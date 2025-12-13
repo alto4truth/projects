@@ -5,16 +5,16 @@ This repository contains 9 original stories organized into themed collections.
 ## All Stories:
 
 ### Memory & Time Collection
-1. **The Clockmaker's Secret** (story_2.txt)
-2. **The Memory Merchant** (story_5.txt)  
-3. **The Cartographer of Lost Places** (story_6.txt)
-4. **The Night Shift at the Museum of Time** (story_7.txt)
-5. **The Lighthouse Keeper's Daughter** (story_9.txt)
+1. **The Clockmaker's Secret** (the_clockmakers_secret.txt)
+2. **The Memory Merchant** (memory_merchant.txt)  
+3. **The Cartographer of Lost Places** (cartographer_of_lost_places.txt)
+4. **The Night Shift at the Museum of Time** (museum_of_time_night_shift.txt)
+5. **The Lighthouse Keeper's Daughter** (lighthouse_keepers_daughter.txt)
 
 ### Dreams & Imagination Collection
-6. **The Garden of Forgotten Dreams** (story_3.txt)
-7. **The Library of Lost Voices** (story_4.txt)
-8. **The Recipe Keeper** (story_8.txt)
+6. **The Garden of Forgotten Dreams** (garden_of_forgotten_dreams.txt)
+7. **The Library of Lost Voices** (library_of_lost_voices.txt)
+8. **The Recipe Keeper** (recipe_keeper.txt)
 
 ## Story Statistics:
 - **Total stories:** 9
@@ -25,7 +25,7 @@ This repository contains 9 original stories organized into themed collections.
 ## Reading Recommendations:
 - **For time travel enthusiasts:** Start with The Clockmaker's Secret
 - **For dreamers:** Begin with The Garden of Forgotten Dreams  
-- **For complete immersion:** Read all stories in numerical order (2→3→4→5→6→7→8→9)
+- **For complete immersion:** Read all stories in chronological order (the_clockmakers_secret→garden_of_forgotten_dreams→library_of_lost_voices→memory_merchant→cartographer_of_lost_places→museum_of_time_night_shift→recipe_keeper→lighthouse_keepers_daughter)
 
 ## Collection Purpose:
 These stories explore the intersection of the mundane and the magical, showing how extraordinary experiences can emerge from everyday moments. Each story examines different aspects of human connection to memory, time, dreams, and community.
