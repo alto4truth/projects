@@ -1,0 +1,85 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+. ICML, June 2019. 2
+[24] H. Zhang, M. Cisse, Y . N. Dauphin, and D. Lopez-Paz.
+mixup: Beyond empirical risk minimization. InProc. ICLR,
+May 2018. 2
+9
+
+FedSIR: Spectral Client Identification and Relabeling for Federated Learning
+with Noisy Labels
+Supplementary Material
+7. Ablation Study
+To better understand the contribution of each component of
+FedSIR, we perform an ablation study under symmetric label noise with Dirichlet heterogeneity parameterα= 1. In
+this setting, three clients are identified as clean and used to
+construct the spectral reference model. We evaluate several
+variants of the proposed framework by removing one component at a time: the spectral relabeling mechanism, LA,
+KD, and DaAgg. The results are summarized in Table 2.
+The full FedSIR model consistently achieves the best
+performance across noise levels exceeding 50%. Removing
+the spectral relabeling component leads to the most degradation, particularly under high noise rates. For example, at
+90%noise, the accuracy drops from84.51%to80.00%, indicating that the relabeling mechanism plays a critical role
+in correcting corrupted supervision on noisy clients.
+LA mainly compensates for class imbalance across
+clients. Removing this component results in a moderate but
+consistent decrease in accuracy, confirming its significance
+for stabilizing local optimization under heterogeneous label
+distributions.
+KD also contributes to performance stability by providing soft guidance from the global model. When KD is removed, performance decreases slightly across most noise
+levels, suggesting that KD helps regularize the training of
+noisy clients and prevents overfitting to unreliable labels.
+Finally, removing the DaAgg step slightly improves performance at lower noise rates but degrades robustness at
+higher noise levels. This behavior suggests that DaAgg primarily acts as a safeguard against highly corrupted client
+updates rather than improving average-case performance
+when noise is moderate.
+Overall, the ablation results demonstrate that each component contributes to the robustness of the proposed framework, with spectral relabeling playing the critical role in
+handling severe label corruption.
+8. Results on CIFAR-100
+We further evaluate our method on CIFAR-100 under symmetric label noise in a federated setting with 10 clients.
+Compared with CIFAR-10, CIFAR-100 contains a significantly larger number of classes, which makes the learning
+problem more challenging under both label noise and nonIID data. In particular, under strong non-IID settings (small
+α), each client tends to contain few classes, requiring more
+clean clients to ensure sufficient class coverage for reliable
+spectral reference construction. To simulate non-IID data,
+this dataset is partitioned using a Dirichlet distribution with
+α∈ {0.3,0.5,2}.
+Table 3 reports the classification accuracy under symmetric noise rates ranging from 30% to 90%. Despite the
+increased difficulty of CIFAR-100, our method consistently
+achieves the best performance across all noise levels and
+heterogeneity settings. In particular, our approach maintains stable performance even under extremely high noise
+levels (e.g., 80%–90%).
+These results further demonstrate that the proposed spectral client identification and relabeling strategy scales well
+to more challenging multi-class settings and remains robust
+to both severe label noise and client heterogeneity.
+9. Relabeling Strategy
+To analyze the role of the proposed relabeling rule, we compare three variants of the spectral correction mechanism
+used in Stage II:
+•S (r): labels are reassigned according to the dominantdirection alignment score:
+ˆy(r)
+i = arg max
+c
+S(r)(i, c).
+•S (n): labels are determined using the residual-subspace
+projection score:
+ˆy(n)
+i = arg min
+c
+S(n)(i, c).
+• Agreement rule: a relabel is accepted only when the
+scores fromS (r) andS (n) coincide:ˆy(r)
+i = ˆy(n)
+i
+Figure 3 reports the average reduction in label noise
+achieved by these strategies.
+To evaluate the impact of these strategies on the final
+model performance, Table 4 reports the test accuracy obtained using each relabeling variant.
+1

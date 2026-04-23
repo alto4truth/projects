@@ -1,0 +1,29 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 14
+section: lexis-23
+chunk: 58
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+Supplementary Material
+LEXIS: LatEnt proXimal Interaction Signatures for 3D HOI from
+an Image
+S.1 Implementation Details
+S.1.1 MoGe-Based Object Initialization
+For each method (D–G) in Tab. 1 (in main), we apply the same initialization,
+as follows. We initialize the object poseR o, to from SAM3D [71]. The rotation estimate is empirically accurate, so we keep it unchanged. However, the
+translation and scale are noisy. We refine these via MoGe-estimated [76] metric depth. Let the median MoGe depths under body and object masks [39] be
+¯zb,¯zo, respectively. Their ratioρ= ¯z o/¯zb is scale-invariant. Anchoring to the
+metric body depthz b from CameraHMR [56] gives the depth-correction factor
+δ=ρ z b/to
+z, wheret o
+z is the z-component oft o. We resolve the scale ambiguity by anchoring the object’s metric size to the body dimensions, obtaining
+σmoge =σ smplLo/Lh, whereσ smpl is the height of the template SMPL mesh,
+Lo, Lb are bounding-box heights of the object and body, respectively, as extracted from MoGe depth map. Then, we blendσmoge with SAM3D-estimated
+scaleσ sam3d:σ= (δ σ sam3d)0.8 ·σ 0.2
+moge.
+S.1.2 Evaluation Metrics
+For the human body, as in [52, 77], we apply Procrustes alignme

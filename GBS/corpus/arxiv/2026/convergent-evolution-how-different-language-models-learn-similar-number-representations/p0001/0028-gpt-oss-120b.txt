@@ -1,0 +1,22 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+ith 10 (e.g., 3, 7, 9) remain near
+chance. This pattern is stable across all perturbations that preserve geometric convergence.
+In Section 5, we show that this structure can be traced to the tokenizer.
+4.2 Structural Attribution to Architecture and Optimizer
+We now fix the pretraining data, and vary the architecture and optimizer. We train a 300M
+parameter Transformer model and two linear RNNs (Gated DeltaNet and Mamba-2 (Dao &
+Gu, 2024)) whose architectural and training details are shown in § B.1. We vary two different
+optimizers for training LLMs: AdamW and Muon. Figure 5 shows the results.
+Transformers and linear RNNs achieve geometric convergence; LSTMs do not.Under
+both Muon and AdamW, Transformer, Gated DeltaNet , and Mamba-2 all achieve strong
+probing, with the Transformer performing best. All three produce nearly identical Fourier
+spectra regardless of the optimizer, confirming that spectral convergence is architecture-

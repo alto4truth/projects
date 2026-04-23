@@ -1,0 +1,21 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+od- T classes become linearly separable in
+the embeddings. Our experimental methodology can be viewed as a form ofstructure
+attribution. Analogous to how influence functions (Koh & Liang, 2017) or Shapley values
+(Ghorbani & Zou, 2019) attribute model predictions to individual training examples, our
+controlled perturbations attribute the emergence of learned representations to specific
+structural properties of the data distribution. We find that geometric convergence depends
+on several complementary data signals: perturbations that progressively remove textnumber co-occurrence, cross-number interaction, or context length each degrade probing,
+while Fourier spikes persist across all conditions (§4.1). The architecture plays a critical role:
+Transformers and linear RNNs achieve strong probing while LSTMs trained on the same
+data remain at chance (§4.2). Regardless of the optimizer, both Transformers and linear
+RNNs learn the same Fourier spectrum but different probing performance.

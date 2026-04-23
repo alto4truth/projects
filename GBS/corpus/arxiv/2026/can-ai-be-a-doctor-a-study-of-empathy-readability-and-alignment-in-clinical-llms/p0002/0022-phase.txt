@@ -1,0 +1,76 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+cautious, hedged responses in the absence of sufficient clinical
+context-analogous to the safety-driven refusals observed in Gemini. These outputs
+16
+
+were nonetheless classified by the sentiment model, yielding a disproportionately
+highVery Negativerate (82.0%) that reflects classifier sensitivity to evasive or
+uncertainty-laden language rather than affectively charged clinical content. By contrast,Med-PaLM Baseremains closest to physician distributions (V= 0.08,p >0.05),
+representing the only baseline configuration whose sentiment profile is not statistically distinguishable from that of physician-authored responses. In the iCliniqQAs
+dataset, effect sizes are generally more moderate, indicating closer overall alignment
+with human-authored sentiment patterns, though statistically significant differences
+persist for selected configurations.
+Very Negative
+Negative Neutral Positive
+Very Positive
+0
+10
+20
+30
+40
+50
+60
+70
+80Percentage (%)
+Sentiment Distribution Across Models
+Models
+Physicians
+Mixtral Base
+Mixtral Empathy
+Mixtral Rephrase
+Med-PaLM Base
+Med-PaLM Empathy
+Med-PaLM Rephrase
+GPT5 Base
+GPT5 Empathy
+GPT5 Rephrase
+Claude Base
+Claude Empathy
+Claude Rephrase
+Gemini Rephrase
+Fig. 8: Distribution of sentiment expressed by models on the MedQuAD dataset.
+Very Negative
+Negative Neutral Positive
+Very Positive
+0
+20
+40
+60
+80Percentage (%)
+Sentiment Distribution Across Models
+Models
+Physicians
+Mixtral Base
+Mixtral Empathy
+Mixtral Rephrase
+Med-PaLM Base
+Med-PaLM Empathy
+Med-PaLM Rephrase
+GPT5 Base
+GPT5 Empathy
+GPT5 Rephrase
+Claude Base
+Claude Empathy
+Claude Rephrase
+Gemini Rephrase
+Fig. 9: Distribution of sentiment expressed by models on the iCliniqQAs dataset.
+17

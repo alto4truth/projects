@@ -1,0 +1,35 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 1
+section: coral-arm-bn
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+the
+target-batch samples xβ
+1:M ) to the adapted parameters wβ.
+The test-time adaptation functionhϕ has itself parametersϕ,
+which are learned with the usual gradient descent techniques.
+At test time on a new experimental batchβ, we first compute
+wβ =h ϕ(w,x β
+1:M) and then predict with ˆy=g(x;w β)
+for anyxfrom batchβ.
+ARM-BN.In this variant of ARM the adaption function hϕ
+only replaces the batch normalization statistics µBN,σ BN
+of all batchnorm-layers of the main network g with the
+statistics from the batchβfrom the new domain.
+ARM-CML.In this version, the adaptation function hϕ uses
+the unlabeled samples from the new batch to compute a compact representation, acontext vector, that captures the specific characteristics of the target domain. Unlike ARM-BN,
+which only updates normalization statistics, ARM-CML
+performs a lightweight parameter adaptation conditioned on
+the new data, enabling the model to better align with the
+target domain without requiring labels or retraining.
+3. CS-ARM-BN: Control-Stabilized Adaptive
+Risk Minimization with Batch
+Normalization
+A key limitation of BN-based test-time and meta-learned
+adaptation methods is their reliance on statistics estimated
+from a

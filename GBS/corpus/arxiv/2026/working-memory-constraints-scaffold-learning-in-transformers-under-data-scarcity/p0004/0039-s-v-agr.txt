@@ -1,0 +1,33 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+pendency parse:
+dB(hi, hj)2 = (B(hi −h j))T (B(hi −h j))(6)
+The probe is trained to minimise the difference
+between dB and the true parse-tree distance dT
+over a training set of parsed sentences. From the
+resulting distance matrix at evaluation time, we recover the unlabelled syntactic dependency structure
+using a minimum spanning tree algorithm, and we
+report the Unlabeled Unrooted Attachment Score
+(UUAS) by relation type. UUAS measures the proportion of edges in the recovered tree that match
+an edge in the gold parse, ignoring direction and
+dependency labels.
+We probe representations at every layer of the
+model (layers 0–11 for GPT-2 small) and report
+results for the five most frequent dependency relations in our evaluation corpus: nsubj (nominal
+subject), dobj (direct object), prep (prepositional
+modifier), attr (attribute), and root (sentence
+root). Probes are trained on gold-parsed sentences
+from the English Web Treebank, with embeddings
+extracted from each model in inference mode (no
+gradient flow back to the language model). Probe
+dimensionality is set to k= 64 , optimised with
+Adam at a learning rate of 10−3 for 30 epochs,
+with early stopping on validation loss. We evaluate

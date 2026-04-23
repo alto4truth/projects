@@ -1,0 +1,24 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+3Fu, Zhou, Belkin, Sharan, & Jia
+Convergent evolution takes a different form under arithmetic task pressure.In models trained on addition from scratch, the tokenizer determines whether Fourier structure
+emerges (§5). Multi-token addition requires computing each output digit as a sum modulo
+1000, forcing the model to solve modular subproblems that produce circular representations. Single-token addition admits multiple strategies, and the resulting representations
+randomly depend on the optimizer.
+2 Related Work
+Fourier Features.Fourier features have been used for many years in computer vision as edge
+and orientation detectors (Olshausen & Field, 1997; Olah et al., 2020; Fiquet & Simoncelli,
+2023). The original Transformer applies sinusoidal position encodings (Vaswani et al., 2017),
+and several works have found that explicitly injecting high-frequency components into
+inputs helps with spatial and numerical tasks (Tancik et al., 2020; He et al., 2023; Hua
+et al., 2024). Recently, this structure is also found to emerge without being designed in.
+Transformers trained on modular addition embed numbers on a circle and rotating to
+compute the answer (Nanda et al., 2023; Zhong et al., 2023

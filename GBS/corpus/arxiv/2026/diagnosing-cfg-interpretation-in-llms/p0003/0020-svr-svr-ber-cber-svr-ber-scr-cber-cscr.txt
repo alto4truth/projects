@@ -1,0 +1,30 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 3
+section: svr-svr-ber-cber-svr-ber-scr-cber-cscr
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+tate-tracking required to faithfully
+Figure 2: Impact of recursion depth on model performance under theAlienlexicon.
+implement the intended hierarchical logic.
+This structural collapse is further exacerbated
+by theElse-Branch Probability( p). As shown in
+Table 3, forcing p= 1.0 causes SVR to plunge
+to 13.0%, a nearly 40% reduction compared to
+the baseline. In contrast, removing else-branches
+(p= 0.0 ) restores SCR to 15.0%. This confirms
+that tracking multiple execution paths significantly
+exhausts the LLM’s capacity to maintain the current context. As the density of these branches increases, the model often fails to track the active
+scope, resulting in incomplete control blocks or the
+premature termination of nested structures.
+Predicate Complexity and Logic Resolution
+Beyond the global structure, the complexity of
+nested predicates within control flow serves as a
+critical bottleneck. By modulating theExpression
+Depth( E), we find that BER and SCR are more
+sensitive than SVR. As shown in Table 3, increasing the complexity from the baseline ( E= 2 ) to
+6

@@ -1,0 +1,31 @@
+title: Physics-Conditioned Synthesis of Internal Ice-Layer Thickness for Incomplete Layer Traces
+source: arxiv
+year: 2026
+document_id: physics-conditioned-synthesis-of-internal-ice-layer-thickness-for-incomplete-layer-traces
+authors: Zesheng Liu; Maryam Rahnemoonfar
+page: 3
+section: locations-where-ground-truth-boundary-annotations-are
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20783v1
+
+nd context
+from neighboring layers to maintain coherent stratigraphy.
+In Figure 2(b), for the case where entire internal layers are
+absent from the input, despite having no direct trace evidence
+for those layers, our model reconstructs a consistent set of
+boundaries that follow the global geometry of the layer stack
+and exhibit smooth, physically plausible variations across
+depth. Taken together, these qualitative examples highlight
+the effectiveness and robustness of our approach for handling
+both partial discontinuities and fully missing internal layers,
+supporting its use as a practical tool for completing sparse
+layer-boundary annotations.
+We further assess whether the synthetic layer traces produced by our method improve downstream learning. To this
+end, we compare a spatio-temporal GNN [6] pretrained on the
+synthetic traces and then fine-tuned on radargrams with fully
+traced internal layers against the same model trained from
+scratch on the fully traced data. Pretraining leads to faster
+and more stable optimization during fine-tuning and yields
+better downstream performance. In particular, the pretrained
+model achieves an RMSE of 2.9910 pixels for deep-layer
+thickness predict

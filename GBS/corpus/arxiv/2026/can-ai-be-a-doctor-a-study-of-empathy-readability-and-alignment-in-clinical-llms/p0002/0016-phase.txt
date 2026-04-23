@@ -1,0 +1,65 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+.00
+
+-0.10
+***
+-0.00
+
+-0.01
+
+-0.13
+***
+-0.08
+***
++0.00
+
++0.05
+***
++0.07
+***
+-0.06
+***
++0.04
+***
++0.06
+***
+-0.03
+**
++0.06
+***
++0.05
+***
+-0.07
+***
+-0.02
+
++0.06
+***
++0.06
+***
+0.10
+0.05
+0.00
+0.05
+0.10
+Mean Difference (Semantic Fidelity)
+Fig. 4: Pairwise comparison of language models in terms of semantic fidelity on the
+MedQuAD dataset. Each cell reports the mean difference in semantic fidelity between
+model pairs (Modeli−j), where positive values indicate higher similarity to the medical reference for the model reported on the row. Color intensity encodes the magnitude
+of the difference, while statistical significance after FDR correction is indicated by
+asterisks (∗p <0.05, ∗∗p <0.01, ∗∗∗p <0.001).
+and empathy variants as well as over multiple general-purpose counterparts (p <0.01,
+FDR-corrected). The full matrices of mean differences and FDR-adjustedp-values
+are depicted in Figure 4 and Figure 6, highlighting statistically significant contrasts
+across multiple model pairs, especially those involving domain-specialized rephrasing
+configurations.
+13

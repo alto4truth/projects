@@ -1,0 +1,43 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 1
+section: p-assing
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+
+(7)
+where both the norm∥·∥and the nonlinear activation are
+applied independently to each channel matrix.
+At the output layer, the form of the prediction is
+dictated by the transformation properties of the target
+observable. For gauge-covariant quantities, the output
+must itself transform covariantly under local gauge rotations. In this case, the network directly outputs node or
+edge features,V (out)
+i orE (out)
+ij , which furnish the appropriate covariant objects.
+For gauge-invariant targets, scalar observables are constructed from invariant combinations of the learned features. At the node level, this includes quantities such as
+Re Tr
+
+V(out)
+i
+
+, while for edge variables, invariants arise
+from Wilson-loop constructions, e.g., traces over elementary plaquettes and their higher-order generalizations
+generated through message passing.
+To incorporate global information, we further include
+a finite set of Polyakov loopsP={P 1, . . . , PD}defined
+along the independent lattice directions. These invariant features are then processed by a site-wise multilayer
+perceptron (MLP), shared across all lattice sites,
+Oi = MLPθ
+
+Re Tr[V(out)
+i ],Re Tr[E (out)
+□ ],Re Tr[P]
+
+.
+(8)
+In this fram

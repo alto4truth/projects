@@ -1,0 +1,29 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 109
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Illustrative performance drop.As highlighted in the main text, a representative LVLM that reaches
+75.67% accuracy on OlympiadBench drops to50.53% accuracy on OMIBench when evaluated under the
+same decoding and prompting setup. This corresponds to an absolute decrease of over25% and a relative
+performance drop of approximately33%. Together with the moderate Spearman correlation, these findings
+substantiate the claim that OMIBench imposes systematically stronger demands on multi-image Olympiad
+reasoning than its single-image counterpart.
+E.2. Relationship Between Number of Images and Accuracy
+To quantify how multi-image complexity affects model performance, we analyze accuracy as a function of
+the number of images per instance. Each OMIBench question is annotated with its image countk. Instances
+are grouped into bins byk (e.g., k=1, 2, 3, 4, 5,≥6 ), and the average accuracy for each bin is computed by
+aggregating predictions from all evaluated models. Concretely, for each binBk with k images, the bin-level
+accuracy is defined as:
+Acc(k) = 1
+|Bk|
+∑︁
+x∈B k
+match{ ˆy(x),y(x)},(10)
+where y(x) is the ground-truth answer for instancex, ˆy(x) is the model prediction, andmatch{·,·} is the
+ma

@@ -1,0 +1,46 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+7Fu, Zhou, Belkin, Sharan, & Jia
+Table 1: Data perturbation used in §4.1. All models on the 10B tokens from FineWeb-Edu.
+Configuration Perturbation Structure of Data Removed
+Original − −
+Isolate-k Each sequence contains at most k numbers
+token via packing. We usek=1, 2, and 8.
+Interaction across numbers.
+k= 1 indicates no interaction.
+ContextLength-ℓ Sequences split into windows of ℓ. We use
+ℓ=2, 4, 8, and 64
+Role of broad context
+Swap Numbers Number token sequence replaced by that of
+another sequence, keeping numbern-gram
+Number↔text association
+Unigram Replace Every number token resampled i.i.d. from
+marginal distribution to replace the original
+Co-occurrence v.s. frequency
+Original
+Transformer LM (Muon)
+96.1 -4.4 34.7 63.5 10.9 -9.0 9.9 -5.2 85.4
+Context Length 64
+Context Length 8
+Context Length 4
+Context Length 2
+Reducing Context Length
+93.5 -7.1 31.4 46.6 11.7 -7.8 10.7 -6.3 72.0
+88.7 -4.1 29.8 34.9 10.1 -7.3 10.0 -3.7 51.7
+87.3 -7.2 27.7 34.7 8.1 -5.6 10.2 -4.1 47.4
+71.7 -6.3 26.2 29.7 7.6 -3.9 12.1 -1.0 40.6
+Isolate (k=8)
+Isolate (k=2)
+Isolate (k=1)
+Reducing Cross-Number Interaction
+94.1 -4.4 32.2 57.2 9.4 -8.7 11.9 -6.4 77.2
+89.6 -4.7 31.6 36.1 11.2 -5.9 12.1 -5.3 53.0
+85.9

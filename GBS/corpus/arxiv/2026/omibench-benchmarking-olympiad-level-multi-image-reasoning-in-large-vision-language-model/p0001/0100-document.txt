@@ -1,0 +1,25 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 100
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+into floating-point numbers after
+removing units and non-numeric suffixes. The match accuracy is calculated as:
+match( ˆyi,y i) =1⇔ | ˆvi −v i| ≤ϵ,(7)
+where vi and ˆvi enote parsed gold and predicted values, respectively, andϵ=10 −4. Unparseable inputs
+default to normalized string matching.
+Multiple-choice questions.For predefined options, we extract predictions from model outputs via regex
+matching of boxed notation (e.g.,\boxed{A}). A prediction is deemed correct if the extracted symbol
+matches either the gold label directly or, when unavailable, the corresponding option text.
+Unless otherwise specified, we report micro-averaged accuracy across all evaluated tasks.
+C.2. Model-based GPTScore evaluation
+Beyond exact matching accuracy, we employ GPTScore, a semantic evaluation metric that captures partial
+correctness and alignment between predictions and references. This metric leverages a text-based language
+model (e.g., GPT-4-mini) as an automatic judge. For each inputxi, gold answeryi, and model predictionˆyi,
+we prompt the judge model using:
+34

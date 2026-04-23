@@ -1,0 +1,27 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 84
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+all aspects
+together:
+•5 – Excellent rationale
+•4 – Good rationale
+•3 – Acceptable rationale
+•2 – Poor rationale
+•1 – Very poor rationale
+Please base your judgment on the rationale text itself. Do not penalize a rationale just because the
+final answer is wrong, as long as the reasoning process is internally coherent and properly uses the
+provided information.
+Your output must be exactly one label string by {"correctness": NUMBER, "faithfulness":
+NUMBER, "information-usage": NUMBER, "clarity": NUMBER, "detail": NUMBER, "overall": NUMBER}.
+Do not output explanations or reasoning.
+Moreover, to evaluate the alignment between model-generated rationales and human-annotated ones,
+we prompt GPT-4o to compare the two texts and rate their similarity on a 5-point scale. The specific prompt
+is as follows:
+27

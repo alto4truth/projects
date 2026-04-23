@@ -1,0 +1,17 @@
+title: Stream-CQSA: Avoiding Out-of-Memory in Attention Computation via Flexible Workload Scheduling
+source: arxiv
+year: 2026
+document_id: stream-cqsa-avoiding-out-of-memory-in-attention-computation-via-flexible-workload-scheduling
+authors: Yiming Bian; Joshua M. Akey
+page: 1
+section: document
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20819v1
+
+Figure 2: CQSA forward pass with c= 7 and I= (0,1,3) . In step 3, we highlight a chunk pair
+(0,0) . It appears in subsequence 0, 4, and 6, but only one of them should be merged in the end and
+the rest should be masked out to ensure the correctness. This is why the CQS mask (Mi) is necessary.
+We also provide the coverage of attention matrix from the global view to show all chunk pairs are
+covered exactly once. Another caveat is in step 5 that although Numi and Deni are accumulated in
+the same way, their dimensions are different: dim(Num) =N×Dand dim(Den) =N×1.
+4

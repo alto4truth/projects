@@ -1,0 +1,36 @@
+title: Efficient Multi-Cohort Inference for Long-Term Effects and Lifetime Value in A/B Testing with User Learning
+source: arxiv
+year: 2026
+document_id: efficient-multi-cohort-inference-for-long-term-effects-and-lifetime-value-in-a-b-testing-with-user-learning
+authors: Dario Simionato; Andrea Tonon; Mingxue Wang; Weiguo Wang; Tong Gui; Xiaoyue Li
+page: 2
+section: document
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20777v1
+
+sum
+will correctly reveal a negative business outcome. In the following
+sections, we demonstrate how our multi-cohort estimator can be
+applied to A/B test data to recover these distinct but complementary
+insights.
+3.2 Efficient multi-cohort estimation
+Methods for long-term effect estimation under user learning first
+infer the learning component in short A/B tests and then use it
+to estimate the LTE by fitting some models and analyzing their
+behavior at 𝑡→ +∞ [13, 16]. Accordingly, we first review how
+state-of-the-art approaches model user learning, highlighting their
+limitations. Finally, we introduce our efficient multi-cohort estimation method, which we first apply to the user learning inference
+problem and we then adapt for LTE andΔ𝐸𝑅𝐿𝑉estimations.
+We begin by describing two representative approaches from the
+literature. The CCD approach [13] estimates the user learning as a
+difference between treated users exposed at the beginning of the
+experiment against users that just entered in the experiment, that
+is ˆ𝛿𝐶𝐶𝐷 (𝑡)=𝑇 𝑡
+0 −𝑇 𝑡
+𝑡 . In [16], the user learning is instead estimated
+using a DiD method computed as ˆ𝛿𝐷𝑖𝐷 (𝑡)=(𝑇 𝑡
+0 −𝑇 0
+0 ) − (𝐶 𝑡
+0 −𝐶 0
+0).
+Such estimates are then us

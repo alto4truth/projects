@@ -1,0 +1,101 @@
+title: Efficient Multi-Cohort Inference for Long-Term Effects and Lifetime Value in A/B Testing with User Learning
+source: arxiv
+year: 2026
+document_id: efficient-multi-cohort-inference-for-long-term-effects-and-lifetime-value-in-a-b-testing-with-user-learning
+authors: Dario Simionato; Andrea Tonon; Mingxue Wang; Weiguo Wang; Tong Gui; Xiaoyue Li
+page: 2
+section: document
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20777v1
+
+dard practice in such experimental evaluations [11, 18, 19], we computed the
+summation up to a maximum time interval𝑇 ∗. In our experiments𝑇 ∗ =𝑇days.
+
+Efficient Multi-Cohort Inference for Long-Term Effects and Lifetime Value in A/B Testing with User Learning Conference’17, July 2017, Washington, DC, USA
+generally, this methodology is broadly applicable to diverse A/B
+testing scenarios, including search and recommendation systems
+where user behavior evolves over time or where experimental treatments significantly influence user retention (e.g. slow churn due to
+recommendation quality worsening).
+Finally, our formulation bridges the gap between A/B testing and
+traditional Lifetime Value (LTV) frameworks [11]. Unlike standard
+LTV models that often incorporate complex multi-year discounting
+over time [ 10, 17], our 𝑅𝐿𝑉 is optimized for short- to mediumterm online experiments where the discount factor is constant.
+This choice is well justified in fast-moving digital products, where
+the high frequency of subsequent A/B tests on the same features
+often necessitates a focus on the steady state effect and the near
+term lifecycle value rather than multiple years discounted financial
+projections. While traditional LTV literature focuses primarily on
+monetary units, our analysis operates directly on the A/B test metric
+𝑚. This is not a limitation, as such metrics can easily be converted
+into financial value using unit economics already maintained by the
+business. For example, in our streaming context, a change in number
+of clicks can be directly translated into revenue by multiplying it
+by a Cost-Per-Click coefficient.
+Ultimately, this framework ensures that product decisions are
+informed by the total impact on the user lifecycle rather than just
+steady-state behavior. By quantifying both𝐿𝑇 𝐸andΔ𝐸𝑅𝐿𝑉, practitioners can better navigate the complex trade-offs between longterm engagement gains and user retention.
+Presenter Bio
+Dario Simionato is an Applied Research Scientist at the Huawei
+Ireland Research Centre, where his work focuses on advancing A/B
+testing and causal discovery algorithms. His research aims to bridge
+the gap between theory and practice by addressing the applicability
+challenges inherent in deploying state-of-the-art methods to realworld environments. He was the recipient of the Best Paper Award
+at ECML PKDD 2022 and holds a Ph.D. from the University of
+Padua, Italy.
+References
+[1] Sebastian Ankargren, Mattias Frånberg, and Marten Schultzberg. 2024. It’s About
+Time: What A/B Test Metrics Estimate.arXiv preprint arXiv:2411.06150(2024).
+arXiv:2411.06150 [stat.ME] https://arxiv.org/abs/2411.06150
+[2] Eva Ascarza, Peter S. Fader, and Bruce G. S. Hardie. 2017. Marketing Models
+for the Customer-Centric Firm. InHandbook of Marketing Decision Models,
+Berend Wierenga and Ralf van der Lans (Eds.). International Series in Operations
+Research & Management Science, Vol. 254. Springer International Publishing,
+Cham, Switzerland, 297–329. doi:10.1007/978-3-319-56941-3_10
+[3] Jan Panero Benway. 1998. Banner blindness: The irony of attention grabbing on
+the World Wide Web. InProceedings of the human factors and ergonomics society
+annual meeting. SAGE Publications, Los Angeles, CA, 463–467.
+[4] George Casella and Roger L. Berger. 2024.Statistical Inference(2nd ed.). Chapman
+and Hall/CRC, Boca Raton, FL.
+[5] Junghoo Cho and Sourashis Roy. 2004. Impact of Search Engines on Page Popularity. InProceedings of the 13th International World Wide Web Conference (WWW
+2004). ACM, New York, NY, USA, 20–29. doi:10.1145/988672.988676
+[6] W. G. Cochran. 1954. The Combination of Estimates from Different Experiments.
+Biometrics10, 1 (1954), 101–129.
+[7] Alex Deng, Jiannan Lu, and Shouyuan Chen. 2016. Continuous monitoring
+of A/B tests without pain: Optional stopping in Bayesian testing. In2016 IEEE
+International conference on data science and advanced analytics (DSAA). IEEE,
+IEEE, Montreal, QC, Canada, 243–252.
+[8] Pavel Dmitriev, Somit Gupta, Dong Woo Kim, and Garnet Vaz. 2017. A Dirty
+Dozen: Twelve Common Metric Interpretation Pitfalls in Online Controlled
+Experiments. InProceedings of the 23rd ACM SIGKDD International Conference
+on Knowledge Discovery and Data Mining. ACM, Halifax, Nova Scotia, Canada,
+1427–1436. doi:10.1145/3097983.3098024
+[9] Peter S. Fader and Bruce G. S. Hardie. 2007. How to Project Customer Retention.
+Journal of Interactive Marketing21, 1 (2007), 76–90.
+[10] Peter S. Fader and Bruce G. S. Hardie. 2010. Customer-Base Valuation in a
+Contractual Setting: The Perils of Ignoring Heterogeneity.Marketing Science29,
+1 (2010), 85–93.
+[11] Rosa Ferrentino, Maria Teresa Cuomo, and Carmine Boniello. 2016. On the
+customer lifetime value: a mathematical perspective.Computational Management
+Science13, 4 (2016), 521–539. doi:10.1007/s10287-016-0266-1
+[12] Sunil Gupta, Dominique Hanssens, Bruce Hardie, William Kahn, V Kumar,
+Nathaniel Lin, Nalini Ravishanker, and S Sriram. 2006. Modeling customer
+lifetime value.Journal of Service Research9, 2 (2006), 139–155.
+[13] H. Hohnhold, D. O’Brien, and D. Tang. 2015. Focusing on the Long-Term: It’s
+Good for Users and Business. InProceedings of the 21st ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. ACM, Sydney, NSW,
+Australia, 1849–1858.
+[14] Ron Kohavi, Diane Tang, and Ya Xu. 2020.Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing(1st ed.). Cambridge University Press,
+Cambridge, UK.
+[15] Saharon Rosset, Einat Neumann, Uri Eick, and Nurit Vatnik. 2003. Customer Lifetime Value Models for Decision Support.Data Mining and Knowledge Discovery
+7, 3 (2003), 321–339. doi:10.1023/A:1024036305874
+[16] S. Sadeghi, S. Gupta, S. Gramatovici, J. Lu, H. Ai, and R. Zhang. 2022. Novelty
+and Primacy: A Long-Term Estimator for Online Experiments.Technometrics64,
+4 (2022), 524–534.
+[17] Paul A. Samuelson. 1937. A Note on Measurement of Utility.Review of Economic
+Studies4, 2 (1937), 155–161. doi:10.2307/2967612
+[18] Georgios Theocharous, Philip S Thomas, and Mohammad Ghavamzadeh. 2015.
+Ad recommendation systems for life-time value optimization. InProceedings of the
+24th international conference on world wide web. ACM, Florence, Italy, 1305–1310.
+[19] Ana Alina Tudoran, Charlotte Hjerrild Thomsen, and Sophie Thomasen. 2024.
+Understanding consumer behavior during and after a Pandemic: Implications
+for customer lifetime value prediction models.Journal of Business Research174
+(2024), 114527. doi:10.1016/j.jbusres.2024.114527

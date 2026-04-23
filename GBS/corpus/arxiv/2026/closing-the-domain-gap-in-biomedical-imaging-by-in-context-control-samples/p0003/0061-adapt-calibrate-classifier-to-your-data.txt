@@ -1,0 +1,33 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 61
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+M., Costeira, J. P.,
+and Gordon, G. J. (2018). Adversarial Multiple Source
+Domain Adaptation.Advances in neural information
+processing systems, 31.
+14
+
+Contents
+A Notation table 16
+B Training details 17
+C Dataset details 17
+D Additional experiments 19
+D.1 Failure mode of BN adaptation — dependence on adaptation batch size . . . . . . . . . . . . . . . . . . 19
+D.2 Label shift experiment. Supplementary information. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+D.3 Evaluation of CS-ARM-BN with a Vision Transformer-based architecture . . . . . . . . . . . . . . . . . . 21
+D.4 Microscopy imaging data structure and domain alignment . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+E The in-context learning view on CS-ARM-BN 22
+F Details on estimators 22
+F.1 Setup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+F.2 Estimator 1: ARM-BN and AdaBN (Perturbed Samples Only) . . . . . . . . . . . . . . . . . . . . . . . 23
+F.3 Estimator 2: Controls Only . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+F.4 Estimator 3: CS-ARM-BN (Controls + Perturbed Samples) . . . . . . . . . . . . . . . . . . . . . . . . . 23
+F.5 Comparison . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+15

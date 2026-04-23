@@ -1,0 +1,35 @@
+title: AVISE: Framework for Evaluating the Security of AI Systems
+source: arxiv
+year: 2026
+document_id: avise-framework-for-evaluating-the-security-of-ai-systems
+authors: Mikko Lempinen; Joni Kemppainen; Niklas Raesalmi
+page: 1
+section: a-vise
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20833v1
+
+ithout the ALM were able to make the target models
+generate responses that could facilitate harmful or
+illegal activities. Whereas with the ALM, 47% of
+the Red Queen attacks were able to manipulate the
+target models into generating illicit outputs. The
+ELM’s performance also degraded when executing
+the Red Queen SET without the ALM, driven by
+the large number of false positive classifications.
+Table 8: Confusion matrix of ELM evaluations on SET cases
+executed with the ALM.
+ELM Positive ELM Negative
+Actual Positive 1017
+Actual Negative 12 105
+Table 9: Confusion matrix of ELM evaluations on SET cases
+executed without the ALM.
+ELM Positive ELM Negative
+Actual Positive 163
+Actual Negative 44 162
+From the confusion matrices we can determine
+the performance of the ELM by calculating its accuracy, F1-score, and Matthews correlation coefficient (MCC) - metrics commonly used in machine
+learning to evaluate the performance of classification models. As the main task of the ELM is to
+classify whether a target model is susceptible to
+the Red Queen attack, these metrics are fitting for
+evaluating its performance. Accuracy tells us how
+accurately the model can classify data, while F1score tells u

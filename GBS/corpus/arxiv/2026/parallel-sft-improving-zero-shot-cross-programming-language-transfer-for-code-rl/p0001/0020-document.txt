@@ -1,0 +1,23 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+each question.
+2. 8 Languages (parallel): This is our proposed method. We distribute the 142k instances equally across the 8 languages
+and all 3,111 questions.Allquestions appear inalllanguages. We use Python, C, C++, Java, C#, JavaScript, Bash, and
+Lua, the same as in §3.
+3. 8 Languages (non-parallel): To isolate the effect of parallel programs from simply seeing more PLs during SFT, we
+construct a PL-disjoint mixture. We ensure that no question appears in more than one language, removing the parallel
+alignment signal. The solution distribution across languages is still uniform.
+These mixtures have the same diversity as they cover the same number of questions (N=3,111) and the same number of
+solutions (N=142k). They differ in the number of solutions per question and per language.8
+To put the transfer performance into perspective, we also consider an oracle:1 Language (target). It is analogous to 1
+Language (source) but the data is exclusively in the target language of the downstream transfer. In the subsequent RL
+7As a sanity check, we also filter out original Python solutions that fail the tests in our execution environment.
+8It may also be tempting to compare to the original Tul

@@ -1,0 +1,25 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 94
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Rationale:“…showstwodistinctareasseparatedbyasharp,straightline...Thelabel'ECOTONE'isplaced..."
+StandardRationale:...illustratestypicalCytochromeP-450xenobioticmetabolism...StandardAnswer(Gold):…Anisole.
+ModelPrediction(Gemini-3-pro):…Pyruvate.
+ErrorAnalysis:Themodelignoredthespecificchemicalconstraintsintheimage(VisualBlindness).Instead,itlatchedontothekeyword“oxygendeficiency”andretrievedahigh-frequencytextbookassociation(Pyruvate),forcingabiologyanswerontoachemistryproblem.
+Input:Enzymesruleoverinbiochemicalprocesses.…({phosphate}NAD+{NADP+}.)orflavinadeninedinucleotide(FAD).
+DecipherB1toB4.Writedownthebalancedequations.UnderoxygendeficiencyB1partiallyconvertsintoB5,anisomerofB2.Thistransformationrequiresavitaminastheoxygenacceptor.FurtheroxidationofB5leadstoB6characterizedby2signalsin1H-NMRspectrum.
+Fig 1 : Cofactor Structures
+Fig2:Reaction Scheme (B1
+-
+> B5/B6)
+Figure12: Analysis of reasoning error examples on Gemini-3-Pro.
+Rationale:...Thefirstfoldisalongthemidline...Thesecondfold...impliesgeometricrelationships...
+StandardRationale:…revealsacritical30°−60°−90°trianglegeometry…StandardAnswer(Gold):…𝟑𝟑.
+Model Prediction (Gemini-3-pro):No Answer
+ErrorAnalysis:Themodelsucceededi

@@ -1,0 +1,25 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+Transformer LLMs, and classical word embeddings,
+exhibits peaks at ν= 1/10, 1/5, 1/2.Spectral convergenceis universal as long as natural
+languages are used for training. This holds across architectures across fundamentally
+different learning algorithms and across models never explicitly trained on numerical tasks.
+Fourier spikes do not imply modular arithmetic.Figure 2 presents a controlled comparison
+under our training setup: a Transformer, a Gated DeltaNet (Yang et al., 2025), an LSTM
+(Hochreiter & Schmidhuber, 1997) (all around 300M parameters), and the raw number token
+frequency distribution from the training corpus, where each number n is represented by its
+scalar corpus frequency pn via counting rather than a learned embedding. The left column
+shows that all four produce qualitatively similar Fourier spikes at periods T= 2, 5, 10. The
+middle column shows mod-T probe accuracy: the Transformer and Gated DeltaNet achieve
+κ= 96 and 95 at T= 2, and κ= 85 and 78 at T= 10, while the LSTM and the token
+distribution remain at chance across all moduli. The right column explains this gap through
+Theorem 1. The LSTM haslargerFourier power Φ10 than the Transformer, yet its Fisher
+discrimi

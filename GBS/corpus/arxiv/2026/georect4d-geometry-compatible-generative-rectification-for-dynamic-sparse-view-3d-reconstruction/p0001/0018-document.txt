@@ -1,0 +1,38 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+GeoRect4D for Dynamic Sparse-View 3D Reconstruction 7
+skip connections. Leth(l)
+enc andh (l)
+dec denote encoder and decoder features at level
+l. The decoder update is
+h(l)
+dec ←UpBlock
+
+h(l−1)
+dec +C (l)
+proj
+
+γh (L−l)
+enc
+
+, (7)
+whereC (l)
+proj is a learnable1×1projection aligning feature spaces andγcontrols
+the anchoring strength. This injection constrains refinement to remain aligned
+with the rendered 3D projection, suppressing diffusion-induced shape deviation.
+Degradation-Aware Residual Adaptation.To bridge the domain gap
+between natural-image priors and sparse 3D renderings, we adapt a frozen diffusion backbone via lightweight low-rank adaptation to predict artifact-specific
+residual corrections in latent space. Denoting the degraded latent byzdeg and
+the refined latent byzgt, we adopt a subtraction-based residual bridge:
+zgt =z deg −λ res ϵθ(zdeg), (8)
+whereϵ θ is the adapted residual predictor andλres controls refinement intensity.
+We setλ res = 1during training and adjust it at inference to balance enhancement strength and structural fidelity. The rectifier is trained on paired samples
+rendered at training viewpoints across diverse 3D datasets (more details regarding t

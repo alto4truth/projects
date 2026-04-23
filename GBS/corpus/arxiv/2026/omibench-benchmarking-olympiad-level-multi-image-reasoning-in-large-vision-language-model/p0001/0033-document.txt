@@ -1,0 +1,23 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+remains limited, indicating that reliably solving OMIBench requires stronger underlying intelligence to
+orchestrate tool use, rather than tools alone.
+7. Related work
+Competition Benchmarks.Several benchmarks assess LLM reasoning using competition-style questions.
+MATH [25] and OlymMATH [50] collect high-school mathematics contest problems across diverse topics and
+require multi-step reasoning. AGIEval [76] covers multiple subjects, including mathematics and physics, with
+questions drawn from competitive examinations. OlympiadBench [24] targets Olympiad-level mathematics
+and physics and provides per-problem rationales to enable deeper analysis of model reasoning. In addition,
+AIME [1, 2] and AMC [4] use authentic contest problems that probe a broad range of mathematical skills
+and concepts.
+Multimodal Benchmarks.To evaluate multimodal geometric reasoning, datasets such as Geometry3K [38],
+GeoQA [8], GeoQA+ [7], and UniGeo [9] pair natural-language problems with diagrams [29]. MathVista [40] and MathVerse [72] assess broader multimodal mathematical reasoning in vision-language models.
+ScienceQA [39], MMMU [68], and M3CoT [11] extend evaluation across multiple disciplines [31]. Olymp

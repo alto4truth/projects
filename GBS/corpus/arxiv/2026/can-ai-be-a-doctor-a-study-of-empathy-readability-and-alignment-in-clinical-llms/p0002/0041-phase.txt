@@ -1,0 +1,44 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+ltilingual and low-resource healthcare contexts. In addition,
+future research should investigate the impact of clinical question criticality on LLM
+35
+
+behavior by stratifying responses across severity levels. This would enable a finegrained analysis of semantic fidelity, readability, and affective alignment as a function
+of clinical urgency. A key hypothesis is that LLMs may exhibit stronger alignment
+with physician responses in low-criticality scenarios, while showing degradation in
+high-criticality contexts that require precise reasoning, risk calibration, and cautious
+communication. Such an analysis would clarify whether current models are robust
+across the full spectrum of clinical demands or disproportionately reliable in lowerstakes settings.
+Funding
+This research received no specific grant from any funding agency in the public,
+commercial, or not-for-profit sectors. Grant number: Not applicable.
+Appendix A Prompt Templates
+This appendix details the prompt formulations used across experimental conditions.
+Prompts differ in objective: (i) producing a direct medical answer, (ii) improving
+clarity without stylistic modification, and (iii) collaboratively rewriting physicianauthored content while preserving meaning.
+A.1 Base Prompt (Formal Clinical Answer)
+Used for generating direct medical responses from general-purpose models such
+asMixtral. Emphasizes accuracy, formal tone, and discursive structure without
+enumeration.
+Base Prompt
+[INST]
+<<SYS>>You are a helpful, respectful, and accurate medical doctor. Always
+answer using the provided context. Answer in a formal, scientific tone, in the
+third person. Do not enumerate or provide bullet points. Write in a continuous,
+discursive manner.<<SYS>>
+Question:{query}
+[/INST]
+A.2 Empathy Prompt (Clarity-Focused Prompt)
+Applied toMixtraland other general-purpose models to enhance readability and
+accessibility. This version prioritizes simplicity and comprehension without stylistic
+emotional bias.
+36

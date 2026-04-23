@@ -1,0 +1,121 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 59
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+ablation isolates whether co-occurrence statistics beyond simple
+token frequency are necessary for Fourier features and modular arithmetic to emerge.
+
+Convergent Evolution22
+B.4 Training Dynamics
+Figure 9 shows that during language pretraining, both Fourier power ΦT and linear probe
+accuracy increase smoothly from the start of training for T= 2, 5, 10, with no sudden phase
+transition. This contrasts with grokking in modular arithmetic (Nanda et al., 2023), where
+structured representations appear abruptly after prolonged memorization. In language
+pretraining, the model continuously encounters diverse co-occurrence statistics rather than
+memorizing a fixed set of examples, so both tiers of convergence emerge gradually. In
+contrast, Figure 10 shows training dynamics for addition.
+0 2 4 6 8 10
+Training Tokens (B)
+0.0
+1.5
+3.0
+4.5
+6.0Fourier Power 2
+T = 2
+Fourier Power 2
+Linear Probe Acc
+0 2 4 6 8 10
+Training Tokens (B)
+0
+4
+8
+12
+16Fourier Power 5
+T = 5
+Fourier Power 5
+Linear Probe Acc
+0 2 4 6 8 10
+Training Tokens (B)
+0
+10
+20
+30
+40Fourier Power 10
+T = 10
+Fourier Power 10
+Linear Probe Acc
+40
+55
+70
+85
+100
+Linear Probe Accuracy (%)
+15
+30
+45
+60
+75
+Linear Probe Accuracy (%)
+0
+25
+50
+75
+100
+Linear Probe Accuracy (%)
+Figure 9:Spectral and geometric convergence co-emerge gradually during pretraining.
+Fourier power ΦT (left axis) and linear probe accuracy (right axis) for a 300M Transformer
+trained with Muon, shown for T= 2, 5, 10. Both metrics increase smoothly throughout
+training with no phase transition, in contrast to the sudden emergence observed in grokking
+on modular arithmetic tasks in Nanda et al. (2023).
+0.0 0.5 1.0 1.5 2.0 2.5 3.0
+Training Tokens (B)
+0
+20
+40
+60
+80
+100Accuracy (%)
+9-Digit Addition: Muon vs AdamW (seed 42)
+Muon
+AdamW
+Test
+Train
+0.0 0.5 1.0 1.5 2.0 2.5 3.0
+Training Tokens (B)
+0
+20
+40
+60
+80
+100Accuracy (%)
+3-Digit Addition: Muon vs AdamW (seed 42)
+Muon
+AdamW
+Test
+Train
+0.0 0.5 1.0 1.5 2.0 2.5 3.0
+Training Tokens (B)
+0
+20
+40
+60
+80
+100Accuracy (%)
+3-Digit Addition: Muon vs AdamW (seed 123)
+Muon
+AdamW
+Test
+Train
+Figure 10:Training dynamics for Transformers trained on addition (two seeds).(Left)
+In 9-digit addition, both Muon and AdamW converge smoothly to near-perfect train and
+test accuracy, with no grokking phase.(Right)In 3-digit addition, under seed 42, training
+accuracy reaches 100% for both optimizers, but generalization is optimizer- and seeddependent. AdamW exhibits a quick grokking under seed 42 (test accuracy jumps around
+1.5–2B tokens) but not under seed 123 (where training accuracy can’t reach 100% and test
+accuracy remains random). This confirms that single-token addition imposes no consistent
+pressure toward structured representations.

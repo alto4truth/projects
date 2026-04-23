@@ -1,0 +1,38 @@
+title: LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model
+source: arxiv
+year: 2026
+document_id: llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffusion-large-language-model
+authors: Inclusion AI; Tiwei Bie; Haoxing Chen; Tieyuan Chen; Zhenglin Cheng; Long Cui; Kai Gan; Zhicheng Huang; Zhenzhong Lan; Haoquan Li; Jianguo Li; Tao Lin; Qi Qin; Hongjun Wang; Xiaomei Wang; Haoyuan Wu; Yi Xin; Junbo Zhao
+page: 2
+section: 5
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20796v1
+
+Table 2: The Overall Comparison of LLaDA2.0-Uni and Existing Specialist VLMs and Unified Models.
+Specialist VLMs Unified Models
+Qwen2.5VL-7B LLaDA-V BAGEL InternVL-U LuminaDiMOO LLaDA-o LLaDA2.0Uni
+General Tasks
+MMStar 63.9 60.1 67.0 54.7 61.0 58.0 64.1
+MMBenchEN 83.5 82.9 85.0 75.3 84.5 71.1 81.5
+MMBenchCN 83.4 70.1 82.4 73.6 71.8 69.9 81.2
+MME-C 62.4 49.1 66.7 27.9 35.2 52.7 58.7
+HallusionBench 51.9 39.2 52.5 44.8 32.9 47.4 50.2
+RealWorldQA 68.5 63.2 73.9 56.4 52.4 60.8 66.7
+SimpleVQA 47.9 26.0 41.9 20.7 12.1 29.2 44.0
+Reasoning Tasks
+MMMUval 51.3 48.6 55.3 54.7 58.6 44.9 50.1
+MMMUProstandard 38.3 35.2 37.1 20.8 20.6 28.3 34.0
+MathVistamini 68.2 59.7 73.1 55.8 10.3 66.1 68.1
+MathVisionmini 22.4 21.2 24.1 22.1 13.1 15.7 26.7
+WeMath 33.3 24.6 45.8 18.3 6.2 29.3 29.3
+OCR & Chart Tasks
+CharXiv(DQ) 73.9 47.0 70.6 53.3 27.8 69.8 68.4
+ChartQA 84.1 78.3 74.3 76.6 8.3 87.9 80.1
+OCRBench 84.2 63.2 73.3 83.9 7.6 74.6 75.7
+DocVQA 94.9 83.9 94.3 85.4 7.2 91.5 89.5
+AI2Dw mask 82.6 77.8 88.9 76.3 43.2 79.3 82.0
+InfoVQA 80.3 66.3 60.7 68.3 6.2 54.7 70.1
+Other Tasks
+CountBench 84.9 75.1 93.2 62.2 48.4 91.7 86.0
+VL-RewardBench 45.2 46.0 28.9 46.4 51.7 42.4 47.8
+V∗ 80.1 41.8 67.5 51.3 52.7 57.6 61.

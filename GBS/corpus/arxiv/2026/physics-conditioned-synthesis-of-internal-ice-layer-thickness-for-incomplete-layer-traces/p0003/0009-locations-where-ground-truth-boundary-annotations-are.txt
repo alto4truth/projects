@@ -1,0 +1,16 @@
+title: Physics-Conditioned Synthesis of Internal Ice-Layer Thickness for Incomplete Layer Traces
+source: arxiv
+year: 2026
+document_id: physics-conditioned-synthesis-of-internal-ice-layer-thickness-for-incomplete-layer-traces
+authors: Zesheng Liu; Maryam Rahnemoonfar
+page: 3
+section: locations-where-ground-truth-boundary-annotations-are
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20783v1
+
+spatio-temporal GNN on completed stacks and fine-tuning
+on fully traced radargrams yields faster convergence, more
+stable optimization, and a 7.4% RMSE improvement for deeplayer thickness prediction compared to training from scratch.
+Overall, this completion-to-pretraining workflow turns partially labeled radargrams into scalable supervision and reduces
+reliance on fully traced layer stacks for robust deep-layer
+modeling.

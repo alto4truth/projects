@@ -1,0 +1,20 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 74
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+terface
+presented problems in their final form, allowing reviewers to rate quality on a 5-point Likert scale and flag
+specific defects, such as ambiguous statements, misleading visual content, or erroneous solutions.
+A.4.2. Disagreement Resolution and Escalation
+Disagreements on critical fields, such as solution correctness or label assignment, triggered an automatic
+escalation to a senior reviewer. These discrepancies were identified via logical inconsistencies (e.g., opposing
+validity flags) or rating divergences of at least 2 points. A senior expert with domain experience then
+examined the full annotation history to issue a binding decision: retaining the primary annotation, adopting
+the auditor’s revision, or rewriting the content entirely with a supporting rationale.
+23

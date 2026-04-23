@@ -1,0 +1,31 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+ly in Argument
+Structure where smaller fixed window models obtain significantly higher performance, where the
+sentences usually focus on structures which govern a verb’s relationship with its arguments. This
+is noteworthy because these relationships can be
+complex and are not solely determined by adjacent
+words, yet this highly local model captures them
+effectively. Similarly, these models perform well
+on Binding, which involves the structural relationship between a pronoun and its antecedent. One
+might expect this to require a wider context, but the
+small fixed window proves highly effective, outperforming the baseline. On the other hand, leaky
+models, both Exponential and Logistic bias based
+models, which allow attention to "leak" across the
+entire context while prioritising recent information,
+show interesting trends, however these models are
+inferior in performance compared to stricter and
+smaller fixed window based models.
+Primacy/Recency AblationWe wanted to further understand the efficacy of primacy and recency
+based formulation and carried out an experiment
+where we trained models separately with primacy
+and recency biases. We present these results in
+Figures 1 and 2. We no

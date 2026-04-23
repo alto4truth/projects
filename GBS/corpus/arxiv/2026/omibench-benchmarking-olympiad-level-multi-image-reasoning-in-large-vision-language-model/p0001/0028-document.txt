@@ -1,0 +1,24 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+ct”
+variants of Qwen3-VL to assess whether more advanced Long CoT paradigms improve multimodal reasoning.
+As shown in Figure 4 (c), the thinking variant outperforms the instruct variant on OMIBench by about
+10%, substantially improving Olympiad-level performance. This gain is notably larger than that on earlier
+single-image reasoning benchmarks such as MathVista (<5%) [5].
+6.2. Can Test-Time Scaling Help?
+To assess test-time scaling on OMIBench, we vary three orthogonal axes (parallel sampling, sequential
+reasoning depth, and model size), and obtain the following observations:
+Sequential scaling remains effective in OMIBench.We test whether longer test-time reasoning improves
+performance by varying the maximum reasoning length. The resulting accuracy–reasoning-length curve
+characterizes the marginal returns (and potential saturation) of additional sequential inference computation.
+As shown in Figure 5(a), increasing the token budget from 512 to 16,384 yields a near-monotonic accuracy gain, indicating that such scaling remains effective on OMIBench, where MMIU and OlympiadBench
+performance becomes comparable.
+Parameter scaling limits on OMIBench necessitate increased activated rathe

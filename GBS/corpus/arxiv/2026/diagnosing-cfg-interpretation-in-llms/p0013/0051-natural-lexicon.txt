@@ -1,0 +1,20 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 13
+section: natural-lexicon
+chunk: 51
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+if ((has item_3 and has box_4) and not (has
+ball_1)) after [
+if ((has ball_4 and has ball) and (has
+box_0 alt has key)) after [
+repeat (0 + (1 * 0)) x [
+repeat 4 x [ ... ]
+]
+]
+]
+Alien lexicon replaces keywords with randomized nonsense tokens, stripping semantic cues.

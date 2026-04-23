@@ -1,0 +1,24 @@
+title: Stream-CQSA: Avoiding Out-of-Memory in Attention Computation via Flexible Workload Scheduling
+source: arxiv
+year: 2026
+document_id: stream-cqsa-avoiding-out-of-memory-in-attention-computation-via-flexible-workload-scheduling
+authors: Yiming Bian; Joshua M. Akey
+page: 1
+section: document
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20819v1
+
+emory budgets. This recasts attention from a logically monolithic operation into a collection of schedulable tasks, enabling flexible execution across
+devices without inter-device communication. Experiments demonstrate predictable
+memory scaling and show that exact attention over billion-token sequences can
+be executed on a single GPU via streaming, without changing the underlying
+mathematical definition of attention or introducing approximation error.
+1 Introduction
+Modern large language model (LLM) capabilities depend heavily on their model size and context
+length [1]. Recent systems [2, 3, 4, 5] support a context window ranging from hundreds of thousands
+to one million tokens. Despite these advances, context length remains a fundamental practical
+limitation: models often exhibit degraded performance on long inputs, including inconsistencies and
+increased hallucination. A primary barrier to extending context length is the quadratic memory cost
+of exact self-attention [6]. Among various system bottlenecks, GPU memory has emerged as the
+dominant constraint for scaling long-context modeling, limiting both training and deployment.
+A substantial body of prior work has focused on impro

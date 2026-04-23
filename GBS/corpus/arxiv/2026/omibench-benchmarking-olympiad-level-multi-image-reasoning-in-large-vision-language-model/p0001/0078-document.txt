@@ -1,0 +1,29 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 78
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Subfield Annotation Prompt-P2
+Your task is to assign the most specific sub-category label to each problem.
+[Domain name]
+Classification Labels:
+•[Fine-grained topic list]
+Your output must be exactly one label string by {CLASS: X} from a fixed label list. Do not output
+explanations or reasoning.
+Manual Verification and Correction.After automatic pre-labeling, all problems undergo manual review
+by expert annotators with relevant domain expertise. Annotators may retain the GPT-4o label, modify the
+topic within the same domain, or revise both domain and topic. Annotators are encouraged to propose
+taxonomy changes when they observe repeated, systematic mismatches between available topics and the
+actual problem content.
+B. Detailed Main Experiment
+B.1. Model Inference & Evaluation Setting
+In our main experiments, we evaluate a set of large vision-language models (LVLMs) on OMIBench in
+the zero-shot setting. The evaluated models include InternVL3 [78], Qwen2.5-VL [6], InternVL3.5 [59],
+Qwen3-VL [5], GPT-4o [28], Gemini-2.5 [19], OpenAI-o4-mini [45], GPT-5 [44], and Gemini-3 [22]. To
+ensure fair comparison, we standardize input prompts across models, adapting only the minimal syntax or
+spe

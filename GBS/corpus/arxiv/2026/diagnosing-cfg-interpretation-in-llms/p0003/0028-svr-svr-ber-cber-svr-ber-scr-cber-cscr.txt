@@ -1,0 +1,29 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 3
+section: svr-svr-ber-cber-svr-ber-scr-cber-cscr
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+Princis et al., 2025), use pushdown
+automata to mask output distributions, while
+Grammar-Aligned Decoding (Park et al., 2024)
+aims to guarantee EBNF adherence without semantic distortion. Complementarily, Rule-Following
+Fine-Tuning (RFFT) methods (Hu et al., 2024,
+2025) attempt to internalize these constraints by
+shifting model behavior from pattern matching toward deterministic symbolic execution.
+8 Conclusion
+In this work, we formalize the task of in-context
+grammar interpretation, evaluating LLMs across
+the three layers of syntax, behavior, and semantics.
+Through our ROBOGRIDframework, we demonstrate that while SOTA LLMs can maintain surface
+syntactic validity, they suffer from a severe syntaxlogic gap as structural density increases. Our findings highlight that CoT reasoning is a functional
+necessity for following formal rules, yet LLMs
+remain heavily dependent on semantic bootstrapping from familiar keywords. The rapid collapse
+of semantic alignment under deep recursion and
+high branching factors pinpoints a fundamental limitation in current hierarchical state-tracking. Ultimately, our results suggest that achieving reliable,
+grammar-agnostic agents requires moving beyond
+surf

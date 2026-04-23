@@ -1,0 +1,34 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 2
+section: lexis-5
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+6 D. Antić et al.
+V Q
+LEXIS Codebook
+object embedding
+D e c o d e rE n c o d e r
+humanarticulation
+query triplanes (Fig. 4)
+canonicalize
+I F
+1
+0
+Fig.3: LEXIS (Sec. 3.1).To estimate 3D HOI from images we need a prior model
+of interactions. We train LEXIS-Net, a VQ-VAE that learns a compact dictionary of
+proximal interaction signatures, termed LEXIS. The encoderEϕ maps 3D body pose to
+continuous latents ˆZ, quantized via a learned codebookCinto discrete tokensZ, and
+decoded viaD ψ into 3D body pose and body/object InterFields (shown color-coded).
+Approach:We develop a framework that learns compact “interaction signatures” andexplicitlyexploits these for 3D HOI reconstruction from an image:
+Interaction Signatures (Sec. 3.1):We employ a VQ-VAE and learnLEXIS,
+a novel lexicon ofcompact interaction signaturesthat encode interaction- and
+object-specific patterns observed in InterFields. Note that LEXIS codes can be
+decoded into full 3D InterFields to form constraints for downstream applications.
+NeuralReconstruction(Secs.3.2and3.3):WebuildLEXIS-Flow(Sec.3.2),
+adual-streamFlow-Matchingtransformer,thattakesanimage(andobjectshape
+estimation) and estimates a 3D human and object in interaction

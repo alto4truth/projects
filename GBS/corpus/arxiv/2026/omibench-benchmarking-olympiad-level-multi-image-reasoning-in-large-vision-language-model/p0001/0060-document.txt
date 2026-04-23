@@ -1,0 +1,23 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 60
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Appendix
+A. Data Construction Details
+OMIBench was constructed via a rigorous multi-stage pipeline that aggregates high-quality, reasoningintensive problems from diverse global sources. Key steps are outlined below.
+A.1. Details of Data Collection
+Our collection strategy prioritized three criteria: (1) difficulty, requiring multi-step chain-of-thought reasoning [14]; (2) diversity, spanning text-only and multimodal contexts; and (3) authority, drawing on
+established competitions and vetted academic benchmarks.
+The data acquisition process followed two primary streams: (1)Original contest archival.We manually
+collected official problem sets from international and national Olympiad archives (e.g., ICHO, IMO, CPHO)
+and regional tournaments (e.g., ASO, CUPT). For sources available only as PDFs, we used optical character
+recognition (OCR) tools specialized for scientific notation (e.g., Mathpix) to extract textual content and
+LATEX equations, while high-resolution figures were cropped and preserved for multimodal evaluation. (2)
+Integration of existing benchmarks.To broaden coverage, we adapted images and questions from recent
+open-source benchmarks, including OlympiadBench [24], Mv-MAT

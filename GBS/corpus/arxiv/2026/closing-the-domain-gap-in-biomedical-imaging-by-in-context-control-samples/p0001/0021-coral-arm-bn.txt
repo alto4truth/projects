@@ -1,0 +1,52 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 1
+section: coral-arm-bn
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+L are the non-control or perturbed samples. We model the
+BN activation mean for samplexas:
+µobs,x =µ domain +µ class(x)
+where µdomain is the batch-specific technical offset we wish
+to estimate, and µclass(x) = 0 for controls and µclass(x) ̸= 0
+for perturbed samples.
+The three estimators ofµdomain and their mean squared errors
+(MSEs) are:
+1. ARM-BN or AdaBN estimator (perturbed samples
+only):
+MSE(ˆµARM-BN) = ¯µ2
+class|{z}
+large bias2
++ σ2
+L (12)
+The bias ¯µclass grows with the degree of label shift, explaining the performance collapse observed in Tables 3
+and 4 .
+2.Control-based estimator (controls only):
+MSE(ˆµctrl) = 0|{z}
+no bias
++ σ2
+C (13)
+The estimator is unbiased, but suffers from high variance whenC, the number of controls, is small.
+3. Our estimator CS-ARM-BN (controls + perturbed
+samples):
+MSE(ˆµCS-ARM-BN) =
+ L
+M
+2
+¯µ2
+class
+| {z }
+small bias2
++ σ2
+M (14)
+exploits all available samples M=C+L and allows
+for a small bias, but decreases variance by a factor of
+1/M.
+In typical settings, CS-ARM-BN achieves the lowest MSE
+by trading a small residual bias, shrunk by the factor
+(L/M)2 relative to ARM-BN,

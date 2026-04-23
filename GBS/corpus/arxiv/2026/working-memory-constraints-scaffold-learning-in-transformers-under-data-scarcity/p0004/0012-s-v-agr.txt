@@ -1,0 +1,31 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+her ∆Log-likelihood indicates that a language model’s surprisal values are
+a better predictor of human cognitive effort during
+sentence comprehension. The ‘Baseline’ bar in
+the figure refers to the∆Log-Likelihood achieved
+by GPT-2 model with unmodified attention trained
+on corresponding corpora, serving as our primary
+model for comparison.
+We observe a significant trend emerging in the
+low data regime. Nearly all models with modified attention mechanisms produce surprisal values
+that are substantially more predictive of human
+processing data than the unmodified Transformer
+baseline. The baseline model achieves a relatively
+low average ∆Log-Likelihood of approximately
+3.2, whereas the top-performing models with fixedwindow attention (especially 7 and 9), as well as
+Primacy and Recency biases, achieve scores nearly
+twice as high. This result suggests that in dataconstrained settings, architectural constraints that
+mimic principles of human WM serve as a powerful
+and effective inductive bias, guiding the model to
+learn representations that are more closely aligned
+with human cognitive processes.
+On the other hand, the advantage of these explicit architectural biases diminishes conside

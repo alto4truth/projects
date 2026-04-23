@@ -1,0 +1,41 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 3
+section: svr-svr-ber-cber-svr-ber-scr-cber-cscr
+chunk: 40
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+he mapping of grammar terminals while keeping
+the underlying production rules constant.
+The Natural lexicon employs familiar, semantically meaningful English keywords to represent
+operations and control flow.
+start: stmt+
+action_stmt: DO action END
+...
+DO: "do"; END: "stop";
+LOOP: "repeat"; TIMES: "times";
+IF: "when"; THEN: "next";
+...
+The Alien lexicon replaces these familiar terms
+with randomized, opaque tokens. This configuration forces the model to rely exclusively on the
+provided EBNF specification for symbolic induction, as the semantic cues are entirely stripped.
+start: stmt+
+action_stmt: DO action END
+...
+DO: "v_qnuc"; END: "v_ojrp";
+LOOP: "v_takv"; TIMES: "v_gqge";
+IF: "v_abgh"; THEN: "v_xhfm";
+...
+A.2 Task Examples
+In this section, we provide concrete examples for
+the three tasks.
+Task 1: Grammaticality JudgmentThe model
+is provided with a complete EBNF grammar and a
+code snippet. It must determine if the code is syntactically valid according to the production rules.
+[PROMPT INPUT]
+You are a strict syntax checker
+Your task is to determine if the provided code is strictly
+valid according to the EBNF grammar.

@@ -1,0 +1,19 @@
+title: SWE-chat: Coding Agent Interactions From Real Users in the Wild
+source: arxiv
+year: 2026
+document_id: swe-chat-coding-agent-interactions-from-real-users-in-the-wild
+authors: Joachim Baumann; Vishakh Padmakumar; Xiang Li; John Yang; Diyi Yang; Sanmi Koyejo
+page: 7
+section: scoring-rubric
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20779v1
+
+went down unproductive paths for most of the
+session.
+- **0-9**: Nothing of value was produced. The session ended with no progress toward any
+user goal.
+When a session is ambiguous (e.g., short, exploratory, no clear deliverable), score
+based on whether the agent's responses were the most helpful thing it could have
+provided given the input. Do not penalize the agent for the user's request being
+vague, but do penalize it if it failed to make productive use of whatever
+information was available.

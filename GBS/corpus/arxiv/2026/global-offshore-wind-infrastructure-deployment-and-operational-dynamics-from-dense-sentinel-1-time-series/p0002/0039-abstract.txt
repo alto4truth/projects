@@ -1,0 +1,62 @@
+title: Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+source: arxiv
+year: 2026
+document_id: global-offshore-wind-infrastructure-deployment-and-operational-dynamics-from-dense-sentinel-1-time-series
+authors: Thorsten Hoeser; Felix Bachofer; Claudia Kuenzer
+page: 2
+section: abstract
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20822v1
+
+quisition and near-real-time
+detection strategies and hybrid approaches that balance recall for early foundations with precision in complex coastal
+21
+
+Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+environments. For time series interpretation, the complexity required for a handcrafted rule-based classifier indicates
+that learned sequential models and multi-source data fusion (e.g., AIS and optical) are promising future research areas.
+Overall, the released corpus establishes a foundation for future advancements in offshore wind infrastructure monitoring
+from space by combining global coverage, high temporal resolution, analysis-ready time series, baseline predictions,
+and expert annotations as benchmark data set. It enables in-depth investigation of offshore wind deployment and
+operation at scale and supports the development, evaluation, and benchmarking of temporal methods for independent
+monitoring of this rapidly expanding critical infrastructure.
+Data Availability
+The dataset is publicly available on Zenodo at https://doi.org/10.5281/zenodo.5933966 [Hoeser et al., 2026].
+Abbreviations
+AIS Automatic Identification System
+AUC Area Under the Curve
+CFAR Constant False Alarm Rate
+CNN Convolutional Neural Network
+CSV Comma Separated Value
+DLR German Aerospace Center (Deutsches Zentrum für Luft- und Raumfahrt)
+EEZ Exclusive Economic Zone
+ESA European Space Agency
+EO Earth Observation
+FN False Negative
+FP False Positive
+GDAL Geospatial Data Abstraction Library
+GEE Google Earth Engine
+GRD Ground Range Detected
+GTI GDAL Tile Index
+HPC High Performance Computing
+HS Hywind Scotland
+IW Interferometric Wide
+NRT Near Real-Time
+NSB North Sea Basin
+OWT Offshore Wind Turbine
+SAR Synthetic Aperture Radar
+TP True Positive
+TS Time Series
+VH Vertical transmit, Horizontal receive
+YOLO You Only Look Once
+Author contributions
+TH and CK designed the study. TH labelled the ground truth data; developed and implemented the code for data
+processing, visualization, and evaluation; and prepared the original manuscript, including figures. CK and FB supervised
+the study, gave suggestions for figures, and repeatedly commented on and discussed the manuscript.
+Competing interests
+The contact author has declared that none of the authors has any competing interests.
+Acknowledgements
+The authors gratefully acknowledge the Copernicus program of the European Space Agency (ESA) for providing free
+access to Sentinel-1 data. We also thank DLR’s Terrabyte team for their dedicated efforts in platform operations, which
+enabled the deep learning experiments, synthetic training data generation, and large-scale inference.
+22

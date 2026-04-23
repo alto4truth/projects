@@ -1,0 +1,40 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 143
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Suject Source
+Biology Australian Science Olympiads (ASO)1
+Indian National Biology Olympiad (INBO)2
+Chemistry
+British Biology Olympiad (BBO)3
+International Chemistry Olympiad (ICHO)4
+Chemistry Race [26]
+EMMA [23]
+Mathematics
+International Mathematical Olympiad (IMO)5
+Chinese Mathematical Olympiad (CMO)6
+European Girls’ Mathematical Olympiad (EGMO)7
+OlympiadBench [24]
+Mv-MATH [58]
+Physics
+China Undergraduate Physics Tournament (CUPT)8
+Chinese Physics Olympiad (CPHO)9
+OlympiadBench [24]
+Physics-Big [53]
+Table 3: Source statistics of the constructed OMIBench dataset.
+Model
+Biology Chemistry Mathematics Physics Total
+ACC Score ACC Score ACC Score ACC Score ACC Score
+Qwen3-VL-2B-Instruct 27.44 19.92 12.33 5.07 11.53 6.99 12.50 8.75 14.99 9.69
+Qwen3-VL-2B-Thinking 24.86 9.56 10.46 1.38 22.25 15.81 10.75 6.84 17.12 9.38
+Qwen3-VL-4B-Instruct 43.03 36.65 17.05 11.06 27.91 23.72 18.40 13.92 25.95 20.95
+Qwen3-VL-4B-Thinking 43.58 36.65 18.94 11.52 50.80 44.65 20.41 20.75 34.45 30.03
+Qwen3-VL-8B-Instruct 46.61 43.43 16.13 17.05 27.44 29.30 20.05 18.63 26.85 26.55
+Qwen3-VL-8B-Thinking 52.39 52.59 15.96 17.05 49.90 49.30 21.97 30.66 35.84 38.65
+Qwen3-VL-30B-A3B-Instruct 48.51 48.61 13.29 12.90 31

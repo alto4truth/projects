@@ -1,0 +1,28 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 3
+section: svr-svr-ber-cber-svr-ber-scr-cber-cscr
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+logical predicate inversionsorarithmetic simulation collapseswhere mathematical expressions
+are miscalculated. we also observe aplanning
+horizon collapsewhere LLMs prematurely terminate the execution flow after navigating sub-tasks,
+leaving the final actions unimplemented.
+Semantic DriftThe most subtle failure mode
+is semantic drift, where the generated code is behaviorally functional but semantically non-aligned.
+This is primarily driven by two phenomena: (1)
+AST flattening biasin arithmetic and boolean contexts, where LLMs prematurely evaluate expressions into simplified results. (2)Autoregressive
+Echoing, where the model loses its position within
+deep nested sequences and redundantly duplicates
+entire logical blocks. These failures reveal that
+LLMs often prioritize simulative success over structural fidelity, acting as independent executors rather
+than faithful in-context grammar interpreters.
+7 Related Work
+7.1 Computational Expressivity and
+Grammar Interpretation
+While Transformers with polynomial-length CoT
+theoretically possess the expressivity to recognize CFGs (Merrill and Sabharwal, 2023), potentially via attention heads simulating dynamic programming (Allen-Zhu and Li, 2

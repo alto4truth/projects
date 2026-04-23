@@ -1,0 +1,78 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 55
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+−1
+.
+Any contiguous subsequence of length T or longer contains at least one complete cycle and
+therefore includes at least one point from every class.
+
+Convergent Evolution18
+0 20 40
+e(n)
+A=5, B=0.03, T=206250, best linear acc=100.0%
+N=1000 Points. Period T=10 e(n) = A(n mod T) + B n/T
+0.0 0.1 0.2 0.3 0.4 0.5
+frequency
+0
+25000
+50000
+75000
+100000
+125000F 2
+T=10
+0 1000 2000 3000
+e(n)
+A=5, B=31, T=206250, best linear acc=10.9%
+0.0 0.1 0.2 0.3 0.4 0.5
+frequency
+0
+25000
+50000
+75000
+100000
+125000F 2
+T=10
+mod 10
+0 1 2 3 4 5 6 7 8 9
+Figure 7: Emergence of Fourier structure in a constructed embedding e(n) =A(nmodT) +
+B⌊n/T⌋ with T= 10, A= 5, N= 1000. Each dot is a number n placed at its scalar
+embedding value on the horizontal axis and colored by its class nmodT ; since e(n) is onedimensional, the vertical coordinate carries no information and is jittered purely for visibility
+so that overlapping points of different classes remain distinguishable.Top ( B= 0.03):
+within-block drift is small relative to between-class spacing, so the sorted line separates into
+10 clean color bands: a linear classifier on e(n) recovers the mod-10 residue at near-perfect
+accuracy, and the DFT concentrates energy at the fundamental frequency ν= 1/T= 0.1.
+Bottom (B= 21): the between-block drift B dominates, interleaving classes along the line
+so that every mod-10 lane spans the full range; best linear accuracy collapses to ≈ 1/T+ε
+with ε= 0.9%. The Fourier spectrum keeps the same peak at ν= 0.1 (same ΦT), showing
+that periodic energy at the fundamental is a property of the construction itself, independent
+of whether class identity is linearly decodable.
+Classification bound.A T-class linear classifier assigns each instance x∈R to
+argmaxc∈{0,...,T−1} (wcx+b c) for parameters wc, bc ∈R . This is the hypothesis class of multiclass logistic regression. Note that this hypothesis class is expressive enough to perfectly classify T contiguous groups: when B is small, the T classes cluster near 0, A, 2A, . . ., (T−1)A,
+and setting wc =c with biases cascaded via b0 = 0, bc+1 =b c −(cA+A/ 2) places the
+T−1 decision boundaries between consecutive clusters, achieving 100% accuracy. Next we
+exploit the limitation that linear classifiers partition R into at most T contiguous intervals:
+any two of the T lines x7→w cx+b c intersect in at most one point, yielding at most T− 1
+breakpoints and hence at most T intervals, each assigned to a single class. Now consider
+any such interval. Each complete cycle (0, 1,. . ., T−1) contained in the interval contributes
+exactly one point from every class, so the assigned label matches exactly a 1/T fraction of
+those points. Only at interval boundaries can a partial cycle contribute additional correct
+predictions: at most one per boundary, for a total of at most T− 1 extra correct points across
+allT−1 boundaries. It follows that
+accuracy≤ N/T+T−1
+N = 1
+T + T−1
+KT .
+The choiceK=⌈(T−1)/(Tε)⌉guarantees(T−1)/(KT)≤ε, completing the proof.
+Figures 3 and 7 illustrates this construction for T= 5, N= 25, and for T= 10, N= 1000,
+where in both casesεachieves its minimum at T−1
+N , at 16% and 0.9% respectively.
+The token frequency distribution in Figure 2 provides an empirical counterexample: LSTM
+exhibits clear Fourier spikes at T= 2, 5, 10 yet achieves chance-level probing for all moduli,
+showing that the construction above captures a phenomenon that occurs in practice.

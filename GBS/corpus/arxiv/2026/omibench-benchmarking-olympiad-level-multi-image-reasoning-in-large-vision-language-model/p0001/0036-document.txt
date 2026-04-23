@@ -1,0 +1,23 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Each problem includes rigorous annotations, with an evaluation script provided for reproducible model
+assessment. OMIBench thus supports advances in AI scientific reasoning. To ensure reproducibility and curb
+carbon-intensive redundant computation, we will release the dataset and scripts publicly. All experiments
+adhere to relevant model and data licenses.
+Limitations
+OMIBench still has several limitations in evaluation. First, some questions require open-ended textual
+reasoning, such as multi-part solutions or responses containing multiple valid scientific statements, and
+therefore cannot yet be evaluated fully reliably using symbolic tools such as SymPy. These cases still
+require model-based or human review. Second, even by GPTScore evaluation, it may still under-credit
+creative solutions or partially correct answers in open-ended settings. A further limitation concerns dataset
+construction. Due to the complexity and resource requirements of building a multimodal scientific reasoning
+benchmark, although OMIBench covers multiple disciplines and problem formats, it does not yet cover the
+full range of multi-image Olympiad-style reasoning found in real educational and scientific set

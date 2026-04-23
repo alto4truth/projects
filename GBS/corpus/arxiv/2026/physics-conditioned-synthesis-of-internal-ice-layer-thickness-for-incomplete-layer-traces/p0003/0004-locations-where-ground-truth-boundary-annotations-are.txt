@@ -1,0 +1,32 @@
+title: Physics-Conditioned Synthesis of Internal Ice-Layer Thickness for Incomplete Layer Traces
+source: arxiv
+year: 2026
+document_id: physics-conditioned-synthesis-of-internal-ice-layer-thickness-for-incomplete-layer-traces
+authors: Zesheng Liu; Maryam Rahnemoonfar
+page: 3
+section: locations-where-ground-truth-boundary-annotations-are
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20783v1
+
+ecay10 −4, and batch size 8, using
+a mask-aware Huber loss that is computed only on observed
+thickness values. We use a two-stage learning rate schedule:
+linear warm-up from 0.1 of the base rate to the base rate
+over the first 25 epochs, follwed by cosine annealing for
+the remaining 275 epochs to a minimum learning rate of
+10−6. The final configuration was chosen through preliminary
+validation experiments informed by prior work and constrained
+by training stability and GPU memory.
+For downstream evaluation, we adopt the spatio-temporal
+graph neural network from Liu et al. [6] as the deep layer
+thickness predictor and follow their training settings for training from scratch on the 1644 fully traced radargrams. For the
+pretraining-finetuning workflow, we pretrain the same model
+on synthetic completions from our layer completion model
+using Liu et al.’s settings for 450 epoch, then fine-tune on
+the 1644 fully traced radargrams starting from the 100-epoch
+checkpoint for another 450 epochs with learning rate7×10 −4.
+During fine-tuning, we use the standard mean squared error
+(MSE) loss since all layers are fully traced.
+V. RESULTS
+Table I compares the graph transformer with and without
+M

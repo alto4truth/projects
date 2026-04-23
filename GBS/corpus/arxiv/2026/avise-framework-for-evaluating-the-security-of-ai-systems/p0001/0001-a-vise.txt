@@ -1,0 +1,31 @@
+title: AVISE: Framework for Evaluating the Security of AI Systems
+source: arxiv
+year: 2026
+document_id: avise-framework-for-evaluating-the-security-of-ai-systems
+authors: Mikko Lempinen; Joni Kemppainen; Niklas Raesalmi
+page: 1
+section: a-vise
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20833v1
+
+The AVISE framework, illustrated in Figure 1, can
+be used to evaluate the security of an AI system
+by running automated black-box and grey-box attacks or white-box assessments, or all of the above,
+on the system. In this section, we will demonstrate
+how the Red Queen SET developed in Section 4
+can be used to discover jailbreak vulnerabilities in
+language models. The experiments were ran on
+Ubuntu 24.04 using two NVIDIA Tesla P100 (16
+GB) Graphical Processing Units (GPUs) and 234.4
+GB of Random Access Memory (RAM).
+As targets, we chose recently released opensource instruction finetuned models [41, 45, 46, 47,
+48] of varying sizes. All of the target models were
+deployed using Ollama [49] with default configurations, excluding maximum tokens to generate,
+which was set to 768 for all models apart from the
+Qwen models. The maximum tokens to generate
+limit was set to avoid using unnecessary compute the Red Queen SET can determine whether a target model is vulnerable to the Red Queen attack
+from a relatively low amount of generated output
+tokens. The default configurations used for each
+model are detailed in Table 3, where:
+•T emperaturecontrols the randomness of
+responses. Lower values m

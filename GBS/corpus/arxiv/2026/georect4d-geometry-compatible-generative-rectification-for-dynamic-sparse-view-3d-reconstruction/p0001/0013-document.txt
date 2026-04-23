@@ -1,0 +1,25 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+mplified by
+temporal error accumulation in dynamic scenes.
+To stabilize optimization in this under-constrained regime, we learn a unified rendering framework that couples an explicit geometric substrateGwith
+a degradation-aware generative rectifierDin a closed loop (Fig. 2). The substrate is rendered by differentiable Gaussian splatting [26]. At each timestamp
+t, the scene is represented as a set of GaussiansG(t) ={g i(t)}with parameters(µ i(t),Σ i(t), αi(t),f i(t))(center, covariance, opacity, and view-dependent
+appearance), and rendering from viewpointξis
+ˆIrender(t, ξ) =R(G(t), ξ). (2)
+A key difficulty in sparse-view dynamics is that motion and geometry often
+become entangled early in training, which amplifies drift. We therefore instantiateGwith a stability-oriented disentangled parameterization: a static fieldGs
+and a dynamic fieldG d(t), i.e.,G(t) =G s ∪ G d(t). Following an anchor-based
+dynamic formulation [27], we parameterizeGd(t)using temporal control anchors
+at nodal timestampsT={t 0, . . . , tK}and synthesize intermediate states via
+differentiable interpolation
+Gd(t) =Φ(G d(tk),G d(tk+1), t), t∈[t k, tk+1]. (3)
+To make this formulation reliable under sparse supervision,

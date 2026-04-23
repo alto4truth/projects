@@ -1,0 +1,57 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+Llama-3.1-8B
+Llama-4-Scout-109B
+DeepSeek-V3-671B
+Transformer LLMs
+Mamba-2.8B
+Falcon-Mamba-7B
+xLSTM-7B
+Kimi-Linear-48B
+Non-Transformer LLMs
+0.0 0.1 0.2 0.3 0.4 0.5
+Fourier Frequency
+GloVe-Dolma
+FastText-WikiNews
+Word Embeddings
+Fourier Spectrum on Number Embeddings of Pretrained Models
+1 2 3 4
+Norm. Magnitude
+Transformer (Muon)
+Transformer (AdamW)
+Gated DeltaNet
+Mamba-2
+LSTM
+Word2Vec
+PPMI
+9-digit Addition
+3-digit Addition
+Token Distribution
+Transformer
+Linear RNNs
+Gated RNNs
+Autoregressive
+Language Models
+Word
+Embeddings
+Transformer
+Trained on Addition
+Learned
+Models
+Counting
+Only
+Both Spectral & Geometric Convergence Spectral Convergence Only
+Spectral & Partial Geometric Convergence Neither
+Figure 1:Universality of Fourier Features and Convergent Evolution. (Left) Fourier
+spectrum of number embeddings across three architecture families: Transformer LLMs,
+non-Transformer LLMs, and classical word embeddings. Each row shows the mediannormalized magnitude at each Fourier frequency. All models exhibit consistent spikes at
+frequencies of period T= 2, 5, 10, etc. (Right) Convergent Evolution of various models
+studied in this paper. It shows two types of convergence:spectral convergencewhe

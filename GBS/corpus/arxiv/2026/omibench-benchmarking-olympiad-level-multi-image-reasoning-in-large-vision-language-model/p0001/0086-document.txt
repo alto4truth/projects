@@ -1,0 +1,30 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 86
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+different sequencing.
+• 3 (Partial Alignment):The model captures the main conclusion and primary evidence but misses
+a subordinate step or uses slightly different reasoning to arrive at the same result.
+• 2 (Low Alignment):The model rationale arrives at the correct answer but uses significantly
+different logic or misses critical evidence present in the human reference.
+• 1 (No Alignment):The model rationale contradicts the human reference, uses fallacious logic, or
+fails to address the specific constraints mentioned in the human text.
+Output Format:
+Provide your response in the following JSON format:
+```json
+{
+"justification":
+"[Brief rationale]",
+"score": [Integer 1-5]
+}
+```
+Human AnalysesTo rigorously quantify the discrepancy between surface-level coherence and deep logical
+correctness in LVLMs, we conducted a fine-grained human evaluation. Similar to Appendix C.3, we randomly
+sampled 100 instances from the model outputs. Unlike coarse-grained scoring, our evaluation required
+28

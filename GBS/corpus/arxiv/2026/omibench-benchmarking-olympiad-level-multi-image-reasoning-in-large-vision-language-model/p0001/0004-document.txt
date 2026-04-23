@@ -1,0 +1,27 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Figure(2),andFigure(3).Lettheareasoftheshadedregionsinthesethreefiguresbe𝑆!,𝑆"and𝑆#,respectively.If𝑆!=𝑆"whatistherelationshipbetween𝑆!and𝑆#?A.𝑆!=1.5𝑆#;B.𝑆!=2𝑆#;C.𝑆!=3𝑆#;D.𝑆!=3.5𝑆#
+Rationale: As shown in Figure (2), draw a perpendicular line from point 𝐹to 𝐵𝐷, …Figure (3) …Therefore, the answer is: A.Answer:A
+Question:Asshowninthefigure,inrighttriangle∆𝐴𝐵𝐶,C𝐷isthealtitudeonthehypotenuse𝐴𝐵.Thetwotriangles∆𝐴𝐶𝐷and∆𝐵𝐶𝐷arearrangedinthefollowingthreewaysasshowninFigure(1),
+Figure (1) Figure (2) Figure (3) Rationale:Join𝐵𝑌.Since𝐵𝐶isadiameter,then∠𝐵𝑌𝐶=90°.Sincee𝐴𝐵=𝐵𝐶,∆𝐴𝐵𝐶isisoscelesand𝐵𝑌isanaltitudein∆𝐴𝐵𝐶,then𝐴𝑌=𝑌𝐶=15.Let…Therefore,XY=15.Answer:15
+Question:In∆𝐴𝐵𝐶,𝐴𝐵=𝐵𝐶=2and𝐴𝐶=30.Thecirclewithdiameter𝐵𝐶intersects𝐴𝐵at𝑋and𝐴𝐶at𝑌.Determinethelengthof𝑋𝑌.
+Figure 1
+Figure 2
+Figure 3
+Figure 4
+(a) Olympiad-level single image benchmark.(b) Multi-image Olympiad-level benchmark.
+Only Single Image!!
+Consider Multi-Image!!
+Figure 1
+Figure1: Comparison between existing single-image reasoning benchmarks (OlympiadBench) and our
+proposed Olympiad-level Multi-Image Reasoning Benchmark (OMIBench).
+Effective multi-image reasoning therefore requires not only interpreting each image, but also (1)maintaining
+a cohe

@@ -1,0 +1,18 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 24
+section: ground-truth
+chunk: 62
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+when (not (has ball)alt(has key_3 plus_and
+has key_4)) next [
+...
+]
+Case Study 2: Arithmetic Simulation Collapse
+This failure occurs when the model generates syntactically correct expressions but fails to accurately
+simulate the underlying mathematical or procedural
+state, leading to a divergence in the final environment state.

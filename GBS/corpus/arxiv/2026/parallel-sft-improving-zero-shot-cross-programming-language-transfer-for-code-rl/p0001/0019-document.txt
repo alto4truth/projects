@@ -1,0 +1,28 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+}
+N lang
+i
+j=1 is the set of verified code solutions in
+PL “lang”, with N lang
+i averaging to 181. This amplifies the parallel program signal: if a question is only seen once per
+language, it could easily be forgotten in the course of training.
+5.2 SFT Dataset Mixtures
+We construct a realistic general-purpose SFT dataset by utilizing the Tulu 3 SFT mixture (939k instances; Lambert et al.,
+2025). We only retain its natural language data on instruction following, safety, etc. To be clean, we remove its coding
+instances (N=142k) and replace them with an equal-sized sample from our synthetic dataset in §5.1.
+For this sampled subset (of N=142k), we compare three mixtures:
+1. 1 Language (source): This is the monolingual baseline where the SFT data contains code exclusively in the source
+language of downstream RL training. This represents the standard setting where one relies solely on the high-resource
+language available for both SFT and RL. We ensure that all 3,111 questions in our dataset are included, uniformly
+sampling solutions within each question.
+2. 8 Languages (parallel): This is our proposed method. We distribute the 142k instances equally across the 8 languages
+and all 3,111 q

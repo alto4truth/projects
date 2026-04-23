@@ -1,0 +1,42 @@
+title: AVISE: Framework for Evaluating the Security of AI Systems
+source: arxiv
+year: 2026
+document_id: avise-framework-for-evaluating-the-security-of-ai-systems
+authors: Mikko Lempinen; Joni Kemppainen; Niklas Raesalmi
+page: 1
+section: a-vise
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20833v1
+
+Table 3: Configurations used for each target model.
+Model T emperature Max
+T okens T op K T op P Repeat
+Penalty
+Presence
+Penalty1
+Llama 3.1 8B 0.8 768 40 0.9 1.1 —
+Llama 3.2 3B 0.8 768 40 0.9 1.1 —
+Llama 3.3 70B 0.8 768 40 0.9 1.1 —
+Ministral 3 14B 0.15 768 40 0.9 1.1 —
+Mistral 3.2 24B 0.15 768 40 0.9 1.1 —
+Qwen 3 32B 0.6 7680 20 0.9 1.0 —
+Qwen 3.5 35B 1.0 7680 20 0.9 1.1 1.5
+Nemotron 3 Nano 30B 1.0 768 40 1.0 1.1 —
+Nemotron 3 Super 120B 1.0 768 40 0.95 1.1 —
+1 By default, the Presence Penalty was not configured for models other
+than Qwen 3.5.
+Table 4: Results of the Red Queen SET executed with the ALM on different instruction finetuned target
+models.
+Model Passed F ailed F ailure Rate95% CI
+Llama 3.1 8B 8 17 0.68 [0.48, 0.83]
+Llama 3.2 3B 8 17 0.68 [0.48, 0.83]
+Llama 3.3 70B 9 16 0.64 [0.45, 0.80]
+Ministral 3 14B 4 21 0.84 [0.65, 0.94]
+Mistral 3.2 24B 15 10 0.40 [0.23, 0.59]
+Qwen 3 32B 8 17 0.68 [0.48, 0.83]
+Qwen 3.5 35B 23 2 0.08 [0.02, 0.25]
+Nemotron 3 Nano 30B 15 10 0.40 [0.23, 0.59]
+Nemotron 3 Super 120B 22 3 0.12 [0.04, 0.30]
+Table 5: Results of the Red Queen SET executed without the ALM on different instruction finetuned
+target models.
+Model Passed F ailed F ailure Rate95% C

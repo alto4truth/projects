@@ -1,0 +1,23 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 82
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+ting train/test split. We exclude instances that have
+custom checker functions as tests and those that do not use stdin-stdout tests. The resulting dataset has 6,617 training
+instances and 377 test instances. We train with batch size 16.
+Code validation.We use the CodeForces submissions dataset. We use C++ and Python as our source languages
+because they have the largest amount of data in this dataset. For these two PLs, we manually perform a train-test split.
+We use batch size 32 and notice that the performance plateaus early and only report performance for 200 steps. We
+train with all distinct samples for these 6,400 instances. For evaluation, we use the remaining instances for each PL.
+To prevent class imbalance from skewing the accuracy, we manually balance the correct and incorrect solutions via
+truncation, on a per-PL basis. The statistics of the final evaluation instances are: Python: 19996 samples, Go: 1502
+samples, PHP: 992 samples, Ruby: 1150 samples, Java: 75194 samples, C++: 19998 samples, Rust: 534 samples,
+Javascript: 2440 samples, C#: 8074 samples.
+For both settings, we use a learning rate of5×10 −7.
+18

@@ -1,0 +1,23 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+and
+perform more abstract reasoning (Wendler et al., 2024; Wu et al., 2025b). Parallel-SFT accentuates this trend: for
+example, its adjusted cosine similarities are similar to the baseline models on the two ends, but notably higher in the
+middle layers, where more PL-independent reasoning occurs.
+8 Discussion and Related Work
+Multilingual representation learning is a foundational problem in NLP, from traditional word embeddings (Mikolov
+et al., 2013; Al-Rfou’ et al., 2013; Ammar et al., 2016;i.a.) to later sequence models (Schwenk and Douze, 2017;
+España-Bonet et al., 2017; Eriguchi et al., 2018;i.a.). These models achieve remarkable zero-shot cross-lingual
+generalizability, both on early classification tasks such as entailment (Huang et al., 2019; Conneau and Lample, 2019;
+Conneau et al., 2020a; Hu et al., 2020;i.a.) and more recently on tasks in the LM post-training pipeline, such as SFT
+and reward modeling (Wu et al., 2024; Shaham et al., 2024; Chen et al., 2024; Shimabucoro et al., 2025;i.a.).
+This success is typically driven by two factors:structural isomorphismandexplicit alignment signals. Early approaches
+rely on the latter, providing explicit supervised signals such as bi

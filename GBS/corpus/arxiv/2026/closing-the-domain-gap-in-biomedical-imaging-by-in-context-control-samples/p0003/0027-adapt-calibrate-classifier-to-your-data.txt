@@ -1,0 +1,33 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+N (Ando et al., 2017) – 0.747 ± 0.013✓✗
+TENT (Wang et al., 2021) – 0.926 ± 0.014✓✗
+AdaBN (Li et al., 2016) – 0.928 ± 0.013✓✗
+Generative Style-ID (Chung et al., 2024) – 0.781 ± 0.015✓✗
+Meta-learning ARM-CML (Zhang et al., 2021) – 0.843 ± 0.074✓ ✓
+ARM-BN (Zhang et al., 2021) –0.935 ± 0.018✓ ✓
+CS-ARM-BN (ours) –0.930 ± 0.019✓ ✓
+vectors and cannot be used together with a model trained
+end-to-end directly from images.
+Deep learning and batch effects in microscopy imaging
+data.While Lin and Lu (2022) also proposed using negative
+controls to estimate BN statistics, their work is not framed
+as meta-learning, and they do not show the scenarios where
+control-based statistics are beneficial in comparison to using
+only perturbed samples. Palma et al. (2025); Lopez et al.
+(2018); Chung et al. (2024) presented generative models that
+could be used to address batch effects. Due to computational
+constrains, we use Chung et al. (2024) as representative for
+this class of methods.
+In-context learning for biological data.Recently, in the
+field of single cell transcriptomic data, Dong et al. (2026)
+introduces a foundation model that can perform in-context
+predictions from unlabeled cells. However, their

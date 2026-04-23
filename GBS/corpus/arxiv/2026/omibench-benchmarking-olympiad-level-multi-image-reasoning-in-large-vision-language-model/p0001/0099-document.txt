@@ -1,0 +1,40 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 99
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+C. Details of Accuracy and GPTScore
+C.1. Matching accuracy
+For each OMIBench inputxi with gold answeryi and the model produces predictionˆyi. Matching accuracy
+is computed at instance level:
+Acc= 1
+N
+N∑︁
+i=1
+1
+[︀
+match( ˆyi,y i)
+]︀
+,(5)
+whereNdenotes total evaluated instances across all tasks.
+Specifically, the matching functionmatch(·,·) applies consistent normalization across heterogeneous
+tasks:
+Text normalization.Both ˆyi and yi are lowercased, whitespace is trimmed and collapsed to single spaces,
+and common punctuation (periods, commas, question marks, trailing colons/semicolons) is stripped from
+English segments when not part of alphanumeric tokens.
+Textual or equation answers. Matches are determined by longest common subsequence (LCS) ratio:
+match( ˆyi,y i) =
+{︃ Len(LCS( ˆyi,yi))
+max(Len( ˆyi),Len(y i)) if ratio≥α
+0otherwise
+,(6)
+whereLCS(·,·) denotes the longest common subsequence, andLen(·) represents the length of given sequence.
+In our experiments we setα=75%.
+Numeric answers.For numeric references, we parse both ˆyi and yi into floating-point numbers after
+removing units and non-numeric suffixes. The match accuracy is calculated as:
+match( ˆyi,y i) =1⇔ | ˆvi −v i| ≤ϵ,(7

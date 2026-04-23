@@ -1,0 +1,18 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+n to dynamic scenarios remains significantly more
+challenging due to motion-induced ambiguity and temporal error accumulation.
+Existing sparse dynamic 3DGS methods [20,51] still struggle to maintain geometric stability under extremely limited supervision.
+More recently, generative priors have been introduced to hallucinate missing content under sparse views. Several works leverage 2D generative models or
+diffusion-based refinement to enhance degraded renderings or augment pseudosupervision [34,62,64]. However, most of these approaches are demonstrated on
+static scenes. In dynamic settings, naive integration of generative feedback often
+introduces new instabilities, as shown in Fig. 1. This failure stems from two fundamental barriers: significant geometric collapse within under-constrained representations hindering plausible hallucination, and the inherent mismatch between
+stochastic 2D generative refinement and the deterministic 3D geometric manifold. This conflict typically induces severe structural drift and spatiotemporal

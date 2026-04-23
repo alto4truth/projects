@@ -1,0 +1,32 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+lem Setup and Preliminary Analysis
+We study the token embeddings of numbers 0 through N− 1 in language models, where
+N= 1000 corresponds to the set of numbers that receive single-token representations in the
+Llama-3 tokenizer (Meta, 2024). Let e(n)∈R d denote the token embedding of number n.
+To detect periodic structure in these embeddings, following Zhou et al. (2024), we compute
+the discrete Fourier transform along the token index:
+Fν = 1√
+N
+N−1
+∑
+n=0
+e(n)e −2πiνn ∈C d,ν= k
+N ,k=0, . . . ,N−1.
+The power at frequency ν is ∥Fν∥2 = ∑d
+j=1 |F (j)
+ν |2. AFourier spike at period T refers to a visible
+peak in ∥F1/T ∥2 relative to neighboring frequencies. For a period T dividing N, define
+the mod-T residue classes Cr ={n:n≡r(modT)} for r= 0, . . ., T− 1, each of size
+|Cr|=N/T . To evaluate whether the embeddings encode modular arithmetic at period T,
+we train alinear probe(T-class logistic regression) to predictnmodTfrome(n).
+A natural question is whether the presence of a Fourier spike at period T guarantees good
+mod-T probing accuracy. As we will show in Figure 2, the answer is strikingly no: an

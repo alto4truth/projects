@@ -1,0 +1,26 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 3
+section: svr-svr-ber-cber-svr-ber-scr-cber-cscr
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+the expressivity to recognize CFGs (Merrill and Sabharwal, 2023), potentially via attention heads simulating dynamic programming (Allen-Zhu and Li, 2023) or MLP neurons tracking states (Zhang et al., 2025), a significant gap exists in practice. LLMs often struggle
+with deep recursion (Schulz et al., 2025) and revert to shallow heuristics over compositional parsing (Petty et al., 2025), failing at explicit metalinguistic deduction from formal specifications (Liu
+et al., 2025). These limitations suggest a reliance
+on statistical pattern matching rather than abstract
+rule internalization. We extend these insights by
+using a 3-layered evaluation and Alien lexicons to
+isolate pure symbolic induction from lexical priors.
+7.2 Formal Constraint Enforcement
+To bridge the gap between probabilistic generation and rigid machine interfaces, researchers have
+developed enforcement frameworks that ensure
+syntactic validity. Grammar-Constrained Decoding (GCD) engines, such as XGrammar (Dong
+et al., 2025), SynCode (Ugare et al., 2024), and
+TreeCoder (Princis et al., 2025), use pushdown
+automata to mask output distributions, while
+Grammar-Aligned Decoding (Park et al., 2024)
+aims to guarantee EBNF a

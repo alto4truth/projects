@@ -1,0 +1,37 @@
+title: Stream-CQSA: Avoiding Out-of-Memory in Attention Computation via Flexible Workload Scheduling
+source: arxiv
+year: 2026
+document_id: stream-cqsa-avoiding-out-of-memory-in-attention-computation-via-flexible-workload-scheduling
+authors: Yiming Bian; Joshua M. Akey
+page: 1
+section: document
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20819v1
+
+i dNumi dPi =dNum iV ⊤
+i +dDen i1⊤
+dRi =dP i ⊙P i dQi =αdR iKi dKi =αdR ⊤
+i Qi
+(5)
+Finally,dQ i,dK i,dV i are merged back to full-sequence coordinates, same as in the forward pass.
+dQ=
+X
+i
+scatter(dQi)dK=
+X
+i
+scatter(dKi)dV=
+X
+i
+scatter(dVi)(6)
+The backward pass is formally stated in Algorithm 2 and an illustration is given in Figure 7 for c= 7
+andI= (0,1,3). A full derivation via the chain rule is provided in Appendix D.
+2.3 CQS masking
+Subsequences constructed by CQS Divide exhibit structured overlap. While this overlap is essential
+to ensure full coverage of all-token interactions, it introduces redundancy: since each chunk appears
+in l subsequences, interactions within the corresponding chunk-pair regions are computed l times.
+Directly aggregating these results would lead to incorrect computation results. To ensure correctness,
+each subsequence must be assigned a pre-defined responsibility over the whole attention matrix.
+Redundant contributions must be masked out and this necessitates the CQS mask. Importantly,
+overlap occurs only along the main diagonal at the chunk level, or intra-chunk interactions, rather
+than at the token level. The masking rule is simple: subsequence i

@@ -1,0 +1,24 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+Parallel-SFT: Improving Zero-Shot
+Cross-Programming-Language Transfer for Code RL
+Zhaofeng Wuê,ã,Shiqi Wang ê,Emma Peng ê,Anuj Goyal ê,Melanie Kambadur ê,Sebastian Ruder ê,Y oon
+Kimã,Chloe Bi ê
+êMeta Superintelligence Labs, ãMIT
+∗Work done at Meta
+Modern language models demonstrate impressive coding capabilities in common programming languages
+(PLs), such as C++ and Python, but their performance in lower-resource PLs is often limited by training data
+availability. In principle, however, most programming skills are universal across PLs, so the capability acquired
+in one PL should transfer to others. In this work, we propose the task of zero-shot cross-programming-language
+transfer for code RL. We find that, for Llama-3.1, RL training for code generation in a source PL fails to
+improve, and sometimes even degrades, the performance on other target PLs. To address this, we hypothesize
+that effective RL transfer requires a generalizable SFT initialization before RL. We thus proposeParallelSFT, an SFT strategy that incorporates “parallel programs”—functionally equivalent code implemented in
+multiple PLs—into the data mixture. We demonstrate that this improves transferability: when we sub

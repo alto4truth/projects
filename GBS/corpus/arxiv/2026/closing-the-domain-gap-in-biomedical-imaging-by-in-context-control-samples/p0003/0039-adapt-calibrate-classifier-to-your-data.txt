@@ -1,0 +1,31 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+of samples to compute the BN statistics, and
+it can be seen that CS-ARM-BN still presents the highest
+performance.
+BN-adaptation degrades under label shift.As label shift
+increases, AdaBN, TENT and ARM-BN lose accuracy because their estimated BN statistics entangle (i) batch-specific
+nuisance variation with (ii) class-mixture-specific feature
+shifts. In other words, the adaptation signal becomes confounded by the changing MoA composition.
+Controls stabilize adaptation under label shift.CS-ARMBN addresses this confounding by computing the adaptation
+statistics fromnegative controls, which are independent of
+the MoA mixture by design. Consequently, the adaptation
+remains anchored to a consistent reference distribution per
+batch, and performance becomes substantially more stable
+across label-shift degrees. In Appendix Section D.1, we
+show that CS-ARM-BN stabilizes the performance under
+small batch sizes.
+5.4. Realistic scenario 2: new imaging source with label
+shifts
+As in the previous experiment, the evaluation samples in
+this scenario exhibit a class distribution that differs from
+the training data. However, in this case, the domain shift
+9

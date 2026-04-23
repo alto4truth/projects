@@ -1,0 +1,30 @@
+title: Efficient Multi-Cohort Inference for Long-Term Effects and Lifetime Value in A/B Testing with User Learning
+source: arxiv
+year: 2026
+document_id: efficient-multi-cohort-inference-for-long-term-effects-and-lifetime-value-in-a-b-testing-with-user-learning
+authors: Dario Simionato; Andrea Tonon; Mingxue Wang; Weiguo Wang; Tong Gui; Xiaoyue Li
+page: 2
+section: document
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20777v1
+
+(2)
+This definition shifts the focus from a single point in time (the steady
+state after user learning) to the area under the curve of the treatment
+effect, aligning with traditional lifetime value frameworks [2, 15]
+which prioritize the total value generated over a lifecycle rather
+than isolated asymptotic behaviors [ 1]. Lastly, this formulation
+naturally captures cases where a treatment might boost 𝑚𝑢 in the
+short term but decrease 𝑆𝑢 in the long term, resulting in a possibly
+negativeΔ𝐸𝑅𝐿𝑉despite a potentially neutral or positive LTE.
+3 Methods
+3.1 A unified formulation for LTE andΔ𝐸𝑅𝐿𝑉
+The core of our unified framework is the observation that both
+𝐿𝑇 𝐸 and Δ𝐸𝑅𝐿𝑉 can be derived from the same staggered-cohort
+data by varying the handling of missing values. As established in
+Section 2, the 𝐿𝑇 𝐸 measures the steady-state behavioral change per
+active user, while Δ𝐸𝑅𝐿𝑉 measures the cumulative business impact
+accounting for user participation [1, 2, 15, 18]. Mathematically, we
+can express the two objectives as follows:
+• The Long Term Effect ( 𝐿𝑇 𝐸) is the asymptotic difference
+between treatment and control when considering only available (non-missing) observations (𝑆𝑢 = 1). This meas

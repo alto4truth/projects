@@ -1,0 +1,26 @@
+title: Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+source: arxiv
+year: 2026
+document_id: global-offshore-wind-infrastructure-deployment-and-operational-dynamics-from-dense-sentinel-1-time-series
+authors: Thorsten Hoeser; Felix Bachofer; Claudia Kuenzer
+page: 2
+section: abstract
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20822v1
+
+l axis
+of each 2D image. These profiles capture characteristic SAR signatures whose spatial patterns vary depending on the
+infrastructure state. The resulting time series consist of one 1D backscatter profile per Sentinel-1 acquisition per turbine
+location.
+Data acquisition was performed on GEE, while client-side postprocessing was used to compile the final analysis ready
+time series dataset, see figure 6. GEE’s strongly uses parallelizable map-reduce operations, where in our case, the
+applied operation consists of a column-wise maximum reduction to derive 1D profiles from 2D Sentinel-1 imagery
+crops.
+Three main challenges had to be addressed:
+1. Defining a spatial feature representation compatible with GEE’s region-based reduction.
+2. Designing a scalable and efficient batch processing pipeline which matches GEE’s image collection filtering.
+3. Implementing a data model compliant with GEE constraints while minimizing export size and data egress
+costs.
+A naïve approach would query an image, crop the region of interest, and apply a column-wise reduction to obtain a 1D
+profile. However, GEE’s region reduction assigns a single aggregated value per geometry, which would reduce each
+det

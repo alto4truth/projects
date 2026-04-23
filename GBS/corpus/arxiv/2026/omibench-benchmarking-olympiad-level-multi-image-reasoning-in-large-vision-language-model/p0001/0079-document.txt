@@ -1,0 +1,29 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 79
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+ni [45], GPT-5 [44], and Gemini-3 [22]. To
+ensure fair comparison, we standardize input prompts across models, adapting only the minimal syntax or
+special tokens required by each interface. The prompt specifies the task description, any associated images,
+and the required output format. An example prompt template is shown below:
+Chain-of-Thought Prompting-P1
+Please reason step by step, and then provide the final answer in the exact format: “\boxed{ANSWER}”.
+[Question]
+problem_text0 [IMAGE0] problem_text1 [IMAGE1] ... problem_textn
+[Choices] # only for multiple choices problems
+A. option_A
+B. option_B ...
+Let’s think step-by-step!
+B.2. Rationale Quality Evaluation
+Model AnalysesWe leverage the advanced reasoning capabilities of GPT-4o to assess the quality of
+generated rationales. Specifically, we employ two distinct sets of prompts to evaluate the intrinsic quality of
+the rationales and their alignment with human annotations, respectively. To assess the intrinsic quality of
+the rationales, we utilize a 5-point Likert scale, prompting the model to quantify the coherence and logical
+validity of the reasoning process. The specific prompts are detailed below:
+25

@@ -1,0 +1,27 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 110
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+= 1
+|Bk|
+∑︁
+x∈B k
+match{ ˆy(x),y(x)},(10)
+where y(x) is the ground-truth answer for instancex, ˆy(x) is the model prediction, andmatch{·,·} is the
+match function as mentioned in Appendix C.1. Figure 3 (b) reports the mean accuracy for each bin.
+E.3. Ablation: Restricting Instances to a Limited Input Image
+To verify that OMIBench necessitates multi-image integration rather than being solvable via limited input
+image cues, we constructed an ablation dataset wherein visual context was systematically restricted. For
+every instance containingK>1 images, we retained the original question and ground truth but supplied
+only the primary image (the first in the canonical sequence). This approach isolates the impact of visual
+context reduction while maintaining the distributional properties of the query set.
+We evaluated model performance across two conditions: (1) the standard multi-image setting, where
+models access the full visual complement (k=K images); and (2) the partial-image ablation, where input is
+strictly limited tok<K images per instance. As illustrated in Figure 3 (c), limiting visual input precipitates
+a marked decline in performance. Across all evaluated LVLMs, the mean accur

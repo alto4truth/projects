@@ -1,0 +1,28 @@
+title: LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model
+source: arxiv
+year: 2026
+document_id: llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffusion-large-language-model
+authors: Inclusion AI; Tiwei Bie; Haoxing Chen; Tieyuan Chen; Zhenglin Cheng; Long Cui; Kai Gan; Zhicheng Huang; Zhenzhong Lan; Haoquan Li; Jianguo Li; Tao Lin; Qi Qin; Hongjun Wang; Xiaomei Wang; Haoyuan Wu; Yi Xin; Junbo Zhao
+page: 2
+section: 5
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20796v1
+
+.57 3.68 4.63 4.00
+Step1X-Edit 3.88 3.14 1.76 3.40 2.41 3.16 4.63 2.64 2.52 3.06
+Qwen-Image-Edit 4.32 4.36 4.04 4.64 4.52 4.37 4.84 3.39 4.71 4.35
+Z-Image-Edit 4.40 4.14 4.30 4.57 4.13 4.14 4.85 3.63 4.50 4.30
+Unified
+BAGEL 3.56 3.31 1.70 3.30 2.62 3.24 4.49 2.38 4.17 3.20
+OmniGen2 3.57 3.06 1.77 3.74 3.20 3.57 4.81 2.52 4.68 3.44
+InternVL-U 4.13 3.40 2.27 4.13 3.39 3.84 4.77 3.03 4.05 3.67
+Lumina-DiMOO 3.41 2.38 1.90 3.26 2.21 2.11 4.19 2.26 3.17 2.77
+LLaDA2.0-Uni 3.76 4.16 2.40 4.04 3.82 4.07 4.60 3.97 4.42 3.92
+falls short of leading models in generating dense text, indicating an area for future improvement.
+UniGenBench.LLaDA2.0-Uni sets a new standard for unified models on UniGenBench (EN), achieving
+a top overall score of 79.63 (Table 6). It performs consistently well across all ten dimensions, showing a
+clear advantage in Logic (63.99) and Layout (90.30), where it even surpasses many specialized generation
+models. These results demonstrate that LLaDA2.0-Uni effectively closes the performance gap between
+general-purpose unified models and top-tier specialized models.
+5.2.3 Text-Centric Image Generation Performance
+CVTG-2k.The CVTG-2K benchmark evaluates the capability of the m

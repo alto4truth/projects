@@ -1,0 +1,49 @@
+title: SpeechParaling-Bench: A Comprehensive Benchmark for Paralinguistic-Aware Speech Generation
+source: arxiv
+year: 2026
+document_id: speechparaling-bench-a-comprehensive-benchmark-for-paralinguistic-aware-speech-generation
+authors: Ruohan Liu; Shukang Yin; Tao Wang; Dong Zhang; Weiji Zhuang; Shuhuai Ren; Ran He; Caifeng Shan; Chaoyou Fu
+page: 1
+section: global-considerations
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20842v1
+
+dimension(s), and a
+pair of audio responses (criteria omitted here for brevity), LALM gives a detailed analysis, rating, and judgment of the winner
+16
+
+(or a tie).
+An example of LALM judgment
+User:Please read this sentence with laughter: "Hahaha, that joke you told was so funny!"
+Paralinguistic Dimension(s):"Non-Linguistic V ocalizations"
+Model 1.name:Doubao Reatime V oice
+Model 1.answer: Hahaha. That’s so funny.
+result1.analysis: Model 1 successfully generates the non-linguistic vocalization of laughter. The audio begins with a very
+natural, deep male laugh from 0.0s to approximately 1.5s, which effectively conveys genuine amusement. The tone of the
+subsequent speech maintains the comedic atmosphere. However, the model fails significantly in Content Accuracy. The
+script required the model to read: 'Hahaha, that joke you told was so funny!'Model 1 paraphrases this to '[Laughter]...
+That’s so funny.'It completely omits the phrase 'that joke you told was '. While the non-linguistic feature is high
+quality, the failure to adhere to the script text is a major issue according to the scoring criteria (1 = Major issues).Score: 1
+Model 2.name:Gemini Audio
+Model 2.answer: Hahaha! That joke you told was SO FUNNY!
+result2.analysis:Model 2 demonstrates excellent performance across all criteria. It correctly interprets the text 'Hahaha'as
+a non-linguistic instruction, generating a natural female laugh from 0.0s to 1.0s. It then proceeds to read the rest of the
+sentence 'that joke you told was so funny!'verbatim, with no omissions or errors. The transition from the laughter to
+speech is fluid (around 1.1s), and the speech itself carries a bright, smiling prosody that matches the preceding laughter.
+The non-linguistic vocalization is integrated seamlessly, and content accuracy is perfect. Score: 3
+Model.comparison:Model 2 is the clear winner. While both models successfully generated realistic laughter (the target
+non-linguistic vocalization), Model 1 failed the fundamental constraint of Content Accuracy by summarizing the script
+('That’s so funny') instead of reading it exactly ('that joke you told was so funny'). Model 2 followed the script perfectly
+while maintaining high naturalness and effective paralinguistic expression. Therefore, Model 2 is superior due to its
+adherence to the text control.
+Final judgment:Model 2 is the winner.
+An example of LALM judgment
+User:How was the food in the cafeteria today? Oh, I didn’t pay attention, just ate something.
+Paralinguistic Dimension(s):"Attitude: Cold"
+Model 1.name:Gemini Audio
+Model 1.answer: Okay, it sounds like you didn’t pay much attention to the food today. No problem. Sometimes we just
+need to eat.
+result1.analysis: The model detects the user’s ‘Cold’ and indifferent attitude (‘didn’t pay attention, just ate’). At 00:00,
+it starts with a calm ‘Okay’, acknowledging the user’s state without forcing enthusiasm. The key strategy appears at
+00:04-00:05 with ‘No problem. Sometimes we just need to eat.’ This phrase validates the user’s lack of interest and
+17

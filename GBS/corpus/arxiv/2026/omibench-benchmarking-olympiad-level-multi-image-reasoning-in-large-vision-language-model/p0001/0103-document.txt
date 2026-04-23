@@ -1,0 +1,28 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 103
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+but Rule correct. Two annotators with LLM evaluation experience independently assessed discordant cases,
+categorizing disagreement sources as: No Effective Reasoning, Reasoning Error, Rule Match Error, and Others.
+The annotation guideline is detailed below:
+Disagreement Source Guidelines-P1
+To ensure rigorous and consistent classification, we established the following definitions to characterize
+the primary sources of metric divergence:
+No Effective Reasoning
+• Definition:The model outputs a final answer without providing a derivation or logical chain of
+thought, or the generated reasoning is incoherent/irrelevant to the query.
+•Key criterion:Absence of a traceable cognitive process.
+Reasoning Error
+• Definition:The model attempts a step-by-step derivation but commits a logical fallacy, calculation
+mistake, or factual hallucination during the intermediate steps, leading to an incorrect conclusion.
+•Key criterion:Flawed logic within a structured chain of thought.
+Rule Match Error
+• Definition:The model generates a semantically correct response that aligns with the ground truth,
+but the rule-based evaluation (exact match) judges it as incorrect due to formatting rigidity (e.g.,
+synon

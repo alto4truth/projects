@@ -1,0 +1,27 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+GeoRect4D for Dynamic Sparse-View 3D Reconstruction 13
+T able 3:Ablation study of the Degradation-Aware Generative Prior.Struct.:
+Structure-Preserving Module;STCAttn: Spatio-Temporal Coordinated Attention;
+DA Adapter: Degradation-Aware Adapter.
+Components Fidelity Quality Consistency
+Struct. STCAttn DA Adapter PSNR↑SSIM↑MUSIQ↑MANIQA↑tOF↓tLPIPS↓
+✓ ✓×21.04 0.721 53.57 0.2444 1.535 5.23
+× ×✓21.98 0.723 43.21 0.1938 1.618 4.71
+✓×✓ 22.31 0.738 63.63 0.2943 1.462 5.55
+✓ ✓ ✓ 22.60 0.744 62.71 0.2987 1.412 4.21
+Fig. 5:Qualitative results of GeoRect4D and its variants on the MPEG dataset. Excluding any module leads to severe blurring and structural artifacts.
+increasing the tOF error from1.412to1.462. Consistent with these numerical
+declines, Fig. 5 illustrates the corresponding visual degradation. Without the
+degradation-aware adapter, the model fails to rectify specific artifacts, yielding
+noticeably blurry textures. More critically, removing the structure-preserving
+module detaches the synthesis from the underlying 3D geometry, causing severe structural drift and visible anatomical distortions on the player. Finally,
+omitting temporal attention leads to pronounced temporal jitter, highli

@@ -1,0 +1,31 @@
+title: AVISE: Framework for Evaluating the Security of AI Systems
+source: arxiv
+year: 2026
+document_id: avise-framework-for-evaluating-the-security-of-ai-systems
+authors: Mikko Lempinen; Joni Kemppainen; Niklas Raesalmi
+page: 1
+section: a-vise
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20833v1
+
+kens set to 768, Qwen 3.5 was not able to finish
+its reasoning process before reaching the maximum
+token limit.
+We ran the Red Queen SET on each of the target models with, and without, using the ALM to
+augment the testing prompts. The evaluated target models and their respective test results for Red
+Queen SET with the ALM are presented in Table 4.
+The results for Red Queen SET without the ALM
+are presented in Table 5.
+Tables 4 and 5 include the number of passed and
+failed SET cases for each target model, as well as
+statistics about the executed SET. The failure rate
+is the rate of cases in which the target model generated a response containing harmful or illegal instructions, calculated as the number of failed cases
+divided by the total number of cases evaluated. It
+is equivalent to the Attack Success Rate (ASR)
+commonly used in adversarial testing of language
+models, where a successful attack is defined as one
+that elicits such harmful or illegal content from the
+model. The 95% binomial proportion confidence
+interval (95% CI), a statistical range of likely values for the true ratio, is calculated using the Wilson
+score [50] [51]. The formula for the CI is detailed in
+equations (1)

@@ -1,0 +1,40 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 1
+section: coral-arm-bn
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+0.70
+0.75
+0.80
+0.85
+0.90
+0.95
+1.00MoA Classification Accuracy
+domain gap
+= 0.077
+0.939
+0.862
+0.747
+0.893
+0.935
+in-domain new domain
+Figure 1.Performance of MoA classifier on JUMP-CP data. Error
+bars represent variance across five cross-validation folds.Green
+bar:within the training domain, the performance of the classifier is high.Orange bars:The performance of the classifier on
+images from new experimental batches ("new domain"). Even
+foundation models with normalization (FM+TVN) suffer performance declines, and domain adaptation methods like CORAL only
+slightly counter the domain shift. Only the meta-learning method
+ARM-BN closes the domain gap. Details in Tab. 1
+1. Introduction
+Batch effects severely degrade model generalization for
+biomedical datasets.The growing scale of publicly available biomedical imaging datasets offer an unprecedented opportunity for deep learning models to predict clinically and
+biologically meaningful properties, such as disease states,
+treatment responses, and drug effects (Chandrasekaran et al.,
+2023; Zhang et al., 2025; Peidli et al., 2023). However, a key
+challenge arises because biological data has to be acquired
+inexperimental batches, which are g

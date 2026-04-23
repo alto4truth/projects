@@ -1,0 +1,35 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 87
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+41%
+Logical Reasoning Fallacies
+Visual
+Perception Failures
+Cross
+Image Association Failures
+Instruction
+Comprehension Biases
+Other
+13%
+29%
+8%
+9%
+Figure7: Distribution of different reasoning error types labeled by human.
+Rationale:…In'dear-enemy'experiment...aggressionimmediatelyjumpsup...consistentwithTRUE...
+StandardRationale:Let'sanalyzeeachstatementbasedontheinformationintheimagesand…StandardAnswer(Gold):…FALSE.
+ModelPrediction(o4-mini):…TRUE.ClaimsfishCANrecognizethemselveswithoutamirror.
+Input:
+…withotherfishandimagesofthemselveswithandwithoutmirrors.
+Fig 1: Experiment setupFirst,thescientistscarriedouta"dearenemyexperiment"toseewhetheracleanerfishhabituatedtoaneighbour….Thepicturesweremadeupoftwohalves(headandbody)andeachhalfcouldeither…
+Thecleanerfish,Labroidesdimidiatus,usesvisualcuesto
+Fig 2: Habituation Trend
+Fig 3: Mirror Test Results
+…Finally,theylookedattwosetsoffish,thosewhohadamirrorintheirtankandthosewhodidnot…MarkthefollowingasTRUEorFALSE…b)Cleanerfishknowwhattheylooklikewithoutamirror…
+ErrorAnalysis:Themodelcorrectlyunderstoodthe"habituation"inFig2,butfailedtocross-referencethelegendsinFig3.Itconfusedthe"No-Mirror"(Control)barswiththe"Mirror"(Experimental)bars,lea

@@ -1,0 +1,27 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 1
+section: surface
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+bolic reasoning from
+semantic priors.
+Through systematic experiments, we find that
+LLMs exhibit a consistent hierarchical degradation
+in grammar interpretation, where syntactic validity
+does not guarantee behavioral or semantic correctness under complex constraints. Specifically, even
+the strongest LLMs struggle with structural alignment, showing a significant gap between surface
+parsing and logical execution. Furthermore, our ablations reveal that performance is highly sensitive
+to recursion depth and lexical familiarity. Sharp
+non-linear decay occurs as depth increases, consistent with findings on the limitations of LLMs in
+maintaining deep reasoning chains (Rodkin et al.,
+2025). The sharp decline in performance when using Alien tokens further indicates that LLMs struggle with pure symbolic induction once stripped of
+familiar lexical priors.
+In summary, our contributions are as follows:
+• We develop ROBOGRID, a diagnostic benchmark that utilizes a three-layer evaluation hierarchy (Syntax, Behavior, Semantics) to localize failures in structural reasoning.
+• We formalize the task ofin-context grammar
+interpretationfor LLMs, shifting the evaluation focus from surface pattern matchin

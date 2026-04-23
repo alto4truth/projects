@@ -1,0 +1,22 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 66
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Rationale Filtering:After generation, we automatically filter candidates, retaining only those whose final
+answermatchestheknowncorrectanswerundertheofficialevaluationprotocol. Ifatleastonesuchcandidate
+exists, all matching candidates are kept as potential rationales. If none of the16 candidates is correct, we
+append the corresponding reference solution sketch or official final answer to the prompt as “Reference
+Solution: [Insert reference solution here] ” to trigger generation of a correct rationale. To avoid
+trivial rationales that merely restate the answer, we apply simple automatic heuristics to discard degenerate
+candidates, such as explanations shorter than 50 tokens or responses that only paraphrase the question or
+the reference answer without intermediate steps.
+Overall, this LLM-assisted stage reduces human annotation effort by about60% relative to fully manual
+authoring, while still providing a rich pool of candidate rationales for each problem.
+A.3.2. Human Verification and Refinement
+Based on the filtered candidate rationales, experienced annotators are required to verify and refine all LLMgenerated rationales. Annotators are graduate-level students or domain experts wi

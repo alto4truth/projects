@@ -1,0 +1,52 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+polarity amplification in formal explanatory texts but produces more
+architecture-specific shifts in already supportive patient–physician dialogue.
+29
+
+Takeaway 3☞Empathy-enhanced prompting (Empathy Prompt) systematically
+improves readability and modulates affective tone across both datasets. It reduces
+extreme negativity and increases affiliative cues — particularlycaring— while lowering linguistic complexity relative to baseline generations. Readability gains are
+especially pronounced for larger architectures such asGPT5, whereas sentiment shifts
+are more dataset-dependent: polarity correction is consistent in institutional texts
+(MedQuAD) but more variable in conversational dialogue (iCliniqQAs). Overall,
+Empathy Prompt acts as a controllable alignment mechanism, steering emotional tone
+toward clinical norms while improving accessibility without compromising semantic
+fidelity.
+4.6 RQ4 – Human–AI Collaboration
+This research question evaluates LLMs not only as content generators, but also as editors capable of revising expert-authored medical texts to improve clarity and emotional
+resonance.
+Hypothesis 4LetR LLM Rephrase denote the physician-authored response rewritten by an
+LLM using the Rephrase prompt, andR Phys the original physician response. We hypothesize
+that collaborative rewriting will produce responses that are (i)more readableand (ii)more
+affectively supportivethan the original physician-authored text, i.e.,
+(i)E[Read(R LLM Rephrase)]<E[Read(R Phys)]and
+(ii)E[E(R LLM Rephrase)]>E[E(R Phys)].
+Rewriting systematically shifts emotional polarity toward more supportive and less
+confrontational phrasing across both datasets.
+In MedQuAD (Table 1), rephrase variants markedly reduceVery Negativesentiment while increasingNeutralresponses.MedPaLM Rephraseachieves the strongest
+moderation effect (Very Negative= 19.61%,Neutral= 72.55%), followed closely
+byMixtral Rephrase(Very Negative= 21.57%,Neutral= 70.59%).GPT5 Rephrase
+reducesVery Negativesentiment from 40.00% to 22.00% while increasing neutrality
+to 68.00%. AlthoughClaude Rephraseremains more polarity-heavy than other models (Very Negative= 56.00%), it still substantially moderates its baseline behavior
+relative toClaude Base(82.00%).
+A different but structurally consistent pattern emerges in iCliniqQAs (Table 2).
+Here, physician responses already exhibit strong neutrality (Neutral= 84.00%,Very
+Negative= 6.00%), reflecting the conversational nature of the dataset. In this context,
+rewriting primarily compresses extreme negativity and increases neutral dominance
+rather than correcting polarity amplification.Mixtral RephraseachievesVery Negative
+= 0.00% andNeutral= 90.00%, whileMedPaLM RephraseyieldsVery Negative=
+2.00% andNeutral= 90.00%.GPT5 RephrasereducesVery Negativefrom 28.00% to
+0.00% and increasesNeutralto 88.00%.Claude Rephrasesimilarly eliminates extreme
+negativity (Very Negative= 0.00%) and raisesNeutralto 92.00%.
+Emotional tone analysis (Figures 12 and 13) further supports these trends. In
+MedQuAD, rewriting substantially increasescaringrelative to physicians (7.80%),
+30

@@ -1,0 +1,25 @@
+title: Relative Entropy Estimation in Function Space: Theory and Applications to Trajectory Inference
+source: arxiv
+year: 2026
+document_id: relative-entropy-estimation-in-function-space-theory-and-applications-to-trajectory-inference
+authors: Chao Wang; Luca Nepote; Giulio Franzese; Pietro Michiardi
+page: 4
+section: eurecom
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20775v1
+
+al evaluation only compares snapshot distributions in finite-dimensional space, the
+underlying inference target is a probability measure over full trajectories in function space. Without
+constraints on temporal correlations, transition structure, or other path-wise properties, distinct
+trajectory models can attain similar marginal scores while inducing very different distributions over
+trajectories, differences that remain invisible to marginal-only criteria (see Figure 1). This motivates
+evaluating the inferred object itself: a probability measure on trajectory space. In this work, we
+propose a general framework for estimating the KL divergence between probability measures on
+function space, validate it on special cases where the analytic KL is available, and use it to assess TI
+methods in both synthetic settings (e.g., physical simulations) and real settings (single-cell omics).
+Figure 1: Petal dataset at τ= 0.75 :
+MSBM and TIGON yield marginals
+close to GT but differ in trajectory
+dynamics, captured by FKL.
+This work builds on the growing literature of infinite dimensional generative models Kerrigan et al. (2023b); Hagemann
+et al. (2023); Pidstrigach et al. (2024); Lim et al. (2

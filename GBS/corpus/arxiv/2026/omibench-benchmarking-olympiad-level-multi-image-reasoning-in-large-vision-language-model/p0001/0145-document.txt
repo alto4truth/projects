@@ -1,0 +1,31 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 145
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Metric Evaluator Biology Chemistry Mathematics Physics Total
+Mean Std Mean Std Mean Std Mean Std Mean Std
+GPTScore Gemini-2.5-flash 72.49 1.01 26.61 0.95 61.57 0.88 40.33 1.17 50.98 0.42
+GPTScore GPT-5-mini 71.49 0.33 23.85 1.02 62.85 1.25 40.21 0.99 50.80 0.45
+ACC Gemini-2.5-flash 59.74 1.29 21.08 0.69 39.71 1.19 21.76 0.76 34.66 0.29
+ACC GPT-5-mini 60.14 1.20 21.43 0.88 36.92 0.79 24.47 0.89 34.75 0.22
+Table 5: Stability of GPTScore and Accuracy (%) across three independent runs (mean and standard
+deviation).
+Setting Biology Chemistry Mathematics Physics Total
+ACC Score ACC Score ACC Score ACC Score ACC Score
+Original multi-image 60.64 52.61 15.67 22.12 29.53 15.35 16.98 18.87 24.05 24.88
+Inform.-equivalent single-image64.66 56.63 20.74 26.27 33.49 19.30 22.41 24.53 33.71 29.17
+Table 6: Performance comparison of GPT-4o between the original multi-image setting and the informationequivalent single-image setting.
+Comparison Spearman Cor.p-value
+Human vs. GPT-4o-mini 0.886<0.05
+Human vs. GPT-5-mini 0.874<0.05
+Human vs. Gemini-2.5-flash 0.869<0.05
+Table 7: Spearman correlation between human ratings and model-based GPTScore.
+Evaluation subject Accuracy
+Human Expert A (avg.) 82.69%
+Huma

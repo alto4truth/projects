@@ -1,0 +1,50 @@
+title: Relative Entropy Estimation in Function Space: Theory and Applications to Trajectory Inference
+source: arxiv
+year: 2026
+document_id: relative-entropy-estimation-in-function-space-theory-and-applications-to-trajectory-inference
+authors: Chao Wang; Luca Nepote; Giulio Franzese; Pietro Michiardi
+page: 4
+section: eurecom
+chunk: 47
+source_ref: https://arxiv.org/pdf/2604.20775v1
+
+provides more robust generation quality under super-resolution (see Figure 7). A theoretical
+discussion of this choice is given in Franzese (2025).
+23
+
+(a) White noise.
+(b) Matérn noise,α 0 = 6.0.
+(c) Matérn noise,α 0 = 0.5.
+Figure 6:Evaluation of resolution invariance with different noise covariances C.All models
+were trained at resolutionM= 256and evaluated at varying test resolutions.
+Figure 7: Real vs. generated samples across upsample ratios, for the Gaussian measures special case.
+E Experimental Details for TI Evaluation
+E.1 Marginal Metrics
+To quantitatively assess the quality of the generated trajectories and to compare our new evaluation
+metric, we considered a set of established metrics. These metrics capture the difference in marginal
+reconstruction on validation data.
+Optimal Transport metrics.We quantify geometric distances between generated and target
+distributions using Wasserstein distances Peyré & Cuturi (2020). For p∈ {1,2} , the p-Wasserstein
+distance between probability measuresµandνis
+Wp(µ, ν) =
+
+inf
+γ∈Π(µ,ν)
+Z
+Rd×Rd
+∥x−y∥ p dγ(x, y)
+1/p
+,(29)
+where Π(µ, ν) is the set of couplings with marginals µ and ν. We consider Earth Mover’s Distance
+(EMD, i.e., W1) and Wasserstein-2 (W2). To remain comparable to prior work, we also include the
+Sliced Wasserstein Distance (SWD):
+SWp(µ, ν) =
+Z
+Sd−1
+W p
+p (θ#µ, θ#ν) dλ(θ)
+1/p
+,(30)
+which averages 1D Wasserstein distances over random projections over the unit sphere θ∈S d−1.
+Similarly, we report the Max-Sliced Wasserstein Distance (MWD).
+24

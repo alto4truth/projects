@@ -1,0 +1,28 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+are in Appendix B.
+The architectural constraint seems to shape the
+local attention patterns within heads, producing interpretable functional specialisation. It also tends
+to alter the global geometry of the representational
+space such that syntactic dependencies become
+more linearly recoverable.
+6 Conclusions
+We investigated the integration of cognitively inspired working memory constraints into the Transformer architecture, comparing fixed-width attention windows, exponential and logistic decay mechanisms, and primacy and recency biases against
+an unmodified GPT-2 baseline trained on developmentally plausible corpora of 10M and 100M
+words. Across grammatical competence on BLiMP,
+alignment with a convergent battery of neural and
+behavioural processing measures, and analyses of
+the models’ internal representations, the results
+converge on a single picture. Constraints aligned
+with the limits of human working memory function as a potent inductive bias, yielding gains in
+data efficiency, predictive alignment with human
+comprehension, and the development of linguistically interpretable internal structure. The advantage is most pronounced in the data-limited regime
+that most closely res

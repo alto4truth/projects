@@ -1,0 +1,23 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Expert solutions and rationales:Each problem includes an expert solution with explicit reasoning. This
+lowers annotation and evaluation cost, strengthens correctness judgments, and provides supervision for
+analyzing model reasoning.
+Multi-Image reasoning:Problems that require linking multiple images and their relations, testing crossimage and cross-modal reasoning and integration of visual evidence.
+3.2. Data Annotation
+The data annotation pipeline comprises four phases: data collection & selection, rationale annotation, quality
+control, and classification labeling.
+Step 1: Data Collection & Selection.OMI-Bench comprises Olympiad-level problems in biology, chemistry,
+mathematics, and physics, with source distributions summarized in Table 3. The corpus integrates international Olympiads, national and regional contests, and mixed-complexity benchmarks, providing broad
+Olympiad-level coverage across subfields in these disciplines.
+After collecting all PDF files, we use Mathpix OCR to convert problems into Markdown format, and
+team members manually verify each item to ensure accuracy. The Markdown texts are then normalized
+into a structured “Question–Rationale (if available)–Answer” fo

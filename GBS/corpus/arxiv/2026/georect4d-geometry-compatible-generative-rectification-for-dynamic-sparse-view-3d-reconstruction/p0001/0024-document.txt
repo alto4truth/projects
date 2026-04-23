@@ -1,0 +1,22 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+s on sparse dynamic pixels, ensuring that fine-grained
+motion details are recovered rather than diluted by static field optimization.
+Stage 2: Generative Knowledge Distillation.Upon establishing a purified geometric substrate, we address the inherent information deficit of extreme
+view sparsity. We sample unobserved novel viewpoints and unlock the potential
+of our diffusion prior (Sec. 3.2) to enhance their initial renderings into highfidelity rectified views ˆIrect. Crucially, while the known training views remain
+strictly supervised by ground truth, we treat these rectified novel views as a
+source of pseudo-supervision to transfer generative knowledge back into the explicit 3D representation. Specifically, we activate the generative feedback loop
+by instantiating the coupling factorλ(t)(Eq. 6) as a non-zero weightλrect. This
+weight serves as a confidence regulator, preventing potential geometric distortion caused by over-reliance on hallucinated content. To construct the hybrid
+feedback objective, both the data fidelity termLdata (anchored by physical observations) and the prior termLprior (guided by pseudo-supervision) in Eq. 6
+are instantiated with the photometric lossLcolor:
+L

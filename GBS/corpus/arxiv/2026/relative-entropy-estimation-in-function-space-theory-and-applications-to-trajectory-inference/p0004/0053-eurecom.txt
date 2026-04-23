@@ -1,0 +1,66 @@
+title: Relative Entropy Estimation in Function Space: Theory and Applications to Trajectory Inference
+source: arxiv
+year: 2026
+document_id: relative-entropy-estimation-in-function-space-theory-and-applications-to-trajectory-inference
+authors: Chao Wang; Luca Nepote; Giulio Franzese; Pietro Michiardi
+page: 4
+section: eurecom
+chunk: 53
+source_ref: https://arxiv.org/pdf/2604.20775v1
+
+erated trajectories by TI methods with respect to the training and
+validation marginals.
+KL configuration.We report FKL hyperparameters in Table 8.
+29
+
+Name Value
+Training functionXA1 GT
+Training functionXB1 TI methods: SBIRR, vSB, MSBM, MFL, AM, TIGON
+Training functions’ input time pointsM101
+Training functions’ output dimensionD2
+Covariance operator of noise functionX0 Rougher empirical GT Fourier-spectrum
+Num. modesNsummed at KL estimation16
+tsampling scheme at training Curriculum: logit-normal (mean=0.5,std=1.5) for first60%, then uniform
+tsampling scheme at KL estimation Importance samplingt/(1−t)
+Num.tsampled at KL estimation 100
+Num. functions at training 2000
+Training batch size 64
+Training iterations 50,000
+Num. functions at KL estimation 500
+Optimizer Muon
+EMA rate 0.999
+LR 1.78e−3
+LR scheduler Cosine annealing
+FFM training lossw L FFM+ (1−w)LFKL,wlinearly decayed from1to0.2
+Model MINO-T
+Encoder (dim / depth / heads) 32/2/8
+Decoder (dim / depth / heads) 32/2/8
+Supernode radius 5e−4
+GPUs for Training 1×NVIDIA A100
+Table 8: FKL hyperparameters for Petal.
+E.2.4 Critical differences (CD) diagram.
+We summarize methods performance in terms of marginal metrics using CD Ismail Fawaz et al. (2019)
+diagrams based on average ranks. For each task, methods are ranked according to the evaluation score
+(with ties handled by average ranks), and ranks are averaged across tasks. Statistical differences are
+assessed via a Friedman test followed by a Wilcoxon-Holm post-hoc comparison: two methods are
+considered significantly different if their average-rank gap exceeds the CD. In the diagram, methods
+connected by a horizontal bar are not significantly different at the chosen significance level, whereas
+unconnected groups indicate statistically distinguishable performance.
+We report the diagrams in Figure 3.
+E.3 TI Evaluation on Real-World Datasets
+As real-world data we consider two different single-cell RNA sequencing (scRNA-seq) datasets that
+capture cellular differentiation processes over time: the Embryoid Body (EB) dataset and the Human
+Embryonic Stem Cell (hESC) dataset, both preprocessed as in Shen et al. (2025). Both datasets
+provide snapshots of gene expression profiles at multiple time points during differentiation, making
+them suitable for evaluating trajectory inference methods.
+We consider SBIRR trajectories as reference GT, training the model over all the available snapshots.
+The other TI methods are trained on odd-index snapshots, and tested on SBIRR validation marginals.
+E.3.1 Embryoid Body
+TI methods configuration.Specifications of hyperparameters for the TI methods:
+• SBIRR: default parameters, trained on all snapshots. Time horizonτ∈[0,1].
+• vSB: we run vSB methods with default parameters, but we changed the discretization to
+dt= 0.01 and dts= [0,0.5,1] in order to be consistent with the other trajectory inference
+methods.
+• MSBM: num_stage= 11 ; num_epoch= 10 ; num_itr= 1000 ; num_ResNet= 1 ;
+learning_rate= 2×10 −4; batch_size= 256; var= 0.1; interval= 51.
+30

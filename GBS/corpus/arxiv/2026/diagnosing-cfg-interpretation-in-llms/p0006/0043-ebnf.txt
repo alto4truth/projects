@@ -1,0 +1,38 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 6
+section: ebnf
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+start: stmt+
+stmt: action_stmt | loop | if_stmt
+action_stmt: "act" action "fin"
+loop: "repeat" expr "iters" "{" stmt+ "}"
+if_stmt: "when" cond "next" "{" stmt+ "}"
+...
+Instructions:
+Step 1: Move backward ((4 times 4) times (4 plus 3)) steps.
+Step 2: Move forward (5 plus 1) steps. Step 3: Repeat
+((4 times 0) plus 4) times: [ If (not (holding key))
+and ((holding box_0) and (holding cube)), then: [ Turn
+left. ] Otherwise: [ Move backward 3 steps. ] ] Step
+4: If not ((holding box_2) and (holding ball_0)), then:
+[ If not ((holding box) and (holding key)), then: [
+Grab the key_2. ] ] Otherwise: [ Turn right. ]
+Your task is to faithfully translate the instructions into
+code. You must strictly adhere to the provided EBNF
+syntax and ensure the hierarchical structure of the
+generated program exactly matches the logical nesting
+of the instructions.
+A.3 Generated Data Examples
+We illustrate the diversity of our generated data
+with examples covering different recursion depths,
+syntactic styles, and lexical variations.
+A.3.1 Recursion Depth Variations
+We vary the maximum nesting depth of the AST
+to probe the LLM’s ability to handle hierarchical
+structures. At depth 2, programs consist of shallow

@@ -1,0 +1,25 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+0.797 0.288 - - - - - - Ours 26.98 0.884 0.113 0.994 62.73 22.23 0.878 0.120 0.432 68.20
+we use 300 frames at half resolution, selecting cameras 1, 4, 7, and 10 as sparse 4view inputs. On the challenging MPEG dataset, we conduct experiments on the
+first 60 frames, utilizing cameras 0, 7, 14, and 21 for training. Following standard
+protocols, all models are evaluated on a single held-out camera (camera 0 for
+N3DV/MeetRoom and camera 8 for MPEG) as the novel view across all frames.
+Evaluation Metrics.We report the PSNR and SSIM [60] of all methods
+to evaluate their reconstruction quality and modeling capability, alongside the
+average LPIPS [74] for perceptual quality. For the temporal consistency evaluation of the reconstructed sequences, we adopt tLPIPS [9] and tOF [9], and use
+RAFT [55] to compute optical flow. We also report no-reference metrics such as
+MUSIQ [25] and MANIQA [68] as references to evaluate the visual quality of
+the enhanced images.
+Implementation Details.Our framework is evaluated on a single NVIDIA
+RTX 3090 GPU. We build the generative prior upon the SD-Turbo backbone,
+applying trainable LoRA modules to all convolutional and linear layers, with the
+adapter loss w

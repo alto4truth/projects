@@ -1,0 +1,134 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+the model parameters of clientk at round
+t. For each noisy client k, we measure itsℓ 2 distance to the
+clean set as
+dk = min
+j∈Kclean
+
+ϕ(t)
+k −ϕ (t)
+j
+
+2
+. (18)
+The minimum distance is used so that each noisy client
+is evaluated relative to its nearest clean counterpart rather
+than the clean population average. This choice is particularly suitable in heterogeneous settings, where a useful
+noisy client update may resemble only a subset of the clean
+clients. Now let ak be the normalized sample-size weight
+of client k. The final aggregation weight is defined as
+αk = ak exp(−dk)PK
+j=1 aj exp(−dj)
+, (19)
+where dk = 0 for clean clients. The global model is then
+updated as
+ϕ(t+1) =
+KX
+k=1
+αkϕ(t)
+k . (20)
+This aggregation mechanism introduces an additional level
+of robustness. Even after relabeling and KD, some noisy
+clients may still produce updates that deviate from the clean
+population. DaAgg reduces their influence without excluding them entirely, allowing useful information to contribute
+while suppressing unreliable updates.
+The complete procedure after Stage II proceeds as follows. At each communication round, the current global
+model is broadcast to all clients. Clean clients update
+their models using the LA objective, while noisy clients are
+trained with the hybrid LA-KD objective. During each relabeling step (performed every R communication rounds),
+feature representations are extracted by the model trained
+on clean clients. The spectral information of these features
+is then used to assist noisy clients in relabeling their potentially corrupted samples. Finally, all local models are
+aggregated using DaAgg to produce the next global model,
+while the updates from clean clients are separately averaged
+to obtain the clean reference model used to guide the subsequent relabeling step. The complete training procedure is
+summarized in Algorithm 1.
+4. Results
+We evaluate the proposed method on CIFAR-10 under symmetric label noise with 10 federated clients. To simulate
+data heterogeneity, the training data samples are partitioned
+across clients using a Dirichlet distribution with concentration parametersα∈ {0.1,0.5,2}, where smaller values of
+Algorithm 1FedSIR
+Require:Client datasets {Dk}K
+k=1, initial model ϕ(0),
+communication rounds T , identification epochs E1,
+training epochs E2, R relabeling period
+Ensure:Final global model ϕ(T)
+Stage I: Client identification
+1:foreach client k= 1, . . . , K do
+2:Initialize local model ϕk ←ϕ (0)
+3: ϕk ←LocalTrain(ϕ k,D k, E1,L CE)
+4:{v k,c} ←Alg. 2(D k,ϕ k,0)
+5:Compute (µk, ek) from Sk using (3) and (4)
+6:Send (µk, ek) and ϕk to the server
+7:end for
+8:Fit a two-component GMM on {(µk, ek)}K
+k=1
+9:Partition clients into Kclean and Knoisy
+10: ϕ(1) ←FedAvg k∈Kclean(ϕk)
+Stage II–III: Relabeling and Training
+11:forround t= 1, . . . , T do
+12:foreach clientk∈ K clean do
+13:Initialize ϕ (t)
+k ←ϕ (t)
+14: ϕ (t)
+k ←LocalTrain(ϕ (t)
+k ,D k, E2,L LA)
+15:ift%R== 0then
+16:({v k,c,V (n)
+k,c })←Alg. 2(D k,ϕ (t)
+k , L)
+17:Send ϕ (t)
+k ,{(v k,c,V (n)
+k,c )}to server
+18:else
+19:Send ϕ (t)
+k to server
+20:end if
+21:end for
+22:Apply (5) and (6) on
+
+{(vk,c,V (n)
+k,c )}
+
+to get
+¯v(r), ¯V(n)
+23:foreach clientk∈ K noisy do
+24:ift%R== 0then
+25: D⋆
+k ←Alg. 3
+
+Dk,ϕ (t)
+clean, ¯v(r), ¯V(n)
+
+26:end if
+27: ϕ (t)
+k ←LocalTrain(ϕ (t)
+k ,D ⋆
+k, E2,L LA-KD)
+28:end for
+29: ϕ(t+1) ←DaAgg
+
+{ϕ (t)
+k }K
+k=1,K clean,K noisy
+
+30: ϕ(t+1)
+clean ←FedAvg k∈Kclean(ϕ (t)
+k )
+31:end for
+32:return ϕ(T)
+αcorrespond to stronger non-IID data distributions. To introduce heterogeneity in client-level noise, the number of
+clean clients varies across different settings. Specifically,
+the number of clean clients is3,3, and5forα= 0.1,
+0.5, and2, respectively. Furthermore, we evaluate multiple noise rates ranging from30%to90%to assess the robustness of the proposed framework under different levels
+of label corruption.
+All experiments are conducted forT= 100communica6

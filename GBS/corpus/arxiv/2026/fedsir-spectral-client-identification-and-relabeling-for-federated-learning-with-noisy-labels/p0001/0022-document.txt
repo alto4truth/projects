@@ -1,0 +1,88 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+← ∅
+3:foreach(x i,˜yi)∈ D k do
+4:z i ←f ϕclean(xi)
+5:foreach classc= 1, . . . , Cdo
+6:S (r)(i, c) =
+
+z⊤
+i ¯v(r)
+c
+
+7:S (n)(i, c) = 1√
+L
+
+z⊤
+i ¯V(n)
+c
+
+2
+8:end for
+9:ˆy (r)
+i ←arg max c S(r)(i, c)
+10:ˆy (n)
+i ←arg min c S(n)(i, c)
+11:ifˆy (r)
+i = ˆy(n)
+i then
+12:y ⋆
+i ←ˆy(r)
+i
+13:else
+14:y ⋆
+i ←˜yi
+15:end if
+16:D ⋆
+k ← D ⋆
+k ∪ {(xi, y⋆
+i )}
+17:end for
+18:returnD ⋆
+k
+19:end function
+tion rounds. In Stage I, each client performs local training
+forE 1 = 5epochs for client identification, using a learning
+rate (LR) of5×10 −5 and a weight decay (WD) of2×10 −2.
+In Stage II, local updates are performed forE 2 = 1epoch
+per round using LR= 3×10 −4 and WD= 5×10 −4, while
+spectral relabeling is performed everyR= 20communication rounds using the topL= 12residual right singular
+vectors. In all experiments, local models are optimized using the Adam optimizer. We use an ImageNet-pretrained
+ResNet-18 [6] as the backbone model. We compare our
+method with standard FL baselines and recent noise-robust
+FL approaches. In addition, we include a pruning baseline
+that evaluates the performance obtained by excluding identified noisy clients.
+Table 1 shows that our method consistently achieves the
+best performance across nearly all noise levels and heterogeneity settings. In the highly non-IID case (α= 0.1),
+our method remains robust even under severe noise, outperforming baselines such as FedELC, FedNoRo, and FedNed.
+As the data distribution becomes less heterogeneous (α=
+0.5andα= 2), the performance of all methods generally
+improves; however, our approach continues to maintain a
+clear advantage, particularly at high noise rates where reliable client identification and conservative relabeling become more critical. These results indicate that the proposed spectral client identification and relabeling strategy
+provides robustness to both label noise and client heterogeneity.
+5. Conclusion
+We introducedFedSIR, a robust FL framework for noisylabel settings that exploits the consistency of class-wise
+feature representations to identify clean and noisy clients.
+The identified clean clients are then used to construct spectral references that enable noisy clients to relabel potentially corrupted samples by associating them with the closest clean class subspace. Furthermore, our framework integrates LA, KD, and DaAgg to stabilize federated optimization.
+Results across a range of label-noise levels and non-IID
+data distributions show thatFedSIRconsistently outperforms state-of-the-art methods, highlighting the effectiveness of spectral information as a reliable supervisory signal
+in noisy-label FL. Overall, our findings indicate that clientlevel spectral geometry provides a principled foundation for
+robust FL under corrupted supervision.
+An important direction for future work is to extend the
+proposed framework to handle more complex noise patterns, such as asymmetric label noise.
+6. Acknowledgement
+The work of S. Gholami, T. Haghighi, and M. N. Alam
+was supported by the U.S. National Institute of Health
+- National Eye Institute under Grants R15EY035804 and
+R21EY035271. The work of A. Ali and A. Arafa was
+supported by the U.S. National Science Foundation under
+Grant ECCS 21-46099.
+7

@@ -1,0 +1,23 @@
+title: LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model
+source: arxiv
+year: 2026
+document_id: llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffusion-large-language-model
+authors: Inclusion AI; Tiwei Bie; Haoxing Chen; Tieyuan Chen; Zhenglin Cheng; Long Cui; Kai Gan; Zhicheng Huang; Zhenzhong Lan; Haoquan Li; Jianguo Li; Tao Lin; Qi Qin; Hongjun Wang; Xiaomei Wang; Haoyuan Wu; Yi Xin; Junbo Zhao
+page: 3
+section: g-sc-g-pq-g-o-g-sc-g-pq-g-o
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20796v1
+
+a strong synergy between visual generation and understanding. In LLaDA 2.0-Uni, we conduct a preliminary exploration into interleaved reasoning capability. As
+illustrated in Figure 8, through interleaved reasoning, our model successfully deduces logical strategies in in
+chess games and provides step-by-step solutions to physics problems. These promising results give us great
+confidence to further expand interleaved reasoning capabilities in future research.
+5.5 Ablation Study
+5.5.1 Analysis of SPRINT Acceleration
+Table 13 evaluates SPRINT on nine multimodal benchmarks, covering both understanding (AI2D, OCRBench,
+MathVista, ChartQA, DocVQA, MMMU, MMStar) and generation (GenEval, DPG). SPRINT shifts the average
+score from 76.3 to 75.7 (−0.6) while accelerating generation from 24.3 to 39.8 TPS (1.6×). Several benchmarks
+show score decreases; the most notable are OCRBench (−2.3) and DPG (−1.5). OCRBench demands precise
+character-level prediction, where the lower threshold τ= 0.93 may accept tokens before sufficient refinement.
+The speedup is largest on benchmarks with longer outputs, where the per-step savings from prefix pruning
+compound across many denoising iterations: DocVQA reach

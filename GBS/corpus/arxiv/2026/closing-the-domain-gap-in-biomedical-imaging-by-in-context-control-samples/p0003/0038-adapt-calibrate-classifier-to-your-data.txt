@@ -1,0 +1,29 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+6 0.452 ± 0.010 0.229 ± 0.009
+ARM-BN 0.831 ± 0.017 0.416 ± 0.020 0.228 ± 0.009
+CS-ARM-BN (ours)0.924 ± 0.018 0.906 ± 0.021 0.894 ± 0.022
+only a subset of MoAs may appear in a new batch. If the
+adaptation statistics are computed over theperturbedsamples, then changing the class mixture changes the feature
+statistics and can mislead adaptation.
+Protocol.We simulate increasing levels of label shift by subsampling the target batch to enforce different class-mixture
+skew strengths. We report performance at three shift degrees (Table 3): from mild to severe label shift. In all of the
+experiments, we use a constant number of labeled samples
+so the decrease in accuracy is not due to a smaller batch size.
+In every TTA method, the adaptation is unlabeled; only the
+class mixture is manipulated. While for TENT, AdaBN and
+ARM-BN, the accuracy decreases rapidly when label shift
+increases, the performance for CS-ARM-BN remains robust. Moreover, we also compare to AdaBN and ARM-BN
+including negative controls so that every method uses the
+same amount of samples to compute the BN statistics, and
+it can be seen that CS-ARM-BN still presents the highest
+performance.
+BN-adaptation degrades under label

@@ -1,0 +1,22 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+8a; Conneau et al., 2020b). Programming languages,
+however, are often domain-specialized. It is rare for an LM training script in Python to have a direct counterpart in Ruby
+or C++, as those languages are typically applied to different domains (e.g., web development or systems programming).
+This domain mismatch limits the organic emergence of parallel signals, and in turn leads to empirically fragmented
+representations across PLs (Utpala et al., 2024) and weak semantic understanding in lower-resource PLs (Gu et al.,
+2025). This contributes to the negative transfer effects observed in §3.
+To bridge this gap, we proposeParallel-SFT: a method to improve cross-PL capabilities by explicitly constructing
+“parallel programs”—functionally equivalent code programs across PLs—anchored by (near-)identical natural language
+instructions. This is reminiscent of second-order co-occurrences in word models, where models can infer from a
+sentence pair “I have an adorable pet Corgi.” and “I have an adorable pet Samoyed.” the relationship between the
+words “Corgi” and “Samoyed”. Similarly, we hypothesize we can improve the model’s cross-PL representation with
+training instances such as “Write a Python

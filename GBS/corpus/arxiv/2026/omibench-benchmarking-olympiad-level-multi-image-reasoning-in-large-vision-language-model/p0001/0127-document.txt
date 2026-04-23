@@ -1,0 +1,24 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 127
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+ordering. Thus, demonstrations in
+this condition mirror the multimodal structure of the test instance itself. The textual content and answer
+format again remain unchanged relative to the other ICL configurations, so that any performance differences
+can be attributed to how well the model leverages multi-image visual context in the demonstrations.
+I. Additional Details for “Thinking with Images”
+I.1. Tool-based “Thinking with Images” (GPT-4o + VisualSketchpad)
+Inspired by Cheng et al.[17], Tong et al.[54], we instantiate the tool-based “Think-with-Image” paradigm
+by augmenting GPT-4o with VisualSketchpad. This integration enables the model to draw primitives and
+text, highlight or blur regions, and crop or zoom. We adapt VisualSketchpad’s prompting strategy, originally
+optimized for single-image tasks, to our multi-image framework.
+Qualitatively, the system exhibits distinct limitations on OMIBench: (1) fixating on isolated images
+while neglecting other crucial information for the task; (2) performing redundant edits that yield no new
+information; and (3) failing to spatially align objects across images. These behaviors, rare in single-image
+settings, highlight the limited transfer

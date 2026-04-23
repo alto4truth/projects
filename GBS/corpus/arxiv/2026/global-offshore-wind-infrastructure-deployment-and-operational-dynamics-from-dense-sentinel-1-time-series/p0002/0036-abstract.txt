@@ -1,0 +1,39 @@
+title: Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+source: arxiv
+year: 2026
+document_id: global-offshore-wind-infrastructure-deployment-and-operational-dynamics-from-dense-sentinel-1-time-series
+authors: Thorsten Hoeser; Felix Bachofer; Claudia Kuenzer
+page: 2
+section: abstract
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20822v1
+
+location markers in the close-up overview map. Vessel related labels are markers in the time
+series with a random jitter for better visualization.
+18
+
+Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+Figure 15: Distribution of offshore wind turbine deployment duration, derived as elapsed time measured from the first
+occurrence of a "turbine foundation" label to the first occurrence of a "deployed turbine" label, separated by regions.
+Overall, the classified time series reveal deployment patterns, regional construction dynamics, and operational events,
+demonstrating the analytical potential of high-density SAR-based time series for monitoring offshore wind infrastructure.
+6 Discussion
+Over the past decade, Earth Observation based mapping of offshore wind infrastructure has matured substantially,
+with robust methods now available for global-scale spatial mapping. The contribution of this work lies in introducing
+high-density temporal characterization of offshore wind infrastructure at global scale. In this sense, the focus shifts
+from asking "Where are turbines?" to asking "What is happening at each turbine location, and when?". By providing
+high density time series and baseline semantic labels, this study moves offshore wind infrastructure monitoring toward
+dynamic infrastructure intelligence rather than inventory mapping. However, the results also reveal that temporally
+dense monitoring remains fundamentally dependent on spatial detection. Bridging spatial localization and temporal
+analysis into a unified spatiotemporal framework represents a central challenge for upcoming research in offshore wind
+infrastructure monitoring from space.
+A central challenge pointed out by this work is the dependency of dense time series analysis on prior spatial detection.
+The proposed 1D profile-based time series approach is highly effective once a location is known, but it requires initial
+spatial localization. CNN-based object detectors perform well in complex near-coastal and harbour environments, where
+heterogeneous background patterns demand high precision [Hoeser et al., 2022, Ding et al., 2024, Zhang et al., 2024,
+Liu et al., 2024, Song and Li, 2025, Liu et al., 2026]. In contrast, CFAR-based approaches are often more sensitive to
+generic offshore metallic structures [Wang et al., 2019, Wong et al., 2019, Paolo et al., 2024] and may therefore be
+better suited to detecting early-stage turbine foundations. The two approaches reflect a precision-recall trade-off, where
+CNN-based models tend to optimize precision in heterogeneous settings, whereas CFAR-based methods may increase
+recall for early construction signals but tend to be more prone to false alarms.
+19

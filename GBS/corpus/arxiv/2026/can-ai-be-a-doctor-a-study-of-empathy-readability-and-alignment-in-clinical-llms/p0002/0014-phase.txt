@@ -1,0 +1,56 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+ion.
+All outputs were generated with low-temperature sampling (temperature= 0.1) to
+limit stochastic variation and promote consistency across runs.
+11
+
+4.2 Preliminary Evaluation – Semantic Fidelity
+Semantic fidelity was evaluated as a prerequisite validation step to verify that LLMgenerated responses are semantically aligned with physician-authored answers before
+conducting downstream analyses. Cosine similarity was computed between sentence
+embeddings obtained with theBioBERT-mnli-snli-scinli-scitail-mednli-stsb 7
+model [38]. Descriptive statistics for each configuration are reported in Figure 4 and
+Figure 6.
+All evaluated systems exhibit strong conceptual alignment with physician responses
+across both datasets. Average cosine similarity values are consistently above 0.78 in
+the first dataset and above 0.75 in the iCliniqQAs dataset.
+In the first dataset as we can see in figure 5, the highest semantic fidelity is
+achieved byGPT5 Rephrase(µ= 0.92), followed byMixtral Rephrase(µ= 0.91) and
+MedPaLM Rephrase(µ= 0.89), whileGemini RephraseandClaude Rephrasereach
+µ= 0.87 andµ= 0.85, respectively. In contrast, on the iCliniqQAs dataset (Figure 7),
+the highest semantic fidelity is achieved byMedPaLM Rephrase(µ= 0.93), followed
+byGPT Rephrase(µ= 0.91) andMixtral Rephrase(µ= 0.89), withGemini Rephrase
+(µ= 0.86) andClaude Rephrase(µ= 0.84) showing comparatively lower performance.
+Notably, the separation between domain-specialized and general-purpose models is
+more pronounced in iCliniqQAs, whereMedPaLM Rephraseconsistently outperforms
+all other configurations.
+Among baseline architectures, performance remains tightly clustered in both
+datasets. In the first dataset,MedPaLM Base(µ= 0.82),Mixtral Base(µ= 0.80),
+andGPT5 Base(µ= 0.79) show closely matched alignment. In iCliniqQAs,MedPaLM Base(µ= 0.80) andMixtral Base(µ= 0.78) remain comparable, while
+GPT Base(µ= 0.85) exhibits slightly higher raw similarity but does not consistently
+match the gains observed in domain-adapted rephrasing configurations.
+Prompt-based variants yield comparable distributions across both datasets. In
+the first dataset,GPT5 Empathy(µ= 0.81),MedPaLM Empathy(µ= 0.80),
+Claude Empathy(µ= 0.80), andMixtral Empathy(µ= 0.78) remain aligned
+with baseline levels. Similarly, in iCliniqQAs,GPT Empathy(µ= 0.83),MedPaLM Empathy(µ= 0.80),Claude Empathy(µ= 0.78), andMixtral Empathy
+(µ= 0.78) show limited deviation from their respective base configurations, confirming
+that empathy prompting alone does not substantially increase semantic fidelity.
+Statistical significance between model configurations was assessed via two-sided
+pairedt-tests with False Discovery Rate (FDR) correction using the Benjamini–
+Hochberg procedure [39]. Each statistical population corresponds to the distribution of
+cosine similarity scores produced by a model across all evaluated questions. Letm1 and
+m2 denote two distinct model configurations andµ m the associated mean similarity.
+For each pairwise comparison, the null hypothesis is defined asH 0 :µ m1 =µ m2.
+No statistically significant difference is observed betweenMixtral BaseandMedPaLM Basein either dataset, confirming comparable semantic fidelity at baseline.
+Rephrasing configurations introduce systematic improvements across both datasets;
+however, the effect is particularly pronounced in the iCliniqQAs dataset, whereMedPaLM Rephraseachieves statistically significant improvements over both its baseline
+7https://huggingface.co/pritamdeka/BioBERT-mnli-snli-scinli-scitail-mednli-stsb
+12

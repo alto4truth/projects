@@ -1,0 +1,17 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 2
+section: lexis-5
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+o form geometric losses.
+To this end, we employ a VQ-VAE, calledLEXIS-Net, to learn a novel compactlexicon of interaction signatures, calledLEXIS; see Fig. 3 for an overview.
+LEXIS-Net builds on the pose tokenization of TokenHMR [18] and extends it
+so that, conditioned on object shape in canonical pose (denoted as point cloud
+Po ∈R N×3), a decoder reconstructs both 3D body pose and 3D (body and
+object) InterFields. Thus, the learned tokens encode not only the body configuration, but, crucially, also the proximal human-object relationships and physical
+coupling that describes the interaction computationally.

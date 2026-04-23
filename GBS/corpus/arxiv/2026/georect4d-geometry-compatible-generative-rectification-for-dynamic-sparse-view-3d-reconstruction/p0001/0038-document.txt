@@ -1,0 +1,21 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+to under882ms. This efficiency
+enables our framework to achieve a highly competitive training time on the
+complex MPEG dataset, while maintaining real-time rendering speeds exceeding115FPS. More details on timing and resource consumption are available in
+the supplementary material.
+5 Discussion
+Conclusion.This paper presents GeoRect4D designed to tackle the highly illposed problem of dynamic 3D scene reconstruction from extremely sparse multiview videos. By synergistically coupling a robust explicit dynamic 3D Gaussian
+Splatting substrate with a degradation-aware generative prior, our approach effectively overcomes prevalent issues such as geometric collapse, trajectory drift,
+and floating artifacts. Extensive evaluations demonstrate that GeoRect4D establishes a new state-of-the-art in both rendering fidelity and perceptual realism.
+By successfully hallucinating fine-grained details while strictly preserving spatiotemporal consistency, this work bridges the gap between physical geometric
+constraints and 2D generative priors for high-quality free-viewpoint video synthesis.
+Limitations.Despite its effectiveness, GeoRect4D has two primary limitations. First, the framework’s performan

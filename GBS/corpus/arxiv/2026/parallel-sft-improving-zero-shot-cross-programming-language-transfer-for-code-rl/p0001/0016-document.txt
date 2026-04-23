@@ -1,0 +1,22 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+ds “Corgi” and “Samoyed”. Similarly, we hypothesize we can improve the model’s cross-PL representation with
+training instances such as “Write a Python implementation of binary search. def binary_search(... ” and “Write a
+Java implementation of binary search. public int binarySearch(... ”. Intuitively, this semantically grounds code
+models with execution equivalence.
+4It is not an SFT model, which typically precedes the RL stage, but it has also gone through preference tuning with DPO. We do not believe this
+affects our results, especially since it is common for current LMs to undergo multiple stages of policy optimization (Yang et al., 2025a; Bercovich
+et al., 2025;i.a.). In §A, we validate this with our own custom-trained SFT models and observe qualitatively similar results.
+5While Qwen models (Qwen et al., 2025; Yang et al., 2025a) have higher raw coding scores, past work has suggested likely substantial data
+contamination on coding benchmarks, and Llama models to a much less extent (Wu et al., 2025a). We thus choose to use Llama-3.1 as a cleaner
+testbed.
+6https://www.tiobe.com/tiobe-index/
+4

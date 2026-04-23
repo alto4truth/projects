@@ -1,0 +1,21 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 22
+section: ground-truth
+chunk: 60
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+if (has item_1) {
+if (no (has box_2)) {
+...
+}
+}
+A.4.2 Behavioral Misalignment
+Case Study 1: Logical Predicate Inversion
+This failure occurs when a model produces syntactically valid code that adheres to all EBNF rules
+but fails to faithfully simulate the conditional logic
+of the instructions. The model correctly identifies
+the predicates but substitutes the wrong logical connective, leading to an incorrect execution path.

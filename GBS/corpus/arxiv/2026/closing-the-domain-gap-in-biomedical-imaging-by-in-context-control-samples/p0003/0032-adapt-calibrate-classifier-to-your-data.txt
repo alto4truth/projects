@@ -1,0 +1,27 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+e 8 in Exp. 5.2, and perform a classification task to
+predict eight well-defined MoAs. Therefore, we work with
+samples perturbed with eight different compounds, each
+one of them known to produce one of these MoAs (see
+Appendix Table A6), and which are present in every plate
+of the dataset. Each microscopy image has five channels;
+we use the preprocessing described in Appendix Section C.
+Data splits.To evaluate robustness to batch effects, we
+consider two data splitting strategies reflecting different levels of domain shift (see Appendix Section D.4). In most
+experiments, we adopt anexperimental-batch split, where
+training and evaluation are performed on disjoint experimental batches, representing a challenging but realistic batch
+generalization setting. For the strong domain shift scenario,
+we instead evaluate on images acquired from a completely
+unseen imagingsource, corresponding to a cross-platform
+or cross-institution transfer setting. Under the experimentalbatch split, we use5-fold cross-validationand reportmean
+accuracy ± standard deviationacross folds, corresponding to five independent training runs per method. Unless
+otherwise specified, accuracy is reported at the image le

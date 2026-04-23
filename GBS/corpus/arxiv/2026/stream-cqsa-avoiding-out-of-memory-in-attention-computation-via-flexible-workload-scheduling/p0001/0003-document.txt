@@ -1,0 +1,25 @@
+title: Stream-CQSA: Avoiding Out-of-Memory in Attention Computation via Flexible Workload Scheduling
+source: arxiv
+year: 2026
+document_id: stream-cqsa-avoiding-out-of-memory-in-attention-computation-via-flexible-workload-scheduling
+authors: Yiming Bian; Joshua M. Akey
+page: 1
+section: document
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20819v1
+
+he
+dominant constraint for scaling long-context modeling, limiting both training and deployment.
+A substantial body of prior work has focused on improving the memory efficiency of attention
+computation. Exact attention methods with IO-awareness, such as the FlashAttention series [7, 8],
+improve performance by optimizing memory access patterns and avoiding materialization of large
+intermediate matrices. In parallel, approximate approaches including sparse [ 9, 10, 11], low-rank
+[12], kernelized [ 13, 14, 15], block-wise [ 16, 17], and global-local hybrid methods [ 18], reduce
+computational and memory complexity by relaxing exactness.
+However, the memory bottleneck can arise even before attention computation begins. For sufficiently
+long sequences, simply materializing the Q, K, and V tensors can already exceed available GPU
+memory, making it impossible to invoke even these optimized attention mechanisms. This reveals
+a more fundamental limitation: existing approaches largely assume that the full QKV tensors can
+reside in GPU memory, an assumption that breaks down in extreme long-context regimes.
+Preprint.
+arXiv:2604.20819v1 [cs.LG] 22 Apr 2026

@@ -1,0 +1,30 @@
+title: Efficient Multi-Cohort Inference for Long-Term Effects and Lifetime Value in A/B Testing with User Learning
+source: arxiv
+year: 2026
+document_id: efficient-multi-cohort-inference-for-long-term-effects-and-lifetime-value-in-a-b-testing-with-user-learning
+authors: Dario Simionato; Andrea Tonon; Mingxue Wang; Weiguo Wang; Tong Gui; Xiaoyue Li
+page: 2
+section: document
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20777v1
+
+fect ( 𝐿𝑇 𝐸) is the asymptotic difference
+between treatment and control when considering only available (non-missing) observations (𝑆𝑢 = 1). This measures the
+steady-state treatment effect on users assuming they keep
+engaging in the system.
+• The Incremental Lifetime Value (Δ𝐸𝑅𝐿𝑉 ) is the cumulative
+difference between treatment and control weighted by the
+percentage of active users. This captures the combined effect
+of user retention and behavioral changes such as novelty or
+primacy effects [8, 13, 14, 16].
+While traditional A/B test analysis often treats missing data as
+"missing at random" and ignores it, in the context of business value,
+churn is an informative non-random event. By explicitly modeling
+user churn, theΔ𝐸𝑅𝐿𝑉 naturally weights the treatment’s behavioral
+impact by its ability to keep the user active. As illustrated in Figure 1,
+this distinction is critical: a treatment might have a positive or null
+effect on 𝑚𝑢 among survivors (𝐿𝑇 𝐸≈ 0), but if it simultaneously
+accelerates churn, the survival rate decrease in the Δ𝐸𝑅𝐿𝑉 sum
+will correctly reveal a negative business outcome. In the following
+sections, we demonstrate how our multi-cohort estimator can be
+applied to A/B

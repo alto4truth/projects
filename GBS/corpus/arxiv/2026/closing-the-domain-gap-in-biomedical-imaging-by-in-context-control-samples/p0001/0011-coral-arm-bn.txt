@@ -1,0 +1,33 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 1
+section: coral-arm-bn
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+a∈R D, and b)
+a classifier c:R D 7→ Y , which maps the embeddings to a
+class label ˆy∈ Yin the output spaceY.
+The model g:X 7→ Y is usually a composition of the
+feature extractor with the classifierg=c◦f:X 7→ Y.
+2.1. Domain Adaptation Methods for Biomedical
+Images
+We first introduce a set of domain adaptation methods for
+biomedical images that will be compared to our work and
+mentioned throughout the manuscript.
+Supervised baselines. ResNet (He et al., 2015) and Foundation Model CA-MAE (Kraus et al., 2024).We train a
+standard classifiergonD train by minimizing
+min
+w
+BX
+b=1
+X
+(x,y)∈D(b)
+LCE(y,g(x,w))(2)
+with cross-entropy loss LCE and using a ResNet50 architecture with either BatchNorm (BN) or InstanceNorm (IN)
+layers, and a linear layer as a classifier. This classifier is not
+adapted to new experimental batches.
+3

@@ -1,0 +1,33 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 84
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+gramming language (e.g., C++); and {lg_short} is the short name used for
+Markdown formatting (e.g.,cpp).
+Translate the following code from Python to {lg_long}. The functionality should be exactly the same across
+all possible inputs.
+```python
+{code}
+```
+For reference, the original Python code was generated according to the following request:
+'''
+{instruction}
+'''
+Now translate the code into {lg_long} and wrap it in
+```{lg_short}
+```
+Closely follow the stylistic aspects of the original Python code, for example: (1) Respecting the amount
+of comment (e.g., function-level/line-level/etc.) and not be over-verbose or under-verbose; (2) Not
+writing sample inputs **if** the original Python code doesn't have them; (3) The original Python code
+can be directly run with top-level statements. If this is allowed in {lg_long}, follow this behavior; if
+this is impossible in {lg_long}, put the top-level statements in a canonical entry point, such as a main
+function.
+D In-Language Performance of Parallel-SFT
+We empirically test the extent to which parallel program training degrades in-language performance (i.e., training and
+testing on the same PL). We performed in-language RL training and evaluatio

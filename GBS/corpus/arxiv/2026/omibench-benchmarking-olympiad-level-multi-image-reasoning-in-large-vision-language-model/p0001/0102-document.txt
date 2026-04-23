@@ -1,0 +1,29 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 102
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+sistent
+1otherwise ,(8)
+GPTScore is then the mean across allNexamples:
+GPTScore(x i) = 1
+N
+N∑︁
+i=1
+˜si.(9)
+For per-task results, averaging is restricted to task-specific examples. Main results report micro-averaged
+GPTScore across all tasks.
+C.3. Manual Analysis Protocol
+To understand how performance diverges from GPTScore, we conducted manual analysis on cases where
+the two metrics disagree. For Gemini-3-Pro-Preview and InternVL3.5-1B, evaluation items were partitioned
+based on whether rule-based accuracy (match score>0.75 as correct) agreed with GPTScore-based labels
+(GPTScore=1 as correct). From disagreement cases, 100 instances per model were randomly sampled,
+yielding 200 instances for detailed inspection.
+We collected Model Judgment and Rule Judgment labels for 200 instances and calculated agreement rates
+across four categories: both correct, both incorrect, Model correct but Rule incorrect, and Model incorrect
+35

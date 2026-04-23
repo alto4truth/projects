@@ -1,0 +1,23 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+el temporal evolution through frame-wise tracking [15,17,21,37,54,75] or unified 4D
+primitives [27,28,32,63,69], achieving better resource efficiency and robustness
+to complex motion. However, both paradigms rely heavily on dense multi-view
+inputs to disentangle motion from geometry. Under sparse views, deformation
+fields suffer severe blurriness from under-constrained optimization, while explicit
+methods are prone to trajectory drift and artifacts, lacking the robust priors necessary to maintain temporal and geometric consistency.
+2.3 Sparse-View Novel View Synthesis
+Sparse-view novel view synthesis remains challenging due to severely underconstrained geometry and appearance. To mitigate this, NeRF and 3DGS methods often employ soft regularizations, including depth or normal priors [10,11,
+29,52,58,65,72,78], semantic or frequency regularization [24,40,46,56,67], and
+dropout-based stabilization [18,41,48,66,73]. However, these constraints still fail
+to prevent structural collapse or severe trajectory drift under extreme sparsity.
+Recently, diffusion models have emerged as powerful generative priors for novel
+view synthesis and 3D augmentation [16,33–35,62,64]. Yet, naively applyin

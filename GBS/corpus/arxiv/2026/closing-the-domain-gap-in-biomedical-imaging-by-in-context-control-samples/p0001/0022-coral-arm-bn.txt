@@ -1,0 +1,24 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 1
+section: coral-arm-bn
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+ctor of
+1/M.
+In typical settings, CS-ARM-BN achieves the lowest MSE
+by trading a small residual bias, shrunk by the factor
+(L/M)2 relative to ARM-BN, against a reduced variance,
+since M > C . This bias-variance tradeoff is most favorable
+precisely in the operating regime of real drug screening:
+availability of few controls (C) and moderate-to-severe label shift, which is confirmed empirically in Table 4. Details
+in Appendix F.
+Relation to ARM.Importantly, our CS-ARM-BN method
+remains fully within the Adaptive Risk Minimization
+(ARM) framework. As shown in Figure 3, during training, the model is meta-learned episodically: for each source
+Algorithm 1Pseudo code for CS-ARM-BN vs traditional
+image classifier inference pipelines

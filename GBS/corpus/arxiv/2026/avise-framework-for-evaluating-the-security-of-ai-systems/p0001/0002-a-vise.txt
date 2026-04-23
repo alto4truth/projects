@@ -1,0 +1,35 @@
+title: AVISE: Framework for Evaluating the Security of AI Systems
+source: arxiv
+year: 2026
+document_id: avise-framework-for-evaluating-the-security-of-ai-systems
+authors: Mikko Lempinen; Joni Kemppainen; Niklas Raesalmi
+page: 1
+section: a-vise
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20833v1
+
+kens. The default configurations used for each
+model are detailed in Table 3, where:
+•T emperaturecontrols the randomness of
+responses. Lower values make the output
+more deterministic, while higher values increase stochasticity.
+•Max T okensis the maximum number of tokens to generate.
+•T op Kdetermines how many of the most
+likely tokens should be considered when generating a response.
+•T op Pdefines the probabilistic sum of tokens
+that should be considered for each subsequent
+token.
+•Repeat Penaltydetermines if repetition of
+tokens is penalized. The logit scores of each
+new token is divided by the penalty value before sampling. A value of 1.0 means no penalization.
+•Presence Penaltysubtracts a fixed value
+from the logit score of any token that has appeared at least once in the preceding context.
+This makes the model more likely to discuss
+new topics.
+The maximum generated tokens was set to 7680
+for Qwen models as the maximum generated tokens include the tokens generated for reasoning on
+reasoning models - with the maximum generated
+tokens set to 768, Qwen 3.5 was not able to finish
+its reasoning process before reaching the maximum
+token limit.
+We ran the Red Queen SET on each of th

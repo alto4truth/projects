@@ -1,0 +1,38 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 80
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+0 200 400 600 800 1000
+Step
+0
+2
+4
+6
+8
+10Pass@1 (%)
+Go
+Same Language
+Different Language (average)
+0 200 400 600 800 1000
+Step
+PHP
+0 200 400 600 800 1000
+Step
+Ruby
+Figure 5 Validation of Transfer Failure with Custom SFT.We replicate the experiment from §3 and Figure 2 using custom SFT models
+trained from the Llama-3.1-8B base model, removing the DPO priors. We visualize the pass@1 performance on a target language
+(e.g., Go) during RL training on the same vs. different source languages (averaged over 10 source PLs). Shaded regions indicate 95%
+confidence intervals. Consistent with the instruct model results, cross-PL transfer from a different source language leads to limited
+improvements compared to same-language training.
+Appendix
+A Cross-Programming-Language Evaluation of Custom-Trained SFT Models
+In §3, we observed limited transferability using Llama-3.1-8B-Instruct. It is an SFT + DPO model, and we append a
+code RL training stage. While this is consistent with state-of-the-art practices that include multiple stages of policy
+optimization (Yang et al., 2025a; Bercovich et al., 2025;i.a.), the existing DPO stage may confound transfer effects
+in the RL stage. Therefore, we conduct a

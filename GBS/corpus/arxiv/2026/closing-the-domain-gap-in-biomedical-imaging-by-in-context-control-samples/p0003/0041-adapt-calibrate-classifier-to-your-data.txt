@@ -1,0 +1,28 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+0.579±0.010 0.154±0.003
+CS-ARM-BN (ours)0.878±0.006 0.825±0.007 0.788±0.014 0.770±0.045 0.657±0.003 0.606±0.006 0.648±0.011 0.611±0.015
+is more pronounced, as the test samples originate from a
+new imaging source. In Table 4, we show that, similarly
+to Experiment 5.3, the performance of methods that do not
+leverage negative controls (TENT, AdaBN, and ARM-BN)
+degrades as the degree of label shift increases.
+We evaluate the performance of BEN, which relies exclusively on control samples for adaptation, for which we also
+extend BEN to meta-learning. While the version without
+meta-learning performs poorly, the meta-learned variant,
+despite achieving lower accuracy than CS-ARM-BN, outperforms the other methods under strong label shift.
+Consistent with the previous experiment, CS-ARM-BN stabilizes the batch normalization statistics and achieves the
+highest accuracy across both mild and severe domain shifts.
+6. Discussion and outlook
+We exemplified a real use-case scenario of batch effect
+correction for mechanism of action (MoA) classification of microscopy imaging data.Our study shows that
+in-context adaptation, where models adapt some of their
+parameters on a small set of unlabeled sampl

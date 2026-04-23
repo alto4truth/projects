@@ -1,0 +1,23 @@
+title: Stream-CQSA: Avoiding Out-of-Memory in Attention Computation via Flexible Workload Scheduling
+source: arxiv
+year: 2026
+document_id: stream-cqsa-avoiding-out-of-memory-in-attention-computation-via-flexible-workload-scheduling
+authors: Yiming Bian; Joshua M. Akey
+page: 1
+section: document
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20819v1
+
+roduced in Section 2.3), and
+Numi and Deni correspond to the numerator and denominator of the softmax computation.
+When all subsequences are computed, CQSA constructs two global accumulators in full-token
+coordinates followed by the final normalization. Thus,
+Num=
+X
+i
+scatter(Numi)Den=
+X
+i
+scatter(Deni)O=Num⊘Den (3)
+where⊘denotes token-wise division with broadcast along the head dimension (D).
+2

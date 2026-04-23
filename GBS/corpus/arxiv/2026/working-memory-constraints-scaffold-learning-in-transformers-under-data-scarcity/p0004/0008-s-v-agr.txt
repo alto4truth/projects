@@ -1,0 +1,27 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+s. This sharp increase suggests that the generalisations required to correctly
+resolve ellipsis are not readily captured with limited data, but indeed become accessible with more
+exposure.
+An important overall finding is that highly constrained, simple models often outperform the less1We also see that the performance on Argument Structure
+especially is remarkably similar to GPT2-large pretrained
+model (Warstadt et al., 2020).
+constrained baseline, particularly on complex syntactic and semantic challenges. Our null hypothesis before experimentation was that heavily constrained models may significantly hamper performance in transformers, especially since a large
+body of work in contemporary NLP looks into
+methods for moving away from locality bias (Tay
+et al., 2020; Zaheer et al., 2020,inter alia). We find
+the performance of small, rigid attention windows
+on phenomena that are not strictly local to be the
+most surprising result. For instance, fixed window
+5 is broadly one of the best performing models in
+complex sub categories. Especially in Argument
+Structure where smaller fixed window models obtain significantly higher performance, where the
+sentences usually focus on structures wh

@@ -1,0 +1,57 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 9
+section: behave
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+mance on the BEHAVE benchmark by a
+significant margin of 15.0% and 5.0% on
+CDhum andCD obj respectivelyrelativeto
+the closest competitor, HOI-TG [77].
+
+14 D. Antić et al.
+Fig.7: Qualitative results.LEXIS-Flow ∗ recovers physically-plausible interactions
+from diverse in-the-wild images. By leveraging dense InterField signals, our model produces accurate spatial configurations and realistic articulations even under occlusion.
+4.5 Ablation Study Variants CDhum↓CDobj ↓
+Architect.
+(Unguided)
+GaussFlow Baseline 13.45 57.25
+FlowObject Baseline N/A 65.05
+LEXIS-Flow Baseline 9.68 48.01
+Guidance
+Unguided 9.68 48.01
+Lmask 9.46 43.51
+Lpose+IF 9.05 41.01
+Lmask +L pose+IF 8.85 35.01
+Table 4: Ablations:We evaluate design
+choices for our architecture (unguided) and
+for guided refinement on Open3DHOI [78].
+Table 4 evaluates our design choices
+on the Open3DHOI [78] dataset.
+Architecture(unguided):When
+replacing the discrete LEXIS codebook with a continuous VAE latent
+(GaussFlow) degrades CDhum by 39%
+and CDobj by 19%. This shows that
+discrete tokenization preserves pose
+expressivityandinteractionstructure.
+After removing LEXIS, we keep the human fixed (initialized with the SotA
+CameraHMR method) and denoise object pose (FlowObject). This worsens performance, showing that jointly denoising the body and object with LEXIS is
+essential; note that CDhum is not reported as body parameters are fixed.
+Guidance signal (Sec. 3.3):Adding mask guidance (Lmask) reduces CDobj
+to43.51.InterFieldguidance(L pose+IF)achievesCD obj of41.01.Combiningboth
+yields the best CDobj (35.01), a 27% reduction over unguided sampling. This
+shows that 2D masks and 3D InterField proximity are complementary signals.
+5 Conclusion
+We go beyond sparse, binary contact by leveraging dense, continuous InterFields
+for reconstructing 3D Human-Object Interaction from single images. To make
+InterFieldinferencetractablefromasingleimage,welearnLEXIS,alatentmanifold of interaction signatures, encoding interaction- and object-specific proximity
+patterns. Then, we develop LEXIS-Flow, a dual-stream Flow-Matching model
+that jointly estimates 3D human and object meshes alongside their InterFields,
+and exploits these for guided refinement, eliminating post-hoc optimization. Experiments show that continuous InterFields outperform binary contacts in both
+fitting and generative settings. On the Open3DHOI benchmark, LEXIS-Flow∗
+achieves the lowest CDobj (22.96) and highest Contact F1 (0.451), outperforming
+all baselines. This moves us closer to holistic 3D scene understanding.

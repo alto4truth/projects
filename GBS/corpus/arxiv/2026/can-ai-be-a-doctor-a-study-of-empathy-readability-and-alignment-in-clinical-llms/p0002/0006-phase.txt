@@ -1,0 +1,23 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+niddk.nih.gov3. Each entry includes metadata such as UMLS Concept Unique Identifiers (CUIs), semantic types, question focus (e.g., disease, drug, test), and topic type
+(e.g., treatment, side effects, diagnosis). The dataset is distributed in XML format
+with structured tags for questions, answers, and metadata.
+For this study, we selected a subset of 16,400 QA pairs covering 37 question types.
+We excluded three sections of the original corpus: A.D.A.M. Medical Encyclopedia,
+MedlinePlus Drugs, and MedlinePlus Herbal Supplements. These sections account
+for approximately 31,000 entries. They follow editorial standards that differ from the
+core NIH sources and show substantial variation in writing style, clinical depth, and
+structure. Their exclusion ensures consistency in tone, source reliability, and clinical
+framing. This controlled subset enables fair comparisons across models.
+The resulting MedQuAD subset is suitable for evaluating patient-facing language
+models. It primarily includes symptom-, treatment-, and diagnosis-oriented questions authored by NIH experts. Each entry contains aquestionthat reflects common
+medical concerns and a correspondinganswerderived from expert-curated

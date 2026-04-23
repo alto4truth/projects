@@ -1,0 +1,19 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+tically investigate the efficacy of our generative prior, the geometric
+purification and the generative rectification module. Furthermore, we provide an
+analysis of the computational efficiency of our framework.
+Generative Prior.We first dissect the generative prior module introduced
+in Sec. 3.2 to evaluate the impact of its specific designs. As detailed quantitatively in Tab. 3, disabling these key components leads to significant performance
+drops across both perceptual and temporal metrics. Specifically, disabling the
+structure-preserving module leads to severe structural drift, causing the generative model to hallucinate implausible shapes and visible anatomical distortions
+on the player, which deteriorates the MANIQA score from0.2987to0.1938.
+Furthermore, applying 2D priors purely frame-by-frame by removing the spatiotemporal coordinated attention inherently compromises sequence consistency,

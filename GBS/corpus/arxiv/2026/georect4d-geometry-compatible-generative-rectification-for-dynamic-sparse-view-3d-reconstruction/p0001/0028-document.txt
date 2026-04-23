@@ -1,0 +1,23 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+build the generative prior upon the SD-Turbo backbone,
+applying trainable LoRA modules to all convolutional and linear layers, with the
+adapter loss weights set toλpix = 1.0andλ per = 1.0. Our progressive training
+is optimized for 20000 iterations per stage. Across all sequences, we set the
+threshold factorκ= 3.0, the SSIM loss weightλs = 0.2, and the dynamic weight
+λdy = 0.2. During the generative feedback phase, we sample novel views via
+camera pose interpolation and utilize the diffusion prior for joint optimization,
+with the coupling factor set toλrect = 0.1. More details regarding the camera
+pose sampling strategy are provided in the supplementary material.
+4.2 Comparison
+Quantitative Comparisons.To validate the effectiveness of our method, we
+first compare it against state-of-the-art NeRF- and 3DGS-based dynamic view
+synthesis approaches including HyperReel [1], Mixvoxels [57], STGS [32] , 4DGS

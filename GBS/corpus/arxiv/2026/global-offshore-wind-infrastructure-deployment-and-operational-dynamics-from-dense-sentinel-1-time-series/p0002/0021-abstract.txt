@@ -1,0 +1,23 @@
+title: Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+source: arxiv
+year: 2026
+document_id: global-offshore-wind-infrastructure-deployment-and-operational-dynamics-from-dense-sentinel-1-time-series
+authors: Thorsten Hoeser; Felix Bachofer; Claudia Kuenzer
+page: 2
+section: abstract
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20822v1
+
+chip grid of 2048 × 2048 pixels with 50%
+overlap is used to enable highly parallelized data access via the GTI during a CPU based inference process running up
+to 24,000 concurrent model instances.
+Detection bounding boxes of the second object detection stage were reduced to centroid coordinates to get point
+representations of offshore wind infrastructures for validation. Validation was performed using manually annotated
+offshore wind infrastructure locations derived from the Sentinel-1 2025Q1 median composite across three validation
+sites.
+We updated the validation datasets from Hoeser et al. [2022] to include infrastructure constructed up to 2025Q1 in the
+North Sea Basin and the East China Sea. Additionally, a new validation site was introduced along the southeast coast of
+Vietnam to include challenging to detect offshore wind farm layouts characteristic for this region. Overall, we provide
+9,770 offshore wind energy infrastructure validation locations. Because classification of deployment state and object
+type is addressed in the subsequent time series analysis, detection was evaluated in a class-agnostic manner, treating
+turbine foundations, deployed turbines, and support platf

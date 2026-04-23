@@ -1,0 +1,54 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 1
+section: surface
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+Procedural
+Generation
+Novel EBNF
+Task Instance
+LLMs
+CoT
+Few-Shot
+Grammaticality Judgment
+Goal-Conditioned Generation
+Inst-to-Code Generation
+Synthesis Code
+Generated Code
+Parsing Check
+Parsable?
+AST
+Identical?
+Target
+Reachable?
+Synthesis Configuration start: stmt+
+action_stmt: DO action END
+...
+if (holding ball ) then [
+go forward 3 end
+] ...
+Write a valid program
+that reaches the
+target final state ...
+SVR
+BER
+SCR
+v_pipo ((v_gsqe
+item_3 v_vvyj v_gsqe
+box_4) v_vvyj v_tkik
+Figure 1: Architecture of the evaluation framework. It illustrates the transition from controllable synthesis of novel
+grammars to the hierarchical assessment of LLMs’ in-context interpretation capability.
+ronments for precise behavioral evaluation (Yang
+et al., 2025b). Our framework supports systematic stress-testing across recursion depth, expression complexity, and surface realizations. Notably,
+we introduce" Alien" lexicons, which replace familiar keywords with opaque tokens, to force the
+LLM to rely exclusively on the provided grammar,
+thereby isolating pure symbolic reasoning from
+semantic priors.
+Through systematic experiments, we find that
+LLMs exhibit a consistent hierarchical degradation
+in grammar inter

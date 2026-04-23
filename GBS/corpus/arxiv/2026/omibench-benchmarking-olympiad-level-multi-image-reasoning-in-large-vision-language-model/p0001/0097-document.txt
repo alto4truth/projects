@@ -1,0 +1,25 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 97
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+ntherelationships𝑥∼𝜃,𝑦∼𝜃anddescribein
+wordsthedirectionofthetangentlinetotheepitrochoidatpoint𝐴.
+Figure14: Analysis of reasoning error examples on Gemini-3-Pro.
+Rationale:“…showsthatallAustralianferalrabbitsaredescendedfromasinglepopulation...Theothershipmentsofdomesticrabbitsdidnotcontribute..."
+StandardRationale:...showsdistinctlineages...confirmingoriginsfromseparateshippings.StandardAnswer(Gold):…A.
+ModelPrediction(Gemini-3-pro):…B.
+ErrorAnalysis:VisualGeneralization:Themodel"smoothedout"thecomplextreeintoasimple"SingleOrigin"narrative,missingthesubtlebranches.Confabulation:Tosupportitswrongconclusion,ithallucinatedbiologicalmechanisms(e.g.,specificgenefunctions)thatwereNOTpresentinthechartatall.
+Input:RabbitswereoriginallyonlywildinSpainandFrance.…RabbitsspreadacrossAustraliaexplosively,causingcatastrophicdamagetoAustralianhabitats.ScientistsinCambridgeinvestigatedwhereferalAustralianrabbitscamefrom.
+…eachbranchisproportionaltothenumberofgeneticchanges.
+WheredidAustralianferalrabbitscomefrom?…(A)Frenchwildrabbits.(B)Britishwildrabbits(C)Domesticrabbits(D)NewZealand…
+Fig 1: Historical Context
+(Rabbits at Waterhole)
+Fig 2: Genetic Tree
+(The Proof)
+Figure15: Analysis of reasoning

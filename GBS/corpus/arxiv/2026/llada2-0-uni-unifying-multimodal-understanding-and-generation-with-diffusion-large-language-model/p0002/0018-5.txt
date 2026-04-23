@@ -1,0 +1,26 @@
+title: LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model
+source: arxiv
+year: 2026
+document_id: llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffusion-large-language-model
+authors: Inclusion AI; Tiwei Bie; Haoxing Chen; Tieyuan Chen; Zhenglin Cheng; Long Cui; Kai Gan; Zhicheng Huang; Zhenzhong Lan; Haoquan Li; Jianguo Li; Tao Lin; Qi Qin; Hongjun Wang; Xiaomei Wang; Haoyuan Wu; Yi Xin; Junbo Zhao
+page: 2
+section: 5
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20796v1
+
+0.740
+Seedream 3.0 Diff. 0.628 0.596 0.604 0.561 0.592 0.853 0.782
+Qwen-Image Diff. 0.837 0.836 0.831 0.816 0.829 0.912 0.802
+LongCat-Image Diff. 0.912 0.873 0.855 0.831 0.865 0.936 0.785
+Z-Image-Turbo Diff. 0.887 0.866 0.862 0.834 0.858 0.928 0.804
+Unified
+BAGEL AR + Diff. 0.498 0.391 0.332 0.291 0.356 0.657 0.779
+InternVL-U AR + Diff. 0.729 0.660 0.618 0.549 0.623 0.804 0.816
+Lumina-DiMOO D-Diff. 0.723 0.646 0.571 0.505 0.590 0.805 0.831
+LLaDA2.0-Uni D-Diff. + Diff. 0.788 0.776 0.763 0.746 0.765 0.911 0.818
+DPG-Bench.Table 4 reports the text-to-image generation results on the DPG benchmark. Notably, LLaDA2.0Uni achieves the state-of-the-art overall score of 87.76 among unified models, outperforming strong baselines
+such as LLaDA-o (87.04) and HunyuanImage-3.0 (86.10). Specifically, our model secures the highest scores
+on the Entity (93.55) and Other (94.04) sub-metrics. Furthermore, LLaDA2.0-Uni delivers highly competitive performance even against specialized generation-only models, surpassing Z-Image-Turbo (84.86) and
+demonstrating robust text-image alignment capabilities.
+One-IG Bench.As shown in Table 5, LLaDA2.0-Uni achieves a highly competitive overall score of 0.505
+on One

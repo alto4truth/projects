@@ -1,0 +1,24 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+stage, this SFT model is always paired with target-language RL training data, representing the ideal "data-rich" scenario
+where transfer is unnecessary.
+5.3 Training Setup
+We evaluate the transfer effect from a source PL to another target PL. For the source, we consider C++ and Python, two
+high-resource languages. For the target PL, we consider Go, PHP, and Ruby, the same as in §3, all of which are unseen
+during SFT. We also consider the other SFT languages as target languages whenever appropriate.
+We initialize from the Llama-3.1-8B base model9 and train 3 SFT models on the mixtures in §5.2,10 as well as the oracle.
+For the oracle, we continue from the 1 Language (target) SFT model and further RL-train it with target PL data to get
+the “data-rich” in-language training performance.
+We consider the two coding tasks in §2.1. For code generation, we use CodeForces, following §3. For code validation,
+we use the CodeForces submissions dataset11 that consists of human submissions to the CodeForces website. It contains
+submissions in multiple PLs, including all of our 3 target languages. See dataset statistics and additional training details
+in §B.
+During evaluation, we sample 8 times per

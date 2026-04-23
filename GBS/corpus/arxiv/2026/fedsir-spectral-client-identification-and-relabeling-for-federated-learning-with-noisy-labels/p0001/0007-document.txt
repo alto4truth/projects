@@ -1,0 +1,28 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+rong baselines and recent methods for FL with
+noisy labels.
+Notation.We use bold uppercase letters to denote matrices, bold lowercase letters to denote vectors, and non-bold
+symbols to denote scalars. For a setC,|C|denotes its cardinality. For a vectorx,∥x∥ 2 denotes theℓ 2 norm.
+2. Related Works
+Noisy label learning in centralized setting.In centralized
+learning, where all training data are aggregated and processed on a central server, multiple methods have been proposed to address the noisy label challenge. One prominent
+category is sample selection and reweighting, which aims
+to identify clean samples during training. In [5], two neural networks are trained simultaneously, and each network
+selects small-loss samples to update its peer. To mitigate
+the risk that both networks converge to the same erroneous
+predictions, [23] further introduces a disagreement-update
+mechanism before the cross-update.
+Another line of work focuses on designing robust loss
+functions. For example, [19] proposes the symmetric cross
+entropy loss, which augments standard cross entropy with
+a reverse cross entropy term to improve robustness without
+requiring explicit noise estimation. Similarly, [16] propo

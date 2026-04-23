@@ -1,0 +1,46 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 1
+section: p-assing
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+hin the message-passing framework, node updates
+are constructed by aggregating all gauge-covariant contributions that transform consistently at sitei. These
+include local interactions among node features as well
+as edge-mediated contributions from neighboring sites,
+transported covariantly along lattice links. Concretely,
+the aggregated messageX (ℓ)
+i ={X (ℓ)
+i,α}at theℓ-th layer
+takes the form
+X(ℓ)
+i =η 1 W1
+
+V(ℓ)
+i
+
++η 2 W2
+
+V(ℓ)
+i V(ℓ)
+i
+
++η3
+X
+j∈N(i)
+W3
+
+E(ℓ)
+ij V(ℓ)
+j E(ℓ)
+ji
+
+.(4)
+Here,W k[·] denote learnable linear or multilinear maps
+acting on channel indices, while matrix multiplication
+acts on gauge indices and follows the order of factors.
+The coefficientsη k are trainable coefficients controlling

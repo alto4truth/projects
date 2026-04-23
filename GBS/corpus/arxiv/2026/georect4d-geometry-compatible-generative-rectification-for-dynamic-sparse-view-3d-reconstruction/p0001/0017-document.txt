@@ -1,0 +1,17 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+se 3D renderings differ substantially from
+the natural-image domain, and (iii) frame-wise stochastic refinement introduces
+temporal flickering. We thus instantiateDas a degradation-aware rectifier with
+targeted designs to ensuregeometry compatibilityandtemporal stability.
+Structure-Preserving Feature Injection.We designDas an efficient
+single-step diffusion rectifier to enable iterative feedback without multi-step sampling overhead. To suppress structure drift caused by latent compression, we
+inject multi-scale spatial cues from the encoder into the decoder via projected

@@ -1,0 +1,51 @@
+title: DeVI: Physics-based Dexterous Human-Object Interaction via Synthetic Video Imitation
+source: arxiv
+year: 2026
+document_id: devi-physics-based-dexterous-human-object-interaction-via-synthetic-video-imitation
+authors: Hyeonwoo Kim; Jeonghwan Kim; Kyungwon Cho; Hanbyul Joo
+page: 1
+section: 1
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20841v1
+
+X model [33], which includes 21 body joints
+and 30 hand joints, with 15 joints per hand. The state at each time t is defined as st ={s h
+t ,s o
+t },
+3
+
+Figure 2:Overview.Given a scene with an SMPL-X [ 33] human and object, we replace it with a
+deformed textured mesh and render an HOI video. Then hybrid imitation targets extracted from the
+video are used to train our humanoid control policy.
+composed of the human component and the object component. Following MaskedMimic [46], the
+human state sh
+t ∈R 778 comprises joint positions, rotations, and linear/angular velocities. The object
+state so
+t ∈R 15 includes its position, orientation, and velocities, while the action at ∈R 51×3 defines
+PD target angles for all body and hand joints.
+4 DeVI: Dexterous Video Imitation
+Given an initial scene including a 3D human, represented as a SMPL-X pose, and a target 3D object,
+our goal is to learn a policy π to generate physically plausible HOI motion to manipulate the target
+object in simulation, following the action specified by a text prompt. Our core idea is to leverage a
+video diffusion model [49] to synthesize 2D videos, from which we extract hybrid imitation targets,
+including 3D human motion and 2D object trajectories, to train the humanoid control policy.
+In this paper, we focus on dexterous hand-object manipulation in tabletop scenarios. We initialize a
+scene S={H,O} , where H denotes the human parameterized by SMPL-X [33], and O represents
+the object defined as follows:
+H={β,θ b,ϕ b,τ b,θ h}(2)
+O={ϕ o,τ o},(3)
+where β∈R 10, θb ∈R 21×3, θh ∈R 30×3, ϕh ∈SO(3) , and τ h ∈R 3 are the SMPL-X parameters
+of human shape, body pose, hand pose, global body root orientation, and global body root translation,
+respectively. The ϕo ∈SO(3) and τ o ∈R 3 are the object’s global orientation and translation. We
+define MO(ϕo,τ o) as a mapping from the object state to the transformed object mesh. We use a
+similar function MSMPLX(H) to obtain the SMPL-X mesh from the parameters. In this section, we
+consider the single object case for simplicity, but our framework is not restricted to it.
+We first present our method to synthesize an HOI video from the input scene following the prompt
+instruction (Sec. 4.1). From the video, we obtain hybrid imitation targets (Sec. 4.2). Then, we present
+our novel hybrid tracking reward (Sec. 4.3) for learning the control policy. An overview of our
+method is shown in Fig. 2.
+4.1 2D HOI Video Generation
+Observing that 2D video synthesis and 3D human mesh recovery perform better with realistic human
+appearances, we first replace the SMPL-X surface mesh with a more realistic textured human mesh
+MHuman(H) that matches the scale, pose, and location ofMSMPLX(H). In practice, we select textured
+4

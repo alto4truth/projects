@@ -1,0 +1,41 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+ephrase
+Claude Base
+Claude Empathy
+Claude Rephrase
+Gemini Rephrase
+Fig. 9: Distribution of sentiment expressed by models on the iCliniqQAs dataset.
+17
+
+T able 1: Percentage distribution of sentiment labels per system on MedQuAD dataset.
+Arrows indicate comparison to Doctor:↑= higher,↓= lower, - = similar.
+System V ery Negative (%) Negative (%) Neutral (%) Positive (%) V ery Positive (%)
+Physician Answer 37.25 13.73 49.02 0.00 0.00
+Mixtral 43.14 (↑) 0.00 (↓) 56.86 (↑) 0.00 (—) 0.00 (—)Med-PaLM 45.10 (↑) 13.73 (—) 41.18 (↓) 0.00 (—) 0.00 (—)MixtralEmpathy Prompt 23.53 (↓) 1.96 (↓) 74.51 (↑) 0.00 (—) 0.00 (—)Med-PaLMEmpathy Prompt 25.49 (↓) 5.88 (↓) 68.63 (↑) 0.00 (—) 0.00 (—)MixtralRephrase 21.57 (↓) 7.84 (↓) 70.59 (↑) 0.00 (—) 0.00 (—)Med-PaLMRephrase 19.61 (↓) 7.84 (↓) 72.55 (↑) 0.00 (—) 0.00 (—)GPT-5 (BASE) 40.00 (↑) 2.00 (↓) 58.00 (↑) 0.00 (—) 0.00 (—)GPT-5Empathy Prompt 22.00 (↓) 4.00 (↓) 74.00 (↑) 0.00 (—) 0.00 (—)GPT-5Rephrase 22.00 (↓) 10.00 (↓) 68.00 (↑) 0.00 (—) 0.00 (—)GeminiRephrase 16.00 (↓) 8.00 (↓) 68.00 (↑) 8.00 (↑) 0.00 (—)Claude (BASE) 82.00 (↑) 4.00 (↓) 14.00 (↓) 0.00 (—) 0.00 (—)ClaudeEmpathy Prompt 48.00 (↑) 20.00 (↑) 32.00 (↓) 0.00 (—) 0.00 (—)ClaudeRephrase 56.00 (↑) 10.00 (↓) 34.00 (↓) 0.00 (—) 0.00 (—)
+T able 2: Percentage distribution of sentiment labels per system on the iCliniqQAs
+dataset. Arrows indicate comparison to Physician:↑= higher,↓= lower, - = similar.
+System V ery Negative (%) Negative (%) Neutral (%) Positive (%) V ery Positive (%)
+Physician Answer 6.0 10.0 84.0 0.0 0.0
+Mixtral 14.0 (↑) 2.0 (↓) 84.0 (—) 0.0 (—) 0.0 (—)Med-PaLM 10.0 (↑) 8.0 (↓) 82.0 (↓) 0.0 (—) 0.0 (—)MixtralEmpathy Prompt 2.0 (↓) 10.0 (—) 84.0 (—) 4.0 (↑) 0.0 (—)Med-PaLMEmpathy Prompt 4.0 (↓) 12.0 (↑) 84.0 (—) 0.0 (—) 0.0 (—)MixtralRephrase 0.0 (↓) 10.0 (—) 90.0 (↑) 0.0 (—) 0.0 (—)Med-PaLMRephrase 2.0 (↓) 8.0 (↓) 90.0 (↑) 0.0 (—) 0.0 (—)GPT-5 (BASE) 28.0 (↑) 8.0 (↓) 62.0 (↓) 2.0 (↑) 0.0 (—)GPT-5Empathy Prompt 16.0 (↑) 16.0 (↑) 62.0 (↓) 4.0 (↑) 2.0 (↑)GPT-5Rephrase 0.0 (↓) 12.0 (↑) 88.0 (↑) 0.0 (—) 0.0 (—)GeminiRephrase 4.0 (↓) 26.0 (↑) 52.0 (↓) 18.0 (↑) 0.0 (—)Claude (BASE) 6.0 (—) 2.0 (↓) 92.0 (↑) 0.0 (—) 0.0 (—)ClaudeEmpathy Prompt 10.0 (↑) 10.0 (—) 80.0 (↓) 0.0 (—) 0.0 (—)ClaudeRephrase 0.0 (↓) 8.0 (↓) 92.0 (↑) 0.0 (—) 0.0 (—)
+Taken together, the results suggest that affective misalignment is more pronounced
+in institutionally curated medical explanations (MedQuAD) than in conversational
+clinical exchanges (iCliniqQAs). While empathy prompting and rephrasing consistently reduce extreme negativity and increase neutrality across both datasets,
+certain architectures introduce an independent tendency toward positive reinforcement, revealing a systematic stylistic shift rather than strict replication of physician
+affective norms.
+4.3.2 Emotion Distribution
+Beyond general sentiment, we analyzed the presence of 28 fine-grained emotional categories. Figures 12 and 13 report the five most frequent dominant emotions across
+systems in the MedQuAD and iCliniqQAs datasets, respectively.
+Across both datasets, two emotions consistently dominate model-generated outputs:approvalandcaring. However, their relative balance differs substantially between
+datasets, reflecting the distinct communicative setting. In MedQuAD, physicianauthored responses are strongly approval-oriented, withapprovalas the dominant
+emotion in 78.4% of cases, whilecaringanddisapprovaleach account for 7.8%, and
+realizationfor 5.9%. This pattern is consistent with institutional medical explanations,
+18

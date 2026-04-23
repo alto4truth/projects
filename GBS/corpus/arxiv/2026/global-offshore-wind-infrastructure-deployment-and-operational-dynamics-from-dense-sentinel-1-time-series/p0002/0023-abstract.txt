@@ -1,0 +1,28 @@
+title: Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+source: arxiv
+year: 2026
+document_id: global-offshore-wind-infrastructure-deployment-and-operational-dynamics-from-dense-sentinel-1-time-series
+authors: Thorsten Hoeser; Felix Bachofer; Claudia Kuenzer
+page: 2
+section: abstract
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20822v1
+
+Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+Performance was quantified using Precision, Recall, and F1 score at site level, along with macro- and micro-averaged
+scores across sites to account for class imbalance. A detection was considered a true positive (TP) if its centroid lay
+within a radius of 100 m of a ground truth point. Detections outside this radius were counted as false positives (FP), and
+ground truth points without a corresponding detection within 100 m were counted as false negatives (FN).
+We handled edge cases, so that if multiple detections matched the same ground truth point, only the closest detection
+was counted as TP, additional detections were counted as FP. Furthermore, if a detection fell within 100 m of multiple
+ground truth points, it was assigned to the nearest ground truth location as TP and unmatched ground truth points were
+counted as FN.
+Evaluation metrics were computed as:
+Precision = TP
+TP + FP ,(1)
+Recall = TP
+TP + FN ,(2)
+F1 = 2× Precision×Recall
+Precision + Recall .(3)
+With this modernized workflow building upon Hoeser et al. [2022], we provide an updated global dataset of offshore
+win

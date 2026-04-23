@@ -1,0 +1,26 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+ity.Following Wu et al. (2025b), we correct for baseline anisotropy by subtracting the cosine
+similarities between non-parallel pairs. Formally, e.g., we measure cos(rGo
+i,ℓ,r PHP
+i,ℓ )−E j̸=i[cos(rGo
+i,ℓ,r PHP
+j,ℓ )]. We estimate
+the second term with a single random sample.
+We show the results in Figure 4. We observe that simple (non-parallel) multi-PL training already improves program
+alignment over the monolingual baseline, and explicit parallel program training further promotes it. This confirms that
+Parallel-SFT induces more functionality-centric representations.
+Furthermore, interestingly, the similarity measures both follow an inverted U-shape, higher in intermediate layers and
+lower on the two ends. This is a familiar trend in multilingual studies (Pires et al., 2019; Wu and Dredze, 2019; Conneau
+et al., 2020b; Wu et al., 2025b;i.a.). The initial/final layers need to map from/to the surface form of PLs and are thus
+more specialized to the syntax of individual PLs. The middle layers, on the other hand, serve as a “semantic hub” and
+perform more abstract reasoning (Wendler et al., 2024; Wu et al., 2025b). Parallel-SFT accentuates this trend: for
+example, its adjusted cosine s

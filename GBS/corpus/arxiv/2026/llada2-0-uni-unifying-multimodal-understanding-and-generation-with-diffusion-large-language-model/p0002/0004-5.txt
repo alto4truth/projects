@@ -1,0 +1,31 @@
+title: LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model
+source: arxiv
+year: 2026
+document_id: llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffusion-large-language-model
+authors: Inclusion AI; Tiwei Bie; Haoxing Chen; Tieyuan Chen; Zhenglin Cheng; Long Cui; Kai Gan; Zhicheng Huang; Zhenzhong Lan; Haoquan Li; Jianguo Li; Tao Lin; Qi Qin; Hongjun Wang; Xiaomei Wang; Haoyuan Wu; Yi Xin; Junbo Zhao
+page: 2
+section: 5
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20796v1
+
+k.
+4.4 Diffusion Decoder Training
+Training Paradigm.We optimize the diffusion decoder via the standard flow matching objective (Lipman
+et al., 2022). The overall training trajectory is decoupled into a preliminary warm-up followed by a progressive
+two-stage fine-tuning scheme. The flow matching loss is formulated as:
+LFM(θ) =E x0,x1,z,t
+h
+∥vθ,t (xt,z)−v t∥2
+2
+i
+, (7)
+where z represents the conditioned semantic visual tokens, vθ,t denotes the velocity field predicted by the
+network at timestept, andv t is the target velocity. The overall training process is divided into three stages:
+• Stage 1: Warm-up.We freeze the semantic processor and update only the remaining modules to establish
+cross-modal alignment while preserving pre-trained priors.
+• Stage 2: Multi-domain Generalization.Following the warm-up, we unfreeze all parameters and fine-tune
+on diverse domains for robust generalization.
+•Stage 3: High-fidelity Refinement.In the final stage, we refine on high-quality data to elevate aesthetic
+fidelity and fine-grained visual details.
+Few-step Generation.To accelerate visual generation, we adopt a lightweight consistency-based distillation
+framework (Sun et al., 2026) for the diffus

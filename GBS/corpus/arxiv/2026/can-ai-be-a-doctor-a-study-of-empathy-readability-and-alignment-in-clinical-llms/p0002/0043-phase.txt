@@ -1,0 +1,49 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+s response in a real medical
+context.
+• Emotional T one: The tone felt supportive and reassuring.
+Ratings were collected on a 5-point Likert scale:
+37
+
+Score Interpretation
+1 Strongly disagree
+2 Disagree
+3 Neutral
+4 Agree
+5 Strongly agree
+Responses appeared in randomized order to reduce position bias, and participants
+were blinded to whether a response originated from physicians or LLMs.
+B.2 Expert Evaluation (Human Panel)
+Expert evaluations were collected through a structured Google Form administered to
+medical professionals. Each evaluator independently rated model-generated responses
+using the same 5-point Likert scale employed in the main study.
+Experts assessed each response along three criteria:
+• Clinical Accuracy
+• Stylistic Appropriateness
+• Linguistic Precision
+Scores ranged from 1 (strongly disagree) to 5 (strongly agree). Each response was
+evaluated independently without exposure to model identity to reduce bias.
+The evaluation form presented the clinical question followed by the generated
+response. Experts were instructed to provide numerical ratings only.
+Expert Evaluation Form (Google Form Structure)
+Question: question
+Answer: model-generated-answer
+Please assign a score from 1 (strongly disagree) to 5 (strongly agree): Clinical
+Accuracy; Stylistic Appropriateness; Linguistic Precision
+Evaluations were aggregated by computing the mean and standard deviation for
+each model configuration.
+Appendix C Qualitative Example
+Table C1 reports representative Base configuration responses to a sample question.
+Gemini and Claude exhibit the safety-driven, hedged behavior discussed in Section 4,
+in which the absence of sufficient clinical context leads to evasive or non-specific
+outputs rather than direct medical answers.
+38

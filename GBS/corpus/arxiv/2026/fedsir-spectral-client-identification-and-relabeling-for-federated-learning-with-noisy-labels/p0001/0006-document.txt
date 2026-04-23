@@ -1,0 +1,26 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+ntations, providing a new perspective beyond conventional loss-dynamics or predictionbased approaches.
+• We introduce aspectral client identificationmechanism
+that characterizes each client through class-wise feature
+subspaces and their off-diagonal similarity statistics, enabling the identification of clean and noisy clients with
+minimal communication overhead and without requiring
+access to raw data, or a noise transition model.
+• We develop aspectral relabelingscheme for noisy
+clients that constructs class references from clean-client
+dominant directions and residual subspaces, and performs
+conservative label correction by enforcing agreements between complementary spectral criteria.
+• We integrate noise-aware federated optimization, combining logit-adjusted (LA) loss, KD, and distance-aware
+aggregation (DaAgg) to further stabilize training under
+label noise.
+• We conduct extensive experiments on federated CIFAR10 datasets under varying label-noise rates and client heterogeneity levels, showing thatFedSIRconsistently outperforms strong baselines and recent methods for FL with
+noisy labels.
+Notation.We use bold uppercase letters to denote matrices, bold lowercase letters to denot

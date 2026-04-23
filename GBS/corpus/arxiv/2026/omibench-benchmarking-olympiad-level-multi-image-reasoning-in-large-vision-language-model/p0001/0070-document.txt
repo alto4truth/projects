@@ -1,0 +1,29 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 70
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+rall argument is coherent.
+4.Consistency with the final answer.
+•Confirm that the reasoning actually leads to the stated final answer.
+•Ensure that there is no mismatch between intermediate conclusions and the final result.
+•Verify that the final answer is stated explicitly, unambiguously, and in the required format.
+5.Clarity and style.
+•Assess whether the rationale is easy to follow for a competent reader.
+•Avoid unnecessary repetition, irrelevant digressions, and overly verbose explanations.
+•Check adherence to the agreed notation, terminology, and formatting conventions.
+After applying the evaluation criteria above, annotators should choose exactly one of the following
+actions for each candidate rationale:
+1. Acceptwithminoredits.Usethisoptionwhentherationaleisfundamentallycorrectandcomplete,
+but has small issues such as:
+•Minor wording problems (e.g., awkward phrasing, ambiguous pronouns).
+•Slightly unclear transitions between steps.
+•Cosmetic inconsistencies in notation, symbols, or formatting.
+In this case, annotators should directly edit the text to correct these minor issues without changing
+the core reasoning.
+2. Substantive revision.Use this option when the rationale con

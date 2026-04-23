@@ -1,0 +1,28 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 1
+section: coral-arm-bn
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+lized metalearned BatchNorm adaptation method that leverages
+negative control samples available in every experimental batch, and show that it robustly alleviates the failure
+modes of previous methods and nearly closes the generalization gap between in-domain and unseen-batch
+performance.
+• We demonstrate that adaptive Batch Normalization–
+based methods, particularly when combined with metalearning and in-context adaptation, provide an effective
+and computationally efficient approach to mitigate severe batch effects in biomedical microscopy images.
+• We systematically analyze and expose key limitations
+of existing BatchNorm-based adaptation methods, including AdaBN and ARM-BN, showing that their performance degrades in realistic settings such as label
+shift.
+2. Problem setting and Background
+We consider the problem of adapting fromB source batches
+of size N to a single target batch of size M under the crossentropy loss LCE(y, ˆy) =− PK
+k=1 yk log(ˆyk). This problem can be extended to any loss function L, many target
+batches and different batch sizes, in a straight forward way.
+We are given a source dataset Dtrain =
+D(1), . . . ,D(B)
+⊂(X × Y) N consisting of B experimental batches D

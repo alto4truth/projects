@@ -1,0 +1,27 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+s from the same class tend to form well-separated
+clusters in feature space. As a result, clean clients exhibit
+consistent class-wise spectral structures, characterized by
+high within-class similarity and low between-class similarity. In contrast, label noise mixes samples from different classes and disrupts this spectral separation. This phenomenon is illustrated in Figure 2.
+We leverage these differences in spectral structure to
+identify clean and noisy clients. Clean clients are then used
+to construct an initial global model, while the class-wise
+spectral structure is further utilized to relabel samples from
+noisy clients. FL then continues using KD to progressively
+refine the model.
+A key advantage of our formulation is that it eliminates
+the need for centralized clean data. Instead, it extracts
+supervisory signals from the internal spectral structure of
+client feature representations. This property is particularly
+desirable in FL, where both raw data sharing and direct inspection of label noise are infeasible. Moreover, our framework does not require estimating a noise transition matrix,
+which is typically difficult to obtain in federated settings
+due to heterogeneous data dis

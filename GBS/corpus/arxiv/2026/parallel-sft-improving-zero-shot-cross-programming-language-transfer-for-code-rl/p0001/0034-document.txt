@@ -1,0 +1,22 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+factors are often absent for programming languages.
+First, natural languages have distributionally similar lexicons, where most words have translations in other languages.
+However, PLs’ lexical structures usually differ due to heterogeneous paradigms. For instance, non-object-oriented
+languages lack keywords related to classes; some PLs rely on specific control flow structures like switch statements or
+lazy returns (yield) that others lack; and mechanisms such as garbage collection and concurrency can be explicitly
+specified via certain keywords in some PLs but are implicit in others. Even for shared concepts, usage distributions
+diverge vastly: while the boolean type is universal, it may be syntactically required in Java (boolean x = true; ) but
+implicitly typed in Python (x = True).
+Beyond structure similarities, parallel natural language sentences provide explicit alignment signals, whether deliberately
+leveraged in pretrained objectives or organically emerging in unsupervised corpora. However, as we discussed in §4, they
+are often lacking for programming languages too. Without these explicit signals or the implicit structural isomorphism
+of natural languages, zero-shot transfer

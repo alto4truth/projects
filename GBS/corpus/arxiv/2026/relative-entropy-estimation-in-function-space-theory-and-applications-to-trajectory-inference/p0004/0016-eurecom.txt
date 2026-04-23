@@ -1,0 +1,25 @@
+title: Relative Entropy Estimation in Function Space: Theory and Applications to Trajectory Inference
+source: arxiv
+year: 2026
+document_id: relative-entropy-estimation-in-function-space-theory-and-applications-to-trajectory-inference
+authors: Chao Wang; Luca Nepote; Giulio Franzese; Pietro Michiardi
+page: 4
+section: eurecom
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20775v1
+
+Remark.Indeed, as the goal of this work is to obtain KL estimates via a novel estimator, we need to
+assume that the underlyingestimand(the true KL) is well-defined.
+Assumption 3.2(Cameron–Martin support).The measures are fully supported on the Cameron–
+Martin space of the noise (νA(Hµ0) =ν B(Hµ0) = 1).
+Remarks.First, Assumption 3.2 can be relaxed: together with Assumption 3.1, it suffices to require
+that νB be fully supported on Hµ0, since νB(Hµ0) = 1 paired with Assumption 3.1 implies
+νA(Hµ0) = 1. Indeed, by Assumption 3.1, νA is absolutely continuous with respect to νB on B(H) ,
+i.e., νB(Γ) = 0 implies νA(Γ) = 0 for all Γ∈B(H) . If νB(Hµ0) = 1, then νB(H\H µ0) = 0,
+and since the Hilbert subspace Hµ0 is Borel, Assumption 3.1 yields νA(H\H µ0) = 0 , hence
+νA(Hµ0) = 1.
+Second, Assumption 3.2 can be satisfied by choosing noise that is rougher than the data distribution
+(so the data are fully supported on Hµ0) while still being trace-class (and hence in H). In practice, in
+H:=L 2(T;R d) with Fourier orthonormal basis, we first estimate the data’s Fourier spectrum using
+empirically determined variances for each Fourier coefficient, and then multiply each coefficient by
+the wavenumber m

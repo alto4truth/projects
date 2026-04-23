@@ -1,0 +1,107 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+, we compare their principal directions. Using the
+leading right singular vector of each class, we define the
+class similarity
+[Sk]c,c′ =
+
+v⊤
+k,cvk,c′
+
+. (2)
+This yields a class similarity matrix Sk ∈R C×C for each
+client and reflects the principal-angle relationships between
+pairwise class subspaces. Clean clients typically exhibit
+lower off-diagonal similarity, as different classes occupy
+more separated directions in feature space. Noisy clients,
+in contrast, exhibit higher off-diagonal similarity because
+mislabeled samples introduce cross-class mixing in the feature representations. As the noise level increases, this effect
+becomes more pronounced, leading to progressively larger
+off-diagonal similarities inS k. Importantly, this computation is fully local and requires no auxiliary information from
+other clients or the central server.
+3.3. Stage I: Client Identification
+We use these class-wise spectral signatures to identify clean
+and noisy clients.
+For each client k, we form a class-similarity matrix Sk,
+where entries are computed only for class pairs observed
+on that client. Let Ck ={c:n k,c >0} denote the set of
+classes available at clientk. We summarize the off-diagonal
+structure of Sk using
+µk = 1
+|Ck|(|Ck| −1)
+X
+c,c′∈Ck
+c̸=c′
+[Sk]c,c′, (3)
+and
+ek = 1
+|Ck|(|Ck| −1)
+X
+c,c′∈Ck
+c̸=c′
+[Sk]2
+c,c′, (4)
+which measure the average off-diagonal similarity and its
+squared energy, respectively. These statistics quantify the
+degree of cross-class mixing within each client. For classes
+absent from client k, the corresponding entries are undefined and excluded from these statistics. Clients with fewer
+than two observed classes do not yield valid off-diagonal
+statistics and are excluded from the spectral identification
+step. We then fit a two-component Gaussian mixture model
+(GMM) over these descriptors (µk, ek) and partition clients
+into two groups: aclean setand anoisy set.
+3.4. Stage II: Spectral Relabeling for Noisy Clients
+After identifying clean clients in Stage I, we use their classwise spectral directions to construct reference subspaces for
+label correction. LetK clean denote the set of clean clients.
+We assume that clients inK clean collectively provide sufficiently reliable spectral directions across classes, allowing
+them to serve as class references.
+Specifically, we construct a compact representation of
+each classc, through its dominant directionv (r)
+c , and its
+residual subspaceV (n)
+c . Potentially corrupted samples are
+associated with the class whose dominant direction yields
+the highest alignment, while the corresponding residual
+subspace produces the lowest projection energy. The clientside spectral extraction procedure is summarized in Algorithm 2.
+M(r)
+c = 1
+Wc
+X
+k∈Kclean
+wk,c vk,cv⊤
+k,c, W c =
+X
+k∈Kclean
+wk,c,
+(5)
+where vk,c is the dominant class direction from clientk and
+wk,c is a reliability weight determined by the class sample
+count. The aggregated class direction ¯v(r)
+c is the principal
+eigenvector of M(r)
+c .
+Similarly, for residual subspaces across clean clients we
+set
+M(n)
+c = 1
+Wc
+X
+k∈Kclean
+wk,c V(n)⊤
+k,c V(n)
+k,c , (6)
+where V(n)
+k,c contains residual directions orthogonal to vk,c.
+The consensus residual subspace ¯V(n)
+c is given by the topL
+eigenvectors of M(n)
+c .
+4

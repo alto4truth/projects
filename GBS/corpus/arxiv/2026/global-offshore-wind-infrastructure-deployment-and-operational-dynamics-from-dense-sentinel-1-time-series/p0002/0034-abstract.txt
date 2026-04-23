@@ -1,0 +1,39 @@
+title: Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+source: arxiv
+year: 2026
+document_id: global-offshore-wind-infrastructure-deployment-and-operational-dynamics-from-dense-sentinel-1-time-series
+authors: Thorsten Hoeser; Felix Bachofer; Claudia Kuenzer
+page: 2
+section: abstract
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20822v1
+
+ial alignment with the ground truth data.
+In figures 13 and 14 we illustrate representative classified time series in spatial and temporal context.
+15
+
+Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+Figure 12: Fraction of Time Series with Edit Similarity scores higher than a given threshold at different threshold levels
+with corresponding AUC values on step-wise and collapsed classified time series.
+In the NSB, deployment phases are clearly separated into distinct foundation construction and turbine installation stages,
+with a high vessel interaction during peak construction periods. In contrast, examples from the Chinese EEZ show a
+less distinct separation between foundation and turbine deployment stages. The lag between foundation construction
+and turbine installation, commonly observed in NSB sites, is often absent, resulting in shorter overall construction
+durations per turbine. However, vessel interaction patterns remain consistent across regions, with higher event density
+during construction compared to operational phases.
+Using the classified time series, we derive regional deployment duration estimates by identifying the dates of first
+turbine foundation detection and first deployed turbine detection for each site and computing the elapsed time between
+these phases. The comparison of China, the European Union, and the United Kingdom shows significantly shorter
+deployment durations within the Chinese EEZ, see figure 15, which supports the observed differences in the example
+time series. These results demonstrate how high density, temporal classification enables large-scale analysis of regional
+deployment patterns.
+To illustrate the sensitivity of the classified time series to operational events at a local scale, we present the case study of
+maintenance events at Hywind Scotland. Figure 16 presents results for the Hywind Scotland floating wind farm. In
+2024, all five turbines were temporarily towed back to Norway for maintenance. According to official reports from
+Global Maritime [Global Maritime, 2024], maintenance began on 2024-05-17, with the first turbine towed back to
+Norway reaching the port on 2024-05-24. The first turbine returned on 2024-07-05, and the final turbine on 2024-09-22.
+These documented events align closely with the observed and classified time series. The classification captures the
+absence of deployed turbine signatures during the maintenance periods. This case study provides an example, that the
+time series data of this publication provides temporally detailed insights exceeding those available from summarized
+reports, demonstrating the capability of the dataset to detect and contextualize operational dynamics at individual sites.
+16

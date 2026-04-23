@@ -1,0 +1,22 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 139
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+ge, while the question text and
+answer choices remain unchanged.
+M. Detailed Results for Training and External Tools
+This appendix provides the full numerical results referenced in Section 6.4.
+SFTonmulti-imageinstruction-tuningdata.Table9reportstheper-subjectACCandScoreforInternVL3.58B and Qwen3-VL-8B-Instruct fine-tuned on CMMCoT [71] and MMDU [37]. CMMCoT consistently yields
+modest improvements on both backbones (Total ACC26.59→28.11 and 26.74→28.86 respectively), while
+MMDU yields no improvement or slight degradation, suggesting that simple multi-image understanding data
+is insufficient for Olympiad-level reasoning.
+External-tool integration.Table 10 reports the per-subject ACC and Score of three external-tool integration
+frameworks on top of GPT-4o and GPT-5. GPT-4o consistently degrades when augmented with any of the
+three tools, while GPT-5 shows modest, inconsistent gains.
+48

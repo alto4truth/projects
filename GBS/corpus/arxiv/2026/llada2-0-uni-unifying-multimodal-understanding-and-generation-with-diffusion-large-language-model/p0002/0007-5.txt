@@ -1,0 +1,25 @@
+title: LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model
+source: arxiv
+year: 2026
+document_id: llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffusion-large-language-model
+authors: Inclusion AI; Tiwei Bie; Haoxing Chen; Tieyuan Chen; Zhenglin Cheng; Long Cui; Kai Gan; Zhicheng Huang; Zhenzhong Lan; Haoquan Li; Jianguo Li; Tao Lin; Qi Qin; Hongjun Wang; Xiaomei Wang; Haoyuan Wu; Yi Xin; Junbo Zhao
+page: 2
+section: 5
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20796v1
+
+dding to match the longest sequence, wasting computation on padding tokens. We address this
+with an offline data packing strategy that consolidates multiple shorter samples into fixed-length sequences
+(Figure 5), significantly increasing effective token throughput for both pre-training and post-training.
+Distributed Framework.We employ dFactory (InclusionAI, 2025) as the primary training engine for both
+pre-training and post-training phases—a high-efficiency framework specifically optimized for Diffusion
+Large Language Models. Built upon the VeOmni (Ma et al., 2025) distributed training ecosystem, dFactory
+enables the flexible deployment of sophisticated parallelization strategies.
+5 Experiments
+5.1 Multimodal Understanding
+5.1.1 Evaluation Settings
+Benchmarks.We evaluate LLaDA2.0-Uni across 21 multimodal understanding benchmarks, focusing on
+three core capabilities: general VQA, reasoning, and OCR/document understanding:
+• General Tasks:MMStar (Chen et al., 2024b), MMBench (Liu et al., 2024b), MME (Fu et al., 2023),
+HallusionBench (Guan et al., 2024), RealWorldQA (OpenAI, 2024) and SimpleVQA (Cheng et al., 2025).
+• Reasoning Tasks:MMMU (Yue et al., 2024), and MMMU-Pro (Yue et al.,

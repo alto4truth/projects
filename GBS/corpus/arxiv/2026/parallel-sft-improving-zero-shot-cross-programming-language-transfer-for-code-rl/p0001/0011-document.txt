@@ -1,0 +1,19 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+cross-PL transfer often underperforms zero-shot prompting. Furthermore, interpretability studies have revealed low
+cross-PL representation generality in code models (Utpala et al., 2024), potentially limiting transferability.
+3 Cross-Programming-Language Generalization Evaluation
+We quantify the zero-shot cross-lingual transferability of current models for code RL. Starting from an LM, we perform
+RL for a coding task in asourcePL, and then zero-shot evaluate the resulting model on the same task in anothertarget
+PL.
+2Or a reward model for non-verifiable tasks, which we do not consider.
+3Precisely, thex RL in both cases also requires a template.
+3

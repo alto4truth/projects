@@ -1,0 +1,25 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+suggesting that autoregressive language
+modeling with text-number co-occurrence alone extracts richer modular structure than
+classical embedding methods. Allowing more numbers to co-occur within each attention
+block improves probing: κ= 53.0 at k= 2 and 77.2 at k= 8 for T= 10. The fact that
+Isolate (k= 1) still outperforms Swap Numbers confirms that text-number co-occurrence
+alone provides strong signal, but the gap to Original almost closed by Isolate (k= 8)
+shows that cross-number interaction contributes on top of it. In all cases, Fourier spikes
+are fully preserved while probing degrades, reinforcing the two-tiered hierarchy between
+spectral and geometric convergence and they are driven by different mechanisms.
+Probing accuracy varies sharply across moduli.Across all conditions that achieve geometric
+convergence, the probing accuracy depends strongly on the modulus. Mod 2, 5, and 10 are
+consistently the easiest (κ= 96.1, 63.5, 85.4 forOriginal), mod 4 achieves nontrivial probing
+(κ= 34.9), while moduli that share no common factor with 10 (e.g., 3, 7, 9) remain near
+chance. This pattern is stable across all perturbations that preserve geometric convergence.
+In Section 5, we show

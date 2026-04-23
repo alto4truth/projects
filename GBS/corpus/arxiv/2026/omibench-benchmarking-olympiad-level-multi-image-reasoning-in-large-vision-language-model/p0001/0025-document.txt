@@ -1,0 +1,20 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+image reasoning remains the main bottleneck.To disentangle cross-image reasoning from confounders such as increased visual information, longer inputs, or OCR noise, we construct aninformationequivalent single-imagecontrol by concatenating all images for each problem into a single composite image
+while keeping the question text and answer choices unchanged. This preserves the total visual and textual
+information, logical difficulty, input length, and OCR-related noise. Detailed results are provided in Appendix L. The information-equivalent single-image setting consistently outperforms the original multi-image
+setting, indicating that the multi-imageorganizationitself, which requires models to autonomously align,
+filter, and integrate evidence across images, is the primary source of the observed performance gap rather
+than visual volume or OCR noise.
+Human-expert baselines confirm the difficulty of OMIBench.To calibrate the absolute difficulty of
+OMIBench against human performance, we conduct an initial human-baseline study on a 52-problem subset.
+Human experts achieve above80% accuracy, and trained non-experts exceed57%, while the strongest current
+model (Gemini-3-Pro) reaches only4

@@ -1,0 +1,58 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 106
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+(a) Human annotation concerningabout differentjudgement methods onIntern3.5-VL-1B(WeakLVLM ).
+58%27%15% 11%54%35%No Effective ReasoningReasoning ErrorRule Match Error
+No Effective ReasoningReasoning ErrorRule Match Error
+Model Judg.
+:
+Correct
+Rule Judg.:
+Wrong
+Model Judg.
+:
+Wrong
+Rule Judg.:
+Wrong
+58%
+13%
+Model Judg.
+:
+Wrong
+Rule Judg.:
+Wrong
+61%
+26%
+Model Judg.
+:
+Correct
+Rule Judg.:
+Wrong
+13%
+Model Judg.
+:
+Wrong
+Rule Judg.:
+Correct
+Model Judg.
+:
+Wrong
+Rule Judg.:
+Correct
+29%
+(b) Human annotation concerningabout differentjudgement methods onGemini-3-Pro-Preview(StrongLVLM ).
+Figure16: Human annotation concerning different judgment methods (Model Judge: GPTScore, Rule Judge:
+Match Accuracy). Note: Correct/wrong indicates the automated method’s output, not its actual accuracy.
+in Figure 3(a), this analysis yields a moderate Spearman correlation ofρ=0.535 , which is well below the
+commonly used strong-correlation threshold of0.7.
+E. Detailed Analyses for OMIBench Multi-Image Requirements
+E.1. Single- vs. Multi-image Olympiad-Level Benchmark Comparison
+For the correlation analysis between OMIBench and OlympiadBench, we evaluate three representative LVLMs:
+GPT, Gemini, Qwen-VL, and Inte

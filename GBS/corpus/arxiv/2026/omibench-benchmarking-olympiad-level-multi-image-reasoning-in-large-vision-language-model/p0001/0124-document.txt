@@ -1,0 +1,35 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 124
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+problems
+[Solution]
+[Example Solution]
+[EXAMPLE 2]
+[Question]
+[Problem Text 0] [IMAGE0] ... [Problem Textn K]
+[Choices] # only for multiple choices problems
+[Solution]
+[Example Solution]
+...
+[REQUEST]
+[Question]
+[Problem Text 0] [IMAGE0] ... [Problem Textn K]
+[Choices] # only for multiple choices problems
+A. option_A
+B. option_B
+...
+No-Image-ICL Configuration.The No-Image-ICL condition tests whether models can exploit purely textual
+patterns in the demonstrations, even though OMIBench is a multimodal benchmark. Concretely, for each of
+the k demonstrations, we remove all images from the model input but keep the textual problem description
+(including any references to images, image indices, or regions) and the answer line. Thus, the model can only
+rely on textual information in the demonstrations, but still has access to the full visual information for the
+target question. As reported in the main text, adding these purely textual in-context examples substantially
+improves OMIBench performance compared to the zero-shot baseline.
+43

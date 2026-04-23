@@ -1,0 +1,23 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+ulty of multi-image Olympiad reasoning. To further probe these demands, we sample 100 problems
+and rate rationales from o4-mini and Gemini-3.0-Pro. The human review finds logical errors in 46% of key
+steps, exposing a gap between fluent rationales and correct reasoning. This gap calls for stronger rationale
+generation to reach Olympiad-level reasoning depth.
+OMIBench needs stronger awareness of the information flow across images.Generally, MMIU [42]
+targets basic multi-image understanding, whereas OMIBench demands complex reasoning across images.
+To confirm this, we compare model performance. As shown in Figure 3 (a), OMIBench shows moderate
+Spearman correlation with MMIU (< 0.7): it links to multi-image tasks but Olympiad-level difficulty alters
+model rankings. Beyond this, we further examine multi-image information integration. As shown in Figure 3
+(b), single-image accuracy reaches 40%, dropping below 15% for inputs with≥6 images. Restricting
+instances to one image (Figure 3 (c)) causes at least a 10% absolute performance drop versus using all
+images, revealing LVLMs’ struggles with cross-image integration.
+OMIBench needs combined Olympiad-level cross-image and cross-modal reaso

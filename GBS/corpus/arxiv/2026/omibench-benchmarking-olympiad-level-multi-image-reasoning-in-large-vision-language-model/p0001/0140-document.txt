@@ -1,0 +1,28 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 140
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Model Biology Chemistry Mathematics Physics Total
+ACC Score ACC Score ACC Score ACC Score ACC Score
+Instruction LVLMs
+InternVL3-1B [78] 27.41 7.97 6.54 1.84 13.39 3.26 14.86 1.42 15.40 3.33
+InternVL3-2B [78] 31.47 20.72 12.35 11.98 17.88 7.67 14.81 9.43 18.57 11.42
+Qwen2.5-VL-3B-Instruct [6] 27.89 21.12 17.05 9.68 17.91 11.16 15.57 8.25 18.91 11.87
+Qwen2.5-VL-7B-Instruct [6] 37.85 31.87 20.28 15.67 13.72 8.37 11.56 14.39 18.69 15.96
+InternVL3-8B [78] 43.57 33.07 15.80 16.13 23.30 9.30 19.53 12.74 24.71 16.04
+InternVL3-14B [78] 47.94 38.25 22.66 20.74 24.28 11.92 21.89 16.35 27.74 19.79
+InternVL3-38B [78] 50.92 43.03 13.36 17.97 24.35 15.81 24.8116.75 27.74 21.63
+InternVL3-78B [78] 47.41 46.61 17.16 20.74 27.30 17.21 22.95 18.63 28.06 23.83
+Qwen2.5-VL-32B-Instruct [6] 48.21 48.61 22.93 19.82 24.01 21.40 23.54 19.81 28.28 25.80
+Qwen2.5-VL-72B-Instruct [6] 51.79 53.39 23.45 19.82 24.19 27.6722.47 17.45 28.76 27.99
+Long CoT LVLMs
+InternVL3.5-1B [59] 32.46 17.93 14.29 6.91 15.12 4.65 23.58 8.02 21.56 8.62
+Qwen3-VL-2B-Instruct [5] 27.44 19.92 12.33 5.07 11.53 6.99 12.50 8.75 14.99 9.69
+InternVL3.5-2B [59] 34.66 25.10 16.13 13.82 20.00 11.86 22.64 12.74 23.00 14.98
+InternVL3.5-30B-A3B [59

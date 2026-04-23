@@ -1,0 +1,21 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+lacking for programming languages too. Without these explicit signals or the implicit structural isomorphism
+of natural languages, zero-shot transfer in code becomes challenging.
+Prior work has attempted to bridge this gap through either data-centric or structure-centric methods. Data-centric
+approaches attempt to scale up multi-PL datasets, but existing resources are typically scarce beyond small-scale
+evaluation benchmarks (Khan et al., 2024; Chai et al., 2025; Xu et al., 2025;i.a.). Others have synthetically generated
+data in low-resource PLs via translation (Cassano et al., 2024), a practice termed “translate-train” in the multilingual
+NLP nomenclature (Conneau et al., 2018). Alternatively, structure-centric approaches enforce alignment by leveraging
+language-agnostic intermediate forms such as Abstract Syntax Trees (Guo et al., 2022; Chen et al., 2023; Gong et al.,
+2024;i.a.) and Intermediate Representations (Ma et al., 2023; Szafraniec et al., 2023; Paul et al., 2024).
+Our approach diverges from these methods. We augment data via synthetic translation, similar to translate-train methods,
+but with more flexibility afforded by zero-shot cross-PL transfer rather than requiring

@@ -1,0 +1,60 @@
+title: Stream-CQSA: Avoiding Out-of-Memory in Attention Computation via Flexible Workload Scheduling
+source: arxiv
+year: 2026
+document_id: stream-cqsa-avoiding-out-of-memory-in-attention-computation-via-flexible-workload-scheduling
+authors: Yiming Bian; Joshua M. Akey
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20819v1
+
+latency trade-offs, and reframing attention execution as a task-parallel dataflow for
+scalable and resource-efficient long-context model deployment.
+9
+
+References
+[1] Jared Kaplan, Sam McCandlish, Tom Henighan, Tom B Brown, Benjamin Chess, Rewon Child,
+Scott Gray, Alec Radford, Jeffrey Wu, and Dario Amodei. Scaling laws for neural language
+models.arXiv preprint arXiv:2001.08361, 2020.
+[2] The claude 3 model family: Opus, sonnet, haiku. https://www-cdn.anthropic.com/
+de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf.
+[3] Gheorghe Comanici, Eric Bieber, Mike Schaekermann, Ice Pasupat, Noveen Sachdeva, Inderjit
+Dhillon, Marcel Blistein, Ori Ram, Dan Zhang, Evan Rosen, et al. Gemini 2.5: Pushing the
+frontier with advanced reasoning, multimodality, long context, and next generation agentic
+capabilities.arXiv preprint arXiv:2507.06261, 2025.
+[4] Daya Guo, Dejian Yang, Haowei Zhang, Junxiao Song, Peiyi Wang, Qihao Zhu, Runxin Xu,
+Ruoyu Zhang, Shirong Ma, Xiao Bi, et al. Deepseek-r1: Incentivizing reasoning capability in
+llms via reinforcement learning.arXiv preprint arXiv:2501.12948, 2025.
+[5] An Yang, Anfeng Li, Baosong Yang, Beichen Zhang, Binyuan Hui, Bo Zheng, Bowen Yu,
+Chang Gao, Chengen Huang, Chenxu Lv, et al. Qwen3 technical report.arXiv preprint
+arXiv:2505.09388, 2025.
+[6] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez,
+Łukasz Kaiser, and Illia Polosukhin. Attention is all you need.Advances in neural information
+processing systems, 30, 2017.
+[7] Tri Dao, Dan Fu, Stefano Ermon, Atri Rudra, and Christopher Ré. Flashattention: Fast and
+memory-efficient exact attention with io-awareness.Advances in neural information processing
+systems, 35:16344–16359, 2022.
+[8] Tri Dao. Flashattention-2: Faster attention with better parallelism and work partitioning.arXiv
+preprint arXiv:2307.08691, 2023.
+[9] Iz Beltagy, Matthew E Peters, and Arman Cohan. Longformer: The long-document transformer.
+arXiv preprint arXiv:2004.05150, 2020.
+[10] Manzil Zaheer, Guru Guruganesh, Kumar Avinava Dubey, Joshua Ainslie, Chris Alberti,
+Santiago Ontanon, Philip Pham, Anirudh Ravula, Qifan Wang, Li Yang, et al. Big bird:
+Transformers for longer sequences.Advances in neural information processing systems, 33:
+17283–17297, 2020.
+[11] Jiayu Ding, Shuming Ma, Li Dong, Xingxing Zhang, Shaohan Huang, Wenhui Wang, Nanning
+Zheng, and Furu Wei. Longnet: Scaling transformers to 1,000,000,000 tokens.arXiv preprint
+arXiv:2307.02486, 2023.
+[12] Sinong Wang, Belinda Z Li, Madian Khabsa, Han Fang, and Hao Ma. Linformer: Self-attention
+with linear complexity.arXiv preprint arXiv:2006.04768, 2020.
+[13] Nikita Kitaev, Łukasz Kaiser, and Anselm Levskaya. Reformer: The efficient transformer.
+arXiv preprint arXiv:2001.04451, 2020.
+[14] Angelos Katharopoulos, Apoorv Vyas, Nikolaos Pappas, and François Fleuret. Transformers
+are rnns: Fast autoregressive transformers with linear attention. InInternational conference on
+machine learning, pages 5156–5165. PMLR, 2020.
+[15] Krzysztof Choromanski, Valerii Likhosherstov, David Dohan, Xingyou Song, Andreea Gane,
+Tamas Sarlos, Peter Hawkins, Jared Davis, Afroz Mohiuddin, Lukasz Kaiser, et al. Rethinking
+attention with performers.arXiv preprint arXiv:2009.14794, 2020.
+[16] Jiezhong Qiu, Hao Ma, Omer Levy, Wen-tau Yih, Sinong Wang, and Jie Tang. Blockwise selfattention for long document understanding. InFindings of the Association for Computational
+Linguistics: EMNLP 2020, pages 2555–2565, 2020.
+10

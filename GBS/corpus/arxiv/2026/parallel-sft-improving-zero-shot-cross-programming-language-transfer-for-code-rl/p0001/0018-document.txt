@@ -1,0 +1,28 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+ion (§5.3). We also filter out questions that have visual inputs.
+These datasets contain mostly solutions in Python. To generate parallel programs in other languages, we perform
+synthetic code translation: for each instance (q, cPython), we translate cPython into cC++, cJava, etc., by prompting Llama-4Maverick, a 400B-parameter mixture-of-expert model (Meta AI, 2025). We include our translation prompt in §C. This
+model generally has good translation accuracy: it achieves 57.3% pass@1 when validated on the tests in the datasets.
+We further filter out all translations that fail the tests to ensure translation quality.7
+These datasets contain multiple Python solutions per question. We sample 8 generations per source cPython solution to ensure an abundance of candidate programs. Our final synthetic dataset contains 3,111 unique questions
+and, on average, 181 instances per language per question, totaling ≈6.2 million instances. Formally, the dataset is
+{(qi,(C Python
+i , CC++
+i ,· · ·))} N
+i=1 where N= 3,111 . Each set Clang
+i ={c lang
+ij }
+N lang
+i
+j=1 is the set of verified code solutions in
+PL “lang”, with N lang
+i averaging to 181. This amplifies the parallel program signal: if a qu

@@ -1,0 +1,23 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+GeoRect4D for Dynamic Sparse-View 3D Reconstruction 5
+Fig. 2:Overview of GeoRect4D.Left:Sparse inputs are adaptively decomposed into a
+static base and an anchor-controlled dynamic field to construct the base dynamic 3DGS
+model.T op Right:A degradation-aware, single-step diffusion prior synthesizes highfidelity rectified views from coarse renderings.Bottom Right:A two-stage progressive
+optimization framework first applies geometric purification to stabilize the substrate,
+then performs generative distillation to seamlessly integrate hallucinated details with
+strict physical fidelity.
+whereI t,v andπ t,v denote the image and camera pose of viewvat timet. Our
+goal is to recover a dynamic scene model that supports photorealistic novelview synthesis at an arbitrary time and viewpoint(t, ξ). Under such an extreme
+view budget, purely photometric supervision provides insufficient cross-view constraints, and direct optimization often collapses into degenerate geometry with
+floating artifacts and blurred appearance. These failures are further amplified by
+temporal error accumulation in dynamic scenes.
+To stabilize optimization in this under-constrained regime, we learn a unified rendering fr

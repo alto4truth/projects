@@ -1,0 +1,24 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+ins near chance for all
+moduli. Multi-token tokenization forces modular subproblems that produce convergent
+representations; single-token tokenization leaves the representation unconstrained.
+independent and optimizer-independent in language pretraining task. The 12-layer LSTM,
+trained with AdamW, develops even more prominent Fourier spikes but its probing accuracy remains near chance across all moduli. A 4-layer LSTM shows no improvement nor
+degradation, indicating that the failure is architectural rather than a matter of capacity (see
+Figure 8). We note that as shown in Figure 2, the Fourier spectrum of the LSTM embeddings
+closely resembles that of the number token marginal distribution, suggesting that the LSTM
+embeddings capture little beyond unigram frequency statistics for numbers. Classical word
+embeddings fall in between: PPMI and word2vec, trained on the same 10B tokens, achieve
+moderate probing ( κ= 27.1 and 29.3 at T= 10) with clear Fourier spikes yet weaker
+probing, illustrating the dissociation between spectral and geometric convergence.
+The effect of optimizer is architecture-dependent.Comparing the top and middle blocks
+of Figure 5 isolates the effect of the optimize

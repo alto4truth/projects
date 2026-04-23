@@ -1,0 +1,27 @@
+title: LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model
+source: arxiv
+year: 2026
+document_id: llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffusion-large-language-model
+authors: Inclusion AI; Tiwei Bie; Haoxing Chen; Tieyuan Chen; Zhenglin Cheng; Long Cui; Kai Gan; Zhicheng Huang; Zhenzhong Lan; Haoquan Li; Jianguo Li; Tao Lin; Qi Qin; Hongjun Wang; Xiaomei Wang; Haoyuan Wu; Yi Xin; Junbo Zhao
+page: 3
+section: g-sc-g-pq-g-o-g-sc-g-pq-g-o
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20796v1
+
+Diffusion Decoder (50 Steps)
+Distilled Decoder (8 Steps)
+Figure 9: Visual Comparison of the Decoder and the Distilled Version.
+SGLang (Zheng et al., 2024) to accelerate inference, and the implementation will be made publicly available
+soon.
+5.5.2 Analysis of Diffusion Decoder
+Table 14 shows the performance and speed comparison between the Diffusion Decoder (50 steps) and
+Diffusion Decoder Turbo (8 steps) across five benchmarks. Speed is measured on a single GPU at 1024× 1024
+resolution with a batch size of 1, using BF16 precision.
+Table 14: Performance and Speed Comparison between Diffusion Decoder and Diffusion Decoder Turbo.
+Method Speed (s / img) GenEval DPG UniGenBench OneIG-EN WISE
+Diffusion Decoder (50 steps) 32.95 0.89 87.76 79.63 0.505 0.68
+Diffusion Decoder Turbo (8 steps) 2.90 0.87 87.24 79.76 0.500 0.68
+Through few-step acceleration, the Diffusion Decoder Turbo achieves an 11.4× speedup (from 32.95 s/img
+to 2.90 s/img) while maintaining competitive performance across all benchmarks. Specifically, it retains a
+GenEval score of 0.87 (vs. 0.89 for the base) and a DPG score of 87.24 (vs. 87.76). Similarly, on the UniGenBench,
+OneIG-EN, and WISE benchmarks, Diffusion Decoder

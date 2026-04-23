@@ -1,0 +1,61 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+starts from a substantially higher human baseline (33.30%).
+Many models push caring to near-saturation levels, particularly in base configurations
+20
+
+Approval
+Caring Sadness
+Realization Disapproval
+Emotion
+0
+20
+40
+60
+80Percentage (%)
+Top 5 Dominant Emotions Across Models
+Model
+Physicians
+Mixtral Base
+Med-PaLM Base
+Mixtral Rephrase
+Med-PaLM Rephrase
+Mixtral Empathy
+Med-PaLM Empathy
+GPT-5 Base
+GPT-5 Rephrase
+GPT-5 Empathy
+Gemini Rephrase
+Claude Base
+Claude Rephrase
+Claude Empathy
+Fig. 12: Emotions most frequently expressed by models on the MedQuAD dataset.
+(e.g.,Mixtral Rephrase= 92.00%,Claude Base= 82.00%,GPT5 Base= 92.0%), indicating that in naturally emotional patient narratives, models converge toward a highly
+supportive stance regardless of whether they are explicitly prompted for empathy.
+Third, negative or corrective emotions are attenuated in model outputs, especially
+in MedQuAD. In the first dataset,disapprovalis consistently present in physician
+texts (7.8%) yet appears marginally or disappears in most LLM configurations, rarely
+exceeding 5.9% and often remaining absent in the top emotions. This aligns with an
+avoidance of negatively directive stances in machine-generated clinical communication.
+In iCliniqQAs, disapproval is not among the dominant emotions for physicians or models; instead, low-frequency positive-affiliative emotions such asgratitude,optimism,
+andcuriosityemerge among the top categories, but remain limited in prevalence (generally below∼5%), suggesting that the overall affective profile is still largely governed
+by caring.
+Taken together, fine-grained emotion analysis shows that LLMs do not reproduce
+physician affective behavior verbatim. Rather, they exhibit a systematic reweighting
+of emotional cues that amplifies affiliative signals such ascaringand, depending on the
+dataset, either preserves or reducesapproval. Importantly, the direction of this shift is
+dataset-dependent: institutional explanations (MedQuAD) highlight a transition from
+approval-dominant physician discourse toward caring-heavy model outputs, whereas
+real-world consultations (iCliniqQAs) already start from a caring-oriented physician
+baseline and are further pushed by LLMs toward near-uniform supportive affect. This
+difference reflects variation in emotional style and emphasis across contexts, rather
+than an absolute improvement in communication quality.
+21

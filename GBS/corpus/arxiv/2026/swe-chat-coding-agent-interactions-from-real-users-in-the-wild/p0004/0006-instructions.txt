@@ -1,0 +1,25 @@
+title: SWE-chat: Coding Agent Interactions From Real Users in the Wild
+source: arxiv
+year: 2026
+document_id: swe-chat-coding-agent-interactions-from-real-users-in-the-wild
+authors: Joachim Baumann; Vishakh Padmakumar; Xiang Li; John Yang; Diyi Yang; Sanmi Koyejo
+page: 4
+section: instructions
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20779v1
+
+- Analyze the full sequence of actions in the session.
+- Focus on patterns across time, not a single prompt.
+- Use evidence from: constraint specificity, goal stability, revision behavior, error
+tolerance,
+explicit vs vague expectations.
+- If multiple personas seem plausible, choose the dominant behavioral pattern.
+- Do not over-index on one isolated incident.
+- Reserve "Other" for sessions where no pattern is discernible.
+OUTPUT FORMAT (JSON only):
+Return exactly one JSON with the following keys:
+"label": "<one of: Expert Nitpicker | Vague Requester | Mind Changer | Other>",
+"confidence": 0.0-1.0,
+"reason": "2-5 sentence explanation referencing specific behavioral patterns observed
+in the timeline."
+Do not include anything outside the JSON.

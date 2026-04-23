@@ -1,0 +1,23 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+re 10); under another seed, generalization never occurs. Unlike Nanda
+et al. (2023), who train on mod-113 addition where modular structure is explicit, single-token
+addition imposes no modular constraint: the sequences a+b=c are identical whether
+interpreted as mod-1000 or mod-1111. Without this constraint, convergent evolution does
+not occur and the learned representation is seed-dependent.
+Why tokenization determines learned representation.In 9-digit addition after tokenization
+[a2, a1, a0] + [b2, b1, b0] = [c 2, c1, c0], each output token satisfies ci = (a i +b i +γ i)mod 1000
+where γi ∈ { 0, 1} is the carry. Each output position is therefore a mod-1000 classification problem, especially the least significant position with no carry, i.e. γ0 = 0. Since
+all our models use tied embeddings (Table 2), the output logits depend directly on the
+input embedding matrix, creating pressure for the embeddings to develop high Φ1000 to
+distinguish residue classes at each output position. This in turn implies non-trivial ΦT for
+all T| 1000 = 23 · 53. In single-token addition, no modular constraint is imposed, so ΦT is
+unconstrained and depends on the optimizer and random seed. This reveals a se

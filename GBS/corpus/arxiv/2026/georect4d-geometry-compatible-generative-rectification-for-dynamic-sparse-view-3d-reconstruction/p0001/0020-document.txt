@@ -1,0 +1,17 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+spatial-token dimensions for
+global interaction. This spatio-temporal coordination suppresses flickering and
+yields stable rectified targets for subsequent closed-loop distillation.
+3.3 Progressive Geometric Purification and Generative Distillation
+We establish a progressive optimization framework to bridge the substantial
+gap between sparse physical observations and photorealistic rendering. Diverging from standard pipelines that often compromise between geometric accuracy
+and textural detail, our approach orchestrates a two-phase evolution: first executingGeometric Purificationto eliminate artifacts from the substrate, and

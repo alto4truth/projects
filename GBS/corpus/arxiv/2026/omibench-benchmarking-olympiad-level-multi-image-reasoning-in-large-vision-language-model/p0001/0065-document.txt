@@ -1,0 +1,23 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 65
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+rovided figures, tables, or input–output formats), when
+available. Concretely, we use a prompt template that instructs the model to “Let’s think step-by-step!” and
+enforces a standardised answer format. Each candidate must include both an explicit reasoning trace and an
+explicit final answer. Specifically, the model prompt is structured as follows:
+LLM Rationale Generation Prompt-P1
+You are an expert problem solver. Given the following problem statement and any auxiliary
+information, provide a clear step-by-step solution that leads to a final answer. Explain each step of
+your reasoning, and format your response as: {Reasoning: ... Final Answer: ...}.
+Problem Statement:[Insert problem statement here]
+Auxiliary Information:[Insert figures, tables, or other relevant data here]
+For each problem, Gemini-2.5-pro-thinking samples up to16 candidate solutions at moderate temperature
+(0.6) to balance diversity and coherence.
+20

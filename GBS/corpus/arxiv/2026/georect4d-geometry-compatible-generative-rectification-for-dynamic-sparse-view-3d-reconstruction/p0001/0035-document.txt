@@ -1,0 +1,22 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+re structural drift and visible anatomical distortions on the player. Finally,
+omitting temporal attention leads to pronounced temporal jitter, highlighting
+its necessity for cross-frame stability.
+Geometric Purification and Generative Rectification.As detailed in
+Tab. 4, we systematically validate our geometric purification and generative rectification components. Within the purification stage, omitting adaptive decomposition yields a0.53dBPSNR drop, while discarding stochastic pruning leads
+to a catastrophic1.36dBdegradation. Furthermore, opacity annealing is vital
+for suppressing shape-radiance ambiguities; without this perturbation, the optimizer overfits sparse views with semi-transparent floaters, dropping the SSIM to
+0.743. Similarly, removing the ROI loss dilutes the focus on dynamic regions,
+reducing the SSIM by0.02. Finally, completely removing the closed-loop generative rectification drastically drops the overall PSNR from22.60dBto20.54dB,
+and significantly worsens the perceptual LPIPS score from0.175to0.224. As
+visually confirmed by the qualitative degradations in Fig. 5, this massive gap
+definitively underscores that explicit 3D modeling alone is fundamentally insuffic

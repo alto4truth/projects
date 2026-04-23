@@ -1,0 +1,70 @@
+title: Relative Entropy Estimation in Function Space: Theory and Applications to Trajectory Inference
+source: arxiv
+year: 2026
+document_id: relative-entropy-estimation-in-function-space-theory-and-applications-to-trajectory-inference
+authors: Chao Wang; Luca Nepote; Giulio Franzese; Pietro Michiardi
+page: 4
+section: eurecom
+chunk: 54
+source_ref: https://arxiv.org/pdf/2604.20775v1
+
+e
+methods.
+• MSBM: num_stage= 11 ; num_epoch= 10 ; num_itr= 1000 ; num_ResNet= 1 ;
+learning_rate= 2×10 −4; batch_size= 256; var= 0.1; interval= 51.
+30
+
+• MFL: lambda_reg = 0.05; n_sinkhorn = 250; sigma=2.0, sigma_final = 1.0; t_final = 1;
+eta_final =0.1; n_iter = 1500; M (number of particles) = 1000; tau_final = 1.0. All the other
+hyperparameters are set to the default values.
+• AM hyperparameters: omega = 0.1; BS = 100; SIGMA = 0.1; lr = 1e-6; num_iterations =
+10_000. We followed the same procedure as in the original paper, for which we considered
+mixture of points to have data which is more dense in time. We do not employ any
+interpolation trick in this case.
+• TIGON: training time points t∈ {0,0.5,1} ; initial kernel bandwidth σnow = 1 ; decay
+= 0.5σ with a stopping condition of σ >0.02 ; and a regularization parameter λd = 107.
+All the other parameters have been set to the default values.
+KL configuration.We report FKL hyperparameters in Table 9.
+Name Value
+Training functionXA1 SBIRR
+Training functionXB1 TI methods: vSB, MSBM, MFL, AM, TIGON
+Training functions’ input time pointsM101
+Training functions’ output dimensionD5
+Covariance operator of noise functionX0 Rougher empirical SBIRR Fourier-spectrum
+Num. modesNsummed at KL estimation16
+tsampling scheme at training Curriculum: logit-normal (mean=0.5,std=1.5) for first40%, then uniform
+tsampling scheme at KL estimation Importance samplingt/(1−t)
+Num.tsampled at KL estimation 100
+Num. functions at training 300
+Training batch size 32
+Training iterations 20,000
+Num. functions at KL estimation 500
+Optimizer Muon
+EMA rate 0.999
+LR 1.28e−3
+LR scheduler Cosine annealing
+FFM training lossw L FFM+ (1−w)LFKL,wlinearly decayed from1to0.2
+Model MINO-T
+Encoder (dim / depth / heads) 32/2/8
+Decoder (dim / depth / heads) 32/2/8
+Supernode radius 5e−3
+GPUs for Training 1×NVIDIA A100
+Table 9: FKL hyperparameters for Embryoid Body.
+E.3.2 Human Embryonic Stem Cell
+TI methods configuration.Specifications of hyperparameters for TI methods:
+• SBIRR: default parameters, trained on all snapshots. Time horizonτ∈[0,1].
+• vSB: we run vSB with default parameters. As for the EB dataset, we changed the time
+horizon in order to be limited in the interval[0,1], to be consistent with the other methods.
+• MSBM hyperparameters: num_stage= 100 ; num_epoch= 1 ; num_itr= 1000 ;
+num_ResNet= 1; learning_rate= 1×10 −3; batch_size= 256; var= 0.1; interval= 30.
+• MFL: lambda_reg = 0.025; n_sinkhorn = 500; sigma=2.0, sigma_final = 1.0; t_final = 1;
+eta_final =0.1; n_iter = 2500; M (number of particles) = 500; tau_final = 1.0. All the other
+hyperparameters are set to the default values.
+• AM: BS = 50; SIGMA = 0.1; lr = 1e-6; num_iterations = 20_000; MLP with hidden
+dimension equal to 256. In this case, we used gradient accumulation. We followed the same
+procedure as in the original paper, for which we considered mixture of points to have data
+which is more dense in time. We do not employ any interpolation trick in this case, even if
+the data present jumps in space between marginals.
+• TIGON: training time points t∈ {0,0.5,1} ; initial kernel bandwidth σnow = 1 ; decay
+= 0.5σ with a stopping condition of σ >0.02 ; and a regularization parameter λd = 107.
+31

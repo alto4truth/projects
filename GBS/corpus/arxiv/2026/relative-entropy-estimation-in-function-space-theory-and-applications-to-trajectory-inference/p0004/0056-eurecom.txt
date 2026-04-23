@@ -1,0 +1,71 @@
+title: Relative Entropy Estimation in Function Space: Theory and Applications to Trajectory Inference
+source: arxiv
+year: 2026
+document_id: relative-entropy-estimation-in-function-space-theory-and-applications-to-trajectory-inference
+authors: Chao Wang; Luca Nepote; Giulio Franzese; Pietro Michiardi
+page: 4
+section: eurecom
+chunk: 56
+source_ref: https://arxiv.org/pdf/2604.20775v1
+
+5; n_sinkhorn = 250; sigma=2.0, sigma_final =
+0.5; t_final = 1.0; eta_final =0.1; n_iter = 10_000; M (number of particles) = 1000; tau_final
+= 1.0.
+32
+
+Name Value
+Training functionXA1 SBIRR
+Training functionXB1 TI methods: vSB, MSBM, MFL, AM, TIGON
+Training functions’ input time pointsM1024
+Training functions’ output dimensionD5
+Covariance operator of noise functionX0 Rougher empirical SBIRR Fourier-spectrum
+Num. modesNsummed at KL estimation16
+tsampling scheme at training Curriculum: logit-normal (mean=0.5,std=1.5) for first40%, then uniform
+tsampling scheme at KL estimation Importance samplingt/(1−t)
+Num.tsampled at KL estimation 100
+Num. functions at training 900
+Training batch size 64
+Training iterations 20,000
+Num. functions at KL estimation 500
+Optimizer Muon
+EMA rate 0.999
+LR 1.28e−3
+LR scheduler Cosine annealing
+FFM training lossw L FFM+ (1−w)LFKL,wlinearly decayed from1to0.2
+Model MINO-T
+Encoder (dim / depth / heads) 32/2/8
+Decoder (dim / depth / heads) 32/2/8
+Supernode radius 2e−4
+GPUs for Training 1×NVIDIA A100
+Table 11: FKL hyperparameters for Mouse Erythroid.
+• AM hyperparameters: omega = 0.1; BS = 100; SIGMA = 0.1; lr = 1e-5; num_iterations =
+50_000.
+• TIGON configuration: same as Mouse Erythroid.
+We report the generated trajectories in Figure 4 and the hyperparameters for training FFM in Table 12.
+KL configuration.We report FKL hyperparameters in Table 12.
+Name Value
+Training functionXA1 SBIRR
+Training functionXB1 TI methods: vSB, MSBM, MFL, AM, TIGON
+Training functions’ input time pointsM1024
+Training functions’ output dimensionD5
+Covariance operator of noise functionX0 Rougher empirical SBIRR Fourier-spectrum
+Num. modesNsummed at KL estimation16
+tsampling scheme at training Curriculum: logit-normal (mean=0.5,std=1.5) for first40%, then uniform
+tsampling scheme at KL estimation Importance samplingt/(1−t)
+Num.tsampled at KL estimation 100
+Num. functions at training 1000
+Training batch size 64
+Training iterations 20,000
+Num. functions at KL estimation 500
+Optimizer Muon
+EMA rate 0.999
+LR 1.28e−3
+LR scheduler Cosine annealing
+FFM training lossw L FFM+ (1−w)LFKL,wlinearly decayed from1to0.2
+Model MINO-T
+Encoder (dim / depth / heads) 32/2/8
+Decoder (dim / depth / heads) 32/2/8
+Supernode radius 2e−4
+GPUs for Training 1×NVIDIA A100
+Table 12: FKL hyperparameters for Human Fibroblast.
+33

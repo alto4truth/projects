@@ -1,0 +1,16 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 20
+section: ground-truth
+chunk: 58
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+exec go forward (3 * 2) fin
+exec go backward ((2 * 4) + (1 + 3)) fin
+Case Study 4: Premature Scope Termination
+This failure occurs when the model loses track of
+deep nesting levels, causing it to close an outer control block prematurely or omit trailing delimiters
+as the sequence length increases.

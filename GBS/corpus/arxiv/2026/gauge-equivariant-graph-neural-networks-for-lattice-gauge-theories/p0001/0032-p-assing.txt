@@ -1,0 +1,33 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 1
+section: p-assing
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+5
+where the ordered product runs over links around each
+plaquette□. We focus first on predicting the total action
+S[U]. Rather than constructing it explicitly from plaquettes, we adopt a flexible decompositionS= P
+i ϵi, where
+ϵi are gauge-invariant scalars produced at the output
+layer. This Behler–Parrinello–type Ansatz is used here
+purely as a modeling device: theϵ i are latent variables
+with no prescribed physical meaning. The key point is
+that no Wilson-loop structure is hard-coded. This benchmark therefore directly tests whether the network can reconstruct gauge-invariant observables and their additive
+organization from gauge-covariant representations alone.
+As a complementary task, we consider the prediction
+of the local topological charge densityq i, defined on the
+lattice as
+qi = 1
+32π2 ϵµνρσ Tr
+"
+Ui,µν −U †
+i,µν
+2i
+Ui,ρσ −U †
+i,ρσ
+2i

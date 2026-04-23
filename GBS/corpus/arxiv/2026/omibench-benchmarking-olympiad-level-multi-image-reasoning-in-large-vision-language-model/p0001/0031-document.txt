@@ -1,0 +1,21 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+TwI works in single image domain but fails in OMIBench.Tool-based TwI with
+GPT-4o and VisualSketchpad still suffers substantial performance degradation on OMIBench in Figure 6 (b),
+indicating limited transfer from single-image tasks.
+Current internal TwI works in single image domain but fails in OMIBench.Internal TwI with Emu-3.534B likewise incurs large performance degradation in Figure 6 (c) and even falls below Qwen-2.5-32B-VL,
+further underscoring its limited transfer from single-image tasks.
+6.4. Can SFT or Tools Close the Gap?
+Beyond prompting and test-time strategies, we ask whether (1) supervised fine-tuning (SFT) on existing
+multi-image data, or (2) integration of external visual tools, can substantially narrow the gap on OMIBench.
+Detailed numbers are reported in Appendix M (Tables 9 and 10).
+SFT on existing multi-image data yields only limited gains.We fine-tune InternVL3.5-8B and Qwen3VL-8B-Instruct on two representative multi-image SFT datasets:CMMCoT[71] andMMDU[ 37]. Naive SFT
+on the simpler MMDU even slightly degrades performance (∼0.5–1%), while SFT on the more reasoningintensive CMMCoT consistently improves both backbones, but with average gains still below∼1.5–2%

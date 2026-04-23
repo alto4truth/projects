@@ -1,0 +1,25 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+m remains
+unchanged. Results are summarized in Table 1.
+Batch effects degrade generalization performance.A
+standard ResNet50 achieves high in-domain accuracy (e.g.,
+0.939±0.005 with BN), but drops substantially when evaluated on unseen experimental batches (0.862±0.060 ). This
+gap quantifies the severity of batch effects even under mild
+shifts.
+Classical UDA baselines are insufficient or impractical.
+Domain-invariant learning (DANN) and discrepancy/moment matching (CORAL) do not reliably close the gap in
+this few-shot multi-source regime. Moreover, these approaches conceptually assume access to the target distribution during training and are thus inefficient in sequential
+settings where new batches continually arrive.
+Test-time and in-context adaptation close the gap.Methods that adapt using the unlabeled target batch at inference
+time provide the strongest gains. In particular, adapting
+normalization statistics (AdaBN) and entropy-minimizing
+BN adaptation (TENT) markedly improve robustness. Meta8

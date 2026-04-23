@@ -1,0 +1,25 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 113
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+The following
+subsections detail the operational definitions of each category.
+Visual Perception Failuresoccur when the LVLM misperceives basic visual facts in one or more images,
+yielding wrong or incomplete scene descriptions, even for simple questions, and thus unreliable downstream
+reasoning. We label an error as a visual perception failure whenat least oneof the following holds:
+1. Object misrecognition:The model assigns an incorrect object category that the question depends on
+(e.g., bus vs. truck, dog vs. cat).
+2. Attribute misclassification:The model gets the object class right but misperceives salient attributes such
+as color, number, relative size, pose, or state (e.g., open vs. closed, full vs. empty).
+3. Spatial relation errors:The model misreads coarse spatial relations or layout (e.g., left vs. right, in front
+of vs. behind, above vs. below) that are visually clear and explicitly queried.
+4. Salient detail omission:The answer would be correct if a clearly visible but critical detail did not exist
+(e.g., a small but prominent symbol, icon, or text overlay).
+Cross-Image Association Failuresoccur when the LVLM parses each image reasonably well in isolation but
+fails to c

@@ -1,0 +1,31 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 64
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+DMSO was applied, were used. In total, the
+negative controls present in the 172 plates from the dataset described above, consist of 49,536 images.
+17
+
+Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+Table A5.Considered hyperparameter space for all compared methods. The selected configurations for mechanism of action prediction
+based on manual search on validation set are shown in bold.
+Hyperparameter Explored space
+Baseline
+(ResNet)
+Learning rate {0.001, 0.005}
+Scheduler {Cosine annealing, None}
+Batch size {64,128}
+Baseline (CA-MAE) Learning rate {0.001, 0.002, 0.003, 0.004, 0.005, 0.006, 0.007,0.009, 0.01}
+Batch size {128}
+DANN
+Learning rate {0.001}
+Batch size {128}
+λ{0.1, 0.5, 0.7,2, 3, 4}
+Domain classifier learning rate {0.0001}
+Unlabeled batch size {128}

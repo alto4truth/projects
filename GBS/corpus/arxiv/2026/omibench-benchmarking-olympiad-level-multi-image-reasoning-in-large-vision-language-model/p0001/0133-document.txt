@@ -1,0 +1,20 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 133
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Rationale:Reasoningloopbrokedown…
+StandardRationale:…Strictlyderivedfromgivensidelengths(AB=2,BC=3)andfoldingsymmetry…StandardAnswer(Gold):…3−3.
+ModelPrediction(Emu3.5):InfiniteLoopErrorAnalysis:RegularizationBias:Themodel“regularized”astandardtriangleintoa“perfect”EquilateralTriangle(60°)simplybecauseitlookedtidy.LogicalCollapse:Whenthemathderivedfromthisfakeangledidn'taddup,thelanguagemodelenteredaninfinitegenerationloop,unabletoresolvethecontradiction.
+Input:Intherectangle𝐴𝐵𝐶𝐷showninFigure(1),point𝐸ison𝐴𝐷,andbyfoldingpoint𝐴totherightalong𝐵𝐸,itformstheconfigurationshowninFigure(2).Then,𝐴𝐹⊥𝐶𝐷isdrawnatpoint𝐹,asshowninFigure(3).If𝐴𝐵=2,𝐵𝐶=3,∠𝐵𝐸𝐴=60∘,thenthelengthof𝐴𝐹inFigure(3)is:
+Output:InfiniteLoopCrash
+Figure (3)
+Figure (1)
+Figure (2)
+Figure20: Analysis of reasoning error examples on Emu-3.5.
+46

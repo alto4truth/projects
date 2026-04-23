@@ -1,0 +1,22 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 63
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Format Conversion.First, we convert all PDF files to Markdown using Mathpix OCR and normalize them
+to a “Question–Rationale (if available)–Answer” schema.
+Format Filtering.Team members review each item to confirm that (i) the problem statement is complete
+and legible, and (ii) the answer is well defined and unambiguous. Items with severe OCR errors, missing
+essential information (e.g., truncated questions or missing answers), duplicated content, or unresolved
+formatting issues (such as unreadable formulas or diagrams) are removed from the final set.
+Difficulty Curation.For benchmarks spanning multiple difficulty levels, experienced competition participants further curate the pool by excluding trivial, overly domain-specific, or stylistically inconsistent
+problems, so that the remaining items better align with the intended reasoning skills and difficulty.
+Multilingual Translation and Verification.For multilingual components, all non-English questions are
+first translated into English using Google Translate. Human annotators fluent in English then verify and,
+when necessary, correct the translations to preserve the original semantics, mathematical notation, and
+any subtle constraints

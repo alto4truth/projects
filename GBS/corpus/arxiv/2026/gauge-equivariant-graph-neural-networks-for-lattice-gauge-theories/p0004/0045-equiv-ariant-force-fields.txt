@@ -1,0 +1,29 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 4
+section: equiv-ariant-force-fields
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+collapse of both training and test
+data onto the diagonal, indicating that the model faithfully captures the gauge-covariant force across a broad
+range of dynamical configurations. The corresponding
+error distribution is sharply peaked around zero, with
+nearly indistinguishable statistics between training and
+test sets, demonstrating robust generalization. These
+results confirm that the gauge-equivariant GNN accurately learns the fermionic response functional underlying
+Eq. (15), providing a reliable and symmetry-consistent
+surrogate for the forces governing semiclassical gauge dynamics.
+Having established the accuracy of the GNN in predicting instantaneous forces, we next assess its performance
+in a fully dynamical setting. To this end, we integrate
+the trained GNN force field into the semiclassical equations of motion governing the link variablesU ij and their
+conjugate generatorsL ij, and carry out time evolution
+using the ML-predicted forces. This provides a stringent
+end-to-end benchmark, as any small local errors in the
+learned forces can accumulate and propagate nonlinearly
+during the dynamics.
+The results are summarized in Fig. 5. Panel (a)
+compares the time evolution of a

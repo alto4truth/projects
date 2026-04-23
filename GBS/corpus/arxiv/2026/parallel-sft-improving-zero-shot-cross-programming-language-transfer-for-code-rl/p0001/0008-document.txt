@@ -1,0 +1,40 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+0 200 400 600 800 1000
+Step
+1
+2
+3
+4
+5
+6
+7
+8
+9Pass@1 (%)
+Go
+Same Language
+Different Language (average)
+0 200 400 600 800 1000
+Step
+PHP
+0 200 400 600 800 1000
+Step
+Ruby
+Figure 2 Failure of Naive Cross-Lingual Transfer.We visualize the pass@1 performance on a target language (e.g., Go) during RL
+training on the same vs. different source languages (averaged over 10 source PLs). Shaded regions indicate 95% confidence intervals.
+While RL on the target language itself leads to consistent gains, cross-PL transfer from a different source language leads to limited
+improvements or even performance degradation.
+instruction and ground-truth response pairs, (xSFT, ySFT). Like in pretraining, the SFT data also usually includes both
+natural language tasks and coding tasks.
+Finally, we perform RL to optimize for a specific coding task. It requires a dataset of prompts xRL and a verifier.2 For
+code generation, xRL =q , the coding question, and the verifier is a code executor with test cases. For code validation,
+xRL = (q, c),3 and the verifier extracts the boolean prediction from the code solution and compares it against the ground
+truth. During training, the policy model samples a response, which i

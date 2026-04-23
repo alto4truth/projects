@@ -1,0 +1,40 @@
+title: ParetoSlider: Diffusion Models Post-Training for Continuous Reward Control
+source: arxiv
+year: 2026
+document_id: paretoslider-diffusion-models-post-training-for-continuous-reward-control
+authors: Shelly Golan; Michael Finkelson; Ariel Bereslavsky; Yotam Nitzan; Or Patashnik
+page: 1
+section: rules
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20816v1
+
+Two images will be provided: The first
+being the original AI-generated image and
+the second being an edited version of the
+first. The objective is to evaluate how
+successfully the editing instruction has
+been executed in the second image.
+Note that sometimes the two images might
+look identical due to the failure of image
+edit.
+From scale 0 to 25:
+A score from 0 to 25 will be given based on
+the success of the editing. (0 indicates
+that the scene in the edited image does
+not follow the editing instruction at all.
+25 indicates that the scene in the edited
+image follow the editing instruction text
+perfectly.)
+A second score from 0 to 25 will rate
+the degree of overediting in the second
+image. (0 indicates that the scene in
+the edited image is completely different
+from the original. 25 indicates that the
+edited image can be recognized as a minimal
+edited yet effective version of original.)
+Put the score in a list such that output
+score = [score1, score2], where ‘score1’
+evaluates the editing success and ‘score2’
+evaluates the degree of overediting.
+Editing instruction: [instruction]’’
+26

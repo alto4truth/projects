@@ -1,0 +1,24 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 1
+section: p-assing
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+We begin by outlining the essential structure of lattice gauge theory (LGT), a discrete formulation of systems with local gauge symmetry. The defining feature
+of a gauge theory is local redundancy: physically equivalent configurations are related by independent symmetry transformations at each lattice site. On the lattice,
+this structure is realized by assigning gauge degrees of
+freedom to links, rather than to sites or continuous connections. Concretely, group-valued variablesU ij ∈ Gare
+placed on oriented links (ij), whereGis a compact gauge
+group. The link variableU ij acts as a discrete parallel
+transporter from siteitoj. Under a local gauge transformation,
+Uij →g i Uij g†
+j ,(1)
+with independentg i ∈ Gat each site. Physical observables must therefore be invariant under such transformations and are naturally constructed from closedloop combinations of links—Wilson loops—which encode
+gauge flux and characterize confinement, deconfinement,
+and topological structure. Notably, the placement of degrees of freedom on edges aligns naturally with graphbased representations, where links carry the fundamental
+variables and vertices define local transformation frames.
+In the machine-learn

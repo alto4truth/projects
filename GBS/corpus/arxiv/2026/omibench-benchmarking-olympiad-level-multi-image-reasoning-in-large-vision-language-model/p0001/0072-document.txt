@@ -1,0 +1,29 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 72
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Annotator Guidelines-P2
+In this case, annotators should:
+•Fix computational and logical errors.
+•Fill in missing, non-trivial steps.
+•Reorganize the structure for better flow, and remove superfluous parts.
+3. Complete rewrite.Use this option when the rationale is not salvageable as a whole, for example:
+•The overall reasoning is conceptually flawed or contradicts the problem statement.
+•The logical structure is inconsistent or self-contradictory.
+• The explanation is so unclear, disorganized, or confusing that repairing it would be harder
+than rewriting.
+In this case, annotators should:
+•Discard the rationale as the primary solution.
+•Write a new rationale from scratch that is correct, complete, and clear.
+• Optionally reuse any locally correct insights from the original rationale (e.g., a correct formula,
+an accurate sub-case analysis), but only if they fit naturally into the new solution.
+Annotators should choose theleast intrusiveaction that yields a high-quality rationale. If in doubt
+between “Substantive revision” and “Complete rewrite,” prefer “Complete rewrite” when the existing
+structure significantly impedes clarity or correctness.
+Annotators should apply these guidelines

@@ -1,0 +1,27 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+challenges for
+noisy label learning in federated environments, and motivate the study of noisy label learning in FL settings.
+Noisy label learning in FL.RoFL [22] adapts the sample selection paradigm to the federated setting by leveraging globally aggregated class-wise feature centroids. Each
+client uses these centroids to identify confident samples for
+training and applies pseudo-labeling to the remaining noisy
+instances. Moving beyond sample-level selection, RHFL
+[4] introduces a client confidence re-weighting scheme that
+adaptively adjusts each client’s aggregation weight based on
+its estimated label quality and learning efficiency. In contrast, FedCorr [21] identifies clean and noisy clients by measuring the discrepancies in their prediction spaces using the
+local intrinsic dimension. Clean clients are then leveraged
+to assist noisy clients by relabeling their candidate noisy
+samples. Similarly, FedNoRo [20] is a multi-stage method
+that identifies clean and noisy clients through per-class loss
+values, after which noisy clients are guided via KD from
+the global model rather than explicit relabeling. Moreover,
+FedNoRo adopts DaAgg that differentially weights client
+contributions

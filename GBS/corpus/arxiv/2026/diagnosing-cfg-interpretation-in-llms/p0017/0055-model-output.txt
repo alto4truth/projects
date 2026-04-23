@@ -1,0 +1,15 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 17
+section: model-output
+chunk: 55
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+run 3 iters {
+execif (no has box_0) next {
+exec go backward 5 fin
+}fin
+}

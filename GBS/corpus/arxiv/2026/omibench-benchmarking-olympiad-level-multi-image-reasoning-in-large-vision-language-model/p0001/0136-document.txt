@@ -1,0 +1,25 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 136
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+t our conclusions are
+statistically stable.
+Partial-credit evaluation (future work).Although GPTScore already provides graded semantic judgments
+under contextual constraints, we acknowledge that purely binary or near-binary judgments may underweight
+creative or partially correct solutions on highly open-ended OMIBench items. As a future extension, we plan
+to incorporate a rubric-guided partial-scoring mechanism following recent practice in scientific-reasoning
+evaluation[43], andtoreleasethecorrespondingrubricsandevaluatorpromptstogetherwiththebenchmark.
+K. Human Baseline Details
+To calibrate the difficulty of OMIBench against human performance, we conduct a small-scale human study
+on a uniformly sampled 52-problem subset spanning biology, chemistry, mathematics, and physics. We
+recruit four participants: two domain experts (PhD/Master’s students in STEM-related fields) and two
+trained non-experts (undergraduates without direct domain specialization). None of the participants has
+seen OMIBench before the study.
+Before formal evaluation, all participants complete 10 familiarization problems that are not included
+in the reported subset. This stage is used only to acquaint them with t

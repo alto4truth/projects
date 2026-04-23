@@ -1,0 +1,28 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+tic tasks, we analysed the results across individual
+BLiMP sub-tasks. In Figure 2, we categorise the
+different tasks into a set of classes motivated by the
+analyses in Warstadt et al. (2020). Consistent with
+previous findings, our models perform best on phenomena related to morphological agreement, which
+often rely on local dependencies. Across both 10
+million and 100 million data regimes, all models
+achieve reasonably high accuracy on DeterminerNoun Agreement (which focuses on number agreement, e.g., that chair vs. that chairs), Irregular
+Forms, and Anaphor Agreement (where the focus
+is on reflexive pronoun agreement, e.g., girls insulted themselves vs. herself). We note that the
+fixed-window models, which explicitly enforce locality, excel here. We also find that most models
+suffer on more abstract syntactic and semantic constraints. Performance on Island Effects (restrictions
+on syntactic movement) and NPI Licensing (the requirement for words like ever to be in a negative
+context) is the lowest across the board, often only
+marginally better than chance. This confirms that
+these phenomena, which predominantly require
+sensitivity to complex structural and logical scope,
+represent

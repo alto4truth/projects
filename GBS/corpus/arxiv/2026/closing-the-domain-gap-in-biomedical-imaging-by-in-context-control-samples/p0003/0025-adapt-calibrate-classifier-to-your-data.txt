@@ -1,0 +1,26 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+ng:as in
+ARM-BN, adaptation remains fully unlabeled and
+lightweight, requiring only a single forward pass over
+the samples from the new domain (see Algorithm 1 and
+2), i.e. experimental batch, and no expensive test-time
+training.
+4. Related work
+Traditional batch effect correction methods.Batch effect
+correction methods that are based based on either linear
+transformations (Johnson et al., 2007; Ando et al., 2017),
+nearest neighbors (Haghverdi et al., 2018; Stuart et al., 2019;
+Hie et al., 2019) or a mixture of PCA and clustering (Korsunsky et al., 2019) have been previously proposed. One
+of the closest related works is Arevalo et al. (2024), who
+investigate batch correction methods for handcrafted features for microscopy images. These methods, however, have
+been originally designed to correct batch effects in feature
+6

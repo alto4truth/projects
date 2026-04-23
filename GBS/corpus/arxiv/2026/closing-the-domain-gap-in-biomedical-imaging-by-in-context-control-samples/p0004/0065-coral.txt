@@ -1,0 +1,23 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 4
+section: coral
+chunk: 65
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+Learning rate {0.001}
+Batch size {128}
+γ{0.05, 0.2. 0.3, 1}
+Unlabeled batch size {128}
+CA-MAE (FM) + TVN Learning rate {0.001, 0.002, 0.003, 0.004, 0.005, 0.006, 0.007, 0.009, 0.01}
+Batch size {128}
+Style-ID Learning rate {0.001}
+Batch size {128}
+ARM-BN Learning rate {0.001}
+Batch size {8, 16, 32, 64,128}
+CS-ARM-BN Learning rate {0.001}
+Batch size {8, 16, 32,64}
+Negative controls batch size {64,128}

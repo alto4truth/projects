@@ -1,0 +1,29 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 2
+section: grab-item
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+outperforms the larger
+GPT-5.2 in Task 2 BER (90.0% vs. 60.0%). (2)
+Syntactic Mastery vs. Logical Fidelity:The conditional metrics CBER and CSCR reveal that syntax is a necessary but insufficient condition for
+correctness. Notably, DeepSeek-V3.2 maintains a
+high Task 3 CBER (87.6%), whereas GPT-5-mini
+exhibits a severe semantic collapse with a CSCR of
+only 9.23% despite its high SVR. (3)Functional
+Heuristics vs. Structural Alignment:The sharp
+drop in CSCR across all models under the Alien
+lexicon suggests that without semantic anchors,
+LLMs rely on surface-level workarounds rather
+than pure symbolic state-tracking, failing to maintain a consistent mapping between nested instructions and recursive production rules.
+5.2 Ablation Studies
+To further isolate the factors governing in-context
+grammar induction, we conduct a series of systematic ablations across the three dimensions defined
+in Table 1. For these experiments, we focus on
+theInstruction-to-Code Generationtask as our primary testbed, as it requires the most comprehensive
+alignment across syntax, behavior, and semantics.
+5

@@ -1,0 +1,24 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+outputs are
+evaluated using exact-match accuracy and GPTScore, which assesses semantic equivalence under multimodal
+contextual constraints for open-ended answers (see Appendix C and Appendix J for more details on the
+metrics and their reliability). We report micro-averaged accuracy as the overall metric.
+4.2. Main Results
+Table 2 presents the overall experimental results, yielding two key findings:
+OMIBench provides a more challenging evaluation framework than existing benchmarks.The highestperforming model (Gemini-3-Pro) achieves only 50.53% on OMIBench, substantially lower than on current
+benchmarks. This increased difficulty amplifies performance differences between models, enabling more
+precise capability comparisons.
+Substantial gaps persist between leading closed- and open-source models, though model scale alone is
+insufficient.Gemini-3-Pro-Preview achieves about 15% higher accuracy than the best open-source models.
+However, GPT-4o, despite being closed-source and competitive on complex tasks, achieves accuracy only
+marginally above open-source models, suggesting that architecture and training strategies beyond parameter
+count determine performance on challenging benchmarks.

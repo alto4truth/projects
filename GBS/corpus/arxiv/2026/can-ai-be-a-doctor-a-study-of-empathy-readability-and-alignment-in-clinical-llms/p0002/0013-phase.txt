@@ -1,0 +1,54 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+mous generation, and the Rephrase
+Prompt measures the model’s capacity to enhance existing human-authored content
+through collaborative refinement.
+10
+
+4 Experiments and Results
+In this section, we present the experimental setup, describe the evaluation procedures,
+and report the results for each research question (RQ). Before addressing the RQs
+individually, we first evaluate semantic fidelity across systems to establish a baseline
+understanding of how closely LLM-generated responses align with physician-written
+content.
+4.1 Experimental Setup
+Our experimental setup was structured in two main phases.
+4.1.1 Phase 1 – Model Comparison
+In the first phase of the study, we generated four responses for each question in the
+MedQuAD and iCliniqQAs subsets by combining two language models -Mixtral
+andMed-PaLM 2- with two prompting strategies: theBase Promptand theEmpathy
+Prompt. This setup yielded four distinct outputs, representing general-purpose and
+medical-domain generations under both standard and empathy-enhanced conditions.
+Each output was then systematically compared with the physician-authored reference
+answer, resulting in a structured five-way evaluation for every question.
+To further examine the generalizability of the observed trends, we extended the
+evaluation to additional architectures-GPT-5,Gemini 2.5 Pro, andClaude Sonnet
+4.5-using a representative subset of 50 questions selected through a readability-based
+clustering procedure. ForGemini 2.5 Pro, however, a complete evaluation was not
+feasible: the model frequently produced limited or incomplete answers when contextual
+information was insufficient, underscoring its reliance on external context to generate
+medically grounded responses. This behavior also reflected an ethical safeguard, as the
+model tended to refrain from producing potentially unreliable clinical information in
+the absence of adequate medical context.
+4.1.2 Phase 2 – Physician Answer Rephrase
+To investigate whether large language models can assist or refine physicianauthored responses, we employed the same set of models as in the previous
+experiments:Mixtral,Med-PaLM 2,GPT-5,Gemini 2.5 Pro, andClaude Sonnet
+4.5, to rewrite each original medical answer. The resulting generations are denoted
+asModel Rephrase, following a consistent naming convention across models (e.g.,
+Mixtral Rephrase,Med-PaLM Rephrase, etc.). Using a dedicated rewriting prompt,
+each model was instructed to enhance the emotional tone, clarity, and accessibility of
+the physician’s message while preserving its medical accuracy and factual consistency.
+This phase simulated a human–AI co-authoring process distinct from theBase
+PromptandEmpathy Prompt (Empathy Prompt)configurations used in Phase 1,
+emphasizing collaborative refinement rather than autonomous response generation.
+All outputs were generated with low-temperature sampling (temperature= 0.1) to
+limit stochastic variation and promote consistency across runs.
+11

@@ -1,0 +1,30 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+ension. As
+models are trained on more data, they become increasingly specialised at predicting the statistical
+patterns of the training corpus. This high degree
+of specialisation may cause their expectations to
+diverge from the more generalised predictions that
+humans make which is also illustrated in recent
+work (Oh and Schuler, 2023; de Varda et al., 2024;
+Shain et al., 2024,inter alia).
+5.4 Understanding attention distribution
+As an initial, exploratory step toward understanding
+the inductive biases in our models, we examine the
+internal representations along two complementary
+dimensions: the attention patterns within individual heads, and the syntactic structure recoverable
+from the contextual embeddings. Figure 4 compares the attention patterns of two models trained
+on the 10M corpus, the baseline GPT-2 with unmodified self-attention and a constrained model
+with a fixed-window mechanism (window size=5),
+on the sentence “The trophy would not fit in the
+brown suitcase because it was too small”, a classic test case for pronoun resolution. We focus the
+figure on early layers, though the pattern is consistent across higher layers. We observe significant
+diffences. The fixed-window

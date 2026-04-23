@@ -1,0 +1,22 @@
+title: Relative Principals, Pluralistic Alignment, and the Structural Value Alignment Problem
+source: arxiv
+year: 2026
+document_id: relative-principals-pluralistic-alignment-and-the-structural-value-alignment-problem
+authors: Travis LaCroix
+page: 1
+section: document
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20805v1
+
+ately lead to the
+objective” [52, p. 329]. Consequently, many objective functions are constructedad hoc, privileging what is easy to
+measure rather than what genuinely captures human goals. The underlying reason that poorly specified objectives
+yield misalignment is that objective functions are mere proxies for the true objective. From the AI system’s “point
+of view”, however, the proxyisthe objective—a model cannot distinguish between the proxy and the task it
+approximates. Moreover, proxies permeate every aspect of an ML system along the algorithmic development
+pipeline—e.g., at the problem specification stage, a task is a proxy for a real-world problem; during the model
+design stage, an objective function is a proxy for the true objective; during the testing/validation/deployment
+stages, training data, test data, and benchmarking datasets or metrics are proxies for real-world distributions.
+Because each layer of the pipeline replaces the complex, value-laden world with simplified formal representations,
+alignment depends critically on how well these proxies track true objectives.
+To give a concrete example of value misalignment along the objectives axis, consider again the case

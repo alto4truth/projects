@@ -1,0 +1,20 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 125
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Rationale:“…showthedistancebetweenobjects,withvaryingcolorintensitiesindicatingproximity...warmercolorsinthecentralarea..."
+StandardRationale:Let'sanalyzeeachstatementbasedonthegivendata...StandardAnswer(Gold):True
+ModelPrediction(GPT-4o+VSP):NoAnswerErrorAnalysis:Over-Engineering:Themodellacks"Meta-Cognition"toselecttherighttool.Itusedasledgehammer(DepthModel)tocrackanut(2DLineDrawing).Theresultingtoolartifacts(fakedepthcolors)hijackedthereasoningprocess,causingHallucinationofMeaning.
+Input:Rootanatomychangesasplantsmature.Asrootsgrow,lateralrootsgrowfromtheprimary(roots).Manylateralrootscangrowfromoneprimaryroot,andeachlateralrootgrowsfromasingleprimordium.Aprimordiumcanbethoughtofasalateralrootbud.Tostudyplantrootgrowth,scientistsgrewArabidopsisthalianaplantsfor10days…
+Fig 1: Growth Timeline & Primordia Count
+Fig 2: Grafting
+Experiment Phenotypes
+TostudyhowagenemiR156Aaffectsplantdevelopment,scientiststhencreatedanArabidopsisplantwhichdidnotcontainthemiR156Agene.…a)ThemiR156AgeneincreasesrootgrowthTRUE/FALSEb)…
+Figure17: Analysis of reasoning error examples on GPT-4o+VisualSketchpad (VSP).
+Single-Image-ICL Configuration.The Single-Image-ICL condition evaluates whether attaching

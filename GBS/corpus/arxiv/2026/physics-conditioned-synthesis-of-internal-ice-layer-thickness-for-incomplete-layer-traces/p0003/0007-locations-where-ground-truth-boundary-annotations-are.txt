@@ -1,0 +1,23 @@
+title: Physics-Conditioned Synthesis of Internal Ice-Layer Thickness for Incomplete Layer Traces
+source: arxiv
+year: 2026
+document_id: physics-conditioned-synthesis-of-internal-ice-layer-thickness-for-incomplete-layer-traces
+authors: Zesheng Liu; Maryam Rahnemoonfar
+page: 3
+section: locations-where-ground-truth-boundary-annotations-are
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20783v1
+
+uning and yields
+better downstream performance. In particular, the pretrained
+model achieves an RMSE of 2.9910 pixels for deep-layer
+thickness prediction, compared with 3.2297 pixels for training
+from scratch, corresponding to a 7.4% improvement.
+Overall, our physics-conditioned graph transformer effectively synthesizes complete internal ice-layer thicknesses from
+incomplete layer-boundary annotations, handling both partial discontinuities and fully missing layers while maintaining physically plausible stratigraphy. Furthermore, leveraging
+these synthetic completions for pretraining enhances downstream deep-layer thickness prediction accuracy and optimization stability, highlighting the practical value of our approach
+for scalable supervision from partially labeled radargrams.
+VI. CONCLUSION
+In this work, we present a novel graph transformer architecture for synthetically completing internal ice layer thicknesses when internal layer boundary annotations are incomplete or discontinuous in radar echograms. Conditioning on
+climate-model physical features, our model leverages intralayer spatial structure and cross-layer temporal dependencies
+to produce physically plausible completions

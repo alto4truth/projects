@@ -1,0 +1,25 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+Figure 1.A)Each client trains the global model over its local data (noisy and clean), computes its class similarity matrix and its offdiagonal mean and energy. The client then sends the off-diagonal mean and energy, along with updated gradients, to the server.B)The
+server fits GMM to the off-diagonal statistics derived from class similarity matrices of all clients and partitions the clients into two groups:
+noisy and clean.C)The server aggregates the class-wise dominant direction¯ v (r) and residual subspaces ¯V(n) from clean clients, and
+sends them to noisy clients with a clean reference model for relabeling.
+the possible ground-truth label of each noisy sample as a
+differentiable soft distribution that is jointly optimized with
+the network parameters.
+3. Methods
+We propose a multi-stage FL framework for identifying
+noisy clients, constructing reliable clean reference representations, and correcting noisy labels.
+Our approach is motivated by the spectral structure of
+clean and noisy clients. Under an early-stage trained model,
+samples from the same class tend to form well-separated
+clusters in feature space. As a result, clean clients exhibit
+consistent class-wise spectral structu

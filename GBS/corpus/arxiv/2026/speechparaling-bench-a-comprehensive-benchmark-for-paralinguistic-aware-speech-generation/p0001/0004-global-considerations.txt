@@ -1,0 +1,65 @@
+title: SpeechParaling-Bench: A Comprehensive Benchmark for Paralinguistic-Aware Speech Generation
+source: arxiv
+year: 2026
+document_id: speechparaling-bench-a-comprehensive-benchmark-for-paralinguistic-aware-speech-generation
+authors: Ruohan Liu; Shukang Yin; Tao Wang; Dong Zhang; Weiji Zhuang; Shuhuai Ren; Ran He; Caifeng Shan; Chaoyou Fu
+page: 1
+section: global-considerations
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20842v1
+
+nner_n =
+0→tie
+1→model_1 wins
+2→model_2 wins
+- Note: Ensure the json structure is followed and the json output **MUST** be parsable without errors.
+15
+
+C. Output Examples
+We present examples of the prompted LLM and LALM outputs, including the Output JSON Schema for instruction analysis
+by the LLM and the LALM’s detailed judgment.
+C.1. Instruction Output JSON Schema
+We show the structured output schema of the LLM for instruction analysis, as detailed below. Each sample comprises a textual
+prompt and corresponding paralinguistic dimensions.
+Output JSON Schema for Paralanguage Control, Dynamic Variation, and Situational Adaptation
+Paralanguage Control:
+{"prompt": "Please read this sentence with a child’s voice: ’Mom, can I have another
+cookie?’", "dimensions": ["Age"]}
+{"prompt": "Please read this sentence with a very high pitch: ’Help! I’m trapped here
+!’", "dimensions": ["Pitch"]}
+{"prompt": "Please read this sentence with a sad emotion: ’We lost the game, we worked
+hard for a long time.’", "dimensions": ["Emotion"]}
+{"prompt": "Please read this sentence with a rushed rhythm and a fearful emotion: ’
+Hurry, I feel someone following us!’", "dimensions": ["Emotion", "Rhythm"]}
+{"prompt": "Please read this sentence quietly and with a contemptuous tone: ’Him?
+Still wants to win?’", "dimensions": ["Attitude", "Volume"]}
+...
+Dynamic Variation:
+{"prompt": "Please read this sentence starting with a very low pitch and gradually
+transitioning to a medium pitch: ’Late at night, the little bear quietly crept out
+of his cave, wanting to see how round the moon was in the forest.’", "dimensions"
+: ["Pitch"]}
+{"prompt": "Please read this sentence starting with a very slow pace and gradually
+increasing to a medium pace: ’The morning sunlight gently falls by the window. Hmm
+, time to get up, I need to hurry and make breakfast.’", "dimensions": ["Pace"]}
+{"prompt": "Please read this sentence starting quietly and gradually increasing the
+volume to loudly: ’Actually, I’ve always known that secret. Now, I decide to stop
+hiding, I will tell everyone the truth!’", "dimensions": ["Volume"]}
+...
+Situational Adaptation:
+{"prompt": "If the children could visit more often, I would be very content.", "
+dimensions": ["Age: Elderly"]}
+{"prompt": "This service attitude is absolutely terrible, I demand a refund!", "
+dimensions": ["Emotion: Angry"]}
+{"prompt": "Ah! There’s an insect, run! I’m most afraid of insects!", "dimensions": ["
+Emotion: Fear", "Non-Linguistic Vocalizations: With a Scream"]}
+{"prompt": "Yawn... Are you done talking? I don’t have time for your nonsense.", "
+dimensions": ["Attitude: Cold", "Non-Linguistic Vocalizations: With a Yawn"]}
+{"prompt": "Haha, look at your sleepy eyes, stayed up playing games again last night,
+didn’t you?", "dimensions": ["Attitude: Teasing", "Non-Linguistic Vocalizations:
+With Laughter"]}
+...
+C.2. LALM Judgment Cases
+We list some real cases of LALM judgment below. Given a textual user query, associated paralinguistic dimension(s), and a
+pair of audio responses (criteria omitted here for brevity), LALM gives a detailed analysis, rating, and judgment of the winner
+16

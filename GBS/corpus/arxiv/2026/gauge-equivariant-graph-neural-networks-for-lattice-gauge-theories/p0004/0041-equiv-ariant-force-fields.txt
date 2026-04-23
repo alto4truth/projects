@@ -1,0 +1,29 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 4
+section: equiv-ariant-force-fields
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+We next demonstrate that gauge-equivariant GNNs
+provide a natural and efficient framework for learning
+force fields in dynamical lattice gauge systems, extending beyond the static prediction of observables. As a concrete setting, we consider the SU(2) quantum link model
+(QLM), in which gauge fields reside on lattice links as
+finite-dimensional degrees of freedom and transform coFIG. 4. Benchmark of gauge-covariant force prediction
+for the semiclassical dynamics of the SU(2) quantum link
+model. Left: parity plot comparing GNN-predicted forces
+FML
+ij with exact diagonalization (ED) resultsF ED
+ij (dashed
+line: ideal agreement). Right: distribution of prediction errorsδF=F ML −F ED for training (magenta) and test (blue)
+sets. The model achieves MSE = 1.57×10 −4 andR 2 = 0.97,
+demonstrating accurate learning of fermion-induced, gaugecovariant forces.
+variantly under local SU(2) rotations [Eq. (1)]. QLMs
+establish a direct connection between high-energy lattice
+gauge theories and experimentally accessible platforms,
+particularly in ultracold-atom realizations where gauge
+and matter fields emerge from constrained dynamics in
+optical lattices. Although realistic implementations involve ad

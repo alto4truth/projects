@@ -1,0 +1,58 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 1
+section: coral-arm-bn
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+ARM-BN CS-ARM-BN ( ours)
+b. Small bat ch siz e
+c. Label shift
+T r aining Inf er ence
+Image
+encoder
+Image
+encoder
+Image
+encoder
+Image
+encoder
+bat ch 1
+...
+bat ch B
+Image
+encoder
+b. Small bat ch siz e
+c. Label shift
+a. Balanced data
+T r aining Inf er ence
+bat ch 1
+...
+bat ch B
+Image
+encoder
+Image
+encoder
+Image
+encoder
+Image
+encoder
+Image
+encoder
+b. Small bat ch siz e
+c. Label shift
+a. Balanced data
+Figure 3.Graphic representation of our method, CS-ARM-BN, and comparison to ARM-BN (Zhang et al., 2021). Both are meta-learning
+methods that are be modified at test-time by using the BN statistics from the target domain (lilac). CS-ARM-BN uses control samples both
+at training and at inference time, which provides stability when (b) the number of perturbed samples is small or (c) the label distribution is
+shifted.
+For the foundation model baseline, we use a frozen CAMAE encoder fMAE to obtain embeddings a=f MAE(x)
+and perform linear probing with a classifier cθ trained with
+CE-loss.
+Domain-Adversarial Neural Networks (DANN) (Ganin
+and Lempitsky, 2014).DANN uses a domain discriminator
+dv :R D → S B−1 over features a=f

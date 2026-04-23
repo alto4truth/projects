@@ -1,0 +1,33 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+urely test-time methods
+because the model is trained to adapt to new domains via
+episodic context sampling during training. Overall, Experiment 5.2 highlights that cross-source robustness remains
+challenging, butlearning to adaptis a promising direction
+compared to static training or target-dependent retraining.
+5.3. Realistic scenario 1: new experimental batch with
+label shifts
+A known failure mode of BN-based adaptation islabel shift
+(i.e., changes in the class proportions between training and
+test) (Park et al., 2023; Zhao et al., 2023). In microscopy
+screening, this occurs naturally: many experiments are designed to test only a narrow set of hypotheses, and thus
+Table 3.Comparison of MoA classification accuracy of different
+methods in a new experimental batch under different degrees of
+label shift. A smaller α value corresponds to a larger degree of
+label shift.
+Method Label shift degree
+α= 1α= 0.1α= 0.01
+ERM (no adaptation) 0.862 ± 0.060 0.862 ± 0.061 0.862 ± 0.061
+TENT 0.832 ± 0.014 0.778 ± 0.016 0.156 ± 0.010
+AdaBN 0.851 ± 0.016 0.452 ± 0.010 0.229 ± 0.009
+ARM-BN 0.831 ± 0.017 0.416 ± 0.020 0.228 ± 0.009
+CS-ARM-BN (ours)0.924 ± 0.018 0.906 ± 0.021 0.894 ± 0.022
+only a subset

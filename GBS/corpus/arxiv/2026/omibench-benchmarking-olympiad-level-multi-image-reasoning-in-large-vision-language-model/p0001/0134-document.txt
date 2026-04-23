@@ -1,0 +1,21 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 134
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Rationale:Step1:Calculatethesolubilityofcarbondioxideinwater...Henry'slaw...
+StandardRationale:…Calculatevolumeofconefrustum+cylindertofindheight…StandardAnswer(Gold):…𝒙≈𝟐𝟎𝒄𝒎.
+ModelPrediction(Emu3.5):…𝒙≈𝟏𝟖.𝟓𝒄𝒎ErrorAnalysis:DistractorTrap:Thesolubilitygraph(Fig2)actedasa"Super-Stimulus",hijackingthemodel'sattentionawayfromthebottle'sgeometry(Fig1).DomainDrift:ThemodeldriftedfromPhysics(Volume)toChemistry(Solubility),performingcomplexbutirrelevantthermodynamiccalculations.
+Input:RabbitswereoriginallyonlywildinSpainandFrance.TheRomansdomesticatedFrenchrabbits,andintroducedthemtoBritain(andtherestofEurope).DuringtheImperialera,rabbitswereintroducedtoAustralia.RabbitsspreadacrossAustraliaexplosively,causingcatastrophicdamagetoAustralianhabitats.ScientistsinCambridgeinvestigatedwhereferalAustralianrabbitscamefrom.
+Fig 1: Geometric
+Constraints
+Fig 2: Chemical
+Distractor (No Use)
+…ToworkoutwhereAustralianferalrabbitscamefrom,agenetictreeofthedifferentrabbitpopulationswasconstructed.Thelengthofeachbranchisproportionaltothenumberofgeneticchanges.DoesthistreeproveferalrabbitsinAustraliacamefrommultipledifferentshippings?
+Figure21: Analysis of reasoning error examples on Emu-3.5.
+Sampling stab

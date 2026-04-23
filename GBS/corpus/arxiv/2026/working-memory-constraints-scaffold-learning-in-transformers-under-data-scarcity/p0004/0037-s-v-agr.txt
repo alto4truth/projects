@@ -1,0 +1,35 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+that this is
+a simplification of human chunking, which operates over linguistically meaningful units of variable
+size.
+Exponential Decay Attention.We adopt λ=
+82.86 and α= 0.37 , the values reported as optimal
+by De Varda and Marelli (2024) from a grid search
+using GPT-2 small on the Provo corpus (Luke and
+Christianson, 2018). We retain these values without
+re-tuning in order to enable direct methodological
+comparison with the post-hoc application reported
+in that work.
+Logistic Decay Attention.We use k= 0.4 as the
+steepness parameter and m= 12.0 as the midpoint
+distance. These values establish a profile where
+tokens within approximately five positions retain
+high attention weight before the decay accelerates.
+Primacy and Recency Attention.The mechanism includes two learnable scalar parameters,
+wprimacy and wrecency, which control the relative
+contribution of primacy and recency biases. Both
+are initialised at 0.5 at the start of training.
+A.3 Training Configuration
+All models are trained from scratch using the
+AdamW optimiser with a learning rate of 5×10 −5,
+batch size of 64, and weight decay of 0.01. Training proceeds for 5 epochs with gradient clipping at
+a maximum norm of 1.0.

@@ -1,0 +1,31 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 8
+section: adapt-calibrate-classifier-to-your-data
+chunk: 73
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+x = load_data() # your biomedical images
+z = load_controls() # available controls
+model = load_model() # public classifier
+context = concat([x, z]) # assemble context
+pred = model.cpredict(x, context=context)
+F. Details on estimators
+F.1. Setup
+We model the BN activation mean for a samplexas:
+µobs,x =µ domain +µ class(x) +ε x,(15)
+where µdomain is the batch-specific technical offset we wish to estimate, µclass(x) = 0 for control samples, µclass(x) ̸= 0 for
+perturbed samples, andε x ∼(0, σ 2)is additive noise.
+We have C control samples and L perturbed samples, with M=C+L total. The mean class effect across all perturbed
+samples is
+¯µclass = 1
+L
+LX
+l=1
+µclass(l).(16)
+For any estimatorˆµ, the MSE decomposes as:
+MSE(ˆµ) = Bias2(ˆµ) + Var(ˆµ).(17)
+22

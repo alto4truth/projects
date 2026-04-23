@@ -1,0 +1,22 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 2
+section: document
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+ng. Together, these tasks provide a controlled setting to assess the expressive power and inductive bias of gaugeequivariant message passing.
+The benchmark results are summarized in Fig. 2.
+Panel (a) shows the prediction of the total actionS[U].
+The parity plot exhibits an essentially perfect linear correlation between predicted and exact values for both
+training and test sets, with a narrow and symmetric error distribution centered at zero. This indicates that
+the network accurately reconstructs the additive structure of the action and generalizes well across configurations. Fig. 2(b) presents the prediction of the local
+topological charge densityq i. Despite the increased difficulty of this site-resolved task, the model maintains
+strong agreement with the exact values, with only moderate broadening around the ideal diagonal. The corresponding error distribution remains sharply peaked at
+zero, demonstrating that local fluctuations are captured
+with high fidelity. Together, these results show that
+gauge-equivariant message passing accurately recovers
+<latexit sha1_base64="R4kPNc2aOb05e2iYVjsHcTPfDnI=">AAAB6nicbVDLSgNBEOyNrxhfUY9eBoMQL2E34OMY9OIxonlAsoTeyWwyZHZ2mZkVQsgnePGgiFe/yJt/4

@@ -1,0 +1,25 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 130
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Images” (EMU-3.5-34B)
+In the internal “Think-with-Image” configuration, we employ EMU-3.5-34B, a unified multimodal generator
+designed to reason over inputs and synthesize visual content autonomously, eliminating the need for external
+APIs. This architecture enables the model to perform reasoning that integrates both textual analysis and
+self-generated visual aids. For inference, we adopt a mixed-precision protocol on 2 NVIDIA A100 80GB GPUs.
+We set the temperature to 0.3 and top-p to 0.9, a configuration empirically determined to optimally balance
+diversity and coherence during visual planning. More detailed case analyses are provided in Figure 19-21.
+J. Reliability and Stability of GPTScore
+To address concerns about the trustworthiness of model-based evaluation, we report four complementary
+analyses of GPTScore.
+Complementarity with match accuracy.Match Accuracy captures exact symbolic agreement, while
+GPTScore evaluates semantic equivalence under the multimodal context (see Appendix C). The Spearman
+correlation between the two metrics over model-level scores is0.93, indicating strong agreement and
+consistency.
+Agreement with human ratings and cross-evaluator stability.We randoml

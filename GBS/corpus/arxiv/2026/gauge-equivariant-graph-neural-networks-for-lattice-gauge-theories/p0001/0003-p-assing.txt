@@ -1,0 +1,25 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 1
+section: p-assing
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+e variables correspond to physical degrees of
+freedom and observables—such as forces or currents—are
+inherently gauge dependent. Embedding these transformation laws directly into the architecture is therefore not
+merely a formal constraint, but a guiding design principle that reduces the hypothesis space, improves data
+efficiency, and enables physically consistent predictions
+across both invariant and covariant sectors.
+A natural approach to incorporating gauge symmetry in machine learning is to eliminate gauge redundancy at the level of the input by constructing gaugeinvariant features, such as Wilson loops. While this strategy can be effective for Abelian gauge groups—where
+elementary plaquette fluxes provide a compact and essentially complete local description—it becomes fundamentally limited in the non-Abelian setting. Owing to
+noncommutativity, Wilson loops are matrix-valued and
+path-dependent, and no finite set of local loops forms a
+complete representation of the gauge field. Restricting
+inputs to small gauge-invariant loops therefore yields an
+intrinsically incomplete and information-reducing encoding.
+More fundamentally, invariant representations discard
+structured informa

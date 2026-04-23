@@ -1,0 +1,24 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+en natural languages is often attributed to
+language-general representations, where multilingual models develop representations that capture the underlying
+semantics of texts (Pires et al., 2019; Wu and Dredze, 2019; Conneau et al., 2020b;i.a.). Similarly, we hypothesize that
+Parallel-SFT aligns the PL representation space, leading to more semantic code representations. This enables the policy
+improvements learned during source-PL RL to better propagate to target PLs. Our analysis supports this hypothesis:
+Parallel-SFT induces higher similarity between parallel programs even inunseenPLs. We hope our method inspires
+future work on training generalizable models not only across PLs, but also across natural languages, domains, and tasks.
+2 Background
+In this section, we outline the coding tasks considered in this work and the standard post-training pipeline to solve them.
+We then review the paradigm of zero-shot cross-lingual transfer in NLP, which motivates our experimental setup.
+2.1 Coding Tasks
+We focus on two coding tasks: code generation and code validation.
+Incode generation, the model takes a natural language description of a coding question, q, and generates a solution
+code pr

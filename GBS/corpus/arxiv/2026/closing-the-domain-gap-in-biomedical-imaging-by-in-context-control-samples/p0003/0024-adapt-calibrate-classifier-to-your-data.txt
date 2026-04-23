@@ -1,0 +1,31 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+x = load_data() # your biomedical images
+z = load_controls() # available controls
+model = load_model() # public classifier
+model.adapt(concat([x, z]))# calibrate
+pred = model.predict(x) # neutralized gap
+batch b, a control samples and perturbed samples are used
+as context to adapt BN statistics, and performance is optimized on perturbed query samples from the same batch.
+This trains the base network toexpectandexploitcontrolconditioned normalization at test time, rather than treating
+it as a heuristic post-hoc correction.
+Compared to standard ARM-BN and other domain adaptation methods, CS-ARM-BN offers three key advantages:
+• Stability under small context sizes:since all samples,
+perturbed plus control samples are used in each batch,
+the BN statistics can be estimated reliably even when
+only few perturbed samples are available.
+• Robustness to label shift:control samples are independent of the class distribution in the new domain,
+and are used to decrease the bias in the estimator at test
+time.
+• No additional supervision or re-training:as in
+ARM-BN, adaptation remains fully unlabeled and
+lightweight, requiring only a single forward pass over
+the samples from the new domain (see Al

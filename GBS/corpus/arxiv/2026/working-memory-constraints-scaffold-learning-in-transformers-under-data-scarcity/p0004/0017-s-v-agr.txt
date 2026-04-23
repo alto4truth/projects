@@ -1,0 +1,68 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+.
+L2H0
+The
+trophywould
+notfit inthe
+brown
+suitcasebecause
+it
+wastoo
+small
+.
+L2H1
+The
+trophywould
+notfit inthe
+brown
+suitcasebecause
+it
+wastoo
+small
+.
+L2H2
+The
+trophywould
+notfitinthe
+brown
+suitcasebecause
+it
+wastoo
+small
+.
+L2H3
+0.00
+0.25
+0.50
+0.75
+1.00
+0.00
+0.25
+0.50
+0.75
+1.00
+0.00
+0.25
+0.50
+0.75
+1.00
+The trophy would not fit in the brown suitcase because it was too small. (b) 10M Fixed Window 5
+Figure 4: Attention weights distributions for the sentence "The trophy would not fit in the brown suitcase because it
+was too small." across individual heads in the first three layers of the 10M Baseline and Fixed Window 5 models.
+the immediately preceding token. This specialisation sharpens in later layers: heads L2H0 and
+L2H1 come to focus on the core subject-verb-object
+structure (‘trophy’, ‘fit’, ‘suitcase’), a pattern reminiscent of the telegraphic speech observed in children between 18 and 36 months (Brown, 1973);
+L2H2 specialises in verbs (‘fit’, ‘was’) andL2H3 in
+nouns (‘trophy’, ‘suitcase’). The baseline model
+mostly shows dissimilar patterns where its heads
+remain diffuse across layers, attending to less interpretable combinations of function and content
+words without evident fun

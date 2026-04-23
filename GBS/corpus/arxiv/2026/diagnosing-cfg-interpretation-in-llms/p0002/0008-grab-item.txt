@@ -1,0 +1,24 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 2
+section: grab-item
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+on the overall
+program’s behavioral and semantic correctness.
+3.2 Surface Realization: Styles and Lexicons
+To isolate symbolic reasoning from the effects of
+pre-training exposure, we vary the surface realization of program through two key mechanisms.
+Syntactic StyleWe implement three distinct formatting conventions: Block (verbose keywords
+like do/end), C-style (braces {} and semicolons),
+and S-expr (Lisp-like prefix notation). This variation tests whether LLMs are biased toward specific
+structural delimiters inherited from common programming languages.
+Lexical FamiliarityThis is a critical control in
+our framework. While Natural mode employs
+standard keywords (e.g., loop), Alien mode maps
+all grammar terminals to randomized, opaque tokens (e.g., v_xkqm). This Alien setting necessitates pure in-context induction, as the LLM cannot
+3

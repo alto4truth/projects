@@ -1,0 +1,25 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 64
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+nglish then verify and,
+when necessary, correct the translations to preserve the original semantics, mathematical notation, and
+any subtle constraints or assumptions. During this process, annotators flag and resolve ambiguities (e.g.,
+multiple plausible interpretations of a term or condition), and any items whose meaning cannot be reliably
+disambiguated are discarded.
+A.3. Details of Rationale Annotations
+Most existing competition-style datasets provide only final answers or brief solution sketches, which are
+insufficient for analysing model reasoning behaviours. To address this limitation, we construct expert-verified,
+step-by-step rationales for each problem using a two-stage pipeline that combines LLM generation with
+careful human verification.
+A.3.1. LLM-Assisted Rationale Generation
+We first use Gemini-2.5-pro-thinking to generate multiple candidate solutions for each problem.
+Model Prompting:For every problem, the input to the model includes: the problem statement; all auxiliary
+information required to solve the problem (e.g., provided figures, tables, or input–output formats), when
+available. Concretely, we use a prompt template that instructs the model to “Let’s think step-

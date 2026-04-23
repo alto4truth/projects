@@ -1,0 +1,26 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 5
+section: arm-cml
+chunk: 70
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+t level Accuracy Number of domains Samples per domain (avg.)
+Source 0.773 ± 0.033 1 56,160
+Batch 0.790 ± 0.014 4 14,040
+Plate 0.798 ± 0.014 195 288
+21
+
+Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+E. The in-context learning view on CS-ARM-BN
+Our method CS-ARM-BN can be understood as a form ofin-context learning: rather than retraining the model, the classifier
+conditions its predictions on a smallcontextof unlabeled samples from the new experimental batch, without any gradient
+update. The negative controls play the role of a stable, class-agnostic reference that directly reflects the batch-specific
+technical variation.
+As shown in Algorithm 2, this can be written in two equivalent ways: either as an explicit two-step procedure of calibration
+followed by inference (model.adapt), or as a single context-conditioned forward pass (model.cpredict), making
+the analogy to in-context learning explicit.
+Algorithm 2Pseudo code for CS-ARM-BN vs traditional image classifier pipelines | In-context view on CS-ARM-BN

@@ -1,0 +1,24 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+output in that language. Therefore, while the
+improved transferability from Parallel-SFT is still scientifically meaningful, we also consider the code validation task.
+In code validation, the code program in the inputisPL-dependent, making zero-shot transfer a real practical problem.
+Figure 3b summarizes the results.15 Overall, we observe similar trends to code generation, corroborating the utility of
+Parallel-SFT.
+9See Footnote 5 for our rationale.
+10Note that we have two 1 Language (source) models corresponding to the two source languages.
+11https://huggingface.co/datasets/open-r1/codeforces-submissions
+12Though accuracy is the metric, we do not train a classification model because LMs can develop chains-of-thought.
+13Here, comparing the 8 Languages models with the 1 Language model is no longer fair because the latter does not see these languages during SFT,
+unlike the former.
+14We conjecture that this may be due to models learning more effectively on higher-resource PLs, analogous to multilingual models learning more
+effectively in English. We leave further studies on this phenomenon to future work.
+15Because of the realistic data constraint, we no longer have sufficient target

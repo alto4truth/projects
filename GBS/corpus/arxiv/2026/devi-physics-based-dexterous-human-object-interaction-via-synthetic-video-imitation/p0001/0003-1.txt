@@ -1,0 +1,79 @@
+title: DeVI: Physics-based Dexterous Human-Object Interaction via Synthetic Video Imitation
+source: arxiv
+year: 2026
+document_id: devi-physics-based-dexterous-human-object-interaction-via-synthetic-video-imitation
+authors: Hyeonwoo Kim; Jeonghwan Kim; Kyungwon Cho; Hanbyul Joo
+page: 1
+section: 1
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20841v1
+
+ace mesh with a more realistic textured human mesh
+MHuman(H) that matches the scale, pose, and location ofMSMPLX(H). In practice, we select textured
+4
+
+Figure 3:Challenges in 4D HOI Reconstruction.Reconstructing 4D HOI from the synthetic video
+is challenging due to (a) noisy 6D pose estimation and (b) HOI alignment issues. DeVI addresses
+these via hybrid tracking rewards and visual HOI alignment.
+human meshes from the THuman2.0 dataset [67] and deform them via an automatic rigging process
+using approximated joint offsets and skinning weights for linear blend skinning (LBS). See examples
+in Fig. 2, and the supplementary material for the details. We then specify a camera with parameters
+Π and render the scene into 2D image space I= Π({M Human(H),M O(O)), together with a fixed
+table and background. Using the pre-trained image-to-video generation model [ 49] and the text
+prompt, we generate a 2D HOI videoV={I t}F
+t=1, initialized from the rendered imageI 1 =I.
+4.2 Extracting Hybrid Imitation Targets
+Directly using the generated video V for RL policy learning is challenging. Instead, we first extract
+hybrid imitation targets ˆghybrid ={ ˆh, ˆo}, which consist of estimated 3D human motion ˆh and 2D
+object trajectories ˆofrom the video as follows:
+ˆh={ ˆJ b
+t , ˆθb
+t , ˆJ h
+t , ˆθh
+t }F
+t=1 (4)
+ˆo={ ˆxt}F
+t=1.(5)
+Here, ˆJ b
+t ∈R 19×3 and ˆJ h
+t ∈R 32×3 denote the estimated 3D body and hand joint locations, and
+ˆθb
+t ∈R 19×3 and ˆθh
+t ∈R 32×3 represent the corresponding body and hand pose parameters in SMPL-X
+representation. The object target ˆo consists of tracked 2D points ˆxt ∈R M×2 in image coordinates
+at time t, initialized from the first frame. These points correspond to M visible object vertices
+projected into the image using the camera Π. Our motivation for using 3D human pose with 2D
+object trajectories is that accurately recovering full 3D object pose from video remains challenging
+as shown in Fig. 3 (a), and robust 3D spatial alignment between humans and objects is still an open
+problem. By providing these hybrid cues as reference targets, we allow the RL framework to infer
+a physically plausible solution that jointly imitates both signals. Below, we describe the extraction
+process for each component of the hybrid imitation target.
+Initializing 3D Human Reference.For the human component, we apply an off-the-shelf monocular
+world-grounded human motion estimator [41], denoted as F b, along with a hand pose estimator [34],
+denoted as F h, to the synthesized 2D video V. These models provide estimates of 3D body motion
+and 3D hand poses, which we combine to reconstruct a unified SMPL-X human motion sequence
+with hand poses. Specifically,
+F b(It) ={β t,θ b
+t ,ϕ b
+t ,τ b
+t }(6)
+F h(It) ={θ h
+t ,ϕ lh
+t ,ϕ rh
+t ,τ lh
+t ,τ rh
+t },(7)
+where βt ∈R 10, θb
+t ∈R 21×3, ϕb
+t ∈SO(3) , and τ b
+t ∈R 3 are the estimated SMPL-X parameters
+for human shape, body pose, the root joint orientations in the world coordinate, and translation,
+respectively. The θh
+t ∈R 30×3 is a hand pose, ϕlh
+t ∈SO(3) are root (wrist) orientation of each hands,
+and τ rh
+t ∈R 3 are the global translations of each hands. As the hand estimator typically provides
+more accurate hand locations and orientations, we refine the body pose by adjusting the wrist joint
+angles in θb
+t to combine the outputs of F b and F h. See supplementary material for the details. The
+5

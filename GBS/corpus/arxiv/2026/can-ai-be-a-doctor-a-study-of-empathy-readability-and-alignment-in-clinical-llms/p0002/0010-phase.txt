@@ -1,0 +1,17 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+an a population-scale benchmark.
+The subset was constructed through a readability-driven clustering procedure:
+1.Extract linguistic features:For each question in datasetD, compute the
+Flesch–Kincaid Grade Level (FKGL), the Gunning Fog Index (GFI), lexical representativeness (cosine similarity between TF–IDF vectors and the corpus centroid),
+and answer length.
+2.Remove extreme outliers:Apply interquartile range (IQR) filtering independently to FKGL and GFI.
+8

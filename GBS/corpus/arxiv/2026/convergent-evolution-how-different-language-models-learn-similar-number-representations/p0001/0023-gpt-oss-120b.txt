@@ -1,0 +1,27 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+ing, but with shorter
+context length or fewer numbers within each sequence (e.g. Isolate-2) is much weaker at
+T=5 and 10.Swap Numbersdrops substantially, andUnigram Replacefalls to chance.
+Spectral convergence requires only token frequencies.All perturbations produce nearly
+identical Fourier spectra (Figure 4, left), including Unigram Replace , which destroys all
+co-occurrence structure by independently resampling every number token from its marginal
+distribution. As predicted by the universality observed in §3, the periodic frequency
+distribution of number tokens is sufficient to produce Fourier spikes, and no co-occurrence
+information is needed.
+Geometric convergence draws on several complementary data signals.The right panel
+of Figure 4 reveals that geometric convergence degrades gradually as different types of
+co-occurrence information are removed. The probing power is measured with Cohen’s
+κ for balanced classes, the metric that removes random guessing from accuracy for Tway classifications defined as κ= (Accuracy− 1
+T )/(1 − 1
+T ). When κ= 0, the probe is
+at chance and κ= 100% is perfect classification regardless of T. Swap Numbers , which
+preserves number n-gram statistics b

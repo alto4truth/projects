@@ -1,0 +1,30 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+To evaluate the impact of these strategies on the final
+model performance, Table 4 reports the test accuracy obtained using each relabeling variant.
+1
+
+Table 2. Ablation study of FedSIR on CIFAR-10 with symmetric label noise and Dirichlet parameterα= 1. Removing each component
+shows its contribution to the overall framework.Boldindicates the best result and underline indicates the second-best result.
+Symmetric Noise
+α# Clean Clients Method 30% 40% 50% 60% 70% 80% 90%
+1 3
+w/o relabeling 85.13±0.73 84.81±0.73 84.29±0.70 83.90±0.76 82.85±0.76 82.06±0.75 80.00±0.77
+w/o LA 84.93±0.69 84.60±0.76 84.63±0.70 84.38±0.75 84.15±0.75 84.04±0.71 84.14±0.72
+w/o KD 85.49±0.69 85.16±0.68 85.03±0.70 84.63±0.66 84.43±0.69 84.16±0.73 84.37±0.68
+w/o DaAgg85.65±0.70 85.33±0.73 85.25±0.6884.41±0.70 83.90±0.71 83.95±0.73 83.73±0.72
+Ours85.21±0.70 85.28±0.68 84.86±0.7084.68±0.71 84.54±0.73 84.35±0.74 84.51±0.72
+3 Pruning 81.78±0.80
+10 FedAvg 87.23±0.66
+Figure 3. Average relabeling noise reduction under different symmetric noise levels for three relabeling variants: using only the
+dominant-direction score S(r), using only the residual-subspace
+score S(n), and the proposed agreement-based strategy.
+2

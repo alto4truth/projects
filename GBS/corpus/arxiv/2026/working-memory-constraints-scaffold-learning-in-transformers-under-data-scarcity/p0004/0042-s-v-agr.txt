@@ -1,0 +1,26 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 42
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+cally acceptable sentences
+than to unacceptable ones, but does not directly tell
+us whether the model has internalised the structural
+relations that underlie the contrast. A model could
+in principle perform well on agreement minimal
+pairs by tracking surface co-occurrence statistics
+rather than by representing the binding relation between subject and verb. In a way, structural probing
+addresses this gap by asking whether the geometry
+of a model’s representations encodes the grammatical structure of its inputs in a recoverable form.
+A higher UUAS indicates that syntactic dependencies are linearly decodable from the embedding
+space, which we take as evidence that the model
+has acquired a more explicit internal representation
+of structure rather than an implicit, behaviourally
+adequate proxy.
+B.1 Results by Dependency Relation
+Figure 5 reports UUAS for the baseline and fixedwindow models trained on the 10M corpus, plot-

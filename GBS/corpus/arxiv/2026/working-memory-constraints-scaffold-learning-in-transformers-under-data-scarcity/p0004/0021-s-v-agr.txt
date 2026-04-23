@@ -1,0 +1,25 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+Limitations
+We believe several bounds on the present work
+deserve explicit acknowledgement. Our investigation is deliberately confined to the developmentally
+plausible regimes of 10M and 100M words, and we
+make no claim about what happens at the trilliontoken scale of contemporary frontier models. The
+trajectory of psychometric alignment we observe
+between 10M and 100M, in which alignment degrades rather than improves with more data, is at
+least consistent with the possibility that the specialised structure our constrained models acquire
+reflects an inductive bias absent from the unconstrained architecture rather than a pattern recoverable from data alone, but our experiments don’t currently dont provide strong experimental evidence
+that this is the case with all dominant models. Our
+implementation of working memory is also a deliberate simplification. Working memory is not a rigid,
+position-indexed buffer. It is perhaps a dynamic,
+content-addressable system shaped by similaritybased interference among held items (Van Dyke
+and Lewis, 2003) and by linguistic experience itself (Schwering and MacDonald, 2020; MacDonald, 2016). In our experiments, we isolate one
+dimension, namely the l

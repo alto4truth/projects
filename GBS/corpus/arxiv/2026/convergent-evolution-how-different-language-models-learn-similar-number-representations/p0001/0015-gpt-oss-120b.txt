@@ -1,0 +1,16 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+w ask two empirical questions: how common are Fourier spikes in practice,
+and do they actually predict mod-Tprobe accuracy?
+Throughout this paper, unless stated otherwise, we train models with around 300 million
+parameters on 10B tokens from FineWeb-Edu (Lozhkov et al., 2024) using the Llama-3
+tokenizer, which assigns single tokens to each integer from 0 to 999 such that N= 1000.
+We include architecture details in the Appendix B.1. We evaluate number representations

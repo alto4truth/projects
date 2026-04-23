@@ -1,0 +1,30 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+Formally, our SFT data follows the format
+n
+(qi, cPython
+i ),(q i, cC++
+i ),· · ·
+o
+i
+, where the clang are mutual translations
+that all solve q. By forcing the model to map the same question q to different language-specific realizations clang,
+Parallel-SFT encourages a functionality-centric, rather than syntax-centric, representation space. We will show that
+Parallel-SFT enables a more generalizable SFT model: the subsequent RL stage in a source language transfers better to
+target languages.
+5 Experimental Setup
+5.1 Parallel Data Construction
+We construct a high-quality parallel program dataset. Following our examples in §4 and common practices (Rozière
+et al., 2024; Lambert et al., 2025;i.a.), we use instances of thecode generationtask for SFT training. We utilize a
+combination of the APPS (Hendrycks et al., 2021) and CodeContests (Li et al., 2022a) datasets, which contain diverse
+code generation instances. To ensure rigorous evaluation, we filter the data to exclude any CodeForces data which we
+reserve for RL training and evaluation (§5.3). We also filter out questions that have visual inputs.
+These datasets contain mostly solutions in Python. To generate parallel programs in

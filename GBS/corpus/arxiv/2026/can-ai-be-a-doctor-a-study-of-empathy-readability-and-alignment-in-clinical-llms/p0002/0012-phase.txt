@@ -1,0 +1,54 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+regate subset:Collect selected samples intoD MedQuAD
+50 .
+Figure 2 confirms that the retained subset spans the full readability range of the
+corpus.
+9
+
+iCliniqQAs Subset Construction
+For iCliniqQAs, subset construction combined linguistic stratification with clinical
+severity balancing. The goal was to ensure representation across urgency levels while
+maintaining variability in linguistic complexity.
+1.Extract linguistic features:Compute FKGL, GFI, lexical representativeness,
+and answer length for each sample.
+2.Normalize features:Apply z-score normalization to all linguistic features.
+3.Severity labeling:Assign each question to one of five triage levels (White,
+Green, Yellow, Orange, Red). Labels were generated using PalMed-2 to ensure
+medically coherent classification.
+4.Stratify by severity:Partition the dataset into five severity groups.
+5.Cluster within each group:Perform clustering in the normalized linguistic
+feature space within each severity class.
+6.Select balanced representatives:Select 10 samples per severity class based
+on centroid proximity.
+7.Aggregate subset:Combine selected samples intoD iCliniq
+50 .
+Figure 3 shows that the resulting subset preserves the full range of clinical urgency
+while maintaining diversity in readability and lexical density.
+Both subsets support controlled cross-model comparison under resource constraints. The reduced sample size limits statistical generalization but maximizes
+coverage across linguistic and clinical dimensions.
+3.3.1 Prompting strategies
+To evaluate how expertise and communication style affect outputs, we tested each
+model under three distinct response-generation settings:
+• Base Prompt - Clinical Baseline Mode(Appendix A.1): this label emphasizes that the prompt represents the model’s default, unconditioned clinical
+behavior, serving as a neutral reference point for all comparisons.
+• Empathy Prompt - Empathy-Driven Generation(Appendix A.2): this
+name highlights that the model is explicitly instructed to generate responses with
+enhanced emotional awareness and patient-centered tone, framing the prompt as
+an affective alignment strategy rather than a mere style change.
+• Rephrase Prompt - AI-Assisted Clinical Editing(Appendix A.3): this
+formulation clarifies that the model operates as a collaborative editor, reframing
+its role from content generator to clinical communication enhancer[37].
+Together, these three configurations isolate complementary aspects of communicative alignment: the Base Prompt captures factual generation, the Empathy Prompt
+evaluates stylistic modulation during autonomous generation, and the Rephrase
+Prompt measures the model’s capacity to enhance existing human-authored content
+through collaborative refinement.
+10

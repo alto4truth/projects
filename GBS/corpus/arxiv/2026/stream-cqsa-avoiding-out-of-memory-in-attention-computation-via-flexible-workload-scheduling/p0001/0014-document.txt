@@ -1,0 +1,51 @@
+title: Stream-CQSA: Avoiding Out-of-Memory in Attention Computation via Flexible Workload Scheduling
+source: arxiv
+year: 2026
+document_id: stream-cqsa-avoiding-out-of-memory-in-attention-computation-via-flexible-workload-scheduling
+authors: Yiming Bian; Joshua M. Akey
+page: 1
+section: document
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20819v1
+
+able memory budget. If OOM occurs during
+this calibration step, the divide granularity is further increased until a feasible configuration is found.
+6
+
+Figure 5: Performance curve of naïve kernel (left) and FA kernel (right)
+3 Experiments
+All experiments are conducted on a single NVIDIA A100 GPU with 80 GiB memory. Unless
+otherwise specified, we set the number of chunks c= 7 , interest set I= (0,1,3) , head dimension
+D= 128 , batch size B= 1 , number of heads H= 1 , and precision to fp16. Memory is reported in
+GiB (≈1.07×GB) and time in seconds. We adopt uniform scheduling throughout this section.
+3.1 Attention kernel
+Stream-CQSA decomposes attention into independent subsequence computations but does not prescribe how attention is computed within each subsequence. We refer to the underlying implementation
+as the attention kernel (distinct from CUDA kernels unless explicitly stated). As a result, the overall
+performance of Stream-CQSA, particularly runtime, is largely determined by the design of attention
+kernel. Here we evaluate two representative kernels in the forward pass: a naïve Python implementation of CQSA and a FlashAttention (FA) CUDA kernel. Since kernel optimization is not the focus of
+this work, we do not attempt to fully optimize the kernel design.
+To compare the two kernels, we vary the sequence lengthN and measure peak memory usage and
+computation time per subsequence. Results are shown in Figure 5. Both implementations exhibit
+quadratic time complexity, while their space complexity differs: the naïve implementation is quadratic
+in memory, whereas the FA kernel achieves linear memory complexity. Consequently, the FA kernel
+is significantly more memory-efficient.
+These results highlight that the time and memory complexity of Stream-CQSA are inherited from the
+underlying attention kernel. Generally, the kernel can be any attention variant, including approximate
+and distributed methods. To be compatible with Stream-CQSA, an attention kernel must accept the
+CQS mask and return the numerator and denominator of the softmax computation when applicable.
+3.2 Forward and backward pass: from memory-bound to kernel-bound
+Due to the OOM guardrail mechanism, Stream-CQSA avoids out-of-memory failures in both forward
+and backward passes. However, the backward pass remains more memory and compute intensive than
+the forward pass under the same divide granularity (itr). When the memory limit is reached, excess
+memory demand is translated into additional computation time via finer decomposition, resulting in
+longer execution time for the backward pass.
+A caveat here is that we must distinguish between the number of subsequences that can reside on
+the GPU (n_cap) and the number that are actually executed in parallel (n_parallel). In practice,
+these may differ. For example, the FA kernel used in our experiments is optimized for single-task
+execution to maximize throughput, so we haven_parallel=n_cap= 1in all experiments.
+We profile the forward pass across the following stages: CQS mask ( Mi) generation, Qi, Ki, Vi
+gathering, host-to-device (H2D) transfer, subsequence computation producing Numi,Den i, deviceto-host (D2H) transfer, and final aggregation into Num,Den followed by output (O) computation.
+The backward pass includes analogous stages, with additional gradient computations. Particularly, we
+ignore the time of random tensor generation of {Q, K, V,dO} although they could take noticeably
+amount of time whenNis large.
+7

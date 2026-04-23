@@ -1,0 +1,46 @@
+title: Stream-CQSA: Avoiding Out-of-Memory in Attention Computation via Flexible Workload Scheduling
+source: arxiv
+year: 2026
+document_id: stream-cqsa-avoiding-out-of-memory-in-attention-computation-via-flexible-workload-scheduling
+authors: Yiming Bian; Joshua M. Akey
+page: 1
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20819v1
+
+Algorithm 1CQSA forward pass
+Require:Q, K, V∈R B×H×N×D , chunk countc, divide granularityitr, interest setI, scaleα
+1:subseq_entries←BUILDSUBSEQ(N, c,itr,I)
+2:Num←0 B×H×N×D
+3:Den←0 B×H×N
+4:foreach subsequencei∈subseq_entriesdo
+5:idx←token_ids[i]
+6:Q i ←GATHER(Q,idx),K i ←GATHER(K,idx),V i ←GATHER(V,idx)
+7:M i ←mask[i]
+8:R i ←α(Q iK ⊤
+i )
+9:P i ←exp(R i)⊙M i
+10:Num i ←P iVi
+11:Den i ←ROWSUM(P i)
+12:Num.INDEXADD(2,idx,Num i)
+13:Den.INDEXADD(2,idx,Den i)
+14:end for
+15:O←Num/Den.UNSQUEEZE(−1)
+16:returnO
+The forward pass is summarized in Algorithm 1. We also provide a step-by-step illustration in
+Figure 2 forc= 7andI= (0,1,3), explicitly verifying full coverage of the attention matrixP.
+2.2 Backward pass
+The backward pass follows the same decomposition. Let dO be the upstream gradient, since
+O=Num⊘Den, we have
+dNum=dO⊘DendDen=− ⟨dO,Num⟩ D
+Den2 (4)
+where⟨·,·⟩ D denotes the inner product on the head dimension.
+Using the same (c,I) construction, we construct dNumi and dDeni for each subsequence. The
+gradients are computed as follows.
+dVi =P ⊤
+i dNumi dPi =dNum iV ⊤
+i +dDen i1⊤
+dRi =dP i ⊙P i dQi =αdR iKi dKi =αdR ⊤
+i Qi
+(5)
+Finally,dQ i,dK i,dV i are merged back to full-sequence coordinate

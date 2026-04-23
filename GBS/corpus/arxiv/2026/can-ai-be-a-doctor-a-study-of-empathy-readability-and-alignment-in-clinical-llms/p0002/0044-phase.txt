@@ -1,0 +1,57 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+ssed in Section 4,
+in which the absence of sufficient clinical context leads to evasive or non-specific
+outputs rather than direct medical answers.
+38
+
+T able C1: Representative Base configuration responses to the question:“What are
+the side effects of using ibuprofen?”
+System Response
+Physician AnswerIbuprofen can cause gastrointestinal issues such as stomach pain, nausea, or ulcers,
+especially when taken in high doses or over long periods.
+Mixtral (Base)Ibuprofen may lead to nausea, headache, dizziness, or stomach pain. Prolonged use
+increases the risk of ulcers.
+Med-PaLM (Base)Common adverse effects include gastrointestinal discomfort, nausea, headache, and
+dizziness, with rare instances of ulceration or renal complications.
+Gemini (Base)I’m not able to provide medical advice or information about specific drug side effects.
+It’s best to speak with a healthcare professional or consult official medical sources for
+guidance.
+Claude (Base)Ibuprofen is commonly used for pain relief, but how someone reacts can vary. Some
+individuals may notice discomfort or sensitivity after taking it. If you’re unsure how it
+affects you or have concerns, discussing it with a healthcare provider can help clarify
+what to expect.
+GPT-5 (Base)Some people may feel mild stomach discomfort, nausea, or dizziness when taking ibuprofen. These effects are usually temporary, but check with a doctor if symptoms persist,
+especially with long-term use.
+References
+[1] Oliver Klingefjord, Ryan Lowe, and Joe Edelman. What are human values, and
+how do we align ai to them? 2024.
+[2] Paul R¨ ottger, Fabio Pernisi, Bertie Vidgen, and Dirk Hovy. Safetyprompts: a
+systematic review of open datasets for evaluating and improving large language
+model safety. 2025.
+[3] Antonis A. Armoundas and Joseph Loscalzo. Patient agency and large language
+models in worldwide encoding of equity.npj Digit. Medicine, 8(1), 2025.
+[4] Jiyeon Han, Jimin Park, Jinyoung Huh, Uran Oh, Jaeyoung Do, and Daehee Kim.
+Ascleai: A llm-based clinical note management system for enhancing clinician
+productivity. InExtended Abstracts of the CHI Conference on Human Factors
+in Computing Systems, pages 1–7, 2024.
+[5] Sina Shool, Sara Adimi, Reza Saboori Amleshi, Ehsan Bitaraf, Reza Golpira, and
+Mahmood Tara. A systematic review of large language model (llm) evaluations
+in clinical medicine.BMC Medical Informatics and Decision Making, 25(1):117,
+2025.
+[6] Marium M. Raza, Kaushik P. Venkatesh, and Joseph C. Kvedar. Generative AI
+and large language models in health care: pathways to implementation.npj Digit.
+Medicine, 7(1), 2024.
+[7] Carlos Garcia-Fernandez, Luis Felipe, Monique Shotande, Muntasir Zitu, Aakash
+Tripathi, Ghulam Rasool, Issam El Naqa, Vivek Rudrapatna, and Gilmer Valdes.
+Trustworthy ai for medicine: Continuous hallucination detection and elimination
+with check. 2025.
+39

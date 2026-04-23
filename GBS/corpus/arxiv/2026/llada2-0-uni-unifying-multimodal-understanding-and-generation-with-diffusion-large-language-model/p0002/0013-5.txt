@@ -1,0 +1,37 @@
+title: LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model
+source: arxiv
+year: 2026
+document_id: llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffusion-large-language-model
+authors: Inclusion AI; Tiwei Bie; Haoxing Chen; Tieyuan Chen; Zhenglin Cheng; Long Cui; Kai Gan; Zhicheng Huang; Zhenzhong Lan; Haoquan Li; Jianguo Li; Tao Lin; Qi Qin; Hongjun Wang; Xiaomei Wang; Haoyuan Wu; Yi Xin; Junbo Zhao
+page: 2
+section: 5
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20796v1
+
+Table 3: Comparison of Text-to-Image Generation Ability on GenEval Benchmark.
+Type Model Arch. Single
+Object
+Two
+Object Counting Colors Position Attribute
+Binding Overall↑
+Gen. Only
+FLUX.1 [Dev] Diff. 0.98 0.81 0.74 0.79 0.22 0.45 0.66
+Emu3-Gen AR 0.98 0.71 0.34 0.81 0.17 0.21 0.54
+Lumina-mGPT 2.0 AR 0.99 0.87 0.44 0.85 0.44 0.54 0.69
+Seedream 3.0 Diff. 0.99 0.96 0.91 0.93 0.47 0.80 0.84
+Qwen-Image Diff. 0.99 0.92 0.89 0.88 0.76 0.77 0.87
+LongCat-Image Diff. 0.99 0.98 0.86 0.86 0.75 0.73 0.87
+Z-Image-Turbo Diff. 1.00 0.95 0.77 0.89 0.65 0.68 0.82
+Unified
+Janus-Pro AR 0.99 0.89 0.59 0.90 0.79 0.66 0.80
+BAGEL AR + Diff. 0.99 0.94 0.81 0.88 0.64 0.63 0.82
+OmniGen2 AR + Diff. 1.00 0.95 0.64 0.88 0.55 0.76 0.80
+HunyuanImage-3.0 AR + Diff. 1.00 0.92 0.48 0.82 0.42 0.63 0.72
+NextFlow AR + Diff. 0.98 0.92 0.73 0.90 0.77 0.69 0.83
+InternVL-U AR + Diff. 0.99 0.94 0.74 0.91 0.77 0.74 0.85
+MMaDA D-Diff. 0.99 0.76 0.61 0.84 0.20 0.37 0.63
+Lumina-DiMOO D-Diff. 1.00 0.94 0.85 0.89 0.85 0.76 0.88
+LLaDA-o D-Diff. + Diff. 0.99 0.98 0.73 0.96 0.69 0.83 0.86
+LLaDA2.0-Uni D-Diff. + Diff. 1.00 0.98 0.73 0.92 0.90 0.84 0.89
+Table 4: Comparison of Text-to-Image Generation Ability on DPG Benchmark.
+Type Mo

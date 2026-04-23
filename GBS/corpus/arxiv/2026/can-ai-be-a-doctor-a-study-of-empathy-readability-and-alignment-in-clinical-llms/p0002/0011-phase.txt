@@ -1,0 +1,41 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+4 6 8 10 12 14 16
+Flesch Kincaid
+6
+8
+10
+12
+14
+16
+18
+20Gunning Fog
+Severity 1 (White)
+Severity 2 (Green)
+Severity 3 (Yellow)
+Severity 4 (Orange)
+Severity 5 (Red)
+Fig. 3: Severity-aware selection of 50 representative iCliniqQAs samples. The corpus
+is visualized in the Gunning Fog vs. Flesch–Kincaid space. Samples are stratified into
+five clinical severity levels (White, Green, Yellow, Orange, Red). Ten representatives
+are selected per severity class after clustering in the normalized linguistic feature space.
+The resulting subset preserves both urgency distribution and readability variability.
+3.Normalize features:Apply z-score normalization:
+z= x−µ
+σ
+4.Cluster by linguistic properties:Performk-means clustering withk= 50 in
+the normalized feature space (FKGL,GFI,lexical repr,|answer|).
+5.Select representatives:Select the question closest to each cluster centroid.
+6.Aggregate subset:Collect selected samples intoD MedQuAD
+50 .
+Figure 2 confirms that the retained subset spans the full readability range of the
+corpus.
+9

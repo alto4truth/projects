@@ -1,0 +1,77 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+ly instructed or used as rewriting assistants, indicating that
+accessibility depends strongly on prompting strategy rather than architecture alone.
+23
+
+PhysiciansMixtral BaseMed-PaLMBase Mixtral
+EmpathyMed-PaLMEmpathy
+Mixtral
+RephraseMed-PaLMRephraseGPT5 Base
+GPT5 Empathy
+GPT5
+Rephrase
+Gemini
+RephraseClaude Base
+Claude
+Empathy
+Claude
+Rephrase
+0.0
+2.5
+5.0
+7.5
+10.0
+12.5
+15.0
+17.5
+20.0
+22.5
+Readability Score
+Flesch Kincaid Grade Level
+(a) FKGL. Lower values = better readability.
+PhysiciansMixtral BaseMed-PaLMBase Mixtral
+EmpathyMed-PaLMEmpathy
+Mixtral
+RephraseMed-PaLMRephraseGPT5 Base
+GPT5 Empathy
+GPT5
+Rephrase
+Gemini
+RephraseClaude Base
+Claude
+Empathy
+Claude
+Rephrase
+0.0
+2.5
+5.0
+7.5
+10.0
+12.5
+15.0
+17.5
+20.0
+22.5
+Readability Score
+Gunning Fog Index
+(b) GFI. Higher values = harder text.
+Fig. 14: Readability analysis: Flesch–Kincaid Grade Level and Gunning Fog Index
+scores across physician and LLM outputs on the MedQuAD dataset.
+Takeaway 2☞Baseline LLM generations do not systematically improve accessibility across datasets. WhileMixtralandMed-PaLMapproximate physician readability
+in both MedQuAD and iCliniqQAs,GPT5 BaseandClaude Baseconsistently produce significantly more complex text than clinicians. Substantial and statistically
+significant readability gains emerge only under empathy prompting or collaborative
+rewriting. Accessibility therefore appears to be a controllable property induced by
+alignment strategies rather than an intrinsic characteristic of large language models.
+4.5 RQ3 – Effect of Prompt Engineering on AI Alignment
+This research question assesses whether empathy-enhancing prompt design can steer
+LLMs toward more emotionally appropriate and readable outputs.
+24

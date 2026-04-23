@@ -1,0 +1,33 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 3
+section: lexis-7
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+M(ˆθ,β)− M(θ,β)
+
+2,
+M(·,·)denotes the SMPL+H [64] body mesh produced for given pose and shape
+parameters, ˆθandθare the estimated and GT body poses, respectively,βis
+GT SMPL+H shape parameters, andLIF is a loss that penalizes the discrepancy between estimated and GT InterFields,ˆIF(p)and IF(p), respectively, as
+LIF = 1
+|S|
+P
+p∈S | ˆIF(p)−IF(p)|, wherepare 1024 points uniformly sampled on a
+surfaceS; we computeL IF separately for the body (Lb
+IF) and object (Lo
+IF). The
+codebook lossesL VQ andL commit follow standard VQ-VAE training [18]. The
+steering weightsλare set empirically; see “Implementation Details” in Sec. 3.4.
+In Secs. 3.2 and 3.3 we refer to the codebookCas “LEXIS”, and to the
+continuous ˆZas “LEXIS Code” as diffusion operates on codesˆZ. In practice,
+estimated ˆIF=Dψ( ˆZ,f o)ismappedviaexp(−ω· ˆIF)toemphasizecloseproximity.
+
+8 D. Antić et al.
+...
+I m a g e
+E n c o d e r

@@ -1,0 +1,31 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+work does not require estimating a noise transition matrix,
+which is typically difficult to obtain in federated settings
+due to heterogeneous data distributions across clients.
+3.1. Overview
+Let there be K clients and C classes. Each client k holds a
+local dataset
+Dk ={(x i,˜yi)}Nk
+i=1,
+where ˜yi may be corrupted, and|D k|=N k. Our method
+consists of three stages:
+1.Stage I: Client Identification.Detect clean and noisy
+clients from the spectral structure of their class-wise feature matrices, characterized by their top-rsingular vectors.
+2.Stage II: Spectral Relabeling of Noisy clients.Use
+class subspaces extracted from clean clients to infer corrected labels for samples from noisy clients.
+3.Stage III: Noise-Aware Federated Optimization.Update clean clients with LA supervision, train noisy
+clients using a hybrid relabeling-and-KD loss, and aggregate all clients using DaAgg.
+We first perform a coarse client-level separation to identify a subset of clean clients.
+Once clean clients are identified, their learned representations serve as stable anchors for subsequent sample-level
+correction.
+Figure 1 illustrates the overall pipeline of our approach.
+3.2. Spectral View of Class Structur

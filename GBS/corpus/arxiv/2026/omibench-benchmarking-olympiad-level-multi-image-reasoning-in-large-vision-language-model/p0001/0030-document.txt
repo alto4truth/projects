@@ -1,0 +1,25 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+6.3. Can In-Context Learning Help?
+Inspired by Multimodal In-Context Learning (MM-ICL) [46], we ask whether curated in-context examples
+can improve multimodal reasoning without parameter updates.
+MM-ICL offers a limited logical connection of multi-image context.Figure 6(a) shows that multi-image
+ICL exceeds single-image ICL, yet both underperform No-Image-ICL, indicating that current LVLMs benefit
+more from textual context than from multi-image visual context for cross-image reasoning.
+Multiple visual logical connections remain inferior to textual connections.This differs from prior
+single-image findings [11, 46], suggesting that MM-ICL can link multimodal context to some extent but
+remains weaker than text-based connection.
+6.3.1. Can Thinking with Images Help?
+Further, we examine whether models can effectivelythink with images (TwI)by generating or manipulating
+intermediate visual artifacts during reasoning, rather than producing only textual rationales [17, 16, 49].
+Additional details are provided in Appendix I.
+Current tool-based TwI works in single image domain but fails in OMIBench.Tool-based TwI with
+GPT-4o and VisualSketchpad still suffers substantial performance degradatio

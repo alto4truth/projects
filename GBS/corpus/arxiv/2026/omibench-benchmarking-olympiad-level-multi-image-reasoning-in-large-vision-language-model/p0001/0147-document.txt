@@ -1,0 +1,22 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 147
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Method Biology Chemistry Mathematics Physics Total
+ACC Score ACC Score ACC Score ACC Score ACC Score
+GPT-4o60.64 52.6115.6722.1229.53 15.35 16.98 18.87 24.05 24.88
++ SlowPerception 51.41 52.21 7.83 17.97 18.14 6.98 1.89 14.39 17.50 19.70
++ CogFlow 47.39 40.56 7.37 13.36 8.84 4.42 6.37 2.36 15.08 12.05
++ Visual Sketchpad 18.88 17.6716.1317.97 9.53 13.72 15.33 16.75 14.24 16.14
+GPT-5 68.1362.55 23.9629.03 39.30 56.51 20.52 40.80 36.23 48.11
++ SlowPerception 69.8863.4523.04 29.95 39.07 56.9820.99 42.2236.44 49.02
++ CogFlow 72.29 62.25 23.5033.6438.8457.4420.52 41.04 36.7449.17
++ Visual Sketchpad73.9061.85 22.12 30.8839.5356.51 20.05 38.2136.8947.42
+Table 10: Results of different external-tool integration frameworks on OMIBench.
+52

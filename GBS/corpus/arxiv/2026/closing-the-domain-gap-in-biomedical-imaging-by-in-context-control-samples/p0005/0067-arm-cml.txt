@@ -1,0 +1,60 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 5
+section: arm-cml
+chunk: 67
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+methasone Glucocorticoid agonist
+LY2109761 TGF-βinhibitor
+NVS-PAK1-1 PAK1 inhibitor
+Quinidine Sodium channel inhibitor
+TC-S-7004 DYRK1A/B inhibitor
+18
+
+Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+D. Additional experiments
+D.1. Failure mode of BN adaptation — dependence on adaptation batch size
+BN-based test-time adaptation implicitly relies on accurate estimation of target statistics. When only a few samples are
+available from a new batch (or when adaptation must be performed in small micro-batches due to memory constraints), these
+estimates become noisy. To stress-test this failure mode, we vary the number of target samples used to compute adaptation
+statistics (adaptation batch size / context size M) and evaluate methods that adapt BN parameters. Table (BatchNorm size)
+reports the results.
+Previous BN-adaptation methods collapse for small M.Both AdaBN and TENT perform poorly when only very few
+target samples are available to estimate BN statistics (e.g., M∈ {1,2,4} ). Performance improves monotonically with M,
+approaching a plateau only once statistics can be reliably estimated (larger M). This explains why BN-based test-time
+adaptation can appear strong in benchmarks that provide a full target batch, yet fail in operational settings with limited or
+streaming access.
+Control-stabilized context mitigates the small-M regime.Our control-stabilized variant (CS-ARM-BNin the table)
+remains strong even for extremely small numbers of perturbed samples. The key is that, while perturbed-class composition
+may be sparse,negative controls are plentiful and consistently available in every batch. Using controls to estimate batch
+statistics yields a stable estimate of batch-specific nuisance variation, making adaptation substantially less sensitive to the
+number of available perturbed samples.
+Table A7.Comparison of MoA classification accuracy of different methods in a new experimental batch with different batch sizes. The
+accuracy values denote mean and standard deviation over 5-fold cross-validation, thus five training re-runs of each method.
+Method Labeled batch size
+1 2 4 8 16 32 64 128 Full domain
+ERM (no adaptation) 0.862 ± 0.060 0.862 ± 0.060 0.862 ± 0.060 0.862 ± 0.060 0.862 ± 0.060 0.862 ± 0.060 0.862 ± 0.060 0.862 ± 0.060 0.862 ± 0.060
+TENT 0.126 ± 0.001 0.175 ± 0.013 0.230 ± 0.011 0.323 ± 0.012 0.550 ± 0.026 0.794 ± 0.021 0.881 ± 0.025 0.889 ± 0.031 0.908 ± 0.032
+AdaBN 0.130 ± 0.005 0.447 ± 0.095 0.709 ± 0.052 0.839 ± 0.024 0.898 ± 0.014 0.919 ± 0.014 0.924 ± 0.014 0.927 ± 0.013 0.928 ± 0.013
+ARM-BN 0.126 ± 0.007 0.514 ± 0.092 0.716 ± 0.052 0.832 ± 0.028 0.896 ± 0.019 0.923 ± 0.0180.930 ± 0.018 0.933 ± 0.017 0.935 ± 0.018
+CS-ARM-BN0.923 ± 0.018 0.923 ± 0.018 0.924 ± 0.019 0.925 ± 0.018 0.927 ± 0.019 0.929 ± 0.019 0.930 ± 0.0190.929 ± 0.020 0.923 ± 0.023
+D.1.1. ABLATION STUDY. EFFECT OF THE NEGATIVE CONTROLS SET SAMPLE SIZE
+In the previous experiment, we assume that other methods do not consider the presence of negative controls in biological
+data, so that the available samples are only perturbed ones, while in CS-ARM-BN we make use of negative controls, which
+results in a larger effective batch size. However, in this experiment we also study the effectiveness of standard ARM-BN in
+the presence of negative controls, so that we compare both methods using the same total batch size. In Table A8, we show
+thatCS-ARM-BN presents a higher accuracyeven when thesame amount of unlabeled datais available, probably due
+to the fact that during the meta-learning phase, the model has already learned to normalize the intermediate features of the
+model using both negative controls and perturbed samples.
+Table A8.Comparison between ARM-BN and CS-ARM-BN classification accuracy using the same number of samples in every batch,
+with the same proportion of negative controls per perturbed sample. The accuracy values denote mean and standard deviation over 5-fold
+cross-validation, thus five training re-runs of each method.
+Method Total batch size [perturbed : controls]
+5 [1 : 4] 10 [2 : 8] 20 [4 : 16] 40 [8 : 32] 80 [16 : 64]
+ARM-BN 0.799 ± 0.020 0.827 ± 0.024 0.846 ± 0.025 0.860 ± 0.026 0.870 ± 0.028
+CS-ARM-BN (ours)0.848 ± 0.035 0.875 ± 0.029 0.891 ± 0.028 0.899 ± 0.027 0.905 ± 0.026
+19

@@ -1,0 +1,23 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 48
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+Figure 6: Model performance on BLiMP across individual tasks and models.
+Binding phenomena show a parallel pattern.
+Sub-tasks such as principle_A_c_command and
+principle_A_case test sensitivity to the structural constraints governing the relationship between reflexive pronouns and their antecedents.
+Constrained models, particularly fixed windows
+of size 5, perform competitively on these tasks despite the fact that binding relations are not always
+strictly local. This is theoretically interesting: the
+principle of binding is a structural constraint over ccommand relations rather than over linear distance,
+and one might expect that models with restricted
+linear access would struggle. The empirical pattern
+suggests either that the relevant binding relations
+in BLiMP minimal pairs typically fall within the
+model’s window, or that the representational struc-

@@ -1,0 +1,27 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+ta at its sources while
+enabling collaborative model training across distributed
+clients [17]. However, the effectiveness of collaborative
+learning still depends on the quality of locally stored data.
+In practice, client-side datasets are often collected in uncontrolled environments and may contain noisy or unreliable
+labels, which can significantly degrade the performance of
+federated models [1].
+To address the challenge of noisy labels, a large body of
+literature has proposed various strategies. A representative
+overview of related work is provided in Section 2. Most
+existing methods rely on signals derived from loss trajectories or client performance during training [21]. However,
+such signals may become unreliable in FL settings due to
+inherent FL challenges, including data heterogeneity, aggregation strategies, and partial client participation.
+In [18], the authors leverage the availability of a clean
+validation dataset at the central server to identify clean
+clients and prune noisy ones. Instead of excluding potentially noisy clients, [15] incorporates them through knowledge distillation (KD), in which noisy client models act as
+negative teachers that guide the global model a

@@ -1,0 +1,23 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+y to hallucinate high-frequency details in under-observed
+regions. In contrast, our generative feedback framework overcomes this limitation, yielding a striking PSNR improvement (26.98 dBvs. 22.28 dB) alongside a
+drastic LPIPS reduction (0.113vs. 0.288) on N3DV. Beyond spatial fidelity, our
+method effectively mitigates trajectory drift and floating artifacts. This robust
+performance is further evidenced by highly competitive temporal consistency (a
+tOF of0.994on N3DV) and superior no-reference visual quality, securing the
+highest MUSIQ scores of62.73and68.20on the respective datasets.
+To further evaluate the robustness of our method under extreme large-motion
+and topological changes, we conduct comparisons on the highly challenging
+MPEG dataset (Tab. 2). In this regime, the limitations of existing paradigms
+become glaringly apparent. Conventional dynamic baselines (e.g., Swift4D at
+19.28 dB, Ex4DGS at 17.95 dB) suffer from severe motion-induced ambiguity
+and structural collapse. Conversely, while applying static sparse priors frameby-frame (e.g., DropGaussian [41] and DNGaussian [29]) can preserve some spatial structures, they completely fail to maintain temporal coherence, resulti

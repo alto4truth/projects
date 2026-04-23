@@ -1,0 +1,38 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 9
+section: high-recursion-depth-depth-10
+chunk: 47
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+loop ((1 * 1) + (0 + 0)) x [
+exec go forward 5 stop
+]
+exec go forward 5 stop
+loop ((0 * 3) * (3 * 3)) x [
+exec turn left stop
+]
+loop ((0 + 4) + (0 + 1)) x [
+loop 1 x [
+loop 4 x [
+loop ((2 * 1) * 1) x [
+loop 0 x [
+loop 1 x [
+if ((holding ball_4 alt holding
+item_1) alt not (holding key_2)) then [
+...
+]
+]
+]
+]
+]
+]
+]
+A.3.2 Expression Complexity Variations
+We also control the complexity of arithmetic and
+boolean expressions nested within the control flow.
+Shallow expressions (depth 1) involve simple arithmetic or boolean operations.
+12

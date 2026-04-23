@@ -1,0 +1,119 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+ral references, we evaluate two complementary scores for each sample with feature zi:
+S(r)(i, c) =
+
+z⊤
+i ¯v(r)
+c
+
+,(7)
+S(n)(i, c) = 1√
+L
+
+z⊤
+i ¯V(n)
+c
+
+2
+. (8)
+Finally, we derive two class predictions:
+ˆy(r)
+i = arg max
+c
+S(r)(i, c),(9)
+ˆy(n)
+i = arg min
+c
+S(n)(i, c), (10)
+and accept a relabel only when
+ˆy(r)
+i = ˆy(n)
+i .
+Thus, the corrected label is
+y⋆
+i =
+(
+ˆy(r)
+i ,ifˆy (r)
+i = ˆy(n)
+i ,
+˜yi,otherwise,
+yielding the updated dataset
+D⋆
+k ={(x i, y⋆
+i )}Nk
+i=1.
+This agreement rule enforces conservative relabeling by
+correcting only samples with consistent spectral evidence.
+The detailed relabeling procedure for a noisy client is given
+in Algorithm 3.
+3.5. Noise-aware Federated Optimization
+Once the clean and noisy client sets have been identified,
+all clients continue to participate in FL, but their local optimization follows a noise-aware strategy. Clean clients,
+whose labels are considered reliable, are trained with the
+LA only, whereas noisy clients are trained with a hybrid
+objective that combines hard targets and teacher guidance.
+Clean clients.For each clean client k∈ K clean, we estimate the empirical class prior from its local labels,
+πk,c = nk,c
+PC
+c′=1 nk,c′
+.
+We then define a per-class logit-adjustment:
+mk,c =βlog(π k,c +ϵ),
+whereβ >0controls the strength of the adjustment and
+ϵprevents degenerate priors when some classes are absent.
+If fϕk(x) denotes the output logits of the local model, the
+clean-client objective is
+LLA = CE(fϕk(x) +m k,˜y). (11)
+This follows the same LA formulation used in [20] and
+[9]. The adjustment compensates for client-level class imbalance, which commonly arises under heterogeneous label
+distributions.
+Noisy clients.To leverage global learning, noisy clients
+are trained using both the hard target y⋆
+i from the relabeling
+step and the soft predictions from the global model trained
+on all clients. Let fϕglobal(x) denote the logits produced by
+the global model. The soft probability distribution for each
+sample xi is defined as
+pi = softmax
+ fϕglobal(xi)
+τ
+
+, (12)
+where τ is the temperature parameter controlling the softness of the distribution.
+Before computing the loss, the noisy logits are adjusted
+using the class-prior correction described earlier. Let
+hi =f ϕk′ (xi) +m k′ (13)
+denote the adjusted logits for noisy client k′. The corresponding log-probabilities of the noisy client model are then
+qi = softmax(hi). (14)
+Using these quantities, the noisy-client objective combines
+KD and hard-label supervision using weightw KD as follows:
+LLA-KD =w KD LKD + (1−w KD)L CE, (15)
+where
+LKD = KL(pi ∥q i),(16)
+LCE = NLL(logq i,˜yi). (17)
+This formulation allows the noisy to learn from two complementary signals. The corrected hard label provides a strong
+supervisory signal when the spectral relabeling mechanism
+identifies clear inconsistencies in the original annotation. At
+the same time, the global model offers a softer form of guidance that captures class relationships. This is particularly
+helpful when the local label remains uncertain or when the
+relabeling evidence is weak.
+Combining these two sources of supervision makes the
+optimization more stable in the presence of label noise.
+Hard-label correction addresses samples that are clearly
+mislabeled, while KD regularizes training dynamics and
+prevents the model from overfitting to unreliable targets.
+3.6. Distance-aware Aggregation (DaAgg)
+After local updates, all client models are aggregated into
+the next global model using a DaAgg rule inspired by
+RSCFed [13]. The aggregation starts from the standard
+5

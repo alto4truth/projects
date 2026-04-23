@@ -1,0 +1,28 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+ly better than chance. This confirms that
+these phenomena, which predominantly require
+sensitivity to complex structural and logical scope,
+represent a persistent challenge for language models, and our architectural modifications do not offer
+a simple solution to assist models on these tasks.
+On the other hand, the results for Argument
+Structure, which governs a verb’s ability to appear
+with certain arguments (e.g., disturbing a person
+vs. boasting a person), are particularly interesting.
+Performance is generally boosted by locality constraints across both data regimens. We see that
+the models that have fixed window size of about
+5 and exponentially decaying attention constraints
+(which tend to promote highly local attention structures) seem to generally perform better1. We also
+observe that Ellipsis emerges as a phenomenon
+highly dependent on data scale. At 10M, all models perform exceptionally poorly, with accuracies
+in the 33-54% range. However, at 100M words, performance improves dramatically into the 65-78%
+range across all models. This sharp increase suggests that the generalisations required to correctly
+resolve ellipsis are not readily captured with limited data, but indeed

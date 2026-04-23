@@ -1,0 +1,23 @@
+title: Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+source: arxiv
+year: 2026
+document_id: global-offshore-wind-infrastructure-deployment-and-operational-dynamics-from-dense-sentinel-1-time-series
+authors: Thorsten Hoeser; Felix Bachofer; Claudia Kuenzer
+page: 2
+section: abstract
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20822v1
+
+Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+Figure 4: Deep learning based, global, offshore wind infrastructure detection workflow based on Hoeser et al. [2022].
+For these reasons, Sentinel-1 SAR imagery is highly suitable for global offshore wind infrastructure detection and for
+generating high-density time series capable of resolving structural changes during deployment and operation.
+4 Method
+4.1 Updated global offshore wind infrastructure detection
+To derive offshore wind infrastructure locations at global scale, we updated the detection workflow proposed by Hoeser
+et al. [2022]. The workflow consists of a global offshore wind farm proposal network, and a second-stage detector that
+identifies individual infrastructure units within the proposed regions.
+As illustrated in figure 4, we trained YOLOv10-L object detection models provided by Ultralytics [Wang et al., 2024c]
+to improve inference throughput in the two-stage global detection process. This replaces the Faster R-CNN [Ren et al.,
+2017] architecture used in the preceding study. Following Hoeser and Kuenzer [2022b], Hoeser et al. [2022], we
+generated 90,000 synth

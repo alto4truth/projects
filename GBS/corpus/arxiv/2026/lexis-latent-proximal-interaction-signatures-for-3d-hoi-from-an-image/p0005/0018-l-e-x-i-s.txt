@@ -1,0 +1,26 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 5
+section: l-e-x-i-s
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+e vector field that generates this flow, we
+train a neural network,vγ(xt, t,I); then the target flow velocity isdxt/dt=x 1−ϵ.
+Thevectorfield,v γ,isparameterizedbyamulti-streamtransformerbackbone
+inspired by DiT [58] and Mixture of Transformers [71]. The body stream (for
+stateB),andobjectstream(forstateO),operatewithdecouplednoiseschedules,
+conditioned on independent timestepst 1 andt 2, respectively, as in TriDi [59].
+Cross-attention between the two streams conditions each modality on the other
+one, with sinusoidal timestep embeddings informing the network of each stream’s
+noise level. During training,t1 andt 2 are sampled independently [2]. This lets the
+network model both the joint distributionP(B,O | I)and the conditional ones,
+P(B | O,I)andP(O | B,I), preventing modality collapse (where one stream
+might get ignored) by requiring each stream to be informative at all noise levels.
+The LEXIS-Flow training objective is:
+LLEXIS-Flow =L FM +λ IF LIF +λ v2v Lv2v +λ 2D L2D +λ obs Lobs, (4)
+whereL FM is the conditional flow-matching loss:
+LFM =E t1,t2∼U(0,1),ϵ∼N(0,I)

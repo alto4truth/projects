@@ -1,0 +1,23 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 88
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+understoodthe"habituation"inFig2,butfailedtocross-referencethelegendsinFig3.Itconfusedthe"No-Mirror"(Control)barswiththe"Mirror"(Experimental)bars,leadingtoalogicalcontradiction.
+Figure8: Analysis of reasoning error examples on o4-mini.
+expert annotators to inspect the generated rationale step-by-step and identify theroot causeof the first fatal
+error encountered.
+To decouple visual perception capabilities from reasoning engines, we developed a specific error taxonomy
+comprising five distinct categories: (1)Visual Perception Failures, where the model misinterprets explicit
+visual semantics; (2)Cross-Image Association Failures, indicating an inability to synthesize information
+across multi-view inputs; (3)Logical Reasoning Fallacies, covering invalid deductions and calculation
+errors despite correct perception; (4)Instruction Comprehension Biases, regarding format or constraint
+violations; and (5)Otherfor hallucinations or uncategorized failures. This taxonomy allows us to diagnose
+whether performance bottlenecks stem from the vision encoder, the cross-modal alignment, or the LLMs’
+reasoning core.
+29

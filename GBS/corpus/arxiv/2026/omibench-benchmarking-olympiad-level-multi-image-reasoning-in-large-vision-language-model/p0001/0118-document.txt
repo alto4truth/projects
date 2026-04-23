@@ -1,0 +1,21 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 118
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+es in Fig. 4(b) are implemented for
+both reasoning-oriented and non-reasoning LVLMs. In the "no-thinking" mode, the prompt instructs the
+model to avoid step-by-step reasoning and output only the final answer:
+No-Think Prompting
+Return only the final answer in this exact format:\boxed{ANSWER}.
+[Question]
+problem_text0 [IMAGE0] problem_text1 [IMAGE1] ... problem_textn
+[Choices] # only for multiple choices problems
+A. option_A
+B. option_B ...
+41

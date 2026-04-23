@@ -1,0 +1,26 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 2
+section: lexis-5
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+ve shape from a large 3D object
+database [14] via a joint image-geometry latent space [44], but databases have
+finite sizes. Instead, we estimate shape via the SAM3D [71] foundational model.
+Most work [13,16,52,77,82,90] follows atwo-stageapproach; it first estimates
+rough meshes, and then refines these viasparse, binarycontact inpost-hocoptimization [82,90] or in a transformer [52]. Instead, we follow aone-stageapproach; we use diffusion tojointlyinfer a 3D body, object, and respectivedense,
+continuousInterFields, which guide sampling to refine estimates.
+3 Methodology
+Overview:Given an RGB image depicting a human–object interaction
+(HOI),I ∈R H×W×3, and a 3D object shape estimation by an off-the-shelf
+model, the goal is to estimate the HOI in 3D, namely to estimate a 3D human
+mesh (SMPL+H1 body [64]) and object mesh, shaped and posed such that they
+interactrealisticallyandmatchimagecues.Technically,thisestimatestwostates:
+(1) Object stateO={R o, t o}in ahuman-root-relative frame, whereRo ∈
+R6 is the global rotation (in 6D form [95]), andto ∈R 3 the global translation;
+(2) Body stateB={R b, t b,β,Z}in thecamera frame, whereR b ∈R 6 is
+the global rotation (in 6D form [95]),tb ∈R 3

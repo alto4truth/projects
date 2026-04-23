@@ -1,0 +1,23 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+annotated rationales and answers. Each problem contains multiple images that jointly provide
+the evidence needed for multi-step reasoning and the final solution. OMIBench also offers reasoning-path
+annotations, enabling fine-grained analyses.
+We benchmark representative LVLMs on OMIBench. The results reveal clear limitations, with accuracy
+below 51% and drops of up to 15% relative to single-image settings. Model outputs show recurring failures
+in visual perception, cross-image association, and cross-modal logical integration; compared with existing
+multi-image benchmarks, OMIBench produces performance decreases exceeding 20%. We also examine
+several strategies for improving performance, including long chain-of-thought, test-time scaling, ICL, and
+think-with-image approaches. Long CoT, parallel/sequential scaling, and ICL bring consistent but limited
+gains, while parameter scaling and think-with-image methods offer little benefit and sometimes reduce
+performance. These results suggest that progress will likely require more fundamental advances in model
+architecture and training.
+2

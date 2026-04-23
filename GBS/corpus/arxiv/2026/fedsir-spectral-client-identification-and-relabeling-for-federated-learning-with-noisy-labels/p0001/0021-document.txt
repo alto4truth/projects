@@ -1,0 +1,59 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+%to90%to assess the robustness of the proposed framework under different levels
+of label corruption.
+All experiments are conducted forT= 100communica6
+
+Algorithm 2Client Spectral Structure Extraction
+1:functionEXTRACTSPECTRAL(D k,ϕ k, L)
+2:Extract featuresz i =f ϕk(xi)for all(x i,˜yi)∈ D k
+3:Define observed class setC k ← {c:n k,c >0}
+4:foreach classc∈ C k do
+5:Construct class-wise feature matrixZ k,c
+from samples with˜yi =c
+6:Compute SVDZ k,c =U k,cΣk,cV⊤
+k,c
+7:v k,c ←leading right singular vector ofZ k,c
+8:ifL >0then
+9:V (n)
+k,c ←topLresidual right singular
+vectors ofZ k,c
+10:end if
+11:end for
+12:ifL >0then
+13:return{(v k,c,V (n)
+k,c )}c∈Ck
+14:else
+15:return{v k,c}c∈Ck
+16:end if
+17:end function
+Algorithm 3Spectral Relabeling for a Noisy Client
+1:functionRELABEL(D k,ϕ clean,{ ¯v(r)
+c , ¯V(n)
+c }C
+c=1)
+2:D ⋆
+k ← ∅
+3:foreach(x i,˜yi)∈ D k do
+4:z i ←f ϕclean(xi)
+5:foreach classc= 1, . . . , Cdo
+6:S (r)(i, c) =
+
+z⊤
+i ¯v(r)
+c
+
+7:S (n)(i, c) = 1√
+L
+
+z⊤
+i ¯V(n)
+c

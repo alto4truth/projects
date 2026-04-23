@@ -1,0 +1,75 @@
+title: DeVI: Physics-based Dexterous Human-Object Interaction via Synthetic Video Imitation
+source: arxiv
+year: 2026
+document_id: devi-physics-based-dexterous-human-object-interaction-via-synthetic-video-imitation
+authors: Hyeonwoo Kim; Jeonghwan Kim; Kyungwon Cho; Hanbyul Joo
+page: 1
+section: 1
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20841v1
+
+om SMPL-X parameters in Ht. The jbody
+t and jhand
+t
+are estimated 2D body and hand joints obtained from Fb and Fh. The temporal consistency loss Ltc
+6
+
+Figure 5:Target-Awareness and Text Controllability.As DeVI leverages a video diffusion model
+as a motion planner, (a) we can model HOIs that require a specific target, and (b) plan different
+motions from the same scene.
+encourage temporal consistency, and defined as:
+Ltc =
+t−1X
+t=1
+Dgeo(θb
+t ,θ b
+t+1) +
+t−1X
+t=1
+Dgeo(θh
+t ,θ h
+t+1),(13)
+where Dgeo(·) is a mean geodesic distance between rotations. Additionally, we also present an HOI
+loss LHOI to enforce the human body parts to be in contact with the object at a certain time instance:
+LHOI = min
+t
+Dchamfer(J∗(vSMPLX
+t ), v∗)(14)
+where Dchamfer(A, B) is a one-sided chamfer distance from A to B, J∗ is the SMPL-X joint regressor
+for specific body parts (e.g., left hand), and v∗ ∈R n∗×3 is the initialized object vertices. Note that
+the pair (J∗, v∗) is specified in the text prompt we used for generating video (e.g., "holds thecoke
+with left hand"). The HOI loss is motivated by the intuition that at least one frame of the human
+motion should establish contact with the initial object to make object moves.
+Generating 2D Object Reference.For the object side, we first identify the visible vertices and their
+corresponding projections for the object mesh via ray casting [38] using the camera Π. The projected
+vertices are extended over temporal frame using a video tracker [ 16], constructing our 2D object
+reference ˆo={ ˆxt}F
+t=1. We filter out vertices that are heavily occluded across video frames using the
+occlusion mask estimated by the tracker.
+4.3 Learning Humanoid Control Policy
+To train humanoid control policy πθ(at|st,g t) (represented in Sec.3), we define gt = ˆht+k
+t , the
+futurekentities ofg t as an goal, while guiding to match ˆousing our hybrid tracking reward.
+Hybrid Tracking Reward.We present a hybrid tracking reward to track the hybrid imitation targets
+obtained from the video:
+R(st,a t,g t) =R h ·R o ·R contact,(15)
+whereR h,R o, andR contact are the human tracking, object tracking, and contact rewards.
+The human tracking reward Rh encourages the humanoid to track the synthetic 3D human motion ˆh.
+It is defined as the product of several joint difference rewards and a power penalty as follows:
+Rh =r jp ·r jv ·r jr ·r h
+lp ·r h
+lr ·r pw,(16)
+where rjp, rjv, rjr correspond to full body joint position reward, joint velocity reward, and joint
+rotation reward. The term rh
+lp and rh
+lr are the local hand joint position and rotation reward. These
+local joint quantities are represented in the wrist-centric coordinate by translating joint positions and
+rotations relative to the wrist. The rpw is a power penalty reward [18] preventing excessive forces and
+guiding smooth motion. All the joint difference reward is formulated as an exponential function of
+the negative squared error between the 3D human reference ˆhand the simulated state.
+The object tracking reward Ro encourages the 2D projection of the simulated object to follow the
+reference 2D object trajectory ˆo={ ˆxt}F
+t=1, defined as:
+Ro =e λo∥ ˆxt−xt∥2
+,(17)
+7

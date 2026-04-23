@@ -1,0 +1,60 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 63
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+ANN)L CE (b,d v(h))R
+CORAL discrepancy∥C S −C T ∥2
+F R ≥0
+BatchNorm (BN) statistics
+test-batch mean/var (per channel, batchβ)µ BN ,σ BN R D ,R D
+>0
+16
+
+Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+B. Training details
+In our experiments, we used either Nvidia A40 or A100 GPUs and all experiments use a single GPU. When reporting results,
+for the new experimental batch evaluation (experiment 5.1) and for the in-domain evaluation of source 3 (S3→S3 in Table
+2), we perform 5-fold cross-validation and report the mean and standard deviation across folds. For the in-domain evaluation
+of source 8 (S8→S8), due to computational constrains, we perform re-runs in two different random splits.
+For all methods, in Experiments 5.1 and 5.3 we set a maximum number of training epochs to 400 and implement an early
+stopping strategy, setting the patience to 80 epochs, so that if the validation loss does not decrease with respect to the current
+minimum loss for 80 epochs, the training is stopped. In Experiments 5.2 and 5.4, due to computational constraints, we
+set we set a maximum number of training epochs to 200 and a patience of 20. In all experiments, the checkpoint used
+for evaluating the test set is the one that achieved the lowest validation loss. By default, we use a ResNet50 as a feature
+encoder. As an optimizer, unless otherwise stated, we use Adam and the selected learning rate is decreased using a cosine
+annealing scheduler. The hyperparameters were manually tuned, and the exploration space for each method can be found in
+Supplementary Table A5
+For the methods based in the CA-MAE foundation model, linear probing is performed, so that the weights of the feature
+encoder are frozen and only the classifier, which consists in one linear layer, is trained. The pretrained weights of this model
+are the weights of a ViT-S/16, provided in HuggingFace by Kraus et al. (2024), trained with the RxRx3 dataset and subsets
+of the JUMP-CP with samples treated for gene knockout and overexpression.
+In the style transfer baseline, as the images were generated using a pre-trained diffusion model, the input for the feature
+extractor consisted in 3 channels instead of 5. Moreover, for computational efficiency, the images were generated with a
+resolution of 256x256.
+For performing the TVN correction, control images from the corresponding matching plate of each perturbed sample are
+used for centering and whitening.
+C. Dataset details
+As explained in Section 5, the experiments were carried out on the JUMP-CP dataset, using source 3 and source 8. The
+classification task consists in classifying the MoA of the given image, similar to Haslum et al. (2023). As we need images
+that are correctly annotated, we use images that were treated with compounds that have a clear and well-defined MoA.
+Specifically, we use the images treated with the compounds used as positive controls, which are all present in every plate.
+The name of these compounds, along with their mechanism of action can be found in Supplementary Table A6. Source 3
+contains 9 experimental batches and consists of 49,491 microscopy images (with 5 channels each) and 172 different plates.
+Source 8 contains 4 experimental batches and 56,160 microscopy images (with 5 channels each) and 195 different plates. For
+experiments with the CellProfiler features, we download the provided images in https://registry.opendata.aws/cellpaintinggallery/, and perform standardization by using the training features. We use these features as provided, and they were
+calculated on a well-level basis, so that this is the only baseline where accuracy is evaluated on a well level.
+Preprocessing.As a preprocessing step, the images were downsized to a resolution of 512x512 and we performed
+illumination correction by clipping 0.01% of the brightest pixels. During training, the images were further resized to
+256x256 and random vertical and horizontal flipping was performed. Moreover, in all methods, except for the baseline with
+instance norm and the MAE-based methods, the images were normalized using the mean and standard deviation calculated
+for the training split. In the remaining methods, the images are preprocessed by normalizing the channel of each image
+individually, in order to match the pretraining procedure in the case of the CA-MAE baselines (Kraus et al., 2024).
+For the TVN correction, additional negative controls, i.e. samples in which only DMSO was applied, were used. In total, the
+negative controls present in the 172 plates from the dataset described above, consist of 49,536 images.
+17

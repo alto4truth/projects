@@ -1,0 +1,44 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 8
+section: adapt-calibrate-classifier-to-your-data
+chunk: 77
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+factor L/M <1 relative to Estimator 1. The more controls are included (larger C, smaller
+L/M), the smaller the bias.
+Variance.
+Var(ˆµCS−ARM−BN) = Var
+
+1
+M
+X
+u
+εu
+!
+= σ2
+M .(32)
+SinceM > LandM > C, this variance is strictly smaller than those of Estimators 1 and 2.
+MSE.
+MSE(ˆµCS−ARM−BN) =
+ L
+M
+2
+¯µ2
+class + σ2
+M .(33)
+F.5. Comparison
+Table A12.MSE decomposition for the three estimators ofµ domain.
+Estimator Bias 2 Variance Notes
+ARM-BN and AdaBN¯µ 2
+class σ2/LLarge bias under label shift
+Controls-only0σ 2/CLarge variance whenCis small
+CS-ARM-BN(L/M) 2¯µ2
+class σ2/MTrade-off between the two above
+CS-ARM-BN achieves the lowest MSE by trading a residual bias shrunk by(L/M)2 relative to ARM-BN against the lowest
+variance of all three estimators (since M≥max(L, C) ). This bias-variance trade-off is most favourable in the typical
+drug-screening regime: few controls (Csmall) and moderate-to-severe label shift.
+24

@@ -1,0 +1,19 @@
+title: Stream-CQSA: Avoiding Out-of-Memory in Attention Computation via Flexible Workload Scheduling
+source: arxiv
+year: 2026
+document_id: stream-cqsa-avoiding-out-of-memory-in-attention-computation-via-flexible-workload-scheduling
+authors: Yiming Bian; Joshua M. Akey
+page: 1
+section: document
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20819v1
+
+28.50% 0.08% 0.05% 70.52% 0.23% 0.38% 0.06%
+8 0.39% 28.15% 0.18% 0.12% 69.53% 0.52% 0.96% 0.14%
+9 0.90% 27.35% 0.41% 0.29% 67.34% 1.17% 2.23% 0.32%
+13
+
+Figure 8: Performance estimation of SDPA(baseline) and Stream-CQSA
+Figure 9: Tree structure of uniform and hybrid scheduling schemes in Figure 4. Only leaves are
+computed to be equivalent to the root. Intermediate gray nodes do not need to be computed.
+14

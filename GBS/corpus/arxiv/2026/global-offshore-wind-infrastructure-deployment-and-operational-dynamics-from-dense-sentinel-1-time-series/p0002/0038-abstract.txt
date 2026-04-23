@@ -1,0 +1,67 @@
+title: Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+source: arxiv
+year: 2026
+document_id: global-offshore-wind-infrastructure-deployment-and-operational-dynamics-from-dense-sentinel-1-time-series
+authors: Thorsten Hoeser; Felix Bachofer; Claudia Kuenzer
+page: 2
+section: abstract
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20822v1
+
+smoothing and refinements
+improves coherence but tends to risks over-regularization by enforcing deterministic transitions, or opposed to this miss
+20
+
+Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+to refine overly volatile sequences to avoid over-regularization. Thus, future approaches may benefit from learning
+temporal transitions directly rather than relying on heuristic post-processing.
+Performance differences between turbine-related classes and transient or platform-related classes reveal ambiguities in
+the 1D SAR backscatter profiles. Vessel activity, maintenance operations, and support platforms can produce similar
+scattering patterns, and backscatter alone may not always be sufficient to clearly separate these classes. Integration of
+auxiliary data sources such as AIS vessel tracking or optical imagery may therefore enhance classification robustness.
+While prior studies have demonstrated the benefits of such integration in 2D imagery analysis [Paolo et al., 2024], an
+open research question is whether similar gains can be achieved within a reduced 1D representation without sacrificing
+computational efficiency.
+The representation of 2D SAR imagery as 1D backscatter profiles is a design choice balancing efficiency and feature
+depth. This compression enables global time series analysis, with 14.8 million events stored in approximately
+5 GB, while preserving horizontally directed scattering signatures. However, this representation assumes that most
+discriminative information lies in the range direction. Rather than reverting directly to full 2D representations, a
+promising intermediate step would be to incorporate an additional vertical 1D profile derived along the azimuth
+direction. Such an extension would approximately double data set size while remaining computationally manageable,
+and may improve discrimination of mooring vessels and subtle differences between turbine foundation and deployed
+states, where azimuthal Doppler effects become relevant. This would preserve the initial motivation of compact,
+analysis-ready data while enriching feature representation.
+Finally, although the dataset achieves global spatial completeness, it contains uneven temporal density due to variations
+in Sentinel-1 revisit frequency. European regions benefit from overlapping orbits and higher data take frequency,
+whereas parts of the Chinese EEZ typically follow a 12-day revisit interval. Due to this fact, deployment duration
+estimates and early detection timestamps are influenced by sampling frequency. Future analyses should therefore
+include acquisition density at a local scale, in order to provide event time ranges rather than assigning single timestamps.
+Defining milestone events as temporal windows bounded by neighbouring acquisitions may provide more robust
+interregional comparisons and uncertainty-aware deployment metrics.
+Taken together, this work demonstrates that spatial mapping of offshore wind infrastructure has reached a high degree
+of maturity, while fine grained temporal characterization is emerging as the new frontier. The presented dataset and
+baseline classification shift offshore wind infrastructure monitoring toward time series based event analysis. At the
+same time, spatial detection remains the bottleneck for early monitoring. The next generation of Earth Observation
+based offshore wind infrastructure monitoring will likely require detection approaches optimized for early onset signals
+and trained spatiotemporal models integrating detection and temporal event classification. Bridging spatial detection
+and temporal characterization into a unified spatiotemporal monitoring framework will be essential for achieving NRT,
+globally scalable monitoring of offshore wind infrastructure.
+7 Conclusion
+In this study we present an approach and dataset for Earth Observation based offshore wind infrastructure event
+classification from high-temporal-resolution time series. The dataset contains open, analysis-ready, and globally
+distributed Sentinel-1 synthetic aperture radar (SAR) time series spanning 2016Q1–2025Q1, centred on 14,840,637 1D
+backscatter profiles compiled into 15,606 location-specific time series. These profiles provide a compact representation
+of global scale offshore wind infrastructure temporal dynamics, that preserves key SAR signatures while remaining
+accessible in storage and compute requirements.
+For a spatial foundation, we update a global two-stage detection workflow and provide 15,606 offshore wind infrastructure locations for 2025Q1, with high detection performance across three geographically diverse validation sites.
+To classify the 1D SAR backscatter profile time series at each of the detected locations, we introduce a rule-based
+classifier that assigns event-level semantic labels describing deployment and operational states, and we release a benchmark dataset of 553 expert-annotated time series containing 328,657 event labels to support reproducible evaluation
+and method comparison. The baseline classifier achieves strong performance, particularly for turbine-related events
+(transition from water to turbine foundations, and transition from turbine foundations to deployed turbines). Example
+analyses reveal differences in regional patterns concerning deployment duration with China showing significantly lower
+durations compared to the European Union and the United Kingdom. On a local scale we also show sensitivity to
+operational dynamics such as maintenance-related towing events for floating offshore wind turbines.
+Beyond the dataset contribution, the results highlight key directions for future work. Early-onset detection of wind
+infrastructure construction remains challenging, motivating research toward single-acquisition and near-real-time
+detection strategies and hybrid approaches that balance recall for early foundations with precision in complex coastal
+21

@@ -1,0 +1,50 @@
+title: AVISE: Framework for Evaluating the Security of AI Systems
+source: arxiv
+year: 2026
+document_id: avise-framework-for-evaluating-the-security-of-ai-systems
+authors: Mikko Lempinen; Joni Kemppainen; Niklas Raesalmi
+page: 3
+section: red-queen-025tn-fp-tn-tp-fp-fp-tn-fn-tn
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20833v1
+
+12
+
+Figure 5: An example of the AI summary of a generated report.
+tions [53]. However, F1-score presents several welldocumented limitations - most notably its exclusion
+of true negatives and non-comparability between
+balanced and skewed datasets [54, 55]. The MCC is
+a more suitable evaluation metric than F1-score for
+evaluating the performance of the ELM on the Red
+Queen SET executed without the ALM, as those
+results contain a large disproportionate number of
+true negatives.
+We calculate the performance metrics separately for the Red Queen SET executed with the
+ALM using data from Table 5, and the Red Queen
+SET executed without the ALM using data from
+Table 5. The accuracies are calculated using equation (4), the F1-scores are calculated using equations (5), (6), and (7), and the MCCs are calculated
+using equations (8) and (9)
+Accuracy= T P+T N
+T P+T N+F P+F N (4)
+P recision= T P
+T P+F P (5)
+Recall= T P
+T P+F N (6)
+F1-score= 2 P recision×Recall
+P recision+Recall (7)
+A=
+p
+(T P+F P)(T P+F N)(T N+F P)(T N+F N)
+(8)
+M CC= T P×T N−F P×F N
+A (9)
+The calculated performance metrics for the
+ELM are detailed in Table 10. The ELM performed
+notably better when used in combination with the
+ALM, with a classification accuracy of 92%, F1score of 0.91, and MCC of 0.83. When not using
+the ALM, the ELM’s classification accuracy fell to
+79%, F1-score to 0.41, and MCC to 0.40. The degraded performance is due to the large number of
+false positive classifications and the fact that the
+F1-score does not take into account the significant
+number of true negative classifications.
+13

@@ -1,0 +1,36 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 14
+section: alien-lexicon
+chunk: 52
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+v_pipo ((v_gsqe item_3 v_vvyj v_gsqe box_4)
+v_vvyj v_tkik (v_gsqe ball_1)) v_oklp [
+v_pipo ((v_gsqe ball_4 v_vvyj v_gsqe ball)
+v_vvyj (v_gsqe box_0 v_lwmz v_gsqe key))
+v_oklp [
+v_zmew (0 v_vyht (1 v_lbke 0)) v_buty [
+v_zmew 4 v_buty [ ... ]
+]
+]
+]
+A.4 Typical Failure Modes and Case Studies
+Following the three-layered evaluation hierarchy,
+we provide abstracted case studies to localize specific reasoning failures. For clarity of presentation,
+the examples below utilize the Natural lexicon
+style rather than the Alien mode to ensure the
+underlying logic remains interpretable. Furthermore, to accommodate the structural complexity of
+programs at extreme depths, we present only the
+critical segments of the code where errors occur.
+Non-essential instructions are omitted to focus exclusively on the breakdown of syntactic, behavioral,
+or semantic reasoning.
+A.4.1 Syntactic Fragility
+Case Study 1: Lexical Mapping FailureThis
+failure identifies a symbolic binding gap where the
+model tracks the AST structure but fails to replace
+EBNF non-terminal with their terminal strings.
+13

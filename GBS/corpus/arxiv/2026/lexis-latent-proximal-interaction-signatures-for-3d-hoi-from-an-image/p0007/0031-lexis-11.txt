@@ -1,0 +1,20 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 7
+section: lexis-11
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+“generative reconstruction,” and for
+“guided refinement.” The results are shown in Tab. 1 and Fig. 6.
+Generative Reconstruction (Tab. 1):LEXIS-Flow (row B) outperforms
+HDM [81] (row A) on CDhum (8.8 vs 13.5cm), CDobj (35.0 vs 49.3cm) and Contact F1 (0.21 vs 0.14); note in Fig. 6 that HDM produces geometric artifacts and
+intersecting meshes on real-world images. Notably, LEXIS-Flow (row B), with its
+direct generative estimation, already achieves lower CDobj and higher Contact
+F1 than a baseline that combines off-the-shelf CameraHMR + SAM3D (row D)
+estimations (aligned using MoGe [76] depth). This suggests that jointly estimatinghumansandobjectsbyexploitinginteractionsignatures(InterFields)(rowB)
+produces better spatial configurations than independently combining per-entity
+experts (row D). When we initialize our method with these off-the-shelf estimates (row D), denoted as LEXIS-Flow∗(row G), it improves further; see below.

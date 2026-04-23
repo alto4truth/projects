@@ -1,0 +1,25 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 4
+section: equiv-ariant-force-fields
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+aneous ground state. This expression
+makes explicit that the gauge dynamics is entirely mediated by the fermionic response to the background{U ij}.
+The dominant computational cost arises from evaluatingρ ij via repeated fermionic diagonalization along the
+dynamical trajectory.
+To overcome this bottleneck, we construct a gaugeequivariant GNN to learn the intermediate, gaugecovariant response functional
+Fθ :{U ij} 7→ {ρ ij},(16)
+directly from data. The physical force is then obtained by inserting the predictedρ ij into Eq. (15), ensuring that the learned dynamics preserves the underlying algebraic structure by construction. By replacing
+repeated fermionic diagonalization with this symmetryconstrained surrogate, the approach enables efficient and
+scalable simulations of coupled gauge–matter dynamics
+while maintaining the essential gauge structure.
+We benchmark the accuracy of the learned force field in
+Fig. 4 by comparing the GNN-predicted forces with exact
+results obtained from fermionic diagonalization. The parity plot exhibits a tight collapse of both training and test
+data onto the diagonal, indicating that the model faithfully captures the gauge-covariant force across a broad
+ran

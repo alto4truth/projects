@@ -1,0 +1,25 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 2
+section: document
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+(10)
+with the total charge given byQ= P
+i qi. Here, we
+treatq i explicitly as alocalgauge-invariant observable
+constructed from nearby plaquettes, rather than emphasizing its global interpretation. As with the action,q i can
+be expressed in terms of traces of small Wilson loops and
+therefore belongs to the same class of structured but ultimately local functionals of the gauge field. In practice,
+for generic Monte Carlo configurations without smoothing, the summed chargeQis not strictly quantized, further supporting its interpretation here as a continuous
+observable assembled from local contributions.
+From a modeling perspective, this task probes the ability of the network to predictsite-resolvedgauge-invariant
+quantities, complementing the global action prediction.
+As in the case ofS[U], the underlying functional dependence on Wilson-loop invariants is relatively simple; the
+key question is whether the equivariant architecture can
+reconstruct these local invariants directly from gaugecovariant inputs without explicit feature engineering. Together, these tasks provide a controlled setting to assess the expressive power and inductive bias of gaugeequivariant message passing.
+The benc

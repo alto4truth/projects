@@ -1,0 +1,17 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 96
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Rationale:Tofindtherelationships...let'sanalyzethemotion...1.CoordinateSystem:TheoriginOis...
+StandardRationale:Tosolvethisproblem,weneedtounderstandthemotionofapointona…StandardAnswer(Gold):…𝒙=𝑹(𝜽+𝒔𝒊𝒏𝜽).
+ModelPrediction(Gemini-3-pro):𝒙=𝑹(𝜽−𝒔𝒊𝒏𝜽).ErrorAnalysis:Themodelrecognizedthekeyword"cycloid"andtriggeredaHigh-FrequencyPatternRetrieval(standardfloorrolling).Itfailedto"ground"itsreasoninginthespecificvisualevidence(Counter-ClockwiseArrow),treatingtheimageasagenericillustrationratherthanasourceofphysicalconstraints.
+Input:
+Whenaringrollspurelyalongastraighttrack,thetrajectoryofapointontheringiscalledanepitrochoid,alsoknownasarollingcurveorcycloid.(1)Aringofradius𝑅rollspurelyunderahorizontalstraighttrack𝑀𝑁,withtheringtouching𝑀𝑁frombelow…When𝑃isat𝑂,theradiusvector𝐶𝑃from𝐶to𝑃pointsstraightdownwards.Astheradiusvector𝐶𝑃rotatesbyanangle𝜃,thepositionofpoint𝑃ontheepitrochoidisdenotedas𝐴,withcoordinates(𝑥,𝑦).Atthismoment,thepointoftangencybetweentheringand𝑀𝑁isdenotedas𝑄,and𝑄𝑃representstheinstantaneouspositionvectorof𝑃relativeto𝑄.(1.1)Writedowntherelationships𝑥∼𝜃,𝑦∼𝜃anddescribein
+wordsthedirectionofthetangentlinetotheepitrochoidatpoint𝐴.
+Figure14: Analysis of reasoning error examples on Gem

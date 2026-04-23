@@ -1,0 +1,24 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 111
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+stance. As illustrated in Figure 3 (c), limiting visual input precipitates
+a marked decline in performance. Across all evaluated LVLMs, the mean accuracy drops by at least10% in
+the single-image setting relative to the multi-image baseline. The degradation is particularly pronounced for
+inquiries requiring cross-referencing or comparative analysis, confirming that high performance on OMIBench
+relies on joint reasoning over multiple visual inputs.
+F. Detailed Analyses for “Combined Multi-Image and Olympiad-Level Thinking”
+F.1. Correlation with MMIU and OlympiadBench
+Figure 3 (a) examines model ranking consistency. MMIU prioritizes multi-image perception, whereas
+OlympiadBench emphasizes single-image reasoning; OMIBench integrates these demands by requiring
+reasoning across multiple images. Empirically, rankings between MMIU and OlympiadBench diverge,
+confirming their disparate foci. Conversely, OMIBench correlates more strongly with each baseline than the
+baselines do with one another. This suggests OMIBench effectively bridges the two domains, capturing the
+joint capabilities of multi-image understanding and complex problem-solving.
+38

@@ -1,0 +1,25 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 104
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+response that aligns with the ground truth,
+but the rule-based evaluation (exact match) judges it as incorrect due to formatting rigidity (e.g.,
+synonym usage, "10.0" vs. "10", or verbose phrasing).
+•Key criterion:Semantic correctness rejected by syntactic rigidity.
+Others
+• Definition:Disagreements arising from external factors such as ground-truth errors (label noise),
+ambiguous prompts, or unclassifiable multimodal alignment failures.
+•Key criterion:Issues external to the model’s reasoning capability or the extraction rule.
+C.4. Performance Comparison between Accuracy and GPTScore
+Accuracy overestimates weaker models and underestimates stronger ones relative to GPTScore, though
+model ranking is preserved.Models with higher GPTScore also achieve higher accuracy under GPTScorebased evaluation, but accuracy systematically overestimates weaker models and underestimates stronger
+ones, while largely preserving their relative ranking. To substantiate this, we manually analyze 100 instances
+where accuracy and GPTScore disagree for Gemini-3-Pro-Preview and InternVL3.5-1B.
+As shown in Figure 16, weaker models often produce flawed reasoning yet output a definite option
+that rule judgment m

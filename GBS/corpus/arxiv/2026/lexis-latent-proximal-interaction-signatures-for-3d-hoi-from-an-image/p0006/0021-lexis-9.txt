@@ -1,0 +1,24 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 6
+section: lexis-9
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+rrors. Typically,
+optimization performs corrections via contact constraints [82], but is slow, prone
+to local minima, and takes place post-hoc, i.e., in aseparatestageafterinference.
+We tackle this limitation with aguided refinement; LEXIS-Flowitselfperforms the refinement in inference time (withoutadditional stages) by adding
+gradient-based guidance steps in the ODE sampling loop. Specifically, at intermediate timestepst, the ODE solver pauses, and the current statext is updated
+via a guidance gradient before the next iteration step.
+To this end, we add a guidance loss with the terms discussed in the following:
+Lguide =L pose+IF +λ maskLmask. (6)
+InterField Guidance (LIF):The LEXIS-Net decoder,D ψ, maps the running estimations of latent tokens,ˆZ, to a predicted InterField,ˆIF=D ψ( ˆZ,f o),
+which encodes the proximal relationships between interacting surfaces. Moreover, an “observed” InterField is computed based on the running estimations for
+the body and object meshes. Then, the novel loss termLpose+IF penalizes the
+discrepancy between the “observed” and estimated InterFields:
+Lpose+IF =∥ ˆIF−IF t∥2, (7)
+where IFt denotes the computed InterField by posing body (decoded from runni

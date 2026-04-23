@@ -1,0 +1,21 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 1
+section: lexis-3
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+them in
+post-hoc optimization with contact-based losses to improve interaction plausibility. This is suboptimal for two reasons; first, contact provides onlysparse, binary
+cues; second, these are considered only “too late,” i.e., post-hoc. Instead, we leveragedense, continuousInterFields and consider them “early on” in our model.
+More specifically, we develop LEXIS-Flow, a Flow-Matching model that jointly
+estimates posed 3D human and object meshes, along with their InterFields.
+Crucially, the predicted InterFields help in a guided refinement of meshes, eliminating the need for post-hoc optimization in a separate stage.
+We evaluate primarily on the Open3DHOI [78] dataset (unless otherwise
+specified) due to its focus onin-the-wildimages andgeneralizability. Evaluation shows that dense, continuous InterFields are more helpful than sparse, binary contacts for formulating 3D reconstruction constraints; we test this both in
+LEXIS-Flow’s guided refinement and in a fitting framework [16]. Benchmarking
+shows that LEXIS-Flow clearly outperforms SotA methods on 3D reconstruction in the wild and its estimates are perceived as significantly more realistic.
+In-distributionevaluationontheBEHAVE[4

@@ -1,0 +1,41 @@
+title: Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+source: arxiv
+year: 2026
+document_id: global-offshore-wind-infrastructure-deployment-and-operational-dynamics-from-dense-sentinel-1-time-series
+authors: Thorsten Hoeser; Felix Bachofer; Claudia Kuenzer
+page: 2
+section: abstract
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20822v1
+
+in heterogeneous settings, whereas CFAR-based methods may increase
+recall for early construction signals but tend to be more prone to false alarms.
+19
+
+Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+Figure 16: Visualization of the Hywind Scotland (HS) maintenance case study. HS is a floating turbine pilot project, in
+2024 all 5 turbines have been towed away from their operational location due to planned maintenance. Reported start
+2024-05-17 and end 2024-09-22 of the maintenance align well with classified time series patterns for all turbines.
+This trade-off becomes critical when aiming for early onset detection of turbine foundations. Early detection without
+prior location knowledge remains a conceptually unresolved problem. Future research must address how spatial
+detection methods can be designed to capture the very first construction signals without overwhelming downstream time
+series analysis with false positives. Hybrid CNN-CFAR cascades optimized specifically for early-stage foundations,
+or the integration of temporal anomaly detection directly at the spatial detection stage are promising directions.
+Furthermore, moving away from quarterly median composites toward single-acquisition-based detection will be
+essential for approaching near-real-time (NRT) monitoring. While median compositing increases robustness, it
+suppresses transient signals and delays early detection. Recent work, such as Paolo et al. [2024], provides a starting
+point for such single-image detection frameworks, particularly when integrating SAR with AIS or optical data sources
+and cascading CFAR and CNN target classification.
+With respect to time series classification, the rule-based classifier presented here was intentionally designed as a
+relatable, training-data-free baseline. However, the implemented rule-based classifier has already reached considerable
+complexity, including multi-stage decision logic, sequential smoothing, segment-level corrections, and global label
+distribution refinements. This complexity suggests that the decision boundaries between infrastructure states are not
+trivial and may exceed what threshold-based logic can robustly encode. While the baseline achieves strong event-level
+performance, future improvements may require supervised temporal deep learning to further improve sequence-wise
+performance.
+The evaluation of time series classification highlights the performance gap between event-level accuracy and sequential
+consistency. Even when point-wise classification performance is strong, especially for turbine-related classes, the
+collapsed edit similarity score clearly shows that sequence-level agreement leaves room for improvement. This reflects
+the methodological limitations of hand-crafted rule-based classifiers, where sequential smoothing and refinements
+improves coherence but tends to risks over-regularization by enforcing deterministic transitions, or opposed to this miss
+20

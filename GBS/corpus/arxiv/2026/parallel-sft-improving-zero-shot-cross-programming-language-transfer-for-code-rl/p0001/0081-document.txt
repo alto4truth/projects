@@ -1,0 +1,22 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 81
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+tion (Yang et al., 2025a; Bercovich et al., 2025;i.a.), the existing DPO stage may confound transfer effects
+in the RL stage. Therefore, we conduct a controlled experiment where we train custom SFT models, initializing from
+the Llama-3.1-8Bbasemodel. We replicate the 1 Language (source) setup from §5.2 and Figure 1. For each of our
+11 possible source PLs, we generate an SFT mixture that contains both the general-purpose Tulu 3 SFT data and our
+coding SFT data exclusively in thesourcelanguage. The subsequent RL training stage uses the same source PL. This
+simulates the setting where we only have access to the source PL data for both SFT and RL. As shown in Figure 5, the
+results are qualitatively similar to those in §3: same-language RL consistently leads to performance improvements, but
+RL-training using a different PL has limited benefits. This confirms that the transfer failure is fundamental, rather than
+an artifact of the specific instruct model used.
+B RL Training Details
+Code generation.We use the CodeForces dataset with its existing train/test split. We exclude instances that have
+custom checker functions as tests and those that do not use stdin-stdout tests. The resulting da

@@ -1,0 +1,168 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+cases, whilecaringanddisapprovaleach account for 7.8%, and
+realizationfor 5.9%. This pattern is consistent with institutional medical explanations,
+18
+
+Physicians(Humans)
+MixtralBase Mixtral
+Empathy
+Mixtral
+RephraseMedPaLM
+Base
+MedPaLMEmpathyMedPaLMRephrase
+GPT5Base GPT5
+Empathy
+GPT5
+Rephrase
+Gemini
+Rephrase
+ClaudeBase Claude
+Empathy
+Claude
+Rephrase
+Physicians
+(Humans)
+Mixtral
+Base
+Mixtral
+Empathy
+Mixtral
+Rephrase
+MedPaLM
+Base
+MedPaLM
+Empathy
+MedPaLM
+Rephrase
+GPT5
+Base
+GPT5
+Empathy
+GPT5
+Rephrase
+Gemini
+Rephrase
+Claude
+Base
+Claude
+Empathy
+Claude
+Rephrase
+0.27
+0.29
+*
+0.22
+0.22 0.29
+*
+0.14
+0.08 0.29
+*
+0.36
+**
+0.30
+*
+0.21 0.24 0.11 0.06 0.28
+*
+0.24 0.30
+*
+0.14 0.02 0.32
+*
+0.08
+0.20 0.10 0.17 0.24 0.24 0.17 0.26
+0.25 0.25 0.06 0.09 0.33
+*
+0.07 0.09 0.20
+0.19 0.29
+*
+0.17 0.05 0.27 0.08 0.07 0.24 0.12
+0.26
+*
+0.31
+*
+0.21 0.17 0.31
+*
+0.19 0.17 0.27
+*
+0.19 0.17
+0.28
+*
+0.09 0.16 0.24 0.32
+*
+0.19 0.25 0.12 0.19 0.25 0.27
+*
+0.19 0.37
+**
+0.44
+**
+0.40
+**
+0.11 0.37
+**
+0.42
+**
+0.34
+*
+0.43
+**
+0.36
+**
+0.37
+**
+0.41
+**
+0.18 0.30
+*
+0.41
+**
+0.39
+**
+0.12 0.34
+*
+0.42
+**
+0.27 0.40
+**
+0.36
+**
+0.37
+**
+0.36
+**
+0.14
+0.00
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+0.35
+0.40
+Cramér's V (Effect Size)
+Fig. 10: Pairwise comparison of sentiment distributions across systems on the
+MedQuAD dataset. Cells report Cram´ er’s V effect size for each model pair; darker color
+indicates larger divergence. Asterisks denote FDR-corrected significance (*p <0.05,
+**p <0.01, ***p <0.001).
+where clinicians primarily convey validation and guidance, with occasional corrective
+or reflective cues.
+In contrast, iCliniqQAs exhibits a marked shift toward affective support. Here,
+physician answers are predominantlycaring-oriented (33.3%), whileapprovalbecomes
+secondary (2.0%). The remaining dominant emotions appear at much lower rates,
+includinggratitude(2.0%),curiosity(3.9%), andoptimism(2.0%). This difference
+indicates that conversational consultations elicit a substantially more supportive
+and relational emotional style than standardized institutional explanations, even in
+physician-written content.
+Several systematic model behaviors emerge across both datasets. First, LLMs
+display high variability in the expression ofapprovalon MedQuAD. Some base configurations are more approval-heavy than physicians, such asGPT5 BASE(92.23%) and
+Claude BASE(86.31%), whereas others substantially reduce approval when prompted
+for caring or rewriting:Mixtral Rephrase(23.5%) andMedPaLM Rephrase(19.60%)
+19

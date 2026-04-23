@@ -1,0 +1,26 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+algorithm. We then apply a time-varying dropout pressureη(t)based
+on the training progress. The binary existence maskmi for thei-th Gaussian is
+formulated as a random variable following a Bernoulli distribution:
+mi ∼Bernoulli(p i),wherep i = 1−η(t)·ω(d i)·s comb
+i (11)
+whereη(t)increaseslinearly duringtraining;ω(d i)is acontinuouspenalty weight
+decaying linearly with depth; ands comb
+i represents the min-max normalized
+weighted sum of the inverse depth1/di and the densityρ i. Acting as a probabilistic high-pass filter, this soft Bernoulli process gradually eliminates dense,
+near-camera erroneous floaters without prematurely destroying valid physical
+geometry.
+Simultaneously, to suppress shape-radiance ambiguity caused by sparse observations, which often leads the optimizer to minimize photometric loss by
+stacking semi-transparent floaters, we introduce aStochastic Opacity Annealingstrategy.Weinjectmultiplicativenoiseintoopacitiesviaˆα i = clamp(αi·
+(1 +n i),0,1)withn i ∼ N(0, σ 2(t)), where the standard deviationσ(t)decays
+linearly from0.3to0as training progresses. This continuous perturbation acts
+as a geometric stress test: it amplifies the rendering variance of fragile, semi-

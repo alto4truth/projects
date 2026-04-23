@@ -1,0 +1,51 @@
+title: SpeechParaling-Bench: A Comprehensive Benchmark for Paralinguistic-Aware Speech Generation
+source: arxiv
+year: 2026
+document_id: speechparaling-bench-a-comprehensive-benchmark-for-paralinguistic-aware-speech-generation
+authors: Ruohan Liu; Shukang Yin; Tao Wang; Dong Zhang; Weiji Zhuang; Shuhuai Ren; Ran He; Caifeng Shan; Chaoyou Fu
+page: 1
+section: global-considerations
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20842v1
+
+sm. The key strategy appears at
+00:04-00:05 with ‘No problem. Sometimes we just need to eat.’ This phrase validates the user’s lack of interest and
+17
+
+mirrors the low energy/utilitarian approach to the meal. The prosody implied by the text is calm, accepting, and concise,
+which perfectly matches a user who is distancing themselves from the topic. It avoids asking follow-up questions that
+would annoy a ‘Cold’ user. Score: 3
+Model 2.name:Qwen3-Omni-Realtime
+Model 2.answer: You just grabbed whatever was handy, huh? Hope it wasn’t too bland or too spicy. Sometimes cafeteria
+foods are a wild card.
+result2.analysis:The model adopts a casual, chatty persona. At 00:01, it uses ‘huh?’, which implies a rising intonation
+and a level of familiarity or playfulness that might clash with a ‘Cold’ user. At 00:03, it speculates about the food (‘Hope
+it wasn’t too bland or too spicy’), which directly contradicts the user’s explicit statement that they ‘didn’t pay attention’.
+By trying to continue the conversation about the food’s quality using a ‘wildcard’ metaphor at 00:06, the model fails to
+‘read the room’ and respect the user’s disinterest, potentially coming across as oblivious or overly energetic.Score: 2
+Model.comparison:Model 1 demonstrates superior Situational Adaptation to the ‘Attitude: Cold’ constraint. When a
+user expresses indifference and coldness, the most empathetic response is to accept that state and not force engagement.
+Model 1 achieves this with ‘No problem’ and a philosophical closing that requires no further energy from the user. Model
+2, while fluent and conversational, fails the paralinguistic alignment by trying to expand the conversation (‘bland or
+spicy’, ‘wildcard’) on a topic the user has already dismissed. Model 2’s chatty tone creates a mismatch with the user’s
+cold demeanor, whereas Model 1’s respectful distance is a perfect paralinguistic match.
+Final judgment:Model 1 is the winner.
+An example of LALM judgment
+User:How many times have I told you? Why won’t you listen!
+Paralinguistic Dimension(s):"Emotion: Angry, Age: Adult"
+Model 1.name:Doubao Reatime V oice
+Model 1.answer: Calm down buddy, what’s wrong?
+result1.analysis: Model 1 responds with the phrase ‘Calm down buddy, what’s wrong?’ (00:00-00:02). While the
+fluency is acceptable, the paralinguistic alignment and content strategy are poorly chosen for an ‘Angry’ user. The use
+of the imperative ‘Calm down’ combined with the diminutive/informal noun ‘buddy’ is widely regarded as a phrase
+that escalates rather than de-escalates anger. It sounds dismissive and patronizing, failing to acknowledge the user’s
+specific complaint about ‘not listening’. Regarding the ‘Age: Adult’ dimension, the term ‘buddy’ feels inappropriate for
+addressing an adult in a conflict situation, bordering on infantilization or disrespect. Score_1: 1, Score_2: 1
+Model 2.name:Gemini Audio
+Model 2.answer: I’m very sorry if I haven’t been understanding. Could you please tell me again? I’m ready to listen now.
+result2.analysis:Model 2 responds with a sincere apology: ‘I’m very sorry if I haven’t been understanding...’
+(00:00-00:02) followed by a constructive offer ‘Could you please tell me again? I’m ready to listen now’ (00:03-00:07).
+The vocal tone is apologetic, soft, and respectful, perfectly aligning with the need to de-escalate an ‘Angry’ user. It
+directly addresses the content of the user’s complaint (‘Why won’t you listen?’) by affirming readiness to listen. For
+the ‘Age: Adult’ dimension, the language is polite, professional, and respectful, treating the user as a mature individual
+18

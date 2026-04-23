@@ -1,0 +1,62 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 62
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+gnitude
+0
+20
+40
+60
+80
+100
+Cohen's (%)
+Fourier Magnitude Spectrum Cohen's of MLP (%)
+Figure 12: Structural Attribution Results with 2-layer MLP probes.
+
+25Fu, Zhou, Belkin, Sharan, & Jia
+0
+1
+23
+4
+5
+6
+7 8
+9
+9-digit addition (84% acc)
+0
+1
+23
+4
+5
+6
+7 8
+9
+3-digit addition (11% acc)
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Figure 13: Circular probe projections of token embeddings onto the unit circle for mod-10
+classification. Each point is a number token n∈[ 0, 999] projected to 2-D by the probe and
+normalized; color indicates nmod 10. (Left) embeddings from a model trained on 9-digit
+addition cluster sharply by residue class (84% test accuracy), indicating that the token
+embedding layer has learned a geometrically organised, clock-like representation. (Right)
+embeddings from a model trained on 3-digit addition show no angular structure (11% test
+accuracy, near chance), consistent with the absence of Fourier peaks in Figure 6.
+Cicular Probes for Transformers Trained on Addition.To probe how number tokens are
+represented in the embedding layer, we train circular probes on the token embeddings
+for numbers. Beyond T-class modular probes, which test linear separability in a (T−1)dimensional subspace, a circular probe tests angular separability in 2-D: it learns a linear
+map W∈R d×2 projecting each embedding onto the unit circle, and classifies by cosine
+similarity tomanchor directions atθ k =2πk/m.

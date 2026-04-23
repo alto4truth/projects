@@ -1,0 +1,40 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 3
+section: gauge-ma-tter-systems
+chunk: 40
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+significance. Because the energy
+depends on fermionic states delocalized across the entire
+lattice, the learnedε i implicitly encode fermion-mediated
+
+7
+correlations that are intrinsically nonlocal.
+Within this framework, the quantitiesε i should be
+viewed as latent variables that provide a symmetryconsistent decomposition of a global observable, rather
+than physically well-defined local energies. The key point
+is that both local observables and global quantities are
+represented within a unified local embedding: the network constructs site-resolved features that simultaneously predictn i and, when aggregated, recoverE. In
+doing so, it implicitly encodes fermion-mediated correlations over extended length scales, enabling a local, gaugeequivariant architecture to approximate observables governed by globally entangled degrees of freedom.
+As summarized in Fig. 3, the gauge-equivariant architecture achieves high accuracy across both gauge groups.
+For SU(2), the energy prediction attains a test MSE of
+6.7×10 −8 (R2 = 0.973), while the density task yields
+2.9×10 −5 (R2 = 0.976). For SU(3), the energy accuracy
+further improves to 1.6×10 −8 (R2 = 0.994), with density prediction at 3.3×10 −5 (R2 = 0.953). Parity plots
+exhibit a tight collapse onto the diagonal with sharply
+peaked error distributions, and the close agreement between training and test metrics indicates robust generalization.
+Notably, near-saturation accuracy is achieved with
+only shallow architectures. This does not imply that
+the learned representation is short-ranged. While message passing is local at the architectural level, the effective interactions are mediated by fermions and are therefore intrinsically nonlocal. In practice, this nonlocality is captured through repeated gauge-covariant transport and contraction operations, which concatenate link
+variables along extended paths. As a result, even shallow networks generate features corresponding to Wilson
+lines of increasing spatial extent, and the effective receptive field—measured in gauge transport length—grows
+rapidly beyond the naive graph distance. This mechanism enables the model to capture fermion-mediated correlations across the lattice despite its local construction.
+Taken together, these results demonstrate that gaugeequivariant graph neural networks provide a unified and
+scalable framework that simultaneously resolves local observables and reconstructs global quantities through latent local representations, even in systems where the
+underlying physics is governed by intrinsically nonlocal,
+fermion-mediated interactions.
+V. LEARNING GAUGE DYNAMICS WITH

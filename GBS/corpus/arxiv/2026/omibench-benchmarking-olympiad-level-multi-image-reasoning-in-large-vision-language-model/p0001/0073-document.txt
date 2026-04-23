@@ -1,0 +1,25 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 73
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+ewrite,” prefer “Complete rewrite” when the existing
+structure significantly impedes clarity or correctness.
+Annotators should apply these guidelines consistently across all examples to ensure uniform quality
+and style in the final dataset.
+A.4. Details of Quality Control
+This section provides a detailed description of the quality control procedures summarized in the main paper,
+including the dual-review protocol (5$ per sample), weekly random sampling and regression testing, metric
+definitions, and the closed-loop feedback process for guideline refinement and model retraining.
+A.4.1. Dual-Review Annotation Workflow
+To ensure dataset quality, each problem instance (comprising the statement, associated images, and solution)
+underwent a dual-review protocol consisting of primary annotation followed by an independent audit. (1) A
+primary annotator first verified the content and assigned task-specific metadata; (2) subsequently, a blinded
+auditor assessed problem well-posedness, text–image alignment, and solution validity. The auditing interface
+presented problems in their final form, allowing reviewers to rate quality on a 5-point Likert scale and flag
+specific defects, such as ambigu

@@ -1,0 +1,33 @@
+title: Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+source: arxiv
+year: 2026
+document_id: global-offshore-wind-infrastructure-deployment-and-operational-dynamics-from-dense-sentinel-1-time-series
+authors: Thorsten Hoeser; Felix Bachofer; Claudia Kuenzer
+page: 2
+section: abstract
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20822v1
+
+and harbor environments.
+Figure 10: Detection performance at the three validation sites, the East China Sea, North Sea Basin and southeast
+Vietnam.
+14
+
+Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+Figure 11: Event level, point-wise classification results as on predictions from the rule-based classifier. In the upper
+left metric over view of Precision, Recall and F1, Water, Turbine Foundation and Deployed Turbine are aggregated to
+W/F/T, Platform, Mooring/Construction vessel and Vessel are aggregated to P/M/V .
+Looking closer into the point wise evaluation of event classification, figure 11 reveals a clear separation in classification
+performance between deployment-related turbine classes (water, turbine foundation, deployed turbine; short W/F/T)
+and non-turbine or transient classes (support platform, mooring / construction vessel, vessel; short P/M/V). The
+turbine-related classes achieve a higher macro F1 score (0.96), whereas the platform and transient vessel-related classes
+show lower performance (macro F1 = 0.71).
+To complement single-event classification metrics, we evaluate sequential consistency using edit similarity. This metric
+quantifies how well predicted label sequences match the temporal structure of ground-truth sequences. Particularly
+informative is the collapsed edit similarity, see figure 12 . Its summary statistic AUC provides a measure of sequence
+and segment agreement and is therefore the most challenging and relevant benchmarking score for future studies. The
+rule-based classifier scores with an AUC of 0.785, with the steepest decline in successful edit similarity at 0.6 to 0.8
+quality levels, stabilizing after the 0.9 quality level at 35% of the classified time series. Meaning, 35% of the classified
+time series have perfect sequential alignment with the ground truth data.
+In figures 13 and 14 we illustrate representative classified time series in spatial and temporal context.
+15

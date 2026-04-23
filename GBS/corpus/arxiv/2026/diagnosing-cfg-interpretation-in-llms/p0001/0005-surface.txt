@@ -1,0 +1,25 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 1
+section: surface
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+Category Parameter Conf. Space Evaluation Purpose
+RECURSION Max Nesting Depth (D){2, . . . ,20}Probes hierarchical state tracking horizon
+Else-Branch Prob. (p)[0.0,1.0]Modulates control flow branching density
+EXPRESSIONExpression Depth (E){1,2,3}Controls nested arithmetic and boolean predicates
+SURFACE Syntactic Style {Block,C-style,S-expr} Tests robustness to structural delimiters
+Lexical Familiarity {Natural,Alien} Isolates syntactic reasoning from semantic priors
+Table 1: Controllable parameters for procedural data generation. By systematically varying these dimensions
+(D, p, E), we isolate specific aspects of grammar interpretation capability.
+start: stmt+
+stmt: action_stmt | loop | if_stmt
+action_stmt: DO action END
+loop: LOOP INT TIMES LBR stmt+ RBR
+if_stmt: IF cond THEN LBR stmt+ RBR (ELSE LBR
+stmt+ RBR)?
+action: MOVE MOVE_DIR INT? | TURN TURN_DIR |

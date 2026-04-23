@@ -1,0 +1,20 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+the conceptual proximity between the embeddings. Higher
+values indicate stronger alignment in global meaning.
+Semantic fidelity evaluates the degree to which model-generated responses
+preserve the conceptual content expressed by clinicians. We operationalize this
+dimension using cosine similarity computed over embeddings produced by the
+BioBERT-mnli-snli-scinli-scitail-mednli-stsbencoder. Because this metric
+does not capture fine-grained factual inaccuracies (e.g., incorrect dosages or omitted
+clinical entities), we interpret it as a measure ofconceptual fidelity, supplemented by
+domain-specific analyses reported in Section 5.
+5

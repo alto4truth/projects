@@ -1,0 +1,32 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 1
+section: coral-arm-bn
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+aran et al., 2023;
+Bray et al., 2017), which makes UDA methods unsuitable
+in this setting. Batch effect correction can be formalized instead as amulti-source domain adaptation(MSDA) problem
+(see Figure 2), where each experimental batch is a source
+domain (Farahani et al., 2020; Blanchard et al., 2011).
+Multi-source domain adaptation and in-context test-time
+adaptation.Recent works have been developed to extend
+classical UDA methods to a multi-source setting (Zhao et al.,
+2018; Peng et al., 2019; Wen et al., 2020; Yang et al., 2020;
+Venkat et al., 2020; Guo et al., 2018). Nevertheless, just
+like UDA, MSDA methods require re-training the model
+every time a new target domain needs to be evaluated. In
+microscopy imaging data, new experimental batches come
+in sequentially, making these methods highly inefficient.
+An ideal setting for microscopy imaging data would be one
+where the multi-source nature of the data can be exploited
+and also the model can be dynamically adapted at test time
+without need for retraining. Adaptive Risk Minimization
+(ARM) (Zhang et al., 2021) is a meta-learning framework
+(Hochreiter et al., 2001; Finn et al., 2017) that enables such
+rapid adaptation.
+Batch Norma

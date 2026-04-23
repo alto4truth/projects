@@ -1,0 +1,24 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+us using all
+images, revealing LVLMs’ struggles with cross-image integration.
+OMIBench needs combined Olympiad-level cross-image and cross-modal reasoning.As shown in
+Figure 3 (a), MMIU and OlympiadBench yield poorly aligned model rankings, whereas OMIBench is more
+consistent with both, suggesting that it more faithfully captures the joint demands of multi-image and
+Olympiad-style problems. The performance comparison in Figure 3 (d) further illustrates this distinction:
+MMIU primarily evaluates basic visual understanding (even the weakest models achieve >40% accuracy),
+whereas OMIBench requires substantially deeper reasoning (the best model reaches only around 40%). This
+pronounced performance gap highlights the increased difficulty of OMIBench and its value for stress-testing
+LVLMs on both multi-image integration and Olympiad-level reasoning.
+Mistake Analysis.We further analyze GPTScore-annotated incorrect samples to identify common failure
+modes, grouping them into three categories. As shown in Figure 7, visual perception failures account for
+13% of errors, cross-image association failures for 29%, and logical reasoning fallacies for 41%. These
+distributions reveal persistent cha

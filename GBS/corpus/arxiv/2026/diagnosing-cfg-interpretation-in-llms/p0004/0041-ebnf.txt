@@ -1,0 +1,29 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 4
+section: ebnf
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+start: stmt+
+stmt: action_stmt | loop | if_stmt
+action_stmt: "act" action "fin"
+loop: "repeat" expr "iters" "{" stmt+ "}"
+if_stmt: "when" cond "next" "{" stmt+ "}"
+...
+Code to Check:
+repeat (3 + 4) iters {
+repeat ((1 + 0) * 4) iters {
+...
+}
+}
+If the code can be parsed by the grammar, output'VALID'
+Task 2: Goal-Conditioned GenerationThe
+model receives the EBNF grammar, a start state
+and a target state description. It must synthesize a
+valid program that achieves this state.
+You are a strict code generator.
+You are given a NEW programming language definition (EBNF).

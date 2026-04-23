@@ -1,0 +1,22 @@
+title: Relative Principals, Pluralistic Alignment, and the Structural Value Alignment Problem
+source: arxiv
+year: 2026
+document_id: relative-principals-pluralistic-alignment-and-the-structural-value-alignment-problem
+authors: Travis LaCroix
+page: 1
+section: document
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20805v1
+
+on how well these proxies track true objectives.
+To give a concrete example of value misalignment along the objectives axis, consider again the case of predictive
+policing.5 Charitably, the intended goal of such systems is to reduce crime by allocating police resources efficiently.
+However, the objectivefunctionoperationalised in these models typically seeks to predict where crime is most
+likely to occur—a proxy for the (purported) true objective. Because actual future crime is unobservable and,
+therefore, impossible to optimise directly, the model relies on historical arrest data as a proxy. However, arrest
+data is a more accurate measure ofpolice activitythancrime incidence. As such, these data are heavily influenced
+by historical policing practices. Areas that have been over-policed in the past tend to generate more arrests,
+which in turn train subsequent models to allocate even more police resources to those areas. This feedback
+loop ensures that over-policed neighbourhoods continue to appear “high-risk”, reinforcing systemic bias. For
+this reason, Benjamin [6] calls predictive policing a “crime production algorithm” (83), which contradicts the
+purported aim of the model—i.e,

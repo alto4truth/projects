@@ -1,0 +1,49 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+9Fu, Zhou, Belkin, Sharan, & Jia
+Muon
+AdamW
+9-Digit Addition
+99.7 -10.2 59.4 100.0 7.0 -9.9 7.7 -9.2 100.0
+100.0 -24.2 53.6 100.0 -6.6 -13.1 3.4 -11.5 100.0
+0.0 0.1 0.2 0.3 0.4 0.5
+Fourier Frequency
+Muon (seed 42)
+Muon (seed 123)
+AdamW (seed 42)
+AdamW (seed 123)
+3-Digit Addition
+mod 2 mod 3 mod 4 mod 5 mod 6 mod 7 mod 8 mod 9 mod 10
+5.9 -2.3 -0.5 -10.4 -4.4 -2.1 -5.4 -6.6 -4.5
+-4.9 -12.0 -8.4 2.8 -5.3 -6.6 -7.2 -5.9 0.3
+3.7 -10.1 -10.5 -14.3 -9.9 -12.2 -11.1 -10.7 -4.8
+1.9 -0.4 -2.1 0.4 0.9 1.1 -1.9 -1.4 -3.3
+1.0
+1.5
+2.0
+3.0
+4.0
+Norm. Magnitude
+0
+20
+40
+60
+80
+100
+Cohen's (%)
+Fourier Magnitude Spectrum Cohen's of Linear Probe (%)
+Figure 6:Tokenization determines convergence in arithmetic.(Top) In 9-digit addition,
+both Muon and AdamW converge to the same spectral structure with sharp Fourier peaks
+and near-perfect κ for mod 2, 5, and 10, showing both spectral and geometric convergence.
+(Bottom) In 3-digit addition, where every operand and sum fits in a single token, the
+Fourier spectra vary across optimizers and random seeds, and κ remains near chance for all
+moduli. Multi-token tokenization forces modular subproblems that produce convergent
+representations; single-token tokenization

@@ -1,0 +1,27 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+ing in structural-probing literature
+that the latest layers of language models tend to
+be optimised for the prediction objective rather
+than for representational explicitness, and that intermediate layers often carry more directly recoverable structural information (Hewitt and Manning,
+2019; Tenney et al., 2019). The fixed-window
+model’s advantage is therefore most visible precisely where syntactic structure is most explicitly
+available, namely the early-to-middle layers.
+Third, the fixed-window model develops its
+structural representations earlier in the network.
+For nsubj, dobj, and prep, the fixed-window
+model’s UUAS at layer 2 is comparable to the baseline’s UUAS at layer 4 or 5. This earlier emergence of structure is consistent with our attentiondistribution analysis (Section 5.4), which suggests
+that the fixed-window model’s heads specialise for
+syntactic functions already in the early layers. Together, these results suggest that the architectural
+constraint pushes the model to discover syntactic
+abstractions sooner in the processing pipeline, freeing later layers for higher-order operations.
+B.2 Relation to the Attention-Head Analysis
+The probing results provide a quantitati

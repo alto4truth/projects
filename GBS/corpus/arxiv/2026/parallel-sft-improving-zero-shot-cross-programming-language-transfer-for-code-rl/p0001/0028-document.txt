@@ -1,0 +1,30 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+ssing the target-language oracle. Non-parallel multi-PL training
+sometimes is beneficial too.
+Furthermore, in §D, we also confirm that Parallel-SFT, while achieving improved cross-language generalizability, does
+not sacrifice in-language performance.
+7 Analysis
+Inspired by the multilingual NLP literature (§2.3), we investigate whether the improved transferability correlates with
+more PL-general representations. Specifically, we check if Parallel-SFT promotes the representation similarity between
+standalone parallel programs (i.e., without contexts), as is standard in multilingual research (Wu et al., 2025b; Shen
+et al., 2025; Gao et al., 2025;i.a.).
+We construct a held-out dataset with 312 code programs from our SFT distribution, each from a different question. None
+of the questions has been observed in SFT. We consider translations of these programs in 3 languages unseen during
+SFT—Go, PHP, and Ruby—obtained from the synthetic translation procedure in §5.1. This yields a list of parallel
+programs{(c Go
+i , cPHP
+i , cRuby
+i )}N
+i=1 whereN= 312.
+For each SFT model, we derive program representations, separately at each layer ℓ, e.g. rGo
+i,ℓ. We compute the program
+representations via

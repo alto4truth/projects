@@ -1,0 +1,25 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 1
+section: p-assing
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+EQoMQt/xY0LRdz6G+78G6ePhbYeuHA4517uvcdPOJPKsr6NwtLyyupacb20sbm1vWPu7rVknApCmyTmsej4WFLOItpUTHHaSQTFoc9p2x9ej/32AxWSxdGdGiXUDXE/YgEjWGnJMw9a91nFoZyf5F7GTpGDeTLAuWeWrao1AVok9oyUYYaGZ345vZikIY0U4VjKrm0lys2wUIxwmpecVNIEkyHu066mEQ6pdLPJ/Tk61koPBbHQFSk0UX9PZDiUchT6ujPEaiDnvbH4n9dNVXDpZixKUkUjMl0UpBypGI3DQD0mKFF8pAkmgulbERlggYnSkZV0CPb8y4ukdVa1a9Xa7Xm5fjWLowiHcAQVsOEC6nADDWgCgUd4hld4M56MF+Pd+Ji2FozZzD78gfH5Ay3TlZY=</latexit>
+V
+(`)
+i,↵
+FIG. 1. Gauge-equivariant GNN architecture. (a) The input consists of matrix-valued gauge linksU jk defined on the lattice
+edges. Throughout the network, both node featuresV (ℓ)
+i,α and edge featuresE (ℓ)
+ij,β are complexN f ×N f matrices (elements
+ofC Nf ×Nf ), ensuring the correct transformation under local gauge operations. The model is composed of successive hidden
+lattices followed by an output lattice. (b) Initialization: the first-layer vertex featureV (1)
+i,α is constructed from ordered products
+of nearby gauge linksU jk around elementary plaquettes adjacent to sitei, encoding local gauge-covariant information. (c) Node
+update: at layerℓ, the vertex featureV (ℓ)
+i,α is updated via gauge-covariant aggregation of neighboring node and edge features,
+yie

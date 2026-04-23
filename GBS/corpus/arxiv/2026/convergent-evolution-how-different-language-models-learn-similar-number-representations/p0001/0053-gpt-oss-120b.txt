@@ -1,0 +1,110 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 53
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+iance is:
+Tr(SB) = 1
+T ∑
+r
+∥µr −µ∥ 2 = 1
+T
+
+∑
+r
+∥µr∥2 −2µ ⊤
+
+1
+T ∑
+r
+µr
+!
++∥µ∥ 2
+!
+(3)
+= 1
+T
+
+∑
+r
+∥µr∥2 − ∥µ∥2
+!
+= 1
+T
+
+T−1
+∑
+ℓ=1
+∥ˆµ[ℓ]∥2
+!
+(4)
+= 1
+T
+
+T−1
+∑
+ℓ=1
+T
+N ∥Fℓ/T ∥2
+!
+= 1
+N
+T−1
+∑
+ℓ=1
+∥Fℓ/T ∥2 = ΦT
+N , (5)
+where the second line uses 1
+T ∑r µr =µ , which holds because the classes {Cr} partition
+{0, . . . ,N−1}into equal-sized groups.
+For Tr(SW ), the total variance decomposes asV=Tr(S B) +Tr(SW ). Define the N×d matrix
+E whose rows are e(0)⊤, . . ., e(N− 1)⊤, and let UN be the N×N DFT matrix with entries
+(UN)kn = 1√
+N e−2πikn/N . Then ˆE=U N Ehas rowsF ⊤
+ν , and sinceU N is unitary,
+N−1
+∑
+n=0
+∥e(n)∥ 2 =∥E∥ 2
+F =∥ ˆE∥2
+F = ∑
+ν
+∥Fν∥2.
+SinceF 0 =
+√
+Nµ, we have∥F 0∥2 =N∥µ∥ 2, and therefore
+V= 1
+N
+N−1
+∑
+n=0
+∥e(n)−µ∥ 2 = 1
+N
+
+∑
+n
+∥e(n)∥ 2 −N∥µ∥ 2
+!
+= 1
+N ∑
+ν̸=0
+∥Fν∥2.
+Therefore:
+Tr(SW ) =V−Tr(S B) = 1
+N ∑
+ν̸=0
+∥Fν∥2 − 1
+N
+T−1
+∑
+ℓ=1
+∥Fℓ/T ∥2 = 1
+N ∑
+ν/∈HT
+∥Fν∥2,
+where HT ={ 0, 1/T, 2/T, . . ., (T−1)/T} collects the zero-frequency and harmonic frequencies.

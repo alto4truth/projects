@@ -1,0 +1,30 @@
+title: LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model
+source: arxiv
+year: 2026
+document_id: llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffusion-large-language-model
+authors: Inclusion AI; Tiwei Bie; Haoxing Chen; Tieyuan Chen; Zhenglin Cheng; Long Cui; Kai Gan; Zhicheng Huang; Zhenzhong Lan; Haoquan Li; Jianguo Li; Tao Lin; Qi Qin; Hongjun Wang; Xiaomei Wang; Haoyuan Wu; Yi Xin; Junbo Zhao
+page: 3
+section: g-sc-g-pq-g-o-g-sc-g-pq-g-o
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20796v1
+
+Gen. Only
+FLUX.1 Kontext Diff. 6.52 7.38 6.00 - - Step1X-Edit Diff. 7.66 7.35 6.97 7.20 6.87 6.86
+Qwen-Image-Edit Diff. 8.00 7.86 7.56 7.82 7.79 7.52
+LongCat-Image-Edit Diff. 8.18 8.00 7.64 8.08 7.99 7.60
+Z-Image-Edit Diff. 8.11 7.72 7.57 8.03 7.80 7.54
+Unified
+BAGEL AR + Diff. 7.36 6.83 6.52 7.34 6.85 6.50
+OmniGen2 AR + Diff. 7.16 6.77 6.41 - - InternVL-U AR + Diff. - - 6.66 - - Lumina-DiMOO D-Diff. - - 3.91 - - LLaDA2.0-Uni D-Diff. + Diff. 6.68 7.52 6.61 6.63 7.67 6.66
+Table 11: Comparison of Multi-Reference Image Editing Ability on MICo-Bench.
+Model Arch. Object Person HOI De&Re Overall↑
+Qwen-Image-Edit Diff. 52.4 21.1 35.0 37.4 35.9
+BAGEL AR + Diff. 39.0 28.5 25.3 44.5 34.4
+OmniGen2 AR + Diff. 46.3 22.9 32.2 36.8 33.8
+Lumina-DiMOO D-Diff. 38.4 12.1 24.7 21.3 23.3
+LLaDA2.0-Uni D-Diff. + Diff. 51.0 32.8 46.0 54.4 47.1
+comparisons against leading models on MICo-Bench (Wei et al., 2025), a challenging multi-reference image
+editing benchmark.
+Baselines.We evaluate LLaDA2.0-Uni against specialized editing models (FLUX.1 Kontext (Labs et al.,
+2025), Step1X-Edit (Liu et al., 2025), Qwen-Image-Edit (Wu et al., 2025a), Z-Image-Edit (Cai et al., 2025))
+and unified models (BAGEL (Deng et a

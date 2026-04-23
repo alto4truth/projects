@@ -1,0 +1,23 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+ion including coding agents and code retrieval (Gu et al., 2025), and we hope that Parallel-SFT
+inspires future work to train more general and transferrable code models.
+Limitations
+While Parallel-SFT demonstrates improvements in cross-PL transfer, our exploration was not exhaustive. We did not
+perform a search over many design decisions, including SFT data formatting, curricula, or mixing ratios. Further
+iterations on these could yield further gains, perhaps additionally leveraging typological similarities between PLs, which
+would better inform transfer. Additionally, our experiments focused on fundamental coding tasks. We anticipate that the
+benefits of Parallel-SFT extend to more complex settings, such as reasoning models and coding agents, but verifying
+this remains an open question. We leave these explorations to future work.
+Acknowledgments
+We thank Alex Gu, Naman Jain, Yuning Mao, Shruti Bhosale, and colleagues at the Meta Superintelligence Labs for
+discussions and help at various stages of this project.
+9

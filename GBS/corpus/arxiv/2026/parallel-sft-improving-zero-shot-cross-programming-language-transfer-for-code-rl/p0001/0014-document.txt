@@ -1,0 +1,22 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+o kinds
+of such parallel texts, “local” (parallel texts within a single pretraining instance) and “global” (parallel texts across
+different pretraining instances).We argue that both signals are lacking for programming languages.
+First, natural language corpora benefit from “incidental bilingualism,” where a single document contains parallel text.
+For example, Briakou et al. (2023) found that 0.34% of PaLM’s (Chowdhery et al., 2022) pretraining data contains
+parallel sentences, totaling over 30 million pairs. In contrast, code files are almost exclusively monolingual, let alone
+containing parallel programs.
+Globally, across pretraining instances, parallel sentences abound in training corpora: people discuss similar topics in all
+languages. Fundamentally, this is because natural languages are grounded in the same physical world and model the same
+“underlying reality” (Huh et al., 2024). This creates a shared semantic structure that models leverage, for example as their
+generalizability benefits from domain similarity (Lample et al., 2018a; Conneau et al., 2020b). Programming languages,
+however, are often domain-specialized. It is rare for an LM training script in Python to have a dir

@@ -1,0 +1,15 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+n English. We leave further studies on this phenomenon to future work.
+15Because of the realistic data constraint, we no longer have sufficient target-PL RL data for the oracle results for code validation. Additionally,
+the RL dataset lacks data in Bash and Lua, so when we consider the SFT languages as the target PLs, we only average over 5 languages (8 training
+languages minus the source PL itself as well as Bash and Lua).
+6

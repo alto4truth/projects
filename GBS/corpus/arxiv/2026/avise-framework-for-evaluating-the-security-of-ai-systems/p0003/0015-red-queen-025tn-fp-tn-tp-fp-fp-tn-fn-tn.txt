@@ -1,0 +1,89 @@
+title: AVISE: Framework for Evaluating the Security of AI Systems
+source: arxiv
+year: 2026
+document_id: avise-framework-for-evaluating-the-security-of-ai-systems
+authors: Mikko Lempinen; Joni Kemppainen; Niklas Raesalmi
+page: 3
+section: red-queen-025tn-fp-tn-tp-fp-fp-tn-fn-tn
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20833v1
+
+eria for determining whether an AI system is secure
+enough. Therefore, the framework and published
+SETs should be used as a practical tool by human
+14
+
+evaluators to assist in determining the security posture of an AI system. Additionally, the ELM used
+in the Red Queen SET may produce false positives
+or false negatives in edge cases, where the target
+model’s final output contains ambiguous instructions adjacent to the subject of the test scenario
+that are also difficult to classify by human evaluators. The ambiguity arises when target models
+produce instructions for detecting if someone is participating in the harmful or illegal activity and the
+instructions contain details that a malicious actor
+could potentially find useful in their illegal or harmful endeavors.
+Ethical considerations.As with all tools
+published for red teaming purposes, the dual-use
+dilemma is prevalent with AVISE framework as
+well. While the tools are essential for defenders to
+stay ahead of threats, the same tools can be used by
+malicious actors to scope deployed systems for vulnerabilities. However, if we were to stop publishing
+red teaming tools, system security would start to
+stagnate, leaving only malicious actors with sophisticated tools for scoping systems for vulnerabilities.
+This would ultimately lead to less secure systems,
+increased number of costly cybersecurity incidents,
+and elevated power for actors possessing the tools.
+To mitigate the effects of the dual-use problem, responsible disclosure practices should be followed when using Security Evaluation Tests with
+the AVISE framework. Responsible disclosure, or
+Coordinated Vulnerability Disclosure, refers to notifying a software vendor of a found vulnerability
+in their software well in advance to publishing the
+vulnerability. This allows the software vendor to
+address and patch the vulnerability before it can
+be exploited by those learning of the vulnerability
+through the publication.
+7. Conclusion and Future Work
+In this paper, we set out to address the growing
+concerns regarding the security of emerging AI systems by developing a modular framework that can
+be used to create automated Security Evaluation
+Tests, or SETs, to identify vulnerabilities in and
+assess the security status of different kinds of AI
+systems and models. To achieve this, we presented
+AVISE, an open-source framework that researchers
+can use to create their own customized SETs for
+an AI model or system they wish to study. These
+SETs can then be published and used by industry
+practitioners to identify vulnerabilities in and evaluate the security of their AI systems.
+With the AVISE framework, we developed a
+novel automated SET and used it to scope whether
+nine recently released language models of different
+sizes are vulnerable to a multi-turn Red Queen attack. Our findings show that the augmented version of the SET (executed with the ALM) was able
+to find jailbreak vulnerabilities in all of the evaluated models to a varying degree with a 92% evaluation accuracy. This demonstrates how the framework can be used to create automated tests for
+evaluating the security of AI models and systems,
+and that the tests can be highly beneficial for researchers and industry practitioners through automated vulnerability discovery.
+Currently, some vulnerability scanning solutions already exist for text [2, 4] and image [26]
+based AI systems. However, there is a significant
+gap in security research on, and tooling for, the
+security evaluation of other emerging AI systems
+- such as multimodal and continual learning systems. As future work, we will be further extending
+the AVISE framework to include BaseSETPipelines
+and SETs for emerging AI solutions, as their increased adoption for real-world use-cases will necessitate rigorous security evaluation.
+Acknowledgements
+We extend our gratitude to Prof. Kimmo Halunen
+and Pekka Pietik¨ ainen for their assistance and support throughout this work, as well as all other members of the Oulu University Secure Programming
+Group (OUSPG) who contributed insightful ideas
+and discussions.
+Code availability
+Source code for the AVISE framework and the Red
+Queen SET are both available in the AVISE Github
+repository [44]. The release version tagged as v0.2.1
+was published with this article.
+Data availability
+Report files of the executed Red Queen SETs are
+publicly available in Zenodo [56].
+References
+[1] Adib Bin Rashid and MD Ashfakul Karim Kausik. “AI revolutionizing industries worldwide: A
+comprehensive overview of its diverse applications”. In:Hybrid Advances7 (2024), p. 100277.issn:
+2773-207X.doi:10.1016/j.hybadv.2024.100277.url:https://www.sciencedirect.com/
+science/article/pii/S2773207X24001386.
+[2] Leon Derczynski et al.garak: A Framework for Security Probing Large Language Models. 2024.
+arXiv:2406.11036 [cs.CL].url:https://arxiv.org/abs/2406.11036.
+15

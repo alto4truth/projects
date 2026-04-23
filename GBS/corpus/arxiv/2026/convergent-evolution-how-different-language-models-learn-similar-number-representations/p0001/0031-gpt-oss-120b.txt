@@ -1,0 +1,25 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+ric convergence.
+The effect of optimizer is architecture-dependent.Comparing the top and middle blocks
+of Figure 5 isolates the effect of the optimizer. Muon produces stronger probing for the
+Transformer (κ= 85.4 vs 72.1 at T= 10) and for Gated DeltaNet (77.8 vs 69.7), but Mamba-2
+trained with AdamW actually outperforms Mamba-2 trained with Muon (80.1 vs 76.7).
+We find that the Transformer trained with Muon has the best probing performance. The
+optimizer’s effect on geometric convergence thus depends on the architecture, and we do
+not observe a universal advantage for either optimizer in language pretraining task.
+Spectral and geometric convergence co-emerge gradually.Figure 9 tracks ΦT and probe
+accuracy throughout Transformer pretraining for T= 2, 5, 10. Both increase smoothly with
+no phase transition, unlike the grokking observed in modular arithmetic (Nanda et al., 2023).
+We will discuss more on model behavior when trained directly on arithmetic in Section 5.
+5 Convergent Evolution in Training on Arithmetic
+Sections 3 and 4 studied models trained on general language, where Fourier features emerge
+from the statistics of number tokens in natural text. We now ask whether convergen

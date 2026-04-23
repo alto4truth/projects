@@ -1,0 +1,28 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+zed medical communication and real-world clinical interaction
+scenarios.
+3.3 Models Evaluated
+We selected multiple large language models (LLMs) to capture different design
+philosophies and degrees of domain specialization.Mixtral[34] represents a generalpurpose model trained on diverse conversational and web-scale corpora without
+explicit biomedical fine-tuning. Conversely,Med-PaLM[35] is a domain-adapted model
+optimized for clinical reasoning and medical question answering through supervised
+instruction on biomedical literature and expert-annotated data. This contrast enables
+a controlled investigation of how domain specialization influences the communicative
+quality of medical responses.
+To further test whether observed trends generalize across distinct architectures and
+training paradigms, we evaluatedGPT-5 5,Gemini 2.5 Pro[36], andClaude Sonnet
+4.56.
+3https://medlineplus.gov/ — https://cancer.gov/ — https://niddk.nih.gov/
+4https://github.com/LasseRegin/medical-question-answer-data
+5https://openai.com/index/introducing-gpt-5/
+6https://www.anthropic.com/claude/sonnet
+7

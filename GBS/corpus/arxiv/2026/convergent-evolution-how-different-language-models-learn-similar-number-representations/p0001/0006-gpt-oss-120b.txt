@@ -1,0 +1,25 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+gned in.
+Transformers trained on modular addition embed numbers on a circle and rotating to
+compute the answer (Nanda et al., 2023; Zhong et al., 2023; Gromov, 2023). The same
+holds in pretrained LLMs that number token embeddings break into Fourier components,
+and there are recognizable addition circuits in the attention and MLP layers (Zhou et al.,
+2024; Kantamneni & Tegmark, 2025; Levy & Geva, 2025). Zhou et al. (2025) show that
+hard-coding these Fourier features improves arithmetic learning. These studies document
+spectral structure but do not test whether it implies geometric separability — a distinction
+our work shows is critical. In this paper, we further study the question these papers leave
+open, where the structure comes from in the first place.
+Mechanistic Interpretability.Mechanistic interpretability aims to reverse-engineer the
+representations and algorithms learned by language models. The linear representation
+hypothesis (Park et al., 2023) conjectures that high-level concepts, if learned, should be
+linearly decodable from model representations. Probing (Orgad et al., 2025; Kossen et al.,
+2024) is the standard tool for this. However, number representations are not line

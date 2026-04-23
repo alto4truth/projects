@@ -1,0 +1,19 @@
+title: LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model
+source: arxiv
+year: 2026
+document_id: llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffusion-large-language-model
+authors: Inclusion AI; Tiwei Bie; Haoxing Chen; Tieyuan Chen; Zhenglin Cheng; Long Cui; Kai Gan; Zhicheng Huang; Zhenzhong Lan; Haoquan Li; Jianguo Li; Tao Lin; Qi Qin; Hongjun Wang; Xiaomei Wang; Haoyuan Wu; Yi Xin; Junbo Zhao
+page: 3
+section: g-sc-g-pq-g-o-g-sc-g-pq-g-o
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20796v1
+
+ancements, several areas remain for future improvement:
+• Enhancing Visual Detail.While the SigLIP-VQ tokenizer provides rich semantic information, it struggles
+to preserve fine-grained image details. Future work could focus on better reconstruction techniques to
+benefit detail-sensitive tasks like image editing.
+• Scaling Interleaved Capabilities.To fully unlock the model’s potential for complex interleaved generation and reasoning, further scaling of training data and model capacity is required.
+• Reinforcement Learning.Although we have begun exploring RL for unified dLLMs, optimizing its
+performance remains a challenge. We plan to further refine the RL framework in future versions and then
+release it to the community.
+19

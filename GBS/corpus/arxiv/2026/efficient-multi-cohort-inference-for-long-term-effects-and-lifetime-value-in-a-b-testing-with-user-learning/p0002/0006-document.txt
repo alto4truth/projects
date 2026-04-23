@@ -1,0 +1,41 @@
+title: Efficient Multi-Cohort Inference for Long-Term Effects and Lifetime Value in A/B Testing with User Learning
+source: arxiv
+year: 2026
+document_id: efficient-multi-cohort-inference-for-long-term-effects-and-lifetime-value-in-a-b-testing-with-user-learning
+authors: Dario Simionato; Andrea Tonon; Mingxue Wang; Weiguo Wang; Tong Gui; Xiaoyue Li
+page: 2
+section: document
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20777v1
+
+stimates using inverse-variance weighting, which assigns greater weight to more precise estimatesˆ𝛿𝑘. This
+yields to the multi-cohort estimator ˆ𝛿𝑀𝐶 (𝑡) , which combines information across cohorts and by construction has a lower variance
+than any individual ˆ𝛿𝑘 [4, 6]. Our approach can then be summarized
+as follows:
+(1) Compute the estimates ˆ𝛿𝑘 (𝑡)=𝑇 𝑡+𝑘
+𝑘 −𝑇 𝑡+𝑘
+𝑡+𝑘 and their variances ˆ𝜎 2
+ˆ𝛿𝑘
+(𝑡)= ˆ𝜎 2
+𝑇 𝑡+𝑘
+𝑘
++ ˆ𝜎 2
+𝑇 𝑡+𝑘
+𝑡+𝑘
+−2𝑐𝑜𝑣(𝑇 𝑡+𝑘
+𝑘 , 𝑇𝑡+𝑘
+𝑡+𝑘 ) for0 ≤𝑡<𝑇
+and0≤𝑘<𝑇−𝑡.
+(2) Compute the estimates weights𝑤 𝑘 (𝑡)=
+1/ ˆ𝜎 2
+ˆ𝛿𝑘
+(𝑡)
+Í𝑇−𝑡
+𝑘=0 1/ ˆ𝜎 2
+ˆ𝛿𝑘
+(𝑡) .
+(3) Compute the weighted mean ˆ𝛿𝑀𝐶 (𝑡)= Í𝑇−𝑡
+𝑘=0 𝑤 𝑘 (𝑡) ˆ𝛿𝑘 (𝑡)
+and the weighted variance ˆ𝜎 2
+ˆ𝛿𝑀𝐶
+(𝑡)=

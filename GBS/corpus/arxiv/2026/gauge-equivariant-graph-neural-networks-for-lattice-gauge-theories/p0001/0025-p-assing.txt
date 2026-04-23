@@ -1,0 +1,30 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 1
+section: p-assing
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+e the Hermiticity constraintE †
+ij =E ji,
+such that reversing the orientation of an edge corresponds
+to Hermitian conjugation.
+A schematic of the gauge-equivariant GNN is shown in
+Fig. 1. For a given gauge configuration{U ij}, edge features consist of a single channel initialized by the gauge
+linkE (1)
+ij =U ij. Node features are constructed from local
+holonomies to ensure gauge covariance. At each site-i,
+we associate matrix-valued featuresV (1)
+i,α given by untraced Wilson loops around elementary plaquettes sharingi, with a consistent choice of orientation. In addition
+to these local loops, one may incorporate global or topological information by including Polyakov loops anchored
+at sitei, defined along each independent non-contractible
+direction of the lattice. These provide gauge-covariant
+probes of the global structure of the gauge field and can
+be naturally incorporated as additional node features.
+However, as will be discussed later, such explicit inclusion is not essential for the prediction of gauge-invariant
+observables.
+Within the message-passing framework, node updates
+are constructed by aggregating all gauge-covariant contributions that transform consistently at sitei.

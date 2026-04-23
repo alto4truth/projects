@@ -1,0 +1,29 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 76
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+ophilic substitution).
+Fine-Grained Topic Annotation.Because the fine-grained topics are unknown a priori, we first prompt
+GPT-4o to perform open-ended topic analysis for each sample and to generate classification labels in the
+form {CLASS: X}. Specifically, the prompts are as follows:
+Fine-Grained Topic Annotation Prompt
+You are an expert annotator for multi-image, multi-discipline Olympiad-level problems. Your task is to
+assign the most specific sub-category label to each problem.
+Each sample may contain:
+•One or more images (diagrams, experiment setups, screenshots, etc.).
+•Optional text (problem statement, description, notes).
+Annotation rules:
+•Choose the label by the core method and main concept, not by surface story.
+• Always pick the most fine-grained label available (do not annotate coarse-grained subjects like
+"Optics").
+•If it mixes multiple topics, use "#" as a divider.
+• Use all images and text jointly; visual cues (rays, lenses, optical axes, diagrams) are as important
+as text.
+Your output must be exactly one label string by {CLASS: X}. Do not output explanations or reasoning.
+Subfield Annotation.We first use GPT-4o [28] to assign preliminary fine-grained topic labels

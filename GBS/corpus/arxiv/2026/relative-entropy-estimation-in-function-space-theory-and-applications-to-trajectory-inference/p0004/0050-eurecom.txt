@@ -1,0 +1,71 @@
+title: Relative Entropy Estimation in Function Space: Theory and Applications to Trajectory Inference
+source: arxiv
+year: 2026
+document_id: relative-entropy-estimation-in-function-space-theory-and-applications-to-trajectory-inference
+authors: Chao Wang; Luca Nepote; Giulio Franzese; Pietro Michiardi
+page: 4
+section: eurecom
+chunk: 50
+source_ref: https://arxiv.org/pdf/2604.20775v1
+
+64/4/4
+Decoder (dim / depth / heads)64/3/4
+Supernode radius 0.002
+GPUs for Training 1×NVIDIA A100
+Table 6: FKL hyperparameters for Lotka-V olterra.
+26
+
+E.2.2 Repressilator
+Dataset.Repressilator Shen et al. (2025) is a synthetic genetic regulatory network designed to
+exhibit stable oscillatory behavior. The system consists of three genes connected in a feedback
+loop, where each gene expresses a protein that represses the next gene in the cycle. The protein
+concentrationsX t = [X1,t, X2,t, X3,t]⊤ can be modeled using the following system of SDEs:
+dX1,t =
+ β
+1 + (X3,t/k)n −γX 1,t
+
+dt+σdW 1,t,
+dX2,t =
+ β
+1 + (X1,t/k)n −γX 2,t
+
+dt+σdW 2,t,
+dX3,t =
+ β
+1 + (X2,t/k)n −γX 3,t
+
+dt+σdW 3,t,
+(33)
+where Wt = [W1,t, W2,t, W3,t]⊤ denotes a standard 3-dimensional Brownian motion.We set the
+parameters to β= 10 , n= 3 , k= 1 , and degradation rate γ= 1 . We set the diffusion coefficient
+σ= 0.1.
+We simulate trajectories over 7.5 unit time intervals using the Euler-Maruyama scheme with a step
+size of ∆t= 0.01 . The system is initialized with X1,0, X2,0 ∼ U(1,1.1) and X3,0 ∼ U(2,2.1) .
+Generated trajectories are considered as GT trajectories.
+TI methods configuration.To train the trajectory inference methods, we considered 11 equally
+spaced snapshots in the trajectory time [0,1] . Odd snapshots are used as training, whereas even
+snapshots as validation. For each snapshot, we consider 100 points for training.
+Specifications of hyperparameters for TI methods:
+• SBIRR-vSB: As in the Lotka V olterra case, we run SBIRR and vSB methods using default
+parameters, but considering the new data. Again, for a fair comparison, the number of
+iterations has been set to the same number (i.e. 10).
+• MSBM hyperparameters: num_stage= 20 ; num_epoch= 5 ; num_itr= 1000 ;
+num_ResNet= 3 ; learning_rate= 1×10 −3; var= 0.1 ; interval= 151 , time_scale
+= 7.5, BS=32.
+• MFL: lambda_reg = 0.0075; initial position of the particles (cx, cy, cz) = (2.5, 2.5, 2.5);
+n_sinkhorn = 500; sigma=1.0, sigma_final = 0.5; t_final = 7.5; eta_final =0.1; n_iter = 2500;
+M (number of particles) = 500, tau_final = 1.0. All the other hyperparameters are set to the
+default values. Notice that, also in this case, we had to change the initial position of the
+particles (cx, cy, cz̸= 0,0,0).
+• AM: T_final = 7.5, BS = 100; SIGMA = 0.1; lr = 5e-6; num_iterations = 10_000. Even in
+this case we employ the linear interpolation trick, given that training marginals are located
+far away in space.
+• TIGON: learning rate = 5e−4 ; training time points t∈[0,2,4,6,8,10] ; initial gaussian
+kernel bandwidth σnow = 1; decay = 0.9σ with a stopping condition of σ >0.02 ; and a
+regularization parameter λd = 107. We changed the neural network architecture for the
+drift, considering 8 hidden layers, each with dimension 32. All the other parameters have
+been set to the default values.
+In Figure 10, we show the generated trajectories by TI methods with respect to the training and
+validation marginals.
+FKL configuration.We report FKL hyperparameters in Table 7.
+27

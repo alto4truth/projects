@@ -1,0 +1,26 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+ss all moduli. The right column explains this gap through
+Theorem 1. The LSTM haslargerFourier power Φ10 than the Transformer, yet its Fisher
+discriminant λmax(S−1
+W SB) is two orders of magnitude smaller. The difference lies in the
+condition number cond(SW ): the LSTM’s within-class scatter is highly anisotropic, so the
+periodic signal is buried under within-class variance and the classes overlap despite visible
+Fourier spikes. Several recent studies have inspected Fourier spectra and concluded that
+models have learned modular structure (Nanda et al., 2023; Zhou et al., 2024). Our analysis
+shows why this inference is unreliable: a visible spike at period T guarantees Tr(SB)> 0,
+but probe accuracy depends on the eigenspectrum of S−1
+W SB, which the Fourier power
+spectrum alone does not determine.
+We call this arrangement of embeddings into linearly separable mod-T classesGeometric
+Convergence. Unlike spectral convergence, geometric convergence is selective: only certain
+combinations of data, architecture, and optimizer produce it. Both are instances ofconvergent evolution: different systems arriving at similar representations because of shared
+constraints. The next sections identif

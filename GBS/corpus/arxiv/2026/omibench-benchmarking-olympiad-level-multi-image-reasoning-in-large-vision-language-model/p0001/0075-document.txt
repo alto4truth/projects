@@ -1,0 +1,24 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 75
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+A.4.3. Weekly Random Sampling Procedure
+To complement per-example dual review, we implemented weekly random sampling for quality assurance.
+Each week, 5% of annotated or modified examples were randomly selected using stratified sampling across
+problem type, difficulty level, and source (newly created vs. revised). Senior reviewers blind to original
+annotator identities re-evaluated these samples.
+Finally, these strategies enabled the estimation of residual error rates and enforced strict quality control.
+The kappa value of our annotation correctness is close to 0.86, indicating good annotation quality. Table 2
+summarizes the final coverage statistics and rationale distributions.
+A.5. Details of Classification Labeling
+Taxonomy construction.To ensure consistent topic annotations across domains, we build a unified threelevel taxonomy for OMIBench:domain(biology, chemistry, mathematics, physics),subfield(e.g., algebra,
+combinatorics, organic chemistry, mechanics), andfine-grained topic(e.g., polynomial inequalities, graph
+coloring, nucleophilic substitution).
+Fine-Grained Topic Annotation.Because the fine-grained topics are unknown a priori, we first prompt
+GPT-4o to perform open-ende

@@ -1,0 +1,22 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 115
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+rules, unsupported assumptions, or inconsistent intermediate conclusions. (3) Adjusting the reasoning alone,
+without changing the perceived facts, would fix the answer.
+Error distributions highlight complementary weaknesses in LVLM. Visual perception (35%) and crossimage association failures (30%) indicate persistent limits in fine-grained visual understanding and multiimage integration, while logical reasoning (25%) and instruction comprehension errors (10%) show that
+stronger visual encoders alone are insufficient without advances in structured reasoning and multimodal
+instruction following.
+These results motivate future work on: (i) stronger low- and mid-level visual representations, (ii) explicit
+cross-image alignment and aggregation mechanisms, (iii) more reliable, verifiable reasoning procedures, and
+(iv) training schemes that sharpen sensitivity to multimodal instructions and output constraints.
+G. Details for Long CoT Experiments
+This section provides the full experimental details for Section 6.1 (Can Long Chain-of-Thought Strategies
+Help?), including the exact prompting templates, decoding configurations, and the definition of the “thinking”
+and “no-thinking” settings used

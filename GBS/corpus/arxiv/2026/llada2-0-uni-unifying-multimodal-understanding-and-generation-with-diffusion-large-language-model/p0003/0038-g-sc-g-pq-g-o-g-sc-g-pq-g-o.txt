@@ -1,0 +1,22 @@
+title: LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model
+source: arxiv
+year: 2026
+document_id: llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffusion-large-language-model
+authors: Inclusion AI; Tiwei Bie; Haoxing Chen; Tieyuan Chen; Zhenglin Cheng; Long Cui; Kai Gan; Zhicheng Huang; Zhenzhong Lan; Haoquan Li; Jianguo Li; Tao Lin; Qi Qin; Hongjun Wang; Xiaomei Wang; Haoyuan Wu; Yi Xin; Junbo Zhao
+page: 3
+section: g-sc-g-pq-g-o-g-sc-g-pq-g-o
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20796v1
+
+p is largest on benchmarks with longer outputs, where the per-step savings from prefix pruning
+compound across many denoising iterations: DocVQA reaches 3.5× (8.0 → 27.6), and ChartQA and AI2D
+both reach 2.2×. SPRINT improves MMMU by +2.4 and ChartQA by +0.9. The non-uniform unmasking
+schedule concentrates refinement on uncertain positions, effectively increasing the denoising budget for
+difficult tokens without additional forward passes. Furthermore, we are integrating LLaDA2.0-Uni with
+Table 13: Performance and TPS comparison with and without SPRINT. (w/o SGLang)
+Method Metric AI2D OCRB MathVista ChartQA DocVQA MMMU MMStar GenEval DPG Avg.∆
+LLaDA2.0-UniScore 82.0 75.7 68.1 80.1 89.5 50.1 64.1 89.0 87.76 76.3 –
+TPS 19.5 21.2 55.0 28.7 8.0 49.4 31.7 2.8 2.7 24.3 –
++ SPRINT Score 80.9 73.4 67.2 81.0 89.0 52.5 63.0 87.8 86.27 75.7−0.6
+TPS 42.9 36.0 75.0 62.3 27.6 52.2 49.2 5.1 7.8 39.8×1.6
+18

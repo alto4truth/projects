@@ -1,0 +1,21 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 91
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+or
+flawed causal logic.
+4. Instruction Comprehension BiasesThe model fails to adhere to specific constraints provided in
+the text prompt. This includes ignoring format requirements, violating negative constraints (e.g., "do
+not use calculus"), or misunderstanding the core question.
+5. OtherAny error that does not fit the above categories. This includes hallucinating constraints that
+are absent from both text and images, or generating unintelligible content.
+Case Studies of Reasoning ErrorsAs illustrated in Figures 8 to 15, we present representative examples of
+reasoning errors identified in our human evaluation. These cases highlight common pitfalls in LVLM reasoning, such as multi-image information flow confusion, misapplication of physical laws, incorrect geometric
+interpretations, and flawed logical deductions.
+30

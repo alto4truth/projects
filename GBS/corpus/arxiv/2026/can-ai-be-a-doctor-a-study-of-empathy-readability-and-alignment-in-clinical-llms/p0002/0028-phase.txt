@@ -1,0 +1,52 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+].
+Overall, physician-authored responses exhibit moderate complexity in both
+datasets. On MedQuAD, physicians show FKGL = 11.47 and GFI = 12.82. On
+22
+
+iCliniqQAs, physicians exhibit FKGL = 12.50 and GFI = 12.60, indicating that conversational physician responses are not substantially simpler than institutional ones
+in terms of formal grade-level metrics.
+In MedQuAD,GPT5 Basedisplays substantially higher complexity (FKGL =
+16.91, GFI = 20.39), andClaude Basealso exceeds physician readability (FKGL
+= 14.26, GFI = 16.54).Mixtral BaseandMedPaLM Baseremain closer to physician
+levels. For the iCliniqQAs dataset,GPT5 Baseproduces highly complex text (FKGL
+= 17.60, GFI = 17.60), whileClaude Basereaches the highest GFI values overall
+(GFI = 20.30). As shown in Figures 18 and 19, on iCliniqQAsGPT5 Baseis significantly less readable than physicians across both metrics (∆FKGL = +5.44, ∆GFI
+= +7.57, allp <0.001, FDR-corrected).Claude Basealso produces significantly
+more complex text than physicians (∆FKGL = +2.78, ∆GFI = +3.71,p <0.01).
+In contrast,Mixtral BaseandMedPaLM Basedo not show statistically significant
+deviations from physician readability on either dataset, confirming that their baseline
+lexical complexity is broadly aligned with expert-authored responses.
+Across both datasets, empathy prompting and rephrasing systematically reduce
+linguistic complexity relative to baseline models. On MedQuAD (Figures 16 and 17),
+Mixtral EmpathyandMedPaLM Empathyreduce FKGL by−2.41 and−2.41 points
+respectively compared to their base variants, with analogous improvements in GFI
+(−1.79 and−2.31, allp <0.001). ForGPT5, the reduction is even larger:
+GPT5 EmpathyandGPT5 Rephraselower FKGL by−6.87 and−6.61 points and GFI
+by−8.69 and−7.98 points relative toGPT5 Base(allp <0.001).Claude Empathy
+andClaude Rephrasealso improve readability relative toClaude Base(∆FKGL
+=−2.95 and−1.02; ∆GFI =−3.11 and−0.86,p <0.01).
+A comparable pattern is observed in iCliniqQAs (Figures 18 and 19).
+GPT5 Empathyreduces FKGL by−4.54 and GFI by−5.39 relative toGPT5 Base
+(bothp <0.001), andGPT5 Rephraseyields even larger improvements (∆FKGL
+=−6.95, ∆GFI =−7.81,p <0.001). The effect is especially pronounced for
+Claude:Claude Empathylowers FKGL by−7.87 and GFI by−9.56 relative to
+Claude Base, whileClaude Rephrasefurther reduces complexity (∆FKGL =−9.39,
+∆GFI =−11.08, allp <0.001).
+Gemini Rephrasealso shows statistically significant improvements relative to more
+complex baselines (e.g., ∆FKGL =−3.16, ∆GFI =−3.50 vs.GPT5 Baseon
+iCliniqQAs,p <0.001).
+Taken together, these findings confirm that improved readability is not an intrinsic
+property of LLM output. Baseline generations fromMixtralandMedPaLMapproximate physician readability across both datasets, whereasGPT5 BaseandClaude Base
+produce significantly more complex prose. Consistent readability gains emerge primarily when models are explicitly instructed or used as rewriting assistants, indicating that
+accessibility depends strongly on prompting strategy rather than architecture alone.
+23

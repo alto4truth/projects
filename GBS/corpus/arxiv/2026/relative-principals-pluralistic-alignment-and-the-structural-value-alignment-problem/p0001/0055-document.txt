@@ -1,0 +1,23 @@
+title: Relative Principals, Pluralistic Alignment, and the Structural Value Alignment Problem
+source: arxiv
+year: 2026
+document_id: relative-principals-pluralistic-alignment-and-the-structural-value-alignment-problem
+authors: Travis LaCroix
+page: 1
+section: document
+chunk: 55
+source_ref: https://arxiv.org/pdf/2604.20805v1
+
+[ 57].
+Seen through the lens of the scaling hypothesis, this requirement is not incidental but structural: as AI systems
+become more general and widely deployed, alignment increasingly depends on governance mechanisms capable
+of managing both informational asymmetry and pluralistic disagreement at scale.
+4.3 Benchmarking Degrees of Alignment
+A benchmark is supposed to measure a model’s performance on a task. To create a standard metric for measuring
+degrees of value alignment—either singular or pluralistic—requires that the standard can be formalised. To
+benchmark alignment along the objectives axis, one must already formalise the “true” objective that the system
+is meant to approximate. But because objective functions are themselves proxies for those true objectives, such
+formalisation is rarely possible. In other words, the very mechanism that makes value misalignment possible—the
+proxy problem—also makes precise measurement of alignment impossible. Moreover, as Dotan and Milli [17]
+argue, benchmarks do not merely measure progress but actively shape what counts as progress. In particular,
+they highlight that evaluation practices embed normative assumptions about what constitutes

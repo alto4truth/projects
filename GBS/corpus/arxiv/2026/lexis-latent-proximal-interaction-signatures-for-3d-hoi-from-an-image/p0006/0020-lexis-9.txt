@@ -1,0 +1,25 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 6
+section: lexis-9
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+terms provide explicit geometric and visual supervision;LIF penalizes theL 1
+discrepancy between the estimated (Dψ( ˆZ,f o)) and GT InterFields,Lv2v is aL2
+vertex-to-vertex loss between estimated (M(ˆB)) and GT (M(B)) body meshes,
+L2D is a 2D keypoint re-projection loss encouraging alignment with image cues,
+andL obs is a loss penalizing deviation between “observed” and GT InterFields,
+encouraging consistency between the estimated poses and InterFields. To this
+end, it first poses the object relative to the body using the estimated transformations{ ˆRo, ˆto}, computes the “observed” InterFields between the posed body
+and object meshes, and penalizes their deviation from the GT InterField. The
+steering weightsλare set empirically; see “Implementation Details” in Sec. 3.4.
+3.3 InterField-Guided Refinement within LEXIS-Flow
+Our LEXIS-Flow (Sec. 3.2) is a flow-based generative model, so it imposes
+a prior that pulls estimations towards the training-data distribution. However,
+for rare/unseen images and interactions it can naturally make errors. Typically,
+optimization performs corrections via contact constraints [82], but is slow, prone
+to local minima, and takes place post-hoc, i.e.,

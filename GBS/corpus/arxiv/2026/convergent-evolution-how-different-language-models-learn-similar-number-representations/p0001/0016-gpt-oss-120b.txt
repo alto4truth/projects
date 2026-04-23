@@ -1,0 +1,26 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+Convergent Evolution6
+using two complementary measurements: (1) theFourier magnitude spectrum, computed
+as the power ∥Fν∥2 normalized by the median across frequencies ν, and (2) themod- T
+probe accuracy, measured by Cohen’sκ of a classifier trained to predict nmodT from the
+token embedding e(n). Cohen’s κ adjusts for the baseline accuracy of random guessing
+(1/T for balanced classes), so that κ= 0 corresponds to chance and κ= 100% to perfect
+classification regardless of T. We report accuracy-based results in the appendix. We use
+three probe types: linear (logistic regression), MLP , and RFM kernel (Radhakrishnan et al.,
+2024); unless noted, we report linear probe results, with the others in § B.5. We report probe
+performance averaged over 30 runs: 3 random seeds, each with 10-fold cross-validation. The
+first measurement detects periodic structure while the second tests whether that structure
+supports mod-Tclassification.
+Fourier spikes are universal.Figure 1 shows that every pretrained model we examine,
+spanning Transformer LLMs, non-Transformer LLMs, and classical word embeddings,
+exhibits peaks at ν= 1/10, 1/5, 1/2.Spectral convergenceis universal as long as natural
+languages are

@@ -1,0 +1,24 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 1
+section: coral-arm-bn
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+on is
+also carried out at test-time, and, as in AdaBN, the BN
+statistics are computed using samples from the new domain. However, in this method an additional adaptation is
+included, consisting in minimizing the entropy H of the
+model predictions ˆy by updating only the BatchNorm affine
+parametersγandβ:
+ˆy=g(x), H( ˆy) =−
+KX
+k=1
+ˆyk log(ˆyk)(6)
+min
+γ,β
+H( ˆy)(7)
+4

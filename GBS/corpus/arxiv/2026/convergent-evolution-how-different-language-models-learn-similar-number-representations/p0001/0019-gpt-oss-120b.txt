@@ -1,0 +1,25 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+h are instances ofconvergent evolution: different systems arriving at similar representations because of shared
+constraints. The next sections identify what drives each.
+4 Convergent Evolution in Language Model Pretraining
+Spectral convergence requires only the periodic frequency distribution of number tokens,
+but geometric convergence is selective. We now ask which constraints must be present for
+geometric convergence to emerge. Through controlled experiments that vary one factor at a
+time, we identify three: the data signal the model receives (§4.1), the architecture, and the
+optimizer (§4.2). All experiments use 300M-parameter models trained on 10B tokens from
+FineWeb-Edu (Lozhkov et al., 2024) with the Llama-3 tokenizer, unless stated otherwise.
+4.1 Structural Attribution to Data
+To isolate the environmental pressures driving convergence, we fix the architecture (300M
+Transformer) and optimizer (Muon, Jordan et al., 2024) and vary only the training data. We
+apply controlled perturbations (Table 1) that each remove a specific type of co-occurrence
+while leaving others intact, attributing the emergence of spectral and geometric convergence
+to specific structural properties of the

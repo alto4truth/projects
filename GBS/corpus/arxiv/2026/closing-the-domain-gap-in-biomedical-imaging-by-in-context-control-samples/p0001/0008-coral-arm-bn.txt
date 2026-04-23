@@ -1,0 +1,29 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 1
+section: coral-arm-bn
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+a significant
+improvement with respect to its pure test-time counterparts.
+Nevertheless, in this work, we show that these methods also
+underperform in the presence of small batch sizes and under
+label shifts. Both scenarios, a) small sample sizes and b)
+labels shifts in a new experimental batch are very plausible,
+because of the typical design of such bioimaging studies
+(Hughes et al., 2011; Knowles and Gromo, 2003). However,
+almost all biomedical experiments guarantee that a specific
+type of samples will bepresent in every new experimental batch (i.e., domain):negative controls(Chandrasekaran
+et al., 2023; Bray et al., 2017). Therefore, we propose to
+exploit the presence of negative controls and use them as
+context samples both during training and for inference of a
+meta-learning model, showing that this approach makes the
+performance of our method robust to small numbers of new
+experimental batches and to shifts in the class distribution.
+Contributions.Our main contributions are the following:
+• We proposeCS-ARM-BN, a control-stabilized metalearned BatchNorm adaptation method that leverages
+negative control samples available in every experimental batch, and show that it robustly

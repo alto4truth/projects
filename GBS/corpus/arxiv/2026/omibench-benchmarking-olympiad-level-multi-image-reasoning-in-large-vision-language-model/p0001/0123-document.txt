@@ -1,0 +1,30 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 123
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+H.4. Details of In-Context Learning Experiments on OMIBench
+This section details the experimental protocol for the in-context learning (ICL) results reported in Figure 6(a),
+including the construction of in-context examples, the definition of the No-Image-ICL, Single-Image-ICL and
+Multi-Image-ICL conditions, and the control choices used to ensure fair comparison across conditions.
+Prompt template and formatting.For each test instance, we randomly samplek demonstrations from
+OMIBench; these source problems are excluded when computing the evaluation metrics. For each instance,
+the sampled demonstrations are fixed across all ICL conditions to ensure a fair comparison. All ICL variants
+share a unified prompt template to isolate the effect of visual context. Each prompt is structured as follows:
+In-Context Learning Prompt Template-P1
+Please reason step by step, and then provide the final answer in the exact format: “\boxed{ANSWER}”.
+[EXAMPLE 1]
+[Question]
+[Problem Text 0] [IMAGE0] ... [Problem Textn K]
+[Choices] # only for multiple choices problems
+[Solution]
+[Example Solution]
+[EXAMPLE 2]
+[Question]
+[Problem Text 0] [IMAGE0] ... [Problem Textn K]
+[Choices] # only for multiple choices p

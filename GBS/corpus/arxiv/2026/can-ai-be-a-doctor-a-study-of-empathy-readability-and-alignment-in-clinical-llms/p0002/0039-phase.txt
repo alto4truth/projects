@@ -1,0 +1,49 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+eflects a shift from detached concern [41] toward regulated empathy [42],
+but it does not imply faithful reproduction of physician affective norms.
+33
+
+For RQ2, baseline LLM generations do not systematically improve readability.
+In both datasets, GPT5 Base and Claude Base produce significantly higher FKGL
+and GFI scores than physician-authored responses. Mixtral Base and MedPaLM Base
+remain closer to physician readability levels. Empathy prompting and collaborative
+rewriting reduce linguistic complexity across architectures. These reductions are statistically significant and consistent in both datasets. The results confirm that stylistic
+accessibility depends on alignment strategies rather than intrinsic model properties.
+This pattern is consistent with findings that domain specialization increases terminological density and lexical complexity [43]. Readability improvements therefore emerge
+primarily through explicit control mechanisms[44].
+For RQ3, empathy-oriented prompting modifies communicative style but does not
+substantially alter semantic fidelity. Across both datasets, cosine similarity remains
+stable between base and empathy configurations. The main effect of prompting concerns affective distribution and moderate readability reduction. This supports prior
+work showing that stylistic control through prompting influences surface-level structure and tone [43]. Prompt design acts as a lightweight alignment intervention but
+does not fundamentally reshape epistemic alignment.
+RQ4 shows that collaborative rewriting produces the most robust improvements
+across dimensions. Rephrase variants consistently achieve the highest semantic fidelity.
+In MedQuAD, GPT5 Rephrase reaches the strongest conceptual alignment. In iCliniqQAs, MedPaLM Rephrase achieves the highest similarity scores and significantly
+outperforms baseline variants. Rewriting improves readability and reduces affective
+extremity without degrading semantic overlap. These results align with studies reporting that guided rewriting outperforms prompt-only stylistic control [45]. Similar
+findings in AI-assisted documentation show that editing assistance enhances coherence and clarity without replacing clinician expertise [46]. The evidence supports a
+human–AI collaborative model rather than autonomous substitution.
+RQ5 highlights systematic divergence between expert and patient preferences. In
+MedQuAD, expert ratings remain anchored to physician-level epistemic standards. No
+LLM configuration surpasses physicians on accuracy, style, or precision. Relational
+gains appear primarily in patient evaluations. In iCliniqQAs, relational metrics dominate stakeholder differentiation. Rephrase configurations achieve near-ceiling patient
+trust and emotional tone scores, while expert ratings remain bounded by physician
+baselines. These findings confirm that stakeholder alignment is multidimensional and
+strongly dependent on communicative context and dataset characteristics.
+Across both datasets, rewriting consistently improves relational alignment without demonstrating epistemic superiority over physician-authored content. Gains are
+larger in conversational data than in institutional explanations. The difference suggests
+that communicative context mediates the magnitude of alignment effects. Institutional
+explanations impose stronger epistemic constraints. Conversational exchanges allow
+greater stylistic modulation.
+Limitations.This study relies on controlled subsets rather than full-corpus evaluation. The MedQuAD subset is readability-stratified and the iCliniqQAs subset is
+severity-balanced. The reduced sample size limits statistical generalization. Sentiment
+34

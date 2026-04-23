@@ -1,0 +1,23 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+nchored by physical observations) and the prior termLprior (guided by pseudo-supervision) in Eq. 6
+are instantiated with the photometric lossLcolor:
+LStage2 = (1−λ rect)Lcolor(ˆIrender, It,v) +λ rectLcolor(ˆIrender, ˆIrect) (13)
+whereλ rect is the weighting factor for the rectified signal, typically set to a small
+value, ensuring that the optimization remains grounded in physical observations
+It,v while selectively absorbing high-frequency textures from the rectified views
+ˆIrect. This strategy effectively distills the strong generative power of 2D diffusion
+models into the explicit 3D scene representation, enabling knowledge transfer
+from sparse input to dense details.
+4 Experiments
+4.1 Experimental Settings
+Datasets.We evaluate GeoRect4D on three real-world datasets: N3DV [31],
+MeetRoom [30], and the high-motion MPEG dataset. For N3DV and MeetRoom,

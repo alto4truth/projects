@@ -1,0 +1,22 @@
+title: SWE-chat: Coding Agent Interactions From Real Users in the Wild
+source: arxiv
+year: 2026
+document_id: swe-chat-coding-agent-interactions-from-real-users-in-the-wild
+authors: Joachim Baumann; Vishakh Padmakumar; Xiang Li; John Yang; Diyi Yang; Sanmi Koyejo
+page: 6
+section: evaluation-procedure
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20779v1
+
+ude: appropriate use of
+research tools before acting, surfacing uncertainty and offering the user choices,
+and recovering from errors autonomously.
+4. **Code and commit quality**: If code was produced, does it appear correct and
+complete based on the available evidence (test results, diff content, user
+reactions)? Were changes committed? Commits are a strong positive signal for taskoriented sessions but are not required for short advisory or exploratory sessions
+where no code change was the expected outcome.
+5. **User experience**: Did the user have to fight the agent, or did the interaction
+flow naturally? Look for signs of satisfaction (thanks, approval, moving to the
+next task) and dissatisfaction (re-explaining, correcting, expressing frustration)
+.
+37

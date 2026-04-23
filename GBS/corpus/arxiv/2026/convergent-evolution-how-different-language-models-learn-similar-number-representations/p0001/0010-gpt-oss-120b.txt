@@ -1,0 +1,49 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+distinct Fourier spikes at T= 2, 5, and 10. (Middle)
+Linear probes reveal only the Transformer and Gated DeltaNet learned functional modular
+arithmetic with high Cohen’sκ, while others remain at chance. (Right) Theorem 1 explains
+this discrepancy through the internal noise structure of theT=10 embeddings.
+LSTM trained on the same data as a Transformer develops larger Fourier power at T= 10
+yet achieves chance-level probing. The following result shows how this is possible and
+demonstrates that the presence of a Fourier spike is anecessarybut not asufficientcondition
+for learning modular probes.
+Theorem 1.Given embeddings {e(n)} N−1
+n=0 and residue classes {Cr}T−1
+r=0 defined above, let the class
+meansµ r, grand meanµ, between-class scatter matrixS B, and within-class scatter matrixS W be
+µr = 1
+|Cr| ∑
+n∈Cr
+e(n),µ= 1
+N
+N−1
+∑
+n=0
+e(n),
+SB = 1
+T
+T−1
+∑
+r=0
+(µr −µ)(µ r −µ) ⊤,S W = 1
+N
+T−1
+∑
+r=0
+∑
+n∈Cr
+(e(n)−µ r)(e(n)−µ r)⊤.
+Let ΦT = ∑T−1
+ℓ=1 ∥Fℓ/T ∥2 be the total power at harmonics of period T, and HT =
+{0, 1/T, 2/T, . . . ,(T−1)/T}be the set of harmonic frequencies.
+(i)IfΦ T =0, thenS B =0and no linear probe can classify nmodT above chance.
+(ii) For any T≥ 2, C> 0, and ε> 0, there exist

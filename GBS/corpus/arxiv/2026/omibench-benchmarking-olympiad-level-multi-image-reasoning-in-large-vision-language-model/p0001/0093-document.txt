@@ -1,0 +1,32 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 93
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+htline...
+StandardRationale:Let'sanalyzeeachdescriptionaboutecotonesinrelationtothefigures:…StandardAnswer(Gold):Fig2(B)&Fig4(D)
+ModelPrediction(Gemini-3-pro):Fig4(D)selects...Fig4andrejects…Fig2…
+Input:
+Fig
+1:
+Straight
+…B.Figure2hasmarginalundulatingboundarywhichsuggestalmostcompletedistinction.Thiscanbe……D.Figure4showsalmostnonoverlappingecotones...distinctexceptfortheoverlappingregions…
+ErrorAnalysis:Themodelwasseducedbythe"VisualObviousness"oftheoverlappingregioninFig4.Itreducedthe“True/False”taskto“SingleBestChoice” task,failingtomaptheabstractsymbol(wavyline)inFig2totheconceptof"RiverEcotone".
+Fig2:
+Undulating
+Boundary
+(2points)Anecotoneisatransitionareabetweentwobiomes.Itiswheretwocommunitiesmeetandintegrate.Itmaybenarroworwide,anditmaybelocalorregional…
+Fig
+3
+:
+Intermingled
+Fig4:
+Overlapping
+Zone
+Figure11: Analysis of reasoning error examples on Gemini-3-Pro.
+31

@@ -1,0 +1,24 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+2 Z. Wu et al.
+state-of-the-art performance in reconstruction fidelity, perceptual quality, and spatiotemporal consistency across multiple datasets.
+Keywords:Sparse-View Reconstruction·Dynamic 3D Gaussian Splatting·Diffusion Model
+1 Introduction
+Reconstructing dynamic 3D scenes from sparse multi-view videos remains a fundamentally ill-posed problem. Without dense cross-view constraints, limited spatiotemporal cues cause optimization over explicit representations to converge to
+degenerate configurations, including geometric collapse, floaters, trajectory drift,
+and texture ambiguity. Such failures are more pronounced in dynamic scenes,
+where motion and geometry are tightly coupled under insufficient supervision.
+Solving this challenge is critical for practical 6-DoF free-viewpoint video (FVV)
+systems in resource-constrained capture settings.
+Neural Radiance Fields (NeRF) [38] and their dynamic extensions [5,43,45,
+59] have demonstrated high-fidelity novel view synthesis under dense multi-view
+supervision, but typically incur substantial training and rendering costs. More
+recently, 3D Gaussian Splatting (3DGS) [26] offers an explicit and efficient alternative with real-time rendering

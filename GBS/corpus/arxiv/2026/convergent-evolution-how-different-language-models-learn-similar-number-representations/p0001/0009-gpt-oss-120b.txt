@@ -1,0 +1,111 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+Convergent Evolution4
+0.0 0.1 0.2 0.3 0.4 0.5
+0
+4
+8
+T=2T=5T=10
+Transformer
+Fourier Magnitude Spectrum
+2 3 4 5 6 7 8 9 10
+0
+50
+100 96
+-4
+35
+64
+11
+-9
+10
+-5
+85
+Cohen's of Linear Probe (%)
+1 2 3 4 5 6 7 8 9
+0
+15
+30
+max = 23.314
+Fourier 10 = 33.8
+cond(SW) = 122.1
+Eigenvalues of S 1
+W SB (T=10)
+0.0 0.1 0.2 0.3 0.4 0.5
+0
+4
+8
+T=2T=5T=10
+Gated DeltaNet
+2 3 4 5 6 7 8 9 10
+0
+50
+100 95
+-5
+37
+55
+11
+-7
+14
+-5
+78
+1 2 3 4 5 6 7 8 9
+0
+15
+30
+max = 19.963
+Fourier 10 = 24.6
+cond(SW) = 126.3
+0.0 0.1 0.2 0.3 0.4 0.5
+0
+4
+8
+T=2
+T=5
+T=10
+LSTM
+2 3 4 5 6 7 8 9 10
+0
+50
+100
+9
+0 0 3 0 -1 0 -1 2
+1 2 3 4 5 6 7 8 9
+0
+15
+30
+max = 0.290
+Fourier 10 = 337.4
+cond(SW) = 8569.0
+0.0 0.1 0.2 0.3 0.4 0.5
+Fourier Frequency
+0
+4
+8
+T=2T=5T=10
+Token Dist.
+2 3 4 5 6 7 8 9 10
+Modulus T
+0
+50
+100
+4 0 1 4 1 -1 1 0 3
+1 2 3 4 5 6 7 8 9
+Eigenvalue Rank i
+0
+15
+30
+max = 0.046
+Fourier 10 = 94.0
+Figure 2:A “Spiky” Fourier Spectrum Does Not Imply Good Feature Learning.(Left)
+Token embeddings of Transformer, Gated DeltaNet and LSTM, and even simply the Number
+Token Distribution Frequency exhibit distinct Fourier spikes at T= 2, 5, and 10. (Middle)
+Linear probes reveal only the Transformer and Gated DeltaNet learned functional modular
+arithmeti

@@ -1,0 +1,45 @@
+title: SWE-chat: Coding Agent Interactions From Real Users in the Wild
+source: arxiv
+year: 2026
+document_id: swe-chat-coding-agent-interactions-from-real-users-in-the-wild
+authors: Joachim Baumann; Vishakh Padmakumar; Xiang Li; John Yang; Diyi Yang; Sanmi Koyejo
+page: 5
+section: input
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20779v1
+
+now"
+- non_pushback - The prompt moves the session forward normally: a new task, building on
+agent output, asking a question, or routine iteration.
+36
+
+Examples: "now add a login page", "good, also add unit tests", "why did you use a
+list here?", "change the button color to blue"
+Disambiguation:
+- correction vs rejection: correction provides a specific fix, missing information, or
+new direction; rejection just says "no" or "undo" without explaining what was
+wrong.
+- failure_report vs rejection: failure_report = "it doesn't work" (something is broken)
+; rejection = "I don't want that" (output is unwanted even if functional).
+When uncertain:
+- If the prompt contains words like "undo", "revert", "wrong", "broken", "doesn't work
+", "I said", "you missed", or "never mind", lean toward a pushback category.
+- If the prompt reads like a standalone next step with no negative reaction, lean
+toward non_pushback.
+Respond in valid JSON only:
+{
+"label": "<one of: correction, rejection, failure_report, non_pushback>",
+"reason": "<1-2 sentence explanation>"
+}
+Preceding conversation context:
+{context}
+User prompt to classify:
+{input}
+E.2.5 Session success rating
+Model:claude-sonnet-4-6.
+You are scoring the overall success of an interactive coding session between a human
+user and an AI coding agent.
+You will receive:
+1. The full conversation transcript (user messages and agent responses).
+2. A summary of tool calls made during the session (category counts, top tools).
+3. Commit information, if any (commit messages and diff summaries).

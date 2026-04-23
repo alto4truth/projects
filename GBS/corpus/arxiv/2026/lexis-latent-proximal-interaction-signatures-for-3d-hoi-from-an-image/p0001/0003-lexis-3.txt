@@ -1,0 +1,25 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 1
+section: lexis-3
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+SotA methods on 3D reconstruction in the wild and its estimates are perceived as significantly more realistic.
+In-distributionevaluationontheBEHAVE[4]datasetechoestheabove.Ablation
+studies support our key design choices. Last, evaluation shows that LEXIS-Flow
+can be initialized with 3D estimates provided by SotA tools, and LEXIS-Flow’s
+guided refinement clearly improves these.
+In summary, here we make the following contributions:
+1. Wegobeyondsparse,binarycontactbyinferringdense, continuousInterFields
+that encodeproximitycues across entire body and object surfaces.
+2. We learn the novel LEXISdictionarythat encodes action- and object-aware
+latent interaction signatures, which are learned from 3D interaction datasets.
+3. We develop LEXIS-Flow, a model that exploits LEXIS to estimate a 3D
+human, object, and their InterFields, from an image. Notably, LEXIS-based
+InterFields guide the Flow-Matching generative sampling to refine estimates
+and improve the 3D HOI plausibility, without post-hoc optimization.
+Code and models will be available athttps://anticdimi.github.io/lexis.

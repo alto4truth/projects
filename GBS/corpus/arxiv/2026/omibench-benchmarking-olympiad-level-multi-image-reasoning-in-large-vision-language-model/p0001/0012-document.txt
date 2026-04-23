@@ -1,0 +1,26 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+edure used to format the textual input. Conditioned onI and T , the model produces a step-by-step
+rationaleR m ={s 1, . . . ,s m}, with each step generated as:
+si =argmax si∈Rm P(si|I,T).(3)
+Finally, the model arrives at the final answerYfrom open answer spaceA, which is denoted as:
+Y=argmax A P(A|R m),(4)
+where Y derives from information in the images and question, requiring the model to integrate visual and
+textual cues for a coherent answer.
+3. Olympiad-Level Multi-Image Reasoning Benchmark (OMIBench)
+We build OMIBench to assess whether LVLMs can solve competition-grade scientific problems whose evidence
+is distributed across multiple images, with coverage across biology, chemistry, mathematics, and physics.
+Summary statistics are provided in Figure 2 and Table 3. Data construction details can be seen in Appendix A.
+3.1. Design Principle
+OMIBench targets the upper bound of Olympiad-level problem solving and supports research on LVLMs
+for multi-image reasoning in biology, mathematics, chemistry, and physics. Following He et al.[24], it
+reflects the rigor of top competitions. Specifically, OMIBench includes:Olympiad-level problems:Biology,
+mathematics, chemistry, and physics quest

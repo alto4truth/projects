@@ -1,0 +1,21 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 11
+section: deep-expressions-depth-3
+chunk: 49
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+run ((3 * (2 + 1)) + (4 * (0 + 1))) times [
+if ((holding ball and holding box) or (not
+(holding key) and holding item)) then [
+go forward (2 * (1 + 1)) end
+]
+]
+A.3.3 Syntactic Style Variations
+We generate the same underlying AST in different
+surface forms to test robustness to syntax. The
+Block style uses explicit keywords like do/end and
+repeatto delimit scope.

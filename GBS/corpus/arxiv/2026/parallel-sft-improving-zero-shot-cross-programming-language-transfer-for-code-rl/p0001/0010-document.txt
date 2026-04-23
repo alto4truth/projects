@@ -1,0 +1,21 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+l., 2018, 2019; Artetxe and Schwenk, 2019;i.a.), where language-general representations allow
+the task head’s decision boundary to naturally generalize across languages (Conneau et al., 2018). While modern models
+typically update the pretrained parameters too, a language-general initialization still enables a general learning process.
+While this paradigm is successful for natural languages, its application to programming languages has yielded mixed
+results. Early work focused on pretraining encoder models on code-only corpora (Feng et al., 2020; Wang et al., 2021b).
+These studies typically involved non-generative tasks (e.g., code search; Chen et al., 2022; Baltaji et al., 2025) or training
+a separate decoder from scratch to pair with the pretrained encoder (Ahmed and Devanbu, 2021; Chen et al., 2022).
+Despite mostly positive transfer effects, these settings are far removed from the current pretraining paradigm. Recently,
+Baltaji et al. (2025) investigated cross-PL code generation in modern LLMs via in-context learning, but found that
+cross-PL transfer often underperforms zero-shot prompting. Furthermore, interpretability studies have revealed low
+cross-PL representation generality

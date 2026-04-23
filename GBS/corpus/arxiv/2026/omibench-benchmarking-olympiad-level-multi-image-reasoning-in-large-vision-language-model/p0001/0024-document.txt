@@ -1,0 +1,42 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+051015202530
+1416642562024283236
+2561024409616384Max Token Length
+Accuracy (%)
+(a) SequentialScalingPerformance.
+0510152025303540
+2832128Parameter Size (B)
+Accuracy (%)
+Parameter Size (B)
+Qwen3-VLQwen2.5-VLIntern3.5-VLIntern3-VL
+Accuracy (%)
+3234363840
+124816Sampling Size
+Accuracy (%)
+(b) Parameter Scaling Performance.(c) ParallelScalingPerformance.
+Qwen3-32B-VLQwen3-32B-VL
+Figure5: Performance analysis on 3-dimensional Test-Time Scaling paradigms. See Appendix H for more
+details.
+30323436384042
+01234shot
+Accuracy (%)
+0102030405060
+0102030405060
+BiologyChemistryMathematicsPhysicTotalGPT-4o+Visual-SketchpadQwen2.5-32B-VLEMU-34B
+BiologyChemistryMathematicsPhysicTotal
+Bio.Chem.Math.Phy.TotalBio.Chem.Math.Phy.TotalSubject Subject
+Accuracy (%)
+Accuracy (%)
+No-Image-ICLOne-Image-ICLMulti-Image-ICL
+(a) The Performanceon In-Context Learning(b) The Performanceon Tool-based Think-with-Image(c) The Performanceon Internal Think-with-Image
+Figure6: The performance analysis on multimodal In-Context Learning and Thinking-with-Image paradigms.
+Cross-image reasoning remains the main bottleneck.To disentangle cross-image reasoning from confounders such as increased visual information, longer inputs,

@@ -1,0 +1,53 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 2
+section: grab-item
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+Algorithm 1Controllable Grammar and Program
+Generation
+Require: Styles S, Lexicons L, Max depth Dmax, Max block
+sizeB max, Else-probp e
+Ensure:GrammarG, Codey, ASTT
+1:functionGENERATEINSTANCE
+2:s∼ S, ℓ∼ L▷Sample style and lexicon
+3:K ←MAPLEXICON(ℓ)
+4:G ←BUILDGRAMMAR(s,K)
+5:T←SAMPLENODE(d= 0)
+6:y←LINEARIZE(T, s,K)
+7:return(G, y, T)
+8:end function
+9:functionSAMPLENODE(d)
+10:ifd≥D max then
+11:returnSAMPLEACTION▷Base case: leaf node
+12:end if
+13:t∼Categorical({Act, Loop, If})
+14:ift=Actthen
+15:returnSAMPLEACTION
+16:else ift=Loopthen
+17:e←SAMPLEEXPR(d)
+18:B←SAMPLEBLOCK(d+ 1)
+19:return Node(Loop,e, B)
+20:else ift=Ifthen
+21:c←SAMPLECOND(d)
+22:T b ←SAMPLEBLOCK(d+ 1)
+23:E b ←Bernoulli(p e)?SAMPLEBLOCK(d+ 1) :
+None
+24:return Node(If,c, T b, Eb)
+25:end if
+26:end function
+27:functionSAMPLEBLOCK(d)
+28:n∼Uniform(1, B max)▷Number of statements
+29:return[SAMPLENODE(d)fori= 1. . . n]
+30:end function
+leverage semantic priors to infer the function of a
+command, forcing a reliance on the provided EBNF
+specification.
+3.3 Synthesis Procedure
+Algorithm 1 formalizes the generation process. The
+pipeline first samples a grammar variant G by binding a syntactic style to a lexicon. It then performs a
+constrai

@@ -1,0 +1,51 @@
+title: SWE-chat: Coding Agent Interactions From Real Users in the Wild
+source: arxiv
+year: 2026
+document_id: swe-chat-coding-agent-interactions-from-real-users-in-the-wild
+authors: Joachim Baumann; Vishakh Padmakumar; Xiang Li; John Yang; Diyi Yang; Sanmi Koyejo
+page: 3
+section: output-format
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20779v1
+
+Respond in valid JSON with the following format (and no other text):
+34
+
+{
+""domain"": <application|library|devtools|other>,
+""audience"": <enduser|developer|researchers|education>,
+}
+Repository information:
+{input}
+We aggregate library and devtools into a single category called devtools, since human
+annotators often disagreed about which to assign.
+E.2.2 Session persona classifier
+Model:gpt-5.4-2026-03-05. Parameters:reasoning_e f f ort=low.
+You are given a chronological timeline of a coding session. The timeline contains:
+- User prompts
+- Model responses
+- AI agent coding actions (file edits, tool calls, tests run, etc.)
+- Commits or diffs
+- Any visible user reactions to outputs
+Your task is to classify the USER (not the model) into one of the following personas:
+1) Expert Nitpicker
+- Deep domain knowledge; high and consistent standards
+- Gives precise, technically specific instructions or corrections
+- Notices subtle issues and requests exact adjustments
+- Goal remains stable throughout; corrections refine execution, not direction
+2) Vague Requester
+- Broad strokes only; underspecified goals
+- Missing constraints; leaves many decisions to the model
+- Does not correct or redirect in detail
+3) Mind Changer
+- Shifts the overall goal or requirements mid-session
+- Contradicts or reverses earlier instructions
+- Corrections change direction, not just execution details
+4) Other (use only when the session is too brief to judge, or the user's behavior
+clearly does not match any of the above)
+Disambiguation:
+- Expert Nitpicker vs Mind Changer: an Expert Nitpicker corrects HOW the model executes
+a stable goal; a Mind Changer revises WHAT the goal is. Repeated precise
+corrections within the same goal = Expert Nitpicker.
+- Expert Nitpicker vs Other: prefer Expert Nitpicker over Other when the user shows
+specific technical demands, even if corrections are infrequent.

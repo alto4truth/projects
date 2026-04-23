@@ -1,0 +1,28 @@
+title: SWE-chat: Coding Agent Interactions From Real Users in the Wild
+source: arxiv
+year: 2026
+document_id: swe-chat-coding-agent-interactions-from-real-users-in-the-wild
+authors: Joachim Baumann; Vishakh Padmakumar; Xiang Li; John Yang; Diyi Yang; Sanmi Koyejo
+page: 6
+section: evaluation-procedure
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20779v1
+
+First, analyze the session along five dimensions. For each, note concrete evidence from
+the transcript.
+1. **Goal completion**: Did the agent fulfill what the user asked for? Identify every
+distinct user request or task. For each, judge whether it was fully resolved,
+partially resolved, or unresolved.
+2. **Final session state**: How did the session end? A natural conclusion (user
+confirms satisfaction, moves on to a new topic, or signs off) is positive. An
+abrupt stop (user abandons mid-task, expresses frustration, or silently disengages
+after an unresolved error) is negative. Weigh the ending heavily - a session that
+goes well for many turns but ends in an unresolved failure should score
+substantially lower than one that resolves cleanly.
+3. **Agent efficiency**: Did the agent make steady progress, or did it spin? Negative
+signals include: the user repeating the same instruction or correction, the agent
+retrying a failed approach without changing strategy, and unnecessary tool calls
+that do not advance the task. Positive signals include: appropriate use of
+research tools before acting, surfacing uncertainty and offering the user choices,
+and recovering from errors autonomously.
+4.

@@ -1,0 +1,14 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+quality free-viewpoint video synthesis.
+Limitations.Despite its effectiveness, GeoRect4D has two primary limitations. First, the framework’s performance remains sensitive to SfM-based initialization, as textureless regions or extreme occlusions can result in suboptimal
+reconstruction. Second, although the single-step diffusion prior is efficient, the
+closed-loop generative distillation still introduces higher training overhead compared to purely explicit dynamic modeling.

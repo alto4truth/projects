@@ -1,0 +1,27 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 42
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+n of microscopy imaging data.Our study shows that
+in-context adaptation, where models adapt some of their
+parameters on a small set of unlabeled samples from a new
+batch, clearly outperforms established approaches.
+Across four experiments, we find that (i) batch effects cause
+a large generalization gap even under mild within-source
+shifts, (ii) cross-source transfer is substantially harder but
+the domain gap is notably narrowed by meta-learned incontext adaptation, (iii) standard BN-based test-time adaptation methods are weak when target statistics are estimated
+from few or label-skewed perturbed samples. By leveraging
+the experimental design of high-content screening, i.e. the
+presence of negative controls in every batch, CS-ARM-BN,
+yields strong accuracy while remaining robust to small context sizes and label shift. While it could be argued that this
+increase in performance is solely due to a larger batch size,
+we also show that CS-ARM-BN outperforms its counterparts without controls even when using the same amount of
+samples to compute BN statistics. We intentionally focus
+on lightweight, fast adaptation methods that can operate
+with limited target data and minimal computation,

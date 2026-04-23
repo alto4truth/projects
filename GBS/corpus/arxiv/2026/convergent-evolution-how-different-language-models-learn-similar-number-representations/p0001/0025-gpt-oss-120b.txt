@@ -1,0 +1,54 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+Convergent Evolution8
+Transformer
+Gated DeltaNet
+Mamba-2
+Language Models (Muon)
+96.1 -4.5 34.9 63.5 11.0 -9.1 9.9 -5.2 85.4
+95.1 -5.3 37.3 55.2 10.7 -6.9 13.6 -5.2 77.8
+93.8 -2.1 29.3 50.7 10.7 -8.4 12.9 -4.8 76.7
+Transformer
+Gated DeltaNet
+Mamba-2
+LSTM
+Language Models (AdamW)
+89.1 -2.8 32.4 47.7 12.3 -8.1 11.3 -5.3 72.1
+91.1 -5.8 28.4 46.4 11.7 -9.8 10.6 -4.2 69.7
+95.0 -6.0 31.2 55.3 11.1 -7.6 10.8 -3.7 80.1
+9.0 -0.3 0.3 2.7 0.4 -1.2 0.3 -0.8 2.0
+0.0 0.1 0.2 0.3 0.4 0.5
+Fourier Frequency
+PPMI
+word2vec
+Classical Word Embeddings
+mod 2 mod 3 mod 4 mod 5 mod 6 mod 7 mod 8 mod 9 mod 10
+54.4 -14.5 19.8 20.8 -0.1 -10.6 7.5 -7.5 27.1
+40.7 -2.3 18.9 25.0 7.4 -2.4 6.0 -2.0 29.3
+1.0
+1.5
+2.0
+3.0
+4.0
+Norm. Magnitude
+0
+20
+40
+60
+80
+100
+Cohen's (%)
+Fourier Magnitude Spectrum Cohen's of Linear Probe (%)
+Figure 5:Geometric convergence depends on architecture and optimizer.(Left) Fourier
+magnitude spectra of number embeddings across architectures and optimizers; all exhibit
+spikes at periods T= 2, 5, 10, including theLSTM and classical word embeddings. All three
+architectures produce similar Fourier spectra under both optimizers. (Right) Mod-T probe
+accuracy separates the models into tiers. With bot

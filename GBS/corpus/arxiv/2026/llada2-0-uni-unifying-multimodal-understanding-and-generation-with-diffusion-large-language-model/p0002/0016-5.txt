@@ -1,0 +1,32 @@
+title: LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model
+source: arxiv
+year: 2026
+document_id: llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffusion-large-language-model
+authors: Inclusion AI; Tiwei Bie; Haoxing Chen; Tieyuan Chen; Zhenglin Cheng; Long Cui; Kai Gan; Zhicheng Huang; Zhenzhong Lan; Haoquan Li; Jianguo Li; Tao Lin; Qi Qin; Hongjun Wang; Xiaomei Wang; Haoyuan Wu; Yi Xin; Junbo Zhao
+page: 2
+section: 5
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20796v1
+
+Table 5: Comparison of Text-to-Image Generation Ability on OneIG-EN Benchmark.
+Type Model Arch. Alignment Text Reasoning Style Diversity Overall↑
+Gen. Only
+FLUX.1 [Dev] Diff. 0.786 0.523 0.253 0.368 0.238 0.434
+Lumina-Image 2.0 Diff. 0.819 0.106 0.270 0.354 0.216 0.353
+Seedream 3.0 Diff. 0.818 0.865 0.275 0.413 0.277 0.530
+Qwen-Image Diff. 0.882 0.891 0.306 0.418 0.197 0.539
+Z-Image-Turbo Diff. 0.840 0.994 0.298 0.368 0.139 0.528
+Unified
+Janus-Pro AR 0.553 0.001 0.139 0.276 0.365 0.267
+BAGEL AR + Diff. 0.769 0.244 0.173 0.367 0.251 0.361
+OmniGen2 AR + Diff. 0.804 0.680 0.271 0.377 0.242 0.475
+InternVL-U AR + Diff. 0.820 0.740 0.270 0.400 0.250 0.500
+Lumina-DiMOO Diff. 0.820 0.550 0.280 0.400 0.230 0.460
+LLaDA2.0-Uni D-Diff. + Diff. 0.882 0.661 0.323 0.400 0.259 0.505
+Table 6: Comparison of Text-to-Image Generation Ability on UniGenBench.
+Type Model Arch. Style World Attr. Action Relat. Logic Gram. Comp. Layout Text Overall↑
+Gen. Only
+FLUX.1 [dev] Diff. 83.90 88.92 67.84 62.17 67.26 30.91 60.96 47.04 71.83 32.18 61.30
+Emu3-Gen AR 86.80 77.06 51.39 40.11 49.75 19.32 52.94 36.86 44.78 1.15 46.02
+Seedream 3.0 Diff. 98.19 94.90 84.62 83.14 80.18 51.83 60.30 72.32 88.74 69.86 78.41
+Qwen-

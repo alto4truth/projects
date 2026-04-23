@@ -1,0 +1,24 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+n and carried out an experiment
+where we trained models separately with primacy
+and recency biases. We present these results in
+Figures 1 and 2. We notice, unsurprisingly, that
+Recency based bias in attention tends to perform
+better with local structures while Primacy tends to
+have a slight edge on tasks with dependency structures that require access to longer distances. While
+both Primacy and Recency generally tend to perform worse in comparison to the baseline model,
+however, increasing data tends to substantially help
+the model with Recency based bias. This tends
+to correlate with fixed window models with strict
+local attention constraints. Finally, while the model
+based on Primacy and Recency is not among the
+best models, however in most cases, it has a tendency to even out the divergence between models

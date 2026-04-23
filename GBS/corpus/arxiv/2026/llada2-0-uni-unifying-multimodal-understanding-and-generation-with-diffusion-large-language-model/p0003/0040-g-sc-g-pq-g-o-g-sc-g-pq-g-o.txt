@@ -1,0 +1,23 @@
+title: LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model
+source: arxiv
+year: 2026
+document_id: llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffusion-large-language-model
+authors: Inclusion AI; Tiwei Bie; Haoxing Chen; Tieyuan Chen; Zhenglin Cheng; Long Cui; Kai Gan; Zhicheng Huang; Zhenzhong Lan; Haoquan Li; Jianguo Li; Tao Lin; Qi Qin; Hongjun Wang; Xiaomei Wang; Haoyuan Wu; Yi Xin; Junbo Zhao
+page: 3
+section: g-sc-g-pq-g-o-g-sc-g-pq-g-o
+chunk: 40
+source_ref: https://arxiv.org/pdf/2604.20796v1
+
+of 0.87 (vs. 0.89 for the base) and a DPG score of 87.24 (vs. 87.76). Similarly, on the UniGenBench,
+OneIG-EN, and WISE benchmarks, Diffusion Decoder Turbo achieves performance on par with the original
+decoder. Moreover, as shown in Figure 9, the visual quality remains virtually indistinguishable.
+6 Conclusion and Future Directions
+In this work, we introduce LLaDA2.0-Uni, a unified framework that enables both multimodal understanding
+and generation within a single diffusion large language model. Built on the LLaDA 2.0 backbone, our
+approach uses a SigLIP-VQ tokenizer to map visual inputs into semantically rich discrete tokens, allowing
+text and images to be modeled in a shared space. Extensive experiments show that LLaDA2.0-Uni achieves
+strong performance across various benchmarks, including multimodal understanding, image generation, and
+editing. Furthermore, the model naturally supports interleaved generation and chain-of-thought reasoning,
+demonstrating the flexibility and practicality of our unified architecture.
+Despite these advancements, several areas remain for future improvement:
+• Enhancing Visual Detail.While the SigLIP-VQ tokenizer provides rich semantic information, it

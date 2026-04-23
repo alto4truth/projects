@@ -1,0 +1,28 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 2
+section: grab-item
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+nfigurations.We establish a high-difficulty
+benchmark with 200 distinct samples per task,
+fixing a recursion depth of D= 10 and a 0shot Chain of Thought (CoT) (Wei et al., 2022)
+prompting strategy. To isolate symbolic reasoning from semantic memorization, we utilize
+the block syntactic style paired with an Alien
+lexicon, where all functional keywords are replaced by opaque tokens. We evaluate a diverse suite of LLMs, including the Qwen3 family (8B, 32B, 235B) (Yang et al., 2025a), reasoning LLMs ( DeepSeek-V3.2 (Team, 2025a),
+Mimo-V2-flash (Xiaomi, 2025), GLM4.7 (Team,
+2025b), MiniMax M2.1) (Team, 2025c), and the
+GPT-5 series (OpenAI, 2025).
+Results and Analysis.As reported in Table 2,
+performance consistently follows a hierarchical
+degradation of SCR<BER<SVR , highlighting the challenge of maintaining structural fidelity
+under deep recursion. Three prominent findings
+emerge: (1)Model Scale vs. Task Consistency:
+Increased model scale does not consistently translate to better structural alignment. For instance,
+GPT-5-mini significantly outperforms the larger
+GPT-5.2 in Task 2 BER (90.0% vs. 60.0%). (2)
+Syntactic Mastery vs. Logical Fidelity:The conditional metrics CBER and CSCR reve

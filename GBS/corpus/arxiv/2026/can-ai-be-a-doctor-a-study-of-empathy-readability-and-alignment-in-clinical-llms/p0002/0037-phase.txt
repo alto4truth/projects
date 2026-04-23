@@ -1,0 +1,44 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+ly rewritten responses (RLLM Rephrase)
+achieve higher alignment than physician-authored content:
+E[Vexp, pat (RLLM Rephrase)]>E[V exp, pat (RPhys)]
+31
+
+T able 3: Mean ( ¯x) and standard deviation (σ) of physician and patient (human)
+ratings on the MedQuAD. Arrows indicate comparison to Doctor:↑= higher,↓=
+lower, - = similar. Bold values denote best-performing variants per metric (excluding
+Physician baseline).
+Response V ariant Expert Evaluation (Human) Patient Evaluation (Human)¯xAccuracy±σ ¯xStyle±σ ¯xPrecision±σ ¯xTrust±σ ¯xCompr.±σ ¯xEmot. Tone±σ
+Physician Answer5.00±0.00 5.00±0.00 5.00±0.00 2.50±0.50 2.10±0.60 2.30±0.50
+Mixtral 5.00±0.00(−) 4.50±0.00 (↓)5.00±0.00(−)3.80±0.30 (↑) 4.10±0.20 (↑) 3.70±0.30 (↑)Med-PaLM 5.00±0.00(−) 4.50±0.00 (↓)5.00±0.00(−)3.50±0.30 (↑) 4.00±0.30 (↑) 3.60±0.20 (↑)Claude 5.00±0.00(−) 4.50±0.00 (↓)5.00±0.00(−)3.40±0.20 (↑) 3.20±0.10 (↑) 3.10±0.10 (↑)GPT5 4.00±1.41 (↓) 4.00±0.00 (↓) 4.50±0.71 (↓)3.60±0.20 (↑) 3.20±0.20 (↑) 2.30±0.50 (−)
+MixtralEmpathyPrompt 4.00±1.41 (↓) 4.50±0.71 (↓) 4.00±1.41 (↓)4.60±0.20 (↑)4.70±0.10(↑) 4.80±0.10 (↑)Med-PaLMEmpathyPrompt4.50±0.71 (↓) 4.50±0.71 (↓) 4.50±0.71 (↓)4.40±0.20 (↑) 4.50±0.20 (↑) 4.50±0.20 (↑)ClaudeEmpathyPrompt 4.50±0.71 (↓) 4.50±0.71 (↓) 4.50±0.71 (↓)3.80±0.20 (↑) 3.60±0.20 (↑) 3.80±0.50 (↑)GPT5EmpathyPrompt 4.00±1.41 (↓) 4.50±0.71 (↓) 4.50±0.71 (↓)4.20±0.10 (↑) 3.50±0.30 (↑) 3.80±0.50 (↑)
+MixtralRephrase 5.00±0.00(−)5.00±0.00(−) 4.50±0.71 (↓)4.50±0.20 (↑) 4.60±0.20 (↑) 4.60±0.10 (↑)Med-PaLMRephrase 4.50±0.71 (↓) 4.00±1.41 (↓) 3.50±0.71 (↓)4.70±0.10(↑) 4.60±0.20 (↑) 4.70±0.10 (↑)GeminiRephrase 4.00±1.41 (↓) 3.00±1.41 (↓) 4.00±1.41 (↓)4.70±0.20(↑) 4.60±0.30 (↑)4.90±0.10(↑)ClaudeRephrase 4.00±1.41 (↓) 4.00±0.00 (↓) 4.00±1.41 (↓)4.60±0.10 (↑) 4.60±0.20 (↑) 4.50±0.10 (↑)GPT5Rephrase 4.00±1.41 (↓) 4.00±0.00 (↓) 4.50±0.71 (↓)4.50±0.30 (↑) 4.40±0.10 (↑) 4.20±0.20 (↑)
+T able 4: Mean ( ¯x) and standard deviation (σ) of physician and patient (human)
+ratings on the iCliniqQAs. Arrows indicate comparison to Doctor:↑= higher,↓=
+lower, - = similar. Bold values denote best-performing variants per metric (excluding
+Physician baseline).
+Response V ariant Expert Evaluation (Human) Patient Evaluation (Human)¯xAccuracy±σ ¯xStyle±σ ¯xPrecision±σ ¯xTrust±σ ¯xCompr.±σ ¯xEmot. Tone±σ
+Physician Answer5.00±0.00 5.00±0.00 5.00±0.00 4.60±0.50 4.70±0.45 4.65±0.48
+Mixtral 3.00±1.41 (↓) 3.50±2.12 (↓) 4.00±1.41 (↓)4.30±0.70 (↓) 4.40±0.65 (↓) 4.25±0.72 (↓)Med-PaLM 2.50±2.12 (↓) 3.00±0.00 (↓) 2.00±1.41 (↓)4.20±0.75 (↓) 4.30±0.70 (↓) 4.15±0.80 (↓)Claude 5.00±0.00(−) 1.00±0.00 (↓)5.00±0.00(−)4.65±0.48 (↑) 4.75±0.44 (↑) 4.70±0.46 (↑)GPT5 4.50±0.71 (↓) 3.00±1.41 (↓) 4.00±0.00 (↓)4.70±0.46 (↑) 4.80±0.40 (↑) 4.75±0.43 (↑)
+MixtralEmpathyPrompt 2.00±1.41 (↓) 3.50±0.71 (↓) 2.00±1.41 (↓)4.40±0.65 (↓) 4.50±0.60 (↓) 4.35±0.68 (↓)Med-PaLMEmpathyPrompt1.50±0.71 (↓) 4.00±0.00 (↓) 1.50±0.71 (↓)4.55±0.55 (↓) 4.60±0.52 (↓) 4.50±0.58 (↓)ClaudeEmpathyPrompt 1.50±0.71 (↓) 3.00±0.00 (↓) 1.50±0.71 (↓)4.75±0.44 (↑) 4.85±0.36 (↑) 4.80±0.40 (↑)GPT5EmpathyPrompt 3.50±0.71 (↓) 4.00±1.41 (↓) 3.00±0.00 (↓)4.85±0.35 (↑) 4.90±0.30 (↑) 4.88±0.32 (↑)
+MixtralRephrase 3.00±2.83 (↓) 4.50±0.71 (↓) 3.00±2.83 (↓)4.75±0.43 (↑) 4.85±0.36 (↑) 4.80±0.40 (↑)Med-PaLMRephrase 3.00±2.83 (↓)5.00±0.00(−) 4.00±2.83 (↓)4.88±0.32 (↑) 4.92±0.28 (↑) 4.90±0.30 (↑)ClaudeRephrase 3.00±2.83 (↓) 4.50±0.71 (↓) 3.00±2.83 (↓)4.90±0.30 (↑) 4.95±0.22 (↑) 4.93±0.25 (↑)GPT5Rephrase 3.00±2.83 (↓) 4.50±0.71 (↓) 3.50±2.12 (↓)4.95±0.22(↑)4.98±0.15(↑)4.96±0.20(↑)
+We evaluate two axes: epistemic values (accuracy, stylistic appropriateness, precision) and relational values (trust, comprehensibility, emotional tone). All scores use
+5-point Likert scales.
+In MedQuAD, as we can see in Table 3, physician answers receive maximum expert
+scores (5.00) across accuracy, style, and precision. No LLM configuration surpasses
+the physician baseline on epistemic criteria. Rewriting configurations improve relational metrics without exceeding physician epistemic performance. Mixtral Rephrase
+achieves the highest stylistic score (5.00) while maintaining strong patient trust
+(4.50) and emotional tone (4.60). MedPaLM Rephrase preserves high expert precision
+(4.00) and patient trust (4.70). GPT5 Rephrase shows balanced performance (expert
+accuracy = 4.00; patient trust = 4.50; emotional tone = 4.20). Empathy prompting increases patient-oriented metrics but reduces expert scores relative to physician
+answers.
+32

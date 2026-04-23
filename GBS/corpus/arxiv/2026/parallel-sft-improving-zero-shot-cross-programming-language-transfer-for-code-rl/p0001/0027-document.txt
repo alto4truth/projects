@@ -1,0 +1,50 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+0 100 200 300 400 500
+0
+2
+4
+6
+8Pass@1 (%)
+C++ Unseen languages
+0 100 200 300 400 500
+Python Unseen languages
+0 100 200 300 400 500
+C++ SFT languages
+0 100 200 300 400 500
+Python SFT languages
+Step
+Oracle (in-language) 1 Language 8 Languages (non-parallel) 8 Languages (parallel)
+(a)Code generation.
+0 50 100 150 200
+50.0
+52.5
+55.0
+57.5
+60.0
+62.5
+65.0Accuracy (%)
+C++ Unseen languages
+0 50 100 150 200
+Python Unseen languages
+0 50 100 150 200
+C++ SFT languages
+0 50 100 150 200
+Python SFT languages
+Step
+Random 1 Language 8 Languages (non-parallel) 8 Languages (parallel)
+(b)Code validation.
+Figure 3 Parallel-SFT improves cross-PL RL transfer.We report performance across two source languages and two coding tasks. We
+report the (average) transfer effect to 3 unseen languages (left) and the SFT languages (right; 7 PLs for code generationexcluding
+the source; 5 for code validation (see Footnote 15)). Shaded regions denote 95% confidence intervals. Parallel-SFT yields the best
+transferability, outperforming the baselines and, in some cases, surpassing the target-language oracle. Non-parallel multi-PL training
+sometimes is beneficial too.
+Furthermore, in §D, we also confirm that Parallel-SFT, w

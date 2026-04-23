@@ -1,0 +1,52 @@
+title: Stream-CQSA: Avoiding Out-of-Memory in Attention Computation via Flexible Workload Scheduling
+source: arxiv
+year: 2026
+document_id: stream-cqsa-avoiding-out-of-memory-in-attention-computation-via-flexible-workload-scheduling
+authors: Yiming Bian; Joshua M. Akey
+page: 1
+section: document
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20819v1
+
+her caveat is in step 5 that although Numi and Deni are accumulated in
+the same way, their dimensions are different: dim(Num) =N×Dand dim(Den) =N×1.
+4
+
+Algorithm 2CQSA backward pass
+Require:Q, K, V∈R B×H×N×D , upstreamdO,subseq_entries,Num,Den, scaleα
+1:dQ←0,dK←0,dV←0
+2:dNum←dO/Den.UNSQUEEZE(−1)
+3:dDen← −ROWSUM D(dO⊙Num)/(Den⊙Den)
+4:foreach subsequencei∈subseq_entriesdo
+5:idx←token_ids[i]
+6:dNum i ←GATHER(dNum,idx),dDen i ←GATHER(dDen,idx)
+7:dV i ←P ⊤
+i dNumi
+8:dP i ←dNum iV ⊤
+i +dDen i1⊤
+9:dR i ←dP i ⊙P i
+10:dQ i ←α(dR iKi)
+11:dK i ←α(dR ⊤
+i Qi)
+12:dQ.INDEXADD(2,idx,dQ i)
+13:dK.INDEXADD(2,idx,dK i)
+14:dV.INDEXADD(2,idx,dV i)
+15:end for
+16:return dQ,dK,dV
+Figure 3: CQS masking on R=QK ⊤ with N= 49 , c= 7 , and I= (0,1,3) . Iteration 1 forms
+subsequences of 21 tokens with masked diagonal redundancies. Iteration 2 further partitions each
+subsequence into smaller chunks (size 3), producing 9-token subsequences with both local and
+inherited masks. Only Seq0,itr=1 is shown and other subsequences at itr=1 follow the same pattern.
+from the previous iteration (itr), resulting in structured off-diagonal masking. Figure 3 illustrates
+the CQS mask at iterations1and2for an example sequence withN= 49tokens.
+Notably, this controlled overlap ensures that subsequence computations are non-redundant after
+masking and therefore fully independent. This property is central to the flexibility of workload
+management in Stream-CQSA, enabling subsequences to be executed in parallel, distributed across
+multiple devices, and scheduled on heterogeneous hardware with varying memory and compute
+capabilities. Furthermore, the decomposition is not restricted to a fixed choice of c. Different values
+of c (Table 3) can be used at each iteration, enabling finer control over subsequence length that
+maximizes the memory usage.
+2.4 Workload scheduling
+Since each subsequence defines an independent computation pipeline, attention computation can
+be viewed as processing a collection (or queue) of subsequence tasks. By iteratively applying CQS
+5

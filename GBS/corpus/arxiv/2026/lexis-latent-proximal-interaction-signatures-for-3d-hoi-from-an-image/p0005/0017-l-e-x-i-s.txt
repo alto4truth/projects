@@ -1,0 +1,26 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 5
+section: l-e-x-i-s
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+D e c o d e r
+Fig.5: LEXIS-Flow (Sec. 3.2).We develop a dual-stream Flow-Matching model
+that takes as input a single image, and estimates 3D body and object meshes in interaction along with LEXIS-based InterField proximal relationships (Sec. 3.1; shown
+with heatmap color-coding on the 3D meshes). Guiding sampling via LEXIS-based
+InterFields refines estimates to improves the physical plausibility of 3D interaction.
+3.2 LEXIS-Flow
+After pretraining a LEXIS codebook of interaction signatures (Sec. 3.1),
+we exploit this to reconstruct 3D HOI from an image. To this end, we build
+LEXIS-Flow (see Fig. 5 for an overview), a model that captures the conditional
+distributionP(B,O | I)via Flow Matching [43]. The generative process is formulated as an Ordinary Differential Equation (ODE) that transports samples
+from a Gaussian priorN(0,I)att=0to the target HOI distribution att=1.
+Letx= [B;O]denote the HOI state. Then, the flow interpolates between
+Gaussian noiseϵ∼ N(0,I)att=0and a ground-truth samplex 1 att=1via
+xt = (1−t)ϵ+tx 1. To approximate the vector field that generates this flow, we
+train a neural network,vγ(xt, t,I); then the target flow velocity isdxt/dt=x 1−ϵ.
+Thevectorfield,v γ,ispar

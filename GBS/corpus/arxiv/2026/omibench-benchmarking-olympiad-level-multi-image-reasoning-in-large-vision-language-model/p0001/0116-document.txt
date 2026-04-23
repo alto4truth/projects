@@ -1,0 +1,30 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 116
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+ategies
+Help?), including the exact prompting templates, decoding configurations, and the definition of the “thinking”
+and “no-thinking” settings used on OMIBench.
+G.1. Prompting strategies on OMIBench
+ToprovidetheexacttemplatesusedforthecomparisoninFigure4(a), wesystematicallyevaluatewidely-used
+Chain-of-Thought prompting strategies on OMIBench, including Least-to-Most [77], Plan-and-Solve [57],
+VoT [64]. All prompts follow the generic instruction format below:
+Least-to-Most Prompting [77]is a strategy that decomposes complex problems into a sequence of simpler
+subproblems, solving them one by one. Specifically, the prompt used is as follows:
+Least-to-Most Prompting
+Please reason step by step, and then provide the final answer in the exact format:\boxed{ANSWER}.
+[Question]
+problem_text0 [IMAGE0] problem_text1 [IMAGE1] ... problem_textn
+[Choices] # only for multiple choices problems
+A. option_A
+...
+Let’s break down this problem and solve it one by one.
+Plan-and-Solve Prompting [57]first devises a high-level plan to tackle the problem, then executes the
+plan step by step. The specific prompt used is as follows:
+40

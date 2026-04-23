@@ -1,0 +1,101 @@
+title: Stream-CQSA: Avoiding Out-of-Memory in Attention Computation via Flexible Workload Scheduling
+source: arxiv
+year: 2026
+document_id: stream-cqsa-avoiding-out-of-memory-in-attention-computation-via-flexible-workload-scheduling
+authors: Yiming Bian; Joshua M. Akey
+page: 1
+section: document
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20819v1
+
+he memory efficiency
+and minimizes the overall computation time depends on the attention kernel design and the hardware
+to perform the computation.
+16
+
+D Chain-rule deductions in backward pass
+Given upstream gradientdO= ∂L
+∂O whereLis the loss, the goal is to computedQ,dKanddV.
+For subsequencei, the forward pass generates
+Ri =α(Q iK ⊤
+i )P i =exp(R i)⊙M i Numi =P iVi Deni =
+X
+j
+(Pi):,j (15)
+whereM i is the CQS mask.
+The global merge generates
+Num=
+X
+i∈S
+scatter(Oi)Den=
+X
+i∈S
+scatter(Si)O= Num
+Den (16)
+So we have the following partial derivatives:
+∂O
+∂Num = 1
+Den
+∂O
+∂Den =− Num
+Den2 (17)
+Below, we explicitly write the dimension with batch and head dimension omitted for simplicity. Still
+from the global view, we have
+dO[n, d] = ∂L
+∂O[n, d] (18)
+HeredO[n, d]is a scaler fromdO∈R N×D . Next, we have
+dNum[n, d] = ∂L
+∂Num[n] = ∂L
+∂O[n, d] × ∂O[n, d]
+∂Num[n, d] = dO[n, d]
+Den[n] (19)
+dDen[n] = ∂L
+∂Den[n] = ∂L
+∂O[n, d] × ∂O[n, d]
+∂Den[n]
+=
+X
+d
+dO[n, d](−Num[n, d]
+Den[n]2 ) =−
+P
+d dO[n, d]Num[n, d]
+Den[n]2
+(20)
+A compact version of Eq. 19 and 20 are as follows.
+dNum= dO
+Den dDen=−
+P
+d dOd ·Num d
+Den2 (21)
+Now we switch to the perspective of subsequence i, let its length be L, we gather L tokens from the
+global dNum∈R N×D and dDen∈R N , thus dNumi ∈R L×D,dDen i ∈R L. Finally, we have the
+following computations.
+dVi[m, d] =
+X
+l
+Pi[l, m]dNumi[l, d](22)
+dPi[l, m] =
+X
+d
+dNumi[l, d]Vi[m, d] +dDen i[l](23)
+dRi[l, m] =dP i[l, m]·P i[l, m](24)
+dQi[l, d] =α
+X
+m
+dRi[l, m]Ki[m, d](25)
+dKi[l, d] =α
+X
+l
+dRi[l, m]Ki[l, d](26)
+A compact version of Eq. 22 to 26 are as follows.
+dVi =P ⊤
+i dNumi (27)
+dPi =dNum iV ⊤
+i +dDen i1⊤ (28)
+dRi =dP i ⊙P i (29)
+dQi =αdR iKi (30)
+dKi =αdR ⊤
+i Qi (31)
+The last step is to merge alldQ i,dK i,dV i ∈R L×D intodQ,dK,dV∈R N×D .
+17

@@ -1,0 +1,30 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 1
+section: coral-arm-bn
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+.We could consider batch effect
+correction in machine learning as anunsupervised domain
+adaptation(UDA) problem, where the source domain is
+the training data available and the target domain is a new
+experimental batch. Classical UDA aligns source and target
+distributions using approaches such as a) importance weighting (Shimodaira, 2000; Ben-David et al., 2006; Kimura and
+Hino, 2024), b) distance-based matching (Sun et al., 2015;
+Zellinger et al., 2017), c) adversarial training (Ganin and
+Lempitsky, 2014), or d) generative translation (Liu and
+Tuzel, 2016; Taigman et al., 2016; Bousmalis et al., 2017;
+Chung et al., 2024). In the field of microscopy imaging
+data, test-time training (TTT) strategies have been explored
+(Haslum et al., 2023). However, traditional UDA and TTT
+methods assume a small number of source domains, each of
+them with a large amount of samples, and require retraining
+the model every time a new domain needs to be evaluated.
+In contrast, microscopy imaging data is comprised of many
+domains with few samples (Chandrasekaran et al., 2023;
+Bray et al., 2017), which makes UDA methods unsuitable
+in this setting. Batch effect correction can be formalized instead as amulti

@@ -1,0 +1,24 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+ereN= 312.
+For each SFT model, we derive program representations, separately at each layer ℓ, e.g. rGo
+i,ℓ. We compute the program
+representations via echo embedding (Springer et al., 2025) that repeats the program twice in a lightweight template
+which empirically produces strong sequence representations.16
+Representation similarity is most straightforwardly computable by cosine similarity. It, however, can be misleading due
+to theanisotropyof the representation space (Ethayarajh, 2019). That is, it is possible that a model simply utilizes a
+small subset of its representation space for code, embeddingallprograms closer together, not just parallel programs. We
+account for this in two robust metrics:
+16The intuition is that autoregressive models do not attend to the future, but future information is helpful for a good representation. By repeating the
+sequence twice, the early tokens in the second occurrence can attend to future tokens in the first occurrence. We lightly adapt the template in Springer
+et al. (2025): “Rewrite the following code: {x}. The rewritten code: {x}” where “{x}” is substituted with the code program. We mean-pool the token
+representations in the second “{x}”.
+7

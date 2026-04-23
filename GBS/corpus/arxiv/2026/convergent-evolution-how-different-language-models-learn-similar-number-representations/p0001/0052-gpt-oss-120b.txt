@@ -1,0 +1,104 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 52
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+ma 4.Let the between-class and within-class variances SB and SW be defined as in Theorem 1,
+they satisfy
+Tr(SB) = ΦT
+N , Tr(S W ) = 1
+N ∑
+ν/∈HT
+∥Fν∥2.
+
+Convergent Evolution16
+Proof.Define theT×dmatrixMwhose rows are the class means:
+M=
+
+
+—µ ⊤
+0 —
+—µ ⊤
+1 —
+...
+—µ ⊤
+T−1 —
+
+ ∈R T×d,
+and let U be the T×T matrix with entries Uℓr = 1√
+T e−2πiℓr/T . Define ˆM=U M∈C T×d,
+whose rows are ˆµ[ℓ]⊤:
+ˆM=
+
+
+— ˆµ[0] ⊤ —
+— ˆµ[1] ⊤ —
+...
+— ˆµ[T−1] ⊤ —
+
+ ∈C T×d.
+SinceUis the DFT matrix inTdimensions,Uis unitary.
+Therefore,
+T−1
+∑
+ℓ=0
+∥ˆµ[ℓ]∥2 =∥ ˆM∥2
+F =∥U M∥ 2
+F =∥M∥ 2
+F =
+T−1
+∑
+r=0
+∥µr∥2.
+This is simply the fact that a unitary change of basis preserves the sum of squared norms.
+For ℓ= 0: ˆµ[0] = √
+T/N·F 0. Since F0 = 1√
+N ∑n e(n) =
+√
+Nµ , we have ˆµ[0] =
+√
+Tµ , and
+therefore 1
+T ∥ˆµ[0]∥2 =∥µ∥ 2.
+The between-class variance is:
+Tr(SB) = 1
+T ∑
+r
+∥µr −µ∥ 2 = 1
+T
+
+∑
+r
+∥µr∥2 −2µ ⊤
+
+1
+T ∑
+r
+µr
+!
++∥µ∥ 2
+!
+(3)
+= 1
+T
+
+∑
+r
+∥µr∥2 − ∥µ∥2
+!
+= 1
+T
+
+T−1
+∑
+ℓ=1
+∥ˆµ[ℓ]∥2
+!
+(4)
+= 1
+T

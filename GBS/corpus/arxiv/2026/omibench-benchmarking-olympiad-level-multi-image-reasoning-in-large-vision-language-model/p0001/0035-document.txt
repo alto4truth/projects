@@ -1,0 +1,26 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+soning, but they still
+focus largely on single-image settings or relatively shallow multi-image perception, and seldom capture
+Olympiad-level multi-step reasoning. OMIBench addresses this gap by combining Olympiad-level scientific
+reasoning with evidence distributed across multiple interdependent images, requiring coherent image–image
+and image–text reasoning to derive the final answer.
+8. Conclusion
+This work introduced OMIBench, a large-scale multi-image Olympiad-level benchmark for evaluating LVLMs
+on complex multi-image reasoning. Experiments show substantial performance drops relative to single-image
+tasks, driven by failures in multi-image integration and grounded cross-modal reasoning. These findings
+establish multi-image reasoning as a central challenge and motivate advances beyond prompting.
+Ethical Considerations
+In this paper, we introduce OMIBench, a demanding multimodal benchmark for assessing mathematical
+and physical reasoning in current large models and future AGI systems. We outline the dataset construction
+pipeline, encompassing data collection from official sources only, OCR processing, cleaning, deduplication,
+and expert annotations.
+11

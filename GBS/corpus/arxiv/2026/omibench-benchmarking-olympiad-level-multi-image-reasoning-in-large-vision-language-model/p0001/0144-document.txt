@@ -1,0 +1,21 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 144
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+8.63 26.85 26.55
+Qwen3-VL-8B-Thinking 52.39 52.59 15.96 17.05 49.90 49.30 21.97 30.66 35.84 38.65
+Qwen3-VL-30B-A3B-Instruct 48.51 48.61 13.29 12.90 31.42 32.33 20.02 20.99 28.03 28.59
+Qwen3-VL-30B-A3B-Thinking 54.44 55.78 28.13 32.26 63.70 59.30 27.92 37.50 44.63 47.20
+Qwen3-VL-32B-Instruct 57.62 58.57 14.09 20.74 44.40 40.70 25.48 25.00 35.87 35.78
+Qwen3-VL-32B-Thinking 65.72 64.14 29.83 24.88 60.66 60.93 31.92 41.98 47.34 49.54
+Qwen3-VL-235B-A22B-Instruct 60.41 63.20 17.23 22.58 37.48 34.19 23.77 23.58 34.11 34.39
+Qwen3-VL-235B-A22B-Thinking 55.00 61.35 34.14 33.18 53.71 48.84 26.81 43.87 42.12 47.05
+Table 4: “Thinking” and “Instruct” results on OMIBench, where the bold content denotes the best performance
+in each category.
+50

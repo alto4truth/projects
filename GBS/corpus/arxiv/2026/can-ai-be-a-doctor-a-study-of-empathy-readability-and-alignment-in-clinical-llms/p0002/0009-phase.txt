@@ -1,0 +1,36 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+4 6 8 10 12 14 16 18
+Flesch Kincaid
+6
+8
+10
+12
+14
+16
+18
+20Gunning Fog
+Clustering-based representative selection (50 clusters)
+All physician answers
+Cluster representatives (50)
+Fig. 2: Readability-based selection of 50 representative MedQuAD questions after
+outlier removal. The corpus is visualized in the Gunning Fog vs. Flesch–Kincaid space.
+Extreme values were excluded using the interquartile range (IQR) criterion prior to
+clustering. The selected representatives correspond to the centroids of eachk-means
+cluster (k= 50). The resulting subset spans the full readability distribution of the
+cleaned corpus while avoiding anomalous texts that could distort clustering geometry.
+MedQuAD Subset Construction
+Due to the high inference cost of commercial models, evaluation was conducted on
+a reduced subset of 50 MedQuAD questions. This subset reflects explicit budget
+constraints and follows a structured selection protocol designed to preserve linguistic diversity. The experiment is framed as a controlled cross-architecture comparison
+rather than a population-scale benchmark.
+The subset was constructed through a readability-driven clustering procedure:
+1.Extract linguistic features:For each

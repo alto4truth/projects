@@ -1,0 +1,24 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 121
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+plateauing around35%GPTScore.
+H.3. Parallel Scaling Protocol
+To evaluate parallel test-time scaling, we fix the model and prompting scheme and vary the number of
+independent samples per example, denoted byk. For each configuration, we drawk stochastic reasoning
+trajectories and aggregate them via majority vote over the final answers. We sweep
+k∈ {1, 3, 4, 8, 16}.(12)
+For k=1 , this reduces to standard single-sample decoding. Fork>1 , we keep all per-sample decoding
+hyperparameters fixed and only change the number of parallel draws. Since self-consistency is not welldefined fork=2, we usek=3as the smallest multi-sample setting.
+To enable self-consistency, we decode with temperatureT=0.6 and a maximum reasoning length
+Lmax =16,384 tokens per sample. After decoding, we apply the common post-processing pipeline to extract
+and normalize the final answer from each of thek samples and then take the majority-voted answer. For each
+k, wecomputethemeanGPTScoreonthefullOMIBenchtestsetusingthemajority-votedpredictions, yielding
+the accuracy–sampling curve in Figure 5(c). Plotting GPTScore againstlog2(k) reveals an approximately
+log-linear relationship between the number of samples and perform

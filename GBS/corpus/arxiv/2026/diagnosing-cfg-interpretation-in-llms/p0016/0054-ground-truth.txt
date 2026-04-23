@@ -1,0 +1,16 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 16
+section: ground-truth
+chunk: 54
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+do move forward 5 stop
+if (not (has item_2)) ...
+next [ do take cube_3 stop ]
+Case Study 2: Hierarchical Scoping Failure
+This failure demonstrates a breakdown in recursive state-tracking, where the model applies a flat
+encapsulation heuristic to hierarchical structures.

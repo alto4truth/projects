@@ -1,0 +1,23 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+d
+for RL training. We see that while training using the target language yields consistent improvements, transferring from
+another source language leads to limited, or sometimes degraded effects (negative transfer). This is consistent with the
+observation from Baltaji et al. (2025) that was based on in-context learning rather than RL. In §A, we show similar
+results initializing not from the instruct model but the base pretrained model and performing our own source-PL SFT.
+This confirms that this is a fundamental issue and not due to model variations.
+4 Method: Parallel-SFT
+Observing unsatisfactory cross-PL generalization, in contrast to prior success for natural languages (§2.3), we reflect
+on differences between natural languages and programming languages. Past work on multilingual NLP has attributed
+multilingual capabilities to organic parallel texts (i.e., translations) in pretraining corpora. They function like a “Rosetta
+Stone” to help align the model representations of different languages. Balashov (2025) distinguishes between two kinds
+of such parallel texts, “local” (parallel texts within a single pretraining instance) and “global” (parallel texts across
+different pretrainin

@@ -1,0 +1,32 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 3
+section: svr-svr-ber-cber-svr-ber-scr-cber-cscr
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+21.5 10.5
+Table 3: Ablation results on Mimo-V2-flash (D= 10 ,
+0-shot CoT). All metrics are in %. E denotes Expression Depth and p denotes Else-branch probability. The
+Standardbaseline uses Block style with Alien lexicon,
+E= 2, andp= 0.5.
+We employ Mimo-V2-flash as the representative
+model for ablation experiments.
+Hierarchical Depth and Recursive ScalingThe
+recursive nature of CFGs poses a significant challenge for hierarchical state-tracking. By evaluating LLMs acrossMax Nesting Depths( D∈
+{2,5,10,15,20} ), we observe a sharp, non-linear
+decay across all metrics (Figure 2). At D= 2 , the
+model achieves a moderate SVR of 42.0% and an
+SCR of 39.0%, indicating relatively stable structural alignment at shallow levels. However, as the
+depth increases to 20, SVR drops to 10.0%, while
+SCR nearly vanishes at 0.50%. This widening gap
+between syntax and semantics, where the CSCR
+falls from 92.8% to a negligible 5.0%, suggests
+that while LLMs can occasionally produce locally
+parseable code at high depths, they almost entirely
+lose the global state-tracking required to faithfully
+Figure 2: Impact of recursion depth on model performance under theAlienlexicon.
+implement the intended hierarchic

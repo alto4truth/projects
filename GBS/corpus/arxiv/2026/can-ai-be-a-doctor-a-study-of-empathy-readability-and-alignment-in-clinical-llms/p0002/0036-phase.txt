@@ -1,0 +1,49 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+tone analysis (Figures 12 and 13) further supports these trends. In
+MedQuAD, rewriting substantially increasescaringrelative to physicians (7.80%),
+30
+
+withMixtral RephraseandMedPaLM Rephrasereaching 76.50%. In iCliniqQAs,
+where physician responses are already caring-dominant (33.30%), rewriting pushes
+affective support toward near-saturation levels (e.g.,Mixtral Rephrase= 92.00%).
+Thus, rewriting acts as polarity correction in institutional discourse and as affective
+amplification in conversational dialogue.
+Rewriting also enhances linguistic accessibility in both datasets. On MedQuAD,
+Mixtral RephraseandMedPaLM Rephrasereduce FKGL from 12.91 to 11.18 and
+from 13.13 to 10.56, respectively, and GFI from 13.66 to 12.45 and from 14.47 to
+12.16.GPT5 Rephraselowers FKGL from 16.91 to 10.30 and GFI from 20.39 to 12.41,
+yielding statistically significant improvements (allp <0.001). In iCliniqQAs, similar
+reductions are observed:GPT5 Rephrasedecreases FKGL by−6.95 and GFI by−7.81
+relative toGPT5 Base, whileClaude Rephrasereduces FKGL by−9.39 and GFI by
+−11.08 relative toClaude Base(all statistically significant under FDR correction).
+Notably, the magnitude of readability improvement is comparable across datasets,
+but the emotional effect differs in function: in MedQuAD, rewriting primarily mitigates excessive polarity, whereas in iCliniqQAs it consolidates an already supportive
+conversational tone.
+Paired statistical tests with Benjamini–Hochberg False Discovery Rate correction
+confirm that rewriting introduces statistically significant improvements over baseline
+generations in sentiment distribution, fine-grained emotion profiles, and readability
+across multiple model families (allp <0.01).
+Takeaway 4☞Collaborative rewriting consistently improves emotional alignment and linguistic accessibility across both datasets. It reduces extreme negativity,
+increases neutral and supportive phrasing, and lowers readability scores relative
+to baseline generations. Open-source models such asMedPaLM RephraseandMixtral Rephraseexhibit the most stable cross-dataset gains, while larger architectures
+(e.g.,GPT5 Rephrase,Claude Rephrase) demonstrate substantial reductions in polarity and complexity compared to their base variants. Rewriting therefore emerges
+as a robust post-hoc alignment mechanism that enhances clarity and affective
+appropriateness without degrading semantic fidelity.
+4.7 RQ5 – Value Alignment between Experts and Patients
+To address RQ5, we evaluate whether different LLM configurations align with expert
+and patient communication values in clinical settings.
+Hypothesis 5LetR LLM be a response generated under a given configuration andR Phys
+the physician-authored version. LetV exp(·) andV pat(·) denote alignment with expert and
+patient preferences. We hypothesize that collaboratively rewritten responses (RLLM Rephrase)
+achieve higher alignment than physician-authored content:
+E[Vexp, pat (RLLM Rephrase)]>E[V exp, pat (RPhys)]
+31

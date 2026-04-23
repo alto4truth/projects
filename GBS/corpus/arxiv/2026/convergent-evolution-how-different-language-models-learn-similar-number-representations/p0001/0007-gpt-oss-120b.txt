@@ -1,0 +1,25 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+m model representations. Probing (Orgad et al., 2025; Kossen et al.,
+2024) is the standard tool for this. However, number representations are not linearly encoded
+(Nanda et al., 2023; Zhong et al., 2023; Gromov, 2023). Karkada et al. (2026) also find circular
+representations for days of the week, which suggests this is a fairly general solution to any
+problem with rotational symmetry. Allen-Zhu (2025) use controlled synthetic pretraining
+to isolate which capabilities emerge from which architectural and data choices. Separately,
+Huh et al. (2024) argue that representations across models and modalities are converging
+toward a shared statistical model of reality, measured via global kernel alignment. We
+ask a different question: whether models that converge on the similar representation of a
+specific concept have learned the same functional structure, and show that they can diverge
+fundamentally. In this paper, we vary tokenization, architecture, optimizer, and task to
+understand the convergent evolution of number representations.
+3 Problem Setup and Preliminary Analysis
+We study the token embeddings of numbers 0 through N− 1 in language models, where
+N= 1000 corresponds to the set of

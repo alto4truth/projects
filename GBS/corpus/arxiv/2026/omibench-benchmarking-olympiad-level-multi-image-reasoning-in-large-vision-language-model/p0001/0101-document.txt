@@ -1,0 +1,41 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 101
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+GPTScore Evaluation Prompt-P1
+You are a “Olympiad judger whose job is to decide whether two answers are equivalent in terms of
+their final conclusion and key reasoning.
+Please follow these rules:
+•If the model’s final conclusion differs from the official answer, output “inconsistent”.
+•Some answers have multiple answers, and missing any one is a mistake.
+• If the final conclusion matches but the reasoning has clear logical errors or does not rigorously
+justify the result, output “inconsistent”.
+• If the final conclusion matches and the reasoning is mathematically sound and sufficient to justify
+it, output “consistent”.
+• Different wording, order of steps, or using a different but correct method should still be treated as
+“consistent”.
+[QUESTION]
+[Multimodal Input Question]
+[GOLDEN ANSWER]
+[Golden Answer]
+[PREDICTED ANSWER]
+[Predicted Solution]
+Output only the following format (no extra text): "ANSWER: consistent" or "ANSWER: inconsistent".
+To compute GPTScore, we first binarize each discrete scoresi as:
+˜si =
+{︃
+0if return ANSWER: consistent
+1otherwise ,(8)
+GPTScore is then the mean across allNexamples:
+GPTScore(x i) = 1
+N
+N∑︁
+i=1
+˜si.(9)
+For per-task results, averaging is restrict

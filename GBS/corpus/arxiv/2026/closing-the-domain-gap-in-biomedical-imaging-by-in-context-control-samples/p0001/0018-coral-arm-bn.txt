@@ -1,0 +1,31 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 1
+section: coral-arm-bn
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+with Batch
+Normalization
+A key limitation of BN-based test-time and meta-learned
+adaptation methods is their reliance on statistics estimated
+from a set ofunlabeled target samples. When the number
+of available samples is small or when the class distribution at test time differs from that observed during training,
+the resulting batch normalization (BN) statistics become
+noisy and confounded by label shift (Park et al., 2023; Zhao
+et al., 2023), leading to unstable or degraded performance.
+We confirm this occurrence in our experiments shown on
+Sections 5.3 and 5.4 and Appendix Sections D.1 and D.2.
+In high-content screening experiments, and generally in
+biomedical experiments,negative control samplesare available (Chandrasekaran et al., 2023; Arevalo et al., 2024).
+For every experimental batch β, a set of control images
+{zβ
+c }C
+c=1 is acquired under the same technical conditions as
+the perturbed samples, but without inducing any biological
+effect. These controls provide a direct estimate of batchspecific technical variation that is independent of the class
+composition of the perturbed samples.
+Control-stabilized adaptation.In CS-ARM-BN, we extend ARM-BN by incorporating negative co

@@ -1,0 +1,20 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+e3.34Average question length210.12Average rationale length420.18
+PhysicslOpticslCircuitslRelativitylFluid MechanicslElectromagnetismlSolid-State PhysicslClassical MechanicslRigid Body RotationlWaves and AcousticslEngineering & Applied PhysicslThermology & ThermodynamicslCelestial/Orbital MechanicslQuantum Mechanics & Nuclear Physics
+lPlane Geometry & Axiomatic GeometrylOrigami / Folding geometry / UnfoldinglTrigonometric Functions and ApplicationslApplied Mathematics in Real-world ContextslAnalytic Geometry / Coordinate Geometry / GraphslAngle Bisection, Trisection, and Related ConstructionslAngles, Parallel lines, and Related Theorems
+Figure2: Key statistics of OMIBench, encompassing diverse problem types across Biology, Chemistry,
+Mathematics, and Physics (over 1.3K samples; average 3.07 images per sample). Images are excluded from
+token counts.
+Open-Ended Reasoning TaskFor open-ended problems, we first form an instruction prompt T=
+Prompt(Q,C), where Prompt(·) from the question and context, wherePrompt(·) denotes the prompting
+procedure used to format the textual input. Conditioned onI and T , the model produces a step-by-step
+rationaleR m ={s 1, . . . ,s m}, with each step gene

@@ -1,0 +1,70 @@
+title: Stream-CQSA: Avoiding Out-of-Memory in Attention Computation via Flexible Workload Scheduling
+source: arxiv
+year: 2026
+document_id: stream-cqsa-avoiding-out-of-memory-in-attention-computation-via-flexible-workload-scheduling
+authors: Yiming Bian; Joshua M. Akey
+page: 1
+section: document
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20819v1
+
+that minimizes total computation time. Given x=N( l
+c )itr and ntotal =c itr, we
+consider the objective
+x∗ = arg min
+x
+tseq(x)ntotal
+n_parallel (7)
+8
+
+Table 1: A100 GPU hour estimation of forward and backward pass for 1B tokens. t7_fwd/bwd denotes
+the wall-clock time of computing7subsequences in forward/backward pass.
+itrN n total Memfwd t7fwd (s) Est.t fwd(h) Mem bwd t7bwd (s) Est.t bwd(h)
+5 14.5M7 5 21.08 14,260 9,510 41.79 35,103 23,411
+6 6.20M7 6 9.09 2,600 12,138 17.93 6,442 30,075
+7 2.66M7 7 3.94 478 15,621 7.68 1,178 38,497
+8 1.14M7 8 1.75 91 20,817 3.32 221 50,556
+9 488K7 9 0.80 18 28,824 1.43 42 67,256
+Under the current kernel implementation of FA withn_parallel= 1 , and using c=l(l−1)+1≈l 2,
+we obtain the approximation ntotal ≈ N 2
+x2 . In the forward pass, the only critical point ( x∗ ≈
+70,766) corresponds to a global maximum, implying that total runtime decreases monotonically as
+subsequence length decreases beyond this point. Consequently, sufficiently fine decomposition (e.g.,
+itr≥12 ) reduces both memory usage and total runtime. In contrast, the backward pass exhibits
+strictly decreasing runtime with respect to subsequence length under this setting. However, under
+alternative configurations (i.e., n_parallel=n_cap ), a global minimum x∗ can emerge, balancing
+computation time and memory efficiency. A detailed analysis is provided in Appendix C.
+4 Limitation and future work
+Two key components determine the overall performance of Stream-CQSA: the attention kernel
+and the workload scheduler. In the current implementation, the FA based kernel only supports
+n_parallel= 1 , which limits parallel execution and prevents full utilization of the available
+memory budget. As a result, the scheduling strategy remains relatively naïve. In addition, there is
+room for further optimization in computation time. At present, the FA kernel is treated as a black
+box that returns normalized outputs (out) and log-sum-exp values (softmax_lse), from which we
+reconstruct Deni = exp(softmax_lse) and Numi =out⊙Den i, introducing additional overhead.
+A key direction for future work is the development of hardware-aware dedicated CQSA attention
+kernels, most likely to be built on FlashAttention, that maintains linear memory complexity while
+supporting maximal subsequence parallelism (i.e., n_parallel=n_cap ). Such a kernel would
+enable full utilization of hardware capacity and unlock more effective scheduling strategies. In
+particular, with true parallel execution of subsequences, a hybrid scheduler could dynamically allocate
+shorter subsequences to fully occupy available memory, thereby improving overall throughput.
+Another important direction lies in optimizing host-device communication. Since Stream-CQSA
+involves frequent data movement between host and device, an effective scheduler should aim to
+maximize communication bandwidth utilization, overlap communication with computation, and
+minimize pipeline idle time. This would enable a streaming execution model in which subsequence
+computations are continuously pipelined between host and device. Notably, in a multi-device setting,
+inter-device communication can be entirely avoided, as subsequence computations are independent
+and do not require synchronization or data exchange across devices.
+Beyond exact attention, extending Stream-CQSA to support approximate attention kernels is a
+promising avenue. Such extensions could further improve scalability in both time and memory,
+making Stream-CQSA a more general framework for long-sequence attention computation. Ultimately, this line of work aims to decouple attention computation from hardware memory constraints,
+enabling scalable long-context modeling across a wide range of applications such as long-document
+understanding, code analysis, time-series forecasting, and large-scale scientific simulation.
+To conclude, beyond the algorithmic contribution, this work suggests a systems-level opportunity by
+exposing attention as a collection of independent, potentially non-uniform, tasks whose recomposition
+is exactly equivalent to the original full computation. Crucially, this decomposition is memoryadaptive, in the sense that for any given memory budget, the workload can be partitioned into
+subsequence computations that fit within the available resources. This property naturally aligns with
+distributed and heterogeneous AI infrastructure, enabling dynamic scheduling across devices with
+tunable memory–latency trade-offs, and reframing attention execution as a task-parallel dataflow for
+scalable and resource-efficient long-context model deployment.
+9

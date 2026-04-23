@@ -1,0 +1,29 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 3
+section: lexis-7
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+In detail, an encoderEϕ (with network weightsϕ) maps body pose,θ∈R21×3
+(axis-angle rotations for 21 joints up to the wrist), to a discrete token sequence
+(one token per joint),Z ∈R 21×D, via a learned codebook,C={c k}K
+k=1,c k ∈
+R21×D, calledLEXIS(for LatEnt proXimal Interaction Signatures):
+Z= arg min ck∈C ∥ ˆZ −c k∥2, ˆZ=E ϕ(θ), (1)
+where ˆZis a sequence of continuous latents, andZof discrete latents, the quantization operator (arg min) maps continuous latents (ˆZ) to their nearest discrete
+codebook entry (ck), andDis the token length andKthe codebook size; for
+the values of the latter two, see “Implementation Details” in Sec. 3.4.
+The decoderD ψ (with network weightsψ) maps latentsZto full InterFields.
+Naively doing so for a specific mesh is straightforward, but ties the decoder,Dψ,
+to a specific topology; note that different body models have a different number
+of vertices, and objects vary widely. To tackle this,Dψ projects quantized tokens
+Zinto two TriPlane [7] feature volumes:
+Fig.4: TriPlane-based InterFields.
+A 3D surface pointp(see yellow point
+on human/object surface) is orthogonally projected onto the three feature
+planes (see red, blue, and green points)
+to sample feat

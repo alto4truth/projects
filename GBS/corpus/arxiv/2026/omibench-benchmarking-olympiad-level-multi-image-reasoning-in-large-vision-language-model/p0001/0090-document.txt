@@ -1,0 +1,27 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 90
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+onsites.
+Figure9: Analysis of reasoning error examples on o4-mini.
+Annotator Guidelines-P1
+You are given a multi-image Olympiad-level problem and a model-generated rationale. Your task is to
+verify the correctness of the solution. If an error is found in a logical step, classify it into exactly one
+of the following five categories based on its primary cause.
+1. Visual Perception FailuresThe model incorrectly recognizes or misses explicit visual information
+within an image. This includes misreading text, misidentifying geometry/objects, or failing to perceive
+attributes like color or position.
+2. Cross-Image Association FailuresThe model fails to synthesize or track information across
+multiple images. This includes errors in understanding temporal sequences, matching objects between
+different views, or aggregating data from separate image panels.
+3. LogicalReasoningFallaciesThemodelcorrectlyperceivesthevisualdatabutfailsinthesubsequent
+reasoning process. This includes invalid deductions, calculation errors, misapplication of theorems, or
+flawed causal logic.
+4. Instruction Comprehension BiasesThe model fails to adhere to specific constraints provided in
+the text prompt. This include

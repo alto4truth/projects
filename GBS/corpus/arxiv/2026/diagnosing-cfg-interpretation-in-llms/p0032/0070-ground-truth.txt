@@ -1,0 +1,23 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 32
+section: ground-truth
+chunk: 70
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+if (not (holding item_1) plus_and (holding
+cube_4 plus_and holding box_1)) then {
+...
+}
+Case Study 3: Structural Redundancy via Autoregressive EchoingThis failure stems from
+the nature of autoregressive decoding, where previously generated complex blocks act as strong
+distractors in the context. The model’s attention
+mechanism may loop by re-predicting the same
+high-probability sequence instead of advancing the
+execution plan. While behaviorally idempotent,
+this redundancy creates a structural mismatch with
+the ground-truth AST.
+Abstracted Structural Redundancy

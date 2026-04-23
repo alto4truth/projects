@@ -1,0 +1,23 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+4 Z. Wu et al.
+field [12,43,45,53,76,77] to warp time-variant observations into a canonical
+space. However, the prohibitive training and rendering latencies of these implicit fields prompted the introduction of explicit structured representations
+[5,14,23,31,44,50,57,59]. Despite these efficiency gains, these methods often
+incur high storage overheads and remain heavily reliant on dense multi-view supervision. Under sparse-view settings, they struggle to decouple complex motion
+from geometry, leading to severe blurring or topological artifacts.
+2.2 Dynamic Novel View Synthesis with 3DGS
+Recently, 3D Gaussian Splatting [26] has drawn significant attention for its
+high-fidelity reconstruction and real-time rendering, spurring numerous extensions [6,8,13,19,39,48,71]. To model dynamics, existing approaches fall into
+two paradigms. Deformation-based methods [22,36,47,61,70] warp canonical
+Gaussians via learnable fields into time-varying states. Though compact, they
+struggle with rapid topological changes. In contrast, explicit methods model temporal evolution through frame-wise tracking [15,17,21,37,54,75] or unified 4D
+primitives [27,28,32,63,69], achieving better resource efficiency

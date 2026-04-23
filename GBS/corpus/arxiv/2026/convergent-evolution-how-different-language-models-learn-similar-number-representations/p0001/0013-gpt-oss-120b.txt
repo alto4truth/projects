@@ -1,0 +1,31 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+es cluster into linearly
+separable groups, but as B grows the embeddings interleave across classes so that the best
+linear classification accuracy goes closer to random guessing 1/T.
+Theorem 1 establishes that ΦT > 0 is necessary but not sufficient. A natural follow-up is:
+whatquantitativelydetermines whether a spikyΦ T translates into geometric separability?
+Remark 2.The gap between two parts of Theorem 1 can be made more precise through the lens
+of Fisher’s Linear Discriminant Analysis (Fisher, 1936). Assumed≥T− 1and SW is invertible.
+Assume d>T− 1and SW is invertible. While a linear probe for T classes separates data across a
+(T− 1)-dimensional subspace, the absolute ceiling on its performance is dictated by its principal
+axis of separation: the single direction v that maximizes the ratio of between-class to within-class
+variance, given by the Rayleigh quotient v⊤SBv
+v⊤SWv . The maximum achievable separability along this
+optimal axis is exactly the largest generalized eigenvalue of the scatter matrices, λmax(S−1
+W SB). We
+show (see § A.4) that this maximum discriminant satisfies:
+1
+(T−1)·cond(S W ) · ΦT
+N·λ min(SW ) ≤λ max(S−1
+W SB)≤ ΦT
+N·λ min(SW ) .
+The Fourier power ΦT only g

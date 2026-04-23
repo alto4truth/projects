@@ -1,0 +1,59 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+0 1 2 3
+0
+1
+2
+3
+Clean
+0 1 2 3
+0
+1
+2
+3
+Noise 0.4
+0 1 2 3
+0
+1
+2
+3
+Noise 0.8
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Figure 2. Class subspace similarity matrices for a subset of classes
+with clean labels (left),40%symmetric noise (middle), and80%
+symmetric noise (right).
+wheren k,c denotes the number of samples labeled as class
+c, i.e.,˜yi =c, at clientk.
+We then perform singular value decomposition (SVD)
+onZ k,c:
+Zk,c =U k,cΣk,cV⊤
+k,c, (1)
+and use the leading right singular vector vk,c to characterize the spectral structure of class c at client k. This vector
+captures the dominant direction of variation for that class.
+If a class is internally consistent, its features tend to align
+around a relatively stable direction in the feature space.
+When labels are corrupted, samples from other classes are
+mixed into the same set, causing the resulting direction to
+align with multiple class directions rather than a single one
+[10].
+To quantify how strongly class structures overlap within
+a client, we compare their principal directions. Using the
+leading right singular vector of each class, we define the
+class similarity
+[Sk]c,c′ =
+
+v⊤
+k,cvk,c′

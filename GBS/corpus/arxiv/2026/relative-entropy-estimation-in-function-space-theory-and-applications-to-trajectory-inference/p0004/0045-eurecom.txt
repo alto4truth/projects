@@ -1,0 +1,83 @@
+title: Relative Entropy Estimation in Function Space: Theory and Applications to Trajectory Inference
+source: arxiv
+year: 2026
+document_id: relative-entropy-estimation-in-function-space-theory-and-applications-to-trajectory-inference
+authors: Chao Wang; Luca Nepote; Giulio Franzese; Pietro Michiardi
+page: 4
+section: eurecom
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20775v1
+
+error is smallest.(iii) Monte Carlo approximation.
+We vary the number of trajectories in the KL estimator from 10 to 2000. Figure 5c shows that the
+21
+
+Name Value
+Training functionXA
+1
+
+
+
+f∼ N(µ, C)
+µ(x) =ssin(2πf 0x), s∈ {0.5,1.5,3.0}, f 0 ∈ {1,3,5}
+C:Matérn w.ν C=3.5, ℓC=0.05, σ2
+C=0.15
+Training functionXB
+1 f∼ N(0, C)
+Training functions’ input time pointsM128
+Training functions’ output dimensionD∈ {1,2,3,5,10}
+Noise functionX0 f∼ N(0, K),K:Matérn w.ν K=0.5, ℓK=0.1, σ2
+K=1.0
+Num. modesNsummed at KL estimation64
+tsampling scheme at training Logit-normal
+tsampling scheme at KL estimation Importance samplingt/(1−t)
+Num.tsampled at KL estimation100
+Num. functions at training50,000
+Training batch size 1024
+Training iterations 30,000
+Num. functions at KL estimation500
+Optimizer Adam
+EMA rate 0.999
+Learning Rate (LR) 1e−3
+LR scheduler Cosine annealing
+FFM training loss LFFM
+Model MINO-T
+Encoder (dim / depth / heads)64/2/4
+Decoder (dim / depth / heads)64/2/4
+Supernode radius 5e−3
+GPUs for Training 1×NVIDIA A100
+Table 4: FKL hyperparameters for Gaussian Measures.
+Name Value
+Training functionX A
+1
+
+dY t =c A Yt dt+g dW t
+Y0 ∼ N(m 0,Σ 0), m 0=2.0,Σ 0=0.2
+Training functionX B
+1
+
+dY t =c B Yt dt+g dW t
+Y0 ∼ N(m 0,Σ 0), m 0=2.0,Σ 0=0.2
+Training functions’ input time pointsM128
+Training functions’ output dimensionD∈ {1,2,3,5}
+Noise functionX 0 Rougher empirical GT Fourier-spectrum
+Num. modesNsummed at KL estimation64
+tsampling scheme at training Importance samplingt/(1−t)
+tsampling scheme at KL estimation Importance samplingt/(1−t)
+Num.tsampled at KL estimation100
+Num. functions at training50,000
+Training batch size1024
+Training iterations30,000
+Num. functions at KL estimation500
+Optimizer Adam
+EMA rate 0.999
+LR 4.06e−3
+LR scheduler Cosine annealing
+FFM training lossw L FFM + (1−w)L FKL,wlinearly decayed from1to0.2
+Model MINO-T
+Encoder (dim / depth / heads)32/2/8
+Decoder (dim / depth / heads)32/2/8
+Supernode radius5e−4
+GPUs for Training 1×NVIDIA A100
+Table 5: FKL hyperparameters for SDEs.
+22

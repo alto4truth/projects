@@ -1,0 +1,25 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 9
+section: behave
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+CDhum↓CD obj↓
+PHOSA [90] 12.17(68.0%)26.62(71.5%)
+HDM [81] 11.61(66.4%)11.35(33.0%)
+CHORE [82] 5.58(30.1%)10.66(28.7%)
+CONTHO [52] 4.99(21.8%)8.42(9.7%)
+HOI-TG [77] 4.59(15.0%)8.00(5.0%)
+LEXIS-Flow3.90 7.60
+Table 3: In-lab 3D HOI:Evaluation
+on the in-lab BEHAVE [4] dataset.
+We evaluate in-lab HOI reconstruction
+on the BEHAVE benchmark (Tab. 3).
+LEXIS-Flow resets the SotA performance on the BEHAVE benchmark by a
+significant margin of 15.0% and 5.0% on
+CDhum andCD obj respectivelyrelativeto
+the closest competitor, HOI-TG [77].

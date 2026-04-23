@@ -1,0 +1,19 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 3
+section: svr-svr-ber-cber-svr-ber-scr-cber-cscr
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+t in simpler tasks, for deep recursive
+structures, additional examples do not provide a
+clear reasoning advantage and may even introduce
+distracting noise into the context window.
+Universal Fragility at Depth.Regardless of the
+prompting strategy, all configurations exhibit a
+sharp performance decay as recursion depth increases (Figure 3). Even with CoT, SCR plunges
+from 39.0% at D= 2 to a negligible 0.5% at
+7

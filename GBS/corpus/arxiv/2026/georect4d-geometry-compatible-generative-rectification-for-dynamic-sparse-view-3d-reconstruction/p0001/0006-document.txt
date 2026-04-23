@@ -1,0 +1,25 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+GeoRect4D for Dynamic Sparse-View 3D Reconstruction 3
+inconsistency, rendering the reconstruction unusable for immersive FVV. These
+observations suggest that sparse dynamic reconstruction is not merely a data
+scarcity problem, but a stability issue arising from interactions between underconstrained geometry and stochastic generative feedback. Our key insight is that
+to prevent structural drift, generative priors must be firmly anchored by explicit
+geometric constraints rather than serving as unconstrained 2D refinement.
+To address these limitations, we propose GeoRect4D, a unified generative
+feedback framework for sparse-view dynamic reconstruction. Our key idea is to
+maintain a stable geometric substrate while progressively injecting generative
+knowledge through a closed-loop optimization process. Specifically, GeoRect4D
+couples an anchor-based dynamic 3DGS substrate with an efficient single-step
+diffusion rectifier to hallucinate missing details. The rectifier is fine-tuned to
+map degraded renderings to photorealistic imagery and employs structural locking together with spatiotemporal coordinated attention to preserve geometric
+consistency during generative refinement.
+To ensure

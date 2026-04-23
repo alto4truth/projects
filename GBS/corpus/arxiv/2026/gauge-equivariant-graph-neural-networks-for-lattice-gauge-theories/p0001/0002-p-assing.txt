@@ -1,0 +1,26 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 1
+section: p-assing
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+lly with graphbased representations, where links carry the fundamental
+variables and vertices define local transformation frames.
+In the machine-learning setting, the task is to learn a
+mapping
+F:{U ij} 7→ O[{U ij}],(2)
+from a gauge-field configuration to physically meaningful observables. The outputsOmay be global quantities—such as total energy or action—or local observables,
+such as site-resolved densities, currents, or forces. Importantly, these outputs may be either gauge invariant (e.g.,
+energies or Wilson loops) or gauge covariant, transforming consistently under local symmetry operations.
+Crucially, the learned mapping must respect the underlying gauge structure. Gauge-equivalent inputs must
+yield identical invariant outputs, while covariant outputs
+must transform in accordance with Eq. (1). This requirement imposes a stringent structural constraint: the
+model must preserve a site-dependent symmetry action
+throughout its internal representation. This is particularly important in settings such as quantum link models,
+where gauge variables correspond to physical degrees of
+freedom and observables—such as forces or currents—are
+inherently gauge dependent. Embedding these trans

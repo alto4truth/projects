@@ -1,0 +1,21 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+-constrainedgeometrythrough
+closed-loop coupling between explicit 3D Gaussian representations and generative priors.
+–We introduce a generative rectification module based on a single-step diffusion prior together with a progressive optimization strategy, enabling consistent detail hallucination via structural locking, spatiotemporal attention,
+geometric purification, and generative distillation.
+–Extensive experimental results on multiple dynamic-scene datasets demonstrate that our GeoRect4D consistently outperforms existing methods in
+reconstruction fidelity, perceptual quality, and spatiotemporal consistency.
+2 Related Work
+2.1 Dynamic Novel View Synthesis with NeRF
+NeRF [38] initially revolutionized 3D scene synthesis by modeling scenes as
+continuous implicit functions [2–4,7,42,49]. Extending this paradigm to the
+temporal domain, early dynamic approaches typically employed a deformation

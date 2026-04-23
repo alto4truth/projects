@@ -1,0 +1,23 @@
+title: Relative Entropy Estimation in Function Space: Theory and Applications to Trajectory Inference
+source: arxiv
+year: 2026
+document_id: relative-entropy-estimation-in-function-space-theory-and-applications-to-trajectory-inference
+authors: Chao Wang; Luca Nepote; Giulio Franzese; Pietro Michiardi
+page: 4
+section: eurecom
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20775v1
+
+constraints yields Monge-Kantorovich-type formulations (Peyré & Cuturi, 2020; Villani, 2021).
+SDE-based models relax determinism and solve a stochastic control problem that steers a Brownian
+prior with minimal control effort, typically optimizing only the drift while treating the marginal flow
+as fixed or estimated from data. SB-based models are less prescriptive: given a reference diffusion
+(e.g., Brownian or Ornstein-Uhlenbeck), they infer a path measure whose snapshot marginals match
+the data while remaining close to the reference, equivalently solving a stochastic optimal control
+problem (Chen et al., 2021). Yet, computational constraints often push SB methods away from native
+path-space representations, relying on discretization and finite-dimensional parameterizations that
+only approximately preserve path-space structure.
+In the literature, most TI methods are evaluated via held-out marginals. Such metrics are intrinsically
+limited because marginals do not determine how states at different times are coupled. Indeed,
+while marginal evaluation only compares snapshot distributions in finite-dimensional space, the
+underlying inference target is a probability measure over full tra

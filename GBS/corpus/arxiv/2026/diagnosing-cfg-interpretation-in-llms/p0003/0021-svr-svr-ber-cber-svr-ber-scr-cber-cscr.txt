@@ -1,0 +1,32 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 3
+section: svr-svr-ber-cber-svr-ber-scr-cber-cscr
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+Figure 3: Comparison of CoT and Direct generation
+across recursion depths.
+the deep setting ( E= 3 ) causes SCR to drop by
+more than half, from 9.00% to 4.00%. Conversely,
+simplifying predicates to E= 1 improves SCR
+to 10.5% and BER to 20.0%. The fact that SVR
+remains relatively high (16.5%) even at E= 3 indicates that while LLMs can still generate syntactically valid shells, they fail to resolve the underlying
+logical operations. This suggests that nested arithmetic and boolean predicates constitute a distinct
+reasoning hurdle that persists even when the model
+successfully adheres to the global grammar rules.
+Structural Delimiters and Lexical PriorsThe
+impact of surface realization reveals the extent to
+which LLMs rely on pre-training biases versus
+formal rules. As shown in Table 3, among the
+testedSyntactic Styles, the Block used in our baseline is the most robust, while C-style and S-expr
+lead to consistent performance drops. Specifically,
+switching to S-expr reduces SVR from 21.5% to
+16.0% and nearly halves the SCR to 4.50%. This
+suggests that without familiar semantic cues, the
+repetitive parentheses of S-expr become harder
+for the model to track than explicit keywords. A
+more

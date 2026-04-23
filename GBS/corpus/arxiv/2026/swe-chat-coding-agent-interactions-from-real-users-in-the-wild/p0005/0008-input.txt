@@ -1,0 +1,71 @@
+title: SWE-chat: Coding Agent Interactions From Real Users in the Wild
+source: arxiv
+year: 2026
+document_id: swe-chat-coding-agent-interactions-from-real-users-in-the-wild
+authors: Joachim Baumann; Vishakh Padmakumar; Xiang Li; John Yang; Diyi Yang; Sanmi Koyejo
+page: 5
+section: input
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20779v1
+
+<input>
+35
+
+E.2.3 Prompt intent classifier
+Model: Qwen/Qwen3.5-27B. We use suggested decoding parameters: temperature=
+0.7,top_p=0.8,top_k=20,presence_penalty=1.5.
+You are a classifier that categorizes developer prompts based on their primary intent.
+Your task is to read a user prompt and assign it exactly one of the following labels:
+- create new code - The user is asking to generate new functionality, write a script,
+implement a feature, or build something from scratch.
+- refactor - The user wants to modify, restructure, optimize, clean up, or improve
+existing code without fundamentally changing its purpose.
+- debug - The user is diagnosing an error, investigating unexpected behavior, fixing a
+bug, or resolving a crash.
+- understand - The user is asking for an explanation, walkthrough, summary, or
+clarification of existing code or behavior.
+- connect - The user wants to integrate systems, connect APIs, wire components together
+, or build glue code between tools/services.
+- git - The user is asking for help with version control, branching, merging, resolving
+conflicts, commits, or other git-related tasks such as fixing git-related errors.
+- test - The user is asking to write tests, add validation, benchmark, evaluate
+performance, or verify correctness.
+- other - The prompt does not clearly fall into any of the above categories.
+Instructions:
+- Choose exactly one label.
+- Select the label that best represents the primary intent of the prompt.
+- If multiple intents are present, prioritize the main action requested.
+- Respond in valid JSON with the following format:
+{
+"label": "<one of the labels above>",
+"reason": "<1-2 sentence explanation of why this label was chosen>"
+}
+- Do not include any text outside the JSON object.
+Now classify the following prompt:
+{input}
+E.2.4 User pushback classifier
+Model: Qwen/Qwen3.5-9B. We use suggested decoding parameters: temperature=
+0.7,top_p=0.8,top_k=20,presence_penalty=1.5.
+You are a classifier that determines whether a user prompt in a coding agent session
+represents pushback against the agent's preceding action, and if so, what kind.
+Pushback is any prompt where the user resists, corrects, redirects, or takes over from
+the agent - rather than simply continuing the workflow. Use the preceding
+conversation context to understand what the agent just did.
+Classify the prompt into exactly one of the following categories:
+- correction - The user redirects the agent by providing missing context, correcting a
+misunderstanding, pointing out factual errors, or changing requirements/direction/
+scope mid-task.
+Examples: "I said X not Y", "you changed the wrong file", "actually the API uses POST
+not GET", "actually, let's do X instead", "forget that approach, try Y", "on
+second thought, skip the tests"
+- rejection - The user explicitly rejects, reverts, or refuses the agent's output
+without providing a specific correction.
+Examples: "undo that", "revert the last change", "no", "that's wrong", "I don't want
+that", "put it back the way it was"
+- failure_report - The user reports that the agent's output does not work: bugs, errors
+, test failures, or broken behavior.
+Examples: "this still doesn't work", "it's still crashing", "same error, try again",
+"the tests are failing", "I get a 404 now"
+- non_pushback - The prompt moves the session forward normally: a new task, building on
+agent output, asking a question, or routine iteration.
+36

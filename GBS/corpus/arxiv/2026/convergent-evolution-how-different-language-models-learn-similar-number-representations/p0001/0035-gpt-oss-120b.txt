@@ -1,0 +1,25 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+53. In single-token addition, no modular constraint is imposed, so ΦT is
+unconstrained and depends on the optimizer and random seed. This reveals a second route
+through the two-tiered hierarchy: multi-token tokenization creates modular subproblems
+that produce both spectral and geometric convergence through carry propagation, while
+single-token tokenization guarantees neither.
+6 Conclusion and Discussion
+We have shown that periodic number representations in language models exhibit a twotiered convergence: Fourier spikes are universal, but linearly separable mod- T classes
+emerge only when data, architecture, and optimizer align. The central lesson is that visible
+structure in representations does not guarantee functional organization: the LSTM and even
+the raw token distribution develop more prominent Fourier spikes than the Transformer yet
+achieve chance-level probing.
+More generally, any representation-level diagnostic could mistake statistical artifacts of the
+training distribution for learned structure. Our controlled perturbation approach offers
+a complementary lens to instance-level attribution methods such as influence functions
+(Koh & Liang, 2017): rather than attributing p

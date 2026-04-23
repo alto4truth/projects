@@ -1,0 +1,37 @@
+title: Efficient Multi-Cohort Inference for Long-Term Effects and Lifetime Value in A/B Testing with User Learning
+source: arxiv
+year: 2026
+document_id: efficient-multi-cohort-inference-for-long-term-effects-and-lifetime-value-in-a-b-testing-with-user-learning
+authors: Dario Simionato; Andrea Tonon; Mingxue Wang; Weiguo Wang; Tong Gui; Xiaoyue Li
+page: 2
+section: document
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20777v1
+
+In [16], the user learning is instead estimated
+using a DiD method computed as ˆ𝛿𝐷𝑖𝐷 (𝑡)=(𝑇 𝑡
+0 −𝑇 0
+0 ) − (𝐶 𝑡
+0 −𝐶 0
+0).
+Such estimates are then used to fit an exponential model 𝑓(𝑡)=
+𝛾+𝛼𝑒 −𝛽𝑡 , and the LTE is obtained by summing𝛾 and the treatment
+effect in the first user exposure day.
+The main limitation of such approaches lies in their inefficient
+use of data. In the CCD method, each cohort contributes to the
+estimator only once through the 𝑇 𝑡
+𝑡 term. By contrast, the DiD
+estimator ignores users who enter in the experiment after it begins.
+Our approach, instead, overcomes such issue by combining multiple
+estimates and therefore making full use of the available data.
+We observe that the user learning at time 𝑡 can be computed as
+ˆ𝛿0 (𝑡)=𝑇 𝑡
+0 −𝑇 𝑡
+𝑡 (as shown in [13]) but also as ˆ𝛿𝑘 (𝑡)=𝑇 𝑡+𝑘
+𝑘 −𝑇 𝑡+𝑘
+𝑡+𝑘
+(as suggested in [16]) as long as 𝑡+𝑘<𝑇 . While both estimates are
+unbiased, combining them with a simple average to obtain a more
+precise quantity is inefficient due to their different variances. We
+therefore aggregate such estimates using inverse-variance weighting, which assigns greater weight to more precise estimatesˆ𝛿𝑘. This
+yields to the multi-cohort estimator ˆ𝛿𝑀𝐶 (

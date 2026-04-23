@@ -1,0 +1,18 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+). When κ= 0, the probe is
+at chance and κ= 100% is perfect classification regardless of T. Swap Numbers , which
+preserves number n-gram statistics but destroys the association between specific numbers
+and their text contexts, drops probing from κ= 85.4 to 28.8 at T= 10, making text-number
+co-occurrence an important signal. But it is not the only one.
+Longer context provides a second signal. At Context Length 2 , where each token sees only
+one neighbor, mod-10 probing already reaches κ= 40.3, well above Swap Numbers (28.8).
+Increasing the window to ℓ= 4, 8, and 64 steadily improves mod10 probes (κ= 47.3, 51.7,

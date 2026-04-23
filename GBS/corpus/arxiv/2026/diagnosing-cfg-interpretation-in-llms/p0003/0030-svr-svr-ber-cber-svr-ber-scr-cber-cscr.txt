@@ -1,0 +1,30 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 3
+section: svr-svr-ber-cber-svr-ber-scr-cber-cscr
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+Limitations
+Despite the insights provided by our evaluation
+hierarchy, this work has certain limitations that
+open avenues for future research.
+First, while ROBOGRIDprovides a deterministic
+and controllable environment for isolating structural reasoning, it relies on template-synthesized
+instructions. In real-world agentic deployments,
+LLMs often encounter a complex interleaving of
+nuanced natural language and highly intricate structured interfaces. The interplay between linguistic
+ambiguity and formal rigidity may introduce additional failure modes. Future work will extend our
+framework to more heterogeneous environments
+to evaluate LLMs as in-context interpreters under
+open-domain constraints.
+Second, although our study exposes a massive
+gap between syntactic adherence and semantic
+alignment in novel grammars, we do not propose
+a specialized architecture or decoding strategy to
+bridge this divide. Current solutions often either
+rely on model-internal knowledge or sacrifice semantic flexibility for syntactic validity. Developing a grammar-agnostic reasoning mechanism that
+maintains both structural integrity and logical fidelity without over-reliance on semantic priors remains a cr

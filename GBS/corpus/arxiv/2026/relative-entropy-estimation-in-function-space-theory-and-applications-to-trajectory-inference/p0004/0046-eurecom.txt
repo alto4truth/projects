@@ -1,0 +1,50 @@
+title: Relative Entropy Estimation in Function Space: Theory and Applications to Trajectory Inference
+source: arxiv
+year: 2026
+document_id: relative-entropy-estimation-in-function-space-theory-and-applications-to-trajectory-inference
+authors: Chao Wang; Luca Nepote; Giulio Franzese; Pietro Michiardi
+page: 4
+section: eurecom
+chunk: 46
+source_ref: https://arxiv.org/pdf/2604.20775v1
+
+epth / heads)32/2/8
+Decoder (dim / depth / heads)32/2/8
+Supernode radius5e−4
+GPUs for Training 1×NVIDIA A100
+Table 5: FKL hyperparameters for SDEs.
+22
+
+estimates remain highly precise and stable throughout.(iv) Temporal discretization.We vary the
+number n of sampled time points used to approximate the integral in Equation (7). Over 5 random
+seeds, Figure 5d shows that the mean estimate remains close to the ground truth for all n, and the
+standard deviation decreases substantially with finer discretization and becomes negligible at n= 80 ,
+confirming the strong stability of our estimator.
+Together, these results show that FKL estimation is accurate and numerically stable, supporting our
+discretization choices for FKL estimation.
+(a) Basis truncation.
+(b) Velocity-field estimation.
+(c) Monte Carlo approximation.
+(d) Temporal discretization.
+Figure 5: Sensitivity analysis on a Gaussian special case.
+Choice of noise covariance operator C.In our function-space formulation, the FFM-based
+FKL estimator is accurate and resolution-invariant only when the noise covariance satisfies two
+conditions:(i) C is trace-class on the Hilbert space H; and(ii) C satisfies the Cameron-Martin
+support assumption (Assumption 3.2), i.e., the Gaussian noise N(0, C) must be rougher than the
+data measure. To verify this empirically, we conduct an ablation study on a Gaussian special case
+(Case 2 in the top-left table of Figure 1). We test three choices of C and evaluate the FKL estimate
+on trajectories sampled at resolutions M∈ {128,256,512,1024} , while keeping the FFM trained at
+resolutionM= 256. Results are shown in Figure 6.
+When C= Id (white noise), condition(i)fails because C is not trace-class; consequently, the
+estimator is not function-space resolution-invariant, with the estimated FKL diverging as the inference
+resolution increases. When C is Matérn with smoothness α0 = 6.0, condition(i)holds, but condition
+(ii)fails because the noise is smoother than the data measure ( α0 > α 1), leading to unstable and
+divergent FKL estimates across all resolutions. In contrast, Matérn C with α0 = 0.5 satisfies
+both conditions, yielding accurate and resolution-invariant forward and reverse FKL estimates,
+which highlights the importance of choosing a noise covariance that meets both conditions for FKL
+evaluation.
+For the empirical comparison between white noise and trace-class Matérn noise with smoothness
+α0 = 0.5 , in addition to demonstrating the improved robustness of KL estimation under superresolution afforded by trace-class noise (see Figure 6c), we further show that trace-class noise
+also provides more robust generation quality under super-resolution (see Figure 7). A theoretical
+discussion of this choice is given in Franzese (2025).
+23

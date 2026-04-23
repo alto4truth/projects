@@ -1,0 +1,34 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 117
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Plan-and-Solve Prompting
+Please reason step by step, and then provide the final answer in the exact format:\boxed{ANSWER}.
+[Question]
+problem_text0 [IMAGE0] problem_text1 [IMAGE1] ... problem_textn
+[Choices] # only for multiple choices problems
+A. option_A
+...
+Let’s first understand the problem and devise a plan to solve it. Then, let’s carry out the plan and
+solve the problem step by step.
+Visualization-of-Thought (VoT) Prompting [64]encourages the model to visualize intermediate states
+after each reasoning step to enhance clarity and understanding. The specific prompt used is as follows:
+Visualization-of-Thought (VoT) Prompting
+Please reason step by step, and then provide the final answer in the exact format:\boxed{ANSWER}.
+[Question]
+problem_text0 [IMAGE0] problem_text1 [IMAGE1] ... problem_textn
+[Choices] # only for multiple choices problems
+A. option_A
+B. option_B
+...
+Visualize the state after each reasoning step.
+G.2. “Thinking” vs. “No-Thinking” Prompting Modes
+We next describe how the “thinking” and “no-thinking” prompting modes in Fig. 4(b) are implemented for
+both reasoning-oriented and non-reasoning LVLMs. In the "no-thinking" mode, the prompt instructs the
+model to avoi

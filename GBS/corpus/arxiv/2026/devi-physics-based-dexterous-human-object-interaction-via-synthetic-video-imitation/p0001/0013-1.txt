@@ -1,0 +1,61 @@
+title: DeVI: Physics-based Dexterous Human-Object Interaction via Synthetic Video Imitation
+source: arxiv
+year: 2026
+document_id: devi-physics-based-dexterous-human-object-interaction-via-synthetic-video-imitation
+authors: Hyeonwoo Kim; Jeonghwan Kim; Kyungwon Cho; Hanbyul Joo
+page: 1
+section: 1
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20841v1
+
+Shi, Michael Taylor, and Xue Bin Peng. Physicsbased motion imitation with adversarial differential discriminators. InProc. ACM SIGGRAPH
+Asia, 2025.
+14
+
+A Implementation Details
+A.1 Scene Initialization
+Our scene initialization follows a tabletop scenario. We place an SMPL-X [33] human at the origin
+on the xy-plane and initialize it to face the positive y-axis. We then place a table on the xy-plane
+at (x, y) = (0.0,0.4) , with dimensions (1.0,0.5,0.8) . The objects are initialized on the table to
+construct our scene. We assume a physically valid state (e.g., no floating objects) for the initialized
+scene and assign an initial pose to each object accordingly, maintaining the same poses when applying
+the physics simulation.
+A.2 Deforming Textured Human
+We replace the SMPL-X model with a 3D textured human mesh by deforming the mesh to match
+the pose of the initialized SMPL-X. We use the 3D textured human meshes from the THuman
+2.0 dataset [ 67] with their corresponding SMPL-X annotations to assign SMPL-X offsets and
+skinning weights to each vertex of the textured human mesh. For the textured human mesh vertices
+{xi}N
+i=1 ∈R N×3 and {vj}M
+j=1 ∈R 10475×3, we assign the offsets oi ∈R 3 and skinning weight
+wi ∈R J of the vertexx i as follows:
+wi =
+X
+k∈NK (i)
+αi,kWk, o i =
+X
+k∈NK (i)
+αi,kOk,
+where NK(i) is the indices of the K-nearest vertices of xi in {vj}M
+j=1, Wk ∈R J is the skinning
+weight of J= 55 joints in the SMPL-X vertex vk, Ok ∈R 3 is the offset of the SMPL-X vertex vk
+computed via shape and pose parameters, and αi,k is the blending coefficient of the each skinning
+weight. The coefficient αi,k is defined using a Gaussian kernel over the distance between xi and its
+nearest neighbors{v k}k∈NK (i) as follows:
+αi,k = esi,k
+P
+k′∈NK (i) esi,k′ , s i,k =− ∥xi −v k∥2
+2σ2
+Using the assigned offset oi and skinning weight wi, we deform the 3D textured human mesh via
+linear blend skinning. In practice, we use K= 16 for approximating the offsets and skinning weights.
+A.3 Rendering Scene
+For the initialized scene, we initially place 16 candidate cameras at a radius of 1.5, spaced at 45◦
+azimuth intervals, and facing the origin with two elevation angle variations, 15◦ and 30◦. The height
+of the cameras are adjusted about 1.0 along the positive z-axis to capture the scene within the image
+frame. Among the 16 cameras, we empirically find that selecting one of the six frontal views in which
+both the human’s hands and the object are visible is beneficial, especially for hand pose estimation.
+For the remaining intrinsic parameters, we follow the Isaac Gym [30], and define as follows:
+K=
+"f0w/2
+0f h/2
+0 0 1

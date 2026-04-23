@@ -1,0 +1,33 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 14
+section: lexis-23
+chunk: 61
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+24 D. Antić et al.
+wherePis Precision andRis Recall. Higher is better (↑).
+Collision Score:This quantifies the fraction of body vertices that penetrate
+into the object mesh:
+Collision(Vb,V o) = 1
+|Vb|
+X
+vb∈Vb
+I(vb inV o), (S.3)
+whereV b,V o are the set of body and object vertices, respectively,I(vb inV o)
+is a binary indicator of whether a body vertex,vb, is inside the object volume
+Vo, computed via ray-parity testing [34]. Lower is better (↓).
+S.2 Qualitative Evaluation (Extending Sec. 4.3 of Main)
+S.2.1 Additional Results
+ComparisonstoSotA:ThenewextensivecomparisonsinFigs.S.2andS.3
+(which extend Fig. 6 of the main) demonstrate the robustness of LEXIS-Flow∗
+across diverse, complex interactions shown in images taken in the wild. For more
+results shown with a rotating viewpoint, see our website video.
+Failure Cases:As with all methods, performance can degrade when poor
+off-the-shelf initialization exceeds the recovery capacity of the Flow, or for highly
+atypical interactions underrepresented in existing datasets [41, 81, 91, 93]. In
+such Out-Of-Distribution (OOD) cases, the LEXIS manifold (and the decoded
+InterFields) may misguide LEXIS-Flow, causing floating or penetrating artifact

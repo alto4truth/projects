@@ -1,0 +1,21 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+frame (e.g., DropGaussian [41] and DNGaussian [29]) can preserve some spatial structures, they completely fail to maintain temporal coherence, resulting
+in severe flickering and a massive tOF error of 15.403. In stark contrast, our
+closed-loop generative feedback thrives in highly dynamic scenarios. GeoRect4D
+not only achieves a commanding PSNR of22.60 dBbut also ensures that the
+hallucinated details remain structurally stable across time. By achieving the
+lowest tOF (1.412) and tLPIPS (4.21) alongside state-of-the-art perceptual realism (MUSIQ:62.71, MANIQA:0.2987), we demonstrate that our method
+fundamentally resolves the tension between spatial hallucination and temporal
+consistency in large-motion scenes.
+QualitativeComparisons.WepresentqualitativecomparisonswithSTGS,
+Swift4D, and Ex4DGS on thecoffee_martini,discussion, andCBAsequences,
+as shown in Fig. 4. Under the severely under-constrained 4-view setting, existing methods struggle to disentangle complex motion from geometry. Con-

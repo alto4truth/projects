@@ -1,0 +1,110 @@
+title: SWE-chat: Coding Agent Interactions From Real Users in the Wild
+source: arxiv
+year: 2026
+document_id: swe-chat-coding-agent-interactions-from-real-users-in-the-wild
+authors: Joachim Baumann; Vishakh Padmakumar; Xiang Li; John Yang; Diyi Yang; Sanmi Koyejo
+page: 2
+section: task-b-target-audience
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20779v1
+
+Assign one of target audience tags from:
+- enduser
+- developer
+- researcher
+- education (i.e., educators or students)
+33
+
+create new code
+debug
+git
+other
+refactor
+test
+understand
+Predicted (qwen-3.5-27b)
+create new code
+debug
+git
+other
+refactor
+test
+understand
+Gold label (humans)
+12 0 0 0 0 1 1
+0 14 0 0 2 0 0
+1 0 16 0 0 0 2
+0 1 0 7 2 0 4
+2 1 0 2 8 0 1
+0 0 0 0 0 2 0
+1 0 1 2 0 0 17
+Prompt Intent
+(Accuracy=0.76, n=100)
+correction
+failure_reportnon_pushback
+rejection
+Predicted (qwen-3.5-9b)
+correction
+failure_report
+non_pushback
+rejection
+Gold label (humans)
+18 0 6 1
+4 18 4 1
+10 2 30 0
+4 0 0 0
+Prompt Pushback
+(Accuracy=0.67, n=98)
+Expert NitpickerMind Changer
+Other
+Vague Requester
+Predicted (gpt-5.4-2026-03-05)
+Expert Nitpicker
+Mind Changer
+Other
+Vague RequesterGold label (humans)
+43 5 2 5
+12 2 0 1
+1 0 2 0
+3 0 2 22
+User Persona
+(Accuracy=0.69, n=100)
+application
+devtools
+other
+Predicted (claude-opus-4-6)
+application
+devtools
+other
+Gold label (humans)
+43 1 1
+9 27 0
+7 1 11
+Repo Domain
+(Accuracy=0.81, n=100)
+developer education enduser
+researchers
+Predicted (claude-opus-4-6)
+developer
+education
+enduser
+researchersGold label (humans)
+51 1 4 2
+0 4 0 0
+7 1 27 0
+1 0 0 2
+Repo Audience
+(Accuracy=0.84, n=100)
+20 40 60 80 100
+Predicted (claude-sonnet-4-6)
+20
+40
+60
+80
+100Gold label (humans)
+Session Success
+( =0.600, ICC(2,1)=0.605, ICC(3,1)=0.614, n=100)
+y=x
+Figure 34: LLM annotation agreement with gold labels from human expert annotations.
+Instructions:
+- Choose exactly one, most likely label.

@@ -1,0 +1,23 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 119
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+G.3. “Thinking” vs. “Instruct” Model Variants
+Finally, we describe the usage of the Qwen3-VL “thinking” and “instruct” variants whose comparison is
+summarized in Figure 4(c). We use two official checkpoints: “Qwen3-VL-Instruct,” an instruction-following
+vision-language model optimized for general-purpose multimodal tasks; and “Qwen3-VL-Thought,” a variant optimized for long-form reasoning that supports an explicit “thinking” mode with extended internal
+deliberation. As shown in Figure 4 (c), although the gains remain below Olympiad-level performance, they
+constitute the largest relative improvement among all tested Long CoT paradigms, indicating that specialized
+long-reasoning training can partially enhance multimodal Olympiad performance.
+H. Detailed Protocols for Test-Time Scaling Experiments
+Unless otherwise specified, all results are reported on the OMIBench test split using GPTScore, and each
+configuration is evaluated on the full benchmark.
+H.1. Sequential Scaling Protocol
+To study sequential test-time scaling, we vary the maximum number of newly generated tokens per example,
+Lmax, while keeping all other hyperparameters fixed and re-evaluating the full OMIBench test set for

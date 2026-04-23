@@ -1,0 +1,34 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 1
+section: surface
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+structural reasoning.
+• We formalize the task ofin-context grammar
+interpretationfor LLMs, shifting the evaluation focus from surface pattern matching to
+formal rule induction.
+• We characterize the operational limits of
+SOTA LLMs, revealing amassive gap between syntactic adherence and semantic
+alignment. While LLMs may follow formal
+rules at the surface level, their ability to maintain logical fidelity collapses as complexity
+increases, exposing a heavy reliance on semantic priors rather than pure symbolic induction.
+2 Preliminaries
+2.1 ROBOGRIDEnvironment
+ROBOGRIDis a deterministic grid-world designed
+to decouple a LLM’s understanding of task logic
+from its adherence to formal syntax. In this environment, a robot navigates the grid to pick up
+objects which are then stored in its inventory. The
+robot maintains a state (x,y,facing,inventory) ,
+representing its 2D coordinates, orientation, and
+the collection of held items respectively. The instruction set is as follows:
+Move(dir, n) #forward/backward n steps
+Turn(dir) #left/right 90 deg
+Grab(item) #pick up item|key|box
+Loop(n, body) #repeat body n times
+If(cond, then, else?) #conditional branch
+Holding(item) #state-query predicates

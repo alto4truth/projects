@@ -1,0 +1,15 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 6
+section: ebnf
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+ons
+We vary the maximum nesting depth of the AST
+to probe the LLM’s ability to handle hierarchical
+structures. At depth 2, programs consist of shallow
+control structures, typically single loops or conditionals.

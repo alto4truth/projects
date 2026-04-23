@@ -1,0 +1,31 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+learning rate of 5×10 −5,
+batch size of 64, and weight decay of 0.01. Training proceeds for 5 epochs with gradient clipping at
+a maximum norm of 1.0. These hyperparameters
+follow the empirical setups commonly used in the
+BabyLM Challenge (Warstadt et al., 2023) and are
+kept consistent across all model variants to ensure
+fair comparison. Tokenisation uses the standard
+GPT-2 byte-pair encoding, with separate tokenisers
+trained on the 10M and 100M corpora respectively
+to match the data scale of each setting.
+B Structural Probing Analysis
+Our structural probing analysis applies the derivational probing framework of Someya et al. (2025),
+which extends the structural probe of Hewitt and
+Manning (2019) by making explicit the layer-wise
+derivation of syntactic structures in neural language
+models. The method trains a diagnostic linear projection B∈R k×d over a model’s contextual embeddings hi ∈R d, such that the squared L2 distance between projected embeddings approximates
+the tree distance between the corresponding tokens
+in the syntactic dependency parse:
+dB(hi, hj)2 = (B(hi −h j))T (B(hi −h j))(6)
+The probe is trained to minimise the difference
+between dB and the true parse-tree distanc

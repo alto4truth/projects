@@ -1,0 +1,22 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+the boolean prediction from the code solution and compares it against the ground
+truth. During training, the policy model samples a response, which is scored by the verifier. This binary signal is used to
+update the policy using RL algorithms such as GRPO (Shao et al., 2024).
+2.3 Zero-Shot Cross-Lingual Transfer
+Zero-shot cross-lingual transfer is a core paradigm in multilingual NLP. In this setup, a multilingual model is finetuned
+on task data in asourcelanguage and then evaluated zero-shot on the same task in a differenttargetlanguage. Despite
+never seeing any task data in the target language, models often achieve surprisingly high performance (Huang et al., 2019;
+Conneau and Lample, 2019; Conneau et al., 2020a), provided that they were exposed to unsupervised target-language
+data during pretraining. This transferability is often attributed to language-general representations (Conneau et al.,
+2020b). This is most intuitive when an LM is finetuned by training a task-specific head while freezing the pretrained
+parameters (Peters et al., 2018, 2019; Artetxe and Schwenk, 2019;i.a.), where language-general representations allow
+the task head’s decision boundary to naturally generaliz

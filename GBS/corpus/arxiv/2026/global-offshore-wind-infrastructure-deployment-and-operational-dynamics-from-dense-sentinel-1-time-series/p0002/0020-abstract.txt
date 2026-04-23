@@ -1,0 +1,22 @@
+title: Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+source: arxiv
+year: 2026
+document_id: global-offshore-wind-infrastructure-deployment-and-operational-dynamics-from-dense-sentinel-1-time-series
+authors: Thorsten Hoeser; Felix Bachofer; Claudia Kuenzer
+page: 2
+section: abstract
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20822v1
+
+CNN [Ren et al.,
+2017] architecture used in the preceding study. Following Hoeser and Kuenzer [2022b], Hoeser et al. [2022], we
+generated 90,000 synthetic training samples with corresponding annotations for both offshore wind farms and individual
+offshore wind infrastructure units to train the models for both stages.
+Training was conducted on four NVIDIA A100 GPUs hosted on DLR’s Terrabyte HPC [DLR terrabyte, 2026]. The
+models were trained using an input size of 1024 × 1024 pixels, a batch size of 32, and 20 epochs. A linearly decaying
+learning rate schedule was applied, decreasing from 0.01 to 0.0001 following a three-epoch warm-up phase.
+Inference was performed on median composites of the Sentinel-1 GRD IW product. All images which are within
+the global Exclusive Economic Zones (EEZs) [Flanders Marine Institute, 2024] with VH polarization for both orbit
+directions are queried and processed on GEE for 2025Q1. The resulting tiles were exported to Terrabyte HPC and
+organized as a global mosaic using the GDAL tile index (GTI). A virtual chip grid of 2048 × 2048 pixels with 50%
+overlap is used to enable highly parallelized data access via the GTI during a CPU based inference process r

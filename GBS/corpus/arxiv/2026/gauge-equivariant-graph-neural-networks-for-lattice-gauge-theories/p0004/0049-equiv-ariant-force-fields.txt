@@ -1,0 +1,24 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 4
+section: equiv-ariant-force-fields
+chunk: 49
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+message passing as a unified and scalable paradigm for learning both static and dynamical properties of non-Abelian
+lattice gauge systems.
+Looking forward, the present framework opens several
+promising directions at the interface of machine learning and lattice gauge theory. A natural application
+lies in accelerating lattice QCD simulations. By embedding gauge-equivariant neural surrogates into Monte
+Carlo workflows—such as learned effective actions, proposal generators, or force models—one may construct
+more efficient sampling schemes while preserving exactness through standard accept–reject steps [61–65]. This
+direction is particularly compelling in gauge–matter settings, where fermionic contributions render conventional
+updates computationally expensive. Beyond sampling,
+the same architecture may serve as a physics-informed accelerator for fermionic solvers, for example by providing
+symmetry-consistent preconditioners or surrogate representations of Dirac operators, potentially alleviating the
+dominant cost associated with repeated inversions.
+From the perspective of condensed matter and quantum simulation, the same framework naturally extends to
+variational representations of

@@ -1,0 +1,24 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+8 Z. Wu et al.
+Fig. 3:Illustration of our two-stage progressive optimization framework. Stage 1 executes geometric purification via stochastic pruning, opacity annealing, and ROI-based
+dynamic constraints to establish a robust substrate. Stage 2 performs generative distillation, transferring details from the generative prior into the 3D scene through a hybrid
+objective combining physical and pseudo-supervision.
+subsequently performingGenerative Distillationto transfer generative priors
+into the 3D representation.
+Stage 1: Stochastic Geometric Purification:We observe that sparse
+supervision often overfits static scenes, minimizing projection errors by generating low-depth, high-density anomaly clusters rather than physically plausible
+geometry. Since classical hard pruning may prematurely remove unconverged
+valid structures, we propose aDistribution-Guided Stochastic Pruning.
+Specifically, for each Gaussiani, we compute its depthdi relative to the camera center and estimate its local spatial densityρi via the K-Nearest Neighbors
+(KNN) algorithm. We then apply a time-varying dropout pressureη(t)based
+on the training progress. The binary existence maskmi for thei-th Gaussian is
+formul

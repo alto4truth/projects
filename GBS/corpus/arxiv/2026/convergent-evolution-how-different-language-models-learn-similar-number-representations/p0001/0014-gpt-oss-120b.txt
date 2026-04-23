@@ -1,0 +1,29 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+§ A.4) that this maximum discriminant satisfies:
+1
+(T−1)·cond(S W ) · ΦT
+N·λ min(SW ) ≤λ max(S−1
+W SB)≤ ΦT
+N·λ min(SW ) .
+The Fourier power ΦT only guarantees a large total variance among the class means, which drives
+ΦT =Tr(S B)/N in the numerator. It ensures the class centers are dispersed in space. However,
+actual linear separability depends on how this signal aligns with the within-class scatter,SW. A large
+condition number, cond(SW ) =λ max(SW )/λmin(SW ), drastically lowers the minimum bound. If
+the periodic signal aligns with the dimensions of maximum within-class noise, the massive ΦT is
+entirely swallowed by within-class variance. This drives λmax toward zero and forces the entire
+(T−1)-dimensional subspace to collapse into overlapping classes.
+The proof of Theorem 1 is given in Appendix A, where part (i) follows naturally from
+Fourier identities in Lemma 4 which shows that Tr(SB) =Φ T/N, and part (ii) constructs
+examples (see Figure 3) so that ΦT can be arbitrarily large but residue classes are not linearly
+separable. We now ask two empirical questions: how common are Fourier spikes in practice,
+and do they actually predict mod-Tprobe accuracy?
+Throughout this paper, unl

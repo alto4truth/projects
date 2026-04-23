@@ -1,0 +1,28 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 2
+section: grab-item
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+logic. To ensure
+a precise mapping between instructions and groundtruth code, these natural language descriptions are
+deterministically synthesized using templates corresponding to the underlying AST structure. This
+requires the LLM to map the hierarchical structure
+of natural language to the nested syntax of G while
+maintaining semantic fidelity.
+4.2 Evaluation Metrics
+We evaluate performance across the tasks using a
+hierarchy of three metrics.
+Syntax Validity Rate (SVR)SVR measures the
+proportion of LLM’s outputs that conform to the
+production rules of G. For Task 1, SVR is the
+classification accuracy of the judgment. For Tasks
+2 and 3, it is defined as the parseable rate:
+SVR=E[1{parse(ˆy,G)̸=error}].(1)
+where ˆydenotes the program string synthesized
+by LLM. The parse(·) function is implemented via
+4

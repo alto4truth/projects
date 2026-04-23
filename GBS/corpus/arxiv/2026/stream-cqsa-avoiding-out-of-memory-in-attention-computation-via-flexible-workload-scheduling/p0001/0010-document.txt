@@ -1,0 +1,18 @@
+title: Stream-CQSA: Avoiding Out-of-Memory in Attention Computation via Flexible Workload Scheduling
+source: arxiv
+year: 2026
+document_id: stream-cqsa-avoiding-out-of-memory-in-attention-computation-via-flexible-workload-scheduling
+authors: Yiming Bian; Joshua M. Akey
+page: 1
+section: document
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20819v1
+
+ly along the main diagonal at the chunk level, or intra-chunk interactions, rather
+than at the token level. The masking rule is simple: subsequence i is responsible only for the diagonal
+chunk pair (i, i). For example, if subsequence 0 is constructed using I= (0,1,3) , it contains
+diagonal chunk pairs (0,0) , (1,1) , and (3,3) . Among these, only (0,0) is retained, while (1,1) and
+(3,3)are masked out, as they are assigned to subsequences1and3, respectively.
+When applying CQS Divide iteratively from iteration itr to itr+ 1 , subsequences at iteration
+itr+ 1 apply the same main-diagonal masking rule. In addition, they inherit main-diagonal masks
+3

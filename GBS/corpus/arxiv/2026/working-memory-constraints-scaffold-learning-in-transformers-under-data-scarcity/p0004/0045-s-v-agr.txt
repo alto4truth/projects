@@ -1,0 +1,28 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+ssing pipeline, freeing later layers for higher-order operations.
+B.2 Relation to the Attention-Head Analysis
+The probing results provide a quantitative complement to the qualitative attention-head analysis
+in Section 5.4. Where the attention-head visualisations show that individual heads in the fixedwindow model specialise for identifiable linguistic
+functions, the probing results show that this specialisation translates into representational geometry in
+which syntactic relations are linearly recoverable.
+The two analyses converge on the same underlying
+claim that the fixed-window constraint shapes both
+the local attention patterns within heads and the
+global geometry of the resulting representational
+space.
+We however caution that structural probing remains an indirect measure. A high UUAS shows
+that syntactic structure is recoverable from the embeddings, but does not establish that the model uses
+this structure in any computationally meaningful
+way during prediction. The convergence between
+probing results and behavioural performance on
+BLiMP is suggestive. We treat the probing analysis as one of several converging lines of evidence
+rather than as a standalone proof of structura

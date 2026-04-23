@@ -1,0 +1,25 @@
+title: Relative Entropy Estimation in Function Space: Theory and Applications to Trajectory Inference
+source: arxiv
+year: 2026
+document_id: relative-entropy-estimation-in-function-space-theory-and-applications-to-trajectory-inference
+authors: Chao Wang; Luca Nepote; Giulio Franzese; Pietro Michiardi
+page: 4
+section: eurecom
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20775v1
+
+growing literature of infinite dimensional generative models Kerrigan et al. (2023b); Hagemann
+et al. (2023); Pidstrigach et al. (2024); Lim et al. (2024); Yang
+et al. (2024); Baker et al. (2024); Park et al. (2024). In particular, our approach represents trajectory distributions through
+functional flows using Functional Flow Matching (FFM) (Kerrigan et al., 2023c). FFM constructs a path of conditional
+Gaussian measures interpolating between a reference Gaussian
+law and a data-induced law; marginalizing these conditional
+laws over the data distribution yields a corresponding path of
+unconditional measures. Exploiting this structure, we derive
+a tractable estimator of the KL divergence between trajectory
+distributions, expressible, up to model- and approximationdependent terms, in terms of squared discrepancies between
+the associated (approximate) velocity fields. The resulting
+estimator is practical and scales to realistic regimes in both
+snapshot count and trajectory resolution. Our work connects
+to recent progress on information-measure estimation (Belghazi et al., 2018; Franzese et al., 2023a;
+Kong et al., 2023; Butakov et al., 2024, 2026; Gowri et al., 2024; Pieper-Sethmacher e

@@ -1,0 +1,31 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 3
+section: svr-svr-ber-cber-svr-ber-scr-cber-cscr
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+oT) setting, performance is
+consistently abysmal across all depths, with SVR
+rarely exceeding 10% and SCR dropping to near
+zero even at shallow depths ( D= 5 ). In stark
+contrast, enabling CoT provides a massive performance boost, lifting SVR at D= 2 from 9.5% to
+42.0% with zero-shot setting. This suggests that the
+external reasoning trace is a functional necessity
+for the model to maintain the hierarchical statetracking required by EBNF production rules.
+Diminishing Returns of Few-shot Prompting.
+To isolate the impact of few-shot examples, we
+analyze performance variations under the CoT setting specifically at a fixed complexity of D= 10
+(Figure 4). We observe diminishing returns as the
+number of shots increases. Moving from 0-shot
+(21.5% SVR, 9% SCR) to 1-shot actually results
+in a performance dip (20.0% SVR, 6.0% SCR).
+While 2-shot and 5-shot trials show minor recoveries in SVR (20.5% and 21.0% respectively), they
+fail to consistently surpass the 0-shot baseline. This
+indicates that while ICL might assist with surfacelevel alignment in simpler tasks, for deep recursive
+structures, additional examples do not provide a
+clear reasoning advantage and may even introduce
+distracting n

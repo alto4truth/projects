@@ -1,0 +1,34 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 1
+section: p-assing
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+a site-wise multilayer
+perceptron (MLP), shared across all lattice sites,
+Oi = MLPθ
+
+Re Tr[V(out)
+i ],Re Tr[E (out)
+□ ],Re Tr[P]
+
+.
+(8)
+In this framework, equivariant message passing systematically builds an expressive hierarchy of contractible Wilson loops from local features, whose traces serve as local
+invariant descriptors. In contrast, non-contractible loops
+encode global (topological) information and remain insensitive to local equivariant updates. Their contribution thus enters naturally as a finite set of global scalar
+features at the level of the invariant MLP.
+In this way, the gauge-equivariant GNN serves as a
+structured feature extractor that organizes local and
+global gauge information into symmetry-compatible representations, with the final MLP mapping these invariant
+descriptors to physical observables.
+III. LEARNING PURE GAUGE STRUCTURE
+IN 3+1 DIMENSIONS
+Having established the general framework for gaugeequivariant graph neural networks, we now turn to a
+concrete benchmark. We consider pure lattice gauge theory in 3 + 1 dimensions, where the dynamical degrees of
+freedom reside solely on the gauge links. This setting
+provides a nonperturbative discretization of Yang

@@ -1,0 +1,63 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 8
+section: adapt-calibrate-classifier-to-your-data
+chunk: 76
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+rturbed Samples)
+The estimator is the sample mean over allM=C+Lsamples:
+ˆµCS−ARM−BN = 1
+M
+X
+u∈Cβ
+µobs,u = 1
+M
+CX
+c=1
+µobs,c +
+LX
+l=1
+µobs,l
+!
+.(28)
+23
+
+Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+Expanding each term:
+ˆµCS−ARM−BN = 1
+M
+CX
+c=1
+(µdomain +ε c) +
+LX
+l=1
+(µdomain +µ class(l) +ε l)
+!
+=µ domain + 1
+M
+LX
+l=1
+µclass(l) + 1
+M
+X
+u
+εu
+=µ domain + L
+M ¯µclass + 1
+M
+X
+u
+εu.(29)
+Bias.
+E[ˆµCS−ARM−BN] =µ domain + L
+M ¯µclass,(30)
+Bias = L
+M ¯µclass.(31)
+The bias is attenuated by the factor L/M <1 relative to Estimator 1. The more controls are included (larger C, smaller
+L/M), the smaller the bias.
+Variance.
+Var(ˆµCS−ARM−BN) = Var

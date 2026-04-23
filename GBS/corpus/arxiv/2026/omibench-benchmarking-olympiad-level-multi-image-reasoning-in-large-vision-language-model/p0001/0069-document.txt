@@ -1,0 +1,29 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 69
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Annotator Guidelines-P1
+These guidelines define how annotators should evaluate and edit solution rationales for reasoning
+tasks (e.g., mathematical or logical problems). The goal is to ensure that all accepted rationales are
+correct, complete, and stylistically consistent.
+For every candidate rationale, annotators should perform the following checks:
+1.Conceptual correctness.
+•Verify that all major inference steps are logically valid.
+•Check that all problem constraints are correctly interpreted.
+•Ensure that the rationale does not introduce unwarranted assumptions or ignore conditions.
+2.Computational correctness.
+•Check all algebraic manipulations, arithmetic calculations, and case analyses for errors.
+•Confirm that intermediate results are correct and consistent across steps.
+3.Completeness of reasoning.
+•Ensure that the solution does not skip non-trivial steps.
+•Include necessary intermediate results (e.g., key substitutions, simplifications, or case splits).
+• Check that each step is connected to the previous one and that the overall argument is coherent.
+4.Consistency with the final answer.
+•Confirm that the reasoning actually leads to the stated final answer.
+•Ensure that th

@@ -1,0 +1,35 @@
+title: Relative Entropy Estimation in Function Space: Theory and Applications to Trajectory Inference
+source: arxiv
+year: 2026
+document_id: relative-entropy-estimation-in-function-space-theory-and-applications-to-trajectory-inference
+authors: Chao Wang; Luca Nepote; Giulio Franzese; Pietro Michiardi
+page: 4
+section: eurecom
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20775v1
+
+refine highfrequency modes at later stages. In practice, all fields are represented in a truncated spectral basis, so
+both norms are well defined.
+19
+
+Estimation of FKL.Given the two learned velocity fields, we estimate FKL via Monte Carlo
+approximation of Equation (7). Specifically, we sample xA
+1 ∼ν A, t∼ U[0,1] , and x0 ∼µ 0 =
+N(0, C) , and form xA
+t =tx A
+1 + (1−t)x 0, so that xA
+t ∼µ A
+t . Evaluating both fields at (xA
+t , t) yields
+vA
+θ (xA
+t , t) and vB
+θ (xA
+t , t). We then compute the integrand t
+1−t
+
+vA
+θ (xA
+t , t)−v B
+θ (xA
+t , t)

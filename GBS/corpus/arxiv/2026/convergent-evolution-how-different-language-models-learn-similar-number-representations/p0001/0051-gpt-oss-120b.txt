@@ -1,0 +1,107 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 51
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+B.5 Modular Probe Results with MLP and RFM Probes . . . . . . . . . . . . . . 23
+
+15Fu, Zhou, Belkin, Sharan, & Jia
+A Proof of Theorem 1
+We first restate the theorem here.
+Theorem 1.Given embeddings {e(n)} N−1
+n=0 and residue classes {Cr}T−1
+r=0 defined above, let the class
+meansµ r, grand meanµ, between-class scatter matrixS B, and within-class scatter matrixS W be
+µr = 1
+|Cr| ∑
+n∈Cr
+e(n),µ= 1
+N
+N−1
+∑
+n=0
+e(n),
+SB = 1
+T
+T−1
+∑
+r=0
+(µr −µ)(µ r −µ) ⊤,S W = 1
+N
+T−1
+∑
+r=0
+∑
+n∈Cr
+(e(n)−µ r)(e(n)−µ r)⊤.
+Let ΦT = ∑T−1
+ℓ=1 ∥Fℓ/T ∥2 be the total power at harmonics of period T, and HT =
+{0, 1/T, 2/T, . . . ,(T−1)/T}be the set of harmonic frequencies.
+(i)IfΦ T =0, thenS B =0and no linear probe can classify nmodT above chance.
+(ii) For any T≥ 2, C> 0, and ε> 0, there exist N divisible by T and embeddings e(n)
+satisfying ΦT >C yet no T-class linear classifier achieves accuracy above1 /T+ε , i.e., no
+more thanεabove random guessing.
+We first start with two lemmas and then prove them in parts.
+A.1 Lemmas Fourier-variance identity
+We first establish a lemma connecting the class meansµ r to the Fourier coefficientsF ν.
+Lemma 3.For eachℓ=0, . . . ,T−1, define
+ˆµ[ℓ] = 1√
+T
+T−1
+∑
+r=0
+µr e−2πiℓr/T .
+Thenˆµ[ℓ] = √
+T/N·F ℓ/T .
+Proof. Substituting µr = 1
+|Cr| ∑n∈Cr e(n) = T
+N ∑n∈Cr e(n) (since |Cr|=N/T when T|N .) and
+pulling the constant into the outer sum:
+ˆµ[ℓ] =
+√
+T
+N
+T−1
+∑
+r=0
+∑
+n∈Cr
+e(n)e −2πiℓr/T . (1)
+Every n∈ { 0, . . ., N− 1} belongs to exactly one class Cr with r=nmodT , so we can
+write n=mT+r for some non-negative integer m. Then e−2πiℓr/T =e −2πiℓn/T , since the
+additional mℓ full periods contribute an integer multiple of 2π to the exponent. Re-indexing
+the double sum as a single sum overn:
+ˆµ[ℓ] =
+√
+T
+N
+N−1
+∑
+n=0
+e(n)e −2πiℓn/T . (2)
+Because T|N , the ratio ℓ/T is one of the N Fourier frequencies, so comparing with
+Fℓ/T = 1√
+N ∑n e(n)e −2πi(ℓ/T)n gives
+ˆµ[ℓ] =
+√
+T
+N ·
+√
+N·F ℓ/T =
+r
+T
+N ·F ℓ/T .
+Next, we state our second lemma on the identities for Tr(SB)and Tr(S W ).
+Lemma 4.Let the between-class and within-class variances SB and SW be defined as in Theorem 1,
+they satisfy
+Tr(SB) = ΦT
+N , Tr(S W ) = 1
+N ∑
+ν/∈HT
+∥Fν∥2.

@@ -1,0 +1,22 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 6
+section: lexis-9
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+eed
+a 2-layer MLP ([128,64]hidden units). We optimize Eq. (3) (λh
+IF=10,λ o
+IF=10,
+λVQ=λcommit=0.5) for60,000iterations using AdamW [50] (lr=10−4, batch size
+1024). Training takes∼5hours on a single RTX-6000Ada.
+LEXIS-Flow:LEXIS-Flow uses a 18-layer multi-stream transformer backbone[71](512hiddenunits).AsimageencoderweusefrozenDINOv2(ViT/L-14)
+[53]. Optimizing the training loss of Eq. (4) (λIF=10,λ v2v=5,λ 2D=1,λ obs=0.5)
+runs for100k steps via AdamW [50] (batch size1024). We use a warmup cosine plateau scheduler (learning rate10−6 to5×10 −4) and a0.3dropout rate
+for classifier-free guidance, with guidance-scale1.5. Training takes∼48hours on
+4 RTX-6000Ada GPUs. We use Euler ODE solver (25steps) for sampling and
+perform guidance/refinement (Eq. (9)) starting attstart=15,λ mask=0.5.

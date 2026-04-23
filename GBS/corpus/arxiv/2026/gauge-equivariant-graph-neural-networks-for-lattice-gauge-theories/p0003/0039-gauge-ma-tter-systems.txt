@@ -1,0 +1,68 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 3
+section: gauge-ma-tter-systems
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+es a
+substantially more stringent test of the expressive power
+of gauge-equivariant architectures.
+Gauge theories generically include dynamical matter
+
+6
+<latexit sha1_base64="jqOtnWrMH3bRX+iTNlPbsp7mQZs=">AAAB6nicbVA9TwJBEJ3DL8Qv1NJmIzHBhtxRoCXRxhKjfCRwIXvLHGzY27vs7pkQwk+wsdAYW3+Rnf/GBa5Q8CWTvLw3k5l5QSK4Nq777eQ2Nre2d/K7hb39g8Oj4vFJS8epYthksYhVJ6AaBZfYNNwI7CQKaRQIbAfj27nffkKleSwfzSRBP6JDyUPOqLHSQ5le9oslt+IuQNaJl5ESZGj0i1+9QczSCKVhgmrd9dzE+FOqDGcCZ4VeqjGhbEyH2LVU0gi1P12cOiMXVhmQMFa2pCEL9ffElEZaT6LAdkbUjPSqNxf/87qpCa/9KZdJalCy5aIwFcTEZP43GXCFzIiJJZQpbm8lbEQVZcamU7AheKsvr5NWteLVKrX7aql+k8WRhzM4hzJ4cAV1uIMGNIHBEJ7hFd4c4bw4787HsjXnZDOn8AfO5w+LnY1T</latexit>
+(a)
+<latexit sha1_base64="CCojrv5AyQNhmx1TlOX7Rj2vIdU=">AAAB6nicbVA9TwJBEJ3DL8Qv1NJmIzHBhtxRoCXRxhKjfCRwIXvLHGzY27vs7pkQwk+wsdAYW3+Rnf/GBa5Q8CWTvLw3k5l5QSK4Nq777eQ2Nre2d/K7hb39g8Oj4vFJS8epYthksYhVJ6AaBZfYNNwI7CQKaRQIbAfj27nffkKleSwfzSRBP6JDyUPOqLHSQzm47BdLbsVdgKwTLyMlyNDoF796g5ilEUrDBNW667mJ8adUGc4Ezgq9VGNC2ZgOsWuppBFqf7o4dUYurDIgYaxsSUMW6u+JKY20nkSB7YyoGelVby7+53VTE177Uy6T1KBky0VhKoiJyfxvMuAKmRETSyhT3N5K2IgqyoxNp2BD8FZfXietasWrVWr31VL9JosjD2dwDmXw4ArqcAcNaAKDITzDK7w5wnlx3p2PZWvOyWZO4Q+czx+NIo1U</latexit>
+(b)
+<latexit sha1_base64="XYNM+NBacxAEYvEmFThyqImT2yA=">AAAB6nicbVA9TwJBEJ3DL8Qv1NJmIzHBhtxRoCXRxhKjfCRwIXvLHGzY27vs7pkQwk+wsdAYW3+Rnf/GBa5Q8CWTvLw3k5l5QSK4Nq777eQ2Nre2d/K7hb39g8Oj4vFJS8epYthksYhVJ6AaBZfYNNwI7CQKaRQIbAfj27nffkKleSwfzSRBP6JDyUPOqLHSQ5ld9oslt+IuQNaJl5ESZGj0i1+9QczSCKVhgmrd9dzE+FOqDGcCZ4VeqjGhbEyH2LVU0gi1P12cOiMXVhmQMFa2pCEL9ffElEZaT6LAdkbUjPSqNxf/87qpCa/9KZdJalCy5aIwFcTEZP43GXCFzIiJJZQpbm8lbEQVZcamU7AheKsvr5NWteLVKrX7aql+k8WRhzM4hzJ4cAV1uIMGNIHBEJ7hFd4c4bw4787HsjXnZDOn8AfO5w+Op41V</latexit>
+(c)
+<latexit sha1_base64="apMrVaIgdsH71nBj2OolNAqWFpQ=">AAAB6nicbVA9SwNBEJ2LXzF+RS1tFoMQm3CXIloGbSwjmg9IjrC3t5cs2d07dveEcOQn2FgoYusvsvPfuEmu0MQHA4/3ZpiZFyScaeO6305hY3Nre6e4W9rbPzg8Kh+fdHScKkLbJOax6gVYU84kbRtmOO0limIRcNoNJrdzv/tElWaxfDTThPoCjySLGMHGSg/V8HJYrrg1dwG0TrycVCBHa1j+GoQxSQWVhnCsdd9zE+NnWBlGOJ2VBqmmCSYTPKJ9SyUWVPvZ4tQZurBKiKJY2ZIGLdTfExkWWk9FYDsFNmO96s3F/7x+aqJrP2MySQ2VZLkoSjkyMZr/jUKmKDF8agkmitlbERljhYmx6ZRsCN7qy+ukU695jVrjvl5p3uRxFOEMzqEKHlxBE+6gBW0gMIJneIU3hzsvzrvzsWwtOPnMKfyB8/kDkCyNVg==</latexit>
+(d)
+FIG. 3. Benchmark of the gauge-equivariant GNN for non-Abelian gauge–matter systems on a 20×20 square lattice. Panels
+(a,b) correspond to the SU(2) model and panels (c,d) to the SU(3) model. For each case, we report energy density prediction
+at half filling (a,c) and local fermion density prediction at quarter filling (b,d). Left subpanels show parity plots comparing
+ML predictions with exact diagonalization (ED) results (dashed line: ideal agreement), while right subpanels display the
+corresponding error distributions,δO=O ML − OED, for training (magenta) and test (blue) sets. For SU(2), the energy model
+achieves MSE = 6.713×10 −8 withR 2 = 0.9732, and the density model yields MSE = 2.8878×10 −5 withR 2 = 0.9759.
+For SU(3), the corresponding values are MSE = 1.615×10 −8 withR 2 = 0.9941 for energy, and MSE = 3.2615×10 −5 with
+R2 = 0.9525 for density.
+fields transforming nontrivially underG. A minimal lattice realization couples site fermions to gauge links via
+H=
+X
+⟨ij⟩
+ψ†
+i Uijψj + h.c.,(11)
+whereψ i denotes a fermionic annihilation operator in
+the fundamental representation, andU ij ∈ Gis the link
+variable. Under local gauge transformationsψ i →g iψi
+andU ij →g iUijg†
+j, the Hamiltonian remains invariant
+by construction. Hermiticity further requiresU ji =U †
+ij,
+consistent with link orientation.
+Beyond high-energy contexts, Hamiltonians of this
+form arise naturally in condensed-matter systems. In
+parton constructions of strongly correlated phases, microscopic degrees of freedom are fractionalized into emergent fermions coupled to a dynamical gauge field. The
+resulting hopping processes are dressed by gauge connections, leading to effective descriptions identical in structure to Eq. (11). In this setting, the gauge field encodes the redundancy of the fractionalized representation, while its dynamics govern confinement, deconfinement, and the emergence of exotic phases such as quantum spin liquids.
+We benchmark the gauge-equivariant GNN on SU(2)
+and SU(3) lattice gauge theories defined by Eq. (11) on
+a 20×20 square lattice. Gauge configurations{U ij}
+are generated randomly to probe a wide region of the
+configuration space without imposing an explicit equilibrium distribution. For each configuration, the fermionic
+Hamiltonian is solved via exact diagonalization to obtain the corresponding observables. This dataset construction isolates the structure–property mapping from
+gauge fields to fermionic responses, enabling a direct assessment of the model’s capacity to learn the underlying
+functional dependence. Despite the absence of equilibrium sampling, such broad, unbiased coverage of configuration space provides a stringent and informative benchmark for evaluating both expressivity and generalization
+of the learned representation.
+We consider two supervised tasks: prediction of the total energyEand the site-resolved fermion densityn i =
+⟨ψ†
+i ψi⟩. Remarkably, the same gauge-equivariant architecture accurately captures both explicitly local quantities such asn i and global quantities such asE, the latter
+reconstructed through a latent decompositionE= P
+i εi
+in terms of learned site-resolved contributions. This formulation parallels the Behler–Parrinello-type decomposition used for the gauge action in the pure gauge case, but
+here acquires a deeper significance. Because the energy
+depends on fermionic states delocalized across the entire
+lattice, the learnedε i implicitly encode fermion-mediated

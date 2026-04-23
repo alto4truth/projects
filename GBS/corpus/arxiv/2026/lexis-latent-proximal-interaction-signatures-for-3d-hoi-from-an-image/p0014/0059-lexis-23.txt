@@ -1,0 +1,41 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 14
+section: lexis-23
+chunk: 59
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+h SAM3D-estimated
+scaleσ sam3d:σ= (δ σ sam3d)0.8 ·σ 0.2
+moge.
+S.1.2 Evaluation Metrics
+For the human body, as in [52, 77], we apply Procrustes alignment on the
+estimated SMPL+H mesh (to align it to the GT SMPL-X mesh), via a similarity
+transform{s,R,t}computed on vertices that are common between SMPL+H
+and SMPL-X. For the object, we apply only the rigid transform{R,t}(from
+above) to preserve and evaluate the estimated scale,s. After the above, we compute all metrics on10,000points uniformly sampled across the aligned surfaces.
+Chamfer Distance (CD):A bidirectional surface-to-surface distance (cm):
+CD( bV,V) = 1
+|V|
+X
+v∈V
+min
+ˆv∈ bV
+∥v− ˆv∥+ 1
+| bV|
+X
+ˆv∈ bV
+min
+v∈V
+∥v− ˆv∥, (S.1)
+capturingthe3DgeometricerrorbetweenanestimatedandGTmeshwithvertex
+sets bVandV, respectively. Lower is better (↓).
+Contact F1:This captures the agreement between the estimated (ˆM) and
+ground-truth(M)binarycontactmasks,M∈ {0,1} N.Forahumanbodysurface
+pointp b ∈R 3, binary contact is defined asI(minpo∈O ∥pb −po∥ ≤5cm)by finding
+the closest pointp o on the object surface,O, and thresholding the respective
+distance. Moreover,I(·)is the indicator function, withI(a < b) = 1iffa < b. Let
+T P=| ˆM∩M|be the number

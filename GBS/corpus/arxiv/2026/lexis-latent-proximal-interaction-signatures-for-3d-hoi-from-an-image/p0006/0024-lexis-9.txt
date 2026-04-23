@@ -1,0 +1,26 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 6
+section: lexis-9
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+ding the missing interaction awareness. That
+is, given rough initial 3D body and object estimations from a baseline model,
+LEXIS-Flow encodes these into a unified latent statexinit ={B init,O init}. Then,
+ratherthangeneratinga3DHOIestimationfrompurenoise,acontrolledamount
+of noise is injected to transport this estimate to anintermediateflow timestep
+tstart ∈(0,1):x tstart = (1−t start)ϵ+t start xinit, as in SDEdit [51]. A partial
+ODE integration then proceeds fromtstart tot=1with the guided sampling. In
+the “Experiments”section (Sec. 4), this variant is denoted as LEXIS-Flow∗.
+3.4 Implementation Details
+LEXIS:We initialize LEXIS-Net VQ-VAE with TokenHMR [18] tokenizer
+and further train it to InterFields (evaluated at 1024 uniform surface points).
+We useω=5for exponential mapping of InterFields. The LEXIS codebook containsK=2048entries (D=128). A frozen PointNeXt [61] (pretrained on ModelNet40 [79]) encodes object geometry into a 1024-D global descriptor. This conditions theT b andT o TriPlanes (Tr=64resolution,T c=64channels), which feed
+a 2-layer MLP ([128,64]hidden units). We optimize Eq. (3) (λh
+IF=10,λ o
+IF=10,
+λVQ=λcommit=0.5) for60,000iterations using AdamW [50] (lr=10−4, bat

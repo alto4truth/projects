@@ -1,0 +1,65 @@
+title: Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+source: arxiv
+year: 2026
+document_id: global-offshore-wind-infrastructure-deployment-and-operational-dynamics-from-dense-sentinel-1-time-series
+authors: Thorsten Hoeser; Felix Bachofer; Claudia Kuenzer
+page: 2
+section: abstract
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20822v1
+
+urbine labels, subsets
+of these labels are reassigned to the platform class, including cases where turbine foundation labels persist long after the
+10
+
+Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+last deployed turbine occurrence. The final labels are written to the time series parquet files holding the corresponding
+14,840,637 swath profiles.
+To evaluate the performance of the rule-based classification, we examined and annotated 328,657 swath profiles of 553
+time series randomly drawn from all 15,606 available time series. This benchmark data set is part of the data corpus
+provided with this publication. We used two validation strategies, single event classification evaluation and time series
+evaluation.
+For single event evaluation, the ground-truth event labels in the benchmark dataset are compared against the labels
+predicted by the rule-based classifier using a confusion matrix, from which class-wise Precision, Recall, and F1-scores
+are derived, as well as overall and grouped macro averaged scores.
+To complement these point wise scores with a sequence sensitive metric, we compute the edit similarity score. Edit
+similarity is defined as the normalized Levenshtein distance [Levenshtein, 1966] between the ground-truth and predicted
+label sequences, which we chose due to different sequence lengths of the time series:
+EditSim(S, ˆS) = 1− dLev(S, ˆS)
+max(|S|,| ˆS|)
+,(4)
+where dLev denotes the Levenshtein distance and |S| and | ˆS| are the sequence lengths. The Levenshtein distance
+measures how many edit operations like insertions, deletions, or substitutions of labels are necessary to align the
+predicted sequence with the ground-truth sequence, where fewer required edits express a higher similarity. Edit similarity
+is computed in two variants. The first variant compares the full label sequences performing a point-wise evaluation,
+thereby penalizing incorrect labels at any time step. Since this variant is conceptually close to a micro-averaged F1
+score obtained from single-event evaluation, we additionally compute edit similarity on collapsed label sequences.
+During collapsing, segments of identical labels are reduced to a single label. Collapsed edit similarity abstracts away
+absolute event durations and focuses on the temporal ordering and presence of event phases. This variant penalizes
+unnecessary transitions, incorrect event ordering, and missing or extra phases in the predicted sequence, making it
+a suitable complementary metric to single-event evaluation. For benchmarking purposes, edit similarity is further
+evaluated at uniformly spaced quality thresholds qs ∈[0,1] with a step size of 0.05. For each threshold, we compute the
+fraction of time series with an edit similarity score greater than or equal to qs. The overall performance is summarized
+as the area under the edit similarity-quality threshold curve (AUC).
+5 Results
+5.1 Dense SAR backscatter profile time series
+As a primary outcome of this study, we provide a globally consistent, high-temporal-resolution time series dataset of
+offshore wind infrastructure derived from Sentinel-1 SAR imagery available at Hoeser et al. [2026]. While an updated
+set of offshore wind infrastructure locations for 2025Q1 is included as a structural foundation, the central contribution
+lies in the analysis-ready time series data and the benchmark annotations.
+The 14,840,637 analysis-ready 1D Sentinel-1 backscatter profiles spanning the period from 2016Q1 to 2025Q1 are a
+starting point for detailed investigation and research in Earth Observation based offshore wind infrastructure monitoring
+by complementing spatial detection approaches with high density, temporal infrastructure dynamics. Each backscatter
+profile corresponds to a single acquisition at a detected offshore wind infrastructure location and preserves structurally
+informative SAR signatures.
+The temporal resolution and thus number of events of each time series directly reflects Sentinel-1 acquisition frequency.
+During dataset engineering, we focused on extracting the densest possible time series from the Sentinel-1 archive. As
+shown in figure 7, temporal resolution varies geographically. Regions within the European Union show dense coverage
+corresponding to a higher number of events per time series due to higher acquisition frequencies and overlapping
+Sentinel-1 orbits, especially at higher latitudes, resulting in revisit intervals of up to one day for certain locations. In
+contrast, regions such as the Chinese EEZ generally follow the mission’s default 12-day revisit interval of a single
+Sentinel-1 platform.
+The provided 1D backscatter profiles are balancing feature richness, global completeness, and technical usability. The
+objective was to construct a globally consistent dataset at maximal temporal resolution while preserving SAR features
+necessary for detailed deployment-phase analysis for a broad user audience, with different computational resources.
+11

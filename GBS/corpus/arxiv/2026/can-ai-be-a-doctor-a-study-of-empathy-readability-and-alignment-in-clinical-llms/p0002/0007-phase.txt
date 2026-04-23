@@ -1,0 +1,25 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+ions authored by NIH experts. Each entry contains aquestionthat reflects common
+medical concerns and a correspondinganswerderived from expert-curated institutional content. The dataset provides standardized and clinically grounded medical
+explanations.
+In addition to MedQuAD, we used theiCliniqQAssubset from themedicalquestion-answer-datarepository 4. This subset contains 465 real-world physician–
+patient question–answer pairs collected from an online medical consultation platform.
+The questions are written by patients and reflect spontaneous descriptions of symptoms, concerns, and contextual information. The answers are authored by licensed
+physicians and follow a conversational clinical style.
+The inclusion of iCliniqQAs introduces naturally occurring medical dialogue into
+our evaluation setting. Unlike MedQuAD, which provides institutionally curated
+explanations, iCliniqQAs captures authentic patient concerns and real consultation
+dynamics. The combination of these datasets allows us to evaluate model behavior
+across both standardized medical communication and real-world clinical interaction
+scenarios.
+3.3 Models Evaluated
+We selected multiple large language models (LLMs) to cap

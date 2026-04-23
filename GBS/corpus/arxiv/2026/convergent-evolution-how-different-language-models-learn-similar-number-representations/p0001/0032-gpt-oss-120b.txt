@@ -1,0 +1,22 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+d models trained on general language, where Fourier features emerge
+from the statistics of number tokens in natural text. We now ask whether convergent
+evolution also occurs when models are trained directly on arithmetic, where the training
+signal is purely numerical, and the prior given by human language is absent.
+Experimental setup.We train 300M Transformers from random initialization on integer
+addition using the same architecture as in §3. Each example has the form a+b=c , with
+loss masked on prompt tokens up to = sign. We train for 3B tokens under both Muon and
+AdamW. In 9-digit addition, operands have 1-9 digits with stratified digit-count sampling.
+Each operand may span multiple number tokens. In 3-digit addition, we enumerate all pairs
+(a, b) with a, b∈[ 0, 999] and a+b≤ 999. Every operand and sum is a single token. Training
+for 3 billion tokens amounts to roughly 1,000 epochs; we run two seeds per optimizer. We
+additionally train circular probes that project embeddings onto the unit circle (see Figure 13).

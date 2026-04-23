@@ -1,0 +1,28 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 7
+section: low-recursion-depth-depth-2
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+loop (3 + 4) iters {
+loop ((1 + 0) * 4) iters {
+act turn left end
+}
+}
+loop 3 iters {
+loop (4 * (4 * 2)) iters {
+act turn left end
+}
+}
+act turn left end
+act take box_4 end
+if not ((has cube_0 and has cube_4)) after {
+act turn left end
+}
+At depth 5, programs exhibit moderate nesting,
+requiring the model to track state across multiple
+indentations.

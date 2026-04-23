@@ -1,0 +1,28 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+pute BN statistics. We intentionally focus
+on lightweight, fast adaptation methods that can operate
+with limited target data and minimal computation, reflecting
+realistic deployment conditions.
+Why was it possible at all to close the domain gap?
+ARM-BN and CS-ARM-BN close or nearly close the performance gap between in-domain and out-of-domain evaluation. On unseen experimental batches, ARM-BN and
+CS-ARM-BN reach 0.935±0.018 and 0.930±0.019 accuracy, respectively, matching the0.939±0.005 accuracy
+observed within the training distribution. This demonstrates
+that batch effects, a long-standing problem for AI systems
+for bioimaging data, can be effectively neutralized. We hypothesize that three components were necessary to allow
+for closing the gap:a) Many sources/domains available
+for meta-learning:the JUMP-CP (Chandrasekaran et al.,
+2023) dataset contains thousands of different sources within
+the training set: each plate can be considered a source domain. Meta-learning methods (Hochreiter et al., 2001; Finn
+et al., 2017) can effectively learn to adapt in such scenarios.
+b) Stable context for adaptation methods:Each plate
+contains sufficient samples and controls which can stabilize
+es

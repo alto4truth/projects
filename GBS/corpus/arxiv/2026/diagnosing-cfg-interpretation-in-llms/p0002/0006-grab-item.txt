@@ -1,0 +1,31 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 2
+section: grab-item
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+cond: HOLDING ITEM
+DO: "exec" END: "end"
+LOOP: "loop" TIMES: "times"
+IF: "when" THEN: "after"
+LBR: "[" RBR: "]"
+This EBNF defines the legal hierarchical structure
+of the language. Specifically, it specifies:
+• Recursive Composition: The stmt nonterminal expands into actions, loops, or conditionals, where loop and if_stmt can recursively containstmt+to enable nesting.
+• Explicit Delimiters: Actions are wrapped by
+DO/END and control blocks by LBR/RBR, providing anchors for tracking recursion levels.
+• Dynamic Terminals: Bottom-level mappings
+(e.g.,LOOP: "loop") define the lexicon.
+By substituting terminals, e.g., replacing "loop"
+with an opaque token like "v_xkqm", we decouple pure syntactic induction from semantic priors.
+This formalizes LLMs asin-context interpreters,
+where the EBNF acts as a dynamic protocol that
+LLMs must interpret on the fly.
+3 Controllable Data Generation
+To rigorously evaluate LLMs’ ability to induce
+novel CFGs, we developed a controllable generation pipeline that disentangles structural complexity from surface representation. Unlike static
+benchmarks, our framework dynamically synthesizes instances by sweeping across a multidimensional configuration space (se

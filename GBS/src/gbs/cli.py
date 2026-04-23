@@ -5,7 +5,7 @@ import html
 import json
 import re
 import unicodedata
-from dataclasses import asdict, dataclass
+from dataclasses import dataclass
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Iterable
@@ -46,10 +46,11 @@ class Chunk:
     source: str
     year: str
     document_id: str
+    authors: list[str]
     page: int
     section: str
     chunk: int
-    source_path: str
+    source_ref: str
     text: str
 
 
@@ -139,17 +140,19 @@ def infer_sections(text: str) -> Iterable[tuple[str, str]]:
             yield heading, section_text
 
 
-def build_chunks(
+def build_chunks_from_text(
     *,
-    input_path: Path,
+    text: str,
     source: str,
     year: str,
     title: str,
+    authors: list[str] | None,
+    source_ref: str,
     max_chars: int,
     overlap_chars: int,
 ) -> list[Chunk]:
-    text = extract_text(input_path)
     document_id = slugify(title)
+    author_list = authors or []
 
     built: list[Chunk] = []
     page = 1
@@ -163,10 +166,11 @@ def build_chunks(
                     source=source,
                     year=year,
                     document_id=document_id,
+                    authors=author_list,
                     page=page,
                     section=section_slug,
                     chunk=chunk_number,
-                    source_path=str(input_path.resolve()),
+                    source_ref=source_ref,
                     text=chunk_text_value,
                 )
             )
@@ -175,13 +179,43 @@ def build_chunks(
     return built
 
 
+def build_chunks(
+    *,
+    input_path: Path,
+    source: str,
+    year: str,
+    title: str,
+    max_chars: int,
+    overlap_chars: int,
+) -> list[Chunk]:
+    text = extract_text(input_path)
+    return build_chunks_from_text(
+        text=text,
+        source=source,
+        year=year,
+        title=title,
+        authors=[],
+        source_ref=str(input_path.resolve()),
+        max_chars=max_chars,
+        overlap_chars=overlap_chars,
+    )
+
+
 def write_chunks(chunks: list[Chunk], output_dir: Path) -> Path:
     if not chunks:
         raise ValueError("No chunks were produced from the input document.")
 
     first = chunks[0]
     base_dir = output_dir / slugify(first.source) / first.year / first.document_id
-    manifest: list[dict[str, str | int]] = []
+    manifest: dict[str, object] = {
+        "title": first.title,
+        "source": first.source,
+        "year": first.year,
+        "document_id": first.document_id,
+        "authors": first.authors,
+        "source_ref": first.source_ref,
+        "chunks": [],
+    }
 
     for chunk in chunks:
         page_dir = base_dir / f"p{chunk.page:04d}"
@@ -193,13 +227,14 @@ def write_chunks(chunks: list[Chunk], output_dir: Path) -> Path:
             f"source: {chunk.source}\n"
             f"year: {chunk.year}\n"
             f"document_id: {chunk.document_id}\n"
+            f"authors: {'; '.join(chunk.authors)}\n"
             f"page: {chunk.page}\n"
             f"section: {chunk.section}\n"
             f"chunk: {chunk.chunk}\n"
-            f"source_path: {chunk.source_path}\n\n"
+            f"source_ref: {chunk.source_ref}\n\n"
         )
         chunk_path.write_text(header + chunk.text + "\n", encoding="utf-8")
-        manifest.append(
+        manifest["chunks"].append(
             {
                 "path": str(chunk_path.relative_to(output_dir)),
                 "page": chunk.page,

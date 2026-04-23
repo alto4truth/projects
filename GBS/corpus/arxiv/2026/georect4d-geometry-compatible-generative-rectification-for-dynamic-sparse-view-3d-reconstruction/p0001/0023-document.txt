@@ -1,0 +1,28 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+GeoRect4D for Dynamic Sparse-View 3D Reconstruction 9
+transparent floaters, destabilizing their gradient flow and compelling the model
+to seek geometric configurations that remain stable under stochastic noise, without incurring inference overhead.
+Furthermore, under sparse supervision, dominant errors from static regions
+often overwhelm dynamic details, causing motion blurring and ghosting. To address this, we introduce anROI-based Saliency-aware Constraint. Specifically, we extract a 2D dynamic maskMdy by exclusively rendering all dynamic
+Gaussians and systematically filtering out spatial outliers. LeveragingMdy to
+guide the data fidelity termL data, and setting the generative coupling factor
+λ= 0(Eq. 6) to focus entirely on robust geometric initialization, the Stage 1
+optimization objective is formulated as:
+LStage1 =L data = (1−λ s)L1 +λ sLSSIM| {z }
+Lcolor( ˆIrender,It,v)
++λdy ∥Mdy ⊙( ˆIrender −I t,v)∥1| {z }
+LROI ( ˆIrender,It,v)
+(12)
+where⊙denotes the Hadamard product. This term encourages the optimizer
+to place greater emphasis on sparse dynamic pixels, ensuring that fine-grained
+motion details are recovered rather than diluted by static field optimization.
+Stage 2: Generat

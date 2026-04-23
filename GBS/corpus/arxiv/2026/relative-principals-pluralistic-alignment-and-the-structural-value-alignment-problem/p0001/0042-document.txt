@@ -1,0 +1,23 @@
+title: Relative Principals, Pluralistic Alignment, and the Structural Value Alignment Problem
+source: arxiv
+year: 2026
+document_id: relative-principals-pluralistic-alignment-and-the-structural-value-alignment-problem
+authors: Travis LaCroix
+page: 1
+section: document
+chunk: 42
+source_ref: https://arxiv.org/pdf/2604.20805v1
+
+ts define what “alignment” even means.
+4 Alignment with Pluralistic Values
+A fundamental challenge emerges from the structural account of value alignment: namely, that alignment cannot
+be conceived monolithically. Current technical approaches to alignment—most notably, RLHF—are primarily
+designed to align models with the average preferences of humans. While this strategy is often framed as
+“democratic”, it effectively erases diversity by smoothing over legitimate differences among individual and group
+values [3, 70, 71]. This observation should be understood as a diagnostic claim about prevailing training and
+deployment incentives rather than a dismissal of emerging pluralistic alignment research. In principle, feedback
+aggregation methods can be designed to preserve disagreement, represent minority viewpoints, or enable
+deliberative synthesis among competing perspectives. In practice, however, standard deployment pipelines—
+especially those optimised for scalability, consistency, and product usability—tend to reward the production of a
+single coherent response distribution, which implicitly encourages the smoothing or aggregation of divergent
+human judgments unless explicit instit

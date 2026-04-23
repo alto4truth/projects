@@ -1,0 +1,64 @@
+title: DeVI: Physics-based Dexterous Human-Object Interaction via Synthetic Video Imitation
+source: arxiv
+year: 2026
+document_id: devi-physics-based-dexterous-human-object-interaction-via-synthetic-video-imitation
+authors: Hyeonwoo Kim; Jeonghwan Kim; Kyungwon Cho; Hanbyul Joo
+page: 1
+section: 1
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20841v1
+
+ons. This highlights the importance of visual HOI alignment in refining 3D
+human motion, enabling the motion to be simulated in a physics simulator.
+8
+
+Table 2:Ablation Study on Visual HOI Alignment.Our visual HOI alignment is crucial to maintain
+alignment with both the video frames and the target object.
+Methods MPJPE (Pixel)↓C prec ↑ dHOI(mm)↓
+Body Hand Allτ= 0.1τ= 0.025
+GVHMR [41] 31.2 28.3 29.3 0.76 0.073 94.9
+DeVIw/o Visual HOI Alignment 31.2 25.6 27.4 0.73 0.100 101
+DeVI26.2 3.74 11.0 1.00 0.864 18.7
+Target Awareness and Text Controllability.Using a video diffusion model as a motion planner
+offers th advantage of leveraging the model’s existing ability to perceive and understand the scene in
+the image. Fig. 5 (a) shows the results that involves both a manipulated object (e.g., a frying pan) and
+an target object (e.g., an induction) in the scene. We demonstrate that DeVI generates interactions
+in complex scenes containing multiple objects, without requiring an explicit scene understanding.
+Additionally, we highlight the text controllability of DeVI by showing distinct simulated motions
+generated from different text prompts for the same input scene, as shown in Fig. 5 (b).
+5.3 Quantitative Results
+Comparison with Baselines.We compare DeVI with baselines on the GRAB [43] dataset, and report
+how closely the imitated motions produced by each model match the reference motion, separately
+for the human and the object. As shown in Tab. 1, DeVI outperforms baselines for all metrics. This
+shows that DeVI imitates the reference motion more similar than baselines for manipulation tasks,
+demonstrating the efficacy of our hybrid tracking reward. We additionally demonstrate the advantage
+of DeVI using 2D trajectory which is easier to obtain than 6D pose, achieve better HOI imitation
+performance with traditional 6D pose tracking reward. Our 2D tracking reward implicitly guides both
+position and rotation of an object through its projected geometry without explicitly enforcing either,
+providing well-balanced guidance without the over-constraint of dense 6D reward shaping, which
+makes it difficult to find an optimized policy.
+Ablation Study on Visual HOI Alignment.We conduct an ablation study on visual HOI alignment,
+a key design for reconstructing feasible human motion for HOI simulation. For the video-alignment
+metric, we report MPJPE in pixel units for body joints, hand joints, and all joints. For the HOI
+metric, we report Cprec with threshold τc and dHOI, which measure contact precision and the humanobject contact distance at contact frames, respectively. The contact precision is computed using two
+thresholds, 0.1 and 0.025, to provide detailed assessment. We use a total of 276 generated videos
+with 12 object categories for the evaluation. As shown in Tab. 2, our visual HOI alignment is crucial
+for producing human motion aligned with the video and feasible for interaction with the 3D object.
+The results show that our visual HOI alignment reduces the pixel error, especially for the hand
+joints, adjusting the hands positions within the image frame. Additionally, our visual HOI alignment
+significantly reduces the distance to the 3D object at contact frame, allowing the reconstructed human
+motion to be able to interact with the object.
+6 Discussion
+We present DeVI, a method to generate dexterous HOI in physics simulation, without requiring
+high-quality 3D demonstrations such as motion capture data. As a key idea, we leverage a video
+diffusion model as an HOI-aware motion planner, generating motion plans as videos. Instead of
+generating video only from text prompts, DeVI initializes a scene with a human and objects, renders
+an initial image, and uses an image-to-video model to generate the video, allowing effective 3D
+alignment of reconstructed human motion with existing scenes. The reconstructed 3D human motion
+via our visual HOI alignment is combined with 2D object tracking to form hybrid imitation targets,
+which are used to train a humanoid control policy that imitates the video. We qualitatively show
+that DeVI effectively plans and imitates the HOI from the scene for various objects and interactions.
+Quantitative results show that DeVI better reconstruct the 3D human motion and imitates the motion
+capture data. Finally, we demonstrate the advantage of leveraging video generation model as a motion
+planner by generating diverse interactions in multi-object scenes.
+9

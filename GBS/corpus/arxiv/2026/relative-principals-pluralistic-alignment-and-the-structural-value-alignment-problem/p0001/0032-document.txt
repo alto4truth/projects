@@ -1,0 +1,22 @@
+title: Relative Principals, Pluralistic Alignment, and the Structural Value Alignment Problem
+source: arxiv
+year: 2026
+document_id: relative-principals-pluralistic-alignment-and-the-structural-value-alignment-problem
+authors: Travis LaCroix
+page: 1
+section: document
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20805v1
+
+row in scale and parameter complexity, their optimisation landscapes
+expand correspondingly, creating vast solution spaces with numerous local optima. A model might perform well
+on its training objective yet behave unpredictably when confronted with out-of-distribution data. In such cases,
+misalignment results not from a flawed objective, per se, but from the principal’s inability to observe or interpret
+the agent’s internal state. The POAG framework formalises such scenarios as ones in which the agent must act
+under uncertainty about the human’s latent reward function and the true state of the environment, reinforcing
+the role of partial observability and hidden information in alignment failures.
+Adverse selection(exogenous to the principal-agent relationship) has an AI analogue in the black-box nature of
+state of the art models—i.e., when the internal workings of a model are not easily interpretable or transparent
+to humans. Deep neural networks, for instance, encode relationships among millions or billions of parameters
+across multiple layers. These architectures learn high-dimensional, hierarchical representations that are largely
+6Garber et al. [28] suggest that assistance gam

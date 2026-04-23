@@ -1,0 +1,38 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 1
+section: p-assing
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+rmation. (c) Node
+update: at layerℓ, the vertex featureV (ℓ)
+i,α is updated via gauge-covariant aggregation of neighboring node and edge features,
+yieldingV (ℓ+1)
+i,α while preserving equivariance. (d) Edge update: the edge featureE (ℓ)
+ij,β is likewise mapped toE (ℓ+1)
+ij,β through a
+gauge-covariant transformation involving adjacent vertex features.
+level of the model, retaining full structural information
+while preserving local covariance.
+To preserve gauge covariance throughout the network,
+we associate both nodes and edges in every layer with
+matrix-valued features carrying multiple channels indexed byα, β,· · ·. We group channel-indexed matrices
+into boldface tensors:V i ={V i,α}andE ij ={E ij,α},
+where each component is anN f ×N f matrix. Under a
+local gauge transformation{g i}, these features transform
+as
+Vi →g i Vi g†
+i ,E ij →g i Eij g†
+j ,(3)
+where the transformation acts identically on each channel
+matrix. This corresponds to adjoint-type transformation
+for nodes and bi-fundamental transformation for edges.
+We further impose the Hermiticity constraintE †
+ij =E ji,
+such that reversing the orientation of an edge corresponds
+to Hermitian conjugation.
+A schematic of the gaug

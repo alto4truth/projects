@@ -1,0 +1,79 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+nt
+This research question assesses whether empathy-enhancing prompt design can steer
+LLMs toward more emotionally appropriate and readable outputs.
+24
+
+PhysiciansMixtral Base
+Mixtral
+Empathy
+Mixtral
+RephraseMed-PaLMBaseMed-PaLMEmpathyMed-PaLMRephraseGPT5 Base
+GPT5 Empathy
+GPT5
+Rephrase
+Gemini
+RephraseClaude Base
+Claude
+Empathy
+Claude
+Rephrase
+0.0
+2.5
+5.0
+7.5
+10.0
+12.5
+15.0
+17.5
+20.0
+22.5
+Readability Score
+Flesch Kincaid Grade Level
+(a) FKGL. Lower values = better readability.
+PhysiciansMixtral Base
+Mixtral
+Empathy
+Mixtral
+RephraseMed-PaLMBaseMed-PaLMEmpathyMed-PaLMRephraseGPT5 Base
+GPT5 Empathy
+GPT5
+Rephrase
+Gemini
+RephraseClaude Base
+Claude
+Empathy
+Claude
+Rephrase
+0.0
+2.5
+5.0
+7.5
+10.0
+12.5
+15.0
+17.5
+20.0
+22.5
+Readability Score
+Gunning Fog Index
+(b) GFI. Higher values = harder text.
+Fig. 15: Readability analysis: Flesch–Kincaid Grade Level and Gunning Fog Index
+scores across physician and LLM outputs on the iCliniqQAs dataset.
+Hypothesis 3LetR LLM Empathy Prompt denote responses generated under the empathyenhanced Empathy Prompt condition. We hypothesize that Empathy Prompt primarily affects
+affective and communicative style rather than technical content, leading to (i) increased affective support and (ii) improved readability due to indirect stylistic simplification rather than
+explicit textual optimization, relative to zero-shot outputs, i.e.,
+(i)E[E(R LLM Empathy Prompt )]>E[E(R LLM Base)]and
+(ii)E[Read(R LLM Empathy Prompt )]<E[Read(R LLM Base)].
+Readability outcomes are reported in Figures 14 and 15, which present average Flesch–Kincaid Grade Level (FKGL) and Gunning Fog Index (GFI) scores for
+physician-authored responses and for each model configuration across both datasets.
+25

@@ -1,0 +1,22 @@
+title: Relative Principals, Pluralistic Alignment, and the Structural Value Alignment Problem
+source: arxiv
+year: 2026
+document_id: relative-principals-pluralistic-alignment-and-the-structural-value-alignment-problem
+authors: Travis LaCroix
+page: 1
+section: document
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20805v1
+
+s” (“values”, “goals”, “incentives”, etc.) of an ML model are misaligned with the
+true objectives for the system—what we might colloquially call “our values”. Such misalignment is not merely
+a theoretical concern about hypothetical systems; it already appears in present-day applications—e.g., when
+optimisation metrics fail to capture broader social goals or when deployed systems behave in ways that were not
+anticipated by their designers.
+In economics, law, and political science, this situation is more commonly referred to as aprincipal-agent
+problem(also known as an “agency dilemma” or an “incentive problem”). In these contexts, a principal delegates
+authority to an agent to act on her behalf, yet the agent’s actions may not always reflect the principal’s best
+interests. This framework has become increasingly relevant in the AI literature, where scholars have drawn
+explicit parallels between value alignment and the principal-agent problem [34, 49]. Recent work emphasises the
+structural similarities between these domains, framing value alignment as a multi-agent coordination problem
+[24]. These connections are reflected in a growing body of practical alignment research that uses ec

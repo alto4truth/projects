@@ -1,0 +1,31 @@
+title: Efficient Multi-Cohort Inference for Long-Term Effects and Lifetime Value in A/B Testing with User Learning
+source: arxiv
+year: 2026
+document_id: efficient-multi-cohort-inference-for-long-term-effects-and-lifetime-value-in-a-b-testing-with-user-learning
+authors: Dario Simionato; Andrea Tonon; Mingxue Wang; Weiguo Wang; Tong Gui; Xiaoyue Li
+page: 2
+section: document
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20777v1
+
+Í𝑇−𝑡
+𝑘=0
+1
+ˆ𝜎 2
+ˆ𝛿𝑘
+(𝑡)
+! −1
+(as
+shown in [4]).
+Such approach can also be used for LTE and Δ𝐸𝑅𝐿𝑉 estimation.
+To estimate the LTE, we first compute𝜏+𝛿 𝑡 using our multi-cohort
+estimator applied to 𝑇 𝑡+𝑘
+𝑘 −𝐶 𝑡+𝑘
+𝑘 , rather than 𝑇 𝑡+𝑘
+𝑘 −𝑇 𝑡+𝑘
+𝑡+𝑘 , ignoring
+missing values when computing the estimation. Following [16], we
+then fit an exponential model 𝑓(𝑡) to the sequence of treatment
+effect estimates ˆ𝜏+ ˆ𝛿𝑡 . This parametric model is finally used to
+extrapolate the total treatment effect beyond the observation window, that is according to Equation 1, 𝐿𝑇 𝐸=lim 𝑡→+∞ 𝑓(𝑡)=𝛾 .
+Estimating Δ𝐸𝑅𝐿𝑉 requires instead modeling treatment and control outcomes, as well as their survival functions, separately over

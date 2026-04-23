@@ -1,0 +1,23 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+ograms”—functionally equivalent code implemented in
+multiple PLs—into the data mixture. We demonstrate that this improves transferability: when we subsequently
+perform RL on our Parallel-SFT model, we observe better generalization to unseen PLs. Analysis of the model
+internal representations reveals that Parallel-SFT leads to a more functionality-centric latent space, where
+equivalent programs across PLs are more tightly clustered, which we hypothesize to contribute to the improved
+transferability.
+Date:April 23, 2026
+Figure 1We propose zero-shot cross-PL transfer for code RL, where we perform RL training and testing on different PLs. Llama-3.1
+fails to transfer effectively (§3; not represented in this figure). We find that, compared to single-PL SFT, multi-PL SFT improves
+transferability in downstream RL, which is further enhanced when the SFT code programs are parallel (§4). The code validation task
+is shown here as an example.
+1
+arXiv:2604.20835v1 [cs.CL] 22 Apr 2026

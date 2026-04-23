@@ -1,0 +1,98 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 58
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+also reset RoPE position IDs to zero at segment boundaries
+to avoid leaking positional information across segments, and mask the loss at boundaries so
+
+21Fu, Zhou, Belkin, Sharan, & Jia
+0.0 0.1 0.2 0.3 0.4 0.5
+0
+4
+8
+T=2
+T=5
+T=10
+LSTM
+Fourier Magnitude Spectrum
+2 3 4 5 6 7 8 9 10
+0
+50
+100
+9
+0 0 3 0 -1 0 -1 2
+Cohen's of Linear Probe (%)
+1 2 3 4 5 6 7 8 9
+0
+15
+30
+max = 0.290
+Fourier 10 = 337.4
+cond(SW) = 8569.0
+Eigenvalues of S 1
+W SB (T=10)
+0.0 0.1 0.2 0.3 0.4 0.5
+Fourier Frequency
+0
+4
+8
+T=2
+T=5T=10
+LSTM (4-layer)
+2 3 4 5 6 7 8 9 10
+Modulus T
+0
+50
+100
+5 1 2 4 4 0 0 0 2
+1 2 3 4 5 6 7 8 9
+Eigenvalue Rank i
+0
+15
+30
+max = 0.698
+Fourier 10 = 736.3
+cond(SW) = 20297.1
+Figure 8:Ablation on the depth of LSTM models.We find that reducing the number of
+layers to 4 (green) instead of 12 (blue) does not change the phenomenon: both will learn
+fourier spikes but no probing performance.
+the model is not trained to predict across segment breaks. Importantly, we do not modify
+the training data at all. The tokenized sequences are identical to those used in the standard
+configuration; only the attention mask differs.
+Context length ℓ.To test the role of broad context in Fourier feature formation and geometric
+emergence, we train models whose effective context is limited to a fixed window of ℓ
+consecutive tokens. Each 1024-token sequence is reshaped into ⌊1024/ℓ⌋ independent
+subsequences of length ℓ, each processed with its own standard causal attention mask.
+Tokens in one window cannot attend to tokens in any other window. This is equivalent to
+training on a corpus of short documents of length ℓ. We experiment with ℓ∈ { 2, 4, 8, 64}:
+a window of ℓ= 2 reduces the model to learning bigram statistics (each token sees only
+the immediately preceding token), while ℓ= 4 and 8 permit short-range dependencies
+but still prevents any long-range co-occurrence patterns. ℓ= 64 permits longer range
+dependencies but is still much shorter than Original’s context length of 1024. As with
+the isolate configuration, the underlying token sequence is unchanged; only the effective
+context window differs.
+Swap numbers.This configuration dissociates number tokens from their original textual
+context while preserving natural number n-gram statistics. For each training sequence, we
+keep every text token in its exact position and replace the entire subsequence of number
+tokens with a contiguous, order-preserving slice of number tokens drawn from other
+documents in the corpus. Concretely, we pre-extract all number tokens from the full training
+set into a single in-memory stream, and for each sequence we substitute a randomly chosen
+contiguous segment from this pool. The replaced number tokens therefore retain realistic
+sequential patterns but lose their association with the surrounding text. This tests whether
+the text-number co-occurrence structure, rather than the number token statistics alone,
+drives Fourier feature and modular probe emergence.
+Unigram replace.In the unigram configuration, every number token in the training data
+is independently replaced by a random draw from the corpus-wide marginal (unigram)
+distribution over number tokens. This destroys all sequential structure among numbers,
+such as their relationship to surrounding text and their co-occurrence with other numbers.
+But this type of perturbation exactly preserves the marginal frequency of each number token.
+If a number tokennappears with probabilityp n in the original corpus, it appears with the
+same probability in the perturbed data. By comparing to the original and swap-numbers
+configurations, the unigram ablation isolates whether co-occurrence statistics beyond simple
+token frequency are necessary for Fourier features and modular arithmetic to emerge.

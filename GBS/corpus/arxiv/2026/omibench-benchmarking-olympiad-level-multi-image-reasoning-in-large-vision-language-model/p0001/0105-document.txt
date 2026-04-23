@@ -1,0 +1,25 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 105
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+-Pro-Preview and InternVL3.5-1B.
+As shown in Figure 16, weaker models often produce flawed reasoning yet output a definite option
+that rule judgment marks as correct; model judgment exposes these reasoning errors, revealing inflated
+accuracy. For stronger models, reasoning is typically correct, but open-ended questions lead to outputs that
+do not exactly match the reference; model judgment recovers these false negatives, showing that accuracy is
+deflated. Nonetheless, the induced model ranking remains largely consistent, indicating that accuracy is still
+a useful metric.
+D. Analyses for OMIBench Olympiad-Level Thinking Requirements
+Correlation Analysis with Existing Multi-Image Benchmarks.To quantify how OMIBench relates to
+existing multi-image benchmarks while still reshaping model rankings, we perform a system-level correlation
+analysis with MMIU [42]. To reduce reproduction cost, we reuse a subset of MMIU results from Wang
+et al.[59], yielding a score pair(sOMI
+m ,s MMIU
+m ) for each modelm. As reported in the main text and shown
+36

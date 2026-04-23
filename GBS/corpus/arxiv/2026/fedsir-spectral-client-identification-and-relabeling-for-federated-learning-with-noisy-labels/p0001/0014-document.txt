@@ -1,0 +1,21 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+stable anchors for subsequent sample-level
+correction.
+Figure 1 illustrates the overall pipeline of our approach.
+3.2. Spectral View of Class Structure
+Given a feature extractorf ϕ, each samplex i is mapped to a
+feature representation
+zi =f ϕ(xi)∈R d,
+wheredis the feature dimension. For client k and class c,
+we construct a class-wise feature matrix
+Zk,c = [z1,z 2, . . . ,znk,c]⊤ ∈R nk,c×d,
+3

@@ -1,0 +1,27 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 4
+section: equiv-ariant-force-fields
+chunk: 48
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+9
+VI. DISCUSSION
+In this work, we introduced a general gaugeequivariant graph neural network framework for lattice
+gauge systems, in which local non-Abelian symmetry
+is enforced exactly at the architectural level through
+matrix-valued message passing. By operating directly
+on gauge-covariant degrees of freedom and preserving
+transformation laws throughout, the approach eliminates
+the need for explicit construction of gauge-invariant features while retaining full structural information. We
+demonstrated its effectiveness across three representative regimes. In pure gauge theory, the network reconstructs both global and local gauge-invariant observables
+directly from covariant inputs. In gauge–matter systems,
+it captures fermion-mediated, intrinsically nonlocal correlations with high accuracy despite its local messagepassing structure. In dynamical settings, it provides
+symmetry-consistent force fields that faithfully reproduce
+the statistical properties of semiclassical gauge dynamics.
+Together, these results establish gauge-equivariant message passing as a unified and scalable paradigm for learning both static and dynamical properties of non-Abelian
+lattice gauge systems.
+Looking fo

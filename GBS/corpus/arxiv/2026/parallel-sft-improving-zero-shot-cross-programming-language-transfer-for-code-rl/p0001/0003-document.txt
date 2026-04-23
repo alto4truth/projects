@@ -1,0 +1,22 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+1 Introduction
+As language models (LMs) are increasingly integrated into real-world coding workflows, their ability to handle the
+long tail of programming languages (PLs) becomes critical. Yet, LMs often show vastly disparate performance across
+PLs depending on their resource availability (Cassano et al., 2023, 2024; Blinn et al., 2024; Xu et al., 2025; Chai et al.,
+2025). This disparity signals a fundamental inefficiency in leveraging universal code reasoning. Analogous to human
+programmers who can learn algorithms in a certain source PL and reproduce them in other target PLs, LMs ideally
+should also generalize their programming capabilities across PLs.
+In this work, we focus on this PL generalization problem, specifically within the RL stage of code post-training,
+where task-specific training usually takes place. We define the task ofzero-shot cross-programming-language transfer,
+optimizing a task policy via RL in a source PL and zero-shot evaluating its performance on another target PL. Empirically,
+we find that Llama-3.1 (Grattafiori et al., 2024) exhibits limited transferability: while RL yields consistent benefits
+within the source PL, these gains fail to transfer to differen

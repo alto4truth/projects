@@ -1,0 +1,51 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+trust = 4.50; emotional tone = 4.20). Empathy prompting increases patient-oriented metrics but reduces expert scores relative to physician
+answers.
+32
+
+In iCliniqQAs, as we can se in Table 4, physician answers obtain expert scores
+of 5.00 across epistemic criteria and strong patient ratings (trust = 4.60; emotional
+tone = 4.65). Baseline LLM configurations diverge more strongly from physicians
+than in MedQuAD. GPT5 Base reaches high patient trust (4.70) but lower stylistic
+alignment (3.00). Claude Base achieves strong expert alignment (accuracy = 5.00;
+precision = 5.00) and high patient tone (4.70). Rewriting configurations yield the
+largest relational gains. GPT5 Rephrase reaches near-ceiling patient scores (trust =
+4.95; comprehensibility = 4.98; emotional tone = 4.96). ClaudeRephrase shows similar
+relational alignment (trust = 4.90; tone = 4.93). No configuration exceeds physicians
+on expert accuracy.
+Across datasets, rewriting improves relational alignment more strongly in conversational data than in institutional explanations. MedQuAD remains expert-dominated,
+with physicians as the epistemic reference. iCliniqQAs emphasizes relational values,
+where rewriting yields larger measurable gains. Empathy prompting produces moderate improvements in both datasets. Epistemic superiority over physician-authored
+answers is not observed.
+Takeaway 5☞Collaborative rewriting consistently improves relational alignment
+across datasets but does not surpass physician-authored responses on epistemic
+criteria. The largest gains emerge in conversational clinical data. Rewriting acts
+as a communication enhancement mechanism rather than a substitute for clinical
+expertise.
+5 Discussion
+Our findings provide a structured perspective on the role of large language models
+(LLMs) in patient-directed clinical communication. The results must be interpreted
+across two distinct settings: institutionally curated medical explanations (MedQuAD)
+and real-world physician–patient consultations (iCliniqQAs).
+Regarding RQ1, LLMs do not reproduce physician affective distributions. In
+MedQuAD, physician answers concentrate in the Neutral category with substantial Very Negative content. Baseline LLM configurations increase affective polarity,
+particularly Very Negative sentiment. Empathy prompting and collaborative rewriting reduce extreme negativity and increase Neutral proportions. Gemini Rephrase
+introduces non-negligible Positive sentiment, which is absent in physician-authored
+content.
+In iCliniqQAs, physicians exhibit strong Neutral dominance and minimal Very Negative content. LLM outputs show lower polarity amplification than in MedQuAD but
+still exhibit systematic emotional shifts. Rephrase configurations further increase Neutral proportions, often exceeding physician baselines. Fine-grained emotion analysis
+confirms a consistent amplification of caring signals across models, while disapproval
+and corrective cues are attenuated. This behavior aligns with prior observations that
+LLMs tend to generate warmer and more supportive language in clinical contexts [40].
+The pattern reflects a shift from detached concern [41] toward regulated empathy [42],
+but it does not imply faithful reproduction of physician affective norms.
+33

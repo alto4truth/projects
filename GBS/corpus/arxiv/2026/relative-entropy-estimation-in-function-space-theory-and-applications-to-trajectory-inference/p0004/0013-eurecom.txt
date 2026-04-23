@@ -1,0 +1,37 @@
+title: Relative Entropy Estimation in Function Space: Theory and Applications to Trajectory Inference
+source: arxiv
+year: 2026
+document_id: relative-entropy-estimation-in-function-space-theory-and-applications-to-trajectory-inference
+authors: Chao Wang; Luca Nepote; Giulio Franzese; Pietro Michiardi
+page: 4
+section: eurecom
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20775v1
+
+sociated with such measure.
+We then define an H-valued random process X= (X t)t∈[0,1] by the linear interpolation between the
+twoindependentrandom variablesX 0 andX 1:
+Xt = (1−t)X 0 +tX 1, t∈[0,1](1)
+Denote the associated curve of finite positive Borel probability measures of X by (µt)t∈[0,1] with
+µt =P #Xt. We say that the velocity field v:H×[0,1]→H generatesthe path of measures
+(µt)t∈[0,1] if the path µt is the pushforward of µ0 along the flow associated with (vt)t∈[0,1], where
+flow refers to the mapping ϕ: [0,1]×H→H that solvesthe initial value problem(Kerrigan et al.,
+2023c): ∂tϕt(x) =v t(ϕt(x)), ϕ 0(x) =x. A standard way to verify this is to check that the pair
+(µt, vt) satisfiesthe continuity equation in the sense of distributions (i.e., weakly)(Zhang & Scott,
+2025; Kerrigan et al., 2023c): for arbitrary test functionφ∈Cyl(H×I),
+Z
+H
+φ(x,1)dµ 1(x)−
+Z
+H
+φ(x,0)dµ 0(x) =
+Z
+I
+Z
+H
+(∂tφ(x, t) +⟨v t(x),∇ xφ(x, t)⟩)dµ t(x)dt
+(2)
+where ∇xφ(x, t) is the unique vector g such that the Fréchet derivative Dxφ(·, t) can be identified
+withD xφ(·, t) =⟨·, g⟩by the Riesz representation theorem.
+If known, the velocity field could be leveraged for generative modeling purposes (simulating an
+H−val

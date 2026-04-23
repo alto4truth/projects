@@ -1,0 +1,23 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+mathematical reasoning in vision-language models.
+ScienceQA [39], MMMU [68], and M3CoT [11] extend evaluation across multiple disciplines [31]. OlympiadBench [24] targets advanced scientific reasoning through Olympiad problems in mathematics and physics,
+while Physics Big [53] provides a large-scale collection of physics competition problems for evaluating
+quantitative problem solving.
+Recent work has also examined multi-image understanding in LVLMs. Mementos [60] studies narrative
+and temporal reasoning over image sequences; MC-Bench [65] evaluates multi-context visual grounding;
+and MANTIS [30] offers interleaved vision–language instruction-tuning data with broad, general-domain
+difficulty. Although these benchmarks effectively test cross-image reference, alignment, and commonsense
+composition, they mainly emphasize narrative or perceptual integration rather than the tight semantic and
+quantitative coupling required by competition-level scientific problems.
+Overall, existing benchmarks have advanced the evaluation of multimodal reasoning, but they still
+focus largely on single-image settings or relatively shallow multi-image perception, and seldom capture
+Olympiad-level multi-st

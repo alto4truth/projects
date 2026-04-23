@@ -1,0 +1,32 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+here V(n)
+k,c contains residual directions orthogonal to vk,c.
+The consensus residual subspace ¯V(n)
+c is given by the topL
+eigenvectors of M(n)
+c .
+4
+
+Given these spectral references, we evaluate two complementary scores for each sample with feature zi:
+S(r)(i, c) =
+
+z⊤
+i ¯v(r)
+c
+
+,(7)
+S(n)(i, c) = 1√
+L
+
+z⊤
+i ¯V(n)
+c

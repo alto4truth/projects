@@ -1,0 +1,28 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+es, all client models are aggregated into
+the next global model using a DaAgg rule inspired by
+RSCFed [13]. The aggregation starts from the standard
+5
+
+sample-size weighting but additionally downweights noisy
+clients according to how far their local models deviate from
+those of clean clients.
+Let ϕ(t)
+k denote the model parameters of clientk at round
+t. For each noisy client k, we measure itsℓ 2 distance to the
+clean set as
+dk = min
+j∈Kclean
+
+ϕ(t)
+k −ϕ (t)
+j

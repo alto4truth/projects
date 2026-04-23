@@ -63,6 +63,8 @@ Supported now:
 - `md`
 - `html`
 - `htm`
+- `arXiv` PDF import via `scripts/import_arxiv.py`
+- `Project Gutenberg` bulk import via `scripts/import_gutendex_technical_books.py`
 
 Optional later:
 
@@ -79,6 +81,14 @@ python -m gbs build \
   --source demo \
   --year 2026 \
   --title "Example Paper"
+```
+
+Bulk import open corpora:
+
+```bash
+cd /root/projects/GBS
+python scripts/import_arxiv.py 'cat:cs.AI OR cat:cs.LG OR cat:cs.CL OR cat:cs.CV' 25
+python -u scripts/import_gutendex_technical_books.py
 ```
 
 ## Next steps

@@ -1,0 +1,34 @@
+title: Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+source: arxiv
+year: 2026
+document_id: global-offshore-wind-infrastructure-deployment-and-operational-dynamics-from-dense-sentinel-1-time-series
+authors: Thorsten Hoeser; Felix Bachofer; Claudia Kuenzer
+page: 2
+section: abstract
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20822v1
+
+shows predicted event labels, the
+upper and lower panels display corresponding 2D Sentinel-1 backscatter images and derived 1D backscatter profiles.
+8
+
+Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+Figure 6: Time series compilation workflow, based on 15,606 offshore wind infrastructure spatial detections to efficiently
+acquire 14.8 million Sentinel-1, 1D backscatter profiles with unique time and location relations.
+To overcome this limitation, each of the 15,606 detection boxes was split client side into 10 m wide vertical columns
+along the horizontal axis, resulting in 729,016 narrow spatial processing units. Instead of launching one GEE task per
+column, boxes (not columns) were grouped into spatial batches under the following constraints:
+• A batch includes all boxes within 15 km of a randomly selected seed box.
+• A batch contains no more than 40 boxes.
+The 15 km spatial threshold increases the likelihood that all boxes in a batch share common image footprints, minimizing
+unnecessary NaN values due to partial coverage. The limit of 40 boxes per batch was determined empirically and
+maintains high parallelism while preventing overly large export objects that may cause GEE task failures. Applying this
+batching strategy resulted in 516 processing batches for the 15,606 detected locations.
+Each GEE batch exported a CSV file. The tabular format was selected to allow inclusion of metadata alongside reduced
+backscatter values. The data model contains:
+•box_id: identifier of the parent detection box
+•column_id: identifier of the 10 m column within the box
+•max_value: maximum backscatter value for the column
+•img_date: Sentinel-1 acquisition date
+•orbit_direction: ascending or descending pass
+9

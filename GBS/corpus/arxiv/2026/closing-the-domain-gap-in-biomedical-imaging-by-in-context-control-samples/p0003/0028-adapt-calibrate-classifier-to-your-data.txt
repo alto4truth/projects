@@ -1,0 +1,26 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+ell transcriptomic data, Dong et al. (2026)
+introduces a foundation model that can perform in-context
+predictions from unlabeled cells. However, their work focuses on tabular data and the transformer architecture.
+Test-time adaptation and robustness to label shift.Aside
+from TENT (Wang et al., 2021), additional test-time adaptation methods have been developed since. Wang et al. (2022);
+Gong et al. (2022); Boudiaf et al. (2022) propose methods to
+overcome catastrophic forgetting in online TTA, while our
+proposed method does not consist on continually adapting
+the model weights. Park et al. (2023) introduced a hypernetwork to address label shift, but it needs additional training
+of the model and it is not specifically tailored for biological
+data where control samples are available.
+5. Experiments and Results
+We performed a set of experiments to evaluate the effectiveness of a wide selection of methods for addressing batch
+effects under different scenarios:a) Mild domain shift:
+new experimental batches.We evaluate adaptation performance when the target data originate from previously
+unseen batches generated under similar experimental conditions, reflecting routine batch-to-batch vari

@@ -1,0 +1,25 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 112
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+F.2. Detailed Error Analysis
+In this section, we formally define the annotation protocol, the taxonomy of failure types, and the qualitative
+patterns observed for each category on OMIBench. The goal is to make the reported percentages in Figure 7
+reproducible and interpretable.
+F.2.1. Annotation Protocol
+We analyzed OMIBench examples where LVLM responses fell below a predefined correctness threshold
+under GPTScore. Thesecandidate errorsunderwent a rigorous secondary inspection to elucidate failure
+mechanisms. For each instance, annotators examined the visual inputs, instructions, reference solutions,
+and model outputs. A prerequisite validation step excluded false positives where GPTScore misclassified
+valid responses. Confirmed errors were then assigned aprimaryfailure mode based on the fundamental
+deficit preventing a correct output.
+Figure 7 illustrates the resulting distribution: visual perception failures (35%), cross-image association
+failures (30%), logical reasoning fallacies (25%), and instruction comprehension biases (10%). The following
+subsections detail the operational definitions of each category.
+Visual Perception Failuresoccur when the LVLM misperceives basic visual

@@ -1,0 +1,23 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 7
+section: lexis-11
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+ic version for classes it was trained on, and its general version for all others.
+Guided Refinement (Open3DHOI):LEXIS-Flow ∗ starts from off-theshelf estimates rather than noise; it uses CameraHMR [56] for the body and
+SAM3D [71] for the object, aligned to a MoGe [76] depth estimate; see alignment details in Sec. S.1.1. This initialization is encoded into the latent state
+and transported to an intermediate timestept start=15(out of total 25) via
+SDEdit [51], after which InterField-guided ODE integration refines estimates
+(Sec. 3.3). LEXIS-Flow∗ trains on a combination of the ProciGen and InterActrefined datasets. We compare against the optimization-based InteractVLM [16]
+and HOI-Gaussian [78] methods, initialized with CameraHMR + SAM3D +
+MoGeasourmethodforfaircomparison.WerefertothisversionofInteractVLM
+as “InteractVLM++.” Originally, InteractVLM uses ICP-based initialization of
+object pose, which struggles in difficult scenarios; for completeness, we also report this original setting, denoted as “InteractVLM.”
+In-lab Evaluation (BEHAVE):For fair comparison to baselines that train
+on BEHAVE, we train dataset-specific variants of LEXIS-Net and LEXIS-Flow
+on this dataset, using the o

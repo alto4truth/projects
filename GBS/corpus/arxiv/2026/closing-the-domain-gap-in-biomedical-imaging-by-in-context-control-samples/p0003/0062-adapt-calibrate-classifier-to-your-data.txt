@@ -1,0 +1,73 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 62
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+. . . . . . . . . . . . . 23
+F.5 Comparison . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+15
+
+Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+A. Notation table
+Definition Symbol Type
+Scalars
+number of source domains (batches)BN
+number of samples per source domain (simplified)NN
+number of samples from one of the target domainsMN
+number of control samples from target domainCN
+number of non-control samples from target domainLN
+feature dimensionDN
+number of classesKN
+DANN domain-loss trade-offλR ≥0
+CORAL penalty weightγR ≥0
+Sets, spaces, and distributions
+input/image spaceX
+label space / class setY
+training data (all sources)D train S B
+b=1 D (b)
+data from source domainbD (b) {(x
+(b)
+n ,y
+(b)
+n )} N
+n=1
+unseen target-batch dataD β {x β
+1 , . . . ,x β
+M }
+domain-specific data distributionp b
+xy distribution onX × Y
+meta-distribution over domainsµdistribution on domains
+Representations and tensors
+image / sample / inputxX
+control image / control samplezX
+labelyY
+feature embeddinga=f(x;w ′)R D
+TVN-normalized embedding ˜aR D
+control embeddings (batchβ){z β
+j }R D
+source/target feature covariancesC S ,C T R D×D
+control mean/covariance (TVN)µ ctrl,β ,Σ ctrl,β R D ,R D×D
+Models and parameters
+feature extractorf,f w ,f(·;w ′)X →R D
+classifierc(·;θ)R D → Y
+prediction modelg(x;w) = (c◦f)(x;w)X → Y
+model parameterswW
+adaptation function (test-time)h ϕ(w,x β
+1:M )W × X M → W
+adaptation parametersϕparameters ofh
+adapted parameters for batchβw β W
+domain discriminator (DANN)d v R D → S B−1
+Losses and objectives
+supervised loss (cross-entropy)L CE (y,g(x;w))R
+domain loss (DANN)L CE (b,d v(h))R
+CORAL discrepancy∥C S −C T ∥2
+F R ≥0
+BatchNorm (BN) statistics
+test-batch mean/var (per channel, batchβ)µ BN ,σ BN R D ,R D
+>0
+16

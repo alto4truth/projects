@@ -1,0 +1,23 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 135
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+s.DoesthistreeproveferalrabbitsinAustraliacamefrommultipledifferentshippings?
+Figure21: Analysis of reasoning error examples on Emu-3.5.
+Sampling stability and statistical significance.We report the mean and standard deviation of both
+GPTScore and ACC across three independent sampling runs of Gemini-3-Pro-Preview, evaluated by Gemini2.5-flash and GPT-5-mini. As shown in Table 5, the standard deviations remain small: for GPTScore, all
+subject-level deviations are below1.3% and total-level Std is below0.5%; for ACC, fluctuations are at most
+∼1.3% and total-level Std is below0.3%. These variations are much smaller than the effective gains reported
+in our paper for techniques such as long-CoT thinking, sequential scaling, and in-context learning, which
+exceed 5% and in most cases exceed10%. Moreover, paired comparisons for Qwen-VL-32B-Thinking vs.
+Instruct, Qwen-VL-32B-Instruct sequential scaling (1 vs. 16 samples), and Qwen-VL-32B-Instruct textual ICL
+(0-shot vs. 3-shot) over five repeated runs yieldp-values all below0.05, indicating that our conclusions are
+statistically stable.
+Partial-credit evaluation (future work).Although GPTScore already provides graded semantic judgments
+under

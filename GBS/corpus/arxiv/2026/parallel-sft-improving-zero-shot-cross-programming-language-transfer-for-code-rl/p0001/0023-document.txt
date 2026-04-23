@@ -1,0 +1,24 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+e PLs, including all of our 3 target languages. See dataset statistics and additional training details
+in §B.
+During evaluation, we sample 8 times per question for both tasks. Pass@8 for code generation requires all 8 samples. For
+pass@1 as well as boolean accuracy for code validation,12 we treat them as independent samples to reduce estimation
+variance.
+6 Results
+Figure 3a presents the transfer performance for code generation. On the left, we visualize the zero-shot transfer
+results to the 3 target PLs unseen during SFT. When C++ is the source language, simple (non-parallel) multi-PL
+training already offers generalization benefits over the monolingual baseline. Theoretically, this is consistent with prior
+literature that posited multi-task training as a form of meta-learning that facilitates better downstream adaptation (Wang
+et al., 2021a). Empirically, this aligns with the multilingual literature where more training languages enable better
+generalization (Arivazhagan et al., 2019; Aharoni et al., 2019;i.a.). Parallel-SFT enables further improvements and
+leads to the best transfer performance throughout RL.
+On the right, we show the performance when the target PL is in the 8-Lang

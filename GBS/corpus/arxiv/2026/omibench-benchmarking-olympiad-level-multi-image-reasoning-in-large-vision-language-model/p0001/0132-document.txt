@@ -1,0 +1,24 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 132
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Rationale:…Retrievedthestandard"DoubleDisplacement"mechanismfrommemory,ignoringthespecific"Inversion"diagramprovided...
+StandardRationale:Theimageexplicitlyshowstheresidueabstractingaprotonfromwater…StandardAnswer(Gold):…Base.
+ModelPrediction(Emu-3.5):NucleophileErrorAnalysis:VisualNeglect:Themodelignoredthespecificelectronflow(arrowpushing)intheimage.HallucinationformPriors:Seeing"Glycosidase",itblindlyappliedahigh-frequencytextbookconcept(Enzyme=Nucleophile),failingtoadapttothespecificcaseshown(Enzyme=GeneralBase).
+Input:…Glycosidases,…areenzymesthatcatalyzethisreaction(scheme1).…increasethespeedoftheC-Obondcleavagereactionbyafactorof(10&')
+Scheme1:Hydrolysisoftheglycosidicbond.Mechanismofhydrolysiscatalyzedbyglycosidase...Scheme2:Mechanismwithinversionofconfiguration
+Scheme3:MechanismwithretentionofconfigurationChosethecorrectstatementindicatingthereactivityofsodiumhydride:Base/Acid/nucleophile/electrophile
+Fig 1: General
+Hydrolysis
+Fig 2: Inversion Mechanism
+(The Reality)
+Figure19: Analysis of reasoning error examples on Emu-3.5.
+Rationale:Reasoningloopbrokedown…
+StandardRationale:…Strictlyderivedfromgivensidelengths(AB=2,BC=3)andfoldingsymmetry…StandardAnswer(Gold):…3−3.
+Model

@@ -1,0 +1,47 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+1 6 11 16 21 26 31
+Layer
+0
+10
+20
+30
+40
+50
+60Retrieval Accuracy (%)
+1 Language
+8 Languages (non-parallel)
+8 Languages (parallel)
+(a)Retrieval accuracy
+1 6 11 16 21 26 31
+Layer
+0.02
+0.04
+0.06
+0.08
+0.10
+0.12
+Adjusted Cosine Similarity
+1 Language
+8 Languages (non-parallel)
+8 Languages (parallel) (b)Adjusted cosine similarity
+Figure 4 Parallel-SFT improves representation generality.We measure the cross-PL alignment of program representations for
+unseen languages across model layers. Non-parallel multi-PL training induces more aligned parallel program representations, while
+Parallel-SFT further improves them. The inverted U-shape suggests that alignment peaks in the middle layers, where semantic
+reasoning occurs.
+1. Retrieval accuracymeasures whether a program and its translation have closer representations than all other noncorresponding programs (Artetxe and Schwenk, 2019; Feng et al., 2022; Shen et al., 2025;i.a.). Formally, e.g., we
+measure the accuracycos(r Go
+i,ℓ,r PHP
+i,ℓ )>max j̸=i cos(rGo
+i,ℓ,r PHP
+j,ℓ ).
+2. Adjusted cosine similarity.Following Wu et al. (2025b), we correct for baseline anisotropy by subtracting the cosine
+similarities between non-parallel pairs. Formally, e.g.,

@@ -1,0 +1,33 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 3
+section: lexis-7
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+ntp(see yellow point
+on human/object surface) is orthogonally projected onto the three feature
+planes (see red, blue, and green points)
+to sample features, which are aggregated and passed to a small MLP to infer the InterField value for pointp.
+T b,T o =D ψ(Z,f o), (2)
+whereT b,T o ∈R 3×Tr×Tr×Tc are TriPlane feature volumes for the body and
+object respectively, andf o is an object
+shape embedding extracted by a pretrained frozen PointNeXt [61] encoder
+applied on the object point cloud,P o.
+To query the decoded InterField at any
+3D surface point,p∈R 3, LEXIS-Net
+projectsponto the three axis-aligned
+planes of the respective TriPlane (see
+Fig. 4), bilinearly samples and sums the
+features, and infers an InterField value
+through a lightweight MLP.
+The LEXIS-Net training objective is:
+LLexisNet =L recon +λ h
+IF Lh
+IF +λ o
+IF Lo
+IF +λ VQ LVQ +λ commit Lcommit, (3)
+whereL recon is a reconstruction loss defined asLrecon =

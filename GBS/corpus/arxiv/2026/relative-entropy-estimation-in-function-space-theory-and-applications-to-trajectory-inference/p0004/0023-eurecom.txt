@@ -1,0 +1,67 @@
+title: Relative Entropy Estimation in Function Space: Theory and Applications to Trajectory Inference
+source: arxiv
+year: 2026
+document_id: relative-entropy-estimation-in-function-space-theory-and-applications-to-trajectory-inference
+authors: Chao Wang; Luca Nepote; Giulio Franzese; Pietro Michiardi
+page: 4
+section: eurecom
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20775v1
+
+st (HF) Riba et al. (2022). Each dataset is projected to 5 dimensions and
+split into 3 equally spaced training snapshots and 2 validation snapshots.
+6
+
+Evaluation metrics.The TI literature typically evaluates performance via marginal reconstruction
+on held-out validation snapshots, using metrics such as Earth Mover’s Distance (EMD) ( W1),
+Wasserstein-2 Distance (W2), Sliced Wasserstein Distance (SWD), Max-Sliced Wasserstein Distance
+(MWD), and RBF-Maximum Mean Discrepancy (MMD) (see Appendix E.1), all of which we report
+here. To the best of our knowledge, this is the first benchmark using such an extensive set of standard
+marginal metrics.
+However, marginal metrics cannot detect discrepancies at the level of full trajectory distributions.
+We therefore estimate FKL between the ground-truth trajectory distribution and that produced by
+each method by learning velocity fields from complete trajectories. For synthetic datasets, groundtruth trajectories are simulated from the known SDEs, whereas for real scRNA-seq datasets, where
+only snapshot samples are observed, we use the trajectory measure inferred by SBIRR (Shen et al.,
+2025) from all snapshots as a biologically motivated reference. This is consistent with standard
+assumptions in cellular development modeling, since SBIRR learns stochastic dynamics aligned
+with Waddington’s landscape view of differentiation; under this proxy, FKL quantifies how closely
+alternative methods match a biologically interpretable view of developmental dynamics.
+5.2 Results with Marginal-Based Metrics
+Finding 1: Marginal-based rankings vary substantially with(i)validation time-point,(ii)metric
+choice, and(iii)metric hyperparameters.Our benchmark highlights that inconsistencies are
+intrinsic to marginal-based evaluation.(i) The same method can rank best at one validation snapshot
+and substantially worse at another, even though methods are trained to learn the full underlying
+dynamics.This pattern is clear on both synthetic and real datasets. On Lotka-V olterra, SBIRR leads at
+early snapshots but is overtaken by vSB and TIGON at later ones. Repressilator shows even stronger
+reversals, with SBIRR leading at some snapshots and TIGON at others. Petal is more stable, but still
+not invariant across τ (Table 2). The same effect appears on real datasets, where the leading method
+at early snapshot often differs from that at later snapshot (Table 3).(ii) Even at a fixed validation
+snapshot, different metrics on the same marginal can induce different rankings.For example, at the
+last validation snapshot of Lotka-V olterra, TIGON ranks best under EMD and MMD, but not under
+the other metrics (Table 2a). Similar metric-dependent reversals are also observed at early snapshots
+on Petal, EB, and ME.(iii) Some marginal metrics are themselves sensitive to hyperparameter choices,
+so rankings can vary even within a fixed metric family.Kernel-based distances illustrate this effect:
+their usefulness depends on whether the kernel captures a notion of similarity aligned with the data.
+For MMD with RBF kernel, the statistic is informative only when Euclidean distances in data space
+are meaningful, and even then it can remain highly sensitive to bandwidth. With a fixed bandwidth,
+MMD may saturate and become insensitive to growing discrepancies. On Repressilator, this appears
+for AM: while OT-based metrics such as EMD and W2 increase steadily, reflecting transport over
+larger spatial scales, MMD remains nearly constant (Table 2b). Taken together, these results suggest
+that marginal-based rankings are highly sensitive to evaluation choices, making them difficult to
+interpret robustly.
+Finding 2: Matching marginals does not imply correct dynamics.Marginal evaluation is fundamentally non-identifiable: many distinct path measures can share the same finite set of time-indexed
+marginals, so matching these marginals does not determine the underlying dynamics. Therefore,(i)
+strong marginal agreement can mask incorrect temporal behavior.A model may achieve competitive
+marginal scores without recovering the true dynamics. On Repressilator, for example, TIGON attains
+competitive marginal distances despite generating a smooth spiral rather than the characteristic
+three-gene oscillations (Table 2b).(ii) Marginal comparisons are further affected by method-specific
+trajectory generation procedures.Choices such as the numerical integration direction can improve
+agreement at some validation snapshots while degrading it at others. For example, on Lotka-V olterra,
+TIGON with backward integration performs well at the last validation snapshot (Table 2a). On
+Repressilator, SBIRR performs well at early snapshots but deteriorates later, whereas vSB scores
+well at the last snapshot despite missing the correct dynamics (Table 2b).
+To further assess both the statistical robustness of marginal-metric rankings and their relation to
+dynamical fidelity, we examine theCritical Difference (CD)plots on the three synthetic datasets (Figure 3). On Lotka-V olterra and Repressilator, the CD plots show that, except for V AL, most differences
+are not statistically significant, underscoring the statistical weakness of marginal-metric rankings.
+On Petal, several differences become significant, yet CD ranks SBIRR ahead of V AL, suggesting
+7

@@ -1,0 +1,24 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 2
+section: lexis-5
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+, andto ∈R 3 the global translation;
+(2) Body stateB={R b, t b,β,Z}in thecamera frame, whereR b ∈R 6 is
+the global rotation (in 6D form [95]),tb ∈R 3 is the global translation,β∈R 10
+are SMPL+H shape parameters, andZ ∈R 21×D are tokens of anovellexicon,
+called LEXIS (see Sec. 3.1), encoding both pose and “interaction signatures.”
+Representation (InterField):To encode interaction relationships, most
+work usessparse, binary contact; points are either in contact or not. Recent
+work uses InterFields, IF(p)∈R≥0, which, for every2 3D body/object point,p,
+encodes the distance to the nearest point on the interacting counterpart. This is a
+dense,continuoussignal, that models both contact andproximity. Our approach
+builds on this richer representation. However, estimating 3D InterFields from a
+2D image is a highly ill-posed, high-dimensional problem. We tackle this below.
+1 Our method works directly for SMPL+H [64] & SMPL [49].
+2 InterFields arehigh-dimensional; to store a distance per SMPL+H vertex:R6890.

@@ -1,0 +1,25 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+(Sec. 3.3). By first optimizingGs
+and the anchor-basedGd(t)through a Geometric Purification phase, we establish
+a robust substrate that is physically consistent with the observed projections.
+This structure provides the necessary geometric foundation for the subsequent
+stage, where generative priors are applied to refine appearance details.
+3.2 Degradation-Aware Generative Prior
+AsintroducedinSec.3.1,ourrectifierD(Eq.5)providesimagepseudo-supervision
+for closed-loop optimization. Despite the stabilized geometric substrate, sparseview supervision still leaves appearance severely under-constrained, resulting
+in hole-like missing regions, over-smoothed textures, and view-/time-dependent
+artifacts, especially around occlusions and thin structures. While a strong 2D
+diffusion prior could in principle restore plausible details, naively inserting an
+off-the-shelf model into our closed-loop pipeline is unsafe: (i) The VAE bottleneck may distort fine structures and deviate from the projected 3D geometry.
+(ii) The degradation statistics of sparse 3D renderings differ substantially from
+the natural-image domain, and (iii) frame-wise stochastic refinement introduces
+temporal flickering. We thu

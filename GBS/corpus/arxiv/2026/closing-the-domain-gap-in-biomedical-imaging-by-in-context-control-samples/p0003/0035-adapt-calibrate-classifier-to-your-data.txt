@@ -1,0 +1,29 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+learned in-context approaches further improve performance:
+ARM-BN achieves the best accuracy (Table 1), approaching the in-domain baseline and thereby largely neutralizing
+mild batch effects. This supports our hypothesis that, in
+microscopy, batch effects can often be corrected byfast,
+context-conditionedadaptation rather than retraining.
+5.2. Strong domain shift: transfer across sources
+Next, we evaluate whether the above conclusions hold understrongdomain shift across laboratories, which might
+have different data acquisition protocols and microscopes.
+We consider the setting where the main model is trained
+using labeled images obtained from only one source, i.e. a
+pharmaceutical company, and the evaluation is performed in
+samples from another source. Specifically, we use source 3
+(S3) and source 8 (S8), and we perform experiments where
+the source (labeled) domain is S3 and the target domain is
+S8, and vice versa, and we also compare to the in-domain
+performance for each of them. Table 2 reports MoA accuracy for each method under source transfer.
+Cross-source shifts are substantially harder.All methods
+degr

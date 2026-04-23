@@ -1,0 +1,22 @@
+title: Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+source: arxiv
+year: 2026
+document_id: global-offshore-wind-infrastructure-deployment-and-operational-dynamics-from-dense-sentinel-1-time-series
+authors: Thorsten Hoeser; Felix Bachofer; Claudia Kuenzer
+page: 2
+section: abstract
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20822v1
+
+ing. Paolo et al. [2024] motivated by the work of Wong et al. [2019] used a combination of CFAR on
+Sentienl-1 SAR data and convolutional neural network (CNN) on Sentinel-1 SAR and Sentienl-2 multispectral data
+to detect and classify marine infrastructure on a global scale with a dedicated "wind" category. Hoeser et al. [2022]
+introduced DeepOWT, a global scale dataset of offshore wind infrastructure locations that distinguishes OWTs, OWT
+foundations, and support platforms as separate classes, using a CNN based object detection approach on Sentienl-1
+SAR data. Zhang et al. [2024] employed Sentinel-2 imagery and an ensemble of CNN based detection models to reduce
+false positives in global OWT detection.
+Regionally focused studies have also been conducted, particularly for Chinese waters. Liu et al. [2026] and Ding
+et al. [2024] proposed SAR based OWT mapping using CNN object detection methods, while Song and Li [2025]
+investigated multispectral Sentinel-2 imagery also using CNN based object detection. Wang et al. [2024b] combined
+multispectral Sentinel-2 and Sentinel-1 SAR data, applying handcrafted spatial feature detectors for OWT mapping.
+For this study, the temporal dimension of

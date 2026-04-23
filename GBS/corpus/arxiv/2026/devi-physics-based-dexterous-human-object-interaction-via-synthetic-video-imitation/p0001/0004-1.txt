@@ -1,0 +1,60 @@
+title: DeVI: Physics-based Dexterous Human-Object Interaction via Synthetic Video Imitation
+source: arxiv
+year: 2026
+document_id: devi-physics-based-dexterous-human-object-interaction-via-synthetic-video-imitation
+authors: Hyeonwoo Kim; Jeonghwan Kim; Kyungwon Cho; Hanbyul Joo
+page: 1
+section: 1
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20841v1
+
+ine the body pose by adjusting the wrist joint
+angles in θb
+t to combine the outputs of F b and F h. See supplementary material for the details. The
+5
+
+Figure 4:Qualitative Results on Various Objects.DeVI leverages a video diffusion model as an
+HOI-aware motion planner, allowing simulation of HOI with diverse objects through text prompts.
+resulting unified 3D human representation at timetis:
+Ht ={β t, ˜θb
+t ,ϕ b
+t ,τ b
+t ,θ h
+t },(8)
+with adjusted body pose ˜θb
+t . Ideally, the reconstructed SMPL-X human model at the first frame Ht=1
+should match the initial SMPL-X model H in the input scene S. We therefore apply a global rigid
+transformation to match the position and orientation of Ht=1 to the initial state. This transformation
+is analytically derived from their relative pose, and applied to all subsequent frames, resulting in:
+˜Ht ={β t, ˜θb
+t , ˜ϕb
+t ,˜τb
+t ,θ h
+t },(9)
+where ˜ϕb
+t and˜τh
+t are the adjusted global orientation and translation.
+Refining 3D Human Reference via Visual HOI Alignment.As the coarse SMPL-X reconstructed
+in the previous stage is obtained by simply unifying the outputs of two independent estimator, it is not
+perfectly aligned with the reference video V or the 3D object O in the scene S, as shown in Fig. 3 (b).
+To address this, we present an optimization procedure termed Visual HOI Alignment, by optimizing
+the body and hand pose parameters to better align with both the reference video V and the initial
+3D object state O. We optimize body pose parameters { ˆθb
+t }F
+t=1 and hand parameters { ˆθh
+t }F
+t=1 by
+minimizing the following objective:
+Ltotal =w bLb +w hLh +w tcLtc +w HOILHOI,(10)
+where Lb, Lh, Ltc, LHOI are the 2D body projection loss, 2D hand projection loss, temporal consistency loss, and HOI loss, with their corresponding weights, wb, wh, wtc, and wHOI. The 2D body
+projection loss Lb and 2D hand projection loss Lh are defined to align the projection of SMPL-X
+joints to the original joint estimations from theF b andF h in 2D as follows:
+Lb =∥Π (J b(Ht))−j body
+t ∥2 (11)
+Lh =∥Π (J h(Ht))−j hand
+t ∥2,(12)
+where Jb, Jh are body and hand joint regressor from SMPL-X parameters in Ht. The jbody
+t and jhand
+t
+are estimated 2D body and hand joints obtained from Fb and Fh. The temporal consistency loss Ltc
+6

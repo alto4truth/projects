@@ -1,0 +1,32 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 2
+section: grab-item
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+LM reaches the correct state through an
+incorrect execution path.
+By construction, these metrics follow a strict
+containment: SCR≤BER≤SVR . This allows
+us to localize exactly where the LLM’s reasoning
+fails—whether at the level of surface syntax, functional execution, or structural semantics.
+We further define the conditional metrics as
+CBER=BER/SVR and CSCR=SCR/SVR .
+These scores isolate the LLM’s logical and structural performance from its basic syntactic proficiency, revealing its reasoning quality specifically
+on validly formatted outputs.
+5 Experimental Results and Findings
+We conduct a comprehensive evaluation of LLMs
+on ROBOGRIDto assess their ability to handle
+recursive syntax and semantic constraints.
+5.1 Main Experiments
+We evaluate LLMs across three progressively difficult tasks:Grammaticality Judgment, which
+tests syntactic recognition;Goal-Conditioned
+Generation, which assesses behavioral planning
+under constraints; andInstruction-to-Code Generation, which requires full alignment across syntax, behavior, and semantics.
+Configurations.We establish a high-difficulty
+benchmark with 200 distinct samples per task,
+fixing a recursion depth of D= 10 and a 0shot Chain of Thoug

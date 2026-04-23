@@ -1,0 +1,24 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+approach offers
+a complementary lens to instance-level attribution methods such as influence functions
+(Koh & Liang, 2017): rather than attributing predictions to individual training examples, we
+attribute learned representations to structural properties of the data distribution.
+Analogous periodic representations have been found for days of the week and months of the
+year (Engels et al., 2025; Karkada et al., 2026); whether the spectral-geometric dissociation
+extends to these and other cyclic concepts is a natural next step. More broadly, the spectralgeometric hierarchy introduced here provides a concrete framework for distinguishing
+superficial from functional feature learning. This distinction may prove important well beyond numerical representations as we increasingly rely on representation-level diagnostics
+to understand large language models.
+Acknowledgments
+The authors acknowledge the Center for Advanced Research Computing (CARC) at the
+University of Southern California for providing computing resources that have contributed
+to the research results reported within this publication. We also acknowledge the use of the
+USC NLP cluster provided by the USC NLP Group. DF and RJ w

@@ -1,0 +1,42 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 3
+section: svr-svr-ber-cber-svr-ber-scr-cber-cscr
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+A Appendix
+A.1 EBNF Examples
+A.1.1 Different Syntactic Styles
+We implement three distinct syntactic styles to evaluate the LLMs’ sensitivity to structural delimiters
+and formatting conventions.
+The block style utilizes explicit, verbose keywords to demarcate action and control boundaries,
+providing clear anchor points for hierarchical parsing:
+start: stmt+
+action_stmt: DO action END
+loop: LOOP expr TIMES LBR stmt+ RBR
+if_stmt: IF cond THEN LBR stmt+ RBR (ELSE LBR
+stmt+ RBR)?
+...
+The C-style mimics common imperative programming languages, employing curly braces for
+scoping and semicolons for statement termination:
+start: stmt*
+action_stmt: action SEMI
+loop: LOOP PAR_L expr PAR_R LBR stmt* RBR
+if_stmt: IF PAR_L cond PAR_R LBR stmt* RBR
+(ELSE LBR stmt* RBR)?
+...
+The S-expr style adopts a Lisp-like prefix notation with extensive parenthesization:
+start: stmt+
+loop: PAR_L LOOP expr stmt+ PAR_R
+if_stmt: PAR_L IF cond THEN stmt+ (ELSE
+stmt+)? PAR_R
+...
+A.1.2 Different Surface Realization
+To investigate the impact of lexical priors, we vary
+the mapping of grammar terminals while keeping
+the underlying production rules constant.
+The Natural lexicon employs familiar, semantically meaningful

@@ -1,0 +1,26 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+:
+• We identify a critical gap in existing literature on evaluating multi-image Olympiad-level reasoning in
+LVLMs, a setting that requires autonomous cross-image alignment, selection, and integrative reasoning.
+• We introduce OMIBench, a novel benchmark with over 1,000 Olympiad-level multi-image reasoning
+tasks spanning chemistry, physics, mathematics, and experimental design. We establish comprehensive
+baselines by evaluating state-of-the-art LVLMs, exposing major gaps in Olympiad-level multi-image
+reasoning.
+• We provide diagnostic analyses and assess diverse enhancement techniques, including long CoT, test-time
+scaling, in-context learning, and think-with-image methods, to improve LVLM performance on OMIBench
+and identify promising directions.
+The dataset and resources are available at https://github.com/LightChen233/OMIBench.
+2. Task Definition
+Unlike single-image multimodal CoT, multi-image CoT considers a set of imagesI={I 1,I 2, . . . ,I n|n≥2} ,
+a question Q, and a contextC. The task is to answerQ by integrating evidence across multiple images,
+where different images may provide complementary information needed for the final answer. Specifically,
+OMIBench consists of the fo

@@ -1,0 +1,28 @@
+title: SWE-chat: Coding Agent Interactions From Real Users in the Wild
+source: arxiv
+year: 2026
+document_id: swe-chat-coding-agent-interactions-from-real-users-in-the-wild
+authors: Joachim Baumann; Vishakh Padmakumar; Xiang Li; John Yang; Diyi Yang; Sanmi Koyejo
+page: 7
+section: scoring-rubric
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20779v1
+
+After analyzing the five dimensions, assign a single integer score from 0 to 100.
+- **90-100**: Every user request was fully resolved. The final session state is clean (
+code works, commits are sound, no dangling errors). The user's last messages
+indicate satisfaction or natural conclusion.
+- **70-89**: The core user goal was met, but minor issues remain (e.g., an edge case
+unhandled, a small follow-up the user would still need to do). No major unresolved
+errors. The session ended on a reasonable note.
+- **50-69**: Meaningful progress was made on the primary goal, but at least one
+significant sub-task is incomplete or the solution has a known defect. The user
+may have had to redirect the agent more than once on the same point.
+- **30-49**: The agent produced some relevant output, but the primary user goal was not
+achieved. The codebase may be in a worse or broken state, or the user visibly
+gave up on the main task.
+- **10-29**: Very little useful work was accomplished. The agent struggled repeatedly,
+required heavy user correction, or went down unproductive paths for most of the
+session.
+- **0-9**: Nothing of value was produced. The session ended with no progress toward any
+user go

@@ -1,0 +1,24 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 61
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+n of existing benchmarks.To broaden coverage, we adapted images and questions from recent
+open-source benchmarks, including OlympiadBench [24], Mv-MATH [58], and EMMA [23]. For these
+sources, we standardized the data format to unify the representation of questions, images, and ground-truth
+answers across disciplines.
+Table 3 lists the sources for each discipline and the rationale for their inclusion.
+Biology:Data were sourced from theAustralian Science Olympiads (ASO)and theIndian National Biology
+Olympiad (INBO). These contests feature long-context problem statements that require synthesizing facts
+with experimental data, testing LLMs’ capacity for evidence-based reasoning.
+Chemistry:This subset combines classical analytical problems from theInternational Chemistry Olympiad
+(ICHO)with interdisciplinary challenges. We include questions from theBritish Biology Olympiad (BBO)that
+overlap with biochemistry, alongside theChemistry Raceand modifiedEMMAinstances, to diversify problem
+formats from organic synthesis planning to physical chemistry calculations.
+Mathematics:To capture high-level symbolic reasoning, we aggregate problems from theIMO,CMO, and
+EGMO. Supplemented byMv-MATHandOly

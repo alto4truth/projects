@@ -1,0 +1,22 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+s manually verify each item to ensure accuracy. The Markdown texts are then normalized
+into a structured “Question–Rationale (if available)–Answer” format. For samples from mixed-complexity
+benchmarks, expert competitors further select and curate the items. Multilingual questions are translated
+with Google Translate and subsequently verified by human experts.
+Step 2: Rationale Annotations.Most competition datasets omit solution rationales, which are essential for
+analyzing problem-solving. We therefore build expert-verified rationales via a two-stage pipeline combining
+LLM-assisted generation (Gemini-2.5-pro-thinking) and human verification.
+Specifically, we use two-stage annotation: (1) LLM generates up to 16 candidate solutions per problem
+given the reference, retaining those with the correct final answer. If none succeed, we provide the groundtruth answer and regenerate a correct solution, reducing human effort by∼20%. (2) Experienced annotators
+verify and refine the retained rationales by correcting errors, adding missing steps, removing redundancy,
+and standardizing notation. If a rationale is fundamentally flawed, annotators rewrite it while preserving
+valid core ideas. A fin

@@ -1,0 +1,22 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 1
+section: surface
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+eg
+Grab(item) #pick up item|key|box
+Loop(n, body) #repeat body n times
+If(cond, then, else?) #conditional branch
+Holding(item) #state-query predicates
+And | Or | Not #logical operators
+2.2 Grammar Specification via EBNF
+To interact with ROBOGRID, LLMs must generate code conforming to a specific CFG provided in
+the prompt. We specify these grammars usingExtended Backus-Naur Form (EBNF)(McCracken
+and Reilly, 2003). A representative EBNF snippet
+for ROBOGRIDis shown below:
+2

@@ -1,0 +1,25 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+Convergent Evolution10
+9-digit addition: convergence across optimizers.Both Muon and AdamW converge to the
+same spectral structure (Figure 6, top), with sharp Fourier peaks at the expected harmonics
+and near-perfect κ for mod 2, 5, and 10. The two optimizers produce nearly identical
+Fourier spectra and probing accuracy, suggesting that the multi-token setting imposes
+constraints strong enough for both spectral and geometric convergence. Models determine
+the representation regardless of optimizer.
+3-digit addition: no convergence without modular pressure.The single-token setting
+produces a different outcome (Figure 6, bottom). With 500K unique pairs repeated over
+1,000 epochs, the learned representations vary across optimizer and random seed. Muon
+develops Fourier peaks at frequencies that do not align with modular periods, andκ remains
+near chance. AdamW exhibits grokking under one seed: training accuracy reaches 100%
+early while test accuracy remains low until a phase transition after training achieves roughly
+1.6B to 2B tokens (Figure 10); under another seed, generalization never occurs. Unlike Nanda
+et al. (2023), who train on mod-113 addition where modular structure is explicit

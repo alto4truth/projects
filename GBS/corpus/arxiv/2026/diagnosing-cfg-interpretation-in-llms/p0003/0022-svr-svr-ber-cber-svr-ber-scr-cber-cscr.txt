@@ -1,0 +1,32 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 3
+section: svr-svr-ber-cber-svr-ber-scr-cber-cscr
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+suggests that without familiar semantic cues, the
+repetitive parentheses of S-expr become harder
+for the model to track than explicit keywords. A
+more profound effect is observed throughLexical
+Familiarity. Moving from the Alien baseline to
+the Natural lexicon improves SVR to 24.5% and
+BER to 21.5%. This performance gain confirms
+that LLMs employ semantic bootstrapping, leveraging familiar keywords like loop to guess behavior,
+rather than performing pure in-context induction
+from the provided EBNF specification.
+6 Diagnostic Analysis and Discussion
+6.1 Prompting Strategies and ICL Efficiency
+We evaluate the impact of different prompting configurations, specifically comparing zero-shot and
+Figure 4: Impact of few-shot examples on performance
+at fixed recursion depth with CoT reasoning.
+few-shot in-context learning (ICL) (Brown et al.,
+2020) both with and without CoT reasoning.
+The Dominance of CoT in Novel CFGs.Figure 3 reveals that CoT is a critical factor for enabling LLMs to function as grammar interpreters.
+In the direct (without CoT) setting, performance is
+consistently abysmal across all depths, with SVR
+rarely exceeding 10% and SCR dropping to near
+zero even at shallow depths

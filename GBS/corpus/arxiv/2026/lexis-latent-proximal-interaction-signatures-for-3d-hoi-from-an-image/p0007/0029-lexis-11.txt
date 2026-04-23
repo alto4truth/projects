@@ -1,0 +1,34 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 7
+section: lexis-11
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+12 D. Antić et al.
+Method CD hum↓CD obj ↓Collision↓Contact↑
+A. HDM (w. scale align.) [81] 13.50(34.4%)49.38(29.1%)0.089(32.6%)0.141(49.6%)
+B. LEXIS-Flow (Ours)8.85 35.010.060 0.211
+C. InteractVLM [16] 7.20(2.1%)38.20(39.9%)0.054(24.1%)0.372(21.2%)
+D. CameraHMR [56] + SAM3D [71] 7.20(2.1%)37.30(38.4%)0.051(19.6%)0.182(147%)
+E. HOI-Gaussian [78] 7.28(3.2%)32.02(28.3%)0.061(32.8%)0.151(198%)
+F. InteractVLM++ [16] 7.20(2.1%)30.11(23.7%)0.047(12.8%)0.394(14.5%)
+G. LEXIS-Flow∗(Ours)7.05 22.96 0.041 0.451
+Table 1: 3D HOI in the wild (Sec. 4.3).We evaluate our LEXIS-Flow against SotA
+refinement-based methods on the Open3DHOI [78] benchmark. Rows A–B estimate
+from scratch; row C initializes with CameraHMR, and rows E–G initialize with D.
+4.2 Interaction Representation
+Task Representation CD obj ↓Contact↑
+Fitting Binary Contact 35.4 17.8
+Fitting InterField (ours)34.6 19.8
+Generative Binary Contact 49.11 0.152
+Generative InterField (ours)41.01 0.290
+Table 2: Representation effect (Sec. 4.2).
+Contacts and InterFields are compared on
+Open3DHOI [78] on two tasks: render-andcompare fitting and generative reconstruction.
+To evaluate the effect of
+the interaction representation, we
+compare the dens

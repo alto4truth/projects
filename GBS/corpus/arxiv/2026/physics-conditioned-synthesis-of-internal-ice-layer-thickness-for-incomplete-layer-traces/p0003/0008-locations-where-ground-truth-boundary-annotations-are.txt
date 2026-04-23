@@ -1,0 +1,18 @@
+title: Physics-Conditioned Synthesis of Internal Ice-Layer Thickness for Incomplete Layer Traces
+source: arxiv
+year: 2026
+document_id: physics-conditioned-synthesis-of-internal-ice-layer-thickness-for-incomplete-layer-traces
+authors: Zesheng Liu; Maryam Rahnemoonfar
+page: 3
+section: locations-where-ground-truth-boundary-annotations-are
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20783v1
+
+physical features, our model leverages intralayer spatial structure and cross-layer temporal dependencies
+to produce physically plausible completions while optimizing
+a mask-aware Huber loss only on observed measurements.
+Qualitative results show smooth, coherent, and physically
+plausible thickness completions that remain consistent with
+available observations, even under severe missingness. We
+further demonstrate that these synthetic completions provide
+effective pretraining supervision: pretraining a downstream

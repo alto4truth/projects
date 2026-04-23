@@ -1,0 +1,22 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+emoving redundancy,
+and standardizing notation. If a rationale is fundamentally flawed, annotators rewrite it while preserving
+valid core ideas. A final review ensures correctness, with dataset statistics in Figure 2.
+Step 3: Quality ControlTo ensure dataset quality, we employ a dual-review protocol in which every problem receives at least one independent audit, complemented by weekly random sampling of 5% of examples
+for regression testing on key metrics, error rate, text-image alignment, and solution accuracy. Further, audit
+feedback is introduced to drive iterative updates to annotation guidelines and targeted retraining, forming a
+closed-loop quality assurance process that maintains a high-fidelity multimodal competition problem corpus.
+Step 4: Classification Labeling.OMIBench problems in biology, chemistry, mathematics, and physics fall
+into two categories: open-ended and multi-choices. The combined Olympiad and high-stakes examination
+corpus covers a wide range of subfields, as shown in Figure 2. We first use GPT-4o to generate preliminary
+topic labels, and then manually assign final topic to ensure consistency and correctness across the corpus.
+5

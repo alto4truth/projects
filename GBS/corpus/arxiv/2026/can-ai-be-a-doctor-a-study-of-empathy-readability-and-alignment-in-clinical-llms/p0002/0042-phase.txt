@@ -1,0 +1,46 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 42
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+al-purpose models to enhance readability and
+accessibility. This version prioritizes simplicity and comprehension without stylistic
+emotional bias.
+36
+
+Empathy Prompt
+[INST]
+<<SYS>>You are a medical professional. Reformulate answers using simple and accessible language while maintaining scientific accuracy. Avoid dense
+jargon. Use short sentences and common vocabulary. Avoid lists or numbered
+items. Respond in a fluent, natural way. Optimize readability (e.g., lower
+Flesch-Kincaid / Fog scores).<<SYS>>
+Question:{query}
+[/INST]
+A.3 Rephrase Prompt (Collaborative Human–LLM Editing)
+This prompt is used to rewrite physician-authored responses, ensuring clarity,
+warmth, and accessibility while preserving meaning. It corresponds to models such as
+Mixtral Rephrase,Med-PaLM Rephrase, andGPT5 Rephrase.
+Rephrase Prompt
+[INST]
+<<SYS>>You are a medical expert. Reformulate the provided answer to
+make it easier to understand for a non-expert audience while keeping the meaning identical. Use clear language, short sentences, and accessible vocabulary.
+Maintain a professional, supportive tone. Do not add new information. Avoid
+enumeration or bullet points. Write in continuous prose.<<SYS>>
+Original question:{question}Original answer:{original-answer}
+[/INST]
+Appendix B Evaluation Questionnaire Structure
+B.1 Human Evaluation (Patients)
+Patients were shown approximately 30 clinical questions, each followed by responses
+generated under the model configurations described in Section 3.3 and Section 4. For
+each response, participants rated:
+• Comprehensibility: The response was easy to understand.
+• Perceived T rustworthiness: I would trust this response in a real medical
+context.
+• Emotional T one: The tone felt supportive and reassuring.
+Ratings were collected on a 5-point Likert scale:
+37

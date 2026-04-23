@@ -1,0 +1,30 @@
+title: Physics-Conditioned Synthesis of Internal Ice-Layer Thickness for Incomplete Layer Traces
+source: arxiv
+year: 2026
+document_id: physics-conditioned-synthesis-of-internal-ice-layer-thickness-for-incomplete-layer-traces
+authors: Zesheng Liu; Maryam Rahnemoonfar
+page: 3
+section: locations-where-ground-truth-boundary-annotations-are
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20783v1
+
+use the standard mean squared error
+(MSE) loss since all layers are fully traced.
+V. RESULTS
+Table I compares the graph transformer with and without
+MAR-derived physical conditioning and calculate the mean
+absolute error at locations where ground-truth boundary annotations are available, highlighting the effect of incorporating
+physical features beyond latitude and longitude for better
+internal ice-layer completion accuracy. Figure 2 demonstrates
+that our method can reliably recover internal layer boundaries
+from radar echograms even when annotations are severely
+incomplete. As shown in Figure 2(a), when layer traces are
+only partially available, the predicted boundaries smoothly
+bridge missing segments while remaining well-aligned with
+the visible portions of the reference traces in the overlay.
+Importantly, the completed curves preserve realistic layer ordering and spacing and avoid introducing spurious oscillations,
+indicating that the model is not performing na ¨ıve interpolation
+but instead leveraging spatial graph connectivity and context
+from neighboring layers to maintain coherent stratigraphy.
+In Figure 2(b), for the case where entire internal layers are
+absent from the in

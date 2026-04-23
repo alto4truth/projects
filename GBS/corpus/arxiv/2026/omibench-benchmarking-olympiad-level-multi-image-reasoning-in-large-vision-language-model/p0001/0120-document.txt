@@ -1,0 +1,24 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 120
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+um number of newly generated tokens per example,
+Lmax, while keeping all other hyperparameters fixed and re-evaluating the full OMIBench test set for each
+configuration. We sweep
+Lmax ∈ {512, 1,024, 2,048, 4,096, 8,192, 16,384},(11)
+a near-geometric progression that provides dense coverage on a log scale with a manageable number of runs.
+H.2. Parameter Scaling Protocol
+To analyze how test-time scaling interacts with model size, we evaluate two families of open-source multimodal language models: InternVL and QwenVL. Within each family, we use checkpoints spanning roughly1B
+to 235B parameters (see Table 2). The resulting performance–parameter-count curves are shown in Figure 5
+(b), with parameter counts on a logarithmic scale. We mark the saturation region as the smallest parameter
+size beyond which all larger models yield less than 0.5 absolute GPTScore improvement. InternVL improves
+up to approximately the mid-sized checkpoints and then saturates around25% GPTScore, whereas QwenVL
+continues to improve up to its largest public variant, plateauing around35%GPTScore.
+H.3. Parallel Scaling Protocol
+To evaluate parallel test-time scaling, we fix the model and prompting scheme and vary t

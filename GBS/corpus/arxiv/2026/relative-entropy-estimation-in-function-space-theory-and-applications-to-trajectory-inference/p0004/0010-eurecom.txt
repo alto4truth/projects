@@ -1,0 +1,23 @@
+title: Relative Entropy Estimation in Function Space: Theory and Applications to Trajectory Inference
+source: arxiv
+year: 2026
+document_id: relative-entropy-estimation-in-function-space-theory-and-applications-to-trajectory-inference
+authors: Chao Wang; Luca Nepote; Giulio Franzese; Pietro Michiardi
+page: 4
+section: eurecom
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20775v1
+
+sure estimation (Belghazi et al., 2018; Franzese et al., 2023a;
+Kong et al., 2023; Butakov et al., 2024, 2026; Gowri et al., 2024; Pieper-Sethmacher et al., 2025);
+to our knowledge, it is among the first practically tractable estimators designed to act directly on
+distributions over functions.
+Our contributions are fourfold. First, we give a general construction for estimating the KL divergence
+between distributions over functions, based on a careful treatment of absolute continuity and traceclass noise covariances, leading to a simple estimator. Second, we validate our functional KL
+estimator on an extensive set of special cases with known analytic KL divergence, and systematically
+assess its robustness across multiple estimation factors. Third, we conduct an extensive evaluation
+of prominent TI methods on a range of synthetic and real datasets, demonstrating that five widely
+used snapshot-based metrics can yield inconsistent rankings. Fourth, we show that our functional KL
+estimator provides a coherent comparison that exposes discrepancies in inferred dynamics, particularly
+under sparse or missing observations, supporting functional relative entropy as a principled criterion
+for

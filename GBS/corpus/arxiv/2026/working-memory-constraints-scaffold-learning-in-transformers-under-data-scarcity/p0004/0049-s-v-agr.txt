@@ -1,0 +1,80 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 49
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+ggests either that the relevant binding relations
+in BLiMP minimal pairs typically fall within the
+model’s window, or that the representational struc-
+
+ture encouraged by the locality constraint generalises usefully to capturing structural rather than
+purely linear dependencies. Distinguishing these
+two possibilities empirically would require a controlled analysis on minimal pairs stratified by the
+linear distance between binder and bindee, which
+we leave to future work.
+Two categories show consistently weak performance across all models, including the constrained
+variants: Island Effects and NPI Licensing. The
+performance ceiling on these categories is substantially below the model’s overall accuracy, and the
+constrained models offer no clear advantage over
+the baseline. We take this as informative rather
+than disappointing.
+Island Effects test the model’s sensitivity to constraints on syntactic movement, such as the whisland and complex NP-island constraints. These
+constraints are not reducible to linear distance or
+to local agreement; they require sensitivity to abstract syntactic configurations that hold over arbitrarily extensive structural domains. A model
+whose architectural constraint is defined in terms
+of linear distance, as ours are, has no principled
+mechanism for representing such configurations.
+The persistence of poor performance across all our
+locality-based mechanisms therefore aligns with
+theoretical expectation: linear locality is the wrong
+abstraction for capturing island constraints. A more
+interesting open question, raised in the Limitations
+section, is whether cognitive constraints have natural analogues that operate over abstract structural
+distance, which might capture island phenomena
+where linear constraints cannot.
+NPI Licensing tests the model’s sensitivity to the
+requirement that negative polarity items such as
+everoranyappear in the scope of a licensing operator such as negation or a question. The constraint
+is logical and scope-based rather than structural
+in the syntactic sense, and the relevant licensing
+operator may be arbitrarily distant from the NPI in
+linear terms. As with island constraints, a localitybased constraint is unlikely to offer a principled
+solution here, and the empirical results bear this
+out. Performance on npi_present_1 and related
+sub-tasks remains close to chance for most models
+at both training scales.
+The heatmap also reveals systematic differences
+among the fixed-window variants themselves. Window size 5 emerges as the most consistent performer across phenomena, achieving the highest
+overall accuracy at 10M and remaining competitive at 100M. Windows of size 7 and 9 perform
+comparably to size 5 on most sub-tasks but show
+occasional degradation on phenomena requiring
+particularly local sensitivity, such as some morphological agreement tasks. Window size 4 exhibits
+the opposite pattern, performing well on local phenomena but showing larger degradations on subtasks involving moderately non-local dependencies.
+The convergence on W= 5 as the best-performing
+choice is itself empirically interesting and may reflect something about the typical phrasal length
+over which English syntactic dependencies operate,
+although we emphasise that this observation is suggestive rather than conclusive without controlled
+cross-linguistic replication.
+The exponential and logistic decay variants show
+a different profile. They perform competitively
+with the fixed-window models on phenomena requiring strict locality but underperform on tasks
+where information from slightly more distant tokens is informative. We attribute this to the soft nature of the decay constraint: while the bias favours
+nearby tokens, attention to more distant tokens is
+not strictly prevented, and the model appears to
+retain some capacity to attend non-locally when
+the training signal calls for it. Whether this represents a genuine weakness of soft decay relative to
+hard windowing, or whether it reflects inadequate
+hyperparameter tuning of the decay mechanisms,
+is a question we cannot fully resolve here.
+D AI Assistant Use
+We made use of generative AI tools to assist in the
+drafting of the manuscript and the refinement of
+the research code. These tools were used only for
+linguistic clarity and code scaffolding (VS Code).
+All technical content and final interpretations were
+rigorously reviewed and verified by us.

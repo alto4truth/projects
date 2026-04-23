@@ -1,0 +1,27 @@
+title: Stream-CQSA: Avoiding Out-of-Memory in Attention Computation via Flexible Workload Scheduling
+source: arxiv
+year: 2026
+document_id: stream-cqsa-avoiding-out-of-memory-in-attention-computation-via-flexible-workload-scheduling
+authors: Yiming Bian; Joshua M. Akey
+page: 1
+section: document
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20819v1
+
+Stream-CQSA: A voiding Out-of-Memory in Attention
+Computation via Flexible Workload Scheduling
+Yiming Bian Joshua M. Akey
+Lewis-Sigler Institute of Integrative Genomics
+Princeton University
+Princeton, NJ 08540
+{yimingb, jakey}@princeton.edu
+Abstract
+The scalability of long-context large language models is fundamentally limited
+by the quadratic memory cost of exact self-attention, which often leads to out-ofmemory (OOM) failures on modern hardware. Existing methods improve memory
+efficiency to near-linear complexity, while assuming that the full query, key, and
+value tensors fit in device memory. In this work, we remove this assumption by
+introducing CQS Divide, an operation derived from cyclic quorum sets (CQS)
+theory that decomposes attention into a set of independent subsequence computations whose recomposition yields exactly the same result as full-sequence attention.
+Exploiting this decomposition, we introduce Stream-CQSA, a memory-adaptive
+scheduling framework that partitions attention into subproblems that fit within
+arbitrary memory budgets. This recasts attention from a logically monolithic operation into a collection of schedulable tasks, enabling flexible execution across

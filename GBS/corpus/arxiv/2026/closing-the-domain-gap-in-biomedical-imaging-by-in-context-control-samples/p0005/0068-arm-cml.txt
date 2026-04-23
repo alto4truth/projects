@@ -1,0 +1,43 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 5
+section: arm-cml
+chunk: 68
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+0.020 0.827 ± 0.024 0.846 ± 0.025 0.860 ± 0.026 0.870 ± 0.028
+CS-ARM-BN (ours)0.848 ± 0.035 0.875 ± 0.029 0.891 ± 0.028 0.899 ± 0.027 0.905 ± 0.026
+19
+
+Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+D.2. Label shift experiment. Supplementary information.
+D.2.1. EXPERIMENT DETAILS
+In experiment 5.3 we show a comparison between methods under label shifts. To achieve batches that have a certain level of
+label shift, we sample a class probability vector from a Dirichlet distribution with a certain α parameter. Then we use this
+class probability vector to define a multinomial distribution and draw N samples from it, that we will use as input to our
+model. In total we use a labeled batch size of 36 in every method, and we include 288 negative samples in CS-ARM-BN.
+One could argue that performance differences might be only due to a larger sample size, therefore, we show in Table 3 other
+baselines including the same amount of negative controls in each batch, as explained in the following section.
+D.2.2. ABLATION STUDY. EFFECT OF THE NEGATIVE CONTROLS SET SAMPLE SIZE
+In our method, CS-ARM-BN, negative controls are used both at training and at inference time, so the total batch size used to
+compute the BN parameters is larger than for the other methods. To demonstrate that the gains in performance in our method
+are not only due to a larger batch size but also due to the fact that the models were trained in a meta-learning fashion, we run
+theAdaBN and ARM-BNwith the same amount of negative controls andsame total batch size than for CS-ARM-BN.
+We don’t perform this experiment for TENT because we argue that there is no reason why minimizing the entropy of the
+model outputs for control samples should be beneficial. In Table A9 we show that, even if including controls increases the
+performance of both methods,CS-ARM-BN still shows the best performance.
+Table A9.Comparison of MoA classification accuracy of different methods in a new experimental batch under different degrees of label
+shift. A smallerαvalue corresponds to a larger degree of label shift.
+Method Label shift degree
+α= 4α= 1α= 0.1α= 0.01
+ERM (no adaptation) 0.862 ± 0.060 0.862 ± 0.060 0.862 ± 0.061 0.862 ± 0.061
+TENT 0.887 ± 0.014 0.832 ± 0.014 0.778 ± 0.016 0.156 ± 0.010
+Ada-BN 0.899 ± 0.012 0.851 ± 0.016 0.452 ± 0.010 0.229 ± 0.009
+ARM-BN 0.894 ± 0.018 0.831 ± 0.017 0.416 ± 0.020 0.228 ± 0.009
+Ada-BN (perturbed + controls)0.879 ± 0.018 0.871 ± 0.019 0.815 ± 0.022 0.785 ± 0.033
+ARM-BN (perturbed + controls) 0.861 ± 0.032 0.850 ± 0.033 0.785 ± 0.058 0.752 ± 0.068
+CS-ARM-BN (ours)0.927 ± 0.017 0.924 ± 0.018 0.906 ± 0.021 0.894 ± 0.022
+20

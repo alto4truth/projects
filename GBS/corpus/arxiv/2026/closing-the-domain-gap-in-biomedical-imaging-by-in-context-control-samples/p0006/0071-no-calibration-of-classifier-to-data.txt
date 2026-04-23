@@ -1,0 +1,13 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 6
+section: no-calibration-of-classifier-to-data
+chunk: 71
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+x = load_data() # your biomedical images
+model = load_model() # public classifier
+pred = model.predict(x) # domain gap!

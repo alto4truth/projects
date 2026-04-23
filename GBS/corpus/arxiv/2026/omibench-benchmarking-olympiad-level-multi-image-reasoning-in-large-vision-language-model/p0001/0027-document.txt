@@ -1,0 +1,23 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+6. How to improve on OMIBench?
+6.1. Can Long CoT Strategies Help?
+Prompting methods that usually work do not significantly improve performance on OMIBench.Prior
+work has found that chain-of-thought (CoT) prompting can improve model performance on Olympiad-level
+reasoning tasks [12, 33]. We test whether these gains transfer to OMIBench by comparing widely used CoT
+prompting strategies, asking whether prompt engineering can narrow the gap or whether improvements
+remain marginal. As shown in Figure 4 (a), we observe no statistically significant differences across prompts,
+indicating that current CoT prompting yields only limited gains on OMIBench.
+Long CoT thinking model variants significantly improve performance on OMIBench compared with
+prior benchmarks.We further evaluate a “no-thinking” prompting setting and find that both reasoningoriented and non-reasoning LVLMs still struggle on OMIBench. As shown in Figure 4 (b), enabling or
+disabling explicit “thinking” yields little performance change. We then compare the “thinking” and “instruct”
+variants of Qwen3-VL to assess whether more advanced Long CoT paradigms improve multimodal reasoning.
+As shown in Figure 4 (c), the thinking varia

@@ -1,0 +1,46 @@
+title: Relative Entropy Estimation in Function Space: Theory and Applications to Trajectory Inference
+source: arxiv
+year: 2026
+document_id: relative-entropy-estimation-in-function-space-theory-and-applications-to-trajectory-inference
+authors: Chao Wang; Luca Nepote; Giulio Franzese; Pietro Michiardi
+page: 4
+section: eurecom
+chunk: 57
+source_ref: https://arxiv.org/pdf/2604.20775v1
+
+/2/8
+Decoder (dim / depth / heads) 32/2/8
+Supernode radius 2e−4
+GPUs for Training 1×NVIDIA A100
+Table 12: FKL hyperparameters for Human Fibroblast.
+33
+
+E.4 Uncertainty Estimation
+E.4.1 FKL
+To ensure the reliability of our performance rankings and account for the inherent stochasticity in
+Monte Carlo sampling and velocity fields training, we evaluate all models across multiple independent
+runs. By employing 3 different random seeds, we provide quantitative uncertainty estimates for
+the forward and backward FKL, across the three synthetic datasets (Table 13) and four real-world
+datasets (Table 14).
+Models LV Repr Petal
+KL(νA∥νB) KL(ν B∥νA) KL(ν A∥νB) KL(ν B∥νA) KL(ν A∥νB) KL(ν B∥νA)
+Val 0.271±0.008 0.268±0.009 0.015±0.001 0.014±0.001 0.079±0.006 0.078±0.005
+SBIRR43.352±1.456 42.779±0.629 23.519±1.087 25.242±0.31415.991±0.892 49.360±2.334vSB 165.057±8.938 126.886±5.601 82.933±2.302 79.014±0.874 18.881±0.658 53.435±4.186MSBM 79.872±2.644 46.023±1.504 90.011±4.888 49.395±1.3999.641±0.307 17.055±1.186MFL43.929±2.094130.579±13.905 63.077±2.686 84.621±4.619 42.660±0.957 68.191±3.010AM 44.914±2.233 55.488±3.059 66.901±0.437 126.248±8.847 12.328±0.387 31.641±2.890TIGON 179.367±2.205 65.442±5.152 54.515±3.738 42.844±1.857 96.144±11.848 35.505±3.089
+Table 13: Variation in FKL across 3 seeds on synthetic datasets.
+Models EB hESC Mouse Erythroid Fibroblast
+KL(νA∥νB) KL(ν B∥νA) KL(ν A∥νB) KL(ν B∥νA) KL(ν A∥νB) KL(ν B∥νA) KL(ν A∥νB) KL(ν B∥νA)
+vSB 23.778±0.982 27.727±0.392 127.241±3.511 124.057±3.868 51.119±1.330 48.054±3.561 56.990±5.092 41.638±0.481MSBM 29.452±0.75721.454±0.878111.151±3.63281.697±1.93465.571±2.52437.563±3.34958.914±2.04326.784±0.437MFL22.058±0.83873.201±2.34197.134±2.747117.901±3.34642.268±2.12379.306±4.28829.706±0.73169.830±7.687AM 74.803±5.319 32.180±0.480 145.552±18.465 283.293±32.506 89.223±3.304 81.838±5.794 73.227±6.770 66.942±4.031TIGON 122.486±4.452 41.076±1.958 293.102±4.104 161.731±5.677 250.619±29.298 82.386±7.848 197.769±4.872 69.540±5.794
+Table 14: Variation in FKL across 3 seeds on real-world datasets.
+The reported performance metrics exhibit high consistency across multiple independent trials. The
+variance observed between different random seeds suggests that the model is robust to stochastic
+initialization and training noise, ensuring the reproducibility of our findings.
+E.4.2 Marginal Metrics.
+In Tables 15 to 17 we estimate the uncertainty of marginal metrics via bootstrapping, on the three
+synthetic datasets. For Lotka-V olterraand Repressilator we considered 10 runs with a subsample size
+of 100, whereas for Petal we consider 10 runs and subsample size equal to 500.
+The low variance present in most of the results show robustness in Monte Carlo sampling of the data.
+Notably, in the case of AM on the Repressilator dataset (Table 16), we observe that the variance
+scales positively with τ. This behavior is expected, as larger values of τ correspond to trajectories
+that propagate further into the state space, naturally leading to a higher dispersion of samples and a
+subsequent increase in the system’s variance.
+34

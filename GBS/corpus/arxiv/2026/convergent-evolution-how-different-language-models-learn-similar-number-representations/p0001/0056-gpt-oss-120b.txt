@@ -1,0 +1,67 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 56
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+es at T= 2, 5, 10 yet achieves chance-level probing for all moduli,
+showing that the construction above captures a phenomenon that occurs in practice.
+
+19Fu, Zhou, Belkin, Sharan, & Jia
+A.4 Lower and Upper Bounds
+Lemma 5.Assume d≥T− 1and SW is invertible (which holds when d≤N−T , or after
+projecting to a subspace of dimension at most N−T ). In Fisher’s Linear Discriminant Analysis
+(Fisher, 1936), the optimal linear probe maximizes the ratio of between-class to within-class variance
+along a projection direction. The separability of this optimal discriminant is characterized by
+λmax(S−1
+W SB), the largest generalized eigenvalue of the scatter matrix pair, which satisfies
+1
+(T−1)·cond(S W ) · ΦT
+N·λ min(SW ) ≤λ max(S−1
+W SB)≤ ΦT
+N·λ min(SW ) .
+The ratio between the upper and lower bounds is (T− 1)·cond(S W ), where cond(SW ) =
+λmax(SW )/λmin(SW ).
+Proof. The optimal linear discriminant for T-class classification projects the data onto the
+direction maximizing the generalized Rayleigh quotient:
+λmax(S−1
+W SB) =max
+v̸=0
+v⊤SB v
+v⊤SW v .
+Upper bound.For any v̸= 0, the numerator satisfies v⊤SB v≤λ max(SB)∥v∥2 ≤Tr(S B)∥v∥2,
+where the second inequality holds because SB is positive semidefinite and λmax(SB)≤
+Tr(SB). The denominator satisfiesv ⊤SW v≥λ min(SW )∥v∥2. Therefore:
+λmax(S−1
+W SB)≤ Tr(SB)
+λmin(SW ) = ΦT
+N·λ min(SW ) .
+Lower bound.The matrix SB has rank at most min(d, T− 1); since d≥T− 1 by assumption,
+this simplifies to T− 1. This holds because the T vectors {µr −µ} T−1
+r=0 satisfy ∑r(µr −µ) = 0
+and therefore span a subspace of dimension at most T− 1. It follows that λmax(SB)≥
+Tr(SB)/(T− 1) =Φ T/(N(T− 1)). Let v∗ be the unit eigenvector of SB corresponding to
+λmax(SB). Then:
+λmax(S−1
+W SB)≥ v∗⊤SB v∗
+v∗⊤SW v∗ = λmax(SB)
+v∗⊤SW v∗ ≥ λmax(SB)
+λmax(SW ) ≥ ΦT
+N·(T−1)·λ max(SW ) .
+Gap between the bounds.The ratio of the upper to lower bound is:
+ΦT/(N·λ min(SW ))
+ΦT/(N·(T−1)·λ max(SW )) = (T−1)· λmax(SW )
+λmin(SW ) = (T−1)·cond(S W ).
+The Fourier power spectrum fully determines ΦT via Part (i), but cond(SW ) depends on
+the directional structure of within-class variation, which the power spectrum {∥Fν∥2} does
+not capture. Specifically, ∥Fν∥2 aggregates power across all d embedding dimensions at
+frequency ν, discarding any information about which dimensions carry the periodic signal
+versus which carry within-class noise. As a result, two embeddings with identical power
+spectra (and hence identical ΦT) but different within-class covariance structures can yield
+λmax(S−1
+W SB) values differing by up to a factor of (T− 1)·cond(S W ), producing vastly
+different probe accuracies.

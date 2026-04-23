@@ -1,0 +1,32 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+Table 2.Comparison of MoA classification accuracy of different methods across target sources. The element before the arrow indicates
+the training domain, the element after the arrow indicates the evaluation domain. The accuracy values denote the mean and standard
+deviation over 3 re-runs with different seeds.
+Method Source→Target
+S3→S3 S3→S8 S8→S8 S8→S3
+no adaptation (BatchNorm) 0.939 ± 0.005 0.670±0.016 0.974 ± 0.002 0.498±0.011
+no adaptation (InstanceNorm) 0.949 ± 0.007 0.796±0.018 0.984 ± 0.001 0.552±0.014
+CA-MAE (FM) 0.747 ± 0.006 0.389±0.015 0.840 ± 0.004 0.356±0.011
+CellProfiler 0.923 ± 0.031 0.430±0.074 0.991 ± 0.004 0.550±0.029
+DANN – 0.639±0.175 – 0.324±0.079
+CORAL – 0.804±0.018 – 0.697±0.010
+CA-MAE (FM) + TVN – 0.688±0.005 – 0.488±0.010
+TENT – 0.813±0.041 – 0.768±0.001
+AdaBN – 0.838±0.037 –0.787±0.002
+StyleID – 0.774±0.004 – 0.713±0.016
+ARM-CML – 0.645±0.034 – 0.569±0.030
+ARM-BN –0.874±0.008–0.795±0.002
+CS-ARM-BN (ours) –0.884±0.005– 0.776±0.016
+source 8 in Exp. 5.2, and perform a classification task to
+predict eight well-defined MoAs. Therefore, we work with
+samples perturbed with eight different

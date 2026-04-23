@@ -1,0 +1,33 @@
+title: LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model
+source: arxiv
+year: 2026
+document_id: llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffusion-large-language-model
+authors: Inclusion AI; Tiwei Bie; Haoxing Chen; Tieyuan Chen; Zhenglin Cheng; Long Cui; Kai Gan; Zhicheng Huang; Zhenzhong Lan; Haoquan Li; Jianguo Li; Tao Lin; Qi Qin; Hongjun Wang; Xiaomei Wang; Haoyuan Wu; Yi Xin; Junbo Zhao
+page: 2
+section: 5
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20796v1
+
+A key challenge in SFT is that sample lengths vary significantly—by up to two orders of magnitude. Naive
+token-averaged loss causes gradients to be dominated by long sequences, while sample-level averaging
+encourages brevity. We therefore propose a re-weighting mechanism to balance these extremes:
+LMTRS = ∑j βjL(j)
+SFT
+∑j βj
+, whereβ j = 1q
+∑K
+k=1 ∑LB
+i=1 1[xi,(j)
+t,k =[MASK]]
+. (6)
+The scaling factor βj is the inverse square root of the number of masked tokens in sample j, equilibrating
+gradient contributions across diverse response lengths.
+Complementary Masking.Complementary masking (Li et al., 2025b) is a strategy to enhance data efficiency
+for dLLMs by constructing two antithetical training instances from a single sequence x0: a primary noised
+sequence xt and a complementary sequence x′
+t using the inverse mask. This design ensures that every token
+position appears uncorrupted exactly once per pair, thereby doubling effective information utilization and
+eliminating token-level sampling bias. We adapt this strategy in our framework.
+4.4 Diffusion Decoder Training
+Training Paradigm.We optimize the diffusion decoder via the standard flow matching objective (Lipman
+et al., 2022).

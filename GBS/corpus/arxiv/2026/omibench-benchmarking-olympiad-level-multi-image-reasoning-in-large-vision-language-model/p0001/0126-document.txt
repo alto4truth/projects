@@ -1,0 +1,23 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 126
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+f reasoning error examples on GPT-4o+VisualSketchpad (VSP).
+Single-Image-ICL Configuration.The Single-Image-ICL condition evaluates whether attaching asingle
+representative image to each demonstration offers additional benefits over text-only demonstrations. For
+each of thek demonstration instances: If the original OMIBench question contains a single image, we attach
+that image to the demonstration, exactly as in the dataset. All other aspects of the prompt (textual problem
+statement, options, and answer format) are identical to the No-Image-ICL case, and the test instance is again
+provided with its full set of images. This condition probes whether current LVLMs can effectively exploit
+minimal visual context in the demonstrations to further improve over text-only ICL.
+Multi-Image-ICL Configuration.The Multi-Image-ICL condition provides the model with the full visual
+complexity of OMIBench within the in-context examples. For each of thek demonstrations, we attachall
+images associated with that OMIBench instance, preserving the original ordering. Thus, demonstrations in
+this condition mirror the multimodal structure of the test instance itself. The textual content and answer
+format a

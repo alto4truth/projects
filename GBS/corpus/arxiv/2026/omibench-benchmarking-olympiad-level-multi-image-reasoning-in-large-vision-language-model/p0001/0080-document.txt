@@ -1,0 +1,28 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 80
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Rationale Quality Evaluation Prompt-P1
+You are given a question, a model answer, and a rationale (the step-by-step explanation or reasoning
+produced by the model). Your task is to evaluate the quality of the rationale,notthe quality of the
+final answer itself.
+Please read the rationale carefully and rate it along the following dimensions.
+1. Logical correctness
+Does the rationale follow a sound and coherent line of reasoning?
+•5 – Fully correct: Each step is logically valid, with no contradictions or clear mistakes.
+• 4 – Mostly correct: Overall reasoning is sound, with only minor issues that do not affect the main
+conclusion.
+•3 – Partially correct: Some important steps are correct, but there are noticeable gaps or errors.
+• 2 – Mostly incorrect: Reasoning is largely flawed or inconsistent, with only a few correct fragments.
+•1 – Completely incorrect: The rationale is illogical, self-contradictory, or entirely wrong.
+2. Faithfulness to the answer
+Is the rationale genuinely explaining how the given answer is (or would be) derived, instead of being
+disconnected or made-up?
+• 5 – Fully faithful: The rationale clearly and directly supports the given answer. No hallucinated
+steps are n

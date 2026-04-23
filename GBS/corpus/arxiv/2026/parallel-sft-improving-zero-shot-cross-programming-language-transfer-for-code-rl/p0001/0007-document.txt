@@ -1,0 +1,16 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+ing for Coding Tasks
+The standard recipe for training coding tasks includes three stages: pretraining, supervised finetuning (SFT), and RL.
+First, a model is pretrained on massive corpora of text and code. Second, the model undergoes SFT on a dataset of
+1Code validation models are useful in RL post-training as reward models to estimate the correctness of generated programs, circumventing the
+need for tests and the sometimes high execution cost.
+2

@@ -1,0 +1,28 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+isting label correction strategies rely on the predictions of
+the trained model.
+As a result, many FL approaches for noisy labels heavily depend on training dynamics, making it difficult to disentangle the impact of FL system characteristics from the
+effect of noisy labels. This motivates our work to approach
+the noisy-label problem from a different perspective by asking the following question:
+Can structural information in the feature representations
+of local datasets help distinguish clean samples from
+corrupted ones?
+We answer this question in the affirmative. Our proposed
+framework demonstrates that the spectral structure of classwise feature representations provides a reliable signal for
+identifying noisy clients and correcting potentially corrupted labels in FL under completely random label noise,
+i.e., symmetric label noise.
+Contributions.The main contributions of this work are
+summarized as follows:
+• We proposeFedSIR, a multi-stage FL framework that
+addresses noisy labels through thespectral geometry of
+client feature representations, providing a new perspective beyond conventional loss-dynamics or predictionbased approaches.
+• We introduce aspectral client identificationm

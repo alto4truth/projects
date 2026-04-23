@@ -1,0 +1,59 @@
+title: Stream-CQSA: Avoiding Out-of-Memory in Attention Computation via Flexible Workload Scheduling
+source: arxiv
+year: 2026
+document_id: stream-cqsa-avoiding-out-of-memory-in-attention-computation-via-flexible-workload-scheduling
+authors: Yiming Bian; Joshua M. Akey
+page: 1
+section: document
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20819v1
+
+nt computation pipeline, attention computation can
+be viewed as processing a collection (or queue) of subsequence tasks. By iteratively applying CQS
+5
+
+Figure 4: Workload management using uniform scheduling (left) and hybrid scheduling (right). The
+corresponding tree structure are in Figure 9. The dashed line indicates the memory limit (80GiB).
+Divide, the original large-scale attention problem is decomposed into many smaller sub-computations,
+enabling a trade-off between memory usage and computation time. This allows attention to scale
+beyond the memory limits of a single device.
+We conduct a preliminary experiment on the forward pass to illustrate the impact of workload
+scheduling. Experiments are performed on an NVIDIA A100 GPU with 80 GiB memory. We set the
+sequence length to N= 1M , head dimension D= 128 , batch size B= 1 , number of heads H= 64 ,
+and data precision to fp16. As a baseline, we use scaled dot-product attention (SDPA) from PyTorch
+(v2.11.0) with the FlashAttention (FA) backend. Stream-CQSA uses a modified FA kernel.
+Since N= 1M exceeds the GPU memory capacity, we estimate the memory and runtime of SDPA
+by measuring peak memory usage and execution time for sequence lengths ranging from 100K to
+900K at a step of 50K, where out-of-memory (OOM) occurs at 900K. We then fit polynomial models
+using numpy.polyfit() to estimate memory (degree= 1 ) and runtime (degree= 2 ). A similar
+procedure is used to model Stream-CQSA. The results are shown in Figure 8. Stream-CQSA achieves
+comparable memory efficiency to SDPA, but incurs additional runtime overhead due to operations
+such as mask generation, subsequence gathering, result aggregation, and host-device data transfers.
+In contrast, SDPA performs a single data transfer followed by a fused computation on the GPU.
+Using the fitted models, we estimate that processing a sequence of length 1M with SDPA requires
+approximately 92.53 GiB of memory and 223.22 seconds, which exceeds the memory capacity of
+an A100 GPU. In comparison, applying Stream-CQSA with itr= 1 produces 7 subsequences of
+length 1M× 3
+7 ≈428K , each requiring 52.65 GiB and 110.06 seconds. With itr= 2 , there are 49
+subsequences (length ≈183K ), each requiring 22.56 GiB and 19.74 seconds. With itr= 3 , there
+are343subsequences (length≈78K), each requiring only4.13GiB and4.13seconds.
+Scheduling subsequences that are constructed on the same iteration level, we obtain uniform scheduling. However, CQS Divide does not require uniform decomposition. For example, as shown in
+Figure 4 (right), some subsequences at itr= 1 can be further divided to itr= 2 and itr= 3 ,
+while others remain unchanged. This enables hybrid scheduling, where subsequences of different
+sizes coexist. They can be scheduled dynamically to maximize resource utilization while reduce
+the overall computation time. More generally, subsequence computations can be flexibly scheduled
+across devices to fully utilize available memory and compute resources.
+2.5 OOM guardrails
+Stream-CQSA incorporates a guardrail mechanism to prevent GPU OOM failures during execution.
+The mechanism is governed by two parameters: itr and n_cap. The parameter itr controls
+the divide granularity, and consequently the subsequence length and peak memory footprint. The
+parameter n_cap specifies the maximum number of subsequences that can be concurrently loaded
+to the GPU. During execution, if a subsequence computation triggers an OOM error, the offending
+subsequence is evicted from GPU memory and returned to the scheduling queue. The value of
+n_cap is then reduced by one to lower memory pressure for future rounds. If OOM persists even
+when n_cap= 1 , the divide granularity is increased to itr=itr+ 1 , thereby producing shorter
+subsequences with reduced memory requirements. After increasing itr, n_cap is reset to 1 to
+perform a calibration pass, which estimates the memory footprint of the new subsequences and
+determines the maximum feasible n_cap under the available memory budget. If OOM occurs during
+this calibration step, the divide granularity is further increased until a feasible configuration is found.
+6

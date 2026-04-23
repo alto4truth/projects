@@ -1,0 +1,24 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 1
+section: coral-arm-bn
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+n
+(ARM) (Zhang et al., 2021) is a meta-learning framework
+(Hochreiter et al., 2001; Finn et al., 2017) that enables such
+rapid adaptation.
+Batch Normalization as a domain adaptation mechanism.
+Batch Normalization (BatchNorm) is a widely established
+normalization technique, that allowed training deep neural
+networks with skip connections (Ioffe and Szegedy, 2015),
+and that can additionally be used as a module for domain
+adaptation (Li et al., 2016). Conventionally, when the assumption that both training and test data are sampled from
+the same distribution is made, the stored training statistics
+are used at inference time. In contrast, when the test samples
+are known to come from a different distribution, adapting
+2

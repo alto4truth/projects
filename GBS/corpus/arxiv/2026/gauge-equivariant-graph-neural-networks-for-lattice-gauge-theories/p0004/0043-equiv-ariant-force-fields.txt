@@ -1,0 +1,50 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 4
+section: equiv-ariant-force-fields
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+8
+0 10 20 30
+t
+−4
+−2
+0
+2
+4
+ReTr[W ]
+ED
+ML
+0 50 100 150 200
+τ
+0.00
+0.25
+0.50
+0.75
+1.00
+A(τ )
+ML
+ED
+FIG. 5. Dynamical benchmark of the GNN force-field for
+semiclassical dynamics of the SU(2) quantum link model.
+(a) Time evolution of the gauge-invariant Wilson loop
+Re Tr[W] on a representative plaquette, comparing ED forces
+and ML-predicted forces. The ML dynamics reproduces the
+short-time behavior accurately, with deviations emerging at
+longer times due to accumulated prediction errors. (b) Autocorrelation functionA(τ) obtained from Re Tr[W] averaged
+over plaquettes and independent trajectories. The ML results
+are in good agreement with ED across the full time window,
+with a small deviation at largeτ.
+while the ellipsis denotes a Casimir-induced phase rotation (proportional toL 2
+ij) that commutes with all observables and does not affect the force dynamics.
+The force acting on each link is determined by the
+fermionic back-action,
+Fij =−Im Tr[σU ij ρij],(15)
+withρ ij ≡ ⟨ψ jψ†
+i ⟩the single-particle density matrix evaluated in the instantaneous ground state. This expression
+makes explicit that the gauge dynamics is entirely mediated by the fermionic response to the background{U ij}.
+Th

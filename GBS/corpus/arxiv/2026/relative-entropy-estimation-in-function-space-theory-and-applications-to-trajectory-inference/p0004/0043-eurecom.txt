@@ -1,0 +1,45 @@
+title: Relative Entropy Estimation in Function Space: Theory and Applications to Trajectory Inference
+source: arxiv
+year: 2026
+document_id: relative-entropy-estimation-in-function-space-theory-and-applications-to-trajectory-inference
+authors: Chao Wang; Luca Nepote; Giulio Franzese; Pietro Michiardi
+page: 4
+section: eurecom
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20775v1
+
+and defineS 0 := Tr(Σ0), M 0 :=∥m 0∥2.
+Since the two SDEs have the same diffusion and initial law, Girsanov’s theorem gives
+KL(νA∥νB) = 1
+2
+Z 1
+0
+EA
+"
+
+(cA −c B)Yt
+g
+
+2#
+dt= (cA −c B)2
+2g2
+Z 1
+0
+EA
+
+∥Yt∥2
+dt.(25)
+20
+
+Step 1: computeE A[∥Yt∥2].Under the SDE A, the explicit solution is
+Yt =e cAtY0 +g
+Z t
+0
+ecA(t−s) dWs.
+Using independence ofY 0 and(W s)s≥0, the cross-term vanishes and Itô isometry yields
+EA[∥Yt∥2] =e 2cAt E[∥Y0∥2] +g 2 E
+"
+
+Z t
+0
+ecA(t−s) dWs

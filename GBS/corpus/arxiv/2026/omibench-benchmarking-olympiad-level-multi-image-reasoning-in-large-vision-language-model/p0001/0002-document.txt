@@ -1,0 +1,27 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+stry, mathematics, and physics Olympiads, together
+with manually annotated rationales and evaluation protocols for both exact and semantic answer matching.
+Across extensive experiments on OMIBench, we observe meaningful performance gaps in existing models. Even
+the strongest LVLMs, such as Gemini-3-Pro, attain only about 50% on the benchmark. These results position
+OMIBench as a focused resources for studying and improving multi-image reasoning in LVLMs.
+∗ Equal Contribution
+Corresponding Author
+Date: April 23, 2026
+Projects: https://huggingface.co/datasets/LightChen2333/OMIBench
+Code Repository: https://github.com/LightChen233/OMIBench
+Contact: qgchen@ir.hit.edu.cn, car@ir.hit.edu.cn, lbqin@csu.edu.cn
+1. Introduction
+Recent advances in large vision–language models (LVLMs) have enabled strong performance on demanding
+reasoning tasks, from elementary arithmetic to Olympiad-level problems that require deep domain knowledge
+and multi-step inference [39, 40, 11, 61, 35, 24]. A central driver of this progress is chain-of-thought (CoT)
+prompting [63], which elicits explicit intermediate reasoning steps in natural language [61, 10, 12]. In
+multimodal settings, these techniques enable LVLM

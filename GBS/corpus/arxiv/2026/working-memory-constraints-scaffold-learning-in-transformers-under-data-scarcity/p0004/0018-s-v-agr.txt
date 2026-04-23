@@ -1,0 +1,31 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+patterns where its heads
+remain diffuse across layers, attending to less interpretable combinations of function and content
+words without evident functional differentiation.
+The fixed-window constraint appears to force a
+structured division of labour amongst the attention
+heads, producing a representation of syntax that
+is more explicit than anything that emerges in the
+unconstrained model.
+Following Hewitt and Manning (2019) and its recent extension by Someya et al. (2025), we further
+train a diagnostic linear projection to reconstruct
+unlabelled dependency trees from each model’s
+contextual embeddings, reporting Unlabelled Unrooted Attachment Score (UUAS) by dependency
+relation. The fixed-window model achieves higher
+UUAS than the baseline across all five relations
+tested, with the largest gaps on core grammatical
+relations such as nsubj and dobj, which capture
+the link between a verb and its arguments. The advantage emerges early in the network and is most
+pronounced at intermediate layers. Full per-layer
+and per-relation results are in Appendix B.
+The architectural constraint seems to shape the
+local attention patterns within heads, producing interpretable functional specialis

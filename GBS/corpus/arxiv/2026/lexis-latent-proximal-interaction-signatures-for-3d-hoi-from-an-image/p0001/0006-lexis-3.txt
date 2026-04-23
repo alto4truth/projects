@@ -1,0 +1,22 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 1
+section: lexis-3
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+quadrics [55], meshes [23,75],
+or neural fields [10,54,94]. Recent work uses diffusion [45,46,62] or database retrieval [33,44]. Recently SAM3D [71] estimates robust object shape, but its pose
+estimation lacks interaction awareness w.r.t. humans; weinitializeLEXIS-Flow
+with SAM3D object estimates, andrefine poseby adding interaction awareness.
+HOI Datasets:Images paired with 3D GT are scarce. Most datasets are
+captured in constrained in-lab [20,91], indoor [4,29,32,66] or outdoor [31] settings. Sometimes these [4,32] are synthetically augmented [81]. To recover better 3D pseudo-GT, the BEHAVE [4] and InterCap [32] datasets are built using
+multi-view RGB-D cameras, while other datasets are built with multi-view RGB
+cameras [31,91,93] along with IMU sensors [93]. Recently 3D contact labels are
+crowd-sourced [13,72,78,88] to help 3D reconstruction for in-the-wild images.
+Template-free HOI methods:HDM [81] infers human and object point
+clouds via a hierarchical diffusion framework; this first predicts rough a point
+cloud for each, and then refines these separately via cross-attentive diffusion.

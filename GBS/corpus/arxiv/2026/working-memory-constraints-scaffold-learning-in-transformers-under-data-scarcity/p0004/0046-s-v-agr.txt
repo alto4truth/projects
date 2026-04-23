@@ -1,0 +1,30 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 46
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+ce on
+BLiMP is suggestive. We treat the probing analysis as one of several converging lines of evidence
+rather than as a standalone proof of structural representation.
+C Detailed BLiMP Analysis by
+Phenomenon
+The main text reports BLiMP performance aggregated by linguistic category (Section 5.2). Here we
+provide a finer-grained analysis at the level of individual sub-tasks, drawing on the per-phenomenon
+heatmap shown in Figure 6. The analysis surfaces
+several patterns that do not emerge clearly at the
+category level and that bear on the interpretation of
+where architectural constraints help, where they do
+not, and why.
+The largest constrained-versus-baseline gaps
+appear on phenomena that combine two properties: a syntactically structured relationship between elements that are not always linearly adjacent, and a heavy dependence on training data
+for the acquisition of that relationship. Argument structure phenomena highlight this pattern.
+Sub-tasks such as animate_subject_passive,
+animate_subject_trans, and causative test
+whether the model has internalised the selectional
+restrictions verbs impose on their arguments. The
+fixed-window models with W= 5 achieve accuracies on these sub-t

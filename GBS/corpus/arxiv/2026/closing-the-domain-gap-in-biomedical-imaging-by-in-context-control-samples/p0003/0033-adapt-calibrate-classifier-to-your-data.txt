@@ -1,0 +1,31 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+rd deviationacross folds, corresponding to five independent training runs per method. Unless
+otherwise specified, accuracy is reported at the image level.
+Methods and implementation.We compare supervised
+baselines (ResNet50 with BN/IN; CA-MAE linear probe;
+CellProfiler features), classical UDA/MSDA baselines
+(DANN, CORAL), generative style transfer (Style-ID), and
+test-time adaptation / in-context methods (AdaBN, TENT,
+ARM-CML, ARM-BN). Training details and hyperparameter search spaces are provided in Appendix Table A5.
+For methods that requiretest-timesamples to adapt (AdaBN, TENT, ARM-BN, ARM-CML), we evaluate them
+in a strictlyunlabeledtest-time adaptation setting unless
+explicitly stated.
+5.1. Mild domain shift: new experimental batches
+within a source
+We first study the most common practical scenario: training
+and test data originate from thesameimaging source, but the
+test batches correspond tonew experimental batches. This
+setting reflectsmilddomain shift: acquisition conditions
+drift across experiments, but the imaging platform remains
+unchanged. Results are summarized in Table 1.
+Batch effects degrade generalization performance.A
+standard ResNet50 achieves high in-domain a

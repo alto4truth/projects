@@ -1,0 +1,17 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 85
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+llel program training degrades in-language performance (i.e., training and
+testing on the same PL). We performed in-language RL training and evaluation (using Python), starting from both the
+8-language non-parallel SFT model and the 8-language Parallel-SFT model. After 500 RL steps, non-parallel training
+leads to 12.47% pass@1 (95% CI: [11.32, 13.71]) and parallel training leads to 12.36% pass@1 (95% CI: [11.22,
+13.60]). The difference is not statistically significant, confirming that parallel training does not sacrifice in-language
+performance.
+19

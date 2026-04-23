@@ -1,0 +1,22 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+rther improvements and
+leads to the best transfer performance throughout RL.
+On the right, we show the performance when the target PL is in the 8-Language SFT mixture. 13 Remarkably, when
+Python is the source PL, Parallel-SFT not only outperforms the baselines but even the in-language oracle. 14 This
+supports our hypothesis that Parallel-SFT creates a high-quality “generalist” initialization that allows models to leverage
+abundant high-quality source data effectively, compared to SFT- and RL-training on the target PL alone, which may
+suffer from noise. Additional results measured in pass@8 (§E) show similar trends.
+While the code generation results validate the effectiveness of Parallel-SFT, we acknowledge that zero-shot transfer
+is primarily a scientific question for this task, but not a practical challenge. This is because its training instances are
+PL-agnostic, with only a natural language prompt and stdin-stdout tests. When we “train in a source language,” we
+instruct the model to generate programs in that language and execute the output in that language. Therefore, while the
+improved transferability from Parallel-SFT is still scientifically meaningful, we also consider the cod

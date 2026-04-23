@@ -1,0 +1,30 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+learn to adapt in such scenarios.
+b) Stable context for adaptation methods:Each plate
+contains sufficient samples and controls which can stabilize
+estimation of the adaption parameters. This is akin to a
+calibration phase that many instruments in medicine and
+molecular biology require and for which controls must be
+available.c) Powerful machine learning methods:Lastly,
+in-context meta-learning methods are powerful learners that
+can profit from the structure of the JUMP-CP dataset and
+finally allow for closing the domain gap. We believe that
+this will be not possible for many other cases, but might help
+the community to collect datasets that exhibit characteristics
+like JUMP-CP.
+Our findings highlight that in-context test-time domain adaptation methods can make deep learning models bioimaging
+data not only accurate but also practical for deployment
+across experimental batches.
+Software and data
+Method and data are available at https://github.
+com/ml-jku/cs-arm-bn.
+10

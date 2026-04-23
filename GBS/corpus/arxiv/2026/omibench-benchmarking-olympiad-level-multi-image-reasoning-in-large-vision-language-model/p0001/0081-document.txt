@@ -1,0 +1,30 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 81
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+tead of being
+disconnected or made-up?
+• 5 – Fully faithful: The rationale clearly and directly supports the given answer. No hallucinated
+steps are needed to justify the answer.
+•4 – Mostly faithful: Slight mismatches, but the core reasoning is aligned with the answer.
+• 3 – Partially faithful: Some parts support the answer, but other parts are irrelevant or inconsistent.
+• 2 – Weakly faithful: The rationale only loosely relates to the answer, or relies heavily on speculation.
+•1 – Not faithful: The rationale does not explain the answer at all, or contradicts it.
+3. Use of information
+Does the rationale appropriately use the information provided in the input (question, context, passage,
+etc.)?
+• 5–Excellent: Usesallrelevantinformation,doesnotignorekeyfacts,anddoesnotaddunsupported
+facts.
+• 4 – Good: Uses most important information, with minor omissions or slightly extra but harmless
+details.
+• 3 – Fair: Uses some relevant information, but misses several important points or includes noticeable
+unsupported content.
+•2 – Poor: Rarely uses the provided information or relies heavily on invented details.
+•1 – Very poor: Almost no connection to the provided information.
+4. Clarity and re

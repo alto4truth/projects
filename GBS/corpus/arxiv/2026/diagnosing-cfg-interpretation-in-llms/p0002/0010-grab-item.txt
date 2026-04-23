@@ -1,0 +1,31 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 2
+section: grab-item
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+rmalizes the generation process. The
+pipeline first samples a grammar variant G by binding a syntactic style to a lexicon. It then performs a
+constrained recursive walk to construct a valid AST
+within the specified depth limits. Finally, the AST
+is linearized into a code string y according to the
+chosen style and mapping. This ensures that every
+generated instance is guaranteed to be syntactically
+valid and possesses a deterministic execution trace.
+4 Evaluation Framework
+To rigorously assess LLMs as in-context grammar
+interpreters, we propose a diagnostic framework
+that disentangles the multi-faceted process of grammar induction. Our framework combines three
+progressively difficult tasks with a three-layered
+hierarchy of evaluation metrics.
+4.1 Task Definitions
+We design three tasks to evaluate the LLM’s ability to recognize, plan, and implement logic under
+a novel grammar G provided in the prompt. Detailed examples of each task are provided in Appendix A.2.
+Task 1: Grammaticality JudgmentThis task
+probes the LLM’s capacity forsyntactic recognition. Given G and a candidate string s, the LLM
+must classify it as VALID or INVALID. We construct
+the test set with a balanced distributio

@@ -1,0 +1,28 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 1
+section: coral-arm-bn
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+MoA 3 MoA 2 MoA 1 Control
+Figure 2.Representation ofbatch effectsin microscopy imaging data considered as a multi-source domain adaptation (MSDA) problem.
+In this setting, each source consists of different experimental conditions, e.g. different plates. In each domain, an image of the same class
+is depicted, which represents a particular mechanism-of-action (MoA). Control samples are unperturbed samples, that are present in every
+domain, and which we represent with thecsymbol.
+lar imaging profiling to try to disentangle biological signal
+from confounding factors, often by standardizing features
+using controls from the corresponding experimental batch
+(Arevalo et al., 2024). However, such post-hoc corrections
+do not allow exploiting the capabilities of end-to-end deep
+learning models, and traditional deep learning models perform poorly on new batches (Chen et al., 2020; Kim et al.,
+2025).
+Domain adaptation provides a natural framework for
+batch effect correction.We could consider batch effect
+correction in machine learning as anunsupervised domain
+adaptation(UDA) problem, where the source domain is
+the traini

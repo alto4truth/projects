@@ -1,0 +1,17 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 8
+section: lexis-13
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+from the learned LEXIS.
+Qualitative comparison:Figure 6 compares our LEXIS-Flow ∗ method
+against SotA methods in the wild; for more results see Sec. S.2.1. Optimizationbased methods often produce floating objects or penetration, because sparse contacts lack the spatial awareness to correct these errors. LEXIS-Flow∗ recovers
+physically-plausible interactions via InterField-guided refinement. Additional results in Fig. 7 show our in-the-wild generalization; for more results see Sec. S.2.1.
+Perceptual study:We conduct a perceptual study on 60 Open3DHOI images with 62 participants (protocol in Sec. S.2.2). This shows that LEXIS-Flow∗
+estimations are perceived as more realistic 75.8% of times over HOI-Gaussian.
+4.4 In-lab 3D HOI Reconstruction

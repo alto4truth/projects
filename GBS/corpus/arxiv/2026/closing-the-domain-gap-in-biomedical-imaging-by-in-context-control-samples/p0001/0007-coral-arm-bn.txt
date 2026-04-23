@@ -1,0 +1,28 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 1
+section: coral-arm-bn
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+these layers by using the statistics of the new domain at
+inference time provide a straight-forward test-time domain
+adaptation method (Li et al., 2016; Wang et al., 2021). However, it has also been shown that these methods fail when not
+enough samples are available to accurately estimate the new
+domain statistics or when the class distribution is shifted at
+test time (Zhao et al., 2023; Park et al., 2023).
+Control samples provide an opportunity to stabilize the
+context in meta-learning methods.In addition to the methods presented above, there are also meta-learning methods
+which include adapting the batch normalization layers in a
+meta-learning setting (Zhang et al., 2021). The main difference between BatchNorm adaptation (Li et al., 2016) and
+meta-learning BatchNorm adaptation (Zhang et al., 2021)
+is that the adaptation does not only occur at test-time but
+also during training, such that the model learns to adapt to
+new batches. This has been shown to provide a significant
+improvement with respect to its pure test-time counterparts.
+Nevertheless, in this work, we show that these methods also
+underperform i

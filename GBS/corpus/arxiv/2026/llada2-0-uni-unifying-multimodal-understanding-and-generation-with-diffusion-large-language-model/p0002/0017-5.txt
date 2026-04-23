@@ -1,0 +1,29 @@
+title: LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model
+source: arxiv
+year: 2026
+document_id: llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffusion-large-language-model
+authors: Inclusion AI; Tiwei Bie; Haoxing Chen; Tieyuan Chen; Zhenglin Cheng; Long Cui; Kai Gan; Zhicheng Huang; Zhenzhong Lan; Haoquan Li; Jianguo Li; Tao Lin; Qi Qin; Hongjun Wang; Xiaomei Wang; Haoyuan Wu; Yi Xin; Junbo Zhao
+page: 2
+section: 5
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20796v1
+
+77.06 51.39 40.11 49.75 19.32 52.94 36.86 44.78 1.15 46.02
+Seedream 3.0 Diff. 98.19 94.90 84.62 83.14 80.18 51.83 60.30 72.32 88.74 69.86 78.41
+Qwen-Image Diff. 94.70 94.15 87.93 82.60 80.08 51.59 60.96 72.94 86.57 72.13 78.36
+Z-Image Diff. 96.80 94.46 82.48 78.90 80.20 49.08 68.98 76.80 84.89 68.39 78.10
+Unified
+Janus-Pro AR 90.80 86.71 67.74 64.26 68.40 37.05 64.44 62.11 72.01 2.59 61.61
+BAGEL AR + Diff. 90.20 85.60 67.74 61.98 70.69 30.23 66.44 58.12 76.49 7.76 61.53
+OmniGen2 AR + Diff. 91.90 86.39 72.12 62.83 68.27 32.50 59.89 56.31 71.64 29.02 63.09
+MMaDA D-Diff. 82.40 56.65 48.39 37.83 50.25 17.95 55.75 32.35 30.22 1.15 41.35
+Lumina-DiMOO D-Diff. 89.70 90.03 81.62 71.12 78.43 45.45 70.45 73.32 82.84 25.57 71.12
+LLaDA2.0-Uni D-Diff. + Diff. 95.30 93.67 91.77 85.65 86.42 63.99 72.19 85.82 90.30 31.23 79.63
+Table 7: Comparison of Text Rendering Ability on CVTG-2K Benchmark.
+Type Model Arch. Word Accuracy↑ NED↑CLIPScore↑
+2 regions 3 regions 4 regions 5 regions average
+Gen. Only
+FLUX.1 [Dev] Diff. 0.608 0.553 0.466 0.431 0.496 0.687 0.740
+Seedream 3.0 Diff. 0.628 0.596 0.604 0.561 0.592 0.853 0.782
+Qwen-Image Diff. 0.837 0.836 0.831 0.816 0.829 0.912 0.802
+LongCat-Image Diff. 0.9

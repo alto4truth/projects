@@ -1,0 +1,70 @@
+title: Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+source: arxiv
+year: 2026
+document_id: global-offshore-wind-infrastructure-deployment-and-operational-dynamics-from-dense-sentinel-1-time-series
+authors: Thorsten Hoeser; Felix Bachofer; Claudia Kuenzer
+page: 2
+section: abstract
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20822v1
+
+n the box
+•max_value: maximum backscatter value for the column
+•img_date: Sentinel-1 acquisition date
+•orbit_direction: ascending or descending pass
+9
+
+Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+Including orbit direction is essential for later interpretation of directional SAR signatures. The 516 exported CSV files
+collectively contain 763,630,250 rows. GEE task preparation and submission was managed client side, maintaining up
+to 25 concurrent or queued GEE tasks with automated retry logic after failure. Data were exported to a Google Cloud
+Storage bucket, resulting in about 50 GB of data and total egress cost of about 6 USD. This cloud-based workflow
+demonstrates both computational and resource efficiency for large-scale SAR time series acquisition.
+After download, batch level CSV files were processed individually. Rows were aggregated bybox_idandimg_date
+to group all backscatter profile values belonging to a single location and acquisition. Entries containingNaN values were
+removed. To reconstruct coherent 1D backscatter profiles, column values were sorted by column_id. This resulted in
+14,840,637 valid 1D backscatter profiles associated with offshore wind infrastructure locations and unique acquisition
+dates.
+For efficient storage and data access, the dataset was saved into 128 partitioned Parquet files. Partitioning was
+implemented by computing a hash of batch_id + box_id and mapping the resulting integer to the range 0-127 using
+a modulo operation. This scheme ensures that all profiles belonging to the same location are stored within the same
+partition while maintaining near-uniform partition sizes. As a result, loading individual location-specific time series is
+highly efficient.
+4.3 Rule-based time series classification
+The goal is to provide a rule-based classifier as baseline approach, which is able to assign the labels water, turbine
+foundation, deployed turbine, vessel, mooring / active construction, or as fallback unclear to each 1D backscatter profile
+of the prepared time series.
+In a preprocessing step, before classification, for each backscatter profile a peak detection is performed [Virtanen et al.,
+2020] after a Gaussian smoothing of the original backscatter profile to focus on major peaks. During peak detection,
+candidate peaks must satisfy a minimum inter-peak distance of 5 profile bins and a minimum prominence of 2 dB. The
+detected peaks are mapped back to their positions to the unsmoothed profile indices. To distinguish peaks resulting
+from the actual target position and layover effects, the centre peak is defined as the peak closest to the profile centre.
+Layover peaks are defined based on their orbit direction. For descending passes, the right adjacent peak serves as the
+valid side peak, and for ascending passes, the left adjacent peak is used. Furthermore, for each profile we calculate the
+mean, standard deviation and range. This set of features is used during profile classification.
+The rule-based classifier is designed in two stages. In the first stage, each profile is classified independently using
+thresholds on profile statistics (mean, standard deviation, range) and peak characteristics (presence, prominence, width,
+and amplitude). Figure 5 should be revisited here to get an intuition of the characteristics of the 1D backscatter profiles
+and different profile types. A water label is assigned if the profile has low overall backscatter or lacks distinct peaks,
+including cases of low mean and variability, weak or absent centre peaks, or uniformly low peak prominence. A
+mooring / active construction label would indicate the presence of a larger construction vessel or maintenance vessel,
+for which we assume strong and broad backscatter profiles. This label is assigned when broad peaks or high dynamic
+range indicate strong but spatially diffuse responses, or when low variance appears together with high mean backscatter.
+A deployed turbine label is assigned when a pronounced centre peak and a valid layover peak are present with sufficient
+amplitude and prominence. An unclear label is assigned to profiles with elevated side peaks that do not satisfy any of
+the preceding criteria, while a turbine foundation label is assigned when a sufficiently prominent centre peak is present
+and no earlier rule applies. All remaining profiles default to unclear after this first stage.
+In the second stage, labels are refined using sequential context. First, a smoothing operation is performed by applying
+a moving window with an adaptive kernel that ignores transient labels (unclear, vessel, mooring) when determining
+effective neighbours. Targeted passes correct isolated non-water profiles flanked by water and enforce local consistency
+by relabelling profiles that disagree with two agreeing neighbours, except for vessel labels, which are preserved. Next,
+profiles still labelled unclear are reevaluated using relaxed peak-based criteria to resolve ambiguities between mooring /
+active construction and turbine foundation classes. The smoothing step is then repeated to propagate updated labels.
+Subsequent refinements correct isolated water labels between turbine-related classes using a sliding window. Larger
+temporal contexts are then considered through segment-based refinement, where adjacent deployed turbine and turbine
+foundation segments are compared chronologically. Treating mooring and vessel labels as transparent, the shorter of
+two conflicting adjacent segments is relabelled to match the longer one. This process is then iterated until convergence.
+Finally, a timeseries refinement resolves platform related ambiguities by examining the global label distribution.
+Depending on the dominance and ordering of vessel, mooring, turbine foundation, and deployed turbine labels, subsets
+of these labels are reassigned to the platform class, including cases where turbine foundation labels persist long after the
+10

@@ -1,0 +1,27 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 107
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+ark Comparison
+For the correlation analysis between OMIBench and OlympiadBench, we evaluate three representative LVLMs:
+GPT, Gemini, Qwen-VL, and InternVL. All models are used in their official API or checkpoint form without
+any additional fine-tuning or task-specific adaptation. In order to reduce evaluation cresource consumption,
+the partial results of OlympiadBench are taken from Wan et al.[55], Wang et al.[59], Team et al.[51], Yue
+et al. [69], Shen et al. [48], Zhang et al. [73], Zha et al. [70], Team et al. [52], Yu et al. [67].
+Spearman correlation between benchmarks.To study whether Olympiad-level thinking transfers from
+the single-image to the multi-image setting, we compute the Spearman rank correlation coefficient between
+model performances on OlympiadBench and OMIBench. Concretely, for each modelm, we obtain its accuracy
+on OlympiadBench, denoted byaOlympiad
+m , and its accuracy on OMIBench, denoted byaOMI
+m . We then rank
+the models separately according toaOlympiad
+m and aOMI
+m and apply the standard Spearman formula on these
+two rankings. The resulting coefficient is0.614, which is below the commonly used threshold of0.7 for
+strong monotonic correlation, showing that

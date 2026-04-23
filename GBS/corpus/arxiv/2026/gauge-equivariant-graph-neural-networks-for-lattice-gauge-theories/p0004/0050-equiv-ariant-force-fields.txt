@@ -1,0 +1,24 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 4
+section: equiv-ariant-force-fields
+chunk: 50
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+d inversions.
+From the perspective of condensed matter and quantum simulation, the same framework naturally extends to
+variational representations of quantum states in gaugeconstrained many-body systems [66–68]. Existing neural quantum state constructions in this context have
+thus far been predominantly developed for Abelian lattice gauge theories, where gauge constraints can be incorporated more directly into the variational ansatz.
+By interpreting gauge-invariant outputs as amplitudes
+of a many-body wavefunction, the equivariant messagepassing backbone defines a scalable neural ansatz that enforces local gauge constraints by construction. Combined
+with variational Monte Carlo, this enables compact and
+systematically improvable descriptions of ground states
+in both Abelian and non-Abelian models. Furthermore,
+integration with time-dependent variational principles
+provides a route to real-time simulations of nonequilibrium phenomena—including quenches, transport, and
+confinement dynamics—within a symmetry-preserving
+variational manifold. These directions are particularly relevant for quantum link models and other finitedimensional gauge systems realizable in ultracold-atom
+and prog

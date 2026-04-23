@@ -1,0 +1,67 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 8
+section: adapt-calibrate-classifier-to-your-data
+chunk: 75
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+9)
+Bias =E[ˆµARM−BN]−µ domain = ¯µclass.(20)
+The bias equals the mean class effect, which grows large under label shift.
+Variance.
+Var(ˆµARM−BN) = Var
+
+1
+L
+LX
+l=1
+εl
+!
+= σ2
+L .(21)
+MSE.
+MSE(ˆµARM−BN) = ¯µ2
+class + σ2
+L .(22)
+F.3. Estimator 2: Controls Only
+The estimator is the sample mean over theCcontrol samples. Since controls satisfyµ class = 0:
+ˆµctrl = 1
+C
+CX
+c=1
+µobs,c = 1
+C
+CX
+c=1
+(µdomain +ε c).(23)
+Bias.
+E[ˆµctrl] =µ domain,(24)
+Bias = 0.(25)
+The estimator is unbiased because controls carry no class-specific signal by definition.
+Variance.
+Var(ˆµctrl) = σ2
+C .(26)
+This is large whenCis small, which is the typical regime in drug-screening experiments.
+MSE.
+MSE(ˆµctrl) = 0 + σ2
+C .(27)
+F.4. Estimator 3: CS-ARM-BN (Controls + Perturbed Samples)
+The estimator is the sample mean over allM=C+Lsamples:
+ˆµCS−ARM−BN = 1
+M
+X
+u∈Cβ
+µobs,u = 1
+M
+CX
+c=1
+µobs,c +
+LX
+l=1
+µobs,l
+!
+.(28)
+23

@@ -1,0 +1,21 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+e on OMIBench, where MMIU and OlympiadBench
+performance becomes comparable.
+Parameter scaling limits on OMIBench necessitate increased activated rather than total activable parameters.We evaluate test-time scaling versus parameter count using models from 1B to 235B parameters
+under identical inference. Unlike OlympiadBench and MMIU (Figure 5(b)), InternVL and QwenVL plateau
+on OMIBench at∼25% and ∼35% GPTScore, respectively. This plateau is mainly associated with Mixtureof-Experts (MoE) models, where added capacity may not be activated at inference. In contrast, performance
+plotted against activated parameters shows a positive, near-linear trend, implying that multi-image Olympiad
+tasks require more concurrently active parameters rather than a larger inactive pool.
+Parallel scaling still works in OMIBench.With temperature set to 0.6 and self-consistency applied,
+accuracy in Figure 5(c) improves monotonically ask increases and exhibits approximately log-linear scaling
+in the number of samples. These results indicate that parallel scaling remains effective on OMIBench.
+9

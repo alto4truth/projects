@@ -1,0 +1,98 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+0 1 2 3 4 5 6 7 8 9 10 11
+Layer
+0.55
+0.60
+0.65
+0.70
+0.75
+0.80
+0.85
+0.90
+0.95
+1.00UUAS Score
+attr Dependencies
+Model Type
+Baseline
+Fixed Window=5
+0 1 2 3 4 5 6 7 8 9 10 11
+Layer
+0.55
+0.60
+0.65
+0.70
+0.75
+0.80
+0.85
+0.90
+0.95
+1.00UUAS Score
+dobj Dependencies
+Model Type
+Baseline
+Fixed Window=5
+0 1 2 3 4 5 6 7 8 9 10 11
+Layer
+0.55
+0.60
+0.65
+0.70
+0.75
+0.80
+0.85
+0.90
+0.95
+1.00UUAS Score
+nsubj Dependencies
+Model Type
+Baseline
+Fixed Window=5
+0 1 2 3 4 5 6 7 8 9 10 11
+Layer
+0.55
+0.60
+0.65
+0.70
+0.75
+0.80
+0.85
+0.90
+0.95
+1.00UUAS Score
+prep Dependencies
+Model Type
+Baseline
+Fixed Window=5
+0 1 2 3 4 5 6 7 8 9 10 11
+Layer
+0.55
+0.60
+0.65
+0.70
+0.75
+0.80
+0.85
+0.90
+0.95
+1.00UUAS Score
+root Dependencies
+Model Type
+Baseline
+Fixed Window=5
+10M Training Corpus - Baseline vs Fixed Window=5 Comparison
+Figure 5: UUAS Score comparison between the Baseline and Fixed Window 5 models trained on 10M words.
+We believe that this structural probing complements behavioural evaluation in a specific way.
+BLiMP measures whether a model assigns higher
+probability to grammatically acceptable sentences
+than to unacceptable ones, but does not directly tell
+us whether the model has internalised the structural
+relations that u

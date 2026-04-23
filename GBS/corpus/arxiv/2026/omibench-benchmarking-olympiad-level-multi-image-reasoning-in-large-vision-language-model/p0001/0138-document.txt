@@ -1,0 +1,25 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 138
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+auxiliary answer choices. During the actual evaluation, participants are allowed to inspect all provided
+images and text for each problem and are asked to provide a final answer in the same problem setting as the
+benchmark.
+We report average accuracy for each participant group in Table 8, together with the strongest current
+model on the same subset for reference. The results show that experts remain substantially above current
+LVLMs, while even trained non-experts still outperform the best model by a clear margin. This gap indicates
+that OMIBench is difficult but still solvable for humans with sufficient scientific background, making it a
+meaningful benchmark for measuring progress in multi-image Olympiad-level reasoning.
+L. Single-Image Control Details
+To distinguish the effect of cross-image reasoning from confounders such as visual volume, input length,
+and OCR noise, we construct an information-equivalent single-image control. For each problem, all images
+are concatenated in their original logical order into a single composite image, while the question text and
+answer choices remain unchanged.
+M. Detailed Results for Training and External Tools
+This appendix provides the full n

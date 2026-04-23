@@ -1,0 +1,58 @@
+title: DeVI: Physics-based Dexterous Human-Object Interaction via Synthetic Video Imitation
+source: arxiv
+year: 2026
+document_id: devi-physics-based-dexterous-human-object-interaction-via-synthetic-video-imitation
+authors: Hyeonwoo Kim; Jeonghwan Kim; Kyungwon Cho; Hanbyul Joo
+page: 2
+section: 18
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20841v1
+
+method successfully imitates HOI motion using relatively sparse signals,
+even for HOI scenarios that we do not generate via video diffusion model.
+19
+
+Table 3:Success Ratio on GRAB.Success is defined as passing all three thresholds MPJPE(All) ,
+Tobj, and Oobj.
+Method
+Success ratio (%)
+Oobj<0.9O obj<1.0
+MPJPE(All)<0.1MPJPE(All)<0.2MPJPE(All)<0.1MPJPE(All)<0.2
+Tobj<0.1T obj<0.2T obj<0.1T obj<0.2T obj<0.1T obj<0.2T obj<0.1T obj<0.2
+PhysHOI 0.000 0.000 0.000 0.0625 0.000 0.000 0.000 0.0625
+SkillMimic 0.0625 0.0625 0.0625 0.125 0.0625 0.0625 0.0625 0.125
+InterMimic 0.188 0.250 0.250 0.438 0.250 0.312 0.3120.500
+DeVIw/o 2D Reward 0.188 0.188 0.188 0.188 0.188 0.188 0.188 0.188
+DeVI0.500 0.500 0.500 0.500 0.500 0.500 0.500 0.500
+B.2 Quantitative Results
+We additionally report quantitative results on the imitation success ratio for the GRAB dataset. As
+shown in Tab. 3, DeVI outperforms baselines [52, 53, 64] on imitating the HOI motion. This means
+that our method achieves a higher success rate compared to method using 6D poses, even we are
+relying on relatively sparse 2D object trajectories as references. As obtaining 2D object trajectories is
+more efficient than acquiring 6D poses, this is practically useful in synthetic setups. Additionally,
+when using a 6D pose reward in DeVI, the objective becomes more challenging, and the policy does
+not learn well within the same number of epochs. We demonstrate that our 2D object tracking reward
+more effectively guides the network toward an optimized policy by guding the object’s position and
+rotation through its 2D projection compared to the traditional 6D pose tracking reward. As 2D object
+tracks are easier to obtain than 6D poses, our hybrid reward built on top of the 2D tracking reward
+provides an efficient reward formulation for imitating control policies from noisy synthetic videos.
+C Limitation and Future Work
+C.1 Perspective Artifacts in Video Diffusion
+While we render a checkered grid floor alongside the scene to provide perspective cues to the video
+diffusion model, the model often does not produce results with perfect perspective. For example,
+when a human moves their hand toward the camera, the hand may appear relatively larger or smaller
+than it should. Such perspective artifacts introduce depth-direction errors in our visual HOI alignment.
+While our HOI loss (based on Chamfer distance) minimizes these errors near the frame where contact
+starts, errors in the remaining frames may reduce the naturalness of the reconstructed motion. In
+particular, this error becomes significant in interactions that require precise target placement (e.g.,
+putting a baseball into a small cup). As a future direction, we can consider leveraging multi-view
+video diffusion model to reduce this depth error.
+C.2 Limits of Automatic Contact Estimation
+While we propose a simple pipeline for estimating pseudo contact labels from the generated video,
+the estimated labels may not be perfectly aligned with the video as the algorithm rely solely on the
+pixel velocity of hands and objects. Specifically, the pixel velocity does not include motion along
+the depth direction, which may lead to estimation errors. While we find that the amount of error is
+generally not critical for successfully learning the humanoid control policy, the lack of fine-grained
+contact labels often leads to unnatural motions such as quickly snatching an object. As a future
+direction, we can consider using affordance grounding methods [6, 48] to refine the contact labels.
+20

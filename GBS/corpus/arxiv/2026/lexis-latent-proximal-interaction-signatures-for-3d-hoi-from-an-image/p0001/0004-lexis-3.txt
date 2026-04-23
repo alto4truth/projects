@@ -1,0 +1,28 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 1
+section: lexis-3
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+4 D. Antić et al.
+2 Related Work
+2.1 HOI Representations
+Binary Contact:Contact is a binary cue (points are in contact or not) that
+is used to taxonomize grasps [3,21,36], to synthesize hand [34,47,69,92] or body
+[15,30,38,59] interaction, and reconstruct hand [26,27,86] or body [52,82,90]
+interactionfrompixels.Forthelatter,existingwork:(i)detectscontactpixels[8],
+(ii) thresholds distances to compute 3D contact [31,69], (iii) exploits manual 3D
+contact labels [13,90], (iv) infers 3D contact [16,52,72] or (v) pressure [25,73].
+Spatial Probability:Recent work uses text-to-image diffusion to generate
+3D training data [28,38]. CHORUS [28] learns a 3D object occupancy field w.r.t.
+the body. ComA [38] extends this by learning an object-to-human 3D distance
+field with orientation cues. These works learn separate models per object/action
+class, and need heavy sampling/filtering, but their zero-shot nature is promising.
+Interaction Fields (InterFields):Going beyond sparse, binary contact,
+InterFields encode dense, continuous surface-to-surface distances. CHORE [82]
+thresholds learned Distance Fields (DF) to extract binary contacts. Other work
+uses DFs to synthesize body [15] or hand interac

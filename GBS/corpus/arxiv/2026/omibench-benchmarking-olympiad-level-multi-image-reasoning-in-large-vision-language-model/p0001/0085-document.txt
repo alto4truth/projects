@@ -1,0 +1,32 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 85
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Rationale Alignment Evaluation Prompt-P1
+You are an expert evaluator specializing in natural language understanding and reasoning chains.
+Your task is to assess how well a model-generated rationale aligns with a human-annotated reference
+rationale.
+Now, please evaluate the alignment between theModel Rationaleand theHuman Referencebased
+on the providedQuestion. Focus on the underlying logic, the sequence of reasoning steps, and the
+key evidence used. Do not penalize for differences in writing style or length, provided the core logic
+remains identical.
+Input Data:
+[Question]
+[Question Content]
+[Human Reference]
+[Human Annotated Rationale]
+[Model Rationale]
+[Model Predicted Rationale]
+Scoring Criteria (1-5 Likert Scale):
+• 5(PerfectAlignment):The model rationale uses the exact same logic, key evidence, and reasoning
+steps as the human reference. Differences are purely stylistic.
+•4 (High Alignment):The model rationale captures all key logical points of the human reference
+but may include minor, non-contradictory extra details or slightly different sequencing.
+• 3 (Partial Alignment):The model captures the main conclusion and primary evidence but misses
+a subordinate step or uses sligh

@@ -1,0 +1,25 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 1
+section: lexis-3
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+distances. CHORE [82]
+thresholds learned Distance Fields (DF) to extract binary contacts. Other work
+uses DFs to synthesize body [15] or hand interaction [68,70,85,89,92] or to reconstruct grasps [20,60,86], but mostly implicitly in features or losses. LEXIS-Flow
+differs from these in two ways:(1) Usage:LEXIS-Flow is the first method to
+use full-body InterFields explicitly ininference.(2) Task:LEXIS-Flow does the
+above forreconstruction(with InterField-guided refinement), while CG-HOI [15]
+for synthesis. Uniquely, LEXIS-Flow exploits a noveldictionaryof InterFields.
+2.2 3D HOI Reconstruction from a Single Image
+Human-only Reconstruction:Optimization methods fit a parametric 3D
+body model [35,49,83] to image cues [5,35]. Regression-based methods estimate
+parameters of such models [17,37,40,56,87] or a non-parametric mesh [12,42,65].
+Object-only Reconstruction:Pose is estimated via regression [23,80] or
+by fitting a template [24,48,74] or implicit SDF [1] with optimization. Shape is
+encoded as voxels [9,11], point clouds [19,19], superquadrics [55], meshes [23,75],
+or neural fields [10,54,94]. Recent work uses diffusion [45,46,62] or database retrieval [33,44]. Recently SAM3D [71] e

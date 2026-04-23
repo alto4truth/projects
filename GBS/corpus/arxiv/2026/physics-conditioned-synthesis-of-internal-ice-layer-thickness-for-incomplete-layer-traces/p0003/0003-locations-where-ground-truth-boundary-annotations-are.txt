@@ -1,0 +1,33 @@
+title: Physics-Conditioned Synthesis of Internal Ice-Layer Thickness for Incomplete Layer Traces
+source: arxiv
+year: 2026
+document_id: physics-conditioned-synthesis-of-internal-ice-layer-thickness-for-incomplete-layer-traces
+authors: Zesheng Liu; Maryam Rahnemoonfar
+page: 3
+section: locations-where-ground-truth-boundary-annotations-are
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20783v1
+
+AVAILABLE.
+Model Masked MAE
+Non-Physical Graph Transformer 3.45
+Physical-Conditioned Graph Transfoemer 1.81
+as network input, we follow the same procedure as Zalatan
+et al. [3–5] and Liu et al. [6], where each internal layer is
+represented as a spatial graph with nodes corresponding to
+pixels in the width of the radar echograms. Each node contains
+seven node features: Latitude, Longitude, and five physical
+features from the MAR climate model [12, 13].
+We implement our graph transformer network in PyTorch
+and PyTorch Geometric. The spatial encoder is a 2-layer
+GraphSAGE network with hidden dimensiond s = 128, and
+the temporal module is a Transformer encoder with width
+dt = 256, 8 attention heads, and 4 layers. We applied dropout
+(p= 0.05) in both GraphSAGE and Transformer blocks.
+To isolate the contribution of physical conditioning, we also
+compare our model against a non-physical variant that uses
+only latitude and longitude as node features. The completion
+model is trained for 300 epochs with Adam, base learning
+rate5×10 −4, weight decay10 −4, and batch size 8, using
+a mask-aware Huber loss that is computed only on observed
+thickness values. We use a two-stage learning rate schedu

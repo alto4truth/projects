@@ -1,0 +1,23 @@
+title: Relative Principals, Pluralistic Alignment, and the Structural Value Alignment Problem
+source: arxiv
+year: 2026
+document_id: relative-principals-pluralistic-alignment-and-the-structural-value-alignment-problem
+authors: Travis LaCroix
+page: 1
+section: document
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20805v1
+
+us to conflicting
+incentives in the principal-agent framework and corresponds roughly to the “outer alignment” problem identified
+by Hubinger et al. [44]. In this sense, the objectives axis captures what most people intuitively mean by value
+misalignment—e.g., reward hacking, negative side effects, or perverse incentives [ 1]. Thus, poorly designed
+objective functions can lead to instances of the value alignment problem whenever there is a conflict between the
+objective function and the true objective (i.e., the “intentions” or “values” specified by the standard definition of
+the value alignment problem).
+In a standard machine-learning model, the objective function defines the optimisation landscape over which the
+model learns. However, the solution space for an optimisation problem defined by an objective function includes
+a “pathology” of local optima, meaning these landscapes are frequently deceptive [30, 52, 58, 69]. As a result, the
+objective function “does not necessarily reward the stepping stones in the search space that ultimately lead to the
+objective” [52, p. 329]. Consequently, many objective functions are constructedad hoc, privileging what is easy to
+measure rather th

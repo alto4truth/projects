@@ -1,0 +1,41 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+6 Z. Wu et al.
+statistics: a Gaussian is assigned toGd if its center-gradient magnitude exhibits
+outlier behavior
+∇(i)
+µ > ¯∇µ +κ·σ ∇, (4)
+where ¯∇µ andσ ∇ are computed over all primitives, andκcontrols the dynamic
+budget. Intuitively, static primitives converge to stable positions, whereas truly
+dynamic ones keep receiving persistent gradients. This criterion prevents noisy
+motion assignment caused by sparse-view ambiguity.
+Built on this stabilized substrate, we introduce a generative rectifierDto
+provide controlled feedback for sparse render degradations. Given a rendering,
+the rectifier produces
+ˆIrect(t, ξ) =D
+
+ˆIrender(t, ξ)
+
+, (5)
+and we optimizeGwith a hybrid objective that couples physical observations
+and rectified supervision:
+min
+G
+X
+t,ξ
+
+(1−λ(t))L data(ˆIrender, It,v) +λ(t)L prior(ˆIrender, ˆIrect)
+
+. (6)
+HereL data anchors geometry to real observations, whileLprior distills reliable details from the rectified views (Sec. 3.2). Crucially, this disentangled architecture
+facilitates our progressive optimization strategy (Sec. 3.3). By first optimizingGs
+and the anchor-basedGd(t)through a Geometric Purification phase, we establish
+a robust substrate that is physically

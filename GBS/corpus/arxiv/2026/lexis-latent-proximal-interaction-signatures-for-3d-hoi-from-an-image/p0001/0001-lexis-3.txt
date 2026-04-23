@@ -1,0 +1,23 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 1
+section: lexis-3
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+However, inferring 3D fields, i.e., distances for all points across two 3D surfaces from just a 2D image is inherently ill-posed. Moreover, the space of possible
+interactions is vast and highly non-convex. To tackle these challenges, we empiricallyobservethatInterFieldscontaininteraction-andobject-specificpatterns,or
+“interaction signatures.” Thus, we learn a novellexiconof these patterns called
+LEXIS (LatEnt proXimal Interaction Signatures), namely a discretemanifold
+of interaction signatures, encodingprior knowledgeabout these. Specifically, to
+learn LEXIS we train a VQ-VAE [18,22] that takes as input 3D human and
+object geometry in interaction, encodes this into a latent code, and decodes
+this into body and object InterFields. As training data we use MoCap-based,
+synthetically-augmented 3D geometry of interactions.
+We exploit LEXIS to estimate 3D interactions from a single RGB image.
+Existing methods mostly follow a two-stage pipeline: they first estimate coarse
+human and object shape/pose (often missing contacts), and then refine them in
+post-hoc optimization with contact-based losses to improve interaction plausibility. This is suboptimal for two reasons; first, contact provid

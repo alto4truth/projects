@@ -1,0 +1,26 @@
+title: Gauge-Equivariant Graph Neural Networks for Lattice Gauge Theories
+source: arxiv
+year: 2026
+document_id: gauge-equivariant-graph-neural-networks-for-lattice-gauge-theories
+authors: Ali Rayat; Yaohang Li; Gia-Wei Chern
+page: 4
+section: equiv-ariant-force-fields
+chunk: 46
+source_ref: https://arxiv.org/pdf/2604.20797v1
+
+forces can accumulate and propagate nonlinearly
+during the dynamics.
+The results are summarized in Fig. 5. Panel (a)
+compares the time evolution of a representative gaugeinvariant Wilson loop Re Tr[W] obtained from MLdriven dynamics against that computed using exactdiagonalization (ED) forces. The agreement at short
+times is excellent, confirming that the learned force field
+faithfully captures the local structure of the effective energy landscape. At longer times, the trajectories gradually diverge, reflecting the expected accumulation of
+small prediction errors in a nonlinear dynamical system.
+Importantly, this trajectory-level sensitivity does not preclude accurate statistical predictions. As shown in panel
+(b), the autocorrelation functionA(τ)—averaged over
+plaquettes and independent initial conditions—remains
+in close agreement between ML and ED across the entire
+time window. The weak feature at largeτis reproduced
+qualitatively by both approaches and likely reflects finitesize effects or residual dynamical recurrences. Together,
+these results demonstrate that the GNN force field, when
+coupled to the semiclassical equations of motion, provides
+an accurate and robust descripti

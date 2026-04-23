@@ -1,0 +1,27 @@
+title: LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model
+source: arxiv
+year: 2026
+document_id: llada2-0-uni-unifying-multimodal-understanding-and-generation-with-diffusion-large-language-model
+authors: Inclusion AI; Tiwei Bie; Haoxing Chen; Tieyuan Chen; Zhenglin Cheng; Long Cui; Kai Gan; Zhicheng Huang; Zhenzhong Lan; Haoquan Li; Jianguo Li; Tao Lin; Qi Qin; Hongjun Wang; Xiaomei Wang; Haoyuan Wu; Yi Xin; Junbo Zhao
+page: 2
+section: 5
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20796v1
+
+InterleavedEditingMMUMMUText
+T2IT2IMMUInterleavedEditing
+…
+Training Batch
+Fixed Max Length
+Figure 5: Data Packing Strategy for Efficient Training. Multiple shorter samples are concatenated into
+fixed-length sequences, minimizing padding tokens and improving GPU utilization.
+4.5 Infrastructure for Training Efficiency
+Image Tokens Pre-extraction.LLaDA2.0-Uni employs a Vector Quantized (VQ) tokenizer to transform
+images into discrete visual tokens, incurring substantial computational cost during training. We adopt an
+offline pre-extraction strategy: prior to training, the entire dataset is processed through the frozen tokenizer,
+with token indices stored on disk. During training, the data loader retrieves pre-extracted tokens directly,
+eliminating repeated encoder passes and significantly accelerating the pipeline.
+Load Balancing via Data Packing.In LLaDA2.0-Uni, sequence lengths vary significantly across multimodal
+tasks (e.g., short text-only tasks versus long image-generation tasks). Traditional batching strategy requires
+extensive padding to match the longest sequence, wasting computation on padding tokens. We address this
+with an offline data packing strategy that consolidates mu

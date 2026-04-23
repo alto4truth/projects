@@ -1,0 +1,33 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+A Architectural Parameters and Training
+Configuration
+A.1 Base Architecture
+All models in this study use the GPT-2 small architecture as a base, with the following parameters: 12
+transformer decoder layers, 768-dimensional token
+embeddings and hidden states, 12 parallel attention
+heads per layer, and a maximum context window
+of 1024 tokens. The combination yields approximately 124 million trainable parameters per model.
+The results are averaged over 3 runs.
+A.2 Per-Mechanism Parameter Justifications
+Fixed Window Attention.We evaluate window
+sizes W∈ {4,5,7,9} . The choice of W= 4
+is motivated by Cowan (2001), who proposed an
+upper bound of approximately four chunks on
+the contents of focal attention in short-term memory under controlled conditions. The choices of
+W∈ {5,7,9} are derived from Miller (1956),
+whose “magical number seven, plus or minus two”
+represents the classical estimate of the number of
+items maintainable in immediate memory. In the
+present setting, we treat each token as a fundamental information chunk, acknowledging that this is
+a simplification of human chunking, which operates over linguistically meaningful units of variable
+size.
+Exponential Decay Attention.We

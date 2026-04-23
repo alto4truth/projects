@@ -1,0 +1,20 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 95
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+nale:…revealsacritical30°−60°−90°trianglegeometry…StandardAnswer(Gold):…𝟑𝟑.
+Model Prediction (Gemini-3-pro):No Answer
+ErrorAnalysis:ThemodelsucceededinStaticCalculation(Fig1&2)butcrashedduringDynamicSimulation(Fig3).Itlacksa"MentalSandbox"toupdatethetopologygeometryafterthefinalfold,leadingtoadisconnectbetweenthevisualstateanditslogicalreasoning.
+Input:
+Asshowninthefigure,intherectangularpaper…Step1:First,foldtherectangle𝐴𝐵𝐶𝐷inhalf,withthecreaselinebeing𝑀𝑁,asshowninFigure(1);Step2:Then,foldpoint𝐵ontothecreaseline𝑀𝑁,withthecreasebeingAE,andthecorrespondingpointof𝐵on𝑀𝑁being𝐵′,resultingintherighttriangle∆𝐴𝐵!𝐸,asshowninFigure(2);Step3:Foldalong𝐸𝐵′withthecreasebeing𝐸𝐹,and𝐴𝐹intersectingtheextensionof𝐵′𝑁atpoint𝐺,asshowninFigure(3);Then,inthefigureformedbythefoldedpaper,thearea𝑆∆#$%is______.
+Figure 3
+Figure 1
+Figure 2
+Figure13: Analysis of reasoning error examples on Gemini-3-Pro.
+32

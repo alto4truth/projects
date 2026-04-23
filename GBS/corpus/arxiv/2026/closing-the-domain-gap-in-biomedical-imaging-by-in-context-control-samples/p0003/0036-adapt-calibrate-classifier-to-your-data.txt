@@ -1,0 +1,26 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+ce for each of them. Table 2 reports MoA accuracy for each method under source transfer.
+Cross-source shifts are substantially harder.All methods
+degrade under cross-source transfer compared to withinsource evaluation, confirming that laboratory-to-laboratory
+changes introduce stronger shifts than batch-to-batch drift
+within a single source.
+Normalization-based adaptation only at test time remains competitive but is less stable.AdaBN and TENT
+improve over non-adaptive baselines in some transfer directions, but the improvements are not consistent across all
+source→target pairs. This variability is expected: under
+strong shift, the target feature statistics may differ not only
+due to style or illumination differences, but also due to more
+complex, structured differences (e.g., staining intensity distributions, microscope optics, and site-specific pipelines),
+and may require more robust context construction.
+Meta-learned in-context adaptation improves crosssource robustness.ARM-BN tends to provide stronger
+cross-source performance than purely test-time methods
+because the model is trained to adapt to new domains via
+episodic context sampling during training. Overall, Experiment 5.2 hi

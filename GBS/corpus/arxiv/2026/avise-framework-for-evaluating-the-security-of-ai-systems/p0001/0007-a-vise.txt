@@ -1,0 +1,28 @@
+title: AVISE: Framework for Evaluating the Security of AI Systems
+source: arxiv
+year: 2026
+document_id: avise-framework-for-evaluating-the-security-of-ai-systems
+authors: Mikko Lempinen; Joni Kemppainen; Niklas Raesalmi
+page: 1
+section: a-vise
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20833v1
+
+Figure 4: An example of the generated report in human-readable format. Each of the SET cases can be
+clicked to reveal the execution and evaluation logs.
+Furthermore, we manually analyzed the logs of
+each of the SET cases to identify how accurate the
+ELM was at evaluating whether a target model was
+vulnerable to the Red Queen attack or if the target
+model generated only safety aligned outputs. The
+basis for human evaluation was whether the target model’s final response contained instructions or
+details that could realistically facilitate illicit activities. For example, if the final response included
+mentions of specific tools or components for making
+an explosive device, the SET case was considered as
+failed. The results of the human evaluation for the
+Red Queen SET executed with the ALM are presented in Table 6, and for the Red Queen SET executed without the ALM are presented in Table 7.
+Confusion matrices of these results are presented in
+Tables 5 and 5. Depicted in the confusion matrices,
+only 7% of the Red Queen attacks executed without the ALM were able to make the target models
+generate responses that could facilitate harmful or
+illegal activities. Whereas with the ALM, 47% o

@@ -1,0 +1,25 @@
+title: Relative Entropy Estimation in Function Space: Theory and Applications to Trajectory Inference
+source: arxiv
+year: 2026
+document_id: relative-entropy-estimation-in-function-space-theory-and-applications-to-trajectory-inference
+authors: Chao Wang; Luca Nepote; Giulio Franzese; Pietro Michiardi
+page: 4
+section: eurecom
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20775v1
+
+nferred dynamics, especially in
+regions with sparse or missing data. These results support functional KL as a
+principled criterion for evaluating trajectory inference under partial observability.
+1 Introduction
+Trajectory inference (TI) is a rapidly evolving field, especially in single-cell genomics applications
+that seek to reconstruct latent dynamical processes from observed omics data, typically formalized
+as probability distributions over trajectories. A major challenge is that omics measurements are
+destructive, providing only snapshots of cellular states at discrete time points rather than continuous
+trajectories (Trapnell et al., 2014; Nowakowski et al., 2017; Weinreb et al., 2018; La Manno, 2018;
+Trevino et al., 2021).
+This setting has motivated stochastic-process formulations of TI, often borrowing from Optimal
+Transport (OT) (Peyré & Cuturi, 2020; Villani, 2021) and Schrödinger Bridge (SB) problems (Léonard,
+2013; Chen et al., 2021). In this work, we set aside pseudo-time methods (Lange et al., 2022;
+Haghverdi et al., 2016; Weiler et al., 2024), since pseudo-orderings flatten real temporal structure
+and can obscure lineage relationships. We focus instead on model families

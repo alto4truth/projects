@@ -1,0 +1,36 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+0510152025303540
+0102030405060ThinkingInstruct
+Qwen-VL-2BQwen-VL-4BQwen-VL-8BQwen-VL-30B-A3BQwen-VL-32B
+2483032Model Size (B)
+GPTScore (%)
+(c) The performancecomparisonbetweenInstructionand ThinkingmodelvariantonQwen3-VLseries.
+235
+Qwen-VL-235B-A22B
+01020304050
+CoTVoTLeast-to-MostPlan-and-Solve
+1234Prompt Index
+GPTScore (%)
+(a) The performanceofdifferencepromptingstrategiesonQwen3-VL-32B-Instruct.
+Instruct + CoTNo-Thinking
+Qwen-VL-2BQwen-VL-4BQwen-VL-8BQwen-VL-30B-A3BQwen-VL-32B
+2483032Model Size (B)
+GPTScore (%)
+(b) The performancecomparisonbetweenCoTpromptingand No-ThinkingpromptingstrategiesonQwen3-VL-Instructionseries.
+235
+Qwen-VL-235B-A22B
+Figure4: Performance analysis on Long CoT Strategies. More details can be seen in Appendix G.
+shows only moderate Spearman correlation across models (ρ=0.614<0.7 ), suggesting that multi-image
+inputs shift relative rankings even on similar Olympiad problems. Accordingly, Gemini-3.0-Pro drops from
+75.67% accuracy on OlympiadBench to 50.53% on OMIBench (>25% absolute), indicating the added
+difficulty of multi-image Olympiad reasoning. To further probe these demands, we sample 100 problems
+and rate rationales from o4-mini and Gemini-3.0-Pro. Th

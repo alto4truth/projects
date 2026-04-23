@@ -1,0 +1,24 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+at are more closely aligned
+with human cognitive processes.
+On the other hand, the advantage of these explicit architectural biases diminishes considerably
+when the models are trained on the larger, 100Mword dataset. The standard baseline model’s
+performance improves, with its average ∆LogLikelihood increasing marginally. More importantnly, the performance gap between the baseline and the modified models narrows significantly.
+This pattern suggests that with an order of magnitude more data, the standard self-attention mechanism is better able to approximate the necessary
+behaviours and produce surprisal values that correlate well with human processing metrics. However, we note here that even for all the constrained
+attention models and the baseline (with unmodified attention) the ∆Log-likelihood is lower in
+the 100M setting compared to the 10M setting. A
+compelling hypothesis for this seemingly counterintuitive trend relates to the divergence between
+the language modelling objective and the cognitive
+processes underlying human comprehension. As
+models are trained on more data, they become increasingly specialised at predicting the statistical
+patterns of the training corpus. This h

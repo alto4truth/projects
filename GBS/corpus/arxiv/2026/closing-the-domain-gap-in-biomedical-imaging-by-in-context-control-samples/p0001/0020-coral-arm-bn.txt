@@ -1,0 +1,22 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 1
+section: coral-arm-bn
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+roposed by Batch
+Effect Normalization (BEN) (Lin and Lu, 2022). However,
+in the following paragraph, we argue that including both
+perturbed and control samples provide the best trade-off
+between bias and variance. Empirically, we found that
+adapting BN layers using control samples only at evaluation
+time performed poorly, but when only controls were already
+included during training, the performance improved (see
+"BEN w/o meta-learning" and "ARM-BEN" in Table 4).
+Let M=C+L be the total number of samples in a new
+target batch, where C is the number of control samples and
+5

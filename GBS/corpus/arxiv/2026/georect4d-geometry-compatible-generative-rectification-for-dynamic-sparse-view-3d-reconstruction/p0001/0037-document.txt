@@ -1,0 +1,31 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+14 Z. Wu et al.
+T able 4:Ablation study of the Geometric Purification components and the overall
+Generative Rectification framework. ‘w/o’ denotes without.
+Setup PSNR↑SSIM↑LPIPS↓Time(min)↓
+w/o Adaptive Decomposition 22.07 0.739 0.179 48.94
+w/o Stochastic Pruning 21.24 0.724 0.194 50.84
+w/o Opacity Annealing 22.34 0.743 0.179 48.30
+w/o ROI Loss 22.44 0.742 0.175 47.86
+w/o Generative Rectification 20.54 0.694 0.224 42.57
+Ours-F ull 22.60 0.744 0.175 49.96
+T able 5:Computational efficiency breakdown of GeoRect4D across the evaluated
+datasets. We report the training duration for both progressive optimization stages,
+the generative rectification latency, and the final real-time rendering speed.
+DatasetStage 1(min) Stage 2(min) Rectify Latency(ms) Render Speed(FPS)
+N3DV 49.45 58.57 882 115
+MeetRoom 22.45 29.12 357 130
+MPEG 20.40 26.85 542 121
+Efficiency Analysis.As detailed in Tab. 5, while our closed-loop framework introduces additional training steps, the single-step nature of our diffusion
+prior minimizes generative rectification latency to under882ms. This efficiency
+enables our framework to achieve a highly competitive training time on the
+complex MPEG dataset, while maintaining rea

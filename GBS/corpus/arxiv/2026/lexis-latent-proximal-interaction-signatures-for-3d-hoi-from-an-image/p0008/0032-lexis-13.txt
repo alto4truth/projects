@@ -1,0 +1,24 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 8
+section: lexis-13
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+Input LEXIS-Flow ∗ (ours) HOI-Gaussian [78] InteractVLM [16] HDM [81]
+Fig.6: LEXIS-Flow vs SotA.Existing methods often fail to capture tight physical coupling, yielding floating objects (HOI-Gaussian, InteractVLM) or penetrations
+(HDM). LEXIS-Flow tackles this via dense InterFields for proximity-aware estimation.
+Guided Refinement (Tab. 1):With identical initialization (row D–G)
+LEXIS-Flow∗ (row G) achieves the best results across all four metrics, outperforming both InteractVLM (row C) and HOI-Gaussian (row E). LEXIS-Flow∗
+also outperforms InteractVLM++ (row F) (initialized with CameraHMR +
+SAM3D + MoGe; see Sec. 4.1). This shows that the gains are not solely due
+to better initialization; even when InteractVLM benefits from the same starting
+point, the InterField-guided refinement of LEXIS-Flow∗ yields stronger spatial
+alignment. The key difference is that the optimization baselines refine in output
+space with sparse contact losses, while LEXIS-Flow∗ corrects intermediate latent
+states during generation using dense InterField signals from the learned LEXIS.
+Qualitative comparison:Figure 6 compares our LEXIS-Flow ∗ method
+against SotA methods in the wild; for more results see Sec.

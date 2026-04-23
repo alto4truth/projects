@@ -1,0 +1,31 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Benchmark Multi-Image Maths Physics Chemistry Biology Difficulty Rationale Answer type Question type
+ScienceQA [39]✘ ✔ ✔ ✔ ✔H∼90% Text, Num MC
+MME-CoT [31]✘ ✔ ✔ ✔ ✔H✔Text, Num MC, OE
+M 3CoT [11]✘ ✔ ✔ ✔ ✔COL✔Exp, Text, Num MC
+MMReason [66]✘ ✔ ✔ ✘ ✘COL✔Exp, Text, Num OE
+MathVista [40]✘ ✔ ✘ ✘ ✘COL✘Num MC, OE
+MathVerse [72]✘ ✔ ✘ ✘ ✘COL✘Num MC, OE
+MMMU [68] <10%✔ ✔ ✔ ✔COL<18%Image, Text, Num MC, OE
+OlympiadBench [24] <5%✔ ✔ ✘ ✘COMP✔ALL ALL
+MuirBench [56]✔ ✘ ✘ ✘ ✘H✘Text MC
+MMIU [42]✔ ✘ ✘ ✘ ✘H✘Text MC
+Blink [21]✔ ✘ ✘ ✘ ✘H✘Image, Text, Num MC
+ReMI [32]✔ ✔ ✔ ✘ ✘H, COL✘Image, Text, Num MC, OE
+OMIBench✔ ✔ ✔ ✔ ✔COMP✔ALL ALL
+Table 1: Comparison of representative multimodal benchmarks by image setting, subject coverage, difficulty,
+rationale, answer types and question types. Fordifficulty, H: high, COL: college, COMP: competition; For
+answer or choice type, Num: numeric value, Text: text expression answer or choice, Image: image choices;
+Forquestion type, MC: multiple-choice, J: judgement, OE: open-ended.
+In summary, our contributions are threefold:
+• We identify a critical gap in existing literature on evaluating multi-image Olympiad-level reasoning in
+LVLMs, a setting that requires autonomous

@@ -1,0 +1,23 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+ation and code validation.
+Incode generation, the model takes a natural language description of a coding question, q, and generates a solution
+code program c. c is evaluated against a suite of instance-specific test cases, and is considered correct iff it passes all.
+Performance is typically measured using the pass@k metric: for each question, the model samples k solutions, and
+the instance is considered solved if at least one sample passes all tests. Broadly, the field distinguishes between two
+difficulty levels: competition coding that consists of complex Olympiad-level questions (Li et al., 2022b), and more
+general coding questions that are familiar to software engineers (Chen et al., 2021; Austin et al., 2021; Hendrycks et al.,
+2021;i.a.). In this work, we evaluate on the former, but train on the latter too.
+Incode validation, the model takes as input a tuple (q, c) containing a question and a candidate code solution, and it
+outputs whethercis correct, i.e., whethercsolvesq. Performance is measured by boolean accuracy. 1
+2.2 Training for Coding Tasks
+The standard recipe for training coding tasks includes three stages: pretraining, supervised finetuning (SFT), and RL.
+First, a m

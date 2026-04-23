@@ -1,0 +1,25 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 6
+section: lexis-9
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+een the “observed” and estimated InterFields:
+Lpose+IF =∥ ˆIF−IF t∥2, (7)
+where IFt denotes the computed InterField by posing body (decoded from running ˆZ) and object with running estimates{Rb
+t , tb
+t},{R o
+t , to
+t }, respectively. This
+acts as a field that pulls the object and body into a 3D configuration informed
+by the LEXIS interaction tokens and their corresponding InterFields, in a form
+of LEXIS-/InterField-based analysis-by-synthesis.
+Mask-pixelGuidance(L mask):Toalign3Destimationswithimagecues,a
+common way is to use mask-based losses. Doing this for the human is challenging,
+as people have hair, accessories, and loose clothing that “contaminate” masks and
+cannot be explained by parametric body models such as SMPL+H. However,
+doing this for the object is reliable, because the recent SAM [39] model estimates

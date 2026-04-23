@@ -1,0 +1,49 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+(a) ThespearmancorrelationmatrixofOMIBench,OlympiadBench,andMMIUbenchmarks.
+MMIU
+OMIBench
+OlympiadBench
+MMIUOMIBenchOlympiadBench
+1.000
+1.000
+1.000
+0.1430.614
+0.6140.535
+0.1430.535
+0.8
+1.00.9
+0.5
+0.70.6
+0.2
+0.40.3
+1020304050
+Input Image Number (#)
+GPTScore (%)
+(c) Performancewithdifferentmaximumnumbersofinputimages.
+Qwen3-32B-VL
+010203040
+Qwen3-32B-VL
+2345≥6
+2345≥86701
+GPTScore (%)
+Max Image Number (#)
+(b) Performancegroupedbyimagenumber.
+(d) ComparisonofperformanceanddifficultydifferencesbetweenMMIUandOMIBench.Performance on MMIU(%)0102030405060708001020304050607080Performance on OMIBench(%)Qwen3-VLGPT-4o
+Intern3.5-VLIntern3-VL
+Figure3: The performance analysis for benchmark feature analysis and statistics.
+4. Main Experiments
+4.1. Experiments Setup
+We evaluate advanced open-source and closed-source LVLMs (see Appendix B for additional evaluation
+details). Each model generates answers using boxed-format (“\boxed{·}”) prompts, and open-source models
+are deployed on NVIDIA A800 or A100 GPUs. Temperatures are selected from[0, 1]. Model outputs are
+evaluated using exact-match accuracy and GPTScore, which assesses semantic equivalence under multimodal
+contextual constraints for open-en

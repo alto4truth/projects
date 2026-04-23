@@ -1,0 +1,29 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 8
+section: medium-recursion-depth-depth-5
+chunk: 46
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+if (no (has ball_3) alt (has item and has
+ball_2)) next {
+if (no (has key_4) alt (has ball_2 alt has
+ball)) next {
+do go forward (3 * (1 * 1)) end
+}
+} else {
+if ((has box and has key_2) and (has ball_0
+and has box_0)) next {
+do go backward ((2 + 1) * 4) end
+}
+}
+loop ((4 * 4) + 3) times {
+do turn left end
+}
+...
+At depth 10, programs feature deep recursion
+chains, challenging the LLM’s ability to maintain
+hierarchical state-tracking.

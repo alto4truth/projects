@@ -1,0 +1,35 @@
+title: Diagnosing CFG Interpretation in LLMs
+source: arxiv
+year: 2026
+document_id: diagnosing-cfg-interpretation-in-llms
+authors: Hanqi Li; Lu Chen; Kai Yu
+page: 2
+section: grab-item
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20811v1
+
+Lark library, which provides a standard parser to
+validateˆyagainstG.
+Behavioral Equivalence Rate (BER)Applied to
+Tasks 2 and 3, BER measures the ratio of generated
+programs that, when executed from an initial state
+s0, result in a final environment state identical to
+the ground truth:
+BER=E[1{exec(ˆy, s0) =exec(y ∗, s0)}].(2)
+Here, y∗ represents the ground-truth program, and
+exec(·, s0) denotes a deterministic execution function that maps a program and an initial environment
+state s0 to a final state. This metric captures functional correctness, rewarding any valid program ˆy
+that achieves the intended outcome regardless of
+its internal implementation.
+Semantic Correctness Rate (SCR)The strictest
+metric, primarily utilized for Task 3. SCR measures
+whether the induced AST of the generated output
+is structurally identical to the ground-truth AST:
+SCR=E[1{AST(ˆy) =AST(y ∗)}].(3)
+SCR ensures that a LLM has correctly internalized
+the hierarchical logic and structural intent defined
+by the grammar, precluding "semantic shortcuts"
+where a LLM reaches the correct state through an
+incorrect execution path.
+By construction, these metrics follow a strict
+containment: SCR≤BER≤SVR . This allow

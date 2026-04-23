@@ -1,0 +1,47 @@
+title: Relative Entropy Estimation in Function Space: Theory and Applications to Trajectory Inference
+source: arxiv
+year: 2026
+document_id: relative-entropy-estimation-in-function-space-theory-and-applications-to-trajectory-inference
+authors: Chao Wang; Luca Nepote; Giulio Franzese; Pietro Michiardi
+page: 4
+section: eurecom
+chunk: 48
+source_ref: https://arxiv.org/pdf/2604.20775v1
+
+ages 1D Wasserstein distances over random projections over the unit sphere θ∈S d−1.
+Similarly, we report the Max-Sliced Wasserstein Distance (MWD).
+24
+
+(a) Finite-dimensional setting: distributions over states
+x(t)∈R d at individual time points.
+(b) Function-space setting: distributions over trajectoriesx: [0,1]→R d.
+Figure 8: Conceptual comparison between finite-dimensional and function space modeling.
+Kernel-based metrics.In addition to OT metrics, we also report the Maximum Mean Discrepancy
+(MMD), a kernel based two-sample test Gretton et al. (2012) that detects differences between
+distributions by comparing their mean embeddings in a Reproducing Kernel Hilbert Space (RKHS).
+Formally,
+MMD2(µ, ν) =E x,x′∼µ[k(x, x′)]−2E x∼µ,y∼ν[k(x, y)] +E y,y ′∼ν[k(y, y ′)],(31)
+where k is a positive definite kernel. For all the experiments, we consider the Radial Basis Function
+(RBF) kernel with kernel bandwidthσ= 1.
+It is important to note that, such marginal metrics are intrinsically limited because marginals do
+not determine how states at different times are coupled. Figure 8 highlights this distinction: while
+marginal evaluation only compares snapshot distributions in finite-dimensional space, the underlying
+inference target is a probability measure over full trajectories in function space.
+E.2 TI Evaluation on Synthetic Datasets
+E.2.1 Lotka-Volterra
+Dataset.We evaluate the proposed method on the dynamics of a stochastic Lotka-V olterra predatorprey model Shen et al. (2025). The system describes the evolution of prey ( Xt) and predator (Yt)
+populations governed by the following system of stochastic differential equations (SDEs):
+dXt = (αXt −βX tYt)dt+σdW x,t,
+dYt = (γXtYt −δY t)dt+σdW y,t, (32)
+where Wt = [W x,t, Wy,t]⊤ denotes a standard 2-dimensional Brownian motion. We define the
+diffusion coefficient as σ= 0.1 and fix the model parameters to α= 1 , β= 0.4 , γ= 0.1 , and
+δ= 0.4.
+To generate the synthetic dataset, we simulate the system over K= 8 unit time intervals. The initial
+states are sampled uniformly such that X0 ∼ U(5,5.1) and Y0 ∼ U(4,4.1) . Numerical integration is
+performed using the Euler-Maruyama scheme with a discretization step of ∆t= 0.02 . Generated
+trajectories are considered as GT.
+TI methods configuration.To train the trajectory inference methods, we considered 9 equally
+spaced snapshots in the trajectory time [0,1] . Odd snapshots are used as training, whereas even
+snapshots as validation. For each snapshot, we consider 100 points for training TI methods.
+Specifications of hyperparameters for TI methods:
+25

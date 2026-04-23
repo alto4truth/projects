@@ -1,0 +1,25 @@
+title: Convergent Evolution: How Different Language Models Learn Similar Number Representations
+source: arxiv
+year: 2026
+document_id: convergent-evolution-how-different-language-models-learn-similar-number-representations
+authors: Deqing Fu; Tianyi Zhou; Mikhail Belkin; Vatsal Sharan; Robin Jia
+page: 1
+section: gpt-oss-120b
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20817v1
+
+All three
+architectures produce similar Fourier spectra under both optimizers. (Right) Mod-T probe
+accuracy separates the models into tiers. With both Muon and AdamW, Transformer, Gated
+DeltaNet, and Mamba-2 all achieve strong geometric convergence, while the LSTM remains
+near zero. Muon outperforms AdamW for Transformer and Gated DeltaNet , but Mamba-2
+with AdamW slightly outperforms its Muon counterpart. PPMI and word2vec fall in between.
+and 72.0 respectively), showing that the model accumulates richer co-occurrence statistics
+from broader context.
+Cross-number interaction provides an additional signal as well. Isolate-k directly controls
+cross-number interaction by restricting each packed sequence to contain at mostknumber
+tokens. The extreme limit of k= 1 isolates text-number co-occurrence completely, ensuring
+no two number tokens can interact within the same attention window. Under this setting, it
+achieves κ= 45.0 at T= 10 and 85.9 at T= 2. Notably, even k= 1 with a Transformer surpasses PPMI (κ= 27.1) and word2vec (κ= 29.3), suggesting that autoregressive language
+modeling with text-number co-occurrence alone extracts richer modular structure than
+classical embedding metho

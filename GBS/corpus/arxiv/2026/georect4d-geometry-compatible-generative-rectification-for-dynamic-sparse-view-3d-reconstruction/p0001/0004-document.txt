@@ -1,0 +1,21 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+l training and rendering costs. More
+recently, 3D Gaussian Splatting (3DGS) [26] offers an explicit and efficient alternative with real-time rendering and strong structural controllability, and has
+been extended to dynamic scenarios via deformation modeling and motion-aware
+parameterization [17,37,61,70,75]. Despite differences in representation and efficiency, most dynamic NeRF/3DGS methods rely on dense camera arrays to
+disambiguate geometry and motion. Under sparse inputs, optimization becomes
+unstable and generalization to novel views degrades.
+To mitigate sparse-view ambiguity, prior work primarily focuses on constraining the solution space through additional regularization. NeRF-based approaches
+incorporate geometric supervision such as depth or normals [58,72] and frequency regularization [24,67]. Within the 3DGS framework, depth-guided constraints [29,78] and dropout-based stabilization [41,66] improve robustness under
+sparse inputs. While these techniques show promising results in static scenes, extending sparse reconstruction to dynamic scenarios remains significantly more
+challenging due to motion-induced ambiguity and temporal error accumulation.
+Existing sparse dynamic

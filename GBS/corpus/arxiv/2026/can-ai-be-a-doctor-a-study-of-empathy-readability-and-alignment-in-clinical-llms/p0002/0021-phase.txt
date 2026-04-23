@@ -1,0 +1,72 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+l communication. In contrast, baseline LLM configurations on MedQuAD tend
+to amplify polarity. BothMixtralandMed-PaLMincrease the proportion ofVery
+15
+
+MixtralBase Mixtral
+Empathy
+Mixtral
+RephraseMed-PaLM
+Base
+Med-PaLMEmpathyMed-PaLMRephrase
+GPT
+Base
+GPT
+Empathy
+GPT
+Rephrase
+Gemini
+Rephrase
+ClaudeBase Claude
+Empathy
+Claude
+Rephrase
+Model
+0.2
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+Cosine Similarity (normalized)
+Cosine Similarity Across Models
+Mean ± Std
+Fig. 7: Cosine similarity between physician-written and model-generated answers on
+the iCliniqQAs dataset. Higher values reflect closer semantic alignment. Gemini 2.5
+Pro appears only in the Rephrase configuration because, in our experiments, the model
+frequently refused to generate Base or Empathy responses without sufficient clinical
+context, exhibiting strong safety guardrails similar to those observed in Claude Base
+(left in the comparison as an explicit example of this behaviour).
+Negativeresponses (43.14% and 45.10%, respectively), indicating a sharper affective framing than physicians. Prompt-based and rephrased configurations mitigate
+this effect, systematically shifting outputs toward higherNeutralrates and reducing
+extreme negativity. Notably,Gemini Rephraseis the only configuration exhibiting a
+non-negligible proportion ofPositivesentiment (8.0%), suggesting a mild but distinct
+tendency toward affective reinforcement absent from physician-authored texts.
+A different pattern emerges in the second dataset (iCliniqQAs), where physician
+responses are even more strongly dominated byNeutralsentiment (84.0%) and contain
+markedly lower levels ofVery Negativecontent (6.0%). This reflects the conversational
+and patient-facing nature of the dataset, in which clinicians adopt a less confrontational and more stabilizing tone. In this setting, baseline models do not systematically
+amplify extreme negativity as observed in MedQuAD; instead, they display greater
+variability in the distribution ofNegativeandNeutralresponses. Rephrasing strategies
+generally increaseNeutralproportions (e.g., up to 90–92% in several configurations),
+further aligning outputs with physician affective restraint. However,Gemini Rephrase
+again stands out, exhibiting a substantially higher proportion ofPositivesentiment
+(18.0%), a level not observed in physician responses in either dataset.
+Pairwise chi-square analyses with Benjamini–Hochberg correction confirm that
+these deviations are not uniform across systems (Figures 10 and 11). In the MedQuAD
+setting,Claude (Base)exhibits the strongest divergence from physicians (V= 0.45,
+p <0.001). This result, however, does not reflect polarity amplification of the same
+kind observed inMixtralandMed-PaLM: as noted in Section 4, Claude Base frequently produced cautious, hedged responses in the absence of sufficient clinical
+context-analogous to the safety-driven refusals observed in Gemini. These outputs
+16

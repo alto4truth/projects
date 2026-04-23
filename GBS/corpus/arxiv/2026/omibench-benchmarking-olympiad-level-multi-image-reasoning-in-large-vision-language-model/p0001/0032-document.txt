@@ -1,0 +1,19 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+performance (∼0.5–1%), while SFT on the more reasoningintensive CMMCoT consistently improves both backbones, but with average gains still below∼1.5–2%. This
+shows that the field currently lacks training data tailored toOlympiad-levelmulti-image reasoning, and that
+closing the gap on OMIBench likely requires fundamentally new training resources.
+External visual tools help only when paired with strong base models.We evaluate three external-tool
+integration frameworks, Visual Sketchpad [27], SlowPerception [62], and CogFlow [15], on top of GPT-4o
+and GPT-5. When the base model is weaker (GPT-4o), tool augmentation generallydegradesperformance, as
+the model frequently fails to invoke visual tools correctly in multi-image scenarios. With a stronger backbone
+(GPT-5), tool augmentation yields modest additional gains in some subjects, but the overall improvement
+10

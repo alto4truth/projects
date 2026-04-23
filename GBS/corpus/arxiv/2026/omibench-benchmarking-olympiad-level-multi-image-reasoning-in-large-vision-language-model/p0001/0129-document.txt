@@ -1,0 +1,23 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 129
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+Rationale:“…withoutmeasurementsofAB,BE,andBQ…cannotdefinitivelyconcludecongruence..."
+StandardRationale:AccordingtoFigure(1),whenpoint𝑃reachespoint𝐸,point𝑄reachespoint𝐶.…StandardAnswer(Gold):…𝑩.
+Model Prediction (GPT-4o+VSP):Error
+ErrorAnalysis:VisualInertia:Themodeltreatsthetwoimagesasseparatetasks.Itlackstheinitiativeto"SearchAcrossImages"(lookingformissingvariablesintheneighborgraph).ToolDistraction:Insteadoflinkingthegraphs,itwastedcomputeonhallucinating3Ddepthfrom2Dlines.
+Input:
+Fig 2: Time Data (When)
+Fig 1:
+Spatial Path (Where)
+AsshowninFigure(1),point𝐸isonside𝐴𝐷ofrectangle𝐴𝐵𝐶𝐷.Points𝑃and𝑄startsimultaneouslyfrompoint𝐵.Point$P$movesalongthebrokenline𝐵𝐸−𝐸𝐷−𝐷𝐶untilitreachespoint𝐶,andpoint𝑄movesalong𝐵𝐶untilitreachespoint𝐶.Bothpointsmoveataspeedof1cm/second.Let𝑦cm2betheareaof∆𝐵𝑃𝑄when𝑃and𝑄havebeenmovingfor𝑡seconds.Thegraphofthefunction𝑦versus𝑡isshowninFigure(2)(curve𝑂𝑀isapartofaparabola).Whichofthefollowingconclusionsisfalse?
+Figure18: Analysis of reasoning error examples on GPT-4o+VisualSketchpad (VSP).
+I.2. Internal “Thinking with Images” (EMU-3.5-34B)
+In the internal “Think-with-Image” configuration, we employ EMU-3.5-34B, a unified multimodal generator
+designed to reason over

@@ -1,0 +1,25 @@
+title: Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples
+source: arxiv
+year: 2026
+document_id: closing-the-domain-gap-in-biomedical-imaging-by-in-context-control-samples
+authors: Ana Sanchez-Fernandez; Thomas Pinetz; Werner Zellinger; Günter Klambauer
+page: 3
+section: adapt-calibrate-classifier-to-your-data
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20824v1
+
+when the target data originate from previously
+unseen batches generated under similar experimental conditions, reflecting routine batch-to-batch variability.b) Strong
+domain shift: transfer across sources.We consider a more
+challenging setting in which the target data come from different institutions or data-generating sources, inducing substantial domain shifts due to variations in protocols, equipment,
+and experimental practices.c) Realistic scenario 1: new
+experimental batch with label shifts.We study the impact
+of changes in class proportions, evaluating how well methods maintain performance when label distributions differ
+at inference time. This is the most realistic scenario since,
+novel sets of compounds are usually screened, which do
+not maintain the label distribution of the training data. One
+obvious example are drug discovery efforts, where the compounds that are tested in the lab are suspected to be active
+towards one specific protein target.d) Realistic scenario 2:
+new imaging source with label shifts.Finally, we evaluate
+the performance of our method and the baselines in a setting where test samples exhibit both class distribution shift
+and domain shift, but are addi

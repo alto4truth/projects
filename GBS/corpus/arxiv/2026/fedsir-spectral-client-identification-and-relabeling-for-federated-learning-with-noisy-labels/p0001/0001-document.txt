@@ -1,0 +1,42 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+FedSIR: Spectral Client Identification and Relabeling for Federated Learning
+with Noisy Labels
+Sina Gholami*
+University of North Carolina at Charlotte
+Charlotte, NC, USA
+sina.gholami72@gmail.com
+Abdulmoneam Ali*
+University of North Carolina at Charlotte
+Charlotte, NC, USA
+aali28@charlotte.edu
+Tania Haghighi
+University of North Carolina at Charlotte
+Charlotte, NC, USA
+thaghigh@charlotte.edu
+Ahmed Arafa
+University of North Carolina at Charlotte
+Charlotte, NC, USA
+aarafa@charlotte.edu
+Minhaj Nur Alam
+University of North Carolina at Charlotte
+Charlotte, NC, USA
+minhaj.alam@charlotte.edu
+Abstract
+Federated learning (FL) enables collaborative model
+training without sharing raw data; however , the presence
+of noisy labels across distributed clients can severely degrade the learning performance. In this paper , we propose
+F edSIR, a multi-stage framework for robust FL under noisy
+labels. Different from existing approaches that mainly rely
+on designing noise-tolerant loss functions or exploiting loss
+dynamics during training, our method leverages the spectral structure of client feature representations to identify
+and mitigate label noise.
+Our framework consists of three key components. Fir

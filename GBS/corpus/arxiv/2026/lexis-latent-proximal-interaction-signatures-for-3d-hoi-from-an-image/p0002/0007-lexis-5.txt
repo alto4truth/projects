@@ -1,0 +1,23 @@
+title: LEXIS: LatEnt ProXimal Interaction Signatures for 3D HOI from an Image
+source: arxiv
+year: 2026
+document_id: lexis-latent-proximal-interaction-signatures-for-3d-hoi-from-an-image
+authors: Dimitrije Antić; Alvaro Budria; George Paschalidis; Sai Kumar Dwivedi; Dimitrios Tzionas
+page: 2
+section: lexis-5
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20800v1
+
+Template-based HOI methods:Object shape is often assumed known.
+Optimization [78,82,90] fits 3D human/object poses to images while satisfying
+contact constraints. PHOSA [90] assumes known 3D contacts. HOI-Gaussian [78]
+derives contacts from Gaussian splat opacities. CHORE [82] infers distance fields
+around the human/object and extracts from these binary contacts. Instead of
+optimizing, CONTHO [52] directly infers a human mesh and object orientation.
+Most methods work for in-distribution images, captured in constrained environments with pre-scanned objects, so they struggle generalizing. To tackle this,
+recent work annotatesin-the-wildimages with 3D contact labels (at a part- [78]
+or vertex-level [13,72] granularity), used to constrain optimization [13,78]. For
+unlabeled images, PICO [13] first infers (noisy) body-only 3D contact from pixels [72], and uses this as query to retrieve clean contact labels from its PICO-DB
+database. InteractVLM [16] learns contact from scarce 3D labels via visionlanguage models. PICO and InteractVLM retrieve shape from a large 3D object
+database [14] via a joint image-geometry latent space [44], but databases have
+finite sizes. Instead, we estimate shap

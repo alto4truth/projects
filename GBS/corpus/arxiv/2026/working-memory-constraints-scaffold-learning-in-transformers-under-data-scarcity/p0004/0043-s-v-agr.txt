@@ -1,0 +1,30 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+ted as a function of layer depth. Several patterns
+are worth noting. First, the fixed-window model
+achieves consistently higher UUAS than the baseline across all five relations, with the gap emerging
+in the early-to-middle layers and persisting across
+the remainder of the network. The advantage is
+most pronounced for nsubj and dobj, where the
+fixed-window model reaches UUAS values approximately 0.05 above the baseline at several intermediate layers. These two relations capture the
+core argument structure of clauses, which is precisely the domain in which the fixed-window model
+also outperforms the baseline most dramatically on
+BLiMP. The convergence of the behavioural and
+probing evidence is notable, and suggests that the
+BLiMP gains observed for the fixed-window model
+are underwritten by genuinely better structural representations rather than by surface-level heuristics.
+Second, both models converge to similar UUAS
+scores at the deepest layers for several relations,
+particularly prep and root. This is consistent with
+the general finding in structural-probing literature
+that the latest layers of language models tend to
+be optimised for the prediction objective rather
+than for repre

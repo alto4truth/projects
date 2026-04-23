@@ -1,0 +1,50 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 40
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+bset is readability-stratified and the iCliniqQAs subset is
+severity-balanced. The reduced sample size limits statistical generalization. Sentiment
+34
+
+and emotion classifiers are general-domain models and may not capture all medical discourse nuances [47]. Human expert evaluations were conducted by a panel of medical
+professionals using a structured questionnaire, though the limited number of evaluators constrains the statistical power of the human assessment. The study is limited to
+English-language data and selected architectures.
+Ethical Considerations.Emotional amplification may increase perceived support while masking epistemic limitations. Stylistic alignment must not compromise
+factual rigor or induce overconfidence. Human oversight remains necessary. LLMs function most effectively as communication enhancers rather than independent clinical
+authorities [48].
+6 Conclusion
+This work provides a multidimensional evaluation of large language models in clinical
+communication across two distinct settings: institutionally curated medical explanations (MedQuAD) and real-world physician–patient consultations (iCliniqQAs). We
+analyze semantic fidelity, readability, affective resonance, and stakeholder alignment
+under baseline generation, empathy prompting, and collaborative rewriting.
+Results show that baseline LLMs do not systematically improve accessibility
+or affective alignment relative to physician-authored content. Linguistic complexity often exceeds clinician levels, particularly in larger general-purpose architectures.
+Readability gains emerge primarily under explicit alignment strategies.
+Empathy-oriented prompting reduces affective extremity and moderately improves
+readability without significantly altering semantic fidelity. However, collaborative
+rewriting consistently yields the strongest overall improvements. Rephrase configurations achieve the highest semantic similarity to physician answers across both datasets.
+In MedQuAD, GPT5 Rephrase reaches the strongest conceptual alignment, while in
+iCliniqQAs MedPaLM Rephrase achieves the highest semantic fidelity. Rewriting also
+produces the largest reductions in linguistic complexity and the most consistent gains
+in patient-rated trust and emotional tone.
+Expert evaluations confirm that no configuration surpasses physicians on epistemic
+criteria such as accuracy and precision. Relational improvements do not translate
+into epistemic superiority. Patient evaluations reveal stronger preference for rewritten
+variants, particularly in conversational clinical contexts, where clarity and emotional
+support are central.
+Taken together, the findings indicate that LLMs function most effectively as
+collaborative editing tools rather than autonomous communicators. Human–AI coauthorship improves clarity and relational alignment while preserving clinical meaning,
+but it does not replace physician expertise.
+The code and data supporting this work are publicly available at https://github.
+com/PRAISELab-PicusLab/CanAIBeADoctor.
+Future work should extend this framework to multi-turn interactions, integrate
+domain-adapted affective models, involve certified clinicians in structured evaluation,
+and expand analysis to multilingual and low-resource healthcare contexts. In addition,
+future research should investigate the impact of clinical question criticality on LLM
+35

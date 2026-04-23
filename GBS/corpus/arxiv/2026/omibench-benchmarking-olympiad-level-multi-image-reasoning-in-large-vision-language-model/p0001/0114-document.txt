@@ -1,0 +1,26 @@
+title: OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model
+source: arxiv
+year: 2026
+document_id: omibench-benchmarking-olympiad-level-multi-image-reasoning-in-large-vision-language-model
+authors: Qiguang Chen; Chengyu Luan; Jiajun Wu; Qiming Yu; Yi Yang; Yizhuo Li; Jingqi Tong; Xiachong Feng; Libo Qin; Wanxiang Che
+page: 1
+section: document
+chunk: 114
+source_ref: https://arxiv.org/pdf/2604.20806v1
+
+nent symbol, icon, or text overlay).
+Cross-Image Association Failuresoccur when the LVLM parses each image reasonably well in isolation but
+fails to correctly relate them when the question requires comparing, contrasting, or aggregating information
+across images. We assign this label when:
+1. The model’s descriptions of individual images (paraphrased or inferred from its answer) are largely
+accurate.
+2. The question explicitly or implicitly involves multiple images (e.g., “between the first and second image”,
+“across all panels”).
+3. The error stems from misalignment, confusion, or omission in how information from different images is
+combined.
+Logical Reasoning Fallaciesoccur when the LVLM’s basic visual understanding and cross-image mapping
+are adequate, but the chain of reasoning leading to the final answer contains flawed logical steps; fixing
+the reasoning alone would yield the correct answer. We annotate an error as a logical reasoning fallacy
+when: (1) The model’s implicit or explicit description of relevant visual facts is broadly correct; perception is
+not the main source of error. (2) The natural-language explanation, if present, shows misapplied inference
+39

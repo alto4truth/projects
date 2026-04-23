@@ -1,0 +1,51 @@
+title: Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+source: arxiv
+year: 2026
+document_id: global-offshore-wind-infrastructure-deployment-and-operational-dynamics-from-dense-sentinel-1-time-series
+authors: Thorsten Hoeser; Felix Bachofer; Claudia Kuenzer
+page: 2
+section: abstract
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20822v1
+
+n while preserving SAR features
+necessary for detailed deployment-phase analysis for a broad user audience, with different computational resources.
+11
+
+Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series
+Figure 7: Global and regional distributions for the number of events per time series and the median number of days
+between time series events.
+The 14.8 million 1D backscatter profiles need about 5 GB of storage, enabling broad accessibility without requiring
+large-scale computational infrastructure. In contrast, storing the corresponding 2D Sentinel-1 image patches would
+increase data volume by an estimated factor of 25, significantly limiting usability to users with advanced computing
+resources.
+5.2 Global Offshore Wind Infrastructure Detection
+With the updated two stage object detection workflow based on Hoeser et al. [2022], we identified 15,606 offshore
+wind infrastructure across the entire global EEZ based on Sentinel-1 VH-polarized GRD imagery reduced to a 2025Q1
+median composite. Of these, 15,100 were subsequently classified as offshore wind turbines in the time series analysis,
+see figure 1.
+At global scale, two dominant offshore wind hotspots exist: the Chinese EEZ and the North Sea Basin (NSB). Figure 8
+illustrates the bounding boxes of offshore wind farm regions detected by the first-stage, which scans the global coastline
+and offshore areas. Zoomed examples further demonstrate detections of individual offshore wind infrastructure units
+identified by the second-stage within these candidate regions.
+Ongoing expansion of the offshore wind energy sector introduce new spatial layouts that challenge detection models.
+Figure 9 highlights complex environments such as harbours and near-coastal environments, where offshore wind
+turbines may be located close to piers or connecting infrastructure. Such sites pose recall challenges, increasing the
+risk of false omissions. Especially the wind farm layouts along the southeast coast of Vietnam represent challenging
+patterns that differ from typical patterns in the NSB or Chinese EEZ. At the same time, precision is challenged by
+coastal and harbour infrastructure with radar signatures similar to these layouts.
+Detection performance across the three validation sites, the East China Sea, the NSB, and Southeast Vietnam is
+summarized in figure 10 using Precision, Recall, and F1 score. Across all validation sites, performance ranges from
+95.2% to 100% for individual metrics. The overall macro-averaged F1 score is 98.1%, indicating robust global detection
+performance. The lowest metric observed is a Recall of 95.2% in the NSB. The false omissions belong mainly to a large
+cluster of turbine foundations under construction at the Dogger Bank, which were not identified as candidate wind farm
+regions in the first-stage detection of the applied workflow. Overall, the updated detection workflow provides a well
+performing and globally consistent spatial foundation for the subsequent high-temporal-resolution time series analysis.
+5.3 Time series classification
+For the 15,606 detected offshore wind infrastructure locations, we classified 15,606 corresponding time series with a
+total of 14,840,637 event labels. Six semantic classes are distinguished: water, turbine foundation, deployed turbine,
+support platform, mooring / construction vessel, and vessel.
+Validation was performed on a benchmark subset of 553 expert-annotated time series containing 328,657 event labels.
+On the two important summary metrics, the area under the collapsed edit similarity-quality threshold curve (AUC) and
+the macro F1 score of event-based comparison, the proposed classifier performed with AUC of 0.785 and an F1 of 0.84.
+12

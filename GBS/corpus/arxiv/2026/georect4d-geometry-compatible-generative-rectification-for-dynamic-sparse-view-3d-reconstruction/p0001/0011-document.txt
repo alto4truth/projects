@@ -1,0 +1,21 @@
+title: GeoRect4D: Geometry-Compatible Generative Rectification for Dynamic Sparse-View 3D Reconstruction
+source: arxiv
+year: 2026
+document_id: georect4d-geometry-compatible-generative-rectification-for-dynamic-sparse-view-3d-reconstruction
+authors: Zhenlong Wu; Zihan Zheng; Xuanxuan Wang; Qianhe Wang; Hua Yang; Xiaoyun Zhang; Qiang Hu; Wenjun Zhang
+page: 1
+section: document
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20784v1
+
+ently, diffusion models have emerged as powerful generative priors for novel
+view synthesis and 3D augmentation [16,33–35,62,64]. Yet, naively applying
+them to dynamic scenes causes severe temporal flickering and structural drift,
+and existing methods lack explicit modeling of 3D reconstruction degradation
+and inherent spatiotemporal constraints. In contrast, our unified framework enables robust sparse dynamic reconstruction by explicitly modeling degradation
+and performing geometric purification.
+3 Method
+3.1 Problem Formulation and Framework Overview
+We target high-fidelity dynamic 3D reconstruction from calibrated sparse multiview videos
+V={(I t,v, πt,v)}T,N v
+t=1,v=1, N v ≤4, (1)

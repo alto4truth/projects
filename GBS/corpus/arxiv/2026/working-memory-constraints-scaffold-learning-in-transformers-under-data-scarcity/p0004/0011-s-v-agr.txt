@@ -1,0 +1,58 @@
+title: Working Memory Constraints Scaffold Learning in Transformers under Data Scarcity
+source: arxiv
+year: 2026
+document_id: working-memory-constraints-scaffold-learning-in-transformers-under-data-scarcity
+authors: Pranava Madhyastha; Dagmar Adamcova
+page: 4
+section: s-v-agr
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20789v1
+
+Win=4
+Win=5
+Win=7
+Win=9
+Log
+Exp
+Prim/Rec
+Prim
+Rec
+Baseline
+0
+1
+2
+3
+4
+5
+6
+7Average Log-Likelihood
+10M Training Corpus
+Win=4
+Win=5
+Win=7
+Win=9
+Log
+Exp
+Prim/Rec
+Prim
+Rec
+Baseline
+100M Training Corpus
+Figure 3: ∆Log-Likelihood averaged across psychometric measures for each model.
+trained separately with Primacy or Recency.
+5.3 Analysing the model behaviour with
+human processing data
+Would our cognitively inspired attention constraints
+correlate with human processing data? To answer
+this we examine the alignment of surprisal and
+psychometric data using averaged difference of
+log-likelihood (Figure 3). Here, ∆Log-Likelihood
+measures the additional explanatory power offered
+by surprisal values over a base model without surprisal. We then average this across psychometric
+corpora. That is, the difference in log-likelihood
+(∆Log-likelihood) represents the improvement in
+statistical model fit when surprisal is added as a
+predictor, compared to a base statistical model that
+includes only covariates like word length and frequency. Therefore, a higher ∆Log-likelihood indicates that a language model’s surprisal values are
+a better predictor of human cognitive effort during
+sentence comprehension.

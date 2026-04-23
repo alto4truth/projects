@@ -1,0 +1,34 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 83
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+0 100 200 300 400 500
+0
+5
+10
+15Pass@8 (%)
+C++ Unseen languages
+0 100 200 300 400 500
+Python Unseen languages
+0 100 200 300 400 500
+C++ SFT languages
+0 100 200 300 400 500
+Python SFT languages
+Step
+Oracle (in-language) 1 Language 8 Languages (non-parallel) 8 Languages (parallel)
+Figure 6 Parallel-SFT improves cross-PL RL transfer (pass@8).We report pass@8 performance across two source languages. We
+report the (average) transfer effect to 3 unseen languages (left) and the SFT languages (right; 7 PLs excluding the source). Shaded
+regions denote 95% confidence intervals. Consistent with the pass@1 results in Figure 3a, parallel-SFT yields the best transferability,
+outperforming the baselines and, in some cases, surpassing the target-language oracle.
+C Synthetic Translation Prompt
+We use the below prompt for synthetic translation (§5.1). {code} is the original Python code snippet in the coding
+dataset; {instruction} is the natural language description of the code, from the same source; {lg_long} is the
+human-readable name of the target programming language (e.g., C++); and {lg_short} is the short name used for
+Markdown formatting (e.g.,cpp).
+Translate the following code from Python to {

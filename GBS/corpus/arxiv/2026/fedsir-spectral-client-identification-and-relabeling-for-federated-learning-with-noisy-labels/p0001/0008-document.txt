@@ -1,0 +1,25 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+ents standard cross entropy with
+a reverse cross entropy term to improve robustness without
+requiring explicit noise estimation. Similarly, [16] proposes
+a normalization framework that provably converts any loss
+function into a noise-robust variant and introduces the active
+passive loss, which combines normalized active and passive
+components to balance learnability and robustness.
+In addition, different training strategies have been explored to limit the impact of noisy labels, including Mixup
+[24], Dividemix [11], KD methods [2, 3, 7], and earlylearning regularization techniques [14].
+Despite their effectiveness, these methods assume centralized access to training data. As a result, additional adaptations may be required to apply them in FL settings where
+data is distributed across multiple clients, often exhibiting
+strong heterogeneity. Furthermore, clients may contain different levels of label noise, and the model is trained through
+collaborative aggregation rather than centralized optimization. These characteristics introduce new challenges for
+noisy label learning in federated environments, and motivate the study of noisy label learning in FL settings.
+Noisy label learning in

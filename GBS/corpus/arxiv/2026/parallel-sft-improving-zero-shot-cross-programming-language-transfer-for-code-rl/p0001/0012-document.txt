@@ -1,0 +1,22 @@
+title: Parallel-SFT: Improving Zero-Shot Cross-Programming-Language Transfer for Code RL
+source: arxiv
+year: 2026
+document_id: parallel-sft-improving-zero-shot-cross-programming-language-transfer-for-code-rl
+authors: Zhaofeng Wu; Shiqi Wang; Boya Peng; Anuj Goyal; Melanie Kambadur; Sebastian Ruder; Yoon Kim; Chloe Bi
+page: 1
+section: document
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20835v1
+
+Model & Task.We use Llama-3.1-8B-Instruct (Grattafiori et al., 2024) as our initial model. 4,5 We consider the task of
+competition-level code generation and use the CodeForces dataset for training and evaluation (Penedo et al., 2025). See
+dataset statistics in §B.
+Language Selection.Since our goal is to improve performance on medium- and low-resource PLs, we select 3
+diverse target PLs: Go, PHP, and Ruby. Respectively, they rank 15th, 16th, and 25th on the TIOBE popularity index
+(as of December 2025), even lower than PLs like Ada and MATLAB.6 This categorization aligns with past work on
+medium-/low-resource code modeling (Ahmed and Devanbu, 2022; Du et al., 2024; Cassano et al., 2023). We also
+consider 8 additional languages that we only treat as source: Python, C, C++, Java, C#, JavaScript, Bash, and Lua.
+Results.Figure 2 shows the transfer performance throughout RL training, averaged over 10 source languages (11 PLs
+in total, minus the target language itself). We also show the in-PL performance, where the same target language is used
+for RL training. We see that while training using the target language yields consistent improvements, transferring from
+another source language lead

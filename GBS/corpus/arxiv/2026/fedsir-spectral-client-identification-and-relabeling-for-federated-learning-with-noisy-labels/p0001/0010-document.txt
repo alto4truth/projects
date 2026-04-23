@@ -1,0 +1,16 @@
+title: FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels
+source: arxiv
+year: 2026
+document_id: fedsir-spectral-client-identification-and-relabeling-for-federated-learning-with-noisy-labels
+authors: Sina Gholami; Abdulmoneam Ali; Tania Haghighi; Ahmed Arafa; Minhaj Nur Alam
+page: 1
+section: document
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20825v1
+
+e guided via KD from
+the global model rather than explicit relabeling. Moreover,
+FedNoRo adopts DaAgg that differentially weights client
+contributions based on their estimated noise levels. Building on the noisy client detection of FedNoRo, FedELC [9]
+addresses the second stage of label correction by modeling
+2

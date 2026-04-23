@@ -1,0 +1,63 @@
+title: Can "AI" Be a Doctor? A Study of Empathy, Readability, and Alignment in Clinical LLMs
+source: arxiv
+year: 2026
+document_id: can-ai-be-a-doctor-a-study-of-empathy-readability-and-alignment-in-clinical-llms
+authors: Mariano Barone; Francesco Di Serio; Roberto Moio; Marco Postiglione; Giuseppe Riccio; Antonio Romano; Vincenzo Moscato
+page: 2
+section: phase
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20791v1
+
+. This
+difference reflects variation in emotional style and emphasis across contexts, rather
+than an absolute improvement in communication quality.
+21
+
+caring
+approval gratitude curiosity optimism
+Emotion
+0
+20
+40
+60
+80
+100Percentage (%)
+Top 5 Dominant Emotions Across Models
+Model
+Physicians
+Mixtral Base
+Med-PaLM Base
+Mixtral Rephrase
+Med-PaLM Rephrase
+Mixtral Empathy
+Med-PaLM Empathy
+GPT-5 Base
+GPT-5 Rephrase
+GPT-5 Empathy
+Gemini Rephrase
+Claude Base
+Claude Rephrase
+Claude Empathy
+Fig. 13: Emotions most frequently expressed by models on the iCliniqQAs dataset.
+Takeaway 1☞R LLM can approximateR Phys in overall emotional restraint across
+both datasets. However, fine-grained emotion analysis reveals a systematic reweighting rather than faithful replication: LLMs consistently amplify affiliative signals such
+ascaring, while attenuating corrective or discordant cues. This shift is datasetdependent: models move from approval-dominant discourse in institutional texts to
+near-saturated caring in conversational settings, indicating stylistic modulation rather
+than improved clinical alignment.
+4.4 RQ2 – Readability Analysis
+This research question explores whether LLMs can produce more readable responses
+than those authored by physicians, who may rely on complex phrasing and technical
+jargon. To evaluate the readability of each response type, we applied the FKGL and
+GFI metrics previously introduced in theBackgroundsection. Figures 14 and 15 report
+average scores for physician-written content and base (i.e., non–prompt-engineered,
+non–rephrased) LLM generations.
+Hypothesis 2LetR base
+LLM be a zero-shot (baseline) LLM response without domain prompting
+or rewriting, and letRead(·)be a function that measures the readability of a text where lower
+scores indicate greater accessibility. We hypothesize that baseline LLM generations will exhibit
+equal or higher readabilitycompared to physician-authored contentR Phys, i.e.,
+E[Read(Rbase
+LLM)]≤E[Read(R Phys)].
+Overall, physician-authored responses exhibit moderate complexity in both
+datasets. On MedQuAD, physicians show FKGL = 11.47 and GFI = 12.82. On
+22
