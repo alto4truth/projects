@@ -1,0 +1,17 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 8
+section: expressions
+chunk: 47
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+t binary value we can and note the corresponding bit. We continue to do this subtracting binary values until we come up with the resulting bit string:
+
+When working with the bit-wise operators, we sometimes have to convert between binary and integer like this and vice-versa.
+In Active Server Pages, bit-wise operators are only used on numeric expressions to manipulate individual bits. The numberic expression can evaluate to integers, longs, single or double-precision numbers. After evaluating the bit-wise operation, the resulting value will be compatible with the original arguments.
+The following bit-wise operators require two arguments: one on the left-side of the operator and one on the right-side.
+
+The following operators are "unary" operators meaning they only require one argument. The single expression argument must be to the right-side of this operator.

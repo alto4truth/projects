@@ -1,0 +1,18 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 9
+section: functions-and-subroutines
+chunk: 60
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+arentheses. The one exception to this rule is when you precede your function call with the Call keyword. The two different invocations are shown below
+
+== Local Variables ==
+Just as you can declare variables using the Dim statement in your web page, you can also declare variables for use within your procedures. These are typically referred to as "local variables" because they are only available "locally" within the procedure declaration. The variables declared outside of the procedures can be thought of as "global variables".
+You declare local variables within a procedure block just as you would a regular variable:
+
+The scope of the variable I is strictly within the procedure declaration. You won't be able to reference I outside of the procedure. It is created when the function is called and disappears when the function finishes.
+Active Server Pages allows you to reference global variables within your procedures. Although this is not recommended because it makes your procedures less portable, there are some instances where this proves useful.

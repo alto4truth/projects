@@ -1,0 +1,25 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 14
+section: d-transition-guide
+chunk: 23
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+really shouldn't use a for loop here. You'll learn about foreach later on.
+Casts are all explicitly specified with the cast keyword.
+
+=== Strings ===
+
+Strings are character arrays which cannot be modified on a per element basis. You'll see more about arrays later. Another major note is that D strings are not null terminated. Arrays simply keep track of their length.
+firstname is assigned to "Walter".
+~ is the concatenation operator. There is no ambiguity between + and ~ for strings.
+One way of outputting, although number 8 is better
+To modify a string, we get a duplicate (a copy) of the string. .dup returns a mutable copy of an array.
+Since b is really a pointer to a, b actually gets modified on this line. firstname remains unchanged.
+Although we cannot change string on an per element basis, we can re-assign them.
+Since fullname was created through concatenation, it also remains unchanged.
+
+=== Dynamic Arrays and Foreach ===

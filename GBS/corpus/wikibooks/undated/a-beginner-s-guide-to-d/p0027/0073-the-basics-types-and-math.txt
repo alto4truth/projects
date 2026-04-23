@@ -1,0 +1,42 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 27
+section: the-basics-types-and-math
+chunk: 73
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+backslash.
+Example:
+
+"Hello,\nworld!"
+
+If you were to replace the above "Hello, world!" literal with this one, the program would write
+
+Hello,
+world!
+
+on the console.
+Other useful escape sequences are \" which adds a double quotation mark (without the backslash, the quotation mark would terminate the string literal) and \\ to add one backslash to the literal.
+Example:
+
+"\"Interesting, \\\nor not?\", he said"
+
+Output:
+
+"Interesting, \
+or not?", he said
+
+=== Substrings ===
+Sometimes you need to just grab part of a string. To do this use Array slice notation, which is the two '.'s between the indices you want to get the substring of lower bound inclusive and upper bound exclusive. Say we just wanted "Interesting" from the string seen above, we would do the following.
+Example:
+
+"\"Interesting, \\\nor not?\", he said" [ 1 .. 12 ]
+
+Output:
+
+Interesting
+
+(Stub)

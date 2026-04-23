@@ -1,0 +1,18 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 13
+section: variable-types
+chunk: 86
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+enter in a web form.
+Dim bIsActive 'Used to test if the user's account is active.
+You will learn more on naming conventions later on in this document.
+
+== Declaring Variables ==
+To declare a variable, you use the Dim statement for page and procedure-scoped variables. After the Dim statement, you can put a comma-separated list of variable names. If you prefer, you can just put one variable on each line. This allows you to add comments about each variable you declare.
+
+You should place your variables in a consistent location on the page or within your procedures. Typically, most people place the declarations at the very top (beginning) of the page or the top of the procedure. Others think it makes more sense to place the variable declarations right above the location where they are first used.

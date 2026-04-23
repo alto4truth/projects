@@ -1,0 +1,11 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 19
+section: templates-and-generic-programming-template-classes
+chunk: 39
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+Container classes are usually most useful if they can hold any kind of item. Otherwise, you would have to write a different container for each type you wanted to hold. The traditional object-oriented approach (used by Java before version 1.5) takes advantage of polymorphism. Since all classes derive from Object, a container that holds Object instances can serve as a general-purpose container. This has a number of disadvantages:

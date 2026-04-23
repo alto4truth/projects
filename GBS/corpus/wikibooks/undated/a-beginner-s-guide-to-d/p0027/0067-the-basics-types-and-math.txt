@@ -1,0 +1,16 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 27
+section: the-basics-types-and-math
+chunk: 67
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+variable contains garbage
+
+Note: Do not count on the garbage in a void-initialized variable being random; more often than not it will be anything but.
+
+=== Imaginary and Complex Numbers ===
+If you are not familiar with the mathematical concept of imaginary and complex numbers, feel free to skip this sub-section. D has built-in support for imaginary and complex decimal number types. D's imaginary and complex number types are based on its real decimal types (float, double, or real). An arithmatic operation involving a real decimal number and an imaginary or complex number results in a complex number and all complex arithmatic works the same as in algebra. The type names of imaginary number types are the same as real decimal types except they are prefixed with an i, and the type names of complex numbers are likewise the same as real decimal types except prefixed with a c. Imaginary numbers are initialized to NaN * 1.0i, and complex numbers are initialized to NaN + NaN * 1.0i. Imaginary literals are the same as decimal literals except they are followed by an i. Complex literals are simply real literals plus imaginary literals. For example:

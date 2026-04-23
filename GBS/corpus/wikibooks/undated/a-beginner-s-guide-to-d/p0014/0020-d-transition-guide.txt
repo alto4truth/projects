@@ -1,0 +1,21 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 14
+section: d-transition-guide
+chunk: 20
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+jor points of the language. Additionally, if you'd like more examples of any specific topic, the DSource Tutorials Project is the right place for you.
+
+== What We'll Cover ==
+For now, we will only cover core language features and the bare minimum library calls required to utilize them. One of the first things you should realize about D, as opposed to C++ and Java, is that it includes in the language many features relegated to libraries in its predecessors. So while a Java tutorial would be remiss in not mentioning java.util.ArrayList, in D we get by with int[]. (More on this later.)
+
+== Style of This Guide ==
+Each section will have a code snippet and a description of how D differs from its predecessors. Usually, that will be sufficient; occasionally, there will also be an explanation of a feature which is vastly different (read: revolutionary versus evolutionary).
+
+== The Guide ==
+
+=== Hello World ===

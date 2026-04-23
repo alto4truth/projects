@@ -1,0 +1,26 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 27
+section: the-basics-types-and-math
+chunk: 65
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+== What are types? ==
+If you look directly at the contents of a computer's memory, you see only a lot of bytes. These are often shown as numbers but in fact they don't have a meaning on its own, not even the meaning of a number.
+Types are used in computer languages like D or C to give one byte or a sequence of bytes a meaning. Types define if these bytes are a number, a text, a date or whatever.
+
+== The Basic Types ==
+Two basic types have already been introduced: int and float, for non-decimal and decimal numbers, respectively. Here, all of the basic types are introduced, including limits on their values and how large they are in memory.
+
+=== Notes ===
+The types which cannot be decimal take less time (are more efficient) for math. The numbers which can be decimal are unpredictably less accurate for larger numbers. chars can, in general, be used exactly like ubytes, but their purpose is different.
+
+=== Initialization ===
+[TODO: Should some of the following sub-sections be placed elsewhere?]
+You can initialize a basic variable, or set it to a default value, by assigning it a value in its declaration:
+
+int five = 5;
+double twoPointFive = 2.5;

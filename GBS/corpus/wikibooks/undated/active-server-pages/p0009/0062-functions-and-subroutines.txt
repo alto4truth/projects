@@ -1,0 +1,17 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 9
+section: functions-and-subroutines
+chunk: 62
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+e same name. This is perfectly legal in ASP. When you do this, the local variable will "hide" the global variable within the context of the procedure.
+
+In the example above, we have the variable I declared globally (actually the scope is the life of the web page) and locally. When you run this sample code, you will notice that the global variable I remains unchanged after the call to CountTo. This is because the local variable is completely separate from the global. Changes to the local variable have no effect on global I.
+Because you declared a local variable with the same name as a global one, you effectively hide the reference to the global variable. Within the procedure CountTo, there is no way to reference the global I. While other languages provide a mechanism to access such variables, ASP does not. One way to get around this is to either: change the name of your local variable or pass the global variable as a parameter (using a different name).
+
+== Recursion ==
+Recursion refers to the practice of having a function "call itself" in order to perform a repetitive task. Creating a recursive function is as simple as declaring a function that contains a call to itself.

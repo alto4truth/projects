@@ -1,0 +1,21 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 14
+section: d-transition-guide
+chunk: 21
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+re will also be an explanation of a feature which is vastly different (read: revolutionary versus evolutionary).
+
+== The Guide ==
+
+=== Hello World ===
+
+As you can see, D is more Java-like in that it uses import statements instead of #include. In fact, D has no preprocessor at all. Don't worry; you'll see how to do almost all your preprocessor tricks with D itself.
+main can return void.
+std.stdio and writefln are part of the library, so we won't really discuss them here. Sufficed to say, writef follows the printf family of functions and writefln adds the Java-like "ln" suffix to denote newline.
+
+=== Arrays (and more) ===

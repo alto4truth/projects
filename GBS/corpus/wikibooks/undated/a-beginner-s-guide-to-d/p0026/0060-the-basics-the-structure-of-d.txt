@@ -1,0 +1,30 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 26
+section: the-basics-the-structure-of-d
+chunk: 60
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+s used for subtraction, / is used for division, and * is used for multiplication. To add two numbers, you simply put a + between them, like so:
+
+2 + 2
+
+The order of operations is the same as in math. That is, * and / are done before + and -. So, 2 + 2 * 2 is 6, not 8. You can change this by using ( and ) (parenthesis). Anything inside parenthesis will be done before anything outside of them; again, as in normal math. While 2 + 2 * 2 is 6, (2 + 2) * 2 is 8.
+Math like this can be used most anywhere that a simple value could be used, including in assignment:
+
+foo = 2 + 2;
+
+The above assigns the value 4 to the variable 'foo'.
+Furthermore, as in algebra, you can use variable names instead of numbers in math. If there is a variable 'bar', 'foo' can be assigned a value of 'bar's value plus two with:
+
+foo = bar + 2;
+
+The difference between the types mentioned above can make division produce unexpected results. If both numbers (operands) are ints, the resulting value will be an int as well. For example, if you write the following division:
+
+1 / 2
+
+the result will be an int. The result is rounded down, so the result is not 0.5, but 0!
+To avoid this, you can force one value to be a float:

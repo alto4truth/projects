@@ -1,0 +1,20 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 27
+section: the-basics-types-and-math
+chunk: 66
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+u can initialize a basic variable, or set it to a default value, by assigning it a value in its declaration:
+
+int five = 5;
+double twoPointFive = 2.5;
+
+In D all basic variables have a default value that they are initialized to if the programmer does not specify one. This may seem intuitive, but some languages (most notably C) do not automatically initialize variables unless explicitly told to do so which can lead to many problems because without initialization variables contain garbage by default (as an artifact of how computer memory works). All integer number types are default initialized to 0. All decimal number types are default initialized to NaN, a special value meaning "Not a Number". Character types are default initialized to their maximum values. If you specifically want any basic variable to be initialized with garbage, initialize them with the special value void which means no initialization.
+
+int garbage = void; //This variable contains garbage
+
+Note: Do not count on the garbage in a void-initialized variable being random; more often than not it will be anything but.

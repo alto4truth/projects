@@ -1,0 +1,21 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 20
+section: templates-and-generic-programming-template-functions
+chunk: 44
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+Just as template classes allow the writing of generic data structures, template functions allow the writing of generic algorithms. Generally speaking, template functions allow the library writer to write functions for argument types without having to overload the function with the same code.
+
+== Syntax ==
+A template function looks like a regular function with two sets of arguments:
+
+The first set of arguments are the template arguments. (See the section on template classes for what are allowed as template arguments.) The second set of arguments are the regular function arguments.
+In the case of the above example, the function can just be called by passing the regular function arguments. D will derive the template parameters automatically based on the types of the arguments. This is called implicit function template instantiation, or IFTI for short.
+Function templates may be explicitly instantiated like any other template, as in foo!(int, char[])(12, "hello").
+
+== Example ==
+The classic example of a template function is the min function:

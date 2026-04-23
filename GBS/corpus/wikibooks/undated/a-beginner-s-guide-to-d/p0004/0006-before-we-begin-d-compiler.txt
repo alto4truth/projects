@@ -1,0 +1,24 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 4
+section: before-we-begin-d-compiler
+chunk: 6
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+There are currently three versions of the D compiler available. Digital Mars provides the DMD compiler, while there is a front end for the GNU Compiler Collection available called GDC, and a front end for the LLVM compiler called ldc.
+The DMD compiler supports Windows, Linux x86, and OS X, whereas GDC and LLVM support many more platforms.
+At the time of writing, the homepage boasts support for:
+
+Linux (tested on Fedora Core 5 x86 and PowerPC)
+Mac OS X 10.3.x, 10.4.x, 10.5.x
+FreeBSD 5.2.1
+Cygwin
+MinGW
+AIX (tested on 5.1)
+On January 2, 2007, DMD released version 1.0 of their compiler, and GDC released version 0.21, which is based on the specification for DMD 1.0.
+On January 9, 2009, the ldc project released a D frontend for the LLVM compiler. It supports OS X, Windows and Linux.
+On February 11, 2009, DMD released dmd 1.040 (GM) binaries for OS X 10.5, Windows x86 and Linux x86.
+On February 14, 2009, DMD released dmd 2.025 (alpha) binaries for OS X 10.5, Windows x86 and Linux x86.

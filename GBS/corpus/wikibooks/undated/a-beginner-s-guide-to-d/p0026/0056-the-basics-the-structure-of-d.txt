@@ -1,0 +1,15 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 26
+section: the-basics-the-structure-of-d
+chunk: 56
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+This section assumes that you have read an introduction to programming in general, and know what a program is, and what source code is.
+
+== Programming ==
+Fundamentally, a computer program is a series of instructions for a computer to perform. This is true of everything from a text editor to a 3D game. At its lowest level (the Central Processing Unit), a computer has a set of instructions that it can perform. Although this set of instructions is a programming language, it has a number of problems that make it difficult to use for common programming. Because of this, there are programming languages which are more expressive, and give the programmer an easier means of writing programs, such as D. A compiler is a program that converts code written in such a programming language into the language a computer can use (called machine code).
+Many programming languages, including D, are expressed as a series of instructions, to be performed in order. This concept is easy for both a computer and a human to grasp. In D, these instructions are called statements.

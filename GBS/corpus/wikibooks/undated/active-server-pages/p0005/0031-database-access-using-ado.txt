@@ -1,0 +1,18 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 5
+section: database-access-using-ado
+chunk: 31
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+always close your database connection when you are done accessing the database. It is not required, but it is always a good idea.
+
+== ADO Constants ==
+
+= Summary =
+Using ADODB is the ideal way to connect to a database through Active Server Pages. ADODB utilizes ODBC or OLE DB technologies to connect to a database depending on the connection string you use when using the ADODB.Connection::Open method. The most efficient method of access is OLE DB.
+You may choose to create a database library code to simplify the task of working with a database. You can create a database class which manages all the tasks of communicating with a database. Combine this with database configuration settings stored in a global.asa file, and you will have a quick yet powerful way of executing database queries.
+Make sure to make use of the ADO Constants to make the most efficient use of the ADO methods and your database server. The examples above should give you everything you need to work with a database.

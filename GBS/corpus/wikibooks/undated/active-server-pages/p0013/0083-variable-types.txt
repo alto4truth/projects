@@ -1,0 +1,15 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 13
+section: variable-types
+chunk: 83
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+ide a procedure or function declaration. The third type of variables are scoped with a class definition which is used for object-oriented programming.
+
+Page-scoped variables will be visible to all code included on your web page including procedures and functions. You can even access page-scoped variables within a class although good object-oriented design would strongly discourage this practice.
+Procedure-scoped variables will only be visible within the procedure in which they are defined. It is perfectly acceptable to use the same variable name for a page-scoped variable and a procedure-scoped variable. Keep in mind, that when you do this, you will hide the page-scoped variable and will have no way to access it within the procedure.
+Class-scoped variables can only be accessed through an instance of the class. There is no notion of static variables or static methods in the simplified ASP scripting language. You will need to use the ObjectName.VariableName syntax in order to access member variables directly. Only variable declared Public can be accessed in this way. Private class variables can only be accessed by code defined within the class. More information about using classes in Active Server Pages will be discussed later.

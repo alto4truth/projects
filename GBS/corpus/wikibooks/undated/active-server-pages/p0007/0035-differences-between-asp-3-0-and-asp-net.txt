@@ -1,0 +1,20 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 7
+section: differences-between-asp-3-0-and-asp-net
+chunk: 35
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+. Customarily, the dlls that ASP.NET creates start out as namespaces. All of the classes in the namespaces are then compiled into a single dll binary.
+
+ASP is mostly written using VB Script and HTML intermixed. Presentation and business logic is intermixed while ASP.NET can be written in several .NET compliant languages such as C# or VB.NET.
+ASP has maximum of 4 built in classes like Request, Response, Session and Application whereas ASP.NET using .NET framework classes which has more than 2000 built-in classes.
+ASP does not have any server based components whereas ASP.NET offers several server based components like Button, TextBox etc. and event driven processing can be done at server.
+ASP doesn't support Page level transactions whereas ASP.NET supports Page level transactions.
+ASP.NET offers web development for mobile devices which alters the content type (wml or chtml etc.) based on the device.
+ASP.NET allows separation of business and presentation logic because the code need not be included directly in the *.aspx page.
+ASP.NET uses languages which are fully object oriented languages like C# and also supports cross language support.
+ASP.NET offers support for Web Services and rich data structures like DataSet which allows disconnected data processing.

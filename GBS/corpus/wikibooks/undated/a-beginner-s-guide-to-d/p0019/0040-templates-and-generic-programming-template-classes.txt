@@ -1,0 +1,17 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 19
+section: templates-and-generic-programming-template-classes
+chunk: 40
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+all classes derive from Object, a container that holds Object instances can serve as a general-purpose container. This has a number of disadvantages:
+
+Primitive types (e.g. int) cannot be directly held in the container. You must write a wrapper class (such as Java's Integer) to hold such items.
+The container is not typesafe. You must cast items from Object to their real type when removing them from the container. There are also no particular limits on the actual types of the items in the container, meaning a given container is capable of holding a random mix of types.
+All of this up- and down-casting can have a negative impact on performance.
+The simpler solution of just writing a custom container class for each type you want to hold has obvious drawbacks. (Most obviously, it does not promote code reuse.)
+Template classes were originally added to C++ to solve this problem, and D's template features are based on those in C++. A library writer first writes a generic container (say, a linked list), as though any type may be contained in it. At the start of the container, the library writer puts a placeholder for the type that will be stored in it. By convention, we usually call this T. This generic class is called a template class, so called because it serves as a template for more concrete implementations.

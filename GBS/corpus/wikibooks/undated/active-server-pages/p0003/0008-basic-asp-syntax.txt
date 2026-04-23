@@ -1,0 +1,15 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 3
+section: basic-asp-syntax
+chunk: 8
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+alue. Another way is to pass variables in a web form or part of the URL in the Request object. More information on these topics will be covered later.
+
+== Comments ==
+Comments are notations you can make on your web page within an ASP script block that will not be output on the web page. For all intents and purposes, they are hidden from your site visitors since they cannot view the ASP source code for your web pages. This allows you to make comments about what your code is doing.
+Active Server Pages uses the quote character (') to define comments. This comment is a "line comment" meaning that it will comment out everything following it up until the end of the line. There is no multi line comment in ASP. In order to comment multiple lines, each line must be preceded by a quote (').

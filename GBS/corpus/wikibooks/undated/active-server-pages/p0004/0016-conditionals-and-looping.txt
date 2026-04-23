@@ -1,0 +1,20 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 4
+section: conditionals-and-looping
+chunk: 16
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+discussed later.
+One topic that will not be covered in this section is procedure and object method calls. We will talk about these in later sections.
+
+== Conditionals ==
+A conditional statement is one where an expression is evaluated and based on the result one or more actions may be taken. This allows you to check for a certain condition and take a specific action that is required when the condition is or is not met.
+
+=== If-Then Statement ===
+The "If-Then" statement is the most basic conditional statement. When put on a single line, this statement says "If the condition is met, then do this." For example, we could test to see if someone is old enough to vote with:
+
+You may optionally, create an If-Then statement that encloses a block of statements. A block of statements means more than one statement grouped together. In this case, the entire block of statements will be executed only when the condition is met. We use indenting in this case to help us read the code and determine where the block starts and ends.

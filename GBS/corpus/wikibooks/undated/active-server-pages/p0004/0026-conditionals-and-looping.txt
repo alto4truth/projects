@@ -1,0 +1,17 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 4
+section: conditionals-and-looping
+chunk: 26
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+n "Do While" to understand how this looping construct works.
+
+Unlike the "Do" loops, the While loop program block is terminated by the Wend statement.
+
+= Summary =
+Active Server Pages has many different control flow statements to handle the execution of your ASP page. The conditional statements are: If Then, If Then Else and Select Case. The looping constructs are For Next, Do While, Do Until and While. Conditional expressions in ASP do not need to be enclosed in parentheses ("(" and ")").
+For Next loops manipulate a counter and repeat the program block until the counter exceeds the ending value. Do While, Do Until and While loops repeat based on the evaluation of a boolean expression (meaning an expression resulting in the value of "true" or "false").

@@ -1,0 +1,19 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 9
+section: functions-and-subroutines
+chunk: 52
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+= Objectives =
+In this chapter we will introduce the concepts of creating procedures. A procedure may be a function or subroutine definition. Once defined, a procedure can be called from anywhere in your code. After reading this chapter, you should understand how to write your own procedure and then call that from another point in your code.
+
+= Content =
+One of the most powerful features of the Active Server Pages is the ability to create powerful procedures that can extend the scripting language. If you are new to procedural programming, you can think of a procedure as a macro that performs a complex task. Once defined and included in your web page, you can reference the macro in any code block you define.
+For example, if you created a function to display the current date and time you could call this function with something like:
+
+== What is a Function? ==
+A function is a procedure that returns a value to the caller. By "caller", we mean the place in the ASP code where you invoke the procedure through a "function call". Functions are declared using the Function statement and terminated with an End Function statement.

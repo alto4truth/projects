@@ -1,0 +1,28 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 27
+section: the-basics-types-and-math
+chunk: 71
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+urse be generalized:
+
+array[index]
+
+And the index can be far more complex than just a number: it can be a variable, or even a mathematical expression.
+
+== Strings ==
+In D and many other language, a series of textual characters is called a string. In some languages, there is a special type dedicated to this, but D takes it at face value: a string is just a series of characters, and a series of characters is just an array of characters. So, you can use the char[] type (that is, a dynamic array of chars) as a string.
+Similar to numeric types where you could either write a variable of numeric type or directly a fixed number in an arithmetic expression in the source code and where you could assign a fixed number to a numeric variable, you can write a fixed string in the source and assign it to a char[] variable (often also called string variable).
+To mark something as a fixed string (a so-called string literal) it must be enclosed in double quotation marks:
+
+"Hello, world!"
+
+A program writing this string literal to a console window (also known as a DOS-box in Windows), such as the example given in Basic Output, would give:
+
+Hello, world!
+
+Notice the lack of quotes in the output.

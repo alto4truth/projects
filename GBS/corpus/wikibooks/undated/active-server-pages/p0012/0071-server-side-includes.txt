@@ -1,0 +1,16 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 12
+section: server-side-includes
+chunk: 71
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+= Objectives =
+In this chapter we will discuss the use of server-side includes (SSI) to simplify the process of building and maintaining a website. For maximum flexibility, I use SSI for both site templates and common code modules (libraries).
+
+= Content =
+Server-side includes have been around long before Active Server Pages was ever conceived. Basically, it was designed as a web server extension that looked for special macros contained inside of HTML comments. Nearly all webservers support at least some subset of server-side includes. The most useful of these macros is the "server-side include".
+So when a web page is accessed, the web server would first scan the source file (or resource) that the visitor requested. If no processing macros were found, then this file is simply delivered to the user without modification. When a macro is found, the web server will do the appropriate processing of the macro (completely replacing the HTML comment with the appropriate results). All of this is done before the content gets delivered to the user (or the remote host).

@@ -1,0 +1,20 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 3
+section: basic-asp-syntax
+chunk: 4
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+s only completely reliable on Microsoft's IIS (Internet Information Server.) We encourage you to use Microsoft IIS to develop Active Server Page code.
+
+== Statements ==
+A statement is like a sentence in English, it describes one task for the ASP interpreter to perform. A block of code is made up of multiple statements strung together on a web page.
+There are various types of statements which we will talk about in the future including: "(flow) control, output, assignment, and HTTP processing.
+In Active Server Pages, it is important to realize that each statement must appear on a line by itself. There is no special delimiter that indicates the end of an ASP statement. Unless you consider the carriage-return as the delimiter, which you really shouldn't.
+You can use the colon character ":" within a program block to place multiple statements on the same line such as:
+
+In practice, it is best to avoid such programming constructs since it will make your code harder to read and maintain.
+Another way to include more than one statement on a line is by using multiple code blocks like in the following:

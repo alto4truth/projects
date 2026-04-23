@@ -1,0 +1,15 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 11
+section: conditions-and-loops-simple-looping
+chunk: 16
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+their bodies 0 or more times. But with a do-while loop, the body is run at least once before the condition is checked. do-while loops look like this:
+
+One case where this kind of loop comes up a lot is when you're trying to get valid input from the user. Usually you ask the user to enter something in, then you check it to see if it's valid, and if it's not, you keep asking them until they give you something good. This is what a do-while loop is for: it'll run the input code at least once, and keep running it until the condition is met.
+
+This code uses the valid variable to keep track of whether what the user entered was valid or not. It'll be set to true once they do. Until then, though, the do-while loop will keep looping, asking for user input.

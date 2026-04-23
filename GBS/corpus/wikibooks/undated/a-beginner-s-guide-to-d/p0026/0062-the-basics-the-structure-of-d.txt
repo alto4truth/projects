@@ -1,0 +1,21 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 26
+section: the-basics-the-structure-of-d
+chunk: 62
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+1 / 2.0
+
+Since a decimal point is included, the 2.0 is interpreted as a float, so the whole operation is now calculated as float and results in 0.5.
+
+== Functions ==
+Any non-trivial program should, like any other non-trivial task, be subdivided into small pieces.
+Washing a car can be subdivided into first cleaning the hood, then washing the windows, cleaning the rims, etc. You may need different tools, techniques and cleansers for each sub-cleaning, and you may subdivide some of these tasks even further because they are too complicated. Fundamentally, computers are quite stupid: they must have all of this subdivision and instruction done by a human, for them. A human brain does this task subdivision nearly automatically for fairly complex tasks.
+Technically, functions in D encapsulate a group of statements to perform a more abstract task than a single statement could do. One or more of these statements can in turn be function calls (use of a function).
+Functions helps to organize a program. In the car-wash example, you can write one function for cleaning a car window, and while you write it you don't have to think about other parts of the car.
+Later, when you call (use) it in another function to clean the whole car, you don't have to remember how the cleaning of the window works in detail, as the "clean window" function "knows" these details already.
+The actual structure of functions and calls will be discussed in a later chapter.

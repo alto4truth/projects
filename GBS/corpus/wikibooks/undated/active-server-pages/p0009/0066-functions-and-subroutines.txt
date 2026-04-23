@@ -1,0 +1,19 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 9
+section: functions-and-subroutines
+chunk: 66
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+d as arguments to functions
+Local variables may be declared inside of a procedure block.
+Local variables hide references to global (page-scoped) ones.
+
+= Exercises =
+Write a function to compute the diameter of a circle (2 * pi * radius) with the single parameter being the radius.
+Write a function to compute the area of a rectangle (length * width) having two parameters.
+Write a subroutine to output a greeting such as: "Good Morning", "Good Afternoon" or "Good Evening" based on the time-of-day.
+Re-write the bubble-sort procedure as a non-recursive function.

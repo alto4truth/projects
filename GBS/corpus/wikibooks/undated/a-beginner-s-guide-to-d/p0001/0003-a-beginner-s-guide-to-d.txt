@@ -1,0 +1,85 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 1
+section: a-beginner-s-guide-to-d
+chunk: 3
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+e]]
+(The /'s are important), and put some note on the page to say you're going to handle it (to try to minimize duplication).
+
+== Table of Contents ==
+
+Before We Begin...
+Short Introduction to D
+D Compiler
+Editors Supporting D
+The Basics
+The Structure of D
+Start at the Beginning
+Introduction to Modules
+Types and Math [input of a few different types, up to dynamic arrays]
+Basic Output [using std.stdio.writef/writefln]
+Basic Input [using std.cstream.din]
+Conditions and Loops
+The Concepts of Conditionals and Loops
+Simple Branching
+Simple Iteration
+Simple Looping (The while and do-while loops)
+Complex Iteration (The for Loop)
+Conditions and Loops/Switch Statement (The Switch conditional)
+Functions and Simple Arguments [somewhere in this chapter, segfaults and other failures should be briefly introduced but simply refer to a later chapter]
+The Concept of Functions [NOT in the Functional Programming sense]
+Simple Functions
+Recursion
+Passing Basic Types
+Passing Arrays
+Assertion and Contracts
+Basic Classes and Object Orientation
+The Concept of Classes
+Simple Classes [an extension to the input programs above that has a "person" class with char[] name, int age, etc.]
+Methods
+Data Hiding
+Public vs Private
+Accessor Methods and Properties
+Exceptions and Handling [This chapter should also mention segmentation faults]
+The Concept of Exceptions
+Throwing Exceptions
+Simple Catching
+The finally Clause
+Advanced Arrays
+Dynamic Arrays, Concatenation and COW
+Static Arrays
+Associative Arrays
+Modules
+Modules and the Filesystem
+Making your Own Modules
+Importing Modules
+Public vs private vs static imports
+Namespace and Conflicts
+Advanced Object Orientation
+Friendly Classes
+Class Inheritance
+Simple Inheritance
+Interfaces
+Operator Overloading
+x. --- TO BE COMPLETED --Advanced Functions and Arguments [This chapter should perhaps be switched with the last one]
+Review of Passing
+Passing Classes
+Passing by-val vs. by-ref: in, out, inout
+x. Function Pointers and Delegates?
+x. --- TO BE COMPLETED --Templates and Generic Programming
+Template Classes
+Template Functions
+Mixins
+Advanced Templates
+Miscellaneous and Advanced Features
+Functions
+Lazy Evaluation
+Object Orientation
+Structs and Packing
+Unions
+Enumerations

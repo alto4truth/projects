@@ -1,0 +1,14 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 13
+section: variable-types
+chunk: 82
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+ASP interpreter will handle all conversion between types automatically when you group more than one variable or type together in a single expression.
+
+== Variable Scope ==
+There are three different scopes for variables used in ASP. The first is page scope meaning that the variable is available for the entire duration. These are typically declared at the top of the page. The second type of variables are procedure scoped variables which are declared inside a procedure or function declaration. The third type of variables are scoped with a class definition which is used for object-oriented programming.

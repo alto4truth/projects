@@ -1,0 +1,15 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 3
+section: basic-asp-syntax
+chunk: 6
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+llows this construct on your web pages since it is sometimes necessary to write code like this to eliminate white space that appears on your web page.
+
+== Variables ==
+One of the hallmarks of a good scripting language is that the variables in the language are loosely typed. This means that there is minimal type-checking done on the values of the variables your program code uses. Active Server Pages was built correctly as a scripting language to be loosely typed. This allows you, as the programmer, to worry less about what type a variable is which frees you from a lot of work converting values and testing for the correct type.
+You are not required to declare your variables before you use them (or even at all if you so wish). The one exception to this rule is when the page directive "Option Explicit" is in effect. If you place the following at the top of your ASP page, you will be required to declare all variables:

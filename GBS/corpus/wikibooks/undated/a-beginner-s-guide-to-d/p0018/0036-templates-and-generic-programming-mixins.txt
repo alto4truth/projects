@@ -1,0 +1,39 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 18
+section: templates-and-generic-programming-mixins
+chunk: 36
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+D's classes only support single inheritance and interfaces. While interfaces are sufficient to reproduce many of the uses of multiple inheritance, there are some things they don't suffice for. Mixins were originally added to the language to fill in many of these other cases.
+
+== Regular Templates ==
+Before discussing mixins, it is necessary to discuss the normal syntax for templates. The class and function template syntax discussed in the previous two chapters is actually a shorthand for the regular syntax. A "normal" template looks like this:
+
+template Foo(A, B, C)
+{
+A a;
+B b;
+C c;
+}
+
+A template consists of a name (Foo), a parameter list (A, B, C), and a series of declarations (a, b, c). When a template is instantiated, the parameters are replaced with the arguments provided by the instantiation. The declarations are placed at the same scope as the template.
+
+alias Foo!(int, real, char[]) F;
+F.a = 10;
+F.b = 5.8;
+F.c = "hello!";
+
+Since the above example is not very useful, here's what the long form of the "min" function from the previous section looks like.
+
+template min(T)
+{
+T min(T t1, T t2)
+{
+if (t1 < t2) return t1;
+else return t2;
+}
+}

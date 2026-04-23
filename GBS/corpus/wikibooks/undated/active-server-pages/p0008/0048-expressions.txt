@@ -1,0 +1,18 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 8
+section: expressions
+chunk: 48
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+ing operators are "unary" operators meaning they only require one argument. The single expression argument must be to the right-side of this operator.
+
+=== Truth Tables ===
+Truth tables display the results of the binary operators on a bit-by-bit basis. You can think of each bit in the arguments being evaluated one-by-one. Bits are matched up based on their position in the bytes. So for a 16-bit integer, each bit would be operated on individually and the resulting bits would be strung together in the same order to generate the resulting number.
+When viewing these tables, think to yourself "When performing a bit-wise and (&), bit 0 from argument 1 and bit 0 from argument 2 are anded together and the result is X. Next bit 1 from argument 1 and bit 1 from argument 2 are anded together and the result is Y". And continuing on for all the bits in the arguments.
+
+== Manipulating Date and Time Values ==
+ASP has some built-in functions to manipulate datetime values. Thought technically not operators, we mention them here for completeness since datetime is a valid data type and it is often necessary to calculate dates and times.

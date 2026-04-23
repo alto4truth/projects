@@ -1,0 +1,19 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 13
+section: variable-types
+chunk: 89
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+to your ASP code and use in expressions. By itself, a literal value has no use, but when used in a statement such as an assignment or output statement
+
+You will notice that there is no way to specify a date literal in ASP. Therefore, you need to use a function call to build a date value using DateSerial or you can use Now() to get the current date and time.
+The value for a literal value is bound by the limits specified in the table for primitive types above. If you attempt to use a value that is outside the acceptable range for any of the types, you will receive an error message indicating this fact and your ASP page will terminate execution.
+
+== Constant Definitions ==
+In some cases, you might want to create "named constants" instead of using literal values all of the time. This is particularly useful if you create a common include file that will be used in multiple scripts on your site. You define constants using the Const keyword like so:
+
+It is common practice to use all uppercase variables for your constant definitions although this is not required. It simply makes your code easier to read and maintain.

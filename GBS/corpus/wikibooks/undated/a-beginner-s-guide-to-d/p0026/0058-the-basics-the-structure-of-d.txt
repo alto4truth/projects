@@ -1,0 +1,24 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 26
+section: the-basics-the-structure-of-d
+chunk: 58
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+am to perform hypothetical instructions 'a', 'b' and 'c', in that order.
+There are many types of statements, each of which serves a different purpose.
+
+== Variables ==
+It's very important for a program to be able to store information. In D (and most programming languages), a location to store information is called a variable. There are several types of variables, and which type should be used depends on what sort of information the variable is supposed to store.
+To use a variable, you first have to declare it. Declaring a variable simply designates space to store it, and associates a name you supply with that space. A variable declaration is a statement, with the type and name of the variable being declared. All of the types of variables will be introduced in later sections; for the moment only two will be introduced:
+
+To declare a variable named 'foo', of the type int, use the following statement:
+
+int foo;
+
+Of course, this can be changed for any type or name, with the general format:
+
+type name;

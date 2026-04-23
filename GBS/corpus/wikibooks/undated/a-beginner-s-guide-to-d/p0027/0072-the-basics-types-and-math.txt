@@ -1,0 +1,32 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 27
+section: the-basics-types-and-math
+chunk: 72
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+(also known as a DOS-box in Windows), such as the example given in Basic Output, would give:
+
+Hello, world!
+
+Notice the lack of quotes in the output.
+
+=== Escape sequences ===
+Sometimes you want to add "special" characters to a string literal. This means
+
+characters not available on your keyboard
+control characters which are not visible when printed but instead are a simple command to the console to do something.
+characters with particular meaning like the double quotation mark.
+The most commonly used of the second category is the newline character which ends one line on a consoleand starts a new one.
+To include such characters in a string literal, you use escape sequences. An escape sequence starts with a backslash "\" in the literal followed by one or more characters describing the desired character. For a newline character simply add "n" after the backslash.
+Example:
+
+"Hello,\nworld!"
+
+If you were to replace the above "Hello, world!" literal with this one, the program would write
+
+Hello,
+world!

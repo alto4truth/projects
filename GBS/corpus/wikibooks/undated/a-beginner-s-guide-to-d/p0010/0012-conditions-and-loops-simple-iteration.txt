@@ -1,0 +1,25 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 10
+section: conditions-and-loops-simple-iteration
+chunk: 12
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+== Simple Iteration: The foreach loop ==
+The foreach statement provides a number of ways to iterate through an array in either direction. It takes as its arguments the name of a variable that will contain an element in the array, and the array to be traversed. It is followed by the statements to be executed. It is possible to obtain the index used to find a specific position in the array. In the following example we initialize an array of integers and iterate through it using foreach and foreach_reverse. You do not need to specify a type for the value.
+
+As with the if statement in previous chapters, you do not need brackets if there is only one statement following foreach. It is worth noting the use of a comma instead of semi-colon between index and value.
+The code prints out the following:
+
+foreach: value = 1
+foreach: value = 3
+foreach: value = 5
+foreach: index = 0, value = 1
+foreach: index = 1, value = 3
+foreach: index = 2, value = 5
+foreach_reverse: index = 2, value = 5
+foreach_reverse: index = 1, value = 3
+foreach_reverse: index = 0, value = 1

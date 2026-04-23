@@ -1,0 +1,17 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 24
+section: the-basics-introduction-to-modules
+chunk: 53
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+module name;
+
+Everything defined in the imported module (e.g. functions, variables, etc.) become known to the importing module and can be used there.
+
+== Packages ==
+A package is a group of modules and possibly (sub)packages. Practically it is just a directory containing module source files and other directories. In the example above, "std" is a package containing the module "cstream" (among others). When importing a module, the package(s) containing it must always be mentioned in the import statement, separated by dots from each other and from the actual module name (very similar to the path to a file).
+Packages are usually used to group together modules that handle one or more commonly-performed tasks. This type of package is known as a library. Most libraries specialize in doing a single task, but some are (much) more general. The Phobos Runtime Library is a notable example of the latter category. It is the D language's standard library and comes standard with all D compilers as the std package. It handles basic features not built into the language itself, such as input and output, common math functions, and much more. Although D compilers are required to include Phobos (or a 100% compatible library), it is not a part of the language itself. For that reason this book will not cover Phobos in-depth beyond what is necessary.

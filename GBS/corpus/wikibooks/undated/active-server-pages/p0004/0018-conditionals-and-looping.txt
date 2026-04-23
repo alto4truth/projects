@@ -1,0 +1,15 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 4
+section: conditionals-and-looping
+chunk: 18
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+ill want to avoid this since it tends to make the length of the line very long. Instead, you will probably want to use the program block form like so:
+
+In this case, only one of the two program blocks will be executed. The first will be executed when the condition is met. The second will be executed when the condition is not met. So you can think of the If Then Else statement as saying "one or the other but not both".
+Although we are using more than one statement in the program blocks shown above, you could also put a single statement within each program block. For debugging purposes, you can even have no statements at all within a program block. This allows you to comment out all the statements in a program block and your script will still run no problem.
+You will notice that in the conditional expression for the If Then statement, we did not have to enclose the condition with parentheses "(" and ")". You can always use parentheses for grouping expressions together but they are not required to enclose conditional statements.

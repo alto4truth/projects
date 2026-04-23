@@ -1,0 +1,34 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 16
+section: style-guide
+chunk: 33
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+output should be in bold, monospaced blocks. Wrapping should occur at column 80 as with code examples. Example input should be in bold italics. E.g.:
+
+This is an example of console output. It wraps at column 80. Lorem ipsum dolor
+sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+labore et dolore magna aliqua.
+
+Enter user name: example
+Enter password: ****
+
+== Complexity ==
+Remember that this is A Beginner's Guide to D. So:
+
+Don't dwell on bizarre exceptions from rules. If they must be mentioned, mention them, but don't confuse the reader, who presumably doesn't know anything about programming.
+If you find yourself needing to refer to a future section to explain the current one, then the table of contents needs changing - every section should depend only on those preceding it.
+
+== Transitional Users ==
+(The rules put forth in this section are yet to be officially accepted)
+To make this book usable by seasoned programmers, templates are provided to show when certain content is redundant for certain users. These templates are:
+
+{{A Beginner's Guide to D/Skim X}}
+
+{{A Beginner's Guide to D/Skim J}}
+
+{{A Beginner's Guide to D/Skim CX}}

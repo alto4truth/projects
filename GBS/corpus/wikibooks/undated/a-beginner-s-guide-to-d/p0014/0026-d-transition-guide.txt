@@ -1,0 +1,20 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 14
+section: d-transition-guide
+chunk: 26
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+to a greater extent, but you can always read up the official language specs or look at the dsource tutorials if you like.
+
+=== Associative Arrays ===
+
+In order to pass in arguments, we simple have main receive an array of strings. Unlike C/C++, we needn't worry about "int argc" since arrays know their own length.
+To define an associative array, you simple put a value type inside the square brackets; otherwise it's like a normal array. You can put any type in there (classes, arrays, etc.). However, if you use objects as keys, keep in mind that you'll have to do some fancy stuff with hash functions and opCmp (which is beyond the scope of this document, but described fully in D Programming Language- Arrays.
+This "1..$" construct is a slice of an array; it means "return an array which includes the element at index 1 all the way to the end ($)". There are other ways of doing this, such as "1..length", but this one can be very nifty. If you're wondering why we would ignore the first element, it's because, like in C/C++, the first element is the name of the program.
+In order to access elements of an associative array, you simply give an index of the key type for it.
+All associative arrays have a property called "keys" (along with others like values and length) which returns an array of all the keys. Like any other array, you can then call the property sort on that.
+This is just an alternative way to print lines, each argument is simply converted and printed sequentially.

@@ -1,0 +1,18 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 9
+section: functions-and-subroutines
+chunk: 59
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+the ByRef and ByVal prefixes together on a list of multiple parameters. Each parameter in your list can have one prefix modifying it (or none at all).
+
+== Calling Conventions ==
+When invoking a subroutine or function, you need to be aware of the different calling conventions used for each. If you fail to follow these guidelines, you will receive a syntax error when loading the page in your browser.
+Calling a function will always require you to enclose the arguments within parentheses. Unlike subroutines, a function can be used within expressions or as an argument to another function.
+
+In the last example above, you will notice we call the function but ignore the return result. This is only useful when your function has some side effect on a global variable, or modifies a variable passed "by reference".
+Calling subroutines, on the other hand, requires that you do not enclose the arguments within parentheses. The one exception to this rule is when you precede your function call with the Call keyword. The two different invocations are shown below

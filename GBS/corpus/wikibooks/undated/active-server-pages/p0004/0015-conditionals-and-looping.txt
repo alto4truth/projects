@@ -1,0 +1,16 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 4
+section: conditionals-and-looping
+chunk: 15
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+looks like a loop (or a circle) which is why we call it looping. We will introduce you to all of the looping methods available to you in this chapter.
+
+== Program Flow ==
+In general, program flow starts at the very top of the page and continues all the way down the page in the same way that you read a book. All pages are executed this way in ASP and it makes the code very easy to follow until you get to conditional statements and looping constructs.
+Because of the logical flow of the program, it is easy to trace through your program code and output debugging information to see what your script is doing as it gets processed by the ASP interpreter. Through use of the Response.End statement, you can place breakpoints in your script to stop execution at specific points. More about this will be discussed later.
+One topic that will not be covered in this section is procedure and object method calls. We will talk about these in later sections.

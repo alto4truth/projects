@@ -1,0 +1,29 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 16
+section: style-guide
+chunk: 31
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+ntents for the chapter. Note that this means that the table of contents will need to be maintained in two locations (the front page and each chapter).
+
+== Naming ==
+The sections in the Table of Contents should be named by the concept they will teach, not the construct. That is, rather than, for example, being named "The if Conditional", a section should be named "Conditions and Branching". When implementing a section, please give it a concept-oriented name; do not keep the name on the TOC if it's not concept-oriented. Titles should be capitalized, but D keywords in titles should not be.
+
+== Development ==
+While the page is being written, use templates to show that it is a stub. If you are still actively writing it, use this template:
+
+Otherwise, use either the chapter stub:
+
+or section stub:
+
+{{sectstub}}
+
+as appropriate.
+
+== Dependencies ==
+No section should depend on concepts taught in later sections. This is hopefully fairly obvious.
+It is perfectly acceptable to refer to future concepts, so long as you do not actually depend on them being learned.

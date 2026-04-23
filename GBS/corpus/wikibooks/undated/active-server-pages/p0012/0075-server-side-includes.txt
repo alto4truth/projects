@@ -1,0 +1,18 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 12
+section: server-side-includes
+chunk: 75
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+you include one file that //also contains// server-side include directives, then those will be included recursively so that all macros are processed.
+
+== File Includes ==
+Another type of include statement is #include file. This statement works just like the virtual include except that the path to the file must be relative to the directory where the current page resides. In other words, you cannot access the directory structure starting from the document root (meaning the root of the website.)
+Below is the same example as before with the virtual includes replaced with file includes. When running this script under IIS, you may get an error when trying to access a parent directory in this manner. For this reason, I prefer to use virtual includes whenever possible.
+
+== Alternatives to Server-Side Includes ==
+Active Server Pages contains a couple of statements that work similar to server-side includes. These are also useful for the same purposes as server-side includes. However, none is a substitute for the other. They all have their different purposes and you should know when to use each.

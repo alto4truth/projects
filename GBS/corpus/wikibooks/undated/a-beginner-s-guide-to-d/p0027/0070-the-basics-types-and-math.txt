@@ -1,0 +1,20 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 27
+section: the-basics-types-and-math
+chunk: 70
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+e. That is, you can use an array element nearly anywhere you could use a simple value. To access element 1 from an array named 'a', for example:
+
+a[1]
+
+The number for the element is called the index. The range of valid indexes is from 0 to 1 less than the number of elements; that is, for an array with 5 elements, the range of valid indexes is from 0 to 4, not from 1 to 5.
+Array access can of course be generalized:
+
+array[index]
+
+And the index can be far more complex than just a number: it can be a variable, or even a mathematical expression.

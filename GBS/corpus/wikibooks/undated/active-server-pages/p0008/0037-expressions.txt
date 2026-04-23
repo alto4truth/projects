@@ -1,0 +1,19 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 8
+section: expressions
+chunk: 37
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+riable. The equals sign (=) separates the variable that gets the result (on the left side) and the expression to build the result (on the right side).
+
+Don't worry too much about some of the more complicated expressions found in this example. All of this will be explained later in this chapter. You should note that the left side of the expression is always a variable. You are only allowed to put a single ASP variable on the left side of the equals sign.
+
+== Evaluation Order ==
+The way an expression is evaluated, depends on the operator precedence. Precedence is kind of an importance assigned to an operator. Operators that have the highest precedence are evaluated first and those that have the lowest are evaluated last. When two operators exist that have the same precedence, the operators are evaluated from left-to-right.
+Take for example the following expression:
+
+In this example, you will see we have three different operators. The "+" and the "-" operator have the same precedence while the multiplication operator (*) has a higher precedence. In this case, the multiplication takes place first reducing the expression to:

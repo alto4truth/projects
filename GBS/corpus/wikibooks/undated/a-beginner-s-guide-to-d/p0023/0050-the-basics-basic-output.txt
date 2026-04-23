@@ -1,0 +1,27 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 23
+section: the-basics-basic-output
+chunk: 50
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+es with one of the basic numeric types or string types or arrays of such items.
+
+Output:
+
+8
+[1,2,4,3]
+3.1415
+Integer 5 plus double 3.1415 gives 8.1415
+
+As you can see in the last output of the example, you can also write multiple expressions as a comma-separated list of parameters to writef() and writefln().
+This last line can also be written in another way with a format string which is more common to C programmers. A format string is a single string containing some fixed text and placeholders for data which is contained in variables or expressions. The values which must be placed in the format string are appended as additional parameters after the format string itself.
+A placeholder in the format string begins always with a percent sign % and ends with a letter which defines how to output the value (the format character). For some letters there can be additional characters between percent sign and letter to control the output more precisely (especially for numbers).
+The default all-purpose format character is the 's' which can be used everywhere. So the line above can be rewritten as
+
+with exactly the same output.
+[TODO: More details]
+(stub)

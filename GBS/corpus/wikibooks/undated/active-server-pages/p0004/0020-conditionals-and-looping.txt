@@ -1,0 +1,16 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 4
+section: conditionals-and-looping
+chunk: 20
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+match a "case". You may include more than one value to match, but you may not define ranges of values to match, nor may you define a pattern to match.
+
+This select statement is a little deceiving, because it will only tell you that you can vote if the age is 18 and only 18. If the age is greater than 18, then none of the specific cases will be matched. Instead, the optional catch-all case (Case Default) will be executed when the age is greater than 18.
+Of course, you don't need to include the Case Default if you don't need it. By leaving it off, you are basically saying "do nothing if an exact match for a case is not found".
+You can use any expression for the Select Case as long as it evaluates to a primitive type. You can not use an object expression because there is no such thing as an object literal to compare it to. However, you can call an object method that returns a primitive type and use this as the expression.
+In the example shown above, you can see that we are using the carriage return to separate the Case from the block to be executed. There is no need to terminate this type of program block. It is terminated by the instance of the next case or the End Select. You may also put the case and the action to perform on the same line by using the colon (:) as a statement separator:

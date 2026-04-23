@@ -1,0 +1,19 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 8
+section: expressions
+chunk: 36
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+= Objectives =
+In this section, you will learn how to build expressions in Active Server Pages. After studying this section, you will learn how to build an expression and learn how to combine variables and string literals in combination to manipulate data.
+
+= Content =
+An expression is a group of literal and variables which are organized in a structured format using operators. The best example of an expression is a mathematical expression such as x + 3.
+Expressions are made up of a collection of mathematical, comparison, bit-wise and logical operators as well as literal values and ASP variables which are placed together for evaluation by the ASP Interpreter. Once an expression is evaluated, it can be assigned to a variable, used as the argument to an ASP procedure or output on an ASP page.
+
+== Assignment ==
+One of the most basic statements you can make in ASP is an assignment. This basically evaluates an expression and places the result into a variable. The equals sign (=) separates the variable that gets the result (on the left side) and the expression to build the result (on the right side).

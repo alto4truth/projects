@@ -1,0 +1,14 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 8
+section: expressions
+chunk: 41
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+ation meaning that it takes two arguments: the left-side is the string you want to append to and the right-side is the string that you want to append.
+
+As you can see in the example above, we are using the string concatenation operator to append three string values together: "Bill", " ", and "Gates". Two of the strings are stored in variables while the space character is just a string literal.
+You may concatenate as many variables as you want together using the string concatenation operator. It has been shown that string concatenation under Active Server Pages is very inefficient. So if your page is performing slowly and you have a lot of string concatenations, you should look for ways to eliminate them.

@@ -1,0 +1,16 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 13
+section: variable-types
+chunk: 81
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+= Objectives =
+In this section you will learn about variables in Active Server Pages. This includes naming conventions, how they are declared, different primitive types and naming conventions. After studying this section, you should have a firm grasp of the types of variables available to you and how to work with different types in a web application.
+
+= Content =
+All variables in ASP are loosely typed. This means that you don't need to declare variables with a type. It also means that you can assign the value of any variable to any other variable. There are a few exceptions to this rule as we will see.
+Basically, every variable in ASP has the major type of Variant. It is "variant" meaning that the type of value it holds can vary. Basically, the ASP interpreter will handle all conversion between types automatically when you group more than one variable or type together in a single expression.

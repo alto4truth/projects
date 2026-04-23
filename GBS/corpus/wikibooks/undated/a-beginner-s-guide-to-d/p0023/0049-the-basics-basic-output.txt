@@ -1,0 +1,29 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 23
+section: the-basics-basic-output
+chunk: 49
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+after the output. Everywhere where you use writefln you can instead use writef and append the newline yourself, this is just less practical.
+
+Output:
+
+Hello, this is allon one line
+Another line
+
+There was no space after the "all" in the source, therefore there isn't a space in the output either.
+It is a good idea to always have a newline after the last output of a program.
+
+== Printing Variables ==
+writef() and writefln() are useful for more than just printing string literals. They can print any combination of variables with one of the basic numeric types or string types or arrays of such items.
+
+Output:
+
+8
+[1,2,4,3]
+3.1415
+Integer 5 plus double 3.1415 gives 8.1415

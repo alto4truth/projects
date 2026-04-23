@@ -1,0 +1,18 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 19
+section: templates-and-generic-programming-template-classes
+chunk: 43
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+covered later.
+
+== Example ==
+A simple templated stack (implemented with a linked list) might look like this:
+
+To use the above example, we might say:
+
+Note the syntax: LinkedStack!(int). This is a template instantiation. This tells the compiler to generate a version of the LinkedStack class where T is replaced with int. The type of the list variable in the above example is LinkedStack!(int). The type of strList is LinkedStack!(string). These two types are distinct from each other. In terms of inheritance, they are only related insofar as they both inherit from Object.

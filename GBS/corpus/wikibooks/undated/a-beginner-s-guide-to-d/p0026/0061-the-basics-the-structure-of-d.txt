@@ -1,0 +1,18 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 26
+section: the-basics-the-structure-of-d
+chunk: 61
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+1 / 2
+
+the result will be an int. The result is rounded down, so the result is not 0.5, but 0!
+To avoid this, you can force one value to be a float:
+
+1 / 2.0
+
+Since a decimal point is included, the 2.0 is interpreted as a float, so the whole operation is now calculated as float and results in 0.5.

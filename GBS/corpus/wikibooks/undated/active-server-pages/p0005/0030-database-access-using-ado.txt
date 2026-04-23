@@ -1,0 +1,27 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 5
+section: database-access-using-ado
+chunk: 30
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+ed to change the sQuery variable with your modified query.
+
+The constants adCmdText and adExecuteNoRecords are described in the section ADO Constants.
+
+== SELECT ==
+The following code can be used to run a SELECT statement against a database. You must first open a connection to a database using the code described in the section Connecting to a Database.
+
+1. When sQuery in above code snippet is set as example 1. it will fetch records with companyid having value 1, in this SQL statement WHERE clause is used to define that criteria.
+The constants adOpenKeySet, adLockReadOnly, and adCmdText are described in the section ADO Constants. Now that you have opened a recordset, what can you do with it?
+
+=== Retrieving the Recordset ===
+The following code will show you how to use the recordset object (rs) described in the SELECT section to retrieve values from your database query.
+
+== Closing a Database Connection ==
+You should always close your database connection when you are done accessing the database. It is not required, but it is always a good idea.
+
+== ADO Constants ==

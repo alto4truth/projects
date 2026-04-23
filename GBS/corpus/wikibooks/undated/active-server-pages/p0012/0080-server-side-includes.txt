@@ -1,0 +1,25 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 12
+section: server-side-includes
+chunk: 80
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+f the calling script. The other is the Server.Transfer statement which passes control over to the external script
+permanently (control never returns).
+
+= Review Questions =
+What does a server-side include do?
+What are the two types of server-side includes?
+What happens if you include a file which contains server-side includes?
+What are some alternatives to the server-side include?
+Explain how these alternatives work to execute external ASP code
+
+= Exercises =
+Create the include files (header and footer) for a real simple HTML template
+Write a virtual server-side include to import the HTML template files.
+Write some ASP code to call Server.Execute to display a weather module
+Write some ASP code to call Server.Transfer to log off a user from a member area.

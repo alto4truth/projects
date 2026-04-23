@@ -1,0 +1,31 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 26
+section: the-basics-the-structure-of-d
+chunk: 59
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+o', of the type int, use the following statement:
+
+int foo;
+
+Of course, this can be changed for any type or name, with the general format:
+
+type name;
+
+== Assignment ==
+A variable isn't very useful if you can't store something there. Storing a value in a variable is called assigning the value to the variable. A variable can only have a value assigned to it after it has been declared, as mentioned above. The following statement will assign the value 5 to the variable 'foo':
+
+foo = 5;
+
+Any variable can be assigned any value like this, with the general format:
+
+variable = value;
+
+== Math ==
+Math in D is straightforward. + is used for addition, - is used for subtraction, / is used for division, and * is used for multiplication. To add two numbers, you simply put a + between them, like so:
+
+2 + 2

@@ -1,0 +1,24 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 14
+section: d-transition-guide
+chunk: 22
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+fficed to say, writef follows the printf family of functions and writefln adds the Java-like "ln" suffix to denote newline.
+
+=== Arrays (and more) ===
+
+We use int[], as opposed to int ages[] or int* ages or int *ages. Arrays are proper types in D, not just aliases for pointers. Those familiar with scripting languages like Perl and Python should find this much more comfortable. For the rest of you, wait a few minutes and then you'll appreciate it.
+Array literal.
+Notice that I didn't set it to 0. Shouldn't I be worried about some arbitrary data? Nah, D sets all variables to a default value.
+Well, unless I specify otherwise by setting it to void.
+We use writefln to print formatted lines, much like printf in C. It prints 0 and then some arbitrary junk.
+What is this? Arrays have properties attached to them, like length. It can be very convenient, especially when dealing with dynamic arrays (later).
+The for loop is totally unchanged. But we really shouldn't use a for loop here. You'll learn about foreach later on.
+Casts are all explicitly specified with the cast keyword.
+
+=== Strings ===

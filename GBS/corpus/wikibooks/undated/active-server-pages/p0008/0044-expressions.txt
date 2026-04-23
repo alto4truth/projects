@@ -1,0 +1,15 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 8
+section: expressions
+chunk: 44
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+when Not is applied.
+So using these logical operators, we can group many comparison expressions together to create a very complex expression like so:
+
+The first comparison (nX = 2) looks just like an assignment. You can never put an assignment in an expression like this. Assignment only occurs at the start of an expression, where the first symbol is an ASP variable which is followed by the assignement (=) operator.
+You will notice that we used parentheses to group the expressions. Even in some cases where parentheses are not required, it sometimes makes your expressions easier to read when you put them in there.

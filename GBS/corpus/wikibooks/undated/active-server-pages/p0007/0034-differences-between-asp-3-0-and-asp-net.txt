@@ -1,0 +1,13 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 7
+section: differences-between-asp-3-0-and-asp-net
+chunk: 34
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+The most important difference between ASP and ASP.Net is that ASP uses interpreted VBScript or JScript, and ASP.net uses any .Net language (including VB.Net, C#, J#, etc.) compiled.
+ASP 3.0 left all its code in the front of the application. There was no way for a programmer to "hide" the sensitive code which he or she may not want anybody to see. The fact that the code was interpreted also slowed performance. ASP.NET allows the programmer to create dynamic link libraries containing the sensitive code. This may be a disadvantage from an open-source perspective but compiling code into dll's greatly improves performance.
+ASP.NET is firmly rooted in XML. Customarily, the dlls that ASP.NET creates start out as namespaces. All of the classes in the namespaces are then compiled into a single dll binary.

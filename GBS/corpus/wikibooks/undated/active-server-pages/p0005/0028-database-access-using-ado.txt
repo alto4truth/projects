@@ -1,0 +1,16 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 5
+section: database-access-using-ado
+chunk: 28
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+= Objectives =
+This describes database connectivity with ADO (ActiveX Data Objects) and how you can use this to communicate and manage a database server. You will learn how to open a connection to a database, run INSERT, UPDATE, DELETE, and SELECT statements as well as execute a stored procedure.
+
+= Content =
+Active Server Pages, being a scripted language, is a stateless language. By this, we mean that it doesn't preserve the state of the application between page loads. Nearly all ASP hosting solutions will include some sort of database hosting. Most common is MySQL, followed by Microsoft SQL Server. No matter what database you are using, ADO will allow you to manage the database through Active Server Pages.
+While it's true that you can store persistant data in the Application object. This is basically just stored in a memory cache that will be flushed whenever IIS or the server is restarted. It also causes problems when trying to create an application which will be used in a server cluster (where each cluster has its own version of the Application cache.)

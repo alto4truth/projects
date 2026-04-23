@@ -1,0 +1,18 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 4
+section: conditionals-and-looping
+chunk: 25
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+hile" by enclosing your expression with Not (expr), but the creators of ASP realized that the code would be cleaner using this more logical statement.
+
+Here, we have created a loop that does exactly the same thing as our "do while". We just reversed the logic of the conditional statement and changed the keywords to Do Until. In this case, it doesn't make the code that much cleaner to read. But as we will see later, there are definite cases where you will want to use Do Until.
+
+=== While ===
+The While loop works exactly the same as the Do While except that it has a little shorter construct. Please read the section on "Do While" to understand how this looping construct works.
+
+Unlike the "Do" loops, the While loop program block is terminated by the Wend statement.

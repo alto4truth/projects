@@ -1,0 +1,16 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 9
+section: functions-and-subroutines
+chunk: 53
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+you invoke the procedure through a "function call". Functions are declared using the Function statement and terminated with an End Function statement.
+
+Above, we have an example of a function definition that will return the current date and time using the built-in function Now. By assigning a value to a variable which has the same name as the function (TodaysDate), we return a value to the calling process. There is no return statement like the PHP scripting language or in C programming.
+This function can be declared anywhere in your web page and it will be made available for you to call from within anywhere in the page. As we will see later, you can even place commonly used procedures within a Server-Side Include page so that you don't have to write duplicate procedures on multiple pages from your web site.
+This function is totally useless because it's easier to just call the built-in function Now.
+It is important to note that a procedure declaration like this will not do anything meaningful until it is actually called. It simply declares a procedure which will do work when it is called.

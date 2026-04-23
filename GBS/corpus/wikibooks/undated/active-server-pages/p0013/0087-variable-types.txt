@@ -1,0 +1,20 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 13
+section: variable-types
+chunk: 87
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+e or the top of the procedure. Others think it makes more sense to place the variable declarations right above the location where they are first used.
+
+== Primitive Types ==
+When we talk about primitive types, we are talking about low-level variables types that cannot be broken down into smaller primitive types. Basically, these are the "built-in" variables that Active Server Pages understands.
+These are sometimes referred to the "sub-type" of the variable since the major type of the variable is "variant". Each variable may have one of the sub-types shown in the following table. If you have used other programming languages, then these primitive types will be very familiar to you.
+
+=== Special Values ===
+In addition to the values shown above, the following special values may also be assigned to Active Server Page variables:
+
+The empty value is the default value for newly declared variables (never assigned any value.) If tested in a boolean context, it is equivalent to "false" or tested in a string context it is equivalent to the empty string ("")

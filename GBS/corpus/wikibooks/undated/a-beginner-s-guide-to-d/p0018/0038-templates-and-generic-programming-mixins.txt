@@ -1,0 +1,30 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 18
+section: templates-and-generic-programming-mixins
+chunk: 38
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+t i and char[] s.
+Mixins may also be named, allowing the same mixin to be mixed-in to the current scope more than once. Here's a more complex example.
+
+template Writer(T)
+{
+void write(T t)
+{
+writefln(t);
+}
+}
+
+struct S
+{
+mixin Writer!(int) IntWriter;
+mixin Writer!(char[]) StrWriter;
+}
+
+S s;
+s.IntWriter.write(12);
+s.StrWriter.write("hello!");

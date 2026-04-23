@@ -1,0 +1,15 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 12
+section: server-side-includes
+chunk: 77
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+heir website. The template engine checks this configuration and pulls in only the modules that we need to display and arranges the layout accordingly.
+
+=== Server.Transfer ===
+The Server.Transfer statement is similar to Execute in that it executes an external ASP file on the webserver. However, unlike Execute, this function does not return control to the calling script. Instead, control is transferred to the script and, when the script finishes execution, the processing of the request terminates.
+This is useful for use as a redirect. Basically, you test for certain conditions in your script and transfer control to another script based on which condition is met. So maybe you could have a login page that contains a form which posts to itself. If the user login is authenticated, you can transfer processing to a member control panel.

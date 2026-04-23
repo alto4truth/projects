@@ -1,0 +1,16 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 11
+section: conditions-and-loops-simple-looping
+chunk: 15
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+g here, except we're reading from a file on disk instead of from the user.
+The important thing here is the while loop. Let's have a closer look at it:
+
+The condition is input.eof() == false. The .eof() method of File means "end of file." So we're going to use this loop to read data while we're not at the end of the file. In other words, we're going to read all the data out of the file. The body of the loop does just that—it reads a line from the file, and appends it to the end of our list of names.
+At the end of our program, we write out the list of names, using the familiar foreach loop.
+A second, very similar kind of loop is the do-while loop. In a while loop, the condition comes at the beginning of the loop, but in a do-while loop, the condition comes at the end. The reason this is significant is that with a while loop, if the condition is false the very first time, the loop body will never be run, so while loops can run their bodies 0 or more times. But with a do-while loop, the body is run at least once before the condition is checked. do-while loops look like this:

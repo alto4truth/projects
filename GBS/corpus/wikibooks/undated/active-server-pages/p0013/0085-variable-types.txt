@@ -1,0 +1,23 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 13
+section: variable-types
+chunk: 85
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+iables you are using is to use a naming convention. Usually the first letter or few letters of the variable names what information it holds.
+Examples:
+
+nCount n for integer or number, holds a value that is used to count something, like for control loops.
+sName s for string, holds a value that represents a name.
+bIsActive b for boolean, holds true or false values, in this case true if something is active, false if it is not.
+Following a naming convention can help avoid messy code, and leads to good programming habits. It also allows somebody else to work with your code and help debug it or modify it. Along with a naming convention, use comments as well to document what the variable is to be used for in the ASP page.
+Examples:
+
+Dim nCount 'Used to count values in control loops.
+Dim sName 'Used to store the user's name that they enter in a web form.
+Dim bIsActive 'Used to test if the user's account is active.
+You will learn more on naming conventions later on in this document.

@@ -1,0 +1,14 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 12
+section: server-side-includes
+chunk: 74
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+l see the processing directive (#include virtual). The path and filename inside the quotes is the resource we want to bring into the current document.
+
+It is important to note that you can import many different types of files into the current document. You should realize that the webserver simply replaces the contents of the included file directly into your HTML document. Also, you cannot embed any preprocessing macros inside an ASP code block (delimitted by <% and %>).
+The include process works recursively, so that if you include one file that //also contains// server-side include directives, then those will be included recursively so that all macros are processed.

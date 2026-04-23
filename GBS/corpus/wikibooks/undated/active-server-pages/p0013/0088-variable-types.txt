@@ -1,0 +1,18 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 13
+section: variable-types
+chunk: 88
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+signed any value.) If tested in a boolean context, it is equivalent to "false" or tested in a string context it is equivalent to the empty string ("")
+
+=== Conversion and Verification ===
+You don't need to concern yourself much with setting the type of the variable. This is done pretty much automatically for you. In the event that you want to set the type that is assigned to a variable, you can use the ASP conversion function that corresponds to each type.
+Also, there are verification functions available to make sure a variable is compatible with the specified type. This doesn't mean that the variable has that sub-type. Rather, it means that the variable can successfully be converted to the type.
+
+== Literal Values ==
+Literal values are values you insert into your ASP code and use in expressions. By itself, a literal value has no use, but when used in a statement such as an assignment or output statement

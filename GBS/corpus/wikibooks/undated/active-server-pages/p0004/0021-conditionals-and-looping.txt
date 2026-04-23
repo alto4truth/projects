@@ -1,0 +1,17 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 4
+section: conditionals-and-looping
+chunk: 21
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+the next case or the End Select. You may also put the case and the action to perform on the same line by using the colon (:) as a statement separator:
+
+== Looping Constructs ==
+Looping constructs are used for repeating the same step over-and-over again. There may be many reasons to use a loop. In database-driven web applications, you will often use a loop to iterate over each record returned from a recordset.
+
+=== For Next Loop ===
+The "for next" loop allows you to repeat a block of code using an incremental counter. The counter is initialized at the start of the loop and then incremented at the end of the loop. At the start of each repetition, the counter is checked to see if it has exceeded the ending value. This is best explained by using an example:

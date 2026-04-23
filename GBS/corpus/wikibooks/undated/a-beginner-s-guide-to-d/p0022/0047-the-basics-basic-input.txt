@@ -1,0 +1,12 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 22
+section: the-basics-basic-input
+chunk: 47
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+The built-in capabilities of D (meaning the capabilities of the runtime library Phobos) for input from a console (alias terminal or DOS-Box) are very restricted.
+Here is a simple program that demonstrates string input with din.readLine() which reads a complete line of input. A line means all characters typed until the user pressed RETURN on keyboard. It doesn't mean a physical line in the console-window which is usually 80 characters wide.

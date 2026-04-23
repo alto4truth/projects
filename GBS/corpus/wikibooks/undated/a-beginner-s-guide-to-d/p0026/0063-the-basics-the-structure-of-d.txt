@@ -1,0 +1,17 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 26
+section: the-basics-the-structure-of-d
+chunk: 63
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+etail, as the "clean window" function "knows" these details already.
+The actual structure of functions and calls will be discussed in a later chapter.
+
+== Comments ==
+[TODO: Tighten up this section]
+One last topic to discuss is comments. Comments are parts of your source code file that you tell the D compiler to ignore. They are useful because it lets you document your code in the code itself, or remove parts of your code for testing purposes (known as commenting out code). D has three basic types of comments: line comments, non-nesting block comments, and nesting comments.
+Line comments are very simple. They are begun by two slashes (//) and ended at the end of a line. They are mainly used for documenting or commenting out single lines of code. Non-nesting block comments start with a slash and an asterisk (/*) and end with an asterisk and slash (*/). They can span multiple lines, but they do not nest, or allow multiple levels, which means that even if you have more than one /* comment opener, it only takes a single */ comment closer to close them all. These comments are mainly used for documenting entire sections of code. The last type of comments, nesting comments, work like block comments excep they do nest and are deliminated by a slash and plus-sign (/+) and plus-sign and slash (+/). The following example is designed to show off the features of comments, and should not be taken as an example of the best use of them.

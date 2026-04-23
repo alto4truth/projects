@@ -1,0 +1,16 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 4
+section: conditionals-and-looping
+chunk: 14
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+Server Pages to make decisions based on expressions. You should also understand how to repeat a block of program code based on conditions you define.
+
+= Content =
+Conditional statements are used by your program to make decisions and decide what the program should do next. An example of this would be deciding whether a user has entered the correct password for your site by comparing the password entered with the correct password. If the user passes the test, they are sent to their account management Web page. If they fail, they are sent back to the login screen with an error indicating the "password is invalid".
+This kind of decision making is common in all programming languages. You need to master this aspect of Active Server Pages in order to write dynamic web applications.
+Another important concept is looping. Looping simply means that you repeat the same block of code multiple times. Since you are going through the code once, going back to the beginning and repeating it again, the direction of program execution looks like a loop (or a circle) which is why we call it looping. We will introduce you to all of the looping methods available to you in this chapter.

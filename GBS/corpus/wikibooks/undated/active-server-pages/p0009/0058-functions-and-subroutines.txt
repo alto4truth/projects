@@ -1,0 +1,15 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 9
+section: functions-and-subroutines
+chunk: 58
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+By default, all parameters are passed "by reference". If you need to pass a value "by value", you need to prefix the parameter declaration with ByVal.
+
+When invoking this subroutine call, you will be guaranteed that the original argument will not be modified. You won't have that same guarantee with the previous declaration which declares the parameter ByRef.
+You should only use ByVal when it is absolutely necessary. It is more efficient to pass parameters "by reference" than it is to pass them "by value". In typical use, most parameters are used as "read only", so you will probably only use the ByVal keyword occasionally.
+Of course, you can mix the ByRef and ByVal prefixes together on a list of multiple parameters. Each parameter in your list can have one prefix modifying it (or none at all).

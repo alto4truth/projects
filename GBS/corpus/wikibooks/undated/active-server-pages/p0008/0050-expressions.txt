@@ -1,0 +1,33 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 8
+section: expressions
+chunk: 50
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+nt. It makes sense to split up long lines for readability. Just be careful how you split lines so that you don't make the line more confusing to read.
+
+= Summary =
+There are eight different types of operators in ASP:
+
+Assignment Operators
+Mathematical Operators
+String Operators
+Comparison Operators
+Logical Operators
+Bit-wise Operators
+Grouping Operators
+Line Continuation Operator
+All but the assignement operators can be used for building expressions. Operators are evaluated based on precedence and the grouping operators. If two operators have the same precedence, then the operators are evaluated from left-to-right.
+All date and time values must be manipulated using functions. The mathematical operators are invalid on datetime values.
+
+= Review Questions =
+What must be on the left-side of the assignment operator?
+What must be on the right-side of the assignment operator?
+What are the eight major types of operators?
+What is meant by operator precedence?
+Which operator is used to group expressions?
+How are datetime values used in expressions?

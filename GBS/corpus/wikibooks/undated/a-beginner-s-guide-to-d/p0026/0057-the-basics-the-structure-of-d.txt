@@ -1,0 +1,21 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 26
+section: the-basics-the-structure-of-d
+chunk: 57
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+instructions, to be performed in order. This concept is easy for both a computer and a human to grasp. In D, these instructions are called statements.
+
+== Statements ==
+A statement is a (possibly very complicated) instruction to the computer. A single statement ends with a ';' (semicolon), and any number of statements can be put immediately after each other, so long as they each end with a ';' (semicolon). So, the series of statements 'a', 'b', 'c' is written as:
+
+a;
+b;
+c;
+
+This code will cause the program to perform hypothetical instructions 'a', 'b' and 'c', in that order.
+There are many types of statements, each of which serves a different purpose.

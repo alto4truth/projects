@@ -1,0 +1,16 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 9
+section: functions-and-subroutines
+chunk: 56
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+ice to Meet You!". In this case we pass a string literal as the argument to the subroutine. You may also pass an ASP variable or a complex expression.
+
+Finally, this example shows how multiple parameters are declared for a function. These two values are used to compute the number of seconds from the hours and minutes. You can see that multiple parameters are separated by a comma. If you want to place a long list of parameters on multiple lines, you will have to use the "line continuation" operator which is the underscore character (_).
+
+=== Passing by Reference ===
+By default, all procedure parameters are passed by reference. This means that when you use a variable as your procedure argument, any changes to the parameter within the procedure, will be reflected in the original argument. If you want to explicitly declare your parameter as "by reference", you may use the ByRef keyword:

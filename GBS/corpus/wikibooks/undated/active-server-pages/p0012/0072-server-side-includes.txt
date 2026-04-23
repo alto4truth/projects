@@ -1,0 +1,16 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 12
+section: server-side-includes
+chunk: 72
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+tely replacing the HTML comment with the appropriate results). All of this is done before the content gets delivered to the user (or the remote host).
+
+== What it Does ==
+The specific processing directive we are interested in here is the server-side include. This allows you to import the contents of another document into the current one. This is extremely useful for reusing common blocks of ASP code and HTML. One of the most common uses of this is for creating a website template.
+Another popular use is for creating code libraries that can be included in the web pages where you need them. I typically create a generic site-wide library that all pages must include, a header and footer template, a database library, an e-mail library and a form processing library. By reusing common code, you can eliminate the errors that may occur when you copy code from one page to another.
+There are two different types of server-side includes we will discuss here: "virtual includes" and "file includes". The only difference is in the way that they access the directory structure for the website.

@@ -1,0 +1,16 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 25
+section: the-basics-start-at-the-beginning
+chunk: 55
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+== Where the Program Begins ==
+There is a special location in code that is used as a starting point for all programs in D. This location is called the main function. The first code you want to run, the code that will start all the other code, is in this function.
+Exactly how the main function works will be introduced in a later chapter, but for the moment you just need to know what the code for one style of main function:
+
+== Putting the Concepts Together ==
+You now have enough knowledge to write a small, simple but complete program. Extending the "hello world" program introduced earlier, you can make a program start and store a number, by combining a main function with some simple variable code learned in the previous section. Here is a complete program, that will store the value 3 in the int variable 'a' and print it to console:

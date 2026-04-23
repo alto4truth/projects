@@ -1,0 +1,18 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 9
+section: functions-and-subroutines
+chunk: 55
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+. If you attempt to use a subroutine as a function, you will receive a runtime error. The same is true when you try to use a function as a subroutine.
+
+== Procedure Parameters ==
+Thus far, we have only looked at procedures which have no parameters. A parameter is an ASP value which is passed to the procedure for the purpose of completing a task. An optional parameter list is declared along with the function or subroutine by appending a comma-separated list of parameter names and enclosing this within parentheses.
+
+Above we have a very simple subroutine which takes a single argument. This argument is the name of the person you want to say hello to. When you invoke this subroutine with a call such as:
+
+Your ASP page will output "Hello Bill Gates, Nice to Meet You!". In this case we pass a string literal as the argument to the subroutine. You may also pass an ASP variable or a complex expression.

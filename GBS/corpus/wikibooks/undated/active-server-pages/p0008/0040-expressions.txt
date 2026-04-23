@@ -1,0 +1,17 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 8
+section: expressions
+chunk: 40
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+you can combine binary and unary operators in one expression. The results of one binary operation might serve as the argument to your unary operation.
+
+There are many advanced mathematical functions that can be used to do complex arithmetic which we will talk about later. These will not be covered in this chapter.
+
+== String Operators ==
+When working with strings, Active Server Pages provides a wealth of functions for manipulating strings. But since we are only talking about operators that may be used in an expression, we will only be dealing with the one string operator here: the string concatenation operator.
+String concatenation means that you want to append one string to another. This operation is a binary operation meaning that it takes two arguments: the left-side is the string you want to append to and the right-side is the string that you want to append.

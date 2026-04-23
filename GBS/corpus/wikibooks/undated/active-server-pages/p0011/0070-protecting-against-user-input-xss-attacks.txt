@@ -1,0 +1,21 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 11
+section: protecting-against-user-input-xss-attacks
+chunk: 70
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+To protect your users from Cross-site scripting (XSS) and similar attacks, you should escape both URLs and user-submitted text. In ASP this is done with two functions Server.HTMLEncode, and Server.URLEncode.
+
+== Server.HTMLEncode ==
+Don't ever output non-escaped user data:
+
+Instead do the following:
+
+This method should also be used for all data that comes from SQL. Better safe than sorry.
+
+== Server.URLEncode ==
+To encode URLs that you insert into the href attribute of A tags, use the Server.URLEncode function, like this:

@@ -1,0 +1,18 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 11
+section: conditions-and-loops-simple-looping
+chunk: 14
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+One of the simplest kinds of loops in D is the while loop. This loop will keep looping as long as its condition is true. This also makes the while loop very flexible—virtually any kind of loop can be written as a while loop, if you try hard enough.
+A while loop looks like this:
+
+The while loop will see if the condition is true, and if it is, it'll run the code inside it. It'll keep doing that until the condition is false.
+As was shown in the last section, the foreach loop is useful for looping over the contents of some kind of container. But what about when you don't know how much data you have, such as when you're reading from a file? A while loop can help in this case.
+
+So here we create an array of strings named names to hold a list of names we'll read in from a file. Then we create a File object. Remember in the Basic Input section, where we used din to read a line of text from the console? din is really a kind of File object, so we're doing the same thing here, except we're reading from a file on disk instead of from the user.
+The important thing here is the while loop. Let's have a closer look at it:

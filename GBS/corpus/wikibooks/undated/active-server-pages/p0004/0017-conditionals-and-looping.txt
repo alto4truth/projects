@@ -1,0 +1,18 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 4
+section: conditionals-and-looping
+chunk: 17
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+will be executed only when the condition is met. We use indenting in this case to help us read the code and determine where the block starts and ends.
+
+As you can see in this program block, the If Then statement defines the start of the program block while the End If statement defines the end of the program block. The program block is indented to make it easier to match the start and end of the block. All of the statements in this program block will only be executed if the conditional statement is met (nAge > 18). When it is not, nothing will be done.
+
+=== If-Then-Else ===
+The If Then statement is great, but what if you want to perform two different actions. One action to be taken when the condition is met and one action to be taken when the condition is not met. That is what the If Then Else statement was create to handle. It basically says: "If the condition is met, then do this, otherwise do this".
+
+As you can see from the example above, you can put the entire If Then Else statement in one line. In many cases, you will want to avoid this since it tends to make the length of the line very long. Instead, you will probably want to use the program block form like so:

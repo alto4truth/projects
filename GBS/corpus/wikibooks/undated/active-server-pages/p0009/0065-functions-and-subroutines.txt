@@ -1,0 +1,29 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 9
+section: functions-and-subroutines
+chunk: 65
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+erence" or "by value". The default parameter passing convention is "by reference". Use ByVal or ByRef to explicitly declare your procedure parameters.
+
+= Review Questions =
+Procedures may be subroutines or functions.
+Only functions may return a value to the caller.
+Function declares a function, Sub declares a subroutine.
+Procedures may be placed anywhere on the page from which they are called.
+Commonly-used procedures may be placed in a Server-Side Include file.
+An optional parameter list may be declared after the procedure name.
+The parameter list must be enclosed in parentheses.
+Multiple parameters are separated by a comma.
+The default parameter passing convention is "by reference".
+ASP variables passed "by reference" to a procedure may be modified.
+The default parameter passing convention is "by reference".
+When calling functions, enclose the arguments in parentheses
+When calling subroutines, use no parentheses around the arguments
+Functions may be used in expressions and as arguments to functions
+Local variables may be declared inside of a procedure block.
+Local variables hide references to global (page-scoped) ones.

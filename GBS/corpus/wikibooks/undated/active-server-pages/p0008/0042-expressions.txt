@@ -1,0 +1,19 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 8
+section: expressions
+chunk: 42
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+ges is very inefficient. So if your page is performing slowly and you have a lot of string concatenations, you should look for ways to eliminate them.
+
+== Comparison Operators ==
+Comparison operators, as you might have guessed, are used to compare two different expressions and return a value of "true" or "false". In most cases the two expressions being comparted will evaluate to a number, but it is possible to compare string values, dates and booleans.
+The following table lists the binary comparison operators. These operators require two expression arguments: one on the left-side of the operator and one on the right-side. Just like mathematical expressions, you may combine two-or-more of these expressions together. In the next section we will explain how to these are combined using logical operators.
+
+These operators are most commonly used in an If Then statement which will take an action based on the boolean result of an expression. Unless you already have a boolean value stored in an ASP variable, you will need to write an expression like the following:
+
+Of course, your expression can be as complicated as you want as long as it evaluates to a boolean value.

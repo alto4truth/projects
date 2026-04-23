@@ -1,0 +1,24 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 4
+section: conditionals-and-looping
+chunk: 22
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+loop. At the start of each repetition, the counter is checked to see if it has exceeded the ending value. This is best explained by using an example:
+
+In this example, we have created a loop that is repeated 10 times. We know it executes exactly ten times because you can read the statement as "for every whole integer from 1 to 10, do this".
+The variable "I" is initialized with a value of 1 and the first repetition of the program block (indented) is executed. The output will be "I = 1". Don't worry about the "<br>" part, this is just HTML code to create a line break on the web page.
+The second time through the loop, the counter (I) is incremented and takes on a value of 2. So the second line output by this block is "I = 2". This process repeats as I is incremented one at a time until the counter exceeds the end value. So in this case, the last line printed will be "I = 10".
+In a more advanced case, we can change the way in which the index is incremented. If we wanted the counter to increment by 2, we would write the For Next loop as follows:
+
+The output of this code will be:
+
+I = 1
+I = 3
+I = 5
+I = 7
+I = 9

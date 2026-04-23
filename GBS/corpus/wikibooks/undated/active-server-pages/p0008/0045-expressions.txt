@@ -1,0 +1,18 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 8
+section: expressions
+chunk: 45
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+the expressions. Even in some cases where parentheses are not required, it sometimes makes your expressions easier to read when you put them in there.
+
+== Bit-Wise Operators ==
+For advanced programming, Active Server Pages has operators for working with individual "bits". A "bit" is the digit used in the binary number system and was formed from a contraction of the words "binary digit". It can only have one of two different values: "0" and "1".
+In the old days of computer, programmers were severely limited in storage and had to make the most of the available storage. One way they did this was by combining multiple variables into a single "byte". This has carried through to modern-day computer systems and this is why we need bit-wise operators.
+In computer terms, we talk about "bytes". A byte is composed of 8 "bits" and therefore can have 2 ^ (raised-to-the-power) 8 or 256 possible values. An integer is composed of two bytes so it can have a value of 256 ^ 2 or 65536 possible values.
+
+The 8 bits from a byte and their integer equivalents

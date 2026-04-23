@@ -1,0 +1,23 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 14
+section: d-transition-guide
+chunk: 24
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+element basis, we can re-assign them.
+Since fullname was created through concatenation, it also remains unchanged.
+
+=== Dynamic Arrays and Foreach ===
+
+Defining a dynamic array is very intuitive; simply omit the length.
+Extending a dynamic array is simply done by resizing it.
+foreach is awesome. Here's the simple case: the part before the semicolon is the variable from the array, and the one afterwards is the array. And yes, foreach can work with much more than just arrays.
+ref simply means pass by reference. Without this, the original array would be unaffected.
+Built-in sort. If I'm not mistaken, both implementations use a quicksort, which- as its name implies- is pretty good.
+And now another form of foreach. The left-side of the semicolon can specify two variables, separated by a comma. In this case, the first is the index (think of "i" in your typical for loop) and the second is the value.
+If you feel like there's something missing in the above code, you're right: I didn't put the data type on the variables in the foreach loop. D actually supplies an "auto" keyword which means "automatically figure out what type I want," and it is implicitly understood in the foreach loop if a type is missing.
+I know I lumped many important things together in this example. The rest of the guide should elucidate all these topics to a greater extent, but you can always read up the official language specs or look at the dsource tutorials if you like.

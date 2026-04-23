@@ -1,0 +1,22 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 8
+section: expressions
+chunk: 46
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+An integer is composed of two bytes so it can have a value of 256 ^ 2 or 65536 possible values.
+
+The 8 bits from a byte and their integer equivalents
+
++-------------------------------------------------------+
+| Bit7 | Bit6 | Bit5 | Bit4 | Bit3 | Bit2 | Bit1 | Bit0 |
++------+------+------+------+------+------+------+------+
+| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
++-------------------------------------------------------+
+
+For all of the bits that are set (equal to 1) above, you need to add their integer equivalent to determine the resulting byte value. So If bits 6, 4, 1 and 0 were set, the equivalent byte value would be: 64 + 16 + 2 + 1 = 83.
+Going the other way around, we can convert an integer to binary. We just take the integer value and subtract the biggest binary value we can and note the corresponding bit. We continue to do this subtracting binary values until we come up with the resulting bit string:

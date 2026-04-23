@@ -1,0 +1,18 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 8
+section: conditions-and-loops-complex-iteration-the-for-loop
+chunk: 10
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+The most complicated loop statement that D provides is the for loop. The for loop is borrowed directly from C, and shares its syntax. It has the following form:
+
+for(statements; conditional; statements) { body }
+
+The first set of statements are separated by commas, and are executed before the loop begins. Variables can be declared in these statements. This is usually used to initialize an index variable. The conditional is a Boolean value, and is executed before each iteration of the loop. The body is only executed as long as the conditional remains true. The last set of statements are executed after the body, and usually increments an index variable.
+The following is the typical use of the for loop:
+
+However, more complicated for loops are possible. For example, a for loop can iterate over two arrays, in opposite directions, at the same time:

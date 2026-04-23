@@ -1,0 +1,28 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 12
+section: conditions-and-loops-switch-statement
+chunk: 17
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+== Basics ==
+The switch statement can be found in almost every programming language, it's commonly used for checking multiple conditions. Syntax is identical as it is in C++ or Java. It has following form:
+
+Here's some simple example:
+
+And the result of our code:
+
+Enter some command: /hello
+Hello!
+
+Note break keyword after each case! If it's bypassed each case after it will be called. So here's console output of code without breaks:
+
+Enter some command: /hello
+Hello!
+Bye!
+I don't know that command
+
+As you may see, all cases after /hello were "called", this is useful if we want to call same statements in more that one case. Here's one more example:

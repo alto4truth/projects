@@ -1,0 +1,23 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 10
+section: conditions-and-loops-simple-iteration
+chunk: 13
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+ue = 3
+foreach: index = 2, value = 5
+foreach_reverse: index = 2, value = 5
+foreach_reverse: index = 1, value = 3
+foreach_reverse: index = 0, value = 1
+
+Cycling using foreach is done on a copy of the values, meaning that changes to them are not reflected in the originals. If we want to change the original array's values, that can be done by adding the type modifiers out or ref (equal to inout). The first can only be written to, the second can be read and written. If you attempt to read an out variable, it will be initialized. Adding the type modifier to an array index results in a compiler error.
+
+Output:
+
+arr[0] = 12
+arr[1] = 14
+arr[2] = 16

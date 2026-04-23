@@ -1,0 +1,21 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 8
+section: expressions
+chunk: 38
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+ecedence while the multiplication operator (*) has a higher precedence. In this case, the multiplication takes place first reducing the expression to:
+
+Now there are two expressions that have the same precedence. In this case, we evaluate the left-most expression first. After two more reductions we get the final result:
+
+You should note also that if we had evaluated the expression from the other direction we would get a completely different result. This order of evaluation follows the same method used in mathematics (if you remember your basic algebra.)
+
+== Grouping Sub-Expressions ==
+If you want to over-ride the default order-of-evaluation (precedence) for evaluating an expression, you can group expressions that should be evaluated first in parentheses. You can think of it as an expression embedded in another expression or a "sub-expression".
+If you remember the example from the previous section, we can modify it to change the order-of-evaluation like so:
+
+And just like in Algebra, we know that we have to evaluate these sub-expressions first. So the first step in reducing this type of expression is to evaluate the sub-expression:

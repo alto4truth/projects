@@ -1,0 +1,16 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 12
+section: server-side-includes
+chunk: 73
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+will discuss here: "virtual includes" and "file includes". The only difference is in the way that they access the directory structure for the website.
+
+== Virtual Includes ==
+A virtual include will import the contents of another file based on the document root of the webserver. The path to the file should begin with a slash (/) which represents the root of the website (not the root of the filesystem).
+Internet Information Server (the default webserver for Microsoft Windows) may be configured so that you cannot use a File Include to import the contents of a file from a parent directory. In this case, you will need to use the Virtual Include to accomplish this task.
+Shown below is an example of two virtual includes used to pull in a header and footer template into the current page. Contained within an HTML comment (delimitted by <!-- and -->), you will see the processing directive (#include virtual). The path and filename inside the quotes is the resource we want to bring into the current document.

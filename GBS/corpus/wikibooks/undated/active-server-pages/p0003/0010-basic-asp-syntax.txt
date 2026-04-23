@@ -1,0 +1,15 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 3
+section: basic-asp-syntax
+chunk: 10
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+the directive. This is because the directive is evaluated before the ASP code is interpreted. So trying to do something like the following is illegal:
+
+But this doesn't mean that you can't place ASP code inside an included file. So if you include a file called /lib/common.asp, you can place ASP code inside that file (just like you would a normal ASP page) and it will be evaluated by IIS and the results will be placed in the calling page.
+An interesting note is that your main page can use a ".html" extension and include (via SSI) an ASP page and the included file will be interpreted and processed as ASP and included in the HTML page.
+The two different types of Server-Side includes allow you to retrieve and include files based on the absolute path (based on the Web site root) or relative to the calling page as shown below;

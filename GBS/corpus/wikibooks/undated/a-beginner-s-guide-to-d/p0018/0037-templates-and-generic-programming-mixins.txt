@@ -1,0 +1,43 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 18
+section: templates-and-generic-programming-mixins
+chunk: 37
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+ng form of the "min" function from the previous section looks like.
+
+template min(T)
+{
+T min(T t1, T t2)
+{
+if (t1 < t2) return t1;
+else return t2;
+}
+}
+
+This also shows another interesting feature of D's templates. If a template contains a single declaration, and that declaration has the same name as the template, then one can refer to that single member implicitly. Combined with implicit function template instantiation (discussed in the previous section), the following are all equivalent:
+
+min!(int).min(1, 2); // long form
+min!(int)(1, 2); // with the single-element rule
+min(1, 2); // with IFTI
+
+== Mixins ==
+Normally, when a template is instantiated, its declarations are inserted into whatever scope the template exists in. With a mixin, the declarations may be inserted into the current scope. A trivial example looks like this:
+
+template Foo()
+{
+int i;
+char[] s;
+}
+
+struct S
+{
+mixin Foo;
+}
+
+(Note that if the template's parameter list is empty, then the mixin may elide the !().) The result is that the struct S has two members: int i and char[] s.
+Mixins may also be named, allowing the same mixin to be mixed-in to the current scope more than once. Here's a more complex example.

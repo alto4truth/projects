@@ -1,0 +1,18 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 9
+section: functions-and-subroutines
+chunk: 57
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+cedure, will be reflected in the original argument. If you want to explicitly declare your parameter as "by reference", you may use the ByRef keyword:
+
+You need to be careful when writing and invoking procedures like these. This procedure will actually modify the calling argument by removing everything except the first word in the argument.
+Passing by reference is the default calling method. So even if the ByRef keyword is not present, the parameter is defined as "by reference" by default. It is important to remember this so that you don't fall into the trap mentioned above.
+
+=== Passing by Value ===
+The other way to pass values into your procedure is "by value". This means that a copy of the value is taken when the procedure is called. The parameter holds a copy of the value so that any modifications to this parameter will not affect any arguments that were used by the calling process.
+Parameters which should be "passed by value" should be declared using the ByVal prefix. By default, all parameters are passed "by reference". If you need to pass a value "by value", you need to prefix the parameter declaration with ByVal.

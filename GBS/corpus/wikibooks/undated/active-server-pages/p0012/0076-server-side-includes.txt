@@ -1,0 +1,17 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 12
+section: server-side-includes
+chunk: 76
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+ses as server-side includes. However, none is a substitute for the other. They all have their different purposes and you should know when to use each.
+
+=== Server.Execute ===
+This will execute another Active Server Page file from the website. You can do this conditionally using the If Then ... End If syntax. This is different from the server-side include statement which will be executed wherever it appears.
+Another difference between this statement and a server-side include is that all variables, functions and classes defined in the calling script will not be accessible in the executed script. This is a huge barrier to using this as an include and it is the main reason why I prefer server-side include to this statement.
+
+I have used this to build a modular web portal application with good success. Through a control panel, the user can configure which modules they would like to display on their website. The template engine checks this configuration and pulls in only the modules that we need to display and arranges the layout accordingly.

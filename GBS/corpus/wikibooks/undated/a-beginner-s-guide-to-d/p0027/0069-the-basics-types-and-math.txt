@@ -1,0 +1,41 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 27
+section: the-basics-types-and-math
+chunk: 69
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+t[5]
+
+So, a variable called 'a' which is an array of five ints is:
+
+int[5] a;
+
+Of course, this can be generalized for any type and count:
+
+type[count]
+
+You can also create arrays with no specified number of elements, which can then
+be expanded to fit any number of elements. These are called dynamic arrays,
+and the alternatives (with a set number of elements) are called static arrays. They are specified similarly to static arrays, but the count is
+excluded. A dynamic array of any number of ints is:
+
+int[]
+
+A variable called 'a' which is a dynamic array of any number of ints is:
+
+int[] a;
+
+And of course, this can be generalized for any type with:
+
+type[]
+
+[TODO: Array literals and initializing dynamic arrays to them? Should this be saved for later?]
+
+=== Array Access ===
+Array elements can be accessed like normal variables in code. That is, you can use an array element nearly anywhere you could use a simple value. To access element 1 from an array named 'a', for example:
+
+a[1]

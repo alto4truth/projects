@@ -1,0 +1,15 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 9
+section: functions-and-subroutines
+chunk: 64
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+en to use no recursion at all. A good rule-of-thumb is: if the procedure is much easier to write and maintain using recursion then go ahead and do so.
+
+= Summary =
+Procedures allow you to create reusable code "macros" that perform a specific task. Functions are procedures which return a value, whereas subroutines do not. Procedures may be declared anywhere within a page and referenced from anywhere on your page. Output from a subroutine or function will be placed at the location where the sent to the location where the procedure is invoked.
+Each procedure declaration may have an optional list of parameters. Parameters may be declared as being passed "by reference" or "by value". The default parameter passing convention is "by reference". Use ByVal or ByRef to explicitly declare your procedure parameters.

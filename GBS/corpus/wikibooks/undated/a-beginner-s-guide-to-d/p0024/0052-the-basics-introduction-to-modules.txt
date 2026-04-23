@@ -1,0 +1,26 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 24
+section: the-basics-introduction-to-modules
+chunk: 52
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+s.
+
+=== Overview ===
+Similar to functions, modules are another way to cut down a complex program into smaller parts which can be looked at separately.
+
+== Importing ==
+In D, to access a module X from module Y, module X must be imported in module Y.
+Importing a module is achieved through an import statement, consisting of the keyword import and the name of the module. For example, to import the module 'std.cstream' (which will be discussed later), the following statement is used:
+
+import std.cstream;
+
+Of course, this can be generalized to import any module:
+
+import module name;
+
+Everything defined in the imported module (e.g. functions, variables, etc.) become known to the importing module and can be used there.

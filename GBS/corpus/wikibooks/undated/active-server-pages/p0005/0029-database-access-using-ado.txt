@@ -1,0 +1,22 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 5
+section: database-access-using-ado
+chunk: 29
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+roblems when trying to create an application which will be used in a server cluster (where each cluster has its own version of the Application cache.)
+
+== Connecting to a Database ==
+Here is a sample showing how to open a connection to a database. To do this, we call the Server.CreateObject to create an instance of the built-in ADODB Connection object. Not only is this used to create the initial connection to the database, it will also be used to create the Recordset and Command Objects later.
+You will need to replace the text mysqluser, mysqlpass, and mysqldbname with the correct values for your database. Note that this is accessing a MySQL server on the local server (localhost) using ODBC.
+
+Note that you could wrap this statement with an On Error block to trap any exceptions that may occur.
+
+== INSERT, UPDATE, and DELETE ==
+The following will use the ADODB.Connection object to run an INSERT query on the database. The code is the same whether you are doing INSERT, UPDATE, or DELETE. You only need to change the sQuery variable with your modified query.
+
+The constants adCmdText and adExecuteNoRecords are described in the section ADO Constants.

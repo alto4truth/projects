@@ -1,0 +1,17 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 9
+section: functions-and-subroutines
+chunk: 54
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+eclaration like this will not do anything meaningful until it is actually called. It simply declares a procedure which will do work when it is called.
+
+== What is a Subroutine? ==
+A subroutine is a procedure that does not return a value to the caller. Subroutines are declared using the Sub statement and terminated with an End Sub statement.
+
+The subroutine call above will output text that looks like "Today's Date is: Jan, 23 2004 06:43:12AM" when it is called. The location in the web page where this is output depends on where the subroutine is called. You should call the subroutine at the exact point where you would like it to output the text.
+Unlike a function declaration, you are not allowed to assign a return value to the procedure name (ShowDate). If you attempt to use a subroutine as a function, you will receive a runtime error. The same is true when you try to use a function as a subroutine.

@@ -1,0 +1,14 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 3
+section: basic-asp-syntax
+chunk: 11
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+cludes allow you to retrieve and include files based on the absolute path (based on the Web site root) or relative to the calling page as shown below;
+
+There are benefits to using both. A good rule of thumb is this: if you expect you will be moving entire folders (or trees) of your web application then relative paths are more appropriate. If you expect things to stay pretty much where you created them then you should use absolute paths.
+Please note: When using IIS6 (Windows 2003 Server), relative paths are not enabled by default, which will cause any Server-Side includes using relative paths to cease functioning.

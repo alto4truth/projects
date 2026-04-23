@@ -1,0 +1,14 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 9
+section: functions-and-subroutines
+chunk: 61
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+n your procedures. Although this is not recommended because it makes your procedures less portable, there are some instances where this proves useful.
+
+=== Variable Hiding ===
+A variable may be declared "locally" and "globally" using the same name. This is perfectly legal in ASP. When you do this, the local variable will "hide" the global variable within the context of the procedure.

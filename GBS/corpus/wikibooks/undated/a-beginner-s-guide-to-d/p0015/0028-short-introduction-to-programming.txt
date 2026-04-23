@@ -1,0 +1,25 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 15
+section: short-introduction-to-programming
+chunk: 28
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+f instructions to get a specific task done.
+
+== How to Cook a Pancake ==
+Let's tell a really, really stupid, but capable, person how to cook pancakes.
+
+In a bowl, put in a cup of flour, one egg, and enough milk to make a smooth mixture.
+Mix it with a wooden spoon until it is smooth.
+Heat a frying pan with a small knob of butter until melted.
+Place a cup of the mixture into the frying pan and cook one side until bubbles form.
+Carefully turn the half-cooked pancake over and continue cooking the other side until it is firm.
+Place cooked pancake on a plate and repeat these steps until all the mixture is used.
+Simple and obvious, no?
+No, not really. For example, I didn't say to tip the flour out of the cup into the bowl, so a computer would have done literally what I said to do - "put a cup of flour" into the bowl. Then there is the egg; I didn't say to crack the egg and only put its contents (yolk and white) into the bowl, so the shell would have also gone in. And what exactly is a "smooth" mixture?
+Further literal execution of these instructions would have the computer trying to mix a bowl rather than the contents of the bowl. And this assumes that it knows what "mixing" is! And have you ever tried to use a knob of butter to heat a frypan? And what is a "knob" of butter? Will the computer wait until the butter is melted or the frypan is melted? Again with the cup; are we cooking it or its contents? How many bubbles do we wait for - two, three, ... ? What if no bubbles show up - do we keep cooking it while it rapidly burns to a cinder? The last instruction tells us to repeat but literally that includes all the steps, in a never ending frenzy of pancake making.
+I don't mean to scare you but it is important to realize that computers take your programs literally, and thus you have a responsibility to be accurate and precise. That is the challenge of programming.

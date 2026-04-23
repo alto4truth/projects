@@ -1,0 +1,20 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 8
+section: expressions
+chunk: 39
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+we know that we have to evaluate these sub-expressions first. So the first step in reducing this type of expression is to evaluate the sub-expression:
+
+The final reduction will yield a result of 14 which is a completely different result than we got before. Be careful about how you group your expressions. It can cause a lot of problems and increase the complexity of your code. If you want to keep your code simpler, you can always create new variables to store the results of sub-expressions.
+
+== Mathematical Expressions ==
+The following table lists all of the binary mathematical operators. They are "binary" because they require two arguments. The first argument is on the left-side and the second argument is on the right-side. So the operator "+" in the expression "5 + 6" has the binary arguments "5" and "6".
+
+The following table lists all of the unary mathematical operators. A unary operator only has a single argument to act on.
+
+Of course you can combine binary and unary operators in one expression. The results of one binary operation might serve as the argument to your unary operation.

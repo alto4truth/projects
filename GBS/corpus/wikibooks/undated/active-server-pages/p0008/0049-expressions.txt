@@ -1,0 +1,23 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 8
+section: expressions
+chunk: 49
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+cally not operators, we mention them here for completeness since datetime is a valid data type and it is often necessary to calculate dates and times.
+
+Information about optional arguments for these functions and valid interval types will be discussed in a later chapter. You should note that none of the mathematical operators apply to datetime values. You must use the various conversion and calculation functions above to manipulate dates.
+
+== Line Continuation Operator ==
+If you have a really long line in ASP that you would like to split into two lines, you can use the line continuation operator. This is an underscore (_) placed at the end of the line that tells the ASP interpreter that statement or expression continues on the next line.
+
+if ((bDaysLeft < DateDiff("d", Now(), dBirthDay)) Or _
+(bDaysLeft > DateDiff("d", Now(), dChristMas)) Then
+Response.Write "Hooray!"
+End If
+
+In the example above, we use the line continuation to continue a boolean expression. You may use it to continue any type of expression or statement. It makes sense to split up long lines for readability. Just be careful how you split lines so that you don't make the line more confusing to read.

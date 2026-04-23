@@ -1,0 +1,24 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 24
+section: the-basics-introduction-to-modules
+chunk: 51
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+(Java programmers: Please read the last subsection of this chapter)
+
+== What are modules? ==
+Technically, modules group things which belong together logically. A module can contain any number of definitions for functions, variables, and other D constructs which will be introduced later. These parts can then be easily accessed by other modules in D.
+Each D program consists of at least one module which contains the main() function (see previous section).
+Practically, in D a module is just a file with D source code (which has normally the file suffix ".d").
+
+== What are they good for? ==
+
+=== Reusable Code ===
+In programming, making code reusable is very important. Without reusable code, the process of writing even a fairly trivial program would be overwhelmed by the tasks of rewriting all of the basic code needed, such as communication with the user or network and mathematical functions.
+
+=== Overview ===
+Similar to functions, modules are another way to cut down a complex program into smaller parts which can be looked at separately.

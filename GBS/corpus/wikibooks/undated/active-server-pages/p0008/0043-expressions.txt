@@ -1,0 +1,21 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 8
+section: expressions
+chunk: 43
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+d to write an expression like the following:
+
+Of course, your expression can be as complicated as you want as long as it evaluates to a boolean value.
+
+== Logical Operators ==
+Whereas mathematical expressions are used to manipulate numbers, logical operators are used to work with the two boolean values "true" and "false". These operators are always used to combine two expressions that result in boolean values.
+
+In addition to these binary operators, there is also one unary operator:
+
+The negation operator basically will give you the opposite value of the expression. So if the expression evaluates to "true" and you perform the Not operation on it, it becomes "false". Conversely, "false" will become "true" when Not is applied.
+So using these logical operators, we can group many comparison expressions together to create a very complex expression like so:

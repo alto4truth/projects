@@ -1,0 +1,27 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 4
+section: conditionals-and-looping
+chunk: 23
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+we wanted the counter to increment by 2, we would write the For Next loop as follows:
+
+The output of this code will be:
+
+I = 1
+I = 3
+I = 5
+I = 7
+I = 9
+
+This time we only get five values output by the loop. This is because we are incrementing the counter by 2 instead of by 1 (the default.) Notice that we do not have to finish on the ending value (10). After incrementing the counter from 9 to 11, the loop checks to see if we have exceeded the ending value (10) and exits the loop.
+You can also count backwards like this:
+
+And of course, you can substitute expressions and variables for the starting and ending values and even the amount to "step through" the loop:
+
+=== Do While ===
+Another looping construct is the Do While loop which will repeat a block of program code as long as the condition is met. This is kind of like the If Then conditional statement in that it expects a boolean expression. Here is what it looks like:

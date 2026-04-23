@@ -1,0 +1,21 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 20
+section: templates-and-generic-programming-template-functions
+chunk: 45
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+antiated like any other template, as in foo!(int, char[])(12, "hello").
+
+== Example ==
+The classic example of a template function is the min function:
+
+This function determines which of any two arguments (of the same type) are smaller. (With the stupid caveat that it will return the second argument if they are equal.)
+
+min(12, 20); // Returns 12
+min("green"[], "blue"); // Return "blue"
+
+(A note about the second example. We pass min a slice of "green", because otherwise D will infer the type of the argument to be char[5], a static array. The type of "blue" is char[4], a different type. By slicing "green", we get a char[], a dynamic array, and D knows how to implicitly convert "blue" to this type.)

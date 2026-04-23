@@ -1,0 +1,20 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 24
+section: the-basics-introduction-to-modules
+chunk: 54
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+100% compatible library), it is not a part of the language itself. For that reason this book will not cover Phobos in-depth beyond what is necessary.
+
+== Writing Modules ==
+It is of course possible to write your own modules. In fact, any D program you write will be contained in a module. However, dividing your programs into multiple modules will not be introduced in this book until several more fundamentals are introduced.
+
+== Info for Java programmers ==
+Modules can contain zero or more class definitions and can also contain other entities, like e.g. functions.
+There is no relation between the module name and the name of contained entities.
+Module names follow the general rules for identifiers, the filename suffix is ".d".
+Module can be organized in packages (using directories) as in Java.

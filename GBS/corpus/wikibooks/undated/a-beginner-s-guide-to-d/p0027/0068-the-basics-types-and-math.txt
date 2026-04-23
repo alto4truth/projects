@@ -1,0 +1,31 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 27
+section: the-basics-types-and-math
+chunk: 68
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+als are the same as decimal literals except they are followed by an i. Complex literals are simply real literals plus imaginary literals. For example:
+
+One footnote is that complex decimal types take up double the amount of memory as their base real and imaginary decimal types because complex types are really just a real decimal and an imaginary decimal number stored together as one variable.
+
+=== User Defined Types ===
+D also supports several user defined types including enums, structs, classes, and more. These types are very powerful, but they are much more complicated to use. They will be covered in-depth later in the book.
+(Stub)
+
+== Arrays ==
+An array is a way to group data of the same type. An array contains any number of elements, and each element is a value of a specified type.
+Arrays can be made from any type (including other array types) similarly. The type for an array of ints with five elements is:
+
+int[5]
+
+So, a variable called 'a' which is an array of five ints is:
+
+int[5] a;
+
+Of course, this can be generalized for any type and count:
+
+type[count]

@@ -1,0 +1,15 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 3
+section: basic-asp-syntax
+chunk: 9
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+it up until the end of the line. There is no multi line comment in ASP. In order to comment multiple lines, each line must be preceded by a quote (').
+
+== Server-Side Includes (SSI) ==
+Server-Side Includes allow you to retrieve code from one web page and insert it into another page. This allows you to create common pieces of code and HTML which only need to be maintained in one place. Other web pages can include this content within their pages using this server directive.
+If you are using server-side include directives, you cannot place ASP code within the directive. This is because the directive is evaluated before the ASP code is interpreted. So trying to do something like the following is illegal:

@@ -1,0 +1,18 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 19
+section: templates-and-generic-programming-template-classes
+chunk: 41
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+n, we usually call this T. This generic class is called a template class, so called because it serves as a template for more concrete implementations.
+
+== Syntax ==
+A template class in D looks like this:
+
+Note the (T) after the name of the class. This is the template parameter list. To actually use the class, we must instantiate it, by saying something like:
+
+The template parameter list can have multiple parameters in it, just like a function parameter. A parameter with just a name is taken to be a type. Attempting to pass anything other than a type to T is an error. There are four kinds of template parameters:

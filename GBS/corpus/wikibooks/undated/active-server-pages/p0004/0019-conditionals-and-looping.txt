@@ -1,0 +1,15 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 4
+section: conditionals-and-looping
+chunk: 19
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+parentheses "(" and ")". You can always use parentheses for grouping expressions together but they are not required to enclose conditional statements.
+
+=== Select Case ===
+The If Then statements are great if you are just evaluating a "true" or "false" condition. But if you want to evaluate an expression other than a boolean and take some action based on the result, you will need another mechanism. This is why the ASP language includes the Select Case statement. This allows you to basically "select" from a list of many cases, the action to perform.
+The cases for a Select Case are all literal primitive values. You must have an "exact match" in order to match a "case". You may include more than one value to match, but you may not define ranges of values to match, nor may you define a pattern to match.

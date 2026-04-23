@@ -1,0 +1,23 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 13
+section: variable-types
+chunk: 84
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+variables can only be accessed by code defined within the class. More information about using classes in Active Server Pages will be discussed later.
+
+== Valid Variable Names ==
+To be valid, an ASP variable name must follow the following rules:
+
+Must begin with an alphabetic character
+All other characters must be alphanumeric or underscore ("_")
+Name must not exceed 255 characters in length
+Name must be unique within the scope it is defined
+Name must not be the same as a reserved word of built in functions, procedures, and objects.
+Variable names, just like statements are case-insensitive. This means that if you declare a variable with the name "myVar", you can access it using "MYVAR" or "myvar" or even "MyVaR".
+One way to avoid using reserved words and make it easier to identify what type of variables you are using is to use a naming convention. Usually the first letter or few letters of the variable names what information it holds.
+Examples:

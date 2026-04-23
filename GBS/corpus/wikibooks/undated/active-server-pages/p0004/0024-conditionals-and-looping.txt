@@ -1,0 +1,18 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 4
+section: conditionals-and-looping
+chunk: 24
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+g as the condition is met. This is kind of like the If Then conditional statement in that it expects a boolean expression. Here is what it looks like:
+
+What we have here is a loop that does exactly the same thing as the For Next example shown in the previous section. Why would you want to use this construct instead of a "for next"? The problem becomes obvious when it is not easy to determine how many repetitions of the loop you need to do.
+
+In this case, we do not know how many times we will have to divide the value of X by two until we end up with a value less than or equal to 1. So we just use the Do While loop to handle the logic for us.
+
+=== Do Until ===
+Almost identical to the Do While looping construct is the Do Until. It works exactly the same way except that it repeats the program block until the condition evaluates to "true". You could basically do the same thing with "Do While" by enclosing your expression with Not (expr), but the creators of ASP realized that the code would be cleaner using this more logical statement.

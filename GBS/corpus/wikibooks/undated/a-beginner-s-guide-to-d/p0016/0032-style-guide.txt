@@ -1,0 +1,25 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 16
+section: style-guide
+chunk: 32
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+This is hopefully fairly obvious.
+It is perfectly acceptable to refer to future concepts, so long as you do not actually depend on them being learned.
+
+== Style ==
+New terminology should be in italics, variable names in 'single quotes', and snippets of code, keywords or symbols in monospace font. Avoid using 1st person (that is, "I", "me", "my" and such) and 2nd person (that is, "you", "your", "etc").
+Feel free to use metaphors to describe concepts, just be careful not to take them beyond their limit.
+
+== Code ==
+Most sections should include one or more example code sections, no matter how trivial.
+This book is on the D language, not Phobos, so please use only din and dout in the examples. Descriptions of Phobos and other popular libraries will be contained in the appendix.
+Try to make each example, where appropriate, a complete application such that it contains a main() function and can compile and run in one step.
+Sections of code in the book must use the following coding convention:
+
+== Console Input/Output ==
+Example console output should be in bold, monospaced blocks. Wrapping should occur at column 80 as with code examples. Example input should be in bold italics. E.g.:

@@ -1,0 +1,17 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 9
+section: functions-and-subroutines
+chunk: 63
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+call itself" in order to perform a repetitive task. Creating a recursive function is as simple as declaring a function that contains a call to itself.
+
+As you can see on the last line of the subroutine, the bubble sort routine will call itself recursively as the span decreases by one each time. The function will stop calling itself once the span distance reaches one. The "depth" or "level of recursion" depends on the size of the array passed. If you have seven elements, the procedure will call itself 6 times.
+Shown below is some ASP code which will test the bubble sort routine be creating an array of seven numbers and invoking the BubbleSort procedure:
+
+You should notice, that we first call the procedure with a span of zero. Code in the procedure will recognize this as a signal to initialize the span parameter with for sorting.
+You should also be aware, that the bubble sort routine outlined above could easily be re-written to use no recursion at all. A good rule-of-thumb is: if the procedure is much easier to write and maintain using recursion then go ahead and do so.

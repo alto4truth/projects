@@ -1,0 +1,13 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 12
+section: server-side-includes
+chunk: 78
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+ve a login page that contains a form which posts to itself. If the user login is authenticated, you can transfer processing to a member control panel.
+
+You should note that if any HTML is output to the browser before the Server.Transfer statement is reached, the output of the new ASP file will be appended to the HTML that has already been output. While you could do a standard redirect using the ASP built-in statement Response.Redirect, that would discard any HTML that has already been output and rebuild the response from the beginning.

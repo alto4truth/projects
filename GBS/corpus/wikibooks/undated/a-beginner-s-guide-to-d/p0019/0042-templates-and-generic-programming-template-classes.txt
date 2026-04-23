@@ -1,0 +1,25 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 19
+section: templates-and-generic-programming-template-classes
+chunk: 42
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+r with just a name is taken to be a type. Attempting to pass anything other than a type to T is an error. There are four kinds of template parameters:
+
+Types
+The T in the example above is a type parameter.
+Constant values
+Nearly any value which can be determined at compile-time can be used as a template parameter. Value template parameters look just like function parameters, e.g. int i in a template parameter list means the template expects an integer literal or a const int.
+Alias parameters
+These parameters can accept essentially any symbol which can be determined at compile-time. This includes functions, other templates, classes, and much more. Alias parameters are declared by putting alias before the parameter's name.
+Tuple parameters
+D supports variadic templates. This is an advanced topic, and is covered later.
+
+== Example ==
+A simple templated stack (implemented with a linked list) might look like this:
+
+To use the above example, we might say:

@@ -1,0 +1,21 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 26
+section: the-basics-the-structure-of-d
+chunk: 64
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+and slash (+/). The following example is designed to show off the features of comments, and should not be taken as an example of the best use of them.
+
+number = 5; //Number is set to 5
+//number = 6; //We don't want number set to 6
+/* The next section of code subtracts one from number and assigns that value to number2 */
+number2 = number - 1;
+//The following lines demonstrate nesting vs. non-nesting comments:
+/+ This type of comment /+ Can /+ nest +/
+... +/ still in comment +/
+/* This type cannot /* nest
+*/ number = 7; //number is now set to 7

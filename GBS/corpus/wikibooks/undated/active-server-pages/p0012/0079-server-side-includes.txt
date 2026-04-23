@@ -1,0 +1,17 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 12
+section: server-side-includes
+chunk: 79
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+ng the ASP built-in statement Response.Redirect, that would discard any HTML that has already been output and rebuild the response from the beginning.
+
+= Summary =
+Server-side includes provide a powerful mechanism to reuse code in Active Server Pages. You can use it to create a website template, code libraries, and HTML modules which may be reused throughout your site.
+The two types of include statements are the virtual include and the file include. Use the virtual include to include ASP or HTML files using a path specifier that begins with a slash (/) denoting the document root of your website. The file include includes the content of a file with a path specifier that is relative to the directory of the calling script. The contents of the external file will be imported into the original document before any ASP code is processed.
+Alternatives to server-side include the Server.Execute statement which executes the external file as a stand-alone script and then combines this output with the output of the calling script. The other is the Server.Transfer statement which passes control over to the external script
+permanently (control never returns).

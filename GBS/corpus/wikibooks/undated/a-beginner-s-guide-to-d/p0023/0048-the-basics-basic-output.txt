@@ -1,0 +1,30 @@
+title: A Beginner's Guide to D
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-d
+authors: 
+page: 23
+section: the-basics-basic-output
+chunk: 48
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_D
+
+One of the most basic operations you can do with a program is to print out some text in a console window (sometimes also called DOS-box). Even if you later only use graphical environments to show nice windows on the screen, writing to a console is always helpful to tell the programmer what the program is currently doing so he/she can check if it does the right thing and can find bugs (mistakes in the source code) in the program.
+Very versatile functions to write something to the console are writef and writefln.
+First of all, these functions are placed in a separate module named "std.stdio", so you have to import it, as you have learned in Introduction to Modules.
+Here is a very simple program that only writes a single string literal to the console:
+
+If you compile and run it, you will see the text
+
+Hello, world!
+
+on the screen.
+As you have learned in Types and Math you can use escape sequences, also in writefln:
+
+Output:
+
+Hello,
+world!
+
+The difference between writef and writefln is only that the latter automatically appends a "\n" after the output. Everywhere where you use writefln you can instead use writef and append the newline yourself, this is just less practical.
+
+Output:

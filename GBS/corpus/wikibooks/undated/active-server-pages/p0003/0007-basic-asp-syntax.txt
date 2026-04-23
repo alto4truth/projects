@@ -1,0 +1,16 @@
+title: Active Server Pages
+source: wikibooks
+year: undated
+document_id: active-server-pages
+authors: 
+page: 3
+section: basic-asp-syntax
+chunk: 7
+source_ref: https://en.wikibooks.org/wiki/Active_Server_Pages
+
+page directive "Option Explicit" is in effect. If you place the following at the top of your ASP page, you will be required to declare all variables:
+
+If you don't want this requirement in all your scripts, you can leave it out. It is a useful tool to throw onto a page to check for mis-spelled or mis-used variable names. If you mis-spelled a variable, you will likely see "variable not defined".
+Variables are declared with a Dim statement and can include a single variable at-a-time or a comma-delimited list of variable names like shown in the following example:
+
+There is no such thing as a global variable in the ASP language. All variables are specific to the web page they are processed in. Once the page is done processing the values are lost. One exception to this is the Application object. It can hold a number of different values, each of which is associated with a string value. Another way is to pass variables in a web form or part of the URL in the Request object. More information on these topics will be covered later.
