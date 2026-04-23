@@ -2,11 +2,12 @@ from __future__ import annotations
 
 import io
 import json
-import shutil
+import re
 import sys
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
+from collections import defaultdict
 from pathlib import Path
 
 from pypdf import PdfReader
@@ -19,6 +20,21 @@ from gbs.cli import build_chunks_from_text, normalize_text, write_chunks
 
 ARXIV_API = "https://export.arxiv.org/api/query"
 DEFAULT_QUERY = "cat:cs.AI OR cat:cs.LG OR cat:cs.CL OR cat:cs.CV"
+RELEVANCE_RULES = {
+    "agent": 10,
+    "benchmark": 8,
+    "code": 8,
+    "evaluation": 6,
+    "framework": 6,
+    "llm": 10,
+    "multimodal": 7,
+    "rag": 10,
+    "reasoning": 8,
+    "retrieval": 8,
+    "safety": 10,
+    "search": 8,
+    "security": 10,
+}
 
 
 def fetch_atom(query: str, start: int, max_results: int) -> ET.Element:
@@ -61,6 +77,7 @@ def parse_entries(root: ET.Element) -> list[dict]:
                 "published": entry.findtext("atom:published", default="", namespaces=ns),
                 "updated": entry.findtext("atom:updated", default="", namespaces=ns),
                 "summary": " ".join(entry.findtext("atom:summary", default="", namespaces=ns).split()),
+                "categories": [node.attrib.get("term", "") for node in entry.findall("atom:category", ns)],
                 "pdf_url": pdf_url,
             }
         )
@@ -77,6 +94,24 @@ def fetch_pdf_text(pdf_url: str) -> str:
         if text.strip():
             parts.append(text)
     return normalize_text("\n\n".join(parts))
+
+
+def score_entry(entry: dict) -> tuple[int, list[str]]:
+    score = 40
+    reasons: list[str] = []
+    categories = set(entry.get("categories", []))
+    if {"cs.AI", "cs.LG", "cs.CL", "cs.CV"} & categories:
+        score += 15
+        reasons.append("matches target AI categories")
+
+    haystack = f"{entry['title']} {entry['summary']}".lower()
+    for keyword, points in RELEVANCE_RULES.items():
+        pattern = r"\b" + re.escape(keyword) + r"\b"
+        if re.search(pattern, haystack):
+            score += points
+            reasons.append(f"contains keyword '{keyword}'")
+
+    return min(score, 100), reasons[:5]
 
 
 def import_entry(entry: dict, corpus_dir: Path) -> dict | None:
@@ -101,16 +136,40 @@ def import_entry(entry: dict, corpus_dir: Path) -> dict | None:
         return None
 
     output_dir = write_chunks(chunks, corpus_dir)
+    relevance_score, reasons = score_entry(entry)
+    rerank_score = min(100, relevance_score + 5 if relevance_score >= 65 else relevance_score)
     return {
         "id": entry["id"],
         "title": entry["title"],
         "authors": entry["authors"],
+        "categories": entry["categories"],
         "published": entry["published"],
         "updated": entry["updated"],
+        "ori_summary": entry["summary"],
+        "summary": entry["summary"],
+        "translation": None,
+        "relevance_score": relevance_score,
+        "reasoning": "; ".join(reasons) if reasons else "matched arXiv category query",
+        "rerank_relevance_score": rerank_score,
+        "rerank_reasoning": "heuristic rerank score derived from title/summary/category signals",
+        "is_filtered": rerank_score < 65,
+        "is_fine_ranked": rerank_score >= 65,
         "pdf_url": entry["pdf_url"],
         "corpus_path": str(output_dir.relative_to(ROOT)),
         "chunk_count": len(chunks),
     }
+
+
+def write_daily_feed(imported: list[dict], feed_dir: Path) -> None:
+    by_day: dict[str, list[dict]] = defaultdict(list)
+    for item in imported:
+        day = item["published"][:10].replace("-", "") or "undated"
+        by_day[day].append(item)
+
+    for day, items in by_day.items():
+        output_path = feed_dir / f"{day}.json"
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text(json.dumps(items, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
 def main() -> None:
@@ -119,7 +178,9 @@ def main() -> None:
 
     corpus_dir = ROOT / "corpus"
     catalog_dir = ROOT / "catalogs"
+    feed_dir = ROOT / "feeds" / "arxiv_daily"
     catalog_dir.mkdir(parents=True, exist_ok=True)
+    feed_dir.mkdir(parents=True, exist_ok=True)
 
     root = fetch_atom(query=query, start=0, max_results=limit)
     entries = parse_entries(root)
@@ -139,6 +200,7 @@ def main() -> None:
         print(f"  imported [{item['chunk_count']} chunks]")
 
     catalog_path = catalog_dir / "arxiv_articles.json"
+    write_daily_feed(imported, feed_dir)
     for item in imported:
         item.pop("chunk_count", None)
     catalog_path.write_text(json.dumps(imported, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

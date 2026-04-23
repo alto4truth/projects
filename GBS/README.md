@@ -91,6 +91,11 @@ python scripts/import_arxiv.py 'cat:cs.AI OR cat:cs.LG OR cat:cs.CL OR cat:cs.CV
 python -u scripts/import_gutendex_technical_books.py
 ```
 
+`import_arxiv.py` now produces two outputs:
+
+- `corpus/arxiv/...` for full-text search
+- `feeds/arxiv_daily/YYYYMMDD.json` for a ranked metadata feed
+
 ## Next steps
 
 1. Add `pdf` and `epub` extraction.
