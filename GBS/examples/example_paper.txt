@@ -1,0 +1,11 @@
+INTRODUCTION
+
+Full-text search for books and papers is still broken in practice. Web search is optimized for pages, not for structured corpora of long documents. Existing tools rarely expose every matching occurrence with enough context.
+
+METHODS
+
+One pragmatic workaround is to reshape long-form documents into code-search-friendly text chunks. Each chunk becomes a small file with explicit metadata in the path and in the file header.
+
+RESULTS
+
+If the corpus is legal to publish, GitHub code search can act as the execution layer. The repository layout becomes part of the product design, not just an implementation detail.

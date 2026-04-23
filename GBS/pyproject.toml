@@ -1,0 +1,18 @@
+[project]
+name = "gbs"
+version = "0.1.0"
+description = "Build GitHub-code-search-friendly corpora from long-form documents."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+pdf = ["pymupdf>=1.24.0"]
+epub = ["ebooklib>=0.19", "beautifulsoup4>=4.12.0"]
+
+[project.scripts]
+gbs = "gbs.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
