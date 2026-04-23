@@ -1,0 +1,25 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 71
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+al filtering
+and the retention of samples that support multistep reasoning. Overall, these findings indicate
+that while balanced weighting provides a robust
+default, the EVIAN framework allows practitioners
+to adjust score weights to prioritize task-specific
+objectives, such as hallucination mitigation via SV
+or enhanced reasoning viaS L.
+D Generalizability Across Model
+Architectures
+Motivation: Addressing Auditor–Target Architectural Bias.A potential concern regarding our
+main results is the possibility that EVIAN overfits to the inductive biases shared by the auditor
+(Qwen2.5-VL-7B) and the fine-tuned target model
+(Qwen2-VL-2B). Since these two models belong to
+the same family, one could argue that EVIAN does
+not truly identify intrinsically high-quality samples, but instead selects data that align with Qwenspecific reasoning heuristics. This concern is particularly acute for theLogical Coherencedimension,

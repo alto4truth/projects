@@ -1,0 +1,30 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 14
+section: critical-guidelines-for-extraction
+chunk: 52
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+1. **FIELD: "when_to_use" (The Trigger Scope)**
+- **Definition:** Precisely define the context where this best practice applies. You
+MUST consider three dimensions:
+a. **Task Requirement:** What is the user specifically asking for? (e.g., "When the
+task requires verifying code execution results...")
+b. **Specific Scenario:** What is the current state of the agent? (e.g., "When
+possessing a vague error message but no source code...")
+c. **Observation:** What favorable condition appeared? (e.g., "When the search
+results return multiple high-confidence API documents...")
+- **STRICT CONSTRAINT:**
+- Do NOT use specific dataset names (e.g., "In AlfWorld").
+- Do NOT use specific entity names (e.g., "When analyzing ’main.py’"). Instead,
+generalize it (e.g., "When analyzing the entry-point script").
+2. **FIELD: "experience" (The Solution)**
+- **Definition:** A strict, actionable standard operating procedure.
+- **Constraint:** **PURELY FORWARD-LOOKING.** Do NOT explain why the approach was
+superior. Do NOT include phrases like "The agent succeeded because..." or "It is
+better to...".
+- **Structure:** Directly provide the step-by-step instruction on how to execute this
+efficiency. Use imperat

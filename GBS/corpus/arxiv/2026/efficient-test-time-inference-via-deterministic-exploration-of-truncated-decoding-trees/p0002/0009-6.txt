@@ -1,0 +1,54 @@
+title: Efficient Test-Time Inference via Deterministic Exploration of Truncated Decoding Trees
+source: arxiv
+year: 2026
+document_id: efficient-test-time-inference-via-deterministic-exploration-of-truncated-decoding-trees
+authors: Xueyan Li; Johannes Zenn; Ekaterina Fadeeva; Guinan Su; Mrinmaya Sachan; Jonas Geiping
+page: 2
+section: 6
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20500v1
+
+.2199 0.2631
+Table 9: Results for DeepConf (Fu et al., 2025) on GSM8K (Cobbe et al., 2021) with Qwen2.50.5B-Instruct. See Appendix D.4 for details.
+25
+
+Method 2 4 8
+Mean Confidence
+Weighted 0.14060.15580.1607
+Top Percent Weighted (10%) 0.1371 0.1451 0.1544
+Top Percent Weighted (25%) 0.1363 0.1524 0.1439
+Top Percent (10%) 0.1433 0.1493 0.1471
+Top Percent (25%) 0.1419 0.1439 0.1503
+Tail Mean Conf (64 Tokens)
+Weighted 0.1381 0.1518 0.1635
+Top Percent Weighted (10%) 0.1362 — 0.1478
+Top Percent Weighted (25%) 0.1410 0.1468 0.1516
+Top Percent (10%) 0.1409 0.1435 0.1479
+Top Percent (25%) 0.1388 0.1464 0.1470
+Tail Mean Conf (10%)
+Weighted 0.1410 0.1503 0.1600
+Top Percent Weighted (10%) 0.1377 0.1434 0.1410
+Top Percent Weighted (25%) 0.1385 0.1376 0.1446
+Top Percent (10%) 0.1341 0.1420 0.1497
+Top Percent (25%) 0.1394 0.1385 0.1444
+Min Sliding Mean Conf (64 Tokens)
+Weighted 0.1401 0.14970.1676
+Top Percent Weighted (10%) 0.1418 0.1470 0.1469
+Top Percent Weighted (25%) 0.1347 0.1465 0.1456
+Top Percent (10%) 0.1411 0.1478 0.1499
+Top Percent (25%) 0.1418 0.1457 0.1470
+Bottom Sliding Mean Conf (10%, 64 Tokens)
+Weighted 0.1395 0.1547 0.1618
+Top Percent Weighted (10%) 0.1389 0.1432 0.1490
+Top Percent Weighted (25%) 0.1375 0.1463 0.1490
+Top Percent (10%) 0.1426 0.1462 0.1495
+Top Percent (25%) 0.1394 0.1418 0.1476
+Bottom Sliding Mean Conf (50%, 64 Tokens)
+Weighted0.14410.1501 0.1646
+Top Percent Weighted (10%) 0.1419 0.1523 0.1526
+Top Percent Weighted (25%) 0.1390 0.1467 0.1489
+Top Percent (10%) 0.1365 0.1439 0.1511
+Top Percent (25%) 0.1391 0.1462 0.1461
+Table 10: Results for DeepConf (Fu et al., 2025) on MMLU-Pro (Wang et al., 2024c) with
+Qwen2.5-0.5B-Instruct. See Appendix D.4 for additional information.
+26

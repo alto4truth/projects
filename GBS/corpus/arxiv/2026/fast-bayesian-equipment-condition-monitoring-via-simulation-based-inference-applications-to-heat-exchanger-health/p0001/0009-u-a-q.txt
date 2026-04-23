@@ -1,0 +1,38 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+1−exp
+"
+−
+tX
+i=1
+S(i)·g l ·∆L i
+#!
+,(17)
+whereL max = 0.95represents the physical saturation of
+the leak andg l ∈ {0,1}is a binary leakage indicator
+determined by the sampled failure modez. The increments∆L i are sampled from an exponential distribution
+∆Li ∼exp (1/β l), where the scale parameterβ l determines the growth rate of the failure.
+C. Bayesian Inference and Probabilistic Modeling
+Bayesian inference offers a rigorous mathematical
+framework for quantifying uncertainty in model parametersθgiven observed datay. In the case of industrial
+simulations, it solves the inverse problem of determining the distributionp(θ|y)representing the probability
+that a set of parametersθproduce the observed sensor
+datay. The cornerstone of the Bayesian approach is the
+posterior distribution,
+p(θ|y) = p(y|θ)p(θ)
+p(y) ,(18)
+wherep(θ)is the prior,p(y|θ)is the likelihood, and
+p(y) =
+R
+p(y|θ)p(θ)dθis the model evidence. In the
+context of heat exchanger modeling,θmay include parameters such as the effective heat transfer coefficient,
+fouling factor, mass flow rates, and failure mode indicators. The likelihood is typically constructed based on a
+well-defined physical model such as the one in Sec. IIB,

@@ -1,0 +1,32 @@
+title: Interval POMDP Shielding for Imperfect-Perception Agents
+source: arxiv
+year: 2026
+document_id: interval-pomdp-shielding-for-imperfect-perception-agents
+authors: William Scarbro; Ravi Mangal
+page: 2
+section: additionalempiricalresults
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20728v1
+
+d many probability samples,
+Fwd-Sampling exposes substantially more uncertainty than a
+single posterior, but as an inner approximation it can still
+miss the exact worst-case belief corners that the LP envelope
+captures.
+The remaining TaxiNet failure rate is also informative. Even
+atβ= 0.95, the Envelope Shield still fails in roughly40%
+of runs. This is not obviously an artifact of the LP relaxation
+alone; rather, the results suggest that it reflects the intrinsic
+difficulty of a runway-alignment task in which observation
+noise still leaves several plausible latent states after one sensor
+reading. The shield can prevent overconfident corrections, but
+it cannot recover information that the sensor channel never
+supplied.
+Obstacle pushes the aliasing effect further. With only 3
+observations for 50 states, each observation aggregates many
+states with incompatible safe actions. Figure 6 shows that
+memoryless Observation and Carr are then driven to the same
+corner of the tradeoff curve: around2%fail, but at roughly
+98%stuck. Belief history breaks this deadlock because the
+Fig. 6. Obstacle Pareto scatter over thresholdβunder adversarial perception.
+With only three observations for fifty st

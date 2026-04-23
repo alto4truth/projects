@@ -1,0 +1,33 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+)
+𝑘 ,(22)
+𝐽𝑣 =
+𝐿∑
+𝑙=1
+𝜆(𝑙)
+𝑣 𝐽 (𝑙)
+𝑣 ,
+𝐽f f =
+𝐿∑
+𝑙=1
+2∑
+𝑚=1
+𝜆(𝑙)
+f f 𝐽 (𝑙)
+f f,𝑚,
+with layer-wise regularization coefficients𝜆(𝑙)
+𝑘 , 𝜆(𝑙)
+𝑣 , 𝜆(𝑙)
+f f ≥0.
+This formulation allows independent control of the regularization strength for each component and each layer of the
+Transformer encoder.
+:Preprint submitted to Elsevier Page 4 of 13

@@ -1,0 +1,30 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 2
+section: feret
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+ER at fixed APCER also
+requires the presence of attack samples in the evaluation
+dataset to determine the APCER thresholds. Due to the
+absence of attack samples, the APCER thresholds have to
+be determined in advance using a different dataset containing attack samples. Hence, we start by evaluating each of
+the considered MAD techniques on the complete MAD22
+[22] dataset, including its original subsets (FaceMorpher
+[44], MIPGAN I [57], MIPGAN II [57], OpenCV [34], and
+Webmorph [12]) and its extension MorDIFF [8], to extract
+the thresholds that result in a maximum APCER of 1%,
+10%, and 20%. Since MixFaceNet-MAD and MADPromptS
+normalize the MAD scores before extracting the metrics,
+the mean and standard deviation values used in this process
+are also extracted. Hence, the considered thresholds are
+determined based on information extracted from both bona
+fide and attack samples, while following the methodology
+used in real-world MAD application settings, where the
+classification thresholds and normalization statistics are predefined based on the evaluation of labeled datasets and
+subsequently applied in the field. Then, each MAD method
+is used to determine the BPCER achieved by the origi

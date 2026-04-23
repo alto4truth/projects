@@ -1,0 +1,84 @@
+title: Tokenised Flow Matching for Hierarchical Simulation Based Inference
+source: arxiv
+year: 2026
+document_id: tokenised-flow-matching-for-hierarchical-simulation-based-inference
+authors: Giovanni Charles; Cosmo Santoni; Seth Flaxman; Elizaveta Semenova
+page: 1
+section: gpu-nvidia-a100-pcie-40gb
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20723v1
+
+ated parameter and observation
+tokens are processed jointly by self-attention and mapped to the vector-field output through a final
+linear readout.
+21
+
+Algorithm 1:LF Sampling for TFMPE
+Input: Prior functions p(θg), p(ηs|θg, hs), function input distributionsp(hs), p(is), simulator
+function sim(θg, ηs, is), observed datayobs = (yobs
+1 , . . . , yobs
+ns )with corresponding
+function inputsh obs, iobs, number of samplesN
+Output:Trained posterior estimator parametersϕ p
+// Initialization
+Randomly initialize estimator parametersϕl, ϕp ;
+Initialize empty single-simulation datasetDs ={};
+Initialize empty multi-simulation datasetDm ={};
+// Generate single-simulation training data
+Sampleθ (i)
+g ∼p(θ g)fori= 1, . . . , N;
+Sample function inputsh(i)
+s ∼p(h s), i(i)
+s ∼p(i s)fori= 1, . . . , N;
+Sampleη (i)
+s ∼p(η s|θ(i)
+g , h(i)
+s )fori= 1, . . . , N;
+Simulatey (i)
+s ∼sim(θ (i)
+g , η(i)
+s , i(i)
+s )fori= 1, . . . , N;
+Ds ={(θ (i)
+g , η(i)
+s , y(i)
+s , h(i)
+s , i(i)
+s )}N
+i=1 ;
+// Stage 1: Learn per-site neural surrogate
+Optimizeϕ l usingL 1(ϕl) =L FMPE(ϕl;y s|θg, ηs, hs, is)onD s ;
+// Generate multi-simulation training data using the learned surrogate
+fori= 1, . . . , Ndo
+Sampleθ (i)
+g ∼p(θ g);
+Sample function inputsh(i) ∼p(h), i (i) ∼p(i);
+Sampleη (i)
+s ∼p(η s|θ(i)
+g , h(i)
+s )fors= 1, . . . , n s ;
+Generatey (i)
+s ∼q ϕl(ys|θ(i)
+g , η(i)
+s , i(i)
+s )fors= 1, . . . , n s ;
+end
+Dm ={(θ (i)
+g , η(i), y(i), h(i), i(i))}N
+i=1 ;
+// Stage 2: Learn full posterior
+Optimizeϕ p usingL 2(ϕp) =L FMPE(ϕp;θ g, η|y, h, i)onD m ;
+returnϕ p such thatη, θ g ∼q ϕp(θg, η|yobs, hobs, iobs)
+Joint The per-site surrogate and posterior estimator were trained using the same architecture. The
+data set for posterior estimation is the concatenation of the surrogate training data and the
+posterior training data sampled from the estimator itself. This joint inference variant provides
+a unified estimator for sampling observations or posterior samples.
+MLP The transformer was replaced with a multi-layer perceptron (MLP). The MLP inputs were
+computed as a concatenation of the value and functional input of each token into a single
+vector (positional, group and variable id embeddings were omitted as redundant). The MLP
+consisted of2 × 256layers with rectified linear units as activations and a 10% drop out per
+layer. This experiment shows the relative effects of the Transformer architecture on inference.
+No Grouping This ablation removes the group id embedding from the input tokens. The group
+embedding separates tokens belonging to each site without requiring the architecture to deduce
+it from the multi-site data and the positional embeddings alone.
+22

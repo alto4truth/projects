@@ -1,0 +1,24 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+discrete domain, while minimizing frequency distortion. In vision tasks, the spatial frequency corresponds to the rate of change in
+pixel or feature values, where low frequencies capture smooth regions and global
+structure, and high frequencies represent edges, textures, and fine details. Preserving these high-frequency components during discretization is critical for accurate visual representation. As illustrated in Fig.2, BIL differs from hold-based
+methods by approximating the integration operation rather than the input signal itself. It employs a trapezoidal-rule formulation that uses both current and
+previous samples, treating the sampling period∆as a fixed scaling factor for the
+calculation of the trapezoidal area rather than a dynamic interpolation variable
+as in FOH.
+Whenappliedtoacontinuoussystemmatrix,thediscretetimerepresentation
+is:
+¯A= (I− ∆
+2 A)−1(I+ ∆
+2 A)(7)
+¯B= (I− ∆
+2 A)−1∆B(8)

@@ -1,0 +1,30 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+hts the diagnostic precision of EVIAN, which
+consistently extracts higher-quality data from a
+noisy pool.
+These gains stem from EVIAN’s
+“Decomposition-then-Evaluation” paradigm,
+which addresses fine-grained defects overlooked
+by coarse auditing approaches. Filters such
+as CLIPScore and BLIP-2 provide moderate
+improvements but fail to capture errors like
+factual inaccuracies or logical fallacies. Moreover,
+EVIAN outperforms theQwen2.5-VL baseline
+(70.20 vs. 66.34) using the identical auditor
+architecture, suggesting that the performance gains
+stem from our structured verification logic rather
+than simple knowledge distillation. By explicitly
+evaluating Image-Text Consistency, Logical
+Coherence, and Factual Accuracy, EVIAN yields
+targeted diagnostics that translate into stronger
+downstream models. For example, EVIAN’s
+leading performance on MME (1876.89) and

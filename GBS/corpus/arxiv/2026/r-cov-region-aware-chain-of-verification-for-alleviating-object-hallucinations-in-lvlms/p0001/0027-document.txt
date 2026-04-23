@@ -1,0 +1,54 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+Table 2.Results on MME existence subset.We report both accuracy and accuracy+. Results for LogicCheckGPT are reproduced
+by us using the official code. Numbers for other methods are taken
+from [49]. The best results are inbold.
+Model Method Acc Acc+
+mPLUG-Owl
+Vanilla 65.00 35.00
+LRV-Instruction 83.33 66.67
+SelfCheck 85.00 73.33
+LURE 80.00 60.00
+LogicCheckGPT 95.00 90.00
+R-CoV (ours) 96.67 93.33
+MiniGPT-4
+Vanilla 78.33 56.67
+LRV-Instruction 83.33 66.67
+SelfCheck 80.00 60.00
+LURE 85.00 70.00
+LogicCheckGPT 86.67 73.33
+R-CoV (ours) 88.33 76.67
+LLaV A-1.5
+Vanilla 96.67 93.33
+SelfCheck 96.67 93.33
+LURE 93.33 86.67
+LogicCheckGPT 96.67 93.33
+R-CoV (ours) 98.33 96.67
+Qwen2.5-VL
+Vanilla 95.00 90.00
+LogicCheckGPT 95.00 90.00
+R-CoV (ours) 98.33 96.67
+Table 3.Results on CHAIR.We report CHAIR S, CHAIR I, and
+F1 score. Results for LogicCheckGPT are reproduced by us using
+the official code. The best results are inbold.
+Model Method CHAIR S ↓CHAIR I ↓F1↑
+mPLUG-Owl
+Vanilla 88.0 32.1 60.1
+LogicCheckGPT 70.0 25.9 61.4
+R-CoV (ours) 64.0 21.7 64.3
+MiniGPT-4
+Vanilla 46.0 13.0 66.0
+LogicCheckGPT 44.0 12.9 66.4
+R-CoV (ours) 34.0 9.2 67.1
+LLaV A-1.5
+Vanilla 52.0 16.2 73.2
+LogicCheckGPT 38.0 11.5 74.8
+R-CoV (

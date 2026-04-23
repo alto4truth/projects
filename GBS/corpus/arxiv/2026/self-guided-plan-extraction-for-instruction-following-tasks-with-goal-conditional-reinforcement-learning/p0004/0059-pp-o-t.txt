@@ -1,0 +1,54 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 59
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+rge a stone pickaxe and mine coal"
+Algorithm 5Complete SuperIgor Training
+Pipeline
+Require:
+1: EnvironmentE
+2: Instruction datasetD train ={I 1, I2, . . . , IN }
+3: Initial LLM plannerf LLM with parametersθ LLM
+4: Initial RL policyπ θ with parametersθ RL
+5: Mastery thresholdτ, number of cyclesC
+Ensure:
+6: Optimized plannerf ∗
+LLM
+7: Trained policyπ ∗
+θ
+8:
+9: Initialize subtask bankB ← ∅
+10: Initialize candidate plansP ← {}
+11: Initialize mastered subtasksM ← ∅
+12:
+13:Initial Plan Generation (Cycle 1):
+14: Extract subtasks:S ←f LLM(Dtrain)
+15: Build ontology:O ←BuildOntology(S, f LLM)
+16: Generate initial plans: Pinitial ←ExpandPlans(D train,O)
+17:
+18: Fine-tunef LLM onP initial using SFT
+19: Generate training plans:P ←f LLM(Dtrain)
+20:
+21:forcyclec= 1toCdo
+22:
+23:Policy Training with Skill Curriculum:
+24: Train πθ on P using PPO with Skill Curriculum Learning
+25: Update mastered subtasksMbased on success rates
+26:
+27:Plan Validation:
+28: Executeπ θ with plansPfor multiple seeds
+29: For every plan P in compute average success rate
+SR(p)
+30: Construct preference datasetD pref
+31:
+32:LLM Fine-tuning:
+33: Fine-tunef LLM onD pref using DPO
+34:
+35:Plan Generation:
+36: Select plans for ne

@@ -1,0 +1,28 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+ndFactual Accuracyscores, respectively.
+Configuration MME MMBench SEEDBench ScienceQA A-OKVQA POPE Avg
+w/o Decomposition 1706.70 0.6401 0.6312 0.7085 0.7170 76.93 67.93
+w/oSL 1656.62 0.3425 0.5324 0.5563 0.6288 78.45 57.27
+w/oSK 1604.91 0.6110 0.5875 0.6604 0.6629 75.77 64.21
+w/oSL, SK (OnlySV ) 1807.13 0.5605 0.6092 0.6822 0.7389 68.56 65.36
+EVIAN (Full) 1876.89 0.6463 0.6359 0.7115 0.7493 79.87 70.20
+average performance (70.20), confirming the synergistic benefit of combining all three evaluation
+axes. Most notably, removing Logical Coherence
+(SL) leads to a significant decline in performance
+to 57.27. This counterintuitive outcome arises because filtering based solely on factual accuracy
+(SK) and visual consistency (SV ) inadvertently favors responses that are factually correct and visually grounded but logically inconsistent. The
+prevalence of such inconsistent samples introduces
+conflicting supervision signals, which significantly
+impairs the model’s performance on reasoningintensive benchmarks like ScienceQA. This confirms that logical integrity is not merely an auxiliary
+metric but a critical factor for complex reasoning
+tasks.
+In contrast, relying solely on Image-Text Consi

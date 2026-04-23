@@ -1,0 +1,20 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 53
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+models, taking 0.57 for Llama-3, and relatively higher values for the remaining
+LLMs, ranging from 0.94 for Gemma-3 to 0.99 for Gemini-2.5-Flash. This indicates a strong tendency for predictions to
+align with stereotypes in the race-gender intersection. In contrast, the lower sDIS values on Race_SES dataset suggest a
+weaker but still consistent stereotype-aligned tendency of the different LLMs.
+Fairness.While SF values for all LLMs remain near zero, indicating low observed disparity in favorable predictions
+across subgroups, this should be interpreted with caution as SF is computed solely from model outputs and may
+be affected by the limited number of non-‘unknown’ predictions. DF, however, reveals a more nuanced picture. On
+Race_SES dataset, it ranges from 0.36 for Llama-3 to 1.11 for Gemini-2.0-Flash, indicating measurable inter-subgroup
+disparity in favorable-outcome rates. On Race_Gender dataset, Llama-3 records the highest finite DF value of 2.37,
+suggesting comparatively stronger subgroup disparity for this model, while it shows unbounded values for the remaining

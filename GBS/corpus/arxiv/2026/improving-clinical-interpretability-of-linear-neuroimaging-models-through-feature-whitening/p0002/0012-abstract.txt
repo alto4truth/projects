@@ -1,0 +1,38 @@
+title: Improving clinical interpretability of linear neuroimaging models through feature whitening
+source: arxiv
+year: 2026
+document_id: improving-clinical-interpretability-of-linear-neuroimaging-models-through-feature-whitening
+authors: Sara Petiton; Antoine Grigis; Raphaël Vock; Edouard Duchesnay
+page: 2
+section: abstract
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20675v1
+
+from whitened space to feature space, for each pairp, via the
+transformation:
+θ=W ⊤
+ZCA-corβ.(3)
+2.6. Mapping classifier weights back to feature space
+For each pair of whitened features(z1, z2)(each given as vector of lengthn), letβ 1 andβ 2 be the classifier weights associated withz 1 andz 2 in the whitened space, andθ 1 andθ 2 the
+corresponding weights in the original feature space.
+These weights are related by the2×2whitening matrix
+Wp =
+
+w11 w12
+w21 w22
+
+,
+wherew 11 =w 22 > w 12 =w 21 andw 11 >0, since a2×2
+ZCA-cor whitening matrix is symmetric, with positive and
+equal diagonal terms larger than the off-diagonal entries.
+The original-space weights can be expressed as
+θ1 =w 11β1+w12β2, θ 2 =w 21β1+w22β2 =w 12β1+w11β2.
+It follows that
+β1 > β 2 ⇒(w 11 −w 12)(β1 −β 2)>0⇒θ 1 > θ 2.
+Thus, ifz 1 has a higher weight thanz 2 in the whitened space,
+the same order is preserved in the original feature space,
+preserving the relative contributions of input features (i.e.,
+left/right or GM/CSF features).
+2.7. Regularized ZCA-cor whitening
+Since our primary objective is interpretability, we propose a novel whitening procedure to decorrelate features
+while preserving class-relevant correlatio

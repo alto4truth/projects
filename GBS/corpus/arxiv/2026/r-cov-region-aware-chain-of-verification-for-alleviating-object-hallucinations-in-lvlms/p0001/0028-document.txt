@@ -1,0 +1,42 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+Vanilla 46.0 13.0 66.0
+LogicCheckGPT 44.0 12.9 66.4
+R-CoV (ours) 34.0 9.2 67.1
+LLaV A-1.5
+Vanilla 52.0 16.2 73.2
+LogicCheckGPT 38.0 11.5 74.8
+R-CoV (ours) 30.0 8.7 77.5
+Qwen2.5-VL
+Vanilla 42.0 8.3 73.0
+LogicCheckGPT 40.0 8.2 73.6
+R-CoV (ours) 30.0 6.9 74.4
+pute. As shown in Figure 3, compared with the prior state
+of the art,i.e., LogicCheckGPT, our R-CoV can always
+achieve the same performance with less computational cost.
+It is worth noting that it takes at least 19 seconds per query
+for LogicCheckGPT to start to surpass the performance of
+the vanilla model, whereas ours only takes around 13 seconds. This demonstrates the efficiency of our method.
+Table 4.Results on GPT-4o assisted evaluation.We report both
+accuracy and relevancy scores. The best results are inbold.
+Model Method Acc Rel
+mPLUG-Owl Vanilla 4.78 7.94
+R-CoV (ours) 6.91 8.41
+MiniGPT-4 Vanilla 5.69 8.62
+R-CoV (ours) 7.24 8.90
+LLaV A-1.5 Vanilla 6.48 8.91
+R-CoV (ours) 7.48 9.03
+Qwen2.5-VL Vanilla 8.35 9.65
+R-CoV (ours) 8.76 9.72
+Results on MME existence subset.We also evaluate
+our method on the MME existence subset, focusing on
+the object existence hallucination. The results are shown
+in Table 2. Again, our R-CoV consis

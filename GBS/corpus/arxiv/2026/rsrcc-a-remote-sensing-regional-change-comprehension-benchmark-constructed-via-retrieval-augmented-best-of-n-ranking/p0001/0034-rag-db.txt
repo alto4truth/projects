@@ -1,0 +1,26 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 1
+section: rag-db
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+Implication for bias and robustness.By the Lipschitz property of𝐹, Lemma A yields a direct
+bound on prediction shift:
+∥𝐹(𝑥;S in) −𝐹(𝑥;S mix) ∥ ≤𝐿 𝐹 · ∥𝜙(S in) −𝜙(S mix) ∥.(17)
+Thus, restricting retrieval toD𝑔(𝑥) controls the induced context shift and helps preserve the local
+decision boundary around𝑥. In contrast, conditioning on cross-group examples may move the
+effective context away fromℎ(𝑥), increasing boundary distortion and introducing bias due to OOD
+exemplars.
+In our framework, retrieval is performed in the encoder space and the Best-of-𝑁 filter further selects
+candidates whose retrieved context yields semantically consistent change descriptions. Together,
+these mechanisms promote in-group conditioning and reduce the likelihood of spurious reasoning
+driven by out-of-group examples.
+B Inference-Time Preference-Guided Ranking
+Our framework employs an inference-time preference-guided ranking strategy to select high-quality
+captions without performing gradient-based optimization. Let𝜋ref (𝑦|𝑠) denote a frozen generator
+that produces candidate captions𝑦∈ Y for an image pair𝑠∈ S . Each candidate is evaluated using
+a retrieval-augmented scoring function𝐽𝜙 (𝑠, 𝑦), which measures se

@@ -1,0 +1,28 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 1
+section: msc-scc-zqc-msc-scc-zqc
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+Coverage, Not Averages Semantic Stratification for Trustworthy Retrieval Evaluation
+A. Semantic Structure Construction
+A.1. Entity Extraction
+Model: GPT-4o-mini
+EXTRACTION_PROMPT = """Extract key entities from this document.
+For each entity provide:
+- name: the entity name (normalized, lowercase, no hyphens or special characters)
+- description: a brief, context-independent description (10-20 words) that would help cluster this entity with
+semantically similar entities
+Include: people, organizations, places, concepts, technical terms, methods, algorithms, systems.
+Exclude: generic words, common verbs, articles.
+Document:
+{text}
+Examples of extracted entities.Extracted entities include technical concepts (e.g., “neural network,” “transformer
+architecture”), domain-specific terminology (e.g., “Cox regression,” “quantitative easing”), named entities (e.g., “GlaxoSmithKline,” “PubMed”), and methodological terms (e.g., “randomized controlled trial”).
+Entity normalization.Entities undergo string normalization and semantic merging (e.g., “neural-networks” → “neural
+network”) to reduce redundancy. For NFCorpus, this yields approximately 24,000 unique entities across 3,633 documents;
+for FiQ

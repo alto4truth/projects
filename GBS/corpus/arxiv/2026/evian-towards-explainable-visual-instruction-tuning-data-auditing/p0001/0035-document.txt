@@ -1,0 +1,28 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+lity and reliability of visual instruction-tuning data through
+automated auditing. By identifying logical inconsistencies, factual errors, and visual misalignment
+in training data, EVIAN has the potential to reduce
+hallucinations and misleading outputs in downstream vision–language models, contributing to
+safer and more trustworthy AI systems.
+Nevertheless, the use of large language and
+vision–language models as automated auditors
+raises ethical considerations. Model-based judgments may reflect biases present in their training
+data and influence which data distributions are preserved or suppressed during curation, potentially
+leading to systematic over- or under-filtering of
+certain types of content. Care should therefore
+be taken when deploying EVIAN in sensitive domains, such as medical or legal applications, where
+incorrect filtering decisions may have disproportionate consequences. EVIAN’s outputs should be
+viewed as decision-support signals rather than absolute ground truth, and human oversight remains
+important in high-stakes settings.
+Finally, all experiments in this work are conducted on publicly available datasets, and no new
+human annotations are collected. The proposed
+f

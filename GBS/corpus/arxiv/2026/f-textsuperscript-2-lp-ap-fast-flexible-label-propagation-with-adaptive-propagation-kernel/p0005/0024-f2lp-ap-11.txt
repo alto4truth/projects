@@ -1,0 +1,23 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 5
+section: f2lp-ap-11
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+Fig. 4.We present the t-SNE visualizations grouped by theCoraandTexasdatasets
+to compare the distributions of the raw features against the features processed by
+F2LP-AP. While the raw features exhibit significant overlap and noise, the features
+refined byF 2LP-APdemonstrate much clearer clustering patterns and tighter intraclass cohesion. This qualitative improvement across both high-homophily (Cora) and
+low-homophily (Texas) scenarios further validates the capability of our framework to
+learn more discriminative representations.
+standard arithmetic mean for prototype initialization. Collectively, these experiments quantify the performance gains attributed to our structure-aware adaptive
+strategy and robust prototype estimation across diverse graph topologies.
+Result.As shown in Table 1, the ablation studies across eight datasets
+yield the following insights: (1)High-Homophily Scenarios:F 2LP-APconsistently outperforms non-adaptive baselines. Specifically, onCora, it achieves an
+accuracy of0.835, representing a significant improvement of 26.9% and 39.9%
+overFixedAPPNPandProto-GeoMed, respectively. Similar trends are observed
+onCiteSeerandPubMed, with gains reaching up to 14.4% and

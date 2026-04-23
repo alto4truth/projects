@@ -1,0 +1,15 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 190
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+made comparisons fragile. After extensive discussion we collapsed these scales into binary categories (positive/negative). Human survey responses were
+
+Chapter 4: The World Values Benchmark 179
+recalculated accordingly to match the binary model outputs. This sacrificed nuance but ensured comparability and reduced spurious noise. Anchor skew. Even on 4-point or binary items, models showed a systematic bias toward positive anchors such as “very important” or “always justified.” This anchor preference distorted distributions away from the intended construct. We addressed this in the OutputBias version of the benchmark through Bayesian adjustment of anchor priors. Input sensitivity. Early runs also revealed that small lexical changes (capitalisation, synonyms, punctuation) could swing distributions disproportionately. Without safeguards, a single phrasing of a question could give misleading results. This prompted the move to prompt sets, where 6–20 paraphrases were averaged to reduce lexical noise. Human–model mismatch. Another challenge was methodological rather than technical: models are not trained on carefully balanced survey data, and their distributions do not correspond to representative populations. This made it essential to foreground validity arguments and be explicit about the descriptive (rather than normative) scope of the benchmark. Taken together, these challenges underline why naive prompting cannot be treated as a neutral evaluation method. Handling high-interval scales, anchor biases, and lexical instability required deliberate methodological safeguards. Where such adjustments were not feasible, we chose to exclude those items rather than over-interpret noisy outputs.
+4.4 Results 4.4.1 Country similarity exemplars from focus questions To ground the analysis, we first examine selected WVS items where the model outputs can be directly compared to national distributions. Each figure reports divergence metrics — primarily Kullback–Leibler (KL) divergence, which is sensitive to cases where models miss minority responses, and L1 distance, which sums overall percentage differences. Low values on either metric indicate closer alignment. Country codes used in this section: AU Australia CA Canada CO Colombia FR France IR Iran JP Japan NG Nigeria NL Netherlands RU Russia

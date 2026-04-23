@@ -1,0 +1,33 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 2
+section: feret
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+– 100.00 100.00 100.00 100.00 2.370 0.074
+FPN + ResNet50 [30] 100.00 100.00 100.00 100.00 2.369 0.074
+SegFormer-B0 [53] 100.00 100.00 100.00 100.00 2.369 0.074
+BiSeNetv2 [55] 100.00 100.00 100.00 100.00 2.367 0.075
+DANet [19] 100.00 100.00 100.00 100.00 2.369 0.074
+Fast SCNN [42] 100.00 100.00 100.00 100.00 2.368 0.074
+FCN + MobileNetv2 [32] 100.00 100.00 100.00 100.00 2.368 0.074
+SAM [27] 100.00 100.00 100.00 100.00 2.362 0.076
+FRGCv2
+– 99.98 99.98 99.98 99.98 2.329 0.071
+FPN + ResNet50 [30] 99.99 99.99 99.99 99.99 2.329 0.070
+SegFormer-B0 [53] 99.99 99.99 99.99 100.00 2.329 0.070
+BiSeNetv2 [55] 99.99 99.99 99.99 99.99 2.329 0.071
+DANet [19] 99.99 99.99 99.99 99.99 2.330 0.070
+Fast SCNN [42] 99.99 99.99 99.99 99.99 2.328 0.071
+FCN + MobileNetv2 [32] 99.99 99.99 99.99 100.00 2.329 0.070
+SAM [27] 99.98 99.98 99.98 99.98 2.330 0.073
+(EER) and the Attack Presentation Classification Error Rate
+(APCER) at a fixed BPCER, cannot be evaluated in this
+work’s context. Moreover, following the traditional evaluation protocols to determine the BPCER at fixed APCER also
+requires the presence of attack samples in the evaluation
+dataset to determine the APCER thresholds. Due to the
+absence of atta

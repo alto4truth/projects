@@ -1,0 +1,24 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 1
+section: msc-scc-zqc-msc-scc-zqc
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+th its challenging scientific citation retrieval task, but the structural patterns remain consistent: low ∆ and high J
+consistently yield better retrieval outcomes.
+B.2. Resolution Sensitivity Analysis
+We conduct a resolution sensitivity analysis on NFCorpus by varying the clustering granularity parameter γ∈
+{10,15,25,40,60}.
+γClustersσ within ∆VRRJVRR nDCG (min / max)
+10 155 0.310 0.104 0.219 0.436 / 0.632
+15 210 0.305 0.131 0.228 0.438 / 0.643
+25 313 0.306 0.125 0.237 0.432 / 0.739
+40 474 0.305 0.133 0.286 0.435 / 0.856
+60 669 0.304 0.137 0.326 0.401 / 0.856
+Table 7.Sensitivity of clustering resolution γ. Core structural metrics and retrieval behavior remain stable across a 4× increase in cluster
+count.
+13

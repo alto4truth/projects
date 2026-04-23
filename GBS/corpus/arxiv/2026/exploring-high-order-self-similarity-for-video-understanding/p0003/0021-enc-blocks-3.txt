@@ -1,0 +1,27 @@
+title: Exploring High-Order Self-Similarity for Video Understanding
+source: arxiv
+year: 2026
+document_id: exploring-high-order-self-similarity-for-video-understanding
+authors: Manjin Kim; Heeseung Kwon; Karteek Alahari; Minsu Cho
+page: 3
+section: enc-blocks-3
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20760v1
+
+Exploring High-Order Self-Similarity for Video Understanding 9
+interactions (Fig. 12), sudden object appearance (Fig. 13a), camera motions
+(Fig. 13b), motion changes (Fig. 14), and background clutter (Fig. 15).
+In Fig. 16, we present qualitative results on real-world robotic tasks. While
+GR00T-N1.5 often fails to distinguish basic motion directions (left vs. right) and
+circular movements (CW vs. CCW), our model makes correct decisions on the
+same examples. For the motion prediction task (PongPredict), GR00T-N1.5 often
+reacts too late or becomes confused, whereas the MOSS model demonstrates
+strong performance. For the full demonstration videos, please refer to the file
+Robotics_demo_videos.pptxincluded in the supplementary zip.
+G Limitation and Future Work
+Ourresearchexplorestheroleofhigh-orderSTSSinlearningvideorepresentations.
+While our theoretical analysis and the toy examples demonstrate that 3rd-order
+STSS has the potential to capture group-wise motion patterns, we observe that
+the learned model primarily utilizes 3rd-order STSS to capture motion boundaries
+for video action recognition (Figs. 5, 11-15). This limited utilization of 3rd-order
+STSS may explain why 2nd- and 3rd-ord

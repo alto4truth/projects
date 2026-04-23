@@ -1,0 +1,27 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 4
+section: ssl-r1
+chunk: 56
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+in raster-scan orderPatchOrdering
+Figure 9.Examples of the Patch Ordering task.The ground-truth answer for each example is provided at the bottom.
+14
+
+Answer: 2, 6, 1, 3, 4, 5 Answer: 4, 5, 6, 3, 1, 2 Answer: 5, 1, 2, 4, 3, 6
+For each point in the first image, find the corresponding point in the second imageGeometric Correspondence
+Figure 10.Examples of the Geometric Correspondence task.The ground-truth answer for each example is provided at the bottom.
+Q:Doesthecaptiondescribetheimagecorrectly?Caption:Aphotographofamothergoatsittingwhileababygoatisstandinginafield.AnswerYe sorNodirectly.Qwen2.5-VL-7B: NoSSL-R1-7B: Ye s
+Q:Doesthecaptiondescribetheimagecorrectly?Caption:somegreenyellowblackwhiteandorangebirdsandsomeplants.AnswerYe sorNodirectly.Qwen2.5-VL-7B: NoSSL-R1-7B: Ye s
+Q:Fromtheforklift'sperspective,onwhichsideistheclosedsilodoor?A.LeftB.cannotdetermineC.cannotdetermineD.rightAnswerwiththeoptionletterdirectly.Qwen2.5-VL-7B: DSSL-R1-7B: A
+Q:Decidewhetherthecaptioncorrectlydescribestheimage.Caption:Thecarisbelowtheparkingmeter.AnswerYe sorNodirectly.Qwen2.5-VL-7B: NoSSL-R1-7B: Ye s
+Q:Whereisthehousewithayellowroofinthepicture?(A)Inthebottomleftofthepicture(B)Inthebottomrightofthepicture(C)Intheupperrightofthepicture(D)Intheupperleftofthepicture(E)Thisimagedoesn'tfeaturetheposition.Respondwithonlytheletterofthecorrectoption.Qwen2.5-VL-7B: ESSL-R1-7B: C
+Spatial UnderstandingCompositional UnderstandingFine-Grained Perception
+Q:Howmanypeoplearevisibleintheimage?Options:A:One,B:Four,C:Three,D:TwoAnswerwiththeoption'sletterfromthegivenchoicesdirectly.Qwen2.5-VL-7B: DSSL-R1-7B: C
+Figure 11.Qualitative examples on three types of vision-centric multimodal benchmarks.The wrong answers are marked in red while
+the correct answers are marked in green.
+15

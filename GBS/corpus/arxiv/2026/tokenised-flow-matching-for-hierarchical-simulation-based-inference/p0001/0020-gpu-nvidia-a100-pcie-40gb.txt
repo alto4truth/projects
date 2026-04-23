@@ -1,0 +1,86 @@
+title: Tokenised Flow Matching for Hierarchical Simulation Based Inference
+source: arxiv
+year: 2026
+document_id: tokenised-flow-matching-for-hierarchical-simulation-based-inference
+authors: Giovanni Charles; Cosmo Santoni; Seth Flaxman; Elizaveta Semenova
+page: 1
+section: gpu-nvidia-a100-pcie-40gb
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20723v1
+
+-02
+Table 5: ℓ-C2ST results for site scaling (N = 5,000). Values show mean [95% CI] over 10 observations
+per task. Bold indicates best performance.
+20
+
+θg
+η
+y
+y
+y
+y
+y
+y
+· · ·
+· · ·
+· · ·
+· · ·
+· · ·
+· · ·
+· · ·
+· · ·
+· · ·
+· · ·
+· · ·
+· · ·
+· · ·
+· · ·
+· · ·
+· · ·
+0
+1
+1
+1
+1
+2
+2
+2
+0
+0
+0
+1
+2
+0
+1
+2
+0.1
+0.1
+0.1
+0.1
+0.1
+0.1
+0.1
+0.1
+t Grp.Pos. ξ V al. ID
+global token
+local token
+site 1 observations
+site 2 observations
+(a)
+Add & Norm
+Multi-Head
+Attention
+Add & Norm
+Feed
+Forward
+Linear
+[θ t , y ]
+v t
+(b)
+Figure 6: Detailed appendix figures for the method overview: a Example token layout under the
+Section 2.1 scheme. Each token concatenates flow time, group identifier, intra-variable position,
+optional functional input, value, and variable identifier before projection into the latent space. b
+Encoder-only architecture used by TFMPE, in which the concatenated parameter and observation
+tokens are processed jointly by self-attention and mapped to the vector-field output through a final
+linear readout.
+21

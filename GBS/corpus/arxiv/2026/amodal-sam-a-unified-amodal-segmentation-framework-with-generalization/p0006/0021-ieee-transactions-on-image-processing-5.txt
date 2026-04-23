@@ -1,0 +1,33 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 6
+section: ieee-transactions-on-image-processing-5
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+Original image
+Random image
+Gaussian Blur on edgeOverlay
+Mask of target
+Occluder Mask Visible Mask Amodal Mask Occluder Mask
+Edge details
+before blur
+Edge details
+after blur
+Fig. 5. The illustration of the proposed Target-Aware Occlusion Synthesis (TAOS) pipeline. Initially, by randomly selecting masks and superimposing them
+on the target object, we create an amodal mask, a visible mask, and an occlusion mask. Furthermore, applying a Gaussian blur to the edges helps in effectively
+smoothing the transition between the two objects. Details can be found in Section III-C.
+randomly selected image, ensuring that it is of a suitable size
+relative to the target object, to serve as theoccluder. Then,
+we overlay theoccluderonto thetargetobject at a random
+position and with a random overlapping area within a specified
+range. Furthermore, we employ VLM to evaluate the generated
+occlusion and eliminate invalid data.
+Finally, we apply pixel blurring to the boundaries of the
+occluded regions to ensure the naturally synthesized occlusion.
+Specifically, we adopt Gaussian Blur, which smooths each
+boundary pixel by normalizing the pixel value according to a
+predefined Gaussian kernel. Formally, a bou

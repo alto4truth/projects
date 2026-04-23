@@ -1,0 +1,14 @@
+title: Enhancing Research Idea Generation through Combinatorial Innovation and Multi-Agent Iterative Search Strategies
+source: arxiv
+year: 2026
+document_id: enhancing-research-idea-generation-through-combinatorial-innovation-and-multi-agent-iterative-search-strategies
+authors: Shuai Chen; Chengzhi Zhang
+page: 1
+section: document
+chunk: 61
+source_ref: https://arxiv.org/pdf/2604.20548v1
+
+rn is consistent with the results reported in Section 4.5: as iterations proceed, idea quality tends to improve, whereas diversity gradually declines.
+
+24
+Figure. 11. The research idea from turn 3. Note: Blue blocks represent entities from the LLM, yellow blocks represent entities from the last idea, and green blocks represent entities from the reference literature. These findings provide further insight into the mechanism of the proposed frame-work. Although iterative search and multi-agent refinement can effectively improve idea quality, the model does not always fully absorb newly retrieved external knowledge. Instead, it increasingly relies on inherited structures and internally gener-ated extensions. This suggests that future work should focus on two directions: improv-ing the effective assimilation of external knowledge by LLMs, and designing stronger mechanisms to prevent excessive path dependence during iterative idea generation. 4.10 Qualitative Error Analysis To complement the quantitative evaluation reported above, we further examined a small set of generated ideas that did not meet the threshold for inclusion in the main compar-ative analysis. Our goal was not to identify extreme outliers, but to characterize repre-sentative failure modes that remain plausible under the current framework. The cases below suggest that, despite improvements in diversity and quality metrics, LLM-based research idea generation can still produce outputs that are technically inconsistent, in-sufficiently grounded in retrieved knowledge, or overly ambitious relative to their methodological support. One recurring failure mode is logical inconsistency within the proposed method it-self. For example, as shown in Appendix Figure. A17, one generated idea proposes using LLaMA-2-7B as the frozen base model while defining its routing mechanism in terms of an input-side [CLS] token embedding from the model’s encoder. This formu-lation is internally inconsistent, because the named backbone does not naturally expose the encoder-style representation on which the rest of the mechanism depends. The issue is not merely missing implementation detail; rather, the central control component is built around an incompatible modeling assumption. This suggests that the system can

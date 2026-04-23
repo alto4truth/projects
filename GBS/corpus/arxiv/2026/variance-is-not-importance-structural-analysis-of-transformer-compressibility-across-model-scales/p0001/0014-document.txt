@@ -1,0 +1,20 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+ear feature construction while
+late blocks perform near-linear refinement.
+This finding is consistent with the “unreasonable ineffectiveness” of deeper layers [8] but
+adds a quantitative characterization via theR 2 metric.
+Component-level analysis (KL divergence upon INT2 destruction) reveals that the importance is U-shaped, not monotonically decreasing:
+•Blocks 0-2: Critical (KL 3–4.5), dominated by attention
+•Blocks 3-6: Important (KL 0.5–1.0), dominated by MLP
+•Blocks 7-10: Cheapest (KL 0.23–0.27), both components light
+•Block 11: Spike (KL 1.1), dominated by attention (prediction assembly)
+6

@@ -1,0 +1,67 @@
+title: AAC: Admissible-by-Architecture Differentiable Landmark Compression for ALT
+source: arxiv
+year: 2026
+document_id: aac-admissible-by-architecture-differentiable-landmark-compression-for-alt
+authors: An T. Le; Vien Ngo
+page: 1
+section: aac-fps-alt
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20744v1
+
+✓
+50 85.5±3.1 0 ✓
+200 86.2±2.4 0 ✓
+seeds for the AAC vs. ALT matched-budget comparison on all four DIMACS road graphs, referenced from
+Section 5.3.
+39
+
+Table 12: ABLATIONExpansion reduction (%) across query distribution modes on NY (264K nodes, DIMACS)andManhattan(4.6Knodes, OSMnx)at64B/v. Hybriduses128B/v(sumofAAC+ALTbudgets).
+Mean±std over 5 seeds, 100 queries per seed. ALT leads AAC on all modes; the Hybridmax(hAAC,h ALT)
+is the top performer across all distributionsbut at doubled memory (2BB/v)— at matched memory (Hybrid
+64B/v vs. pure ALT 128B/v), pure ALT still leads on the road graphs (see Table 10 for the matched-memory
+road-graph hybrid comparison; Table 9 covers the non-road analogue on SBM/BA/OGB-arXiv).
+Graph Mode AAC ALT Hybrid
+NY
+Uniform 87.4±1.8 91.6±0.393.4±0.3
+Hotspot 85.8±6.1 90.8±2.292.8±1.8
+Powerlaw 88.5±2.0 91.4±0.493.7±0.7
+Manhattan
+Uniform 87.1±0.8 90.1±0.591.8±0.7
+Hotspot 87.5±1.8 89.1±2.691.4±1.7
+Powerlaw 87.6±2.2 90.5±0.792.1±0.9
+Table 13: MAINMulti-axis cost summary on DIMACS road networks, matched-deployed-label-memory
+configuration (B=64B/v: AACK 0=64,m=16; ALTK=8). Online memory is the deployed per-vertex label
+memory matched across methods. Offline preprocessing isK0 Dijkstras plus compressor training for AAC,
+KDijkstras for ALT. Query latency is from Table 3 (median over 100 queries, seed 42). Bold per (graph,
+axis) cell marks the cheaper method.
+Graph Method Online (B/v) Offline (s) p50 query (ms) p95 query (ms)
+NY AAC 64 42.0 67.0 166.5
+FPS-ALT 641.488.1 290.9
+BAY AAC 64 40.4 105.6 571.4
+FPS-ALT 641.6136.0492.0
+COL AAC 64 13.6 132.4 549.9
+FPS-ALT 642.1200.0 814.8
+FLA AAC 64 52.3 377.7 1210.5
+FPS-ALT 645.0468.4 1362.1
+B.5 Mechanism diagnostics: ALT-pool, coverage-aware regularizer, training drift
+This subsection collects the controlled diagnostics that isolate which mechanism inside the AAC training
+loop binds the matched-memory gap. The ALT-pool (first-m) arm tests whether the gap is architectural (it
+is not). The coverage-aware regularizer sweep tests whether the gap is closed by directly penalizing covering
+radius (partially, on roads only). The road-graph and hyperparameter robustness checks confirm that the
+training-drift pattern is not a synthetic-graph artifact and is stable under (learning rate, batch size,K0)
+perturbations.
+ALT-pool (firstm) diagnostic.Table 17 reports the ALT-pool (firstm) arm described in Section 5.9:
+FPS-ALT evaluated on the firstmlandmarks of the sameK0-landmark pool AAC is trained on, for seven
+graphs across both directed and undirected regimes. The arm equals pure FPS-ALT at matched memory on
+every graph and budget tested, confirming that the architecture admits the FPS-ALT subset and that any
+residual AAC gap is training-objective drift.
+Coverage-aware regularizer sweep.If FPS’s near-optimal coverage radius (Corollary 6) is the binding
+constraint on road networks, then directly penalizing the learner’s covering radius during training is the
+cleanest causal test available. We add a soft covering-radius penaltyλcov·˜rto the standard distillation
+loss, where˜ris a differentiable log-sum-exp approximation to the covering radius. Across two OSMnx
+graphs (Modena, Manhattan), five seeds, andλcov∈{0,10−3,10−2,10−1}withK0=64,m=16(64 B/v),
+the regularizer narrows the ALT gap by1.3±1.2% on Modena (from5.1to3.8%) and1.4±2.2% on
+Manhattan (from4.4to3.1%), while preserving admissibility in every run; the improvement plateaus at
+λcov≥10−3. This is a partial yes (directly optimizing covering radius does help), but the residual3–4%
+gap after coverage-aware regularization suggests the FPS candidate pool is the binding constraint on road
+40

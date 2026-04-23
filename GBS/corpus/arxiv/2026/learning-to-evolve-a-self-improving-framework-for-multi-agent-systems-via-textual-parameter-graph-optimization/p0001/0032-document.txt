@@ -1,0 +1,38 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+rkflows
+based on environmental feedback alone.
+Performance in Imitative Optimization (GAIA)
+The results on the GAIA benchmark, presented in
+Table 2, demonstrate TPGO’s effectiveness in an
+imitative setting, even when applied to a strong
+baseline like MiroFlow. By optimizing towards a
+known correct answer, TPGO improves the overall
+pass@1 success rate from 73.8% to 81.6%, a relative improvement of 10.6%. Notably, TPGO also
+significantly enhances system efficiency, reducing
+the average time per task by 56.0% (from 4014s
+to 1765s). This gain stems from the optimization
+process pruning inefficient reasoning paths and refining agent logic to more directly reach the desired
+solution. The largest performance gain is on the
+most difficult (Level 3) tasks, where the success
+rate increases from 44.4% to 63.6%, showing that
+TPGO improves the system’s core capabilities for
+handling complex problems.
+5.3 Ablation Study
+To answer our second research question and identify which design choices are most responsible for
+TPGO’s gains, we conduct a component-level ablation study on theBrowser Automationsubset
+of MCP-Universe. Starting from the same ReAct
+0 1 2 3 4 5
+Optimization Iteration
+10
+15
+20
+25

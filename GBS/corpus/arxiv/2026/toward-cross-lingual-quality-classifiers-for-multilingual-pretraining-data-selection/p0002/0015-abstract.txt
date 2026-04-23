@@ -1,0 +1,22 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+izes (e.g., grammar, content quality, symbols). Selected ranking
+changes are shown in Appendix C.
+Downstream Task Evaluation.To better understand how different filtering methods would influence the performance of an LLM, we conduct experiments by training a small 1B parameter
+Apertus (Apertus et al., 2025) architecture model on the filtered FineWeb2 by a given classifier. The
+model is trained on 103B tokens with a sequence length of4096, and sees each token at most twice,
+except for Arabic, where for retention rates of 10% and 20%, we have replicated the filtered data
+10x and 5x respectively, to account for a lower number of tokens. These tokens are directly from
+the filtered samples of the classifier, followed by a rehydration step as described in (Penedo et al.,
+2025). Technical details for the LLM training can be found in Appendix E.
+To evaluate the models, we use the Language Model Evaluation Harness library (Gao et al., 2024).
+Our main criterion is normalized accuracy, as recommended by Kydlí ˇcek et al.. The tasks we use
+span multiple capabilities, including knowledge retrieval, reasoning and natural language understanding. Full benchmark list can be found in Appendix G. The

@@ -1,0 +1,19 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 1
+section: mnist
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+ant𝑚 𝑖 by𝑇, and𝑀 𝑒 is the set of effective mutants.
+To evaluate the impact of mutating different circuit regions and operator strategies on model
+performance, we define two metrics:KillabilityRate(KR) andNontrivialityRate(NR), which denote
+the proportion of killable or nontrivial mutants among all mutants, respectively. Under a fixed test
+suite1, a higher KR or a lower NR indicates that a larger proportion of mutants exhibit statistically
+significant performance deviations from the original model, generally suggesting a stronger mutation impact and suboptimal model robustness. The mean accuracies of all effective mutants also
+1On the other hand, by using a fixed set of mutants, KR and NR can also be used to assess the quality of test suites. Since the
+following experiments mainly focus on evaluating the model sensitivity, we keep the test suite fixed and vary the mutants.
+Proc. ACM Softw. Eng., Vol. 3, No. FSE, Article FSE128. Publication date: July 2026.

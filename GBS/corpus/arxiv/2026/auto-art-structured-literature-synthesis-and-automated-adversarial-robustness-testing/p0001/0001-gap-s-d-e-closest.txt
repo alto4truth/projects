@@ -1,0 +1,32 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+1 Worst-case multi-attack 5 5 5 Daiet al.[C2]
+2 Agent CTF→real gap 5 4 4 Carliniet al.[C3]
+3 Stochastic defence collapse 4 4 5 Kassiset al.[C6]
+4 RDI generalisation 3 4 3 Songet al.[C5]
+5 Continual robustness 4 3 3 Daiet al.[C4]
+5 Research Gap Analysis
+Ranking criterion:product of safety relevance (S), deployment breadth (D), and corpus evidence strength (E), each
+scored 1–5. Gaps are ranked most-to-least significant; if fewer
+than five genuine gaps exist we would state so explicitly.
+G1: Worst-case multi-attack robustness(S5×D5×E5).
+Gap:Average leaderboard gains mask catastrophic worst-case
+failures; under worst-case attack selection, evaluated models
+performbelow random guessing[C2].
+Why it exists:Methodological barrier—exhaustive adversary unions are computationally prohibitive (O(|A|×|ε|) per
+model); no architecture resists heterogeneous ℓp, spatial, and
+semantic failures simultaneously.
+Closest paper:Daiet al.[C2] came closest with 16 models ×
+9 attacks × 20 strengths, but did not propose a training recipe
+that closes the avg/worst-case gap.
+Path to resolution:Multi-norm adversarial training curricula
+with worst-case-aware loss functions; scalable attack union
+approximations;

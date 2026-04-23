@@ -1,0 +1,33 @@
+title: A Hierarchical MARL-Based Approach for Coordinated Retail P2P Trading and Wholesale Market Participation of DERs
+source: arxiv
+year: 2026
+document_id: a-hierarchical-marl-based-approach-for-coordinated-retail-p2p-trading-and-wholesale-market-participation-of-ders
+authors: Patrick Wilk; Ethan Cantor; Yikui Liu; Jie Li
+page: 2
+section: abstract
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20586v1
+
+MARL-Based Coordinated P2P Electricity Trading
+system stability issues [14]. Aggregators have emerged
+to bundle DERs by pooling heterogeneous prosumers
+into a “virtual” resource and negotiating on their behalf
+inwholesalemarkets.Throughprice-basedmechanisms,
+aggregators can harness prosumers’ flexibility to align
+their retail bidding strategies with wholesale market
+signals [15]. Trials like EcoGrid EU confirm residential
+loads can be price sensitive [16]. However, research on
+aggregator-based coordination often relies on iterative
+pricing schemes, such as ADMM [17], that solve Nash
+bargaining problems by iteratively sharing price and
+energy data between the aggregator and participants
+[18, 19]. Moreover, these models [20, 21, 22], using
+prices to influence market behavior, can steer prosumer
+behaviortowardtheaggregator’sobjectivesbutoftenrequire continuous, bidirectional communication, raising
+scalability concerns.
+•From Centralized to Hybrid Coordination Schemes:
+DERcoordinationinLEMsbroadlyfollowscentralized,
+decentralized,orhybridapproaches.Centralizedmodels
+[11] typically rely on extensive information sharing by
+collecting all data, optimize dispatches, and manage
+local transa

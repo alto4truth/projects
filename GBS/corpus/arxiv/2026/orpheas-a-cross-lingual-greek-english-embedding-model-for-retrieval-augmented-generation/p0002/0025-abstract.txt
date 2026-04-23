@@ -1,0 +1,22 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+k Civics QA 9 is a question-answering dataset containing 407 questions related to Greek civics and social
+studies education. The dataset includes questions in Greek along with comprehensive answers sourced from
+Greek educational materials, primarily from the Social and Political Education curriculum for Greek middle
+school.
+•TruthfulQA Greek 10 is composed by 817 adversarial question-answer pairs with parallel versions in English
+and Greek. Two evaluation variants are employed:TruthfulQAwith questions and answers in the same
+language (Greek or English) andTruthfulQA* with cross-lingual pairs where Greek questions are answered
+in English and vice versa, enabling assessment of both monolingual and cross-lingual model capabilities.
+•MS MARCO 11 is a large-scale English question answering benchmark [Bajaj et al., 2016], comprising queries
+of diverse types, including descriptive, numeric, entity-based, location-based, and person-based. For evaluation purposes, 1000 query-answer pairs were randomly sampled from the held-out test split, with no overlap
+with the fine-tuning training data.
+Table 1 presents the comparative performance of all embedding models across the four evaluation datase

@@ -1,0 +1,11 @@
+title: Enhancing Research Idea Generation through Combinatorial Innovation and Multi-Agent Iterative Search Strategies
+source: arxiv
+year: 2026
+document_id: enhancing-research-idea-generation-through-combinatorial-innovation-and-multi-agent-iterative-search-strategies
+authors: Shuai Chen; Chengzhi Zhang
+page: 1
+section: document
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20548v1
+
+9 viewpoints, then select appropriate scientific discovery methods to generate research ideas, and provide the reasoning process involved, ensuring the interpretability of the results (Wei et al., 2022). Finally, 15 initial research ideas are generated to form a re-search idea pool, preparing for subsequent iterations. To formalize the prompting process, this paper assumes P represents the target pa-per, L its references, T the scientific method theory, and R the generated research idea. The initial research idea generation can then be expressed as: R=f (P, L, T) (1) where, f represents the LLM, which utilizes its language understanding capabilities to generate research ideas. The prompts and examples for initial research idea generation can be found in Appendix Figure. 3and Figure. A2. 3.3 Research Idea Iteration Previous methods have predominantly relied on keyword-based searches or co-occur-rence of entity concepts to incorporate external knowledge. However, these approaches exhibit significant limitations, such as inaccurate or overly broad search results, which hinder the ability of LLMs to engage in deep reasoning (Hu et al., 2025). To effectively address these shortcomings,

@@ -1,0 +1,22 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+14 Authors Suppressed Due to Excessive Length
+Fig. 4:Qualitative trajectory comparison pre- and post-PGPO. When querying total
+rushing yards, the baseline (top right) suffers Visual Hallucination, mistakenly extracting the receiving section value. Conversely, V-tableR1 (bottom right) ensures Rigorous
+Inference and correct answering via an explicit visual anchor (<cell: Row 14, Col 4>).
+V-tableR1 Success.Post-PGPO, dense critic rewards compel explicit visual anchor generation and verification before value extraction (Figure 4, bottom
+right). The model correctly identifies the rushing section, the yds column (Column 4), and the bottom row totals (Row 14). Extracting the intersection value
+<cell: Row 14, Col 4>, it outputs the correct answer 8189.0. Exemplifying Rigorous Inference (Path 1), PGPO forces explicit grid coordinate generation, inextricably binding logical operations to the correct visual region and eliminating
+baseline spatial cross-talk.
+5 Conclusion
+In this paper, we identified a critical flaw in current vision-language models: the
+reliance on outcome-supervised training, which inadvertently encourages visual
+hallucinations and shortcut guessing during multi-step reasoni

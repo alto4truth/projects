@@ -1,0 +1,30 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 2
+section: items-in-scene510-1015-1520-2025-25
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+Condition R@1 MRR@5
+Correct Scene Prediction 40.0 48.2
+Incorrect Scene Prediction 29.8 40.1
+Table 10: Recommendation performance on SIMMC
+2.1 conditioned on whether STE predicts the correct
+target scene.
+ary cases. First, errors tend to arise when the
+user provides only sparse transition cues (e.g., a
+broad style request without distinctive attributes),
+in which case multiple candidate scenes remain semantically plausible after coarse retrieval. Second,
+mistakes also occur when visually similar scenes
+share overlapping inventories, causing the generated target profile to overemphasize high-level semantics while under-specifying the decisive finegrained attributes. Importantly, these failures do
+not lead to unconstrained hallucinated transitions:
+the coarse-to-fine design still grounds the final prediction in a real scene from the candidate pool, and
+the downstream recommendation quality degrades
+gracefully rather than collapsing. This pattern is
+consistent with thew/ Non-targetablation in Table 3, the conditioned analysis in Table 10, and the
+qualitative example in Figure 10, where baselines
+without reliable transition reasoning are more likely
+to end in passive or erroneous respon

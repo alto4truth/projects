@@ -1,0 +1,23 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+[35], GLM models [ 36]: GLM-4-Flash and GLM-4-Plus , GPT models: GPT-4o-0806 and
+GPT-4o-mini-0718 [20], and Gemini-2.0-flash [37]. To evaluate whether reasoning MLLMs
+can achieve better performance on the covert advertisement detection task, we also include three
+proprietary reasoning MLLMs:QvQ-Max[38],Gemini 2.5 Pro[24],Step-R1-V-Mini[39].
+We consider three different strategies,Zero-shot Prompting: The LLM is prompted with a brief
+judgment criterion along with the full content of the social media post as input, and directly outputs a
+binary classification indicating whether the content is identified as a covert advertisement;In-Context
+Learning: In addition to using the same input as in zero-shot prompting and the same output format,
+examples of both labels are additionally provided;Fine-Tuning: The same input-output format as
+zero-shot prompting, and fine-tuned the model using a 5-fold cross-validation setup for prediction.
+We also provide some additional experimental results for simpler baselines in Appendix C.
+We report Precision, Recall, F1-Score, and AUC, four standard metrics that respectively assess
+prediction accuracy, completeness, their balance, and overall classificatio

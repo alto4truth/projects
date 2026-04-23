@@ -1,0 +1,23 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+cently extended the field by developing,
+through consultation with sociologists and experts in human rights, datasets on ageism, colonial bias, colorism, disability,
+and supremacism. The developed datasets consist of MCQs which rely on either knowledge (447) or reasoning (75).
+More in detail, knowledge-based questions have a single factual answer, such as identifying which prominent award a
+historic figure received, whereas reasoning questions require answers to be based on the provided information rather
+than on biased assumptions.
+Recent benchmarks have systematically evaluated the fairness of leading LLMs. For instance, Simpson et al. [2024]
+demonstrate that models like GPT-4 and Claude-3.5-Sonnet, when evaluated on MCQs from factual and reasoning
+contexts, score high on factual knowledge but exhibit measurable biases in interpretive and ambiguous contexts,
+especially regarding homophobia, colonialism, and disability.
+A recent study Simpson et al. [2024] evaluates the fairness of the same LLMs used in this study (with changes to
+models when those previously used are deprecated at the time of writing this paper and therefore cannot be reused
+for replication), using a very simple

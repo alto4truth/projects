@@ -1,0 +1,25 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+ur objective is to iteratively refine G to maximize task performance.
+Since traditional gradient-based optimization is not
+applicable to discrete textual structures, we introduce a novel paradigm centered onTextual Gradients. These are structured natural language critiques and suggestions that guide the evolution of
+the graph through a three-stage process of generation, aggregation, and application.
+Step 1: Trajectory Diagnosis and Gradient Generation.For a given batch of tasks, the MAS
+is executed to collect a set of trajectories T=
+{τ1, . . . , τN }. Each trajectory τk is a detailed log
+of the system’s reasoning, tool use, and communication. A diagnostic model then analyzes these
+trajectories, comparing them against ground-truth
+solutions or ideal behaviors to identify discrepancies. From this analysis, the model generates a
+textual gradient ∇text for each informative trajectory, which provides a rich, interpretable signal for
+improvement: ∇text =Generate(τ k)→ {δ +, δ−}.
+This gradient is composed of two parts:
+• Positive Gradient (δ+):Extracted from successful trajectories, δ+ distills high-quality
+reasoning patterns or effective tool-use strategies. It serves as a template for

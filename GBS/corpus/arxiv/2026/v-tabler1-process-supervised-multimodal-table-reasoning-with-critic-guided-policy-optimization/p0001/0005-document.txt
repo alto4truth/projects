@@ -1,0 +1,23 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+ing as
+a static sequence of tokens rather than a verifiable cognitive process [40]. Under this paradigm, the model learns the syntax of reasoning but struggles to
+rigorously ground each step to visual evidence. Crucially, SFT lacks an active
+mechanism to penalize spurious logic; a model that hallucinates intermediate
+steps but luckily guesses the correct final answer receives no corrective signal
+during inference.
+While Reinforcement Learning with Verifiable Rewards (RLVR) has achieved
+massive success in text-based math and coding, extending RLVR to multimodal
+tasks remains notoriously difficult [21,26]. Natural image visual question answering (VQA) often involves subjective answers, making rigorous reward construction nearly impossible and highly susceptible to reward hacking [39,46].
+Unlike natural scenes, tables encode strict, rule-bound logic within a rigid
+grid. Both the intermediate reasoning trajectories (e.g., cell coordinate localization) and the final discrete answers are rigorously verifiable [1, 44]. This
+makes tabular reasoning an ideal, deterministic testbed for exploring multimodal RLVR. Currently, the advancement of tabular vision models is heavily
+constrained by th

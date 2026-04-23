@@ -1,0 +1,32 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+open-source framework
+for building agents capable of complex reasoning.
+We implement a MiroFlow agent using GPT-5 as
+the backbone model for the GAIA benchmark.
+Implementation Details.Unless otherwise specified, the ReAct agents use temperature = 1.0 and
+top-p= 1.0 with GPT-4.1 or DeepSeek-V3.2 as the
+execution backbone. For MiroFlow on GAIA, the
+main agent uses GPT-5 with reasoning effort set to
+high, while sub-agents use GPT-5 with reasoning
+effort set to medium; both use temperature = 1.0
+and top-p= 1.0 . All TPG parsing, textual-gradient
+generation, and optimization proposal generation
+are performed by Gemini-2.5-Pro with temperature
+= 0.7 and top-p= 0.95 . For gradient aggregation,
+we embed negative textual gradients and cluster
+them using DBSCAN to identify recurring failure
+patterns without pre-specifying the number of clusters. For each cluster, the optimizer generates a
+graph-edit proposal, which is then validated on the
+corresponding task subset before being added to
+the optimization memory. We run TPGO for up to
+5 iterations unless otherwise noted.
+Metrics.We evaluate performance using two primary metrics.Success Rate (pass@1)is the percentage of tasks where the system pr

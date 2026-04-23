@@ -1,0 +1,18 @@
+title: Exploring High-Order Self-Similarity for Video Understanding
+source: arxiv
+year: 2026
+document_id: exploring-high-order-self-similarity-for-video-understanding
+authors: Manjin Kim; Heeseung Kwon; Karteek Alahari; Minsu Cho
+page: 3
+section: enc-blocks-3
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20760v1
+
+o capture motion boundaries
+for video action recognition (Figs. 5, 11-15). This limited utilization of 3rd-order
+STSS may explain why 2nd- and 3rd-order STSS are not complementary to
+each other (Tab. 3b) since 2nd-order STSS can already provides such boundary
+information implicitly. We conjecture that learning group-wise motion patterns
+may not provide significant benefits for existing action recognition tasks. Future
+work should focus on developing new benchmarks where higher-order (3rd-order
+or beyond) temporal dynamics can demonstrate more meaningful benefits.

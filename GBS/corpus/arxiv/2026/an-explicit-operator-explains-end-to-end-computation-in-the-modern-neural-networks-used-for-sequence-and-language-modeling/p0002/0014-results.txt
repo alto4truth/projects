@@ -1,0 +1,27 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 2
+section: results
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+ogether, these results demonstrate that discrimination arises
+from a small subset of resonant modes rather than from global spectral differences.
+trials (Fig. 3c).
+This result demonstrates that S4D generates traveling waves in its recurrent layer that distinguish simple
+inputs, allowing successful classification at the system’s
+readout. As discussed above, the sinusoidal inputs that
+are varying in time become translated into waves traveling across the network. These spatial modes allow a
+relatively small 5 Hz difference in temporal frequency between class 1 and class 2 to build up over time, until the
+network produces very different traveling wave patterns
+in the recurrent layer.
+These wave dynamics in the recurrent layer of the SSM
+are then processed through a series of linear and nonlinear operations. While only the linear recurrent dynamics
+in S4D-Lin are needed to distinguish inputs in this relatively simple dataset, more complex, real-world inputs
+require the entire cascade of linear and nonlinear steps.
+In general, the forward pass of the network – i.e., how
+a specific input leads to a specific classification – is very
+difficult to analyze mathematically when the interactions

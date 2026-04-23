@@ -1,0 +1,27 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 2
+section: vocabulary-category-items
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+-of-the-art models can handle 134 items in a single pass, but
+quantized 4B–8B local models lose track of the output schema mid-generation.
+OurSGR-constrainedcondensationfitswithinthereasoningboundsofsmaller
+models (the 9-key JSON is∼400 tokens), securely delegating the complex
+vocabulary checks and item-level compilation to deterministic Python code.
+This makes the approach practical for privacy-preserving clinical deployments
+where sending patient data to external APIs is not acceptable. Concurrent
+work by Ferrazzi et al.[5] confirms that small LLMs (∼1B parameters) can
+match or exceed larger baselines on Italian medical NLP tasks—including
+CRF filling—when combined with appropriate adaptation strategies such as
+few-shot prompting and constraint decoding.
+Concretely, we serve MedGemma 1.5-4B-it as a Q5_K_M GGUF via
+llama.cpp on Apple M3 Pro (18 GB RAM). Stage 1 inference takes∼8 seconds per document; Stage 2 compilation is instant (<10 ms). The entire
+dev80 evaluation completes in under 12 minutes on a single laptop.
+5.4 Cross-Language Applicability
+The pipeline naturally extends to Italian (_it) documents: the Stage 1
+prompt is language-agnostic (it asks the model to extract clin

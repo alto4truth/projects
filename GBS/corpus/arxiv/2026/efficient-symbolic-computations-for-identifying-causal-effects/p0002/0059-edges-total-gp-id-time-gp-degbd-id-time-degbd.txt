@@ -1,0 +1,24 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 2
+section: edges-total-gp-id-time-gp-degbd-id-time-degbd
+chunk: 59
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+ading term
+of efis not divisible by any leading monomial of any element ofH. Hence, it must be divisible by
+some elementg∈F\Hwhose leading term has a nonzero degree in at least one of the variables
+inθ rem. But in order to divide the leading term ofef, the leading termgmust have degree one inq
+and degree zero in all variables inθrem \ {q}. Thus, we can conclude thatg∈Fis of the required
+form.
+Conversely, suppose thatFcontains a polynomial with leading termqa(θ id, σ, h)for somea∈
+R[θid, σ, h]. SinceFis a reduced Gröbner basis with respect to a lex-elimination order, this polynomial must be of the formqa(θid, σ, h)−b(θ, σ, h)wherebonly containsθ-variables smaller thatθ
+with respect to the lexicographic order onR[θrem]. Moreover,adoes not reduce to zero by reduction
+ofH, that is,a̸∈ I wh ∩R[σ, θ id, h]. By Lemma 4.2, it follows thatqis rationally identifiable if
+all smaller variables inθ rem are rationally identifiable. Since we assume thatFcontains such a
+polynomial for allq∈θ rem, it follows that allq∈θare rationally identifiable.
+Proof of Corollary 4.5.By Definition 2.8, the idealIcontains a polynomial of the formqa(θid, σ)−
+b(θid, σ)witha, b∈R[θ id, σ]anda̸∈I∩R[θ id, σ], which is

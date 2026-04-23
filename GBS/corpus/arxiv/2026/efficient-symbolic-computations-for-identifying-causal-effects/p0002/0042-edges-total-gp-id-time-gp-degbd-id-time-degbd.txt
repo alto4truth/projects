@@ -1,0 +1,42 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 2
+section: edges-total-gp-id-time-gp-degbd-id-time-degbd
+chunk: 42
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+7 2 1 0.15 1 0.13
+9 6 4 0.71 5 0.19
+10 8 7 0.69 7 0.17
+11 22 13 0.95 13 0.17
+12 30 19 1.11 25 0.19
+13 43 19 1.48 31 0.22
+14 69 21 2.49 53 0.24
+15 82 24 1.25 65 0.27
+16 91 12 3.34 64 0.32
+17 106 5 1.27 75 0.41
+18 103 5 1.09 66 0.54
+19 91 2 3.19 63 0.72
+20 100 - - 68 0.99
+21 71 - - 46 1.53
+22 56 - - 39 2.13
+23 43 - - 30 1.74
+24 26 - - 18 3.36
+25 18 - - 10 3.81
+26 11 - - 6 5.09
+27 10 - - 8 3.97
+28 5 - - 3 4.70
+29 4 - - - 31 3 - - 1 8.44
+Table 1: Counts and average computing time of1000randomly sampled graphs on10nodes. We
+compare the Garcia-Puente algorithm (GP) with Algorithm 1 (DegBd).
+in the median runtime is mainly due to the preprocessing steps we do for Algorithm 1, such as
+computing the trek length grading. For larger examples, this preprocessing is negligible. Note that
+we were not able to carry-out the Garcia-Puente algorithm on all graphs onm= 5nodes. There
+exist more than100,000such graphs and for many of them the Garcia-Puente algorithm does not
+finish within reasonable time.
+Since differences in computing time are greater on larger graphs, we consider a second experimental
+setup. We randomly generate1000acyclic mixed graphs onm= 10nodes. Both directed and
+bidirected edges

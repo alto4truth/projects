@@ -1,0 +1,54 @@
+title: Participatory provenance as representational auditing for AI-mediated public consultation
+source: arxiv
+year: 2026
+document_id: participatory-provenance-as-representational-auditing-for-ai-mediated-public-consultation
+authors: Sachit Mahajan
+page: 1
+section: 4
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20711v1
+
+g of each summary sentence against the dominant
+directional stance of its top-10 nearest participant texts, classifying the relationship asaligned,
+20
+
+neutral shiftordirectional flipusing GPT-4o-mini. Tension detection classified how the summary
+handled the positions of the three most semantically distant cluster pairs asacknowledged,one-sided
+orsuppressed. All LLM classification tasks used 5 independent runs with majority voting; inter-run
+reliability was reported as Cohen’sκaveraged across all pairs of runs, following standard practice
+in computational annotation [Artstein and Poesio, 2008].
+4.7 Cross-topic and multi-model validation
+Participants who submitted responses to both consultation topics were identified by internal respondent ID (n= 2,392). Cross-topic consistency of coverage scores was quantified by Spearman
+rank correlationρ s; cross-topic consistency of exclusion status (binary) by theϕcoefficient of the
+2×2contingency table.
+Multi-model robustness was assessed by repeating the full coverage analysis with both robustness
+embedding models. For each alternative model, Spearman rank correlation of individual coverage
+scores against primary-model scores, and the exclusion agreement rate (fraction of participants
+assigned the same exclusion status), were computed. Parameter sensitivity was assessed across
+three dimensions: PCA dimensionality (D∈ {20,50,100}), exclusion threshold multiplier (α∈
+{0.5,1.0,1.5,2.0}standard deviations below the random mean), and cluster count (k ∗ ±2). For
+each of the resulting3×4×5 = 60configurations, mean coverage, exclusion rate andW 2
+2 z-score
+were recomputed; the directional consistency of findings across PCA dimensionality and exclusion
+threshold configurations is shown in Supplementary Fig. 2.
+4.8 Statistical analysis and computational environment
+All analyses were conducted in Python 3.11. Core scientific computing used NumPy 1.26, SciPy
+1.12 and pandas 2.2. Clustering and causal inference used scikit-learn 1.4 [Pedregosa et al., 2011]
+and EconML 0.15. Optimal transport used POT 0.9.3 [Flamary et al., 2021]. LLM inference used
+the OpenAI Python SDK 1.17 (GPT-4o-mini,text-embedding-3-large). Local embeddings used
+sentence-transformers2.7 [Reimers and Gurevych, 2019]. All bootstrap (B= 2,000) and permutation (N= 10,000) tests used a fixed random seed (numpy.random.seed(42)) for reproducibility.
+Statistical significance was assessed atα= 0.05; where multiple comparisons were performed (OLS
+interaction terms), Bonferroni correction was applied and full interaction results are reported in
+Supplementary Tables 10 and 11.
+References
+Sherry R. Arnstein. A ladder of citizen participation.Journal of the American Institute of Planners,
+35(4):216–224, 1969.
+Carole Pateman.Participation and democratic theory. Cambridge university press, 1975.
+OECD. Innovative citizen participation and new democratic institutions: Catching the deliberative
+wave. Technical report, OECD Publishing, 2020.
+James S. Fishkin.When the People Speak: Deliberative Democracy and Public Consultation. Oxford
+University Press, 2009.
+Emily M Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. On the
+dangers of stochastic parrots: Can language models be too big? InProceedings of the 2021 ACM
+conference on fairness, accountability, and transparency, pages 610–623, 2021.
+21

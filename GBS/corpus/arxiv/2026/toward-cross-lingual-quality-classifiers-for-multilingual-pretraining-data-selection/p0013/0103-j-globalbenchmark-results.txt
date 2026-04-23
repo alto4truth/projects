@@ -1,0 +1,50 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 13
+section: j-globalbenchmark-results
+chunk: 103
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+28
+
+Published as a paper at 3rd DATA-FM workshop @ ICLR 2026, Brazil.
+Table 18: Arabic performance with extended anchors (MKC-e). Unlike the Romance languages,
+adding the MKC-e pool to Arabic filtering slightly degrades aggregate performance. This suggests
+that the instruction-tuning signal in MKC-e may not align as cleanly with "educational quality" for
+Arabic.
+Benchmark No filtering HQ MKC-e
+ARC-Easy 0.27160.28980.2728
+AlGhafa PIQA-MT0.51940.5145 0.4970
+AlGhafa RACE 0.27150.27750.2753
+AlGhafa SciQ 0.42610.44320.4422
+ARC-Challenge0.26780.2660 0.2643
+Belebele_c 0.3222 0.32330.3244
+GMMLU_c 0.24750.25750.2550
+HellaSwag0.39090.3873 0.3882
+Include_c0.30250.2681 0.2953
+M_MMLU_c0.26690.2614 0.2628
+AlGhafa PIQA0.61320.6088 0.6121
+XNLI0.33490.3309 0.3349
+Xstorycloze 0.59030.59230.5890
+Aggregate acc_norm 0.37110.3708 0.3703
+Average rank 1.852.00 2.08
+Table 19: Spanish comprehensive benchmark results. Final comparison of all filtering strategies.
+ML (Q3) achieves the best average rank, showing that the combination of multilingual signal and
+sharpened decision boundaries is optimal for Spanish.
+Benchmark No filtering HQ HQ seed MKC-e ML ML
+(15%)
+ML
+(Q3)
+ARC-Challenge 0.2991 0.3077 0.3274 0.3291 0.32480.34360.3282
+Belebele_c 0.34220.35330.3422 0.3378 0.3456 0.3500 0.3533
+GMMLU_c 0.3100 0.31500.33750.3200 0.3250 0.3225 0.3275
+HellaSwag 0.5006 0.5263 0.5219 0.5075 0.53100.54400.5372
+Include_c 0.3491 0.3727 0.3782 0.3964 0.38910.40360.4000
+M_MMLU_c 0.2814 0.2985 0.30730.31370.3050 0.3080 0.3083
+XNLI 0.4618 0.4538 0.4707 0.45660.47830.4562 0.4667
+Aggregate acc_norm0.3635 0.3753 0.3836 0.3801 0.38550.38970.3887
+Average rank6.29 5.14 3.71 4.14 3.57 2.712.14
+29

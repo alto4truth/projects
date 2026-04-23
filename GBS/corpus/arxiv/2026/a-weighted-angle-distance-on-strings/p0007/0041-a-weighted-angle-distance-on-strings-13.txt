@@ -1,0 +1,58 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 7
+section: a-weighted-angle-distance-on-strings-13
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+14 GRANT MOLNAR
+Fork≤K edit we haveL edit −k+ 2≥L edit/2, so
+π
+√
+2e k
+2√Ledit −k+ 2 ≤ π√Ledit
+ek.
+Fork > K edit we useθ k(P aQ, P bQ)≤π/2. Hence
+dρ(P aQ, P bQ)≤ π√Ledit
+X
+1≤k≤Kedit
+ρkek + π
+2
+∞X
+k=Kedit+1
+ρk.
+Sincee k ≤min(k, M edit) fork≤K edit, we obtain
+X
+1≤k≤Kedit
+ρkek ≤
+∞X
+k=1
+ρk min(k, Medit) =A Medit(ρ),
+and evaluating the tail gives (6).□
+Our next theorem controls the behavior ofd ρ under stutter.
+Theorem 7.4.Letρ∈(0,1). LetP 1, P2, Q∈Σ ∗ be strings of lengthsm 1,m 2 andn
+respectively, and letℓbe a positive integer. Then
+(16)
+dρ(P1QP2, P 1QℓP2)≤ π√2Lstut
+
+3AMstut(ρ) + ρ
+1−ρ r
+
++ π
+2 · ρKstut+1
+1−ρ + π
+2 · ρLstut+1(1−ρ r)
+1−ρ ,
+whereL stut :=m 1 +n+m 2,r := (ℓ−1)n,K stut :=⌊L stut/2⌋, andM stut := min(m1 +n+
+1, m2 + 1).A M(ρ)is defined as in(7).
+Proof.WriteU :=P 1QP2 andV :=P 1QℓP2, and writep :=m 1 +nandq :=m 2, so that
+|U|=p+q=L stut andVis obtained fromUby inserting the blockB :=Q ℓ−1 of lengthr
+between the prefix of lengthpand the suffix of lengthq.
+Fixk≤L stut. Define
+(17)c k := max (0,min(p, k−1)−max(1, k−q) + 1)
+to be the number of length-kwindows inUthat cross the junction between the prefix of
+lengthpand the suffix of lengthq. Define
+(18)d k := max (0,min(p+r, L s

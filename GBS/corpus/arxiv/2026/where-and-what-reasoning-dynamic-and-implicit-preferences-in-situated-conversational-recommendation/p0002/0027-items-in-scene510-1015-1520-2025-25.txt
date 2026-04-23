@@ -1,0 +1,31 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 2
+section: items-in-scene510-1015-1520-2025-25
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+Latency (s / turn)∼0.8∼1.2∼1.7∼2.3∼2.9
+Table 7: Latency scaling of SiPeR with respect to scene
+density.
+tency of SiPeR on SIMMC 2.1 and compares it
+with a strong trained MLLM baseline. The second
+analysis groups evaluation instances by the number
+of in-scene candidate items to show how BI-INF
+scales as scene density increases.
+Qwen3 Retrieval-only Transition Baseline.To
+separate the effect of backbone capacity from the
+effect of explicit target-profile generation, we compare SiPeR with a retrieval-only transition strategy built on the identical Qwen3-Embedding-4B
+dense retrieval (Karpukhin et al., 2020) backbone
+used in STE. This baseline directly encodes the dialogue history and retrieves the target scene from the
+global pool, but removes the intermediate targetprofile generation step and the subsequent generative reasoning. As summarized in Table 8, a direct MLLM decision over all candidate scenes is
+computationally infeasible when the environment
+contains 1,566 scene snapshots, so we report it as
+an infeasible reference point rather than a runnable
+quantitative baseline.
+Global-access MLLM Baseline.A potential
+concern is that the baseline MLLMs in Table 1
+only observe the curren

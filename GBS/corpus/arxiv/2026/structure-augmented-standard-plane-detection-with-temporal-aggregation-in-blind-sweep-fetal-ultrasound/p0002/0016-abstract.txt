@@ -1,0 +1,30 @@
+title: Structure-Augmented Standard Plane Detection with Temporal Aggregation in Blind-Sweep Fetal Ultrasound
+source: arxiv
+year: 2026
+document_id: structure-augmented-standard-plane-detection-with-temporal-aggregation-in-blind-sweep-fetal-ultrasound
+authors: Keli Niu; He Zhao; Qianhui Men
+page: 2
+section: abstract
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20591v1
+
+Table 1. Quantitative result comparisons for keyframe detection in blind-sweep US. SA: structure-augmented segmentation prior. MS: multi-depth spatial encoding. MT: local and
+global temporal conditioning. Best per column inbold.
+Method P R F1 Abs. time Keyf. num.
+(%) (%) (%) err. (↓) err. (↓)
+BiomedCLIP 37.83 51.12 43.48 46.47 14.00+ViT-B
+nnU-Net 52.65 63.58 57.60 77.78 10.07
+MS40.21 45.47 42.68 60.57 11.80
+MT46.55 41.00 43.60 49.29 11.29
+MS+MT43.73 47.92 45.73 52.59 11.2
+SA+MS+MT60.1472.6365.80 16.82 10.91
+SA+MS+MT+PRS61.1172.6366.37 16.45 10.82
+SA+MS+MT+PRS+L64.2070.0767.01 15.33 10.04
+to the two baselines indicate that our model effectively filters
+out non-standard-plane frames while being less likely to miss
+standard planes, which are crucial for accurate downstream
+biometric measurements in blind-sweep US. The lower time
+and keyframe errors further demonstrate the precise localisation of our method in identifying standard plane segments.
+Ablations.In general, the performance of our methods
+across the five metrics consistently improves with the structural and temporal modules.MSalone results in unstable
+temporal localisation, indicating that the model lacks boundary cues withou

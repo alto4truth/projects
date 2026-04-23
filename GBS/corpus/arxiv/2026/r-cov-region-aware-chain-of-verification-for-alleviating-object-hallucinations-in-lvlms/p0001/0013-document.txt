@@ -1,0 +1,37 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+n the floor next to a
+sink. The bucket is positioned near the
+right side of the sink, and it appears to
+be filled with some items.
+<multiple region descriptions continue>
+...
+The image depicts a small, cluttered
+kitchen with a wooden floor. The
+kitchen is equipped with a sink, an
+oven, and a stove. There are various
+items scattered around the kitchen,
+including a knife. In addition to the
+kitchen appliances, there are several
+bottles and cups scattered throughout
+the room. The overall scene gives the
+impression of a busy, lived-in space.
+kitchen (Yes), floor (Yes), sink (Yes),
+oven (Yes), stove (Yes), knife (Yes),
+spoon (No), bowl (No), bottle (Yes),
+cup (Yes), scissors (No), ...
+Stage 1: Initial Response Generation Stage 2: Entity Extraction
+Stage 3: Coordinate Generation
+Stage 4: Region Description Stage 5: Verification Execution
+Stage 6: Final Response Generation
+Figure 2.Overview of our R-CoV pipeline.R-CoV consists of six stages to alleviate object hallucinations: initial response generation,
+entity extraction, coordinate generation, region description, verification execution, and final response generation.
+we wish to improve in our experiments,i.e., we will directly compare t

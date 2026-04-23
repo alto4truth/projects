@@ -1,0 +1,21 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 2
+section: da-2k
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+s attends to pixellevel details and benefits contextual understanding and reasoning.
+Multi-Task Post-Training.Given that each SSL task improves vision-centric perception and understanding in different ways, it is interesting to ask whether combining multiple SSL tasks further benefits. We study this by performing multi-task post-training. We start from the single
+task formulation and gradually add each new task based on
+the average performance ranking in the single-task posttraining. As shown in Tab. 2 (bottom section), combining two best-performing tasks already improves individual
+tasks by clear margins (+0.90% vs. Geometric Correspondence, +1.11% vs. Patch Ordering). Adding more tasks
+leads to further gains, with the best performance achieved
+by combiningall five tasks, which outperforms the bestperforming single task by 1.31% on average. Since each
+task encourages the model to acquire different visual reasoning abilities, they could be complementary to each other.
+This task synergy highlights the importance of devising diverse SSL objectives for multimodal perception and understanding.
+On individual benchmarks, we have two observations.
+First, combining multiple SSL tasks does

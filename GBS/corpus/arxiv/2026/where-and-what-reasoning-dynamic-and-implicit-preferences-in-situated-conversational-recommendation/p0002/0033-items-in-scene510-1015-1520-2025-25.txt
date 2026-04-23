@@ -1,0 +1,43 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 2
+section: items-in-scene510-1015-1520-2025-25
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+ory,
+and hypothetical user preferences (like/dislike) to
+formulate the input, while the output is the corresponding dialogue state. This structured format
+Predefined Schema of Intents and Slots
+Intents:
+(1) INFORM: GET,
+(2) REQUEST: COMPARE,
+(3) REQUEST: ADD_TO_CART,
+(4) INFORM: REFINE,
+(5) REQUEST: DISAMBIGUATE,
+(6) ASK: GET,
+(7) INFORM: DISAMBIGUATE,
+(8) REQUEST: GET ...
+Slots:
+(1) ASSET TYPE, (2) CUSTOMER REVIEW, (3)
+A V AILABLE SIZES, (4) COLOR, (5) PATTERN,
+(6) BRAND, (7) SLEEVE LENGTH, (8) TYPE, (9)
+PRICE, (10) SIZE, (11) CUSTOMER RATING, (12)
+MATERIALS ...
+Figure 6: Representative instances of the predefined
+intents and slots across SCR datasets.
+Input-Output Format for Fine-tuning
+Input Instruction:
+The provided image consists of a series of scene
+snapshots, accompanied by hypothetical user preferences: {User like/dislike target item} . The
+items mentioned in the conversation history are as
+follows: {item1, item2, ...} . The information
+of the items in the scene: {item1 (attributes1),
+item2 (attributes2), ...} . Given the dialogue
+state of the conversation up to n-1 turns represented
+as: {{Intent_1, Slot_1, Value_1}, ...} , the
+current dialogue state at then-th turn is:
+Out

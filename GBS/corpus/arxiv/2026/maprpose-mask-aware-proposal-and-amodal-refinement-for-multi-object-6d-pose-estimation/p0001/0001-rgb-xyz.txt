@@ -1,0 +1,27 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 1
+section: rgb-xyz
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+Re-Projection
+CNN Encoder
+Iterations
+Relational Encoder
+Fig. 3: Overall Architecture of MAPRPose.Our framework follows a coarse-to-fine paradigm consisting of two integrated stages.Phase 1:
+MAPP.Visible masks are utilized to constrain patch-level matching between the query image and multi-view CAD-rendered templates. These
+mask-aware correspondences are lifted to 3D keypoints to generate a compact set of geometrically consistent pose hypotheses.Phase 2: Pose
+Refinement.These hypotheses are refined via a network thatembedstheAMPRmechanism. Specifically, the architecture is designed for
+parallel processing of multiple object instances and hypothesesin a single forward pass. TheAMPRbranch reconstructs the full amodal
+shape tore-center and normalize the scaleof target objects, established via a feedback loop. To maximize computational throughput, we
+develop ahybrid refinement strategy: high-fidelity CAD rendering is performed only for initialization ( i= 0 ), while subsequent iterations
+(i >0) leverage aRGB-XYZ re-projection.
+respectively. We evaluate alignment quality using a translationinvariant geometric consistency score. Let wi =S(i, j i) and
+define weighted centroids:
+¯P=
+P
+i wiP

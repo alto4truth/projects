@@ -1,0 +1,26 @@
+title: Trust, Lies, and Long Memories: Emergent Social Dynamics and Reputation in Multi-Round Avalon with LLM Agents
+source: arxiv
+year: 2026
+document_id: trust-lies-and-long-memories-emergent-social-dynamics-and-reputation-in-multi-round-avalon-with-llm-agents
+authors: Suveen Ellawela
+page: 1
+section: document
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20582v1
+
+Trust, Lies, and Long Memories: Emergent Social Dynamics and
+Reputation in Multi-Round Avalon with LLM Agents
+Suveen Ellawela
+suveen.ellawela@u.nus.edu
+National University of Singapore
+https://github.com/SuveenE/multi-round-avalon-agents
+Figure 1: Overview of our experimental setup showing emergent social dynamics and reputation. Five LLM agents
+(Alice, Bob, Charlie, Diana, Eve) play repeated Avalon games with randomized roles. After each game, agents generate
+self-reflections and observations about other players, which persist into subsequent games as memory. This cross-game
+memory enables reputation formation, with agents referencing past behavior in their strategic reasoning (example quotes
+shown on right).
+Abstract.We study emergent social dynamics in LLM agents playing The Resistance: Avalon, a hidden-role deception
+game. Unlike prior work on single-game performance, our agents play repeated games while retaining memory of
+previous interactions (who played which roles and how they behaved), enabling us to study how social dynamics
+evolve. Across 188 games, two key phenomena emerge. First,reputation dynamics emerge organicallywhen
+agents retain cross-game memory: agents referen

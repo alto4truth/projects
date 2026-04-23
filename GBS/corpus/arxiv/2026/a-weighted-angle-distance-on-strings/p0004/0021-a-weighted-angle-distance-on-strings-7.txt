@@ -1,0 +1,23 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 4
+section: a-weighted-angle-distance-on-strings-7
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+compute
+av := occS(v)2, b v := occT (v)2, c v := occS(v)occT (v),
+and perform the range additions
+DS[ℓ−
+v ] +=a v, D S[ℓ+
+v + 1]−=a v,
+DT [ℓ−
+v ] +=b v, D T [ℓ+
+v + 1]−=b v,
+DST [ℓ−
+v ] +=c v, D ST [ℓ+
+v + 1]−=c v,
+ignoring any indices greater thanL max + 1.

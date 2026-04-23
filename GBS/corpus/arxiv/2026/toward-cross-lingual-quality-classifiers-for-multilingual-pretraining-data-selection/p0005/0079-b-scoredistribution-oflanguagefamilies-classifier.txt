@@ -1,0 +1,19 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 5
+section: b-scoredistribution-oflanguagefamilies-classifier
+chunk: 79
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+Figures B and 1 show the distribution of quality scores assigned to French documents by different
+classifiers. Several patterns emerge:
+•French and Romance classifiers(Fig B) exhibit similar bimodal distributions: most documents score near 0 (clear negatives) with a long tail toward 1 (clear positives). The 90th
+percentile cutoffs are comparable (French: 0.045, Romance: 0.048).
+•Nordic classifier(Fig 1) produces a markedly different distribution despite successfully
+separating quality tiers. It applies a much stricter threshold (90th percentile: 0.027) and
+assigns generally lower scores, yet still identifies high-quality content effectively.
+•Romance without French(Fig B) shows intermediate behavior, with more score mass in
+the middle range, suggesting less confident predictions.

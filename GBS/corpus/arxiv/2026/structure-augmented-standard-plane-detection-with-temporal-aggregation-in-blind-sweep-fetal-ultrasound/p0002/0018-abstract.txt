@@ -1,0 +1,32 @@
+title: Structure-Augmented Standard Plane Detection with Temporal Aggregation in Blind-Sweep Fetal Ultrasound
+source: arxiv
+year: 2026
+document_id: structure-augmented-standard-plane-detection-with-temporal-aggregation-in-blind-sweep-fetal-ultrasound
+authors: Keli Niu; He Zhao; Qianhui Men
+page: 2
+section: abstract
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20591v1
+
+error.
+3.3. Qualitative Evaluation
+Sequential detection.Fig. 2 compares per-frame labelling
+results on an example blind-sweep scanning sequence. For
+the two real standard plane segments, nnU-Net clearly missed
+one, whereas BiomedCLIP+ViT-B produced multiple off-plane
+spikes. Our prediction is closest to the GT, with strong boundary fidelity and robust noise rejection.
+Keyframe visualisation.Fig. 3 compares the top-scored
+frames of each model from the output probability, and their
+corresponding frame numbers in the scan. Our selections
+consist with the GT (i.e., frame #339 and #163); nnU-Net and
+Fig. 2. Sequential detection results.Green: ground truth (GT)
+standard plane segments;Orange dashed: predictions.
+Fig. 3. The detected keyframes of two example scans with the
+abdominal anatomy highlighted by bbox.
+BiomedCLIP+ViT-B tend to match temporally misaligned
+look-alike frames, and their anatomical structures are visually inconsistent to the GT standard planes.
+4. CONCLUSION
+We propose a structure-augmented keyframe detector for fetal
+standard abdominal planes in the blind-sweep obstetric US.
+The abdominal structures are highlighted in the image frames
+using a segmentation prior, whic

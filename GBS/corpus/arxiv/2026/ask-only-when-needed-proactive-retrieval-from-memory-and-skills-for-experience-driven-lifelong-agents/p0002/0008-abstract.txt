@@ -1,0 +1,22 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 2
+section: abstract
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+effective
+lifelong agent must address both challenges simultaneously: it should learn to retrieve experience proactively, while
+also jointly evolving its memory and policy online.
+To address these challenges, we propose PROACTAGENT, an experience-driven lifelong learning framework that
+unifies proactive retrieval with experience-enhanced online evolution over a structured experience base. Specifically,
+PROACTAGENTconsists of two tightly coupled components. The first component,Experience-Enhanced Online
+Evolution(EXPONEVO), jointly improves the agent through memory refinement and policy optimization, enabling
+it to update both what experience it stores and how it acts during online interaction. The experience base organizes
+historical interactions into typed repositories, including factual memory, episodic memory, and behavioral skills, so that
+retrieval can provide both relevant evidence and actionable guidance. The second component,Proactive Reinforcement
+Learning-based Retrieval(PROACTRL), formulates retrieval as an explicit policy action and learns both when and
+what to retrieve through paired-branch process rewards. By comparing continuations from identical interaction prefixe

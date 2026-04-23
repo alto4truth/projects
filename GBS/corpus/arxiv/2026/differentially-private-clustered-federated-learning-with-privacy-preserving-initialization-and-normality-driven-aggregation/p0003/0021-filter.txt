@@ -1,0 +1,45 @@
+title: Differentially Private Clustered Federated Learning with Privacy-Preserving Initialization and Normality-Driven Aggregation
+source: arxiv
+year: 2026
+document_id: differentially-private-clustered-federated-learning-with-privacy-preserving-initialization-and-normality-driven-aggregation
+authors: Jie Xu; Haaris Mehmood; Rogier Van Dalen; Karthikeyan Saravanan; Mete Ozay
+page: 3
+section: filter
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20596v1
+
+We assume all clients are provided with this pre-trained model at the
+start of training, consistent with standard FL practices.
+Comparing with existing DP-FL methods:Table 1 shows results for different methods with non-private FL (ϵ=∞) and DP-FL
+(ϵ∈ {2,8}). The results demonstrate that PINA consistently outperforms SOTA methods across all three datasets. In particular, for
+ϵ= 2, PINA achieves up to2.9%,2.9%and3.1%improvements
+on rotated CIFAR-10, rotated FMNIST and FEMNIST, respectively.
+Forϵ= 8, the improvements reach up to3.0%,2.8%and3.2%on
+the same datasets. Notably, the improvements are most pronounced
+on the naturally non-IID dataset FEMNIST, highlighting the ability of our proposed method to handle real-world data heterogeneity. Overall, PINA shows an average accuracy improvement of2.9%
+over SOTA methods forϵ∈ {2,8}on non-IID data, validating its effectiveness in learning on heterogeneous user data while preserving
+user privacy.
+0 20 40 60 80 100
+round
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0accuracy
+IFCA( = )
+IFCA+LDP( =2)
+PINA( =2)
+PINA+RI( =2)
+PINA+RI( =8)
+(a)Clustering accuracy
+60 70 80 90 100
+round
+0.90
+0.91
+0.92
+0.93accuracy PINA( =2)
+PINA( =8)
+PINA+RI( =2)
+PINA+RI( =8)
+(b)Classificatio

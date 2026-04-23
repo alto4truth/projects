@@ -1,0 +1,33 @@
+title: Tokenised Flow Matching for Hierarchical Simulation Based Inference
+source: arxiv
+year: 2026
+document_id: tokenised-flow-matching-for-hierarchical-simulation-based-inference
+authors: Giovanni Charles; Cosmo Santoni; Seth Flaxman; Elizaveta Semenova
+page: 1
+section: gpu-nvidia-a100-pcie-40gb
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20723v1
+
+Parameter Site True Mean±Std 95% CI
+Global
+logβ— 14.2914.45±0.29[13.89, 15.02]
+logµ—−5.73−5.68±0.28[−6.21,−5.13]
+logQin — 4.644.57±0.30[3.97, 5.18]
+Local
+logRT Desc. aorta 19.1918.89±0.38[18.15, 19.63]
+logCT −20.61−20.61±0.43[−21.45,−19.78]
+logRT Innominate 21.5321.24±0.40[20.42, 21.99]
+logCT −22.96−22.54±0.46[−23.46,−21.65]
+logRT L. carotid 22.5922.62±0.48[21.54, 23.46]
+logCT −24.02−23.90±0.47[−24.75,−22.92]
+logRT L. subclavian 21.5521.57±0.42[20.70, 22.34]
+logCT −22.97−22.96±0.44[−23.84,−22.10]
+95% CI coverage11/11
+Table 3: Posterior recovery for the 16-patient haemodynamics calibration experiment. Global
+parameters: β (arterial wall stiffness), µ (blood viscosity), Qin (inlet flow amplitude). Local
+parameters: Windkessel terminal resistance (RT) and compliance (CT) at each of the four aortic
+arch outlets. All 11 parameters achieve 95% credible interval coverage.
+shows posterior predictive checks on outlet flow traces, and Appendix Figures 9 and 10 show the
+corresponding global and local posterior marginals. Samples drawn from the posterior closely track
+the observed waveforms, and all 11 inferred parameters achieve 95% credible interval coverage of
+the ground truth (Table 3), co

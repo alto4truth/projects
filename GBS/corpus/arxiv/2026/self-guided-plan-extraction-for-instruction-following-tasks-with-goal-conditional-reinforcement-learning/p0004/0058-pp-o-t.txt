@@ -1,0 +1,41 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 58
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+This structure allows us to rigorously dissect
+the agent’s capabilities: learning from language
+(Atomic/Combo), generalizing to new phrasing
+(Paraphrases), and generalizing to new goal combinations (New Objects).
+D Complete SuperIgor Training Pipeline
+The SuperIgor framework integrates multiple components that exchange specific inputs and outputs
+during training. Below we describe the key data
+flows between components:
+Component Interfaces:
+•LLM Planner (f LLM)
+– Input:InstructionI
+– Output:Candidate plan P consisting
+of a sequence of subtasks from subtask
+bankB
+•RL Policy (π θ)
+– Input:Environment observations ot, current plan step DistilBERT [CLS] embeddingp ϕ(t) of a planP
+– Output:Action at from extended action
+space containing default Craftext actions
+and additional DONE action that gives
+the agent the next plan step embedding
+pϕ(t+1) of a planP
+The complete training procedure integrating all
+components is summarized in Algorithm 5
+E DPO plans reprioritization
+Figure 9: Example of DPO plan reprioritization for the
+instruction:"Forge a stone pickaxe and mine coal"
+Algorithm 5Complete SuperIgor Training
+Pipeline
+Require:
+1: EnvironmentE
+2: Instruction datasetD train ={I 1, I2, .

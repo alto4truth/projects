@@ -1,0 +1,33 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 3
+section: ieee-transactions-on-image-processing-2
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+we show that our framework can be seamlessly extended to
+video amodal segmentation by adapting SAM-2, highlighting
+its flexibility and broad applicability. To the best of our
+knowledge, it is the first attempt to address video amodal
+segmentation in the open-world settings.
+To summarize, our contributions are as follows:
+•We observe that existing amodal segmentation models
+lack open-world generalization capabilities, significantly
+limiting their real-world applications.
+•With the improvements across three dimensions - model,
+data, and optimization - we successfully adapt SAM,
+a generic foundation model, to amodal segmentation,
+allowing the model to generalize to novel and diverse
+open-world scenarios.
+•The obtained framework,i.e., Amodal SAM, achieves
+superior performance in both closed and open-world scenarios, and can be easily extended to video applications,
+marking the first successful implementation of openworld video amodal segmentation.
+II.PRELIMINARIES
+A. Amodal Object Segmentation
+Task Description.Amodal object segmentation [2]–
+[8]addresses the challenge of inferring the integral geometry
+of an object, encompassing both its visible regions and the
+regions obscured behind

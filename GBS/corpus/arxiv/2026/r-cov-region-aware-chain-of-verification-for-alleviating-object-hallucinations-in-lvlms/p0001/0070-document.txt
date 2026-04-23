@@ -1,0 +1,25 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 70
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+way along the street, possibly engaging in a
+conversation with another person or simply enjoying her surroundings.
+(3) In the image, two women are crossing the street at a crosswalk, each holding an umbrella. The woman on the
+left is wearing a white sweater, while the woman on the right is standing next to her, both engaged in their task.
+The scene is sunny, and the women are using umbrellas to protect themselves from the sunlight.
+Q: Assume the image width and height are normalized to [0, 1]. Locate the truck and return its bounding box in the
+format [x_min, y_min, x_max, y_max], where [x_min, y_min] is the top-left corner and [x_max, y_max] is the
+bottom-right corner of the bounding box. Output only the four numbers in a single list. Do not include any
+explanation or extra text.
+A: [0.64, 0.4, 0.86, 0.55]
+Q: Describe [0.64, 0.4, 0.86, 0.55] in the image in detail.
+A: (1) The white car in the image is parked on the side of the road. It is a compact vehicle, and it is positioned near
+the curb. The car is parked in front of a building.
+(2) In the image, a grey van is parked on the street. The van is located next to a pedestrian crossing and is visible
+on the right side of the scene

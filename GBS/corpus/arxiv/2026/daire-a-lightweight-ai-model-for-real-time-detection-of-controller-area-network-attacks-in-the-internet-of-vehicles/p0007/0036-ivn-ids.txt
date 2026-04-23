@@ -1,0 +1,99 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 7
+section: ivn-ids
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+ometric authentication, and
+real-time language translation etc. In real-time classification, ANN
+Machine Learning with Applications 23 (2026) 100859
+5
+
+S. Alam et al.
+Fig. 3. A high-level overview of DAIRE. K represents the number of iterations used during optimization, commonly referred to as the number of epochs. It is
+typically assigned a large value between 500–1000. The ideal value of K is determined experimentally, based on the point at which the model converges, i.e., when
+its predictions no longer improve or the error rate stabilizes. For the dataset used in this paper, K = 100.
+models analyze the incoming data instantly and categorize the data
+into predefined classes. This is crucial in applications that require
+immediate decision-making, such as autonomous driving and intrusion
+detection, etc. One such area is to detect attacks in real-time against
+CAN in IoV. There are different types of such attacks against IoV, such
+as DoS and Spoofing attacks. DoS attack against CAN can be launched
+by manipulating the arbitration mechanism. For example, flooding the
+CAN bus with misleading high-priority messages can prevent essential
+commands from passing through (Derhab et al., 2021). This can lead to
+dangerous consequences, such as disruption in the cruise control system
+during driving, and can cause a serious accident. In Spoofing attacks,
+the attacker takes over the CAN bus and acts as a legitimate node. For
+example, this can lead to controlling the Revolutions Per Minute (RPM)
+of the vehicle during driving and can cause a significant risk to the
+occupants (Taslimasa et al., 2023).
+There is a need to develop real-time detection/classification of such
+attacks. In this paper, we propose, design, and develop a lightweight ML
+model named DAIRE (Detecting Attacks in Iov in REal time) that classifies such attacks in real-time. Fig. 3 presents a high-level overview of
+DAIRE. In the next few sections, we present the design and development
+of DAIRE.
+4.1. Preprocessing
+This section describes the data preprocessing, class imbalance problem, and feature extraction and normalization.
+4.1.1. Data preprocessing and class imbalance handling
+The CICIoV2024 and Car-Hacking datasets have significant natural
+class imbalance, as detailed in Table 4. This reflects real-world IoV environments where normal CAN messages substantially outnumber attack
+instances. Rather than applying synthetic oversampling techniques like
+SMOTE (Synthetic Minority Over-sampling Technique) or GAN-based
+(Generative Adversarial Network-based) generation, we intentionally
+preserved the original data distribution because we aimed to evaluate
+DAIRE under realistic conditions where attack frequencies naturally
+vary. Artificially balancing the datasets might create an unrealistic
+performance expectation. In actual vehicular networks, the frequency
+of attacks is inherently imbalanced; normal messages vastly outnumber
+malicious ones. Training on the raw, imbalanced distribution ensures
+that DAIRE is optimized for the high-precision detection of rare attacks
+within a predominant stream of normal traffic, which is critical for
+real-world deployment.
+Despite the imbalance, DAIRE achieved high performance across
+all classes, demonstrating its inherent capability to handle imbalanced
+data without artificial balancing. During experimental evaluation, our
+results demonstrate that DAIRE achieves high detection rates across
+minority attack categories without artificial balancing, confirming its
+inherent capability to learn effectively from imbalanced data.
+4.1.2. Feature extraction and normalization
+The input to our ML model consists of data, as shown in Table 2
+and Fig. 2, that the model uses to learn patterns, make predictions,
+and classify. This input consists of a set of input samples with features
+𝑆𝑚 = {𝐼𝐷, 𝐵𝑇 , 𝐶𝑙𝑎𝑠𝑠 } in the form of CAN messages, where 𝑚 is the 𝑚th
+CAN message, 𝐼𝐷 is the Arbitration field consisting of the identifier (ID),
+𝐵𝑇 = { 𝑏1, 𝑏2, 𝑏3, … , 𝑏𝑛} is the bytes transmitted comprising the Data
+Field, and Class is the specific class of the message. Raw hexadecimal
+CAN messages were converted into decimal feature vectors containing
+the Arbitration ID and Data Bytes, as illustrated in Table 3. All numerical features (ID and Data Bytes) were normalized to the [0, 1] range to
+ensure stable convergence during training. Attack classes were encoded
+as integer labels for efficient processing with the sparse categorical
+cross-entropy loss function. We have assigned different numbers to
+Class depending on the type of message. For example 0 if the message
+is normal, 1 if a DoS attack, 2 if a Fuzzy attack, 3 represents RPM
+Spoofing, and 4 is for SPEED Spoofing attack. An example of five
+samples of CAN messages belonging to five different classes is shown
+in Table 2.
+We have preprocessed the labeled dataset. This preprocessing transforms raw CAN messages into structured feature vectors (ID, BT, Class)
+through normalization and categorical encoding. Two samples of CAN
+raw data with their corresponding feature vectors are shown in Table
+3. These vectorized samples are now in a numerical format suitable
+for an ML model and serve as input features for our ANN architecture.
+Each feature vector preserves the temporal and payload characteristics
+necessary for attack classification.
+4.2. Lightweight Artificial Neural Network (ANN)
+In order to perform effective classification and enable real-time
+detection of IoV attacks, we have proposed a custom ANN architecture
+specifically designed to meet the constraints and demands of vehicular
+environments. Our model consists of an input layer, a few hidden
+layers, and an output layer. The number of hidden layers and other
+hyperparameters is computed empirically during the training of the
+model. We developed and computed the number of neurons in each
+layer using the following formula:
+𝑁𝑖 = 𝑖 × 𝑐 (1)
+Machine Learning with Applications 23 (2026) 100859
+6

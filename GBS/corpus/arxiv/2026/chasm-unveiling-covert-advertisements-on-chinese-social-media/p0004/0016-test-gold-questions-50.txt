@@ -1,0 +1,27 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+is a multi-modal task, and comments also play a critical role in enabling accurate detection.
+5 Discussion
+In this section, we provide an in-depth
+error analysis of CHASMbased on
+more fine-grained human feedback,
+and pose the following research questions to offer insights for future work.
+5.1 What types of errors can MLLMs make on CHASM
+We analyze the error cases of MLLMs by using fine-grained human feedback to identify common
+types of mistakes. Specifically, we conducted group discussions to determine the reasons why humans
+made opposing judgments on a given error case, and categorized them into four distinct error types:
+Insufficient Evidence: The MLLM misclassified regular posts as covert advertisements without
+sufficient evidence. These posts typically did not include essential promotional elements and merely
+mentioned certain brand names.
+Missing Clue: The MLLM failed to identify clues embedded in the image or comment section, such
+as shopping links in the comments or requests for private messages for more information.
+Textual Style: Humans made judgments opposite to the MLLM based on the textual style. E.g.,
+advertisements often employ exaggerated language or use clickbait-s

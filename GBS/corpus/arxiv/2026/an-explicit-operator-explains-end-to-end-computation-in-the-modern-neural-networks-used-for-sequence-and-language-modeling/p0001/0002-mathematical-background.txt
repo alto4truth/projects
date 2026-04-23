@@ -1,0 +1,26 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 1
+section: mathematical-background
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+wherex(t)∈C N is the solution for the state vector of
+the network at timet,eis the matrix exponential, the
+matrixKhas elementsk ij =κe −iϕij aij, and is a composite matrix containing information about the coupling
+strengthκ, network connectivitya ij and phase lagϕ ij,
+andx(0)∈C N are the initial conditions. Note that
+vectors and matrices will be typeset in bold throughout.
+Note, as well, the exact solution can be expressed in the
+non-rotating coordinate frame by multiplying the RHS
+of Eq. (3) by an additional terme iωt.
+In terms of theψ-coordinate, the exact solution is then
+given by
+ψ(t) = Arg
+
+eKteiψ(0)
+
+−i log

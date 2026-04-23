@@ -1,0 +1,30 @@
+title: Improving clinical interpretability of linear neuroimaging models through feature whitening
+source: arxiv
+year: 2026
+document_id: improving-clinical-interpretability-of-linear-neuroimaging-models-through-feature-whitening
+authors: Sara Petiton; Antoine Grigis; Raphaël Vock; Edouard Duchesnay
+page: 2
+section: abstract
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20675v1
+
+verse relationship.
+We evaluate the approach on two classification tasks,
+distinguishing individuals with bipolar disorder (BD) or
+schizophrenia (SCZ) from healthy controls (HC). Our results demonstrate that whitening and regularized whitening
+improve the interpretability of model weights without degrading predictive performance, offering a robust framework
+for linking linear model estimates to neurobiological mechanisms.
+2. MATERIALS AND METHODS
+2.1. Datasets
+Classification tasks for BD and SCZ were conducted using
+aggregated multi-site neuroimaging datasets. For BD, we
+used the BIOBD and BSNIP datasets [11, 12], comprising
+861 participants across 12 acquisition sites. Among them,
+56.4% are female, 44.1% were diagnosed with BD, and the
+mean age is37.69±11.75years. For SCZ, classification was
+performed using the SCHIZCONNECT-VIP dataset [13], totaling 604 participants across 4 acquisition sites. 38.2% of
+its participants are female, 45.5% were diagnosed with SCZ,
+and the mean age is33.33±12.34years.
+V oxel-based morphometry (VBM) measures were extracted from T1-weighted brain MRI data using the CAT12
+toolbox [14], (v 12.7). The brain was parcellated according to
+the Neuromorphometr

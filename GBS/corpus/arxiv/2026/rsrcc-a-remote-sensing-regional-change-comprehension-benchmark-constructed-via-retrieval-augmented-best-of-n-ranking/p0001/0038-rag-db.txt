@@ -1,0 +1,24 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 1
+section: rag-db
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+ocess.
+C Theoretical Interpretation of Best-of-𝑁Filtering
+We provide a simplified interpretation of why the proposed filtering mechanism remains stable under
+segmentation and localization noise.
+Let 𝑥denoteaninputimagepair,andlet C (𝑥)beasetofcandidateregionsgeneratedbyasegmentation
+model. Due to imperfect localization,C (𝑥)may contain both relevant and irrelevant regions.
+Let 𝑓(𝑐) denote the score assigned to a candidate region𝑐 by the downstream retrieval and reasoning
+module, measuring its semantic consistency with the observed change. We assume that for true
+change regions𝑐∗,𝑓(𝑐 ∗)is stochastically larger than for irrelevant regions.
+The Best-of-𝑁filtering procedure selects
+𝑐★ =arg max
+𝑐∈ C𝑁 (𝑥)
+𝑓(𝑐),(24)
+15

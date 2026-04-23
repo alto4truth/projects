@@ -1,0 +1,63 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 1
+section: paraff
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+t PASSnode, then repeatedly descends
+from the root until the quota is exhausted, the tree is fully explored, or a sufficiently low loss is
+reached.
+33
+
+Algorithm 2 :SOLVECLUSTER(C,picker, Q, s stop, λ)
+Input: clusterC, BeadPicker, quotaQ, stop-losss stop, ptFactorλ
+Output: best ClusterEvaluation found; cluster state updated in place
+e0.order←0; all other orders←∅
+s0 ←PREDICTCLUSTER(C,tip= 1)// single forward pass to seed root
+root←new Pass node withp=s 0,pt= 0
+L∗ ← ∞;S ∗ ←∅
+whileQ >0androot.count<∞:
+reset:e 0.order←0, all others←∅// restore start state before each path
+eval←DEDUCE(root,ctx);Q←Q−1
+ifeval.L<L ∗:
+L∗ ←eval.L;S ∗ ←SAVESTATE(C)
+ifL ∗ ≤s stop:break// solution good enough
+RESTORESTATE(C, S ∗)
+// Post-process residue elements: snap tick to nearest fixed event or grid
+// Assign beam, stemDirection, grace, timeWarp from predispositions
+// BuildH(horizontal adjacency matrix for layout engine)
+Each call to DEDUCEmay itself call PREDICTCLUSTERonce at each new Pass node it creates. The
+quota Q is therefore a budget on the total number of model inference calls, not on the number of
+tree nodes. The root node’s accessCount counts how many times the root has been visited; when
+it reaches ∞ (all branches sealed), the tree is fully explored and the loop terminates regardless of
+remaining quota.
+B.6 Measure-Level Assembly
+SOLVEMEASUREis the top-level entry point. It splits the measure into clusters (one per staff group),
+calls SOLVECLUSTERon each, and assembles the voice structure.
+The per-cluster quota is Q= min(⌈n·f⌉, Q max) where n is the cluster event count, f is
+quotaFactor, andQ max = 1000.
+After all clusters are solved, voices are extracted by iterating events in order-ascending sequence:
+consecutive events (order gap exactly 1) belong to the same voice; a gap larger than 1 begins a new
+voice. Events flagged grace or fullMeasure are excluded from voice sequences but receive ticks
+from the spatially nearest in-voice event.
+The horizontal adjacency matrix H (Hij = 1 iff event j immediately precedes i in its voice) is
+constructed and returned as part of the RegulationSolution, which is applied to the measure to
+populate all fields needed for rendering and export.
+C Failure Cases
+This appendix documents four representative measures where successive regulation strategies fail,
+illustrating the performance boundary of each method. For each entry the left panel shows the original
+sheet music; the centre panel shows the failing strategy’s output; the right panel shows the next
+stronger strategy (or human annotation) that succeeds. In the topology panels, distinct colours identify
+distinct voices; the narrow timeline strip at the bottom encodes each voice’s tick allocation within the
+measure. Measures were selected to form a difficulty ladder: each row’s failure case is too hard for
+all previous strategies and is solved by the next.
+Row 1. Greedy → Equations (rule-based).Bach,BWV791, m. 6. A greedy, myopic voice
+assignment produces six fragmented voices and a quality score of zero. The linear-equation
+solver re-links the fragments correctly, yielding three voices withq= 0.959.
+Row 2. Equations → BeadSolver (single-pass).Chopin,ÉtudeOp. 10 No. 3, m. 34. The constraint
+system cannot resolve voice crossings in denser polyphony and again produces an error
+34

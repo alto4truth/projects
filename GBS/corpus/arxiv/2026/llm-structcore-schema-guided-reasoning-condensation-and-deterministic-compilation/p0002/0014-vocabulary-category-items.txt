@@ -1,0 +1,31 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 2
+section: vocabulary-category-items
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+Dev10 Cross-Language Validation.To validate cross-language robustness, we evaluated on a small dev10 subset for both EN and IT using
+Anthropic-based Stage 1:
+Language F1 TP FP FN
+Italian (IT)0.900059 9 4
+English (EN) 0.8115 55 18 7
+Table 4: Dev10 cross-language validation (Anthropic recall Stage 1→Stage 2
+det).
+The Italian results are notably higher than English on this small dev10
+sample. Thistrendisconfirmedatscaleondev80: ITachievesF1=0.6905
+vs. EN = 0.6543 (Table 2). We attribute this to two factors. First, the
+Italian clinical notes from SGB hospital are written in a more structured,
+formulaic style than their English translations, facilitating cleaner Stage 1
+extraction. Second, certain CRF items use Italian medical terminology that
+maps more directly to the ontology (e.g.,dispnea→presence of dyspnea).
+4.3 Error Analysis
+FP-gates effectiveness.The FP-gate mechanism (Step 3 of Stage 2)
+drops an average of 3.2 items per document that would otherwise be false
+positives. Table 5 shows the per-item impact of FP-gates on dev80.
+The most impactful gate isactive neoplasia: without evidence gating,
+benign mentions of “cancer screening” or “family history of cancer” produce
+FP; the gat

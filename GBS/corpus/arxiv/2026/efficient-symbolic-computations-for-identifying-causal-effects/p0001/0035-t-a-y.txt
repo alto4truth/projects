@@ -1,0 +1,35 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+Algorithm 1Degree-bounded identification in a mixed graph
+Input:Generators of the idealI wh ⊆R[θ, σ, h], maximal degreed≥2.
+Initialize:Letθ id =∅be the rationally identifiable parameters and setθ rem =θ\θ id. Letwbe
+the trek-weighting.
+1:Letd ′ =d·w trek wherew trek is the length of the maximal length of a trek inG.
+2:repeat
+3:fork= 1, . . . , d ′ do
+4:forq∈θ rem do
+5:Let≺be aw-graded lex-elimination order forθ rem s.t.qis the smallest element ofθ rem.
+6:Using a degree-bounded Gröbner basis algorithm, compute the reduced Gröbner basis
+F≤k up to the weighted degreekwith respect to the order≺.
+7:forq∈θ rem do
+8:ifqa(θ id, σ, h)−b(θ id, σ, h)∈F ≤k then
+9:θ id =θ id ∪ {q}andθ rem =θ rem \ {q}.
+10:breakall for-loops
+11:end if
+12:end for
+13:end for
+14:end for
+15:untilθ id =θor no change has occurred in the last iteration.
+16:Output:“yes” ifθ id =θ, “no” otherwise.
+Theorem 5.1 certifies that, for fixed input degreed, Algorithm 1 is quasi-polynomial time in the
+number of nodes of the graph. If the maximal trek length is either bounded by a constant or grows
+fast enough with the number of nodes, then the algorithm is polynomial time. The key ingredient
+to the proof of Theorem 5.1 is the nex

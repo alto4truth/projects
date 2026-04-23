@@ -1,0 +1,26 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+red Pitch-Duration Sequence
+1.Syntax Form:<Pitch><Octave>(<Duration>). Example: C4(1/4) or F#5(1/8).
+2.Separation:Output must be a strictly space-separated sequence.
+3.Constraint:Output ONLY the note sequence. Do not include measure lines, conversational text, or markdown wrappers.
+Figure 7: The three standard music notation formatting constraints applied in ONOTE
+pitches are calculated based on key signature, scale degree markings, and octave indicators; for chord notes within the same time
+frame, they are sorted uniformly from lowest to highest pitch to
+eliminate evaluation biases caused by differences in note ordering across notation systems, laying a unified pitch representation
+foundation for subsequent accurate task-specific evaluation.
+C.3 Task-Specific Evaluation Implementation
+Details
+Visual Score Understanding (VSU) Evaluation: As a classification task, VSU adopts a ground-truth answer matching mechanism.
+The specific process involves parsing the model-generated answer,
+conducting dual-level matching (string-level and semantic-level)
+with manually annotated ground-truth answers, determining correctness based on exact consistency, and calculating the overall
+classification

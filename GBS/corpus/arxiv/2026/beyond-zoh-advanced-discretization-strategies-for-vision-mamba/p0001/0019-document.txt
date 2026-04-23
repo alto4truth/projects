@@ -1,0 +1,32 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+les. The discrete equivalent of the state-space system is
+given by integrating the polynomial input over time:
+¯A=e A∆ (9)
+¯B=
+Z ∆
+0
+eAτ Bp(τ)dτ(10)
+wherep(τ)is the chosen polynomial basis function (e.g., quadratic or cubic). For
+example, for cubic interpolation, a closed-form solution can be expressed as:
+¯B=A −1(eA∆ −I)B+ 1
+2 A−2(eA∆ −I−A∆)B(11)
+POL uses both past data and future sample points, a non-causal approach
+aligning directly with the bidirectional scan mechanism used in ViM and other
+vision SSMs. This allows the system to "see" the entire sequence at once rather
+than guessing the trajectory based solely on past momentum. Other discretization methods only project the signal forward based on the previous sampled
+points and may overshoot; POL, however, ensures the discretization error is
+minimized across the entire visual context.
+Higher-order hold (HOH)generalizes both ZOH and FOH by modeling
+the input as a polynomial ofnth order between samples. In contrast to POL,
+which applies fixed-order polynomial correction terms to improve local input
+smoothness. For annth order hold, the discrete matrices are defined as:
+¯A=e A∆ (12)

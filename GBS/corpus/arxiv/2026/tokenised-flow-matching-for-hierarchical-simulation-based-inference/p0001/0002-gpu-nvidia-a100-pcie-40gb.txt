@@ -1,0 +1,22 @@
+title: Tokenised Flow Matching for Hierarchical Simulation Based Inference
+source: arxiv
+year: 2026
+document_id: tokenised-flow-matching-for-hierarchical-simulation-based-inference
+authors: Giovanni Charles; Cosmo Santoni; Seth Flaxman; Elizaveta Semenova
+page: 1
+section: gpu-nvidia-a100-pcie-40gb
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20723v1
+
+to
+compute wall-clock and illustrative energy costs for both direct calibration and TFMPE in Table 2.
+Parameters and observations.We use global parameters θg = (logβ scale,logµ,logQ in) ∈R 3
+corresponding to arterial stiffness scaling, blood viscosity, and inflow amplitude. In this application, each patient constitutes a site. We use ns = 2patients for the cost telemetry in Table 2, and separately report a larger-scale calibration check with ns = 16synthetic patients
+in Figure 8, Table 3, and Appendix A.6. Each patient has outlet-specific Windkessel parameters (Antonuccio et al., 2021) at the four terminal vessels in the aortic-arch network, i.e.ηs =
+(logR T,s,1 ,logC T,s,1 , . . . ,logR T,s,4 ,logC T,s,4) ∈R 8 (implemented as WindkesselR2 and C, with R1
+fixed to a small fraction of the reference resistance). Observations consist only of the four flow traces
+(one per terminal vessel) resampled toNt points over the final cardiac cycle, givingys ∈R 4Nt (and
+y= (y 1, . . . , yns)).
+LF training.Stage 1 trains the per-site neural surrogate qϕl(ys |θ g, ηs)from per-patient/site
+tuples, where a single full-network simulation produces the four terminal-vessel flow traces for patient
+s. St

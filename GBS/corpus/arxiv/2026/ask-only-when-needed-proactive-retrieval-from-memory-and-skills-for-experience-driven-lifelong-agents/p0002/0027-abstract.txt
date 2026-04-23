@@ -1,0 +1,28 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 2
+section: abstract
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+standard normalized advantage for GRPO as follows:
+Ai =
+Rtraj
+i −mean({R traj
+j }G
+j=1)
+std({Rtraj
+j }G
+j=1) +ϵ
+.(11)
+The optimization of the policy is performed using the standard GRPO objective:
+JPROACTRL (θ) =E x,{τ (i)}
+"
+1
+G
+GX
+i=1
+min (ρiAi,clip(ρ i,1−ϵ,1 +ϵ)A i)−βD KL(πθ∥πref)

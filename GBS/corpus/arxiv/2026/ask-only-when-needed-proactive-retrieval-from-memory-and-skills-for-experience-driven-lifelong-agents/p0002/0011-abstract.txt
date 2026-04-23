@@ -1,0 +1,20 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 2
+section: abstract
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+erience across episodes rather than index a static corpus. Recent agent
+memory systems manage persistent interactions through summarization or hierarchical architectures [11, 13, 23, 24]
+and maintain evolving stores that grow alongside continued interaction [14]. As these repositories scale, how retrieval
+is triggered becomes increasingly critical. Existing approaches differ primarily in triggering mechanism: static initialization [11, 13] injects memory once at episode onset, providing startup context but leaving agents unable to adapt
+when conditions shift mid-episode; continuous retrieval [14, 15] queries at every step, increasing access at the cost of
+redundancy and context overload; and LLM-gated approaches [16, 17] employ a separate model to judge necessity,
+improving flexibility but introducing extra latency. Moreover, most systems store experience in a single undifferentiated
+repository [11, 13], conflating factual evidence with behavioral guidance. More critically, retrieval across all three
+paradigms remains governed by fixed schedules, external rules, or separate modules rather than learned as an intrinsic
+agent capability, leaving agents unable to recognize when current

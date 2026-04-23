@@ -1,0 +1,49 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 4
+section: ssl-r1
+chunk: 53
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+to-bottom), separated by commas.
+Answer format example:
+5, 1, 3, 7, 9, 2, 4, 8, 6
+Patch Ordering
+You are given an image and its rotated version. The image has
+been rotated clockwise by an angle that is a multiple of 90 degrees.
+<image>
+<image>
+Task:
+Determine the rotation angle of the image (clockwise direction).
+Answer format example:
+180
+Rotation Prediction
+You are given an image with a missing part.
+<image>
+Task:
+Determine the candidate image that best fits the missing part of the
+original image.
+Select the correct answer from the following 4 choices:
+(A) <image>
+(B) <image>
+(C) <image>
+(D) <image>
+The final answer should be a single letter.
+Region Inpainting
+You are given two images: the first one is the original image and
+the second one is its transformed version. Six points are marked on
+each of the image with red circular labels (1, 2, 3, ...).
+<image>
+<image>
+Task:
+For each point (1, 2, 3, ...) in the first image, find the
+corresponding point in the second image.
+Answer with the ordered sequence of point numbers, separated by
+commas.
+Answer format example:
+3, 1, 2, 6, 5, 4
+Geometric Correspondence
+You FIRST think about the reasoning process as an internal monologue and then

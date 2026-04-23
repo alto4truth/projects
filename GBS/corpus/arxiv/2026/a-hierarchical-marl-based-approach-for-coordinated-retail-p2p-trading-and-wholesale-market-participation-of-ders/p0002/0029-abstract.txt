@@ -1,0 +1,62 @@
+title: A Hierarchical MARL-Based Approach for Coordinated Retail P2P Trading and Wholesale Market Participation of DERs
+source: arxiv
+year: 2026
+document_id: a-hierarchical-marl-based-approach-for-coordinated-retail-p2p-trading-and-wholesale-market-participation-of-ders
+authors: Patrick Wilk; Ethan Cantor; Yikui Liu; Jie Li
+page: 2
+section: abstract
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20586v1
+
+ct uncompetitive
+pricing, balancing exploration (agents can safely try moderate price variations) with exploitation (excessively high
+or low prices incur aggregator fallback). The result is a
+clear signal reflecting the “missed opportunity” of potential
+savings. The final agent reward𝑟𝑛 is the base reward minus
+penalty (49). If no trade occurs,𝑟∗
+𝑛 = 0.
+Δ𝑆
+𝑛 = max
+(
+0, 𝑝 𝑜𝑛 −𝑝 𝑏
+𝑎
+)
+,Π 𝑆
+𝑛 =𝑞 𝑎
+𝑜𝑛
+× Δ𝑆
+𝑛 , 𝑛∈𝑁 𝑂 (46)
+Δ𝐵
+𝑛 = max
+(
+0, 𝑝 𝑠
+𝑎 −𝑝 𝑏𝑛
+)
+,Π 𝐵
+𝑛 =𝑞 𝑎
+𝑏𝑛
+× Δ𝐵
+𝑛 , 𝑛∈𝑁 𝐵 (47)
+Π𝑛 =
+{
+Π𝑆
+𝑛 ,if𝑛∈𝑁 𝑂
+Π𝐵
+𝑛 ,if𝑛∈𝑁 𝐵
+(48)
+𝑟𝑛 =𝑟 ∗
+𝑛 − Π𝑛 (49)
+The aggregator reward𝑟𝑎𝑔 depends on successful arbitrage and alignment with wholesale market conditions (50),
+representing net gains from wholesale transactions and P2P
+redistributions.
+𝑟𝑎𝑔 =𝑇 𝐴(50)
+3.2. Hierarchical DRL-Based Stackelberg Game
+Framework
+A hierarchical DRL framework, i.e., SEAM-LESS, is
+proposed under a Stackelberg game setup to solve the
+Markov game, as shown in Figure 2. The aggregator agent,
+as the game leader, sets price signals to define its wholesale
+and retail market policies, while the prosumer agents, as the
+game followers, learn local control policies to govern their
+decision-making in the retail market.
+To establish a f

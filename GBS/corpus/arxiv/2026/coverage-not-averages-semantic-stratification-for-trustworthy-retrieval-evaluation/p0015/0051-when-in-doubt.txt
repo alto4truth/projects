@@ -1,0 +1,53 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 15
+section: when-in-doubt
+chunk: 51
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+rieval systems across bootstrap samples (n=300).
+Figure 12.SciDocs: Win rate comparison between retrieval systems across bootstrap samples (n=300).
+25
+
+Coverage, Not Averages Semantic Stratification for Trustworthy Retrieval Evaluation
+E.2. Additional Interpretable Diagnostics
+Beyond the corpus-level failure modes identified in the main paper (semantic-lexical disconnect, register mismatch), stratified
+evaluation reveals additional retriever-dependent failure patterns across datasets.
+Named Entity Mismatch (NFCorpus).ThePharmaceuticals and drug developmentcluster (39 entities) exhibits a 75%
+zero-score rate across 8 queries. Sample entities include company names like “GlaxoSmithKline” and technical terms
+like “pharmaceuticalization.” Queries in this cluster ask about drug development processes, but the named pharmaceutical
+companies mentioned in corpus documents rarely appear in natural user queries. This represents a retriever failure where
+proper noun specificity in documents does not match the more generic query formulations.
+High-Frequency Practical Topics (FiQA).In FiQA, clusters representing common personal finance topics achieve
+disproportionately poor retrieval performance:
+• Retirement investment strategies(62 entities, nDCG = 0.23): 66.7% zero-score rate despite targeting common
+concepts like “target date retirement funds.”
+• Language and terminology in finance(144 entities, nDCG = 0.17): 62.5% zero-score rate for queries about contextual
+meaning and financial terminology.
+• Customization and personalization(nDCG = 0.11): Abstract concepts like “personalized gifts” and “features” that
+are too generic to embed discriminatively.
+These high-frequency, practical questions fail because common financial terminology may be too generic in the embedding
+space to discriminate between relevant and irrelevant documents.
+Technical Algorithm Names (SciDocs).In SciDocs, clusters containing highly specialized algorithm names achieve
+near-zero performance:
+• Optimization algorithms(424 entities, nDCG = 0.07): 75% zero-score rate with entities like “NelderMeadAlgorithm”
+and “alternating direction method of multipliers.”
+• Sentiment analysis(308 entities, nDCG = 0.07): 77.8% zero-score rate despite covering a well-established NLP
+subfield.
+• Digital healthcare innovations(268 entities, nDCG = 0.02): 80% zero-score rate for “quantified self” and “healthcare
+innovation” topics.
+The failure despite exact terminology matches suggests that these technical terms may be underrepresented in the embedding
+model’s training data, or that the citation-based relevance judgments in SciDocs create a mismatch between lexical similarity
+and annotated relevance.
+High-Performing Clusters.For contrast, we identify consistently high-performing clusters:
+• NFCorpus: Viruses linked to obesity (nDCG = 0.81), MRSA strains (nDCG = 0.77), gluten-related disorders (nDCG
+= 0.76)
+•FiQA: Tax incentives (nDCG = 0.97), corporate scandals (nDCG = 0.96), aviation industry (nDCG = 0.96)
+• SciDocs: Algebraic structures in programming (nDCG = 0.72), amplifier design (nDCG = 0.72), wearable health
+monitoring (nDCG = 0.57)
+These clusters succeed because queries and documents use consistent domain terminology with distinctive named entities,
+validating that retrieval works well when lexical-semantic alignment holds.
+26

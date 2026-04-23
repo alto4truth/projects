@@ -1,0 +1,15 @@
+title: Too Sharp, Too Sure: When Calibration Follows Curvature
+source: arxiv
+year: 2026
+document_id: too-sharp-too-sure-when-calibration-follows-curvature
+authors: Alessandro Morosini; Matea Gjika; Tomaso Poggio; Pierfrancesco Beneventano
+page: 1
+section: h-mse
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20614v1
+
+z,i (θ) =∇ 2
+zi LMSE(zi, yi) = 2
+K IK,
+so the logit-level Hessian is constant and does not depend on the predicted probabilities pθ(xi). Hence, unlike CE, the
+Gauss–Newton curvature does not attenuate as the model improves its fit:

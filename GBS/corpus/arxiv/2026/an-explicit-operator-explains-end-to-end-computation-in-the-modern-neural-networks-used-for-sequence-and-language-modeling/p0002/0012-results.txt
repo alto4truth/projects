@@ -1,0 +1,21 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 2
+section: results
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+es, we trained S4D to
+classify a synthetic dataset composed of three different
+signal classes embedded in high noise (Fig. 3a). The
+first class contained ten sinusoids with fixed frequency
+(15 Hz), random amplitude, and random phase embedded in strong Gaussian noise (−0.5 to−1 dB signal-tonoise ratio). The second class consisted of ten 20 Hz sinusoids, again with random amplitude and phase, and
+embedded in Gaussian noise with the same strength.
+The third class contained no sinusoids and only Gaussian noise. All signals were sampled for 900 time steps,
+and there were 300 independent realizations for each class
+in the dataset tested here. Following the analytical expression Eq. (12), when the network is driven by these inputs, the recurrent layer generates waves corresponding
+to specific modesµ j(k) (Fig. 3b). Summing the square of
+each mode (µ j(k))2 over time shows that power at specific modes distinguishes the different input classes across

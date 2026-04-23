@@ -1,0 +1,25 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+h Large Language
+Models (LLMs). The workflow provides immediate feedback on
+feasibility, consistency, and potential defects before formal feature
+models are constructed, thereby bridging informal scoping practices with automated validation and enabling domain experts to
+iteratively refine scope decisions. This early validation step avoids
+the need for a solver or formal knowledge base, reducing modeling
+effort and enabling earlier detection and discussion of design issues.
+Recent advances in LLMs suggest that this approach is feasible.
+Studies show that, when carefully prompted, LLMs can perform
+deductive and logical inference beyond surface-level text understanding [17, 24, 30, 31, 37], and can map natural language into
+formal specifications such as answer set programs [18], constraint
+satisfaction problems (CSPs) [16, 26], or Universal Variability Language (UVL) feature models [11]. These findings indicate that LLMs
+may function as lightweight inference engines over semi-formal
+representations like blueprints. However, their out-of-the-box ability to perform feature model AOs on such inputs has not been
+arXiv:2604.20523v1 [cs.SE] 22 Apr 2026

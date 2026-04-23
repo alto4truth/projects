@@ -1,0 +1,62 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 60
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+1.6 58.4 66.4 74.4 68.0 70.4 60.8 3.82 (6.02)
+Table 5: Performance comparison across different monolingual English retrieval methods using Serper API.
+
+J Multilingual evidence results
+Params 8B 12B-14B 27-32B >=70B Avg (Std.)
+Models LLaMA Qwen Gemma Qwen Gemma MedGemma Qwen LlaMA Qwen
+8B 8B 12B 14B 27B 27B 32B 70B 72B
+LLM’s parametric knowledge
+ES 58.4 70.4 71.2 72.8 71.2 78.4 75.2 73.6 76.0 71.91 (5.37)
+FR 62.4 69.6 65.6 71.2 71.2 75.2 75.2 79.2 78.4 72.0 (5.31)
+IT 64.8 72.8 68.8 75.2 73.6 78.4 77.6 78.4 80.8 74.49 (4.84)
+EU 52.0 60.8 63.2 61.6 71.2 74.4 65.6 72.8 59.2 64.53 (6.84)
+KK 46.4 53.6 60.0 57.6 64.0 67.2 64.0 68.8 65.6 60.8 (6.82)
+Web Search (Cohere)
+ES 64.0 74.4 72.8 75.2 78.4 79.2 79.2 80.0 77.6 75.64 (4.73)
+FR 64.8 73.6 72.0 72.0 73.6 78.4 78.4 79.2 75.2 74.13 (4.22)
+IT 66.4 72.8 71.2 76.8 78.4 75.2 79.2 80.0 78.4 75.38 (4.23)
+EU 47.2 52.0 61.6 56.8 63.2 69.6 62.4 68.0 59.2 60.0 (6.78)
+KK 48.0 32.0 50.4 35.2 59.2 61.6 35.2 70.4 41.6 40.36 (17.38)
+Web Search (Serper)
+ES 60.8 72.8 72.8 77.6 78.4 80.0 78.4 80.0 79.2 75.56 (5.83)
+FR 64.8 71.2 70.4 74.4 76.8 77.6 76.8 76.0 79.2 74.13 (4.28)
+IT 63.2 68.0 70.4 72.8 78.4 73.6 80.0 81.6 74.4 73.60 (5.57)
+EU 38.4 45.6 57.6 53.6 68.0 70.4 62.0 69.6 59.2 58.27 (10.34)
+KK 39.2 44.8 58.4 51.2 64.0 64.0 56.0 68.8 58.4 56.09 (9.03)
+Table 6: Performance comparison across different multilingual retrieval methods, model sizes and languages,
+meaning the retrieved documents are in the language of the question. The models are grouped by the parameter size.
+K Cross-lingual evidence results
+Params 8B 12B-14B 27-32B >=70B Avg (Std.)
+Models LLaMA Qwen Gemma Qwen Gemma MedGemma Qwen LlaMA Qwen
+8B 8B 12B 14B 27B 27B 32B 70B 72B
+LLM’s parametric knowledge
+ES 61.6 71.2 60.8 74.4 68.8 76.0 75.2 80.0 76.8 71.64 (6.35)
+FR 65.6 66.4 66.4 69.6 71.2 68.8 74.4 76.8 80.8 71.11 (4.94)
+IT 65.6 70.4 65.6 72.8 72.0 72.8 77.6 72.8 79.2 72.09 (4.34)
+EU 60.0 63.2 59.2 69.6 72.0 76.8 77.6 75.2 80.0 70.4 (7.43)
+KK 65.6 68.8 67.2 71.2 71.2 71.2 72.8 76.8 76.8 71.29 (3.63)
+Web Search (Cohere)
+ES 65.6 75.2 72.0 79.2 77.6 77.6 80.8 77.6 80.0 76.18 (4.49)
+FR 72.0 78.4 71.2 76.0 72.0 73.6 84.0 79.2 80.8 76.36 (4.25)
+IT 66.4 79.2 69.6 76.8 74.4 76.8 77.6 78.4 84.0 75.91 (4.94)
+EU 62.4 71.2 75.2 80.0 75.2 80.8 76.8 80.8 81.6 76.00 (5.81)
+KK 67.2 75.2 70.4 75.2 75.2 78.4 75.2 81.6 83.2 75.73 (4.71)
+Web Search (Serper)
+ES 57.6 75.2 62.4 74.4 72.0 72.0 78.4 76.8 80.8 72.18 (7.12)
+FR 63.2 70.4 69.6 75.2 76.8 76.8 79.2 79.2 79.2 74.4 (5.23)
+IT 70.4 70.4 76.8 75.2 76.8 76.8 77.6 79.2 77.6 75.64 (2.97)
+EU 65.6 70.4 64.8 69.6 73.6 77.6 79.2 73.6 77.6 72.44 (4.93)
+KK 68.8 70.4 68.8 68.0 73.6 72.8 74.4 78.4 78.4 72.62 (3.75)
+Table 7: Performance comparison across different cross-lingual retrieval methods, model sizes and languages,
+meaning the retrieved documents are in the language of the question and in English. The models are grouped by the
+parameter size.

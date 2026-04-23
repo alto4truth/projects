@@ -1,0 +1,36 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 2
+section: r-e-s-u-lt-s
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+apid intensity changes and the complexity of the multiscale underlying processes,
+pose a significant challenge for predicting TC intensity [ 21–23].
+6
+
+From the above, it is evident that the intensification of TC-related events requires
+augmented efforts towards the development and improvement of operational forecasting frameworks and early warning systems for hazard mitigation, emergency planning,
+and quantifying the impacts of extreme weather events on coastal communities. Storm
+surge models, based on numerical solutions of hydrodynamic equations and forced
+by meteorological inputs, constitute the cornerstone of such frameworks [ 24–26]. The
+advanced circulation model for oceanic, coastal and estuarine waters (ADCIRC) [ 27]
+is among the most broadly used storm surge models, and it is employed by U.S. federal agencies, academic institutions, and private organizations for both research and
+operational purposes. It is commonly used in tight coupling with SW AN, a thirdgeneration spectral wave model, with the two models sharing the same triangular mesh
+and exchanging water depth, current, and wave radiation stress information [ 28, 29].
+The Coastal Emergency Risk Assessment (CERA) framework is an interactive online
+visualization platform that combines real-time water level measurements with numerical predictions based on ADCIRC [ 30]. It is designed to provide first responders,
+decision-makers, and the general public with critical insights during hurricanes and
+other extreme weather events. The aforementioned intensification of extreme weather
+events has motivated numerous and continuous developments in storm surge prediction and response frameworks such as the above, for instance in terms of improving
+mesh design, computational eﬀiciency and descriptions of natural processes, facilitating model comparisons, enabling the coupling of multiscale approaches, using storm
+surge model data for traﬀic and risk assessment, and others [ 24, 31–41].
+Nevertheless, inherent uncertainties remain inevitable in storm surge models.
+These primarily arise from errors in the specification of hurricane characteristics,
+such as track, wind speed, and size, and inaccuracies in input data, including
+coastal topography, bathymetry, and land cover representation. Additional sources of
+bias include inaccuracies in atmospheric forcing from parent meteorological models,
+7

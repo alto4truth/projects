@@ -1,0 +1,28 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+te (intensity).
+A. T est scenarios
+For evaluation purposes, we define five distinct failure scenarios representing a spectrum of industrial operational conditions. These scenarios are generated using
+the stochastic model described in Sec. II, with specific parameters detailed in Table I. The scenarios are designed to test the model’s ability to distinguish between
+quasi-continuous degradation and sporadic, high-impact
+events:
+W eak F ouling (Scenario 1):This represents a wellmaintained system where fouling is slow and progresses in a quasi-continuous manner. The high
+arrival rate (λ= 5.0) combined with a low jump
+scale (βf = 0.005) simulates frequent, minor deposition events that approximate a linear degradation
+trend. This is typical of systems with high fluid velocity or effective surface conditioning, presenting a
+challenge for early-stage anomaly detection due to
+the subtle signal-to-noise ratio of the degradation
+increments.
+Batch Process Shutdown (Scenario 2):This scenario simulates fouling that occurs primarily
+during stagnant periods or process shutdowns
+(Batch SD). The low arrival rate (λ= 0.5) and
+high jump scale (β f = 0.03) result in rare but
+severe “shocks” to the heat

@@ -1,0 +1,74 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+ership in estimation of albedo and surface normal. Fig. 7 shows that our
+model can recover fine-grained surface details in clothing,
+skin, and hair.
+7
+
+High-Resolution
+Image Generation
+Multi-View
+Generation
+Multi-View
+Mesh Carving
+Textured Mesh
+High Resolution,
+DR RGB-X SapiensInput MoGe2
+Our
+DR RGB-X SapiensInput MoGe2 Our
+Figure 7.Qualitative comparison of estimated normal.Our model outperforms all baselines and consistently achieves sharper and
+high-frequency details such as eyes, skin, and hair. Please zoom in for details.
+VGGT MoGe2VGGT OurMoGe2 OurInput Input
+Figure 8.Qualitative comparison on geometry reconstruction.Our joint model (right) reconstructs fine-grained 3D shapes. In contrast,
+specialized geometry estimators like VGGT [33] and MoGe2 [35] produce distorted or over-smoothed point clouds on these in-the-wild
+images, demonstrating the superior performance of high-frequency details modeling of our iNOD with latent generative models.
+Input Synth
+Synth
+Dome
+Synth
+Dome
+ITW
+Figure 9.Benefit of In-the-Wild Data.Using onlySynthuncovers gaps in the data like the lack of mixed colored beards.
+AddingDomedata fixes that but produces unrealistic brightness
+(middle) due to the unnatural LED activation (either very sparse
+or fully lit) in light stage captures. Adding large-scaleITWdata
+corrects this bias, yielding balanced and realistic lighting (right).
+Method Acc.↓Comp.↓CD↓F-Score↑Prec.↑Rec.↑
+VGGT 4.06 2.68 3.37 21.05 18.87 23.98
+MoGe2 4.07 3.02 3.54 23.96 23.71 24.41
+GeoRelight 0.71 0.82 0.766 81.56 84.24 79.09
+Table 4.Geometric Shape Estimation evaluation.GeoRelight
+outperforms specialized, single-task SoTA geometry estimators.
+5. Conclusion
+In this paper, we proposeGeoRelight, a unified framework
+that, for the first time, jointly generates photorealistic relit
+images and reconstructs high-fidelity 3D geometry within
+Albedo Normal
+Method PSNR↑SSIM↑LPIPS↓ Ang.↓RMSE↓
+Sapiens - - - 13.99 0.319
+MoGe2 - - - 16.33 0.344
+RGB-X 15.45 0.909 0.093 21.12 0.420
+DiffusionRenderer19.46 0.892 0.115 20.44 0.420
+GeoRelight 28.07 0.943 0.057 8.64 0.211
+Table 5.Albedo and Normal disentanglement evaluation. GeoRelightachieves state-of-the-art albedo and normal estimation.
+a single multi-modal diffusion transformer. Our solution is
+enabled by three key contributions: (1) a flexible DiT architecture that processes modalities in parallel; (2) iNOD,
+a novel, distortion-free geometry representation compatible with pretrained V AEs; and (3) a strategic mixed-data
+training method that leverages Dome and in-the-wild data to
+bridge the synthetic-real gap. Our experiments proved our
+core thesis: joint modeling is synergistic, and our model
+achieves state-of-the-art results in not just relighting, but
+also in geometry and intrinsic estimation, outperforming
+specialized, single-task methods. While GeoRelight is a robust single-image method, it does not yet model temporal
+consistency. As our core DiT is built from a video model, a
+clear direction for future work is to extend our joint framework to video relighting and reconstruction. Besides, joint
+estimating geometry and appearance for relightable 3D human generation [41–43] can be a downstream application.
+8

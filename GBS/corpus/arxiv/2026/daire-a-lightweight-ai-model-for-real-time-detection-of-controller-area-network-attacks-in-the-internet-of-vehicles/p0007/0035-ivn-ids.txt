@@ -1,0 +1,69 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 7
+section: ivn-ids
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+extraction (SE)
+and BERT; SE for
+converting traffic data into
+byte sentences.
+High computational load
+of BERT makes real-time
+deployment challenging.
+
+datasets and computational demands may limit scalability for real-time
+IoV deployments.
+While most of the above studies focus on intra-vehicle CAN security, other research has addressed higher-layer threats in Intelligent
+Transportation Systems. For example, Karthikeyan and Usha (2022)
+proposed an entropy-driven, reinforcement-learning-based approach
+for real-time DDoS flooding attack detection at RSUs in intelligent
+transportation systems. Their work demonstrates the feasibility of applying adaptive AI methods to mitigate large-scale network-level attacks. However, their model targets vehicle-to-infrastructure traffic
+rather than the in-vehicle CAN bus, and it employs comparatively
+heavier learning strategies that may not suit embedded ECUs. At the
+same time, efforts to improve efficiency have driven the development
+of new hybrid and lightweight approaches. For instance, recent work
+on DDoS detection (Karthikeyan & Usha, 2022) has highlighted the
+critical need for real-time responsiveness. Furthermore, models combining Autoencoders with Temporal Convolutional Networks aim to
+balance temporal feature learning with a compact architecture, while
+other studies explicitly propose lightweight hybrid frameworks for
+resource-constrained vehicles, underscoring the field’s focus on this
+critical trade-off (Aljabri et al., 2025a). Luo et al. (2025) introduced a
+lightweight method using spectral residuals and a depthwise separable
+CNN that achieves high performance with low resource usage. Its
+effectiveness against dynamic attack patterns and its suitability for realtime deployment in diverse vehicular environments remain to be fully
+validated. Addressing a similar need for adaptable and efficient detection, Aljabri et al. (2025b) recently proposed a lightweight, data-driven
+IDS capable of multi-class intrusion detection across both in-vehicle
+and external network datasets. While their model demonstrates high
+accuracy and adaptability, its architecture is based on dense layers and
+the Adam optimizer.
+A summary of several of these related studies is presented in Table
+1, emphasizing their main features and identifying existing research
+gaps. The aforementioned studies demonstrate the growing effectiveness of ML and DL approaches for detecting CAN bus intrusions in
+IoV systems. Deep models like Deep CNNs, LSTM-GRU hybrids, and
+transformer-based architectures have shown high detection rates; however, many face limitations such as high computational complexity,
+reliance on extensive feature engineering, or dependence on centralized
+data that raises privacy concerns. Moreover, the real-time requirements
+and resource constraints of vehicular systems necessitate solutions that
+strike a balance between detection performance, interpretability, and
+computational efficiency.
+To address these limitations, this paper introduces DAIRE, a
+lightweight and real-time machine learning-based IDS designed specifically for CAN bus security in IoV. Unlike heavy DL architectures, DAIRE
+employs a lightweight ANN structure that is both interpretable and
+optimized for low-latency environments.
+4. DAIRE (detecting attacks in Iov in REal-time)
+ML (LeCun et al., 2015) enables computational models with multiple processing layers to learn data representations at various levels of
+abstraction. An ANN uncovers complex patterns in large datasets using
+the backpropagation algorithm, which adjusts internal parameters to
+refine representations at each layer based on the previous layer.
+ANN models use multi-layered neural networks for learning, and
+require a large amount of data and computational power to train.
+They are being applied in computer vision, self-driving cars, driver
+assistance systems, intrusion detection, biometric authentication, and
+real-time language translation etc. In real-time classification, ANN
+Machine Learning with Applications 23 (2026) 100859
+5

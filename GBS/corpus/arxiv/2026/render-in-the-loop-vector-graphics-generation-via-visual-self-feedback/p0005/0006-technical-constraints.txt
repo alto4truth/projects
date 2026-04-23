@@ -1,0 +1,20 @@
+title: Render-in-the-Loop: Vector Graphics Generation via Visual Self-Feedback
+source: arxiv
+year: 2026
+document_id: render-in-the-loop-vector-graphics-generation-via-visual-self-feedback
+authors: Guotao Liang; Zhangcheng Wang; Juncheng Hu; Haitao Zhou; Ziteng Xue; Jing Zhang; Dong Xu; Qian Yu
+page: 5
+section: technical-constraints
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20730v1
+
+- Canvas size: 224×224.
+- Coordinate system: 0–224.
+- Style: Concise, geometric, and visually faithful.
+Fig.S2:System Prompt for Image-to-SVG Task.
+DiffVG[20] is a differentiable vector graphics rasterization framework that
+enables gradient-based optimization over vector primitives. By computing gradients through the rasterization pipeline, DiffVG directly optimizes vector parameters to match raster images. Despite its effectiveness in image vectorization
+tasks, the forward–backward rasterization process introduces significant computational overhead.
+Autoregressive LLM/VLM-based Methods.StarVector[29] generates SVG code
+directly from images using a multimodal transformer architecture. It integrates
+an image encoder with a language model to autoregressively predict SVG primitives. While the model demonstrates strong performance on icon-level vectoriza-

@@ -1,0 +1,24 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+ed and compared against nonfine-tuned models.
+4.2 Semantic Segmentation on ADE20K
+Settings.We evaluate the proposed discretization methods on the ADE20K
+dataset [32], which contains 150 fine-grained semantic categories with 20K training images, 2K validation images, and 3K test images. All experiments are conducted using ViM as the backbone, integrated into the UperNet framework [26].
+The models were optimized using AdamW with a weight decay of0.01and a
+total batch size of16. The learning rate was initialized at6×10−5 and decayed
+linearly over a total of160K iterations, with a linear warmup of1,500iterations.
+Data augmentation includes random horizontal flipping, random rescaling, and
+random distortion. Across all experiments, the ViM architecture, training schedule, and segmentation head remain unchanged. Only the discretization method
+used to compute the discrete-time SSM parameters is modified, ensuring that
+observed differences arise solely from the numerical discretization strategy.
+Results.Table 2 reports the mean Intersection over Union (mIoU) results on
+ADE20K. BIL improves segmentation performance to43.9mIoU, representing a
+2.9point gain over the ZOH baseline used in previ

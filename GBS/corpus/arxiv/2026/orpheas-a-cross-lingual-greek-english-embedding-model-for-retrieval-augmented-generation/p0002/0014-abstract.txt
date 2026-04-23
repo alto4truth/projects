@@ -1,0 +1,23 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+g methodology with a crosslingual augmentation strategy across diverse domains, enabling robust monolingual and cross-lingual retrieval within
+a unified model.
+3 Development of ORPHEAS
+This section presents the development of ORPHEAS, a Greek–English embedding model for bilingual RAG systems.
+Initially, We describe the datasets used for training, followed by the knowledge graph-based fine-tuning methodology
+and finally present the model architecture and training procedure.
+3.1 Datasets
+The development of ORPHEAS leverages a diverse collection of corpora spanning multiple domains. Since Greek
+is the primary target language and high-quality Greek resources are substantially harder to obtain than English ones,
+the corpus is weighted toward Greek, encompassing encyclopedic knowledge, parliamentary discourse, legal documentation, administrative jurisprudence and social media content. English is represented through MS-MARCO, a
+large-scale IR dataset for which abundant resources are readily available.
+•Greek Wikipedia (Wiki) 2: Encyclopedic articles covering diverse topics including history, science, culture and
+geography. The corpus provides general knowledge expressed in modern Greek wi

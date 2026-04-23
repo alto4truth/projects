@@ -1,0 +1,23 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 1
+section: rag-db
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+wering constructed
+through a hierarchical semi-supervised curation pipeline centered on Best-of-𝑁 ranking. By
+combiningsegmentation-basedcandidatelocalization,vision-languagesemanticfiltering,andretrievalaugmented Best-of-𝑁 validation, our framework produces reliable and semantically consistent
+annotations at scale. The resulting dataset provides a benchmark resource for evaluating multimodal
+modelsonlocalized,change-specificreasoning,ratherthanonlyglobalimage-levelchangedescription.
+Our current framework remains tied to a predefined set of semantic classes, and may underperform
+on novel, visually ambiguous, or compositional changes outside this label space. In future work, we
+plan to expand the benchmark with additional classes, explore semi-supervised and open-vocabulary
+annotation strategies, and evaluate broader cross-model generalization across multiple LLMs and
+vision-language encoders. More broadly, we hopeRSRCCwill help advance remote sensing
+change captioning from coarse scene-level summaries toward fine-grained, region-grounded semantic
+understanding.
+9

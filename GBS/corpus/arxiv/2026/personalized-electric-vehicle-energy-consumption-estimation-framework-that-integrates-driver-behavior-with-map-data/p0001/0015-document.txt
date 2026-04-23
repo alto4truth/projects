@@ -1,0 +1,24 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+.
+3.3. Integrated Data Flow and Architecture Benefits
+The seven modules operate in sequence, with each stage editing or adding
+to the data stream:
+1) Route selection (Map Display Handler)
+2) Route feature extraction and structuring (Route Processor)
+3) Rule-based reference velocity profile generation (Velocity Profile Generator)
+4) Vehicle dynamics simulation with realistic constraints (PID Controller)
+5) Personalized, route context informed velocity and acceleration prediction (Driver LSTM Module)
+6) Physics-based energy consumption estimation (BEV Energy Consumption Model)
+7) Comprehensive visualization and validation (Visualization Module)
+This modular architecture directly addresses the identified research gaps
+by seamlessly integrating driver-specific behavioral modeling with comprehensive map context in a computationally efficient framework.
+7

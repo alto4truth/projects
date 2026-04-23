@@ -1,0 +1,21 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 2
+section: abstract
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+Monte
+Carlo rollouts or auxiliary models. Experiments on mathematical and general-domain
+benchmarks show consistent gains over GRPO across diverse models: up to 2.6-point accuracy improvements and 13.7% reasoning-length reductions on math tasks, and up to 2.4
+points and 4% on general-domain tasks, demonstrating strong generalization.
+1 INTRODUCTION
+Advanced by Reinforcement Learning with Verifiable Rewards (RLVR) (Shao et al., 2024; Yu et al., 2025a),
+Large Language Models (LLMs) have demonstrated remarkable capabilities in complex reasoning tasks,
+ranging from mathematical problem solving (OpenAI, 2024; Team et al., 2025; Shao et al., 2024) to multihop question answering (Huang et al., 2025; Song et al., 2025). The success of RLVR is largely attributed
+to computing rewards via direct outcome verification, rather than relying on reward models that complicate
+the training pipeline and are prone to reward hacking (Yu et al., 2025a). In a similar vein, Group Relative Policy Optimization (GRPO) (Shao et al., 2024) eliminates critic models for token-level advantage
+estimation, instead uniformly propagating trajectory-level advantages to intermediate steps. While this simplification avoi

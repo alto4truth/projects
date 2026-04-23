@@ -1,0 +1,23 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 1
+section: mnist
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+l 𝑂, reference data 𝐷, and a mutation operator 𝑀𝑂. The search space for the gate percentage
+is restricted by a lower bound 𝑙𝑏 and an upper bound 𝑢𝑏. 𝑘𝑚𝑎𝑥 specifies the maximum iterations
+for generating stable mutants, and 𝑖 denotes the number of mutants generated in each iteration.
+Initially, the configuration of the gate percentage is set as the middle point of the search bounds
+(line 3). In each iteration, 𝑖 new mutants are appended to the mutant set by applying 𝑀𝑂 with
+the current configuration (lines 7-8). The loop terminates until the RSE is less than 𝜏𝑅𝑆𝐸 or 𝑘𝑚𝑎𝑥 is
+reached (line 4). An RSE above the threshold reflects the instability of the current configuration,
+and the search range is narrowed to explore a smaller-value one (line 10). Also, due to the current
+configuration yielding no stable mutants, the number of mutants generated 𝑖 is increased to 1.5
+times (line 10) for the next generation iteration to ensure a sufficient number of mutants in the end.
+If RSE is stable enough, the algorithm proceeds to the analysis phase. Before analyzing individual
+mutants, to further improve efficiency, it checks whether the current configuration can generate
+killable mutants by slight

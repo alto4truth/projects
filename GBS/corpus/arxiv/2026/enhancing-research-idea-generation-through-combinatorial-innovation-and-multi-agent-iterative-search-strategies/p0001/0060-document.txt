@@ -1,0 +1,14 @@
+title: Enhancing Research Idea Generation through Combinatorial Innovation and Multi-Agent Iterative Search Strategies
+source: arxiv
+year: 2026
+document_id: enhancing-research-idea-generation-through-combinatorial-innovation-and-multi-agent-iterative-search-strategies
+authors: Shuai Chen; Chengzhi Zhang
+page: 1
+section: document
+chunk: 60
+source_ref: https://arxiv.org/pdf/2604.20548v1
+
+dicates that the model moves from broad exploratory generation toward a more focused refinement strategy. Rather than introducing many new theoretical
+
+23 concepts, the model consolidates the technical backbone established in Turn 1 and adapts it to a more concrete disaster-response setting by adding domain-specific entities such as drone swarms, environmental hazard monitoring, and scenario-oriented plan-ning modules. At the same time, several technical refinements are introduced, including Bayesian neural networks and a domain-aware uncertainty propagation mechanism. Figure 11 illustrates the entity composition of the Turn 2 idea.
+Figure. 11. The research idea from turn 2. Note: Blue blocks represent entities from the LLM, yellow blocks represent entities from the last idea, and green blocks represent entities from the reference literature. In Turn 3, path dependence becomes even stronger. The proportion of inherited en-tities further increases to 78.3%, whereas only 5% of entities come from references and the number of newly generated entities sharply declines. Although the model still in-troduces several meaningful additions, such as causal reasoning, causal Bayesian net-works, and human-in-the-loop interaction, the overall idea trajectory becomes highly locked into the previous technical pathway. This suggests that later iterations tend to emphasize deepening and extending an established line of reasoning rather than open-ing up new directions of recombination. Figure 11 shows the entity composition of the Turn 3 idea. Overall, the case analysis reveals a clear three-stage evolutionary pattern in entity recombination. Turn 1 corresponds to exploratory recombination, where the model ac-tively integrates cross-domain concepts and generates a large proportion of novel enti-ties. Turn 2 reflects focused recombination, where the model preserves the core frame-work while adapting it to specific scenarios and adding contextualized technical details. Turn 3 exhibits path locking, in which excessive reliance on inherited entities constrains the introduction of substantially new components. This pattern is consistent with the results reported in Section 4.5: as iterations proceed, idea quality tends to improve, whereas diversity gradually declines.

@@ -1,0 +1,50 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 58
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+s where the operator
+accepts these risks and uses Docker or SLURM when appropriate, but it should not be described as a
+hardened execution sandbox.
+32
+
+C.3 Submission checklist
+Before submitting anypAI/MSc-produced manuscript to a venue (NeurIPS, ICML, ICLR, or similar), a
+human owner should at minimum:
+1. Verify novelty and related-work positioning against recent proceedings, not only arXiv.
+2. Confirm that baselines are appropriate, figures are not misleading, and at least one key experiment
+has been rerun independently.
+3. Spot-check citations and bibliography entries, including retraction status and faithfulness of attributed
+claims.
+4. Manually revise high-stakes sections: abstract, ethics or broader-impact discussion, and venue-specific
+formatting or anonymization details.
+5. Compile the manuscript locally and obtain at least one domain-expert read before submission.
+6. Check venue-specific requirements: page limits, supplementary material format, code-availability statements, and reproducibility checklists.
+This checklist is part of the scientific boundary of the system.pAI/MScreduces orchestration burden but
+does not remove the need for expert ownership of the final claims.
+D Evaluation Framework
+This appendix specifies the evaluation structure forpAI/MSc: the core evaluation questions, the metrics
+taxonomy, and the known failure modes. The current release should be evaluated primarily as aworkflow
+and artifact system, not as a benchmarked scientific autopilot.
+D.1 Evaluation questions
+For the present release, the central evaluation questions are:
+•Q1 – Structural completion.Does the system reliably execute the fixed workflow graph and
+materialize the required stage artifacts under different operating modes?
+•Q2 – Editorial completion.Under stricter settings, does the run reach a paper-facing state in which
+the manuscript artifacts, review artifacts, and optional PDF outputs are all present and structurally
+valid?
+•Q3 – Auditability.Do the emitted files make it possible for a human supervisor to understand
+what the system planned, what it executed, what it decided to follow up on, and where additional
+verification is still required?
+•Q4 – Operational efficiency.What runtime and spend envelopes are induced by the major execution
+modes, and how do optional modules such as counsel and tree search change that profile?
+•Q5 – Scientific quality.Which aspects of output quality can already be instrumented automatically,
+and which still require external auditing, reruns, or expert review?
+These questions deliberately separateoperational success(Q1–Q4, already measurable from run outputs)
+fromscientific success(Q5, only partially observable in the current release).
+33

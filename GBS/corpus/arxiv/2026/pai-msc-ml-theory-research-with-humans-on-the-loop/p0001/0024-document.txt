@@ -1,0 +1,30 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+xperiment_workspace/*,
+experiment_runs/*,math_workspace/*,
+counsel_sandboxes/*,
+tree_search_state.json,
+tree_branches/*
+Evidence from empirical,
+mathematical, counsel, and
+tree-search modes
+Checked by
+downstream stages
+Table 1: Artifact bundles in the currentpAI/MScrelease. The first two rows define the minimal paper-facing contract;
+remaining rows extend it by run mode.
+In stricter paper-oriented modes, validation does more than check file existence. The final gate can also
+enforce internal review thresholds, paper-quality checks, and, when theorem-oriented or editorial modes are
+active, additional consistency requirements on theorem dependencies, acceptance status, and claim traceability. These checks are useful because they prevent the system from calling an obviously incomplete run a
+success. They should not, however, be confused with guarantees of scientific correctness.
+A further design choice is that proofreading and reviewer stages emit editable source artifacts such as
+copyedit_report.texandreview_report.tex. Validation is keyed to those source artifacts rather than
+only to rendered PDFs. This keeps the workflow aligned with a manuscript-development process rather than
+a s

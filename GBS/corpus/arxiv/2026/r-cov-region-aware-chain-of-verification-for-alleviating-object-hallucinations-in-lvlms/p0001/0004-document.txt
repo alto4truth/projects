@@ -1,0 +1,27 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+nd (iii) integration of external expert models [19, 32, 40, 49, 50, 54, 58]. These
+approaches have achieved substantial progress in reducing
+hallucinations in LVLMs, laying important foundations for
+improving their reliability. However, they inevitably have
+the following drawbacks: (i) demands significant computational resources, (ii) requires access to internal model parameters, and (iii) heavily relies on multiple external expert
+models.
+Previous studies in LLMs focusing on text tasks have
+demonstrated that techniques such as chain-of-thought [11,
+47] can effectively reduce LLM hallucinations, leading to
+increased reliability of results by guiding them through a
+structured thought process. In this paper, we are interested
+in investigating whether such a chaining process is helpful to alleviate LVLM hallucinations. Unlike LLMs, which
+primarily process and interpret text, the key challenge in
+LVLMs lies in how to comprehend and reason about the visual information presented in images.
+To tackle this challenge, we proposeRegion-aware
+Chain-of-Verification (R-CoV), atraining-freemethod that
+can directly correct the hallucinations of LVLMs in a posthoc manner. Our method is inspired by

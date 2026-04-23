@@ -1,0 +1,21 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 2
+section: abstract
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+existing lifelong agents still face two fundamental limitations.First, current retrieval mechanisms remain
+essentially passive: retrieval is triggered by pre-defined positions, externally designed rules, or separate gating modules,
+rather than being learned as an intrinsic capability of the agent itself. As a result, agents struggle to recognize knowledge
+gaps during interaction and proactively retrieve the most useful past experience for the current decision.Second,
+existing online update strategies typically focus on either textual memory accumulation or parameter optimization,
+while treating the two as largely independent processes. In practice, both are indispensable for lifelong adaptation.
+Textual memory preserves and expands externalized experience, including facts, episodes, and reusable skills, whereas
+parameter updates improve the agent’s internal policy for future decision making. Updating only one side, or evolving
+them in isolation, limits the agent’s ability to continually improve from interaction history. Therefore, an effective
+lifelong agent must address both challenges simultaneously: it should learn to retrieve experience proactively, while
+also jointly evolving

@@ -1,0 +1,31 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+versight and application-specific safeguards.
+C Implementation Details
+Models and optimization budget.We implement TPGO through an OpenAI-compatible
+API interface. Unless otherwise specified,
+gemini-2.5-pro is used for all meta-optimization
+components, including theParser LLM, theGradient Generator(Reflector), and theOptimizer
+LLM. These modules use temperature 0.7 and topp= 0.95 . Each API call is retried up to three
+times with exponential backoff. In all main experiments, we run TPGO for at most five optimization
+iterations.
+Datasets and optimization settings.ForMCPUniverse(Luo et al., 2025b), we use the evaluated
+subset reported in the main results, covering146
+tasksfrom four domains:Repository Management,3D Designing,Browser Automation, and
+Web Searching. This benchmark is used in an
+exploratory optimizationsetting, where the Gradient Generator analyzes execution traces without
+access to gold answers. ForGAIA(Mialon et al.,
+2023), we start from the public validation split of
+165 questionsand filter it to atext-onlysubset
+of142 tasks(Level 1: 49, Level 2: 71, Level 3:
+22), matching our focus on textual reasoning and
+tool use. GAIA is used in animitative optimization
+setting, whe

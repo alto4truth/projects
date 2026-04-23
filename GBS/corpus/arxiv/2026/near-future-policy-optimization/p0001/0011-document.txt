@@ -1,0 +1,25 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+bestrong enoughto yield correct trajectories that the
+current policy cannot reliably discover, andclose enoughin distribution to keep off-policy updates stable.
+These two requirements are in tension, and to make the tension precise we formalize the effective learning
+signal that any off-policy source contributes.
+Consider an off-policy guidance source whose checkpoint is∆optimization steps ahead of the current policy.
+Its contribution to learning is governed by two competing quantities. The first issignal qualityQ(∆): among
+prompts on which the current policy fails, the fraction for which the source can produce a verified-correct
+trajectory; Q grows with∆because a checkpoint further along the optimization path is stronger. The second
+isvariance cost V (∆): the gradient variance that arises when trajectories drawn from a different policy are
+incorporated through importance weighting. As∆grows, V rises approximately exponentially; we derive this
+upper bound formally in Appendix B and verify it empirically in Figure 2(b). The effective learning signal is
+then defined as:
+S(∆) = Q(∆)
+V(∆) .(1)
+Since Q saturates with further training whileV grows near-exponentially, their ratio first ri

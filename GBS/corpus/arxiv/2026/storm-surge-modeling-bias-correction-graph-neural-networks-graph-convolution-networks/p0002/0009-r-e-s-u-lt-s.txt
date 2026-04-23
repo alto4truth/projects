@@ -1,0 +1,39 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 2
+section: r-e-s-u-lt-s
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+ting [ 88]. While a similar approach has been also reported for
+bias correcting numerical forecasts in the same context [ 89], the implementation of
+9
+
+this family of methods for bias correcting storm-specific scenarios has not been yet
+widely explored. Thus, in this work, we demonstrate the performance of StormNet, a
+GNN-based approach for bias correcting storm surge forecasts. We employ our model
+for bias correcting ADCIRC-based predictions during storm events in the U.S. Gulf
+Coast and we compare the results with our previous LSTM-based model [ 77].
+Contributions.
+The main contributions of this work are summarized as follows:
+• We propose StormNet, a spatio-temporal graph neural network architecture that
+integrates GCN, GAT, and LSTM components to jointly capture spatial correlations
+and temporal dynamics for storm surge bias correction.
+• We introduce a physically informed graph construction strategy that leverages interstation correlations and coastal geometry to encode meaningful spatial relationships
+between gauge locations, enabling better spatio-temporal learning.
+• We develop an end-to-end forecasting framework that predicts future model biases
+and applies them to correct ADCIRC water-level forecasts. This hybrid physics–
+ML approach leads to accuracy improvements, especially for longer (48–72 hour)
+prediction horizons.
+• We conduct a comprehensive evaluation using real hurricane events from the U.S.
+Gulf Coast, including an independent test on Hurricane Idalia (2023).
+• We perform an ablation analysis to quantify the contribution of each architectural
+component (GCN, GAT, LSTM) and demonstrate the robustness of the model, low
+training cost, and suitability for a real-time operational forecasting system (CERA).
+The paper is organized as follows: Data acquisition, preprocessing, and GNN model
+architecture, along with its underlying principles, are presented in Section 2. The
+results of applying StormNet in the considered region of interest, along with a comparison with the LSTM-based model of [ 77], and the results of the ablation study
+10

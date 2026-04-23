@@ -1,0 +1,29 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+guided by manually crafted personas (Lin et al.,
+2025), which is crucial for achieving sophisticated
+outcomes beyond single-agent performance. Consequently, the overall system performance is highly
+sensitive to this vast array of design choices, including the composition of the agent team, the collaboration mechanism, the communication protocol,
+and the specific configuration of each agent’s persona and proactivity (Zhang et al., 2024; Lin et al.,
+2025).
+2.2 Automatic Prompt Optimization
+Recent efforts in automatic prompt optimization
+have pursued three primary directions. Searchbased methods, such as PromptAgent (Wang et al.,
+2023), leverage MCTS for strategic exploration.
+Evolutionary algorithms like EvoPrompt (Tong
+et al., 2025) iteratively evolve prompts to select for
+high-performing candidates. In contrast, gradientbased approaches such as TextGrad (Yuksekgonul
+et al., 2024) frame prompts as differentiable parameters, optimizing them through backpropagation.
+A shared limitation of these methods is their
+focus on textual content over system architecture.
+They optimize individual prompts in isolation but
+are ill-equipped to resolve failures originating from
+the complex interplay

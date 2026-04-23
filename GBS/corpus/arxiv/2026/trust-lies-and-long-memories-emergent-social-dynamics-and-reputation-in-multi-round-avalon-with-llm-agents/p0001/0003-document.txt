@@ -1,0 +1,28 @@
+title: Trust, Lies, and Long Memories: Emergent Social Dynamics and Reputation in Multi-Round Avalon with LLM Agents
+source: arxiv
+year: 2026
+document_id: trust-lies-and-long-memories-emergent-social-dynamics-and-reputation-in-multi-round-avalon-with-llm-agents
+authors: Suveen Ellawela
+page: 1
+section: document
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20582v1
+
+1 Introduction
+Social deduction games provide a compelling testbed for
+studying emergent behavior in AI systems. Unlike chess or
+Go, where optimal play can be computed, games like The
+Resistance: Avalon [Wikipedia, 2024] requiresocial reasoning: inferring hidden information from behavior, building
+trust, detecting deception, and coordinating without explicit
+communication channels. These capabilities are central to
+real-world multi-agent scenarios, from negotiation to collaborative problem-solving.
+Recent advances in large language models (LLMs) have
+enabled agents that can engage in extended natural language
+dialogue, maintain context across interactions, and reason
+about others’ mental states [Kosinski, 2024]. This raises fundamental questions about multi-agent multi-round dynamics:
+Do LLMs develop stable social models when they interact
+repeatedly with the same agents across multiple games? Are
+these models role-conditional, where agents distinguish how
+the same individual behaves as deceiver versus cooperator?
+We address these questions using The Resistance: Avalon,
+a hidden-role game where a “good” team attempts to complete missions while “evil” players sabotage secretly. The

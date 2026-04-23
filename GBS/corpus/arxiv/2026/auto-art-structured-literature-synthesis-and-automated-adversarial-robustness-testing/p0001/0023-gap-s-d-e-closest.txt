@@ -1,0 +1,40 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+ϕ(x), interclass distance dinter =mean c̸=c′∥µc −µ c′∥2, and intra-class
+distanced intra =mean c meanx∈Sc ∥ϕ(x)−µ c∥2. Then:
+RDI=clamp
+ dinter −d intra
+dinter +ϵ ,0,1
+
+(1)
+where ϵ= 10 −8.Interpretation:RDI >0.7 (high robustness), 0.4–0.7 (moderate), 0.2–0.4 (low), <0.2 (very low).
+These thresholds are calibrated on our 10-model RobustBench
+corpus (Section 12) by maximising Kendall τ agreement with
+full AutoAttack rankings; a sensitivity analysis appears in
+Appendix??.
+FOSC (First-Order Stationarity Condition).
+FOSC(f, X, Y) = 1
+|X|
+X
+x,y
+∥∇xL(f(x), y)∥ 2 (2)
+FOSC > τmask = 0.1 signals gradient masking; the threshold
+is chosen to achieve ≥92% detection on 12 known-masking
+configurations (Table 9). A three-signal ensemble (FOSC,
+white-box/black-box discrepancy >0.15 , gradient noise sensitivity>0.1) flags masking when≥2signals trigger.
+Security Score.
+S= 0.4·Acc+ 0.4·(1− ASR) + 0.2·CertRob (3)
+where ASR is the mean attack success rate and CertRob the
+certified robustness fraction.
+Multi-norm metrics.Competitiveness Ratio CR= r/r∗,
+where r is mean robust accuracy across norms and r∗
+is the best single-norm accuracy, and Stability Constant
+SC=std({r i}) across all attack/epsilon comb

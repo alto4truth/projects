@@ -1,0 +1,24 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+uctural finding to actionable guidance for
+compression practitioners.
+1 Introduction
+Large language models (LLMs) require substantial memory and computation for inference. A
+model withNparameters stored at 16-bit precision requires 2Nbytes of storage andO(N)
+floating-point operations per token. Reducing these requirements without degrading output
+quality is a central challenge for practical deployment.
+Current compression methods operate primarily in the weight domain: quantization reduces
+the precision of stored weight values [1, 2], pruning removes weights entirely, and low-rank
+factorization replaces weight matrices with products of smaller matrices [10]. These approaches
+have achieved practical success, with 4-bit quantization (GPTQ, AWQ) becoming standard for
+deployment.
+1
+arXiv:2604.20682v1 [cs.LG] 22 Apr 2026

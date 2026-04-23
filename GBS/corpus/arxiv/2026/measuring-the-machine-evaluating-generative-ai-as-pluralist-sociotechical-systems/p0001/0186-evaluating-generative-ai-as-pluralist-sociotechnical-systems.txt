@@ -1,0 +1,15 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 186
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+prompt sets), and macro (overall dataset-level alignments). These comparisons do not establish validity on their own, but they provide evidence about
+
+Chapter 4: The World Values Benchmark 175
+whether the benchmark captures patterns that remain meaningfully comparable to observed human survey responses across multiple scales. Nomological validity. Validity was further supported by locating model output patterns within broader empirical regularities documented in comparative social research. For example, the benchmark reproduced well-documented divergences between the United States and other industrialised democracies, including stronger religiosity, greater survival-oriented tendencies, and weaker democratic indicators than several peer nations. This does not by itself validate the benchmark, but it provides evidence that the distributions it captures are not random or detached from established social-scientific patterns.10. Ecological validity. WVB was designed to evaluate model outputs under structured prompting conditions that approximate real evaluative use while remaining methodologically controlled. This does not reproduce the full complexity of real-world deployment, but it strengthens the benchmark’s relevance by showing how model response distributions vary under plausible prompt conditions rather than in fully artificial test settings. Taken together, these validity considerations support WVB as a descriptive measurement framework for comparing model output distributions with human survey distributions under controlled conditions. Validity here is not established by any single check, but by a cumulative argument that the benchmark preserves the constructs of interest, supports meaningful comparison, and remains sensitive to plural patterns without reducing them to a single normative ideal.
+4.3.6 Scoring metrics The final step in the WVB pipeline was to compare model-generated probability distributions with those observed in the WVS. The focus was on distributional similarity to national survey data rather than whether any single answer was “correct”. Three scoring views were used: raw distributions, L1 distance, and Kullback–Leibler (KL) divergence. • Raw results. Before applying divergence metrics, raw model distributions were recorded alongside human country distributions. This provided a descriptive baseline for interpreting differences and ensured transparency in how scores were derived • L1 distance (Manhattan distance). This is the sum of absolute differences between model and human probabilities for each answer option. For example, on the 10 Since 2016, the United States has been classified as a “flawed democracy” by the Economist Intelligence Unit. In the 2024 Democracy Index, the US ranked 28th [114].

@@ -1,0 +1,23 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 1
+section: mnist
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+FSE128:12 Minqi Shao, Shangzhou Xia, and Jianjun Zhao
+To evaluate a more diverse set of QNNs, we select four representative architectures with different
+block-stacking and hierarchical-structure strategies.
+Quantum Circuit Learning (QCL)[ 42] is a classical–quantum hybrid model designed to
+approximate nonlinear functions through parameterized quantum circuits. QCL belongs to a blockstacking structure and employs amplitude encoding.
+Quantum Convolutional Neural Network (QCNN)[ 12] is inspired by classical CNNs, implementing convolution, pooling, and fully connected operations using quantum circuits. It is effective
+in mitigating the barren plateau problem [47]. QCNN is hierarchical and employs amplitude encoding.
+Hierarchical Circuit Quantum Classifier (HCQC)[ 24] is another hierarchical model that
+reduces the circuit’s degrees of freedom as depth increases, using translationally stacked, invariant
+ansatz blocks. Here we use the ansatz U_SO4 with amplitude encoding.
+Data Re-uploading Neural Network (DRNN)[ 46] re-uploads data features as rotation angles
+to multiple qubits, combined with extra trainable parts to form a universal classifier. It addresses
+the limited expressivity of a

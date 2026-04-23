@@ -1,0 +1,50 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 7
+section: deprecated-archived
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+ector passes through stages that mirror episodic memory formation in the brain. Stage
+names are chosen to expose the analogy rather than to hide it.
+5
+
+Source Prior Example
+Official database 0.95 CRM, ERP, product DB
+Policy document 0.90 HR, compliance
+Technical document 0.85 API reference, RFC
+Wiki 0.75 Confluence page
+Email 0.50 Archived thread
+Meeting notes 0.45 Transcript
+Chat 0.30 Slack message
+Unknown 0.20 Uncategorized
+Table 1:Default source-authority priors used to initializebase_confidence.
+Stage 1 — Encoding (hippocampal fast-write)
+A new document is chunked with source-offset tracking, embedded, and inserted withstatus =
+UNCONSOLIDATED. It is immediately queryable but has no edges. Any prior vector with the same
+(doc_id, chunk_index) is auto-marked DEPRECATED, and its relational edges are transferred
+to the new vector as initial scaffolding.
+Stage 2 — Consolidation (sleep-time replay)
+A backgroundConsolidationAgentruns on a cron. It recalculates confidence for every active
+vector, detects contradictions via topic-overlap/content-divergence, buildsdepends_on/depended_by
+edges via content similarity and document lineage, propagates pending ripples, and promotes
+UNCONSOLIDATED→ACTIVE. This is our analog of hippocampal-to-neocortical replay: fast
+writes gradually become part of a structured relational schema.
+Stage 3 — Retrieval and Reinforcement (reconsolidation)
+Every retrieval is a reconsolidation event. Access increments access_count, user acceptance
+increments positive_feedback, and correction increments negative_feedback. The vector’s
+confidence is thus shaped continuously by how it is used—a direct analog to the neuroscience finding
+that recalled memories are briefly plastic and can be updated.
+Stage 4 — Decay and Dormancy
+Vectors that go unaccessed and unreinforced experience exponential confidence decay. Below a
+dormant_threshold (default 0.15), they transition to DORMANT: still indexed, still searchable if
+explicitly requested, but deprioritized in the default scorer. This mirrors the forgetting curve rather
+than catastrophic deletion.
+Stage 5 — Supersession and Archival
+Whenanewversionarrives, theoldvectortransitionsDEPRECATED →ARCHIVED.supersedes/superseded_by
+edges record the lineage; dependent vectors are notified via ripple propagation. Nothing is deleted,
+preserving a full audit trail—an explicit design choice for regulated corpora.
+6

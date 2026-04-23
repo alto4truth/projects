@@ -1,0 +1,26 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+ural density
+estimators to approximate either the posteriorp(θ|y),
+thelikelihoodp(y|θ), orthelikelihood-to-evidenceratio,
+typically via simulated data sets [32]:
+ˆpϕ(θ|y)≈p(θ|y),(22)
+whereˆpϕ denotes the neural network approximation parameterized byϕ. These methods permit inference even
+in complex models for which classical Bayesian updating is not tractable, provided that forward simulation is
+possible. For recent advances and theoretical guarantees,
+see [29]. We apply an amortized sequential neural posterior estimation (NPE) [47] as implemented in thesbi
+toolkitsoftware package [48]. Details on the SBI approach can be found in Figure 3 and Section IIIC.
+E. Summary statistics
+InBayesianinferencesuchasMCMCandSBI,thedata
+and models are compared on so-called summary statistics. For high-dimensional data, lower dimensional representations that preserve the relevant information about
+the parameters of interest enable comparison to simulated data. In particular, they are crucial when the system is complex and the likelihood function is intractable.
+The lower dimensional representation can be designed
+from knowledge or learned through an embedding neural network. In this study, we constr

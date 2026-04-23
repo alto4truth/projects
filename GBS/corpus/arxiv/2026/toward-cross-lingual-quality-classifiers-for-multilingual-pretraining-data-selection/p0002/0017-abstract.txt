@@ -1,0 +1,20 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+e Configurations.We establish two primary baselines:No filtering, representing random
+sampling from FineWeb2 (lower bound), andHQ, a monolingual classifier trained following the
+FineWeb2-HQ pipeline (Messmer et al., 2025) with MKC+ anchors.
+Multilingual Synergy.We first investigate whether data quality is a general feature shared across
+samples from different languages, or if it is language-specific. Our hypothesis is that there exist
+shared regularities in XLM-RoBERTa’s embedding space that correlate with quality. If we train a
+model to detect these regularities across multiple languages, then we would obtain a general classifier that could recognize high-quality samples in unseen languages, and even boost the data quality
+for languages it was trained on. In order to test this hypothesis, we train a general multilingual
+classifier (denoted byML). We use theMKC-epool to account for the lack of samples for some
+4

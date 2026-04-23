@@ -1,0 +1,61 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 6
+section: phi-llama-qwen
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+nce relative to the pretrained model, which
+is worse than the random sampling baseline. Standard deviations also increase by 3-4% due to associated
+26
+
+Published in Transactions on Machine Learning Research (11/2025)
+regressions where both embedding models lack coverage. These regressions are worse than the random
+sampling baseline, and indicate that poor embedding quality results in a net negative.
+COMPASS-D vs. COMPASS-S.Both the deterministic (COMPASS-D) and stochastic (COMPASSS) algorithms improve over the baseline for all languages. While COMPASS-S outperforms COMPASS-D,
+indicating value in training data diversity, COMPASS-D is effective without extra sampling overhead.
+Global MMLU MMLU ProX
+Component Varied Setting Mean SD Mean SD
+Baseline Model
+Phi4-Mini (3.8B)43.5 *** 9.0 27.8 *** 10.9
+COMP ASS (Optimal) 52.4 8.4 33.4 10.6
+Components:DoRA, Jina3, HDBScan, COMPASS-S
+Ablation: PEFT Method
+LoRA (r=16)51.2 10.2 32.5 12.1
+Ablation: Embedding Model
+GTE Multilingual Base49.6 * 9.2 32.2 10.4
+Distiluse Base41.1 ** 12.5 27.4 ** 13.6
+Paraphrase Mpnet43.9 ** 11.6 28.8 ** 13.1
+Ablation: Clustering Method
+KMeans47.1 ** 10.8 29.0 ** 12.7
+Agglomerative (Ward)50.7 * 8.9 31.7 * 11.3
+Taylor-Butina40.6 *** 12.4 22.1 *** 13.5
+Ablation: Sampling Strategy
+COMPASS-D51.0 * 9.4 32.1 10.6
+Ablation: Sampling Importance W eights
+w/o sample-level w.48.7 * 8.8 31.3 * 11.0
+w/o cluster-level w.47.3 ** 9.4 29.9 ** 11.6
+Table 2: Performance of COMPASS and variants on Global MMLU and MMLU-ProX. Scores are reported
+as the mean accuracy (%) across all languages. Standard deviation (SD) reflects variability of performance
+across languages, indicating cross-lingual consistency. Superscripts denote statistical significance vs. COMPASS (Optimal) via permutation tests:∗p<0.05,∗∗p<0.01,∗∗∗p<0.001. All results are from single-seed
+runs.
+Sampling Weights.Cluster- and sample-level weights are both important to COMPASS, with the former
+contributing most to performance. To ablate sample-level weights, we sample randomly within each cluster.
+To ablate cluster-level weights, we ignore cluster mismatches and sample a fixed number of examples per
+cluster evenly, picking the samples with highest semantic score in each.
+Cluster weights benefit the model’s ability to prioritize groupings of source language samples that are more
+representative of interactions with the target language’s users, as reflected by live traffic (or a suitable proxy).
+Sample-level weights prioritize source language data that has greater affinity to the target language and that
+are easy-to-learn in low data regimes. When we remove sample-level weights, performance drops by 3.7%
+(Global MMLU) and 2.1% (MMLU-ProX), whereas removal of cluster-level weights reduces performance by
+5.1% (Global MMLU) and 3.5% (MMLU-ProX).
+Cluster selection (i.e., which topic to draw from) is more critical than sample-level weighting. Ignoring which
+clusters are needed (i.e., just taking top examples from each cluster equally) wastes capacity on clusters that
+already had target data reflective of live traffic, or spends too much on clusters that aren’t as useful. This
+aligns with the intuition that ensuring the model sees the right coverage of topics is paramount; seeing the
+absolutebestexampleversusamoderatelygoodexampleinaneededtopicissecondary, andlikelycontributes
+to performance if sufficient to filter out hard-to-learn or noisy examples existing along the cluster boundary.
+27

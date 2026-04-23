@@ -1,0 +1,41 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+nt)
+Layer type Gini Verdict
+Embeddings (wte, wpe) 0.79–0.81 Compressible
+Transformer layers 0.63–0.65 Insufficient
+Random matrix∼0.30 Flat (control)
+8
+
+Figure 5: Block-level importance (KL divergence upon INT2 destruction) reveals a U-shaped
+profile with four phases: context building (block 0), feature construction (blocks 2–4), refinement
+(blocks 5–9), and prediction assembly (block 11).
+Transformer weight matrices show Gini scores of 0.63–0.65: above random (0.30) but insufficient for spectral compression to outperform direct quantization. The top 25% of DCT
+coefficients capture only 72% of energy, compared to>90% needed for effective spectral compression. Embeddings show higher concentration (Gini 0.79–0.81) and are better candidates.
+5.2 K-means Quantization and NF4
+Standard INT4 quantization places 16 levels uniformly across [w min, wmax]. K-means quantization places levels at the actual weight distribution peaks, which is provably optimal for minimum
+MSE (Lloyd-Max, 1957):
+min
+c1,...,c16
+X
+i
+∥wi −c nearest(i)∥2 (5)
+Table 6: K-means vs uniform INT4 on Mistral 7B (5 representative layers)
+Layer INT4 MSE K-means MSE Improvement
+layers.10.q proj 1.7×10 −7 1.0×10 −7 1.6×
+layers.20.gate proj 1.2×10 −7 0.7×10 −7 1.6×
+layers.25.up proj 0.9×10 −7 0.6×10 −7 1.6×
+layers.31.o proj 1.4×10 −7 0.9×10 −7 1.6×
+K-means achieves a consistent 1.6×MSE improvement at the same 4-bit budget. However, this insight is not novel: NF4 (Normal Float 4) [15], used in QLoRA, pre-computes
+Gaussian-optimal quantization levels and achieves 1.21×better MSE at zero storage overhead.
+Approximately 60% of k-means’ advantage comes from Gaussian-optimal levels (captured by
+NF4) and 40% from per-group adaptation (which incurs codebook storage overhead).
+9

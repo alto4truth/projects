@@ -1,0 +1,64 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 1
+section: paraff
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+uations,
+equations failures that require probability-guided search, and remaining hard cases where Multipass
+search or manual correction is needed.
+23
+
+Without pre-pass With pre-pass
+Event-level error vs ground truth
+Any-field error (%) 5.913.18
+Tick RMSE 206.542.9
+Tick error (%) 4.571.64
+Time-warp error (%) 2.551.26
+Has-time-warp error (%) 2.320.55
+Measure-level exactness and diagnostics
+Perfect (%) 85.4686.83
+V oice match (%) 90.2092.42
+Tick exact (%) 93.6195.69
+Avg quality score 0.9330.957
+Tick-twist≥1(%)0.081.03
+Broken beam (%) 2.412.07
+Table 10: Pre-pass ablation results. The pre-pass is not a separate model; it is a lightweight glimpse
+with the same BeadPicker before search. It materially improves ground-truth-aligned accuracy,
+especially on tick-related metrics, except one internal diagnostic (tickTwist≥1 ) becomes worse.
+6 Discussion
+6.1 Methodological Trade-Offs
+Why search mattersThe flexibility of polyphonic staff notation makes reading and decoding
+difficult in a very concrete way: quick visual intuition is often not enough to decide what is correct.
+Many measures admit several locally plausible interpretations, and the right one only becomes clear
+after checking global constraints such as voice continuity, measure duration, and rhythmic consistency.
+In this sense, structure decoding is closer to logical analysis than to pattern matching.
+This is similar to board games. A one-pass model can be surprisingly capable, but its ceiling is limited
+when the decision requires exploring alternatives. When combined with Monte Carlo Tree Search,
+the same model can reach a much higher level because it can branch, test, and back up evidence
+instead of committing too early. Our solver follows the same principle: learned predictions provide
+strong local guidance, while rule-based exploration and verification are used to resolve ambiguity.
+For this reason, we believe that rule-driven exploration will remain a necessary component of an ideal
+OMR system, whether the system is two-stage or end-to-end. Even with stronger models, complex
+notation will continue to require explicit reasoning over constraints, especially in the long tail where
+training data is sparse.
+Why not reinforcement learningWe did not directly formulate the problem as reinforcement
+learning for two main reasons. First, score regulation still lacks a universal rule standard for evaluating
+solutions. We have designed several evaluation functions, but each comes with exception cases;
+unlike board games, there is no single explicit rule judgment that remains reliable across the full
+data distribution. Second, replacing these rules with a learned reward model would return us to
+the same data bottleneck that the current method is designed to alleviate. In that sense, our present
+search-based formulation is a practical compromise: it uses learned local priors where supervision is
+available, while keeping global decision-making anchored by explicit constraints.
+6.2 Issues remaining
+Despite these benefits, our current system still has some limitations.
+Weak global evaluation.Search only helps if we can reliably rank candidate structures. In our
+implementation, the “value” of a partial or complete solution is dominated by hand-designed terms
+with empirical weights. Some terms do incorporate model outputs, but the overall evaluator is still
+relatively weak. In practice, we have seen exception cases where the correct solution receives a worse
+score because it violates a heuristic assumption (e.g., informal rhythmic usage, slight engraving
+misalignment, or crowded layout patterns that break a simple space-time prior). As a result, a non24

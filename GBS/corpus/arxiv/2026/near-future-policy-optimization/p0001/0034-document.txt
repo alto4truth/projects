@@ -1,0 +1,24 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+4.4 Ablation on Importance-Sampling Correction
+The near-policy property of NPO suggests that exact IS correction may be unnecessary in practice, because
+the future checkpoint is already close to the current policy and guidance is further gated by the on-policy
+pass-rate threshold. Figure 4 (c) tests this hypothesis on the late-stage intervention, where the compared
+methods share the same task window and are most directly comparable. Within the common step 200–510
+interval, both NPO variants stay clearly above vanilla GRPO and are nearly indistinguishable from each other,
+confirming that exact IS correction is unnecessary in practice and can be safely dropped without sacrificing the
+gain. Dropping IS further saves memory and compute, since the guide’s per-token log-probabilities no longer
+need to be stored or recomputed. Crucially, this simplification is specific to NPO: for mix-policy baselines
+such as LUFFY, removing IS causes training to collapse, because their guides are distributionally far from the
+current policy. In NPO, the near-policy property of the guide makes it safe to omit.
+5 Related Work
+5.1 Mixed-Policy RLVR
+RLVR has become the dominant post-training recipe for reaso

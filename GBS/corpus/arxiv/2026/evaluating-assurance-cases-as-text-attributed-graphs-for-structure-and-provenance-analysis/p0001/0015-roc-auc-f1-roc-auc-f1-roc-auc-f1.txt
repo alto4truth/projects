@@ -1,0 +1,27 @@
+title: Evaluating Assurance Cases as Text-Attributed Graphs for Structure and Provenance Analysis
+source: arxiv
+year: 2026
+document_id: evaluating-assurance-cases-as-text-attributed-graphs-for-structure-and-provenance-analysis
+authors: Fariz Ikhwantri; Dusica Marijan
+page: 1
+section: roc-auc-f1-roc-auc-f1-roc-auc-f1
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20577v1
+
+ignatures and the limited faithfulness of existing GNN
+explanation tools.
+9.2 Internal Validity
+The dataset used in this study, although carefully verified and curated to ensure the reliability and validity of human-authored samples, is relatively small. This limitation may affect the statistical
+power of our analyses and introduce potential biases that could
+impact the observed model performance. The restricted dataset
+size may also limit the ability of the models to generalise effectively across diverse assurance case structures.However, publicly
+available human-authored assurance cases are scarce in practice in our setting, which reflects the situation whether in
+academia or industry due to data sensitivity.
+Our uncertainty analysis does not include variation over the LLM
+parameters. While this limits conclusions about full model variance,
+our evaluation reflects realistic deployment settings where LLM
+inference is performed via fixed APIs and variability from stochastic
+generation and prompt variation.
+9.3 External Validity
+The bias analysis conducted to differentiate between human-authored
+and LLM-generated assurance cases is limited to a one-way discrimination setup. While th

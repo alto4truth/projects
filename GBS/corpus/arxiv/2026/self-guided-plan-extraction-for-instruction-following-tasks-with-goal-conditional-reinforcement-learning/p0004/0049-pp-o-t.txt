@@ -1,0 +1,29 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 49
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+trast, structural issues such as cyclic
+dependencies, while undesirable, can be mitigated
+algorithmically (e.g., via cycle detection and pruning) and appear less critical in practice.
+Overall, these results indicate that downstream
+performance is primarily driven by the precision
+and completeness of subtask extraction, highlighting the importance of controlling subtask granularity and redundancy for stable and effective training.
+Table 4: Ontology quality metrics across LLMs (lower
+is better): Over. – oversampling, Missing – missing
+skills, Spurious – non-classified skills.
+Model Over.↓Missing↓Spurious↓
+Qwen 1 2 1
+CodeGemma 1 5 3
+Phi-4 25 8 6
+Mistral 59 2 9
+B.4 Ablation Study: Choice of LLM for
+Ontology and Training-Plan Generation
+To understand how the choice of language model
+affects the quality of the ontology and the generated
+training plans we conducted an ablation study comparing several families of LLMs. For each model,

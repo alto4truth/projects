@@ -1,0 +1,46 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 2
+section: r-e-s-u-lt-s
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+consisting of a set of nodes ( V) and edges ( E), indicating the
+presence of an interaction between nodes [ 90–92]. For our problem, we present the
+13
+
+T able 1: Hurricanes considered in this study (in
+chronological order), their category based on the
+Saﬀir-Simpson hurricane scale [ 95] (H1-H5: Hurricane Category 1-5, TS: Tropical Storm) and the
+total amount of hourly data in each.
+Hurricane (Year) Category No. of hourly data points
+Charley (2004) H4 2304
+Dennis (2005) H4 3056
+Wilma (2005) H5 2974
+Debby (2012) TS 1536
+Hermine (2016) H1 2768
+Michael (2018) H5 2384
+Eta (2020) H4 2672
+Fred (2021) TS 3056
+Idalia (2023) H4 2688
+Ian (2022) H5 2288
+Debby (2024) H1 2861
+Helene (2024) H4 2208
+Milton (2024) H5 2208
+graph as G = (V, E), where each node vi ∈ V corresponds to a gauge station and each
+edge (vi, vj) ∈ E represents a strong correlation between stations i and j.
+Node features.
+Each node vi is associated with a time series
+xi =
+
+xi(1), x i(2), . . . , x i(T )
+⊤
+,
+where xi(t) is the observed water level at station i and time t.
+Edge construction.
+We place an undirected edge between nodes i and j if and only if both
+ρij > ρ min and dij < d max,
+14

@@ -1,0 +1,46 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 49
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+retaining key instructions and output schemas.
+D.1 Graph Construction Prompt (Parser
+LLM)
+Parser System Prompt
+Role.Convert an agent prompt into aTextual Parameter
+Graph (TPG).
+Task.Decompose the input prompt into a hierarchical
+JSON structure of semantic units for later optimization.
+Node types.
+• role: persona, objectives, responsibilities, or high-level
+directives
+• logic: reasoning steps, constraints, verification rules, or
+workflow instructions
+• tool: tool descriptions, API usage rules, or tool examples
+Key instructions.
+• Split by semantic function rather than formatting alone.
+• Parent nodes organize sections; leaf nodes contain actual text.
+• Do not split atomic instructions, code blocks, JSON
+objects, or tightly coupled examples.
+• A node should contain either children or content,
+but not both.
+• Preserve the original meaning; do not rewrite or optimize.
+Key output schema.
+{
+"title": "<root title>",
+"type": "generic",
+"children": [
+{ "title": "<node title>", "type":
+"<role|logic|tool|generic>", ... }
+]
+}
+User input.The model receives the prompt type and the
+original prompt text, and outputs its TPG decomposition.
+D.2 Trajectory Diagnosis Prompt (Reflector
+LLM)
+Reflector S

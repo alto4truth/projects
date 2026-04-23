@@ -1,0 +1,24 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+t matrixB, into their discrete counterparts. ZOH discretization is utilized implicitly in many prominent SSM models and extensions,
+including Mamba [11], Structured State Space Sequence (S4) models [29] [27],
+VMamba [18], and VideoMamba [16].
+The general framework of State Space Models allows for various discretization methods. One line of work explored simplifying the complexity of state
+matrices themselves, while later research focused on integrating an alternative
+discretization method beyond ZOH to enhance model expressivity [1] [22]. This
+is similar in concept to BIL (Tustin’s method) [21]:
+–Real Valued Simplification [23]: The Mega model, a derivative of S4, represented the discretization of continuous system parameters as an Exponential
+Moving Average (EMA) term, which led to a simplification of the SSM model
+that only focused on real-valued parameters, reducing computational cost.
+–Trapezoidal Discretization (Mamba-3) [1]: The work experimented with the
+use of trapezoidal discretization (trapezoidal/Euler’s rule) [22] as an improvement to the core SSM components within Mamba for large language
+modeling. The complex valued SSMs, when discretized using the general
+trapezoidal

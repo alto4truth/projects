@@ -1,0 +1,20 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+rize specialized corpora. Recently, Koursaris et al.
+[2026] attempted this limitation by treating a Knowledge Graph (KG) as a primary source for training data generation
+and proposed Themida, an advanced embedding model for Greek legal RAG systems. Rather than relying exclusively
+on synthetic query generation, their proposed approach extracts atomic facts, entity-relation contexts and grounded
+questions directly from knowledge graphs constructed over Greek legal corpora, demonstrating that structured knowledge integration substantially enhances embedding quality for morphologically complex legal text. However, Themida
+operates exclusively within the narrow scope of Greek legal documents, leaving the broader Greek academic and industrial community without a specialized solution for diverse domains and bilingual Greek–English retrieval.
+In this research, we propose a specialized Greek–English embedding model, named ORPHEAS 1, for bilingual RAG
+applications. Building upon the knowledge graph-based fine-tuning methodology of Themida, ORPHEAS extends
+its scope to a diverse multi-domain corpus, which enables the model to retrieve relevant information regardless of
+whether the query and d

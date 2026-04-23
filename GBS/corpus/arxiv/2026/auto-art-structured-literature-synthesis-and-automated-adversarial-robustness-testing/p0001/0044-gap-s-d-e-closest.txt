@@ -1,0 +1,25 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+single-norm reporting. Ablation confirms that the
+three-signal ensemble (FOSC + RDI + WB/BB discrepancy)
+outperforms any single signal on both ranking fidelity and
+masking detection rate. Runtime analysis indicates 30×prescreening speedup and 5–6× end-to-end improvement over
+full AutoAttack.
+Three technical directions emerge from the synthesis (Section 13): worst-case multi-norm adversarial training with
+attack-union curricula, architecture-conditional RDI calibration for ViTs and LLMs, and ecologically valid agent redteaming benchmarks that bridge the CTF-to-production gap.
+Each direction is accompanied by concrete feasibility assessments and ablation designs.
+The gap between robustness research and deployment practice will likely close not through better defences alone, but
+through evaluation infrastructure that subjects themeasurementof robustness to the same rigour the field demands of
+robustness itself.
+References
+[1] A. Talluri, “Auto-ART: Automated adversarial robustness
+testing framework,” https://github.com/abhitall/auto-art, 2026,
+open-source framework for structured adversarial robustness evaluation; 50+ attacks, 28 defence modules, FOSCbased gradient-masking detection,

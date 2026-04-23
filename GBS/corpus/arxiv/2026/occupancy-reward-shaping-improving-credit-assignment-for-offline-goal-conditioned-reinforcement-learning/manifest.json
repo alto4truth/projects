@@ -1,0 +1,437 @@
+{
+  "title": "Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning",
+  "source": "arxiv",
+  "year": "2026",
+  "document_id": "occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning",
+  "authors": [
+    "Aravind Venugopal",
+    "Jiayu Chen",
+    "Xudong Wu",
+    "Chongyi Zheng",
+    "Benjamin Eysenbach",
+    "Jeff Schneider"
+  ],
+  "source_ref": "https://arxiv.org/pdf/2604.20627v1",
+  "chunks": [
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0001/0001-goal-conditionedreinforcementlearning.txt",
+      "page": 1,
+      "section": "goal-conditionedreinforcementlearning",
+      "chunk": 1
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0002-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 2
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0003-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 3
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0004-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 4
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0005-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 5
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0006-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 6
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0007-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 7
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0008-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 8
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0009-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 9
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0010-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 10
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0011-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 11
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0012-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 12
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0013-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 13
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0014-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 14
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0015-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 15
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0016-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 16
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0017-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 17
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0018-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 18
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0019-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 19
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0020-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 20
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0021-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 21
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0022-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 22
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0002/0023-abstract.txt",
+      "page": 2,
+      "section": "abstract",
+      "chunk": 23
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0003/0024-acknowledgements.txt",
+      "page": 3,
+      "section": "acknowledgements",
+      "chunk": 24
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0004/0025-references.txt",
+      "page": 4,
+      "section": "references",
+      "chunk": 25
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0004/0026-references.txt",
+      "page": 4,
+      "section": "references",
+      "chunk": 26
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0004/0027-references.txt",
+      "page": 4,
+      "section": "references",
+      "chunk": 27
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0004/0028-references.txt",
+      "page": 4,
+      "section": "references",
+      "chunk": 28
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0004/0029-references.txt",
+      "page": 4,
+      "section": "references",
+      "chunk": 29
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0004/0030-references.txt",
+      "page": 4,
+      "section": "references",
+      "chunk": 30
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0004/0031-references.txt",
+      "page": 4,
+      "section": "references",
+      "chunk": 31
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0004/0032-references.txt",
+      "page": 4,
+      "section": "references",
+      "chunk": 32
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0004/0033-references.txt",
+      "page": 4,
+      "section": "references",
+      "chunk": 33
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0004/0034-references.txt",
+      "page": 4,
+      "section": "references",
+      "chunk": 34
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0004/0035-references.txt",
+      "page": 4,
+      "section": "references",
+      "chunk": 35
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0004/0036-references.txt",
+      "page": 4,
+      "section": "references",
+      "chunk": 36
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0004/0037-references.txt",
+      "page": 4,
+      "section": "references",
+      "chunk": 37
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0004/0038-references.txt",
+      "page": 4,
+      "section": "references",
+      "chunk": 38
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0004/0039-references.txt",
+      "page": 4,
+      "section": "references",
+      "chunk": 39
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0004/0040-references.txt",
+      "page": 4,
+      "section": "references",
+      "chunk": 40
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0005/0041-a-proofs.txt",
+      "page": 5,
+      "section": "a-proofs",
+      "chunk": 41
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0005/0042-a-proofs.txt",
+      "page": 5,
+      "section": "a-proofs",
+      "chunk": 42
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0005/0043-a-proofs.txt",
+      "page": 5,
+      "section": "a-proofs",
+      "chunk": 43
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0005/0044-a-proofs.txt",
+      "page": 5,
+      "section": "a-proofs",
+      "chunk": 44
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0005/0045-a-proofs.txt",
+      "page": 5,
+      "section": "a-proofs",
+      "chunk": 45
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0005/0046-a-proofs.txt",
+      "page": 5,
+      "section": "a-proofs",
+      "chunk": 46
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0005/0047-a-proofs.txt",
+      "page": 5,
+      "section": "a-proofs",
+      "chunk": 47
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0005/0048-a-proofs.txt",
+      "page": 5,
+      "section": "a-proofs",
+      "chunk": 48
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0005/0049-a-proofs.txt",
+      "page": 5,
+      "section": "a-proofs",
+      "chunk": 49
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0005/0050-a-proofs.txt",
+      "page": 5,
+      "section": "a-proofs",
+      "chunk": 50
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0005/0051-a-proofs.txt",
+      "page": 5,
+      "section": "a-proofs",
+      "chunk": 51
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0005/0052-a-proofs.txt",
+      "page": 5,
+      "section": "a-proofs",
+      "chunk": 52
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0005/0053-a-proofs.txt",
+      "page": 5,
+      "section": "a-proofs",
+      "chunk": 53
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0005/0054-a-proofs.txt",
+      "page": 5,
+      "section": "a-proofs",
+      "chunk": 54
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0006/0055-b-additionalinformation.txt",
+      "page": 6,
+      "section": "b-additionalinformation",
+      "chunk": 55
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0006/0056-b-additionalinformation.txt",
+      "page": 6,
+      "section": "b-additionalinformation",
+      "chunk": 56
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0006/0057-b-additionalinformation.txt",
+      "page": 6,
+      "section": "b-additionalinformation",
+      "chunk": 57
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0006/0058-b-additionalinformation.txt",
+      "page": 6,
+      "section": "b-additionalinformation",
+      "chunk": 58
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0006/0059-b-additionalinformation.txt",
+      "page": 6,
+      "section": "b-additionalinformation",
+      "chunk": 59
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0006/0060-b-additionalinformation.txt",
+      "page": 6,
+      "section": "b-additionalinformation",
+      "chunk": 60
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0006/0061-b-additionalinformation.txt",
+      "page": 6,
+      "section": "b-additionalinformation",
+      "chunk": 61
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0006/0062-b-additionalinformation.txt",
+      "page": 6,
+      "section": "b-additionalinformation",
+      "chunk": 62
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0006/0063-b-additionalinformation.txt",
+      "page": 6,
+      "section": "b-additionalinformation",
+      "chunk": 63
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0006/0064-b-additionalinformation.txt",
+      "page": 6,
+      "section": "b-additionalinformation",
+      "chunk": 64
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0006/0065-b-additionalinformation.txt",
+      "page": 6,
+      "section": "b-additionalinformation",
+      "chunk": 65
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0006/0066-b-additionalinformation.txt",
+      "page": 6,
+      "section": "b-additionalinformation",
+      "chunk": 66
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0006/0067-b-additionalinformation.txt",
+      "page": 6,
+      "section": "b-additionalinformation",
+      "chunk": 67
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0006/0068-b-additionalinformation.txt",
+      "page": 6,
+      "section": "b-additionalinformation",
+      "chunk": 68
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0006/0069-b-additionalinformation.txt",
+      "page": 6,
+      "section": "b-additionalinformation",
+      "chunk": 69
+    },
+    {
+      "path": "arxiv/2026/occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning/p0006/0070-b-additionalinformation.txt",
+      "page": 6,
+      "section": "b-additionalinformation",
+      "chunk": 70
+    }
+  ]
+}

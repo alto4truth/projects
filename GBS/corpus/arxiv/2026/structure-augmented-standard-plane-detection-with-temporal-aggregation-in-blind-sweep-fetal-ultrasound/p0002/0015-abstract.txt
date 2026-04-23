@@ -1,0 +1,29 @@
+title: Structure-Augmented Standard Plane Detection with Temporal Aggregation in Blind-Sweep Fetal Ultrasound
+source: arxiv
+year: 2026
+document_id: structure-augmented-standard-plane-detection-with-temporal-aggregation-in-blind-sweep-fetal-ultrasound
+authors: Keli Niu; He Zhao; Qianhui Men
+page: 2
+section: abstract
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20591v1
+
+train/validation/test set (case-level split).
+In the segmentation prior, the abdominal pixels are highlighted withα=0.15. The size of the local sliding windowk
+is 4. Adam is used as training optimiser with a learning rate
+of10 −4. The temperatureτfor Gumbel–Softmax regularisation is annealed from 1.5 to 0.5 with a decay factor of 0.98
+andmin the contrastive loss is 1. We train for 150 epochs
+with batch size 1 and early stopping is applied. For PRS, min
+segment length is 3 frames, max gap is 2, convex weightλis
+0.6, downward clampδis 0.05, and thresholdθis 0.9.
+3.2. Quantitative Evaluation
+Metrics.We reportPrecision (P),Recall (R), andF1on
+frame-wise labels. Timing fidelity is evaluated by: (i)absolute time error, which measures temporal misalignment as the
+mean of|t pred −t gt|between the predicted and GT keyframes,
+which is sensitive to isolated false peaks; and (ii)keyframe
+number error, which is the discrepancy of lengths between
+the predicted and GT segments.
+Table 1 compares nnU-Net, BiomedCLIP+ViT-B, and
+our variants.Baseline comparisons.The complete model
+of our approach (last row) achieves an F1 score of 67.01%.
+The substantially higher precision and recall rates compared

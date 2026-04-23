@@ -1,0 +1,21 @@
+title: MGDA-Decoupled: Geometry-Aware Multi-Objective Optimisation for DPO-based LLM Alignment
+source: arxiv
+year: 2026
+document_id: mgda-decoupled-geometry-aware-multi-objective-optimisation-for-dpo-based-llm-alignment
+authors: Andor Vári-Kakas; Ji Won Park; Natasa Tagasovska
+page: 6
+section: mgda-d-ecoupled
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20685v1
+
+e-specific scores. As a result, there is substantial overlap across
+per-objective datasets, which may reduce the density of gradient conflicts. Second, while the original UltraFeedback
+data provides granular 1–5 scores, the standard DPO reduction discards these in favour of preference pairs. This may
+lose valuable signal regarding the relative magnitude of improvements. Future work could investigate whether moving
+beyond the pairwise DPO framework to leverage these raw numerical scores directly would provide a richer signal for
+multi-objective optimisation.
+Finally, we note that MGDA variants introduce a computational overhead from computing the gradient Gram matrix
+needed for solving the resulting quadratic program [Sener and Koltun, 2018]. In our experiments with k= 4 objectives,
+this cost was negligible relative to the forward-backward pass. While the complexity scales quadratically with k, these
+algorithms remain feasible for the range of objectives typical in LLM alignment.
+8

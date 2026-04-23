@@ -1,0 +1,36 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 49
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+author does not explicitly
+recommend any specific brand.
+[A Selected Convert Advertisement Example]
+[A Selected Non-Convert Advertisement Example]
+24
+
+Table 8: Evaluation metrics under top performance models and different prompt settings. Compared
+to the prompts used in the main content (Normal Prompt), we found that using prompts with more
+detailed evaluation criteria information did not help align with fine-grained human standards; These
+more detailed prompts performed worse.
+Model Prompt Type Precision Recall F1-score AUC-ROC
+GPT-4o (ZS) Detailed Prompt0.4820.672 0.562 0.786
+Normal Prompt 0.4640.836 0.596 0.851
+DeepSeek-VL3 (ICL) Detailed Prompt 0.565 0.574 0.569 0.756
+Normal Prompt0.578 0.607 0.592 0.772
+Figure 5: Screenshot of The Annotation System
+F Demos of CHASM
+F.1 Screenshot of The Annotation System
+Figure 5 shows the annotation interface designed for labeling social media posts. Title, Description,
+and Comments fields on the left, displaying the textual content of the post. A preview of associated
+images in the center, A labeling section on the right, where annotators can choose from three options:
+Product Unrelated, Product Related But Non-Advertisement, and Covert Advertisement.
+F.2 Examples of Anonymization
+F.2.1 Examples of Text Anonymization
+In the examples, we masked detailed information such as detailed addresses or the website.
+25

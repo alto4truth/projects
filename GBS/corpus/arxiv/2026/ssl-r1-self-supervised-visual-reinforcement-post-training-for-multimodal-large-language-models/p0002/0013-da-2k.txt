@@ -1,0 +1,19 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 2
+section: da-2k
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+loss following [70].
+For each prompt, we sample 16 responses with a temperature of 1.0. We train the models with a global batch size of
+256 and a learning rate of1×10 −6 for either 1000 steps
+(single-task post-training) or 2000 steps (multi-task posttraining).
+Benchmarks.Following [70], we evaluate vision-centric
+capabilities across 13 diverse multimodal benchmarks, covering three main types: (i) Fine-grained perception and understanding: MMVP [59], MMStar (fine-grained perception subset) [10], MMBench [39], HR-Bench [63], V* [69],
+MME-RealWorld (lite) [84], LISA-Grounding [30], and
+OVD-Eval [76]; (ii) Monocular spatial understanding:
+VSR [37], OminiSpatial [29], and DA-2K [75]; (iii) Com5

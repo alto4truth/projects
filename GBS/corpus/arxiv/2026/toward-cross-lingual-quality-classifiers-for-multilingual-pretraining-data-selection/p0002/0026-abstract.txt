@@ -1,0 +1,40 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+Published as a paper at 3rd DATA-FM workshop @ ICLR 2026, Brazil.
+0.0 0.2 0.4 0.6 0.8 1.0
+Quality Score
+10 2
+10 1
+100
+101
+102
+Density
+T est Positive
+T est Negative
+FineWeb2
+Cutoff (retention 0.10)
+Figure 1: French quality score distribution from a Nordic classifier. The classifier effectively separates high-quality (positives) from low-quality (negatives) French text despite being trained solely
+on Nordic languages, suggesting the practical effectiveness of cross-lingual quality transfer.
+Table 4: Models trained on French data filtered by "Nordic" and "Romance (no French)" classifiers.
+The Nordic classifier outperforms the native French HQ baseline in aggregate accuracy, providing
+evidence for transferable quality signals across language families.
+Benchmark No filtering HQ Romance (no fra) Nordic
+ARC-Challenge 0.2891 0.3071 0.30540.3157
+Belebele_c 0.3444 0.35110.36890.3422
+GMMLU_c 0.2625 0.2925 0.27500.3075
+HellaSwag 0.4883 0.47480.49080.4673
+Include_c 0.3866 0.4153 0.42720.4535
+M_MMLU_c 0.2831 0.29450.29500.2936
+XNLI 0.47070.48550.4827 0.4783
+XWinograd 0.6386 0.6506 0.60240.6627
+Aggregate acc_norm0.3954 0.4089 0.40590.4151
+Average rank3.502.12 2.122.25
+ting regularities in the emb

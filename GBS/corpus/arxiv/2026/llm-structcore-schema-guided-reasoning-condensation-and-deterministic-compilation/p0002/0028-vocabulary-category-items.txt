@@ -1,0 +1,30 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 2
+section: vocabulary-category-items
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+8 Limitations
+The deterministic Stage 2cannot recover facts missing from Stage 1
+summaries; thus, overall recall is Stage 1-limited. Some CRF items require
+nuanced contextual interpretation (e.g., distinguishing “past” vs. “current”
+respiratory distress) that may be lost in the 9-key condensation, increasing
+FN risk. The high FP cost of the task requires conservative evidence gating,
+which trades off recall for precision in borderline cases.
+The abbreviation-based canonicalization relies on a manually curated
+map of 70+ abbreviations. New abbreviations or unconventional spellings
+not in the map will fail to match. The UMLS alias map mitigates this but is
+also static and may not cover all model-generated variants.
+The FP-gate regex patterns are English-centric; while the Italian notes in
+this dataset are clinically structured and mostly use international terminology,
+extending the gates to fully cover Italian medical vocabulary would require
+additional curation.
+Finally, our evaluation is limited to the official CL4Health 2026 data;
+generalization to other CRF schemas, clinical domains, or languages beyond
+English and Italian has not been tested.
+9 Reproducibility
+All deterministic

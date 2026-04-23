@@ -1,0 +1,29 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 11
+section: ijb-c
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+DPromptS applied to the original data is never
+surpassed by SPL or MixFaceNet-MAD, regardless of the
+chosen segmentation technique. The combination of these
+conclusions shows that while some methods benefit from the
+background removal, they may still fall behind state-of-theart MAD strategies applied to non-segmented data, which
+limits the applicability of such strategies in real use-cases.
+V. CONCLUSION
+Large-scale biometric systems rely on high-quality facial
+images to ensure reliable enrollment and recognition. To
+support this, standards such as ISO/IEC 19794-5 enforce
+strict requirements, including the use of plain, light-colored
+backgrounds. However, in practical deployment scenarios
+such as enrollment at airports or border control environments,
+these controlled capture conditions cannot always be guaranteed. This motivates the use of face segmentation-based background removal to generate standardized, compliant facial
+images from unconstrained captures. Yet, a critical question
+arises: does such preprocessing preserve both recognition
+performance and the robustness of security mechanisms,
+particularly against attacks such as face morphing?
+We addressed this question through a

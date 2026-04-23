@@ -1,0 +1,49 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 1
+section: bleu-1
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+heses from the model logits, and response generation is invoked only after
+the candidates are ranked. We then employ nucleus sampling (Holtzman et al., 2020) to generate
+Parameter Value
+Model Architectures
+Backbone MLLM (BI-INF) Qwen2.5-VL-7B-Instruct
+STE Dense Encoder Qwen3-Embedding-4B
+STE Reranker Qwen3-Reranker-4B
+Scene Captioning GPT-4o
+Training Optimization
+LoRA Rankr64
+LoRA Scalingα16
+LoRA Dropout 0.05
+Quantization 4-bit (BitsAndBytes)
+Optimizer AdamW
+Learning Rate2×10 −5
+Warm-up Ratio 0.03
+Weight Decay 0.01
+Epochs 3
+Batch Size (STE) 8
+Batch Size (BI-INF) 16
+Context Lengths
+Max. tokens for STE input 512
+Max. tokens for BI-INF input 3000
+Max. tokens for BI-INF output 256
+Inference & Generation
+Decoding Strategy Nucleus Sampling
+Top-p0.75
+Top-k40
+Temperature 0.7
+Max. tokens for response 256
+Table 5: Detailed hyperparameters and experimental
+settings for training and inference.
+diverse and natural responses. We set the cumulative probability threshold top-p to 0.75 and the
+candidate pool size top- k to 40. The maximum
+decoding length is set to 256 tokens. All detailed
+hyperparameters are summarized in Table 5.
+D Additional Efficiency and Transition
+Analyses
+This section present

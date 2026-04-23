@@ -1,0 +1,24 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+Figure 1: Overview of the proposed framework.
+2)Route Processor:The Route Processor transforms raw GPS coordinates into enriched road feature data by interfacing with the Valhalla routing engine through RESTful APIs. Using GPS coordinates
+from the GeoJSON file, the module sends HTTP POST requests to
+Valhalla’s location and elevation API, retrieving node and edge-level
+attributes such as speed limits, curvature, slope, and intersection density. These API responses containing node and edge data are parsed
+into a structuredPandasDataFrame that serves as the comprehensive
+map feature dataset. Error-checking mechanisms handle incomplete or
+inconsistent API responses to maintain data integrity throughout the
+pipeline.
+3)Velocity Profile Generator:With structured map feature data
+available, the Velocity Profile Generator constructs an initial reference
+velocity trajectory. The module applies legal speed limits as upper
+bounds for straight segments, enforces reduced speeds for curves and
+roundabouts based on curvature severity, and sets zero velocity at traffic lights, stop signs, yield signs, and complex intersections. This rulebased profile provides a baseline velocity-distance curve tha

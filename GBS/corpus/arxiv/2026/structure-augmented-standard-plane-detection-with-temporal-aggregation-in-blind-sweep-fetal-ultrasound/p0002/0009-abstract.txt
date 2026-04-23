@@ -1,0 +1,29 @@
+title: Structure-Augmented Standard Plane Detection with Temporal Aggregation in Blind-Sweep Fetal Ultrasound
+source: arxiv
+year: 2026
+document_id: structure-augmented-standard-plane-detection-with-temporal-aggregation-in-blind-sweep-fetal-ultrasound
+authors: Keli Niu; He Zhao; Qianhui Men
+page: 2
+section: abstract
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20591v1
+
+mage features by encoding and fusing the representations
+from the different depths of ViT outputs. This design follows the principle of Feature Pyramid Networks (FPN) [12]
+but adapting multi-scale to multi-depth representation fusion,
+where shallow layers focus on edges and landmarks, and
+deeper layers capture global contours and contextual consistency. In each modelled layer, the extracted feature passes
+through a Squeeze-and-Excitation (SE) block [13] to reweight
+feature channels beyond the pixel-level emphasis of the prior.
+Specifically, the image feature extracted from the structureaugmented frameI ∗ is represented as{f (l)}L
+l=1, wherelis
+the layer depth of ViT. SE block further rescales the feature as ˜f (l) =s⊙f (l)
+t with the learned channel weights
+s∈(0,1) Dl, andD l is the channel dimension at depthl.
+The multi-layer representations are fused in a recursive manner, i.e.,r (1) = ˜f (1),r (l) = MLP([Proj(r (l−1)), ˜f (l)])for
+2≤l≤L, where[·,·]denotes concatenation,Proj(·)is a
+linear projection, andMLPis a two-layer perceptron. We
+learn and merge the feature at depthlfrom deep to shallow at
+layers 5, 7, 9, and 11.
+2.2.2. Local and Global Temporal Conditioning
+Local sliding w

@@ -1,0 +1,24 @@
+title: Structure-Augmented Standard Plane Detection with Temporal Aggregation in Blind-Sweep Fetal Ultrasound
+source: arxiv
+year: 2026
+document_id: structure-augmented-standard-plane-detection-with-temporal-aggregation-in-blind-sweep-fetal-ultrasound
+authors: Keli Niu; He Zhao; Qianhui Men
+page: 2
+section: abstract
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20591v1
+
+Fig. 1. Overview of structure-augmented standard plane detector with temporal localisation.
+poral frames to reduce motion noise in US frames and enhance the spatial evidence obtained in the previous step, and
+a bidirectional temporal transformer to estimate the global
+contextual probability of each frame belonging to a standard
+plane. During inference, the probability output is refined by
+a peak-preserving module, which selects the frames with the
+strongest evidence while removing redundancy within the detected segments.
+2.1. Structure-Augmented Segmentation Prior
+Detecting abdominal planes in obstetric US relies on recognising anatomical landmarks such as stomach bubble and umbilical vein [2]. Blind-sweep sequence, however, contains
+extensive background noise and distracting non-target structures, which obscure the cues for measuring the targets.
+We therefore propose to augment clinical meaningful
+anatomies in the blind-sweep frames using a structural segmentation prior. Specifically, a segmentation model with
+nnU-Net [11] backbone is trained on the training split to predict a frame-wise binary abdominal maskM t (1inside the
+abdomen and0elsewhere).M t is then converted into a simp

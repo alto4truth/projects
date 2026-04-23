@@ -1,0 +1,34 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+of sampled answers, we prompt the LLMLtimes to check
+whether eacha i,j containse i and respond with “Yes” or
+“No”. We then map the “Yes-No” response into a binary
+verification scorev i,j, where “Yes” is equal to 1 and “No”
+is equal to 0. The final averaged verification scoreVfor
+entitye i is formulated as follows:
+V(e i) = 1
+L
+LX
+j=1
+vi,j.(1)
+A lowerV(e i)indicates that the entity is likely to be hallucinated. Thus,V(e i)serves as an indicator for hallucination
+detection. We determine whether the entity is hallucinated
+by setting a thresholdτ∈[0,1], whereV(e i)< τmeans
+that entitye i is hallucinated. The prompt we use in this
+stage is detailed in the supplementary material.
+Stage 6: Final response generation.After identifying the
+hallucinated entities, the final stage is to generate the improved response that takes verification into account. Specifically, we prompt the LLM to revise the initial response in
+Stage 1 based on the verification results in Stage 5. The
+detailed prompt is listed in the supplementary material.
+4. Experiments
+4.1. Experimental Setup
+4.1.1. Baselines
+We build our R-CoV upon several popular opensource LVLMs, including mPLUG-Owl (mplug-owl-llama7b) [53], LLaV

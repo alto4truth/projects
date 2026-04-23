@@ -1,0 +1,25 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+riority, so its degree determines the comparison. If two monomials
+have the same degree inx1, we then compare their degrees inx2, and proceed similarly through the
+remaining variables.
+Elimination orders generalize the lexicographic order. Suppose that the variablesx1, . . . , xm are
+partitioned into two blocksB1 ∪B 2. Then, a monomial order onR[x1, . . . , xm]is anelimination
+orderforB 1 ifx u ≺x v wheneverx v has larger degree in theB 1 variables thanx u. If the two
+monomialsx u andx v have the same degree in theB1 variables, then another term order is used to
+break ties. The following is a more formal definition.
+Definition 3.2.LetR[x 1, . . . , xm]be a polynomial ring with variables partitioned into blocks
+B1 andB 2. For each blocki= 1,2, let≺ i be a monomial order onR[B i]. For a monomial
+xu ∈R[x 1, . . . , xm], denote byxuBi the restriction ofxu to the variables in blockBi. A monomial
+order≺onR[x 1, . . . , xm]is called anelimination order forB 1 ifx v ≻x u wheneverx vB1 ≻1 xuB1
+orx vB1 =x uB1 andx vB2 ≻2 xuB2. Moreover, we say that an elimination order≺forB 1 is a
+lex-elimination orderif≺ 1 is the lexicographic order for some permutation of the variables inB1.
+Lex-eliminatio

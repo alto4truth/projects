@@ -1,0 +1,28 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 4
+section: f2lp-ap-9
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+T able 1.Performance comparison on 8 datasets categorized by homophily ratio (H).
+We report Accuracy (Acc.), Macro-F1 (F1), and Execution Time (Time in seconds).
+Boldindicates the best performance among training-free/non-parametric methods;
+underline indicates the overall state-of-the-art (SOTA).∗denotes supervised GNN
+baselines.
+Dataset Cora(H=.85) CiteSeer(H=.81)PubMed(H=.84)Chameleon(H=.26)
+Method Acc. F1 Time Acc. F1 Time Acc. F1 Time Acc. F1 Time
+GCN∗ 0.8210.8091.3500.7190.691 1.210 0.7980.794 1.485 0.5610.552 1.124
+CoHOp 0.6370.6350.6050.6050.575 0.643 0.7110.702 0.690 0.3710.288 0.676
+LabelProp 0.710 0.719 0.0130.483 0.496 0.013 0.723 0.709 0.015 0.331 0.327 0.012
+kNN@5 0.464 0.458 0.1070.504 0.498 0.135 0.646 0.643 0.716 0.360 0.342 0.139
+Proto-GeoMed0.597 0.575 0.0240.619 0.596 0.031 0.725 0.728 0.0270.430 0.4310.021
+FixedAPPNP0.658 0.637 0.0390.658 0.633 0.088 0.741 0.745 0.086 0.414 0.411 0.179
+F2LP-AP 0.8350.8210.0560.7080.685 0.092 0.7820.7790.044 0.3950.391 0.089
+Dataset T exas(H=.31)Wisconsin(H=.37)Cornell(H=.34) Squirrel(H=.23)
+Method Acc. F1 Time Acc. F1 Time Acc. F1 Time Acc. F1 Time
+GCN∗ 0.5530.3651.0150.6080.269 1.053 0.5000.203 1.014 0.3220.242 2.466
+CoHOp 0.42

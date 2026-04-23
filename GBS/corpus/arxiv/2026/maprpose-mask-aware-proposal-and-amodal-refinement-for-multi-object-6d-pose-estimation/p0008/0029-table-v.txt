@@ -1,0 +1,24 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 8
+section: table-v
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+egrating amodal mask completion with a recursive feedback
+mechanism, MAPRPose resolves the geometric ambiguities
+inherent in severe occlusion and cluttered backgrounds. Our
+analysis on refinement dynamics reveals that the amodal prior
+not only boosts final precision but also accelerates convergence,
+reaching peak accuracy in fewer iterations than the baseline.
+Consequently, MAPRPose outperforms the FoundationPose
+baseline in both estimation fidelity and computational efficiency.
+3) Effectiveness of RGB-XYZ Re-projection:To validate
+the effectiveness of our lightweight RGB-XYZ re-projection
+as a surrogate for full differentiable rendering, we compare it
+against nvdiffrast [43], a representative mesh-based differentiable renderer. Unlike traditional mesh-based methods (e.g.,
+nvdiffrast [43], pytorch3d [55], and softras [69]) that repeatedly
+rasterize the object’s triangular mesh at each iteration, our

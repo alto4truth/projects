@@ -1,0 +1,22 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 2
+section: abstract
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+critically,
+retrieval decisions in all these systems remain passive, governed by confidence thresholds, supervised classifiers, or
+generation-time heuristics that receive no outcome-level feedback on whether a particular retrieval action improved the
+downstream result [28]. When retrieval introduces noise or displaces useful context, these methods cannot attribute
+the failure to a specific retrieval decision, because supervision does not isolate individual retrieval actions from the
+surrounding generation process.
+Online evolution of interactive agents.A parallel line of research enables agents to improve autonomously through
+interaction. Within-episode methods such as iterative self-critique [9] strengthen single-episode capabilities but do not
+accumulate cross-episode experience. Cross-episode approaches pursue continual improvement through two largely
+independent channels. Memory-centric methods accumulate textual experience: Reflexion [10] stores verbal reflections
+from past failures, V oyager [3] builds reusable skill libraries, and ExpeL [ 12] distills lessons from trial outcomes.
+Parameter-centric methods optimize the behavioral policy through online reinforcement learning [

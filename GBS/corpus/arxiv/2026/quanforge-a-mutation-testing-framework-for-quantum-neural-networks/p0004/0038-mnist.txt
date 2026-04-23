@@ -1,0 +1,24 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 4
+section: mnist
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+𝑎𝑙 directly determine how strictly
+QuanForge enforces mutant stability and accuracy. To conduct a sensitivity analysis by varying the
+two thresholds across multiple configurations, respectively, we repeat the experiments in RQ1 and
+RQ2.1 and report the corresponding metrics.
+As in Table 8, under a smaller 𝜏𝑅𝑆𝐸 , more effective mutants are generated since it imposes a
+stricter stability threshold, which requires accumulating more mutants for a smaller RSE. Note that,
+for some extreme settings such as 1%, sufficiently stable mutants may even become unavailable
+under the given budget. On the other hand, a larger𝜏𝑡𝑟𝑖𝑣𝑖𝑎𝑙 imposes a higher accuracy constraint, i.e.,
+mutants should remain closer to the original model’s performance, thereby reducing the number of
+effective mutants. Despite quantitative changes in the metrics, the main findings remain consistent
+with the original experiments across configurations. Strong suites still achieve higher scores than
+the weak ones. Also, shallow-depth mutations manifest higher KRs, lower NRs, and lower accuracies
+than deep-depth ones. To ensure a sufficient yield of effective mutants, we recommend avoiding
+overly strict settings like very small𝜏 𝑅

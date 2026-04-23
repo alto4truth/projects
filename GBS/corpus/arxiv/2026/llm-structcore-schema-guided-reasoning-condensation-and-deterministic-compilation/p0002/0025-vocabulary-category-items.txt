@@ -1,0 +1,27 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 2
+section: vocabulary-category-items
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+Compiler-Based LLM Pipelines.DSPy [ 7] introduced the concept of
+compiling declarative language model programs into optimized pipelines.
+Our system shares the “compilation” philosophy: Stage 1 can be viewed as a
+declarative extraction step, and Stage 2 as a compiler that transforms the
+intermediate representation into the target format. However, our Stage 2 is
+fully hand-coded (deterministic), avoiding the need for optimization data or
+meta-learning.
+Ontology Grounding.UMLS-based concept normalization has been
+widely applied for biomedical concept recognition, including MetaMap [2],
+QuickUMLS [11], and ScispaCy [8].
+Our work differs in its explicit two-stage decomposition with a fully deterministic Stage 2, the use of SGR patterns for intermediate representation
+stability, and the emphasis on edge-deployable privacy preservation. Concurrently, Ferrazzi et al.[5] present a systematic comparison of adaptation
+strategies for small LLMs on Italian medical NLP, covering 20 tasks including
+CRF filling, and demonstrating that fine-tuned 1.7B models can outperform
+32B baselines.
+7 Conclusion
+LLM StructCore emphasizes contract alignment, format stability, and reproducible post-processing fo

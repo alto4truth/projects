@@ -1,0 +1,59 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 3
+section: 12
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+ex.Embeddings are L2-normalized and stored in a FAISS inner-product index, which is equivalent to
+cosine similarity search over normalized vectors.
+16
+
+ICALK@ECNU
+• Scoring.Given a query qt, each candidate entry r is scored as score(qt, r) = sim(e(qt), e(r)) +λ p p(r), combining
+semantic similarity with the priority term (Section 3.2).
+• Type-balanced retrieval.The retrieval budget K is divided equally across the five entry types, with one slot allocated
+to each by default. This prevents any single type from dominating the returned context and encourages complementary
+evidence.
+• Priority update.Only entries that are actually retrieved during a trajectory receive priority updates. Specifically,
+when a trajectory succeeds, the priority of each retrieved entry is incremented by one. Entries that are stored but never
+retrieved receive no update. This mechanism progressively surfaces high-utility entries without requiring explicit
+supervision.
+• Deduplication.Exact-match deduplication on the when_to_use field is enabled by default. The current implementation does not impose a fixed repository capacity cap or employ a learned eviction policy.
+C.3 Entry Extraction and Maintenance
+After each episode, completed trajectories are filtered to retain episodes with valid response tokens and then grouped by
+task instance. Within each group, a dedicated extraction model (Qwen3-32B) produces typed entries according to the
+following procedure:
+1. Factual and episodic memoriesare extracted from individual trajectories via summarization. The extractor
+produces at most two entries of each type per trajectory, focusing on environment facts and trajectory-specific plans
+or constraints.
+2. Success and failure skillsare distilled from outcome-specific trajectory subsets. Each distiller returns one to three
+JSON-formatted entries that encode reusable strategies (from successes) or corrective rules (from failures).
+3. Comparative skillsare distilled from matched trajectory pairs. Paired A/B branches produced by PROACTRL are
+prioritized because they share the same task prefix and therefore expose the most localized contrastive signal. When
+such pairs are unavailable, the extractor falls back to outcome-ranked trajectory pairs from the same task group.
+The complete prompts used for each extraction type are provided in Appendix E.
+D Training Protocol
+This section describes the full training pipeline, including the cold-start phase, the paired-branch rollout procedure,
+and the retrieval annealing schedule. These stages correspond to the procedural flow outlined in Algorithm 1 and
+Algorithm 2. The hyperparameters used in all experiments are summarized in Table 6.
+D.1 Pipeline Overview
+The training pipeline proceeds through six sequential stages:
+1. Cold start.The base policy is trained via supervised learning on successful trajectories to learn the interaction
+format, valid action syntax, and retrieval-tag conventions. This stage is critical for initializing the policy with
+sufficient tool-calling competence before reinforcement learning begins (as confirmed by the ablation in Section 4.3).
+2. Rollout sampling.Multiple rollouts are sampled for each training prompt under the current policy. A portion of
+these rollouts is configured as no-retrieval trajectories through the retrieval_enabled switch, whose probability
+is annealed across training phases.
+3. Paired-branch construction.When paired branching is active, the system identifies retrieval-trigger steps in
+retrieval-enabled rollouts, replays the corresponding prefixes, and creates matched no-retrieval branches (Section D.2).
+4. Reward computation.The environment outcome is combined with the paired-branch process reward and the
+efficiency bonus to produce the PROACTRL trajectory-level reward (Section 3.3).
+5. Policy update.The policy is updated using GRPO-style group normalization with PPO-style clipped surrogate
+optimization.
+6. Experience base update.The experience base D is updated by extracting factual, episodic, success, failure, and
+comparative entries from the new trajectories (Appendix C.3).
+17

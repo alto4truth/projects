@@ -1,0 +1,29 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+etics features,
+Explicit (V)/Explicit achieves the highest mAP (64.68%),
+slightlysurpassingbothimplicitDropKeyandtheNone/Explicit
+baseline. A similar trend holds for ActivityNet features,
+where Explicit (V)/Explicit reaches 56.51%, outperforming
+all implicit configurations. In contrast, the Arora et al. [1]style attention dropout variants exhibit larger variance and
+weaker performance under similar dropout ratios. This suggeststhatourformulationimprovesrobustnessintemporally
+structured representations where attention dynamics are
+more complex.
+GTZAN (Audio Classification).On the GTZAN audio
+classification benchmark (Table 4), implicit dropout methods already achieve strong performance (≈ 85%accuracy).
+The performance differences between methods are comparatively smaller, reflecting the relatively simpler structure
+of the dataset. Nevertheless, the proposed dropout remains
+competitive (85.78%accuracy), with explicit (K) achieving
+the best overall accuracy. This indicates that key-based regularization can be beneficial in low-data or low-complexity
+regimes, where over-regularization may otherwise degrade
+performance.
+Across datasets and modalities, explicit regularization
+appliedtova

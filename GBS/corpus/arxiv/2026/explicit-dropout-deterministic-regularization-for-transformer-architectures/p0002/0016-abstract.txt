@@ -1,0 +1,22 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+×𝑑. For a query corresponding
+to token𝐱𝑖, the attention score is defined as
+𝐒𝑖 =𝐱 𝑖𝐖𝑇
+𝑞 𝐖𝑘𝐗𝑇 .(7)
+During training, dropout is applied to the input representation at epoch𝑡as𝐱 𝑖𝑡 =𝐦 𝑖𝑡 ⊙𝐱 𝑖, where⊙denotes elementwise multiplication. The resulting attention scores become
+𝐒𝑖𝑡 = (𝐦 𝑖𝑡 ⊙𝐱 𝑖)𝐖𝑇
+𝑞 𝐖𝑘𝐗𝑇 .(8)
+Toencourageconsistencybetweentheoriginalanddropoutperturbed queries over training, we seek weights that minimize the discrepancy between𝐒𝑖 and𝐒 𝑖𝑡:
+𝐒𝑖 −𝐒 𝑖𝑡 = ̃𝐱𝑖𝑡𝐖𝑇
+𝑞 𝐖𝑘𝐗𝑇 ,(9)
+where ̃𝐱𝑖 =𝐱 𝑖 − (𝐦𝑖𝑡 ⊙𝐱 𝑖).
+:Preprint submitted to Elsevier Page 3 of 13

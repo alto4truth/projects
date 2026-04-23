@@ -1,0 +1,27 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 1
+section: msc-scc-zqc-msc-scc-zqc
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+ation sets. Using overall mean, textembedding-3-small wins only 32.2% of samples; using
+macro-average (equal weight per cluster), the same model
+wins 63.3%. If a practitioner cares equally about all semantic regions regardless of query volume, macro-averaging
+better reflects their intent. Stratified evaluation makes these
+trade-offs explicit rather than leaving them as implicit artifacts of dataset composition.
+6. Related Work
+RAG Benchmarks. The evaluation of RAG systems inherits methodologies from information retrieval research, most
+notably the Text REtrieval Conference (TREC) (Chowdhury, 2007). These efforts led to unified question answering
+(QA) benchmarks such as BEIR, as well as foundational
+datasets including Natural Questions (NQ) (Kwiatkowski
+et al., 2019), HotpotQA (Yang et al., 2018), TriviaQA (Joshi
+Figure 5.Bootstrap win rates for text-embedding-3-small vs.
+embed-english-v3.0 under different aggregation protocols (1,000
+resamples). Overall Mean weights by query count; Macro Average
+weights clusters equally; Median and Worst Case capture central
+tendency and tail performance.
+et al., 2017), and MS MARCO (Nguyen et al., 2016) . Building on these foundations, more recent

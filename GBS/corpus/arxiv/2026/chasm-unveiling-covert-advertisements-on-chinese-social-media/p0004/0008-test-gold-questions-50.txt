@@ -1,0 +1,23 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+rmined whether the content was related to a product or
+service. If deemed unrelated, the sample was directly labeled as non-covert advertisement. For
+product-sharing samples, which involve greater subjectivity, we employed a majority voting scheme
+among three annotators, ensuring that at least one experienced annotator participated. This approach
+significantly improved annotation quality: the initial inter-annotator agreement (Fleiss’ kappa = 0.65)
+indicates moderate consistency, reflecting the inherent ambiguity of the task. After adopting the dynamic annotation workflow described above, the annotation quality improved markedly: the accuracy
+on gold-standard questions increased from 78% under single-annotator labeling to 94%, while the
+required annotation resources were reduced to 43.3% of those needed for exhaustive three-person
+voting. These results demonstrate that our annotation protocol effectively balances reliability and
+efficiency in handling this challenging task.
+4 Evaluation
+In this section, we first present the experimental setup. In Section 4.2, we discuss the performance of
+different MLLMs on the CHASM. Finally, we conduct comparative experiments to investigate which

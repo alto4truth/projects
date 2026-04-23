@@ -1,0 +1,58 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+the explicit regularizer induced by dropout
+in atwo-layer feed-forward network,following theformulation of Arora et al. [1]. Consider a network
+𝑓(𝐱;𝐖 1,𝐖 2) =
+𝑑1∑
+𝑗=1
+𝜎(𝐱𝐖𝑇
+1,𝑗)𝐖 𝑇
+2,𝑗,(3)
+where𝐱∈ℝ 𝑑 is the input vector,𝐖1 = [𝐰 1,1,…,𝐰 1,𝑑1] ∈
+ℝ𝑑1×𝑑 is the first-layer weight matrix,𝐖2 ∈ℝ 𝑑2×𝑑1 is the
+second-layer weight matrix, and𝜎(⋅)is the ReLU activation
+function. Let{(𝐱 𝑖, 𝑦𝑖)}𝑁
+𝑖=1 be the training set, and let𝐁=
+diag(𝐵11,…, 𝐵 𝑑1𝑑1)be a diagonal random matrix with
+𝐵𝑗𝑗 ∼ 1
+1 −𝑝 Bernoulli(1 −𝑝), 𝑗∈ [𝑑 1],(4)
+for dropout rate𝑝∈ (0,1). The diagonal matrix represents
+column dropout, i.e., dropout of certain feature embeddings
+from the whole input mini-batch. Arora et al. [1] show that
+the final loss function can be decomposed as
+𝐿(𝐖1,𝐖 2) = 1
+𝑛
+𝑁∑
+𝑖=1
+(𝑦𝑖 −𝑓(𝐱 𝑖;𝐖 1,𝐖 2))2 + ̂𝑅(𝐖1,𝐖 2),
+(5)
+where ̂𝑅(𝐖1,𝐖 2)is theexplicitregularizer due to dropout.
+Forthetwo-layernetworkabovewithReLUactivations,the
+explicit regularizer takes the form
+̂𝑅(𝐖1,𝐖 2) =𝜆
+𝑑1∑
+𝑗=1
+‖𝐰2,𝑗‖2
+2 ̂ 𝑎2
+𝑗 ,(6)
+𝜆=
+√ 𝑝
+1 −𝑝 , ̂ 𝑎2
+𝑗 = 1
+𝑛
+𝑁∑
+𝑖=1
+𝜎(𝐱𝑖𝐰𝑇
+1,𝑗
+)2.
+̂ 𝑎2
+𝑗 is the empirical second moment of the𝑗-th hidden neuron’s activation. Thus, dropout induces a data-dependent
+penalty that couples the norm of each hidden

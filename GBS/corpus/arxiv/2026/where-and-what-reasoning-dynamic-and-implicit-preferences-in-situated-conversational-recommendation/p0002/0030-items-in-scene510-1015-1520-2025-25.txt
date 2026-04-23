@@ -1,0 +1,19 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 2
+section: items-in-scene510-1015-1520-2025-25
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+0, correct scene grounding yields 40.0 R@1 and 48.2 MRR@5, whereas
+these numbers fall to 29.8 and 40.1 once the scene
+prediction is incorrect. This 10.2-point drop in
+R@1 confirms that scene-estimation errors propagate directly to downstream item ranking, while
+the remaining gap between the conditioned and
+overall results also indicates that BI-INF still contributes non-trivial discrimination after the scene is
+correctly grounded.
+Boundary Cases of STE.Beyond the aggregate
+metrics above, we explicitly inspect the failure patterns of STE. We observe two recurring bound-

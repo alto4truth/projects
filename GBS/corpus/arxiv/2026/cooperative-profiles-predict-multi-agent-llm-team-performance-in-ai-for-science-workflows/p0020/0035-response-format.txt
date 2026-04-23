@@ -1,0 +1,40 @@
+title: Cooperative Profiles Predict Multi-Agent LLM Team Performance in AI for Science Workflows
+source: arxiv
+year: 2026
+document_id: cooperative-profiles-predict-multi-agent-llm-team-performance-in-ai-for-science-workflows
+authors: Shivani Kumar; Adarsh Bharathwaj; David Jurgens
+page: 20
+section: response-format
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20658v1
+
+Respond with ONLY this JSON object, no other text:
+{
+"completeness": <int 1-5>,
+"completeness_rationale": "<one sentence>",
+"sections": {
+"abstract": <true/false>,
+29
+
+Preprint. Under review.
+"introduction": <true/false>,
+"dataset": <true/false>,
+"methods": <true/false>,
+"results": <true/false>,
+"evaluation": <true/false>,
+"conclusion": <true/false>
+},
+"quality": <int 1-5>,
+"quality_rationale": "<one sentence>",
+"accuracy": <int 1-5>,
+"accuracy_rationale": "<one sentence>"
+}
+Each judge produces integer ratings (1–5) for completeness, quality, and accuracy, along with
+one-sentence rationales. For completeness, the judge additionally reports which of the seven
+required sections (abstract, introduction, dataset, methods, results, evaluation, conclusion)
+are present with substantive content. The template variables {task}, {task description},
+{ground truth text}, and {report text} are filled with the specific science task name, a
+paragraph-length task description, formatted ground truth parameters, and the full text of
+the agent-generated report, respectively. Both judges use temperature 0 and a maximum of
+512 output tokens.
+30

@@ -1,0 +1,24 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 1
+section: msc-scc-zqc-msc-scc-zqc
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+ral-networks” → “neural
+network”) to reduce redundancy. For NFCorpus, this yields approximately 24,000 unique entities across 3,633 documents;
+for FiQA, over 109,000 entities from 57,000 documents.
+A.2. Graph Construction
+Entity embedding.Each semantic entity is represented by concatenating its extracted name and description into a short
+text span, which is embedded using text-embedding-3-large text embedding model with 256 dimensions. We find
+that dimensionality reduction improves graph sparsity and clustering stability without materially affecting downstream
+analyses.
+Graph sparsification.We construct a semantic graph by connecting each entity node to its nearest neighbors in the
+embedding space, using cosine similarity as the affinity measure. Approximate nearest neighbor search is performed using
+FAISS (Johnson et al., 2019) for scalability. For each node, we retain a fixed number of neighbors subject to a minimum
+similarity threshold, yielding a sparse, undirected graph with edge weights given by cosine similarity.
+In all experiments, we set the number of neighbors to k= 50 and the similarity threshold to 0.5. These values were selected
+to balance graph connectivity and sparsi

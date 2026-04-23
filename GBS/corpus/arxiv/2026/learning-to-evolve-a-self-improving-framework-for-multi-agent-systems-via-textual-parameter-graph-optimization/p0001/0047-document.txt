@@ -1,0 +1,29 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 47
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+ored in a persistent vector database. We remove near-duplicate entries by cosine-similarity
+filtering, then cluster the remaining gradients using DBSCAN over all-MiniLM-L6-v2 sentence
+embeddings. In our experiments, DBSCAN uses
+ε= 0.3 and min_samples= 2 . For ablations, we
+additionally consider variants without clustering
+and with random clustering.
+Optimization memory and rollback.GRAO
+maintains a persistent optimization experience
+memory. Each entry records the problem context, the proposed graph edit, its rationale, and the
+observed effectiveness score. When a new error
+cluster is encountered, candidate experiences are
+retrieved by semantic similarity and re-ranked by
+effectiveness; the highest-ranked positive and negative exemplars are then used as in-context demonstrations for the Optimizer LLM. After each iteration, we monitor validation performance and roll
+back to the previous graph if an update degrades
+performance on the targeted validation subset. Unsuccessful updates are still retained in memory. For
+reproducibility, we archive all optimization artifacts, including proposals, graph states, and run
+metadata, for every iteration.
+D Prompt Templates
+We present the main pro

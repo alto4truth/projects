@@ -1,0 +1,30 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+ze direction in the OR context. Additionally, our
+gaze annotations do not solely depend on the head orientation,
+but also on the localization of the attentional gaze target within
+the area of interest. Based on the prior knowledge of where
+clinicians might be looking, the annotators are usually able to
+determine the semantic targets (e.g., operating table, screen,
+a clinician, etc.). Therefore, the gaze annotation strategy is
+generally reliable in the OR for surgical workflow analysis.
+3.2. Dataset and evaluation metrics
+We evaluate gaze-following task on the 4D-OR [26] and
+Team-OR [6] datasets. For 4D-OR, following the original
+configuration, we use 6, 2 and 2 videos for training, validation, and testing, respectively. For Team-OR, we use 80% of
+videos for training and the rest for testing. We use the same
+evaluation metrics as in [31]: the heatmap area under the curve
+(AUC), which considers each heatmap pixel as a confidence
+score for the receiver operating characteristic (ROC) curve,
+and pixel L2, defined as the normalized Euclidean distance
+between the predicted and ground truth gaze points.
+For clinical role prediction and surgical phase recognition,
+we evaluate them on the 4D

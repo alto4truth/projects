@@ -1,0 +1,22 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 2
+section: results
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+5
+Figure 3.Traveling waves distinguish different inputs in a simple dataset. (a)Representative samples of timeseries
+data from each of the three classes. Class 1 contains 15 Hz sinusoids embedded in noise; Class 2 contains 20 Hz sinusoids
+embedded in noise; and Class 3 consists of signals with noise only.(b)We calculate the difference in modal energyE j =P
+k |µj(k)|2 across inputs, which is the summed difference between class 1 and 2, 1 and 3, and 2 and 3. Each mode corresponds
+to an eigenfrequency of the state-transition operatorD τ. Only a small subset of resonant modes shows pronounced differences.
+The stem plot shows that mode 101, whose eigenphase lies closest to the 15–20 Hz temporal frequency band, separates input
+classes most effectively.(c)Single-trial distributions of the resonant modal energy log 10 E(j101), shown as histograms with
+counts. This single resonant mode exhibits clear class separation: the 15 Hz and 20 Hz classes concentrate at distinct energy
+levels, while the noise-only class occupies a lower-energy regime. Together, these results demonstrate that discrimination arises
+from a small subset of resonant modes rather than from global spectral differences.
+tria

@@ -1,0 +1,33 @@
+title: CHORUS: An Agentic Framework for Generating Realistic Deliberation Data
+source: arxiv
+year: 2026
+document_id: chorus-an-agentic-framework-for-generating-realistic-deliberation-data
+authors: A. Koursaris; G. Domalis; A. Apostolopoulou; K. Kanaris; D. Tsakalidis; I. E. Livieris
+page: 2
+section: abstract
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20651v1
+
+CHORUS: An Agentic Framework for Generating Realistic Deliberation DataA PREPRINT
+The archetype distribution approximates the stakeholder composition typical of real-world deliberation platforms,
+where citizen voices constitute the majority of contributions, domain experts provide lower-frequency but higherdensity input, advocates introduce policy-level framing and skeptics promote deliberative diversity through critical
+counterpoints. The corresponding behavioral parameters governing each archetype’s temporal and interactional dynamics are reported in Table 1. All actors are equipped with a shared base tool suiteTcomprising post submission,
+discussion history retrieval and voting (upvote/downvote) actions. In addition, the Expert actor is provisioned with
+a web search tool, enabling evidence retrieval from external sources prior to content generation, consistent with its
+archetype’s evidence-backed communication profile.
+Actor Archetype λpost
+i λaction
+i preply
+i θaction
+i
+Casual User 1
+Casual User
+1.0 1.4 0.45 0.35
+Casual User 2 0.7 1.0 0.40 0.40
+Casual User 3 1.2 1.5 0.50 0.30
+Casual User 4 0.5 0.7 0.35 0.45
+Expert Expert 0.4 0.6 0.60 0.65
+Advocate 1
+Advocate
+1.0 1.8 0.55 0.25
+A

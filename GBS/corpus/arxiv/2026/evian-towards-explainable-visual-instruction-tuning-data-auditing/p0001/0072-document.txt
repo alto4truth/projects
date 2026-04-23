@@ -1,0 +1,29 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 72
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+Table 6: Sensitivity analysis of EVIAN under different weighting schemes. We report performance on 10K-sample
+subsets selected by prioritizing different quality dimensions (60% weight).Reason-Centricselection achieves
+the best average performance, highlighting the importance of logical coherence.Bolddenotes the best result, and
+underlined denotes the second best.
+Configuration MME MMBench SEEDBench ScienceQA A-OKVQA POPE Avg
+Vision-Centric (SV ↑) 1779.15 0.6109 0.6163 0.6905 0.7160 77.76 67.45
+Reason-Centric (SL ↑) 1803.53 0.6373 0.6312 0.7030 0.7228 75.81 68.28
+Know-Centric (SK ↑) 1748.02 0.5995 0.6034 0.6731 0.7021 75.74 65.99
+which depends on the auditor’s internal reasoning
+pathways and, unlike Visual Consistency, could
+in principle be architecture-specific. To rigorously
+stress-test this hypothesis, we adoptInternVL2-2B
+(Chen et al., 2024f) as an alternative target model.
+InternVL2 differs substantially from Qwen in both
+its vision encoder and language backbone, while
+maintaining a comparable 2B scale, allowing us to
+isolate architectural effects from capacity effects.
+Experimental Setup.We follow the exact protocol of Section 5.1 and fine-tune InternVL2-2B
+using 10k-sample su

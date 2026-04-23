@@ -1,0 +1,33 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 2
+section: vocabulary-category-items
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+neralization to other CRF schemas, clinical domains, or languages beyond
+English and Italian has not been tested.
+9 Reproducibility
+All deterministic logic is contained in the open-source packagellm_struct
+core. Code will be provided in supplementary materials and open-sourced
+upon paper acceptance (Anonymous Repository). The repository includes:
+• The llm_structcore Python package (Stage 1 prompt templates,
+Stage 2 compiler, scoring, submission builder).
+• Scripts for running end-to-end inference across multiple backends
+(llama.cpp, OpenAI-compatible APIs, HF Transformers, NVIDIA
+API, Gemini Vertex, Anthropic).
+• The complete UMLS alias map (data/umls_crf_mapping.json ,
+134/134 coverage).
+• The CRF ontology definition (data/ontology_crf_cl4health2026.
+md).
+• Organizer-provided evaluation scripts (external/CRF-filling-CL4
+Health2026/).
+•This system description paper (LaTeX source).
+The Stage 1 SGR schema parses reliably with MedGemma 1.5-4B and does
+not require JSON-mode sampling. Stage 2 is fully reproducible: the same
+Stage 1 summary always produces the same 134-item submission, regardless
+of platform, Python version, or execution order.
+14

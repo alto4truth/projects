@@ -1,0 +1,14 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+applications (batch size 1), BIL is the superior discretization strategy at 13.46 ms, providing a distinct advantage over higher-order methods which may incur computational overhead without throughput gains at low
+saturation. As batch sizes increase to 512, BIL shows advantageous throughput
+(4,804 img/s), suggesting that it handles memory-bound and compute-bound
+transitions more effectively than the other methods. Intermediate batch sizes (4

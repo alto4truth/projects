@@ -1,0 +1,24 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+polynomials for a graphGsuch that all of them are of degree at mostdw for a specific weighting,
+then these identifying polynomials can be computed in polynomial time in the size of the vertex
+and edge set ofG. This will be the main focus of our next section.
+4 Weighting and Homogenization
+As shown in Section 2, deciding identifiability of a parameterq∈θis equivalent to deciding
+whetherIcontains an identifying polynomial. In this section, we transfer this problem to an ideal
+that is homogeneous with respect to a specific weighting. We set the weight ofσuv tow(σ uv) =
+deg(τG(σuv)). Observe thatdeg(τG(σuv))is equal to the maximal length of any trek betweenuand
+v, where the length of a trekπis the total degree of the trek monomialπ(θ). If there is no trek
+between two nodesuandv, then we set the maximal trek length betweenuandvto1. In this way,
+we define thetrek weightingwin the ringR[θ, σ]by setting
+w(q) = 1for allq∈θ,
+w(σuv) =maximal length of any trek betweenuandv. (5)
+Moreover, we denote bywtrek to be the length of the longest trek inG. Now, we consider thewhomogenized idealI wh =⟨f wh :f∈ I⟩ ⊆R[θ, σ, h], wheref wh denotes the weighted homogenization with respect to a new variablehw

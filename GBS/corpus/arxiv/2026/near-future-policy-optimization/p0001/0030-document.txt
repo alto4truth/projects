@@ -1,0 +1,25 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+Table 1Multi-modal reasoning results on Qwen3-VL-8B. The blue rows are our NPO variants.Boldindicates the
+best result in each column.Avg.is the unweighted mean over the eight benchmarks.
+Method MMMU-Pro MathVista MathVision ZeroBench WeMath MMBench MM-Star MathVerse Avg.
+Qwen3-VL-8B-Instruct 51.75 73.80 47.37 19.76 54.10 89.79 71.83 54.61 57.88
+LUFFY (external teacher) 54.23 73.80 54.00 20.51 52.38 89.49 69.47 55.58 58.68
+GRPO (pure on-policy) 55.78 76.20 48.82 22.60 56.57 90.29 72.20 59.52 60.25
+ExGRPO (historical replay) 55.49 77.30 55.46 19.01 62.67 90.44 72.00 56.89 61.16
+RLEP (far future) 55.38 78.50 54.23 19.61 62.48 90.45 72.27 58.91 61.48
+NPO, early-stage only(Ours)56.85 76.60 54.31 26.35 62.76 90.41 70.30 59.38 62.12
+NPO, early+late-stage(Ours)57.07 76.30 54.61 24.85 66.95 90.30 72.20 60.00 62.84
+AutoNPO(Ours) 57.24 79.20 55.72 24.70 66.00 90.63 72.63 59.11 63.15
+Manual NPO improves broadly across benchmarks, and AutoNPO further matches or exceeds
+manually scheduled interventions.The early-stage-only NPO already surpasses every baseline on average
+and leads on ZeroBench, where correct trajectories are scarce and a warm guide matters most; adding the
+late-stage intervention

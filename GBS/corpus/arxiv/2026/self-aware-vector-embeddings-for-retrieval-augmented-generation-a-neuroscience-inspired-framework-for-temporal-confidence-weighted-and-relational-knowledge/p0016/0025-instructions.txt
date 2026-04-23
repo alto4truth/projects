@@ -1,0 +1,20 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 16
+section: instructions
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+to each query kind.Stale rateis the
+fraction of current-query predictions whose top-1 document has status DEPRECATED—a precise
+instantiation of the VersionRAG failure mode [1].Expected Calibration Error (ECE)is computed
+with ten equal-width bins over the top-1 document’s live confidence: for each bin, the absolute gap
+between mean confidence and empirical accuracy is weighted by the bin’s mass, then summed.
+Update costis measured by simulating a single-word edit to the latest version of every topic. Plain
+RAG is charged one re-embedding per chunk in the affected document; SmartVector is charged
+one re-embedding (diff-overlapping chunk) plus a scalar ripple message perdepended_by edge.
+Re-embedding is the dominant cost in production, so this is the ratio operators actually pay.
+11

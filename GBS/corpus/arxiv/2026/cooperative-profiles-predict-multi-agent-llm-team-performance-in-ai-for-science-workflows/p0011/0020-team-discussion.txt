@@ -1,0 +1,62 @@
+title: Cooperative Profiles Predict Multi-Agent LLM Team Performance in AI for Science Workflows
+source: arxiv
+year: 2026
+document_id: cooperative-profiles-predict-multi-agent-llm-team-performance-in-ai-for-science-workflows
+authors: Shivani Kumar; Adarsh Bharathwaj; David Jurgens
+page: 11
+section: team-discussion
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20658v1
+
+show that LLMs do not exhibit a uniform pro-social
+bias; their cooperative tendencies are game-structure-dependent, consistent with human
+behavior.
+23
+
+Preprint. Under review.
+Predictor ˆβ95% CI
+Model characteristics
+Intercept+.853†[+.810,+.898]
+log(size)−.051†[−.053,−.050]
+Thinking variant+.029†[+.024,+.034]
+Prompting strategies
+Chain-of-thought−.000[−.005,+.005]
+Theory of mind−.038†[−.043,−.033]
+Condition controls
+Group size−.001[−.002,+.000]
+Game fixed effects (ref: Collective Risk)
+CPR−.060†[−.065,−.055]
+CPR+Sanction−.008†[−.014,−.003]
+O-Ring−.328†[−.334,−.321]
+Public Goods−.164†[−.169,−.158]
+Weakest-Link−.540†[−.546,−.534]
+Family random intercepts ( ˆδf )
+Gemma 3−.028[−.072,+.014]
+GPT-OSS+.049†[+.004,+.094]
+Granite 4+.039[−.005,+.082]
+Llama+.004[−.040,+.047]
+Mistral+.039[−.006,+.082]
+Nemotron+.049†[+.005,+.092]
+OLMo−.129†[−.173,−.085]
+Phi-4−.006[−.050,+.038]
+Qwen3+.037[−.007,+.080]
+Qwen3.5−.063†[−.108,−.018]
+Variance components
+σf (family) .068[.042, .116]
+σ(residual) .233[.232, .234]
+R2 0.424
+N/ Models / Games 87,475 / 35 / 6
+Table 6: Full Bayesian regression predicting Pareto proximity (continuous). All coefficients
+shown, including game fixed effects (reference: Collective Risk) and family random intercepts. Data includes canonical, CoT, ToM, and parameter sweep conditions using the
+standard prompt only (see Appendix E for prompt invariance analysis). † 95% CI excludes
+zero. 4 chains×2,000 samples; zero divergences.
+H Full Experiment 2 regression table
+Table 7 reports all coefficients from the Bayesian hierarchical measurement-error model
+predicting AI-for-Science outcomes (Section 4.2), including condition-level controls omitted
+from the main paper.
+I Model Inventory
+Table 8 shows the full list of 35 models used in the experiments. Models were selected to
+cover a diverse set of families, training methodologies, and model sizes. All models are
+reported (and required) to support some form of tool calling, which is necessary for the
+AI-for-Science experiments that use real tools to perform their workflow.
+24

@@ -1,0 +1,30 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+V-tableR1: Process-Supervised Multimodal Table Reasoning 7
+iliary 8B-parameter language model (Qwen-3 8B) to systematically corrupt the
+logical coordinates and intermediate values within human-annotated or verified
+trajectories. The severity of the perturbation determines the ground-truth process score. We then train a 32B-parameter vision-language model (Qwen-3-VL
+32B) to function as the critic. By exposing the critic to both pristine logic and
+heuristically generated errors, it learns to holistically evaluate the structural
+integrity of a V-CoT, differentiating between flawless reasoning (Path 1) and
+varying degrees of structural hallucination (Path 2 and Path 3).
+During RL training, for each generated trajectoryy, the critic VLM produces
+a denseprocess score,r proc ∈[0,1]. This score dynamically gates the outcome
+reward. Letr fmt ∈[0,1]denote adherence to structural guidelines, andr acc ∈
+{0,1}indicate final answer correctness. We define the baseline outcome reward
+as:
+Rbase =r fmt +r acc. (1)
+The final composite reward,R(y), incorporates the critic’s feedback via a piecewise gating mechanism, governed by hyperparametersα,β,τ high, andτ low:
+R(y) =
+
+
+
+Rbase +α,ifR base

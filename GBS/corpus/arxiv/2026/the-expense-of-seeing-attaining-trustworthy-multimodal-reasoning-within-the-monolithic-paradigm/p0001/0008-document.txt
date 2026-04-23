@@ -1,0 +1,28 @@
+title: The Expense of Seeing: Attaining Trustworthy Multimodal Reasoning Within the Monolithic Paradigm
+source: arxiv
+year: 2026
+document_id: the-expense-of-seeing-attaining-trustworthy-multimodal-reasoning-within-the-monolithic-paradigm
+authors: Karan Goyal; Dikshant Kukreja
+page: 1
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20665v1
+
+to salvage the monolithic paradigm and
+contribute towards constructing genuinely faithful world models.
+2 Challenging Existing Assumptions: The Crisis
+in Evaluation
+To build trustworthy data science systems, our evaluation metrics
+must rigorously isolate thesourceof a model’s predictive power. The
+standard approach of evaluating multimodal capabilities currently
+relies heavily on the paradigm of data ablation.
+2.1 The Flaws of Multimodal Gain and Leakage
+Consider the formulation of Multimodal Gain ( 𝑀𝐺), which measures the difference in accuracy when a model is given both vision and text ( 𝑆𝑣) versus text alone ( 𝑆𝑤𝑣 ): 𝑀𝐺=𝑆 𝑣 −𝑆 𝑤𝑣 . Similarly, Multimodal Leakage (𝑀𝐿) assesses leakage by comparing the
+VLM’s text-only performance against its underlying base LLM (𝑆𝑡 ):
+𝑀𝐿=max(0, 𝑆 𝑤𝑣 −𝑆 𝑡 ).
+We assert that these metrics are fundamentally inadequate for
+evaluating modern world models.
+(1) Biased Estimators: 𝑀𝐿 is mathematically flawed as a global
+estimator. By utilising a max function, it routinely fails to
+account for destructive interference scenarios where the multimodal alignment training process catastrophically degrades
+the base LLM’s inherent reasoning capabilities (𝑆𝑤𝑣 <𝑆 𝑡

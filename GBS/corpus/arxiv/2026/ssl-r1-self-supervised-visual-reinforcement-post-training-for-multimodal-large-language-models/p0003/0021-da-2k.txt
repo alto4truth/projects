@@ -1,0 +1,26 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 3
+section: da-2k
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+0 47.58 74.79 36.41 80.27 45.21 59.82 39.25 63.04 61.79
++ SSL-R1 60.00 62.81 84.11 71.75 81.68 49.87 74.07 36.50 81.05 45.40 63.54 41.25 63.67 62.75
+∆(vs. baseline) +5.34 +3.06 +0.78 +4.37 +4.72 +6.46 +2.18 +1.43 +3.37 +2.74 +9.09 +4.25 +2.08 +3.84
+stance, on OmniSpatial, we obtain the best performance by
+combining two instead of five tasks (47.23% vs. 46.84%).
+Adding more tasks beyond two continuously degrades the
+performance. Both phenomena indicate that different tasks
+may conflict in certain scenarios, causing a negative transfer. In Sec. 4.4, we further analyze the transfer effect among
+different SSL tasks, revealing that the task synergy and conflict indeed exist.
+Overall, in practice, we recommend using diverse SSL
+task combinations for holistic multimodal perception and
+understanding. Nevertheless, if one prefers optimizing certain downstream capabilities (e.g., visual search), prioritizing corresponding SSL tasks (e.g., Region Inpainting) for
+post-training would be a better choice.
+Task Difficulty.We study how the difficulty of SSL tasks
+affects model performance by varying the complexity of
+each task with two difficulty levels. Specifically, for Geometric Correspondence,

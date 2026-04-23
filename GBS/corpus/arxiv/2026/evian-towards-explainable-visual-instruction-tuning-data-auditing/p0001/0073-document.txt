@@ -1,0 +1,24 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 73
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+itectural effects from capacity effects.
+Experimental Setup.We follow the exact protocol of Section 5.1 and fine-tune InternVL2-2B
+using 10k-sample subsets selected by three representative methods: Random Sampling, BLIP2, and EVIAN. This setup ensures that the only
+change relative to the main experiment is the replacement of the downstream architecture. Any
+shift or preservation of performance patterns therefore directly reflects whether EVIAN captures genuinely architecture-agnostic indicators of data quality, or merely capitalizes on Qwen-specific inductive biases.
+Results and Interpretation.The results are presented in Table 7. Across all benchmarks, the performance ordering observed in our main experiments,EVIAN > BLIP-2 > Random, remains
+fully preserved when InternVL2-2B is used as
+the downstream model. The consistency of this
+ranking across architectures strongly contradicts
+the architectural-bias hypothesis and indicates that
+EVIAN captures transferable signals of data quality rather than family-specific preferences. Notably,
+the largest gains again appear on reasoning-centric
+tasks such asScienceQA(92.46 vs. 91.32) andAOKVQA(76.24 vs. 74.67), demonstrating that the
+logical

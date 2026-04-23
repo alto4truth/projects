@@ -1,0 +1,59 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 10
+section: compass-ecda
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+mbeddings before computing the distance matrix. The
+number of clusters was selected by maximizing the silhouette score over the rangeK= 80toK= 120,
+51
+
+Published in Transactions on Machine Learning Research (11/2025)
+following from initial results on K-means. OptimalKvalues were distributed similarly to K-means, with
+majority of languages optimized at values ofK≥110.
+Taylor-Butina Clustering.Taylor-Butina clustering is a density-based algorithm that iteratively: (1)
+computes pairwise distances between all embeddings, (2) sorts points by their number of neighbors within
+a threshold, (3) assigns points as cluster centers if they haven’t been claimed, and (4) assigns all neighbors
+of a center to its cluster. We enhanced this with an adaptive threshold selection mechanism that uses
+binary search to find the distance threshold within range[0.70,0.95]that yields an optimal number of
+clusters. This approach iteratively adjusts the threshold between specified minimum and maximum values
+until convergence, finding the threshold that produces the largest number of non-singleton clusters while
+ensuring that at least 95% of the data points were assigned to a cluster.
+F Computational Efficiency Analysis
+Preprocessing Overhead.COMPASS incurs a one-time preprocessing cost for embedding generation and
+clustering, which is amortized across all target languages. Using Jina-Embeddings-v3-570M (A100 GPU,
+batch size 128), we embed 204K examples from Aya dataet in 42.4 minutes (averaged over 3 embedding
+runs). HDBScan clustering on 204K 1024-dimensional embeddings required 2.2 hours on CPU. Amortized
+over 42 target languages, the one-time cost of preprocessing was 4.15 minutes per language.
+Per-Adapter Training Costs.Per-adapter training time for COMPASS for Phi4-Mini-3.8B, Llama-3.18B, and Qwen2.5-7B was 44.9, 104.7, and 86.3 minutes per language, respectively. Comparatively, peradapter training time was 17.9, 49.7, and 32.8 minutes per language, respectively, when only using the
+target language training data and not incorporating the auxiliary training data. For full finetuning, we
+observed increases in training time to 61.3, 133.2, and 110.6 minutes per language, respectively, for Phi4Mini-3.8B, Llama-3.1-8B, and Qwen2.5-7B. While rigorous comparison to full finetuning requires careful
+experimental controls (batch size, rank) and depends on hardware configuration and usage of optimized
+implementations, existing literature suggests LoRA and DoRA typically achieve up to 40% reductions in
+peak memory compared to full finetuning, though there are certain settings where throughput can decrease
+by up to 15% (Biderman et al., 2024; Liu et al., 2024).
+Inference Costs.COMPASS introduces minimal inference overhead through adapter loading and language
+detection. Given sentence-length inputs, GlotLID-v3 latency averaged 6 milliseconds with the model already
+loaded in memory. With all adapters pre-loaded, switching is less than 1 millisecond. In aggregate, these
+add negligible overhead to typical LLM inference latency. When loaded dynamically, the DoRA adapters
+introduced no more than 3% inference overhead compared to the base model across 3 runs on GlobalMMLU. Per-adapter memory overhead for Qwen2.5-7B-Instruct is approximately 40 MB (1.68 GB total for
+42 adapters), representing roughly 10% additional storage relative to base model size.
+Scaling Considerations.Adding support for a new language requires embedding the new language’s dev
+set, computing cluster weights, sampling auxiliary data, and training one adapter. Assuming pre-computed
+cluster assignments from the initial clustering run on the initial language set, supporting a new language
+with a dev set of 3,000 examples required 496 seconds for the first three steps: embedding examples (248 sec),
+computing cluster weights (174 sec), and sampling auxiliary data (74 sec). The primary bottleneck remains
+adaptertraining(0.75to2.25hoursdependingonthebasemodelanddatabudget). WhileCOMPASS-ECDA
+update cycles add distribution shift detection and usage of incremental clustering, the scaling bottleneck
+remains adapter retraining. Adding support for a new language entails linear scaling for storage ( 40 MB per
+adapter) and constant inference overhead, as language detection and adapter loading times remain unaffected
+by the total number of supported languages.
+G Statistical Testing
+To assess statistical significance of performance differences between COMPASS and baseline methods, we
+employ non-parametric statistical tests that leverage cross-language variance from our single-run experiments
+across 42 languages (Global-MMLU) and 29 languages (MMLU-ProX).
+52

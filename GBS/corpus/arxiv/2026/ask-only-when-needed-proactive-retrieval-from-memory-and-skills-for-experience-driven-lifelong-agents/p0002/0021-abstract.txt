@@ -1,0 +1,29 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 2
+section: abstract
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+ehavioral skills from
+successes, failures, and comparative evaluations. Each entry r∈ D stores textual content, a type label, an embedding
+vectore(r), and a priority scorep(r). Given a queryq t, the experience base returns a type-balanced experience:
+Dt =
+[
+C∈C
+TopK(qt, C, kC),C={M f ,M e,S +,S −,S ∆},
+X
+C∈C
+kC =K,(4)
+where entries within each subset are ranked by:
+score(qt, r) = sim(e(qt), e(r)) +λ p p(r).(5)
+The similarity term ensures relevance to the current query, while the priority term softly favors entries with demonstrated
+utility. This typed decomposition enables a single query to return complementary evidence (what is true, what happened
+before) and guidance (what to do, what to avoid), mitigating the redundancy inherent in monolithic memory systems.
+After each episode, the evolution framework distills completed trajectories into new entries that grow the structured base.
+Factual and episodic entries capture environment states and interaction patterns from individual trajectories. Success
+and failure skills abstract reusable strategies and error patterns from outcome-specific trajectory subsets. Comparative
+skills, which encode why one continuation outperforms another, a

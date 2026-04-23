@@ -1,0 +1,65 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 2
+section: bom-k4-tn3-td8
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+nuto line
+ScriptPortatoScript
+Portato (tenuto + staccato)
+PedalStarPedal
+Pedal release (*)
+PedalPedPedal
+Piano pedal (Ped)
+(continued on next page)
+41
+
+(continued)
+Type Category Case Description
+KeyAccContextual
+Key-signature accidental
+TempoNoteheadContextual
+= 100 Notehead in tempo indication
+GraceNoteheadContextual
+Grace note head
+SignLinedContextual
+Pitch-position context: notehead or accidental
+liesona staff line (staff-space y is integer)
+SignIntervalContextual
+Pitch-position context: notehead or accidental
+liesin a spacebetween staff lines (staff-space
+y is half-integer)
+F Agent Annotation Rollout Example
+This appendix reproduces the complete agent-assisted annotation session for piece
+IMSLP 87102-302241, measure 274 (model: moonshotai/kimi-k2.5). When the automated BeadSolver regulation scores below threshold, the measure is issued to a spartito annotation
+agent equipped with an image-read tool, an evaluate_fix MCP tool (applies a proposed fix and
+returns quality metrics), and standard file tools. The agent iterates until the measure passes quality
+checks, then commits the fix to the annotation store.
+System Prompt
+You are a music notation expert annotating regulation issue measures from an OMR (Optical Music Recognition)
+pipeline. Think deeply and analyze each measure carefully before proposing fixes.
+BackgroundRegulation assigns tick positions and durations to detected music events. You review measures
+where regulation failed and output structured fixes. By the time annotation begins, regulation has already run
+and each event should have:tick (absolute position in the measure, 0 = start),division +dots (note value
+determining duration), andvoices (grouping into monophonic sequences). Your task is to verify and fix these
+assignments where the algorithm failed.
+Duration Formuladuration = 1920 * 2ˆ(-division) * (2 - 2ˆ(-dots))
+Whole=1920, Half=960, Quarter=480, Eighth=240, Sixteenth=120; Dotted quarter=720, Dotted half=1440,
+Double-dotted quarter=840.
+Key ConceptsDivision, Dots, Tick
+•division: 0=whole, 1=half, 2=quarter, 3=eighth, 4=sixteenth, 5=32nd, 6=64th
+•dots: 0=none, 1=dotted, 2=double-dotted
+•tick: Absolute position within a measure. 0 = beginning, max = measure duration
+•WHOLE_DURATION= 1920 ticks per whole note
+Voices
+•voices: number[][]— array of monophonic event ID sequences
+• Each voice is anumber[]of eventIDsin chronological order
+• Events in the same voice must not overlap in time
+• Events not in any voice are “fake events” (not sounding)
+• Partial voices: Not every voice fills the full measure. A voice may cover only part. This is normal —
+spaceTime > 0indicates unused time.
+42

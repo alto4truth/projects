@@ -1,0 +1,28 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+tsandhyperparametersettings.
+In particular, we evaluate explicit dropout applied independently to the key (K), query (Q), and value (V) projections
+while varying both the learning rate and the regularization
+coefficient𝜆 dr. Results are summarized in Table 5.
+FromTable5,weobservedistincttrendsinhowexplicit
+dropout interacts with different attention components. Applyingdropouttothevalue(V)projectionconsistentlyyields
+the strongest performance across most hyperparameter configurations,withaccuracypeakingaround86.4%atamoderatedropoutregularizationweight(𝜆= 0.0005)andlearning
+rate 0.0005. This suggests that injecting stochasticity into
+the value representation helps improve robustness without
+destabilizing attention distributions.
+On the other hand, dropout applied to the key (K) or
+query (Q) projections leads to noticeably higher variance
+and degraded accuracy, especially at larger learning rates
+(e.g., 0.005). This degradation likely stems from the fact
+that perturbations in K and Q directly affect the attention
+weighting mechanism, leading to unstable gradients and
+noisier optimization.
+A combined dropout on the attention–value (AV) pathwaysproducesintermediateresults,closertothoseo

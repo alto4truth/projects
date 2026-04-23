@@ -1,0 +1,29 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: a-r-a-r
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+Table 2.Ablations on vision-centric multimodal benchmarks.The baseline model is Qwen2.5-VL-3B. We post-train from Qwen2.5VL-3B with different SSL tasks, either separately (Single-Task Post-Training) or jointly (Multi-Task Post-Training). The first five columns
+denote the SSL tasks in abbreviations, ranked by the average performance (fromlefttoright): Cor.:Geometric Correspondence, Ord.:
+Patch Ordering, Rot.:Rotation Prediction, Sim.:Visual Similarity, Inp.:Region Inpainting. The benchmarks are organized into three
+categories:Fine-Grained Perception and Understanding,Spatial Understanding, andCompositional Understanding. We report the average
+accuracy across 13 benchmarks under three categories in the last column. The best results are inbold, and the second-best results are
+underlined.
+Task
+Fine-Grained Perception & Understanding Spatial Und. (Mono.) Compositional Und.
+Avg.
+MMVP
+MMStar
+MMBench
+HR-Bench-8K
+V*
+MME-RealWorld
+LISA-Grounding
+OVD-Eval
+VSR
+OmniSpatial

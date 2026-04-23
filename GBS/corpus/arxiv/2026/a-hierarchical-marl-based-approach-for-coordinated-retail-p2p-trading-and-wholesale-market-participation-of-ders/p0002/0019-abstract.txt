@@ -1,0 +1,71 @@
+title: A Hierarchical MARL-Based Approach for Coordinated Retail P2P Trading and Wholesale Market Participation of DERs
+source: arxiv
+year: 2026
+document_id: a-hierarchical-marl-based-approach-for-coordinated-retail-p2p-trading-and-wholesale-market-participation-of-ders
+authors: Patrick Wilk; Ethan Cantor; Yikui Liu; Jie Li
+page: 2
+section: abstract
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20586v1
+
+MARL-Based Coordinated P2P Electricity Trading
+(a) Physical Network Structure
+(b) Hierarchical Market Structure
+Figure 1:Proposed Wholesale and P2P Market Participation
+Framework of DERs.
+𝑂∗
+𝑘 =
+{
+𝑜∗
+1,𝑘, 𝑜∗
+2,𝑘,…, 𝑜 ∗
+𝑛𝑜,𝑘
+}
+with𝑝 𝑜∗
+1,𝑘
+≤𝑝 𝑜∗
+2,𝑘
+≤⋯≤𝑝𝑜∗
+𝑛𝑏,𝑘
+(6)
+Here,𝑛 𝑏 =|𝑁 𝐵|and𝑛 𝑜 =|𝑁 𝑂|represent the number
+of bids and offers in current time interval. The superscript
+(*) denotes the sorted lists, and𝑘indexes the round of the
+matching process.𝑏∗
+𝑖,𝑘 is the𝑖-th highest-priced bid and𝑜∗
+𝑗,𝑘
+is the𝑗-th lowest priced offer at round𝑘.
+Step2:PriceMatchingandProportionalAllocation.For
+the𝑘-th round, identify:
+•The highest bid𝑏 ∗
+𝑘 =𝑏 ∗
+1,𝑘 with𝑝 𝑏∗
+𝑘
+=𝑝 𝑏∗
+1,𝑘
+,𝑞 𝑏∗
+𝑘
+=𝑞 𝑏∗
+1,𝑘
+•The lowest bid𝑜 ∗
+𝑘 =𝑜 ∗
+1,𝑘 with𝑝 𝑜∗
+𝑘
+=𝑝 𝑜∗
+1,𝑘
+,𝑞 𝑜∗
+𝑘
+=𝑞 𝑜∗
+1,𝑘
+If𝑝 𝑏∗
+𝑘
+≥𝑝 𝑜∗
+𝑘
+, a buy/sell match is possible, meaning at
+least one buyer is willing to pay no lower than the seller
+requires; otherwise, no transaction occurs.
+Formultiplebuyersorsellerssharingthesameprice,we
+group them as (7) and (8). All buyers in𝐵𝑝,𝑘 have the same
+highest price at round𝑘, the total demand at this price is
+calculated as (9), and each buyer’s proportion of the total
+demand at this price is (10). Similarly, all sellers in𝑂𝑝

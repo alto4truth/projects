@@ -1,0 +1,32 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+ver system architecture.
+They optimize individual prompts in isolation but
+are ill-equipped to resolve failures originating from
+the complex interplay of agents, tools, and logic in
+a Multi-Agent System. Lacking the ability to modify the system’s interaction structure, current APO
+techniques leave core architectural problems unsolved. Our work directly confronts this challenge
+by introducing a structurally-aware optimization
+framework.
+3 Task Definition
+The central problem this paper addresses is the
+automated optimization of Multi-Agent Systems
+(MAS). The performance of an MAS is dictated
+by its configuration, a complex collection of textual components that includes agent prompts, tool
+descriptions, and interaction protocols. The manual process of tuning these components, known
+as Agent Engineering, is a laborious and unsystematic endeavor. The high dimensionality and
+non-deterministic nature of LLM interactions make
+this optimization landscape exceedingly difficult to
+navigate, with no guarantee of convergence to an
+optimal state.
+3.1 Problem Formulation
+We formalize a multi-agent system A as being parameterized by a collection of configurable natural
+language elements, which we

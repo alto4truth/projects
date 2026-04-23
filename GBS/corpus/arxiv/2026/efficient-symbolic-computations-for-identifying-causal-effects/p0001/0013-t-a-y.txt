@@ -1,0 +1,29 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+y
+π(θ) =ω v1u1
+l−1Y
+k=1
+λvkvk+1
+r−1Y
+k=1
+λukuk+1 ∈R[θ].
+Denote byT(v, w)the set of all treks fromvtow. Then, thetrek rule(Spirtes et al., 2000; Wright,
+1934) says that the imageτG(σuv)is given as the summation over all treks, i.e.,
+τG(σuv) = [(I−Λ) −⊤Ω(I−Λ) −1]uv =
+X
+π∈T(u,v)
+π(θ).
+Example 2.2.Consider the graph in Figure 2 with nodesV={1,2,3}. Then, the treks between
+2and3are given by2↔3,2→3, and2←1→2→3. Hence, we have that
+τG(σ23) =ω 23 +ω 22λ23 +ω 11λ2
+12λ23.
+5

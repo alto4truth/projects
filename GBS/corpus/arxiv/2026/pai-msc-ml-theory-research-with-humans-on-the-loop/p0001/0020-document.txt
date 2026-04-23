@@ -1,0 +1,26 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+s are produced without
+the artifacts needed to inspect how those drafts were assembled. The current release therefore follows seven
+design requirements.
+•Reduce steering burden without hiding human responsibility.The aim is to compress the
+amount of human orchestration needed to move from an initial research objective to a paper draft.
+At the same time, novelty, correctness, citation faithfulness, and publication decisions remain human
+responsibilities.
+•Keep theory and experiments on a single paper trajectory.When both tracks are active, they
+must remain tied to the same contribution claims and follow-up logic, even when they are developed
+semi-independently.
+•Externalize intermediate state as named artifacts.Progress should live in files and structured
+outputs rather than only in conversational context, so that runs are inspectable, resumable, and auditable.
+•Support bounded iteration rather than a single forward pass.Real research workflows need
+loopbacks: feasibility checks may fail, experiments may invalidate theory, theory may require new
+experiments, and writing may reveal unresolved inconsistencies.
+•Separate structural validation from scientific truth.The system can valida

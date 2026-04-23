@@ -1,0 +1,23 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 2
+section: r-e-s-u-lt-s
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+multilayer perceptron (MLP), graph attention network (GAT), graph convolutional
+network (GCN), and long short-term memory (LSTM) components to jointly capture spatial correlations and temporal dynamics across the gauge network. Model
+performance was evaluated using root mean square error (RMSE), mean square error
+(MSE), and mean absolute error (MAE) metrics. Results demonstrate that StormNet
+reduces RMSE by more than 70% for 48-hour forecasts and more than 50% for 72-hour
+forecasts relative to uncorrected ADCIRC output, while outperforming a sequential
+LSTM baseline, particularly at extended prediction horizons. The framework exhibits
+low training cost and is designed for seamless integration into real-time operational
+systems such as the Coastal Emergency Risks Assessment (CERA) platform. The
+findings offer critical insights for coastal flood risk managers and emergency response
+stakeholders seeking computationally eﬀicient tools for improving the accuracy and
+reliability of storm surge predictions during extreme weather events.
+5

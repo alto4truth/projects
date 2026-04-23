@@ -1,0 +1,29 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+incorrect definition of a concept.
+Attribution Misattributes a quote or work to the wrong source.
+Evaluation Protocol.For all methods, we finetune Qwen2-VL-2B on the selected 10,000-sample
+subset and evaluate the resulting models using
+VLMEvalKit (Duan et al., 2024). All experiments
+share identical architectures, SFT procedures, and
+hyperparameters, ensuring that performance differences reflect data quality rather than training
+variation.
+5.2 Evian Scores: Distribution and
+Discrimination
+To evaluate EVIAN’s discriminative power, we apply it to our benchmark containing 50,000 pristine and 250,000 defect-injected samples. As illustrated in Figure 4, the two groups display a
+clear separation: 92.3% of pristine entries score ≥
+3.0, while defect-injected samples form a distinct
+mid-range peak around 3.0. This shift indicates
+that EVIAN effectively penalizes semantically corrupted responses and differentiates them from highquality data.
+The separation is further quantified by a
+Jensen–Shannon divergence of 0.35 and an AUC of
+0.86, demonstrating the metric’s strong discriminative capability. Furthermore, the concentration of
+defective samples in the mid-range, instead of accumulating at t

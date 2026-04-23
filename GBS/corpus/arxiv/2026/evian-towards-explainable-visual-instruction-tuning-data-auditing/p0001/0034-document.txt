@@ -1,0 +1,28 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+roduced during this decomposition stage
+may propagate to subsequent evaluations and affect the final quality scores. Although our ablation
+results suggest that explicit decomposition is beneficial overall, improving robustness under imperfect decomposition remains an open challenge.
+Third, the current pipeline incurs non-trivial
+computational cost due to multiple invocations of
+large models, which may limit its applicability
+in resource-constrained settings or when auditing
+extremely large-scale datasets. Exploring lighterweight auditors or partially learned approximations
+of individual components is a promising direction
+for future work.
+Finally, EVIAN focuses on auditing response
+quality with respect to visual grounding, logical coherence, and factual accuracy. Other important aspects, such as stylistic diversity, pedagogical value,
+or downstream task-specific preferences, are not
+explicitly modeled and may require complementary
+criteria depending on the application context.
+9 Ethical Considerations
+This work aims to improve the quality and reliability of visual instruction-tuning data through
+automated auditing. By identifying logical inconsistencies, factual errors, and visual

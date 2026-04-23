@@ -1,0 +1,24 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+(Score) (Acc. %) (Acc. %) (Acc. %) (Score) (Acc. %) (Acc. %) (Acc. %) (Score) (Acc. %) (Acc. %) (Acc. %)
+Baichuan-Omni-1.5 1.2418.544.00 3.96 1.39 5.51 19.8 14.75 1.67 6.42 18.5 1.53
+Qwen2.5-Omni-7b4.5114.27 44.00 3.79 1.07 8.62 65.30 20.63 2.67 7.05 80.2 3.30
+Qwen-Omni-turbo 2.07 14.72 48.00 8.55 1.39 8.86 62.38 14.78 2.79 7.45 60.494.32
+Qwen3-Omni-flash 3.84 17.31 88.009.321.86 5.49 82.10 17.96 3.19 4.0794.372.55
+Gemini-2.5-flash 1.31 12.98 45.00 4.11 1.52 9.44 46.07 19.85 1.1746.0836.00 2.17
+Gemini-2.5-pro 3.03 17.04 97.00 7.50 4.33 23.04 90.3815.673.7143.58 82.72 2.57
+Gemini-3.1-flash-lite-preview 4.47 17.2999.007.614.7213.06 80.2024.323.68 22.47 93.83 1.64
+Figure 4: This figure analyzes the structural and cognitive bottlenecks of OLLMs, specifically the performance collapse when
+transitioning from 1D to 2D notations and the technical-aesthetic imbalance in symbolic generation.
+5.2 Cognitive Bottlenecks and Hallucinations in
+Notation Conversion
+Although leading models achieve high accuracy in Visual Score
+Understanding (VSU), their performance on Cross-Format Notation Conversion (CNC) remains comparatively low. This stark contrast highlights a systemic mismatch between visual r

@@ -1,0 +1,26 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+vering both structural metrics (e.g., feature
+counts, tree depth) and solver-based reasoning tasks (e.g., satisfiability, core features, configuration counting).Table 3lists all evaluated
+AOs. Each AO is implemented through a dedicated prompt template
+that defines its reasoning steps and enforces a standardized output
+format for comparison with the solver-based oracle.AO12 (#valid
+configurations) is limited to the first eight FMs due to scalability
+constraints on the largest cases (CNNl, CNNf). For AO16 (generalization), each test involves a pair of blueprints: the original and its
+modified variant (seeSection 4.3).
+4.5 Evaluation Protocol
+Prompt Design.For each AO, we use a three-part pipeline illustrated inFigure 1using dead feature detection as an example. The
+figure shows how thesystem prompt,user prompt, andoutput contractwork together to guide the LLM through the analysis of a
+smartwatch blueprint. We now describe each component:
+• System prompt.The system prompt defines the model’s
+role as a domain-specific assistant for feature model analysis.
+It introduces the blueprint format, explains the elements
+of feature models (features, hierarchy, and cross-tree constraints), and s

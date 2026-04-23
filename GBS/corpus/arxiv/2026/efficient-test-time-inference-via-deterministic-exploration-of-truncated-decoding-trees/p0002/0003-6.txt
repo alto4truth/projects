@@ -1,0 +1,28 @@
+title: Efficient Test-Time Inference via Deterministic Exploration of Truncated Decoding Trees
+source: arxiv
+year: 2026
+document_id: efficient-test-time-inference-via-deterministic-exploration-of-truncated-decoding-trees
+authors: Xueyan Li; Johannes Zenn; Ekaterina Fadeeva; Guinan Su; Mrinmaya Sachan; Jonas Geiping
+page: 2
+section: 6
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20500v1
+
+largely avoids generating duplicate leaves. Thus, for
+the same leaf budget k, DLE can allocate more compute towardsuncovering new probability
+mass.
+19
+
+C.2 Greedy Sampling is Locally Optimal and Compute Optimal
+After picking an alternative token at a branch point, we always complete the sequence greedily. For a prefixxand a horizon T, its best continuation is V∗(x, T) =max x′
+1:T ∈V T logp( x′
+1:T |
+x), with Bellman optimality recursion (Bellman, 1966)
+V∗(x,T) =max
+v∈A ε(x)
+[logp(v|x) +V ∗(x◦v,T−1)], (13)
+whereV ∗(x, 0) =0. Greedy sampling replaces the termV ∗(x◦v,T−1)by 0.
+Remark C.2(Local and compute optimality of greedy sampling).Greedy sampling v=g( x<t)
+chooses, by definition, the maximum next-token probability p(v| x<t)≥p(v ′ | x<t)∀v′ ∈ V , and
+it generates a sample in T forward passes.
+20

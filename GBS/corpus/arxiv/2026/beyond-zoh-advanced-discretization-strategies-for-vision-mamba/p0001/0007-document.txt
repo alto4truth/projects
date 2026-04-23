@@ -1,0 +1,24 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+Beyond ZOH: Advanced Discretization Strategies for Vision Mamba 3
+2 Related Work
+In foundational SSM frameworks, the conversion from continuous to discrete
+time uses a fixed discretization rule. This ensures that the model can handle
+continuous inputx(t)by propagating information through hidden statesh(t).
+ModernSSMarchitectures,suchasVisionMamba(ViM)[33],VMamba[18],and
+its derivatives [13] [28] [27] [29] operate using this structured fixed discretization
+step. The fundamental SSM layer introduced in [23] relies on this continuousto-discrete system translation. The original Mamba research [11], while focusing
+on content-dependent selection, maintains that SSMs were originally defined as
+discretizations of continuous systems.
+The standard and most commonly cited discretization technique across modern SSM architectures is the ZOH method. The ZOH method is predicated on
+the assumption that the input remains constant over a given time interval∆.
+This method transforms the continuous system parameters, such as the evolution matrixAand input matrixB, into their discrete counterparts. ZOH discretization is utilized implicitly in many prominent SSM models and extensions,
+including Mamba [1

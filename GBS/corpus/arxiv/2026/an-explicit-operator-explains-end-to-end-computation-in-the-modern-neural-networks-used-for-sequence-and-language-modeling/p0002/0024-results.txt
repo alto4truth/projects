@@ -1,0 +1,25 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 2
+section: results
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+n: truncating the embedding
+only to second-order accounts for 94% of the complete
+SSM’s performance in classifying a real-world sequence
+(Fig. 4). Truncating the Carleman embedding at higher
+orders brings the explained accuracy closer and closer
+to the complete system, but the second-order expansion
+already explains a substantial fraction of the accuracy
+achieved by the complete S4 system, while also providing succinct theoretical insight. Specifically, the firstorder linear SSMs contribution – representing the traveling waves directly evoked by the input – accounts for 83%
+of the network’s classification accuracy, while the secondorder contribution – representing nonlinear interactions
+between two traveling waves in the SSM – brings the explained performance up to 94%. This provides a clear
+theoretical account of how S4 stores and uses past inputs
+in its activity state, in terms of waves and nonlinear wave
+interactions, in addition to opening new paths to faster
+and more lightweight implementations of S4 guided by
+this mathematical analysis.

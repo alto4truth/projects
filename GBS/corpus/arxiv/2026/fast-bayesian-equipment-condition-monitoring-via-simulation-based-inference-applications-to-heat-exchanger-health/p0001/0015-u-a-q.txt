@@ -1,0 +1,22 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+al data. It is also sensitive to extreme
+outliers.
+III. EXPERIMENTS
+The aim is to evaluate the robustness of the Bayesian
+diagnostic framework by identifying the failure mode
+and determine the failure parameters: induction timeτ
+(Eqn. 9), fouling jump scaleβf (Eqn. 13), leakage growth
+βl (Eqn. 17) and fouling intensityλ. In the model setup,
+failure mode is represented by a discrete categorical variablez∈ {none,fouling,leakage,both}, rather than a continuous simplex Dirichlet prior over mode probabilities.
+This avoids the confounding present in the Dirichlet formulation, where the mode weights also scale degradation
+magnitude. As a result, the categorical formulation leads
+to clearer failure-mode identification.

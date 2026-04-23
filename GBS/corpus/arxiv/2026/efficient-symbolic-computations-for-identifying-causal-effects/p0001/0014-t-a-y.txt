@@ -1,0 +1,26 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+Now, we return to studying identifiability of the parametersθ. An algebraic definition of rational
+identifiability is given as follows.
+Definition 2.3.The parameterq∈θisrationally identifiableif there exist polynomialsa, b∈R[σ]
+such thata̸∈ker(τ G)andτ G(b)/τG(a) =q. The mixed graphG= (V, D, B)is said to berationally
+identifiableif all parametersq∈θare rationally identifiable.
+The requirement thatais not inker(τG)guarantees thatτ G(a)is not the zero polynomial, ensuring
+that we do not divide by zero.
+Example 2.4.We return to the graph in Figure2. The parameterλ23 is rationally identifiable by
+takingb(σ) =σ 13 anda(σ) =σ 12. This can be seen by calculatingτG(b) =τ G(σ13) =ω 11λ12λ23
+andτ G(a) =τ G(σ12) =ω 11λ12, which implies thatτ G(b)/τG(a) =λ 23. Moreover, we note that
+τG(a)is not the zero polynomial.
+Remark 2.5.If all parametersλ⊆θare rationally identifiable, then all remaining parameters
+ω=θ\λare rationally identifiable sinceΩ = (I−Λ) ⊤Σ(I−Λ)by Definition 2.1.
+We now introduce some core concepts from algebra which we will use throughout the remainder
+of this paper. A subset of a polynomial ringR[x1, . . . , xm]is called anidealif it is closed under
+addition and under multiplica

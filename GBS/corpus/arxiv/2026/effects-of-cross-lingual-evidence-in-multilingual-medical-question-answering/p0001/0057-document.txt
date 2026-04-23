@@ -1,0 +1,31 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 57
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+ontuan hartzea eta erantzun zuzena
+hautatzea da. Erantzun zuzena aurkitzen, aztertzen eta galderari erantzuten
+lagunduko dizuten dokumentu multzo
+garrantzitsu bat ematen zaizu.
+[EU] Hemen daude dokumentuak:
+[set of retrieved documents]
+[EU] Hona hemen kasu klinikoa:
+[clinical case question]
+[EU] Hona hemen aukera posibleak:
+[set of options]
+G Prompts used for query generation
+You are given a question describing a
+clinical case. You have to generate a list
+of 10 queries for a web-search that will
+help to find more information to help to
+find the correct answer to the clinical
+case. Provide your answer in Python
+list format. Only in the list form, your
+answer should start with [ and end with
+]. Do not give any other answer. Do not
+give explanations.

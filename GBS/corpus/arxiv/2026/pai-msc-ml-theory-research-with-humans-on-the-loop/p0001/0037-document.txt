@@ -1,0 +1,21 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+cts rather than free-form text.
+Campaign orchestration.The optional campaign layer uses heartbeat scripts, cron, or OpenClaw
+to repeatedly launch or resume runs, validate stage artifacts, distill stage memory, track budget, attempt
+autonomous repair, and notify the user. This extends the artifact-centric philosophy beyond a single run.
+4.4 Operational model
+pAI/MScis designed as a human-on-the-loop system. Asteeris a deliberate human intervention—distinct
+from the graph’s own automatic loopbacks—that changes the direction, constraints, or scope of a run. The
+current release exposes steering through: the initial task specification; a TCP control socket and HTTP API
+during execution; resume from a named stage; injection of context files through aninputs/directory; and
+campaign-level control for multi-stage pipelines.
+12

@@ -1,0 +1,75 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+Input
+x∈
+RB×C×H×W
+Model f
+Estimator
+Wrapper
+Features
+ϕ(x)∈
+RB×D
+Adaptive
+Attack
+Selector
+Multi-Norm
+Attack
+δ∗ =
+arg maxL
+Report
+SARIF 2.1.0
+JSON/HTML
+RDI Gate
+µc ∈R D
+dinter/dintra
+FOSC Gate
+∥∇xL∥2
+3-signal
+ensemble
+Attack
+Memory
+M
+Compliance
+NIST/OW ASP
+EU AI Act
+32×3×32×32 32×640 ASR,τ, acc
+Figure 5: Detailed AUTO-ART architecture.Tensor shapes shown for a WRN-28-10 on CIFAR-10 with batch size B= 32 , feature
+dimension D= 640. The pre-screening gate (RDI + FOSC) operates on features ϕ(x) before the attack selector queries attack memory M for
+adaptive prioritisation.
+0 10 20 30 40
+Evasion (37+)
+Poisoning (10+)
+NLP/LLM (5+)
+Extraction (3)
+Inference (8+)
+Audio (2)
+Agentic (3)
+37
+10
+5
+3
+8
+2
+3
+Attack Modules
+Figure 6:AUTO-ART attack taxonomy. Seven categories totalling
+53 implementations span classical evasion through agentic LLM
+threats.
+11.7 Formal Metric Definitions
+RDI (Robustness Diagnostic Index).Given model f, dataset
+{(xi, yi)}N
+i=1, let ϕ(x) denote the penultimate-layer representation. Compute class centroids µc = 1
+|Sc|
+P
+x∈Sc ϕ(x), interclass distance dinter =mean c̸=c′∥µc −µ c′∥2, and intra-class
+distanced intra =mean c meanx∈Sc ∥ϕ(x)−µ c∥2. Then:
+RDI=clamp
+ dinter −d int

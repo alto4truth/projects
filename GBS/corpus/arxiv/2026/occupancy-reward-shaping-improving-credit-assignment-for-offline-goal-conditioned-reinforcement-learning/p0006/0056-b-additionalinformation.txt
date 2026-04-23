@@ -1,0 +1,24 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 6
+section: b-additionalinformation
+chunk: 56
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+edly picks a cube and places it in other random locations or on another
+cube:cube-double-play(2 cubes) andcube-triple-play(3 cubes). During evaluation, the
+agent is required to perform cube moving, stacking, swapping or permutations according
+to the provided goal configuration. This requires learning generalizable pick-and-place
+operations with multiple objects and stitching across unstructured data to achieve this. The
+task horizon also increases with the number of cubes. We also perform experiments on the
+cube-triple-noisydataset which involves highly sub-optimal data with noisy transitions.
+•Puzzle datasets:These environments specifically test out the combinatorial generalization
+abilities of the agent (upto2 24 puzzle configurations and a much larger state space due to
+robotic manipulation on the puzzle) under very long horizons. They require solving the
+Lights Out puzzle (Park et al., 2024a), which consists of a 2D grid with buttons in cells,
+where pressing buttons toggles the color the that button and buttons around it. The agent has
+to achieve an appropriate goal configuration of colors by pressing buttons by controlling a
+robot arm. We evaluate algorithms on play datasets o

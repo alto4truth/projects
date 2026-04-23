@@ -1,0 +1,32 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+evaluation (Tu et al., 2025) stop short of actionable frameworks. This gap motivates structured,
+component-level evaluation that disentangles visual grounding, reasoning, and factual correctness
+in multimodal data.
+3 The Method: Evian
+We proposeEVIAN, an automated pipeline for
+auditing visual instruction data. As illustrated in
+Figure 1, EVIAN follows a two-phase process: (i)
+response decomposition, which disentangles complex answers into verifiable components, and (ii)
+multi-faceted evaluation, which scores these components across orthogonal quality dimensions.
+3.1 Problem Definition and Data Quality
+Metrics
+We definevisual instruction data auditingas the
+task of assigning interpretable quality scores to
+image-instruction-response triples. Formally, given
+xi = (Ii, Pi, Ri) from dataset D, our auditing function Φ maps each sample to a three-dimensional
+score vector:
+Si = Φ(xi) = (SL,i, SK,i, SV,i),(1)
+where each score ranges from 1 (low) to 5 (high).
+The three metrics are:
+• Logical Coherence (SL): soundness of reasoning relative to the instruction and visual evidence.
+• Factual Accuracy (SK): correctness of knowledge claims against external facts.
+• Image-Text Consistency (SV ): f

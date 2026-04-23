@@ -1,0 +1,27 @@
+title: Aligning Stuttered-Speech Research with End-User Needs: Scoping Review, Survey, and Guidelines
+source: arxiv
+year: 2026
+document_id: aligning-stuttered-speech-research-with-end-user-needs-scoping-review-survey-and-guidelines
+authors: Hawau Olamide Toyin; Mutiah Apampa; Toluwani Aremu; Humaid Alblooshi; Ana Rita Valente; Gonçalo Leal; Zhengjun Yue; Zeerak Talat; Hanan Aldarmaki
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20535v1
+
+a temporal detection task under our definition; the others perform some form of classification on pre-segmented inputs (typically 3-5 seconds long audio). In addition, most works focus
+exclusively on verbal disfluencies, which are the most common
+types of stutter events, but clinical definitions distinguish between verbal disfluencies and other types of stuttering events
+[3]. This distinction is rarely acknowledged in the surveyed
+literature. These omissions and naming inconsistencies make
+it difficult to compare works or identify relevant methods for
+specific downstream tasks. Standardized task definitions would
+make it easier to identify and compare related literature.
+For stuttered speech recognition tasks, intended speech
+recognition is theimplicit standardin the literature. Most works
+use evaluation metrics, references, and design choices (e.g.,
+filler word removal) that implicitly optimize for intended speech
+recognition without explicitly acknowledging this choice. We
+often inferred the specific ASR sub-task through dataset labels
+or down-stream task. In∼7%of the primarily stutter ASR
+works, we were unable to determine if verbatim/intended ASR
+was the objective. About59%of A

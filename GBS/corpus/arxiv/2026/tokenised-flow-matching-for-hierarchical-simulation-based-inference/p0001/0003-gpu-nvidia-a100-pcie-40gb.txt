@@ -1,0 +1,17 @@
+title: Tokenised Flow Matching for Hierarchical Simulation Based Inference
+source: arxiv
+year: 2026
+document_id: tokenised-flow-matching-for-hierarchical-simulation-based-inference
+authors: Giovanni Charles; Cosmo Santoni; Seth Flaxman; Elizaveta Semenova
+page: 1
+section: gpu-nvidia-a100-pcie-40gb
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20723v1
+
+e qϕl(ys |θ g, ηs)from per-patient/site
+tuples, where a single full-network simulation produces the four terminal-vessel flow traces for patient
+s. Stage 2 generates multi-site training observations by samplingy∼q ϕl(y|θ g, η)and trains the
+posterior estimator qϕp(θg, η|y ). Further simulator and prior details are provided in Appendix A.6.
+Posterior quality.Despite the reduction in simulator calls, we verify that inferred posteriors
+remain well-calibrated at larger scale. In the ns = 16synthetic-patient experiment, Figure 8
+12

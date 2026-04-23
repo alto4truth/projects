@@ -1,0 +1,24 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 2
+section: feret
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+can be seen that the quality of the obtained samples does not fluctuate significantly after segmentation. This tendency is also associated with negligible fluctuations in FR performance. Hence, it is possible to conclude
+that while the FRGCv2 dataset contains pictures with an
+unconstrained background, its semi-controlled environment
+(high-quality samples with frontal pose) allows segmentation
+techniques to work effectively without compromising the
+images’ quality, resulting in minimal effects in downstream
+FR performance. Nonetheless, the results depicted in Table
+II highlight a slight approximation tendency between the
+average genuine and impostor scores (smaller∆) for the
+majority of the evaluated scenarios, revealing the negative
+impact of segmentation on the FR scores distribution.
+Uncontrolled Scenario:Table III summarizes the evaluation results of the considered FR models on the IJBC dataset. While all the considered segmentation strategies
+resulted in drops in FR performance, the extent of the decrease in performance varies significantly between segmentation networks. Datasets segmented with SegFormer-B0 and
+SAM achieve the closest performance to the unsegmented

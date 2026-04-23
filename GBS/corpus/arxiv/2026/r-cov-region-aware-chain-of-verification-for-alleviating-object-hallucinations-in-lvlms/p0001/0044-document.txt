@@ -1,0 +1,28 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+ample results of R-CoV for LLaV A-1.5.The hallucinated objects are highlighted in red. We sample three region descriptions
+per examinee to produce a set of diverse answers for verification. More examples are provided in the supplementary material.
+stead outputs regions corresponding to “hand” and “skier”,
+respectively, which commonly co-occur in similar visual
+contexts. When prompted with the image containing the
+bounding boxes, the LVLM tends to refocus on the regions
+of interest, where “handbag” and “backpack” no longer appear. Such a process cannot be simply achieved by external
+object detection models or manual annotations—we cannot
+provide bounding boxes for the hallucinated objects as they
+do not exist. This further demonstrates the superiority of
+our method.
+5. Conclusion
+In this work, we have introduced R-CoV , a visual chainof-verification method that triggers region-level processing
+from LVLMs themselves to alleviate their own hallucinations. R-CoV mimics how humans comprehend intricate
+visual information by delving into details in specific image
+regions. Our method can be seamlessly applied to various
+LVLMs without retraining or relying on external detection
+models. Exte

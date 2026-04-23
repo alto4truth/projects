@@ -1,0 +1,47 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+ang
+Rebuffi70Gowal70 Gowal20Rebuffi28Gowal28
+Xu
+Sehwag Wong
+0
+20
+40
+60
+80
+Robust Accuracy (%)
+ℓ∞ only Multi-norm avg
+Multi-norm worst
+Figure 8:Multi-norm evaluation exposes hidden vulnerability. Mean
+across ten models: average multi-norm robustness drops 12.3 pp from
+singleℓ ∞; worst-case (min over norms) drops 23.5 pp.
+Standard Pipeline
+ℓ ∞ only
+Rob. Acc = 70.7%
+PASS( >40% )
+ℓ1 vulnerability hidden
+AUTO-ART Pipeline
+5-norm worst-case
+Worst-case = 47.2%
+WARN(avg/wc gap)
+ℓ1 exposure detected
+∆ = 23.5pp hidden gap
+Figure 9: Qualitative comparison.Standard single-norm evaluation
+(left) reports Wang2023Better as passing a 40% robustness threshold.
+AUTO-ART’s worst-case multi-norm evaluation (right) exposes a
+23.5 pp hidden gap, correctly flagging theℓ1 vulnerability that singlenorm pipelines miss entirely.
+OWASP LLM Top 10 coverage reaches 90%: full coverage
+on 8 categories (Prompt Injection, Insecure Output, Training
+Data Poisoning, Model DoS, Supply Chain, Sensitive Info,
+Insecure Plugin, Excessive Agency), partial on 2 (Model Theft,
+Overreliance).
+12.5 Experiment 4: Ablation Study
+We ablate the three core components of AUTO-ART’s prescreening gate to isolate their individual contrib

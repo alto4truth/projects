@@ -1,0 +1,38 @@
+title: A Hierarchical MARL-Based Approach for Coordinated Retail P2P Trading and Wholesale Market Participation of DERs
+source: arxiv
+year: 2026
+document_id: a-hierarchical-marl-based-approach-for-coordinated-retail-p2p-trading-and-wholesale-market-participation-of-ders
+authors: Patrick Wilk; Ethan Cantor; Yikui Liu; Jie Li
+page: 2
+section: abstract
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20586v1
+
+quantities, so
+prosumers 1 and 3 become sellers and prosumers 2 and
+4 become buyers. This setup evaluates how buyers wield
+market power in the P2P market with reduced demand.
+Case III: This case uses PJM wholesale market data
+[13] from a 2023 year-long dataset, as well as practical
+PVgenerationandenergyconsumptionprofilesofbuildings
+from[39]tosimulatetheprosumers.Prosumers1and2,with
+integrated solar PV systems, may switch their P2P market
+role from buyer to seller when their onsite PV generation
+exceeds energy demand during a time interval, while the
+remaining two prosumers remain as buyers throughout the
+day, demonstrating dynamic P2P interactions. Episodes are
+randomly sampled from yearly data to capture seasonal
+variations in market prices, loads, and supply conditions.
+Table 1
+RL Training Hyperparameters
+MADDPG / LSD-MADDPG PPO
+Total Timesteps: 60,000 Total Timesteps: 60,000
+Episode Length: 24 Episode Length: 24
+Learning Rate Actor:10−4 Learning Rate Actor:10−4
+Learning Rate Critic:10−3 Learning Rate Critic:10−3
+Noise-rate: 0.1 GAE factor: 0.1
+Gamma: 0.95 Clip rate: 0.95
+Tau: 0.01 K epochs: 0.01
+Buffer size:5 × 10 5 L2 regularization:10 −3
+Batch size: 256 Batch size: 256
+Table

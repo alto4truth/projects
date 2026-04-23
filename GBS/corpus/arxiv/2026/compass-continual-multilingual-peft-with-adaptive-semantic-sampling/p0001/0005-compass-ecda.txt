@@ -1,0 +1,33 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 1
+section: compass-ecda
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+Published in Transactions on Machine Learning Research (11/2025)
+Figure 7 presents performance trajectories across the five periods for Qwen2.5-7B-Instruct. COMPASSECDA maintains robust performance throughout the temporal sequence, maintaining greater accuracy on
+MMLU-ProX than all methods aside from naive fine-tuning while preserving Global MMLU performance. In
+contrast, naive fine-tuning adapts well to each new distribution but exhibits catastrophic forgetting on Global
+MMLU. EWC and random rehearsal provide intermediate solutions, achieving moderate forgetting but
+with weaker adaptation to new distributions than COMPASS-ECDA. Full retraining achieves the strongest
+performance by leveraging all accumulated data at each period, but at multiples of computational cost.
+0.0 2.5 5.0 7.5 10.0 12.5 15.0 17.5
+Time Steps (×500 samples)
+0.38
+0.40
+0.42
+0.44
+0.46
+0.48
+0.50MMLU-ProX Accuracy
+Initial STEM Humanities Professional Cyclical
+Qwen2.5-7B-Instruct: Temporal Performance on New Tasks
+Static Deployment
+Naive Fine-tuning
+Full Retraining
+EWC
+Random Rehearsal

@@ -1,0 +1,48 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+figures in this paper are available upon request from the corresponding
+author. A public release accompanying the companion paper [16] is planned.
+15
+
+References
+[1] Frantar, E., et al. “GPTQ: Accurate Post-Training Quantization for Generative Pre-trained
+Transformers.”arXiv:2210.17323, 2022.
+[2] Lin, J., et al. “AWQ: Activation-aware Weight Quantization for LLM Compression and
+Acceleration.”arXiv:2306.00978, 2023.
+[3] Dettmers, T., et al. “SpQR: A Sparse-Quantized Representation for Near-Lossless LLM
+Weight Compression.”arXiv:2306.03078, 2023.
+[4] Tseng, A., et al. “QuIP#: Even Better LLM Quantization with Hadamard Incoherence
+and Lattice Codebooks.”arXiv:2402.04396, 2024.
+[5] Liu, Z., et al. “SpinQuant: LLM Quantization with Learned Rotations.”arXiv:2405.16406,
+2024.
+[6] ResQ: “Mixed-Precision Quantization of Large Language Models.”arXiv:2412.14363, 2024.
+[7] Razzhigaev, A., et al. “Your Transformer is Secretly Linear.”arXiv:2405.12250, 2024.
+[8] Gromov, A., et al. “The Unreasonable Ineffectiveness of the Deeper Layers.”
+arXiv:2403.17887, 2024.
+[9] Men, X., et al. “ShortGPT: Layers in Large Language Models are More Redundant Than
+You Think.” 2024.
+[10] Hu, E., et al. “LoRA: Low-Rank Adaptation of Large Language Models.”arXiv:2106.09685,
+2021.
+[11] Schuster, T., et al. “Confident Adaptive Language Modeling.”NeurIPS, 2022.
+[12] Leviathan, Y., et al. “Fast Inference from Transformers via Speculative Decoding.”ICML,
+2023.
+[13] “Dynamic Computing for Transformers.”arXiv:2504.20922, 2025.
+[14] Merity, S., et al. “Pointer Sentinel Mixture Models.”arXiv:1609.07843, 2016.
+[15] Dettmers, T., et al. “QLoRA: Efficient Finetuning of Quantized LLMs.”NeurIPS, 2023.
+[16] Salfati, S. “Quantization Dominates Rank Reduction for KV-Cache Compression.”fraQtl
+AI Research, 2026.
+[17] Liu, Z., et al. “KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache.”
+arXiv:2402.02750, 2024.
+[18] Yang, L., et al. “MatryoshkaKV: Adaptive KV Compression via Trainable Orthogonal
+Projection.”arXiv:2410.14731, 2024.
+[19] Lesens, A., et al. “KQ-SVD: Low-Rank Approximation of the KV Cache.”
+arXiv:2512.05916, 2025.
+16

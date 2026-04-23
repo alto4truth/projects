@@ -1,0 +1,41 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+erarchies (depth ≥10), and numerous cross-tree constraints
+(>300), which amplify semantic misunderstandings and reasoning
+limitations. Importantly, no single model achieves 100% accuracy
+across all blueprints, highlighting the difficulty of handling large,
+constraint-dense feature models.
+Model Ranking.Among reasoning-optimized LLMs, three models form the top-performing group: Grok 4 Fast Reasoning (89.7%),
+GPT-5 mini (88.9%), and Gemini 2.5 Pro (88.2%) (see Figure 5). They
+achieve perfect scores on several simple AOs and maintain stable
+performance on complex ones, suggesting potential for ensemblebased aggregation. The second-tier reasoning models, Claude Sonnet 4 Thinking (84.5%) and DeepSeek Reasoner (82.8%), show moderate drops on AO12 (both 75%) and AO15 (80% and 70%). They also
+exhibit structural counting weaknesses: Claude Sonnet 4 Thinking
+performs lower onAO4 (60%) andAO2/AO7 (70%), while DeepSeek
+Reasoner falls sharply onAO4 (30%) andAO5 (50%). Gemini 2.5 Flash
+SW
+SMW
+IDE
+SMG
+COM
+SEA
+CVE
+BDB
+CNNl
+CNNf
+grok-4reasoning
+gpt-5-mini
+gemini-2.5-pro
+claudesonnet-4-think
+deepseekreasoner
+gemini-2.5flash
+llama-4maverick
+100 100 100 100 94 94 88 88 60 73
+100 100 100 100 100 100 94

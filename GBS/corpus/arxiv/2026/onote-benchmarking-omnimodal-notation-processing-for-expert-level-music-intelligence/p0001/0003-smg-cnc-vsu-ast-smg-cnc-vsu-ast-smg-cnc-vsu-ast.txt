@@ -1,0 +1,26 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+efaulting to uniform quarter-note durations and sequential scale
+generation driven by textual priors. Conversely, in the reverse
+Jianpu-to-Staff task, models lose their cross-modal anchor and suffer from severe autoregressive degeneration, falling into infinite
+decoding loops of generic arpeggiated patterns.
+Together, these bidirectional pathologies—rhythmic flattening
+and prior-induced melodic hallucinations—demonstrate that current OLLMs approach notation processing primarily as weaklyconditioned text continuation rather than precise spatial-temporal
+alignment. This fundamental limitation underscores the necessity
+of ONOTE’s deterministic evaluation and knowledge-grounded
+enhancement mechanisms.
+5.3 Dimensional Analysis in Audio-to-Symbolic
+Transcription
+The breakdown of AST metrics reveals differences in acoustictemporal alignment capabilities, which vary depending on the
+spatial dimensionality of the target notation. Specifically, models
+generally exhibit higher accuracy when mapping audio to linear,
+one-dimensional formats, compared to navigating the complex,
+two-dimensional coordinate space required for Standard Staff.

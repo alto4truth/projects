@@ -1,0 +1,25 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+reinforcement learning algorithm that seamlessly integrates decoupled policy constraints with dynamic, length-aware data
+sampling. By directly injecting fine-grained, step-level feedback into the optimization objective, PGPO reinforces mathematically rigorous reasoning paths
+while explicitly penalizing hallucinatory leaps.
+Contributions.
+–Visual Chain-of-Thought Dataset. We construct a large-scale dataset of
+table-questionpairswithstep-levelreasoningannotations.Theseannotations
+explicitly link logical operations to visual anchors (e.g., cell coordinates and
+row/column identifiers), transforming implicit intuition into rigorous, verifiable training signals.
+–Process Evaluation via critic VLM. We design a specialized critic VLM that
+functions as a continuous process verifier. Rather than treating rewards as
+black-box binary signals, the critic evaluates the logical fidelity of each generated step to produce a dense process score. This score dynamically gates
+the outcome reward: flawless reasoning receives a golden-case bonus, while
+unreliable chains that happen to guess the correct answer are conservatively
+penalized.
+–Process-Guided Direct Alignment Policy Optimization (PGPO). We p

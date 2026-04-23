@@ -1,0 +1,29 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+mark v1.0[34], and selected
+tenrepresentative cases covering both toy (e.g., SW, SMW) and large,
+real-world product lines (e.g.,BDB,CNNl/f). Each model contains at
+least one cross-tree constraint and varies widely in feature count,
+tree depth, and constraint density.
+For each UVL model, we constructed a correspondingblueprint
+by restating its hierarchy and constraints in constrained natural
+language, as described inSection 3. Forgeneralization-related AOs,
+each blueprint was paired with itsvariantobtained by swapping selected relationships (mandatory ↔ optional, or ↔ alternative). This
+setting yields controlled pairs that allow testing if one blueprint’s
+variability space includes the other.
+All blueprints were manually verified for semantic equivalence
+to their UVL sources.Table 2summarizes structural metrics and
+blueprint sizes, ranging from fewer than 100 to over 70,000 tokens,
+thus spanning both compact and complex models.
+4.4 Analysis Operations
+We consider 16 commonly used AOs from feature model research
+and practice [4, 13], covering both structural metrics (e.g., feature
+counts, tree depth) and solver-based reasoning tasks (e.g., satisfiability, core features, configuration

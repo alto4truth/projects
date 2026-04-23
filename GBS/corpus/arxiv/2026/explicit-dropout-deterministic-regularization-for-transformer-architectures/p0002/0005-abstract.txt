@@ -1,0 +1,27 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+ularization
+effect is implicit, indirect, and controlled primarily through
+architectural choices and dropout probabilities. As a consequence, it is difficult to reason about or finely tune its
+regularization effect. In this work, we revisit dropout from
+aprincipledregularizationperspectiveandaskafundamental question:can dropout be reformulated as an explicit,
+deterministic regularizer that directly controls parameter
+regularization strength?Rather than treating dropout as a
+training-time perturbation, we seek a formulation in which
+itsregularizationeffectappearsexplicitlyasanadditiveterm
+in the loss function, analogous to classical regularizers such
+as𝓁 2 penalties. Such a formulation would enable precise
+control over regularization strength, eliminate reliance on
+stochasticmasking,andprovideclearertheoreticalandpractical insights into how dropout shapes learned representations. Our work makes the following contributions:
+•We formulate dropout as an explicit, additive regularizer by deriving its deterministic counterpart, transforming it from a stochastic training heuristic into a
+principled loss-based regularization method.
+•We instantiate this formulation for deep architectures
+a

@@ -1,0 +1,26 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+4.1. Experimental Setup
+4.1.1. Baselines
+We build our R-CoV upon several popular opensource LVLMs, including mPLUG-Owl (mplug-owl-llama7b) [53], LLaV A (llava-v1.5-7b) [28], MiniGPT-4 (vicuna13b) [59], and Qwen2.5-VL (qwen2.5-vl-7b-instruct) [3].
+We refer to the base LVLMs as vanilla. In addition, we
+also compare R-CoV with other advanced hallucination
+detection and mitigation methods, including (i) methods
+based on careful instruction tuning or retraining (e.g., LRVInstruction [27], LURE [58]), and (ii) methods heavily relying on external expert models (e.g., SelfCheckGPT [32],
+LogicCheckGPT [49]).
+4.1.2. Benchmarks
+We evaluate our R-CoV on several widely used hallucination benchmarks, including POPE [25], MME [13],
+CHAIR [38], and GPT-4o assisted evaluation.
+POPE.POPE [25] is a hallucination evaluation benchmark
+designed in the VQA paradigm. Specifically, it evaluates hallucinations by querying LVLMs with the questions
+in the form of “Is there a/an <object> in the
+image?”, where<object>is selected from three different types of splits: random, popular, and adversarial. For
+the “random” split, objects are taken randomly from the entire dataset. For the “popular” split, objects are

@@ -1,0 +1,28 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 4
+section: a-datasetcounts
+chunk: 70
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+Table 11: Dataset Counts by Language (sorted by total count, descending). Note: OA = openassistant2,
+MMLU = openai_mmlu, Inc = include, Tag = tagengo, Euro = euroblocks, Wiki = muri_wikipedia, AH
+= aya_human, AC = aya_collection, WQA = wikiqa.
+Language OA MMLU Inc Tag Euro Wiki AH AC WQA Total
+eng_Latn 61,278 99,842 0 15,771 151,135 6,657 3,944 14,693,823 0 15,032,450
+jpn_Jpan 756 14,042 501 2,521 4,735 6,971 6,259 6,218,459 0 6,254,244
+arb_Arab 76 14,042 552 789 0 8,508 4,995 5,857,458 17,706 5,904,126
+tha_Thai 1,503 0 0 133 0 7,187 724 5,338,232 0 5,347,779
+deu_Latn 5,797 14,042 139 5,739 14,081 7,009 241 4,689,989 0 4,737,037
+fra_Latn 3,686 14,042 419 5,369 14,882 6,988 1,422 4,285,094 0 4,331,902
+tel_Telu 0 0 548 0 0 7,765 8,439 4,058,535 0 4,075,287
+rus_Cyrl 13,336 0 552 8,056 4,727 7,042 423 4,005,166 0 4,039,302
+fin_Latn 138 0 551 92 1,022 6,970 742 3,939,941 16,383 3,965,839
+spa_Latn 26,811 14,042 550 8,318 17,428 7,012 3,854 3,872,864 0 3,950,879
+ita_Latn 899 14,042 548 7,063 15,963 7,100 738 3,890,852 0 3,937,205
+urd_Arab 0 0 352 3 0 7,893 654 3,876,197 0 3,885,099
+pol_Latn 431 0 548 1,090 5,358 7,013 1,483 3,841,451 16,964 3,874,338
+por_Latn 2,581 14,042 551 12,564 13,96

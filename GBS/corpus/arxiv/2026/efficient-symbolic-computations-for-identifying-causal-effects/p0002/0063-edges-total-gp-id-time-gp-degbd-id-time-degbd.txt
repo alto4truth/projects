@@ -1,0 +1,32 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 2
+section: edges-total-gp-id-time-gp-degbd-id-time-degbd
+chunk: 63
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+g(n)− 3
+4 n2 + 1
+2 nlog(2π)− 1
+12 log(n) + 1
+12 −log(A) +O
+ 1
+n
+
+(7)
+see, for example, Voros (1987, Appendix). Here, the constantAis the Glaisher–Kinkelin constant
+(Finch, 2019, Section 2.15). The statement of the lemma now follows directly from Equation (7).
+The last lemma is needed for proving the casewtrek ≥2dlog(3d|V|)in Theorem 5.1.
+Lemma B.2.Letn∈Nand consider then-th superfactorial sf(n) = Qn
+i=1 i!. Letd≥1and let
+f:N→Nbe a non-decreasing function such thatf(n)≥log(3dn)2d. Then
+(3dn)2d f(n)
+sf(f(n)) 1/4 =O(1).
+Proof.In this proof, we letC≥1be an absolute constant (not depending ondandn) that might
+changeitsvaluefromplacetoplace. ByLemmaB.1, wehave−log(sf(f(n)))≤ − 1
+2 Cf(n) 2 log(f(n)).
+It follows that
+log

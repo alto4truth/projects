@@ -1,0 +1,23 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 50
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+Under Review
+Intersectional Fairness in Large Language Models 15
+suggest measurable subgroup disparity in favorable-outcome rates, with the larger value on Race_SES indicating more
+uneven subgroup treatment for that dataset. On Race_Gender dataset, DF is mixed: some models also yield UB (Gemma-3,
+GPT-4o, and Gemini-2.0-Flash), indicating that favorable-outcome probabilities are highly sparse and imbalanced across
+subgroups, whereas others (Gemini-2.5-Flash and Claude-Sonnet-4) yield value 0.00, indicating equal favorable-outcome
+rates across subgroups under the metric.
+Overall, in ambiguous contexts, most LLMs tend to select the ‘unknown’, expected answer when the context does not
+provide enough information, whereas Llama-3 often fails to do so. The low sAMB values suggest no strong directional
+tendency in the limited number of non-‘unknown’ predictions. However, fairness metrics are less informative in this
+setting: SF values remain near zero, and DF values are often unbounded, because favorable outcomes are extremely
+sparse and unevenly distributed across subgroups. Overall, these results indicate that model behavior in ambiguous
+contexts is dominated by abstention, which limits

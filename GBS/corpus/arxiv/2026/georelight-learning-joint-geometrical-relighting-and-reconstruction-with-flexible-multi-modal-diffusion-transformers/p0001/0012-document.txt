@@ -1,0 +1,31 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+th
+a desired target environmentEwhile also recovering their
+intrinsic albedoaand 3D geometryg. We formulate this
+joint relighting and reconstruction problem as a conditional
+multi-modal generation task.
+To enable high-resolution generation and leverage strong
+generative priors, we build our framework on a Video Latent
+Diffusion Transformer (DiT). This architectural choice is
+powerful, but it introduces three core technical challenges.
+First, the model must be flexible enough to generate and be
+conditioned on multiple, distinct modalities at once; we address this with our Flexible Multi-Modal Diffusion design
+(Sec. 3.1). Second, we must represent 3D geometry in a
+“V AE-friendly” way that avoids the distortion of standard
+depth maps; we propose a novel representation, isotropic
+Normalized Orthographic Depth (iNOD) (Sec. 3.3) to solve
+this. Finally, we must learn photorealism when real-world
+images lack ground-truth geometry, which we solve with a
+Strategic Mixed-Data Training procedure (Sec. 3.4).
+3.1. Flexible Multi-Modal Diffusion
+Our goal of jointly modeling geometry and relighting requires an architecture that can process multiple distinct
+modalities at once (e.g., images, albedo

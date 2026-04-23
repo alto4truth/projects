@@ -1,0 +1,28 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 3
+section: discussion
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+ork can thus suggest specific, mathematically
+guided design principles for future SSM architectures. In
+addition, the analysis presented here could be directly
+extended to architectures with time-varying recurrences,
+such as Mamba [9], in future work.
+A new level of mathematical interpretability
+for SSMs
+Current methods for explaining machine learning architectures for sequence processing or language modeling require analyzing outputspost-hocin order to
+trace model inputs to outputs. This process is largely
+done manually, and is also data- and method-dependent,
+meaing that different choices of input datasets or analysis parameters yield different explanations of the model.
+Thus, while approaches like mechanistic interpretability
+can provide insight into how systems like large language
+models process inputs and generate outputs [12, 45],
+these methods remain fundamentally empirical, observing model output rather than deriving first-principles insight from the structure of the model itself.
+In contrast, the analysis introduced here opens the
+door to understanding the input-output mapping at a
+mathematical level, enabling prediction of outputsa prioriwithout necessarily needing even t

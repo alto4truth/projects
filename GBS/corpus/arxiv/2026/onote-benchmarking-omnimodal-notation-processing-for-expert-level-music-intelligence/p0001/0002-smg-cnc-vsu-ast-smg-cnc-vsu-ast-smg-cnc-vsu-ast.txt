@@ -1,0 +1,23 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+r performance on Cross-Format Notation Conversion (CNC) remains comparatively low. This stark contrast highlights a systemic mismatch between visual recognition
+and relational reasoning. For instance, while Gemini-3.1-flash-litepreview excels in Standard Staff VSU (99.00%), its CNC score drops
+significantly to 17.29%. This indicates that while the optical character recognition of sheet music is effective, the relational mapping of pitch and temporal values fails. Instead of true cross-modal
+deduction, models heavily rely on pre-training text distributions.
+Gemini-2.5-flash, for example, scores poorly on Guitar Tablature
+VSU (36.00%) yet achieves the highest CNC accuracy (46.08%), implying a probabilistic estimation based on ASCII corpora rather
+than visual-to-symbolic reasoning.
+Qualitative analysis of CNC tasks reveals persistent bidirectional
+errors, indicating a severe disconnect between visual parsing and
+musicological constraints. When converting complex 3/4 Standard
+Staff melodies to Jianpu, models often fail to capture meter, defaulting to uniform quarter-note durations and sequential scale
+generation driven by textual priors. Conversely, in the reverse
+Jianpu-to-Staff task,

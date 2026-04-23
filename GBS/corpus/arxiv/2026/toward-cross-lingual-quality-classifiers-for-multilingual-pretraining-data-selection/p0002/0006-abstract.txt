@@ -1,0 +1,23 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+Published as a paper at 3rd DATA-FM workshop @ ICLR 2026, Brazil.
+from high logical and factual coherence. If this hypothesis holds, a classifierCtrained to recognize quality patterns in French should transfer to typologically distant languages like Chinese, either
+because they share an underlying quality manifold, or because structural and formatting regularities in the positive anchor datasets (such as Wikipedia markup or instruction-tuning templates) are
+themselves cross-lingual proxies for quality. Our primary contributions are as follows:
+•Multilingual Synergy:We demonstrate that massive multilingual pooling frequently outperforms monolingual baselines in both rank stability and aggregate accuracy, delivering
+gains for high-resource languages and beating state-of-the-art baselines for low-resource
+ones.
+•Empirical Validation of Cross-Family Transfer:We demonstrate that classifiers trained
+on one language family can effectively curate high-quality tokens in typologically distant
+languages.
+•Q3 Sampling Strategy:We introduce a third-quartile (Q3) sampling strategy that trains
+against fluent but low-utility text. We find this refinement sharpens decision boundaries
+and improves p

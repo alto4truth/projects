@@ -1,0 +1,44 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+2. On Combo tasks (training, Figure 3, (b)),
+SI-DPO grows from 0.06 in Cycle 1 to ≈0.21 in
+Cycle 2. On New Object tasks (testing, Figure 3,
+(c)), SI-DPO declines only slightly from ≈0.21
+to 0.12–0.17, showing that performance improves
+with additional SuperIgor cycles on both training
+0 1 2 3 4 5 6 7 8 9 10
+Environment Steps (in billions)
+2
+4
+6
+8
+10
+12
+14Number of Mastered Skills
+Oracle Plans,
+Skill Curriculum
+SI-Initial plans,
+Skill Curriculum
+Oracle plans,
+No Skill Curriculum
+Figure 4: A comparative analysis of the number of
+mastered subtasks over 10 billion environment steps.
+and testing setups and remains relatively stable
+when moving to unseen goals.
+b) Plan reprioritization under DPO illustrates
+the process by which language models are incrementally grounded in the agent’s behavior and
+the underlying environment mechanics.. The reranking visualization (Appendix E, Figure 9) shows
+how plans shift across SFT, DPO-C1, and DPO-C2.
+Success Rates range from0.68 to 0.86. A plan with
+SR = 0.86 steadily climbs to the top across cycles,
+while weaker plans with SR ≈0.68 remain consistently at the bottom. These changes are gradual
+rather than abrupt, suggesting that DPO provides
+a soft gr

@@ -1,0 +1,32 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 4
+section: ieee-transactions-on-image-processing-3
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+n is performed using a composite learning objective.
+needed to disentangle visible features from occluded priors. In
+the following sections, we demonstrate that a more nuanced
+architectural modification is requisite to unlock SAM’s potential for amodal segmentation.
+III. AMODALSAM
+A. Overview
+As amodal segmentation in the open world requires robust
+zero-shot generalization to handle novel object classes and
+data distributions, in this work, we propose Amodal SAM a framework that decently extends SAM’s capabilities from
+visible region segmentation to amodal segmentation while
+preserving SAM’s strong zero-shot capabilities. The proposed
+paradigm focuses on the training phase of the following three
+synergistic aspects:
+•Model adaptationenables efficient adaptation with minimal structural modification through the lightweight gated
+adapter.
+•Data adaptationfacilitates the supervised tuning via
+synthesizing object occlusions without the need for exhaustive human annotation.
+•Optimization adaptationinvolves transitioning from a
+generic vision foundation model to a specialized amodal
+segmentation model by incorporating specific learning
+objectives.
+In the following Sections, Section III-B,

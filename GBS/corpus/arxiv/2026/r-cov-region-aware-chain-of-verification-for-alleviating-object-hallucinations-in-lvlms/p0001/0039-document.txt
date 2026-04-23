@@ -1,0 +1,26 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+objects. However, ground
+truth bounding boxes are, of course, not available for nonexistent objects. Thus, we still have to rely on pseudo bounding boxes from the LVLM for verification. We expect that
+the performance of R-CoV can be further improved when
+LVLMs get better at localization.
+Comparison with decoding-based methods.We further
+compare with another stream of methods that optimize the
+decoding process. Specifically, we use LLaV A-v1.5-7B as
+the vanilla LVLM and consider three representative methods in this category for comparisons,i.e., OPERA [16],
+VCD [22], and PAI [29]. Table 8 presents the results
+on CHAIR [38]. We observe that decoding-based methods are sensitive to hyperparameters, and sometimes they
+do not work well (e.g., OPERA). Besides, decoding-based
+methods reduce hallucinations while sacrificing the richness and faithfulness of the generated descriptions (F1
+score). In contrast, our R-CoV significantly outperforms
+the decoding-based strategies, in terms of both hallucination scores (CHAIRS, CHAIRI) and F1 score. Thus, if hallucination alleviation and description faithfulness are both
+critical in certain application scenarios, we recommend that
+practitioners adop

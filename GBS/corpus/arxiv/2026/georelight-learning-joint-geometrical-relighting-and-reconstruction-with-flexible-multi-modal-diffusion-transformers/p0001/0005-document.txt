@@ -1,0 +1,25 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+powerful shape-from-shading cues that can refine the underlying geometry estimation. We introduceGeoRelight, a unified generative framework that first embodies this joint approach. At its core is a Multi-Modal Diffusion Transformer
+(DiT) [29] that simultaneously denoises both the relit image
+and the 3D geometry, allowing information to flow between
+both tasks throughout the generation process
+This joint generative approach, however, introduces two
+significant technical challenges. First, 3D geometry must
+be made compatible with a latent diffusion model that uses
+a pretrained 2D V AE to enable high-resolution generation.
+Standard representations like point maps become extremely
+noisy after lossy compression into V AE latent space, while
+traditional depth maps require normalization that anisotropically distorts the 3D shape. To solve this, we propose
+isotropic NDC-Orthographic Depth (iNOD) (Sec. 3.3), a
+novel representation that isotropically scales the 3D shape
+before projection, preserving the geometry in a “V AEfriendly” image format without distortion. Second, this
+model requires data that is both photorealistic and has accurate 3D geometry labels, which is difficult to acquire.

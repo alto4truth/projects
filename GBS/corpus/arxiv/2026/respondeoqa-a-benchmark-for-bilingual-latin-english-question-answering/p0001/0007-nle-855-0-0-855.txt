@@ -1,0 +1,34 @@
+title: RespondeoQA: a Benchmark for Bilingual Latin-English Question Answering
+source: arxiv
+year: 2026
+document_id: respondeoqa-a-benchmark-for-bilingual-latin-english-question-answering
+authors: Marisa Hudspeth; Patrick J. Burns; Brendan O'Connor
+page: 1
+section: nle-855-0-0-855
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20738v1
+
+2006; Karpinska et al., 2022), the quality of newer,
+fine-tuned neural metrics for Latin is untested, and
+there is a lack of gold parallel sentence data available for developing such methods.
+6.2. Results
+MC and 1-Word SA AccuracyOverall accuracy
+(excluding long-form translation), is 71.92% for
+LLaMa3, 68.11% for QwQ, and 68.61% for o3-mini.
+PerformanceismuchhigheronMCformattedquestions, with LLaMa at 90.25%, QwQ 90.86%, and
+o3-mini 91.80%.
+All models generally perform better on the
+knowledge-based questions than the skill-based
+questions, and LLaMa performs best overall.
+LLaMa has 74.27% accuracy for knowledge questions, 64.77% for skill; QwQ 71.08% knowledge
+and 61.63% skill; and o3-mini 69.46% knowledge
+and 66.76% skill. The gap in performance between
+knowledge and skill questions is noticeably smaller
+for o3-mini.
+Figure 3: Accuracy by question content. Knowledge categories are on the left and skill categories
+ontheright. IncludesbothMCand1-wordSAquestions.
+InFigure3, LLaMaisthebestperformerformost
+knowledge-based content types, and o3-mini is
+worst performing. The reasoning models, QwQ
+and o3-mini, show an advantage over LLaMa on
+literary devices and scansion questions, althou

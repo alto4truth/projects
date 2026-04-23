@@ -1,0 +1,28 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 2
+section: a-weighted-angle-distance-on-strings-3
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+4 GRANT MOLNAR
+See Proposition 7.1 below for a proof of this fact.
+The weighted angle distanced ρ is built from a standard representation of strings: for each
+n≥1, a stringS∈Σ ∗ determines ann-gram count vector [S] n ∈R Σn
+encoding its pattern
+frequencies at scalen.
+Using the angle (cosine) distance between these vectors is natural because it compares
+profiles rather than magnitudes, so it is comparatively insensitive to length and to tandem
+repetition (stutter) while still detecting changes in local structure.
+Summing these angular discrepancies over allnyields a genuinely multi-scale notion of
+similarity, with the weightρ n providing a transparent control of how strongly longer-range
+patterns are emphasized. Moreover, the construction is alphabet-agnostic and admits a
+linear-time evaluation via generalized suffix trees (or suffix arrays), making it a computationally tractable alternative to edit-based distances when repeated motifs are the dominant
+signal.
+3.Related Work
+The study of distances on strings has a long history spanning theoretical computer science,
+information retrieval, and computational biology. Ourρ-weighted angle distance sits at the
+intersection of two major the

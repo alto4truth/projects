@@ -1,0 +1,36 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 55
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+siderar las opciones
+proporcionadas y seleccionar la respuesta
+correcta. Se le proporciona un conjunto
+de documentos relevantes que le ayudarán a encontrar la respuesta correcta,
+analizarlos y responder la pregunta.
+Aquí están los documentos:
+[set of retrieved documents]
+Aquí está el caso clínico:
+[clinical case question]
+Aquí están las posibles opciones:
+[clinical case question]
+Prompt used for French experiments:
+Vous êtes un assistant médical qualifié
+chargé de répondre à des questions
+médicales à choix multiples dans le
+cadre d’une recherche. Votre objectif
+est d’analyser le cas clinique présenté,
+d’examiner les options proposées et de
+sélectionner la bonne réponse. Vous
+disposez d’un ensemble de documents
+pertinents qui vous aideront à trouver la
+bonne réponse; analysez-les et répondez
+à la question.
+V oici les documents:
+[set of retrieved documents]
+V oici le cas clinique:

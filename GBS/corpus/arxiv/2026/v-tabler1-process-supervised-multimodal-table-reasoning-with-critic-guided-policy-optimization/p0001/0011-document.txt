@@ -1,0 +1,23 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+e from this
+paradigm by enforcing explicit Visual Chain-of-Thought reasoning, transforming
+table understanding from opaque pattern matching into a transparent, step-bystep verifiable process [7].
+2.2 Reinforcement Learning with Verifiable Rewards
+Reinforcement Learning with Verifiable Rewards (RLVR) drives recent breakthrough reasoning capabilities in text-only language models, unlocking test-time
+scaling and extended chain-of-thought paradigms [38]. Algorithms like Group
+Relative Policy Optimization (GRPO) demonstrate that optimizing directly
+against rule-based, verifiable outcomes elicits sophisticated behaviors such as
+autonomous self-correction [25,30]. Subsequent innovations refine this foundation; notably, Direct Alignment Policy Optimization (DAPO) mitigates gradient variance and stabilizes long-context reasoning by decoupling clipping constraints [37,38]. However, translating these successes to the multimodal domain
+remains challenging. In pure text, a mathematical proof is logically absolute; in
+vision, grounding a logical step to a continuous pixel space introduces ambiguity
+that resists strict reward verification and invites reward hacking [7]. We identify
+table reasonin

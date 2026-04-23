@@ -1,0 +1,28 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 2
+section: document
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+ng plans
+from a shared set of subtasks and their relations,
+rather than from independent and potentially contradictory structures. Second, it supports partial
+normalization, since the model, when processing
+new instructions, tends to reuse previously identified subtasks, thereby reducing the proliferation
+of synonymous formulations. The details of the
+method and pseudocode are provided in Appendix
+A, and the prompts are presented in Appendix L.
+Plans re-prioretizing for RL-agent (Cycles 2N).After obtaining the initial feedback on agent
+performance for the generated plans and applying
+LLM fine-tuning (Subsection 4.4), subsequent cycles focus on re-prioritizing the candidate set. In
+each cycle, plans are rescored using the language
+model’s negative log-likelihood (NLL), which reflects how natural or plausible a plan is according to
+the model. Plans are then ranked by this score, and
+only the top-performing subset is retained for further training. As cycles progress, this iterative filtering process gradually narrows the candidate space,
+aligning the remaining plans both with the agent’s
+empirical success and with the model’s learned
+preferences.

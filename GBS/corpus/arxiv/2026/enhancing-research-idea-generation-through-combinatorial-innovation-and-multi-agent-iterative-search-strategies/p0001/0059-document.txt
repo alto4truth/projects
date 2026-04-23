@@ -1,0 +1,15 @@
+title: Enhancing Research Idea Generation through Combinatorial Innovation and Multi-Agent Iterative Search Strategies
+source: arxiv
+year: 2026
+document_id: enhancing-research-idea-generation-through-combinatorial-innovation-and-multi-agent-iterative-search-strategies
+authors: Shuai Chen; Chengzhi Zhang
+page: 1
+section: document
+chunk: 59
+source_ref: https://arxiv.org/pdf/2604.20548v1
+
+) 3(5%) From LLM 36 31 10 Note: The percentage in parentheses indicates the entity overlap rate between the idea and its corresponding knowledge base.
+
+22
+Figure. 9. The initial research idea of Idea 1. Note: Yellow blocks denote entities used by the Turn 1 idea, while gray blocks represent its own entities. In Turn 1, the generated idea contains 51 entities, among which 11.8% come from the previous idea, 17.6% from retrieved references, and 70.6% are newly introduced by the LLM. This stage is characterized by broad exploratory recombination: while pre-serving the core logic of the initial idea, the model integrates external concepts such as neuro-symbolic reasoning, uncertainty quantification, and multi-agent systems, and further contributes a large number of self-generated entities related to architecture de-sign, technical components, and evaluation criteria. Figure 10 visualizes the entity com-position of the Turn 1 idea.
+Figure. 10. The research idea from turn 1. Note: Blue blocks represent entities from the LLM, yellow blocks represent entities from the last idea, and green blocks represent entities from the reference literature. Stronger mechanisms to prevent excessive path dependence during iterative idea generation. In Turn 2, the recombination pattern shifts substantially. The proportion of entities inherited from the previous round rises to 43.1%, while the share from references drops to 3.3%. This indicates that the model moves from broad exploratory generation toward a more focused refinement strategy. Rather than introducing many new theoretical

@@ -1,0 +1,36 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 59
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+Accuracy
+Input Text for Evaluation: {text_to_evaluate}
+Task: You are an expert fact-checking assistant. Your task is to evaluate the factual correctness of the information contained ONLY
+within the <KNOW>...</KNOW> tags. Base
+your assessment on your internal, general
+knowledge.
+Output Format:
+Score: integer 1-5
+Explanation: A brief justification for your
+score, specifying which facts are correct or
+incorrect.
+Scoring Rubric:
+Score 1: Entirely Incorrect or Fabricated.
+The information is factually wrong,
+nonsensical, or a complete fabrication
+(e.g., contains imaginary objects like the
+‘Luminara Scepter’).
+Score 2: Largely Incorrect. Contains a
+core factual error, even if minor details
+are correct. (e.g., “<KNOW>Paris, the
+capital of England...</KNOW>”). The
+presence of a single major error means
+the score cannot be higher than 2.
+Score 3: Partially Correct but Misleading.
+Contains a mix of correct and incorrect
+information, or the information is

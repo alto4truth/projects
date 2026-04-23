@@ -1,0 +1,17 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 2
+section: a-weighted-angle-distance-on-strings-3
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+shifts the inductive bias from “minimal edits” to “similar local
+statistics across scales,” which naturally compresses length inflation caused by repeated
+blocks.
+3.2.n-gram feature spaces, cosine geometry, and string kernels.A large body of
+work represents strings by their substring statistics and compares the resulting vectors in a
+feature space. Charactern-gram profiles have long been successful in tasks such as language
+identification and text categorization, especially for short or noisy documents [1]. In classical

@@ -1,0 +1,27 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+unsubstantiated claims, 4 for well-supported reasoning, and 5
+for logically undeniable conclusions. This rubric
+rewards depth of reasoning while penalizing speculation.
+Factual Accuracy ( SK).This dimension factchecks knowledge claims in the <KNOW> tags
+against the auditor’s internal knowledge. Fully correct claims receive 5, minor inaccuracies lower the
+score to 4, and a single major error (e.g., misidentifying a capital city) caps the score at 2. In the
+absence of knowledge claims, the default score is
+2, distinguishing informative from non-informative
+responses.
+Image-Text Consistency (SV ).This dimension
+measures the alignment of the purified visual description Rvisual with the image. The principle is
+consistency over completeness: omissions are acceptable, but contradictions or unverifiable assertions are heavily penalized. Perfectly faithful descriptions receive 5, minor imprecisions result in
+4, and any clear contradiction drops the score to 2
+or below. This ensures that only visually accurate
+responses achieve the highest marks.
+By producing a triplet (SL, SK, SV ) with explicit explanations, Phase 2 delivers an interpretable and multi-dimensional quality assessment.
+These

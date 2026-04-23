@@ -1,0 +1,27 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+AAMAS’27, 2027, Hoang Nguyen, Lu Wang, and Marta Gaia Bras
+Figure 4: Two-Index (𝑐 = 3, green) vs. unconstrained LLM broker (purple) vs. Two-Index against LLM-powered
+carriers (red). (a) By carrier archetype, with Overall column. (b) By spread regime.
+LLM carriers, the two-index strategy achieves 75.8% agreement (±1.0), 0.707 savings ( ±0.031), and 6.4 rounds ( ±0.1),
+with zero retractions across all 6,750 negotiations. Agreement is significantly higher than against algorithmic carriers
+(64.4%, 𝑧 = 3.9, 𝑝 < 0.001), while savings are comparable to
+the algorithmic baseline (0.707 vs. 0.690). LLM carriers are
+substantially more amenable in the anchoring and hardliner
+personas (63.0% and 52.9% vs. 24.4% and 4.4% for algorithmic counterparts), suggesting that persona-prompted LLMs
+adopt less extreme positions than rule-based agents. LLM
+deadline exploiters prove harder to close (71.6% vs. 100%).
+The monotonicity guarantee holds regardless of carrier type.
+7 CONCLUSION
+We presented a two-index anchor-and-resume framework that
+extends Faratin et al.’s time-dependent concession model
+to handle dynamic pricing conditions while guaranteeing
+monotonicity. The framework decouples the negotiatio

@@ -1,0 +1,46 @@
+title: Generative Flow Networks for Model Adaptation in Digital Twins of Natural Systems
+source: arxiv
+year: 2026
+document_id: generative-flow-networks-for-model-adaptation-in-digital-twins-of-natural-systems
+authors: Pascal Archambault; Houari Sahraoui; Eugene Syriani
+page: 1
+section: document
+chunk: 70
+source_ref: https://arxiv.org/pdf/2604.20707v1
+
+wNet. In this regime, the learned policy can still retrieve
+states with lower loss than random search, but it no longer separates itself as clearly
+27
+
+as in the enumerable 1-cycle setting because it has not amortized enough of the larger
+search space. This is reflected in the diversity results as well. Random search attains the
+largest Hamming distances, which is expected from an uninformed sampling strategy,
+while the GFlowNet achieves comparable diversity with consistently better loss values.
+Read in that light, the main result is not that random search reveals useful structure
+in the landscape, but that the learned policy remains competitive even though the
+enlarged search space makes it much harder to improve decisively over a flat reward
+landscape.
+Step fraction Method Best loss Median top-20 loss Mean Hamming top-20 Training time
+sf= 0.15 TPE 0.542±0.003 0.560±0.009 5.19±0.31 1:37:46±17:22
+sf= 0.15 GFN 0.539±0.002 0.561±0.001 6.81±0.12 12:51:33±2:14:28
+sf= 0.15 Random 0.547±0.006 0.709±0.045 7.41±0.06 —
+sf= 0.3 TPE 0.595±0.031 0.670±0.027 6.39±0.59 1:46:29±18:13
+sf= 0.3 GFN 0.535±0.001 0.611±0.012 7.61±0.04 8:42:14±3:43:30
+sf= 0.3 Random 0.570±0.024 0.671±0.022 7.66±0.07 —
+T able 2RQ3 summary in the 2-cycle setting under an equal retrieval budget forβ= 4. Lower is
+better for best loss and median top-20 loss; higher is better for mean Hamming top-20.
+Table 2 highlights the main trade-off that emerges in the 2-cycle setting. At
+sf= 0.15, the GFlowNet only marginally improves upon TPE on best loss, while
+TPE attains a nearly identical median top-20 loss and fits about six times faster. At
+sf= 0.3, the distinction becomes clearer: the GFlowNet achieves the best values for
+both best loss and median top-20 loss, which indicates that it retrieves not only a
+strong single candidate, but also a stronger set of high-quality candidates under the
+same budget. The diversity column complements this comparison. Random search
+attains the largest Hamming distances in both settings, which is expected from an
+uninformed strategy that spreads samples broadly across the state space. More importantly, the GFlowNet maintains higher Hamming distances than TPE while remaining
+competitive, or favorable, on the quality measures. This suggests that the learned policy continues to cover several distinct promising regions of the search space rather than
+concentrating exclusively on one narrow optimum. At the same time, this broader coverage comes at a substantial computational cost: fitting the 2-cycle GFlowNet requires
+roughly 9 to 13 hours, whereas TPE typically completes in under 2 hours. During
+training, our GFlowNet caches candidates and their score, causing subsequent seeds
+to train faster, which explains the observed variance in training times.
+28

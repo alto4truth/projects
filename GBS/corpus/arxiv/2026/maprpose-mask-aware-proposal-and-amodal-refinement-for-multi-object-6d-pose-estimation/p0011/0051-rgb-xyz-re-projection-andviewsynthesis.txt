@@ -1,0 +1,48 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 11
+section: rgb-xyz-re-projection-andviewsynthesis
+chunk: 51
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+To synthesize scale-normalized and pose-aligned representations, we define a differentiable warping operator W based on
+rigid transformation between a source view and a target view.
+Each source observation is represented as paired geometry and
+appearance samples (ps,c s)∈ M s, where ps ∈R 3 denotes
+the 3D coordinate (XYZ) and cs ∈R 3 denotes the RGB color,
+withM s =M s
+xyz × Ms
+rgb.
+Let the source and target camera poses be rigid transformations Ts = [R s |t s] and Tt = [R t |t t], where
+Rs,R t ∈SO(3) and ts,t t ∈R 3. The relative transformation
+is given by:
+Tts =T tT−1
+s =
+Rts tts
+0⊤ 1
+
+,(A.1)
+which induces the point-wise transformation:
+pt =R tsps +t ts,c t =c s.(A.2)
+The transformed 3D point pt = [xt, yt, zt]⊤ is projected onto
+the image plane using the intrinsic matrixK c ∈R 3×3:
+
+
+u
+v
+1
+
+ = 1
+zt
+Kcpt, z t >0.(A.3)
+This defines a correspondence mapping:
+(ps,c s)→(p t,c t)→(u, v),(A.4)
+which preserves strict pairing between geometry (XYZ) and
+appearance (RGB) across views.
+To obtain a continuous representation, each projected sample
+contributes to a local neighborhood on the target image grid,
+enabling smooth aggregation of geometric and photometric
+signals while reducing

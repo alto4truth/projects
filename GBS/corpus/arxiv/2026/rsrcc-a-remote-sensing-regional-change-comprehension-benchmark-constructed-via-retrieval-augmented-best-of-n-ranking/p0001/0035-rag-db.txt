@@ -1,0 +1,45 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 1
+section: rag-db
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+es candidate captions𝑦∈ Y for an image pair𝑠∈ S . Each candidate is evaluated using
+a retrieval-augmented scoring function𝐽𝜙 (𝑠, 𝑦), which measures semantic and visual consistency
+conditioned on reference examplesE.
+B.1 Preference-Weighted Scoring
+Following standard preference learning formulations [27], we consider the regularized objective
+max
+𝜋
+E𝑠∼D, 𝑦∼𝜋(· |𝑠)
+
+𝐽𝜙 (𝑠, 𝑦) −𝛽log 𝜋(𝑦|𝑠)
+𝜋ref (𝑦|𝑠)
+
+,(18)
+where𝛽controls the strength of regularization.
+B.1.1 Closed-Form Preference Distribution
+As shown in prior work [1], the optimal solution to Eq. 18 admits the closed-form expression
+𝜋★(𝑦|𝑠)= 1
+𝑍(𝑠) 𝜋ref (𝑦|𝑠)exp
+ 𝐽𝜙 (𝑠, 𝑦)
+𝛽
+
+,(19)
+where𝑍(𝑠)is a normalization constant.
+This formulation corresponds to a preference-weighted re-ranking of candidate captions, increasing
+the probability of semantically consistent hypotheses.
+B.2 Best-of-N Approximation
+Directsamplingfrom 𝜋★iscomputationallyexpensive. Instead,weapproximateEq.19viaBest-of- 𝑁
+sampling. For each input𝑠, we sample
+{𝑦1, . . . , 𝑦𝑁 } ∼𝜋 ref (·|𝑠),(20)
+and compute corresponding scores
+𝑟𝑖 =𝐽 𝜙 (𝑠, 𝑦 𝑖), 𝑖=1, . . . , 𝑁 .(21)
+The final prediction is obtained through thresholding or maximum selection:
+𝑦★ =arg max
+𝑦𝑖
+𝑟𝑖,or𝑟 𝑖 >

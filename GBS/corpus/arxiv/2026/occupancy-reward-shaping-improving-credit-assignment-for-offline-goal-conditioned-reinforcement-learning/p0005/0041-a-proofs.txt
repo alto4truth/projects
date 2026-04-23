@@ -1,0 +1,39 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 5
+section: a-proofs
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+We introduce notation in Sec. A.1. We then provide common setup used for all proofs in Sec. A.2.
+We introduce the assumptions used in Sec. A.3. Sec. A.4, A.5 and A.6 provide the proofs for
+Proposition1, Proposition2 and Theorem1, respectively.
+A.1 NOTATION
+•Shortest-path distance: We use step ∗(s, g)to denote the minimum number of steps to
+reachgfroms. We define level sets:
+Sk ={s∈ S:step ∗(s, g) =k}, k= 0,1,2, . . .
+Clearly,S 0 ={g}. Under deterministic dynamics, there exists an actiona ∗ at statessuch
+thatp(.|s, a ∗)∈ S k−1 whenevers∈ S k,k≥1.
+A.2 COMMONSETUP FORPROOFS
+The squared Wasserstein-2 distance between two probability measuresµandνis defined as:
+W 2
+2 (µ, ν) = inf
+λ∈Λ(µ,ν)
+Z
+∥x−y∥ 2dλ(x, y)
+whereΛ(µ, ν)is the set of all joint measures with marginalsµandν.
+We consider the special case where one measure is a Dirac delta,µ=δ g, located at a single point
+g. In this case, any valid transport plan must move all mass from the pointg. This removes the need
+for optimization, as the transport plan is uniquely determined to be the product measureΛ(x, y) =
+δg(x)ν(y).
+Substituting this unique plan into the definition yields:
+W 2
+2 (δg, ν) =
+Z Z
+∥y−x∥ 2δg(x)ν(y)dxdy
+=
+Z
+∥y−g∥ 2ν(y)dy(

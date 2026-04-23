@@ -1,0 +1,27 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+ration,
+entity extraction, coordinate generation, region description,
+verification execution, and final response generation. As a
+simple yet effective method, R-CoV can be seamlessly integrated into various LVLMs in a training-free manner and
+without relying on external detection models. Extensive experiments on several widely used hallucination benchmarks
+across multiple LVLMs demonstrate that R-CoV can significantly alleviate object hallucinations in LVLMs. Project
+page:https://github.com/Jiahao000/R-CoV.
+1. Introduction
+Empowered by large language models (LLMs) [4, 12, 31,
+33, 35, 42, 43], large vision-language models (LVLMs) [1,
+2, 7, 10, 23, 24, 28, 31, 53, 59] have made significant strides,
+exhibiting impressive multimodal understanding and reasoning capabilities [5, 20, 44]. Despite their remarkable
+advancements, existing LVLMs still suffer fromobject hallucinations—producing objects that do not exist in the given
+image (see Figure 1 (a)). This issue has been an Achilles’
+heel that hinders the broader applications of LVLMs in realworld scenarios.
+To alleviate object hallucinations in LVLMs, existing
+works have primarily focused on three strategies: (i) inThe image depicts a

@@ -1,0 +1,25 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+Published as a paper at 3rd DATA-FM workshop @ ICLR 2026, Brazil.
+Table 3: Spearman and Kendall correlations between family-specific classifiers and the French HQ
+baseline. High correlation in distant families (e.g., Nordic) indicates a shared quality manifold,
+while the drop in "Romance (no French)" suggests potential syntactic interference.
+Experiment Spearman Kendall
+Romance (spa, fra, por, ita, ron, cat) MKC+ 0.8928 0.7173
+Nordic (swe, dan, nob, isl) MKC+ 0.8820 0.6990
+Romance, no french (spa, por, ita, ron, cat) MKC-e 0.7139 0.5228
+Cross-lingual Transfer.We have seen that multilingual transfer is possible since a classifier
+trained on multiple languages performs better than its monolingual counterpart. We note that our
+ML classifier was trained on these languages; therefore, it already has knowledge in that language.
+We hypothesize that this knowledge has been augmented by the data from the other languages. Can
+this ML classifier actually generalize to unseen languages? Would this classifier be able to perform
+as well (if not better) on a language like French if it has never seen a sample in that language?
+To answer these questions, we investigate the performance of a classifi

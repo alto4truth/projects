@@ -1,0 +1,27 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 2
+section: items-in-scene510-1015-1520-2025-25
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+ogue
+state of the conversation up to n-1 turns represented
+as: {{Intent_1, Slot_1, Value_1}, ...} , the
+current dialogue state at then-th turn is:
+Output:
+{Intent_n, Slot_n, Value_n}
+Figure 7: Input-Output format for fine-tuning the policy
+model in Bayesian inverse inference.
+enables the MLLM to learn the inverse mapping
+from user goals to dialogue actions effectively.
+F Prompt for GPT-Score Evaluation
+To ensure a comprehensive evaluation of the generated responses, we employ GPT-4o as an unbiased
+judge. The evaluation prompt is designed to assess
+the response quality based on three critical dimensions:Relevance(whether the response addresses
+the user’s intent),Visual Grounding(whether the
+mentioned items and attributes align with the provided scene), andFluency(whether the text is natural and coherent). The full prompt template is
+presented in Figure 8.

@@ -1,0 +1,28 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 2
+section: mnist
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+QuanForge: A Mutation Testing Framework for Quantum Neural Networks FSE128:17
+Table 6. Evaluation results of mutants targeted at different gate types. Acc, KR, and NR denote mean accuracy,
+KillabilityRate, and NontrivialityRate, respectively. ’N/A’ denotes the cases where this type of gate does not
+exist, or the MO does not apply to the gates in the given QNN. Underline indicates the highest sensitivity
+across different gate types for a specific QNN and operator.
+operator gate type QCL QCNN HCQC DRNN
+Acc KR NR Acc KR NR Acc KR NR Acc KR NR
+Add
+Controlled 88.17 89.63 46.67 92.73 91.11 52.59 94.67 95.76 67.88 94.92 95.00 59.17
+Hadamard 88.58 94.86 45.14 90.8 89.75 63.16 90.09 77.29 54.17 94.03 98.00 42.25
+Pauli 91.68 88.89 36.19 92.44 82.41 61.35 95.63 58.52 82.96 94.63 96.82 47.05
+Phase 99.95 26.00 100 94.01 94.14 68.97 95.87 84.14 81.38 99.81 85.00 100
+Rotation 97.72 93.68 61.58 93.78 90.00 61.03 96.19 85.00 75.29 99.68 76.00 100
+Swap 89.77 92.08 37.92 92.20 95.81 41.61 94.88 89.42 51.15 91.56 95.88 47.35
+Delete
+Controlled 91.14 100 35.42 91.45 97.39 46.21 97.00 94.19 60.00 94.74 95.56 70.31
+Pauli N/A N/A N/A 87.87 50.95 70.95 N/A N/A N/A N/A N/A N/A
+Rotation 94.45 94.41 40.88 94.6

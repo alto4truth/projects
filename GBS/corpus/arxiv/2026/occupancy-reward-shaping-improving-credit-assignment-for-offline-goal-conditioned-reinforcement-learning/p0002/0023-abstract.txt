@@ -1,0 +1,67 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 2
+section: abstract
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+0±0 0±0 0±050±5 56±7
+puzzle-4x6-noisy 2±1 8±6 0±0 12±6 15±319±4 19±1
+scene-noisy 25±4 33±6 3±2 2±2 3±2 34±540±5
+Mean20.0 25.8 2.8 12.7 23.2 35.844.2
+9
+
+Published as a conference paper at ICLR 2026
+Table 3: ORS vs long-horizon sparse-reward offline GCRL strategies on 3 challenging Tokamak control tasks:
+Overall average cumulative return across 10 testtime goals over 4 seeds per task per algorithm. We report the
+95% bootstrapped C.I. size after the ± sign.
+Task HIQL SA W SMORE n-step GCIQL GCIQL-OTA GO-Fresh ORS
+TokamakβN -45.26±3.83 -51.39±8.16−56.06±12.71−88.7±44.3−67.73±9.73-48.20±11.72 -44.76±8.42
+Tokamak density−49.8±7.5−44.0±2.3−54.0±10.8-25.6±4.1 -27.1±2.5−38.6±12.6-26.9±6.6
+Tokamak rotation−24.4±1.3−26.4±5.1−28.5±6.7−57.4±46.6−30.1±6.9−28.9±7.4-22.4±0.6
+Dataset ORS L2 GCIQL
+antmaze-giant-navigate 56±9 3±2 0±0
+cube-triple-play 37±8 3±1 7±3
+Table 4: ORS vs L2 rewards
+Next, we ablate over design choices
+of the ORS reward function andQfunction by comparing ORS against
+a version that uses state-only rewards
+rW (s, g)named ORS-s and a variant
+that uses the reward function itself as
+theQ-function, i.e.,Q(s, a, g) =r W (s, a, g)named ORS-r. We keep the base algorithm the same.
+Figure 6: ORSvsORS-svsORS-r over 5 testtime
+goals and 8 seeds onscene-play(error bars show
+95% bootstrapped CI)
+In experiments on the manipulation taskscene-play
+in Fig. 6, ORS performs best, showing the importance of learning aQ-function that is a cumulative
+sum overr W (s, a, g), especially when the task involves stitching over trajectories to learn the optimal
+Q∗. We hypothesize that the poor performance of
+ORS-r is due to noisy estimates of theQfunction, as
+evidenced by our analysis in Fig. 5.
+We also ablate the performance of ORS over varying values of the expectile parameterκof GCIQL
+which is crucially linked to the density of rewards (Kostrikov et al., 2021). The results in Table 5
+show higher performance at lowerκin locomotion
+tasks. We hypothesize that this is due to the rich learning signal from dense rewards of ORS. In
+manipulation tasks, as task complexity increases, theκat which we get best performance increases.
+6 CONCLUSION Datasetκ=0.6κ=0.75κ=0.9
+antmaze-giant-navigate 56±9 15±6 1±1
+puzzle-4x4-play 70±5 40±4 21±3
+scene-play 70±5 80±4 71±7
+cube-triple-play 4±3 27±12 37±8
+Table 5: Performance of ORS over varying values ofκ.
+In this paper, we show how generative
+world models implicitly capture world
+geometry and introduce Occupancy Reward Shaping, a novel reward-shaping
+method for offline GCRL that utilizes a
+generative occupancy model to extract global goal-reaching information into a goal-conditioned reward function. Unlike prior work that relies on graph-building, ORS scales effectively with task
+complexity and enables learning performative policies over diverse datasets. ORS is simple to implement on top of existing GCRL algorithms and achieves state-of-the-art results over challenging
+tasks, including real-world Tokamak control.
+Limitations.Reward shaping methods, by virtue of being sample-based, are less effective in longhorizon tasks with highly combinatorial state spaces and very few ways to achieve task success (e.g.
+a large multi-step combination lock puzzle). In such regimes, particularly in the offline setting,
+even ORS rewards may provide limited signal since the occupancy measure has a high Wasserstein
+distance from goal for almost all states. This challenge could potentially be addressed by learning an
+occupancy measure over a filtered set of “useful” future states and by augmenting the ORS reward
+with local rewards that capture short-range state dependencies.

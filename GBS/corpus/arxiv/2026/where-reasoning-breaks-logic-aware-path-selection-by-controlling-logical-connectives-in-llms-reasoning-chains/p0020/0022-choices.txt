@@ -1,0 +1,45 @@
+title: Where Reasoning Breaks: Logic-Aware Path Selection by Controlling Logical Connectives in LLMs Reasoning Chains
+source: arxiv
+year: 2026
+document_id: where-reasoning-breaks-logic-aware-path-selection-by-controlling-logical-connectives-in-llms-reasoning-chains
+authors: Seunghyun Park; Yuanyuan Lei
+page: 20
+section: choices
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20564v1
+
+Gemma-3-4b-it
+Dataset Greedy Beam Self-Cons. (n=5) Ours (best) Ours method
+ZebraLogic 38.8 33.4 39.642.0Branching
+BBH (Ded.) 75.377.075.5 75.9 TTPO
+RuleBERT 60.367.763.9 63.4 Branching
+LogiQA 2.0 55.2 54.0 55.356.8Branching
+ProntoQA 90.0 90.691.890.4 TTPO
+Avg. 63.9 64.5 65.265.7–
+Phi-4-mini-instruct (4B)
+Dataset Greedy Beam Self-Cons. (n=5) Ours (best) Ours method
+ZebraLogic 38.8 31.841.039.6 Steering
+BBH (Ded.) 67.373.873.6 69.1 Branching
+RuleBERT 50.3 51.7 48.851.9Branching
+LogiQA 2.0 57.7 59.0 58.859.4TTPO
+ProntoQA 93.6 93.296.896.6 TTPO
+Avg. 61.5 61.963.863.3 –
+Table 11: Accuracy comparison on 4B models. Self-consistency uses n=5 samples. Beam uses the same beam size
+as in Table 4.
+Efficiency (normalized by Greedy)
+Method Token cost (×) Time (×) Main hyperparams
+Gemma-3-4b-it (4B)
+Greedy 1.00 1.00 –
+Beam Search 3.32 1.88 beam=5
+Self-Consistency 2.90 2.80n= 5
+Steering 0.93 0.99α= 0.5
+TTPO 1.26 1.12 –
+Branching 1.18 1.45K=20, L=20
+Phi-4-mini-instruct (4B)
+Greedy 1.00 1.00 –
+Beam Search 5.61 1.75 beam=5
+Self-Consistency 4.37 4.09n= 5
+Steering 0.89 1.00α= 0.5
+TTPO 0.89 0.93 –
+Branching 1.02 1.53K=20, L=20
+Table 12: Efficiency for 4B models. Token-cost counts the total number of nex

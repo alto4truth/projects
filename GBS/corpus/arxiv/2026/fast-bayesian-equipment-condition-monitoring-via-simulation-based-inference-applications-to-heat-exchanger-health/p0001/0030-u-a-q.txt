@@ -1,0 +1,53 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+10
+Weak FBatch SDBoiler FWMild LeakSevere Leak
+0.0
+0.5
+1.0
+Wd(MCMC-SBI)
+τ
+Weak FBatch SDBoiler FW
+0.00
+0.25
+0.50
+0.75
+1.00
+βf
+Mild Leak Severe Leak
+0.0
+0.1
+0.2
+Wd(MCMC-SBI)
+βl
+Weak FBatch SDBoiler FW
+0.0
+0.5
+1.0
+1.5
+λ
+FIG. 7: Normalized, 1-dimensional Wasserstein distance
+between MCMC and amortized SBI posterior samples
+for the same failure parameter, scaled by the absolute
+value of the true parameter. Color coding follows the
+one in Figure 5
+.
+transients reduce practical identifiability.
+An additional pattern in Fig. 5 is the comparatively
+narrow SBI posterior forλrelative to MCMC. This
+behavior is consistent with an amortization-induced
+shrinkage effect in weakly identifiable settings: when
+the observation carries limited information about jumparrival intensity, SNPE tends to regularize toward dominant simulator-supported regions learned during training, yielding sharper posteriors. In contrast, MCMC explores a flatter likelihood landscape more explicitly and
+therefore retains wider uncertainty forλ[55, 56]. The
+key point is that this difference is primarily in posterior
+width, not in failure-mode decision; both methods still
+produce consistent classification outcomes.
+To systema

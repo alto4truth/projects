@@ -1,0 +1,23 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+auxiliary source is an external teacher [25] or a fully trained
+model (far-future policy) [36], its trajectories have highQ, but the large varianceV they induce destabilizes
+training and cancels out most of the quality gain. Experience replay [35] initially keepsV moderate, but V
+drifts upward as stored trajectories grow stale, andQ remains modest since it is inherently capped by the
+earlier checkpoints. Pure on-policy RLVR avoids variance but offers noQ beyond what the current policy
+produces. None of them provides a tunable handle for optimizingS.
+Intuitively, the optimization process itself continuously produces such off-policy trajectory candidates: every
+later checkpoint along the same training run is a more optimized version of the current policy. As the step
+distance∆grows, Q increases (more optimization) but so doesV (more parameter drift), making∆a natural
+dial for theQ–V trade-off. Anear-futurecheckpoint occupies the high-S region: far enough ahead to offer a
+meaningful Q gain, yet close enough to keepV small. This motivatesNear-FuturePolicyOptimization (NPO),
+a simple mixed-policy scheme that guides the current policy using verified trajectories from a near-future
+checkp

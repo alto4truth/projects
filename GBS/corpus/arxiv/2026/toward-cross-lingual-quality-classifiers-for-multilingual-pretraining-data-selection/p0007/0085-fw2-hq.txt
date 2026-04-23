@@ -1,0 +1,28 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 7
+section: fw2-hq
+chunk: 85
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+ennemis ne se réjouissent pas à mon sujet!...
+4Éternel, fais-moi connaître tes voies, enseigne-moi tes sentiers! 5Conduis-moi dans ta
+vérité...
+Translation:|1||2||3|... 1Of David. Eternal, I turn toward you, 2my God, in you I trust. Let
+me not be covered in shame! Let my enemies not rejoice over me!... 4Eternal, make me
+know your ways, teach me your paths! 5Lead me in your truth...
+Baseline Rank:332,619,231 (Score: 0.0000)→No-Fra Rank:82,936 (Score: 0.9942)
+Shift:+332,536,295
+Analysis:A classifier trained on other Romance languages (Spanish, Italian, etc.) butnotFrench
+significantly prioritized this liturgical text. This proves that formal registers and religious signatures
+are highly conserved across language families. The “quality” of this register is recognized zero-shot
+across languages.
+Sample 4: Transient News (Sports)
+Text:Myriam Soumaré s’est qualifiée pour les demi-finales du 200m des Championnats
+du monde d’athlétisme, ce jeudi à Moscou, en terminant troisième de sa série en 22”83. La
+sprinteuse française, championne d’Europe de la discipline en 2010, tentera de se qualifier
+pour la finale...
+Translation:Myriam Soumaré qualified for the semi-finals of the 200m at the Wor

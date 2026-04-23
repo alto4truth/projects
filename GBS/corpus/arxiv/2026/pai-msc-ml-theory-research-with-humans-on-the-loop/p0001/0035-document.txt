@@ -1,0 +1,24 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+Phase 4: Completion verification and results formalization.Track outputs are merged and
+passed toverify_completion, which routes the run in three directions: proceed, iterate because the work is
+incomplete, or rethink the direction more fundamentally. On success,formalize_results_agentproduces
+a structured assessment of what has been established.
+Phase 5: Internal consistency and follow-up.A duality check can be applied after results formalization. Failure triggers follow-up literature work and renewed planning; success moves the run to paper
+production.
+Phase 6: Paper production and editorial quality assurance.The pipeline prepares resources,
+writes the paper, proofreads it, runs an internal reviewer, and applies a final validation gate. Validation
+failure routes back to writeup for revision before a success state is reported.
+4.2 Artifact contract
+All six phases communicate through the artifact contract described in Section 2 and summarized in Table 1.
+A run is not treated as successful merely because it produces fluent prose; it must materialize the required
+named artifacts for discovery, planning, execution, synthesis, and editorial review. In stricter modes, the final
+gateaddi

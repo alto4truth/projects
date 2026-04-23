@@ -1,0 +1,72 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+Y , USA, 2024. Association for
+Computing Machinery. ISBN 9798400712999. doi: 10.1145/3698387.3700001. URL https:
+//doi.org/10.1145/3698387.3700001.
+14
+
+NeurIPS Paper Checklist
+1.Claims
+Question: Do the main claims made in the abstract and introduction accurately reflect the
+paper’s contributions and scope?
+Answer: [Yes]
+Justification: The abstract and introduction clearly state the main claims and contributions,
+which align with the theoretical and experimental results. Assumptions and limitations are
+appropriately acknowledged, and the scope is accurately reflected.
+Guidelines:
+• The answer NA means that the abstract and introduction do not include the claims
+made in the paper.
+• The abstract and/or introduction should clearly state the claims made, including the
+contributions made in the paper and important assumptions and limitations. A No or
+NA answer to this question will not be perceived well by the reviewers.
+• The claims made should match theoretical and experimental results, and reflect how
+much the results can be expected to generalize to other settings.
+• It is fine to include aspirational goals as motivation as long as it is clear that these goals
+are not attained by the paper.
+2.Limitations
+Question: Does the paper discuss the limitations of the work performed by the authors?
+Answer: [Yes]
+Justification: We have discussed the limitations in Appendix 8.
+Guidelines:
+• The answer NA means that the paper has no limitation while the answer No means that
+the paper has limitations, but those are not discussed in the paper.
+• The authors are encouraged to create a separate "Limitations" section in their paper.
+• The paper should point out any strong assumptions and how robust the results are to
+violations of these assumptions (e.g., independence assumptions, noiseless settings,
+model well-specification, asymptotic approximations only holding locally). The authors
+should reflect on how these assumptions might be violated in practice and what the
+implications would be.
+• The authors should reflect on the scope of the claims made, e.g., if the approach was
+only tested on a few datasets or with a few runs. In general, empirical results often
+depend on implicit assumptions, which should be articulated.
+• The authors should reflect on the factors that influence the performance of the approach.
+For example, a facial recognition algorithm may perform poorly when image resolution
+is low or images are taken in low lighting. Or a speech-to-text system might not be
+used reliably to provide closed captions for online lectures because it fails to handle
+technical jargon.
+• The authors should discuss the computational efficiency of the proposed algorithms
+and how they scale with dataset size.
+• If applicable, the authors should discuss possible limitations of their approach to
+address problems of privacy and fairness.
+• While the authors might fear that complete honesty about limitations might be used by
+reviewers as grounds for rejection, a worse outcome might be that reviewers discover
+limitations that aren’t acknowledged in the paper. The authors should use their best
+judgment and recognize that individual actions in favor of transparency play an important role in developing norms that preserve the integrity of the community. Reviewers
+will be specifically instructed to not penalize honesty concerning limitations.
+3.Theory assumptions and proofs
+Question: For each theoretical result, does the paper provide the full set of assumptions and
+a complete (and correct) proof?
+Answer: [NA]
+Justification: This work does not involve a set of assumptions and corresponding proof.
+Guidelines:
+• The answer NA means that the paper does not include theoretical results.
+• All the theorems, formulas, and proofs in the paper should be numbered and crossreferenced.
+15

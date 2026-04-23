@@ -1,0 +1,32 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+MedQA, PubMedQA,
+and MedMCQA, using web search (WS) as the external knowledge source based on the performance
+gain it provides in our previous experiments. The
+results in Table 8 demonstrate a similar pattern
+of improvement across all benchmarks and model
+sizes.
+7 Conclusion
+This work studied how incorporating external evidence influences MMQA across different languages, retrieval methods, and model sizes. We
+established that web search is often the most effective external source overall; its benefits are uneven:
+smaller and mid-sized models usually improve with
+extra evidence, but larger models sometimes gain
+little or even degrade the performance, possibly
+because the provided information conflicts with
+what they already know. Language of retrieval also
+matters a lot: only English retrieval benefits the
+high-resource languages the most, and combining
+English with information in target languages is the
+best for low-resource settings. Curated medical
+sources are reliable but limited in coverage, especially outside English, while web-based evidence
+offers broader and more relevant information at the
+cost of more noise. To sum up, the results show that
+external knowledge does not imm

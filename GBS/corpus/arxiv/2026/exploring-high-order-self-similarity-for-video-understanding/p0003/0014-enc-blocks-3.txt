@@ -1,0 +1,19 @@
+title: Exploring High-Order Self-Similarity for Video Understanding
+source: arxiv
+year: 2026
+document_id: exploring-high-order-self-similarity-for-video-understanding
+authors: Manjin Kim; Heeseung Kwon; Karteek Alahari; Minsu Cho
+page: 3
+section: enc-blocks-3
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20760v1
+
+mpare our method to
+other temporal modeling modules [1,35,80,81,87] with similar computational costs.
+we replace the MOSS module with different modules, including spatio-temporal
+convolution [81], factorized spatio-temporal attention [1], local attention with a
+spatio-temporal window( L, U, V ), and the other STSS learning blocks [35,87].
+SELFY and ATM extract 1st-order STSS features using convolutions, with ATM
+additionally performing frame-wise subtraction for richer dynamics. The results
+in Tab. 10c show that transforming STSS directly into motion features [35,87]
+is more effective at capturing temporal dynamics than convolution or attention,

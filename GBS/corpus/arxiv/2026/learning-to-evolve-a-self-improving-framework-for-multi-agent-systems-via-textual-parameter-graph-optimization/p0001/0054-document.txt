@@ -1,0 +1,32 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 54
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+nce, (4) Proceed only when all items are
+verified.
+Rationale Creates a mandatory validation checkpoint to prevent premature conclusions
+and addresses systematic failures in constraint verification by requiring explicit
+checklist creation.
+Targeted Errors This modification directly resolves the error IDs associated with incomplete
+constraint validation and premature task conclusion.
+Table 8: Content of the Resulting Prompt Modification
+Component Content Detail
+Title Constraint Validation Protocol
+Core InstructionA direct command is inserted: "Before providing a final answer, you MUST:"
+1.List ALL constraintsexplicitly.
+2.Create a validation checklist.
+3.Verify each constraintwith concrete evidence.
+4.Mark each constraintas✓VERIFIED or×UNVERIFIED.
+5.Only proceedif ALL constraints are verified.
+6. If any are unverified, continue investigation or acknowledge the limitation.
+Example Format A clear example is provided to guide the agent’s internal monologue, such as:
+[✓] Constraint 1... [×] Constraint 2...
+Rationale The node’s rationale explicitly states its purpose: "Creates a mandatory validation
+checkpoint to prevent premature conclusions and addresses systematic failures in
+constrain

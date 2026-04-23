@@ -1,0 +1,32 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+urrent LLMs.
+• Cross-lingual retrieval is essential for lowresource languages.For Basque and Kazakh,
+we show that combining English and targetlanguage evidence substantially improves accuracy and closes the performance gap with
+higher-resource languages, whereas monolingual retrieval alone is insufficient.
+• Retrieval benefits depend strongly on
+model scale and evidence source.While
+smaller and mid-sized models benefit from
+external evidence, models with parameters
+more than 70B often experience performance
+degradation when augmented with additional
+context, suggesting that these models have
+already internalized sufficient medical domain knowledge during pre-training on largescale, diverse data, which leads to the knowledge conflict between external non-parametric
+knowledge and the knowledge encoded in the
+LLMs’ parameters.
+2 Related work
+The application of LLMs in the medical domain
+is one of the crucial directions in the development
+of AI. The growth of model sizes, along with their
+parameter counts, suggests that current language
+models encode a significant amount of specialized
+knowledge (Wei et al., 2022; Singhal et al., 2022).
+This capability has sparked extensive research in

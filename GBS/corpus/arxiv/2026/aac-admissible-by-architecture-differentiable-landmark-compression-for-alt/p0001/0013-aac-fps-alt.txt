@@ -1,0 +1,54 @@
+title: AAC: Admissible-by-Architecture Differentiable Landmark Compression for ALT
+source: arxiv
+year: 2026
+document_id: aac-admissible-by-architecture-differentiable-landmark-compression-for-alt
+authors: An T. Le; Vien Ngo
+page: 1
+section: aac-fps-alt
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20744v1
+
+regret in the same order of magnitude as the blackbox baseline; among the
+baselines compared here, no other method offers all three simultaneously.
+49
+
+Table 24: ABLATIONCost regret by training mode on Warcraft12×12(CNN encoder, 3 seeds). The encoder
+drives the learning signal; freezing the compressor has no effect. BB: blackbox baseline (Vlastelica et al.,
+2020).
+Training Mode Cost Regret↓
+Full E2E 0.144±0.027
+Frozen Compressor 0.144±0.027
+Frozen Encoder 1.012
+BB†(baseline)0.173
+†Vlastelica et al. (2020).
+Comparison with Neural A* and iA*.Neural A* (Yonetani et al., 2021) reports∼98% cost-optimal
+paths on Warcraft 12×12 maps (their “optimality” metric measures whether the found path achieves optimal
+cost, which is strictly weaker than our “path match” metric that requires the exact same path). iA* (Chen
+et al., 2025) improves Neural A*’s search efficiency and out-of-distribution generalization on similar gridplanning tasks. Neither method provides admissibility guarantees. Direct numerical comparison in Table 23
+is complicated by metric differences: Neural A* reports optimality rate and search efficiency rather than cost
+regret, Jaccard, or exact path match. We include both in Table 23 with their published optimality metric
+for reference. The key regime distinction is that Neural A* and iA* learn powerful guidance functions that
+may violate admissibility, while AAC guarantees admissibility architecturally at the cost of lower path-match
+accuracy; the approaches are complementary rather than competing.
+G Reproducibility
+Data and code availability.We provide the implementation and reproducing scripts athttps:
+//github.com/anindex/aac. The repository contains the full source tree, all result CSV tables backing every Table and Figure in this paper, and the verbatim pre-registered OGB-arXiv prediction at
+results/PREREG.md(Appendix E). The repositoryresults/README.mdprovides the per-Section / perTable / per-Figure mapping to its generating experiment record. Installation, environment setup, and full
+reproduction commands are in the repositoryREADME.md.
+Hyperparameters.Key settings:K 0∈{32,64,128},m∈{8,16,32,64}, learning rate10−3,200epochs
+(static) /100epochs (contextual), batch size256(static) /24(contextual), Adam optimizer. The full
+hyperparameter grid lives in YAML configuration files alongside the released code.
+Sentinel masking.Unreachable landmark distances are stored as a sentinel (1018) and masked out of the
+maxcomputation; the theorems of Section 3.3 do not depend on the specific magnitude. The released unit
+tests verify admissibility under sentinel masking, and the run-time SCC audit confirms that query endpoints
+share an SCC on every benchmark graph so the masking path is never taken in production runs.
+H Broader Impact
+The value of AAC lies in safety-critical, ML-integrated planning pipelines: the architectural admissibility
+guarantee (Proposition 2) holds in exact arithmetic given exact teacher labels regardless of training quality,
+distribution shift, or early stopping, a property optimization-dependent guarantees cannot match. Fewer A*
+expansions reduce compute and energy cost for large-scale routing (up to 92% reduction at 128B/v on the
+4.5M-node Netherlands network). Admissibility guarantees optimal pathcostbut not other path qualities
+(smoothness, safety-corridor width); the method requires precomputed landmark distances, restricting it to
+settings where graph structure is known offline; we do not foresee direct negative societal impacts beyond
+the dual-use nature of any routing improvement.
+50

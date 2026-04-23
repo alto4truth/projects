@@ -1,0 +1,138 @@
+title: On Bayesian Softmax-Gated Mixture-of-Experts Models
+source: arxiv
+year: 2026
+document_id: on-bayesian-softmax-gated-mixture-of-experts-models
+authors: Nicola Bariletto; Huy Nguyen; Nhat Ho; Alessandro Rinaldo
+page: 3
+section: exp-x
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20551v1
+
+βn,ij∥ →0;
+•exp(X ⊤α⋆
+1j) ∂4N
+∂E4 (Y|X;α ⋆
+1j, β⋆
+j , σ⋆2
+j )forj∈[K ⋆] :|C j|>1, we get
+1
+L2n
+·
+X
+j∈[K ⋆]:|Cj |>1
+X
+i∈Cj
+exp(αn,0i)|∆σ2
+n,ij|2 →0;
+37
+
+By taking the sum of these limits, we have1 =1
+L2n
+· L2n → 0as n→ ∞ , which is a contradiction.
+Therefore, not all the coefficients in the representations of[An,1 −R n,1(Y|X )]p(X)/L2n,[ An,2 −
+Rn,2(Y|X )]p(X)/L2n,[ Bn,1 −R n,3(Y|X )]p(X)/L2n,[ Bn,2 −R n,4(Y|X )]p(X)/L2n, Cn/L2n
+converge to zero asn→ ∞.
+Step 3 - Fatou’s argument.In this step, we will show a contradiction to the results of Step
+2. To begin with, we denote bymn the maximum of the absolute values of the coefficients in the
+representations of[ An,1 −R n,1(Y|X )]p(X)/L2n,[ An,2 −R n,2(Y|X )]p(X)/L2n,[ Bn,1 −R n,3(Y|
+X)]p(X)/L2n,[ Bn,2 −R n,4(Y|X )]p(X)/L2n, Cn/L2n. Then, the results of Step 2 indicate that
+1/mn ̸→ ∞asn→ ∞. Next, let us denote
+1
+mnL2n
+·
+X
+i∈Cj
+exp(αn,0i)−exp(α ⋆
+0j)
+
+→t 0,j, 1
+mnL2n
+·
+X
+i∈Cj
+exp(αn,0i)(∆αn,1ij)(u) →t (u)
+1,j ,
+1
+mnL2n
+·
+X
+i∈Cj
+exp(αn,0i)(∆βn,ij)(u′) →t (u′)
+2,j , 1
+mnL2n
+·
+X
+i∈Cj
+exp(αn,0i)(∆σ2
+n,ij)→t 3,j,
+1
+mnL2n
+·
+X
+i∈Cj
+exp(αn,0i)(∆αn,1ij)(u)(∆αn,1ij)(v) →t (uv)
+4,j , 1
+mnL2n
+·
+X
+i∈Cj
+exp(αn,0i)(∆βn,ij)(u′)(∆βn,ij)(v′) →t (u′v′)
+5,j ,
+1
+mnL2n
+·
+X
+i∈Cj
+exp(αn,0i)(∆σ2
+n,ij)2 →t 6,j, 1
+mnL2n
+·
+X
+i∈Cj
+exp(αn,0i)(∆αn,1ij)(u)(∆βn,ij)(v′) →t (uv′)
+7,j ,
+1
+mnL2n
+·
+X
+i∈Cj
+exp(αn,0i)(∆αn,1ij)(u)(∆σ2
+n,ij)→t (u)
+8,j , 1
+mnL2n
+·
+X
+i∈Cj
+exp(αn,0i)(∆βn,ij)(u′)(∆σ2
+n,ij)→t (u′)
+9,j ,
+for allj∈ [K⋆]as n→ ∞ . The results of Step 2 indicate that not all these limits are zero. According
+to the Fatou’s lemma, we have
+lim
+n→∞
+∥gGn −g G⋆∥L 1
+mnL2n
+≥
+Z
+lim inf
+n→∞
+|gGn(Y, X)−g G⋆(Y, X)|
+mnL2n
+d(Y, X),
+Since ∥gGn −g G⋆∥L 1/L2(Gn, G⋆) → 0as n→ ∞ , we get[ gGn(Y, X) −g G⋆(Y, X)]/[mnL2n] → 0
+as n→ ∞ along a subsequence for almost every(Y, X)(work on this subsequence from now on).
+Furthermore, as the termPK⋆
+j=1 exp(α⋆
+0j + X ⊤α⋆
+1j)is bounded, it follows thatDn/[mnL2n] → 0as
+n→ ∞, for almost every(Y, X). From the decomposition ofDn in Step 1, we have
+1
+mnL2n
+·[A n,1 +A n,2 −B n,1 −B n,2 +C n]→0.(28)
+For ease of presentation, let Fγ,j := exp(X ⊤α⋆
+1j) ∂γ N
+∂E γ (Y|X ; α⋆
+1j, β⋆
+j , σ⋆2
+j )and Hj(Y|X ) :=
+38

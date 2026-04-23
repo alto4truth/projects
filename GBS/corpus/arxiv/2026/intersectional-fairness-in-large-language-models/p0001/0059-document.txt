@@ -1,0 +1,21 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 59
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+Overall, while certain LLMs consistently answer most of the
+questions correctly, this does not imply total correctness across all runs for all questions. Thus, the GTC metric captures
+how consistently models produce correct answers, which remains limited for all models evaluated.
+5.2.2 Consistency Analysis from GTC Perspective with Both Negative and Non-Negative Polarity-based Questions.We
+further assess the consistency of LLM fairness by observing and analyzing the GTC outcome of each LLM, separately
+on questions with a negative and non-negative polarity on both ambiguous and disambiguated contexts from the RQ2
+data sample (see examples of negative polarity questions from Race_Gender dataset in Table 3).
+Consistency Analysis of GTC metric with Negative Polarity.In ambiguous contexts, where the ground truth answer is
+‘unknown’ or similar keywords (see Section 4.3), we focused on LLM answers that were wrong but indicated a bias
+toward specific intersectional attributes. However, in disambiguated contexts, where the correct answer is different
+from ‘unknown’ or similar keywords, (it rather corresponds to a particular combination of intersectional attributes), we

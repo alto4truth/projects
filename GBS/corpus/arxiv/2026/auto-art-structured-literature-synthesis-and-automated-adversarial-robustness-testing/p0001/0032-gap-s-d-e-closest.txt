@@ -1,0 +1,37 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+of pre-screening components. Kendall τ measures rank agreement with full AutoAttack; detection rate measures
+correctly flagged masking configurations (out of 12 known-masking
+setups). Mean±std over 5 random seeds.
+Configuration KendallτDet. Rate Speedup
+Full pipeline (FOSC+RDI+Disc.)0.82±0.0392%30×
+−FOSC0.80±0.0467%31×
+−RDI0.61±0.0788%1.2×
+−WB/BB discrepancy0.81±0.0383%28×
+FOSC only0.54±0.0975%45×
+RDI only0.78±0.0442%30×
+No pre-screening — —1×
+Table 10:Runtime analysis on a single NVIDIA A100 (40 GB). Wallclock times are median over 5 runs. “Full AA” = full AutoAttack
+with default parameters.
+Phase WRN-70 WRN-28 ResNet-18 Scaling
+FOSC computation 3.1 s 1.4 s 0.8 sO(|θ|)
+RDI screening 11.8 s 5.2 s 2.9 sO(N·d)
+Multi-norm attack (5 norms) 847 s 412 s 198 sO(|A| ·T)
+Compliance mapping 0.3 s 0.3 s 0.3 sO(1)
+Report generation 1.2 s 1.1 s 1.0 sO(1)
+AUTO-ART total 863 s 420 s 203 s—
+Full AA (baseline) 5,420 s 2,310 s 1,080 s —
+Speedup (pre-screen only)30.2×29.8×30.6×—
+Speedup (full pipeline)6.3×5.5×5.3×—
+G1). We propose acurriculum-based multi-norm adversarial
+trainingprocedure that progressively introduces attack types—
+starting from ℓ∞, adding ℓ2, then ℓ1, spatial, and semantic
+perturba

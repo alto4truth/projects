@@ -1,0 +1,22 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 2
+section: abstract
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+his paradigm, requiring
+agents to operate in evolving environments. Recent advances in chain-of-thought reasoning [ 5, 6], tool use [ 7, 8],
+and self-reflection [9, 10] have dramatically expanded what an agent can accomplish within a single episode, yet
+these capabilities yield diminishing returns once the primary bottleneck shifts from within-episode problem-solving to
+cross-episode online knowledge utilization. Recent benchmarks confirm that even state-of-the-art proprietary models
+struggle with long-horizon lifelong tasks [4], suggesting that raw model capacity alone cannot substitute for the ability
+to learn from and build upon interaction history. A truly lifelong agent must learn, much as humans do, to transform
+historical lessons and acquired skills into effective guidance for novel situations.
+To realize online experience utilization, a natural and widely adopted approach is to equip agents with an external
+experience base that stores knowledge accumulated from past interactions [ 11, 3, 10, 12, 4]. By querying this
+repository at decision time, agents can in principle recall relevant facts, reuse successful strategies, and avoid repeating
+known mistakes. As illustrated in F

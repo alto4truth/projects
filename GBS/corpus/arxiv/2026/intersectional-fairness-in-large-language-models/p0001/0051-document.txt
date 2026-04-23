@@ -1,0 +1,22 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 51
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+enly distributed across subgroups. Overall, these results indicate that model behavior in ambiguous
+contexts is dominated by abstention, which limits the ability to draw strong conclusions about subgroup fairness in
+ambiguous context from outcome-based metrics.
+5.1.2 RQ1 Results in disambiguated Context.
+Accuracy.Consistent with ambiguous context findings reported in 5.1.1, in the disambiguated context, all LLMs
+perform better on Race_Gender dataset than on Race_SES dataset. More in detail, on Race_Gender dataset, accuracy
+ranges from 0.74 for Llama-3 to 0.93 for Gemini-2.0-Flash, while on Race_SES it ranges from 0.67 for Llama-3 to
+0.75 for all of GPT-4o, Gemini-2.5-Flash, and Claude-Sonnet-4 LLMs, confirming that the overall race-socioeconomic
+intersectionality remains harder even when the context provides disambiguating information. Critically, accuracy
+alone in this context does not fully capture the LLM effectiveness. More specifically, we denote by Accreinf the LLM
+accuracy on questions where the correct answer aligns with a stereotype. These values are consistently high across
+LLMs on both datasets, ranging from 0.72 for Llama-3 to 0.80 for Claude-Sonnet-4 on Race_SES datase

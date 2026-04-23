@@ -1,0 +1,27 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 2
+section: vocabulary-category-items
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+st impactful gate isactive neoplasia: without evidence gating,
+benign mentions of “cancer screening” or “family history of cancer” produce
+FP; the gate requires explicit cancer vocabularyplusactivity cues (e.g.,
+“chemotherapy”, “progression”, “untreated”). Forarrhythmia, the gate blocks
+positive predictions when the evidence contains Normal Sinus Rhythm (NSR)
+mentions, preventing common misclassification of ECG-described patients.
+Italian-specific error patterns (dev80 IT).Detailed item-level diagnostics on the dev80 IT split (Mistral Large 3→rules_v3e) reveal both
+shared and language-specific error patterns. The top FN sources are:foreign
+body in the airways(11 FN, Stage 1 never surfaces this item),presence of
+dyspnea(7 FN / 8 FP — tension between coverage and FP),diffuse vascular
+disease(7 FN / 6 FP), andagitation(7 FN, not extracted by Stage 1). The
+top FP sources are:chest pain(13 FP),cardiovascular diseases(13 FP —
+triggered by the derivation rule from therapy flags),level of consciousness
+(9 FP — AVPU mapping errors), andheart failure(8 FP — “PMH: HF” in
+Stage 1 often produces FP when GT isunknown).
+Comparing EN and IT dev80 error profiles: both languages share the
+same FN ce

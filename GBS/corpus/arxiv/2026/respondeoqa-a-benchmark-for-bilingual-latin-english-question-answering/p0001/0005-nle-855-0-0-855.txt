@@ -1,0 +1,32 @@
+title: RespondeoQA: a Benchmark for Bilingual Latin-English Question Answering
+source: arxiv
+year: 2026
+document_id: respondeoqa-a-benchmark-for-bilingual-latin-english-question-answering
+authors: Marisa Hudspeth; Patrick J. Burns; Brendan O'Connor
+page: 1
+section: nle-855-0-0-855
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20738v1
+
+to end
+their response with the letter of the correct answer.
+Similarly, for 1-word SA, we ask it to end its response with a single word as its answer.
+When prompting the two open models, we use
+a temperature of 0.6 and top-pof 0.95, the recommended settings for QwQ. These parameters were
+not tunable for o3-mini using the OpenAI API.
+Evaluation MetricsFor multiple choice questions, we evaluate the accuracy of the predicted
+letter choice.
+For1-wordshortanswerquestions,weuseexact
+match (EM) accuracy, after normalization (lowercasing, stripping punctuation and whitespace, JV
+replacement,9 normalizing macrons, accents, and
+ligatures). For the majority of questions, normalizing accents will not affect the correctness of the
+answer. Only questions that ask for vowel quantity
+to be marked are affected, which is less than 20
+questions in the dataset.
+For a subset of scansion questions ("feet identification"), we use mean per-item accuracy (see row
+10 of Table 2 for an example). Each question gives
+one line of poetry and asks for the name of each
+metrical foot in the order it appears in the verse.
+Forasingleline,thenumberoffeettypicallyranges
+from 3-6, and partial correctness is allowed.
+For

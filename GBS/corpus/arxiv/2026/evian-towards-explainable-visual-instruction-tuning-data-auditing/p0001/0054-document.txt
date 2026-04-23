@@ -1,0 +1,41 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 54
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+Step 2: Prompt for Visual Distillation
+Instruction: {instruction}
+Annotated Response: {marked_response}
+Task: Process the “Annotated Response”
+by modifying ONLY the segments
+wrapped in <INFER>...</INFER> or
+<KNOW>...</KNOW> tags.
+• Rewrite or entirely remove tagged segments to leave only what is directly and
+objectively visible in the image.
+• Crucially, all content NOT wrapped
+in tags MUST be preserved exactly as
+is, without any modification.
+Guidelines:
+1. Rewrite When Possible:If a tagged
+idea can be rephrased as a neutral, objective, image-based description, rewrite
+it and remove the tags. For example,
+change “<INFER>creating a cozy atmosphere</INFER>” to “which illuminates
+the scene.”
+2. Delete When Necessary:For clearly
+irrelevant or purely speculative content
+that cannot be visually confirmed, delete
+the entire tagged segment (including the
+tags).
+3. No New Information:DO NOT introduce any new guesses, opinions, or visual details that were not already present
+in the untagged parts of the original response.
+4. Output Format:Your response must
+start with the prefix “Cleaned Response:”.
+Example:
+Input Annotated Response:
+A person wearing sunglasses stands under
+a tree. <INFER>S

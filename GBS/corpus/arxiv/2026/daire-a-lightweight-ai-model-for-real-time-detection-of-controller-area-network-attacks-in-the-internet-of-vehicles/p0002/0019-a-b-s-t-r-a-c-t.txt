@@ -1,0 +1,22 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 2
+section: a-b-s-t-r-a-c-t
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+attackers exploit specific fields
+2.3. CAN packet structure
+Visualizing the CAN message format helps in understanding how
+attacks manipulate standard messages to achieve malicious objectives.
+Fig. 2 illustrates the structure of a CAN packet, which begins with a
+Start of Frame (SOF) and ends with an End of Frame (EOF), occupying
+1 bit and 7 bits, respectively. The arbitration field is an 11-bit identifier that determines which node gains control of the bus. It plays a
+critical role in determining the priority of messages on the bus. The
+arbitration field includes a bit for Remote Transmission Request (RTR).
+The Control Field (6 bits) specifies data length, followed by the Data
+Machine Learning with Applications 23 (2026) 100859
+3

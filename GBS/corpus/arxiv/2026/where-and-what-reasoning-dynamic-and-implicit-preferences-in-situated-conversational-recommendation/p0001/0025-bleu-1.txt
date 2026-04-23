@@ -1,0 +1,24 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 1
+section: bleu-1
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+gth is set to 256 tokens. All detailed
+hyperparameters are summarized in Table 5.
+D Additional Efficiency and Transition
+Analyses
+This section presents five supplementary analyses:
+end-to-end efficiency, a Qwen3 retrieval-only transition baseline, a global-access MLLM baseline,
+conditioned error propagation from STE to BI-INF,
+and a boundary-case discussion of STE. The latency breakdown and scene-density scaling results
+are reported in Tables 6 and 7, respectively. The
+retrieval-only comparison and the global-access
+baseline are summarized in Tables 8 and 9, respectively, the conditioned error-propagation analysis is
+reported in Table 10, and the qualitative boundarycase discussion follows afterward.
+Latency Breakdown and Scene-Density Scaling.
+The first analysis reports the component-wise la-

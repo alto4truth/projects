@@ -1,0 +1,25 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+sufficient criteria that exist in the literature. The Appendix contains the proofs of all results.
+2 Rational Identifiability
+LetG= (V, D, B)be a mixed graph, whereV={1, . . . , p}is the set of nodes andD, B⊆V×V
+are two sets of edges. We say that an element(v, w)∈Dis a directed edge, and we represent
+it asv→w∈D. We say that an element(v, w)∈Bis a bidirected edge, and we assume that
+bidirected edges have no orientation, that is,(v, w)∈Bif and only if(w, v)∈B. We represent a
+bidirected edge asv↔w. Neither the directed part nor the bidirected part contain self-loops, that
+is,v→v̸∈Dandv↔v̸∈Bfor allv∈V. In this paper, we restrict ourselves to acyclic mixed
+graphs, in which the directed parts do not contain cycles.
+For the purpose of deciding rational identifiability, we may identify the linear structural equation
+model with a set of covariance matrices of the form (2). To formally define this, we first introduce
+the necessary notation, which is from Foygel et al. (2012a). We writeRD for the set of realp×p
+matricesΛ = (λ wv)with supportD, that isλ wv = 0ifw→v̸∈D. If the graphGis acyclic, then
+the matrixI−Λis invertible for allΛ∈R D, whereIdenotes thep×pidentity matrix. Finally,
+we write

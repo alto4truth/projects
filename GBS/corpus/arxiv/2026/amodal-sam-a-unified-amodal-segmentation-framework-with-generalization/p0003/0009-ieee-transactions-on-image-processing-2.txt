@@ -1,0 +1,28 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 3
+section: ieee-transactions-on-image-processing-2
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+rk, we mitigate
+these limitations by harnessing the potent zero-shot capabilities and rich geometric priors of the Segment Anything Model
+(SAM) [1]. By bridging the gap between SAM’s promptable
+modal segmentation and the requirement for amodal reasoning,
+we aim to achieve a more resilient and versatile solution for
+open-world perception.
+B. Segment Anything Model (SAM)
+Architectural Overview.The Segment Anything Model
+(SAM) [1], pioneered by Meta AI, serves as a versatile
+foundation model for promptable image segmentation. Its
+architecture comprises a tripartite design: 1) a heavyweight Vision Transformer (ViT)-based image encoder that maps highresolution inputs into dense visual embeddings; 2) a flexible
+prompt encoder that represents sparse queries (e.g., points,
+boxes, text) or dense masks as positional encodings; and 3) a
+lightweight mask decoder that integrates these multimodal signals through cross-attention to generate precise segmentation
+masks. Trained on the colossal SA-1B dataset—encompassing
+11 million images and over 1.1 billion masks—SAM demonstrates extraordinary zero-shot generalization across diverse
+visual domains, effectively establishing a new paradigm for
+inter

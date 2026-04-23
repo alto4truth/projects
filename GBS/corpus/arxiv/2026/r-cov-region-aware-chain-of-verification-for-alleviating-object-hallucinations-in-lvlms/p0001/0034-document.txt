@@ -1,0 +1,28 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+ided coordinates: rectangle, incircle, and circumcircle. As
+shown in Table 5d, all shapes can significantly surpass the
+baseline, where a standard rectangular shape is the most effective choice.
+Bounding box color.We compare different bounding box
+colors to draw in Table 5e. All examined colors outperform
+the baseline by a clear margin, demonstrating the robustness of our method. A red color stands out and yields the
+best performance. This phenomenon could be related to the
+distribution of the datasets used to train the model.
+Bounding box sizeTable 5e ablates the effect of the
+bounding box size to draw on the image. The results indicate that using a 1-pixel size is enough to achieve the best
+performance. A larger size tends to decrease the performance as it may potentially obscure the content presented
+in the image.
+4.4. Further Analysis
+Effect of using the LVLM alone.In our default setting,
+we adopt an LLM (e.g., GPT-3.5) to facilitate the stages
+that only involve processing the generated text,i.e., entity
+extraction, verification execution, and final response generation. This raises the question of whether the LVLM itself can perform all the stages, given that an expert model
+ma

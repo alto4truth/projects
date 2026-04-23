@@ -1,0 +1,28 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 2
+section: da-2k
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+nal dataset consists of 591K question-answer
+pairs in total, dubbed as SSL-R1-591K, which balances
+each task in equal proportion and exhibits diverse question
+formats, including single-value questions, multiple-value
+questions, and multiple-choice questions.
+Baselines.We adopt Qwen2.5-VL-3B/7B-Instruct [4] as
+the base MLLMs for all experiments, due to their strong reasoning performances and moderate model sizes. Apart from
+the base models, we also compare SSL-R1 with several representative Qwen2.5-VL-based reasoning models that have
+undergone reasoning-intensive RL post-training in a supervised way, including ThinkLite-VL [66], VL-Cogito [79],
+LLaV A-Critic-R1 [64]. In addition, to further demonstrate
+the superiority of our method, we consider a concurrent
+self-supervised RL post-training method,e.g., Visual Jigsaw [70], for comparison, with the results reproduced using
+their official code.
+Training Details.We optimize the base models using the
+GRPO algorithm. During GRPO training, we remove both
+the KL regularization and the entropy loss following [70].
+For each prompt, we sample 16 responses with a temperature of 1.0. We train the models with a global batch size of
+256 and a lear

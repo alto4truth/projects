@@ -1,0 +1,37 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 2
+section: r-e-s-u-lt-s
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+ies and temporal dynamics in coastal water-level time series. As
+illustrated in Figure 3, the model operates in three main phases. First, the input
+18
+
+Input MLP GAT
+GCN
+LSTMLSTMOutput
+Prediction
+Input
+Fig. 3 : Architecture of the proposed model StormNet
+signals, including historical offsets from each station, are preprocessed through a
+lightweight multilayer perceptron (MLP). Next, StormNet processes the data through
+two spatial encoders. The first is a GCN, which captures broad spatial correlations by
+aggregating information from neighboring stations according to the graph structure.
+The second is GAT, which applies an attention mechanism to adaptively weight the
+importance of each neighbor. While the GCN extracts general spatial patterns, the
+GAT refines these features by emphasizing the most relevant inter-station relationships during storm events. After that, we use two LSTM layers that are commonly
+leveraged to learn temporal dependencies and time-series prediction. The final output
+consists of predicted offsets ˆo in future per station.
+2.5.1 Experimental Details
+StormNet was trained using the Adam optimizer [ 97] for 200 epochs. The initial
+learning rate is set to 3e−5, and the weight decay is 5e−7 with a batch size of 20.
+Regarding the past time window, by explicitly examining values in the range of 6
+to 48 h, we found the lower error values were obtained with past window values in
+the range of 42 to 48 hours (see Supplementary Information, Table 1). Training and
+inference were performed on a single NVIDIA A100 graphical processing unit.
+19

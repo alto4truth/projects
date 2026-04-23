@@ -1,0 +1,22 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 11
+section: performance-comparison-on-three-representative-amodal
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+s and D2SA datasets as the
+primary evaluation testbeds, as they offer a diverse array
+of complex occlusion scenarios and high-density semantic
+classes. As quantitatively detailed in Table II, our Amodal
+SAM significantly transcends existing methodologies. Specifically, Amodal SAM exhibits a substantial performance gain
+over SAMBA, demonstrating that our specialized Spatial
+Completion Adapter (SCA) and occlusion-aware optimization
+strategies are more effective at hallucinating the geometry of
+sequestered regions than existing adaptation schemes. These
+results underscore the superior generalization capability of
+our model in navigating the challenges of open-world amodal
+segmentation.

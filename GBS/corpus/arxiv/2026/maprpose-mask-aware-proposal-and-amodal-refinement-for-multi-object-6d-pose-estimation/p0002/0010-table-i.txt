@@ -1,0 +1,32 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 2
+section: table-i
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+IDIA A100 GPU. In
+contrast, FoundationPose processes only one hypothesis at a
+time and under-utilizes the GPU.
+Our evaluation protocols focus on both accuracy and system
+throughput. For the BOP benchmark, we evaluate the Average
+Recall (AR) and record the total processing time per image.
+This metric accounts for the simultaneous handling of multiple
+object instances within a single scene, providing a realistic
+measure of multi-object inference speed. Additionally, we conducted ablation studies to systematically examine the influence
+of key components on both accuracy and speed, including the
+number of refinement iterations, the top- K (K= 7 ) parameter
+for hypothesis selection, and the contribution of the amodal
+mask prediction module.
+C. Pose Estimation Results and Comparison
+We evaluate the proposed MAPRPose on the LINEMOD
+and BOP benchmarks to demonstrate its effectiveness and
+robustness in 6D pose estimation for novel objects. In all
+experiments, following the standard protocols, we report the
+Average Recall (AR) and the ADD(-S) metrics to provide a
+comprehensive comparison against state-of-the-art baselines.
+(1) Performance on the LINEMOD Dataset:We first evaluate
+our method o

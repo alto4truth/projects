@@ -1,0 +1,23 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+y
+improve performance, confirming that sharper decision boundaries emerge when the classifier is
+trained on more ambiguous examples.
+For French, the monolingual Q3 classifier achieves the strongest aggregate performance, while the
+multilingual bootstrapped model (ML Q3) remains highly competitive, with only a marginal drop
+in normalized accuracy. In contrast, for Spanish, ML Q3 yields the best overall performance across
+benchmarks, surpassing both standard multilingual filtering and monolingual HQ.
+Taken together, these results indicate that bootstrapped negative sampling systematically strengthens
+quality discrimination. While language-specific refinement can yield peak in-language performance,
+the multilingual Q3 model matches or exceeds these gains in some languages and, critically, preserves cross-lingual transfer without retraining. This further supports the existence of shared in
+representation space that can be progressively refined through Q3 sampling.
+Tuning the Retention Rate.While FineWeb2-HQ was derived using a retention rate of 10% for
+high-resource languages, we argue that this hyperparameter should be tuned for each language separately. The rate for which we filter s

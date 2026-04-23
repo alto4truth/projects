@@ -1,0 +1,17 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 16
+section: instructions
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+modelled on the kinds of corpora where
+the failure modes SmartVector targets are most acute: enterprise policy documents, operational
+runbooks, and compliance rules. The benchmark is parameterized, fully reproducible (SEED=7), and
+is released alongside the paper.
+The generator instantiates 60 topics drawn from 20 templates (parental leave, VPN timeout, perdiem limits, incident SLAs, backup retention, release-freeze windows, etc.). Each topic has 4
+canonical versions with monotonically trending numeric values, spread over a 240–420-day window
+10

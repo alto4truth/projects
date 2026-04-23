@@ -1,0 +1,31 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 2
+section: results
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+Correspondence with diagonal SSMs
+Several implementations of S4 achieve high accuracy
+on benchmarks for sequence processing [7, 8, 17] such
+as the long-range arena (LRA) [22]. We will focus on
+analyzing S4D-Lin [8], which is a diagonalized version
+of S4 that is most commonly used in implementation.
+We note that the mathematical analysis introduced here
+generalizes across all diagonal SSMs (see Appendix I B).
+In addition, because the recurrence matrix for nearly all
+SSMs is diagonalizable, this analysis applies quite generally across SSM architectures.
+The linear recurrence in S4D-Lin evolves in discrete
+time according to the equation:
+xk =e Dτ xk−1 + ¯Buk (9)
+whereDis a diagonal matrix with entriesd jj:
+djj =− 1
+2 + iπj .(10)
+Comparing Eq. (9) with Eq. (8) reveals the precise correspondence between the exactly solvable nonlinear oscillator network and S4D-Lin: both systems evolve by a diagonal operator acting on the state vectorx k−1 ∈C N, with
+externally added inputu k linearly projected through the
+operator ¯Bat each discrete time step. The two systems
+become fully equivalent by matching the eigenvalue matrices –Λin Eq. (8) andDin Eq. (9) – and the input
+projection matrices. 1 Im

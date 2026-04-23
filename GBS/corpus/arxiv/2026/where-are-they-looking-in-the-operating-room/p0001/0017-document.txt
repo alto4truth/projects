@@ -1,0 +1,20 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+4
+Fig. 3: Pipelines of our methods for the downstream tasks (FC=Fully-Connected, TAD=Temporal Activity Detection). (1) Role prediction: we use GazeLLE [31] and tracking to generate heatmap tracklets, and pass them through a transformer encoder to classify the roles. (2) Phase recognition: we fuse features
+of gaze heatmaps and head positions of each frame, pass sequential frame-level features through a transformer encoder along with learnable role embeddings to
+obtain clip-level features, and pass all the clip-level features through a temporal convolution network to classify the surgical phases. (3) Team communication
+detection: we train a spatial-temporal transformer that encodes gaze features for each clip through contrastive learning with visual features [38], merge gaze,
+visual and action features [9] through gated fusion, and then detect the activities through a TAD model [6].
+sizeVfor each clip. Asf v contains rich semantics and serves
+as a strong baseline in the TAD task [6], we propose to densely
+match the gaze featuresf g withf v to ensure semantic consistency. Concretely, we sample a batch of clips and obtain the
+gaze and visual features. Then, we use InfoNCE loss [22] to

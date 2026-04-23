@@ -1,0 +1,15 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 134
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+documentation, requiring algorithmic audits, and supporting explainability measures that make models understandable to end users and affected parties.
+
+Chapter 3: The Model is Not the Market 122
+As we have discussed in detail, creating concept tables and STS maps is an excellent start to mitigating some of the RAI challenges in AI-Real estate. There are additional RAI techniques that real estate can draw from, such as model cards, diverse stakeholder engagement, accountability practices, mechanisms for recourse, and sustainability integration, that together help build a more trustworthy ecosystem.
+3.7.1 Model Cards One practical tool for communicating how an AI model operates is the model card [267]. Originally introduced in general AI contexts, model cards are equally relevant to real estate, especially when building on earlier concept tables. A model card functions as a kind of “meta-tag” for AI systems, outlining critical aspects of a model’s purpose, data, performance, and limitations. When published alongside AI-real estate tools, they can enhance transparency and support responsible use. Key components of a model card might include: • Purpose and Scope. Outline the model’s intended purpose: Is it designed to estimate property values, screen potential tenants, recommend investment strategies, or something else? By clarifying these objectives, stakeholders can more easily evaluate whether the model is being used in contexts that align, or conflict with, its original design. • Dataset Provenance and Known Biases. Where did the training data come from? Was it compiled from property sales, demographic records, or user applications? Highlighting known gaps or imbalances (for example, underrepresented neighbourhoods) helps stakeholders assess how the model may behave in different contexts. • AI-Model Choice. There are many AI-models available for use. Document which model was used and why that model was selected. • Performance Metrics and Validation. In real estate, metrics might include the Mean Absolute Error (MAE) of property valuations, the correlation with actual market sale prices, or false-positive rates in tenant screening. The model card should describe how these metrics were validated, what timeframe was used, which geographic regions were sampled, and whether external validation data was employed. • Intended Usage Context. Specify which usage scenarios are appropriate (e.g., short-term market trend analysis, preliminary mortgage risk assessment). Also, state limitations, such as not capturing rapid neighbourhood gentrification or relying on outdated historical data.

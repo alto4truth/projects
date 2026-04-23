@@ -1,0 +1,23 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+Personalized electric vehicle energy consumption
+estimation framework that integrates driver behavior
+with map data
+Sreechakra Vasudeva Raju Rachavelpulaa,∗, Sangwhan Chaa
+aDepartment of Computer and Information Sciences, Harrisburg University of Science
+and Technology, Harrisburg, PA 17101, USA
+Abstract
+This paper presents a personalized Battery Electric Vehicle (BEV) energy
+consumptionestimationframeworkthatintegratesmap-basedcontextualfeatures with driver-specific velocity prediction and physics-based energy consumption modeling. The system combines route selection, detailed road feature processing, a rule-based reference velocity generator, a PID controllerbased vehicle dynamics simulator, and a Bidirectional LSTM model trained
+to reproduce individual driving behavior. The predicted individual-specific
+velocity profiles are coupled with a quasi-steady backward energy consumption model to compute tractive power, regenerative braking, and State-ofCharge (SOC) evolution. Evaluation across urban, freeway, and hilly routes
+demonstrates that the proposed approach captures key driver behavioral patterns such as deceleration at intersections, speed-limit tracking, and road
+grade-depend

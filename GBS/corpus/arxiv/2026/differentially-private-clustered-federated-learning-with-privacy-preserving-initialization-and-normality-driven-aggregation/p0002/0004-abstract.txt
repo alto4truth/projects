@@ -1,0 +1,28 @@
+title: Differentially Private Clustered Federated Learning with Privacy-Preserving Initialization and Normality-Driven Aggregation
+source: arxiv
+year: 2026
+document_id: differentially-private-clustered-federated-learning-with-privacy-preserving-initialization-and-normality-driven-aggregation
+authors: Jie Xu; Haaris Mehmood; Rogier Van Dalen; Karthikeyan Saravanan; Mete Ozay
+page: 2
+section: abstract
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20596v1
+
+updates to
+be privatized at the edge and therefore protects against a malicious
+server. However, the higher privacy benefits of LDP leads to noisier
+updates and drop in model performance. The alternative solution is
+to add noise to the sum of contributions which is known as central
+DP (CDP) [3], and leverage secure sum protocols [5, 6] to ensure that
+the server only has access to the aggregated updates and is prevented
+from viewing individual contributions.
+A second fundamental challenge in FL is data heterogeneity:
+client data are often non-independent and identically distributed
+(non-IID) [7]. Under such conditions, standard FL algorithms such
+as FedAvg [1] can converge slowly and yield suboptimal performance [7]. The situation deteriorates further when DP is imposed:
+the added DP noise amplifies the impact of data skew, exacerbating
+the performance degradation caused by non-IID data [8, 9, 10].
+Clustered federated learning (CFL) has been recently proposed
+to address data heterogeneity in FL [11, 12]. Instead of fitting a single global model, CFL simultaneously learns a set of cluster-specific
+models and dynamically assigns clients to the cluster whose data
+distribution best matc

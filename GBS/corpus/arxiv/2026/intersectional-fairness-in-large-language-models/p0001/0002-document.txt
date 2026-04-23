@@ -1,0 +1,21 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+arse, non-unknown predictions. In disambiguated contexts, however, we observe that LLM accuracy
+is influenced by stereotype alignment, with models being more accurate when the correct answer reinforces a stereotype than
+when it contradicts it. This pattern is particularly pronounced in race–gender intersection of sensitive attributes, where directional
+bias toward stereotypes is more pronounced. Subgroup fairness metrics further indicate that, despite low observed disparity in
+some cases, outcome distributions can remain uneven across intersectional groups. Across repeated runs, model responses vary in
+consistency, including stereotype-aligned responses. Overall, our findings show that apparent model competence is partly associated
+with stereotype-consistent cues, and no evaluated LLM achieves consistently reliable or fair behavior across intersectional settings.
+These findings highlight the need for evaluation beyond accuracy to capture the interplay between bias, subgroup fairness, and
+consistency in LLMs, emphasizing the importance of combining these metrics, accounting for intersectional groups, and assessing
+model behavior across contexts and repeated runs.
+CCS Concepts:•Compu

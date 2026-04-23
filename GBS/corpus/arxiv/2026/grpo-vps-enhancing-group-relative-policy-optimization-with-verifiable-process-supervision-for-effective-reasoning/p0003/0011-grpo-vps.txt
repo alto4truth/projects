@@ -1,0 +1,18 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+oadly categorized into modelbased and model-free approaches. Model-based supervision utilizes an auxiliary model to provide finegrained feedback. Critic-based methods, often using PPO, train a value network to estimate the expected
+return from intermediate states (Yue et al., 2025; Kazemnejad et al., 2024). However, in long-horizon reasoning tasks, the critic’s signal can diminish or become unreliable due to the long delay in receiving the final
+outcome reward (Shao et al., 2024; Yue et al., 2025). Process Reward Models (PRMs) (Lightman et al., 2023;
+Wang et al., 2023) offer an alternative but are typically trained offline, making them vulnerable to reward
+hacking and distributional shift. These approaches introduce significant system complexity, requiring an
+extra model to be trained, maintained, and served alongside the policy. Model-free process supervision aims
+to provide granular feedback without auxiliary models. Recent works have made progress in this direction.
+For instance, S-GRPO (Dai et al., 2025) introduces a ”serial group” objective with decaying rewards to en3

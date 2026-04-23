@@ -1,0 +1,24 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+Under Review
+Intersectional Fairness in Large Language Models 11
+making it challenging to select the fairness metrics that are the most suitable in the evaluation of the intersectional
+fairness of LLMs.
+In addition to the context-specific bias scores sDIS and sAMB introduced by [Parrish et al. 2021], there exist different
+intersectional sub-group fairness metrics that were used by [Meinson et al. 2025] to evaluate the intersectional fairness
+of different DL models. These metrics are the Statistical Parity (SF) [Kearns et al. 2018] and the Differential Fairness
+(DF) [Foulds et al. 2020], measuring the overall disparities and the worst-case gaps between intersectional groups,
+respectively.
+Not all fairness metrics apply to our dataset, as many are difficult to interpret with a three-class setup including
+‘unknown’ option in MCQs with ambiguous contexts or are redundant given bias scores. Under the assumption that
+all ground-truth labels are considered positive, regardless of the context or the meaning of the question, whether
+the question implies a positive or negative outcome (e.g., who is wealthy vs who stole, respectively), we also adopt
+Statistical Parity Subgroup Fairness (SF) a

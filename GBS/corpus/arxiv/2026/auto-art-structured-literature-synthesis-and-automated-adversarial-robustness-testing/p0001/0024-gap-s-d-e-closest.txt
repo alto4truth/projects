@@ -1,0 +1,31 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+re r is mean robust accuracy across norms and r∗
+is the best single-norm accuracy, and Stability Constant
+SC=std({r i}) across all attack/epsilon combinations, following [C2].
+12 Experimental Evaluation
+We validate AUTO-ART’s three core claims: (1) pre-screening
+gates improve evaluation efficiency and reliability, (2) multinorm evaluation exposes hidden worst-case failures, and
+(3) the framework’s compliance and testing infrastructure
+meets production standards.
+12.1 Experimental Setup
+Models.We evaluate ten models from the RobustBench
+CIFAR-10 ℓ∞ (ε= 8/255) leaderboard [14], spanning stateof-the-art (Wang2023Better, 70.69% robust acc.) to baseline
+(Wong2020Fast, 43.21%).
+Attack configuration.Default parameters: ε= 0.031
+(8/255), step size η= 0.007 (2/255), 100 PGD iterations, batch size 32. Multi-norm epsilons: ℓ∞ ∈
+{0.01,0.03,0.05,0.1,0.3} , ℓ2 ∈ {0.1,0.3,0.5,1.0,2.0} ,
+ℓ1 ∈ {1.0,3.0,5.0,10.0} . Attacks per norm follow Table 5:
+ℓ∞: FGSM, PGD, AutoPGD;ℓ 2: C&W, DeepFool;ℓ 1: EAD.
+Pre-screening parameters.FOSC threshold τmask = 0.1;
+white-box/black-box discrepancy threshold 0.15; noise σ=
+0.01with 10 samples; RDI computed on 500 samples.
+12.2 Experiment 1: Pre-Screening Gate Valida

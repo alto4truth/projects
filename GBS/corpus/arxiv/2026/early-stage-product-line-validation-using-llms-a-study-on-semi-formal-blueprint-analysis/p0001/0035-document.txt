@@ -1,0 +1,27 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis SAC ’26, March 23–27, 2026, Thessaloniki, Greece
+while Grok 4 Fast Reasoning reaches 89.7% with one-third of the runtime. In contrast, Gemini 2.5 Pro delivers similar accuracy (88.2%)
+with the lowest runtime among reasoning models (2,391 seconds),
+representing the most efficient high-accuracy trade-off. GPT-5 mini
+attains top accuracy (88.9%) but at substantially higher runtime and
+token cost, suggesting diminishing returns. Meanwhile, generalpurpose models such as Claude Sonnet 4 offer a moderate balance
+(78.3%, 1,169 seconds), and lightweight models like Llama 4 Scout
+are fast yet unreliable (42.7%).
+5.3 RQ3: Error Analysis
+We identify three dominant failure modes. First,semantic slipsin
+solver-free AOs (AO4–AO9), most notably misreading “A must have
+B or C” as two mandatory children instead of analternativegroup.
+Second,incomplete propagation or enumerationin solver-based AOs,
+especially AO12 (#valid configurations) andAO15 (#false optional),
+which require constraint reasoning beyond surface parsing. Third,
+context and output limitson very large blueprints ( CNNl, CNNf),
+causing truncation

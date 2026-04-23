@@ -1,0 +1,23 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 1
+section: compass-ecda
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+U. Full retraining achieves moderate performance but at greater
+computational cost and assuming access to all data from the initial adaptation stage, which may not be
+available in practice. By itself, EWC reduces forgetting but remains suboptimal in performance, while
+random rehearsal’s naive preservation of old data fails to preserve core training samples.
+The relative advantage of COMPASS-ECDA is most pronounced on the smaller Phi4-Mini model.
+COMPASS-ECDA achieves the highest adaptation rate while minimizing forgetting below a 5% performance regression on Global MMLU. When model capacity is limited, the quality of preserved examples
+via distributional anchors becomes crucial. The adaptive instance weighting within the new COMPASS
+selection adapts sampling strategy based on cluster coverage, initially favoring prototypical examples and
+progressively incorporating boundary cases to ensure stable learning of new domains.
+5.5.2 Multi-Step Continual Learning
+COMPASS-ECDA navigates multiple distribution shifts while maintaining knowledge accumulated across
+temporal periods. Real-world deployment involves sequential distribution shifts as user needs evolve over
+time. To evaluate COMPAS

@@ -1,0 +1,29 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+SAC ’26, March 23–27, 2026, Thessaloniki, Greece V.M. Le et al.
+systematically studied. This paper addresses this gap through a
+large-scale empirical evaluation of 12 state-of-the-art LLMs on 16
+AOs, comparing their accuracy, runtime, and failure modes against
+a solver-based oracle.
+The contributions of this paper are threefold.Firstly, we formalize and motivate a workflow forearly product-line validation, which
+combines semi-formal blueprints with lightweight LLM-based AOs
+to provide feedback already during SPL scoping.Secondly, we conduct a large-scale systematic evaluation of off-the-shelf LLMs on
+feature model analysis tasks using blueprint inputs. Our study
+covers 12 LLMs (both general-purpose and reasoning-optimized)
+and 16 AOs across solver-free and solver-based categories.Finally,
+we systematically evaluate LLM accuracy, cost, and failure modes
+against the solver-based oracle FLAMA [12], providing insights
+into their suitability as lightweight assistants for SPL scoping.
+2 Background and Related Work
+2.1 Software Product Line Engineering
+The primary objective of SPLE is to reduce development cost and
+time-to-market while improving quality by deriving families of
+related pro

@@ -1,0 +1,43 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 2
+section: f2lp-ap-5
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+6 Yutong Shen*, Ruizhe Xia, Jingyi Liu, Yinqi Liu
+Algorithm 1: F 2LP-APInference Procedure
+Input:G(V,E),X∈R n×d,V L = SC
+c=1 VL,c, Hyperparametersθ={f α, gK }.
+Output:ˆy∈ {1, . . . , C} n.
+∀c∈ {1, . . . , C}:P c = GM(XVL,c) viaP (k+1)
+c =
+P ∥xi−P(k)
+c ∥−1xiP ∥xi−P(k)
+c ∥−1 ;
+∀vi ∈ V:LCC i = 2|Ei|
+di(di−1)
+θ
+− → {αi, Ki};
+H(0) =X;
+fork= 0tomax(K i)−1do
+H(k+1) = (I−diag(α)) ˜AH(k) + diag(α)X;
+∀is.t.K i =k+ 1 : ˆxi =h (k+1)
+i ;
+S= L2Norm( ˆXout)·L2Norm(P) ⊤ ∈R n×C;
+∀vi ∈ V: ˆyi = arg maxc Si,c;
+returnˆy
+agation mechanism. Conventional decoupled Graph Neural Networks (GNNs),
+such as APPNP, typically employ globally uniform propagation parameters,
+which often overlook the significant diversity of local structures in real-world
+graph data. To address this,F 2LP-APintroduces an adaptive propagation
+mechanism centered on the Local Clustering Coefficient (LCC), utilizing topological signatures to dynamically guide the information flow. The LCC measures
+the degree to which triangles are closed in a node’s neighborhood, effectively
+reflecting the local topological environment. For any nodev i ∈ V, the LCC is
+defined as:
+LCC i = 2|Ei|
+di(di −1) (5)
+whered i denotes the degree of nodev i and|E

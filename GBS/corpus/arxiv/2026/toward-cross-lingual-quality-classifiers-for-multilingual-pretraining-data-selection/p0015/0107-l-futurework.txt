@@ -1,0 +1,21 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 15
+section: l-futurework
+chunk: 107
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+While our 1B model provides a solid baseline, scaling 3B or 7B parameter models would determine
+if our ML classifier impact becomes even stronger with more capacity. It would be particularly interesting to run cooldown experiments: instead of stopping at the stable phase, we could introduce a
+short, high-quality annealing phase (last 10-20% of tokens) to see if we can “recover” performance
+on formal tasks while keeping the benefits of our broader multilingual filtering. There is also a big
+opportunity to test zero-shot transfer on truly low-resource languages like Swahili or Urdu, where
+native data is so scarce that cross-lingual “subsidy” from high-resource languages is the only viable path forward. Another ablation idea would be to also apply a similar technique to the positive
+samples fed to the classifier. Thanks to our experiments, we argue that selecting better positives
+and combining that with the Q3 strategy could lead to an even bigger performance boost. Finally,
+the rigidity of the sample count threshold for the ML (Q3) strategy warrants further investigation.
+Relying on a static count (e.g.,200,000samples) is likely suboptimal. Future work should explore
+adaptive criteri

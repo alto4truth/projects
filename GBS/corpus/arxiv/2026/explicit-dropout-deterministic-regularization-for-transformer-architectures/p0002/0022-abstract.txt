@@ -1,0 +1,29 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+addition, we
+alsoadaptpriorexplicitdropoutformulationsforTransformers and perform direct comparisons. This allows us to evaluate whether our formulation offers practical improvements
+intermsofperformance.Weconductexperimentsonimage
+classification, temporal action detection, and audio classificationbenchmarks,coveringbothvision-onlyTransformers
+and Transformer encoders operating on pretrained features.
+Unless otherwise stated, all methods use identical training
+settings for fair comparison.
+4.1. Experimental Setup
+4.1.1. Datasets and Baselines:
+For image classification, experiments are conducted on
+CIFAR-10andCIFAR-100[18].Forbothdatasets,theoriginal training set is further split into training and validation
+subsetsusinga70:30ratio,whilethestandardtestsetisused
+forfinalevaluation.Fortemporalactiondetection,wereport
+results on THUMOS14 [16], which contains 413 training
+videosspanning20actioncategorieswithframe-levelannotations.SimilartotheCIFARsetup,theprovidedtrainingset
+is split into training and validation subsets in a 70:30 ratio,
+andevaluationisperformedontheofficialtestset.Following
+prior work [36], we employ a Temporal Segment Network
+(TSN) [35] pretrained on ActivityNet [14]

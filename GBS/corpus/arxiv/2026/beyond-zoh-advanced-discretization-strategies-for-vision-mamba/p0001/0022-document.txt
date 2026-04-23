@@ -1,0 +1,24 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+Beyond ZOH: Advanced Discretization Strategies for Vision Mamba 9
+3.4 Unified Hardware-Aware Discretization Framework
+The original Mamba addressed issues with SSM implementations being memorybound due to frequent high-bandwidth memory (HBM) accesses by implementing a hardware-aware design that favors recomputation over storage to reduce
+bandwidth pressure. Discretization, state updates, and output projection are
+fused into a single GPU kernel, eliminating intermediate writes to HBM [11].
+The original Mamba CUDA kernel only supported ZOH. We extend the
+hardware-aware algorithm to support all discretization methods evaluated in
+this work, ensuring identical fused execution, memory access patterns, and scanbased recurrence across methods. Discretization is computed inside the selective scan kernel, keeping all intermediate values in registers and avoiding global
+memory writes. This design maintains optimized memory access and parallel
+scalability of the original Mamba implementation.
+4 Experiments
+Thissectionoutlinesourexperimentstointegrateadvanceddiscretizationschemes
+into ViM. All experiments were trained according to the original ViM-Ti model
+in [33] on 4 A100 GPUs. The continuous

@@ -1,0 +1,40 @@
+title: Tokenised Flow Matching for Hierarchical Simulation Based Inference
+source: arxiv
+year: 2026
+document_id: tokenised-flow-matching-for-hierarchical-simulation-based-inference
+authors: Giovanni Charles; Cosmo Santoni; Seth Flaxman; Elizaveta Semenova
+page: 1
+section: gpu-nvidia-a100-pcie-40gb
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20723v1
+
+er 10 independently drawn observations per task. Posterior consistency was measured as
+the simulation budgetNincreased, with sites fixed atns = 50.
+24
+
+where A0 is the reference area andβ is a vessel stiffness parameter. Terminal outlets use RCR
+(Windkessel) boundary conditions.
+Hierarchical parameters.Global parameters are θg = (logβ scale,logµ,logQ in), where βscale
+rescales a baseline stiffness profile,µ is blood viscosity, andQin sets inflow amplitude. We treat each
+patientas a site s∈ { 1, . . . , ns}. Each patient has terminal outlet parameters at the four terminal
+vessels, i.e. ηs = (logR T,s,1 ,logC T,s,1 , . . . ,logR T,s,4 ,logC T,s,4) ∈R 8 (implemented as Windkessel
+R2 andC, withR 1 fixed).
+Priors.We use LogNormal priors on global parameters: logβ scale ∼ N (logβ mean, 0.32), logµ∼
+N (log 0.004, 0.22), logQ in ∼ N (log 85, 0.22). Local priors are centred around structured-tree-inspired
+reference values( RT,ref (s), CT,ref (s))with anti-correlated perturbations to keep the outlet time
+constantτ s =R T,s CT,s approximately stable:
+logR T,s,o = logR T,ref (o) + 0.4ϵs,o,logC T,s,o = logC T,ref (o)−0.4ϵ s,o, ϵ s,o ∼ N(0,1),
+for patientsand outlet indexo∈ {1, . . . ,4}.
+Observations and noise model.We condition only on the four flow traces (one per terminal
+vessel), each after simulating 5 cardiac cycles and resampling the final cycle toNt points, giving
+ys ∈R 4Nt for patient s. We use heteroscedastic Gaussian noise on each flow trace with standard
+deviationσ s,o =εmax t |Qs,o(t)|(withε= 0.05).
+LF sampling in the CFD setting.Stage 1 trains the per-site neural surrogateqϕl(ys |θ g, ηs)
+using per-patient tuples, where a full-network run for patients yields the four outlet flow traces
+comprising ys. Stage 2 generates multi-site training observations by samplingy∼q ϕl(y|θ g, η)and
+trains the posterior estimatorqϕp(θg, η|y)using a tokenised estimator as described in Section 2.1.
+Figure 8: Posterior predictive check for haemodynamics calibration showing observed outlet flow
+waveforms (black) against posterior predictive samples (blue) across the four terminal vessels of the
+aortic-arch network:Adescending aorta,Binnominate artery,Cleft common carotid artery, andD
+left subclavian artery. All 11 inferred global and local parameters achieve 95% CI coverage (Table 3).
+25

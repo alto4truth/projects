@@ -1,0 +1,32 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 62
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+LM-driven pipeline for injecting controlled,
+contextually-relevant defects into high-quality responses. This automated pipeline ensures that the
+generated errors are not random but are intelligently
+tailored to the content of the source text.
+B.1 The Three-Stage Defect Injection Pipeline
+The core of our data generation process is a sequential pipeline that first analyzes the text, then selects
+an appropriate error type, and finally rewrites the
+text to introduce the defect.
+Stage 1: Content AnalysisFirst, an LLM analyzes the source text to determine if it contains
+logical reasoning or external knowledge. This classification serves as a prior for the subsequent error
+selection stage. The analysis is performed using
+the prompt below.
+Prompt for Content Analysis
+You are a text analysis expert. Analyze the following text and determine if it contains a) logical reasoning, inference, or conclusion, and
+b) specific external knowledge (like names of
+people, places, brands, historical facts).
+Respond ONLY with a JSON object with two
+boolean keys:
+{“contains_reasoning”: boolean, “contains_knowledge”: boolean}.
+Text to analyze: “{text_to_analyze}”
+Stage 2: Category and Subtype SelectionThe
+pr

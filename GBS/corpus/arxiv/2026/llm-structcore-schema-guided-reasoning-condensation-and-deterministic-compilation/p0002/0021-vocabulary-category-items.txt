@@ -1,0 +1,18 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 2
+section: vocabulary-category-items
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+ge Applicability
+The pipeline naturally extends to Italian (_it) documents: the Stage 1
+prompt is language-agnostic (it asks the model to extract clinical facts
+regardless of language), and Stage 2’s deterministic canonicalization handles
+multilingual item-name variants through the UMLS alias map. We prepared
+Italian test submissions using the same pipeline with no language-specific
+modifications beyond the rules_v3e Stage 2 variant (which adds tighter
+11

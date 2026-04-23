@@ -1,0 +1,26 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+7
+Fig. 5: Visualization of our phase predictions against the ground-truth data on 4D-OR test set.
+Table 5: Ablation study on detecting “anesthesiologists being attentive”. Global and local mean we encode all the gazes and partial gazes in one frame,
+respectively. We report AP at different tIoU.
+Method 0.1 0.2 0.3 0.4 0.5 Avg.
+Global training & global testing 25.54 19.69 14.98 11.25 6.55 15.60
+Local training & local testing 28.89 21.08 15.31 10.48 6.27 16.41
+Global training & local testing 30.95 24.04 18.40 13.70 8.31 19.08
+strategy of encoding gazes of the rightmost three persons for
+team communication detection disables generalizability to the
+other OR scenes. In the future, we plan to further expand gaze
+research in the OR in several directions: (1) 3D semantic gazefollowing, where we can localize and classify the gaze target in 3D space; (2) unsupervised domain adaptation, where
+we can follow the gaze in any new clinical sites without additional annotations; (3) gaze-assisted semantic scene graph
+generation, where we can predict human-human and humanobject interactions more accurately through gaze analysis; (4)
+few-shot learning, where we can recognize roles, phases, and
+activit

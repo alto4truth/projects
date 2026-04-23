@@ -1,0 +1,29 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 56
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+E Case Study
+We present a representative case to illustrate how
+TPGO diagnoses a trajectory-level failure, maps it
+to a structured graph update, and produces an interpretable prompt modification. The failure pattern
+considered here isincomplete constraint validation, a common error mode in which the agent identifies a plausible answer candidate but terminates
+reasoning before verifying all task requirements.
+In the analyzed example, the agent was asked to
+identify a football player from multiple constraints.
+Although it correctly proposed Ollie Watkins as
+the final answer, its reasoning process was incomplete. As shown in Table 6, the agent verified only
+a subset of the required conditions, focusing on
+current-season statistics while omitting historical
+evidence. The resulting failure is therefore not best
+characterized as a factual mistake, but as a procedural error: the agent committed to an answer without
+exhaustively validating all constraints.
+TPGO addresses this issue by extracting the underlying behavioral cause from the trajectory rather
+than only evaluating the correctness of the final
+output. The analysis in Table 6 attributes the error
+to a systematic tendency toward pre

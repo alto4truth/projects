@@ -1,0 +1,20 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 2
+section: abstract
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+Published as a conference paper at ICLR 2026
+Reward Shaping.The idea of using reward shaping to facilitate learning dates back to early RL research and applications (Saksida et al., 1997; Randløv & Alstrøm, 1998). In their canonical work, Ng
+et al. (1999) proposes potential-based reward shaping (PBRS) that preserves the optimal policy under shaped rewards. Potential functions have been learned using expert demonstrations (Brys et al.,
+2015; Kang et al., 2018), transitions (Harutyunyan et al., 2015), uncertainty (Li et al., 2025) or with
+discriminators to be used as exploration bonuses (Durugkar et al., 2021). Another line of research
+does not follow PBRS and considers reward shaping as a bonus for exploration (Pathak et al., 2017;
+Mguni et al., 2021; Wang et al., 2023b; Agarwal et al., 2023; Ma et al., 2024; Zheng et al., 2024)
+and as curriculum learning (Andrychowicz et al., 2017; Eysenbach et al., 2022; Zheng et al., 2023).
+Hartikainen et al. (2019) estimates local temporal distance to provide a dense reward for credit
+assignment in online GCRL. We address the challenge of learning shaped rewards for credit assignment in Offline GCRL. The closest work to ours, Mezghani et al. (20

@@ -1,0 +1,18 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+s, separately. More in detail, for each question, we recorded all LLM outputs and computed
+two consistency measures: 1) the Most-Frequent Answer Agreement percentage (MFAA%), defined as the fraction of
+repetitions that match the most frequent option answered by the LLM, providing a measure of reproducibility, and
+2) the Ground-Truth Consistency percentage (GTC%), defined as the fraction of repetitions that match the correct
+answer, providing a measure of consistency relative to the reference label. We reported these metrics separately for
+ambiguous and disambiguated questions, allowing us to assess whether the LLM predictions are reliably reproducible
+and consistently correct across repeated prompts. Formally, for each question, we compute the consistency𝐶𝑖 as the
+percentage of the consistent predictions 𝑝𝑟𝑒𝑑 𝑖 of each LLM model 𝑚∈ [ 1..𝑀] across the different runs 𝑛= 20, where

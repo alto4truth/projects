@@ -1,0 +1,26 @@
+title: Cooperative Profiles Predict Multi-Agent LLM Team Performance in AI for Science Workflows
+source: arxiv
+year: 2026
+document_id: cooperative-profiles-predict-multi-agent-llm-team-performance-in-ai-for-science-workflows
+authors: Shivani Kumar; Adarsh Bharathwaj; David Jurgens
+page: 12
+section: gpt-oss
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20658v1
+
+lit)
+qwen3-32b 65.5 83.2 Yang et al. (2025)
+qwen3-32b-think 65.5 85.0 Yang et al. (2025)
+Qwen3.5
+qwen3.5-4b 79.1 89.8 HF model card
+qwen3.5-9b 82.5 91.5 HF model card
+qwen3.5-35b-a3b 85.3 91.9 HF model card
+Table 9: Sources for benchmark scores used as capability controls. MMLU-Pro is 5-shot
+chain-of-thought; IFEval is strict prompt accuracy (0-shot). “HF model card” refers to
+the official HuggingFace model card. For thinking variants sharing weights with instruct
+models, MMLU-Pro is identical; IFEval may differ by inference mode.
+dataset and produced a scientific report. You will evaluate one report at a time
+on three metrics using the rubrics below.
+Rate each metric on a 1-5 integer scale. Respond ONLY with valid JSON matching
+the schema provided. Do not include any other text.
+27

@@ -1,0 +1,32 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+rity-based filtering with pre-trained models,
+including CLIP (Radford et al., 2021), ALBEF
+(Li et al., 2021), and BLIP (Li et al., 2022, 2023),
+using holistic similarity scores (Hessel et al., 2021;
+Xu et al., 2025a; Wang et al., 2024d) or mixture
+modeling (Shi et al., 2024a). More recent work
+adopts fine-tuned multimodal language models
+as learned data filters, scoring image-text pairs
+along multiple semantic dimensions (Wang et al.,
+2024c), or employs generative models for dataset
+sanitization via re-captioning and label correction
+(Vasa et al., 2025; Mahjourian and Nguyen, 2025;
+Zhang et al., 2024b; Zhu et al., 2023; Zhang et al.,
+2025). Despite their effectiveness, these methods
+predominantly depend on coarse proxies and offer
+limited insight into complex reasoning or factual
+errors.
+Data Curation for Visual Instruction Tuning.
+As vision-language models shift from representation learning to instruction following (Safaei et al.,
+2025), data quality has become increasingly critical (Chen et al., 2024c). The “quality over quantity” principle was first demonstrated in the text
+domain by AlpaGasus (Chen et al., 2023) and later
+extended to multimodal settings by InstructionGPT4 (Wei

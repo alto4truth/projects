@@ -1,0 +1,22 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+ctionτG to the variables inσ. The following result is
+Lemma 7 in Foygel et al. (2012b); also see Garcia-Puente et al. (2010) for a more detailed discussion.
+Lemma 2.6(Foygel et al., 2012b, Lemma 7).The parameterq∈θis rationally identifiable if and
+only ifIcontains an element of the formqa(σ)−b(σ)witha, b∈R[σ]anda̸∈ker(τ G).
+In Lemma 2.6, note thatker(τG)is given byI ∩R[σ]. Since we want to keep the degree of the
+polynomialsaandbas low as possible, we will allow them to depend on the already identified
+parameters. For this, we show a refined version of Lemma 2.6. Letθid ⊆θbe a subset of parameters
+thatisalreadyknowntoberationallyidentifiable, andletθ rem :=θ\θ id betheremainingparameters.
+Lemma 2.7.The parameterq∈θ rem is rationally identifiable if and only if the idealIcontains an
+element of the formqa(θid, σ)−b(θ id, σ)witha, b∈R[θ id, σ]anda̸∈ I ∩R[θ id, σ].
+Lemma 2.7 justifies the following definition.
+6

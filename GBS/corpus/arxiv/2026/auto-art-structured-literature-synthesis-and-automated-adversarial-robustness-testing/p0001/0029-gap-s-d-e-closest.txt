@@ -1,0 +1,27 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+erreliance).
+12.5 Experiment 4: Ablation Study
+We ablate the three core components of AUTO-ART’s prescreening gate to isolate their individual contributions (Table 9).
+Key findings: (1) Removing RDI collapses the speedup
+from 30×to 1.2×while preserving detection rate, confirming
+RDI is the efficiency engine. (2) Removing FOSC drops
+masking detection from 92% to 67%, confirming FOSC is the
+primary masking signal. (3) The three-signal ensemble (FOSC
++ RDI + WB/BB discrepancy) outperforms any single signal
+on both ranking fidelity (τ) and detection rate, justifying the
+multi-signal design.
+12.6 Experiment 5: Runtime and Scalability
+Table 10 shows that pre-screening adds negligible overhead
+(14.9 s for WRN-70) while the multi-norm attack phase dominates wall-clock time. When the pre-screening gate flags a
+model and redirects to targeted (rather than exhaustive) attacks, end-to-end time drops 5–6×compared to full AutoAttack. Scaling is dominated by the attack phase: O(|A| ·T)
+where |A| is the number of attacks and T the iteration count
+10

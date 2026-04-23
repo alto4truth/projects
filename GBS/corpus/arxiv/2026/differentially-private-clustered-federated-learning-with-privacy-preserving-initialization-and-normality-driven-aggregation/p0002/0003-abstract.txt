@@ -1,0 +1,29 @@
+title: Differentially Private Clustered Federated Learning with Privacy-Preserving Initialization and Normality-Driven Aggregation
+source: arxiv
+year: 2026
+document_id: differentially-private-clustered-federated-learning-with-privacy-preserving-initialization-and-normality-driven-aggregation
+authors: Jie Xu; Haaris Mehmood; Rogier Van Dalen; Karthikeyan Saravanan; Mete Ozay
+page: 2
+section: abstract
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20596v1
+
+ver leverages
+these sketches to construct robust cluster centroids. In the second
+stage, PINA introduces a normality-driven aggregation mechanism
+that improves convergence and robustness. Our method retains the
+benefits of clustered FL while providing formal privacy guarantees
+against an untrusted server. Extensive evaluations show that our
+proposed method outperforms state-of-the-art DP-FL algorithms by
+an average of 2.9% in accuracy for privacy budgets (ϵ∈ {2,8}).
+Index Terms—Clustered Federated Learning, Differential Privacy, Data Heterogeneity, Non-IID Data
+1. INTRODUCTION
+Federated learning (FL) enables a distributed group of edge devices
+to collaboratively train a shared model while keeping raw user data
+on-device [1]. Despite this, the exchanged gradients or model updates can reveal statistical fingerprints that compromise user privacy
+[2]. Differential privacy (DP) [3] protects against such inferences by
+injecting calibrated randomness into the updates, yielding a rigorous
+privacy guarantee. Local DP (LDP) [4] requires client updates to
+be privatized at the edge and therefore protects against a malicious
+server. However, the higher privacy benefits of LDP leads to noisier
+u

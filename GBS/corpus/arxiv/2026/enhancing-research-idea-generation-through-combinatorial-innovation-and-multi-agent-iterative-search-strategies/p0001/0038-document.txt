@@ -1,0 +1,11 @@
+title: Enhancing Research Idea Generation through Combinatorial Innovation and Multi-Agent Iterative Search Strategies
+source: arxiv
+year: 2026
+document_id: enhancing-research-idea-generation-through-combinatorial-innovation-and-multi-agent-iterative-search-strategies
+authors: Shuai Chen; Chengzhi Zhang
+page: 1
+section: document
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20548v1
+
+0 other-wise. Novelty: This paper employs a LLM to evaluate the novelty of generated ideas by examining the 10 most relevant papers (the method for retrieving the most relevant papers is consistent with the knowledge search approach described in Section 3.3). An idea is deemed novel if no paper is identified as containing similar concepts, using the all-MiniLM-L6-v27 model for embedding. A cosine similarity threshold greater than 0.5 indicates similarity. The novelty calculation formula is as follows: 𝑁𝑜𝑣𝑒𝑙𝑡𝑦 = ∑$!"#$(+,-%&!+(,",/"%)01)* (4) where n is the number of generated research ideas, 𝑠𝑖𝑚(𝑎!,𝑟!2) denotes the cosine sim-ilarity between idea 𝑎! and its relevant literature abstract 𝑟!2, and I(·) represents the in-dicator function that returns 1 when the condition is true and 0 otherwise. 7 https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2

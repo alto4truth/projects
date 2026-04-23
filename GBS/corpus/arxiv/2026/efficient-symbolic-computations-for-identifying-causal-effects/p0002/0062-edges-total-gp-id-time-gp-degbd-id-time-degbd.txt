@@ -1,0 +1,53 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 2
+section: edges-total-gp-id-time-gp-degbd-id-time-degbd
+chunk: 62
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+However, any nodev∈Vmay at most appear twice on the trekπ.
+Now, consider any integeri∈ {1, . . . , wtrek}. Note that there is a trek inGfromvs tov s+wtrek−i+1
+for alls= 1, . . . , i. Hence, it holds thatw(σ vsvs+wtrek−i+1)≥w trek −i+ 1for alls= 1, . . . , i.
+Moreover, for any two possibly equal nodesu, v∈V, it holds that there are at most four pairs of
+integers{l, t} ⊆ {1, . . . , w trek + 1}such thatσ uv =σ vlvt. We conclude that
+
+Y
+u≤v
+w(σuv)
+
+
+4
+≥
+wtrekY
+i=1
+(wtrek −i+ 1) i
+=w 1
+trek ·(w trek −1) 2 · · ·1 wtrek
+=w trek!·(w trek −1)!· · ·1!
+=sf(w trek).
+The next lemma is about the asymptotic equivalence of the superfactorial.
+Lemma B.1.Letn∈Nand consider then-th superfactorial sf(n) = Qn
+i=1 i!. Then, for any
+non-decreasing functionf:N→Nwithlim n→∞ f(n) =∞, we have
+lim
+n→∞
+1
+2 f(n) 2 log(f(n))
+log(sf(f(n))) = 1.
+Proof.Sincefis non-decreasing andlim n→∞ f(n) =∞, it is enough to consider the identity
+function, i.e.,f(n) =nfor alln∈N. Forn→ ∞, we obtain from the Stirling expansion of the
+BarnesG-function that
+log(sf(n)) = 1
+2 n2 log(n)− 3
+4 n2 + 1
+2 nlog(2π)− 1
+12 log(n) + 1
+12 −log(A) +O
+ 1
+n
+
+(7)
+see, for example, Voros (1987, Appendix). Here, the constantAis the Glaisher–Ki

@@ -1,0 +1,22 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 1
+section: f2lp-ap-3
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+2 Related Work
+2.1 Decoupled GNNs and Label Propagation
+Decoupled Graph Neural Networks aim to separate feature transformation from
+the message-passing process to enhance computational efficiency on large-scale
+graphs [33, 5]. Currently, mainstream methods like APPNP leverage the Personalized PageRank (PPR) mechanism to redistribute features through fixed
+iteration countsKand teleport probabilitiesα[19, 34, 21]. In this domain, there
+exist both classical training-free baselines, such as Label Propagation (LP), and
+recent attempts like TFGNN that introduce training-free mechanisms by utilizing labels as features [27, 7]. However, these methods generally suffer from a lack
+of computational flexibility: traditional GNNs rely on heavy backpropagation,
+while existing training-free approaches often merely shift the computational burden and remain rigid in their propagation schemes by applying uniform aggregation rules to all nodes [39]. Our F 2LP-AP addresses the contradiction between
+computational overhead and structural rigidity by introducing a three-stage analytical pipeline that completely eliminates gradients and dynamically adjusts
+propagation parameters based on the Local Cluster

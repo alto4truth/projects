@@ -1,0 +1,27 @@
+title: Differentially Private Clustered Federated Learning with Privacy-Preserving Initialization and Normality-Driven Aggregation
+source: arxiv
+year: 2026
+document_id: differentially-private-clustered-federated-learning-with-privacy-preserving-initialization-and-normality-driven-aggregation
+authors: Jie Xu; Haaris Mehmood; Rogier Van Dalen; Karthikeyan Saravanan; Mete Ozay
+page: 2
+section: abstract
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20596v1
+
+the same cluster suffer less from
+data heterogeneity and train via FL more effectively. Several works
+propose clustered FL methods, including CFL [12], IFCA[11] and
+PACFL[19], which use techniques such as cosine similarity, empirical loss and singular value decomposition to assign clients to clusters
+and train models. Clients typically respond with their cluster ID and
+trained model.
+To our knowledge, [20] and [21] are the only existing works that
+add DP to clustered FL. However, [20] uses LDP to privatize user
+updates throughout the entire training process which significantly
+degrades the model’s utility, making it infeasible for training large
+models [22]. Meanwhile, [21] provides sample-level privacy instead
+of user-level privacy which is a weaker form of privacy protection
+than the latter. It’s also been pointed out that the loss-based clustering in [21] breaks the sample-level privacy guarantees by leaking more information than allowed. In contrast, works including
+[23, 24] add secure aggregation to clustered FL without incorporating DP constraints, relying on a fully trusted server.
+3. OUR METHOD: PINA
+3.1. Overview
+Our proposed method PINA consists of two stages: (1) Cluste

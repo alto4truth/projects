@@ -1,0 +1,29 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+as a reduction in the overall conductanceU A
+via a non-negative, dimensionless fouling factorR(t):
+U A(t) = U Aclean
+1 +R(t) .(10)
+FIG. 2: Fouling and Leakage evolution in time with the
+effect of the failure parameters (λ, βf , βl) over the
+trajectories at a fixed failure onset timeτ.
+To capture the sporadic, burst-like nature of industrial
+scaling,R(t)is modelled as a discretized and relaxed
+Compound Poisson Process [41]. The total fouling at
+timetis the accumulation of stochastic increments:
+R(t) =
+tX
+i=1
+∆Ri,∆R i =S(i)·I i ·J i ·g f ,(11)
+whereg f ∈ {0,1}isabinaryfoulingindicatordetermined
+by the sampled failure modez. Specifically,gf = 1when
+the selected mode includes fouling andg f = 0otherwise. The termS(i)represents a steep sigmoid function
+centered at the random failure timeτ, acting as a temporal gate that activates the process fori≥τ. The

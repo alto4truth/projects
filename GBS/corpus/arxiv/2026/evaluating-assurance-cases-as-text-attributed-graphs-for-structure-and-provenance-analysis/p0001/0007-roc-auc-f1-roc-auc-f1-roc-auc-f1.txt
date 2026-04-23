@@ -1,0 +1,30 @@
+title: Evaluating Assurance Cases as Text-Attributed Graphs for Structure and Provenance Analysis
+source: arxiv
+year: 2026
+document_id: evaluating-assurance-cases-as-text-attributed-graphs-for-structure-and-provenance-analysis
+authors: Fariz Ikhwantri; Dusica Marijan
+page: 1
+section: roc-auc-f1-roc-auc-f1-roc-auc-f1
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20577v1
+
+(Encoder LM+GNN)
+GPrompt-GCN .747±.21 .834±.17
+GPrompt-SAGE .831±.07 .894±.05
+Table 8: [RQ3] The GNNExplainer result of Node and Edge
+explanation metrics results from the graph classification
+task.
+[RQ3] Node Edge
+Model Fid(+) (↑)Fid (−) (↓)GEF(↓) Fid(+) (↑)Fid (−) (↓)GEF (↓)
+GCN-1 layer .425±.33 .550±.30 .091±.02 .017±.02 .003±.01 .015±.00
+SAGE-1 layer .703±.40 .128±.06 .048±.02 .011±.02 .000±.00 .015±.00
+GAT-1 layer .569±.44 .431±.44 .081±.03 .031±.07 .000±.00 .012±.00
+UniGraph .567±.31 .433±.31 .114±.01 .161±.14 .044±.03 .032±.02
+GPrompt-GCN .431±.38 .569±.38 .057±.02 .036±.06 .025±.06 .006±.01
+GPrompt-SAGE .067±.08 .708±.31 .101±.06 .092±.09 .089±.10 .036±.03
+diagnostic signal for improving structured arguments in generated
+data.
+RQ2b: Exploratory Analysis of Explainability on Provenance Classification.The faithfulness analysis evaluates whether the explanations provided by GNNs accurately capture the nodes and edges
+most influential to their predictions. The fidelity and GEF metrics
+in Table 7 reveal different results across models. Among all methods, GCN shows relatively balanced positive and negative node
+fidelity (Fid(+) ≈ 0.53, Fid(−) ≈ 0.47), suggesting moderate but inte

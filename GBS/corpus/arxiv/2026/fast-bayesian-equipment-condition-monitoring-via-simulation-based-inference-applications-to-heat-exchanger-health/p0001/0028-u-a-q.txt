@@ -1,0 +1,23 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+9
+FIG. 6: The marginalized distributions of the posterior medians inferred via MCMC (orange) and SBI (blue) across
+500 noisy observations per scenario. The red dashed lines indicate the ground-truth parameter values. Each row
+represents a single continuous parameter, while each column corresponds to a specific failure scenario.
+IV. RESUL TS
+This section compares SBI and MCMC over the six
+benchmark scenarios using 500 noisy realizations per scenario. We first assess failure-mode identification, then
+comparecontinuous-parameterinferencequalityandposterior shape agreement, and finally discuss Scenario 2 as
+a representative stress test under weak observability. Table II shows that both MCMC and SBI identify fouling
+and leakage scenarios with near-perfect reliability, assigning mostposterior mass tothe correct failuremode across
+the 500 datasets per scenario. The healthy state (Scenario 6) is slightly more challenging, as transient sensor noise can emulate weak degradation and occasionally shift posterior mass toward a fault mode. Even in
+this regime, SBI remains statistically equivalent to the
+MCMC reference for failure-mode classification. Figure 5 provides a pointwise comparison of p

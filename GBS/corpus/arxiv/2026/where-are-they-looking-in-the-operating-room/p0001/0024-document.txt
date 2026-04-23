@@ -1,0 +1,35 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+6
+Table 1: Comparison with the state-of-the-art temporal action detection approaches. We report AP at different tIoU.
+Method StOP?
+0.1 0.2 0.3 0.4 0.5 Avg.
+ActionFormer [41] 12.63 12.63 12.63 5.79 1.22 8.98
+TriDet [34] 23.46 13.37 13.35 13.27 1.87 13.06
+TemporalMaxer [35] 16.04 14.36 13.72 13.53 12.38 14.01
+Team-OR [6] 30.8520.78 20.66 20.58 20.52 22.68
+Ours (off-the-shelf) 25.42 25.40 25.30 25.10 25.10 25.26
+Ours (fine-tuned) 30.3430.32 30.18 30.09 30.06 30.20
+Method Anesthesiologists being attentive
+0.1 0.2 0.3 0.4 0.5 Avg.
+ActionFormer [41] 18.21 12.37 8.74 5.28 3.10 9.54
+TriDet [34] 18.37 12.46 8.92 5.42 3.03 9.64
+TemporalMaxer [35] 14.12 8.88 5.94 3.04 1.40 6.68
+Team-OR [6] 22.67 15.51 10.88 6.49 3.21 11.75
+Ours (off-the-shelf) 28.98 22.91 17.62 12.59 7.35 17.89
+Ours (fine-tuned) 30.95 24.04 18.40 13.70 8.31 19.08
+For video preprocessing and training of the TAD model, we
+follow the same settings as in [6].τin Eq. 2 is set to 0.07.
+3.4. Results
+Gaze-following in the operating room:We compare the
+Gaze-LLE models pretrained on the GazeFollow dataset [28]
+with the ones fine-tuned on the 4D-OR and Team-OR datasets.
+As shown in Table 2, the fine-tuned models perform significantly be

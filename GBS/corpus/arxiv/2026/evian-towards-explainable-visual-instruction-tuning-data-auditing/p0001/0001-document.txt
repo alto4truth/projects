@@ -1,0 +1,24 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+Zimu Jia1, Mingjie Xu1, Andrew Estornell2, Jiaheng Wei1*
+1The Hong Kong University of Science and Technology (Guangzhou)
+2ByteDance Seed
+jiahengwei@hkust-gz.edu
+Abstract
+The efficacy of Large Vision-Language Models
+(LVLMs) is critically dependent on the quality of their training data, requiring a precise
+balance between visual fidelity and instructionfollowing capability. Existing datasets, however, are plagued by inconsistent quality, and
+current data filtering methods rely on coarsegrained scores that lack the granularity to identify nuanced semantic flaws like logical fallacies or factual errors. This creates a fundamental bottleneck in developing more reliable models. To address this, we make three core contributions. First, we construct a large-scale, 300Ksample benchmark by systematically injecting
+diverse, subtle defects to provide a challenging
+testbed for data auditing. Second, we introduce a novel “Decomposition-then-Evaluation”
+paradigm that breaks model responses into constituent cognitive components: visual description, subjective inference, and factual claim,
+enabling targeted analysis. Third, we insta

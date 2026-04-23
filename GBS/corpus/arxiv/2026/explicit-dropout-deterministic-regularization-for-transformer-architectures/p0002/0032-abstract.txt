@@ -1,0 +1,43 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+Table 3
+Comparison of implicit and explicit dropout on THUMOS14 features, extracted from the TSN model pre-trained on ActivityNet
+and Kinetics-400, with dropout ratio of 0.2 using a 2-layer Transformer encoder. Results report test mAP.
+Dropout on Attention
+Sequence
+Dropout on FF
+network
+Kinetics ActivityNet
+DropAttention [23] Implicit 62.03±0.26 53.89±0.46
+DropKey [20] Implicit 64.58±0.33 55.87±0.61
+None Implicit 64.53±0.47 55.62±0.74
+(Q) Arora et al. [1] Explicit 48.66±6.52 46.67±2.03
+(K) Arora et al. [1] Explicit 51.84±4.14 44.52±5.80
+(V) Arora et al. [1] Explicit 52.23±7.40 36.96±2.28
+None Arora et al. [1] 57.76±0.90 48.44±1.05
+None Explicit 63.96±0.46 54.92±0.33
+Explicit (Q) Explicit 63.70±0.56 54.98±0.84
+Explicit (K) Explicit 63.78±0.54 54.92±0.76
+Explicit (V) Explicit64.68±0.36 56.51±0.37
+Explicit (AV) Explicit 64.24±0.40 56.10±0.55
+Table 4
+Comparison of implicit and explicit dropout on GTZAN (audio
+classification dataset) with dropout ratio of 0.2 using a 2-layer
+Transformer encoder. Results report test accuracy.
+Dropout on
+Attention Sequence
+Dropout on
+FF network
+Accuracy (%)
+DropAttention [23] Implicit 84.84±0.89
+DropKey [20] Implicit 84.84±0.89
+None Implicit 85.00±0.86
+(Q

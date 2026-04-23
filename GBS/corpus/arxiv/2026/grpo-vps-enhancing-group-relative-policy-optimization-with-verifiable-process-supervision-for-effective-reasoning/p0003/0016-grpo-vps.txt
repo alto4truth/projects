@@ -1,0 +1,34 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+Published as a conference paper at ICLR 2026
+C(z ≤k) =π θ(y∗ |x, z ≤k)(3)
+wherexis the input question andz ≤k = (z1, . . . , zk)denotes partial reasoning trace up to segmentk. The
+initial value, before any reasoning, isC 0 =P(y ∗ |x).
+To quantify the contribution of each reasoning segment, we define a segment-wise progress score, denoted
+as∆C k, is then computed as the change in this confidence score, effectively isolating the contribution of
+that specific step:
+∆Ck =C(z ≤k)−C(z ≤k−1)
+=π θ(y∗ |x, z ≤k)−π θ(y∗ |x, z ≤k−1)
+(4)
+where∆C k ∈[−1,1]due to the probabilistic range of confidence scores. This results in a vector
+∆C= [∆C 1, . . . ,∆Cm]of segment-level supervision signals for each trajectory. It reflects how much
+each segment improves (or worsens) the model’s belief in the final answer.
+3.3 GRPOWITHPROCESSSUPERVISION
+We design a hybrid advantage signal that fuses sparse outcome-level feedback with dense, segment-level
+process supervision. For each prompt, we sample a group ofGtrajectories{o 1, o2, . . . , oG}from the policy
+πθ. Each trajectoryo i = (zi
+1, . . . , zi
+m, yi)with binary correctness labelr i ∈ {0,1}, we compute the grouprelative advantage:
+Ai =r i − 1
+G
+GX
+j=1
+rj,(

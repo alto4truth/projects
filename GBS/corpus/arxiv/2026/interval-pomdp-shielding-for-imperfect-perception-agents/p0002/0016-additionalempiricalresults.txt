@@ -1,0 +1,29 @@
+title: Interval POMDP Shielding for Imperfect-Perception Agents
+source: arxiv
+year: 2026
+document_id: interval-pomdp-shielding-for-imperfect-perception-agents
+authors: William Scarbro; Ravi Mangal
+page: 2
+section: additionalempiricalresults
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20728v1
+
+Fig. 7. TaxiNet abstraction coarseness for the LFP envelope. The mean
+max-gap stays moderate over time, but the percentile band shows that some
+histories generate substantially looser over-approximations than others.
+more permissive and uniquely attains a0%-stuck operating
+point at lower thresholds, but does so by accepting a nontrivial
+failure rate (3–4.5%). Fwd-Sampling does not match SingleBelief on Refuel: at its best low-failure point it reaches0%
+fail but about98%stuck under uniform perception and93%
+stuck under adversarial perception. The lesson is not that
+memoryless or sampled shielding is preferable on Refuel;
+rather, it shows that large hidden-state problems force a threeway tradeoff between safety, stuck avoidance, and online
+computational budget.
+C. Measured Conservatism of the Envelope
+The runtime envelope is intentionally an overapproximation, so an important question is whether its
+conservatism is measurable rather than merely asserted.
+We study this on TaxiNet by comparing the LFP envelope
+against a forward-sampled under-approximation of reachable
+beliefs. For each action under evaluationaand beliefb, let
+P(b,allowed(a))denote the belief-weighted mass on true
+state

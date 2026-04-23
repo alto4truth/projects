@@ -1,0 +1,18 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+ermore, domain-specific
+SFT models like Table-LLaVA (7B and 13B) perform poorly on TQA tasks (e.g.,
+5.29% and 7.71% on FinQA), highlighting that simply fine-tuning on table data
+is inadequate. True tabular intelligence requires the structural determinism and
+step-level penalization that V-tableR1 provides.
+4.3 Ablation Studies
+To systematically dissect the source of V-tableR1’s performance gains, we conduct ablation studies focusing on the core components of our proposed optimization algorithm. We evaluate the models on both the TFV and TQA benchmarks,
+using the Qwen3-VL-2B architecture as our base model for these experiments.

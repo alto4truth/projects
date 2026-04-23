@@ -1,0 +1,20 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+behavior prediction, and map-context informed BEV energy consumption
+modeling. Vehicle speed prediction and energy consumption estimation have
+evolved from classical parametric models to sophisticated data-driven approaches that incorporate map information and driver behavioral patterns.
+Early research relied on physics-based models such as the Intelligent
+Driver Model (IDM) [1], which provided analytical formulations for carfollowing behavior and vehicle dynamics using simplified representations of
+traction, drag, and rolling resistance. However, these parametric models
+proved inadequate for real-world driving scenarios, failing to capture stochasticity and environmental variability in urban traffic conditions [2, 3]. Markov
+chainextensionstothephysics-basedmodelsbridgeddeterministicandstochastic approaches but suffered from accuracy degradation at longer prediction
+horizons due to first-order dependence assumptions [4].
+The availability of high-resolution telemetry data enabled machine learning paradigms, initially using Feedforward Neural Networks (FNN) and Support Vector Machines (SVM) for nonlinear mapping between driving parameters and velocities. Long Short-Term Memory (LSTM

@@ -1,0 +1,26 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+ptibility to error accumulation, where inaccuracies from
+the intrinsic estimation stage are amplified by the renderer.
+The advantage of estimating geometry and intrinsics was already raised by the seminal work by Barron et al. [2] in the
+context of intrinsic image decomposition, without considering relighting yet. More recently, UniRelight [9] introduced
+a general-purpose framework that jointly estimates albedo
+and synthesizes relit video in a single pass. By formulating this as a joint denoising problem in a video diffusion
+model [7, 23], it implicitly reasons about scene structure.
+While powerful, its joint estimation is limited to albedo,
+leaving a critical gap in explicitly and jointly modeling the
+3D geometry essential for consistent shading.
+2.2. Geometry with Latent Diffusion
+A challenge in our joint framework is finding a 3D geometry
+representation compatible with high-resolution latent diffusion models that rely on pretrained V AEs to encode inputs
+into a latent space. Existing representations like 3D point
+maps (used in [33–36]) become noisy after being processed
+by the V AE (see Fig. 2). While other works explore adapting the V AE for point maps, they often require retra

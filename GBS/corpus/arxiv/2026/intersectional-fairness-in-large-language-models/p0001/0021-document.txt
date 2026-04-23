@@ -1,0 +1,48 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+ama-3.1-8B-instruct, Gemma-2-9b-it, Phi-3.5-miniinstruct, bloomz-7b1, sarvam-2b-v0.5
+BharatBBQ (new
+intersectional
+groups)
+Y Y Y accuracy, Bias score, Stereotypical Bias
+Score (SBS)
+N
+[Saralegi and
+Zulaika 2025]
+Latxa (7B, 13B, 70B), Llama-eus-8B, Meta-Llama-3.1 (8B,
+70B)
+BasqBBQ Y Y N Accuracy, bias scores N
+[Huang and
+Xiong 2024]
+GLM, BLOOM, ChatGLM, BELLE, GPT-3.5-turbo culturally-adapted
+BBQ benchmark
+(CBBQ)
+Y Y N weighted overall bias score Y
+[Jin et al .
+2024]
+KoAlpaca (KoAlpaca-Polyglot-12.8B), Claude-v1 (claudeinstant-1.2), Claude-v2 (claude-2.0), GPT-3.5 (gpt-3.5turbo-0613), GPT-4 (gpt-4-0613), and CLOVA-X
+culturally-adapted
+BBQ benchmark
+(koBBQ)
+Y Y N Accuracy, Bias score N‡
+[Jin et al .
+2025]
+GPT-3.5-turbo (OpenAI, 2024b), GPT-4-turbo (OpenAI
+et al., 2024a), GPT-4o (OpenAI, 2024a), Gemini-2.0flash (Google, 2024), HCX-dash, HCX (Yoo et al., 2024),
+Claude-3-haiku (Anthropic, 2024a), Claude-3.5-sonnet
+(Anthropic, 2024b), Llama-3.3-70B (Grattafiori et al., 2024),
+Qwen2.5-72B (Qwen et al., 2025)
+BBQ benchmark,
+KoBBQ, BBG§
+Y Y N bias score N‡
+Our Study GPT-4o, Llama-3, Gemma-3, Gemini-2.0 Flash,
+Gemini-2.5-Flash, Claude-Sonnet-4
+BBQ benchmark Y Y Y accuracy, bias scores, Diffe

@@ -1,0 +1,31 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 14
+section: sam-promptsselection
+chunk: 42
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+es most of
+the frame, and using the image perimeter as a bounding box
+ensures that the biggest possible amount of relevant pixels
+is included inside the box, without significant background
+noise. For FRGCv2 [39] landscape pictures, however, the
+background occupies a significant portion of the sample,
+and using the whole image perimeter as a bounding box
+is not discriminative enough, resulting in poor segmentation
+(Figure 3). Hence, we define a more refined prompt for
+these samples by extending the bounding boxes extracted
+by RetinaFace [13] differently in each dimension.
+We start by experimenting with the horizontal dimension
+by fixing the height of the prompt box as the height of
+the sample and widening the horizontal dimension of the
+RetinaFace bounding box to different extents. It is possible to
+observe that the best segmentation results are achieved when
+the bounding box is extended by 150% in each horizontal
+direction, resulting in a total width of 400% of the original
+size (Figure 4). Nonetheless, it can still be seen that a significant portion of the background is not properly eliminated in
+these samples, due to the vertical dimensions of the prompt
+box. While it is logical

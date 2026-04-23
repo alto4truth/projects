@@ -1,0 +1,32 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+oken after dropout, i.e.,
+̃𝐱𝑖𝑡 =𝐱 𝑖 − (𝐦𝑖𝑡 ⊙𝐱 𝑖).(56)
+Then the deviation induced by dropout in the value space is
+𝐯𝑖 −𝐯 𝑖𝑡 = ̃𝐱𝑖𝑡𝐖𝑇
+𝑣 .(57)
+To enforce consistency between the original and dropoutperturbed value representations, we penalize this deviation.
+Assuming𝑁 𝑇 stochastictrainingepochswithindependently
+sampled dropout masks applied to𝐗, and denoting the
+stackeddroppedcomponentsatepoch𝑡by ̃𝐗𝑡,wedefinethe
+value dropout regularizer as
+𝐽𝑣 = 1
+2𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+‖‖‖
+̃𝐗𝑡𝐖𝑇
+𝑣
+‖‖‖
+2
+𝐹
+.(58)
+:Preprint submitted to Elsevier Page 9 of 13

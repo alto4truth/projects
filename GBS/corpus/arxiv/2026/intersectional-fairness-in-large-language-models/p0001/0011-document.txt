@@ -1,0 +1,21 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+23; Parrish et al. 2022]). For example, a model
+may favor a white woman over a more qualified black woman (race is the only sensitive attribute at play, since both
+individuals are of the same gender), or produce different risk assessments for an Asian woman compared to a white
+man, where both race and gender differ, revealing biases at both single and intersectional levels, respectively.
+Intersectionality is a framework introduced by [Crenshaw 1989] to understand how multiple forms of oppression
+interact to create distinct experiences of marginalization. In the context of AI fairness, this means that the combined
+effect of multiple sensitive attributes such as race and gender can produce discriminatory outcomes that neither attribute
+alone would reveal, making intersectional evaluation essential for a complete understanding of model bias.
+As depicted in Figure 1, fairness assessment in LLMs can be approached along two dimensions: the number of
+sensitive attributes considered, ranging from single attribute to intersectional settings, and the type of evaluation data
+used, including tabular formats and question answering tasks [Chen et al. 2024b]. These datasets vary in the types of

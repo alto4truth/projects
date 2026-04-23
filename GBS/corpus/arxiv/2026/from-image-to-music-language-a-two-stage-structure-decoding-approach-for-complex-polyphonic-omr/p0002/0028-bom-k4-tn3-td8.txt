@@ -1,0 +1,56 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 2
+section: bom-k4-tn3-td8
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+Wrong division leading to cascading tick errors: Always verify each event’s division against
+feature.divisionsAND the image before computing ticks.
+43
+
+4. Not verifying feature.divisions confidence: The ML classifier’s confidence array is often more
+reliable than the regulation’s assigned division.
+5. Mixing staves in one voice: Events with differentevent.staff values must never be in the same
+voice array.
+Output FormatOutput ONLY a JSON block with fixes. Each fix is a RegulationSolution plus
+measureIndexandstatus.
+Fix fields:measureIndex (index in spartito);events (array with requiredid,tick,tickGroup,timeWarp,
+and optional division/dots/beam/grace overrides); voices (array of event-ID arrays); duration (ticks);
+status(0=Solved, 1=Issue,−1=Discard).
+status=0 only if each voice’s durations sum to≤ measure duration and no tick overlap exists within any voice.
+Evaluation ToolYou have access to the evaluate_fix tool (via MCP). Workflow: (1) analyze measure
+data and image; (2) propose a fix; (3) callevaluate_fix to check quality metrics; (4) iffine=false, adjust
+and re-evaluate; (5) once satisfied, include the fix in the final JSON output. Always callevaluate_fix at least
+once per measure before finalizing.
+Initial State
+Measure image
+(background)
+Before — M274
+S0
+S1
+3
+4 1
+0
+2
+240 3
+480
+4
+0
+5
+240
+6
+480
+7
+480
+8
+720
+9
+960
+10
+1200
+1440
+0 480 960 1440

@@ -1,0 +1,37 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis SAC ’26, March 23–27, 2026, Thessaloniki, Greece
+<feature_model_analysis>
+<dead_features>[[analog]]</dead_features>
+<explanation>
+[analog] is a dead feature because [screen] is mandatory, and
+[screen] must be either [analog] or [hires]. However, [screen]
+also requires [camera], and [camera] in turn requires [hires].
+This creates a conflict if [analog] is selected, as it cannot satisfy
+the transitive requirement for [hires]. Therefore, [hires] is always
+included, and [analog] can never be selected.
+</explanation>
+</feature_model_analysis>
+Analysis Results
+LLMs
+- A [smartwatch] must have at least one type of [connector] and a
+[screen].
+- The [connector] can be [gps], [cellular], or both.
+- The [screen] can be [analog] or [hires] (high resolution).
+- The [smartwatch] may include a [camera] and a [compass].
+- [compass] requires a [gps].
+- [camera] requires a [hires].
+- [cellular] and [analog] exclude each other.
+- If the [screen] is selected, a [camera] must also be included.
+Feature Model Blueprint
+You are a domain-specific AI assistant
+specializing in analyzing feature models
+described in “Bluep

@@ -1,0 +1,22 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+earning signal is
+then defined as:
+S(∆) = Q(∆)
+V(∆) .(1)
+Since Q saturates with further training whileV grows near-exponentially, their ratio first rises and then falls,
+admitting a unique interior optimum∆∗ that maximizes S. Below this optimum the guide is too similar to
+the current policy to provide new information; above it, the variance cost overwhelms the marginal gain in
+quality. The full formal treatment, including the variance upper bound and importance-weight analysis, is
+deferred to Appendix B.
+Figure 2(a) places representative trajectory sources in this plane and reveals the same pattern: each existing
+approach sits at a suboptimal corner of theQ–V trade-off. External teachers (e.g., LUFFY) have their dot
+3

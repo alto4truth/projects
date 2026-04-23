@@ -1,0 +1,23 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+lear only years later, as in delayed recognition and “sleeping beauties” [48], and no
+short-horizon scalar objective faithfully captures novelty, correctness, and long-run scientific value. More
+broadly, the research-assessment literature argues that metrics should inform rather than replace expert
+judgment, and that target metrics are easy to game [49–51]. So academic research is only partly amenable
+to direct metric optimization. Local correctness can often be checked, but end-to-end research value cannot
+yet be scored reliably by a single automatic reward. That is why our system is organized around artifacts,
+adversarial critique, and human-on-the-loop judgment rather than one scalar score. A central open problem
+is to design better computable proxies for research quality without reducing research to the proxy.
+Contributions
+•We presentpAI/MSc, an open-source, customizable, modular multi-agent system for hypothesis-topaper workflows with explicit human oversight.
+•We introduce an artifact contract in which progress is represented by named intermediate outputs and
+stage-level validation gates rather than by free-form dialogue alone.
+•We implement a fixed workflow that decomposes

@@ -1,0 +1,61 @@
+title: AAC: Admissible-by-Architecture Differentiable Landmark Compression for ALT
+source: arxiv
+year: 2026
+document_id: aac-admissible-by-architecture-differentiable-landmark-compression-for-alt
+authors: An T. Le; Vien Ngo
+page: 1
+section: aac-fps-alt
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20744v1
+
+e atresults/PREREG.md; see Appendix G). The
+prediction was written based on the covering-radius theory (Theorem 5) and the synthetic-graph findings
+44
+
+Table 18: ABLATIONCoverage-aware regularizer on non-road graphs.AAC trained with the differentiable covering-radius regularizerR cov at four strengthsλcov∈{0,10−3,10−2,10−1}, evaluated against
+the matched-memory FPS-ALT reference at the same deployed label memory. Setup:K0=32,m=8,200
+training epochs, batch size256, learning rate10 −3, 100 queries per seed. SBM results from 5 seeds; BA
+results from 3 completed seeds. The Wilcoxonp-value column is the paired test of AAC expansions at that
+λcov against the same-seedλcov=0baseline, withp-values combined across seeds (Fisher). On non-road
+synthetic graphs the regularizer fails to close the ALT gap: on SBM it is statistically indistinguishable from
+λcov=0(p≳0.4); on BA it is neutral-to-slightly-negative. This is consistent with the covering-radius reading
+that, on small-diameter synthetic graphs, FPS is already near-optimal and there is little covering slack for
+the regularizer to close. The road-network coverage-aware evaluation in Appendix B (Modena/Manhattan)
+closed a1.3–1.4% gap, so the non-road null finding here bounds the regularizer’s effective scope rather than
+overturning it.
+Graphλ cov AAC red. (%) ALT red. (%) Wilcoxonpvs. baseline
+SBM (5×2000)
+0 88.69 89.95 1.00(baseline)
+10−3 88.78 89.95≈0.41
+10−2 88.68 89.95≈0.45
+10−1 88.65 89.95≈0.47
+BA (10,000,m=5)
+0 89.03 89.90 1.00(baseline)
+10−3 88.43 89.90<10 −3(worse)
+10−2 88.43 89.90<10 −3(worse)
+10−1 88.43 89.90<10 −3(worse)
+OGB-arXiv (∼170K nodes, symmetrized LCC): deferred; see Appendix B for discussion.
+Table 19: ABLATIONTraining-objective drift on a road graph (DIMACS NY).Extension of the
+Section 5.9 diagnostic to a directed road network (KALT=8, matched memoryB=64B/v: AACK 0=32,
+mfwd+mbwd=8+8; ALTK=8). Per-cell mean±std over 3 seeds (42, 123, 456) of test-set expansion
+reduction at five training-epoch checkpoints; 100 queries per seed. Theforced-first-marm (AAC with onehot rows on the firstKALT pool indices in each direction) algebraically equals FPS-ALTK=8to rounding
+(91.20%); thetrainedcompressor stays1.7–3.3%belowthis architectural ceiling across the entire0–1000epoch window, with the gapwideningfrom−1.67% at epoch 50 to−3.28% at epoch 1000 — the multi-graph
+SBM/BA pattern of Figure 7 reproduced on a real road graph.
+Variant ep. 0 ep. 50 ep. 200 ep. 500 ep. 1000
+AAC (trained, default; mean over 3
+seeds)
+89.13±0.6289.53±0.2488.82±0.0488.36±1.0887.92±1.53
+forced-first-m(arch. ceiling)91.20 91.20 91.20 91.20 91.20
+FPS-ALTK=8(matched-memory reference)
+91.20 91.20 91.20 91.20 91.20
+gap (AAC−ceiling, %)−2.07−1.67−2.38−2.84−3.28
+(Section 5.8), and reads, verbatim:on OGB-arXiv (citation graph,∼170K nodes, non-metric, high clustering), AAC should beat ALT at every budget level with a gap of roughly+2to+6percentage points at 32 B/v
+narrowing to+1to+3% at 128 B/v; the hybridmax(hAAC,hALT)should be the top performer; admissibility
+violations should be zero.We then ran the evaluation under the convention of E.2 below and report the
+outcome in the table at the top of this section, whether the prediction holds or fails.
+Setup.OGB-arXiv is a directed citation graph (169,343 papers, 1,166,243 edges). We symmetrize (undirected), take the largest connected component (no change; the graph is already connected), and assign
+uniform-random edge weights in[1,10]to obtain a weighted undirected graph suitable for A* benchmarking.
+We run 100 uniform-randoms-tqueries per seed, 5 seeds, at budgetsB∈{32,64,128}per vertex (AAC
+K0/m∈{32/8,64/16,128/32}; ALTK∈{4,8,16}). A matched-total-budget hybrid companion study (Section 5.8.3) evaluatesmax(hAAC,h ALT)on OGB-arXiv, BA, and SBM under a half/half budget split (each
+arm atB/2B/v). Reference oracle: Dijkstra (mean 78,616 expansions).
+45

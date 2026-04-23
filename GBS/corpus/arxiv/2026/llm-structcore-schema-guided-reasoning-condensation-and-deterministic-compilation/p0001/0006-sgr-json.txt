@@ -1,0 +1,32 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 1
+section: sgr-json
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+Teacher Data Generation.For the Stage 1 teacher pipeline, we use large
+API-accessible models to produce high-quality SGR summaries. We tested
+three teacher configurations:
+• Mistral Large 3(675B, via NVIDIA API) — best overall quality, supporting response_format=json_object on most NVIDIA endpoints
+(with auto-fallback to parser-based extraction for Mistral-family models
+where structured output returns 400 errors).
+• Qwen 3.5(397B, via NVIDIA API) — comparable quality but higher
+FP; requires enable_thinking=false to prevent “Thinking Process”
+leakage into the output.
+• Claude Sonnet 4.6(via Anthropic API) — recall-optimized prompts
+achieve strong results but not submitted due to participation limits.
+Teacher-generated summaries are compiled through the same deterministic
+Stage 2, enabling precise ablation of Stage 1 quality vs. Stage 2 deterministic
+logic.
+Concrete Example.Given a Stage 1 summary JSON with the following
+VITALSfield:
+Heart Rate: 105 bpm (tachycardic).
+Blood Pressure: 90/60 mmHg (hypotensive).
+SpO2: 88%.
+Respiratory Rate: 28/min (tachypneic).
+the Stage 2 compiler:
+1. Extracts KV pairs: {heart rate: “105 bpm (tachycardic)”,blood pressure: “90/60 mmHg (hypotensive)”,spo

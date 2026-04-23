@@ -1,0 +1,29 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+le-based evaluation (105,000 negotiations across
+12 spread values), a comparison against a 20-billionparameter unconstrained LLM broker (3,375 negotiations), and a robustness test against LLM-powered
+carrier agents (6,750 negotiations). The framework
+matches LLM performance while operating as a lightweight deterministic formula with negligible inference
+cost, simple prompt instructions, and full auditability
+(Sections 5–6).
+2 RELA TED WORK
+2.1 Automated Negotiation and the Beta
+Problem
+Faratin et al. [1] introduced a taxonomy of negotiation tactics
+for autonomous agents, with time-dependent tactics using a
+concession function 𝛼(𝑡) = 𝑡1/𝛽 where 𝛽 controls the curve
+shape. The original work left 𝛽 as a design-time constant
+chosen by the system builder, explicitly identifying its selection as an open problem. Over the following 25 years, the
+field developed several approaches to address this gap, with
+modern methods largely focusing on adapting 𝛽 based on
+opponent behavior.
+Cao et al. [ 11] proposed a multi-strategy selection algorithm that classifies the opponent’s concession rate as accelerating, decelerating, or steady, and adjusts the agent’s
+concession curve accordingly. Hindriks

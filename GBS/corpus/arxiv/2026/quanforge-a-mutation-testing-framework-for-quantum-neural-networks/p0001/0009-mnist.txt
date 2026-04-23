@@ -1,0 +1,23 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 1
+section: mnist
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+QuanForge: A Mutation Testing Framework for Quantum Neural Networks FSE128:13
+provide additional insight into the sensitivity of different model regions to mutation. Combined
+with KR and NR, it allows a more comprehensive analysis of mutation effects.
+4.3 Test Data Preparation and Mutant Generation
+4.3.1 Test Data of Varying Quality.To evaluate the effectiveness of QuanForge in measuring test
+adequacy, we construct suites with varying quality. As a reference, the original suite, denoted as
+Ori, contains 100 random inputs per class. To focus on deviations introduced by mutations rather
+than on those inherent to the original model itself, as in [38], these samples are correctly classified
+by the original QNN, thereby improving the interpretability of mutation testing. We then categorize
+these suites into two groups. Strong suites introduce more challenging inputs, including (1)LConf,
+low-confidence inputs close to the decision boundary [23, 25], (2)OOD, out-of-distribution inputs
+drawn from unseen classes during training [9], (3)Aug, augmented inputs via affine transformations,
+random cropping, brightness adjustment, blurring, sharpening and additive Gaussian and salt-andpepper noise

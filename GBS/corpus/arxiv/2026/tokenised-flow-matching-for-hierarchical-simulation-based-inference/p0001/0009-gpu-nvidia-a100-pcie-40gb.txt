@@ -1,0 +1,19 @@
+title: Tokenised Flow Matching for Hierarchical Simulation Based Inference
+source: arxiv
+year: 2026
+document_id: tokenised-flow-matching-for-hierarchical-simulation-based-inference
+authors: Giovanni Charles; Cosmo Santoni; Seth Flaxman; Elizaveta Semenova
+page: 1
+section: gpu-nvidia-a100-pcie-40gb
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20723v1
+
+rence with
+irregular data and expensive simulators. By replacing repeated simulator evaluations with fast
+surrogate samples, LF sampling reduces end-to-end training cost whenever simulation dominates
+compute; in the haemodynamics setting we observed a2× speedup for two patients, and since
+flow solves are computationally negligible compared to CFD simulations, this advantage scales
+approximately linearly with the number of sites at moderate scales. To our knowledge, this is the
+first application of functional observations within hierarchical SBI, enabling amortised inference over
+richer observation spaces than prior factorised approaches.
+14

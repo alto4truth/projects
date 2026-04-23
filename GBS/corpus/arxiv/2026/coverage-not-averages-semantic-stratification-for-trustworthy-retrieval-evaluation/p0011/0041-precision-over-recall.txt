@@ -1,0 +1,20 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 11
+section: precision-over-recall
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+entity_list}
+For each candidate, ask: Would a user asking this query want/need
+information about this entity? Is it central to answering the query?
+16
+
+Coverage, Not Averages Semantic Stratification for Trustworthy Retrieval Evaluation
+Be SELECTIVE. Only include entities that genuinely characterize
+the query’s semantic content.
+Return ONLY the entity indices that are relevant:
+Relevance filtering.The following prompt identifies which retrieved documents are relevant to the query.

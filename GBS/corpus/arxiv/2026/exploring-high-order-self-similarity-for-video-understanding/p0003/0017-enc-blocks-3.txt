@@ -1,0 +1,20 @@
+title: Exploring High-Order Self-Similarity for Video Understanding
+source: arxiv
+year: 2026
+document_id: exploring-high-order-self-similarity-for-video-understanding
+authors: Manjin Kim; Heeseung Kwon; Karteek Alahari; Minsu Cho
+page: 3
+section: enc-blocks-3
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20760v1
+
+e baseline Side4Video [93], our MOSS-S
+model significantly reduces the number of trainable parameters and memory footprints by 71% and 48% respectively, while achieving better performance. Across
+all efficiency metrics, MOSS-S shows the best trade-off among the compared
+methods. Scaling up to MOSS-B, we obtain superior performance with a competitive efficiency. Similar trends are observed for the ViT-L scale models as well.
+Our MOSS-M model reduces the number of parameters and memory footprints
+by 76% and 52% respectively, while maintaining competitive performance. While
+ST-Adapter requires fewer parameters and less FLOPs than MOSS-M, it has
+2.9×larger memory consumption. By scaling up to MOSS-L, we can widen the
+accuracy gap with a favorable efficiency. These results demonstrate the effectiveness of our lightweight yet high-performing MOSS modules in significantly
+boosting efficiency across different model scales.

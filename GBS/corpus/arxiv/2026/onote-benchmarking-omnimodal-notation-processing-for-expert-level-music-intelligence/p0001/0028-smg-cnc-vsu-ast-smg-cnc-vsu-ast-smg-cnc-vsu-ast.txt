@@ -1,0 +1,29 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+no more than 60 notes for these 10 seconds.
+Figure 6: Core semantic execution prompts for the four primary tasks in the ONOTE benchmark
+Notation (Jianpu), and Structured Pitch-Duration Sequences. By
+enforcing these rules in the system instructions, we effectively mitigate formatting hallucinations and ensure that the models focus
+purely on the semantic music tasks.
+The detailed definitions of these formatting standards are presented in Figure 7.
+B.2 Scoring Assessment Prompts
+To enable a scalable, multi-dimensional, and nuanced evaluation of
+the generated music notations, ONOTE employs anLLM-as-a-Judge
+paradigm. While traditional string-matching metrics fall short in
+assessing the musicality and structural validity of complex scores,
+state-of-the-art LLMs can effectively serve as automated expert
+evaluators when guided by rigorous rubrics.
+In this subsection, we detail theScoring Assessment Prompts
+designed for our evaluation pipeline. To ensure objectivity and
+consistency, each critic prompt is meticulously engineered with
+three core components: 1)Expert Persona:Assigning a strict
+and domain-specific role (e.g., a rigorous music theory professor
+or a fingerstyle guitar master) to

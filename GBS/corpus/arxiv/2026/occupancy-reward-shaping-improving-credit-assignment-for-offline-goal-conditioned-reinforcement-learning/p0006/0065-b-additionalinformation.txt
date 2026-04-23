@@ -1,0 +1,22 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 6
+section: b-additionalinformation
+chunk: 65
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+tor (p D
+cur, pD
+traj , pD
+rand)
+puzzle-4x6-play 1.0 0.9 25 0.995 (0, 1, 0)
+cube-triple-play 3.0 0.9 50 0.995 (0, 1, 0)
+antmaze-large-navigate 0.3 0.9 50 0.995 (0, 1, 0)
+antmaze-giant-navigate 0.3 0.9 50 0.995 (0, 1, 0)
+puzzle-4x6-noisy 0.03 0.9 25 0.995 (0, 1, 0)
+cube-triple-noisy 0.03 0.9 50 0.995 (0, 1, 0)
+antmaze-large-explore 0.01 0.9 50 0.995 (0, 0, 1)
+24

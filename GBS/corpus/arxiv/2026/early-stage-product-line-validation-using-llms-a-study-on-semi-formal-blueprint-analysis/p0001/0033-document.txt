@@ -1,0 +1,27 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+s with 78.3%, followed
+by GPT-4.1 and Grok 4 Fast Non Reasoning (60–68%), while Llama
+4 Scout is the weakest (42.7%).
+Takeaway.Reasoning-optimized models consistently outperform general-purpose ones on blueprint AOs, but accuracy declines
+with blueprint size/depth and remains uneven for structural counts
+(e.g., mandatory/alternative counting).
+5.2 RQ2: Efficiency of LLM-Based AOs
+Since AOs demand high precision, computational cost is meaningful only in relation to achieved accuracy. A model that spends
+more time but delivers correct results is preferable over a faster
+yet unreliable one.Table 4reports average runtime, token usage,
+and accuracy across all AOs and blueprints. Reasoning-optimized
+LLMs are notably more resource-intensive, requiring 2.4k–9.5k seconds and 500K–840K tokens, compared to 0.7k–1.9k seconds and
+370K–440K tokens for general-purpose models. The symbolic solver
+baseline (FLAMA) remains by far the fastest (18.45 seconds) but
+cannot process semi-formal blueprints directly.
+Accuracy–Cost Balance.High computational cost does not necessarily guarantee better accuracy. For instance, DeepSeek Reasoner is
+the slowest model (9,508 seconds) yet achieves only 82.8% accurac

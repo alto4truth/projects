@@ -1,0 +1,26 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+s through the Glucose3 SAT solver and the DD
+library to obtain exact and reproducible ground-truth results for
+all comparisons. The LLM-based analysis engine and the evaluation framework are implemented in Python 3.10 within a unified
+evaluation harness. To ensure modularity and reproducibility, we
+employ LangChain [22] for standardized API integration, and LangGraph [23] for orchestrating prompting pipelines. All prompts,
+blueprints, model settings, evaluation scripts, raw outputs, and
+per-run runtimes are publicly released in the replication package1.
+5 Results
+Full tables and results are shown in Appendix2.
+5.1 RQ1: Accuracy of LLM-based AOs
+Figure 2andFigure 3summarize accuracy values across all 16 AOs.
+Overall, reasoning-optimized LLMs clearly outperform generalpurpose ones, achieving an average accuracy of 81.1% compared
+to 61.0%. This gap reflects stronger multi-step reasoning and constraint handling. Accuracy patterns, however, vary markedly across
+operation types and blueprint complexity.
+Accuracy Across AOs.Solver-based AOs yield higher accuracies than solver-free ones for both model families: 68.8% vs. 56.0%
+for general-purpose and 83.5% vs. 79.2% for reasoning-optimized

@@ -1,0 +1,30 @@
+title: Trust, Lies, and Long Memories: Emergent Social Dynamics and Reputation in Multi-Round Avalon with LLM Agents
+source: arxiv
+year: 2026
+document_id: trust-lies-and-long-memories-emergent-social-dynamics-and-reputation-in-multi-round-avalon-with-llm-agents
+authors: Suveen Ellawela
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20582v1
+
+4.6 Implementation Details
+Discussion proceeded in fixed turn order starting from the
+leader, with one message per player per proposal round, softly
+capped at 2 sentences via prompting. Roles were sampled
+uniformly at random for each game, subject to Avalon role
+constraints for the given player count (e.g., exactly one Merlin, one Assassin, etc.). Player names (Alice, Bob, Charlie, Diana, Eve, etc.) were fixed across all games within a
+dataset. All discussions, player reflections, and memories
+were saved for all games, enabling detailed post-hoc analysis.
+All prompts are provided in Section A.
+5 Results
+We organize our findings around three main phenomena:
+the emergence of reputation dynamics when agents retain
+cross-game memory, the downstream effects of reputation on
+strategic behavior, and the relationship between reasoning
+depth and strategic behavior.
+5.1 Reputation Dynamics: Emergence of Stable, Role-Conditional Models
+Our primary question is whether LLM agents develop stable
+social models when interacting repeatedly with the same individuals. To investigate this, we analyze Dataset A, where five
+agents played 50 consecutive games while retaining memory
+of previous interactio

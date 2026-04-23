@@ -1,0 +1,22 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 2
+section: roc-auc
+chunk: 56
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+< 𝐵𝑒𝑓𝑜𝑟𝑒 >< 𝐴𝑓𝑡𝑒𝑟 > < 𝑂𝑢𝑟𝑠 > < 𝐿𝐸𝑉𝐼𝑅 >
+Figure 12: Detection of newly constructed or extended roads. Our approach correctly identifies
+subtle road-level changes that prior methods missed, primarily due to incomplete or misaligned
+ground truth annotations inLEVIR.
+Across 1,000 randomly sampled crops, only2samples are retained by the pipeline, corresponding to
+a pass rate of0.2%. This low acceptance rate indicates that the proposed Best-of-𝑁 filtering strategy
+effectively suppresses noisy or semantically irrelevant regions, even under unconstrained random
+sampling.
+Theseresultsfurtherdemonstratethatthemethodexhibitsstrongselectivityandrobustness,reinforcing
+its ability to focus on meaningful change patterns while avoiding false positives induced by random
+spatial variations.
+24

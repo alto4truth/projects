@@ -1,0 +1,22 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+no overlap
+with the fine-tuning training data.
+Table 1 presents the comparative performance of all embedding models across the four evaluation datasets. Clearly,
+ORPHEAS demonstrates consistently superior retrieval performance, established as the top-performing model in both
+monolingual and cross-lingual retrieval scenarios. On theGreek Civics QAdataset, ORPHEAS achieves the highest
+Acc@3 and Acc@10 scores while maintaining competitive NDCG scores, with mGTE marginally outperforming
+ORPHEAS on NDCG by a negligible margin. On theTruthfulQAandTruthfulQA*datasets, ORPHEAS considerably
+outperforms all baseline models reporting 4%–10% amd 6%–11% higher Acc@3 score, respectively. Similar findings
+can be conducted for NDCG metric where the proposed model exhibits the best scores. On the EnglishMS MARCO
+benchmark, ORPHEAS delivers competitive results, marginally below mGTE and Multilingual E5, confirming that
+domain specialization for Greek does not compromise English retrieval capability.
+Regarding GEM-XLM-RoBERTa, which shares the same fine-tuning dataset as ORPHEAS but relies on a less advanced backbone, its competitive performance relative to general-purpose baselines validates the qu

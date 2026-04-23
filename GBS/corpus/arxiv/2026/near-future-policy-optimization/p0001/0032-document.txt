@@ -1,0 +1,50 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+imization. The first highlighted window corresponds to
+the early-stage guidance phase, which lifts the run onto a stronger trajectory, while the later retrospective
+windows produce additional step-wise gains rather than a diffuse, gradual shift. This indicates that AutoNPO
+improves optimization through a small number of well-timed interventions that accumulate over time. Panel
+(b) explains the mechanism behind this advantage. Pure GRPO undergoes a steady entropy collapse, the
+classic signature of a policy that has narrowed to a limited set of reasoning templates. AutoNPO instead
+maintains a higher-entropy policy throughout training, and after the highlighted intervention windows its
+entropy stops decaying and re-expands. This reopened exploration helps the policy avoid premature collapse
+of the rollout distribution, which in turn supports the higher late-stage validation plateau seen in panel (c).
+0 100 200 300 400
+Global Step
+0.20
+0.25
+0.30
+0.35
+0.40
+0.45
+0.50Training Reward
+GRPO
+AutoNPO
+0 100 200 300 400
+Global Step
+0.20
+0.25
+0.30
+0.35
+0.40Entropy
+GRPO
+AutoNPO
+200 250 300 350 400 450 500
+Global Step
+0.40
+0.42
+0.44
+0.46
+0.48
+0.50
+0.52
+0.54Validation Accuracy GRPO
+Late-stage NPO (n

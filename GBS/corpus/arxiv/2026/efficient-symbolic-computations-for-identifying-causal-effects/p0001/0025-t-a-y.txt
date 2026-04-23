@@ -1,0 +1,22 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+h are monomial orders that first compare monomials by total degree
+and only break ties using a secondary order.
+Now, suppose that we compute the reduced Gröbner basisG≺ of a homogeneous ideal via Buchberger’s algorithm with respect to a graded monomial ordering≺. Due to the grading of the
+ordering, we always process lower degree polynomials first, and, importantly, when all elements of
+degree≤dhave been processed, all elements of the Gröbner basis in degrees≤dhave been found
+(Cox et al., 2015, Section 10.1). In contrast, when computing Gröbner bases of non-homogeneous
+ideals, lower-degree elements can appear at any stage. In this way, we can find the set of all elements
+ofG ≺ of degree at mostd, which we denote byG≺,d.
+This idea is leveraged by Faugére’s F4 algorithm (Faugére, 1999; Faugère, 2002) which uses linear
+algebra to greatly speed up Gröbner basis computation. More recently, it was observed that computing Gröbner bases becomes simpler in weighted homogeneous systems (Faugère et al., 2016). A
+weighting in a polynomial ringR[x1, . . . , xm]is given by a weight vectorw= (w 1, . . . , wm)∈N m.
+The weightingwdefines aw-grading of the ring by setting the degree of the variables

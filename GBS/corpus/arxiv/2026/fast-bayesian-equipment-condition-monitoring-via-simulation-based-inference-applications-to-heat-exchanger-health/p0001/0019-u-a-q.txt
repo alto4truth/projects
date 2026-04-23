@@ -1,0 +1,29 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+7
+of mass flow and a corresponding thermal fingerprint in
+the outlet temperatures.
+Mild Leak (Scenario 4):A slow-onset failure where
+the leak fraction grows moderately (βl = 0.0005).
+This scenario tests the sensitivity of the Bayesian
+framework to distinguish small mass-flow discrepancies from measurement noise.
+Severe Leak (Scenario 5):A rapid loss of system integrity (βl = 0.0010). This scenario creates a significant and fast-evolving divergence between inlet
+and outlet mass flow, requiring the model to maintain stability while the heat capacity rate ratior
+shifts rapidly.
+Finally, we also include a baseline no-failure case:
+No F ailure (Scenario 6):This scenario represents
+normal heat exchanger operation without fouling
+or leakage. It serves as a baseline for assessing
+whether the inference framework can correctly
+identify the absence of failure and avoid falsepositive diagnoses.
+For each scenario, an ensemble of 500 synthetic datasets
+was generated to ensure statistical significance in the
+evaluation of the inference methods. For scenario identification, each discrete failure mode is handled by predicting logits, which are transformed via a softmax function to obtain mode proba

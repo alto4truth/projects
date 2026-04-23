@@ -1,0 +1,21 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 1
+section: mnist
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+and Ubuntu 22.04. To
+evaluate the effectiveness of QuanForge, we aim to address the following research questions:
+•RQ1: How effective is QuanForge in assessing the quality of a test suite?
+•RQ2: How sensitive are different parts of QNNs to mutation operators?
+• RQ3: What is the impact of mutating different types of quantum gates on the model performance?
+4.1 Target Datasets and Models
+We choose two datasets commonly used in prior QML works for image classification: MNIST and
+FashionMNIST. The MNIST dataset [29] contains 70,000 grayscale images of handwritten digits
+(0–9), each with a resolution of28 × 28. The FashionMNIST dataset [60] has the same format but
+comprises images from ten categories of clothing items, such as T-shirts and trousers.
+Proc. ACM Softw. Eng., Vol. 3, No. FSE, Article FSE128. Publication date: July 2026.

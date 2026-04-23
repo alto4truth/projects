@@ -1,0 +1,27 @@
+title: The Expense of Seeing: Attaining Trustworthy Multimodal Reasoning Within the Monolithic Paradigm
+source: arxiv
+year: 2026
+document_id: the-expense-of-seeing-attaining-trustworthy-multimodal-reasoning-within-the-monolithic-paradigm
+authors: Karan Goyal; Dikshant Kukreja
+page: 1
+section: document
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20665v1
+
+Conference acronym ’XX, June 03–05, 2026, Woodstock, NY Karan Goyal
+5.2 The KDD Advantage: Universal Dataset
+Applicability
+Because our evaluation protocol never ablates any of the two signals unlike heuristics given by MMStar [3], the failures detected by
+the SSC are definitivelyarchitectural bottlenecksand not datasetinduced artifacts. Consequently, this diagnostic toolkit provides a
+massive advantage for KDD researchers: it can be applied to any
+regular dataset[RQ6]. We no longer need to rely on specially vetted
+datasets to test models. The SSC seamlessly points out and quantifies architectural violations across the entirety of the multimodal
+data science spectrum.
+6 Tackling Hard Problems: The Divergence Law
+of Multimodal Scaling
+The dominant orthodoxy inSystems for Data Science and Scalable
+AIdictates a simple, brute-force heuristic: scaling the compute and
+parameter counts inherently resolves multimodal alignment challenges. The industry operates on the foundational assumption that
+concatenating progressively larger Vision Transformers (ViTs) to
+progressively larger Large Language Models (LLMs) will organically yield faithful multimodal synthesis.We boldly challenge
+this princ

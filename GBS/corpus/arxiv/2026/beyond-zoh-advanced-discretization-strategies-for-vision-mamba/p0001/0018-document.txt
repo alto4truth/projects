@@ -1,0 +1,33 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+Beyond ZOH: Advanced Discretization Strategies for Vision Mamba 7
+Polynomial Interpolation (POL)
+Sample Points
+POL Interpolator
+Coefﬁcient CalculationInput Signal
+x(t)
+Output
+y(t)
+Fig.3: POL fits a polynomial through sampled points of the input, allowing the
+discrete model to approximate smooth, non-linear transitions between samples.
+Unlike FOH, which can "blur" high-frequency content through linear approximation, BIL preserves fine spectral variations while maintaining system stability
+and accurate frequency-domain behavior [3,8,21], making it particularly effective for ViM layers sensitive to fine spectral variations in texture and edges.
+Polynomial interpolation (POL)incorporates higher order terms as coefficients, improving the accuracy of the discrete approximation by capturing
+curvature in the input, resulting in smoother and more accurate latent state
+updates compared to lower order hold methods [7] [24] [2]. Fig.3 shows the block
+diagram that allows the discrete model to approximate smooth, non-linear transitions between samples. The discrete equivalent of the state-space system is
+given by integrating the polynomial input over time:
+¯A=e A∆ (9)
+¯B=
+Z ∆
+0
+eAτ Bp(τ)dτ(10)
+w

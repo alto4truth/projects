@@ -1,0 +1,26 @@
+title: Where Reasoning Breaks: Logic-Aware Path Selection by Controlling Logical Connectives in LLMs Reasoning Chains
+source: arxiv
+year: 2026
+document_id: where-reasoning-breaks-logic-aware-path-selection-by-controlling-logical-connectives-in-llms-reasoning-chains
+authors: Seunghyun Park; Yuanyuan Lei
+page: 3
+section: options
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20564v1
+
+A. True
+B. False
+Think step by step.
+Figure 7: Rulebert-Union prompt template
+D.2 Logi QA 2.0
+Logi QA 2.0 Prompt
+[System Instruction]
+You are an expert in logical reasoning and
+reading comprehension. Your task solve
+questions.
+Follow these steps strictly:
+1. Reasoning step by step.
+2. Select the answer in the format'/boxed{
+ANSWER}'. for example, if the answer is
+option A, the output should be'/boxed{A}'
+[User Prompt]

@@ -1,0 +1,25 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 1
+section: mnist
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+efore analyzing individual
+mutants, to further improve efficiency, it checks whether the current configuration can generate
+killable mutants by slightly adaptingisKilledmetric (line 14). Each element in the mutant accuracy
+list 𝑚𝑢𝑡_𝑎𝑐𝑐_𝑙𝑖𝑠𝑡 represents the average accuracy over multiple predictions of a mutant (line 12).
+The original accuracy is replicated into multiple copies to match the length of the mutant accuracy
+list (line 13). The 𝑜𝑟𝑖_𝑎𝑐𝑐_𝑙𝑖𝑠𝑡 and 𝑚𝑢𝑡_𝑎𝑐𝑐_𝑙𝑖𝑠𝑡 are assigned as 𝐴𝑂 and 𝐴𝑀, respectively. If true,
+the upper bound is updated to the middle point, and effective mutants are selected (lines 16-17).
+Otherwise, the lower bound is set to a larger value (line 19). The search process terminates when
+the search bounds can no longer be refined (line 20). Finally, we can obtain a set of effective mutants
+that cover different configurations of gate percentage.
+4 Evaluation
+We implement QuanForge using PennyLane 0.42 [7] and Pytorch 2.8 [45]. All experiments are
+conducted on systems equipped with Intel Xeon E5-1650 (6 cores, 32GB) and Ubuntu 22.04. To
+evaluate the effectiveness of QuanForge, we aim to address the following research questions:
+•RQ1: How effective is QuanForge in

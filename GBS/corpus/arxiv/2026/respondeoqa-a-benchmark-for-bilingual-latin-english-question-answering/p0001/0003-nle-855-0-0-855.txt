@@ -1,0 +1,40 @@
+title: RespondeoQA: a Benchmark for Bilingual Latin-English Question Answering
+source: arxiv
+year: 2026
+document_id: respondeoqa-a-benchmark-for-bilingual-latin-english-question-answering
+authors: Marisa Hudspeth; Patrick J. Burns; Brendan O'Connor
+page: 1
+section: nle-855-0-0-855
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20738v1
+
+Type La→En En→La Total
+Unconstrained 818 285 1103
+Constrained 17 146 163
+Total 835 431 1266
+Table 6: Translation direction (src→target) by constrainttypeforlong-form(3+word)translationquestions.
+English→Latin (146).
+Content Regular Multihop Total
+Geography 99 57 156
+History 612 280 892
+Literature 303 79 382
+Mythology 1181 303 1484
+Vocabulary 968 266 1234
+Grammar 925 77 1002
+Lit. Devices 44 2 46
+Translation 52 4 56
+Scansion 17 2 19
+Total 4201 1070 5271
+Table 7: Counts of regular vs. multi-hop 1-word SA
+questions and their question content.
+Finally, we examine the 1-word short answer
+questions. About 20% (1070) are multihop (Table 7). The skill-based questions have lower proportions of multihop questions compared to the
+knowledge-based questions. In particular, geography and history have the highest proportion of
+multihop questions (37% and 31%, respectively).
+We provide examples of questions across all language pairs, content types, formats, and sources
+in Table 2.
+6. Experiments
+To illustrate the utility of our dataset to benchmark
+LLMs, we propose with a set of prompts and evaluation metrics, applied to three current LLMs.
+6.1. Experimental Setup
+ModelsWe evaluate two open-source

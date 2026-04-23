@@ -1,0 +1,34 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 1
+section: grant-molnar
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+n repetition scale is a nuisance factor rather than a signal, this behavior is
+undesirable.
+Rather than introducing new edit operations, we take a feature-based, multi-scale approach. Fix a finite alphabet Σ. For each stringS∈Σ ∗ and each lengthn≥1 we form
+then-gram count vector [S] n ∈R Σn
+. We compare these vectors using the angle distanceθ
+(the arccosine of cosine similarity), and we aggregate the discrepancy across allnusing an
+exponentially decaying weightρ n:
+(1)d ρ(S, T) :=
+X
+n≥1
+ρn θn(S, T), θ n(S, T) :=θ([S] n,[T] n).
+Intuitively,θ n(S, T) measures how similar the localn-gram statistics ofSandTare, and the
+parameterρcontrols how strongly we discount longer-range interactions. Smallρemphasizes
+short grams (local structure), while largerρassigns more weight to longer grams (global
+structure). Although (1) is defined for allρ >0 (only finitely many terms are nonzero),
+when 0< ρ <1 the series viewpoint is most transparent and yields uniform bounds such as
+dρ(S, T)≤ π
+2 · ρ
+1−ρ for allS, T∈Σ ∗.
+In particular,d ρ is insensitive to length at large scales: it is designed to compare pattern
+profiles rather than raw counts.
+This work was carried out at ARKA. Patent pending.
+1
+arXiv:

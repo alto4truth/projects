@@ -1,0 +1,24 @@
+title: Exploring Spatial Intelligence from a Generative Perspective
+source: arxiv
+year: 2026
+document_id: exploring-spatial-intelligence-from-a-generative-perspective
+authors: Muzhi Zhu; Shunyao Jiang; Huanyi Zheng; Zekai Luo; Hao Zhong; Anzhou Li; Kaijun Wang; Jintao Rong; Yang Liu; Hao Chen; Tao Lin; Chunhua Shen
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20570v1
+
+the final position and visibility of the target object. Failed executions (e.g., due to unforeseen collisions) are rolled back and
+resampled.
+Post-Generation Filtering and Quality Assurance.To
+ensure benchmark quality, we apply two-stage filtering.
+First, using instance segmentation masks, we filter out samples where pixel-level change is negligible, ensuring every
+edit is visually significant. Second, we leverage an MLLM
+(Qwen3-VL-235B) as a quality gate to identify and discard samples with subtle anomalies difficult to capture with
+hard-coded rules, such as simulation artifacts (e.g., object
+clipping), physically implausible outcomes, or severe occlusions that render instructions ambiguous.
+Through this automated pipeline, GSI-Syn generates diverse, physically valid, and geometrically precise editing
+pairs at scale, offering a reproducible and extensible platform for probing spatial reasoning in generative models under fully controlled conditions.
+4.2. Real-world Benchmark: GSI-Real
+To complement the synthetic GSI-Syn, we curateGSIReal, a real-world benchmark for evaluating generative
+spatial intelligence in natural images. Unlike simulationbased GSI-Syn, constructing GSI-Real pr

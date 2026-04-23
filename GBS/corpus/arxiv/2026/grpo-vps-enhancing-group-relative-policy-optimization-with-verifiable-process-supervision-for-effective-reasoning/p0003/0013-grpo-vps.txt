@@ -1,0 +1,25 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+ith fine-grained credit assignment. We first introduce a segmentation
+strategy that uses token-level entropy to identify high-uncertainty transitions and partition trajectories into
+semantically meaningful reasoning steps (Section 3.1). We then introduce segment-wise progress estimation
+to quantify the contribution of each reasoning segment based on changes in model confidence (Section 3.2).
+Finally, we incorporate this localized feedback into GRPO’s token-level updates, forming a hybrid advantage
+that fuses outcome-based and process-level signals (Section 3.3).
+3.1 REASONINGPROCESSSEGMENTATION
+Recent studies have revealed that performance gains in RLVR are primarily driven by critical decision points
+characterized by high token-level uncertainty (Yang et al., 2025; Wang et al., 2025). Inspired by SPO (Guo
+et al., 2025), we adopt an Adaptive Entropy-based Cutpoint Partition strategy, leveraging token-level entropy
+to robustly identify reasoning ”junctions” where the model’s trajectory is likely to diverge.
+Formally, given a responseoof lengthT, We identify a set of candidate cutpointsU ⊆ {1, . . . , T}by
+selecting tokens whose entropy exceeds an adaptive threshold:
+U={t|e i
+t ≥τ},(

@@ -1,0 +1,19 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+turing2hidden layers with50hidden units each, utilizing Rectified Linear Unit (ReLU)
+activations. The neural network was trained using the
+Adam optimizer with an initial learning rate of5×10−4
+and a batch size of256. To prevent overfitting during
+the offline amortization phase, training was subject to
+an early stopping criterion, halting if the validation logprobability failed to improve over20consecutive epochs.
+All inference architectures were built and trained utilizing the PyTorch-basedsbi toolkit[48].
+To evaluate robustness, we use the six benchmark scenarios described in Sec. II. For each scenario, we evaluate500independent observation records generated with
+the same ground-truth parameters but differing measurement noise realizations.

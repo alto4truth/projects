@@ -1,0 +1,21 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+of 179,040 × 6 = 1,074,240 questions for the 6 LLMs (GTP-4o, Llama-3, Gemma-3, Gemini-2.0-Flash,
+Gemini-2.5-Flash, and Claude-Sonnet-4) to be prompted. As running more than a million API calls for each LLM is
+expensive in terms of execution time and token consumption (e.g., API calls would consume tens of millions of tokens
+per model such as GPT-4o [Yang et al. 2024]), we considered a pilot in a random sample of 5% of the 8952 total questions
+(448 unique questions; 224 questions from each dataset, with 112 questions per context type, further split into 56
+questions per context: negative or non negative). Each question is prompted to each of the six LLMs 20 times, leading
+to448 × 20 = 8, 960questions (API calls) per LLM, resulting in a total of8 , 960 × 6 = 53, 760API calls for the six LLMs
+used in this study. We therefore executed each LLM 20 times under identical settings (we prompted each LLM with
+the exact same questions and alternative answers in the right order) from each set of questions with ambiguous and
+disambiguated contexts, separately. More in detail, for each question, we recorded all LLM outputs and computed
+two consistency measures: 1) the Most-Frequent Answer Agree

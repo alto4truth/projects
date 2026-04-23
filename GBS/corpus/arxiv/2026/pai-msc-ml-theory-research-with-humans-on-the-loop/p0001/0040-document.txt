@@ -1,0 +1,65 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 40
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+AlphaEvolve [70] and Mathematical Exploration at
+Scale[71]targetalgorithmicandmathematicaldiscovery; andDeepInnovator[72]trainsmodelsforinnovative
+14
+
+The system can guarantee The system cannot guarantee
+Deterministic execution topology: same
+stages, same routing logic, same loopback
+structure
+Deterministic outputs: two runs with the same
+task may diverge in content
+Artifact-complete workspace: all required
+files produced and structurally valid
+Scientifically correct workspace: claims may
+contain errors, gaps, or undetected prior art
+Explicit validation gates: hard blockers,
+review thresholds, editorial checks
+Calibrated quality scores: internal reviewer
+scores are routing heuristics, not
+acceptance-probability estimates
+Budget tracking and cost visibility via
+ledger files
+Exact cost prediction: actual provider bills may
+differ from estimates
+Resumable, checkpointed execution with
+stage-level restart
+Idempotent restart: resumed runs may produce
+different outputs from fresh runs
+Human steering surfaces at multiple points
+in the pipeline
+Reduced need for human scientific judgment:
+novelty, correctness, and citation faithfulness
+remain human obligations
+Table 3: Guarantees and non-guarantees of the currentpAI/MScrelease. The central distinction is between structural/operational properties (left) and scientific properties (right).
+idea generation. On the platform side, ClawdLab and Beach.Science [73] introduce governance, auditability,
+and decentralized coordination for scientific-agent ecosystems. These systems enlarge the meaning of research
+automation, but many optimize for open-ended discovery or ecosystem flexibility rather than a governed
+paper-facing workflow.
+Positioning. pAI/MScis closest in spirit to manuscript-first, end-to-end systems, but differs in emphasis. Relative to writing assistants, it covers more of the research lifecycle. Relative to autonomous discovery
+systems, it places more weight on explicit intermediate artifacts, theory–experiment coordination, and validation gates tied to manuscript production. Relative to dynamic or decentralized platforms, it favors a
+tightly governed research-to-paper path designed for human-steerable execution in machine learning theory
+and adjacent quantitative workflows. It should be read not as a general theory of autonomous science, but
+as an artifact-driven technical contribution to the research-to-paper segment of that broader landscape.
+6 Limitations and Honest Assessment
+6.1 What the system guarantees and what it does not
+The most important distinction in this report is betweenstructuralandscientificsuccess. The system’s
+guarantees are structural and operational; its non-guarantees are scientific and epistemic. Table 3 makes
+this boundary explicit.
+6.2 What is surprisingly automatable
+One of the most interesting lessons is thatresearch structuringis more automatable than one might expect.
+The system can turn a high-level task into a staged workspace with literature synthesis, a research plan, a
+theory–experiment decomposition, follow-up decisions, and a draft manuscript. Even when the final science
+requires human scrutiny, this intermediate structuring is already valuable.
+A second surprisingly automatable layer ispaper-adjacent discipline: proofreading, reviewer-style critique,
+copyediting traces, claim-traceability files, resource inventories, and revision logs. These are tedious but
+15

@@ -1,0 +1,23 @@
+title: Tokenised Flow Matching for Hierarchical Simulation Based Inference
+source: arxiv
+year: 2026
+document_id: tokenised-flow-matching-for-hierarchical-simulation-based-inference
+authors: Giovanni Charles; Cosmo Santoni; Seth Flaxman; Elizaveta Semenova
+page: 1
+section: gpu-nvidia-a100-pcie-40gb
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20723v1
+
+irregular hierarchical observations, and flow matching for conditional density estimation. These
+contributions need not be used together. The MLP ablation in Appendix A.5 shows that LF sampling
+remains effective without a transformer, while the "Joint" ablation shows that sharing a single
+estimator for both the per-site surrogate and the posterior degrades stability on several tasks. In
+other words, tokenised flow matching is useful for functional or irregular observations, but the
+main sample-efficiency gain comes from the factorised training scheme and the decision to keep the
+surrogate and posterior estimators separate.
+There is nonetheless a practical scalability limit to transformer-based vector fields. Attention
+memory during training scales asO(BT 2h)in batch size B, token countT, and head counth. In
+our SEIR set-up,ns = 100sites already yields T = 1304tokens, corresponding to roughly 1.4GB
+of attention memory per training step; extrapolating tons = 1000gives roughly 135GB. Efficient
+attention mechanisms can mitigate this cost, and their application to tokenised hierarchical SBI is a
+promising direction for future work. For the time being, in regimes withns ≫ 100we recommend

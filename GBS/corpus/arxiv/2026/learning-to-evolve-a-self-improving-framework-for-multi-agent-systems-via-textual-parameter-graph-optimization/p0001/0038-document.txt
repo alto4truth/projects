@@ -1,0 +1,23 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+ion guarantees,
+since “textual gradients” are heuristic feedback signals rather than analytical gradients. Its optimization loop can also be costly, as each proposal must
+be validated on task subsets, which may limit scalability on larger benchmarks or more complex agent
+systems. In addition, TPGO depends on the capabilities of the underlying LLMs used for parsing,
+diagnosis, and proposal generation; weaker models may yield noisier feedback or less effective
+updates. Finally, our current implementation is
+limited to textual parameter optimization with a
+predefined set of graph edit operations, and does
+not yet consider backbone model selection, numerical hyperparameters, or richer structural changes
+such as node merging and subgraph generation.
+8 Acknowledgments
+This work was supported by Alibaba Group
+through Alibaba Research Intern Program

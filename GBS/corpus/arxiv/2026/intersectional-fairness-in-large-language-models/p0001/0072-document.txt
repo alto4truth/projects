@@ -1,0 +1,23 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 72
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+Under Review
+22 Chaima Boufaied, Ronnie de Souza Santos, and Ann Barcomb
+6.4 Threats to Validity
+6.4.1 Internal Threats.LLMs are known for their nondeterminism and prompt sensitivity, which can easily lead to
+their inconsistency in answering the different questions, and therefore confuse their users. To mitigate this, this study
+goes beyond the assessment of LLMs’ fairness, examining their consistency on a pilot sample of our datasets, running
+each question 20 times. Analyzing repeated LLM predictions allows us to assess the extent of random variability.
+6.4.2 External Threats.Our results may not generalize to other LLMs, model versions, or MCQ-based datasets from
+different contexts or demographic attributes. We mitigate this threat partially by evaluating multiple LLMs and two
+datasets spanning different context types, intersectional attributes, and question polarities.
+6.4.3 Construct Threats.Limited demographic representation and restricted contexts threaten construct validity. To
+mitigate this, we used datasets that not only cover combinations of demographic attributes (i.e., race–gender and
+race–SES), but also consider different contexts (ambiguous and disambiguated), under ne

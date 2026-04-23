@@ -1,0 +1,27 @@
+title: Interval POMDP Shielding for Imperfect-Perception Agents
+source: arxiv
+year: 2026
+document_id: interval-pomdp-shielding-for-imperfect-perception-agents
+authors: William Scarbro; Ravi Mangal
+page: 2
+section: additionalempiricalresults
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20728v1
+
+A. Why History Matters: TaxiNet and Obstacle
+TaxiNet demonstrates why the observation count alone is a
+poor proxy for difficulty. The benchmark has 16 observation
+labels for 16 states, but the learned perception model still
+leaves substantial overlap between the posteriors induced by
+different runway positions. A single noisy observation is therefore consistent with several states that require different steering
+corrections. Figure 5 shows the resulting threshold sweep:
+Observation can reduce failures only by blocking almost all actions, whereas all three history-based methods achieve interior
+tradeoff points. The Envelope Shield dominates Single-Belief
+in safety because the point-estimate filter is systematically
+optimistic in the presence of broad observation intervals. FwdSampling still comes much closer to the envelope than SingleBelief does: at its best point it reaches43%fail and24%stuck
+under uniform perception, versus40%fail and32%stuck for
+Envelope and44%fail and12%stuck for Single-Belief. By
+maintaining many belief points and many probability samples,
+Fwd-Sampling exposes substantially more uncertainty than a
+single posterior, but as an inner approximation it can still
+mi

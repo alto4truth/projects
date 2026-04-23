@@ -1,0 +1,21 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+b;
+Cheng et al. 2021; Ferrara et al. 2024; Pham et al. 2025; Ramadan et al. 2025; Smith et al. 2025]. In the literature, individual
+fairness includes notions such as fairness through awareness/unawareness, counterfactual fairness, and causal fairness,
+which aim to ensure that similar individuals receive similar treatment [Chen et al. 2024b]. By contrast, group fairness is
+typically assessed using metrics such as statistical parity, equalized odds, and equal opportunity, which focus on the
+distribution of outcomes across demographic groups [Baresi et al. 2023; Chen et al. 2024b; Ryan et al. 2023].
+Limitations of Prior Empirical studies.As shown in Table 1, prior work has evaluated LLM fairness across diverse
+settings, often under zero- or few-shot prompting and with different approaches to consistency assessment. Many
+studies use the BBQ benchmark dataset, either in its original form [Parrish et al. 2022] or through cultural and linguistic
+adaptations such as SB-bench [Narnaware et al. 2025], CBBQ [Huang and Xiong 2024], and KoBBQ [Jin et al. 2024].
+1https://github.com/nyu-mll/crows-pairs

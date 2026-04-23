@@ -1,0 +1,18 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 3
+section: table-ii
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+genavg ,imp avg AND∆ONFERET, FRGCV2, IJB-C,AND THEIR SEGMENTED VARIANTS. THE VALUES INSIDE THE PARENTHESES REPRESENT THE
+VARIATION IN MAGNITUDE OF EACH METRIC COMPARED TO THE BASELINE(NO SEGMENTATION). WHILETABLEIDOES NOT REVEAL ANY IMPACT
+ON PERFORMANCE ASSOCIATED WITH THE BACKGROUND REMOVAL PROCESS ONFERETANDFRGCV2,THESE RESULTS ALLOW FOR A MORE
+DETAILED ANALYSIS,AS THEY HIGHLIGHT THE APPROXIMATION TENDENCY BETWEEN THE MEAN GENUINE AND IMPOSTOR PAIRS’COSINE
+SIMILARITY VALUES,REVEALING THE LOWER DISCRIMINATIVE CAPACITY OF THEFRSYSTEMS WHEN EVALUATING SEGMENTED DATA. FORIJB-C,
+THE MAGNITUDE OF THIS APPROXIMATION IS DIRECTLY CORRELATED WITH THE VERIFIEDFRPERFORMANCE DROPS(TABLEIII).
+Dataset Segmentation Method ElasticFace ArcFace SwinFace TransFace
+genavg impavg ∆ genavg impavg ∆ genavg impavg ∆ genavg impavg ∆

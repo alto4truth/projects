@@ -1,0 +1,26 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+Near-Future Policy Optimization
+Chuanyu Qin 1,2,∗,Chenxu Yang 1,2,∗,Qingyi Si 3,∗
+Naibin Gu 1,2,Dingyu Yao 1,2,Zheng Lin 1,2,Peng Fu 1,2,†,Nan Duan 3,Jiaqi Wang 3
+1Institute of Information Engineering, CAS, 2School of Cyber Security, UCAS, 3JD.COM
+∗Equal contribution., †Corresponding author.
+Abstract
+Reinforcement learning with verifiable rewards (RLVR) has become a core post-training recipe.
+Introducing suitable off-policy trajectories into on-policy exploration accelerates RLVR convergence
+and raises the performance ceiling, yet finding a source of such trajectories remains the key challenge.
+Existing mixed-policy methods either import trajectories from external teachers (high-quality but
+distributionally far) or replay past training trajectories (close but capped in quality), and neither
+simultaneously satisfies the strong enough (higherQ , more new knowledge to learn) and close
+enough (lower V , more readily absorbed) conditions required to maximize the effective learning
+signal S = Q/V. We proposeNear-FuturePolicyOptimization (NPO), a simple mixed-policy
+scheme that learns from a policy’s own near-future self: a later checkpoint from the same training
+run is a natural source o

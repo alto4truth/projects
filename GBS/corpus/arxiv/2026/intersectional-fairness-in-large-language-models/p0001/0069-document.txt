@@ -1,0 +1,24 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 69
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+Under Review
+Intersectional Fairness in Large Language Models 21
+6.2 Consistency Across Repeated Runs
+Beyond single-run evaluation, our multi-run analysis shows that response patterns vary across executions and across
+models, with no model consistently combining strong fairness with stable behavior. Even models with low observed
+bias may exhibit instability or occasional failures, raising concerns about reliability in real-world applications. Further,
+evaluating models across multiple runs exposes variability in stereotyped responses that is not captured in single-run
+analyses. This reveals that bias is not only a property of model outputs but also of their stability, with some models
+exhibiting consistent stereotype-aligned behavior while others show more variability. Taken together, these results
+show that intersectional bias in modern LLMs becomes more visible when combining directional, performance-based,
+and subgroup-level fairness perspectives.
+6.3 Practical Implications
+In Table 8 we summarize the key findings w.r.t., the different evaluation metrics we used in assessing intersectional
+fairness of the six LLMs, along with the corresponding key practical implications derived

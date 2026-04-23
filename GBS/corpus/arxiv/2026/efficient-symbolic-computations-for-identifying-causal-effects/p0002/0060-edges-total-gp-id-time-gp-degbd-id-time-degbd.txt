@@ -1,0 +1,25 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 2
+section: edges-total-gp-id-time-gp-degbd-id-time-degbd
+chunk: 60
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+of of Corollary 4.5.By Definition 2.8, the idealIcontains a polynomial of the formqa(θid, σ)−
+b(θid, σ)witha, b∈R[θ id, σ]anda̸∈I∩R[θ id, σ], which is of degree at most ID G. Bywhomogenizing, it follows as in the proof of Lemma 4.2 thatIwh contains a polynomialf(q, θid, σ, h) =
+qaf(θid, σ, h)−b f(θid, σ, h)witha f , bf ∈R[θ id, σ, h]anda f ̸∈ I wh ∩R[θ id, σ, h]. Moreover, note that
+degw(f)≤ID G ·w trek by the definition of the trek-weighting and the wayw-homogenization is
+defined. By Theorem 4.4 and sinceqis the smallest among theθ-variables, we conclude that the
+Groebner basisFcontains a polynomialg q :=qa(θ id, σ, h)−b(θ id, σ, h). Since this polynomial has
+leading term that divides the leading term off, and the Groebner basisFis given with respect to
+aw-graded order, we conclude that it must also be the case thatdegw(gq)≤ID G ·w trek.
+B Proof of Theorem 5.1
+The proof of Theorem 5.1 is based on three lemmas. The first is Lemma 5.2 which is given in the
+main text. It relates the product of all trek weights to the superfactorial.
+Proof of Lemma 5.2.Consider a trekπof lengthw trek inG. It is either of the form
+v1 ← · · · ←v k ↔v k+1 → · · · →v wtrek+1,
+or of the form
+v1 ← · · · ←v

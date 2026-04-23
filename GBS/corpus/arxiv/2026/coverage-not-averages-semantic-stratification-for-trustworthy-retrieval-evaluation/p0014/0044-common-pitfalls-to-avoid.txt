@@ -1,0 +1,20 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 14
+section: common-pitfalls-to-avoid
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+1. TOPICAL SIMILARITY != RELEVANCE
+Two documents about "machine learning" may address completely
+different aspects. The query might be about "ML for medical
+imaging" but doc is about "ML for NLP"
+2. KEYWORD MATCHING != RELEVANCE
+Matching keywords doesn’t mean the document answers the query.
+Context and the specific information need matter.
+3. DOCUMENT QUALITY != RELEVANCE
+A poorly written document can still be relevant. A high-quality
+document on a different topic is not relevant.

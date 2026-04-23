@@ -1,0 +1,18 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 2
+section: cocoa
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+large-scale amodal annotations required by the open-world training, we propose TargetAware Occlusion Synthesis (TAOS), an efficient pipeline that
+synthesizes diverse occlusion patterns from existing segmentation datasets without manual labeling. Finally, we introduce
+the learning objectives regarding regional consistency and
+holistic topological regularization to facilitate training.
+The effectiveness of the proposed Amodal SAM is demonstrated through extensive experiments across extensive datasets
+on both challenging image and video benchmarks. Amodal
+SAM not only achieves state-of-the-art performance on standard amodal segmentation tasks but also shows strong generalization to novel object categories and scenes. Furthermore,
+arXiv:2604.20748v1 [cs.CV] 22 Apr 2026

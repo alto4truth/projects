@@ -1,0 +1,44 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 3
+section: 12
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+scanning and wrong-object
+selection, finishing the task in three steps. In StuLife, retrieving course misconduct criteria provides knowledge absent
+9
+
+ICALK@ECNU
+Table 4: Model scaling on SciWorld with Qwen2.5-3B-Instruct. Our 3B model nearly matches 7B GRPO+Reflexion in
+SR while using 48% fewer rounds.
+Method SR↑Rounds↓
+GRPO (3B) 24.00 24.14
+GRPO+Reflexion (3B) 29.50 20.09
+GRPO+Reflexion (7B) 55.00 27.52
+PROACTAGENT(3B) 53.50 14.35
+Figure 4:Case studies across SciWorld, ALFWorld, and StuLife.Each panel contrasts a query branch (green)
+against a matched no-query branch (red) from the same interaction prefix or task instance. In all three cases, a single
+targeted retrieval at the action-critical decision point leads to immediate success, while the no-query branch drifts into
+invalid actions, wrong-object selection, or stalled interaction and fails.
+from the model’s parametric memory, enabling a correct answer on the first attempt. Across all cases, one targeted
+query at the decision-critical step replaces a longer, failure-prone trajectory, confirming that learned proactive retrieval
+is the key enabler of reliable long-horizon behavior.
+5 Conclusion
+We introduced PROACTAGENT, an experience-driven lifelong learning framework that enables online lifelong agents
+to proactively retrieve from a structured experience base and continually improve through interaction. EXPONEVO
+jointly refines a structured experience base that organizes historical interactions into typed repositories, including
+factual memory, episodic memory, and behavioral skills, alongside policy updates within a unified co-evolution loop.
+PROACTRL formulates retrieval as an explicit policy action and learns both when and what to retrieve through pairedbranch process rewards, which provide step-level supervision by comparing continuations with and without retrieval
+from identical interaction prefixes. Experiments on SciWorld, AlfWorld, and StuLife demonstrate that PROACTAGENT
+consistently improves both task success rates and interaction efficiency, with a 3B-parameter model equipped with
+proactive retrieval rivaling 7B passively augmented baselines. These results suggest that learning to proactively control
+retrieval is more critical than scaling model capacity alone for long-horizon lifelong tasks, and that such control
+constitutes a fundamental capability for autonomous agents operating in complex, evolving environments.
+References
+[1] Mohit Shridhar, Xingdi Yuan, Marc-Alexandre Cote, Yonatan Bisk, Adam Trischler, and Matthew Hausknecht.
+ALFWorld: Aligning text and embodied environments for interactive learning. InInternational Conference on
+10

@@ -1,0 +1,31 @@
+title: Trust, Lies, and Long Memories: Emergent Social Dynamics and Reputation in Multi-Round Avalon with LLM Agents
+source: arxiv
+year: 2026
+document_id: trust-lies-and-long-memories-emergent-social-dynamics-and-reputation-in-multi-round-avalon-with-llm-agents
+authors: Suveen Ellawela
+page: 1
+section: document
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20582v1
+
+me individuals. To investigate this, we analyze Dataset A, where five
+agents played 50 consecutive games while retaining memory
+of previous interactions.
+5.1.1 Descriptor Convergence
+We first examine whether agents develop consistent perceptions of each other over time. After each game, agents generate reflections describing other players’ behavior. We analyzed these reflections for recurring behavioral descriptors
+(Table 3).
+Table 3: Descriptor frequency by player (50-game tournament).
+Player #1 (count) #2 (count) #3 (count)
+Alice straightforward (29) cautious (25) trustworthy (21)
+Bob subtle (28) straightforward (27) cautious (26)
+Charliesubtle (38)straightforward (25) cautious (23)
+Diana subtle (35) straightforward (25) quiet (16)
+Eve cautious (26) subtle (25) quiet (25)
+Charlie receives “subtle” 38 times, significantly more than
+any other player, establishing a consistent reputation that
+persists across games.
+5.1.2 Cross-Game Behavioral References
+Beyond forming stable impressions, do agents actively use
+their memories when making decisions? We searched for
+explicit references to past games in discussion transcripts and
+found 105 instances where agents cited historical behavio

@@ -1,0 +1,72 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 3
+section: 12
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+es share the identical prefix, this signal is attached to the necessity of retrieval at
+the current state rather than to unrelated earlier actions.
+14
+
+ICALK@ECNU
+• Learning what to retrieve.The updated action is not a generic retrieval flag, but the instantiated action
+RETRIEVE(q tb). Consequently, the same gradient step also reinforces or suppresses the specific query content
+qtb. Queries that retrieve a useful experience Ete increase the downstream environment return, are more likely
+to induce a positive rollout margin ∆i, and receive positive process-level reinforcement through rproc
+i . In
+contrast, vague or irrelevant queries tend to produce weak or negative margins and therefore lose relative
+probability. This is why PROACTRL learns the wording of the query jointly with the timing of retrieval.
+Consequently, the shared-prefix paired-branch construction explains why PROACTRL can learn both when to retrieve
+and what to retrieve: the branch comparison supplies a local preference update for triggering retrieval, and that same
+update is tied to the concrete query instance that produced the observed downstream outcome.
+B Algorithm Details
+This section provides the complete algorithmic description of PROACTAGENT, complementing the formal definitions in
+Section 3. Algorithm 1 outlines the full online co-evolution loop that interleaves policy optimization with experience
+accumulation. Algorithm 2 details the paired-branch reward computation that supplies step-level supervision for
+retrieval decisions.
+Algorithm 1Experience-Enhanced Online Evolution
+Require:Base policyπ θ, empty experience baseD, task streamX, group sizeG
+Ensure:Evolved policyπ θ, populated experience baseD
+1:Cold Start:Trainπ θ via SFT on successful trajectories▷Appendix D.1
+2:foreach training iterationdo
+3:Sample task batch{x 1, . . . , xB}fromX
+4:foreach taskxin batchdo
+5:fori= 1, . . . , Gdo
+6:Retrieve initial contextD 0 ←TopK(q init,D, K)
+7:fort= 1, . . . , Tdo
+8:Sample actiona t ∼π θ(· |h t,D <t)
+9:ifa t =RETRIEVE(q t)then
+10:D t ←TopK(q t,D, K); append to context
+11:else
+12:Executea t in environment; observeo t+1, renv
+t
+13:end if
+14:end for
+15:Record trajectoryτ (i)
+16:end for
+17:Construct paired branches via Algorithm 2
+18:Compute{R traj
+i }G
+i=1 and group-normalized advantages{A i}G
+i=1
+19:end for
+20:Updateπ θ via GRPO objectiveJ PROACTRL (θ)▷Eq. 11
+21:Extract typed entries from completed trajectories; updateD▷Appendix C.3
+22:end for
+Interaction protocol.During each rollout, the agent processes the task prompt augmented with an initial retrieval
+context D0 drawn from D. At each subsequent step, the policy produces either an environment action or a retrieval
+action RETRIEVE(q t). When a retrieval action is triggered, the experience base returns a type-balanced set of entries
+Dt (Equation 4 in Section 3.2), which is appended to the agent’s context before the next decision. The policy treats
+retrieval as a regular action within the augmented action space A=A env ∪ Aret, requiring no separate gating module
+or confidence threshold.
+Experience update protocol.After each training iteration, completed trajectories are processed by the extraction
+model (Appendix C.3) to produce typed entries. Factual and episodic memories are extracted from individual trajectories,
+success and failure skills are distilled from outcome-specific subsets, and comparative skills are generated from paired
+branches produced by Algorithm 2. All new entries are deduplicated against the existing repository before insertion.
+Priority scores of retrieved entries associated with successful trajectories are incremented, progressively surfacing
+high-utility experience.
+15

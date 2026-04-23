@@ -1,0 +1,29 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+he empirical second moment of the𝑗-th hidden neuron’s activation. Thus, dropout induces a data-dependent
+penalty that couples the norm of each hidden weight𝑤1,𝑗
+with the magnitude of its responses on the training data.
+Increasing the dropout rate𝑝increases𝜆=
+√
+𝑝∕(1 −𝑝),
+thereby intensifying the penalty and tightening generalization bounds in terms of the value of̂𝑅(𝐖1,𝐖 2).
+While this explicit dropout formulation provides useful theoretical insight, it has limitations when extended to
+modern attention-based architectures. It assumes columnwise (feature-level) dropout, with a regularizer acting independently per feature, failing to capture cross-feature interactions that are central to attention mechanisms based
+onmatrixmultiplicationsandsoftmaxnormalization.These
+structural considerations motivate the development of an
+explicit regularizer tailored to Transformer architectures,
+whichwedescribeinthefollowingsection.SectionBofAppendix provides the relation and highlights the differences
+betweentheregularizerpresentedbyAroraetal.[1]andthe
+proposed regularizer.
+3. Explicit Transformer Dropout
+Regularization
+We propose an explicit regularization framework for
+Transformer architectures b

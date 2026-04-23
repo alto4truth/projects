@@ -1,0 +1,31 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 1
+section: rag-db
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+set creation pipelines.Ours (Segmentation + Encoder +
+Best-of-𝑁Ranking)achieves the highest agreement.
+Creation Pipeline Human-Agreement (Zero-Shot)(↑) Human-Agreement (Few-Shot)(↑)
+Ours 98%
+Encoder Only 11%
+Segmentation Only 61%
+Gemma-3-4B 27% 31%
+Gemma-3-27B 29% 37%
+Gemini-2.5-Flash 51% 57%
+Gemini-2.5-Pro 55% 59%
+Table 3: Evaluation of human and model performance. Accuracy is shown for binary tasks and
+BERTScore for open-ended responses.
+Question Type Metric Change( ↑) No Change(↑)Total Accuracy(↑)
+Yes/No Accuracy 91.33% 93.33% 92.33%
+Multiple-Choice Accuracy 95.33% 99.00% 97.17%
+Open-Ended BERTScore 76.89% 98.12% 87.51%
+Table 2presents human evaluation results for different stages of the dataset creation pipeline, serving
+as a direct measure of change detection capability. Each isolates one component of the pipeline
+to measure its independent contribution to overall agreement. Thefew-shotconfiguration denotes
+that the LLM received example pairs with corresponding questions before evaluation, improving its
+8

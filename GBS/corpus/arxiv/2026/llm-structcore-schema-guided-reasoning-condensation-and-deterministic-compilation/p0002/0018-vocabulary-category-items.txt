@@ -1,0 +1,26 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 2
+section: vocabulary-category-items
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+of consciousness(6 FN + 9 FP in IT) — require nuanced
+temporal or categorical reasoning that is difficult to encode in a flat
+Key:Value format.
+5 Discussion
+5.1 Effectiveness of the SGR Decomposition
+Applying SGR shifts the burden of structural correctness from prompt
+engineeringtocode. ByhavingtheLLMemitastable, 9-keyintermediatetree
+rather than directly producing 134 structured fields, we achieve100% JSON
+parsing stabilityeven on quantized 4B edge models without grammarconstrained decoding. This is notable because direct 134-field extraction
+from the same 4B model fails to produce valid JSON in>30% of cases in
+our preliminary tests.
+The SGR decomposition also provides a naturaldebugging boundary:
+when the system produces an incorrect prediction, we can immediately
+determine whether the error originates in Stage 1 (the fact was not extracted)
+or Stage 2 (the fact was extracted but incorrectly mapped). In practice,
+10

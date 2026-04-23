@@ -1,0 +1,69 @@
+title: AAC: Admissible-by-Architecture Differentiable Landmark Compression for ALT
+source: arxiv
+year: 2026
+document_id: aac-admissible-by-architecture-differentiable-landmark-compression-for-alt
+authors: An T. Le; Vien Ngo
+page: 1
+section: aac-fps-alt
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20744v1
+
+he cost of solution quality. Expansion
+reduction alone should not be compared across admissibility classes without also reporting solution quality.
+43
+
+Table 17: ABLATIONALT-pool (firstm) diagnostic: ALT run on the firstmlandmarks of thesame
+K0-landmark FPS teacher pool that AAC is trained on, vs. canonical FPS-ALT at matched memory (ALT
+K=mon undirected graphs,K=m/2on directed graphs). The two arms agree exactly to two decimal places
+on all seven graphs and three budgets tested, because FPS is greedy-incremental: the firstKlandmarks of
+aK 0-step FPS runaretheK-step FPS landmarks. The arm therefore makes explicit that the FPS-ALT
+matched-memory subset is inside the row-stochastic admissibility set AAC searches: any residual AAC-vsALT gap is training-objective drift (Section 5.9), not architectural capacity. 5 seeds×200 queries per cell
+aggregated full-CSV; ALT has zero variance across seeds (deterministic FPS given the LCC seed). Numbers
+may differ from Table 6’s val-split TEST column (5 seeds×100 disjoint test queries) by sampling variance
+within the val-split standard deviations — the protocols agree on the ALT–AAC ordering at every cell.
+Graph TypeB(B/v) ALT-pool first-mred. (%) FPS-ALT matched red. (%)
+SBM (5×2000) undirected
+3289.95 89.95
+6494.52 94.52
+12897.04 97.04
+BA (10,000,m=5) undirected
+3289.90 89.90
+6494.25 94.25
+12896.93 96.93
+NY (DIMACS) directed
+3285.11 85.11
+6491.20 91.20
+12893.73 93.73
+Modena (OSMnx) directed
+3283.38 83.38
+6491.20 91.20
+12892.85 92.85
+Manhattan (OSMnx) directed
+3283.86 83.86
+6490.44 90.44
+12892.13 92.13
+Berlin (OSMnx) directed
+3286.46 86.46
+6492.77 92.77
+12895.14 95.14
+Los Angeles (OSMnx) directed
+3285.41 85.41
+6491.11 91.11
+12894.20 94.20
+E Pre-Registration Protocol and Accounting Conventions
+Outcome.We falsified the main claim of the pre-registration: the predicted bands of+2to+6% are not
+survived by the observed+0.87to+1.21% effect atB≥64, and the predicted direction is reversed atB= 32
+where ALT leads by1.13%. The convention-independent sub-prediction (zero admissibility violations) holds
+in 15/15 cells, both by architectural guarantee (Proposition 2) and by empirical verification across the full
+5-seed×3-budget audit (1,500queries total:0violations andmaxd AAC/dDijkstra = 1.000000000on every
+per-cell record). The directionality-aware accounting convention used throughout this paper (Section 5.2,
+restated in E.2 below) is the methodological by-product that motivated the apparatus around the preregistration.
+E.1 Pre-Registration Protocol and Timestamps
+B(B/v) predicted gap (AAC−ALT) observed gap (AAC−ALT) TOSTδ=1% verdict
+32+2to+6%−1.13% (ALT ahead) rejecteddirection inverted
+64+1.5to+4.5%+1.21±0.54% rejected magnitude4×low
+128+1to+3%+0.87±0.20% rejected magnitude2–3×low
+Pre-registration protocol.Before running any evaluation on OGB-arXiv (Hu et al., 2020), we filed a
+timestamped prediction (included in the released codebase atresults/PREREG.md; see Appendix G). The
+prediction was written based on the covering-radius theory (Theorem 5) and the synthetic-graph findings
+44

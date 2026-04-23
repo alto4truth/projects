@@ -1,0 +1,45 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 9
+section: e-megatronconfig
+chunk: 93
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+To train the 1B models, we use the Apertus tokenizer, the Megatron LM library (Shoeybi et al.,
+2020), a batch size of 2.06M tokens, a learning rate of 0.00015, the AdEMAMix optimizer (Pagliardini et al., 2024), 50,000 training steps with 2000 warmup steps, and a WSD learning rate schedule
+(?). These models were trained using 84 NVIDIA GH200 chips. The full configuration for these
+models is displayed in Table 13). This training pipeline is very similar to what has been done
+in (Messmer et al., 2025).
+Table 13: Training Configuration for Apertus 1B Model
+Parameter Value
+Model Architecture
+Number of Layers 16
+Hidden Size 2048
+FFN Hidden Size 12288
+Number of Attention Heads 32
+Number of Query Groups 8
+Maximum Position Embeddings 4096
+Position Embedding Type RoPE
+RoPE Base 500000
+RoPE Scaling Factor 32
+Normalization RMSNorm
+Activation Function XieLU
+Training Configuration
+Micro Batch Size 3
+Global Batch Size 504
+Sequence Length 4096
+Total Training Steps 50,000
+Total Tokens∼103B
+Checkpoint Interval 2,000 steps
+Optimization
+Optimizer AdEMAMix
+Learning Rate 0.00015
+Minimum Learning Rate 0.0
+LR Schedule WSD (1-sqrt decay)
+Warmup Steps 2,000
+WSD Decay Steps 10,000
+Weight Decay 0.1
+Gradient C

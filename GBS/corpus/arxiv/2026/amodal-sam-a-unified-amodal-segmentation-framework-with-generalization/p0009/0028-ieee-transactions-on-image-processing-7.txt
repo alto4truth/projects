@@ -1,0 +1,70 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 9
+section: ieee-transactions-on-image-processing-7
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+Mask
+Downsampling
+Conv
+Spatial Completion
+Adapter
+Model Adaptation
+Data
+Adaptation Optimization Adaptation
+Prompt Encoder
+Mask Decoder
+Regional consistency
+Holistic topological
+regularization
+Segmentation
+Supervision
+concat
+Conv
+Gaussian
+Blur
+Mask
+Input
+ROI
+Block
+Block
+Block
+Block
+Block
+Block
+Feature Mask
+Soft
+GatingFeature
+Adapter
+Adapter
+Block
+Block
+Adapter
+Adapter
+Block
+Block
+Block
+Adapter
+Adapter
+Adapter
+Adapter
+Block
+Block
+Block
+Block
+Fig. 8. The image encoder of SAM-2 consists of four stages with distinct
+spatial scales. We incorporate an SCA at the outset of each stage to ensure that
+every feature output from the image encoder undergoes spatial completion.
+E. Video Amodal Segmentation
+From SAM to SAM-2: Architectural Evolution.SAM2 [21] represents a significant paradigm shift, extending the
+foundation model’s efficacy from static images to the temporal
+domain. While retaining the core tripartite structure of its
+predecessor—comprising an image encoder, prompt encoder,
+and mask decoder—SAM-2 introduces a memory bank and a
+memory attention layer. These modules facilitate the fusion of
+current frame features with historical memory embeddings,
+enabling robust spatio-temporal con

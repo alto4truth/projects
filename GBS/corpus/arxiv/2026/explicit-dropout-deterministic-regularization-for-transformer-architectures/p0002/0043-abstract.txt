@@ -1,0 +1,143 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+thindependently
+sampled dropout masks applied to𝐗, and denoting the
+stackeddroppedcomponentsatepoch𝑡by ̃𝐗𝑡,wedefinethe
+value dropout regularizer as
+𝐽𝑣 = 1
+2𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+‖‖‖𝐀 ̃𝐗𝑡𝐖𝑇
+𝑣
+‖‖‖
+2
+𝐹
+.(67)
+Using the identity‖𝐴‖2
+𝐹 = Tr(𝐴 𝑇 𝐴), this becomes
+𝐽𝑣 = 1
+2𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+Tr (𝐖𝑣 ̃𝐗𝑇
+𝑡 𝐀𝑇 𝐀 ̃𝐗𝑡𝐖𝑇
+𝑣
+) (68)
+= 1
+2𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+Tr (̃𝐗𝑇
+𝑡 𝐀𝑇 𝐀 ̃𝐗𝑡𝐖𝑇
+𝑣 𝐖𝑣
+).(69)
+Rearranging terms and collecting the summation yields
+𝐽𝑣 = 1
+2 Tr
+((
+1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+̃𝐗𝑇
+𝑡 𝐘 ̃𝐗𝑡
+)
+𝐖𝑇
+𝑣 𝐖𝑣
+)
+.(70)
+where𝐘=𝐀 𝑇 𝐀. We define
+𝜓= 1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+̃𝐗𝑇
+𝑡 𝐘 ̃𝐗𝑡..(71)
+Then,
+𝐽𝑣 = 1
+2 Tr(𝜓𝐖 𝑇
+𝑣 𝐖𝑣
+).(72)
+A.5.1. Expansion of𝜓
+Expanding Eq 71,
+𝜓= 1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+[(𝐗−𝐗 𝑡)𝑇 𝐘(𝐗−𝐗 𝑡)](73)
+= 1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+[𝐗𝑇 𝐘𝐗−𝐗 𝑇 𝐘𝐗𝑡 −𝐗 𝑇
+𝑡 𝐘𝐗+𝐗 𝑇
+𝑡 𝐘𝐗𝑡].
+(74)
+Substituting𝐗 𝑡 =𝐌 𝑡 ⊙𝐗,
+𝜓= 1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+[𝐗𝑇 𝐘𝐗−𝐗 𝑇 𝐘(𝐌𝑡 ⊙𝐗)−(75)
+(𝐌𝑡 ⊙𝐗) 𝑇 𝐘𝐗+ (𝐌 𝑡 ⊙𝐗) 𝑇 𝐘(𝐌𝑡 ⊙𝐗)]
+= 1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+[((1 −𝐌 𝑡)⊙𝐗 )𝑇 𝐘((1 −𝐌 𝑡)⊙𝐗 )]
+(76)
+Following an element-wise analysis, for the(𝑖, 𝑗)entry
+of𝜓, where𝑖, 𝑗= 1,⋯, 𝑑and𝑎, 𝑏= 1,⋯, 𝑛,
+𝜓𝑖𝑗 = 1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+𝑛∑
+𝑎=1
+𝑛∑
+𝑏=1
+[
+(1 −𝑚 𝑡,𝑎𝑖)𝑋𝑎𝑖𝑌𝑎𝑏(1 −𝑚 𝑡,𝑏𝑗)𝑋𝑏𝑗
+]
+(77)
+= 1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+𝑛∑
+𝑎=1
+𝑛∑
+𝑏=1
+[
+(1 −𝑚 𝑡,𝑎𝑖)(1 −𝑚 𝑡,𝑏𝑗)𝑋𝑎𝑖𝑌𝑎𝑏𝑋𝑏𝑗
+]
+(78)
+= 1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+𝑛∑
+𝑎=1
+𝑛∑
+𝑏=1
+((𝑋𝑎𝑖𝑌𝑎𝑏𝑋𝑏𝑗)(1 −𝑚 𝑡,𝑎𝑖 (79)
+−𝑚 𝑡,𝑏𝑗 +𝑚 𝑡,𝑎𝑖𝑚𝑡,𝑏𝑗))
+=
+𝑛∑
+𝑎=1
+𝑛∑
+𝑏=1
+(𝑋𝑎𝑖𝑌𝑎𝑏𝑋𝑏𝑗)[ 1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+(

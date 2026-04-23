@@ -1,0 +1,41 @@
+title: Differentially Private Clustered Federated Learning with Privacy-Preserving Initialization and Normality-Driven Aggregation
+source: arxiv
+year: 2026
+document_id: differentially-private-clustered-federated-learning-with-privacy-preserving-initialization-and-normality-driven-aggregation
+authors: Jie Xu; Haaris Mehmood; Rogier Van Dalen; Karthikeyan Saravanan; Mete Ozay
+page: 3
+section: filter
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20596v1
+
+therefore required to privatized
+the shared updates, which will be too noisy to give meaningful clustering results with a large number of non-zero values being shared.
+However, updates to four parameters provide limited information. It
+is therefore also necessary to only train a small number of paramserver client
+securesum
+normality-based
+scaling
+clients estimate
+clusteridentity
+train
+selected model
+model updates
+cluster models
+...
+Fig. 2. Stage 2 ofPINAwith normality-based update scaling.
+eters for this step to maximize the ratio of the number of updates
+received by the server to the total number of trainable parameters.
+3.3. Cluster model training
+After initializing global cluster models, server sends the latest cluster
+models to each sampled client at the start of each communication
+round for training. As in [11], clients perform cluster identification
+based on training loss and train the selected cluster model on local
+data. LetZ={z 1, . . . , zn}be the samples held by clientk∈ K.
+We define the empirical lossFassociated with clientkas follows:
+Fk(W) = 1
+|Z|
+X
+z∈Z
+f(W;z),(6)
+wheref(W;z)is the loss function associated with samplez.
+Clients then clip model updates to a predefined

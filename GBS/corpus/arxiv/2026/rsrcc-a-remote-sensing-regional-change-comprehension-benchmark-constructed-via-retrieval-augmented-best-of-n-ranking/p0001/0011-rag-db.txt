@@ -1,0 +1,18 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 1
+section: rag-db
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+change instance. Each region
+𝑏𝑖 is overlaid on the corresponding image pair(𝑥before, 𝑥after) so that the model receives a regiongrounded view of the detected change. Given the cropped visual inputI𝑖 ={𝑥 (𝑏𝑖 )
+before, 𝑥 (𝑏𝑖 )
+after } and the
+pipeline-derived class label𝑐𝑖, the model generates a question-answer pair(𝑞𝑖, 𝑎𝑖). We generate:
+Closed-ended(MCQ):4-optionquestionsofferingdiscretesemanticinterpretations,where 𝑞𝑖 ∈ Qmc.
+Yes/No:binary questions about the presence or absence of a semantic change, where𝑞𝑖 ∈ Qyn.
+7

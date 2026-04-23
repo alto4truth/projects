@@ -1,0 +1,25 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+5
+Fig. 4: Analysis of deviation between head orientation and gaze signal using the EgoExOR dataset [25] with 76,603 frames across multiple surgical procedures.
+(Left) Distribution of angular deviation between the head-worn camera’s optical axis and gaze. (Right) 2D spatial distribution of gaze relative to the head center
+(frame center at (0,0)), where image resolution is 1408*1408.
+3. Experiments
+3.1. Gaze-following annotation validation
+In Sec. 2.1, we annotate gaze points for each person using
+only the ceiling camera view. Although the annotation strategy has been evaluated and adopted in natural image research,
+it is intrinsically inaccurate because the annotators mostly follow the head orientation to label the gaze points without the
+aid of accurate eye-tracking devices. It remains unclear how
+large the potential error could be in the OR scenes. To address this concern, we conduct a quantitative validation experiment using the EgoExOR dataset [25], which provides gaze
+signals synchronized with egocentric videos across multiple
+surgical procedures, allowing for a direct comparison between
+the camera’s optical axis (head orientation) and the actual gaze
+direction. Specifically, w

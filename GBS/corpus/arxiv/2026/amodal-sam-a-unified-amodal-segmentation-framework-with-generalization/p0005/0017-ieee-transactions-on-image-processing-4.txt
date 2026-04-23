@@ -1,0 +1,28 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 5
+section: ieee-transactions-on-image-processing-4
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+pletion Adapter (SCA).In Eq. 4, incorporating the spatial prior viaM spec into the encoder underscores the
+need to devise a dedicated encoder capable of accommodating
+this guided enhancement. Hence, we propose the Spatial Completion Adapter (SCA) and integrate it into the baseline SAM
+encoder. SCA is designed to reconstruct obscured regions of
+target objects within the feature space, leveraging the spatial
+cues offered byM spec, thereby facilitating the completion of
+occluded areas.
+Unlike conventional adapters [22]–[24] that rely on basic
+convolutions or linear transformations for cross-domain feature adaptation, the proposed SCA draws inspiration from
+Gated Convolution [25], implements a dynamic feature selection mechanism. As illustrated in Fig. 3, the SCA first
+concatenates the latent featuresE∈R W×H×C from the preceding ViT block with the spatially downsampled maskM spec.
+This composite representation is then processed through two
+parallel convolutional branches to derive element-wise gating
+weightsGand transformed features, respectively. Formally,
+this spatially-informed modulation is expressed as:
+G=σ(F gate(E, Mspec)),
+O=G⊙ϕ(F feat(E, Mspec)). (5)
+Here,G∈R W×H×C andO∈R W×H×

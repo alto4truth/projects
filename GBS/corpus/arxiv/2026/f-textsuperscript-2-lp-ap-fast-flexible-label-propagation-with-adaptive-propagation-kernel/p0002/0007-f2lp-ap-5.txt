@@ -1,0 +1,24 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 2
+section: f2lp-ap-5
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+Unlike conventional Graph Convolutional Networks, all computational steps
+inF 2LP-APconsist of deterministic algorithms, completely eliminating the burdensome backpropagation process. Such an analytical design not only grants the
+model superior inference efficiency but also endows it with intrinsic topological
+robustness through node-wise adaptive adjustment.
+3.2 Robust Prototype Construction
+Following the initial representation of the graph, the primary objective is to establish stable reference points for each class. Traditional paradigms typically rely
+on the weight matrices of linear layers or simple arithmetic means to represent
+class centers. However, these approaches are inherently fragile when encountering
+feature noise or structural outliers common in real-world graph data.
+To mitigate this,F 2LP-APconstructs the class prototypesP c by solving
+for the geometric median as defined in Eq. (1). Unlike the arithmetic mean,
+which minimizes the sum of squared Euclidean distances, the geometric median
+is robust against extreme outliers. From a statistical perspective, while the arithmetic mean shifts drastically towards outliers, the geometric median possesses
+a breakdown point of

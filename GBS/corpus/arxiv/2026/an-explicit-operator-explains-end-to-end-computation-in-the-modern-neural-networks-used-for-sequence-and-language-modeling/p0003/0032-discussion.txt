@@ -1,0 +1,27 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 3
+section: discussion
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+s the
+door to understanding the input-output mapping at a
+mathematical level, enabling prediction of outputsa prioriwithout necessarily needing even to run the model.
+By deriving an explicit operator expression (Eq. 32) that
+relates arbitrary inputs to model ouputs in a classification task, we establish a mathematical framework
+where the forward pass becomes analytically tractable.
+This represents a qualitative shift from needing to interpret model outputpost-hocto prospective understanding: rather than empirically probing a trained model to
+understand its computational strategy, we can derive how
+specific input features propagate through the recurrent
+dynamics, undergo nonlinear transformation, and lead
+to the model output.
+This mathematical interpretability can lead to several
+clear benefits, including the potential for controllable language models in future work. If the mapping from input
+sequences to model output can be understood in terms
+of explicit mathematical expressions, then one can potentially design eigenvector-based strategies to control
+model output in real time. This level of control is fundamentally unavailable when methods for interpretability
+rely solely on empir

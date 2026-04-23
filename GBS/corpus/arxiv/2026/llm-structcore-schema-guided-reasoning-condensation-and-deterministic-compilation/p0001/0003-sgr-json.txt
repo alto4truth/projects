@@ -1,0 +1,28 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 1
+section: sgr-json
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+3.1 Stage 1: SGR-Style JSON Summary
+Stage 1 produces a single JSON object with exactly 9 domain keys:
+DEMOGRAPHICS,VITALS,LABS,PROBLEMS,SYMPTOMS,
+MEDICATIONS,PROCEDURES,UTILIZATION,DISPOSITION.
+The summary is designed to besparse(include only evidence-supported
+facts) andformat-stable(JSON parse success on every input). On the
+train10 split, we observejson_parse_ok=10/10 and thinking_leak=0/10
+even on quantized 4B models served via llama.cpp without grammarconstrained decoding.
+Prompt Structure.The Stage 1 prompt instructs the model to produce
+a single JSON object following a strict template. Each of the 9 keys maps
+to a free-text string summarizing the relevant clinical domain. The prompt
+includes: (i) explicit definitions of each key’s scope (e.g.,PROBLEMS covers
+past medical history,SYMPTOMS covers presenting complaints); (ii) a checklist
+of high-priority items per domain (e.g., 28 specific problems listed in the
+CRF ontology, all vital signs, key laboratory values); (iii) instructions to use
+Key: Value formatting within each string for machine-parseable extraction;
+(iv) a sparsity directive: “include only facts explicitly stated in the note; do
+not infer or guess”. This structu

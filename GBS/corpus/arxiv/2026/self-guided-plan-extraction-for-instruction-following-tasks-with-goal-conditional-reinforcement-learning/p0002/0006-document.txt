@@ -1,0 +1,33 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 2
+section: document
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+in natural language, but in a
+strict normalized format that allows passing them
+one-by-one to the policy without ambiguity.
+Second, the model generates agoal-level plan,
+producing for each instruction a single conceptual
+representation of its intended outcome, expressed
+in terms of the established subtask base. This step
+abstracts away from concrete execution details and
+captures only the high-level intent.
+Third, we induce asubtask ontologythat encodes the model’s hypotheses about prerequisite
+relations, i.e., which subtasks must be completed
+before others can be attempted. This provides a
+structured view of dependencies across the subtask
+base.
+Finally, we performplan expansion, where the
+single conceptual plan is unfolded into multiple
+detailed plans, with their number corresponding to
+the hypotheses proposed by the model. The ontology ensures that these expanded variants remain
+consistent with prerequisite relations and avoid contradictions.
+This approach provides two key benefits. First,
+it improves plan consistency by constructing plans
+from a shared set of subtasks and their relations,
+rather than from independent and potentially contradictory structures. Second, it supports

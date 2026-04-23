@@ -1,0 +1,12 @@
+title: Enhancing Research Idea Generation through Combinatorial Innovation and Multi-Agent Iterative Search Strategies
+source: arxiv
+year: 2026
+document_id: enhancing-research-idea-generation-through-combinatorial-innovation-and-multi-agent-iterative-search-strategies
+authors: Shuai Chen; Chengzhi Zhang
+page: 1
+section: document
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20548v1
+
+uring identical input conditions across methods. Under this unified setup, AI-Researcher follows its original two-stage pipeline of literature retrieval and literature-grounded idea generation, while NOVA guides knowledge retrieval and idea generation through a planning-driven search mechanism. Our method and the two baseline approaches are evaluated using the same sampled papers and initial ideas, ensuring a fair comparison. The comparative results are shown in Figure 3 based on three metrics: diversity, novelty, and high-score ratio. Diversity reflects the breadth of explored research direc-tions, novelty measures the extent to which generated ideas differ from existing litera-ture, and high-score ratio indicates the proportion of ideas identified as high quality in the Swiss-system pairwise evaluation.
+Figure. 3. Comparison with Baseline Methods As shown in Figure 3, the proposed multi-agent iterative planning framework out-performs both baseline methods across all three metrics. Our method achieves the high-est diversity (0.898), exceeding NOVA (0.867) and AI-Researcher (0.680), which

@@ -1,0 +1,27 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+ty to
+directly infer the realized trajectoryz. This is in contrast
+to MCMC methods, which have access to the full probabilistic model. A practical SBI approach is therefore to
+inferxgiveny, and then sample trajectorieszfrom the
+simulator conditioned on the inferred parameters. However, if the latent variable is stochastic this procedure can
+never recover the actual realized trajectory, only samples
+from its conditional distribution as implied by the simulator. Alternatively, one could modify the inference setup
+and train SBI on pairs(x, z)mapped to observationsy.
+At inference time, conditioning onywould then yield a
+joint posterior over bothxand the trajectoryz. In principle, this allows direct estimation of latent trajectories
+rather than only their distributional family. In practice,
+however, this substantially increases the complexity of
+the inference problem, as SBI must explore a very highdimensional latent space corresponding to the full time
+seriesz.
+We benchmark the amortized SBI approach against a
+MCMC baseline. For MCMC, the stochastic degradation model is implemented in NumPyro [52, 53], and the
+No-U-Turn Sampler [45] draws joint samples of the discrete failure modezand

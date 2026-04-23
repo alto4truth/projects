@@ -1,0 +1,70 @@
+title: RefAerial: A Benchmark and Approach for Referring Detection in Aerial Images
+source: arxiv
+year: 2026
+document_id: refaerial-a-benchmark-and-approach-for-referring-detection-in-aerial-images
+authors: Guyue Hu; Hao Song; Yuxing Tong; Duzhi Yuan; Dengdi Sun; Aihua Zheng; Chenglong Li; Jin Tang
+page: 1
+section: document
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20543v1
+
+Scenes in the Aerial View
+“A camera is located between the car and the street lights in
+the night.”
+“The yellow bus is parked under the streetlights.”
+
+“A girl in light blue clothes and white pants holding a bag is
+walking, and a parked yellow bicycle next to her.”
+“The yellow bicycle is being ridden by a man
+wearing a white shirt and a black backpack.”
+“A white truck is driving in the middle-left lane of
+the main road, with a white car and an electric
+bike rider ahead.”
+“A light green sedan is on the zebra crossing heading from the
+upper to the lower part of the intersection.”
+“A grey sedan with a sleek body in the middle
+lane of the right-side highway.”
+“A white sedan driving on the central main road.”
+Figure 2. Illustration of challenges and samples in the RefAerial dataset.
+Table 1. Comparing our RefAerial with existing ground referring
+detection datasets. The RefAerial significantly distinguishes from
+them regarding object-to-scene ratios, target numbers, description
+complexity, bounding-box numbers, and scene scenarios. O2S Ratio (%): object-to-scene ratio in the form of Mean (Standard Deviation). Word No.: number of words per expression in the form
+of Mean (Standard Deviation). Target No.: average number of annotated referring targets per image. Bbox No.: total number of
+bounding boxes in the whole dataset. Resolution represents the
+average resolution of images in the dataset.
+Items RefCOCO RefCOCOg RefCOCO+ RefAerial
+O2S Ratio 11.4 (8.5) 11.0 (9.4) 11.1 (8.6) 5.6(10.5)
+Word No. 3.61 (2.0) 8.43 (3.5) 3.53 (2.1) 12.5(3.8)
+Target No. 2.5 1.9 2.5 11.4
+Bbox No. 51K 55K 50K 115K
+Resolution 592×485 583×480 592×485 1920x1080
+wide and significant applications in emergency rescue, agricultural monitoring, ecological protection, anti-drone confrontation, etc.
+To activate and advance the research and application of
+referring detection in aerial images, we collect and annotate
+a large-scale challenging datasets for referring aerial image
+detection, termed as RefAerial. It distinguishes from classical ground referring detection datasets by 4 remarkable
+characteristics (as shown in Fig. 2). (1)Low but diverse
+object-to-scene ratios:since the aerial devices inherently
+have broader scope compared to ground devices, the referring object in aerial images typically occupies small portion
+of pixels in the overall scene. In addition, diverse scales
+of objects are commonly contained within and across aerial
+images (see Table 1 and Fig. 1a). Thus, the low but diverse
+object-to-scene ratio significantly increases the difficulty of
+object discrimination, spatial localization, and boundary estimation for referring detection in aerial images. (2)Numerous targets and distractors:an aerial image typically
+contains numerous potential target categories and each referring target in one specific semantic category may also
+be accompanied with numerous similar distractors nearby
+(such as the girl and bicycle in Fig. 2), please see Table
+1 for more details. Thus, it is very challenging to recognize and discriminate the referring target from other distractors with contextual information. (3)Complex and
+fine-grained referring descriptions:the descriptions in
+mainstream ground referring detection datasets are usually
+short and coarse-grained, while our RefAerial dataset covers complex (long and diverse) and fine-grained referring
+descriptions (see Fig. 1b and Table 1). Its descriptions have
+an average length of 12.5 words, and short and long descriptions are nearly balanced. Thus, the complex and finegrained referring descriptions substantially increase the linguistic complexity. (4)Diverse and broad scenes in the
+aerial view:in contrast to small and centralized ground
+scenes, our RefAerial are collected from broad aerial scenes
+with diverse environmental conditions regarding altitude,
+view, weather, area, etc.
+Besides, we observe that existing ground referring detection approaches face serious performance degradation on
+our aerial referring detection dataset since the intrinsic scale
+variety issue within or across aerial images (as shown in Ta-

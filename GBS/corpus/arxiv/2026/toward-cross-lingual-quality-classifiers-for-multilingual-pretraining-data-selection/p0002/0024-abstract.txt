@@ -1,0 +1,24 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+zes almost
+perfectly the negative and positive classes. It applies a very strict threshold (90th percentile: 0.027)
+and assigns generally lower scores, yet still identifies high-quality content effectively. Additional
+experiments, including the baseline plot, can be found in the Appendix B.
+Additionally, we train our 1B models with the datasets from our classifiers. Despite the high rank
+correlation, we would expect the classifier trained on Romance to perform better than Nordic, even
+though both have never seen French samples in their training data. And we expect the Romance
+classifier to perform close to the HQ baseline, as these languages should be similar enough to French
+to give the classifier a good idea of what a high-quality sample should be.
+We show the results of the experiment in Table 4, which provides a surprising result. The Romance
+classifier has the same rank as the HQ baseline, however, with slightly less in normalized accuracy.
+Furthermore, the Nordic classifier is the one with the highest mean normalized accuracy, which even
+outperformed the HQ baseline trained on French.
+The success of the Nordic classifier provides evidence for transferable quality features acr

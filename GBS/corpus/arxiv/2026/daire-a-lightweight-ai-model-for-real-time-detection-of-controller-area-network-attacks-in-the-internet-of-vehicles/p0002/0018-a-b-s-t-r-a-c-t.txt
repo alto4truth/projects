@@ -1,0 +1,29 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 2
+section: a-b-s-t-r-a-c-t
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+n, e.g., reporting Reverse while the car is actually in
+Drive. This can lead to autonomous functions operating in
+the wrong direction.
+• Fuzzy attacks consist of sending random CAN IDs and data payloads into the network in an attempt to crash or destabilize it.
+This method is also used to uncover potential weaknesses in the
+embedded software.
+These vulnerabilities arise mainly because the original CAN specification prioritized efficiency and fault tolerance over security. As a
+result, attackers can exploit the open nature of CAN communication
+to manipulate vehicular functions (Yang et al., 2023). Securing CAN
+communication in IoV scenarios is a critical priority. Recent research
+efforts have focused on identifying and mitigating vulnerabilities within
+the CAN bus system, particularly concerning intra-vehicle security. The
+main aim is to address the protocol’s security weaknesses from multiple
+perspectives (Aliwa et al., 2021). Given these security limitations,
+understanding the structure of CAN packets is essential to identifying
+how attackers exploit specific fields
+2.3. CAN packet structure
+Visualizing the CAN message format helps in understanding how
+attacks manipulate standard

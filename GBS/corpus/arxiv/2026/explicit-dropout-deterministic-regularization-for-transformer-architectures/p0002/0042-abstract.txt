@@ -1,0 +1,66 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 42
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+Using the identity‖𝐴‖2
+𝐹 = Tr(𝐴 𝑇 𝐴), this becomes
+𝐽𝑣 = 1
+2𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+Tr (𝐖𝑣 ̃𝐗𝑇
+𝑡 ̃𝐗𝑡𝐖𝑇
+𝑣
+).(59)
+Rearranging terms and collecting the summation yields
+𝐽𝑣 = 1
+2 Tr
+((
+1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+̃𝐗𝑇
+𝑡 ̃𝐗𝑡
+)
+𝐖𝑇
+𝑣 𝐖𝑣
+)
+.(60)
+Using the definition of𝐁in Eq. (4), we finally obtain the
+compact expression
+𝐽𝑣 = 1
+2 Tr(𝐁𝐖𝑇
+𝑣 𝐖𝑣
+).(61)
+A.5. Derivation of the Value Dropout Regularizer
+(Attention-conditioned)
+The value representation can also be obtained by
+𝐕=𝐀𝐗𝐖 𝑇
+𝑣 .(62)
+For a token𝐱𝑖, the corresponding value vector is
+𝐯𝑖 =𝐀𝐱 𝑖𝐖𝑇
+𝑣 .(63)
+When a dropout mask is applied at training epoch𝑡, the
+perturbed value becomes
+𝐯𝑖𝑡 =𝐀(𝐦 𝑖𝑡 ⊙𝐱 𝑖)𝐖𝑇
+𝑣 ,(64)
+where𝐦 𝑖𝑡denotestheindependentlysampledbinarydropout
+mask and⊙represents element-wise multiplication.
+Let ̃𝐱𝑖𝑡 denote the input token after dropout, i.e.,
+̃𝐱𝑖𝑡 =𝐱 𝑖 − (𝐦𝑖𝑡 ⊙𝐱 𝑖).(65)
+Then the deviation induced by dropout in the value space is
+𝐯𝑖 −𝐯 𝑖𝑡 =𝐀 ̃𝐱𝑖𝑡𝐖𝑇
+𝑣 .(66)
+To enforce consistency between the original and dropoutperturbed value representations, we penalize this deviation.
+Assuming𝑁 𝑇 stochastictrainingepochswithindependently
+sampled dropout masks applied to𝐗, and denoting the
+stackeddroppedcomponentsatepoch𝑡by ̃𝐗𝑡,wedefinethe
+value dropout regularizer as
+𝐽𝑣

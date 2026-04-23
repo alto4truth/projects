@@ -1,0 +1,30 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+ti-norm adversarial
+trainingprocedure that progressively introduces attack types—
+starting from ℓ∞, adding ℓ2, then ℓ1, spatial, and semantic
+perturbations—with a worst-case-aware loss:
+Lunion = max
+p∈P
+Ladv(fθ, x, y;ε p)(4)
+where P={ℓ 1, ℓ2, ℓ∞,spatial,semantic} and εp are normspecific budgets. The curriculum schedules norms by increasing difficulty (measured by attack success rate on a held-out
+set), preventing catastrophic forgetting of earlier-norm robustness through elastic weight consolidation [15].
+Edge-case checklist:
+• Data leakage:Train/test splits follow RobustBench protocol exactly; no model selection on test data; curriculum
+validation uses a separate held-out partition.
+• Compute:Feasible on 4 ×A100 (40 GB each): curriculum training adds |P| ×overhead per epoch, but only the
+worst-case norm requires full PGD; others use FGSM approximations. Estimated 48–72 GPU-hours for CIFAR-10.
+• Reproducibility:Report learning rate, β (TRADES weight),
+curriculum schedule (epoch ranges per norm), and EWC
+regularisation strengthλ.
+• Baselines:AutoAttack [ 8], MultiRobustBench union evaluation [5], TRADES [6], AWP.
+• Ablation variables:(i) curriculum order (random vs.
+difficulty-sorte

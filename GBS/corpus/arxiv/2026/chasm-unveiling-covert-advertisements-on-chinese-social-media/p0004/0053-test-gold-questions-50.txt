@@ -1,0 +1,45 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 53
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+send a private message, a common tactic
+used to evade platform review while promoting products.
+27
+
+Figure 8: Examples of Six Different Error Types
+28
+
+The second common issue is mistakenly classifying normal posts as advertisements without a factual
+basis. As shown in the middle row of Figure 8, the left subfigure features a post recommending
+a novelist. Although the language style may resemble promotional wording, the content itself is
+unrelated to any product or advertisement and should not be considered an advertisement. The right
+subfigure shows a post asking for opinions on outfit choices. While it may touch on product-related
+topics, the author’s focus is on seeking advice rather than promoting any specific item.
+The third common issue involves structural cues. For example, in the left subfigure of the bottom row
+in Figure 8, the content introduces multiple skincare products. The structure of the post is centered
+around summarizing a variety of items rather than focusing on a single one. Since these products are
+competing within a narrow category, it is less likely that the post serves as an advertisement.
+The fourth issue relates to linguistic style cues. For example, in the right subfigure of the bottom row
+in Figure 8, the post introduces a certain medication. The writing style resembles personal lifestyle
+sharing, and a significant portion of the text is dedicated to discussing its drawbacks. Therefore, it
+should be classified as normal sharing content rather than an advertisement.
+I Broader impacts
+Our work has the potential to generate a positive social impact. Covert advertisement is a deceptive
+practice that seeks to gain unfair competitive advantages and is explicitly prohibited by advertising
+laws in multiple regions, including China and the United States. By enabling the automatic detection
+of covert advertisements, we believe our approach can help platforms foster a fairer and more
+trustworthy social media environment.
+The project may also have negative impacts, such as the risk of mistakenly classifying legitimate
+posts as advertisements, which could lead to an unsatisfactory user experience. However, nearly
+all quality-control ML models face this kind of issue, so the negative impact is neither significant
+nor unique to our model. We advocate for a cautious approach in the application of automatic
+advertisement detection by platform administrators. For instance, any punitive actions against users
+should involve human review, and platforms should provide clear channels for user feedback and
+explanation to ensure that the normal user experience is not adversely affected.
+29

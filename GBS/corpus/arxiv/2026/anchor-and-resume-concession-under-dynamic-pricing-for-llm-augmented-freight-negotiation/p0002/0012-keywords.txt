@@ -1,0 +1,31 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation AAMAS’27, 2027,
+3 FRAMEWORK
+3.1 Bilateral Negotiation Model
+We model freight rate negotiation as a single-issue bilateral
+alternating-offers game between a broker agent 𝐵 and a
+carrier agent 𝐶, where the sole negotiated variable is the
+linehaul rate. Each negotiation concerns a single load ℓ with
+parameters 𝑟min (minimum rate), 𝑟max (maximum rate), and
+an optional 𝑟target from the pricing pipeline. The zone of
+possible agreement (ZOPA) is [ 𝑟min, 𝑟max]. The negotiation
+proceeds for up to 𝑇 rounds, ending when one side accepts,
+walks away, or the deadline is reached.
+3.2 Concession Model and Adaptive Beta
+Following the simplified form of Faratin et al.’s [ 1] timedependent tactic (with time normalized to 𝑡∈ [0, 1]), the
+broker’s offer is:
+offerTD(𝑡) =𝑟 min +𝛼(𝑡)·(𝑟 target −𝑟 min) (1)
+where 𝛼(𝑡) = 𝑡1/𝛽 is the concession function and 𝑟target is the
+pricing model’s current target rate (defaulting to 𝑟max when
+unavailable). The broker concedes from 𝑟min toward 𝑟target,
+not 𝑟max; the maximum rate 𝑟max serves only as a hard walkaway ceiling. The parameter 𝛽 controls the concession shape:
+𝛽 < 1 is Boul

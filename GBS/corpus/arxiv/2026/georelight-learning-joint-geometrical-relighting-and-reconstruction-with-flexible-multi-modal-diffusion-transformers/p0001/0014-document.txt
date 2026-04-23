@@ -1,0 +1,88 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+High-Resolution
+Image Generation
+Multi-View
+Generation
+Multi-View
+Mesh Carving
+Textured Mesh
+High Resolution,
+Data Preprocessing
+Multi-Modal DiT
+…
+🔥
+optimizable
+Relit Albedo Normal Dilated iNOD Mask
+❄
+Enc
+❄
+Dec
+Relighting
+Intrinsics
+Decomposition
+Multi-Modal Latent Diffusion
+Generation
+3D Geometry
+Reconstruction
+❄
+Input
+❄
+Enc
+Environment Light
+C
+Learnable
+Context Embedding
+Noise
+Training Inference
+Channel-wise
+Concatenation
+Enc
+Data Preprocessing
+Multi-Modal DiT
+…
+🔥
+optimizable
+Albedo Normal Dilated iNOD Mask
+Relit
+Multi-Modal Latent Diffusion
+Multi-Modal Generation
+iNOD
+❄
+Input
+❄
+Enc
+Environment Light
+C
+Learnable
+Modality Embedding
+Training Inference Channel-wise
+Concatenation
+Enc
+❄
+Encoder
+Segmentation
+(as condition)
+Available Modality during Inference
+(e.g. Segmentation, Normal) Input Image Environment
+Albedo
+❄
+
+Enc
+Albedo
+(as target)
+Normal
+(as condition)
+iNOD
+(as target)
+Relit
+(as target)
+❄

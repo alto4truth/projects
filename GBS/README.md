@@ -65,6 +65,7 @@ Supported now:
 - `htm`
 - `arXiv` PDF import via `scripts/import_arxiv.py`
 - `Project Gutenberg` bulk import via `scripts/import_gutendex_technical_books.py`
+- `Wikibooks` bulk import via `scripts/import_wikibooks_technical_books.py`
 
 Optional later:
 
@@ -89,6 +90,7 @@ Bulk import open corpora:
 cd /root/projects/GBS
 python scripts/import_arxiv.py 'cat:cs.AI OR cat:cs.LG OR cat:cs.CL OR cat:cs.CV' 25
 python -u scripts/import_gutendex_technical_books.py
+python -u scripts/import_wikibooks_technical_books.py 100
 ```
 
 `import_arxiv.py` now produces two outputs:

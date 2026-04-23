@@ -1,0 +1,19 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+lways achieving the same performance with less computational cost.
+and 67.68% F1 score across the three splits. By incorporating R-CoV , mPLUG-Owl can achieve +34.44% accuracy
+and +19.32% F1 score improvements. For MiniGPT-4, RCoV yields +7.45% accuracy and +4.68% F1 score gains.
+When building upon a stronger LLaV A-1.5 (Qwen2.5-VL),
+we still observe +4.56% (+1.78%) and +3.33% (+2.64%)
+improvements on accuracy and F1 score, respectively. This
+demonstrates the effectiveness and the generality of our
+method.
+To further demonstrate the superiority of R-CoV , we analyze the trade-off between performance and test-time com5

@@ -1,0 +1,37 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 57
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+A.4 Prompting and Rubrics for Phase 2:
+Multi-faceted Quality Assessment
+Dimension SL: Prompt for Logical Coherence
+Input Text for Evaluation: {text_to_evaluate}
+Task: You are an AI assistant designed to
+evaluate the correctness of logical reasoning.
+Your primary focus is to rigorously scrutinize the logical soundness and validity of the
+reasoning contained ONLY within the <INFER>...</INFER> tags, based on the visual
+evidence in the image.
+Evaluation and Scoring Rules:
+1. Isolate and Evaluate: Focus exclusively on the statements inside the <INFER> tags.
+2. Assess Plausibility against Image: Judge
+if the inference is a logical and plausible conclusion derived from the visual
+information in the image.
+3. Output Format:
+• Score: integer 1-5
+• Explanation: A brief evaluation of
+the logical rigor, noting key flaws
+or strengths.
+Scoring Rubric:
+Score 1: Grossly Illogical or Baseless. The
+inference is pure speculation with no
+connection to the image (e.g., predicting the future from a photo of a cat), or
+it’s self-contradictory.
+Score 2: Significant Logical Gaps. The inference is a major leap in logic. While
+loosely related to the image, it is
+highly unlikely or requires many unsupported a

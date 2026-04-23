@@ -1,0 +1,21 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 10
+section: step-3-access-reinforcement-diminishing-returns
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+C_final = min( 1.0 , C_fb + beta . log(1 + n_access) )
+Defaults: αpos = 0.03, αneg = 0.08, β= 0.01, H = 30days, dormant_threshold = 0.15. The
+asymmetry αneg > αpos is intentional: a single human correction should outweigh several silent
+accepts, reflecting that corrections are a stronger signal than absence of correction. The log-saturating
+access term prevents runaway confidence from popular-but-wrong documents.
+5.1 Decay Trajectory
+ForC0 = 0.85, H = 30, and no feedback or access, the closed form gives0.85→0.425at day 30,
+0.21at 60,0 .11at 90 (DORMANT threshold crossed),0.013at 180. This matches the qualitative
+shape of the Ebbinghaus forgetting curve and is the simplest model that captures the “sharp early
+drop, slow long tail” observation.
+7

@@ -1,0 +1,24 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 73
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+combinations of demographic attributes (i.e., race–gender and
+race–SES), but also consider different contexts (ambiguous and disambiguated), under negative and non-negative
+polarities for a broader assessment of LLM fairness across different scenarios. Further, the choice of fairness metrics
+might fail to fully capture the LLMs fairness. To mitigate this, we employed a diverse set of metrics, including bias
+scores to capture stereotyped errors in both ambiguous and non-ambiguous contexts, along with group fairness metrics
+to assess disparities across demographic groups.
+6.5 Code availability.
+The code used in this study is publicly available on Figshare [fig 2026]. The repository includes scripts for data
+preprocessing, model evaluation, and analysis, along with instructions to reproduce the reported results.
+7 Conclusion
+Our study provides a comprehensive evaluation of intersectional fairness in six LLMs across both ambiguous and
+disambiguated contexts, examining fairness and consistency. Our findings show that the behavior of the studied LLMs
+differs substantially across these settings. Overall, current LLMs do not yet exhibit consistently reliable behavior in
+scenarios requirin

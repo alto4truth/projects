@@ -1,0 +1,26 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+V-tableR1: Process-Supervised Multimodal Table Reasoning 9
+Table Fact Verification (TFV).
+–TabFact [5]: A large-scale dataset based on Wikipedia tables. The task requires the model to determine whether a given natural language statement
+is entailed or refuted by the table, testing its capacity for linguistic and
+symbolic reasoning.
+–InfoTabs [13]: A semi-structured inference dataset built upon Wikipedia infoboxes. It features complex, multi-row logical reasoning where the model
+must classify hypotheses as entailment, contradiction, or neutral, often requiring implicit knowledge integration.
+Table Question Answering (TQA).
+–FinQA [8]: A financial reasoning dataset requiring deep numerical calculation (addition, subtraction, division) over professional earnings reports. It
+challenges models to extract and compute over numbers heavily embedded
+in dense tables and accompanying text.
+–HiTab[9]:Ahierarchicaltabledatasetcontainingcomplexstatisticalreports.
+It specifically evaluates the model’s structural understanding, demanding
+precise visual anchoring to associate values with their hierarchical row and
+column headers.
+–TAT-QA [48]: A hybrid question-answering dataset that involves extra

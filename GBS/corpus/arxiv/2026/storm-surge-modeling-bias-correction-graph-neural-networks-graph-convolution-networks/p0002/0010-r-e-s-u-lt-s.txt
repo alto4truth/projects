@@ -1,0 +1,41 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 2
+section: r-e-s-u-lt-s
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+ng StormNet in the considered region of interest, along with a comparison with the LSTM-based model of [ 77], and the results of the ablation study
+10
+
+are shown in Section 3. Finally, the concluding remarks and the limitations of this
+approach are included in Section 4.
+2 Methodology
+2.1 Overview
+The proposed pipeline integrates spatial and temporal learning components to correct
+biases in physics-based hurricane storm surge predictions, as illustrated in Figure 1. It
+comprises three key steps, namely data preprocessing, graph computation, and offset
+prediction. The first stage (Figure 1.A) involves the systematic extraction of the offsets
+(Eq. 1) between the modeled and observed water level time series from each gauge
+station in the available dataset. The offset time series ( oi) for each gauge station i is
+defined as follows:
+oi(t) = xmodeled
+i (t) − xi(t) (1)
+where xmodeled
+i (t) and xi(t) denote the forecast (via ADCIRC) and observed (from
+gauge stations) water levels, respectively, and oi(t) is the water level offset (i.e., the
+bias), at each timestep t for each station i. More details on this phase are explained in
+Section 2.2. Given the graph-like nature of our problem, the data can be reformulated
+as a graph (Stage 2, Figure 1.B). A graph G is an abstract representation of a network,
+consisting of a set of nodes V and edges E that indicate the presence of interactions
+between nodes [ 90–92]. In our formulation, each node vi ∈ V corresponds to a gauge
+station and each edge (vi, vj) ∈ E represents the correlation between stations i and j.
+Further details about this stage are described in Section 2.3. Finally, in the third stage,
+we employ the proposed StormNet model to forecast offsets (biases) at all stations.
+These predicted offsets are then used to correct the physics-based (ADCIRC) modeled
+water levels, thereby improving the accuracy and reliability of storm surge forecasts
+within CERA platform.
+11

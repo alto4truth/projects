@@ -1,0 +1,51 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 54
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+abled).
+•Tree-search state(tree_search_state.jsonandtree_branches/). Branch-level search state and
+forked workspaces (when tree search is enabled).
+28
+
+B Extended Related Work
+TheliteratureclosesttopAI/MScdoesnotformasinglecleanlineage. Itspansmanuscript-localwritingassistants, literature-review and survey systems, manuscript-first research-to-paper agents, broader autonomous
+discovery systems, and open multi-agent scientific platforms. We find it more useful to compare these systems
+by three questions than by raw agent count:what scholarly artifact is produced,what substrate the system
+can actually act on, andwhat verification loop constrains error accumulation. Under that lens,pAI/MSc
+is best understood as a manuscript-first, artifact-driven research-to-paper system for quantitative research,
+rather than as a generic autonomous-science platform.
+B.1 Historical precursors: scholarly infrastructure, citation grounding, and
+editor-native assistance
+The pre-agent history of research automation is largely a history of stronger anchoring. Before multiagent research workflows became feasible, the main bottlenecks were access to machine-readable scholarly
+corpora, citation graphs, and interfaces for grounding generated text in evidence. At the corpus level,
+Lo et al. [74] introduced S2ORC, a large-scale structured corpus that made citation-aware retrieval and
+document-level text mining practical at scale. At the catalog and graph level, Priem et al. [75] introduced
+OpenAlex as a fully open index of works, authors, institutions, venues, and concepts, giving later systems a
+programmable substrate forliterature discovery, citation traversal, and bibliometric filtering. These resources
+matter because many later “research agents” inherit their apparent capability from the quality of the scholarly
+substrate underneath them.
+A first wave of LLM-era work then focused on citation-grounded text generation rather than full research
+automation. Gao et al. [76] introduced ALCE, a benchmark and evaluation framework for end-to-end generation of text with citations, emphasizing fluency, correctness, and citation quality rather than stylistic
+quality alone. Funkquist et al. [53] similarly proposed CiteBench as a benchmark for citation text generation, helping expose the gap between merelyhavingcitations and citing evidence that actually supports a
+claim. On top of this evaluation infrastructure, project-level systems such as ChatCite [54], ScholarCopilot
+[55], SurveyGen [56], PaperQA2 [77], and Elicit [78] pushed increasingly far into literature synthesis, comparative summary, citation-grounded writing, and systematic-review-style workflows. These systems are highly
+relevant topAI/MScbecause they establish an important baseline lesson: in scholarly writing, retrieval
+quality and claim–evidence linkage often matter more than surface fluency.
+A parallel line binds generation directly to live manuscript state rather than to a free-form chat session. OverleafCopilot [57] embeds assistance in an Overleaf/LATEX workflow, while PaperDebugger [58] adds pluginbased multi-agent review and patching in-editor. This editor-native family is adjacent rather than identical to
+hypothesis-to-paper systems such as ours, but it highlights a design principle that we also adopt: manuscript
+state, intermediate artifacts, and revision traces are valuable external objects and should not be collapsed
+into ephemeral conversational context.
+B.2 Manuscript-first research-to-paper agents
+The closest prior line topAI/MScis the family of systems that explicitly target end-to-end or near endto-end manuscript production. Within this family, a useful internal distinction is betweenprovenance-first
+systems, which emphasize traceability from evidence to prose, andexploration-firstsystems, which emphasize
+autonomous idea and experiment search before paper synthesis.
+Among provenance-first systems, data-to-paper is the clearest reference point. Ifargan et al. [59] describe
+a stepwise framework that starts from structured data, generates hypotheses, produces analyses and code,
+and then writes a human-verifiable manuscript with explicit backward traceability from claims to executed
+29

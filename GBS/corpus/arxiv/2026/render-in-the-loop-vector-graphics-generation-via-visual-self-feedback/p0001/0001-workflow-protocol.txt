@@ -1,0 +1,29 @@
+title: Render-in-the-Loop: Vector Graphics Generation via Visual Self-Feedback
+source: arxiv
+year: 2026
+document_id: render-in-the-loop-vector-graphics-generation-via-visual-self-feedback
+authors: Guotao Liang; Zhangcheng Wang; Juncheng Hu; Haitao Zhou; Ziteng Xue; Jing Zhang; Dong Xu; Qian Yu
+page: 1
+section: workflow-protocol
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20730v1
+
+1.Initialization: The user will provide a text description.
+2.Incremental Drawing: Do NOT output the entire SVG at once. Output
+small, logical fragments (e.g., one shape or path) in each turn wrapped in“‘svg
+code blocks.
+3.Visual Self-Correction:
+- After your first turn, the user willSTOPproviding text instructions.
+- The user willONLYinput a rasterizedimageof the current canvas state.
+- IMPORTANT: Eachimageis the PNG render of the SVG canvas produced by
+cumulatively applying all SVG fragments you have output so far. Treat it as the
+current accumulated drawing state.
+- You must act as the “eye” and the “hand”: Look at the image, and output the
+nextSVG code fragment to complete the drawing.
+4.Termination:
+- When you see the image and determine the drawing is fully complete and
+matches the goal, you must output a special termination signal inside an svg
+block:
+“‘svg
+<END>
+”’

@@ -1,0 +1,26 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+Figure 3: Examples of our controlled defect injection. For each pair, the original high-quality text (top) is rewritten
+to include a subtle, context-aware flaw (bottom), illustrating various error categories from our taxonomy (Table 2).
+Figure 4: Score distribution comparing original and
+defect-injected samples, illustrating how EVIAN separates high-quality data from subtle semantic corruptions.
+POPE (79.87) validates its ability to mitigate
+hallucinations through holistic multi-dimensional
+verification, while its gains on A-OKVQA (0.7493)
+and ScienceQA (0.7115) highlight the benefit of
+auditing factual and reasoning components.
+Overall, these results reveal a fundamental limitation of existing curation strategies: high similarity or holistic scores do not guarantee utility and
+frequently obscure critical semantic defects. In contrast, EVIAN’s multi-dimensional auditing yields
+cleaner and more reliable training data, enabling
+models trained on small, high-quality subsets to surpass those trained on far larger but noisier datasets.
+This points to a clear direction for LVLM development: progress hinges less on scaling data volume
+and more on fine-grained, interpretable auditing
+that

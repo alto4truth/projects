@@ -1,0 +1,24 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 2
+section: a-b-s-t-r-a-c-t
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+speech recognition or CAN bus traffic analysis. These models capture long-range dependencies but suffer from high memory usage and
+latency due to their recursive nature. Though CAN bus traffic is timeseries data, the shorter sequential dependencies in attack signatures
+may not require LSTM-level complexity.
+Despite their powerful learning capabilities, these architectures often require substantial computational resources and memory, making
+them less suitable for resource-constrained environments such as embedded automotive systems. In contrast, the DAIRE model utilizes a
+lightweight ANN to ensure low-latency, lightweight deployment in realtime IoV scenarios. While deeper models like CNNs and LSTMs offer
+performance advantages in some domains, our empirical evaluation
+demonstrates that a lightweight ANN can achieve competitive accuracy
+in CAN attack detection without the overhead of complex architectures.
+This trade-off between complexity and efficiency makes our ANN-based
+DAIRE model a practical choice for IoV environments.
+2.2. Controller Area Network (CAN)
+CAN protocol is a widely adopted communication standard used in
+vehicles to enable message exchange between ECUs (Song et al.

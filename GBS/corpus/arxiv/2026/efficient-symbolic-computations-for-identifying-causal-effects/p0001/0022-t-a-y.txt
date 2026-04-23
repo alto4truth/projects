@@ -1,0 +1,24 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+that an elimination order≺forB 1 is a
+lex-elimination orderif≺ 1 is the lexicographic order for some permutation of the variables inB1.
+Lex-elimination orders are useful for determining identifiability via Gröbner bases. Recall that
+we denote byθ id ⊆θthe already identified parameters, and byθ rem =θ\θ id the remaining
+parameters. To check the condition from Lemma 2.7, that is, whether the idealIcontains an
+identifying polynomial for the parametersq∈θ rem, we have the following result.
+Proposition 3.3.LetFbe a reduced Gröbner basis of the idealIwith respect to a lex-elimination
+order onR[θ, σ]for the variables inθ rem. Then, all parametersq∈θ rem are rationally identifiable if
+and only if, for each parameterq∈θrem, the Gröbner basisFcontains an element that has leading
+termq·a(θ id, σ)for somea∈R[θ id, σ].
+Example 3.4.For the graph in Figure 3, suppose that the parametersθid ={λ 12, λ14}are already
+identified. For the remaining parametersθ rem, consider the lex-order for(ω 11, ω22, ω33, ω44, ω23,
+ω34, λ34), that is, the variableλ34 is the smallest and has lowest priority. Since we have already
+seen in Example 2.9 that the graph is rationally identifiable, the Gröbner basis with res

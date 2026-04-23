@@ -1,0 +1,40 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 9
+section: output-format
+chunk: 47
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+Output a single valid JSON object strictly following this schema.
+{{
+"factual_memories": [
+{{
+"when_to_use": "<Precise context trigger>",
+"memory": "<The objective fact>"
+}}
+],
+"episodic_memories": [
+{{
+"when_to_use": "<Precise situational OR temporal trigger>",
+"memory": "<The insight, strategy, or scheduled event>"
+}}
+]
+}}
+E.2 Success Skill Extraction Prompt
+The following prompt distills reusable best practices from successful trajectories. It identifies the critical strategic
+decisions that enabled task completion and formulates them as forward-looking, imperative rules.
+19
+
+ICALK@ECNU
+Success Skill Extraction Prompt
+You are an expert Meta-Cognitive Success Analyst reviewing a successful trajectory of an
+LLM Agent.
+Your goal is to analyze a "Success Trajectory" (a sequence of actions that successfully
+achieved a goal) and extract high-utility **Best Practice Memories** that will
+reinforce efficient strategies and ensure consistent success in similar future
+scenarios.
+You must look past routine actions and identify the **critical strategic decisions** or
+**tool usage patterns** that streamlined the solution.

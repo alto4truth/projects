@@ -1,0 +1,45 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 60
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+Supplementary Material
+A Extended Methodology Classification
+Table 12:Extended methodology classification with reproducibility assessment. Reproducibility (Repro.) is rated on a three-point scale: ✓ =
+partial (e.g. code available, limited documentation), ✓✓ = mostly reproducible, ✓✓✓ = fully reproducible (code, data, and configs released).
+Paper Statistical
+Method
+Baseline Code Repro. Notes
+Croce & Hein [8] Robust acc. drop
+vs. prior
+>50 defences✓ ✓✓✓Gold standard
+Daiet al.[5] Worst/avg across
+menu
+16×9 attacks✓ ✓✓✓180 configs
+Carliniet al.[4] Success split by
+task
+CTF vs. real✓ ✓✓Agent variance
+Daiet al.[15] Retention + new
+acc.
+CRT baselines✓ ✓✓No open-world
+Songet al.[43] Correlation w/
+ASR
+PGD screening∼✓CNN-only
+Kassiset al.[10] Attack vs. prior
+DBP
+Prior protocols✓ ✓✓✓MV break
+Liet al.[11] FOSC + hyperparam grid
+Default TRADES ✓ ✓✓CIFAR only
+RobustBench [14] Leaderboard
+ranking
+Community✓ ✓✓✓Living
+OpenRT [44] Not specified —✓ ✓Toolkit
+B Full Assumption Consequence Matrix
+Table 13:Detailed consequence analysis for each untested assumption.
+ID Assumption Papers Relying Risk If False: What Changes
+A1 Fixed suite = safety C1, C2, C5 High Leaderboard rankings temporally bounded;

@@ -1,0 +1,30 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+generalisation(S3×D4×E3).
+Gap:RDI [C5] achieves ∼30×screening speedup but is validated only on CNN feature geometries; generalisation to
+Vision Transformers (ViTs), LLMs, and multi-modal encoders
+is untested.
+Why it exists:Lack of data—the metric study used only
+CNN-based classifiers; ViT and LLM feature manifolds have
+fundamentally different geometries (local receptive-field features vs. global self-attention representations).
+Closest paper:Songet al.[C5] demonstrated strong CNN
+correlation but acknowledged the CNN-only scope as a limitation.
+Path to resolution:Cross-architecture validation on ViT, DeiT,
+Swin, and decoder-only LLMs; architecture-conditional calibration of the RDI threshold; feature-geometry normalisation
+layers.
+G5: Continual robustness under open-world drift
+(S4×D3×E3).
+Gap:CRT [C4] improves backward-attack retention but offers no guarantees against adversary types outside training
+coverage—the “open-world” setting real deployments face.
+Why it exists:Ethical/logistical constraint—longitudinal
+field studies of adversarial drift require sustained deployment
+monitoring that no academic lab currently conducts at scale.
+Closest paper:Daiet al.[C4] demonstrated >100 a

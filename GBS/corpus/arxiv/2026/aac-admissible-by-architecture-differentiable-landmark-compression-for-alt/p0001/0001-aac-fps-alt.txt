@@ -1,0 +1,17 @@
+title: AAC: Admissible-by-Architecture Differentiable Landmark Compression for ALT
+source: arxiv
+year: 2026
+document_id: aac-admissible-by-architecture-differentiable-landmark-compression-for-alt
+authors: An T. Le; Vien Ngo
+page: 1
+section: aac-fps-alt
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20744v1
+
+Figure 8: Total wall-clock cost vs. query workloadNon DIMACS atB=64B/v:T total(N) =T off +NT p50
+(both from Table 13). Vertical dashed line: breakevenNwhere AAC’s offline cost is amortized by its lower
+p50 latency (≈1,924NY,1,276BAY,170COL,522FLA). AAC dominates above breakeven; FPS-ALT
+below. Per-panel insets report theToff andp 50 values driving the curves.
+Table 15 extends the same retrospective protocol to the fullK0×mPareto sweep on NY and FLA, exposing
+the trade-off curve at finer granularity. Table 16 reports per-cell combined Wilcoxon p-values across 5
+38

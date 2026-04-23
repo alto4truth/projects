@@ -1,0 +1,32 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+tabilizing around
+0.30–0.31 despite a 3× increase in compute. This
+indicates that scaling the policy alone is insufficient
+to overcome the limitations imposed by a fixed
+plan distribution, consistent with the sparse-reward
+challenges discussed in Section 3.
+We further compare three compute-matched variants at 5B steps: (i) no DPO with longer training,
+(ii) no DPO with reward-based plan filtering, and
+(iii) the full SuperIgor pipeline with DPO. While
+filtering improves training performance (0.30 →
+0.34), it degrades generalization on New Objects
+(0.11 → 0.10), suggesting overfitting to a narrower plan subset. In contrast, SuperIgor (SIDPO) improves both training (0.36) and generalization (0.17), demonstrating that iterative planner
+updates align the plan distribution with the policy’s learning dynamics. These results confirm that
+performance gains arise from planner–policy coadaptation rather than increased RL compute alone.
+Table 2: Compute-matched comparison of static and
+adaptive planner variants.
+Model Train Combo Test New Objects
+No DPO, longer training 0.30 0.11
+No DPO, reward filtering 0.34 0.10
+SuperIgor (SI-DPO)0.36 0.17
+7 Conclusion
+In this work, we introduced SuperIgor, a

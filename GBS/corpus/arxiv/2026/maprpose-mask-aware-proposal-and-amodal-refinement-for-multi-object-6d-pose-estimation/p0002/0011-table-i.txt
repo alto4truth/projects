@@ -1,0 +1,26 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 2
+section: table-i
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+etrics to provide a
+comprehensive comparison against state-of-the-art baselines.
+(1) Performance on the LINEMOD Dataset:We first evaluate
+our method on the LINEMOD dataset and report the quantitative results in Table I. As shown, our approach achieves stateof-the-art performance across all object categories. Specifically,
+it achieves 100.0% accuracy on several categories, such as
+benchvise,cam, anddrill, while consistently maintaining above
+98% on the remaining ones. Compared with representative
+baselines including LatentFusion [58], OnePose [60], GS-Pose
+[63], and Geo6D [64], our method demonstrates superior
+accuracy. We attribute these gains to the effective use of
+geometric constraints and mask-aware representations, which
+enables robust pose estimation in minimally textured tabletop
+scenarios.
+(2) Performance on the BOP Benchmark:On the more
+challenging BOP benchmark (Table II), MAPRPose achieves
+a balance between precision and computational efficiency.

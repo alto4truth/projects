@@ -1,0 +1,27 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 2
+section: a-b-s-t-r-a-c-t
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+it susceptible to cyber threats such
+as spoofing and DoS attacks. These vulnerabilities arise due to the
+CAN protocol’s transmission of unencrypted messages (Aswal & Pathak,
+2024; Lee et al., 2021). Recent research has increasingly explored ML
+approaches for real-time intrusion detection in CAN-based systems. This
+section reviews recent studies that have proposed ML models aimed at
+identifying cyber attacks within the IoV context.
+DL models have demonstrated superior capabilities in learning complex patterns from CAN bus data. For instance, Song et al. (2020)
+proposed a deep convolutional neural network (Deep CNN) based
+IDS for CAN bus networks in vehicles. It uses a reduced InceptionResNet architecture. The method utilizes raw bitwise CAN ID sequences
+converted into 2D frames, enabling the model to learn sequential
+patterns without requiring manual feature engineering. The model
+outperformed conventional ML approaches, achieving high accuracy
+and F1 score across multiple attack types, including DoS, spoofing, and
+fuzzy attacks. The method processed real CAN data in near real-time
+with minimal error, but it still relies on supervised learning, limiting
+the detection of unknown atta

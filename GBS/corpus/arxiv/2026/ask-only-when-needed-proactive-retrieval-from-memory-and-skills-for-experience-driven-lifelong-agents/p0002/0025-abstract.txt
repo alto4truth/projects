@@ -1,0 +1,47 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 2
+section: abstract
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+step. PROACTRL defines the trajectory-level reward
+for reinforcement learning as follows:
+Rtraj
+i =R env
+i +r proc
+i +r eff
+i ,(7)
+where Renv
+i =PTi
+t=1 renv
+t denotes the cumulative environment reward of trajectory i. For a trajectory i that includes a
+retrieval action, we evaluate its advantage over the adaptively sampled non-retrieval counterpartj(i) by computing the
+rollout margin:
+∆i =
+
+Renv
+i −R env
+j(i)
+
++λ T
+Tj(i) −T i
+max(Tj(i),1) ,(8)
+whereT i denotes the number of interaction steps. The retrieval process reward is then defined as
+rproc
+i =
+
+
+
+α, z i >0and∆ i >0,
+−α, z i >0and∆ i <0,
+0,otherwise.
+(9)
+This process reward directly enables proactive retrieval control. It penalizes passive or vague queries (∆i <0 ) where
+retrieval provides no benefit over proceeding without it, thereby teaching the agent when not to retrieve and what
+to avoid querying. Conversely, it provides explicit positive reinforcement (α) only when the specific query content
+actively unlocks a superior or more efficient continuation, teaching the agent exactly when a query is necessary and
+what information is most effective to retrieve. By learning from these paired comparisons, the agent develops

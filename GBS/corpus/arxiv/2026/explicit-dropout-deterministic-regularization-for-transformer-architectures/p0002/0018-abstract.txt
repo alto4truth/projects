@@ -1,0 +1,44 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+rojection, the induced regularizer takes the form:
+𝐽𝑣 = 1
+2 Tr [((𝐗𝑇 𝐗)⊙ 𝑝 2)Λ𝑣
+],(16)
+Λ𝑣 =𝐖 𝑇
+𝑣 𝐖𝑣.
+This formulation reflects the effect of feature-level noise
+propagationthroughthevalueprojection,leadingtoapenalty
+on the value transformation.
+ValueRegularization(Attention-conditionedDropout).
+When dropout is instead applied after attention mixing, the
+resulting regularizer becomes:
+𝐽𝑎𝑣 = 1
+2 Tr [((𝐗𝑇 𝐀𝑇 𝐀𝐗)⊙ 𝑝 2)Λ𝑣
+],(17)
+Λ𝑣 =𝐖 𝑇
+𝑣 𝐖𝑣.
+Here, the attention matrix𝐀modulates the effective structure, making the regularization explicitly dependent on the
+learned attention patterns.
+Detailed derivations of the above regularizers are provided in Section A of the Appendix.
+3.3. Feed-Forward Network Regularizer
+Each Transformer layer contains a position-wise feedforward network
+FF(𝑋) =𝜎(𝑋𝐖 f f,1)𝐖f f,2,(18)
+where𝐖 f f,1 and𝐖 f f,2 denote the first- and second-layer
+weightmatrices,respectively.Followingthederivationused
+fortheattentionprojections,dropoutinducesanexplicitregularizeronbothfeed-forwardweightmatrices.Theresulting
+regularization terms are:
+𝐽f f,𝑚 = 1
+2 Tr [((𝐗𝑇 𝐗)⊙ 𝑝 2)Λf f,m
+],(19)
+Λf f,m =𝐖 𝑇
+f f,𝑚𝐖f f,𝑚
+where𝑚∈ {1,2}denotes the corresponding feed-forward
+network layer. Thus,

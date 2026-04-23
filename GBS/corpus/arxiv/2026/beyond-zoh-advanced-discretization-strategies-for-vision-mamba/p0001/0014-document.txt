@@ -1,0 +1,61 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+-Wise Conv
+Lin. Proj
+2D-Selective Scan
+(SS2D)
+Layer
+Norm
+Lin. Proj
+Layer
+Norm FFN
+SiLU
+Patch Embeddings
+(inc. Spatial Position / Cls Token)
+MLP
+Conv1d
+Scan Direction 1
+Lin. ProjLin. Proj
+Z
+X
+Lin. Proj
+Selective SSM
+Conv1d
+Scan Direction 2
+Conv1d
+Scan Direction 3
+Conv1d
+Scan Direction 4
+Spatial & Channel
+Attention Module
+(SCAttn)
+FC
+FC
+SiLU
+SiLUConv
+AvgPool FC
+Global
+GELU
+FC
+Local
+GELU Spatial Attn
+Channel
+Attn
+SiLU
+Fig.1: The architecture of Vision Mamba model.
+it had evolved continuously, although pixels are discrete samples, adjacent pixels are highly correlated through smooth shading, edges with consistent slopes,
+and textures with gradients. As ViM scans image patches sequentially, treated
+as continuous systems, they must be discretized to determine how the hidden
+latent state in state space models evolves between adjacent tokens.
+3.2 Baseline SSM Discretization Method
+Zero-order hold (ZOH)is predominantly used in converting continuous signals to discrete samples because it is easy to implement and ensures that the
+system behaves predictably by holding the sample value constant until the next
+time step. This leads to approximation errors with visual data because it assumes that

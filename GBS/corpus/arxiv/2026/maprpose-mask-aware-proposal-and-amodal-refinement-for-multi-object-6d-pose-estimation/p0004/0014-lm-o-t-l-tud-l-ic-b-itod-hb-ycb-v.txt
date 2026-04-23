@@ -1,0 +1,29 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 4
+section: lm-o-t-l-tud-l-ic-b-itod-hb-ycb-v
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+MegaPose [24] 2023 CNOS 49.9 47.7 65.3 36.7 31.5 65.4 60.1 50.9 0.03 V100
+ZeroPose [70] 2024 SAM-6D 63.5 43.0 80.0 51.8 48.4 69.1 79.2 62.2 0.18 3090
+SAM-6D [42] 2024 SAM-6D 69.9 51.5 90.4 58.8 60.2 77.6 84.5 70.4 0.23 3090
+FoundationPose [25] 2024 SAM-6D 75.6 64.6 92.3 50.8 58.0 83.5 88.9 73.4 0.03 A100
+FreezeV2 [29] 2025 SAM-6D 73.3 59.7 95.2 60.9 63.3 80.1 87.8 74.3 0.71 A40
+Co-op (Coarse) [28] 2025 SAM-6D 70.0 65.4 89.2 56.6 58.4 83.7 85.5 72.7 1.10 3090
+Co-op (Top-K=5) [28] 2025 SAM-6D 73.0 67.8 91.5 59.8 63.1 87.5 88.9 75.9 0.14 3090
+MAPRPose (Ours) 2026 SAM-6D 77.0 70.2 93.0 63.5 59.1 84.4 88.6 76.5 1.47 A100
+FoundationPose MAPRPose
+(w/o AMPR)Co-op Freeze
+MAPRPose (Ours)
+Frame B
+Frame C
+Frame A
+Fig. 4: Qualitative Comparison on LM-O Scenes.We visualize the 6D pose estimation performance across three representative frames
+(A–C). The white bounding boxes denote the ground truth, while colored boxes represent predictions from FoundationPose, Co-op, FreeZe,
+MAPRPose (w/o AMPR) and MAPRPose.MAPRPose (w/o AMPR)denotes our MAPRPose method without AMPR mechanism.
+Following the official BOP leaderboard protocols, all compared
+methods utilize SAM-6D for initial detection and segmentat

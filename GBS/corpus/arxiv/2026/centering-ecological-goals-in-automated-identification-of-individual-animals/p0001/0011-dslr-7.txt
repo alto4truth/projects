@@ -1,0 +1,61 @@
+title: Centering Ecological Goals in Automated Identification of Individual Animals
+source: arxiv
+year: 2026
+document_id: centering-ecological-goals-in-automated-identification-of-individual-animals
+authors: Lukas Picek; Timm Haucke; Lukáš Adam; Ekaterina Nepovinnykh; Lasha Otarashvili; Kostas Papafitsoros; Tanya Berger-Wolf; Michael B. Brown; Tilo Burghardt; Vojtech Cermak; Daniela Hedwig; Justin Kitzes; Sam Lapp; Subhransu Maji; Daniel Rubenstein; Arjun Subramonian; Charles Stewart; Silvia Zuffi; Sara Beery
+page: 1
+section: dslr-7
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20626v1
+
+sign, and collectively defined community standards that make
+assumptions, uncertainty, and downstream use easier to communicate across disciplines.
+12
+
+A Influence of Identification Errors on Abundance
+Estimates
+A central argument of the main paper is that identification errors are not all equal: their
+consequences depend on the ecological question. For readers less familiar with ecological
+inference, we illustrate this point here using one of the simplest and most widely used
+abundance estimators, the Lincoln–Petersen estimator [65]. The goal is not to provide a
+full treatment of capture–recapture theory, but to show concretely why different types of
+identification errors matter in different ways.
+In a simple two-occasion mark–recapture setting, letndenote the number of individuals
+recorded on the first occasion,Kthe number recorded on the second occasion, andkthe
+number recorded on both occasions. The estimated population size is then bN= nK
+k . Intuitively, this estimate uses the fraction of individuals seen again on the second occasion to
+infer how many individuals were likely present in total.
+This simple formula already shows why identification errors have asymmetric ecological
+consequences. If observations of the same animal are mistakenly split into multiple identities,
+the apparent number of individuals can increase, and the number of shared identities across
+occasions can decrease. This tends to inflate the abundance estimate. By contrast, if observations of different animals are mistakenly merged into one identity, the apparent number of
+individuals can decrease, and the overlap between occasions can be distorted, which tends
+to reduce the estimate. In extreme cases, if no recaptures remain after misidentification, the
+estimate becomes undefined.
+For a computer scientist, the important point is that these errors are not interchangeable.
+A method that makes few mistakes overall may still be poorly suited to abundance estimation
+if it tends to make the wrong kind of mistake. In this setting, it is not enough to ask
+whether a system is “accurate” on average. We must also ask whether it tends to create
+false individuals, collapse real individuals together, or distort the re-encounter structure on
+which ecological inference depends.
+Table 1 provides simple toy examples of these effects. These examples are not meant to
+cover all possible cases, but to make explicit how identification mistakes propagate into a
+standard ecological estimator. This is the broader point developed throughout the paper:
+methods for automated individual identification should be evaluated not only by overall
+predictive performance, but by how their errors affect the ecological quantities we ultimately
+care about.
+Table 1 Identification errors are not ecologically interchangeable.Illustrative cases based on the
+Lincoln-Petersen estimator show how different kinds of identification errors propagate into abundance
+estimates in different ways. Here,nandKdenote the recorded numbers of individuals on Day 1 and
+Day 2,kdenotes the number of recorded identities shared across days, bN=nK/kis the resulting
+abundance estimate, andNis the true population size. Split errors can create extra apparent individuals
+and inflate abundance estimates, whereas merge errors can collapse distinct individuals and reduce
+abundance estimates or make them undefined.
+Error Day 1 Day 2n K k bN NBias
+– 2 1 1 2 2 –
+Merge 1 1 1 1 2 under
+Merge 1 1 0NaN2 undefined
+Split 2 2 2 2 2 exact
+Split 3 2 2 3 2 over
+Split 2 2 1 4 2 strong over
+13

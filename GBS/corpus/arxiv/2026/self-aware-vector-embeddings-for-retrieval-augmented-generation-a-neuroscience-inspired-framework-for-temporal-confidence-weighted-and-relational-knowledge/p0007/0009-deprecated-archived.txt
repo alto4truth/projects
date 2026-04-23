@@ -1,0 +1,35 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 7
+section: deprecated-archived
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+dent vectors are notified via ripple propagation. Nothing is deleted,
+preserving a full audit trail—an explicit design choice for regulated corpora.
+6
+
+4 Four-Signal Retrieval
+Given a queryq and reference timet, we compute a per-vector score as a convex combination of
+four signals. The combination is deliberately explicit so that operators can tune it to their domain.
+final_score(v, q, t) =
+0.35 . sim(q, v) # Signal 1: semantic similarity
++ 0.25 . temporal_score(v, t) # Signal 2: freshness / validity
++ 0.25 . confidence(v, t) # Signal 3: live trust
++ 0.15 . relational_bonus(v) # Signal 4: graph integration
+Signal 1 is cosine similarity (or any existing retriever). Signal 2 combines a validity window with
+exponential decay: ift falls outside[validity_start,validity_end], the signal collapses to a small
+floor (0.05); otherwisetemporal_score(v,t ) = 2−age_days/Hwith H = 30days by default. Signal 3
+calls the ConfidenceEngine (Section 5). Signal 4 is a log-saturating bonus for vectors with many
+incident edges, capped at 0.3, encoding the prior that well-connected vectors are more integrated
+and typically more reliable.
+The weights(0.35, 0.25, 0.25, 0.15)are defaults, not derived constants. We recommend Bayesian
+optimization over a held-out set of historical queries, and we note that any domain with strong
+temporal volatility (news, compliance) will likely push the temporal weight higher; any domain with
+long-stable facts (engineering reference) will push semantic similarity higher.
+5 The Confidence Engine
+The ConfidenceEngine computes a live confidence for any vector at any reference time. It composes
+three effects:

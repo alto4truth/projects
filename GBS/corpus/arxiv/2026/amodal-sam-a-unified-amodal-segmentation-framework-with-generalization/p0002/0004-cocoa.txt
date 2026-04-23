@@ -1,0 +1,33 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 2
+section: cocoa
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+COCOA-cls
+60
+KINS
+MP3D
+KINS
+20 30 40 50
+10
+Fig. 1. This figure shows the comparisons between our Amodal SAM and
+previous state-of-the-art models in the closed and open domains. In both
+settings, usingmIoU o as the evaluation metric, our method outperforms the
+state-of-the-art model on all compared datasets.
+in amodal segmentation. This raises the question:Is it viable
+to effectively adapt the SAM model for amodal segmentation
+while preserving its generalization prowess?
+Therefore, in this work, we present Amodal SAM, a framework that extends SAM’s capabilities to amodal segmentation
+while preserving its powerful zero-shot ability. Our key insight
+is that successful adaptation requires a holistic approach
+addressing three complementary aspects: model architecture,
+training data, and optimization objectives. Specifically, for
+model adaptation, we introduce a lightweight Spatial Completion Adapter (SCA) that enables the model to reconstruct
+occluded regions while maintaining SAM’s core segmentation
+abilities. To overcome the scarcity of large-scale amodal annotations required by the open-world training, we propose TargetAware Occlusion Synthesis (TAOS), an efficient pipeline that
+synt

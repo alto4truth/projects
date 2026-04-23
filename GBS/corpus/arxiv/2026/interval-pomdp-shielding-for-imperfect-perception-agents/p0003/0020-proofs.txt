@@ -1,0 +1,23 @@
+title: Interval POMDP Shielding for Imperfect-Perception Agents
+source: arxiv
+year: 2026
+document_id: interval-pomdp-shielding-for-imperfect-perception-agents
+authors: William Scarbro; Ravi Mangal
+page: 3
+section: proofs
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20728v1
+
+entE corr, so that
+the true perception uncertainty model satisfiesZ ∗ ∈ Z. For
+t= 0, . . . , H, let
+Et ={s 0, . . . , st ∈C},
+soSafe 0:H =E H. By assumption, the initial support lies in
+C, hencePr(E 0 | Ecorr) = 1.
+Fix anyt∈ {0, . . . , H−1}. On the eventE t, we have
+st ∈C. Since actions are chosen from bΞ, the executed action
+at satisfiesa t ∈ bΞ(ht). The Abstraction Soundness theorem
+then implies
+Pr[at ∈Ω(s t)|h t,E corr]≥β.
+Whenevers t ∈Canda t ∈Ω(s t), Assumption V .1 gives
+Pr[st+1 ∈C|s t, at]≥γ.

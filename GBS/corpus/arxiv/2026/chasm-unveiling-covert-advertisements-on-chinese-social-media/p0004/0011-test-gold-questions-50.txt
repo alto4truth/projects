@@ -1,0 +1,31 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+Recall, F1-Score, and AUC, four standard metrics that respectively assess
+prediction accuracy, completeness, their balance, and overall classification quality. Considering the
+imbalance in the distribution of sample labels and our greater emphasis on distinguishing positive
+examples, we regard the F1-Score as the most representative metric. Implementation details of all
+models, and the training and inference hyperparameters, can be found in Appendix B. The prompt
+templates are provided in Appendix D.
+4.2 Main Results
+Table 2 shows all models’ zero-shot and in-context learning performance. We then fine-tuned the two
+best-performing small-scale open-source models, and the results are reported in Table 3.
+Table 3: Fine-tuning results on CHASM, results
+show that both models improved statistically significantly (p < 0.01) over zero-shot performance, with
+Qwen2.5-7B surpassing GPT-4o after fine-tuning,
+highlighting the effectiveness of our dataset.
+Model
+Metric P↑ R↑ F1↑ AUC↑
+InternVL 0.681 0.520 0.590 0.743
+Qwen2.5 0.783 0.732 0.756 0.852
+GPT-4o (ZS) 0.464 0.836 0.597 0.851
+Qwen2.5 (ZS) 0.473 0.378 0.421 0.660
+InternVL(ZS) 0.289 0.662 0.403 0.717
+Overall, GPT-4o achieved the highest F1

@@ -1,0 +1,20 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+formation—such as slope, curvature, and speed limits—
+and driver-specific behavioral patterns, which can alter BEV energy consumption by 20–40%. Advances in machine learning, especially recurrent
+neural networks and Long Short-Term Memory (LSTM) architectures, provide a promising foundation for modeling these temporal and contextual dependencies. When combined with detailed map data from platforms such as
+OpenStreetMap and Valhalla, LSTM-based models can forecast future velocity trajectories that reflect both learned past driver behavior and upcoming
+road conditions.
+Buildingontheseinsights, thisworkdevelopsapersonalized, routecontextaware BEV range estimation framework that integrates driver-specific velocity prediction with map-derived features and a physics-based energy consumption model. The goal is to produce more realistic velocity forecasts and
+ultimately deliver an improved energy consumption and SOC estimation system for electric vehicles.
+2. Literature Review
+Before we introduce our framework and system design, we examine the related literature published for the problems of vehicle speed prediction, driver
+2

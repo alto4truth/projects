@@ -1,0 +1,26 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 1
+section: abstract
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+Freight brokerages negotiate thousands of carrier rates daily
+under dynamic pricing conditions where models frequently
+revise targets mid-conversation. Classical time-dependent
+concession frameworks use a fixed shape parameter 𝛽 that
+cannot adapt to these updates. Deriving 𝛽 from the live
+spread enables adaptation but introduces a new problem: a
+pricing shift can cause the formula to retract a previous offer,
+violating monotonicity and signaling bad faith. LLM-powered
+brokers offer flexible negotiation but require expensive reasoning models, produce non-deterministic pricing decisions, and
+remain vulnerable to prompt injection from carrier messages.
+We propose a two-index anchor-and-resume framework
+that addresses both limitations. A spread-derived 𝛽 automatically maps each load’s margin structure to the correct concession posture, while the anchor-and-resume mechanism guarantees monotonically non-decreasing offers under arbitrary
+pricing shifts. All pricing decisions remain in a deterministic
+formula; the LLM, when used, serves only as a natural language translation layer. Empirical evaluation across 115,125
+negotiations shows that the adaptive 𝛽 tailors behavior by
+regime: in nar

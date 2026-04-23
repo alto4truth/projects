@@ -1,0 +1,30 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 61
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+Table 7: Comparison of computational cost and performance across methods.
+Method RL Training (5B steps) LLM Costs (2 cycles) Total Cost Atomic SR
+PPO-T (Baseline)∼120h 0h∼120h 0.03
+FiLM (Baseline)∼120h 0h∼120h 0.06
+SuperIgor / SI-DPO∼120h∼32h∼152h0.44±0.02
+Our agent’s policy and value functions are parameterized by a single neural network with a
+shared multimodal feature extractor and separate
+actor and critic heads. The visual stream processes
+the 63×63 pixel image with 3 channels observations using a three-layer Convolutional Neural Network (CNN). Each convolutional layer utilizes 32
+filters with a 5×5 kernel, followed by a ReLU activation and max-pooling. For the language stream,
+textual instructions are encoded using a pre-trained
+BERT model (bert-base-uncased), and we
+use the embedding of the [CLS] token as the final
+text representation.
+The flattened output of the CNN and the text
+embedding are then concatenated to form a unified
+multimodal representation. This combined feature
+vector is fed into two separate feed-forward networks: theactor head, which outputs the logits for
+the categorical action distribution, and thecritic
+head, which outputs a scalar estimate of the statev

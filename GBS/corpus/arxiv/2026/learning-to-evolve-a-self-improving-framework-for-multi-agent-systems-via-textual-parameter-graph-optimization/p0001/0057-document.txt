@@ -1,0 +1,30 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 57
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+tory rather
+than only evaluating the correctness of the final
+output. The analysis in Table 6 attributes the error
+to a systematic tendency toward premature termination once a sufficiently plausible candidate is found.
+Such behavior is particularly problematic in agentic
+settings, where many tasks require explicit satisfaction of multiple constraints and partial verification
+can lead to confident but unjustified answers.
+Based on this diagnosis, TPGO generates a targeted optimization proposal at the graph level. As
+summarized in Table 7, the optimizer introduces a
+new high-priority node that encodes aConstraint
+Validation Protocol. Instead of broadly rewriting
+the full prompt, this update inserts a modular instruction that requires the agent to enumerate all
+constraints, construct an explicit checklist, verify
+each item against evidence, and defer answering
+until all conditions have been checked. This illustrates the central advantage of the Textual Parameter Graph representation: failures can be corrected
+through localized edits to semantically meaningful
+components.
+The resulting prompt modification is shown in
+Table 8. The inserted instruction operationalizes
+the intended behavi

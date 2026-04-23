@@ -1,0 +1,23 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 1
+section: msc-scc-zqc-msc-scc-zqc
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+ents, we set the number of neighbors to k= 50 and the similarity threshold to 0.5. These values were selected
+to balance graph connectivity and sparsity, ensuring that semantic neighborhoods are well-formed while avoiding spurious
+long-range connections. We observe that moderate variations in these parameters do not qualitatively affect the resulting
+semantic communities, coverage statistics, or downstream evaluation conclusions.
+A.3. Corpus-Level Semantic Clustering
+We apply the Leiden community detection algorithm (Traag et al., 2019) to the semantic graph to identify coherent semantic
+neighborhoods. The resolution parameter γ controls cluster granularity and is tuned per dataset to balance interpretability
+and coverage (γ= 25for NFCorpus,γ= 40for FIQA,γ= 10for SciDocs).
+Each document is associated with all clusters containing its entities, yielding a corpus-level semantic taxonomy. Manual
+inspection confirms that clusters correspond to interpretable regions of the information space (e.g., diseases, methods,
+financial instruments).
+This representation directly enables semantic coverage analysis. For NFCorpus, 42 clusters (11.3%), containing 13.5% of
+documents, have zero evaluatio

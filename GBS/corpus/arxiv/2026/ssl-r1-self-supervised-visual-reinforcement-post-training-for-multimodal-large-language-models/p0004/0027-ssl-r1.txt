@@ -1,0 +1,24 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 4
+section: ssl-r1
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+Combined 92.32 89.94 54.00 10.14 99.74 50.64 99.1097.72 80.0068.22 74.18
+∆ +92.04 +89.92 +50.84 +10.14 +81.10 +43.00 +48.92 +50.40 +59.04 +50.56 +57.59
+Table 5.Performance of SSL-R1 on reasoning models.The baseline model is ThinkLite-VL-7B. We evaluate on both vision-centric and
+reasoning-centric multimodal benchmarks. The average results are provided in the last column.
+Model Vision-Centric MathVista MathVision MathVerse MMMU EMMA Avg.
+avg testmini testmini testmini val mini
+ThinkLite-VL-7B [66] 59.70 75.20 30.92 50.76 55.11 26.75 49.74
++ Visual Jigsaw [70] 61.60 (+1.90) 75.10 (-0.10) 35.20 (+4.28) 50.50 (-0.26) 54.22 (-0.89) 29.00 (+2.25) 50.94 (+1.20)
++ SSL-R1 62.35 (+2.65) 76.10 (+0.90) 36.25 (+5.33) 51.00 (+0.24) 55.78 (+0.67) 29.34 (+2.59) 51.80 (+2.06)
+outperforms prior reasoning models (e.g., ThinkLite-VL,
+VL-Cogito, LLaV A-Critic-R1) that undergo reasoningintensive RL post-training in a supervised way. This
+demonstrates the great potential of self-supervised verifiable rewards for RL post-training. In addition, our SSLR1 also outperforms concurrent self-supervised RL posttraining works like Visual Jigsaw by a clear margin, further
+proving the superiority of our method.
+4.4

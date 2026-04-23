@@ -1,0 +1,42 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 2
+section: edges-total-gp-id-time-gp-degbd-id-time-degbd
+chunk: 67
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+ying polynomial forλxy. LetT⊆pa(y)\ {x}be a subset of the
+parents ofy, and letS={s 1, . . . , sk} ⊆Vbe another set of nodes such that|S|=|T|+ 1 =k.
+24
+
+Define thek×kmatrix
+[(I−Λ id −D) ⊤Σ]S,T∪{x} .
+Here, for two setsC, Z⊆Vsuch that|C|=|Z|, the|V| × |V|matrixDis defined as
+Dvw =
+
+
+
+det(Σ∗
+Z,(C\{v})∪{w} )
+det(ΣZ,C) ifv∈C,
+0else,
+whereΣ ∗
+Z,(C\{v})∪{w} )is the matrixΣ Z,C with the column indexed byvreplaced by[Σ(I−Λ id)]Z,w.
+We consider the polynomial
+λxy det([(I−Λ id −D) ⊤Σ]S,T∪{x} )−det([(I−Λ id −D) ⊤Σ]∗
+S,T∪{y} ),(8)
+where[(I−Λ id −D) ⊤Σ]∗
+S,T∪{y} is the matrix[(I−Λ id −D) ⊤Σ]S,T∪{x} with the column indexed by
+xreplaced by[(I−Λ id −D) ⊤Σ(I−Λ id)]S,y.
+AC-identifiability implies that there exist setsS, T, CandZof the above form with|C|=|Z| ≤s
+such that, after clearing denominators in (8) by multiplying withdet(ΣZ,C)s, the resulting polynomialg xy is an identifying polynomial forλxy with respect to≺. It remains to bound the degree
+ofg xy. The polynomialdet(Σ Z,C)s has at most degrees2 and the polynomialdet(Σ −v,+w
+Z,C )has at
+most degrees+ 1. It follows that the degree ofgxy is at mosts2(s(s+ 2) + 1) =s 4 + 2s3 +s 2.
+To conclude the proof, we place all parametersωuv after the parametersλin the identifying order.
+By Remark 2.5, this yields identifying polynomials for all parametersωuv of degree at most3≤
+s4 + 2s3 +s 2.
+25

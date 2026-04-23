@@ -1,0 +1,17 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+g the training pipeline, one could argue that using random samples from FineWeb2 might not be
+the best strategy for selecting negative samples. Standard negative sampling draws randomly from
+FineWeb2, teaching the classifier to distinguish quality content from typical web noise (advertisements, navigation menus, broken formatting, spam). However, as filtering becomes more precise, a
+subtler distinction emerges:separating high-quality content from fluent but low-utility text.
+The Q3 strategy addresses this by sampling negatives from the 50th-75th percentile of the baseline HQ distribution. These samples are grammatically correct and well-formatted, but lacking in
+information density, logical depth, or educational value. We provide an example in the Appendix D.
+7

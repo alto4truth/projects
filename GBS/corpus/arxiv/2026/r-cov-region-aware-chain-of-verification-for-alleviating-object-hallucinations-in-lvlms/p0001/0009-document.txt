@@ -1,0 +1,24 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+guage models like recent
+commercial models [17, 42]. Building on top of openweight models, open-source LVLMs have also been developed [2, 7, 10, 23, 28, 31, 53, 59]. All models share a similar architecture with a dedicated visual encoder to transform images into latent representations that can later be consumed by an LLM together with additional text input.
+Hallucination in LVLMs.In the context of LVLMs, “hallucinations” [38] refer to the generation of textual content
+that is inconsistent with, or entirely disconnected from, the
+provided visual information. This can manifest in various
+ways, including the description of nonexistent objects in
+an image (object hallucination), the attribution of incorrect
+properties or characteristics to existing objects (attribute
+hallucination), or the misinterpretation of relationships and
+interactions between visual elements. This has been a field
+of intense research with the publication of several benchmarks to be able to measure the ability of models not to
+hallucinate [6, 9, 13, 14, 18, 25, 30, 41, 46, 51, 52].
+Several methods have been proposed to mitigate hallucinations in LVLMs. These can be broadly categorized in: (i)
+methods relying on ca

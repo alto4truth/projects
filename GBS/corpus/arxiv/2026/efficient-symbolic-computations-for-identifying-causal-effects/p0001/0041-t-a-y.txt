@@ -1,0 +1,22 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+atrices; compare
+Foygel et al. (2012a, Proposition 2). In total, there are715such mixed graphs on4nodes. For
+such graphs, the method of Garcia-Puente et al. (2010) that checks identifiability by computing
+the whole Gröbner basis in a standard way is computationally feasible. Recall that this method
+verifies rational identifiability as in Proposition 3.3. We find that in total343graphs are rationally
+identifiable. Using Algorithm 1 with maximal degreed= 5, we certify the same343graphs to be
+rationally identifiable. For those 343 graphs, Figure 4 shows two histograms of computation times
+that were needed to certify rational identifiability. On4nodes, most times the Garcia-Puente
+algorithm computes the Gröbner basis immediately. However, there are already a handful of graphs
+were this method already takes considerably longer time, up to20seconds. In contrast, our method
+via degree-bounded Gröbner bases is very fast for all graphs on4nodes. The slight difference
+14

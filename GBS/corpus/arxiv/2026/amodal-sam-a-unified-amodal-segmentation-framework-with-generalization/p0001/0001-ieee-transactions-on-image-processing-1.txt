@@ -1,0 +1,29 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 1
+section: ieee-transactions-on-image-processing-1
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+Amodal SAM: A Unified Amodal Segmentation
+Framework with Generalization
+Bo Zhang, Zhuotao Tian*, Xin Tao, Songlin Tang, Jun Yu, Wenjie Pei*
+Abstract—Amodal segmentation is a challenging task that aims
+to predict the complete geometric shape of objects, including
+their occluded regions. Although existing methods primarily
+focus on amodal segmentation within the training domain, these
+approaches often lack the generalization capacity to extend effectively to novel object categories and unseen contexts. This paper
+introduces Amodal SAM, a unified framework that leverages
+SAM (Segment Anything Model) for both amodal image and
+amodal video segmentation. Amodal SAM preserves the powerful generalization ability of SAM while extending its inherent
+capabilities to the amodal segmentation task. The improvements
+lie in three aspects: (1) a lightweight Spatial Completion Adapter
+that enables occluded region reconstruction, (2) a Target-Aware
+Occlusion Synthesis (TAOS) pipeline that addresses the scarcity
+of amodal annotations by generating diverse synthetic training
+data, and (3) novel learning objectives that enforce regional
+consistency and topological regularization. Extensive experiments
+d

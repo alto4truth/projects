@@ -1,0 +1,22 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 3
+section: a-weighted-angle-distance-on-strings-5
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+information retrieval, the vector space model represents documents and queries as weighted
+term vectors and uses cosine similarity for comparison [16, 10]. This paradigm underlies
+many modern practices, including readily available string-similarity toolkits that expose
+cosine distance onn-gram count vectors as a basic primitive [14].
+In theoretical and applied work on string kernels, this perspective is formalized in a
+reproducing-kernel-Hilbert-space framework. The spectrum kernel is essentially the inner
+product onk-gram count vectors, while mismatch-style kernels allow controlled perturbations of substrings; both families have been highly influential in text and biological sequence
+classification [9, 5, 6, 18]. From this viewpoint, one typically fixes a scalekand measures similarity in the associated feature space. Related ideas appear in approximate string matching
+and filtering usingq-grams [19].
+Our construction differs structurally from most fixed-kapproaches. The distanced ρ incorporatesalln-gram scales via an exponentially decaying weightρ n and uses the angle between
+raw count vectors at each scale. This produces a bona fide metric on Σ ∗ (for anyρ >0, and
+uniformly bound

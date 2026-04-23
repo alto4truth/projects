@@ -1,0 +1,35 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+6 F. Ibrahim et al.
+Bilinear / Tustin Transform (BIL)
+Sample & Buffer(xt, xt-1)
+Trapedzoidal Rule
+Area Calculation
+Input Signal
+x(t)
+Output
+y(t)
+Fig.2: BIL employs a trapezoidal integration rule to approximate the continuous
+input signal area, ensuring numerical stability and preserving high-frequency
+features during the discretization.
+3.3 Advanced Discretization Methods
+First-order hold (FOH)assumes that the inputx(t)varies linearly between
+two samples, rather than being held constant as in ZOH. This yields smoother
+transitions and better approximations for signals with continuous slopes [19] [30].
+For a continuous systemdh(t)
+dt =Ah(t) +Bx(t), under FOH, the discrete time
+equivalent is:
+¯A=e A∆ (5)
+¯B=A −2(eA∆ −I−A∆)B(6)
+This formulation preserves the first-order derivative ofx(t)within the sampling interval, resulting in a more accurate representation of input-driven dynamics, especially in systems with moderate rate-of-change in features.
+The Bilinear/Tustin Transform (BIL)provides a mapping between the
+continuous domain and the discrete domain, while minimizing frequency distortion. In vision tasks, the spatial frequency corresponds to the rate of change in
+pixel or feature v

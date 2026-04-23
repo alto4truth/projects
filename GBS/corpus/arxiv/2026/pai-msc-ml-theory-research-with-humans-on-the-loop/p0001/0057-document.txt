@@ -1,0 +1,68 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 57
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+assistants on real-world, tool-using tasks.
+GPQA [87] probes graduate-level “Google-proof” scientific question answering. Humanity’s Last Exam [88]
+31
+
+seeks a broad frontier academic benchmark that remains difficult even as models saturate older tests. FrontierScience [89] evaluates expert-level scientific reasoning on olympiad-style and research-style scientific subtasks.
+These benchmarks are useful, but they should not be confused with evaluation of manuscript-centered
+research systems. A system can score well on GAIA, GPQA, or FrontierScience and still fail to produce a
+traceable, coherent, properly evidenced paper. Conversely, a system can be strong on structured manuscript
+production while being narrow in open-ended scientific reasoning. This is precisely why we positionpAI/MSc
+not by a single scalar “research capability” score, but by its artifact contract, its grounding substrate, and
+its verification design.
+C Operational Reference
+C.1 Cost and runtime summary
+Table 2 in the main body summarizes cost and runtime envelopes for representative configurations. For
+convenience, the key ranges are: quickstart runs cost $2–10 in 15–40 min; base pipeline with LaTeX/PDF
+costs $10–40 in 30–90 min; math-agent runs cost $20–60 in 60–150 min; counsel mode costs $50–200 in 2–5
+hrs; tree search without counsel costs $60–180 in 2–4 hrs; tree search with counsel costs $200–600 in 4–10
+hrs; and full paper campaigns cost $100–400 in 6–12 hrs. Actual values vary with task scope, model choice,
+revision loops, and experiment intensity.
+The configuration system resolves model settings through a precedence order: built-in defaults,
+then.llm_config.yaml, then explicit CLI overrides. Budget tracking uses workspace-local files:
+budget_state.json,budget_ledger.jsonl, andrun_token_usage.json.
+C.2 Experiment safety model
+The experiment path is deliberately usable, but its safety model remains limited. Table 6 summarizes what
+is and is not in place.
+Aspect What is in place What is not in place
+Process separation Experiments run in dedicated
+experiment_runs/<uuid>/
+directories; local execution
+wrapped in a child process
+Local experiments run as the same
+OS user when not containerized
+Time control Local timeout viaCONSORTIUM
+_EXPERIMENT_TIMEOUT; SLURM
+wall-time in cluster mode
+No general-purpose per-experiment
+CPU or memory isolation in local
+mode
+Environment
+isolation
+Optional Docker for whole-pipeline
+execution; optional SLURM for
+cluster enforcement
+No mandatory per-experiment
+container, namespace, or chroot
+Network and
+resource control
+Budget cap on API spend No network isolation; no local
+cgroup/ulimit enforcement
+Code safety Input-schema validation and
+post-hoc experiment verification
+No human code-review gate before
+execution of AI-generated code
+Table 6: Experiment-execution safety model. The release includes pragmatic controls but not strong sandbox guarantees.
+The correct interpretation: the system is suitable for controlled research environments where the operator
+accepts these risks and uses Docker or SLURM when appropriate, but it should not be described as a
+hardened execution sandbox.
+32

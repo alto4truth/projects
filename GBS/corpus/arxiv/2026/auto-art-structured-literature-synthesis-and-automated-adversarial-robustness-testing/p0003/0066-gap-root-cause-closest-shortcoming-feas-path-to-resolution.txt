@@ -1,0 +1,48 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 3
+section: gap-root-cause-closest-shortcoming-feas-path-to-resolution
+chunk: 66
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+G1 Worst-case
+multi-attack
+Method. barrier
+Daiet al.[C2] No training
+recipe for avg/wc
+gap
+Med Multi-norm curricula; union approximations
+G2 Agent
+CTF→real
+Untested
+assumption
+Carliniet
+al.[C3]
+Gap quantified,
+not closed
+Med Ecologically valid benchmarks
+G3 Stochastic collapse
+Method. barrier
+Kassiset
+al.[C6]
+Image only;
+audio/text unexplored
+High Multi-draw protocols (n≥50)
+G4 RDI generalisation
+Lack of data Songet al.[C5] CNN-only validation
+High Cross-architecture validation
+G5 Continual robustness
+Ethical/ logistical
+Daiet al.[C4] Closed attack vocabulary
+Low Industry partnerships
+E Ablation Study Details
+Table 15 expands the ablation results from the main paper (Table 9) to per-model granularity. Each row shows the FOSC flag
+status (✓ = gradient masking detected) and the RDI score under four gate configurations. “—” indicates the model was not
+flagged by the configured gate. Seeds 1–5 are averaged; standard deviations are reported in the main ablation table.
+Table 15:Per-model ablation results. FOSC flag status and RDI score under each gate configuration. Seeds 1–5 averaged.
+Model Full Pipeline−FOSC−RDI FOSC Only
+Flag RDI Flag RDI Flag FOSC Flag FOSC
+Wang2023_WRN-70 — 0.78 — 0

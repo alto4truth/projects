@@ -1,0 +1,26 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 1
+section: rgb-xyz
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+. We evaluate alignment quality using a translationinvariant geometric consistency score. Let wi =S(i, j i) and
+define weighted centroids:
+¯P=
+P
+i wiPiP
+i wi
+, ¯Q=
+P
+i wiQiP
+i wi
+.(4)
+The final scoring function is given by:
+E(T) =
+X
+i
+wi exp

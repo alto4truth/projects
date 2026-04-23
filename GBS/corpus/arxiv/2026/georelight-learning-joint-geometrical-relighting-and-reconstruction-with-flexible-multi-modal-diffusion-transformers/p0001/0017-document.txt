@@ -1,0 +1,106 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+lution of832×1280pixels from our hybrid dataset. The total training of two stages takes around
+5 days on 64 A100 GPUs. Our 7B-parameter DiT requires
+5
+
+High-Resolution
+Image Generation
+Multi-View
+Generation
+Multi-View
+Mesh Carving
+Textured Mesh
+High Resolution,
+w/o GeometryInput
+Not
+Available
+Joint Modeling
+Relit Albedo NormalRelit Albedo
+(a)Geometry is essential for relighting.Our full "Joint Modeling" (right)
+captures 3D-dependent effects (wrinkles, shadows) absent in the "w/o Geometry" baseline (left).
+High-Resolution
+Image Generation
+Multi-View
+Generation
+Multi-View
+Mesh Carving
+Textured Mesh
+High Resolution,
+Input
+Not
+Available
+w/ novel RelitJoint Modeling
+process_SUBJECT_C006_POSE_02_Cam10/
+Novel Relit as clear latentGenerated Normal Generated Normal
+(b)Relighting provides shape-from-shading.Given a uniformly lit input
+(left), a smooth normal is produced (middle). A relit as condition provides
+novel shading cues and enhances high-frequency normal generation (right).
+Figure 5.Ablation studies validating the synergy of joint modeling.
+Relighting Normal Point
+Ablation PSNR↑SSIM↑LPIPS↓ Ang.↓ CD.↓
+w/o Geometry 21.19 0.976 0.0286 - w/ GT Geometry 26.96 0.986 0.0138 - Joint Modeling 27.49 0.985 0.0149 - w/o Appearance - - - 12.24 1.00
+w/ GT Appearance - - - 8.55 0.66
+Joint Modeling - - - 9.10 0.58
+Table 2.Ablation Study on the Synergy of Joint Modeling.We
+validate our core claims on the synthetic dataset. First ablation
+proves that geometry is essential for high-fidelity relighting. Second ablation proves that relighting provides shape-from-shading
+cues that improve geometry.
+17.5 GB VRAM for inference on a single A100 GPU, generating all five modalities in approximately 35 seconds per
+image. Please refer to supplementary for more details in
+implementation and training.
+Evaluation DetailsFirst we evaluate on synthetic data,
+which contains 42 identities with ground-truth for all
+modalities from our synthetic dataset. Then, we evaluate
+on 50 identities from our light stage captures. We also evaluate on HumanOLAT [32]. Following official instruction,
+we generate ground-truth relit images by combining provided OLAT data. We provide extensive qualitative results
+on in-the-wild images here and in our supplementary.
+For relighting, we quantitatively compare against opensource baselines [12, 22, 45, 47] with PSNR, LPIPS, and
+RMSE computed on foreground subject. We also provide
+qualitative comparison and user study with [26]. For geometry, we compare against feed-forward point map predictors [33, 35]. We report Chamfer distance and F-score
+on the normalized and ICP-aligned [1] geometry to groundtruth shape. For intrinsics, we evaluate normal estimation
+against [16, 22, 35, 46] with angular error and RMSE. For
+albedo estimation we compare against [22, 46] using PSNR,
+SSIM, and LPIPS. Please refer to our supplementary for detailed evaluation protocol.
+4.2. Ablation Studies: Validating our Design
+Before comparing to external baselines, we first validate
+the core claims of our paper: that our multi-modal synergetic generation of geometry and relighting, and mixed-data
+strategy are helpful for high-quality performance.
+Geometry is essential for RelightingWe compare three
+different modes: Joint Modeling (generating geometry and
+relighting together); w/GT Geometry (take ground-truth geometry as clear latent and set up switchcswitch = 1to generate relit image); w/o Geometry (only generate relit without
+joint generation of geometry). Tab. 2 and Fig. 5a clearly
+demonstrates how important the geometry information is
+for relighting: joint modeling of geometry leads to finegrained details such as shadow and clothing wrinkles, while
+the "w/o Geometry" mode fails to capture these geometrydependent effects. Please refer to supplementary for details.
+Relighting provides shape-from-shadingTo prove this,
+we conduct the reverse experiment. We compare our "Joint
+Modeling" mode against generation "w/o Appearance" and
+"w/ GT Appearance". Figure 5b shows that when the model
+is given a ground-truth relit image from HumanOLAT as
+a clear latent condition, it generates a much more detailed
+and accurate normal map. This demonstrates that the appearance of shading provides critical information that our
+model successfully uses to refine geometry estimation.
+In-the-wild data corrects lighting biasWe further analyze
+the specific contribution of our in-the-wild (ITW) data. As
+shown in Fig. 9, training with onlySynth+Domedata already improves realism over synthetic-only training, but introduces a “dark bias” in the relit outputs. This is because
+the light stage captures use sparse LED activations (10-20
+out of 1024 lights), resulting in predominantly dark training
+images that skew the model’s output distribution. Incorporating large-scaleITWdata with diverse, real-world lighting
+conditions corrects this bias, producing relit images with
+balanced and natural illumination.
+Generalizing iNOD Beyond HumansWhile we focus on
+human subjects in this work, iNOD is a general-purpose
+representation that is not inherently limited to any specific category. In supplementary, we validate that iNOD
+faithfully encodes and decodes 3D geometry for subjects
+with increasing Depth-to-Height (D:H) ratios, from humans
+(∼0.1) to objects like buildings (3.0). The representation
+6

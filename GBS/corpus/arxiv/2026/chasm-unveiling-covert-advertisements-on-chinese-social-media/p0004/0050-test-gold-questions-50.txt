@@ -1,0 +1,40 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 50
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+es of Anonymization
+F.2.1 Examples of Text Anonymization
+In the examples, we masked detailed information such as detailed addresses or the website.
+25
+
+Figure 6: Example of the image anonymization
+Example 1
+Chinese Text: <详细地址>的某华公寓，后面就是工业园，超级吵白天晚上都吵
+Translate: The Mouhua Apartment at <detailed address> is right next to an industrial park.
+It’s extremely noisy both during the day and at night.
+Example 2
+Chinese Text:虽然，但是文件要自己命名和管理才知道是什么，在哪里。 ai代理的话
+我怎么找到呢? <网址>
+Translate: Although... the files need to be named and organized manually, so I know what
+they are and where they are. If it’s handled by an AI agent, how would I be able to find them?
+<website>
+F.2.2 Examples of Image Anonymization
+As shown in Figure 6, we anonymized the images, primarily by masking faces, to further protect
+privacy.
+G Distribution of the Dataset
+This section illustrates how normal posts and covert advertisements differ in their distributions over
+five key features, shown in Figure 7. The five key feature dimensions are Number of Images, Post
+Text Length, Number of Comments, Average Comment Length, and Number of Tags. Blue bars
+represent the count distribution of normal posts (left y-axis). Red bars represent the count distribution
+of covert advertisement posts. Blue lines indicate the density of normal posts across the feature values
+(right y-axis). Red lines indicate the normalized ratio of covert ads across the feature values.
+Although there are some distributional differences between the two, for example, covert advertisements tend to have slightly shorter text lengths than normal posts, these statistical features are overall
+quite similar and are insufficient on their own to reliably distinguish covert advertisements from
+normal posts.
+26

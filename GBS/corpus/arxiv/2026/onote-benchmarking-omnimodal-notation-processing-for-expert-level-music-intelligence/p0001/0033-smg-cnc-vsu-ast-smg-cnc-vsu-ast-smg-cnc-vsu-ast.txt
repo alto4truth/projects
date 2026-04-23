@@ -1,0 +1,27 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+ic-level)
+with manually annotated ground-truth answers, determining correctness based on exact consistency, and calculating the overall
+classification accuracy. This evaluation focuses solely on the correctness of visual recognition and music-theoretic understanding,
+excluding assessments of sequence generation quality or format
+standardization.
+Cross-Format Notation Conversion (CNC) Evaluation: As
+a sequence conversion task, CNC employs a combined evaluation approach of music-theoretic equivalence verification and sequence alignment. First, both the input notation and the modelgenerated output notation are projected to a unified canonical
+pitch sequence. Subsequently, the edit distance algorithm is used
+to calculate the matching accuracy of pitch sequences and rhythm
+sequences. Meanwhile, key signature, time signature, and overall
+structure are checked for consistency to ensure music-theoretic
+equivalence. Finally, the grammatical legality of the target format
+is verified, and outputs with format errors or unparseable content
+are directly rejected.
+Audio-to-Symbolic Transcription (AST) Evaluation: As a
+temporal audio transcription task, AST adopts a dual-dimensional
+alignment eval

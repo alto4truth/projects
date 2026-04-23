@@ -1,0 +1,21 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+hs on5nodes. Recently, Dörfler et al. (2024) showed that rational
+identifiability can be decided in exponential running time. However, their algorithm is of a theoretical nature and it does not return the formulas for identification, which are of crucial interest
+in practice. It is an open problem tographicallycharacterize which graphs are rationally identifiable.
+Nevertheless, many graphical criteria have been given that aresufficient conditionsfor rational
+identifiability. Crucially, they are efficient in the sense that they can be checked in polynomial
+time. They search for patterns in the covariance matrix and rely on maximum flow computations
+(Sullivant et al., 2010; Cormen et al., 2009). The first sufficient condition was the instrumental variable criterion, see Wright (1928) and Bowden and Turkington (1984). A major break through was
+the half trek criterion by Foygel et al. (2012a). Improvements and follow-up works include criteria
+based on auxiliary variables (Chen et al., 2016 and Chen et al., 2017), decomposition techniques
+(Tian,2005)andseveralgeneralizationsandfurtherdevelopments, cf. Tian(2009), DrtonandWeihs
+(2016), Weihs et al. (2017), Kumor et al. (2019). To our kno

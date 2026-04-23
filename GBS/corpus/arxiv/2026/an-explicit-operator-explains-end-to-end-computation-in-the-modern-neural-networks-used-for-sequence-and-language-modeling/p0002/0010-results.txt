@@ -1,0 +1,28 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 2
+section: results
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+equencies of the dynamics operator.
+wave in the node dynamics at a specific spatial frequency
+(cf. Eq. 7). Further, we can use the eigenvalues from S4D
+(Eq. 10) to understand the complex adjacency matrixK
+in the equivalent oscillator network, via the expression
+K=F DF † (Fig. 2a). When exponentiated (ine Dτ ,
+Eq. 9), the eigenvaluesd jj fall on the unit circle in the
+complex plane (Fig. 2b). This matrix and its eigenstructure determines the interactions between nodes, and the
+spatio-temporal structure of the dynamics that the network will produce [23, 24].
+Without input, and with random initial conditions, the
+recurrent layer generates transient, fluctuating dynamics at each node (Fig. 2c). These fluctuations in activity
+at single nodes form waves traveling in a single direction around the network’s ring topology (Fig. 2d). Waves
+traveling over a topographically organized neural network are known to serve useful computational roles: by
+embedding a continuous spatiotemporal structure across
+the network, they can provide a way to store information
+about the recent past [25–27]. This property has been
+observed with physical experiments in fluid mechanics
+[28] and in trained recurrent

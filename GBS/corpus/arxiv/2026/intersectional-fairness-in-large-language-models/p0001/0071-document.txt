@@ -1,0 +1,34 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 71
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+el selection in sensitive applications should not
+rely solely on aggregate accuracy.
+Ambiguous Context Most LLMs predominantly select
+unknown option in absence of context.
+Strong performance in ambiguous contexts alone
+should not be treated as sufficient evidence of LLM
+fairness.
+disambiguated Context Accuracy in disambiguated contexts
+is influenced by stereotype alignment.
+Models may rely on stereotypes even when sufficient context is provided.
+Intersectionality Different patterns across
+Race_Gender and Race_SES datasets.
+Fairness evaluation must consider intersectional
+groups, not single attributes.
+Bias Direction (sDIS) Strong tendency toward stereotypealigned outputs (notably in
+Race_Gender dataset).
+Systems should be tested for directional bias, not
+just correctness.
+Fairness Metrics (SF/DF) Limited or unstable informativeness
+under sparse outcomes
+Multiple complementary metrics are needed for robust fairness assessment.
+Consistency Response patterns, including stereotyped errors, vary across runs.
+Reliability and stability should be part of fairness
+evaluation.

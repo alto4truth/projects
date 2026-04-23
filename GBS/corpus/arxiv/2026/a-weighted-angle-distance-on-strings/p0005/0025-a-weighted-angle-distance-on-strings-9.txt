@@ -1,0 +1,24 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 5
+section: a-weighted-angle-distance-on-strings-9
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+•UCI splice-junction gene sequences (splice).This dataset is the UCI Machine
+Learning Repository “Molecular Biology (Splice-junction Gene Sequences)” corpus.
+Each sample is a fixed-length (60) DNA-like string with ambiguity codes, labeled
+by splice-site category (EI,IE, orN). We preserve the original instance identifier as
+sample idand export the normalized triples.
+•UCSC hg19 tandem repeats (ucsc trf).We extract tandem-repeat records from
+the UCSC Genome Browser database tablesimpleRepeat(hg19), which is derived
+from Tandem Repeats Finder (TRF) calls. Each record supplies a repeated “unit”
+(motif) along with its genomic interval. We treat the repeat unit as the class label
+and subsample motif classes to obtain a balanced labeled dataset;sample idencodes
+the genomic interval and metadata, andsequenceis the repeated string.
+•NCBI STRSeq locus collections (strseq).We aggregate multiple STRSeq BioProjects from NCBI and download the associated FASTA records through the Entrez
+E-utilities API. Each record is labeled by locus (e.g.,D8S1179,vWA,FGA, etc.), yielding a multi-class dataset with substantial tandem-repeat structure.
+5.3.Distances compared.We compared ρ to standard edit-based a

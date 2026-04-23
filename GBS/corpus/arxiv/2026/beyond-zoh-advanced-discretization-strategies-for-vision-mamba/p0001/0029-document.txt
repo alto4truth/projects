@@ -1,0 +1,26 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+is performed using the AdamW optimizer with a weight decay of
+0.1and a total batch size of64. The learning rate is initialized at1×10−4 and
+decayed linearly over380K iterations. Large-scale jitter enhancement is applied,
+resizing the input images to1024×1024during training. During evaluation,
+the images are resized so that the shorter side is1024pixels. All detection and
+training hyperparameters are kept constant across discretization methods.
+Results.Detection results are summarized in Table 2 using APbox75as the
+evaluation metric. BIL improves APbox75from49.6under ZOH to52.1, yielding
+a gain of2.5. POL and HOH methods achieve APbox
+75 scores of53.2and54.1, respectively. These gains indicate that higher-order discretization more effectively
+preserves spatial dynamics relevant for object localization and bounding box refinement. Consistent with the classification and segmentation results, FOH does
+not offer a significant improvement over ZOH, while RK4 provides moderate
+gains but does not match the performance of POL or HOH. The results confirm that the discretization strategy has a substantial impact on downstream
+detection accuracy.
+4.4 Statistical Significance
+Further experimen

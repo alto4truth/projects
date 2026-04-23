@@ -1,0 +1,64 @@
+title: Cooperative Profiles Predict Multi-Agent LLM Team Performance in AI for Science Workflows
+source: arxiv
+year: 2026
+document_id: cooperative-profiles-predict-multi-agent-llm-team-performance-in-ai-for-science-workflows
+authors: Shivani Kumar; Adarsh Bharathwaj; David Jurgens
+page: 11
+section: team-discussion
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20658v1
+
+equired) to support some form of tool calling, which is necessary for the
+AI-for-Science experiments that use real tools to perform their workflow.
+24
+
+Preprint. Under review.
+Accuracy Quality Completion
+Predictor ˆβ95% CI ˆβ95% CI ˆβ95% CI
+Intercept (α)+.290†[+.265,+.314] +.662†[+.601,+.721] +.729†[+.593,+.853]
+Game behavior (latentθ, z-scored)
+Weakest-Link+.048†[+.036,+.060] +.091†[+.060,+.122] +.150†[+.079,+.218]
+Coll. Risk+.000[−.001,+.001] +.012†[+.009,+.015]−.004[−.010,+.002]
+O-Ring−.008†[−.015,−.001]−.146†[−.166,−.126]−.216†[−.256,−.174]
+CPR−.022[−.044,+.001] +.827†[+.759,+.898] +.748†[+.609,+.890]
+CPR+Sanction−.006[−.031,+.017]−.632†[−.712,−.555]−.578†[−.731,−.425]
+Public Goods−.041†[−.065,−.017] +.321†[+.259,+.383] +.001[−.128,+.125]
+Benchmark controls (z-scored)
+IFEval+.002[−.002,+.005] +.098†[+.089,+.107] +.122†[+.102,+.141]
+MMLU-Pro−.001[−.007,+.005]−.122†[−.139,−.105]−.225†[−.257,−.192]
+log(size)+.015†[+.005,+.025] +.057†[+.032,+.085] +.057†[+.005,+.113]
+Thinking−.013†[−.020,−.005]−.004[−.022,+.015] +.021[−.017,+.060]
+Condition controls
+log(budget)+.002[−.001,+.005] +.002[−.005,+.008]−.002[−.018,+.013]
+Task: Biomarker−.080†[−.087,−.073]−.062†[−.076,−.047] +.029[−.005,+.065]
+Task: Ecology−.042†[−.048,−.035]−.041†[−.054,−.025] +.034†[+.003,+.070]
+Task: Geospatial−.057†[−.064,−.050]−.078†[−.094,−.063] +.048†[+.011,+.084]
+Vis: Hidden−.000[−.005,+.004] +.011†[+.001,+.022] +.023[−.001,+.048]
+Team size = 3+.004[−.004,+.012] +.001[−.017,+.019]−.022[−.061,+.021]
+Theory of mind−.001[−.007,+.004]−.003[−.015,+.008]−.009[−.037,+.017]
+Variance
+τ(residual SD) 0.05 0.10 0.24
+N/ Models 1,462 / 34 1,462 / 34 1,462 / 34
+Table 7: Full Bayesian hierarchical measurement-error model predicting AI-for-Science
+outcomes, which extends Table 2 to include all condition controls. Game features enter as
+latent dispositions θig across all six games. For categorical variables, the reference categories
+are as follows. Task reference: Anomaly. Visibility reference: Full. Team size reference: 2.
+† 95% CI excludes zero. 2 chains×2,000 samples; zero divergences.
+J Benchmark Scores
+To control for differences in model capabilities in our two experiments, we Table 9 documents
+the source of each MMLU-Pro (5-shot, CoT) and IFEval (strict prompt accuracy) score used
+as capability controls in the regression analyses. Scores are from official tech reports or
+HuggingFace model cards unless noted. For thinking/instruct variant pairs sharing the
+same weights, MMLU-Pro scores are identical (base model capability) while IFEval may
+differ by mode. When publicly reported scores are not available, we compute scores using
+thelm-evalpackage (Gao et al., 2024) using the same settings for other models.
+K AI-for-Science Token Cost
+Each AI-for-Science workflow involves multiple agents each working on specific tasks by
+calling tools and generating output. We quantify the cost of each experiment in terms
+of tokens, which are reflective of the total time required to complete the experiment and,
+if using APIs, the monetary cost. Table 10 shows the mean number of tokens, including
+thinking tokens, for each model, averaged of all experiments and conditions.
+L LLM-as-Judge Evaluation
+To complement the regex-based evaluation of AI-Lab reports, we employ two LLM judges—
+one from OpenAI ( gpt-5.4-mini) and one from Google ( gemini-3.1-flash-preview)—
+25

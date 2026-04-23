@@ -1,0 +1,22 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+tyle: Humans made judgments opposite to the MLLM based on the textual style. E.g.,
+advertisements often employ exaggerated language or use clickbait-style content to attract attention,
+whereas non-advertisements tend to use a more objective tone.
+Structural Pattern: The MLLM failed to capture structural features of the post, e.g., recommending
+products from multiple different brands instead of focusing on a single brand.
+We selected the top F1-score models under each evaluation setting: GPT-4o (Zero-shot), DeepSeekV3 (In-context Learning), and Qwen2.5-7B (Fine-tuned). To enable the comparison, we also included
+the performance of Qwen2.5-7B before fine-tuning. The results are shown in Table 4. Appendix H
+shows specific examples of each error type.
+We observe a clear divergence in the error distributions when comparing zero-shot or in-context
+learning approaches to fine-tuned model settings: Fine-tuned MLLMs significantly reduce the misclassification of posts lacking sufficient cues as covert advertisements. This leads to an improvement in
+precision, thereby enhancing the overall F1-score. In contrast, models like GPT-4o and DeepSeek-V3
+often classify posts as covert advertisements e

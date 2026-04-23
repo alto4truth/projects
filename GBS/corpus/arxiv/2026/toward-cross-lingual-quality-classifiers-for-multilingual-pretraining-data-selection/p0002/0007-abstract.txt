@@ -1,0 +1,25 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+d-quartile (Q3) sampling strategy that trains
+against fluent but low-utility text. We find this refinement sharpens decision boundaries
+and improves performance in high-resource languages such as French and Spanish.
+2 RELATEDWORK
+Evolution of Web Data Curation.Early large-scale datasets relied primarily on heuristic-based
+filtering of Common Crawl. Wenzek et al. (2019) introduced CCNet, which utilized FastText (Joulin
+et al., 2016) for language identification and perplexity-based scoring. This approach was refined by
+Raffel et al. (2020) with C4 and Penedo et al. (2023) with RefinedWeb, the latter demonstrating
+that aggressive deduplication and string-matching heuristics could allow web data to match curated
+dataset performance. However, Penedo et al. (2024) showed that simple heuristics fail to capture the
+nuanced educational value required for complex reasoning tasks.
+Cross-lingual Representation LearningModern NLP has moved beyond language-specific
+models toward unified multilingual encoders. Models such as XLM-RoBERTa (Conneau et al.,
+2020) utilize a Transformer architecture trained on a masked language modeling objective across
+100+ languages simultaneously. The core power of

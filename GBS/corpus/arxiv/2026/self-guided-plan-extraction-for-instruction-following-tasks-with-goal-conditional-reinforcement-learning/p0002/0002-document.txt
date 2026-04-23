@@ -1,0 +1,33 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 2
+section: document
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+where gϕ(t) is the subgoal associated with the active
+plan step.
+In contrast to settings with predefined subtasks
+and explicit intermediate rewards, our formulation
+introduces two key challenges:
+1. Subtask alignment under sparse rewards.
+The agent must discover how its behavior
+aligns with intermediate subgoals despite only
+receiving sparse, delayed feedback upon completing the full instruction. This exacerbates
+the credit assignment problem.
+2. Extended action space.The agent must also
+decide when to terminate the current subtask.
+This requires augmenting the action space
+with control operations (e.g., aDONEaction),
+which increases both exploration complexity
+and the difficulty of learning effective switching strategies.
+4 Super Igor
+Super Igor framework proposes a method for
+jointly training a large language model and a reinforcement learning agent to solve instructionfollowing tasks. The LLM is responsible for transforming natural language instructions into structured plans, i.e. sequences of subtasks. The RL
+agent learns to execute these plans in the environment by interacting with it and maximizing delayed
+rewards.
+The training process proceeds through the following stages:
+1

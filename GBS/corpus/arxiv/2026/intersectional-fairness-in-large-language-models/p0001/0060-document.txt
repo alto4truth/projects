@@ -1,0 +1,31 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 60
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+Under Review
+18 Chaima Boufaied, Ronnie de Souza Santos, and Ann Barcomb
+Table 6. RQ1 Results in disambiguated Context
+LLM Dataset Accuracy Acc reinf Acc counter sDIS SF DF
+Llama-3 Race_SES 0.67 0.72 0.61 0.23 0.02 0.36
+Race_Gender 0.74 0.74 0.57 0.57 0.02 2.37
+Gemma-3 Race_SES 0.69 0.76 0.58 0.31 0.02 0.77
+Race_Gender 0.84 0.83 0.94 0.94 0.01𝑈 𝐵
+GPT-4o Race_SES 0.75 0.79 0.67 0.27 0.03 0.81
+Race_Gender 0.91 0.91 0.98 0.98 0.01𝑈 𝐵
+Gemini-2.0-Flash Race_SES 0.72 0.76 0.66 0.27 0.02 1.11
+Race_Gender 0.93 0.93 0.97 0.97 0.02𝑈 𝐵
+Gemini-2.5-Flash Race_SES 0.75 0.79 0.67 0.27 0.03 0.88
+Race_Gender 0.92 0.92 0.99 0.99 0.00𝑈 𝐵
+Claude-Sonnet-4 Race_SES 0.75 0.80 0.67 0.28 0.03 0.96
+Race_Gender 0.90 0.90 0.97 0.97 0.01𝑈 𝐵
+* UB denotes an unbounded DF value, which occurs when at least one subgroup has zero probability of the favorable outcome
+while another subgroup has a non-zero probability.
+examined wrong answers that reflected biased choices (ignoring the ‘unknown’ option if that is the LLM answer), to
+assess how the different LLMs consistently favored certain stereotypes across the 20 runs.
+As shown in Figure 2, the prevalence of stereotyped responses varies across models. LLaMA-3 exhibit

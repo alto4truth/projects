@@ -1,0 +1,40 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 3
+section: tcoon
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+e estimate the impact of each of the main components of StormNet
+(see Section 2.5) on overall performance. We do this by evaluating the RMSE of the
+32
+
+bias-corrected water levels across all stations using models that include different subsets of components of the full StormNet architecture. For this analysis, the prediction
+window was set to 24 h. The results are presented in Table 5. Using only a GAT or a
+GCN component along with LSTM one leads to the highest RMSE, as expected, with
+the GAT yielding a lower RMSE than GCN. Using both GAT and GCN with LSTM
+leads to a reduction of RMSE by 11% compared to using only GAT. Adding an MLP
+to the GAT+LSTM architecture improves RMSE by roughly 9%. Finally, adding
+the MLP component to the full GAT+GCN+LSTM architecture, i.e., the complete
+StormNet model, yields a further 3% reduction in RMSE.
+T able 5: RMSE values of bias correction
+predictions across all stations produced
+by using only the specified component
+subsets of the full StormNet model.
+Components RMSE (m)
+GAT+LSTM 0.097
+GCN+LSTM 0.131
+GCN+GAT+LSTM 0.087
+MLP+GAT+LSTM 0.088
+MLP+GCN+LSTM 0.088
+MLP+GAT+GCN+LSTM 0.084
+4 Conclusions
+In this work, we introduce and explore the use of StormNet, a spatiotemporal graph
+neural network model, employing convolution and attention components, for bias correction of storm surge numerical forecasts. In our proposed model, graph nodes are
+used to describe gauge stations, and node connectivity is defined based on correlations
+between water level observations at each gauge station. We demonstrate the performance of StormNet in predicting 6, 9, 12, 15, 18, 24, 36, 48, and 72 h-ahead biases in
+ADCIRC water level forecasts at 16 gauge stations along the U.S. Gulf Coast region
+33

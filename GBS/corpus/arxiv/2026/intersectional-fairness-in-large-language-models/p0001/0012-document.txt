@@ -1,0 +1,23 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+Under Review
+4 Chaima Boufaied, Ronnie de Souza Santos, and Ann Barcomb
+bias they aim to capture, such as absolute versus relative bias, ambiguous versus unambiguous contexts [Parrish et al.
+2021], stereotype versus anti-stereotype responses, and challenge style reasoning questions [Simpson et al. 2024].
+3 Related Work
+Fairness testing can be conducted at many stages of the AI lifecycle, covering the training data (e.g., detecting selection
+or label bias), the ML program (e.g., testing data processing or compression algorithms), the model, and the framework
+(libraries) [Chen et al. 2022]. Research has largely focused on model testing, as it is the most accessible stage for users of
+pre-trained models. Some common approaches involve coreference resolution, masked language modeling, sentiment
+analysis, and paired sentences [Soremekun et al. 2022].
+The majority of datasets and research on fairness testing has focused on race, gender, and sexual orientation (e.g.,
+CrowS PairS1 and ASTRAEA [Soremekun et al. 2022]). Simpson et al. [2024] recently extended the field by developing,
+through consultation with sociologists and experts in human rights, datasets on ageism, colonial bias, colori

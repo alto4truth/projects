@@ -1,0 +1,29 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+and pass them through a temporal
+activity detection (TAD) network to obtain the results. Experiments on the 4D-OR and Team-OR datasets prove the value
+of studying gaze-following in the OR.
+Our contributions can be summarized as follows: (1) we
+highlight the clinical importance of studying gaze-following
+in the OR for surgical workflow analysis, and extend two
+existing external OR datasets with gaze annotations; (2) we
+present a transformer-based approach that processes generated
+gaze heatmaps solely to address clinical role prediction and
+surgical phase recognition on the 4D-OR dataset, and reach a
+performance on par with the semantic scene graph-based approaches; (3) we extend the Team-OR dataset with a new activity label, propose a novel self-supervised learning strategy
+to train a spatial-temporal model that encodes clip-level gaze
+features, and achieve state-of-the-art performance on the team
+communication detection task.
+2. Methodology
+2.1. Gaze-following datasets in the operating room
+To enable gaze-following study in the OR, we extend the
+4D-OR [26] and Team-OR datasets [6] with gaze annotations. 4D-OR is a video dataset consisting of 10 simulated
+knee surgeries with annota

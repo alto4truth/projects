@@ -1,0 +1,27 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+f lengthT, We identify a set of candidate cutpointsU ⊆ {1, . . . , T}by
+selecting tokens whose entropy exceeds an adaptive threshold:
+U={t|e i
+t ≥τ},(1)
+whereτis determined from the entropy distribution ofo(e.g. via a perentile-based rule). To partitiono
+intoMreasoning segments(z 1, . . . , zM), we choose boundary indices{t 1, . . . , tM+1 }witht 1 = 1and
+tM+1 =T+ 1, such that the number of cutpoints in each segment is approximately balanced:
+|U ∩[t m, tm+1)| ≈ |U |
+M ,∀m∈ {1, . . . , M}.(2)
+This heuristic ensures that each segment contains a comparable number of high-entropy positions, yielding a balanced and semantically meaningful segmentation of the reasoning trajectory. Our experiments
+demonstrate that this adaptive strategy yields superior performance compared to fixed-token partition (see
+Section 4.3).
+3.2 PROGRESS ASPROCESSSUPERVISION
+Based on the reasoning process segmentation, we propose to leverage segment-wise progress as a form of
+process supervision to address the indiscriminate credit assignment of GRPO. This formulation provides
+a dense, model-free, and scalable supervision signal that quantifies the incremental contribution of each
+reasoning segment toward the corr

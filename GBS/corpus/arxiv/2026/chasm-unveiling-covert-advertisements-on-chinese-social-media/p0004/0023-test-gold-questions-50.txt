@@ -1,0 +1,25 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+deliberately subtle and deceptive, making their detection more challenging and demanding additional
+effort.
+Advertisement DatasetExisting related datasets focus on traditional advertisements, such as [ 47]
+collected 20K official Facebook ads to predict revenue, and [48] compiled 64K advertisement images
+and 3K videos. Similarly, [49] gathered 1K advertisement images to analyze user visual attention,
+and [50] collected 48K textual Chinese advertisement posts to assess legality. These datasets were not
+collected for advertisement detection, but rather for conducting further analysis on advertisements.
+[51] introduces a dataset for advertising, but its data collection is biased, and the task formulation is
+insufficiently aligned with real-world covert advertising behaviors. In contrast, covert advertising
+content is inherently highly deceptive and concealed, which is why our task primarily focuses on
+identifying such content.
+7 Conclusion
+In conclusion, this study introduces CHASM, the first dataset designed to evaluate the capabilities
+of LLMs for detecting covert advertisements on social media. Our evaluations indicate that covert
+advertisements are inherently deceptive, and current

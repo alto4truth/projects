@@ -1,0 +1,15 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 172
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+in a multimodal system. These shifting resources set the boundary conditions of this research, anchoring WVB historically in the 2022 model landscape.
+
+Chapter 4: The World Values Benchmark 162
+4.3 Methods and design This section sets out the methodological pipeline used to construct the WVB: survey question selection, anchor and prompt design, probability extraction and normalisation, prior-aware adjustment, and scoring, followed by version history. The chapter’s central contribution is methodological. Rather than evaluating LLMs against a predefined normative standard, WVB aligns model outputs with existing human survey data and compares distributions rather than single answers. The framework combines four elements: constructs drawn from the WVS, Responsible Prompt Design, distributional scoring metrics, and sociotechnical validity checks. Together, these establish a descriptive and replicable method for locating model outputs within recorded patterns of human values while preserving pluralism and making the normative assumptions of benchmark design more explicit. The sections that follow document each stage of this pipeline in turn, including question selection, prompt construction, anchor design, probability extraction, Bayesian adjustment, and scoring. Representative survey items, prompts, anchors, and workflow steps are provided throughout the chapter to make the design logic and implementation procedure transparent.
+4.3.1 Survey question selection Not all WVS items were equally useful for this benchmark. Some showed little cross-national variance, while others captured experience more than values. WVB therefore prioritised two kinds of items: the core Inglehart–Welzel questions and additional items strongly correlated with those axes. This also explains the inclusion of questions such as Q6 on religion: although not part of the canonical map, they remain theoretically relevant to the same value dimensions, and their omission from the map reflects the need for longitudinal stability rather than lack of explanatory value. The benchmark began with the WVS, which provides a stable empirical foundation for cross-cultural research. The WVS underpins the I-W cultural map: two dimensions (Traditional versus Secular-Rational values; Survival versus Self-Expression values) that together explain more than 70 percent of the variance in global value systems [185]. These dimensions have proven remarkably robust, with correlations of .92 and .95 between successive waves, giving confidence that the constructs are stable measures over time. As Inglehart noted, “human values are structured in a surprisingly coherent way: the two dimensions explain fully 71 percent of the cross-cultural variation among societies” (2006, p. 115).

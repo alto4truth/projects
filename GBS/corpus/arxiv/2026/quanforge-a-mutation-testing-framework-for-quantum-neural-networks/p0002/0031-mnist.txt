@@ -1,0 +1,24 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 2
+section: mnist
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+erent gate types have markedly different impacts on model
+performance, depending on both the gate category and the operator applied. For the Add operator,
+adding Hadamard and SWAP gates tends to cause the most significant performance degradation,
+in general, indicated by lower mean accuracies, higher KRs, and lower NRs. To explain this, the
+Hadamard gate transforms a basis state into a superposition state, introducing abrupt entanglement.
+The SWAP gate, which exchanges the states of two qubits, also ranks high in terms of impact. In
+contrast, phase and rotation gates have relatively mild effects. The limited impact of rotation gates
+is partially attributed to the inherent robustness of quantum circuits to noise [ 11], while phase
+gates modify the relative phase of a state but do not affect its amplitude, which is less tied to the
+measurement results.
+For operators that delete or modify existing gates, amplitude-encoding QNNs tend to be more
+sensitive to controlled gates. This behavior is primarily due to the entangling nature of these gates.
+Altering or removing them disrupts multi-qubit correlations, which are essential to the QNN’s
+ability to encode and process information. Since

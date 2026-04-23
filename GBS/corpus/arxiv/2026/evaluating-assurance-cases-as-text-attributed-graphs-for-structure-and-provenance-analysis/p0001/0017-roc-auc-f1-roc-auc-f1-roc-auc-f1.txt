@@ -1,0 +1,26 @@
+title: Evaluating Assurance Cases as Text-Attributed Graphs for Structure and Provenance Analysis
+source: arxiv
+year: 2026
+document_id: evaluating-assurance-cases-as-text-attributed-graphs-for-structure-and-provenance-analysis
+authors: Fariz Ikhwantri; Dusica Marijan
+page: 1
+section: roc-auc-f1-roc-auc-f1-roc-auc-f1
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20577v1
+
+e variations falls
+outside the primary focus of this paper, as it would require
+extensive data generation and validation. To address these practical constraints and mitigate the need for massive, multi-source
+training datasets, our framework leverages recent advancements
+in graph foundation models. Specifically UniGraph [14] and GraphPrompt [22]. These models require substantially less training data,
+which allows us to establish a robust proof-of-concept for graphbased assurance evaluation without relying on large-scale data
+generation.
+These threats highlight areas where additional research and
+experimentation are needed to strengthen the generalisability and
+practical applicability of our evaluation framework and study.
+10 Conclusion and Future Work
+This study investigated how different modelling strategies perform
+across varying data provenance scenarios, focusing on the integration of masked language model text encoders and graph neural networks. Specifically, we explored five research questions. Our results
+show that graph neural networks can effectively learn reasoning
+and linkage patterns across two different types of assurance case
+structures. For RQ1,link predictionexperim

@@ -1,0 +1,28 @@
+title: Interval POMDP Shielding for Imperfect-Perception Agents
+source: arxiv
+year: 2026
+document_id: interval-pomdp-shielding-for-imperfect-perception-agents
+authors: William Scarbro; Ravi Mangal
+page: 2
+section: additionalempiricalresults
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20728v1
+
+CartPole and Refuel delimit the other two operating
+regimes. CartPole uses deliberately degraded perception, but
+it still has 82 observation labels for 82 states and only two
+actions. As a result, there are few opportunities for the shield
+to become stuck: at the best threshold, Single-Belief achieves
+about2%fail and0%stuck, Observation about3%fail
+and0%stuck, Carr about3%fail and0%stuck, and FwdSampling about2%fail and0%stuck in the uniform regime.
+In this regime, the first observation already localizes the state
+well enough that history adds little. The experiment therefore
+acts as a sanity check: when interval uncertainty does not
+create substantial ambiguity, the heavier envelope machinery
+is unnecessary.
+Refuel is the opposite kind of stress test. The observation model intentionally hides the safety-critical variables, so
+danger must be inferred indirectly from history rather than
+read from a single observation. The Envelope Shield is excluded there because LP-based online propagation is infeasible
+at this scale, and Carr is excluded because our modified
+Refuel observation model hides the safety-critical variables,
+which greatly increases support aliasing and makes the offline

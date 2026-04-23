@@ -1,0 +1,37 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+old we recommend for
+perplexity evaluation in deployment contexts. (4) We do not test models larger than 7B, where
+compression behavior may differ.
+14
+
+Figure 10: Summary of five structural findings and their implications for transformer compression. Each finding maps to a specific failure mode of existing compression methods and suggests
+an alternative approach.
+8 Conclusion
+Through over 40 systematic experiments across two model scales, we establish five structural
+properties of transformer compressibility. Our central finding is thatvariance is not importance:
+the standard tools for identifying redundancy (PCA, activation magnitude, output variance)
+are poor proxies for computational importance. Direct quantization methods avoid this issue
+by operating uniformly on all directions, while more sophisticated approaches that attempt
+to exploit structural redundancy consistently fall into the reconstruction wall or composition
+failure.
+We additionally identify a clear four-phase functional architecture (context building→feature construction→refinement→prediction assembly) that suggests compression strategies
+should be phase-aware rather than uniform across depth.
+The most promising direction for inference cost reduction is not static compression but
+adaptive computation: dynamically allocating depth and precision per token based on prediction
+confidence. The 30% easy-token finding quantifies the opportunity, while the linearity gradient
+(R2: 0.17→0.93) identifies which blocks are safe to bypass. Realizing this potential requires
+integration with model training, as demonstrated by the scaled LoRA fine-tuning results in
+Section 5.4.
+Code and Data Availability
+All experiment scripts, calibration data splits, and raw perplexity / CCA / R 2 outputs underlying the tables and figures in this paper are available upon request from the corresponding
+author. A public release accompanying the companion paper [16] is planned.
+15

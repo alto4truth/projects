@@ -1,0 +1,35 @@
+title: Trust, Lies, and Long Memories: Emergent Social Dynamics and Reputation in Multi-Round Avalon with LLM Agents
+source: arxiv
+year: 2026
+document_id: trust-lies-and-long-memories-emergent-social-dynamics-and-reputation-in-multi-round-avalon-with-llm-agents
+authors: Suveen Ellawela
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20582v1
+
+sis. Average thinking time per decision
+was 7.5 seconds for Low, 37.5 seconds for Medium, and 107
+seconds for High.
+4.4 Experimental Conditions
+We collected 188 games organized into four disjoint datasets,
+summarized in Table 2.
+Table 2: Dataset overview.
+Dataset Games N Mem Reas.
+A: Reputation 50 5 Full Low
+B: Count (Mem) 60 5–10 Full Low
+C: Count (No Mem) 60 5–10 None Low
+D: Reasoning 18 5 Full L/M/H
+Total 188
+Dataset A enables deep analysis of reputation formation
+over 50 repeated games with the same 5 agents. Datasets B
+and C form matched pairs for isolating memory effects across
+player counts. Dataset D varies reasoning depth to explore
+how computational budget affects agent behavior.
+4.5 Text Analysis Methods
+Our qualitative analyses rely on systematic extraction from
+agent-generated text:
+Descriptor frequency (Section 5.1):We compiled a seed
+list of 15 behavioral descriptors commonly used in social evaluation (straightforward, subtle, cautious, trustworthy, quiet,
+aggressive, reliable, suspicious, etc.) and counted exactmatch occurrences in post-game reflection texts.
+Cross-game references (Section 5.1):We identified references using keyword patterns indicating temporal cont

@@ -1,0 +1,23 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 2
+section: mnist
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+the circuit. The sensitivity of QNNs to qubit-level mutations is affected by the specific
+circuit scale, encoding schema and entanglement complexity.
+4.6 RQ3: Impact of Mutating Different Quantum Gates on Model Performance
+Quantum gates differ in their functional roles. Some gates, such as Hadamard and controlled gates,
+have strong, rigid effects that significantly alter entanglement or transform basis states. Others, like
+phase gates, apply more subtle modifications. To analyze how gate types influence model behavior
+under mutation, we configure the parameter gate type for each mutation operator and perform
+controlled mutations. Note that the Add operator can insert gates of any specified type, while other
+operators can only mutate gates already present in the circuit. For Delete, Replace, and Modify
+operators, we reduce the initial 𝑢𝑏 of the search algorithm to ensure that the number of target
+gates remains comparable in early-stage mutants under different gate types. This is because QNNs
+usually contain an imbalanced distribution of different gate types, with rotation gates typically
+occupying a larger proportion. Hence, mutants could disproportionally involve rotation gates und

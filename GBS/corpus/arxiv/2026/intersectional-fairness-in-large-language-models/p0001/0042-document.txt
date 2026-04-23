@@ -1,0 +1,24 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 42
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+Under Review
+Intersectional Fairness in Large Language Models 13
+the correct answer is not revealed. The model is therefore required to respond to the question using one of the question
+options. We evaluated the LLMs effectiveness usingaccuracyas a baseline, along with the five fairness metrics
+we defined and formulated in Section 4.4;bias scores(sDIS and sAMB for disambiguated and ambiguous contexts,
+respectively) to quantify stereotyped errors andgroup fairness metrics: Statistical Parity (SF) for disambiguated
+questions, Differential Fairness (DF) for both question types, and Equal Opportunity / FNR parity for disambiguated
+questions only. Recall, all the ground-truth labels are treated as the “positive class” for fairness metrics, ensuring
+consistent evaluation across subgroups. This setup allows us to measure both the correctness and fairness of our
+baseline LLMs across diverse question types and sensitive attribute groups.
+4.6 RQ1: How fair are LLMs under ambiguous and disambiguated contexts, when evaluated on
+intersectional identity attributes?
+To answer RQ1, we gave to each of the baseline LLMs (i.e., GPT-4o, Llama 3, Gemma-1.1, Gemini-2.0 Flash, Gemini-2.5
+Flash, and Claud

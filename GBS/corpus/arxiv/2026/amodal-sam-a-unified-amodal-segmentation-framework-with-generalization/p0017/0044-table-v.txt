@@ -1,0 +1,24 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 17
+section: table-v
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+PERFORMANCE UNDER DIFFERENT TRAINING OBJECTIVES.
+Method KINS TAOS Dataset
+L hol L reg mIoU f mIoU o mIoU f mIoU o
+✓ ✓ 85.43 59.27 90.85 54.64
+×✓ 83.05 56.75 89.04 54.39
+✓× 82.79 53.94 89.97 53.52
+× × 81.02 53.73 88.45 53.41
+encoder. To assess the impact of varying the number of
+SCAs on the performance of Amodal SAM, we conducted
+experiments using different numbers of SCAs on the KINS [7]
+and COCOA-cls [9] datasets, with the results summarized
+in Table VI. The results demonstrate that our method of
+integrating SCAs achieves effective performance while minimally increasing the model’s parameters, thereby maintaining
+efficient inference speed.

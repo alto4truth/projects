@@ -1,0 +1,28 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+t problem; introduces the avg/worst-case distinction that dominates current debate.
+(c) Carliniet al., 2025 [ 4]—why:bridges adversarial ML
+and LLM agent evaluation, quantifying the externalvalidity gap that limits the field’s real-world claims.
+10 The “So What” Test
+Written for a smart non-expert—no citations, no jargon, no
+hedging.
+1. What has been established.When researchers construct
+stronger attacks and apply stricter testing protocols, AI systems are consistently less robust than originally reported—
+sometimes by large margins. Testing against many attack
+types simultaneously reveals that a system can score well on
+average yet fail its hardest test worse than random guessing.
+2. What remains open.No single evaluation pipeline has
+been accepted as sufficient for the largest deployed systems,
+across all realistic types of input manipulation, or for automated tools that match human expert findings on production
+code. Independent laboratories can reach contradictory safety
+conclusions using testing approaches that each appear methodologically sound.
+3. Why this matters.Safety decisions about products, regulatory compliance, and legal liability depend on robustness
+numbers that t

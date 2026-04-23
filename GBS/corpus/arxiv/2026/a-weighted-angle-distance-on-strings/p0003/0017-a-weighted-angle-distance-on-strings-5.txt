@@ -1,0 +1,40 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 3
+section: a-weighted-angle-distance-on-strings-5
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+6 GRANT MOLNAR
+(i) robustness to stutter-like repetition, (ii) multi-scalen-gram sensitivity, and (iii) provable
+metric structure together with a linear-time algorithm for exact evaluation on finite strings.
+4.Computation
+In this section, we describe an efficient method for computingd ρ(S, T) for two strings
+S, T∈Σ ∗. Throughout, we writem :=|S|,n :=|T|, andL max := max(m, n).
+4.1.Reducingd ρ to aggregatedn-gram statistics.Recall that
+dρ(S, T) =
+X
+n≥1
+ρnθn(S, T),
+whereθ n(S, T) =θ([S] n,[T] n). For eachn≥1, define the aggregated quantities
+An(S) :=∥[S] n∥2 =
+X
+W∈Σ n
+c(S, W) 2,(2)
+An(T) :=∥[T] n∥2 =
+X
+W∈Σ n
+c(T, W) 2,
+Bn(S, T) := [S]n ·[T] n =
+X
+W∈Σ n
+c(S, W)c(T, W).(3)
+Then forn≤L max we have
+(4)θ n(S, T) =
+
+
+
+arccos

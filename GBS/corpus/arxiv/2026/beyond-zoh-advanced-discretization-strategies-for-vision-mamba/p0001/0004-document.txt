@@ -1,0 +1,21 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+2 F. Ibrahim et al.
+continuous-to-discrete conversion [30]. ZOH assumes that input values remain
+constant between samples—an assumption that oversimplifies visual data, where
+spatialsignalsexhibit continuousvariation,sharpedges,textures,and structured
+frequency content. While ZOH simplifies implementation and guarantees stability, it introduces discretization lag and truncation errors that accumulate across
+long sequences of image patches or tokens.
+To address these limitations, this work systematically investigates a controlled and hardware-aware study of advanced discretization strategies that better capture continuous dynamics within Mamba-based visual systems. We implement and evaluate six discretization methods within the ViM framework:
+1. Zero-Order Hold (ZOH) – The baseline method used in original ViM implementations, serving as a reference point for comparison [30].
+2. First-OrderHold(FOH)–Alinearinterpolationmethodthatmodelssmoother
+transitions between samples [30].
+3. Bilinear/Tustin Transform (BIL) – A signal processing technique that converts stable analog filters into equivalent digital filters, allowing analog designs to be implemented digitally, preserving stability

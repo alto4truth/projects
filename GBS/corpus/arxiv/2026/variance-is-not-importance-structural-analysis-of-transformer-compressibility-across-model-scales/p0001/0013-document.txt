@@ -1,0 +1,23 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+Figure 2: Block linearity (R 2) across depth for GPT-2 and Mistral 7B. GPT-2 maintains uniformly high linearity (block-wiseR 2 clustered around 0.95) at all depths. Mistral 7B shows a
+dramatic gradient from 0.17 (block 0) to 0.93 (block 31), revealing a division of labor between
+nonlinear feature construction and linear refinement.
+Every factored approach is strictly worse than direct INT4 at the same 4-bit budget. The
+gap ranges from 2×(SVD+INT4) to 24.8×(rotated mixed-precision), confirming that the crossterm amplification in Eq. 4 is not a theoretical curiosity but the dominant source of error in
+practice.
+Note: GPTQ avoids this wall through sequential error feedback, which compensates for
+rounding errors during the quantization process. Our finding applies specifically to naive factored reconstruction without error compensation.
+4.4 Finding 4: Linearity Gradient Across Depth
+Finding 4.Mistral 7B exhibits a monotonic increase in block linearity with depth (R 2: 0.17
+→0.93), revealing a division of labor: early blocks perform nonlinear feature construction while
+late blocks perform near-linear refinement.
+This finding is consistent with the “unreasonable ineffectiveness” of deepe

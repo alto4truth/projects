@@ -1,0 +1,23 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 2
+section: abstract
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+e retrieval decisions are optimized jointly
+with task actions through paired-branch process rewards (Section 3.3). This creates a self-reinforcing loop: a richer
+experience base provides more relevant retrieval results, which improves trajectory quality, which in turn yields
+higher-quality experience entries and stronger policy gradients.
+A critical design choice within this framework is how accumulated experience is organized for effective retrieval. At
+decision time, an interactive agent benefits from two distinct types of support: relevant memory (factual knowledge or
+similar prior episodes) and behavioral guidance (which action patterns succeed or fail in analogous states). Conflating
+all experience into a single undifferentiated pool mixes these two modes of support, producing redundant or competing
+retrieval results. To address this, the experience base maintains a structured repository (Figure 2 (b)):
+D=M ∪ S,M=M f ∪ Me,S=S + ∪ S − ∪ S∆,(3)
+where Mf and Me denote factual and episodic memories, and S+, S −, S∆ denote distilled behavioral skills from
+successes, failures, and comparative evaluations. Each entry r∈ D stores textual content, a type label, an embedding
+vectore(r),

@@ -1,0 +1,20 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 2
+section: results
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+7
+Figure 4.Operator description of S4 performing classification on real-world input sequences. (a)The input-tooutput mapping in S4 admits a closed-form operator expression: the recurrent operatorD τ evolves the latent state in the Fourier
+eigenbasis, producing modal amplitudesµ i(k) that encode traveling-wave dynamics. The mixing matrixCforms intermediate
+featuresy k, and the nonlinear readout is expressed at the operator level via polynomial lifts of these modal coordinates.(b)
+S4 dynamics during classification of the real-world dataset SelfRegulationSCP1 [32]. Representative eigenmode trajectories
+Re(µ4(k)) and Re(µ 8(k)) wax and wane at different sections of the input. The termz 4,8(k) captures the nonlinear interaction
+betweenµ 4 andµ 8, quantifying times where the interaction between these two waves can contribute to sequence classification.
+(c)The nonlinear interaction termz 4,8(k) in the amplitude basis illustrates how these interacting waves propagate over the
+network. Note how the activity pattern caused by these two interacting waves bends at different times due to time-varying
+phase offsets in the two waves. The time of peak wave interaction is denoted with an arrow at t

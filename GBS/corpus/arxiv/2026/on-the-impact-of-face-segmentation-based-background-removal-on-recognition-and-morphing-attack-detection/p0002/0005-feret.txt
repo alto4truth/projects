@@ -1,0 +1,28 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 2
+section: feret
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+low impact that background removal has on the FR system’s capacity to correctly evaluate FERET, these results
+are consistent with the controlled conditions under which
+FERET’s images were acquired (low background noise,
+frontal position), which make it an ideal dataset from the
+perspective of both the FR system and the segmentation
+network. This is visually supported by Figure 2, where the
+majority of the considered segmentation techniques manage
+to efficiently segment the background, resulting in passportlike pictures. As mentioned in Section III, this analysis
+can be complemented by reporting the average cosine similarity for genuine and impostor pairs, and the difference
+between them (∆). While the results presented in Table I
+show that no background removal technique results in a
+FR performance degradation, it can be argued that they are
+based on a low amount of samples (2,722 images) whose
+characteristics perfectly depict the desired features that the
+images should have to facilitate the background removal task.
+Small deviations might arise from the background removal
+steps and be invisible in the FR performance evaluation
+if they are not enough to generate an overlapping reg

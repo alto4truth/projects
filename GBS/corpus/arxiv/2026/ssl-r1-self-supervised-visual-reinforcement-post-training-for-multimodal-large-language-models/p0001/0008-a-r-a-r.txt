@@ -1,0 +1,28 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: a-r-a-r
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+Accuracy Reward.The accuracy rewardR acc assesses the
+response correctness. Specifically, for tasks whose answers
+are a single value (e.g., rotation prediction, visual similarity,
+and region inpainting), we use a binary reward:R acc = 1
+if the predicted answer exactly matches the ground truth,
+andR acc = 0otherwise. For tasks whose answers are a
+sequence containing multiple values (e.g., patch ordering
+and geometric correspondence), we use a graded reward:
+Racc is a fractional value between 0 and 1, proportional to
+the correctly placed indices.
+Format Reward.The format rewardR format assesses the
+response format. Specifically, we require the model to enclose its reasoning process within<think> </think>
+and the final answer within\boxed{}. Each tag must appear exactly once and in the correct sequence (the reasoning process before the final answer). We setR format = 0.2
+if the output strictly adheres to the prescribed format, and
+Rformat = 0otherwise.
+2We ensure each sampled point is separated by at least 40 pixels on the
+image for diversity.
+4

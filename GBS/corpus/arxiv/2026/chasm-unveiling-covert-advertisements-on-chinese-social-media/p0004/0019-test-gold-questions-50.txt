@@ -1,0 +1,26 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+Although the fine-tuned Qwen2.5-7B model demonstrates a decrease in the number of errors across
+each error category, the results still suggest that there is room for improvement in capturing the structural differences between covert advertisements and non-advertising posts, as well as in identifying
+subtle cues that may remain in the comment section. We hope these findings offer valuable insights
+for future model training.
+Table 4: Error counts and percentages across the four main categories of error causes in four MLLMs.
+We selected the top F1-score models: GPT-4o (Zero-shot), DeepSeek-V3 (In-context Learning), and
+Qwen2.5-7B (Zero-shot and Fine-tuned).
+Error Type GPT4o(ZS) DeepSeek-V3(ICL) Qwen2.5(ZS) Qwen2.5(FT)
+Insufficient Evidence (Total) 22 (47.8%) 16 (36.4%) 38 (38.8%) 6 (17.6%)
+- Misjudged Product Post 16 (34.8%) 11 (25.0%) 30 (30.6%) 6 (17.6%)
+- Misjudged Non-Product Post 6 (13.0%) 5 (11.4%) 8 (8.2%) 0 (0.0%)
+Missing Clue (Total) 10 (21.7%) 15 (34.1%) 32 (32.7%) 14 (41.2%)
+- Missed comment clue 8 (17.4%) 14 (31.8%) 26 (26.5%) 12 (35.3%)
+- Missed image clue 2 (4.3%) 1 (2.3%) 6 (6.1%) 2 (5.9%)
+Language Style 8 (17.4%) 9 (20.5%) 16 (16.3%) 5 (14.7%)
+Post Structure 3 (6.5%) 2

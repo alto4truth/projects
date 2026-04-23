@@ -1,0 +1,28 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+real data. By solving geometry and relighting jointly,GeoRelightachieves state-of-the-art results in photorealistic
+relighting, as well as high-fidelity 3D reconstruction and
+intrinsic estimation from a single image. Project page:
+https://yuxuan-xue.com/georelight
+1. Introduction
+Altering illumination on a person from a single image is a
+core problem for computer graphics and vision [6, 17, 26,
+28]. It enables enormous applications, from creative editing
+and computational photography to virtual reality and film
+production. However, the task is profoundly ill-posed. A
+single 2D image is an ambiguous projection of three distinct
+and entangled factors: the 3D geometry of the subject, their
+intrinsic appearance like base color, and illumination of the
+scene. To realistically change the light, a model must, explicitly or implicitly, disentangle these components [22, 46].
+Recent learning-based approaches often fall into two categories, each with a specific drawback. First, end-to-end
+"translator" models [4, 6, 9, 26] learn a direct pixel-to-pixel
+mapping. This approach is often limited in physical plausibility due to the absence of geometric modeling, failing to
+produce realistic shadows

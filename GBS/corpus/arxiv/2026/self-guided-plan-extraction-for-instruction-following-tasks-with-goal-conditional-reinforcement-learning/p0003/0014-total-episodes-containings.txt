@@ -1,0 +1,33 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 3
+section: total-episodes-containings
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+h with DPO
+( β= 0.5,lr= 1×10 −5 ) to stabilize lo2https://huggingface.co/Qwen/Qwen2.
+5-14B-Instruct
+cal updates, and then train policies with PPO-T
+(lr= 0.001, ε= 0.02 ) and Skill Curriculum Learning for 2.5B steps. We validate by executing 10
+plans across 50 seeds to assess robustness. Two
+full cycles were conducted, with evaluations before
+and after LLM fine-tuning, and results compared
+against baselines at 2.5B and 5B steps (Figure 3).
+Additional hyperparameters are described in more
+detail in Appendix J.
+5.3 Baselines
+For our comparative analysis, we use several established baselines from the original CrafText
+study (V olovikova et al., 2025). PPO-T (TextAugmented PPO) augments PPO with textual
+grounding: instructions are encoded using a frozen
+DistilBERT [CLS] embedding, concatenated with
+CNN-based visual features, and processed by a
+GRU to maintain temporal context. PPO-T+ (PlanAugmented PPO) extends this by first translating
+each instruction into a structured plan with GPT-4,
+and then providing the agent with a plan embedding
+instead of the raw instruction.
+FiLM (Perez et al., 2018) offers an alternative
+integration of language and vision. Here, instruction embeddings genera

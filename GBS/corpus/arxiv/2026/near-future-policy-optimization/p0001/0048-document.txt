@@ -1,0 +1,37 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 48
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+Algorithm 1AutoNPO: adaptive intervention for near-future policy optimization
+Require: dataset D, base policyπ(0), mistake thresholdτerr, confirmation pass-rate thresholdτpass, probe
+sizeN probe, probe intervalTprobe, cooldown lengthTcool, variance proxyˆV(·)
+1:B ← ∅,alert←0,in_retro←False,G ← ∅,t cool ←0
+2:fort= 1,2, . . .do
+3:sample batch{x}fromD
+4:ifin_retrothen foreachxwithG[x]defined, scheduleG[x]to replace one rollout slot
+5:end if
+6:roll out withπ (t), compute rewards and group-relative advantages
+7:updateπ (t+1) via the clipped objective in Eq. (4)
+8:update reward EMA and entropy history
+9:foreach promptxin the batchdo
+10:ifmean group accuracy ofx < τ err thenadd(pid(x), t)toB
+11:end if
+12:end for
+13:ifnotin_retroandt≥t cool andtmodT probe = 0then
+14:// Stage 1: zero-cost warning
+15:alert←alert+ 1if reward stagnates and entropy declines, elsealert←0
+16:ifalert≥mthen
+17:// Stage 2: confirmation rollout
+18:sampleN probe prompts fromB; roll out withπ(t)
+19:ˆp←pass-rate on the probe sample
+20:foreach saved checkpoint at distance∆: ˆQ(∆)←pass-rate ofπ (t) onB ∆
+21:ifˆp > τ pass then
+22:∆ ⋆ ←arg max ∆ ˆQ(∆)/ ˆV(∆)▷Eq. (6)
+23:G ←verified-correct re-rollout ofπ (t) onB ∆⋆
+24:load m

@@ -1,0 +1,28 @@
+title: Exploring High-Order Self-Similarity for Video Understanding
+source: arxiv
+year: 2026
+document_id: exploring-high-order-self-similarity-for-video-understanding
+authors: Manjin Kim; Heeseung Kwon; Karteek Alahari; Minsu Cho
+page: 3
+section: enc-blocks-3
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20760v1
+
+Exploring High-Order Self-Similarity for Video Understanding 5
+D.2 Generic Event Boundary Detection
+Generic event boundary detection (GEBD) aims to localize event boundaries in
+a video, such as changes in subject appearance or motion patterns, segmenting
+it into distinct and meaningful chunks. Accurate detecting these instantaneous
+changes is crucial for effective event segmentation.
+Datasets.Kinetics-GEBD[69] is the largest GEBD dataset, consisting of 55K
+videos with 1.3M taxonomy-free event boundaries including action and object
+changes.TAPOS[65] comprises 15K Olympic sports videos with 21 distinct
+action classes. Following [69], we re-design TAPOS for GEBD task by trimming
+each action instance.
+Implementation Details.We employ BasicGEBD-L4 [99] as backbone and
+add a single MOSS module after the 2nd stage of ResNet-50 and train the entire
+network end-to-end following the training protocols in [99]. For evaluation, we
+measure F1 score with relative distance 0.05 and average F1 score from 0.05 to
+0.5 with 0.05 interval.
+Results.In Tab. 9, we present the results on Kinetics-GEBD and TAPOS. Compared to our baseline (BasicGEBD), our MOSS module substantially improves
+performance at F1

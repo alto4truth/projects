@@ -1,0 +1,30 @@
+title: Interval POMDP Shielding for Imperfect-Perception Agents
+source: arxiv
+year: 2026
+document_id: interval-pomdp-shielding-for-imperfect-perception-agents
+authors: William Scarbro; Ravi Mangal
+page: 4
+section: typing-andbeliefsemantics
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20728v1
+
+This section gives acategorical typing storyfor interval
+perception uncertainty and explains how it directly motivates
+our choice of a convex (LP-friendly) abstract domain. The
+key observation is that interval constraints induceconvex
+sets of admissible distributions (credal sets), and belief-state
+semantics is governed by convex-algebra structure [37]. Our
+abstract interpretation instantiates this structure computationally: it approximates credal belief sets by finitely presented
+convex sets and evaluates admissibility by extremizing linear
+functionals, which are the natural observables in a convexalgebraic setting.
+A. Distributions, Convex Powersets, and Credal Sets
+LetConvdenote the category of convex algebras and affine
+maps, and letU:Conv→Setsbe the forgetful functor. For
+a finite setX,D(X)denotes the simplex of probability distributions onX, viewed as the free convex algebra onX[37].
+LetP c denote the convex-powerset construction on convex
+algebras. On underlying sets,UP c(D(X))is represented by
+the nonempty convex subsets ofD(X); we write this carrier as
+K(X). Thus, in the discussion below, a “credal set” is precisely
+an element ofK(X).
+B. A Coalgebraic Type for anIPOMDP
+For

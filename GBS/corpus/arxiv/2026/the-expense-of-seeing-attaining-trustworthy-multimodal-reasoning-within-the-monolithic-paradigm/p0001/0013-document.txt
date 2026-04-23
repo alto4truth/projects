@@ -1,0 +1,27 @@
+title: The Expense of Seeing: Attaining Trustworthy Multimodal Reasoning Within the Monolithic Paradigm
+source: arxiv
+year: 2026
+document_id: the-expense-of-seeing-attaining-trustworthy-multimodal-reasoning-within-the-monolithic-paradigm
+authors: Karan Goyal; Dikshant Kukreja
+page: 1
+section: document
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20665v1
+
+The Expense of Seeing: Attaining Trustworthy Multimodal Reasoning Within the Monolithic Paradigm Conference acronym ’XX, June 03–05, 2026, Woodstock, NY
+(2)𝑆 𝑆 𝑦𝑚𝑇 (Symbolic Text Ceiling):The visual input 𝑉 is replaced by an achievable exhaustive symbolic text representation 𝑉𝑙𝑎𝑏𝑒𝑙 . This is the absolute reasoning ceiling of the
+LLM.
+𝑆𝑆 𝑦𝑚𝑇 =𝑆(M (∅, 𝑇+𝑉 𝑙𝑎𝑏𝑒𝑙 ))(2)
+(3)𝑆 𝑆 𝑦𝑚𝑉 (Symbolic Vision):The textual question 𝑇 is rendered perfectly as text-within-an-image 𝑇𝑖𝑚𝑔, forcing the
+model to read solely via its visual encoding pipeline without
+discrete text tokens.
+𝑆𝑆 𝑦𝑚𝑉 =𝑆(M (𝑉+𝑇 𝑖𝑚𝑔,∅))(3)
+To emphasise the extreme gravity of the visual knowledge bottleneck, we project below how this protocol unmasks architectural
+failures across three critical domains of Knowledge Discovery.
+• Case Study 1: Financial Time-Series Mining:A VLM
+analyses a candlestick chart to predict a breakout. 𝑆𝑆 𝑦𝑚𝑇
+replaces the chart with perfect OHLC tabular text. If 𝑆𝑆 𝑦𝑚𝑇
+yields95%accuracy but 𝑆𝐹𝑢𝑙𝑙 yields60%, the underlying LLM
+mathematically understands financial reasoning, but the visual encoder actively bottlenecks knowledge extraction.
+• Case Study 2: Trustworthy Medical Diagnostics:A VLM
+evaluates a chest

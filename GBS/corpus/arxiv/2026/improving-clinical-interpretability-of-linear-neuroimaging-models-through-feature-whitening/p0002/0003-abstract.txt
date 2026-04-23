@@ -1,0 +1,29 @@
+title: Improving clinical interpretability of linear neuroimaging models through feature whitening
+source: arxiv
+year: 2026
+document_id: improving-clinical-interpretability-of-linear-neuroimaging-models-through-feature-whitening
+authors: Sara Petiton; Antoine Grigis; Raphaël Vock; Edouard Duchesnay
+page: 2
+section: abstract
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20675v1
+
+polar disorder
+or schizophrenia from healthy controls. Importantly, unlike
+PCA or ICA which use whitening as a dimensionality reduction step, our approach decorrelates anatomically informed
+pairs of neuroanatomical regions while retaining the full input
+signal, making it specifically suited for feature interpretation
+rather than feature selection. Our findings demonstrate that
+whitening improves the interpretability of model weights
+while preserving predictive performance, providing a robust
+framework for linking linear model outputs to neurobiological mechanisms.
+Index Terms—structural MRI, Machine Learning, Whitening, Interpretability, Neuroimaging, Psychiatry, Zero-Phase
+Component Analysis
+1. INTRODUCTION
+Linear models are widely used in computational neuroimaging due to their simplicity, interpretability, and ability to
+uncover relationships between brain measurements and clinical outcomes. They are applied in a variety of contexts,
+including classification of psychiatric disorders, prediction
+of cognitive scores, and identification of biomarkers from
+brain imaging [1, 2]. However, interpreting linear weights
+can be challenging when features are correlated, a common
+scenario in

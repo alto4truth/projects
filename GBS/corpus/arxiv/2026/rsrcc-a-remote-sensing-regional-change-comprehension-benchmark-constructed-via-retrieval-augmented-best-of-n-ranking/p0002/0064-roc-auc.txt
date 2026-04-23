@@ -1,0 +1,34 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 2
+section: roc-auc
+chunk: 64
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+osted deployment. This setup ensured consistent access to the same
+model family used throughout the benchmark construction and evaluation pipeline.
+31
+
+Figure 18: Word cloud visualization of the most frequent terms within the generated multiple-choice
+options. Larger words indicate higher frequency, highlighting recurring spatial and semantic patterns
+in the model outputs.
+O Qualitative Examples from the Dataset
+To provide qualitative insight into the proposed dataset, we present representative examples of image
+pairs and their associated multiple-choice questions. Each example consists of two temporally
+separated satellite images depicting a localized change, accompanied by a question with four answer
+options and a designated correct response. These examples illustrate the diversity of structural and
+land-use changes captured in the dataset, including construction, demolition, vegetation removal, and
+infrastructure development.
+The presented samples demonstrate the ability of the dataset to support fine-grained visual reasoning
+over subtle temporal changes, highlighting its suitability for training and evaluating multimodal
+models for remote sensing change understanding.
+Question: What change is observed between the two images?
+A. An existing building was expanded.
+B. A building was demolished.
+C. A new building was constructed.
+D. Vegetation was cleared to create space.
+The correct answer: C.
+32

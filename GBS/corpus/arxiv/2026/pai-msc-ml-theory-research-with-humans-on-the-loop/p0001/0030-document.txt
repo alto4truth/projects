@@ -1,0 +1,24 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+uent but incomplete paper is flagged as incomplete,
+and the workflow routes back to revision.
+Hard blockers are the mechanism through which the design requirement of separating structural validation
+from scientific truth (Section 2) becomes operationally concrete in the editorial phase.
+3.5 Multi-model counsel as structured disagreement
+Counsel is not redundancy for robustness. It is structured disagreement for quality.
+When counsel is enabled, a specialist stage proceeds as follows. Three frontier models—in the default
+configuration, Claude Opus 4.6, GPT-5.4, and Gemini 3 Pro Preview—each work in an isolated sandbox
+copy of the workspace. They produce independent candidate outputs without seeing each other’s work. The
+candidates are then exposed to multiple debate rounds in which each model critiques the others. Finally, a
+synthesis model (by default Claude Sonnet 4.6) integrates the strongest elements into a single authoritative
+output that is promoted back to the main workspace.
+The goal is to surface alternative reasoning, not to vote. A majority-rules scheme would converge to the
+blandest common denominator. Instead, the synthesis model must explicitly address disagreements, c

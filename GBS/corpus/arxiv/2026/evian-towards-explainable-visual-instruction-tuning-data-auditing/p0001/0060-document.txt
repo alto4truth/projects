@@ -1,0 +1,40 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 60
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+technically correct but presented in a
+highly misleading context.
+Score 4: Mostly Correct. The core assertion is factually sound but contains a
+minor, non-critical inaccuracy (e.g., a
+slightly wrong year, a minor detail about
+a standard feature).
+Score 5: Fully Correct and Accurate.
+Every single claim within the tags is
+factually sound, precise, and widely
+accepted.
+Dimension SV : Prompt for Image-Text
+Consistency
+Input Text: {text_input}
+Task: You are a visual consistency scoring
+assistant. Your task is to evaluate whether the
+extracted text description’s assertions can be
+verified by the given image. Only assess consistency, not completeness: do NOT penalize
+the description for omitting image details, but
+DO penalize any assertions that contradict or
+cannot be supported by the image.
+CORE SCORING GUIDELINE:Be decisive in your scoring. If the description is fully
+and accurately supported by the image without any errors, the score must be 5. Do not
+default to 4 if a 5 is warranted.
+Output Format:
+Score: integer 1-5
+Explanation: Brief justification, indicating
+which assertions are verifiable and which are
+inconsistent or unclear.
+Scoring Rubric:
+Score 1: Severely inconsistent or com

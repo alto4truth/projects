@@ -1,0 +1,55 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 3
+section: tcoon
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+cting water levels at peak surge, while the LSTM model, although
+capturing the correct value for 24 h-ahead corrections, slightly underestimate the
+30
+
+T able 4: Comparison of RMSE values for 24h- and 36h-ahead water level bias predictions for
+the full dataset and a two-day period around landfall for prediction with either StormNet or
+a sequential LSTM-based model [ 77], for each of the considered gauge stations and Hurricane
+Idalia (2023). The lowest RMSE value for each case among the two models are indicated with
+bold. The total amount of stations in which each model yields lower RMSE in each case in
+noted in the next-to-last row, and the average RMSE across all stations is included in the last
+row. The mapping of node numbers is displayed in Figure 4 and the respective gauge station
+information is shown in Table 3.
+RMSE (m)
+24h 36h
+Full test set 2 days around landfall Full test set 2 days around landfall
+Node ID StormNet LSTM [ 77] StormNet LSTM [ 77] StormNet LSTM [ 77] StormNet LSTM [ 77]
+0 0.088 0.087 0.086 0.087 0.089 0.093 0.106 0.119
+1 0.085 0.085 0.071 0.081 0.083 0.093 0.090 0.117
+2 0.103 0.086 0.109 0.103 0.100 0.092 0.117 0.122
+3 0.123 0.169 0.125 0.196 0.120 0.179 0.136 0.200
+4 0.093 0.107 0.113 0.106 0.096 0.109 0.126 0.114
+5 0.066 0.069 0.074 0.090 0.069 0.064 0.083 0.078
+6 0.054 0.058 0.056 0.063 0.057 0.076 0.063 0.072
+7 0.048 0.062 0.052 0.066 0.053 0.071 0.060 0.070
+8 0.069 0.059 0.065 0.057 0.062 0.060 0.067 0.068
+9 0.121 0.130 0.108 0.107 0.127 0.126 0.114 0.115
+10 0.122 0.077 0.132 0.081 0.131 0.092 0.142 0.101
+11 0.089 0.061 0.083 0.059 0.085 0.100 0.080 0.110
+12 0.085 0.078 0.063 0.065 0.081 0.103 0.066 0.080
+13 0.108 0.099 0.084 0.091 0.095 0.127 0.084 0.127
+14 0.054 0.040 0.061 0.032 0.052 0.055 0.049 0.050
+15 0.040 0.049 0.047 0.054 0.038 0.059 0.044 0.076
+Lowest RMSE in: 8 8 9 7 11 5 13 3
+A verage RMSE: 0.084 0.082 0.083 0.084 0.084 0.094 0.089 0.101
+±0.026 ±0.031 ±0.026 ±0.036 ±0.027 0.031 ±0.030 ±0.035
+water level for the 36 h-ahead case. In both cases, though, StormNet yields 12%-13%
+lower RMSE throughout the full water level time series. Finally, in the low severity
+example station (Galveston Bay Entrance North Jetty, 8771341, TCOON), the LSTM
+model shows slightly lower RMSE than StormNet for 24 h-ahead corrections, however,
+StormNet yields a 21% lower RMSE than LSTM in the 36 h-ahead correction case.
+Moreover, another important aspect for the application of such models in OFS
+is their training time. The training time of StormNet was around 5 minutes in all
+cases, while the LSTM-based model of [ 77] was shown to require 30 minutes to 1
+hour to be trained on a similar dataset size on the same hardware, so StormNet
+31

@@ -1,0 +1,21 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 2
+section: abstract
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+Published as a conference paper at ICLR 2026
+Figure 2: ORS learns the occupancy measure (distribution of future states) and extracts goal-reaching information into a reward function such that states with future states closer to goal have higher rewards.
+scaling poorly with task complexity as composing local information to infer global temporal dependencies often leads to compounding errors. So,can we learn
+reward functions that accurately and directly capture long-term temporal dependencies and goalreaching information present in offline data?
+Generative world models (Janner et al., 2020b; Schramm & Boularias, 2024; Farebrother et al.,
+2025) have shown a remarkable ability to capture the multi-modal distribution of future states an
+agent may visit, i.e., the occupancy measure. This suggests that they must inherently possess the
+ability to reason about long-term temporal effects of actions by encoding the geometry of the environment. Nonetheless, it remains unclear how to extract such temporal information from a learned
+world model and leverage it for credit assignment.
+In this paper, we formalize how world models encode world geometry. Specifically, using tools
+for optimal transpor

@@ -1,0 +1,24 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 4
+section: mnist
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+in transformation flow. As a result, their influence on model performance differs.
+Aggressive operators are more likely to generate trivial mutants with lower NRs, while moderate
+ones tend to produce more unkillable mutants with lower KRs. Here, we investigate the generation
+capabilities of different operators under the same settings as in RQ1. The KRs and NRs of different
+operators are reported in Table 7.
+We observe that the Add operator is relatively mild in mutation strength. It generally exhibits
+a lower KR and a higher NR. This finding is consistent with a previous study [ 51]. Currently,
+QuanForge adopts a single MO per mutant. Based on the performance of MOs, future work can
+explore combinations of different MOs to produce mutants with greater complexity and diversity.
+Moreover, a prioritization strategy for MOs could be developed to improve the generation efficiency
+of effective mutants, e.g., reducing the weight of MOs that tend to produce trivial mutants.
+4.7.2 Sensitivity to parameter choice.The choices of 𝜏𝑅𝑆𝐸 and 𝜏𝑡𝑟𝑖𝑣𝑖𝑎𝑙 directly determine how strictly
+QuanForge enforces mutant stability and accuracy. To conduct a sensitivity analysis by varying the
+two thresholds a

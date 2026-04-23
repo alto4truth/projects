@@ -1,0 +1,27 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 3
+section: da-2k
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+of SSL tasks
+affects model performance by varying the complexity of
+each task with two difficulty levels. Specifically, for Geometric Correspondence, we reduce the number of sampled
+points from 6 to 4; for Patch Ordering, we reduce the grid
+size from3×3to2×2; for Rotation Prediction, we reduce
+the angle interval from 90◦ to 45◦; for Visual Similarity, we
+reduce the augmentation strength from strong to weak; for
+Region Inpainting, we reduce the masking ratio from 0.5
+to 0.25. Figure 3 reports the average performance across
+all benchmarks. All configurations yield performance improvements over the base model, while a harder task generally leads to more gains, indicating that a higher degree of
+difficulty provides a stronger supervision signal for downstream reasoning. We also notice that increasing the task
+difficulty of Rotation Prediction degrades the performance.
+A possible explanation is that using an overly fine-grained
+rotation operation might induce overfitting to the SSL objective, leading to a negative transfer to downstream tasks.
+Training Dynamics.Figure 4 shows how our SSL-R1
+evolves during training. Generally, the rewards gradually
+increase with the training steps, while

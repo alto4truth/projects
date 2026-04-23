@@ -1,0 +1,42 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+8 Authors Suppressed Due to Excessive Length
+core DAPO objective maximizes:
+JDAPO(θ) = 1
+G
+GX
+i=1
+1
+|yi|
+|yi|X
+t=1
+min
+
+ρi,t(θ) ˆAi,clip(ρ i,t(θ),1−ϵ low,1 +ϵ high) ˆAi
+
+, (4)
+where asymmetric clipping bounds (ϵlow, ϵhigh) prevent premature convergence
+and mitigate gradient explosion during extended rollouts.
+Length-Aware Dynamic Sampling.The length of a reasoning trajectory is a
+strong proxy for problem difficulty and model uncertainty. In visual reasoning,
+mid-length trajectories often represent standard pattern matching, whereas extremely short trajectories indicate memorized guesses, and extremely long trajectories reflect complex multi-hop searches or self-correction loops. Adopting
+the core insight of LSPO, PGPO introduces a length-aware filtering mechanism
+at the batch level [33]. For the sampled group{yi}G
+i=1, we compute the sequence
+lengths{|y i|}G
+i=1. Rather than computing gradients over the entire group, we
+selectively retain a subsetG active ⊂ {1, . . . , G}comprising trajectories whose
+lengths fall within the empirically validated thresholds from LSPO (specifically,
+retaining the bottom 30% and those between the 60% and 90% percentiles).
+JPGPO(θ) = 1
+|Gactive|
+X
+i∈

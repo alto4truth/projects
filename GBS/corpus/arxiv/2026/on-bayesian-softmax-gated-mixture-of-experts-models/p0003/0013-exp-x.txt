@@ -1,0 +1,59 @@
+title: On Bayesian Softmax-Gated Mixture-of-Experts Models
+source: arxiv
+year: 2026
+document_id: on-bayesian-softmax-gated-mixture-of-experts-models
+authors: Nicola Bariletto; Huy Nguyen; Nhat Ho; Alessandro Rinaldo
+page: 3
+section: exp-x
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20551v1
+
+the experimental design and variational inference methodology used to generate
+the model selection results presented in Section 6 of the main text.
+44
+
+B.1 Black-Box Variational Inference Implementation
+To fit the candidate models, we utilize a black-box variational inference (BBVI) framework across
+all experiments.
+Variational family:We specify a fully factorized (mean-field) Gaussian variational familyQ
+over the transformed parameter space. Specifically, we place Gaussian variational distributions over
+the gating interceptsα0, gating slopesα1, regression coefficientsβ, and the log-varianceslogσ 2. The
+variational parametersµ therefore consist of the means and log-standard-deviations for each of these
+independent Gaussian distributions.
+Optimization:The ELBO is maximized using a pathwise (reparameterization) gradient estimator. During training, we draw standard normal samplesϵ∼ N (0, 1)and apply the location-scale
+transformation (e.g., θ = µθ + ϵexp (logσ θ)) to obtain differentiable samples from the variational
+posterior. We perform full-batch optimization using the Adam optimizer.
+Hyperparameters and evaluation:Zero-mean Gaussian priors are placed on the gating and
+regression parameters (with prior variancesτ1 = τ2 = τ3 = 10.0), alongside an Inverse-Gamma(2, 2)
+prior for the expert variances. Upon completion of the optimization routine, the final ELBO for
+each candidate model is estimated using 200 Monte Carlo samples from the optimized variational
+posterior qµ⋆. The model attaining the highest estimated ELBO is selected as the winner for that
+simulation round.
+B.2 Figure 1a experiment
+For the first experiment, we simulate covariates uniformly from a two-dimensional square,Xi ∼
+U(−1, 1)2. The true gating mechanism assigns observations to the first expert ifXi1 > X i2, and to
+the second expert otherwise. Conditional on the expert assignment, the responsesYi are drawn from
+a Gaussian linear regression model. The true parameters for the first expert are set to intercept
+β0,1 = 2.0, slopes β1,1 = [1.0, 1.0]⊤, and varianceσ2
+1 = 1.0. For the second expert, the parameters are
+β0,2 = −2.0, slopes β1,2 = [−1.0,− 1.0]⊤, and varianceσ2
+2 = 2.0. This creates a sharp discontinuity
+in the conditional mean surface.
+We evaluate candidate modelsK∈ { 1, 2, 3, 4} across sample sizesn∈ { 10, 25, 50, 100}, running
+50 independent replications per size. For this setup, the Adam optimizer is run for 50,000 iterations.
+To ensure stable convergence, learning rates are tailored to each(n, K)pair, ranging from 0.0036 to
+0.015.
+B.3 Figure 1b experiment
+For the more complex experiment, we increase the dimensionality tod = 6and simulate covariates
+uniformly, Xi ∼ U (−1, 1)6. The true model relies on K⋆ = 4experts. The gating mechanism
+is deterministic and assigns each observation based on the maximum value among the first four
+covariates:Z i =argmax k∈{1,2,3,4}Xi,k.
+Conditional on the assignment Zi = k, the responses Yi are drawn from a Gaussian linear
+regression model. The true intercepts alternate in sign, set toβ0,k = 2(−1)k−1. The slope vectors
+β1,k are predominantly diagonal, with thek-th component set to2(−1)k−1, while all components
+are additionally perturbed by independent Gaussian noiseN (0, 0.22). The expert variancesσ2
+k are
+linearly spaced between 1.0 and 2.0.
+We evaluate this configuration across larger sample sizesn∈ { 100, 500, 1000, 2000}, running
+50 independent replications per size. Candidate models are extended toK∈ { 1, . . . ,6}. Due to
+45

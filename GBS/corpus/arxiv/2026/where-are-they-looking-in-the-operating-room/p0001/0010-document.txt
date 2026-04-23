@@ -1,0 +1,28 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+e extend the
+4D-OR [26] and Team-OR datasets [6] with gaze annotations. 4D-OR is a video dataset consisting of 10 simulated
+knee surgeries with annotations of four clinical roles (head
+surgeon, assistant surgeon, circulating nurse and anesthetist)
+and eight surgical phases (OR preparation, patient roll-in,
+patient preparation, implant placement preparation, implant
+placement, conclusion, patient roll-out, and OR cleanup). The
+video recording is done in one frame per second, resulting in a
+total of 6,734 frames. The Team-OR dataset consists of more
+than 100 hours of operation videos of 37 real laparoscopic
+surgeries with team communication annotations (e.g. “StOP?”
+activity, where all OR team members pause their work and
+communicate for about 30-90 seconds during the surgical procedure). We sample one frame every five minutes, resulting in
+a total of 1,284 frames. For both datasets, we select one view
+that mostly captures the holistic OR scenes with the largest
+number of persons visible for annotations.
+After preparing the images, we conduct gaze-following
+annotations following the proposed protocol in previous

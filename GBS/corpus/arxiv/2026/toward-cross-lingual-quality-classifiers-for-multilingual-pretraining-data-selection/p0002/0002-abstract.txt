@@ -1,0 +1,19 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+As Large Language Models (LLMs) scale, data curation has shifted from maximizing volume to optimizing the signal-to-noise ratio by performing quality filtering. However, for many languages, native high-quality data is insufficient to train
+robust quality classifiers. This work investigates the idea that quality markers in
+embedding space may show cross-lingual consistency, which would allow highresource languages to subsidize the filtering of low-resource ones. We evaluate
+various filtering strategies, including cross-lingual transfer, third quartile sampling
+(Q3), and retention rate tuning. Our results demonstrate that massive multilingual pooling frequently outperforms monolingual baselines in both rank stability
+and aggregate accuracy for a 1B model trained on 103B tokens, delivering gains
+for high resource languages (1.2% increase in aggregate normalized accuracy for
+French) and matching or exceeding monolingual baselines for low-resource languages. However, we find that scale alone does not guarantee stability. Furthermore, for high-resource languages like French, we show that refining the decision
+boundary through third quartile sampling (Q3) or tuning the retention rate is n

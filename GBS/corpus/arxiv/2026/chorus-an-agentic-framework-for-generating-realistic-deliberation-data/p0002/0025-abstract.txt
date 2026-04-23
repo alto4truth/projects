@@ -1,0 +1,33 @@
+title: CHORUS: An Agentic Framework for Generating Realistic Deliberation Data
+source: arxiv
+year: 2026
+document_id: chorus-an-agentic-framework-for-generating-realistic-deliberation-data
+authors: A. Koursaris; G. Domalis; A. Apostolopoulou; K. Kanaris; D. Tsakalidis; I. E. Livieris
+page: 2
+section: abstract
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20651v1
+
+1.0 0.40 0.40
+Casual User 3 1.2 1.5 0.50 0.30
+Casual User 4 0.5 0.7 0.35 0.45
+Expert Expert 0.4 0.6 0.60 0.65
+Advocate 1
+Advocate
+1.0 1.8 0.55 0.25
+Advocate 2 1.2 2.0 0.60 0.20
+Advocate 3 0.8 1.6 0.50 0.30
+Skeptic 1 Skeptic 0.55 1.3 0.70 0.55
+Skeptic 2 0.45 1.1 0.75 0.60
+Table 1: Actor configuration and behavioral parameters.λ post
+i andλ action
+i denote the expected number of posts and
+actions per unit time,p reply
+i the probability of replying to an existing post, andθ action
+i the action selectivity threshold.
+Figure 1 illustrates the simulated activity produced by CHORUSover theT= 20minute horizon, reporting per-minute
+participation dynamics, per-actor engagement volumes and the distribution of new comments versus replies.
+Figure 1(a) confirms that the Poisson process-based temporal model produces sustained yet irregular participation,
+with posting rates fluctuating between 3 and 13 posts per minute and voting actions ranging from 6 to 25 per minute.
+Actions consistently outnumber posts throughout the simulation, reflecting the higherλ action parameterization across
+all archetypes. Neither signal exhibits monotonic trends or periodic structure, approximating the bursty, non-st

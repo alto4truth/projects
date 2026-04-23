@@ -1,0 +1,29 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 1
+section: f2lp-ap-3
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+e philosophy ofF 2LP-APis to construct a predictive pipeline that is entirely
+decoupled from gradient-based training and capable of adaptive evolution based
+on local topological structures.
+The entire framework consists of three tightly coupled stages. The first stage
+involvesRobust Prototype Construction. Instead of using arithmetic means
+which are susceptible to noise, we derive the cluster center for each class by
+computing the geometric median of the training features:
+Pc = arg min
+µ
+X
+vi∈VL,c
+∥xi −µ∥ 2 (1)
+whereP c denotes the robust prototype for classc. This is followed by the core
+Adaptive Feature Propagationstage. Departing from the limitation of globally uniform parameters in traditional methods, we introduce the Local Clustering Coefficient (LCC) as a structure-aware indicator to dynamically map individualized propagation parameters for each nodev i:
+ϕ:LCC i → {K i, αi}(2)
+This mapping mechanism enables the model to achieve precise feature smoothing
+control for both homophilous regions (high LCC) and heterophilous regions (low
+LCC). Finally, the features ˆXtransformed by the adaptive kernel enter the
+Analytical Classificationstage. We generate the final predictions by di

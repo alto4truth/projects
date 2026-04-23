@@ -1,0 +1,25 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 2
+section: edges-total-gp-id-time-gp-degbd-id-time-degbd
+chunk: 46
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+iable and suppose that Assumption 7.1
+holds. Then there is an identifying order≺and a corresponding set of identifying polynomialsP≺
+such thatmax g∈P≺ deg(g)≤2s+ 1.
+Finally, we consider the Auxiliary Cutset criterion, that is, to the best of our knowledge, the current
+state-of-the art criterion for rational identification of acyclic mixed graphs that runs in polynomial
+time. If a graphGis certified to be rationally identifiable by the Auxiliary Cutset identification
+algorithm (Kumor et al., 2020), we say thatGis AC-identifiable.
+Proposition 7.4.Let an acyclic mixed graphGbe AC-identifiable and suppose that Assumption 7.1
+holds. Then there is an identifying order≺and a corresponding set of identifying polynomialsP≺
+such thatmax g∈P≺ deg(g)≤s 4 + 2s3 +s 2.
+8 Conclusion
+We have proposed an algorithm for deciding rational identifiability in linear structural equation
+models using computational algebra. The algorithm provides a sufficient criterion for identifiability
+and provably finds all identification formulas up to a prespecified degree in quasi-polynomial time
+16

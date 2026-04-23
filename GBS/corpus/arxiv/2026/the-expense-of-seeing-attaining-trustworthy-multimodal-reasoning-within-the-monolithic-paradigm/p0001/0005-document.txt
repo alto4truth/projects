@@ -1,0 +1,28 @@
+title: The Expense of Seeing: Attaining Trustworthy Multimodal Reasoning Within the Monolithic Paradigm
+source: arxiv
+year: 2026
+document_id: the-expense-of-seeing-attaining-trustworthy-multimodal-reasoning-within-the-monolithic-paradigm
+authors: Karan Goyal; Dikshant Kukreja
+page: 1
+section: document
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20665v1
+
+s
+are increasingly deployed in high-stakes Data Science applications
+ranging from autonomous medical diagnostics [6, 16] to financial
+time-series forecasting [ 10], an alarming epistemic fragility has
+been exposed. Highly parameterised, state-of-the-art models frequently achieve superficial benchmark supremacy by ignoring the
+visual input entirely. Instead, they exhibit a modernClever Hans
+effect, executing complex statistical guessing via deeply ingrained
+text priors housed within their massive Large Language Model
+(LLM) backbones [3–5]. A latest work, BabyVision [4], shows that
+SOTA VLMs consistently fail on basic visual tasks that humans, even
+3-year-olds, can solve effortlessly. It released a dataset benchmark
+designed to assess core visual abilities independent of linguistic
+knowledge for VLMs. MMVP [ 13] released a dataset benchmark
+to probe visual limitations and found that models fail to distinguish images with clear perceptual differences. ConMe [7] released
+compositional reasoning benchmark to produce ‘hard CR Q&A’.
+Recent initiatives within the representation learning community,
+such as MATHVERSE [15], SeePHYS [14] and MMStar [3], have
+attempted to uncover and quantify t

@@ -1,0 +1,25 @@
+title: MGDA-Decoupled: Geometry-Aware Multi-Objective Optimisation for DPO-based LLM Alignment
+source: arxiv
+year: 2026
+document_id: mgda-decoupled-geometry-aware-multi-objective-optimisation-for-dpo-based-llm-alignment
+authors: Andor Vári-Kakas; Ji Won Park; Natasa Tagasovska
+page: 6
+section: mgda-d-ecoupled
+chunk: 46
+source_ref: https://arxiv.org/pdf/2604.20685v1
+
+ro-shot pairwise judge. The model received a system prompt establishing its role and strict
+output format, followed by a user prompt containing the query and two anonymised responses (the model generation
+and the golden response, presented in randomised order).
+The common system prompt was:
+You are an impartial AI judge. Your task is to compare two responses and
+determine which is better. Return ‘1’ if the first response is better, ‘2’
+if the second response is better, or ‘0’ for a tie. You must only return
+1, 2, or 0, nothing else.
+Foroverall qualitycomparisons, the user prompt was:
+QUERY: {query}
+RESPONSE 1: {response_1}
+RESPONSE 2: {response_2}
+Which response is better overall?
+Forobjective-specificcomparisons, the final question was adjusted according to the objective:
+15

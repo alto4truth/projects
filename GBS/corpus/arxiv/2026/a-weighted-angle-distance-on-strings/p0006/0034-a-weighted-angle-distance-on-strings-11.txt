@@ -1,0 +1,22 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 6
+section: a-weighted-angle-distance-on-strings-11
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+) time using generalized suffix trees (or suffix arrays), by reducing the cross-scale dot
+products and squared norms to aggregates over internal nodes. This makesd ρ viable as a
+primitive for large-scale sequence comparison in principle, though the end-to-end runtime
+in our current Python reference implementation remains dominated by engineering choices
+in the surrounding pipeline. In particular, the DBSCAN experiments in Section 5 require
+constructing full pairwise distance matrices; our implementation does not currently cache
+repeated computations across parameter sweeps, vectorize the trigonometric calculations, or
+exploit parallelism. Consequently, the reported wall-clock times should be read as a baseline
+for a straightforward prototype rather than as an intrinsic limitation of the methodology.
+Empirically, the experiments suggest the following picture. On datasets whose class structure is driven primarily by tandem-repeat statistics, weighted angle distances can substantially outperform classical edit distances and fixed-scalek-gram baselines, and performance
+is reasonably stable across a broad range ofρ. On more conventional sequence corpora, edit
+distances may remain the be

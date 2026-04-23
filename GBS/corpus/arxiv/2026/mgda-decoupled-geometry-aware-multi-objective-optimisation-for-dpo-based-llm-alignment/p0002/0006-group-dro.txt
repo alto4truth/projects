@@ -1,0 +1,22 @@
+title: MGDA-Decoupled: Geometry-Aware Multi-Objective Optimisation for DPO-based LLM Alignment
+source: arxiv
+year: 2026
+document_id: mgda-decoupled-geometry-aware-multi-objective-optimisation-for-dpo-based-llm-alignment
+authors: Andor Vári-Kakas; Ji Won Park; Natasa Tagasovska
+page: 2
+section: group-dro
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20685v1
+
+able for every objective at each step. We
+perform full-parameter fine-tuning using the Adam optimiser [Kingma and Ba, 2015] with a learning rate of 5e-7
+and no weight decay. Regarding loss formulation, we set the DPO KL-penalty coefficient to β= 0.5 , which we
+found necessary to mitigate instability observed at lower values. For GROUPDRO, we employ a step size of η= 0.1 .
+Comprehensive hyperparameter settings are detailed in Section A.1.
+Evaluation details.We evaluate model performance using the LLM-as-a-judge framework [Zheng et al., 2023]
+with GPT-4o [Hurst et al., 2024]. For each test prompt, we identify agolden responsefrom the UltraFeedback pool,
+defined as the response with the highest cumulative score across all four objectives. We then sample responses from our
+fine-tuned models and conduct pairwise comparisons against these golden responses. The judge evaluates both overall
+quality and per-objective performance, outputting a win, tie, or loss. We report theNet Win Rate(Win % − Loss %)
+following Ning et al. [2023], and use paired bootstrap resampling [Koehn, 2004] with α= 0.05 to test for significant
+improvements over the REFERENCEbaseline. Evaluation prompts and further de

@@ -1,0 +1,35 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 15
+section: when-in-doubt
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+- Re-read the query and identify the core information need
+- Ask: "If I were the user, would this document satisfy my search?"
+- Lean toward precision: it’s better to miss a marginally relevant
+doc than include an irrelevant one
+--USER:
+Judge which documents are RELEVANT to the given search query.
+A document is RELEVANT if it:
+- Contains information that directly helps answer the query
+- Would satisfy a user who submitted this search
+- Provides substantive content on the query topic
+A document is NOT RELEVANT if it:
+- Only shares keywords but addresses a different information need
+- Is about a related but distinct topic
+- Mentions the query concepts tangentially without substantive
+coverage
+Search Query: "{query_text}"
+Candidate Documents:
+{documents_text}
+For each document, determine if it would SATISFY a user searching
+for this query. Consider:
+1. Does this document contain information the user is looking for?
+2. Would returning this document be helpful for this specific query?
+3. Is the relevance substantive or merely superficial keyword overlap?
+Respond with ONLY the document numbers that are RELEVANT,
+17

@@ -1,0 +1,23 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+vote. A majority-rules scheme would converge to the
+blandest common denominator. Instead, the synthesis model must explicitly address disagreements, choosing
+between alternatives with stated rationale. Engineering discipline is maintained through circuit breakers and
+quorum logic: if models fail, time out, or produce degenerate outputs, the system falls back gracefully rather
+than blocking the entire pipeline.
+This design targets stages where disagreement is informative—literature review, experiment design, and
+manuscript writing—and it changes the failure mode from “one model silently committed to one line of
+reasoning” to “multiple models exposed and critiqued alternative drafts before promotion.”
+3.6 Tree search over proof strategies
+Proof construction has genuine combinatorial structure, and a single linear pass through a proof attempt is
+often insufficient. When tree search is enabled, the theory track’s prover stage is replaced by a DAG-layered
+best-first search controller.
+10

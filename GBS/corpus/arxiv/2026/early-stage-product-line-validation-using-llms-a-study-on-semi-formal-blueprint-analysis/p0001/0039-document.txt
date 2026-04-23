@@ -1,0 +1,26 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+rok handles scale and constraint density, GPT-5 mini excels in fine-grained constraint reasoning, and
+Gemini maintains strict output conformance. Simple ensemble aggregation (majority vote or confidence-weighted fusion) mitigates
+idiosyncratic errors and raises reliability with minimal engineering,
+matching the “low-friction” goal of early validation.
+Actionable guidance.To harden early analyses, we recommend
+four concrete measures aligned with the observed failure modes:
+(i) add short disambiguation rules that test group semantics before
+any counting (distinguishor/alternativefrommandatory) to reduce
+semantic slips inAO4–AO9, (2) plan outputs for long blueprints by
+chunking lists and capping free text to avoid truncation and partial
+results on large cases (e.g.,CNNl/CNNf), (iii) use model ensembles on
+medium and large blueprints (majority vote or confidence-weighted
+fusion across top models) to smooth per-model weaknesses in propagation and enumeration (notably AO12 and AO15), (iv) maintain
+human oversight through stakeholder review and verification protocols to prevent automation bias, as approximately 1 in 10 analyses
+may contain errors.
+Threats to Validity.Our evaluation uses b

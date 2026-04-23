@@ -1,0 +1,20 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+bias score N‡
+Our Study GPT-4o, Llama-3, Gemma-3, Gemini-2.0 Flash,
+Gemini-2.5-Flash, Claude-Sonnet-4
+BBQ benchmark Y Y Y accuracy, bias scores, Differential Fairness (DF), Statistical Parity (SF), Equal
+Opportunity (FNR parity)
+Y
+* Consistency through repeated prompts with different random seeds.
+⁄pilcrowBias score from both ambiguous and disambiguated contexts (𝐷𝐼 𝑆 and 𝐴𝑀𝐵 , respectively) adapted from the original paper [Parrish et al. 2022].
+‡ LLM consistency is rather assessed through permutation / shuffling of MCQ options, and / or variations in prompts.
+§ BBG is a dataset adapted from BBQ to assess social bias in LLMs via story continuations, available in English (BBQ) and Korean (koBBQ).

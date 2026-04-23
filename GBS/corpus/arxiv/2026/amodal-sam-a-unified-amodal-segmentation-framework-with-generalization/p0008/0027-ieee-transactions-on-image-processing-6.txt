@@ -1,0 +1,34 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 8
+section: ieee-transactions-on-image-processing-6
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+e of 0 to 1. During closeddomain training, where unobstructed images are not available,
+only the mask is utilized as input to the discriminator. In
+both training phases, the output from Amodal SAM serves
+as negative samples, while the ground truth acts as positive
+samples. This approach aims to align the distribution of the
+model-predicted mask with the ground truth, facilitating the
+learning of shape priors for achieving topological regularizaMask Decoder
+Image
+Encoder
+Prompt
+Encoder
+Predict
+Masks
+Ground
+Truth Masks
+Dataset
+Discriminator
+Predict Label
+Amodal SAM
+Fig. 7. The discriminator uses the predictions from Amodal SAM as negative
+samples and the ground truth as positive samples. This alignment helps the
+model-predicted mask distribution closely match the ground truth, facilitating
+the learning of shape priors for achieving topological regularization.
+tion as illustrated in Fig. 7.

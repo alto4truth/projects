@@ -1,0 +1,26 @@
+title: Improving clinical interpretability of linear neuroimaging models through feature whitening
+source: arxiv
+year: 2026
+document_id: improving-clinical-interpretability-of-linear-neuroimaging-models-through-feature-whitening
+authors: Sara Petiton; Antoine Grigis; Raphaël Vock; Edouard Duchesnay
+page: 2
+section: abstract
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20675v1
+
+ures were extracted from T1-weighted brain MRI data using the CAT12
+toolbox [14], (v 12.7). The brain was parcellated according to
+the Neuromorphometrics atlas [15], which defines140ROIs
+across both hemispheres. Both GM and CSF volumes were
+included, resulting in a total of280ROIs.
+2.2. Machine Learning setup
+For both classification tasks (i.e., BD vs. HC, SCZ vs. HC),
+train and test sets were constructed using a ten-fold crossvalidation (CV). Classification performance was assessed using the area under the receiver operating characteristic curve
+(ROC-AUC) and balanced accuracy (BAcc) metrics. ROIbased measures were stratified by age, sex, acquisition site,
+and diagnosis using the MULM [16] package. For whitening
+experiments, features were first residualized, then whitened,
+and finally scaled. We chose logistic regression as our classification model for its interpretability and linearity, allowing
+for straightforward computation of weights in the whitened
+space and their projection back to the original feature space.
+The regression was performed with scikit-learn (v. 1.3.2)
+[17], with hyperparameter tuning via a grid search, to identify the bestL 2 regularization parameterC, evalua

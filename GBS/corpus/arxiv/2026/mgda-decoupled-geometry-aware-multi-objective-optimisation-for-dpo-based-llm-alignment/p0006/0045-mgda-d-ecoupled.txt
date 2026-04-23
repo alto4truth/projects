@@ -1,0 +1,40 @@
+title: MGDA-Decoupled: Geometry-Aware Multi-Objective Optimisation for DPO-based LLM Alignment
+source: arxiv
+year: 2026
+document_id: mgda-decoupled-geometry-aware-multi-objective-optimisation-for-dpo-based-llm-alignment
+authors: Andor Vári-Kakas; Ji Won Park; Natasa Tagasovska
+page: 6
+section: mgda-d-ecoupled
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20685v1
+
+A Appendix
+A.1 Training hyperparameters
+The hyperparameters used in fine-tuning for all algorithms are enumerated in Table 3. The quadratic programs
+Equation (4) and Equation (5) were solved iteratively using the Frank-Wolfe method [Sener and Koltun, 2018]. As
+Gemma-2-2b-it and Qwen2.5-0.5B-Instruct were already instruction-finetuned, we used their official chat templates.
+Table 3: Training hyperparameters.
+Hyperparameter Value
+Model precision bf16
+Attention mechanism Flash Attention 2
+GPUs1×NVIDIA B200
+Microbatch size8
+Gradient accumulation steps4
+Effective batch size32
+Max sequence length1024
+Training epochs1
+Optimiser AdamW
+Learning rate1×10 −7
+Adam(β 1, β2) (0.9,0.999)
+Weight decay0.0
+Learning rate schedule Cosine annealing
+Warmup ratio0.03
+DPO KL penalty (β)0.5
+GROUPDRO Step size (η)0.1
+Frank-Wolfe max iterations20
+Frank-Wolfe convergence threshold1×10 −8
+A.2 Evaluation hyperparameters
+Table 4 lists the hyperparameters used during inference and evaluation for all algorithms.
+A.2.1 LLM-as-a-Judge Prompts
+We utilised GPT-4o as a zero-shot pairwise judge. The model received a system prompt establishing its role and strict
+output format, followed by a user prompt containing the qu

@@ -1,0 +1,80 @@
+title: A Hierarchical MARL-Based Approach for Coordinated Retail P2P Trading and Wholesale Market Participation of DERs
+source: arxiv
+year: 2026
+document_id: a-hierarchical-marl-based-approach-for-coordinated-retail-p2p-trading-and-wholesale-market-participation-of-ders
+authors: Patrick Wilk; Ethan Cantor; Yikui Liu; Jie Li
+page: 2
+section: abstract
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20586v1
+
+t:
+•Initializeactornetwork𝜇 𝑛 with𝜃 𝜇𝑛
+𝑛 andcriticnetwork𝑄 𝑛 with𝜃 𝑄𝑛
+𝑛 ;
+•Initialize target networks𝜇 ′
+𝑛 and𝑄 ′
+𝑛 with weights𝜃
+𝜇′
+𝑛
+𝑛 ←𝜃 𝜇𝑛
+𝑛 and
+𝜃
+𝑄′
+𝑛
+𝑛 ←𝜃 𝑄𝑛
+𝑛 ;
+•Initialize LSD experience replay buffer;
+•Initialize PPO parameters, including actor network𝜋 𝜃 and critic
+network𝑉 𝜙. PPO uses its own data buffer for trajectories.
+2:Training Loop for each episode𝑒= 1,2,...:
+•Reset the environment: get initial observation𝑠 0
+𝑛 for each LSDMADDPG agent𝑛, and get𝑠0
+𝑎𝑔 initial state for PPO.
+•Foreach timestep𝑡until the terminal state:
+A. LSD-MADDPG Agents’ Actions: Each agent𝑛observes
+(𝑠𝑡
+𝑛, 𝑠𝑡
+𝑎𝑔). Select action𝑎𝑡
+𝑛 =𝜇 𝑛(𝑜𝑡
+𝑛).
+B. Partial Environment Step:
+i. Execute actions{ 𝑎𝑡
+𝑛
+} in LSD-MADDPG layer;
+i. Update𝑠 𝑡
+𝑎𝑔 resulting in𝑠𝑡,∗
+𝑎𝑔.
+C. PPO Actions: PPO observes𝑠 𝑡,∗
+𝑎𝑔. Select action𝑎 𝑡
+𝑎𝑔 ∼
+𝜋𝜃(𝑎𝑡
+𝑎𝑔|𝑠𝑡,∗
+𝑎𝑔 ).
+D. Finalized Environment Step:
+i. Execute actions𝑎𝑡
+𝑎𝑔. Next states for LSD𝑠𝑡′
+𝑛 and PPO𝑠𝑡′
+𝑎𝑔;
+i. Rewards𝑟 𝑡
+𝑛 and𝑟 𝑡
+𝑎𝑔. Get terminal signalsdone.
+E. Updates for LSD-MADDPG and PPO:
+i. Every𝛿steps for LSD-MADDPG sample:
+–Batch of𝜌transitions(𝑠 𝑗
+𝑛, 𝑎𝑗
+𝑛, 𝑟𝑗
+𝑛, 𝑠𝑗′
+𝑛 , 𝑠𝑗
+𝑎𝑔, 𝑠𝑗′
+𝑎𝑔)from;
+–Compute critic loss:𝐿(𝜃 𝑄𝑛
+𝑛 ) = 1
+𝜌
+∑𝜌
+𝑗=1 (𝑦𝑗
+𝑛 −
+𝑄𝑛(𝑠𝑗
+𝑛, 𝑎𝑗
+𝑛, 𝑠𝑗
+𝑎𝑔))2;

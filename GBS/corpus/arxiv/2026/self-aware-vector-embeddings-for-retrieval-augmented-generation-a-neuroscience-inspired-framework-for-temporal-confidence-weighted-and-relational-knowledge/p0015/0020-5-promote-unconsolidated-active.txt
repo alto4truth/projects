@@ -1,0 +1,27 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 15
+section: 5-promote-unconsolidated-active
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+r old in affected:
+old.status = DEPRECATED
+new = rebuild_from_new_text(old, new_text)
+new.supersedes = old.vector_id
+new.depends_on = old.depends_on
+9
+
+new.depended_by = old.depended_by
+recent_changes.append(new.vector_id)
+8 Context Assembly
+The retrieved context passed to the generator is not an undifferentiated list of chunks. It is a
+structured prompt in which every chunk is annotated with its scores, version, age, access and
+feedback counts, and any conflict flags. This gives the generator the same information a human
+analyst would want when triaging sources, and lets a well-prompted model produce citations with
+explicit version and date. An abbreviated example of the LLM-facing context block is reproduced
+below.
+=== SMART VECTOR RETRIEVAL CONTEXT ===

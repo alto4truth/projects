@@ -1,0 +1,39 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 2
+section: items-in-scene510-1015-1520-2025-25
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+r than a runnable
+quantitative baseline.
+Global-access MLLM Baseline.A potential
+concern is that the baseline MLLMs in Table 1
+only observe the current scene, whereas SiPeR can
+search over the global scene pool through STE. To
+examine this setting more directly, we augment the
+strong zero-shot Qwen2.5-VL baseline with the
+top-5 scene images returned by our coarse retrieval
+stage and ask the model to jointly reason over these
+candidate scenes. We use the zero-shot version
+here to isolate the effect of expanded scene access
+alone, without conflating it with additional supervised adaptation. As shown in Table 9, this globalaccess variant improves R@1 from 16.72 to 19.58
+on SIMMC 2.1, but it still remains far below the
+Transition Strategy Feasibility Final Rec.
+R@1
+Direct MLLM Decision Infeasible N/A
+Qwen3 Dense Retrieval Feasible 35.24
+SiPeR STE Feasible 38.75
+Table 8: Comparison of scene transition strategies on
+SIMMC 2.1. Direct MLLM decision over all 1,566
+candidate scenes is included as an infeasible reference
+point, while Qwen3 dense retrieval and our generativeretrieval STE are both runnable strategies.
+Method Final Rec.
+R@1
+Latency
+vs. Zero-shot
+Qwen2.5-VL
+(current scene) 16.72

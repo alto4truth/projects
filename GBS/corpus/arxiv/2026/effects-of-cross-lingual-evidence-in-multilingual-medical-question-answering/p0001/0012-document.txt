@@ -1,0 +1,31 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+odels encode a significant amount of specialized
+knowledge (Wei et al., 2022; Singhal et al., 2022).
+This capability has sparked extensive research into
+evaluating how well state-of-the-art LLMs perform
+on specialized clinical tasks and medical knowledge domains (Zhang et al., 2023; Achiam et al.,
+2023; Bai et al., 2023; Xiong et al., 2024a; Sellergren et al., 2025).
+Recent research has systematically assessed the
+medical competency of foundation models, including Llama (Touvron et al., 2023; Grattafiori et al.,
+2024), Mistral (Jiang et al., 2024), Gemma (Team
+et al., 2025), and Qwen (Bai et al., 2023), among
+others. While Large Language Models (LLMs)
+exhibit strong performance in medical knowledge
+recall and clinical reasoning (Achiam et al., 2023;
+Xiong et al., 2024a), significant challenges persist
+in ensuring reliability, detecting hallucinations, and
+maintaining consistency with established clinical
+guidelines (Zhang et al., 2023; Wu et al., 2025).
+In the remainder of this section, we focus on reviewing prior work on medical question answering,
+including datasets, systems, and techniques for retrieving and applying external knowledge sources
+and reasoning mechanisms.
+Medical Q

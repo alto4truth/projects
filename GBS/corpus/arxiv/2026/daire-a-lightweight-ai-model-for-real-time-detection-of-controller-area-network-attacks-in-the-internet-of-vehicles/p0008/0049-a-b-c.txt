@@ -1,0 +1,37 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 8
+section: a-b-c
+chunk: 49
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+S. Alam et al.
+Fig. 7. Confusion matrix visualization of the results provided in Tables 6 and 7 on the two datasets using different hidden layers with batch size = 𝑡𝑟𝑎𝑖𝑛𝑖𝑛𝑔 𝑑𝑎𝑡𝑎 𝑠𝑖𝑧𝑒
+300
+and epochs = 100. BE = Benign, DO = DoS, GA = Gas, RP = RPM, SP = Speed, ST = Steering Wheel, GE = Gear, and FU = Fuzzy.
+Table 7
+Classification results of different classes by DAIRE on the two datasets with
+hidden layers = 3, batch size = 𝑡𝑟𝑎𝑖𝑛𝑖𝑛𝑔 𝑑𝑎𝑡𝑎 𝑠𝑖𝑧𝑒
+300 , and epochs = 100. An ↑ signifies
+that a higher value is preferable, while a ↓ indicates that a lower value is
+preferable.
+Attack Type DR ↑ FPR ↓ Accuracy ↑ Precision ↑ F1-score ↑
+CICIoV2024
+Normal/Benign 99.99% 0% 99.99% 99.99% 99.99%
+DoS 100% 0% 99.99% 99.97% 99.94%
+Gas Spoofing 100% 0% 100% 100% 100%
+RPM Spoofing 99.99% 0% 99.99% 99.99% 100%
+Speed Spoofing 100% 0% 100% 100% 100%
+Steering Wheel Spoofing 99.95% 0% 99.94% 99.97% 100%
+Average 99.99% 0% 99.99% 99.99% 99.99%
+Car-Hacking
+Normal/Benign 99.94% 0.2% 99.83% 99.70% 99.46%
+DoS 100% 0% 100% 100% 100%
+Fuzzy 98.97% 0% 99.84% 99.47% 99.98%
+Gear Spoofing 100% 0% 99.98% 99.96% 99.91%
+RPM Spoofing 100% 0% 99.99% 99.99% 99.99%
+Average 99.78% 0.04% 99.93% 99.83% 99.87%
+across both the dataset

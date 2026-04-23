@@ -1,0 +1,38 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 2
+section: vocabulary-category-items
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+1 chronic (4-class) 7
+2 neoplasia (3-class) 1
+3 duration (short/long) 2
+4 binary (y/n) 61
+5 mobility (4-class) 1
+6 consciousness (AVPU) 1
+7 respiratory rate (3-cat) 1
+8 body temperature (3-cat) 1
+9 heart rate (3-cat) 1
+10 blood pressure (3-cat) 1
+11 respiratory distress (current/past) 1
+12 diagnostic tests (pos/neg) 4
+13 labs (measured/numeric) 25
+Total 107
+Unknown-only remainder 27
+Grand Total 134
+Table 1: The 13 controlled-vocabulary categories defined by the CRF ontology.
+Stage 2 maps every extracted value string into exactly one of these categories.
+stripping (e.g., first episode→first episod ); (c) abbreviation expansion (70+ rules, e.g.,hr→heart rate, cxr→chest rx);
+(d) optionally, UMLS alias resolution using a curated map with
+134/134 item coverage[2].
+Step 3: FP-Gates & Derivation.Derive high-FN composite items from
+Stage 1 evidence:poly-pharmacological therapyis inferred when≥8
+distinct medications are listed;antihypertensive therapyis detected
+by matching 35 antihypertensive agents;cardiovascular diseases
+is derived from therapy flags or PMH keywords. Then, strict
+regex-based evidence gatesdropunsupported positive predictions
+for items with high FP cost:active neoplasia(r

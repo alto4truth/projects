@@ -1,0 +1,27 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+Table 3: Comparisons with state-of-the-art data selection baselines on 10K subsets, whereboldand underlined
+indicate the best and second-best results, respectively. “Full Data” denotes training on the entire 300K pool.
+Model MME MMBench SEEDBench ScienceQA A-OKVQA POPE Avg
+Random 1475.76 0.5353 0.6031 0.6614 0.7092 75.50 63.18
+Full Data 1553.05 0.5953 0.5743 0.6267 0.6934 78.17 63.77
+CLIPScore 1565.29 0.5746 0.6170 0.6906 0.7301 74.57 65.28
+ALBEF 1590.70 0.6003 0.6107 0.6748 0.7048 72.29 64.69
+BLIP 1686.62 0.6183 0.6115 0.6802 0.6978 73.40 65.74
+BLIP-2 1810.34 0.6317 0.6187 0.7045 0.7127 77.38 68.13
+SCALE 1814.97 0.6318 0.6280 0.6916 0.7066 73.81 67.41
+Qwen2.5-VL 1682.78 0.5796 0.6182 0.6797 0.7187 78.30 66.34
+EVIAN (Ours) 1876.89 0.6463 0.6359 0.7115 0.7493 79.87 70.20
+Table 4: Ablation study of the EVIAN framework, evaluating the contribution of individual components by removing
+them from the full pipeline. “w/o Decomposition” denotes the variant without the fine-grained decomposition stage.
+SL andS K represent theLogical CoherenceandFactual Accuracyscores, respectively.
+Configuration MME MMBench SEEDBench ScienceQA A-OKVQA POPE Avg
+w/o Decomposition 1706.70 0.6401 0.6312 0.7085

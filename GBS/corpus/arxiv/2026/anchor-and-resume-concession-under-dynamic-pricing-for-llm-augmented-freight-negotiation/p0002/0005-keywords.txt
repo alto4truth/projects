@@ -1,0 +1,27 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+ntroduces per-round inference cost that limits horizontal scaling,
+non-deterministic outputs that complicate auditability, and
+operational dependence on a single model provider.
+We make four contributions:
+(1) Spread-derived 𝛽 for scalable deployment.We
+replace Faratin’s fixed 𝛽 with 𝛽 = 𝑐/(𝑠× 100), where
+𝑠 is the fractional spread from the pricing model. This
+automatically maps each load’s margin structure to
+the correct concession posture (Conceder for narrow
+spreads, Boulware for wide spreads), eliminating pernegotiation tuning and enabling platform-wide deployment across hundreds of thousands of annual deals
+(Section 3.2).
+(2) Two-index anchor-and-resume framework.When
+a pricing shift occurs mid-negotiation, the framework
+decouples the negotiation round from the Faratin curve
+position, allowing the agent’s concession behavior to
+1
+arXiv:2604.20732v1 [cs.MA] 22 Apr 2026

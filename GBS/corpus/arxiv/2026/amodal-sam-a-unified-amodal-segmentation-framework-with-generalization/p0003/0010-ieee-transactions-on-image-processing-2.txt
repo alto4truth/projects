@@ -1,0 +1,30 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 3
+section: ieee-transactions-on-image-processing-2
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+billion masks—SAM demonstrates extraordinary zero-shot generalization across diverse
+visual domains, effectively establishing a new paradigm for
+interactive and automated segmentation.
+SAM-based adaptation.The remarkable generalization
+capability of SAM has inspired numerous downstream adaptation [14]–[17] tailored for specialized domains. Notable
+advancements include HQ-SAM [17], which introduces a
+refined output token to capture intricate boundary details,
+and MedSAM [16], which specializes the model for medical
+imaging via large-scale domain-specific fine-tuning. Drawing inspiration from the adapter-based paradigm in natural
+language processing [18], [19], recent frameworks such as
+SAM-Adapter [14] and ViT-Adapter [20] utilize lightweight
+bottleneck modules to inject domain-specific knowledge into
+the frozen ViT backbone. These strategies preserve the robust
+pre-trained representations while enabling efficient knowledge
+transfer to downstream tasks with minimal computational
+overhead.
+Limitations in amodal segmentation.Despite the success
+of these adaptation schemes, extending SAM’s capabilities
+to the amodal domain presents a unique challenge. While
+we adopt the principle of ad

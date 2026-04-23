@@ -1,0 +1,26 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 3
+section: da-2k
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+sks.
+Training Dynamics.Figure 4 shows how our SSL-R1
+evolves during training. Generally, the rewards gradually
+increase with the training steps, while different tasks exhibit
+different trends. Specifically, Visual Similarity and Rotation Prediction rapidly increase in early training stages and
+finally converge to near-perfect accuracies. Region Inpainting has a lower reward initially and increases gradually at a
+steady speed. Geometric Correspondence and Patch Ordering have the lowest initial rewards and evolve slowly at the
+beginning, while the growth rates get faster in later stages.
+For multi-task post-training, adding more tasks generally
+leads to increased rewards, likely because multiple tasks
+synergize and make the overall learning process easier.
+4.3. Comparison with Previous Methods
+In Tab. 3, we compare Qwen2.5-VL-based models on
+13 diverse vision-centric multimodal benchmarks, spanning fine-grained perception and understanding, spatial understanding, and compositional understanding. Our final model, SSL-R1, achieves consistent improvements on
+Qwen2.5-VL across all benchmarks for both 3B and 7B
+model scales. Specifically, SSL-R1-3B achieves an average gain of +3.44%, with

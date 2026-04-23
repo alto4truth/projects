@@ -1,0 +1,42 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 9
+section: a-weighted-angle-distance-on-strings-17
+chunk: 49
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+18 GRANT MOLNAR
+Lemma 7.13.For a finite stringSof lengthm≥nwe have
+pS
+n = [S]n
+m−n+ 1 .
+In particular,u n(S)agrees with theL 2-normalization of[S] n, and for finite stringsS, Tthe
+angleθ n(S, T)from Definition 7.12 coincides with then-gram angle used in Definition 2.6.
+Consequently, forS, T∈Σ ∗,
+bdρ(S, T) =d ρ(S, T).
+Proof.Ifm≥n, then the number of length-nwindows inSism−n+ 1, and each such
+window contributes one to the appropriate coordinate in [S] n. Thus
+X
+W∈Σ n
+pS
+n(W) = 1
+m−n+ 1
+X
+W
+c(S, W) = 1,
+sop S
+n is exactly the normalized count vector. TheL 2-normalization is therefore the same
+in both constructions, and the definitions ofθ n coincide on finite strings. Summing with
+weightsρ n yields the final claim.□
+Lemma 7.14.The function bdρ is a metric onΣ ∗ ⊔ Mτ(ΣN).
+Proof.Fixn. On the set{0} ∪S(R Σn
+) (unit sphere plus an extra point 0), the rule defining
+θn is a metric: it is the spherical metric on the unit sphere, with the extra point 0 placed at
+distanceπ/2 from every unit vector and distance 0 from itself. Thereforeθ n is a metric on the
+disjoint union Σ∗ ⊔ Mτ(ΣN) when composed withu n(·). The weighted sum bdρ =P
+n≥1 ρnθn
+is therefore a metric provided it separates points.
+S

@@ -1,0 +1,24 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 1
+section: bleu-1
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+with baselines across Coherence, Informativeness, and
+Situatedness. The inter-annotator agreement was moderate across all metrics (Fleiss’κ∈[0.47,0.53]).
+rect visual context, while Bayesian inverse inference effectively filters out irrelevant items to target
+the user’s true intent. Consequently, SiPeR generates responses that are not only linguistically fluent but also visually faithful, whereas text-only
+models like ReGeS struggle significantly without visual cues. The reliability of these results
+is supported by moderate inter-annotator agreement (Fleiss’ κ∈[0.47,0.53] ) (Fleiss, 1971). To
+demonstrate the qualitative performance of different models, we selected representative cases from
+the SIMMC 2.1 test set and presented them in Appendix H for a more detailed examination.
+6 Conclusion
+In this paper, we introduce Situated Preference Reasoning (SiPeR), a novel framework designed to address the challenges of SCR: specifically, reasoning
+about dynamic scene transitions and implicit user
+intents. By integrating scene transition estimation
+and Bayesian inverse inference, SiPeR not only determineswhereto ground the conversation but also
+inferswhatthe user desires through probabilistic

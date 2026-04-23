@@ -1,0 +1,21 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+ter) on a language like French if it has never seen a sample in that language?
+To answer these questions, we investigate the performance of a classifier on French. First, we train
+classifiers on different language families (i.e. Romance, Nordic, Germanic, etc.) and apply them on
+the French split of FineWeb2 to obtain scores. Then, we compute the Spearman and Kendall correlations between the scores of these classifiers and the HQ baseline. We would expect to have a very
+strong correlation score in the Romance family (French, Spanish, Portuguese, Italian, Romanian,
+Catalan) and a low correlation score in the other language families, which are linguistically distant
+from French. We display some of these correlation scores in Table 3, and provide the full table
+for other language families in the Appendix C.1. We can see that intra-family transfer is strong:
+Romance (MKC+)ρ s = 0.89, indicating near-identical document rankings despite training on multiple Romance languages. This is to be expected, as languages in the same family share the same
+root and possess a big overlap in vocabulary. What is more interesting is that the classifiers trained
+on unrelated families, for example Nordic

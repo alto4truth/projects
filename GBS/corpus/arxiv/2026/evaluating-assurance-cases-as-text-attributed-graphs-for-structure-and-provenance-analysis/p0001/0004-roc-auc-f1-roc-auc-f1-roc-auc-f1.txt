@@ -1,0 +1,31 @@
+title: Evaluating Assurance Cases as Text-Attributed Graphs for Structure and Provenance Analysis
+source: arxiv
+year: 2026
+document_id: evaluating-assurance-cases-as-text-attributed-graphs-for-structure-and-provenance-analysis
+authors: Fariz Ikhwantri; Dusica Marijan
+page: 1
+section: roc-auc-f1-roc-auc-f1-roc-auc-f1
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20577v1
+
+Evaluating Assurance Cases as Text-Attributed Graphs for Structure and Provenance Analysis EASE 2026, 9–12 June, 2026, Glasgow, Scotland, United Kingdom
+Table 5: Ablation study for RQ1 (Link Prediction) evaluating
+the contribution of graph propagation and GNN depth on
+Gold Standard.
+Configuration ROC-AUC F1
+UniGraph (1-layer GNN) .855±.02 .717±.02
+w/o GNN (Fixed Encoder Only) .677±.02 .675±.05
+Table 6: Effect of GNN depth on link prediction performance
+(RQ1). Shallow models AUC outperform deeper variants
+across architectures except GCN on the Gold Standard.
+Model 1-layer 3-layer
+GCN .687±.06↓.707±.03↑
+GraphSAGE .796±.03↑.766±.05↓
+GAT .704±.05↑.690±.05↓
+UniGraph .855±.02↑.833±.01↓
+highest overall scores (.868 AUC, .769 F1), demonstrating that incorporating diverse training sources mitigates distributional gaps
+and enhances model robustness.
+RQ1: Ablation.To isolate the contribution of graph-based propagation, we compared the 1-layer UniGraph model against a textonly baseline 5. Removing the GNN layer resulted in a significant
+performance decrease, with ROC-AUC dropping from 0.855 to 0.677.
+This confirms that structural connectivity provides a critical signal
+for link prediction that

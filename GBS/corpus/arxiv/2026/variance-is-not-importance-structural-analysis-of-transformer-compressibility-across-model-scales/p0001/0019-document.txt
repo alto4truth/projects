@@ -1,0 +1,33 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+k-means’ advantage comes from Gaussian-optimal levels (captured by
+NF4) and 40% from per-group adaptation (which incurs codebook storage overhead).
+9
+
+Figure 6: Multi-exit routing tradeoff on Mistral 7B. The quality-compute curve shows diminishing returns: even conservative thresholds (0.95) incur significant perplexity cost (+4.31) for
+modest compute savings (6.4%). The 30% easy-token finding quantifies the ceiling for early-exit
+approaches.
+5.3 Attention vs MLP: A Four-Phase Architecture
+By selectively destroying (INT2 quantization) the attention or MLP component of each block
+independently, we map the division of labor across depth. The resulting pattern reveals a clear
+four-phase functional architecture:
+Table 7: Component-level KL divergence when destroyed (GPT-2)
+Depth Attention KL MLP KL Dominant
+Block 0 4.7 1.1 Attention (4.3×)
+Blocks 2–4 0.2–0.3 0.3–2.1 MLP
+Blocks 5–9 0.09–0.26 0.09–0.29 Neither
+Block 11 0.80 0.18 Attention (4.5×)
+The model exhibits a clear four-phase architecture:
+1.Context building(block 0): Attention-dominated. Establishes token relationships.
+2.Feature construction(blocks 2–4): MLP-dominated. Builds representations.
+3.Refinement(blocks 5–9): Both components light. Gentle polishing.
+4.Prediction assembly(block 11): Attention-dominated. Assembles final predictions.
+10

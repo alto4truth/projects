@@ -1,0 +1,31 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 51
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+A Evian Framework Implementation
+Details
+A.1 Models and Computational Resources
+All experiments were conducted on a highperformance computing node equipped with eight
+NVIDIA H100 (80GB) GPUs. We employed the
+Qwen3-235B-A22B-Instruct-2507-FP8 model for
+the text-heavy response decomposition and defect injection phases, and theQwen2.5-VL-7BInstruct-A WQmodel for the multi-faceted quality assessment. Both models were deployed via
+vLLM (v0.10.0) using a greedy sampling strategy
+to ensure deterministic reproducibility within a unified software environment consisting of PyTorch
+(v2.7.1) and CUDA (v12.6). Leveraging this setup,
+the entire processing pipeline for the 300,000sample benchmark was completed in nearly 28
+hours.
+A.2 Supervised Fine-Tuning (SFT) Details
+To efficiently fine-tune theQwen2-VL-2Bbase
+model, we implemented a selective update strategy, freezing the vision tower while training the
+projector MLP and language model. This training
+process was conducted on a server equipped with
+eight NVIDIA vGPU (48 GB) cards. It leveraged
+DeepSpeed ZeRO Stage 3 for memory optimization, resulting in an effective global batch size of
+128. All key hyperparameters are detailed in Table 5.
+Tab

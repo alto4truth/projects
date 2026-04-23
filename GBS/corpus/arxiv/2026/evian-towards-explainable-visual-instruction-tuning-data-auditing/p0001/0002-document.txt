@@ -1,0 +1,30 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+ponses into constituent cognitive components: visual description, subjective inference, and factual claim,
+enabling targeted analysis. Third, we instantiate this paradigm viaEVIAN(Explainable
+VisualInstruction-tuning DataAuditiNg), a
+pipeline that evaluates these components along
+the orthogonal axes of Image-Text Consistency, Logical Coherence, and Factual Accuracy. Our empirical findings challenge the prevailing scale-centric paradigm: a model finetuned on a compact, high-quality subset curated by EVIAN consistently surpassed models
+trained on orders-of-magnitude larger datasets.
+We also reveal that dividing complex auditing
+into verifiable subtasks enables robust curation,
+and that Logical Coherence is the most critical
+factor in data quality evaluation.
+1 Introduction
+Large Vision-Language Models (LVLMs) (Chen
+et al., 2024e) have recently demonstrated remarkable progress in aligning visual perception with
+natural language understanding, enabling a wide
+range of applications from medical assistance to
+*Corresponding author
+robotic control (Yin et al., 2024; Li et al., 2025;
+Pang et al., 2025; Yue et al., 2024). An important
+factor of this success isVisual Instruction Tuning
+(VIT)

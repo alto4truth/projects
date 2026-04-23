@@ -1,0 +1,30 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 9
+section: ieee-transactions-on-image-processing-7
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+attention layer. These modules facilitate the fusion of
+current frame features with historical memory embeddings,
+enabling robust spatio-temporal context integration. A key
+design transition is the replacement of the vanilla ViT with
+a hierarchical Hiera encoder [29], which extracts multiscale
+features across four stages. This structural consistency provides a seamless pathway for extending our amodal adaptation
+strategies to video sequences.
+Hierarchical SCA Integration.To accommodate the multiscale nature of the Hiera-based encoder, we distribute the
+Spatial Completion Adapter (SCA) across each of the four
+encoding stages. Early-stage SCAs enhance high-resolution
+features critical for boundary refinement, while late-stage
+SCAs modulate the coarse embeddings that guide the final
+mask generation. By injecting the SCA into each stage, we
+effectively leverage SAM-2’s hierarchical representation to
+perform comprehensive amodal segmentation across disparate
+spatial scales, as illustrated in Fig. 8.
+Progressive Temporal Propagation.Transitioning from
+amodal segmentation to video presents unique challenges due
+to the temporal volatility of occlusion patterns and the dynamic
+trajectories

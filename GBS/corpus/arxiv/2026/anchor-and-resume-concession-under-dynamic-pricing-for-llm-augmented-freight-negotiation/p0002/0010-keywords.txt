@@ -1,0 +1,31 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+arameter remains fixed. Our two-index framework
+guarantees monotonicity under arbitrary shift sequences that
+change both the concession range and the shape parameter
+simultaneously.
+2.2 AI-Driven Negotiation Agents
+A separate line of work applies neural and language models
+directly to negotiation. Lewis et al. [ 4] introduced end-toend neural negotiation on the Deal-or-No-Deal task. Fu et
+al. [6] showed that LLM agents can improve through self-play
+and in-context learning from AI feedback. Bianchi et al. [ 7]
+introduced NegotiationArena, finding that behavioral tactics
+(e.g., pretending to be desperate) can improve payoffs by 20%.
+Abdelnabi et al. [ 8] introduced a multi-agent negotiation
+testbed and found that GPT-4’s deal success rates degrade
+significantly when greedy or adversarial agents are present. In
+the supply chain domain specifically, Kirshner et al. [9] found
+that LLM agents exhibit human-like bargaining behavior but
+are more inclined toward agreement, improving efficiency at
+the cost of equity.
+These works treat the LLM as the decision-maker: the
+model chooses both the language and the negotiation posture. He et al. [ 5] showed that decoupling high-level strategy
+from

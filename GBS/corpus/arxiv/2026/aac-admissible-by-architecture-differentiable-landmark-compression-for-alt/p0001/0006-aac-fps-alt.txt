@@ -1,0 +1,63 @@
+title: AAC: Admissible-by-Architecture Differentiable Landmark Compression for ALT
+source: arxiv
+year: 2026
+document_id: aac-admissible-by-architecture-differentiable-landmark-compression-for-alt
+authors: An T. Le; Vien Ngo
+page: 1
+section: aac-fps-alt
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20744v1
+
+comparing AAC vs. ALT at matched memory (2m
+floats per direction). ALT outperforms AAC at high compression ratios; the gap narrows and reverses at
+42
+
+Table 16: MAINPer-cell paired Wilcoxon p-values on DIMACS at matched deployed label memory (AAC
+vs. FPS-ALT, two-sided signed-rank, 100 queries×5 seeds). We report both Fisher’s method and Stouffer’s
+z-score combination across seeds, plus the median per-seedpfor reference. Every cell is significant under
+Benjamini–Hochberg FDR correction atq=0.05under both combinators; the worst Stouffer-combined cell
+is COL-128 atp=1.3×10−3, and the worst Fisher-combined cell is FLA-64 atp=1.6×10−2(both still
+FDR-significant). Caveats in Section 5.3.
+Graph Budget (B/v) FisherpStoufferpMedian per-seedpFDRq=0.05
+NY
+322.2×10−17 5.9×10−20 1.3×10−5 ✓
+647.8×10−13 4.6×10−14 2.0×10−3 ✓
+1288.3×10−15 8.1×10−17 7.3×10−5 ✓
+BAY
+322.0×10−25 1.7×10−26 1.4×10−7 ✓
+643.0×10−9 1.2×10−7 8.2×10−2 ✓
+1286.2×10−5 2.7×10−4 4.0×10−1 ✓
+COL
+328.6×10−12 1.2×10−9 1.0×10−1 ✓
+644.8×10−5 2.6×10−5 1.9×10−1 ✓
+1281.1×10−2 1.3×10−3 2.3×10−1 ✓(worst Stouffer)
+FLA
+326.0×10−24 3.9×10−25 1.8×10−6 ✓
+641.6×10−2 5.5×10−4 1.4×10−1 ✓(worst Fisher)
+1286.0×10−8 5.3×10−9 2.4×10−2 ✓
+low compression. The gap is largest at high compression (m=4–8) where AAC is 12.7% behind ALT on
+Modena, and narrows asmapproachesK 0: atm=32andm=64on Manhattan, AAC slightly surpasses
+ALT (92.2% vs. 92.1% atm=32; 93.7% vs. 93.5% atm=64). This suggests that AAC’s learned compression
+recovers ALT-level performance given sufficient capacity, and can marginally outperform FPS at largem.
+Reconciling with the capacity ceiling.These crossover results do not contradict Proposition 2. The
+capacity ceiling says the learner cannot exceed theteacher withK0 landmarks(FPS-ALT atK=K 0). It
+doesnotsay AAC withmdimensions cannot surpass FPS-ALT atK=m/2, which is the matched-memory
+baseline in the table. Atm=64fromK0=64, AAC selects 64 landmarks from the 64-teacher pool (effectively
+identity, modulo selection order), matching the teacher. But Table 22 compares against FPS-ALT atK=32
+(matched memory:2×32 = 64floats/direction, same asm=64for AAC). Since FPS-at-32 and bestsubset-of-64-of-size-32 are different selection procedures on different-sized pools, the crossover reflects the
+advantage of pool access rather than a violation of the capacity ceiling. Atm=K0, AAC recovers the teacher
+exactly(Proposition4), whilethematched-budgetALTbaselineusesK=K 0/2, strictlyfewerlandmarksfrom
+fresh FPS. The proper three-way decomposition (FPS-at-K0 full teacher vs. AAC-at-mvs. FPS-at-K=m/2
+matched budget) is presented in Section 5.7.
+D FastMap: Extended Out-of-Domain Analysis
+FastMap (Cohen et al., 2018) was designed and its admissibility guarantee proven for undirected graphs. We
+include it on the directed DIMACS benchmarks as a cautionary out-of-domain example, not as a critique of
+the method itself. FastMap’s L1 embedding heuristic achieves the highest raw expansion reduction (93–97%)
+on DIMACS graphs. However, our empirical verification across all four tested dimensionsd∈{8,16,32,64}
+reveals that FastMap is inadmissible on these directed benchmarks: on all 800 queries across NY and FLA
+(100 queries×2 graphs×4 dimensions),100% of FastMap-guided A* paths are suboptimal. The
+mean cost ratio (FastMap path cost / optimal cost) ranges from 1.15 to 1.22, with a maximum of 1.95.
+This finding has a methodological implication:expansion reduction alone is a misleading metric when comparing admissible and inadmissible methods. An inadmissible heuristic can achieve arbitrarily high expansion
+reduction by aggressively overestimating, pruning the search tree at the cost of solution quality. Expansion
+reduction alone should not be compared across admissibility classes without also reporting solution quality.
+43

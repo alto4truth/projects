@@ -1,0 +1,44 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+Table 5:Methodology comparison across the corpus. Key limitation paraphrases authors’ stated constraints.
+Paper Type Data Scale Key Limitation Code
+Croce & Hein [C1] Attack-ensemble
+eval
+Defended models>50 models Static ensemble; prior evals optimistic✓
+Daiet al.[C2] Benchmark suite Leaderboard 16×180 Worst-case<random guessing✓
+Carliniet al.[C3] Agent benchmark Curated tasks CTF/real split 4–6×CTF-to-real gap✓
+Daiet al.[C4] Controlled ML expt. CIFAR/ImageNette>100 combos Open-world drift outside scope✓
+Songet al.[C5] Metric study Image classif. Per-paper Must generalise beyond CNNs∼
+Kassiset al.[C6] Theory + toolkit DBP pipelines Per-paper MV schemes still break✓
+Liet al.[C7] Controlled ML expt. CIFAR-10/100 Config grid Hyperparameter-dependent✓
+RobustBench [C8] Living benchmark Checkpoints Many models Scope fixed by maintainers✓
+OpenRT [C9] Software artifact Multimodal LLM Not specified No proceedings text✓
+0 1 2 3 4 5
+A1: Fixed suite
+A2: Avg⇒wc
+A3: RDI gen.
+A4: CTF→prod.
+A5: Single draws
+A6: CRT lifecyc.
+A7: TRADES def.
+A8: Ckpt prov.
+5
+5
+4
+3.5
+3.5
+3
+3
+2.5
+Consequence (1–5)
+Figure 2:Assumption risk ranking. A1–A2 are existential threats to
+the leaderboard paradigm.
+shows protoco

@@ -1,0 +1,23 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+small and controllable, which
+keeps V (∆)low (see Appendix B for the formal bound). At the same time, further optimization makesQ(∆)
+exceed both the current policy and any historical checkpoint at equal parameter distance. The near-future
+source therefore places both its dot and its triangle in the upper-right region whereQ is high andV is small,
+realizing the effective learning signalSrather than dissipating it.
+We empirically measureQ(∆), V (∆), and their ratioS(∆)on a vanilla GRPO run with Qwen3-VL-8B-Instruct
+(Figure 2(b,c); estimation details in Appendix). Figure 2(b) shows the decomposition:Q(∆)rises quickly at
+small∆and then flattens once the checkpoint has absorbed most of the near-term capability gains, while
+V (∆)grows sharply and accelerates with∆, consistent with its predicted exponential form. Figure 2(c)
+shows the resultingS(∆)for two choices of current policy. From the base policy (T= 0), S peaks at∆ ⋆ ≈ 20
+steps; from a mid-training policy (T= 50), the optimum shifts to∆⋆ ≈ 70steps. In both cases S exhibits the
+predicted U-shape with a clear interior maximum, confirming that the best guide is neither too close (small
+Q) nor too far (explosiveV). These observations d

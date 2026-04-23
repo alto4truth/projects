@@ -1,0 +1,42 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 1
+section: compass-ecda
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+Full Retraining
+Naive Fine-tuning
+EWC
+Random Rehearsal
+44 46 48 50 52 54 56
+Avg. Accuracy on Global-MMLU (%)
+[Higher = Less Forgetting]
+25
+26
+27
+28
+29
+30
+PHI
+54 56 58 60 62 64 66
+Avg. Accuracy on Global-MMLU (%)
+[Higher = Less Forgetting]
+40
+41
+42
+43
+44
+45
+46
+QWEN
+Figure 6: Learning-forgetting trade-off across strategies. COMPASS-ECDA (dark blue) achieves Paretooptimal performance by combining distributional anchors with elastic regularization. Points represent performance after 5 epochs of adaptation. The x-axis shows retention on original Global MMLU subjects, while
+the y-axis shows adaptation to new MMLU-ProX domains.
+to previously unseen MMLU-ProX domains. Since all non-static methods use COMPASS selection, the
+performance differences reflect the effectiveness of their adaptation strategies.
+Even with strategic data selection, adapting to new distributions requires explicit mechanisms to preserve
+prior knowledge. Despite using COMPASS to select optimal training data for MMLU-ProX, naive finetuning drops substantially on Global MMLU. Full retraining achieves moderate performance but at greater
+computational cost and assuming access to all data from the initial adaptation stage,

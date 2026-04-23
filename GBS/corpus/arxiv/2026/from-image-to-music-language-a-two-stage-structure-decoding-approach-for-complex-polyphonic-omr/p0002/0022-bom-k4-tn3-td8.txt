@@ -1,0 +1,52 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 2
+section: bom-k4-tn3-td8
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+S1 Cg f As Osup D32 Bl d As D32 b D32 g As D32 Br
+37
+
+S2 f As Osub D32 Bl d As D32 b D32 g As D32 Br
+S1 d As Osup D32 Bl S2 g As D32 Osub S1 b D32 d As D32 Br VB
+S2 Cf b D8 S1 d As Osup D8 EslurL f As D8 EslurR VB
+S2 Cf b Osub d As D8 Bl b D8 b D8 Br EOM
+This example uses three voices, two staves (treble/bass), and cross-staff note assignment via inline
+S1/S2context switches within a single voice. Figure 13 shows the rendered output.
+Figure 13: Rendered output of the multi-voice cross-staff Paraff example. Three voices share and
+switch between treble and bass staves; brackets denote beamed groups.
+Transition Matrix and Constrained Sampling
+To prevent syntactically invalid sequences during autoregressive generation, Paraff applies a hard
+logit maskat each decoding step, derived from a G×G binarytoken-group transition matrix T
+(where G is the number of groups). Entry T[i][j] = 1 permits a token from group j to follow a token
+from groupi;T[i][j] = 0forbids it.
+Concretely, before sampling tokent n+1, the model logitsl∈R |V| are modified:
+˜lk =
+lk ifT[grp(t n),grp(k)] = 1,
+−∞otherwise.
+Sampling then draws from the renormalised softmax over valid continuations only. Some illustrative
+rules: K→TN (1, key precedes time-sig numerator); TN→TD (1, numerator before denominator);
+TD→S (1, time sig followed by staff selector);TN→TN (0, two consecutive numerators forbidden).
+This shifts grammatical correctness from a post-hoc filter into the sampling process itself, guaranteeing
+that every generated sequence is parseable — an important property when Paraff output is piped into
+downstream topology-extraction tools.
+Role in Topology Training Data
+Every valid Paraff sentence carries, by construction, the fields needed to assemble an event-topology
+supervision sample:
+•Voice assignment:VBboundaries partition events into monophonic voice sequences.
+• Tick positions: voice-internal order and duration tokens (Dn/Dot/W*) determine each event’s
+absolute tick.
+•Staff membership: inlineS1/S2context tokens record cross-staff assignments.
+• Structural attributes: beam markers (Bl/Br), tuplet markers (W*), and expressive markers
+(E*) supply the ancillary fields needed by BeadSolver’s evaluation function.
+A Paraff sentence can therefore be deterministically decoded into the (x,voices,tick,div) tuple
+consumed by the BeadSolver model without additional annotation. At scale, an autoregressive
+Paraff generator produces structurally diverse measures that collectively cover the multi-voice and
+cross-staff patterns most challenging for automated regulation — precisely the structural domain
+BeadSolver is designed to handle.
+The Paraff implementation is open-sourced athttps://github.com/findlab-org/paraff.
+38

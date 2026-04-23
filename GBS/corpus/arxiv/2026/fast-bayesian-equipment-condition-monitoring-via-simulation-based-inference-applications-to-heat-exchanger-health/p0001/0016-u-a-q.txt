@@ -1,0 +1,44 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+6
+λ βf
+τ
+HX Simulator
+f (λ,τ,βf, etc. )
+{Thot,in, Tcold,in, Thot,out,
+Tcout, mhot,in, mhot,out,
+∆ Thot, ∆ Tcold, mloss}.
+n simulation runs n summary statistics
+T hot ,in
+m hot ,in
+{Thot,in, Tcold,in, Thot,out,
+Tcout, mhot,in, mhot,out,
+∆ Thot, ∆ Tcold, mloss}.
+λ βf
+τ
+observations y summary statistics posteriors’ marginals under observations ˆpϕ(θ| y)
+Training
+SNPE (NSF)
+n-parameters draws from priors
+θ1 = {λ1,βf 1,τ1, etc.}, ..., θn = {λn,βfn,τn, etc.}
+FIG. 3: The applied SBI scheme. Blue: training data (priors) and process, orange: input data, green: inferred
+output posteriors. In this workn=50,000 simulations.
+Scenario F ailureτ β f βl λ
+Weak Fouling Fouling 18 0.005 - 5.0
+Batch SD Fouling 18 0.030 - 0.5
+Boiler FW Fouling 18 0.050 - 3.0
+Mild Leak Leakage 18 - 0.0005 Severe Leak Leakage 18 - 0.0010 TABLE I: Failure parameters for synthetic failure
+scenarios.τdenotes the failure changepoint (induction
+time);β f andβ l represent the scale parameters for
+fouling jumps and leakage growth, respectively; andλ
+defines the fouling arrival rate (intensity).
+A. T est scenarios
+For evaluation purposes, we define five distinct failure scenarios representing a spectrum of industrial operationa

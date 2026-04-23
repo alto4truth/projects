@@ -1,0 +1,30 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 2
+section: r-e-s-u-lt-s
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+between real and predicted offsets for the bias predictions
+in each station, overlaid on a boxplot representing their distribution, for each value
+23
+
+of the prediction window. Data points are color coded based on the agency that
+the corresponding station belongs to. It can be observed that median RMSE (shown
+as orange line segments in the boxplots in Figure 6) increases, as expected, with
+prediction window up to 18 h. However, further increasing prediction window above
+18h and up to 72h does not lead to a similar trend for increasing RMSE, as the
+median fluctuates around 0.08-0.09 m. The variance of RMSE, corresponding to the
+length of the box and whisker elements of the boxplots in Figure 6 is typically in the
+range of 0.08-0.10 m and does not appear to be significantly affected by the size of
+the prediction window. This behavior is promising for the application of GNN-based
+strategies such as StormNet for bias prediction in real-time operational forecasting
+systems (OFS), for which the desirable length of prediction windows is typically up to 3
+days or longer [ 25]. Moreover, RMSE of bias predictions for the TCOON stations (red)
+appear to be lower compared to NOAA-NOS ones (blue), which could be attributed
+to the negligible impact of Hurricane Idalia in the Texas region, where these stations
+are located.
+24

@@ -1,0 +1,32 @@
+title: Trust, Lies, and Long Memories: Emergent Social Dynamics and Reputation in Multi-Round Avalon with LLM Agents
+source: arxiv
+year: 2026
+document_id: trust-lies-and-long-memories-emergent-social-dynamics-and-reputation-in-multi-round-avalon-with-llm-agents
+authors: Suveen Ellawela
+page: 1
+section: document
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20582v1
+
+stions using The Resistance: Avalon,
+a hidden-role game where a “good” team attempts to complete missions while “evil” players sabotage secretly. The
+game includes anassassinationmechanic: if the good team
+wins, evil can still claim victory by identifying “Merlin,” a
+good player who knows evil’s identities but must hide this
+knowledge.
+Our contributions are as follows:
+• We show that LLM agents develop stable, roleconditional reputations when given cross-game memory:
+the same player is described as “subtle” when evil but
+“straightforward” when good. Agents actively reference
+previous games and their learnings when making decisions.
+• We find that high-reputation players receive 45.6% more
+team inclusions, showing that reputation has downstream strategic consequences for coalition formation.
+• We find that higher reasoning enables more sophisticated deception: evil players more frequently pass early
+missions to build trust before sabotaging, a strategy
+known as “sleeper agent” among human players (75%
+at medium/high reasoning vs 36% at low reasoning).
+2 Related Work
+2.1 LLMs in Social Deduction and Board
+Games
+Most directly related to our work isAvalonBench[Light
+et al., 2023], whic

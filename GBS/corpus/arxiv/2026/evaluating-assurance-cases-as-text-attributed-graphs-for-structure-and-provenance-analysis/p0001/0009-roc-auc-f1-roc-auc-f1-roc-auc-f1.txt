@@ -1,0 +1,67 @@
+title: Evaluating Assurance Cases as Text-Attributed Graphs for Structure and Provenance Analysis
+source: arxiv
+year: 2026
+document_id: evaluating-assurance-cases-as-text-attributed-graphs-for-structure-and-provenance-analysis
+authors: Fariz Ikhwantri; Dusica Marijan
+page: 1
+section: roc-auc-f1-roc-auc-f1-roc-auc-f1
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20577v1
+
+EASE 2026, 9–12 June, 2026, Glasgow, Scotland, United Kingdom Fariz Ikhwantri and Dusica Marijan
+Figure 3: Node Importance Distribution by Type. Importance scores are obtained by GNNExplainer attributions from UniGraph
+model inference on the test set. Human-authored cases (blue) show a balanced distribution, while LLM-generated cases (orange)
+demonstrate high reliance on Goal/Strategy scaffolding and polarised Context integration.
+The
+machine
+learning ...
+Assumption
+in safety
+...
+technical
+systems
+context
+technical
+safety
+requirements
+Strengths
+and
+weaknesses ...
+The
+machine
+learning ...
+Description
+of ML ...Review of
+generated
+...
+Evidence
+of
+robustness ...
+Weakness
+in the ...
+Uncertainty
+qualificationEvidence
+that
+prototype ...
+Maximum
+distance
+threshold
+Out of
+distribution
+...
+Explanation masks (Prediction: LLM, Target: Human)
+fidelity(+)=1.000, fidelity(-)=0.000, unfaithfulness=0.058
+10.0
+10.2
+10.4
+10.6
+10.8
+11.0
+11.2
+Node importance
+0.060 0.065 0.070 0.075 0.080 0.085 0.090 0.095
+Edge importance
+Figure 4: GNNExplainer output for UniGraph model showing
+high positive fidelity and low unfaithfulness with incorrect
+predictions. Colour bars indicate the intensity of attribution
+sco

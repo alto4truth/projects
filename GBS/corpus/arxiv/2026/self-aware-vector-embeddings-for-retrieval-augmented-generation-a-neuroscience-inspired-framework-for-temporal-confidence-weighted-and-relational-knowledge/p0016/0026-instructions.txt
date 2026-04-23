@@ -1,0 +1,26 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 16
+section: instructions
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+10 Results
+10.1 Main comparison
+Table 2 reports the headline numbers. The signal augmentations produce large, consistent improvements over plain cosine RAG: overall accuracy roughly doubles (31.2%→61.7% with default
+weights,→66.7% with temporal alone), and stale rate drops from 35% to 6.7–13.3%.
+Method Overall Current Time-pt Conflict Stale % ECE
+M1 RAG (plain) 31.2% 50.0% 1.7% 61.9% 35.0% 0.470
+M2 RAG + Temporal 66.7% 60.0% 71.7% 71.4% 6.7% 0.259
+M3 RAG + Confidence 36.9% 58.3% 5.0% 66.7% 13.3% 0.572
+M4 SmartVector (default) 61.7% 53.3% 70.0% 61.9% 13.3% 0.244
+M5 SmartVector (tuned) 64.8% — — — — —
+Table 2:Main comparison on 138 held-out queries. SmartVector’s signals roughly double overall accuracy
+over plain cosine RAG and drop stale-answer rate from 35% to 6.7–13.3%. ECE improves by nearly2×
+(0.470→0.244). The tuned row reports a held-out test-set number under grid-searched weights (Section 10.3).
+Two observations are worth highlighting. First, on the current-query subset plain RAG already
+scores 50.0%—cosine similarity is often enough to identify the correct topic, but it has no principled
+way to disambiguate among the topic’s versions, which is precisely why its stale rate is

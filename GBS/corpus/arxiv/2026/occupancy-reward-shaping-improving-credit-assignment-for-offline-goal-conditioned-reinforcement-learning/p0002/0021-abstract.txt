@@ -1,0 +1,61 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 2
+section: abstract
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+n. We build on the codebase of OGBench and make
+use of the official implementation for Go-Fresh. All algorithms use hindsight relabeling (Kaelbling,
+7
+
+Published as a conference paper at ICLR 2026
+Table 1: ORS vs baselines: Overall average (binary) success rate (%) across the 5 testtime goals over 8 seeds
+per task per algorithm. We report the 95% bootstrapped C.I. size after the ± sign.
+Dataset GCBC GC-IVL QRL CRL GC-IQL Go-Fresh ORS (ours)
+antmaze-large-navigate 25±3 18±3 64±1890±434±488±3 88±7
+antmaze-giant-navigate 0±0 0±0 9±4 39±8 0±0 30±1056±9
+cube-double-play 1±1 36±3 1±0 10±240±517±645±7
+cube-triple-play 0±0 1±1 0±0 6±3 7±3 18±537±8
+puzzle-4x4-play 0±0 13±2 0±0 0±0 26±374±6 70±5
+puzzle-4x5-play 0±0 7±1 0±0 1±0 14±120±1 20±0
+puzzle-4x6-play 0±0 10±2 0±0 4±1 12±1 17±420±2
+scene-play 5±1 42±4 5±1 19±2 51±4 56±1080±4
+antmaze-large-explore 0±0 8±6 0±0 0±0 1±138±1022±7
+cube-triple-noisy 1±1 9±1 1±0 3±1 2±1 5±422±7
+puzzle-4x4-noisy 0±0 20±3 0±0 0±0 29±750±5 56±7
+puzzle-4x6-noisy 0±0 17±2 0±0 6±318±2 19±4 19±1
+scene-noisy 1±1 26±5 9±1 1±1 26±2 34±540±5
+Mean2.5 15.9 6.9 13.7 20.0 35.844.2
+1993; Andrychowicz et al., 2017). Appendix B.3-B.8 provides additional information on baselines,
+hyperparameters used and wall-clock time.
+5.1 RESULTS
+Performance on OGBench is measured by average (binary) success rates on 5 test-time goals of each
+task. We train algorithms to convergence and average the results over8 seeds. We list the number
+of training iterations per task in Appendix B.5. Performance on Tokamak tasks is measured as the
+cumulative reward per episode, where reward is the L2 distance between the goal variables to track
+and the actual achieved quantities. On Tokamak tasks, we evaluate on 10 test-time goals over4
+seeds. We discuss the results below:
+How effective is ORS? ORS achieves the best performance on most tasks, with especially large
+gains on more complex domains. Table 1 summarizes results over 12 offline locomotion and manipulation datasets, where*-play/*-navigatedenote noisy expert datasets and*-noisy/*-explore
+denote highly sub-optimal datasets (Park et al., 2024a). ORS achieves a2.2×improvement in
+performance on averageover its base algorithm GCIQL that uses sparse rewards. While we see
+that GCIQL/GCIVL struggle on locomotion and QRL/CRL struggle on manipulation, ORS consistently outperforms these baselines on both domains. ORS outperforms Go-Fresh on the majority of
+tasks, demonstrating the effectiveness of occupancy-based reward shaping over graph-based reward
+shaping, especially in complex tasks such asantmaze-giant-navigateandcube-triple-playthat are
+characterized by long horizons upto 2000 steps long (Park et al., 2024a). We also see that ORS
+remains effective even under highly sub-optimal data in the*-noisy/*-exploredatasets. Notably,
+only ORS and Go-Fresh produce non-zero performance onantmaze-large-explore. Although GoFresh outperforms ORS on this task, we hypothesize that this could be because the additional local
+rewards used by Go-Fresh are effective in such a task.
+How does ORS compare to other strategies for long-horizon, sparse-reward offline GCRL? On
+average, ORS outperforms the next-best method GO-Fresh by 24% and achieves 2.2×and 1.9×
+high performance than hierarchical (HIQL) and n-step return approaches(GCIQL-OTA), respectively. From Table 2, we see that while hierarchical or policy-bootstrapped-based methods like
+HIQL and SAW are effective on antmaze locomotion but struggle on manipulation tasks. SMORE
+is largely ineffective with a mean performance of just 2.8% while n-step return methods perform
+poorly on noisy datasets. In contrast, the strong performance of ORS with a simple non-hierarchical
+policy underscores the effectiveness of its occupancy-based reward shaping.
+Is ORS effective in real-world tasks? We now examine the ability of ORS to track goals by controlling actuators in real-world Tokamak control tasks. Table 3 compares ORS with baselines specifically designed for long-horizon, sparse-reward offline GCRL. While HIQL and SAW perform relatively well for rotation control, they perform poorly on other tasks. While SMORE performs poorly
+8

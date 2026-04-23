@@ -1,0 +1,26 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 8
+section: a-b-c
+chunk: 55
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+rmance of our
+allocation scheme. The FPR values are nearly zero but are included for
+comparison since they differ slightly. Although increasing the number
+of neurons enhances TPR and FPR, it also results in longer training
+and testing times. In contrast, our allocation scheme achieves the same
+TPR and FPR as configurations with 50, 100, and 200 neurons, while
+significantly reducing both training and testing time. These findings
+further reinforce and validate the formulation of Eq. (1) for selecting the optimal number of neurons in each layer, enabling real-time
+processing and lightweight deployment.
+5.3.6. Interpretability analysis
+Although DAIRE is implemented as a lightweight feed-forward ANN,
+its ability to distinguish between different spoofing attacks is explained
+by the structured nature of CAN message encoding. Each vehicle function (e.g., speed, engine RPM, throttle position, gear state) is represented by fixed Arbitration IDs and specific payload byte positions.
+Spoofing attacks typically manipulate only those CAN fields related
+to the targeted function, leading to consistent, class-specific statistical deviations in a limited subset of input features. For example,
+speed s

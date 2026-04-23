@@ -1,0 +1,25 @@
+title: Exploring High-Order Self-Similarity for Video Understanding
+source: arxiv
+year: 2026
+document_id: exploring-high-order-self-similarity-for-video-understanding
+authors: Manjin Kim; Heeseung Kwon; Karteek Alahari; Minsu Cho
+page: 3
+section: enc-blocks-3
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20760v1
+
+thing-Something V1 [21] when incorporating the 2nd-order STSS on top of
+the 1st-order STSS. The results are summarized in Fig. 10. Among the 50 action
+groups, we observe accuracy improvements in 39 groups and drops in 10 groups.
+Specifically, we find that the 2nd-order STSS is beneficial in understanding
+not only basic motions,e.g., moving something or moving/touching a part of
+something (Fig. 11), but also more complex object-object interactions,e.g.,
+passing/hitting another object or moving two objects relative to each other
+(Fig. 12), (dis-)appearance events,e.g., burying, covering, or dropping (Fig. 13a),
+and camera motion scenarios (Fig. 13b). These improvements indicate that the
+2nd-order STSS captures complementary temporal dynamics beyond what the 1storder STSS can capture. Meanwhile, the accuracy drops mainly in action groups
+such as squeezing, spinning, or twisting. This implies that when motion blur or
+severe deformation makes 1st-order STSS unreliable, motion segmentation in
+2nd-order STSS becomes ambiguous resulting in limited benefits. This statitistical
+analysis reveals when higher-order STSS provides tangible benefits and when it
+becomes less effective, providing pr

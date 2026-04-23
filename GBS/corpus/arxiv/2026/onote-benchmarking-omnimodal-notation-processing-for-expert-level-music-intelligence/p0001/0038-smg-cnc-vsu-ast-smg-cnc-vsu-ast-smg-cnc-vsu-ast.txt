@@ -1,0 +1,22 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+re 1-5).
+1. Layout and Timing:The 6 strings must align perfectly vertically. Assuming 4/4 time, characters on each string between two
+bar lines (|) must be identical, exactly 16 characters per measure. (Score 5: Layout correct, exactly 16 chars/measure; Score 3: Partial
+errors; Score 1: Mostly incorrect).
+2. Musicality Analysis:Voicing should have distinct layers (bass root, middle harmony, high melody). (Score 5: Rich
+range/rhythm; Score 3: Monotonous; Score 1: Illogical).
+3. Fingering Feasibility:Analyze simultaneous notes in the same column. A reasonable stretch is a maximum span of 7 frets.
+(Score 5: Logical, rarely ¿7 frets; Score 3: Frequent unreasonable stretches; Score 1: Physically impossible).
+Output Constraints:Output ONLY the scores without analysis. Format:Technical Layout Score: [ ]/5, Fingering
+Score: [ ]/5, Musicality Score: [ ]/5, Average Score: [ ]/5.
+Figure 8: System prompts designed for the LLM-as-a-Judge automated evaluation, detailing strict scoring criteria for rhythmic
+verification, structural layout, and musical aesthetics across three notation formats

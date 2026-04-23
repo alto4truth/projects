@@ -1,0 +1,42 @@
+title: Exploring High-Order Self-Similarity for Video Understanding
+source: arxiv
+year: 2026
+document_id: exploring-high-order-self-similarity-for-video-understanding
+authors: Manjin Kim; Heeseung Kwon; Karteek Alahari; Minsu Cho
+page: 3
+section: enc-blocks-3
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20760v1
+
+6 Manjin Kim 1∗, Heeseung Kwon2∗, Karteek Alahari3, and Minsu Cho1
+Table 10: Additional ablation studies on Something-Something V1 and
+Diving48.All experiments are conducted with MOSS-S taking 8 and 32 frames
+as input, respectively. “FLOPs", “TP", and “Mem" respectively indicate FLOPs (G),
+trainable parameters (M), and memory footprint (GB) using 8 frames. Memory footprint
+is measured using a batch size of 32 for a single GPU machine.
+(a)Temporal window sizeL
+1st 2nd FLOPs TP MemSSV1 D48
+3 5 150.9 5.4 9.8 59.5 87.0
+5 5 151.5 5.6 9.9 60.0 87.7
+7 5 152.0 5.7 10.5 59.9 87.8
+5 3 150.9 5.4 9.8 59.2 86.5
+5 7 152.0 5.7 10.5 59.788.0
+(b)Module positions
+pos FLOPs TP Mem SSV1 D48
+2 151.5 5.6 9.9 59.1 85.4
+4 151.5 5.6 9.9 60.0 87.7
+6 151.5 5.6 9.9 58.9 86.5
+8 151.5 5.6 9.9 58.2 86.4
+4,6 154.5 6.7 11.9 60.188.1
+(c)Comparison to Other Temporal Modules
+method FLOPsTP MemSSV1 D48
+baseline 148.4 4.5 8.0 56.9 85.0
+R(2+1)D 151.4 6.4 9.6 57.5 86.1
+Fact Attn. 151.8 6.6 11.557.4 85.9
+Local Attn. 150.6 5.6 11.057.5 85.5
+SELFY [35] 151.1 5.1 11.259.2 87.0
+ATM [87] 153.2 6.0 12.159.6 87.2
+MOSS (ours)151.5 5.6 9.9 60.087.7
+(d)Different image encoders
+ViT-B FLOPsTPMemSSV1 D48
+MAE [22] 148.4 4.5 8.0 53.1 83

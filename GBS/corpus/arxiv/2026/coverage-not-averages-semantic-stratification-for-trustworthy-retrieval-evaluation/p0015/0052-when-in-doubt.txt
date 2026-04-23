@@ -1,0 +1,50 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 15
+section: when-in-doubt
+chunk: 52
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+ents use consistent domain terminology with distinctive named entities,
+validating that retrieval works well when lexical-semantic alignment holds.
+26
+
+Coverage, Not Averages Semantic Stratification for Trustworthy Retrieval Evaluation
+F. Additional Related Work
+The evaluation of Retrieval-Augmented Generation (RAG) has evolved from lexical n-gram matching to principled
+methodologies that isolate the performance of retrieval and generation components.
+IR Evaluation.Modern RAG evaluation inherits methodology from information retrieval research such as the Text
+REtrieval Conference (TREC) which established standardized test collections, relevance judgments, and evaluation metrics
+(Chowdhury, 2007). These efforts culminated in unified Question Answering (QA) benchmarks like BEIR (Thakur et al.,
+2021), which aggregates 18 diverse and foundational sets like NQ, HotpotQA, TriviaQA, and MS MARCO (Kwiatkowski
+et al., 2019; Joshi et al., 2017; Nguyen et al., 2016; Yang et al., 2018).
+RAG Benchmarks.Modern RAG-specific benchmarks extend these foundations to target specific RAG failure modes.
+MultiHop-RAG requires synthesis across multiple documents (Tang & Yang, 2024). CRAG provides question-answer
+pairs spanning five domains with varying entity popularity, temporal dynamics, and complexity (Yang et al., 2024). For
+corpus-level reasoning, GlobalQA introduces aggregation tasks such as counting, sorting, and top-k extraction over entire
+collections (Luo et al., 2025). Long 2RAG addresses long-context scenarios with the Key Point Recall metric for evaluating
+generation (Qi et al., 2024), MT-RAG benchmarks multi-turn conversational RAG with human-generated dialogues (IBM
+Research, 2025), mmRAG (Xu et al., 2025) tackles heterogeneous knowledge sources, and QE-RAG (Zhang et al., 2025)
+evaluates robustness to query entry errors such as typos and keyboard proximity mistakes.
+Query Taxonomies and Curation.Principled curation by defining taxonomies that reflect real-world difficulty. Teixeira de
+Lima et al. (2025) proposed a taxonomy classifying context-query pairs into predefined categories such as fact single,
+summary, reasoning, and unanswerable categories to identify specific retrieval challenges. The CRUD-RAG
+benchmark further organizes tasks into Create, Read, Update, and Delete operations to evaluate RAG systems in scenarios
+beyond standard question-answering, such as text continuation and hallucination modification (Lyu et al., 2025).
+Corpus Stratification.Works like GraphRAG (Edge et al., 2025), RAPTOR (Sarthi et al., 2024), and HippoRAG (Guti´errez
+et al., 2024) have explored corpus stratification to improve retrieval efficiency and quality. GraphRAG’s stratification is
+most similar to ours as it constructs clusters using the Leiden algorithm (Traag et al., 2019) after LLM-prompt based entity
+and relationship extraction. Our approach differs in that relationships are detected directly in the semantic space and the
+stratification is used to inform benchmark diagnosis and repair rather than retrieval optimization.
+Synthetic Data Generation (SDG).To overcome the bottleneck of manual annotation, frameworks like RAGEval and
+Long2RAG employ schema-based pipelines to generate grounded documents, questions, and answers (Zhu et al., 2025; Qi
+et al., 2024). Similarly, DataMorgana provides a customizable framework to control the lexical, syntactic, and semantic
+diversity of generated benchmarks, ensuring they reflect the expected traffic of enterprise applications (Filice et al., 2025).
+Efficient Evaluation under Budget Constraints.Complementary work reduces annotation costs via strategic item selection:
+active learning for IR test collections (Rahman et al., 2020), minimal test collections (Carterette et al., 2006), and compact
+LLM benchmarks (Polo et al., 2024). These approaches select items based on model uncertainty or statistical informativeness;
+in contrast, our framework prioritizes corpus-informed coverage independent of the systems being evaluated.
+27

@@ -1,0 +1,40 @@
+title: On Bayesian Softmax-Gated Mixture-of-Experts Models
+source: arxiv
+year: 2026
+document_id: on-bayesian-softmax-gated-mixture-of-experts-models
+authors: Nicola Bariletto; Huy Nguyen; Nhat Ho; Alessandro Rinaldo
+page: 3
+section: exp-x
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20551v1
+
+j)(v)
+1 + 1{u=v}
+X(u)X(v)Hn(Y|X;α ⋆
+1j)
+i
++R n,4(Y|X),
+where Rn,ℓ(Y|X ), for ℓ∈ { 3, 4}, are Taylor remainders such thatRn,ℓ(Y|X )/L2n → 0as n→ ∞ .
+36
+
+Step 2 - Non-vanishing coefficients.In this step, we prove by contradiction that at least
+one among the coefficients in the representations of[An,1 −R n,1(Y|X )]p(X)/L2n,[ An,2 −R n,2(Y|
+X)]p(X)/L2n,[ Bn,1 −R n,3(Y|X )]p(X)/L2n,[ Bn,2 −R n,4(Y|X )]p(X)/L2n, Cn/L2n does not go
+to zero asn→ ∞ . Assume that all these coefficients converge to zero. From the coefficients of the
+terms:
+•exp(X ⊤α⋆
+1j)N(Y|X;α ⋆
+1j, β⋆
+j , σ⋆2
+j )forj∈[K ⋆], we get
+1
+L2n
+·
+K⋆
+X
+j=1
+
+X
+i∈Cj
+exp(αn,0i)−exp(α ⋆
+1j)

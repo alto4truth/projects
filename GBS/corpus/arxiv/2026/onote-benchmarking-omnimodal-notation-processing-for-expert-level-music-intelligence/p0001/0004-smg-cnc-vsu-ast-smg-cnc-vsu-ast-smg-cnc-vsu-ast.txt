@@ -1,0 +1,21 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+Conference’17, July 2017, Washington, DC, USA Menghe Ma *, Siqing Wei*, Yuecheng Xing*, Yaheng Wang, Fanhong Meng, Peijun Han, Luu Anh Tuan, and Haoran Luo †
+Figure 5: Four typical failure cases and underlying causes in omnimodal notation processing. Current models struggle with
+cognitive bottlenecks and autoregressive hallucinations due to a lack of structural reasoning, while concurrently failing to
+align audio-visual dimensions and violating physical playability constraints.
+Linear acoustic alignment.For 1D linear notations like Jianpu,
+models show a moderate capacity for independent feature extraction. Gemini-3.1-flash achieves 61.74% in Pitch and 57.51% in Duration.However, the combined strict Full accuracy decreases to
+24.32%, indicating difficulties in precisely aligning frequency variations with temporal sequences on a unified axis.
+Spatial coordinate mapping.In 2D notations such as Standard Staff, which involve complex polyphony, performance limitations become more apparent. While rhythmic perception (Duration)
+maintains moderate levels, Pitch accuracy is notably lower across
+all models (e.g., Gemini-2.5-flash at 11.05%, Qwen3-Omni-flash at
+19.64%). Consequently, Full accu

@@ -1,0 +1,26 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+Figure 4: The reconstruction wall: factored quantization amplifies errors through cross-terms.
+Direct INT4 achieves the lowest MSE; all factored approaches (DCT+INT4, SVD+INT4, Rotated INT8/INT2) are 2–25×worse at the same bit budget.
+to 10K steps on 866K tokens across three models (Section 5.4) raises agreement to 35–53%, suggesting that the 30% easy-token ceiling reflects a training data limitation, not an architectural
+one.
+5 Extended Analysis
+5.1 Spectral Compression via DCT
+We applied the Discrete Cosine Transform (DCT) to weight matrices, hypothesizing that neural
+network weights—like images—might have concentrated frequency spectra amenable to JPEGlike compression.
+Definition 1(Spectral Energy Concentration).The Gini coefficient of the squared DCT coefficients measures how concentrated the spectral energy is. A Gini score near 1.0 indicates high
+concentration (compressible); near 0.0 indicates uniform spread (incompressible).
+Table 5: DCT spectral energy concentration (Gini coefficient)
+Layer type Gini Verdict
+Embeddings (wte, wpe) 0.79–0.81 Compressible
+Transformer layers 0.63–0.65 Insufficient
+Random matrix∼0.30 Flat (control)
+8

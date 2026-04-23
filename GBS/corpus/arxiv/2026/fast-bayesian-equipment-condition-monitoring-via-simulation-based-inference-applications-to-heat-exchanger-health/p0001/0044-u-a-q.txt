@@ -1,0 +1,25 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+ime series.
+Despite these limitations, the approach is broadly applicable due to its model-agnostic nature. SBI does not
+require an explicit likelihood function and can be applied
+to black-box simulators, making it suitable for legacy systems where governing equations are inaccessible. Compared to purely data-driven methods, the framework retains physical interpretability through latent parameters
+while providing calibrated uncertainty estimates.
+Future work should focus on validation with real operational data, where additional sources of variability such
+as sensor drift and unmodeled disturbances are present.
+However, for real-life industrial systems of increased complexity, the MCMC baseline will be computational infeasible and hence the verification will most likely be limited
+to few hand-labeled failures. Extensions to adaptive or
+online training could improve robustness under distributionalshift, whilejointinferenceoflatenttrajectoriesand
+parameters may further enhance diagnostic resolution.
+More generally, integrating SBI-based inference into digital twin frameworks offers a pathway toward scalable,
+probabilistic condition monitoring in complex industrial
+systems.
+VI. CONCLU

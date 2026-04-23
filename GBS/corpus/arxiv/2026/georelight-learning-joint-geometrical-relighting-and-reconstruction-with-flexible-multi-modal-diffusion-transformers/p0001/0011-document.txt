@@ -1,0 +1,26 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+36]) become noisy after being processed
+by the V AE (see Fig. 2). While other works explore adapting the V AE for point maps, they often require retraining
+the V AE [11], which would prevent us from leveraging the
+strong generative priors of existing models.
+The alternative, a 2D depth map, must be normalized to
+fit the V AE’s[−1,1]range. Methods like Marigold [14, 15]
+use per-image normalization along the optical z-axis, which
+results in anisotropic deformations as in Fig. 2. Furthermore, recovering a 3D shape from such a map is impossible without knowing the camera intrinsics. This establishes the need for a V AE-friendly representation that preserves the 3D shape isotropically, motivating our proposal
+(iNOD, Sec 3.3). iNOD addresses these issues by isotropically packing a distortion-free 3D shape into an image format that is both robust to V AE compression and requires no
+camera intrinsics at inference time.
+3. Methods
+Given a single image of a person captured under unknown
+illumination, our goal is to jointly relight the person with
+a desired target environmentEwhile also recovering their
+intrinsic albedoaand 3D geometryg. We formulate this
+joint relighting and reconstruction p

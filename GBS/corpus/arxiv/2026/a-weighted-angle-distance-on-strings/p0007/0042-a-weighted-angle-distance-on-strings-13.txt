@@ -1,0 +1,25 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 7
+section: a-weighted-angle-distance-on-strings-13
+chunk: 42
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+the number of length-kwindows inUthat cross the junction between the prefix of
+lengthpand the suffix of lengthq. Define
+(18)d k := max (0,min(p+r, L stut +r−k+ 1)−max(1, p−k+ 2) + 1)
+to be the number of length-kwindows inVthat intersect the inserted blockB. Onlykgrams coming from these windows can change when passing fromUtoV. By the same
+triangle-inequality argument as in (11), we have
+(19)∥[V] k −[U] k∥ ≤c k +d k.
+Since [U] k has nonnegative integer entries summing toL stut −k+ 1, we have∥[U] k∥ ≥√Lstut −k+ 1,and similarly for [V] k. Therefore, by (8), fork≤L stut we have
+θk(U, V)≤π· ck +d k
+2√Lstut −k+ 1 .
+Fork > L stut, we have [U] k = 0, while [V] k ̸= 0 fork≤L stut +r, so
+θk(U, V) =
+(
+π
+2 ifL stut < k≤L stut +r,
+0 ifk > L stut +r.

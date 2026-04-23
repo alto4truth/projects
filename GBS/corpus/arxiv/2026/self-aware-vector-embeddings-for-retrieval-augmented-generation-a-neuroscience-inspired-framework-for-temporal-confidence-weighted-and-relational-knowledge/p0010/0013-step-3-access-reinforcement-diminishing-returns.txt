@@ -1,0 +1,56 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 10
+section: step-3-access-reinforcement-diminishing-returns
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+the qualitative
+shape of the Ebbinghaus forgetting curve and is the simplest model that captures the “sharp early
+drop, slow long tail” observation.
+7
+
+5.2 Relation to Bayesian Updating
+Thefeedbacktermisalinearapproximationofabeta-binomialposteriorupdate. If base_confidence
+is interpreted as a prior on document reliability and feedback counts are the beta-binomial sufficient
+statistics, the exact posterior mean has the same monotonicity as our linear rule; the linear form is
+chosen because it isO(1), closed-form, and easy to audit. A strictly Bayesian variant is a drop-in
+replacement.
+6 The Consolidation Agent
+The ConsolidationAgent is the “slow path” in our dual-stream design, running asynchronously
+rather than on the query hot path. Its four sub-engines are coordinated in a single cycle.
+6.1 Conflict Detection
+We group vectors by topic overlap (Jaccard over contentn-grams or topic embeddings) and flag
+pairs with high topic overlap but low content similarity as candidate contradictions. Conflicts are
+resolved by a majority vote over three criteria—recency, source authority, and feedback ratio—which
+are each reasonable priors and which are rarely all wrong simultaneously.
+def resolve(a, b):
+recency = a if a.created_at > b.created_at else b
+authority = a if a.base_confidence > b.base_confidence else b
+feedback = a if fb_ratio(a) > fb_ratio(b) else b
+return majority_vote([recency, authority, feedback])
+6.2 Relationship Building
+Edges are added when two vectors share a document lineage (structuraldepends_on, e.g., a
+policy preamble and its sections) or when their content similarity exceeds a threshold (semantic
+depends_on). This is the step that turns a flat vector set into a graph that the RipplePropagator
+can traverse.
+6.3 Ripple Propagation as Bounded Message Passing
+When a vectorv is updated or superseded, it seeds a breadth-first traversal alongdepended_by
+edges. At hopd, each recipientv′has itsbase_confidence decremented byγ/(d+1), withγ= 0.15
+by default, and hasv appended to its contradictions list to flag for review. The traversal halts at
+d =Dmax (default 2). In the canonical example from the repository, an update to a “sky color”
+vector propagates a 15% penalty to a directly dependent “atmospheric model” vector and a 7.5%
+penalty to a second-hop “sensor calibration” vector.
+def propagate(v, all_vectors, gamma=0.15, D_max=2):
+queue = [(v_id, 0) for v_id in v.depended_by]
+visited = set()
+while queue:
+vid, d = queue.pop(0)
+if vid in visited or d >= D_max: continue
+visited.add(vid)
+u = all_vectors[vid]
+u.base_confidence -= gamma / (d + 1)
+8

@@ -1,0 +1,25 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 6
+section: b-additionalinformation
+chunk: 55
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+B.1 OGBENCH TASKS
+•Antmaze datasets:Antmaze involves controlling a quadruped Ant robot with 8 degrees
+of freedom (DoF) to reach a given goal location in the maze. The agent must learn both
+high-level navigation and low-level locomotion skills purely from offline data. We perform
+experiments on 3 types of challenging mazes:antmaze-large-navigate,antmaze-giantnavigateandantmaze-large-explore.
+antmaze-giantis twice the size of the large and same size asantmaze-ultrain (Jiang
+et al., 2022) designed to substantially challenge long-horizon planning capabilities. Both
+antmaze-large-navigateandantmaze-giant-navigateare collected with noisy expert
+SAC policies that repeatedly move towards randomly sampled goals (Park et al., 2024a).
+antmaze-large-explorefeatures extremely low quality yet high coverage data consisting
+of random exploratory trajectories.
+•Cube datasets:The cube environments involve manipulation of cube blocks using a robot
+arm. We perform experiments on 2 cube-play datasets which are collected using a scripted
+policy that repeatedly picks a cube and places it in other random locations or on another
+cube:cube-double-play(2 cubes) andcube-triple-play(3 cubes). During evaluation

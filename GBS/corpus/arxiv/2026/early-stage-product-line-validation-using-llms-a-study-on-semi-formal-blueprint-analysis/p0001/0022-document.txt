@@ -1,0 +1,22 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+time. Besides, timeouts and
+truncations are kept (and evaluated) as produced.
+Metrics and error taxonomy.We report the results along the following two metrics:
+• Accuracy.Exact-match agreement with the FLAMA oracle,
+broken down by AO, blueprint, and model family (generalpurpose vs. reasoning-optimized).
+• Cost.End-to-endruntime(in seconds) andtoken usage
+(prompt+completion).
+Errors are categorized into four mutually exclusivefailure modes
+aligned with our analysis: (i)Unparseable(violates XML contract),
+(ii)Format-correct but wrong(includessemantic slipssuch as misreading alternative vs. mandatory), (iii)Partial/Truncated(incomplete outputs due to context/output limits), and (iv)Hallucinated
+elements(items not in the blueprint).
+1Replication package: https://github.com/AIG-ist-tugraz/llm-blueprint-analysis

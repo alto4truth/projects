@@ -1,0 +1,21 @@
+title: Differentially Private Clustered Federated Learning with Privacy-Preserving Initialization and Normality-Driven Aggregation
+source: arxiv
+year: 2026
+document_id: differentially-private-clustered-federated-learning-with-privacy-preserving-initialization-and-normality-driven-aggregation
+authors: Jie Xu; Haaris Mehmood; Rogier Van Dalen; Karthikeyan Saravanan; Mete Ozay
+page: 2
+section: abstract
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20596v1
+
+rformance. On the other hand,
+simply applying CDP to CFL requires the server to be fully trusted,
+which is impractical in adversarial settings. To protect against an
+untrusted server, secure sum protocols such as SecAgg [5] are often deployed to ensure the server only has access to the aggregated
+contributions. However, such mechanisms prevent the server from
+accessing individual client updates, which are necessary for initializing cluster models in the first place.
+In this paper, we introduce Clustered Federated Learning with
+Privacy-preservingInitialization andNormality-drivenAggregation
+(PINA), a novel CFL framework that ensures DP without requiring privileged server data or random restarts. PINA uses privacypreserving sketches of client updates to construct robust initial cluster prototypes, enabling dynamic client assignment to the nearest
+cluster. In subsequent training rounds, PINA employs a normalitydriven aggregation mechanism that adaptively mitigates the impact
+of imbalanced client contributions. We believe that these advancements brings clustered FL closer to practical adoption, providing realistic privacy guarantees. The contributions of this work are summarized as fol

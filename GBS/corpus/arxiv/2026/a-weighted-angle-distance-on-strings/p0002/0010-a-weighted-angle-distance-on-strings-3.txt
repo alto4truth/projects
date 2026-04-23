@@ -1,0 +1,24 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 2
+section: a-weighted-angle-distance-on-strings-3
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+theoretical computer science,
+information retrieval, and computational biology. Ourρ-weighted angle distance sits at the
+intersection of two major themes:n-gram feature-space methods and string kernels, and
+alignment-free approaches for biological sequences.
+We begin this section, however, with the standard approach to string distances.
+3.1.Edit-based distances and stutter resistance.The most classical and widely used
+metrics on strings are edit-based. Hamming distance measures the number of substitutions
+between equal-length strings [4]. The Levenshtein (edit) distance extends this to insertions
+and deletions, and can be computed in quadratic time via the dynamic programming algorithm of Wagner and Fischer [7, 20]. The Damerau–Levenshtein distance further allows
+transpositions of adjacent characters, capturing common typo patterns [3]. These metrics are
+fundamental in coding theory, pattern matching, spell correction, and sequence alignment,
+precisely because they track local, position-sensitive edits.
+However, edit distances can behave poorly when the main notion of similarity is repetition
+scale rather than literal edit alignment. For example, (ab) 4 and (ab) 20 are far apart in

@@ -1,0 +1,39 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+RobustBench models:
+• Average multi-normrobustness drops 12.3 pp (mean) from
+singleℓ ∞.
+• Worst-case multi-normdrops 23.5 pp (mean), confirming that average-case gains mask catastrophic worst-case
+failures, consistent with the finding of Daiet al.[C2].
+• Thegap between average and worst-caseis 11.2 pp, meaning that even multi-norm averages still overstate worst-case
+safety.
+Figure 10 shows per-norm robustness profiles for four representative models, revealing that ℓ1 attacks consistently expose
+the weakest point for ℓ∞-trained models. Figure 9 presents the
+evaluation gap qualitatively: a single-norm pipeline (left) reports “robust” while AUTO-ART’s multi-norm pipeline (right)
+exposes the hidden ℓ1 vulnerability, correctly downgrading
+the security assessment.
+12.4 Experiment 3: Framework Validation
+Table 8 summarises AUTO-ART’s validation. The framework
+passes all 346+ tests across Python 3.9–3.12 in a five-phase
+CI/CD pipeline. Deployment gates enforce <5% attack success rates for agentic attacks (DOM injection, RAG poisoning).
+Wang Pang
+Rebuffi70Gowal70 Gowal20Rebuffi28Gowal28
+Xu
+Sehwag Wong
+0
+20
+40
+60
+80
+Robust Accuracy (%)
+ℓ∞ only Multi-norm avg
+Multi-norm worst
+Figure 8:Multi-n

@@ -1,0 +1,24 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+total order, each polynomialf∈R[x 1, . . . , xm]contains a uniquely determined largest monomial,
+which we denote by in≺(f)and which we call the initial term or the leading term. For an ideal
+I⊆R[x 1, . . . , xm], we define its initial ideal by in≺(I) =⟨in ≺(f) :f∈I⟩.
+Definition 3.1.A finite setG⊆Iis called aGröbner basisofI(with respect to≺) if
+in≺(I) =⟨in ≺(f) :f∈G⟩.
+A Gröbner basis is said to bereducedif, for allf∈G, the coefficient of the leading term in≺(g)is
+1and no monomial offis divisible by any other leading term in≺(g)withg∈G\ {f}.
+Gröbner bases have many nice properties including that the reduced Gröbner basis of an ideal
+is unique for a fixed monomial order. For the purpose of determining identifiability, we will use
+lexicographic and elimination orders (Ene and Herzog, 2012, Chapter 3), which we explain now.
+In the lexicographic order, to decide whetherxu ≺x v, we examine the vectorv−uand find the
+first nonzero entry; then we declarexu ≺x v exactly when that entry is positive. Intuitively, the
+variablex 1 has the highest priority, so its degree determines the comparison. If two monomials
+have the same degree inx1, we then compare their degrees inx2, and proceed similarl

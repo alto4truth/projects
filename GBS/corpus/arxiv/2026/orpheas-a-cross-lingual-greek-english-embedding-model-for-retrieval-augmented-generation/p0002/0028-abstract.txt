@@ -1,0 +1,21 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+or NDCG@3 the performance
+differences between ORPHEAS, Multilingual E5 and mGTE are not statistically significant, suggesting comparable
+ranking quality among the top-performing models.
+4.2 Retrieval Evaluation on the Real-World DLBT Deliberation Platform
+To assess the practical applicability of ORPHEAS in a real-world setting, we conducted an additional evaluation using
+data derived from the DELIBERATE platform12. This platform has the attractive features to semantically group user
+9https://huggingface.co/datasets/ilsp/greek_civics_qa
+10https://huggingface.co/datasets/ilsp/truthful_qa_greek
+11https://huggingface.co/datasets/microsoft/ms_marco
+12www.deliberate.gr
+6

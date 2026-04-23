@@ -1,0 +1,29 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 53
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+Table 6: Analysis of a Representative Trajectory Failure
+Component Description
+Trajectory Flaw The agent identified Ollie Watkins but only validated 2 of 4 constraints (current
+season stats). It neglected to verify historical stats, concluding the task prematurely.
+Identified Errors • Concluded the task without systematically verifying all specified constraints.
+• Focused verification on recent stats while neglecting equally critical historical
+data.
+Root Cause A behavioral tendency to stop investigation once a "good enough" candidate is
+found, rather than adhering to a strict protocol of validating every single constraint.
+Table 7: Design of the Corrective Modification
+Parameter Rationale & Implementation
+Action A new_node is created to inject a new, high-priority instruction into the agent’s
+core reasoning process.
+Content Strategy The new instruction establishes a non-skippable "Constraint Validation Protocol."
+It mandates a clear, multi-step process: (1) List all constraints, (2) Create a
+checklist, (3) Verify each item with evidence, (4) Proceed only when all items are
+verified.
+Rationale Creates a mandatory validation checkpoint to prevent premature conclusions
+and addresses

@@ -1,0 +1,56 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+round
+The Driver LSTM Module employs a sequence-to-sequence Bidirectional
+LSTM-based hybrid encoder-decoder architecture similar to the one used by
+11
+
+Paparusso et al. [8] to capture temporal dependencies between past driving
+behavior and future road geometry for future vehicle state prediction. The
+framework addresses the inherently sequential, nonlinear nature of drivervehicle dynamics conditioned by both historical behavior and upcoming road
+features.
+Problem Formulation..Given position indexk, past window sizes P, and
+prediction horizons F, the model approximates:
+fθ :
+
+X vP
+(k−sP :k), XrP
+(k−sP :k), XrF
+(k+1:k+sF )
+
+7→Y vF
+(k+1:k+sF ) (7)
+whereX vP ∈R (sP +1)×nv contains past vehicle states such as velocity and
+acceleration,X rP ∈R (sP +1)×nr andX rF ∈R sF ×nr contain past and future
+road features suchas elevation, heading, speed limit, curvature, traffic control
+flags, and edge classification, respectively, andYvF ∈R sF ×qv represents predicted future vehicle states. Herenv is the number of input vehicle states,nr
+is the number of input road features, andqv ≤n v is the number of predicted
+vehicle states.
+4.5.2. Architecture and Implementation
+We propose the hybrid encoder-decoder architecture shown in Fig. 4
+which comprises two encoders that project the past driving and future road
+context into latent states which are then used by a recursive decoder for
+predicting future vehicle states:
+1)Past Driving Encoder:ConcatenatedX vP andX rP are encoded via
+a BiLSTM layer (ue = 32units). Forward and backward final hidden
+states(h P
+F , hP
+B)and cell states(c P
+F , cP
+B)are concatenated to form unified
+past state representationshP andc P.
+2)Future Road Encoder:X rF is encoded through a separate BiLSTM
+layer (of hidden sizeue = 32units), producing similarly concatenated
+forward and backward hidden stateshF and cell statesc F which represent the future road context.
+3)State Fusion:Concatenated past and future hidden statesh P F =
+[hP , hF ]and cell statesc P F = [cP , cF ]are projected through two dense
+layers with2u e andu d neurons and a dropout (r= 0.25) for regularization, yielding state vectorshD andc D.
+12

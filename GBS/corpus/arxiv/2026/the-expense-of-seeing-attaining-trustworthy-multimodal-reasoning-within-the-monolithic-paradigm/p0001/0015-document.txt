@@ -1,0 +1,31 @@
+title: The Expense of Seeing: Attaining Trustworthy Multimodal Reasoning Within the Monolithic Paradigm
+source: arxiv
+year: 2026
+document_id: the-expense-of-seeing-attaining-trustworthy-multimodal-reasoning-within-the-monolithic-paradigm
+authors: Karan Goyal; Dikshant Kukreja
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20665v1
+
+, quantifiable indicators of multimodal
+knowledge bottlenecks. These metrics move the community beyond
+askingwhethera model works, to diagnosingwhy, how much, and
+wheremultimodal reasoning breaks down.
+4.1𝑇 𝑜𝑆: Toll of Seeing
+The actual expense the VLM bears to process the visual modality,
+operationalising the baseline penalty of integration:
+𝑇 𝑜𝑆=𝑆 𝑆 𝑦𝑚𝑇 −𝑆 𝐹𝑢𝑙𝑙 (4)
+Diagnostic Interpretation [RQ1]:Ideally, 𝑇 𝑜𝑆≤ 0. If 𝑇 𝑜𝑆> 0,
+we mathematically confirm an architectural inefficiency in visual
+encoding and/or integration. The model incurs a systematic performance penalty when processing visual input compared to its
+equivalent (and potentially even lossy) symbolic textual representation. Vision acts as a toll on the LLM’s inherent reasoning capacity.
+4.2𝐶𝑜𝑆: Curse of Seeing
+The asymmetric penalty of processing information across different
+modalities:
+𝐶𝑜𝑆=𝑆 𝑆 𝑦𝑚𝑇 −𝑆 𝑆 𝑦𝑚𝑉 (5)
+Diagnostic Interpretation [RQ3]:Ideally, 𝐶𝑜𝑆≤ 0. If 𝐶𝑜𝑆> 0,
+the architecture demonstrates severe semantic inconsistency. It
+reveals an asymmetric penalisation ofseeingrather thanreading
+equivalent information (and potentially even lossy). A trustworthy
+world model must treat information symmetrically;𝐶𝑜𝑆> 0proves

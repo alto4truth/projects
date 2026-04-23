@@ -1,0 +1,18 @@
+title: CHORUS: An Agentic Framework for Generating Realistic Deliberation Data
+source: arxiv
+year: 2026
+document_id: chorus-an-agentic-framework-for-generating-realistic-deliberation-data
+authors: A. Koursaris; G. Domalis; A. Apostolopoulou; K. Kanaris; D. Tsakalidis; I. E. Livieris
+page: 2
+section: abstract
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20651v1
+
+observed during authentic interaction [Casoria et al., 2025, Li et al., 2024]. Furthermore, the heterogeneous temporal patterns shaping internet
+discourse are largely unaddressed, as current solutions lack principled mechanisms for modeling the diverse participation rates characteristic of real platforms. These shortcomings underscore the need for frameworks combining
+behavioral fidelity, temporal realism and contextual awareness to adequately support deliberative environments.
+To address these challenges, we propose CHORUS 1 (CHaracter-driven Orchestrated Response & User Simulation),
+an agentic simulation framework able to generate realistic deliberation data by orchestrating LLM-powered actors on
+interactive web platforms. CHORUSgrounds each actor’s behavior in a structured persona and equips it with contextual awareness of the evolving discussion, producing dialogue which is both semantically coherent and behaviorally
+diverse. A principled Poisson process-based model governs the temporal dynamics of actor participation, while structured tools facilitate web platform integration and interactivity, providing actors with the ability to access external
+resources. Each actor is gove

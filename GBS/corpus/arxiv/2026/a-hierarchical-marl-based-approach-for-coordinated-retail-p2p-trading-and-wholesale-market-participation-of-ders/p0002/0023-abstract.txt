@@ -1,0 +1,71 @@
+title: A Hierarchical MARL-Based Approach for Coordinated Retail P2P Trading and Wholesale Market Participation of DERs
+source: arxiv
+year: 2026
+document_id: a-hierarchical-marl-based-approach-for-coordinated-retail-p2p-trading-and-wholesale-market-participation-of-ders
+authors: Patrick Wilk; Ethan Cantor; Yikui Liu; Jie Li
+page: 2
+section: abstract
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20586v1
+
+t, it
+incurs a penalty paid to the P2P participants, proportional
+to their unfulfilled quantities𝑞 𝑎
+𝑜𝑛
+and𝑞 𝑎
+𝑏𝑛
+. The aggregator
+must then buy from or sell to the utility at preset prices
+on behalf of these participants. If successful, the aggregator
+transactsatpricesrelativetothewholesaleclearingprice𝑃 𝑤
+to buy (24) and sell (25) unmatched P2P quantities.Δ𝑏 and
+Δ𝑜 represent revenue margins around the wholesale price,
+grantingtheaggregatorflexibilitytoprofitbyacquiringP2P
+energy below𝑃𝑤 and selling above it.
+𝑝𝑏
+𝑎 =𝑃 𝑤 × (1 − Δ𝑏
+) (24)
+𝑝𝑠
+𝑎 =𝑃 𝑤 × (1 + Δ𝑜
+) (25)
+ThepaymentsoftheP2PbuyertoandrevenueoftheP2P
+seller from the aggregator are (26) and (27), respectively.
+𝑃 𝐴𝑎
+𝑛 =𝑞 𝑎
+𝑏𝑛
+×𝑝 𝑠
+𝑎, 𝑛∈𝑁 𝐵 (26)
+𝑅𝑉 𝑎
+𝑛 =𝑞 𝑎
+𝑜𝑛
+×𝑝 𝑏
+𝑎, 𝑛∈𝑁 𝑂 (27)
+Iftheaggregatorfailstoclearinthewholesalemarket,it
+pays penalty𝑃 𝑁𝑛, proportional to the unfulfilled quantities
+(28-29).
+𝑃 𝑁𝑛 =𝑝 𝑎
+𝑝 ⋅ (−𝑞 𝑎
+𝑏𝑛
+), 𝑛∈𝑁 𝐵 (28)
+𝑃 𝑁𝑛 =𝑝 𝑎
+𝑝 ⋅ (𝑞𝑎
+𝑜𝑛
+), 𝑛∈𝑁 𝑂 (29)
+The aggregator’s profit (30) includes payments from/to
+P2Pbuyers/sellers,transactionssettledinthewholesalemarket, and penalties incurred if the wholesale market attempt
+fails.
+𝑇 𝐴= −
+∑
+𝑛∈𝑁𝐵
+𝑃 𝐴𝑎
+𝑛−
+∑
+𝑛∈𝑁𝑂
+𝑅𝑉 𝑎
+𝑛 +(𝑃𝑤 ⋅𝑞 𝑤
+𝑎
+)−
+∑
+𝑛 𝑃 𝑁𝑛
+(30)
+Final payouts of P2P bu

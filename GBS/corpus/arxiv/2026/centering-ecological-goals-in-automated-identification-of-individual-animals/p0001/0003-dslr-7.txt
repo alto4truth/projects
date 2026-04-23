@@ -1,0 +1,53 @@
+title: Centering Ecological Goals in Automated Identification of Individual Animals
+source: arxiv
+year: 2026
+document_id: centering-ecological-goals-in-automated-identification-of-individual-animals
+authors: Lukas Picek; Timm Haucke; Lukáš Adam; Ekaterina Nepovinnykh; Lasha Otarashvili; Kostas Papafitsoros; Tanya Berger-Wolf; Michael B. Brown; Tilo Burghardt; Vojtech Cermak; Daniela Hedwig; Justin Kitzes; Sam Lapp; Subhransu Maji; Daniel Rubenstein; Arjun Subramonian; Charles Stewart; Silvia Zuffi; Sara Beery
+page: 1
+section: dslr-7
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20626v1
+
+how much expert review will still be needed, how much labeled
+data must be assembled, what hardware or cloud resources are necessary, what software
+4
+
+and technical skills are required, and what ongoing effort is needed to maintain catalogs, update models, and document decisions over time. Method choice is therefore also
+a question of resource allocation: when is it most useful to invest in new annotations,
+expert review, improved sampling design, computational infrastructure, or downstream
+ecological analysis? Greater attention to these practical costs and trade-offs would make
+automated identification easier to evaluate, adopt, and trust in ecological applications.
+The path forward.This paper brings together perspectives from ecology, conservation
+biology, and machine learning to help practitioners better understand the complexities and
+practicalities of AI tool use on their own data and field conditions, and to integrate automation into expert-reviewed workflows and downstream population analyses. We argue for a
+shift towardfit-for-purpose evaluation: assessing methods in terms of the ecological question, study design, and tolerance for different identification mistakes, rather than relying
+mainly on performance measured onnon-standardized data collections. By linking ecological goals, sampling design, andexpert-in-the-loopworkflows to the strengths and limitations
+of current tools, we aim to lower barriers to adoption and increase the value of automation, for example, in population and demographic studies and, ultimately, for biodiversity
+conservation.
+2 Understanding the Current Status Quo
+To ensure an interdisciplinary audience is on the same footing, we start with a brief review
+of the types of ecological studies that are informed by the identification of individual animals, provide a brief historical context on the development of both manual and automated
+approaches for this challenge, and characterize the current framing of the problem in the
+machine learning community. Since these communities often use different terms that refer
+to the same or similar concepts (which further reflects the mismatch between method development and practical usage), we include a brief glossary (Table 2) that lists and translates
+the main terms we rely on across both disciplines.
+2.1 How Identification of Individuals is Used in Ecology
+Individual identification is rarely the final goal of an ecological study. In many long-term
+projects, these individual encounter histories are the key link between field observations,
+statistical models, and management decisions. Once individual animals are recognized, their
+encounters over time and space become the raw material for several questions about their
+ecology, biology, and conservation [44]. Examples of such questions include:
+• Abundance and population trends.Distinguishing individuals within a population
+allows estimating population size and tracking how it changes over time by observing
+which individuals appear, disappear, or newly enter the study area. For many threatened
+or protected species, such individual-based estimates are required for assessing progress
+toward recovery targets and/or assessing the impact of conservation actions [5, 14, 35, 76].
+• Birth, death, and demography.Following identified individuals across years supports estimates of survival, age structure, recruitment, and life expectancy, and allows
+comparison of demographic rates across sex, age, or status classes [15, 63, 76].
+• Movement and connectivity.Linking the same individual across space and time provides non-invasive information on territories, home-range use, dispersal, migration routes,
+and connectivity among sites or subpopulations [13, 45, 49].
+• Behavior and social structure.Knowing which individual is doing what, and which
+individuals are seen together, enables studies of behavior (e.g., foraging, mating, parental
+care, aggression) and social organization, including dominance hierarchies, kinship, group
+membership, and how social networks change over time [12, 64].
+5

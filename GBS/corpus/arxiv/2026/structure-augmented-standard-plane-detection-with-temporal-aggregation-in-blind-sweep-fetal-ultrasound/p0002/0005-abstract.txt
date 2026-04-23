@@ -1,0 +1,31 @@
+title: Structure-Augmented Standard Plane Detection with Temporal Aggregation in Blind-Sweep Fetal Ultrasound
+source: arxiv
+year: 2026
+document_id: structure-augmented-standard-plane-detection-with-temporal-aggregation-in-blind-sweep-fetal-ultrasound
+authors: Keli Niu; He Zhao; Qianhui Men
+page: 2
+section: abstract
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20591v1
+
+ion strategy with a sliding window
+across the video frames, where the current frame is integrated
+with its preceding frames to enhance the representation of
+the current anatomical structures. This aggregation step helps
+stabilise the keyframe detection and localisation. This is
+because, for example, if the features in preceding frames
+are anatomically irrelevant, the current frame is unlikely to
+mark the start of a standard-plane segment. A bidirectional
+temporal transformer (BiTT) is then used as the keyframe
+detector for global contextual standard plane detection from
+the spatial-temporal enhanced structural features. Evaluated
+on real-world obstetric blind sweep videos, our keyframe
+detector yields consistent gains over representative segmentation and semantic modelling baselines. An overview of
+our structure-augmented temporal aggregation framework is
+shown in Fig. 1.
+2. METHODOLOGY
+We cast keyframe localisation in blind–sweep US as abinarysequential labelling task. Given a 2D B-mode video
+X={I t}T
+t=1 withTframes, we predict per-frame posterior
+pt =P(y t = 1|I 1:T ), wherey t = 1indicates a standard
+abdominal plane. Our pipeline (Fig. 1) for standard plane detection has two ma

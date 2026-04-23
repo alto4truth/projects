@@ -1,0 +1,25 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 3
+section: discussion
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+couplings. Higher-order truncations correspond to increasingly complex interactions between multiple waves. The
+lifting mechanism of the nonlinear activation function
+thus transforms the wave dynamics into an interaction
+space whose low-order terms already capture most taskrelevant structure. The mathematical analysis thus reveals that S4’s computational power derives not only
+from its ability to maintain information about the recent
+past through wave dynamics, but also from the geometry of interactions between wave modes induced by the
+nonlinear readout.
+Implications for understanding and
+designing SSMs
+This mathematical framework provides several insights
+into why SSMs achieve state-of-the-art performance on
+sequence processing tasks. First, temporal information
+is encoded as traveling waves – coherent spatiotemporal
+activity patterns, rather than abstract, high-dimensional
+activity patterns on a random network topology. Second, the specific eigenvalue structure in S4D-Lin ensures that, once excited, all wave modes decay at identical rates, preventing any single mode from dominating purely due to stability or an intrinsically long lifetime. This produces nearly uniform distributi

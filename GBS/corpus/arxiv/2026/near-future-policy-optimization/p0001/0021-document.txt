@@ -1,0 +1,52 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+Question (x)Current Policy (𝜋!)
+Near Future Policy (𝝅𝑭)
+…
+𝑜!𝑜"
+𝑜#$!
+Solutions
+…
+𝐴!𝐴"
+𝐴#$!
+Advantages
+𝐴#𝑜#
+𝑜#%𝑜#
+RolloutVerify & Select
+RLVR Update &
+Verify & Group Compute
+…
+111
+ISReweight
+𝜋&/𝜋'
+&
+Update BeforeUpdate Now
+RLVR UpdateSelect Future Self
+Select Algorithm
+Optional
+𝑥(,𝑥),…,𝑥*RE
+𝜋&
+-𝑆ΔΔ
+𝜋'
+1. Mistake pool maintenance
+2. Model status monitoring
+3. Model capability verification
+4. Rollback step calculation
+𝜋&𝜋'5. Output:
+Figure 3Overview of NPO and AutoNPO.Right:NPO mechanism (§3.1): a near-future policyπF supplies a verified
+guidance trajectory o′
+x for each prompt, which replaces one slot of the on-policy rollout group whenever the current
+policy πθ is struggling onx.Left:AutoNPO (§3.3): online signals (reward stagnation, entropy drop, a mistake pool, a
+capability probe, and an estimated effective signalS) jointly decidewhento intervene andhow farto roll back.
+Core idea.At any training step t, the current policyπ(t) is a future-self of every earlier checkpointπ(t−∆)
+on the same run. Ifπ(t) can now solve prompts on which some earlierπ(t−∆) failed, it is qualified to serve
+as an NPO guide for the segment starting att− ∆. This observation turns the two manual choices into
+tw

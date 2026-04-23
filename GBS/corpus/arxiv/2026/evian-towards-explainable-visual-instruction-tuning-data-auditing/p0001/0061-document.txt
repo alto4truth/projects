@@ -1,0 +1,37 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 61
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+justification, indicating
+which assertions are verifiable and which are
+inconsistent or unclear.
+Scoring Rubric:
+Score 1: Severely inconsistent or completely
+unrelated. Most or all assertions contradict the image.
+Score 2: Largely inconsistent. Only one or
+two minor assertions can be matched to
+the image.
+Score 3: Partially consistent. Some key assertions align with the image, but others
+are vague, potentially incorrect, or unsupported.
+Score 4: Mostly consistent. The bulk of assertions are supported by the image, but
+there is at least one minor imprecision
+or slight unsupported detail that does not
+mislead. Use this score for responses
+that are good but not perfect.
+Score 5: Fully consistent and accurate. Every single assertion in the text is clearly
+and precisely verifiable in the image.
+There are no unsupported or contradictory claims. If all claims are verified,
+you MUST assign this score.
+B Defect Injection Pipeline and Prompt
+Catalog
+To create a challenging and diverse evaluation
+set, we designed and implemented a three-stage,
+LLM-driven pipeline for injecting controlled,
+contextually-relevant defects into high-quality responses. This automated pipeline ensures that the
+gener

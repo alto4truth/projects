@@ -1,0 +1,25 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+ystem parametersA,Bare converted to ¯A, ¯Bas
+¯A=e A∆,
+¯B= (A∆) −1(eA∆ −I)·∆B
+(2)
+and the discretized system equation can be represented as
+ht = ¯Aht−1 + ¯Bxt, y t =Ch t (3)
+The innovation of Mamba lies in the Selective Scan Mechanism (S6) [11],
+making these SSM parametersB,C,∆functions of the input. The original
+Mamba block [11] introduced a hardware-aware algorithm to efficiently compute the discretization and selective SSM parameters in Eq. (1) and Eq. (3) to
+compute the latent hidden state and output. This mechanism allows Mamba
+to selectively retain or discard information based on the relevance of the input
+sequence.
+ViM ModelViM extends the Mamba architecture, as shown in Fig.1, to address the complexities of visual data. It addresses position sensitivity by incorporating position embeddings, similar to those used in ViT [10]. The original
+Mamba block’s unidirectional scanning suits causal sequences. However, visual
+data are non-causal. To capture global context, ViM employs bidirectional scanning, processing sequences forward and backward to capture dependencies effectively [33]. The model integrates information across the scan direction as if

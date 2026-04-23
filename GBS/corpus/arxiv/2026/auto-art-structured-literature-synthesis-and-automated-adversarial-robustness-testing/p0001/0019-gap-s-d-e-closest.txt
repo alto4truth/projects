@@ -1,0 +1,34 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+robustness Adaptive selector + DriftMonitor
+tificates scalable to any network size; certified radii are computed with configurable confidence levels (α∈ {0.001,0.01} )
+and sampling budgets ( n∈ {100,1000} ). For smaller networks (<1M parameters), AUTO-ART supports integration
+with alpha-CROWN [ 47] (the VNN-COMP winner, 2021–
+2024), which provides exact bound-propagation verification
+on GPU. The GREAT Score (available through ART v1.20+)
+offers robustness estimation for generative models. Certification results feed directly into compliance reports: EU AI Act
+Article 15 [48] requires demonstrated robustness, and certified
+radii provide quantitative evidence for regulatory submissions.
+11.5 Pre-Screening Gate
+The primary architectural contribution is thepre-screening
+gate(Algorithm 1): gradient masking detection and RDI
+computation runbeforethe expensive attack ensemble.
+Algorithm 1AUTO-ART Evaluation Pipeline
+Require:Modelf, data(X, Y), configC
+Ensure:ReportR(JSON + SARIF 2.1.0)
+1:Phase 1 — Pre-screening
+2:g←FOSC(f, X, Y){Gradient masking}
+3:r←RDI(f, X, Y){∼30×faster}
+4:ifg > τ mask then
+5:Flag unreliable; adjust attack weights
+6:end if
+7:Phase 2 — Multi-norm attack
+8:forp∈ {ℓ 1, ℓ2

@@ -1,0 +1,20 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+oduce clear gains over pure on-policy RLVR, showing that
+near-future guidance is useful across training stages. Building on this finding, we proposeAutoNPO, which
+automates intervention timing: it monitors training signals such as reward stagnation and entropy decline,
+selects the guide checkpoint that maximizes an empirical estimate ofS(∆), and injects future-self guidance
+online, capturing the benefits of both manual interventions within a single adaptive framework.
+Our contributions are as follows.
+1. We propose NPO, which improves RLVR by letting the current policy learn from near-future policy
+trajectories. We show thatS(∆) = Q(∆)/V (∆)admits a unique optimum in checkpoint distance, at
+which NPO attains the best balance between signal quality and variance cost.
+2

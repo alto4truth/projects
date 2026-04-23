@@ -1,0 +1,22 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+ii) not MCQ-based (e.g., Compas [Larson et al. 2016], Census Income
+KDD [UCI Machine Learning Repository 2000], and Adult [Kohavi et al. 1996], nlg-bias [Sheng et al. 2019], Bold [Dhamala
+et al. 2021], CrowS-Pairs [Nangia et al. 2020], StereoSet [Nadeem et al. 2021]) .
+To the best of our knowledge, the BBQ benchmark dataset [Parrish et al . 2022]—a manually curated benchmark
+dataset designed to assess social biases in question-answer systems—is the only benchmark dataset that satisfies all
+the aforementioned criteria that make datasets suitable for our LLM models evaluation. BBQ encompasses a range of
+identity categories, including age, disability status, gender identity, nationality, physical appearance, race/ethnicity,
+religion, Socio-Economic Status (SES), and sexual orientation. It has been used to evaluate both medium-sized LLMs
+(e.g., RoBERTa and DeBERTaV3) [Parrish et al. 2022] and large-sized LLMs (e.g., UnifiedQA, InstructGPT, GPT-3, and
+ChatGPT) [Li et al . 2023; Parrish et al . 2022] for bias in QA-based datasets. Although BBQ offers a broad scope of
+demographic coverage, most of its datasets are not suitable for analyzing intersectional fairness, except for the two
+foll

@@ -1,0 +1,28 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 2
+section: edges-total-gp-id-time-gp-degbd-id-time-degbd
+chunk: 55
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+Appendix
+A Proofs of Sections 2 - 4
+Proof of Lemma 2.7.Ifqis rationally identifiable, then by Lemma 2.6 the idealIcontains an
+element of the formqa(σ)−b(σ)witha, b∈R[σ]⊆R[θ id, σ]anda̸∈ker(τ G) =I ∩R[σ]. Sinceais
+a polynomial only inσ, it follows thata̸∈ I ∩R[θ id, σ].
+Conversely, suppose thatIcontains an element of the formqa(θid, σ)−b(θ id, σ)witha, b∈R[θ id, σ]
+anda̸∈ I ∩R[θ id, σ], which implies thatq= b(θid,τG(σ))
+a(θid,τG(σ)). Since all variables¯q∈θ id are rationally
+identifiable, there exist polynomials¯a,¯b∈R[σ]such that¯a̸∈ker(τ G)andτ G(¯b)/τG(¯a) = ¯q. By
+plugging inτ G(¯b)/τG(¯a)for each¯q∈θid, it follows that
+q= τG(eb(σ))
+τG(ea(σ)) (6)
+for polynomialsea,eb∈R[σ]that we obtain from clearing denominators and using thatτ G is a ring
+homomorphism. Equation (6) implies thatqea−eb∈ I. Sinceτ G(ea)can not be the zero polynomial,
+we also have thatea̸∈ker(τG). Hence, we conclude by Lemma 2.6 thatqis rationally identifiable.
+Proof of Proposition 3.3.The statement directly follows from the proof of Algorithm 1 in Foygel
+et al. (2012a, Appendix, Section 8), also see Garcia-Puente et al. (2010, Proposition 4). We also
+refer to the proof of our Theorem 4.4, which implies the stateme

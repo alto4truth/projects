@@ -1,0 +1,25 @@
+title: Cooperative Profiles Predict Multi-Agent LLM Team Performance in AI for Science Workflows
+source: arxiv
+year: 2026
+document_id: cooperative-profiles-predict-multi-agent-llm-team-performance-in-ai-for-science-workflows
+authors: Shivani Kumar; Adarsh Bharathwaj; David Jurgens
+page: 1
+section: game-rules
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20658v1
+
+{game description}
+{strategy instructions, if any}
+IMPORTANT: Respond ONLY with valid JSON matching the required schema. Do
+not include any explanation or text outside the JSON.
+Thealternatevariant uses a prose style for robustness testing:
+You are participating in a group decision-making study. You have been
+assigned as{player id}and belong to{group id}.
+About this activity:
+{game description}
+{strategy instructions, if any}
+Please provide your response as a JSON object matching the required format.
+Do not include any additional text or explanation.
+B.2 Decision prompt template
+Each round, agents receive a decision prompt. Thestandardvariant:
+=== Round{round num}of{total rounds}===

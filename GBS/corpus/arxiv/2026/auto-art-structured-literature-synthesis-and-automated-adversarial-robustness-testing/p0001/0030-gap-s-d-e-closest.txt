@@ -1,0 +1,41 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+ℓ∞ ℓ2 Spatial Semantic ℓ1
+0
+20
+40
+60
+80
+Robust Accuracy (%)
+Wang (SOTA) Gowal-70
+Sehwag Wong (base)
+Figure 10:Per-norm robustness profiles for four representative models (norms ordered strong →weak). ℓ1 is the weakest norm for all
+models, with a 23.5 pp drop from ℓ∞ for SOTA. Single-norm optimisation creates systematic blind spots.
+Table 8:AUTO-ART framework validation metrics.
+Metric Value
+Attack implementations 50+ (7 categories)
+Defence modules 28
+Automated tests 346+ (5-phase CI/CD)
+ML framework support 9 frameworks
+OW ASP LLM Top 10 coverage 90% (8/10 full, 2 partial)
+Deployment gate: DOM attack ASR<5%
+Deployment gate: RAG poison ASR<5%
+RDI screening speedup∼30×vs. PGD
+FOSC masking detection rate 92% (flagged configs)
+Kendallτ(RDI vs. AutoAttack) 0.82
+SARIF output v2.1.0 compliant
+Python compatibility 3.9–3.12
+per attack.
+12.7 Experiment 6: Comparative Analysis
+Table 11 compares AUTO-ART with existing frameworks
+across 11 capability dimensions. ART [19] provides the broadest attack/defence library but lacks pre-screening, compliance
+mapping, and orchestration. Counterfit [20] targets ML security assessments but is limited to evasion attacks. Garak [21]
+and PyRIT [ 22] focus on

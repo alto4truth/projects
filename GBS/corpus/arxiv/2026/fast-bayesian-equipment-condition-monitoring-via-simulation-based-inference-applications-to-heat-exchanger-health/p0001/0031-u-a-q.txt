@@ -1,0 +1,48 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+is difference is primarily in posterior
+width, not in failure-mode decision; both methods still
+produce consistent classification outcomes.
+To systematically compare MCMC and SBI, we analyze the inference results over the 500 independent noisy
+realizations per scenario. Fig. 6 presents the marginalized distributions of posterior medians for each parameter and scenario. These distributions represent variation of point estimates across datasets, not the uncertainty width of individual posteriors. For the induction
+timeτ, medians are centered close to the ground truth
+in all scenarios, with MCMC yielding slightly narrower
+between-dataset spread. Forβ f,β l, andλ, SBI and
+MCMC remain broadly consistent in central tendency,
+while both methods show reduced accuracy forλin fouling scenarios. This behavior reflects identifiability limWeak FBatch SDBoiler FWMild LeakSevere Leak
+0
+10
+20
+30
+CRPS
+τ
+Weak FBatch SDBoiler FW
+0.00
+0.01
+0.02
+βf
+Mild Leak Severe Leak
+0.0000
+0.0001
+0.0002
+0.0003
+CRPS
+βl
+Weak FBatch SDBoiler FW
+0
+1
+2
+λ
+FIG. 8: Continuous Ranked Probability Score (CRPS)
+distributions comparing the sharpness and accuracy of
+MCMC and SBI posterior predictions for each
+parameter.
+its of t

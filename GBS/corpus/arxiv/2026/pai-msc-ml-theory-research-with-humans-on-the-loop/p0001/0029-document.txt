@@ -1,0 +1,26 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+better matched but individually less strong. Independence preserves the possibility that the experiment
+track discovers something the theory track missed, or vice versa. The merge and duality stages then force
+reconciliation, but only after each track has had the chance to develop its own strongest argument.
+3.4 Reviewer hard blockers
+The internal reviewer agent does not produce a single smooth score. It evaluates five binary “hard blockers”
+(B1–B5):
+B1No explicit research questions stated in the introduction.
+B2No evidence pointers for key takeaways (claims without traceable support).
+B3Placeholders, stubs, or unfinished sections remain in the manuscript.
+B4Critical experimental results are missing or unreported.
+B5Formal claims lack proof sketches or verification traces.
+Ifanyhard blocker is true, the reviewer score is capped at 4 regardless of prose quality. A score of 8 or
+above is assigned only when the manuscript is genuinely approaching publication readiness. This shows that
+the system does not rubber-stamp its own output: a fluent but incomplete paper is flagged as incomplete,
+and the workflow routes back to revision.
+Hard blockers are the mechanism through which the design

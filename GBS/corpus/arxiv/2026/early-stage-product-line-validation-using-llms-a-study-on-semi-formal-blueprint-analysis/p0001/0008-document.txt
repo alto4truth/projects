@@ -1,0 +1,27 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+els and Analysis Operations
+A central artifact ofdomain requirements engineeringis thefeature
+model(FM), which represents a product line’s commonalities and
+variabilities through a hierarchical feature tree and cross-tree constraints such asrequiresandexcludes[2, 19]. To validate FMs, the
+community has established automated analysis operations (AOs) [5,
+13].Solver-freeAOs compute structural metrics (e.g., feature counts,
+tree depth), whilesolver-basedAOs employ SAT/CSP/BDD engines
+to verify semantic properties such as satisfiability, dead features,
+and valid configurations [4, 13]. These operations transform FMs
+from descriptive artifacts into analyzable models, enabling systematic detection of defects difficult to assess manually at scale [5].
+The Universal Variability Language (UVL) has emerged as a
+unified textual DSL for feature modeling [6]. In this study, we
+use FLAMA [12] to execute solver-based AOs on UVL inputs as
+our ground-truth oracle. We focus on the Boolean level of UVL,
+capturing feature hierarchies and cross-tree constraints.
+2.3 SPL Scoping
+Scoping defines the boundaries of a product line, identifies candidate features, and establishes variability assumptions [25,

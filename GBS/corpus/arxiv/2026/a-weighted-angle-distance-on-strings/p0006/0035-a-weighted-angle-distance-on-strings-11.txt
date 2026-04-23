@@ -1,0 +1,19 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 6
+section: a-weighted-angle-distance-on-strings-11
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+gram baselines, and performance
+is reasonably stable across a broad range ofρ. On more conventional sequence corpora, edit
+distances may remain the best choice, and in some settings (such assplicein our suite)
+DBSCAN itself appears to be a poor model of the ground-truth labeling regardless of the
+underlying distance. Overall, the weighted angle construction seems most valuable when
+repetition scale should be discounted but repetitionstructureshould still matter.
+Several directions look immediately promising. On the algorithmic side, a performant implementation could combine (i) suffix-array based computation of the required aggregates,
+(ii) memoization of repeated subexpressions acrossρ, and (iii) parallel construction of distance matrices or approximate neighborhood queries. On the modeling side, one can consider
+alternative weighting schemes (beyond geometric weights) to emphasize a chosen range of

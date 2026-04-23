@@ -1,0 +1,22 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+cific image regions or details within a given sample. As illustrated in Figure 1 (b), to elicit such region-level processing from LVLMs, we first obtain the bounding box coordinates for the object of interest by inquiring the LVLM. We
+then prompt the model to provide a detailed description of
+the region based on the provided coordinates. Whether the
+region description contains the original object or not serves
+as an indicator of a possible hallucination.
+Specifically, our R-CoV performs six core steps: (1)Initial response generationgenerates the initial response using
+the LVLM, given a query (i.e., a question and an image); (2)
+Entity extractionextracts entities in the response; (3)Coordinate generationgenerates region coordinates for each entity; (4)Region descriptiondescribes each region with coordinates in detail; (5)Verification executionchecks whether
+the region descriptions contain the original entities to check
+for inconsistencies or mistakes; and (6)Final response generationgenerates a revised response incorporating the verification results, given the discovered inconsistencies.
+We evaluate the effectiveness of R-CoV on several
+widely used hallucination benchmarks: POPE [25

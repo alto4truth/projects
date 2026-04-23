@@ -1,0 +1,19 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 192
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+nd PaLM-540B both weighted freedom heavily. On the graph, the model’s placement shows lowest L1 distance to the US, which also emphasises freedom more
+
+Chapter 4: The World Values Benchmark 181
+strongly than most European countries. Higher KL scores are visible for more security-focussed societies. The takeaway is that PaLM aligns with US-style liberty prioritisation, reproducing one of the clearer cultural divides in the WVS.
+Figure 26: Results for Q150 Freedom vs. Security. Q167: Do you believe in Hell? This item is a proxy for religiosity. PaLM outputs were polarised: some prompt sets produced high endorsement of “belief in hell,” closer to US patterns, while others leaned toward rejection, closer to northern Europe. The Bayes-corrected graph shows the aggregate distribution settling nearer to US response patterns. Looking at the KL scores we see that the US is most closely aligned, and the Netherlands is furthest from the model. This illustrates both prompt sensitivity and the stabilising role of bias correction.
+0.000.200.400.600.801.00
+freedomsecurity
+If you had to choose if freedom or security are more important, which one would you choose?
+PaLM 540Humans in CAHumans in AUHumans in US

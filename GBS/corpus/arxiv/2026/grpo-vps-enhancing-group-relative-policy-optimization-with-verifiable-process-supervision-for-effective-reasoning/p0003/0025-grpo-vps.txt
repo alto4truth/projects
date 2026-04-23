@@ -1,0 +1,17 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+sign segment-level rewards, our method achieves higher accuracy and shorter outputs.
+To ensure a fair comparison, we adopt the same GRPO training pipeline to finetune both our method and
+Skywork-o1-prm. Under this controlled setup, GRPO-VPS consistently outperforms the Skywork baseline
+across both 1.5B and 7B model scales, achieving higher accuracy while generating more concise reasoning
+traces. We further compare our method with Eurus-2-7B-PRIME, a model trained using PRIME-style reward
+modeling. Notably, Eurus performs poorly on AIME24 with 15.0%, substantially lower than the 31.7%
+7

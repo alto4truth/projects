@@ -1,0 +1,37 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+FIG. 1: Schematic of a counterflow heat exchanger with
+key variables. The hot fluid (red) enters atThot,in with
+mass flow rate˙mhot and specific heatcp,hot, and exits at
+Thot,out. The cold fluid (blue) enters atTcold,in with
+˙mcold andc p,cold, and exits atTcold,out. Heat,Q, is
+transferred across the exchanger wall with overall
+conductanceU A.
+II. METHODS
+As physical basis for our diagnostic model, we study
+a deterministic heat exchanger model (Sec. IIA) with
+stochastic failures (Sec. IIB).
+A. Deterministic Heat Exchanger Model
+For the deterministic model, we consider a steady-state
+counterflow heat exchanger as illustrated in Fig. 1. The
+heat capacity rates for the hot and cold fluid streams are
+defined by their respective mass flow rates˙mand specific
+heat capacitiesc p:
+Chot = ˙mhotcp,hot , C cold = ˙mcoldcp,cold .(1)
+For a counterflow heat exchanger, the energy (heat) balances are given by
+Q= ˙mhot cp,hot(Thot,in −T hot,out),(2)
+Q= ˙mcold cp,cold(Tcold,out −T cold,in),(3)
+as well as the heat transfer equation,
+Q=U A·∆T LM,(4)
+where∆T LM denotes the log-mean temperature difference (LMTD) between the two streams, defined as
+∆TLM = (Thot,in −T cold,out)−(T hot,out −T cold,in)
+ln
+

@@ -1,0 +1,71 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+it in defining the categorical prior, we do not generate
+data with both leakage and fouling and consider it only
+as a confounding scenario.
+For the changepoint (τ), we assume a uniform prior over
+the intervalτ∈[1, T−1], excluding boundary cases in
+which the failure is either already present(τ≤0)or does
+not occur within the observation window(τ≥T). The
+positive degradation parameters are assigned log-normal
+0 15 30 45 60 75 90
+τ
+0.000
+0.005
+0.010
+0.015
+0.020
+τ Prob. Density
+τ = 18
+0.000 0.025 0.050 0.075 0.100 0.125 0.150
+βf
+0
+10
+20
+30
+40
+βf Prob. Density
+βf = 0.005
+βf = 0.03
+βf = 0.05
+0.000 0.001 0.002 0.003
+βl
+0
+500
+1000
+1500
+2000
+2500
+βl Prob. Density
+βl = 0.0005
+βl = 0.001
+0.0 2.5 5.0 7.5 10.0 12.5 15.0
+λ
+0.0
+0.1
+0.2
+0.3
+0.4
+λ Prob. Density
+λ = 5
+λ = 0.5
+λ = 3
+FIG. 4: Prior probability densities for the changepoint
+timeτ, fouling strengthβ f, leak rateβl, and
+fouling-event arrival rateλused in the heat-exchanger
+model. Vertical dashed lines mark true parameter
+values for the study scenarios reported in Table I.
+priors:
+βf ∼LogNormal(log 0.015,1.0),
+βl ∼LogNormal(log 0.0004,0.4),
+λ∼LogNormal(log 2.0,0.5).
+These priors enforce positivity while remaining broad
+enough to cover the r

@@ -1,0 +1,54 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 55
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+s hypotheses, produces analyses and code,
+and then writes a human-verifiable manuscript with explicit backward traceability from claims to executed
+29
+
+steps. The main affinity withpAI/MScis therefore not simply “end-to-end research,” but the insistence that
+a manuscript should be supported by inspectable intermediate artifacts rather than by polished prose alone.
+A second cluster emphasizes broader autonomous pipeline coverage. The AI Scientist [60] popularized the
+idea of a repeated loop in which a system generates research ideas, writes code, runs experiments, drafts a
+full paper, and then critiques its own output through a reviewer-style stage. AI Scientist-v2 [61] extends this
+exploration-first pattern through agentic tree search and stronger workshop-level paper generation. Agent
+Laboratory [62] structures the workflow into literature review, experimentation, and report writing, while
+explicitly showing that human feedback at stage boundaries materially improves outcomes. AI-Researcher
+[64]framesautonomousscientificinnovationitselfasthecoretask, andCycleResearcher[63]explicitlycouples
+automated generation to automated review in a revision loop. AgentRxiv [65] adds a collaborative preprintserver abstraction on top of these laboratory-style agents, enabling cross-run accumulation and retrieval of
+prior reports rather than treating every run as an isolated research episode.
+freephdlabor [66] is especially relevant because it departs from rigid fixed pipelines and instead argues
+for highly customizable, fully dynamic workflows determined by real-time agent reasoning. It is therefore
+much closer than earlier systems to a “research operating system” for multi-agent science. Relative to
+freephdlabor, however,pAI/MScintentionally remains more constrained: our emphasis is not maximum
+architectural freedom, but a tighter artifact contract, clearer theory–experiment coupling, and stronger
+paper-facing validation gates.
+Taken together, these systems establish the manuscript-first research-agent frontier into whichpAI/MSc
+enters. Our system is closest to this family in artifact contract, but it differs in emphasis. Relative to
+exploration-first systems, we place more weight on bounded workflow control, explicit intermediate artifacts,
+and the coordination of theory and experiments under a single paper trajectory. Relative to more datafirst systems, we begin from a human-specified hypothesis and support both mathematical and empirical
+development of that idea.
+B.3 Broader autonomous scientific discovery systems
+A nearby but distinct literature optimizes for autonomous scientific discovery more broadly rather than for
+manuscript production as the primary output. The difference matters: these systems are often stronger
+on ideation, search breadth, or domain-specific discovery, yet weaker on paper-facing artifact contracts and
+manuscript governance.
+At one end of this spectrum is AI co-scientist. Gottweis et al. [67] describe a multi-agent system that
+proposes, debates, and iteratively refines scientific hypotheses under scientist guidance, with biomedical validation examples. The center of gravity here is hypothesis generation and research reasoning, not manuscript
+production. InternAgent [68] and InternAgent-1.5 [69] push further toward long-horizon, closed-loop autonomous discovery across multiple scientific domains, with architectures explicitly organized around generation, verification, and evolution. DeepInnovator [72] addresses a different bottleneck still: not orchestration
+of the full pipeline, but training models for innovative idea generation through structured research memories and iterative next-idea prediction. In mathematics and algorithmic discovery, AlphaEvolve [70] uses
+evaluator-guided coding agents for scientific and algorithmic discovery, while Mathematical Exploration and
+Discovery at Scale [71] studies large-scale machine-assisted mathematical exploration more directly.
+These systems are important to our positioning because they enlarge the meaning of “research automation.”
+They suggest that the space is not exhausted by paper-writing systems, and that one can build powerful
+discovery engines without centering the final manuscript artifact.pAI/MSc, by contrast, is not intended
+as a general theory of autonomous scientific discovery. It is narrower: a system whose organizing question
+is how far one can push a hypothesis-to-paper workflow while keeping human steering sparse and scientific
+artifacts explicit.
+30

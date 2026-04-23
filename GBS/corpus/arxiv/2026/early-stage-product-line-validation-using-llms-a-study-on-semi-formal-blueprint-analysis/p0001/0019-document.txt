@@ -1,0 +1,29 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+SAC ’26, March 23–27, 2026, Thessaloniki, Greece V.M. Le et al.
+Table 1: Evaluated LLMs ordered by variant type, context-window capacity, and max output length.
+Model Model ID Type Context Window Max Output
+(tokens) (tokens)
+Grok 4 Fast Non Reasoning [36]grok-4-non-reasoningGeneral-purpose 2M N/A
+GPT-4.1 [27]gpt-4.1General-purpose 1M 32K
+Llama 4 Scout [28]llama-4-scoutGeneral-purpose 328K 16K
+Claude Sonnet 4 [1]claude-sonnet-4General-purpose 200K 64K
+DeepSeek V3.1 Chat [10]deepseek-chatGeneral-purpose 128K 8K
+Grok 4 Fast Reasoning [36]grok-4-reasoningReasoning-optimized 2M N/A
+Gemini 2.5 Flash [15]gemini-2.5-flashReasoning-optimized 1M 65K
+Gemini 2.5 Pro [15]gemini-2.5-proReasoning-optimized 1M 65K
+Llama 4 Maverick [29]llama-4-maverickReasoning-optimized 1M 16K
+GPT-5 mini [27]gpt-5-miniReasoning-optimized 400K 128K
+Claude Sonnet 4 Thinking [1]claude-sonnet-4-thinkReasoning-optimized 200K 64K
+DeepSeek V3.1 Reasoner [10]deepseek-reasonerReasoning-optimized 128K 64K
+Notes: “K” = thousand tokens, “M” = million tokens, “N/A” = not specified.
+Table 2: Feature models used in the experiments with structural metrics and blueprint sizes.
+Feature ModelSW SMW IDE SMG COM SEA CVE BDB CNNl CNNf

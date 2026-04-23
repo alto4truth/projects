@@ -1,0 +1,25 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+fiable process supervision in delivering more accurate and concise reasoning.
+In summary, our main contributions are:
+• We identify and empirically validate that a model’s evolving belief in the correct answer can serve as
+a model-free, interpretable signal for reasoning quality of intermediate steps. This enables fine-grained
+supervision without auxiliary models or Monte Carlo rollouts.
+• We propose GRPO-VPS, a simple yet effective approach to enhance GRPO with granular, segment-wise
+process supervision, avoiding indiscriminate credit assignment and improving sample efficiency.
+• Our empirical results show that the method achieves strong performance on challenging math reasoning
+tasks, demonstrating that our method enhances both reasoning effectiveness and efficiency in comparison
+with GRPO and its variants.
+2 RELATEDWORK
+Group Relative Policy Optimization (GRPO). Reinforcement Learning with Verifiable Rewards (RLVR)
+has become a prominent paradigm for fine-tuning LLMs, using definitive signals from rule-based verifiers
+to circumvent the need for costly and potentially biased reward models (Shao et al., 2024; Yu et al., 2025a).
+Within this paradigm, GRPO (Shao et al., 2024) offers

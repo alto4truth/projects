@@ -1,0 +1,28 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music IntelligenceConference’17, July 2017, Washington, DC, USA
+Appendix
+A ONOTE Implementation Details
+The ONOTE benchmark is constructed over three music notation
+systems: standard staff notation, Jianpu, and guitar tablature, to support unified evaluation for omnimodal music score understanding.
+The dataset is built through a rigorous and controllable three-stage
+pipeline. After initial data collection, strict cross-modal alignment
+and format conversion are performed to ensure notation diversity
+and test validity. Based on the aligned omnimodal and cross-format
+data, task-specific test samples are constructed for the four core
+tasks of ONOTE. All samples are manually verified to guarantee
+musical correctness and structural validity. In total, the benchmark
+consists of 1,120 high-quality test samples.
+A.1 Visual Score Understanding (VSU) Data
+For the Visual Score Understanding task, we design one specialized
+visual question-answering (VQA) question for each music score
+image. All VQA questions are rigorously examined, revised, and validated by professional music annotators to ensure clarity, accuracy,
+and alignmen

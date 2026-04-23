@@ -1,0 +1,15 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 188
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+metrics provide a descriptive basis for comparing model-generated and human survey distributions. Raw distributions preserve transparency, L1 distance
+
+Chapter 4: The World Values Benchmark 177
+captures overall divergence, and KL divergence highlights cases where models underweight responses that remain significant within human populations.
+4.3.7 Benchmark versions The WVB was developed iteratively, with each version addressing a different validity challenge uncovered through trial and error. This staged progression was central to the project: rather than designing a method in theory, the benchmark was built through repeated testing, diagnosing failure modes, and refining the approach accordingly. Three structured versions were produced: Naïve, InputSensitivity, and OutputBias. Each version corrected a distinct validity threat—first prompt sensitivity, then anchor bias—so documenting them shows why the final pipeline is necessary rather than optional. WVB-Naïve. The first version used direct single-prompt translations of WVS items. Each question was posed once, with answer anchors provided, and the resulting distributions were compared against WVS country data. Although simple, this version failed basic validity checks. Small differences in phrasing (i.e. capitalisation, synonyms, order of syntax, or punctuation) produced unstable and sometimes misleading distributions. These early runs demonstrated how fragile naïve prompting was as an evaluation method. WVB-InputSensitivity. To address this, the second version introduced prompt sets, with 6–20 paraphrases of each question. The model scored each variant; scores were normalised over the sub-set and then averaged into a composite distribution. This reduced noise and improved replicability. For example, the lexical preference for “somewhat important” over “moderately important” could skew a single prompt, but averaging across a set balanced such artefacts. InputSensitivity therefore strengthened reliability and face validity. Yet systematic skew remained: models still consistently over-predicted positive anchors such as “very important.” WVB-OutputBias. The third version applied Bayesian adjustment to correct for this skew. First, anchor priors were estimated in neutral contexts to measure default model preferences. Second, observed likelihood scores were adjusted relative to these priors and renormalised. This reduced the dominance of “very important” and allowed question-specific variation to emerge more clearly. OutputBias thus improved construct validity, ensuring distributions reflected question content rather than model defaults.

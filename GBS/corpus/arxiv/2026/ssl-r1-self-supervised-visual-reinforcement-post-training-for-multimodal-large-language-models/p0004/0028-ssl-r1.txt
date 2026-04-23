@@ -1,0 +1,27 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 4
+section: ssl-r1
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+outperforms concurrent self-supervised RL posttraining works like Visual Jigsaw by a clear margin, further
+proving the superiority of our method.
+4.4. Further Analysis
+How Do MLLMs Perform on SSL Tasks?In Sec. 4.2, we
+have studied the effect of transferring SSL tasks to various
+downstream tasks. Since the designed SSL tasks are 100%
+verifiable, we are further interested in investigating how
+well MLLMs perform on these SSL tasks and the transfer
+effect among them. As shown in Tab. 4, existing MLLMs
+like Qwen2.5-VL achieve near-random average accuracy
+on these SSL benchmarks before post-training. In most
+cases, it is even worse than the random baseline on individual benchmarks. After post-training with every single
+SSL task, we observe a significant accuracy improvement
+on the corresponding task type. Interestingly, post-training
+on one task can potentially benefit the others. For example, the accuracy on Visual Similarity gets significantly improved when the model is trained with any other tasks, suggesting that all the other tasks have a positive transfer effect
+for Visual Similarity, likely because all of them require the
+model to reason visual semantics that are beneficial for a

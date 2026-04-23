@@ -1,0 +1,23 @@
+title: Tokenised Flow Matching for Hierarchical Simulation Based Inference
+source: arxiv
+year: 2026
+document_id: tokenised-flow-matching-for-hierarchical-simulation-based-inference
+authors: Giovanni Charles; Cosmo Santoni; Seth Flaxman; Elizaveta Semenova
+page: 1
+section: gpu-nvidia-a100-pcie-40gb
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20723v1
+
+osterior closely track
+the observed waveforms, and all 11 inferred parameters achieve 95% credible interval coverage of
+the ground truth (Table 3), confirming that TFMPE preserves calibration quality while reducing
+simulator calls.
+4 Discussion
+The choice of factorisation strategy depends on the scale of local parameterisation relative to simulation budget. Standard NPE remains practical when the number of sites is small. Posterior
+factorisation methods offer a middle ground, achieving good sample efficiency with limited error
+propagation at moderate scales. LF sampling provides a distinct advantage: when local parameterisation is large and simulations are expensive, the savings from single-site training offset the
+approximation error in the per-site neural surrogate. The "Direct" ablation in Appendix A.5 shows
+that this surrogate approximation error is small on most benchmark tasks, and the matched "PF"
+ablation shows that swapping to LF while holding the architecture, optimiser, and schedule fixed
+can lead to more efficient estimation on most benchmark tasks, indicating that LF contributes
+sample-efficiency gains distinct from those of the tokenised flow-matching architecture its

@@ -1,0 +1,46 @@
+title: Render-in-the-Loop: Vector Graphics Generation via Visual Self-Feedback
+source: arxiv
+year: 2026
+document_id: render-in-the-loop-vector-graphics-generation-via-visual-self-feedback
+authors: Guotao Liang; Zhangcheng Wang; Juncheng Hu; Haitao Zhou; Ziteng Xue; Jing Zhang; Dong Xu; Qian Yu
+page: 5
+section: technical-constraints
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20730v1
+
+age encoder with a language model to autoregressively predict SVG primitives. While the model demonstrates strong performance on icon-level vectoriza-
+
+Render-in-the-Loop 19
+Visual Self-Feedback Training (Sample)
+[User]:Two interlocking hearts, one with a single drop of water or liquid at
+the bottom.
+[Assistant (Step 1)]:<path d="M 173 153 C 175 143 176 133 182 124 C
+197 100 220 77 211 46 C 206 27 190 18 175 18 ..."/>
+→Canvas rendered asI 1
+[Visual Self-Feedback]:<image>(Current canvas stateI 1)
+[Assistant (Step 2)]:<path d="M 160 203 C 160 210 166 215 174 215 C
+182 215 188 210 188 203 C 188 188 177 191 ..."/>
+→Canvas updated toI 2
+[Visual Self-Feedback]:<image>(Current canvas stateI 2)
+[Assistant (Step 3)]:<path d="M 98 72 C 98 72 98 72 98 72 C 98 72 98
+72 98 72"/>
+→Canvas updated toI 3
+[Visual Self-Feedback]:<image>(Canvas stateI 3)
+[Assistant (Step 4)]:<END>
+Fig.S3:A sample from our fine-grained decomposition dataset. The Assistant generates SVG segments incrementally, interleaved with rendered visual context.
+tion tasks, its limited context length restricts the generation of highly complex
+SVG structures.
+IconShop[46] adopts a transformer-based autoregressive model to generate
+SVG path sequences. By tokenizing SVG commands and coordinates, the model
+learns to synthesize vector graphics from textual descriptions. IconShop achieves
+competitive performance for icon synthesis but is mainly designed for relatively
+simple and monochrome SVG structures.
+GPT-5[4] represents a large-scale multimodal language model capable of
+generating SVG code through instruction following. It demonstrates strong general reasoning and visual understanding capabilities but is not specifically optimized for structured vector graphics generation.
+OmniSVG[56] is a unified multimodal SVG generation framework built
+upon a vision-language model backbone. By parameterizing SVG commands and
+coordinates into discrete tokens, OmniSVG enables autoregressive SVG generation conditioned on textual or visual inputs.
+InternSVG[40] is a recent large-scale SVG generation model trained on the
+SAgoge dataset containing approximately 16M SVG samples. It leverages large
+multimodal transformers to generate complex vector graphics and demonstrates
+strong scalability with large training corpora.

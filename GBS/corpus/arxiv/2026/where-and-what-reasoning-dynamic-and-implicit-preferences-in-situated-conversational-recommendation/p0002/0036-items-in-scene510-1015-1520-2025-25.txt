@@ -1,0 +1,27 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 2
+section: items-in-scene510-1015-1520-2025-25
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+present in the environment?
+2. Relevance & Intent:Does the response correctly identify the user’s intent (e.g., recommendation, transition,
+Q&A)? Does it recommend items similar to the [GROUND TRUTH] or meet the user’s constraints?
+3.Fluency & Coherence:Is the response grammatically correct and contextually natural?
+Output Format:Output a JSON object with two fields:
+• “reasoning”: A brief explanation of the judgment (max 50 words).
+• “score”: An integer score from 1 (worst) to 10 (perfect).
+Figure 8: The prompt template used for GPT-Score evaluation. The placeholders SCENE_PROFILE, DIALOGUE_HISTORY, REFERENCE_RESPONSE, and GENERATED_RESPONSE are replaced with the actual test
+data during evaluation.
+G Human Evaluation Details
+We conducted a human evaluation to assess the
+quality of generated responses. Specifically, we
+randomly selected 30 test instances from the
+SCREENtest set, then recruited three welleducated graduate students to serve as annotators. For each instance, the annotators rated the
+responses produced by different models on a 3point ordinal scale (0–2), where 0=Weak, 1=Moderate, and 2=Excellent. Ratings were given along
+three dimensions:
+(1) Coherence (Coher.): logica

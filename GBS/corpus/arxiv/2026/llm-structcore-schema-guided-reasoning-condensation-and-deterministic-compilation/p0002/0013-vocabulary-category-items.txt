@@ -1,0 +1,30 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 2
+section: vocabulary-category-items
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+ndarrhythmia.
+Multi-slice input ablation.Both dev80 teacher runs use themiddle+h
+ead_tail multi-slice strategy withw=4. Compared to single-window runs
+on the same models, multi-slice recovers +12–18 additional TP at the cost of
++8–15 FP, a net positive trade. The improvement is concentrated in theLABS
+and MEDICATIONS domains, where relevant information is often scattered
+across the note.
+4.2 Test Results (Codabench)
+Table 3 shows the submitted and evaluated test200 results, alongside the
+leaderboard context.
+The best submitted English system achieves F1 = 0.63 using Mistral
+Large 3 as the Stage 1 teacher, placing within 0.05 of the top-ranking result
+(F1 = 0.68). The Anthropic variant (Claude Sonnet 4.6 with recall-optimized
+prompts) produces comparable quality (F1 = 0.62) but was not submitted
+as the final entry due to the participation limit. The Italian variant using
+rules_v3e was fully prepared (dev80 IT F1 = 0.6905) but could not be
+submitted as all attempt slots were exhausted.
+Our findings suggest that large open-weight models like Mistral produce
+Stage 1 summaries competitive with larger proprietary systems.
+8

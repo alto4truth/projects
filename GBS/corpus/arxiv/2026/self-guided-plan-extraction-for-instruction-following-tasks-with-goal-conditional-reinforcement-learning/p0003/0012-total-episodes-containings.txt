@@ -1,0 +1,26 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 3
+section: total-episodes-containings
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+5.1 Environment
+We conduct our experiments on the CrafText benchmark (V olovikova et al., 2025), which provides a
+unified testbed for evaluating instruction-following
+agents in a multimodal, dynamic, and partially observable open-ended environment. Leveraging the
+modular design of CrafText, which allows for the
+procedural generation of custom tasks, we construct a specialized dataset namedFOCUS.
+The FOCUS dataset is built upon CrafText’s
+Achievement scenarios but is specifically engineered to rigorously test instruction adherence under strict constraints. It contains over 900 instructions with a vocabulary of more than 1,500 unique
+words. The training set is composed of two instruction types:Atomic, which specify a single, indivisible goal (e.g., “craft a furnace”), andCombo,
+which combine multiple atomic goals into a sequence of actions (e.g., “craft a furnace and then
+collect wood”).
+A critical challenge in this domain is that task
+composition often involves overlapping subtasks.
+For example, crafting a furnace first requires making a wooden pickaxe and collecting stone — steps
+that are also required for other goals. Consequently,
+agents may learn generic subroutines that maximiz

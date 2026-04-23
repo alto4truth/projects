@@ -1,0 +1,88 @@
+title: Tokenised Flow Matching for Hierarchical Simulation Based Inference
+source: arxiv
+year: 2026
+document_id: tokenised-flow-matching-for-hierarchical-simulation-based-inference
+authors: Giovanni Charles; Cosmo Santoni; Seth Flaxman; Elizaveta Semenova
+page: 1
+section: gpu-nvidia-a100-pcie-40gb
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20723v1
+
+test statistic.
+p-value.Thep-value is the proportion of null statistics exceeding the test statistic:
+ˆp= 1
+H
+HX
+h=1
+1
+
+ˆt(h)
+null ≥ ˆtMSE
+
+.(12)
+29
+
+Hierarchical SBI benchmark tasks
+Gaussian Linear
+Simulator
+ys ∼ N(µ s, σ2I)
+Parameters
+σ∼HalfNormal(1.0), σ∈R +
+µs ∼ N(0,1.0I 5), µs ∈R 5
+Gaussian Linear Uniform
+Simulator
+ys ∼ N(µ s, σ2I)
+Parameters
+σ∼HalfNormal(1.0), σ∈R +
+µs ∼Unif(−10,10), µ s ∈[−10,10] 5
+Gaussian Mixture
+Simulator
+ys ∼0.5· N(η s, I) + 0.5· N(η s,0.01I)
+Parameters
+µg ∼Unif(−10,10), µ g ∈[−10,10]
+σg ∼HalfNormal(1.0), σ g ∈R +
+ηs ∼TruncNorm(µ g, σg,−10,10), η s ∈[−10,10]
+SIR
+Simulator
+ys,t ∼Binomial(n c, Is,t/N)
+dS
+dt =−β s SI
+N
+dI
+dt =β s SI
+N −γI
+dR
+dt =γI
+Parameters
+γ∼LogNormal(log 0.125,0.2), γ∈R +
+βs ∼LogNormal(log 0.4,0.5), β s ∈R +
+SLCP
+Simulator
+ys,j ∼MVN([m 0,s, m1,s],Σ)
+Σ =
+ σ4
+1 tanh(ρ)σ2
+1σ2
+2
+tanh(ρ)σ2
+1σ2
+2 σ4
+2
+
+Parameters
+σ1, σ2 ∼Unif(−3,3), σ 1, σ2 ∈[−3,3]
+ρ∼Unif(−3,3), ρ∈[−3,3]
+m0,s, m1,s ∼Unif(−3,3), m 0,s, m1,s ∈[−3,3]
+Two Moons
+Simulator
+ys =f(η s,p)
+a∼U(−π/2, π/2)
+r∼ N(0.1,0.01 2)
+p= [rcosa+ 0.25, rsina]
+Parameters
+µg,0, µg,1 ∼Unif(−1,1), µ g,0, µg,1 ∈[−1,1]
+σg,0, σg,1 ∼Unif(0.1,3.0), σ g,0, σg,1 ∈[0.1,3.0]
+ηs ∼TruncNorm(µ g, σg,−1,1), η s ∈[−1,1] 2
+Table 6: Full simulator formulations and prior distributions for the hierarchical SBI benchmark tasks
+summarised in Table 1. Parameters with subscripts are local parameters replicated independently
+for each sites∈[n s]. 30

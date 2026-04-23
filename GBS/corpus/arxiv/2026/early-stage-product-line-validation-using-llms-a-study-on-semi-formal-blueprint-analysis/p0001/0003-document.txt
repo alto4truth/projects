@@ -1,0 +1,28 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+Product Line Engineering (SPLE) systematically manages
+variability and enables large-scale reuse in software-intensive systems [2, 9]. A critical early stage isSoftware Product Line (SPL)
+scoping, where engineers and domain experts define the boundaries
+This work is licensed under a Creative Commons Attribution 4.0 International License.
+SAC ’26, Thessaloniki, Greece
+©2026 Copyright held by the owner/author(s).
+ACM ISBN 979-8-4007-2294-3/2026/03
+https://doi.org/10.1145/3748522.3779903
+of the product line, identify candidate features, and make assumptions about variability [25]. Scoping outcomes have a profound
+influence on all subsequent phases, since they determine which
+requirements, architectures, and reusable assets will be engineered.
+Empirical studies confirm that incorrect or incomplete scoping
+decisions can cascade into costly rework and misalignment with
+business goals. Industrial practitioners continue to view scoping as
+one of the most persistent challenges in SPLE adoption [3].
+To ensure correct variability decisions, researchers have developed a broad catalogue of automatedanalysis operations(AOs) for
+feature models (FMs) [5, 13]. These operations extract information
+f

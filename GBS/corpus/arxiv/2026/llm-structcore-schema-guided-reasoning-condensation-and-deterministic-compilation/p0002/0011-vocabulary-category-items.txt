@@ -1,0 +1,26 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 2
+section: vocabulary-category-items
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+submissions.
+4 Experiments and Results
+We report results at three scales: train10 (for debugging), dev80 (open GT,
+used as a “sanity gate” before submission), and test200 (Codabench, hidden
+GT).
+4.1 Development Results (dev80, Open GT)
+Table 2 summarizes our main dev80 runs across both English and Italian.
+All use the same deterministic Stage 2 compiler with UMLS mapping and
+FP-gates; EN runs use rules_v3a, while the latest IT variant uses the
+improvedrules_v3e.
+Key observations.(1) Mistral Large 3 and Qwen 3.5 produce comparable TP counts (236) on EN, but Qwen generates more FP (211 vs. 170),
+likely due to less conservative summarization. (2) The FN count is identical
+(128) across both EN teacher models, indicating that Stage 2’s deterministic derivation rules have a ceiling that isStage 1 recall-limited. (3) On
+train10, teacher Stage 1 (Gemini) dramatically reduces FN (9 vs. 22 for
+student) but increases FP (35 vs. 13), motivating our evidence-gated FP
+7

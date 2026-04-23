@@ -1,0 +1,29 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 5
+section: v2-5-7-8-9-10
+chunk: 40
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+[Assistant]
+1. Most Helpful Principles:
+• Beamed notes must be consecutive in a single voice— This was critical for identifying
+why the beam was broken (events 8, 9, 10 were split across voices).
+• Cross-referencing images with event data— The x-positions (events 6 and 7 at ≈19.6)
+confirmed they were simultaneous, requiring voice separation.
+• Voice separation for simultaneous events— Events at the same tick with different staff
+positions (note vs. rest, or different stem directions) must be in different voices.
+2. Suggested Additions:
+• Prioritize beam continuity overspaceTime minimization— A measure with a continuous
+beam but some spaceTime gaps is preferred over a “perfect” voice assignment with broken
+beams.
+• Stem direction as a voice hint— Notes with opposite stem directions at the same tick are
+strong indicators they belong to different voices.
+• Simultaneous note+rest pattern— When a note and rest share the same tick position, they
+likely represent different voices (e.g., one voice has a note while another has a rest).
+3. Common Patterns/Pitfalls:
+• Broken beams from split voice assignments— The beamed group (8, 9, 10) was split
+with 8 in voice 2 and 9, 10 in voice 1, break

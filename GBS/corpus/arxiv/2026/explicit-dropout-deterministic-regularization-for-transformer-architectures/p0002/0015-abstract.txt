@@ -1,0 +1,35 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+e
+proposed regularizer.
+3. Explicit Transformer Dropout
+Regularization
+We propose an explicit regularization framework for
+Transformer architectures by formulating dropout on the
+attentionquery,key,value,andfeed-forwardrepresentations
+as an additive regularization term in the training objective.
+Unlike conventional dropout, which is applied implicitly
+through stochastic masking, our formulation yields a deterministic regularizer analogous to𝓁2 regularizer that can
+be directly added to the task loss, and its strength can be
+balanced using a regularization coefficient𝜆.
+3.1. Dropout as a Regularizer on Queries
+We derive the regularization loss induced by applying
+dropout to the query representations, expressing a weightdependentregularizer[17]toattentionqueries.Specifically,
+we consider standard inverted dropout, where a Bernoulli
+mask𝐌 𝑡 = [𝐦 1𝑡,𝐦 2𝑡,…,𝐦 𝑁𝑡 ] ∈ {0,1} 𝑁×𝑑 with keep
+probability(1 −𝑝)is applied to the query vectors across
+training epochs indexed by𝑡.
+Let𝐗= [𝐱 1,𝐱 2,…,𝐱 𝑁 ] ∈ℝ 𝑁×𝑑 denote the input
+tokens, where each𝐱𝑖 ∈ℝ 1×𝑑. For a query corresponding
+to token𝐱𝑖, the attention score is defined as
+𝐒𝑖 =𝐱 𝑖𝐖𝑇
+𝑞 𝐖𝑘𝐗𝑇 .(7)
+During training, dropout is applied to the input rep

@@ -1,0 +1,23 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+rior maximum for both anchorsT=0andT=50, confirming the predicted U-shape.
+2. NPO is plug-and-play and objective-preserving. Both theoretically and empirically, NPO dominates
+existing mix-policy baselines such as far-future, past, and external-teacher trajectories.
+3. We validate NPO through two manual interventions and an adaptive variant AutoNPO, demonstrating
+two distinct gains: faster convergence in the early stage and a higher performance ceiling in the late stage.
+On Qwen3-VL-8B with GRPO, NPO improves average multi-modal performance from 57.88 to 62.84
+(+4.96), and AutoNPO further pushes it to 63.15 (+5.27).
+2 Motivation: The Quality--Variance Trade-off
+Pure on-policy RLVR is limited by the boundary of the current policy’s own exploration: correct trajectories
+are sparse early in training, and rollout diversity collapses late, so pass@1 improvements come mainly from
+redistribution within the base model’s existing solution space rather than genuine capability expansion [33].
+An ideal auxiliary trajectory source should therefore bestrong enoughto yield correct trajectories that the
+current policy cannot reliably discover, andclose enoughin distribution to keep off-policy updat

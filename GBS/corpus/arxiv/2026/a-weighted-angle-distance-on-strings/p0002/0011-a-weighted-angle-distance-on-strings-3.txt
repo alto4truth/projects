@@ -1,0 +1,24 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 2
+section: a-weighted-angle-distance-on-strings-3
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+ave poorly when the main notion of similarity is repetition
+scale rather than literal edit alignment. For example, (ab) 4 and (ab) 20 are far apart in
+Levenshtein distance despite having essentially the same localn-gram structure repeated at
+different scales. In such settings one would like a metric that treats stutters (repetitive block
+expansions) as relatively small perturbations.
+Recent work by Petty et al. proposes a new edit-based distance designed to address some
+of these weaknesses, with a particular focus on capturing repetition-robust similarity while
+preserving an operational “editing” interpretation [15]. Their construction augments the
+edit operations with a family of stutter-like transformations, but requires one to commit in
+advance to a menu of permissible stutters and to perform substantial precomputation to
+support them.
+Our approach is complementary: rather than enriching the suite of permissible edits, we
+adopt a multi-scale, compositional viewpoint based on weighted angular comparisons ofngram count vectors. This shifts the inductive bias from “minimal edits” to “similar local
+statistics across scales,” which naturally compresses length inflation caused by repe

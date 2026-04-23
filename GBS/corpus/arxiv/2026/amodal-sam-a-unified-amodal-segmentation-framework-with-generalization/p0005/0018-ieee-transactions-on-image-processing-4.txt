@@ -1,0 +1,40 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 5
+section: ieee-transactions-on-image-processing-4
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+ectively. Formally,
+this spatially-informed modulation is expressed as:
+G=σ(F gate(E, Mspec)),
+O=G⊙ϕ(F feat(E, Mspec)). (5)
+Here,G∈R W×H×C andO∈R W×H×C represent
+the learned gating weights and filtered features, respectively.
+Fgate andF feat are implemented via vanilla convolutional
+layers, whileσ(Sigmoid) andϕ(LeakyReLU [26]) serve as
+activation functions. By constraining the gating weightsG
+within[0,1], the SCA functions as a soft switching mechanism
+that prioritizes information recovery in regions highlighted by
+the spatial prior (see Fig. 4).
+Block
+Adapter
+Spatial
+Completion
+Adapter
+Convolution
+Adapter
+Fig. 4. The figure demonstrates the effects of the Spatial Completion Adapter
+(SCA). It is evident that SCA effectively complements the input by restoring
+features in the occluded regions.
+In our implementation, this feature-completion operation
+is executed three times within each SCA module to ensure
+sufficient representational capacity. We strategically integrate
+the SCAs into the shallow, middle, and deep layers of the SAM
+image encoder. The empirical efficacy of this hierarchical
+integration is further validated in Section IV-D.
+C. Data Adaptation
+Amodal segmentation poses a

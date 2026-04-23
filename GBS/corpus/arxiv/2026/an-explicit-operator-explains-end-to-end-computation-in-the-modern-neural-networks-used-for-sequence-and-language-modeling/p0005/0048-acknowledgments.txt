@@ -1,0 +1,28 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 5
+section: acknowledgments
+chunk: 48
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+13
+D. Training S4D on a sequence processing dataset
+To demonstrate how S4D processes real-world sequence inputs, we trained a single-layer S4D architecture on the SelfRegulationSCP1 (SCP1) classification task [32]. The SCP1 dataset is a multivariate,
+long-horizon time-series dataset collected during a selfregulation paradigm, where the goal is to infer cognitive
+control states from temporally extended neural signals.
+For the purpose of probing the contribution of the nonlinear (higher-order) interactions to class separation, we
+perform an analysis on the test set in which misclassified
+samples are excluded. This is done to isolate the mechanisms underlying successful discrimination by restricting
+focus to only correctly classified examples.
+For the mathematical analysis presented in the paper,
+the eigenvalues (or the propagatorD τ) are kept fixed
+while the readout matrixWand the mode mixing matrix
+Care trained. The discretization stepτ(equivalently
+∆t) is fixed to 0.01 in all experiments. Unless otherwise
+stated, the state dimension and model width are set to
+N= 64 andd model = 64, respectively. Model parameters
+are optimized using the AdamW optimizer with standard
+hyperparameter s

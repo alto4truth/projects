@@ -1,0 +1,27 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+rank3.622.314.31 3.69 3.69 3.23
+Table 10: Aggregated macro and micro metrics for all strategies using a 10% retention rate. The
+ML (Q3) strategy achieves the best overall performance in both rank and normalized accuracy,
+highlighting the robustness of combining both our methods to obtain a robust general multilingual
+classifier.
+Method Macro Rank Micro Rank Macro Acc Micro Acc
+ML (Q3)1.6983 1.7857 0.4082 0.4113
+ML 1.9808 1.9286 0.4052 0.4092
+HQ 2.4556 2.4286 0.4011 0.4052
+No filtering 3.7248 3.7143 0.3871 0.3907
+6 CONCLUSION
+This work investigates whether quality classifiers can generalize across languages by exploiting
+shared semantic structures in multilingual embedding spaces. Through systematic evaluation across
+French, Spanish, Arabic, and Chinese, we demonstrate that classifiers trained on typologically distant language families can effectively filter quality content in unrelated languages. Across the four
+tested languages, multilingual classifiers improved over monolingual baselines, with particularly
+strong gains in Spanish (3.0 ranks) and Arabic (2.31 ranks). We also introduce the Q3 sampling
+strategy, which refines decision boundaries by training against fluent but low-u

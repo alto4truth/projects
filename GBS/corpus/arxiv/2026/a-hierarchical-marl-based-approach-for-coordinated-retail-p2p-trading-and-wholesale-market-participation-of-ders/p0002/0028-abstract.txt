@@ -1,0 +1,56 @@
+title: A Hierarchical MARL-Based Approach for Coordinated Retail P2P Trading and Wholesale Market Participation of DERs
+source: arxiv
+year: 2026
+document_id: a-hierarchical-marl-based-approach-for-coordinated-retail-p2p-trading-and-wholesale-market-participation-of-ders
+authors: Patrick Wilk; Ethan Cantor; Yikui Liu; Jie Li
+page: 2
+section: abstract
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20586v1
+
+ia the normalized action𝑎𝑤
+𝑎𝑔 ∈ [0,1].
+𝑝𝑤
+𝑎 =𝑝 𝑚𝑎𝑥
+𝑎𝑔 ⋅𝑎 𝑤
+𝑎𝑔 +𝑝 𝑚𝑖𝑛
+𝑎𝑔 (42)
+Theaggregator’sbuyaction𝑎 𝑏
+𝑎𝑔 ∈ [0,1]andofferaction
+𝑎𝑜
+𝑎𝑔 ∈ [0,1]in P2P market are defined as fractions of the
+maximum allowable markup𝜌𝑚𝑎𝑥 applied to the forecasted
+wholesale price𝐹 𝑀𝑃. The adjustmentsΔ𝑏 andΔ 𝑜, used to
+determine the aggregator’s buy and sell prices in the P2P
+market (as defined in (24) and (25)), are then given by (43)
+and (44).
+Δ𝑏 =𝑎 𝑏
+𝑎𝑔 ⋅𝜌 max (43)
+Δ𝑜 =𝑎 𝑜
+𝑎𝑔 ⋅𝜌 max (44)
+3.1.3. Reward Structures
+Thebasereward(45)quantifieseachagent’scostsavings
+or revenue via P2P trading compared to the aggregator
+fallback.AP2Pparticipant’scostorrevenue(𝑃 𝐴 𝑛or𝑅𝑉 𝑛)is
+comparedtothatitwouldhaveobtainedfromtheaggregator
+for the portion traded in the P2P market.
+𝑟∗
+𝑛 =
+⎧
+⎪
+⎨
+⎪⎩
+𝑅𝑉𝑛 − (𝑞𝑜𝑛 −𝑞 𝑢𝑛
+𝑛 ) ×𝑝 𝑏
+𝑎,if𝑛∈𝑁 𝑂
+−𝑃 𝐴𝑛 − (−𝑞𝑏𝑛 +𝑞 𝑢𝑛
+𝑛 ) ×𝑝 𝑠
+𝑎,if𝑛∈𝑁 𝐵
+(45)
+To ensure continuous feedback from action selection,
+a penaltyΠ 𝑛 is introduced when the P2P participant’s
+unmatched energy𝑞 𝑢𝑛
+𝑛 stems from an uncompetitive P2P
+bid/offer (46-48). This helps agents detect uncompetitive
+pricing, balancing exploration (agents can safely try moderate price variations) with exploitation (excessively high
+or low prices in

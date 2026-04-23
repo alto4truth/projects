@@ -3,10 +3,9 @@ from __future__ import annotations
 import json
 import re
 import shutil
-import ssl
+import subprocess
 import sys
 import urllib.parse
-import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
@@ -57,31 +56,24 @@ FORMAT_PREFERENCE = [
 
 
 def fetch_json(url: str) -> dict:
-    last_error: Exception | None = None
-    candidates = [url]
-    if url.startswith("https://"):
-        candidates.append("http://" + url[len("https://") :])
-
-    for candidate in candidates:
-        for _ in range(3):
-            try:
-                request = urllib.request.Request(
-                    candidate,
-                    headers={"User-Agent": "GBS/0.1 (+https://github.com/alto4truth/projects)"},
-                )
-                with urllib.request.urlopen(
-                    request,
-                    timeout=20,
-                    context=ssl._create_unverified_context() if candidate.startswith("https://") else None,
-                ) as response:
-                    return json.load(response)
-            except Exception as exc:
-                last_error = exc
-                continue
-
-    if last_error is None:
-        raise RuntimeError(f"Failed to fetch {url}")
-    raise last_error
+    raw = subprocess.check_output(
+        [
+            "curl",
+            "-fsSL",
+            "--retry",
+            "3",
+            "--retry-all-errors",
+            "--connect-timeout",
+            "10",
+            "--max-time",
+            "30",
+            "-A",
+            "GBS/0.1 (+https://github.com/alto4truth/projects)",
+            url,
+        ],
+        text=True,
+    )
+    return json.loads(raw)
 
 
 def pick_text_url(formats: dict[str, str]) -> str | None:
@@ -131,33 +123,24 @@ def strip_gutenberg_boilerplate(text: str) -> str:
 
 
 def fetch_text(url: str) -> str:
-    last_error: Exception | None = None
-    candidates = [url]
-    if url.startswith("https://"):
-        candidates.append("http://" + url[len("https://") :])
-
-    for candidate in candidates:
-        for _ in range(3):
-            try:
-                request = urllib.request.Request(
-                    candidate,
-                    headers={"User-Agent": "GBS/0.1 (+https://github.com/alto4truth/projects)"},
-                )
-                with urllib.request.urlopen(
-                    request,
-                    timeout=20,
-                    context=ssl._create_unverified_context() if candidate.startswith("https://") else None,
-                ) as response:
-                    raw = response.read()
-                    encoding = response.headers.get_content_charset() or "utf-8"
-                text = raw.decode(encoding, errors="replace")
-                return normalize_text(strip_gutenberg_boilerplate(text))
-            except Exception as exc:
-                last_error = exc
-                continue
-    if last_error is None:
-        raise RuntimeError(f"Failed to download {url}")
-    raise last_error
+    raw = subprocess.check_output(
+        [
+            "curl",
+            "-fsSL",
+            "--retry",
+            "3",
+            "--retry-all-errors",
+            "--connect-timeout",
+            "10",
+            "--max-time",
+            "40",
+            "-A",
+            "GBS/0.1 (+https://github.com/alto4truth/projects)",
+            url,
+        ]
+    )
+    text = raw.decode("utf-8", errors="replace")
+    return normalize_text(strip_gutenberg_boilerplate(text))
 
 
 def iter_books_for_term(term: str) -> list[dict]:

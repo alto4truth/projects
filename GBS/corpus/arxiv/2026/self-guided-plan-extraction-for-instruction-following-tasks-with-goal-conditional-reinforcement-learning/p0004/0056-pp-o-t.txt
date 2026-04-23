@@ -1,0 +1,38 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 56
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+successful completion, the framework provides the next subtask in the sequence, guiding the
+agent through the overall plan until the final goal is
+achieved.
+We utilize theFOCUSinstruction dataset described in the main text. The structure of the dataset
+is as follows:
+Training Set:
+• Atomic: Single, indivisible goals (e.g., "Craft
+a furnace").
+• Combo: Sequences of multiple atomic goals
+(e.g., "Craft a furnace and then collect wood").
+• Crucially, each instruction in the training set
+also has a paraphrased version to encourage
+linguistic robustness from the start.
+Test Sets (Out-of-Distribution):
+• Paraphrases: Contains the same underlying
+goals as the Combo training set, but expressed
+with novel vocabulary and syntax. This tests
+robustness to linguistic variation.
+– Training Combo: "Consume beef and
+create a stone pickaxe."
+– Test Paraphrase: "Eat steak and forge a
+stone pickaxe." or "Devour cow meat and
+create a stone pickaxe."
+• New Objects: Introduces new combinations of
+atomic goals that appeared during training but
+never occurred together in a single instruction
+in the training set. This directly tests compositional generalization. These instructions also
+come with their own

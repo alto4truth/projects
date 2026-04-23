@@ -1,0 +1,27 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+with
+the state-of-the-art TAD framework [6] to detect the “StOP?”
+and “A.B.A.” activities in real surgeries, as shown in Fig. 3.
+Specifically, we propose a self-supervised learning strategy to
+train a spatial-temporal transformer encoder that encodes cliplevel gaze features.
+For each video clip comprisingNframes, where each frame
+containsPpersons (withPvarying across frames), we extract gaze features of sizeGfor each person from the gaze
+decoder of the gaze-following model without generating gaze
+heatmap. This process yields a sequence of gaze feature vectorsC ∈ R N×P×G over time. Subsequently, we apply the
+spatial-temporal transformer encoder: for each frame, we pass
+the gaze vectorsC s ∈ R P×G with head positions encoded
+through a three-layer encoder to obtain a frame-level vector
+from the[CLS]token, and then we pass these frame vectors
+Ct ∈ R N×G through another three-layer encoder to obtain the
+final clip-level featuresf g of sizeVfrom the[CLS]token.
+Considering the sparsity and ambiguity of the TAD labels,
+we train the gaze encoder under supervision of the visual features in a self-supervised way. Specifically, we use an off-theshelf VideoMAEv2 model [38] to obtain visual feat

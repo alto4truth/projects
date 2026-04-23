@@ -1,0 +1,29 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+ixed-𝛽 Boulware( 𝛽 = 0 .6),Linear( 𝛽 = 1 .0),
+Conceder( 𝛽 = 2 .0): Classical Faratin tactics with
+a fixed 𝛽. Vulnerable to retractions under dynamic
+pricing shifts because𝛽does not recalculate.
+∙ Two-Index( 𝛽 = 𝑐/(𝑠× 100), 𝑐 = 3): The proposed
+framework. Spread-derived 𝛽 determines the concession
+shape; the anchor-and-resume mechanism (Equation 3)
+guarantees monotonicity under dynamic shifts.
+Behavior-dependent strategy.
+∙ Generous Tit-for-Tat(inspired by the generous TFT
+variant in Nowak and Sigmund’s [15] analysis of cooperation in heterogeneous populations, where agents cooperate with some probability after opponent defection
+to escape cycles of mutual defection; we adapt this principle to bilateral negotiation by introducing stochastic
+unilateral concessions): Mirrors the carrier’s absolute
+dollar concession each round. When the carrier’s concession falls below 5% of the broker’s remaining room,
+the broker makes a unilateral concession of 15% of remaining room with 30% probability, breaking deadlock
+against slow-moving carriers. The specific thresholds
+(5%, 15%, 30%) are design choices, not derived from
+the original work. No principled pacing mechanism and
+no formal monotonicit

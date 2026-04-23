@@ -1,0 +1,35 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 2
+section: r-e-s-u-lt-s
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+e Gulf Coast of the U.S., due to its high susceptibility to
+hurricane events; therefore, only data from gauge stations in this region are included.
+12
+
+Furthermore, as explained in more detail in the following sections, offset time series
+for all the considered stations are treated in parallel by the ML model. Thus, it is
+necessary to construct a single time series for each station by concatenating the data
+for all the considered hurricanes. The resulting time series for all stations must also
+have the same length. As a result, stations with a large amount of missing data for
+at least one of the considered storms are excluded from the dataset. This procedure
+leads to the selection of 16 gauge stations, listed in Table 3. Out of the 13 total TCs,
+data for Hurricanes Ian (2022) and Idalia (2023) are separated from the full dataset
+and used as validation and test sets, respectively, while the remaining TC data constitute the training set. All sets were further divided into windows using the windowing
+technique, a common method in time series forecasting. This technique converts continuous time series data into a supervised learning problem by creating input-output
+pairs. It involves defining a fixed-size window that slides through the data, forming
+input sequences from a set of consecutive past values (”input window”), and their
+corresponding target values (”prediction window”). This approach is effective for capturing temporal patterns and dependencies in the data, making it a useful strategy for
+time series forecasting [ 77, 78]. To address the issue of disparate data scales, data are
+transformed using the MinMax scaler of the Scikit-Learn Python package [ 93]. Training, validation, and test sets are rescaled separately, based on the attributes of the
+training set, to avoid data leakage [ 94].
+2.3 Graph-Based Representation of Gauge Stations
+To capture the spatial dependencies among water‐level gauge stations, we model the
+entire network of stations as an undirected graph. A graph ( G) is an abstract representation of a network, consisting of a set of nodes ( V) and edges ( E), indicating the
+presence of an interaction between nodes [ 90–92]. For our problem, we present the
+13

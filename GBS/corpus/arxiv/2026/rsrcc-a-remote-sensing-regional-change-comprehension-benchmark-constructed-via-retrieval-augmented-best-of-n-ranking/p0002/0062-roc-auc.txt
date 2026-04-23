@@ -1,0 +1,64 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 2
+section: roc-auc
+chunk: 62
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+hange. Focus
+strictly on the change inside the red bounding box; all
+other differences are not correct. Format the output as:
+Question:
+nA.
+nB.
+nC.
+29
+
+nD.
+nThe correct answer is:”
+2. No-Change Instruction (MCQ-No):For cases where no visible change occurs, the model is
+instructed to generate a question where the correct answer explicitly identifies that there is
+no change, while the other options describe incorrect or misleading changes.
+“You are an expert in generating multiple-choice questions
+about visual comparisons in satellite imagery. The
+two images below showno visible change. Generate one
+multiple-choice question where the correct answer states
+that there wasno change, and the other three options must be
+incorrect changes (e.g., suggesting false changes). Format
+the output as: Question:
+nA.
+nB.
+nC.
+nD.
+nThe correct answer is:”
+Thisstructuredpromptingdesignensuresbalancedquestion–answergeneration,maintainingsemantic
+correctness for both change and no-change conditions while preventing overfitting to visual noise or
+irrelevant features.
+L Robustness to the Choice of Segmentation Backbone
+To evaluate the sensitivity of the proposed filtering mechanism to the choice of segmentation
+backbone, we compare our custom segmentation model to two established baselines: SegFormer
+[41], a transformer-based semantic segmentation model, and Mask2Former [6], which jointly models
+pixel and mask representations. Both baselines were fine-tuned on the OpenEarthMap [40]. For
+each model, we generate segmentation masks on a representative subset of the dataset and compute
+the pairwise IoU between the resulting masks. Table 7 reports the average IoU scores between the
+three segmentation models. These results suggest that the proposed Best-of-𝑁 filtering mechanism is
+largely insensitive to the specific segmentation backbone employed.
+Table 7: Pairwise IoU between segmentation models.
+Model Ours SegFormer Mask2Former
+Ours 1.00 0.94 0.96
+SegFormer 0.94 1.00 0.98
+Mask2Former 0.96 0.98 1.00
+M Filtering of the Discovery Pipeline
+To better understand the behaviour of the unsupervised discovery pipeline, we analyse the decisions
+made by the two sequential filtering stages: (i) animage-text encoderthat performs initial semantic
+screening of candidate masks, and (ii) anLLM judgethat evaluates the remaining regions using
+retrieval-guided textual reasoning. Only high-confidence pseudo-labels that pass both stages are used
+for adaptation.
+Table 8 summarizes the filtering outcomes over the full evaluation set. Out of total candidate regions
+produced by the segmentation model,54.6% were rejected by the image-text encoder. The remaining
+ambiguous cases were forwarded to the LLM judge. Among these,23.3% were accepted as valid
+semantic changes, while76.7%were discarded as spurious or low-confidence detections.
+30

@@ -1,0 +1,24 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+the attention block or the
+feed-forward network. DropAttention [23] and DropKey
+[20] explore the different positionings of dropout within
+the multi-head attention block. Subsequent works explored
+structuredvariantssuchasheaddropout[39]andLayerDrop
+[7] which stochastically removes entire Transformer heads
+and layers respectively during training. These approaches
+improverobustnessandgeneralization,particularlyinlargescale models. R-Drop [22] enforces consistency between
+multiple stochastic forward passes with dropout, effectively
+tightening the output distribution.
+2.2. Explicit Dropout Regularization
+While dropout is often implemented as stochastic masking, several works make its explicit regularization effect
+precise by rewriting the expected dropout objective as an
+:Preprint submitted to Elsevier Page 2 of 13

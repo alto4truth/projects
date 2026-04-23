@@ -1,0 +1,33 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+values are 95% CIs. Retr. = retraction
+events per negotiation.
+Strategy Agree (%) Savings Rounds Retr.
+Boulware (𝛽=0.6) 66.0±0.6 0.722±0.002 7.47±0.03 0.074
+Linear (𝛽=1.0) 68.4±0.6 0.691±0.002 6.87±0.04 0.165
+Conceder (𝛽=2.0) 72.3±0.6 0.636±0.002 6.36±0.04 0.262
+Gen. TFT 66.5±0.6 0.695±0.002 7.29±0.02 0.000
+Two-Index (𝑐=3) 65.1±0.6 0.690±0.002 6.94±0.04 0.000
+all three fixed- 𝛽 baselines retract at rates proportional to
+𝛽 (Conceder 0.262, Linear 0.165, Boulware 0.074 events per
+negotiation). The two-index framework’s zero retraction rate
+confirms Proposition 3.1 empirically across the full spread
+range, from 𝑆 = 1% (deep Conceder posture) to 𝑆 = 20%
+(deep Boulware posture). Table 1 summarizes aggregate performance with 95% confidence intervals. All pairwise comparisons with the two-index strategy use Welch’s 𝑡-test (savings,
+rounds) or a two-proportion 𝑧-test (agreement rate). Figure 2
+shows agreement rate and broker savings per strategy and
+carrier archetype; the following subsections examine these
+results.
+5.1 Two-Index vs. Time-Dependent
+Strategies
+The fixed-𝛽 baselines exhibit the savings-agreement tradeoff
+described by Faratin et al. [ 1]: Boulware achieves the highest
+saving

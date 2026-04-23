@@ -1,0 +1,34 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 11
+section: performance-comparison-on-three-representative-amodal
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+We utilize
+the AdamW optimizer with a learning rate that decreases from
+1e-4 to 5e-5 throughout training.
+B. Evaluation of Amodal Image Segmentation
+Closed-domain amodal segmentation.To have a comparison
+in the closed-domain scenario,i.e., the training and testing
+samples are from the same dataset, we evaluate the proposed
+methods with four representative works on the KINS, COCOA,
+and COCOA-cls datasets. This comparison is presented in
+Table I, where ”Amodal SAM” shows the performance when
+the proposed Amodal SAM is evaluated in the closed domain
+setting.
+Open-world amodal segmentation.To further validate
+the cross-dataset robustness and zero-shot transferability of
+our proposed framework, we benchmark Amodal SAM
+against two state-of-the-art paradigms: the gestalt-principled
+pix2gestalt [37] and the recently proposed SAMBA [38].
+Unlike conventional evaluations, this zero-shot setting requires
+the models to generalize to unseen object categories and
+disparate environmental distributions without any fine-tuning.
+We utilize the COCOA-cls and D2SA datasets as the
+primary evaluation testbeds, as they offer a diverse array
+of complex occlusion scenarios and high-density semantic
+classes

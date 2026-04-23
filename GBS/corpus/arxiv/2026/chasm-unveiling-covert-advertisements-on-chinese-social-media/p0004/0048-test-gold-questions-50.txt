@@ -1,0 +1,64 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 48
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+ans when identifying covert advertisements, we
+attempted to provide more detailed evaluation standards directly in the prompt. However, as shown in
+23
+
+Table 8, this did not help align with fine-grained human standards, and these more detailed prompts
+performed worse.
+We use the templates as follows:
+Detailed Zero-shot Prompt
+Your task is to determine whether the social media tweets contain advertising content. The
+input may include tweets, pictures, and comments. If the input contains content that persuades
+people to buy, the output is ’1’, which means it contains advertising. If the input is just general
+life sharing content or other content not related to the product, the output is ’0’. Please only
+output ’1’/’0’, and do not output other content.
+Here are some guidelines: 1. Clear evidence of promotion: Hidden ads often contain obvious
+signs of promotion, such as providing direct purchase links or product purchase instructions.
+To make the ads more hidden, promotional links are sometimes embedded in pictures or
+comments, or users are redirected to private chat groups for sales. In contrast, non-advertising
+content focuses mainly on sharing personal experiences, so it may only casually mention
+product or store names, and the content usually lacks enough information for users to
+complete the purchase. 2. Post language style: Hidden ads often use clickbait-style titles
+and sales pitches. Such articles often have a strong promotional tone and use exaggerated
+language to emphasize the advantages of the product, which runs counter to the natural style
+of daily communication. In contrast, non-advertising content is usually more casual in tone
+and focuses on sharing personal experiences rather than promoting products. It may also
+mention product shortcomings. 3. Post text and image structure: Hidden ads often focus text
+and images on a single specific product or closely related products of the same brand. In
+contrast, non-promotional lifestyle sharing posts often involve multiple different brands in
+the same category, some of which may even be competitors, or the author does not explicitly
+recommend any specific brand.
+Detailed Few-shot Prompt
+Your task is to determine whether the social media tweets contain advertising content. The
+input may include tweets, pictures, and comments. If the input contains content that persuades
+people to buy, the output is ’1’, which means it contains advertising. If the input is just general
+life sharing content or other content not related to the product, the output is ’0’. Please only
+output ’1’/’0’, and do not output other content.
+Here are some guidelines: 1. Clear evidence of promotion: Hidden ads often contain obvious
+signs of promotion, such as providing direct purchase links or product purchase instructions.
+To make the ads more hidden, promotional links are sometimes embedded in pictures or
+comments, or users are redirected to private chat groups for sales. In contrast, non-advertising
+content focuses mainly on sharing personal experiences, so it may only casually mention
+product or store names, and the content usually lacks enough information for users to
+complete the purchase. 2. Post language style: Hidden ads often use clickbait-style titles
+and sales pitches. Such articles often have a strong promotional tone and use exaggerated
+language to emphasize the advantages of the product, which runs counter to the natural style
+of daily communication. In contrast, non-advertising content is usually more casual in tone
+and focuses on sharing personal experiences rather than promoting products. It may also
+mention product shortcomings. 3. Post text and image structure: Hidden ads often focus text
+and images on a single specific product or closely related products of the same brand. In
+contrast, non-promotional lifestyle sharing posts often involve multiple different brands in
+the same category, some of which may even be competitors, or the author does not explicitly
+recommend any specific brand.
+[A Selected Convert Advertisement Example]
+[A Selected Non-Convert Advertisement Example]
+24

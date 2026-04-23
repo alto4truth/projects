@@ -1,0 +1,32 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+fully masters14 distinct subtasks. It signifies that
+the agent has acquired almost the entire ’mining’
+technology tree: all the achievements from collecting wood to collecting iron. Furthermore, it
+demonstrates the ability to execute complex, combined instructions that require interleaving subtasks
+from different progression branches, such as eating,
+drinking, and collecting resources within a single,
+coherent plan.
+Agent trainedon Oracle plans without the Skill
+Curriculumperform worse with only mastered5
+basic subtasks. Even with a flawless plan, the
+agent fails to learn without a structured progression that allows it to build foundational skills first.
+This finding confirms that Skill Curriculum helps
+to overcome sparse feedback problem and enables
+agent abilities to learn more subtasks.
+b) Plan quality is critical for effective learning
+under sparse feedback
+While curriculum learning is necessary for training under sparse rewards, its effectiveness strongly
+depends on the quality of the underlying plans.
+High-quality plans constrain the search space and
+provide a meaningful structure for skill acquisition,
+whereas poor plans can make learning intractable
+even with a well-designe

@@ -1,0 +1,25 @@
+title: Exploring High-Order Self-Similarity for Video Understanding
+source: arxiv
+year: 2026
+document_id: exploring-high-order-self-similarity-for-video-understanding
+authors: Manjin Kim; Heeseung Kwon; Karteek Alahari; Minsu Cho
+page: 3
+section: enc-blocks-3
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20760v1
+
+Exploring High-Order Self-Similarity for Video Understanding 7
+consistent with prior work [35]. However, the effectiveness of SELFY [35] and
+ATM [87] is overshadowed by excessive memory overhead when applying a series
+of convolutions to large STSS tensorS. In contrast, we use a simple FC layer to
+directly reduce the volume ofS. This enables memory-efficient processing of multiorder STSSs, leading to superior performance with less memory consumption.
+Finetuning Methods.Although we integrate our MOSS module into LST
+framework [93] for efficient action recognition in previous experiments, MOSS is
+also compatible with various finetuning scenarios including full finetuning and
+parameter-efficient finetuning (PEFT) [58,92]. Here we conduct experiments in
+such scenarios. For full finetuning, we add temporal convolution blocks and a
+single MOSS module to the CLIP-pretrained ViT-B [62] and train the entire
+network following [87]. For PEFT, we integrate MOSS into AIM [92] and train
+the module and adapters keeping the backbone frozen. For LST, we additionally
+conduct experiments on DiST [61] by inserting a single MOSS module between
+the spatial encoder and the integration branch. The results

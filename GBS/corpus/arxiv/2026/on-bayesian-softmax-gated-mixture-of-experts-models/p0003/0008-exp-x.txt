@@ -1,0 +1,117 @@
+title: On Bayesian Softmax-Gated Mixture-of-Experts Models
+source: arxiv
+year: 2026
+document_id: on-bayesian-softmax-gated-mixture-of-experts-models
+authors: Nicola Bariletto; Huy Nguyen; Nhat Ho; Alessandro Rinaldo
+page: 3
+section: exp-x
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20551v1
+
+almost everyX. As the expert functionE is
+second-order strongly identifiable, we gett(u′)
+2,j = 0for allu ′ ∈[d ′];
+•F 2,j(Y|X), we havet 3,j = 0.
+39
+
+Forj∈[K ⋆]such that|C j|>1, by considering the coefficients of
+•F 0,j(Y|X ), we havet0,j +Pd
+u=1 t(u)
+1,j X(u)+Pd
+u,v=1 t(uv)
+4,j X(u)X(v) = 0, for almost everyX. Then,
+we gett 0,j =t (u)
+1,j =t (uv)
+4,j for allu, v∈[d].
+•F 1,j(Y|X), we have
+d′
+X
+u′=1
+t(u′)
+2,j
+∂E
+∂β (u′) (X, β⋆
+j ) +
+d′
+X
+u′,v′=1
+t(u′v′)
+5,j
+∂2E
+∂β (u′)∂β (v′) (X, β⋆
+j )
++
+dX
+u=1
+d′
+X
+v′=1
+t(uv′)
+7,j X(u) ∂E
+∂β (v′) (X, β⋆
+j ) = 0,
+for almost everyX. As the expert functionE meets the second-order strong identifiability
+condition, we gett(u′)
+2,j =t (u′v′)
+5,j =t (uv′)
+7,j = 0for allu ′, v′ ∈[d ′]andu∈[d];
+•F 2,j(Y|X), we have
+1
+2 t3,j +
+d′
+X
+u′,v′=1
+t(u′v′)
+5,j
+∂E
+∂β (u′) (X, β⋆
+j ) ∂E
+∂β (v′) (X, β⋆
+j ) +
+dX
+u=1
+1
+2 t(u)
+8,j X(u) = 0,
+for almost everyX. Since t(u′v′)
+5,j = 0for all u′, v′ ∈ [d′], it follows that1
+2 t3,j +Pd
+u=1
+1
+2 t(u)
+8,j X(u) =
+0, for almost everyX. Then, we gett3,j =t (u)
+8,j = 0for allu ′, v′ ∈[d ′]andu∈[d];
+•F 3,j(Y|X ), we havePd′
+u′=1
+1
+2 t(u′)
+9,j
+∂E
+∂β(u′) (X, β⋆
+j ) = 0, for almost everyX. As the expert function
+Eis strongly identifiable, we gett(u′)
+9,j for allu ′ ∈[d ′];
+•F 4,j(Y|X), we havet 6,j = 0.
+Combining the above results, we deducet0,j = t(u)
+1,j = t(u′)
+2,j = t3,j = t(uv)
+4,j = t(u′v′)
+5,j = t6,j = t(uv′)
+7,j =
+t(u)
+8,j = t(u′)
+9,j = 0for all j∈ [K⋆], u, v∈ [d]and u′, v′ ∈ [d′]. This contradicts the fact that at least
+one among them is non-zero. Therefore, we achieve the result in Equation (26). Hence, the proof is
+completed.
+A.6 Proof of Theorem 6
+Following the proof strategy of Miller (2023) for simple mixture models, we prove the result by
+leveraging the famous posterior consistency theorem by Doob (1949).7 However, the latter requires a
+stronger notion of identifiabilitywith respect to SMoGE parameters. This, despite the identifiability
+of SMoGE densitieswith respect to mixing measures, does not hold onΘ∞ because mixing measures
+are invariant under (i) permutations of expert labels, and (ii) mergers and separations of equal
+mixing measure atoms. Therefore, we first construct a restricted space˜Θ∞ where the assumptions of
+Doob’s theorem (measurability of the model and parameter identifiability) hold; then we show that
+7Throughout the proof, we refer to the formulation of Doob’s theorem presented in Miller (2018) (Theorem 2.4),
+requiring measurability of the model with respect to parameters and parameter identifiability.
+40

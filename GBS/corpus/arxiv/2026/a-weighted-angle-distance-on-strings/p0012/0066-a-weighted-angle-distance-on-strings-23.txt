@@ -1,0 +1,31 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 12
+section: a-weighted-angle-distance-on-strings-23
+chunk: 66
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+24 GRANT MOLNAR
+Dataset Family Median pairwise time
+splice edit2.5s
+splice kgram angle1.2m
+splice js kgram3.2m
+splice weighted angle19.3m
+strseq edit2.1s
+strseq kgram angle39.0s
+strseq js kgram1.2m
+strseq weighted angle19.7m
+ucsc trf edit25.9s
+ucsc trf kgram angle9.1m
+ucsc trf js kgram17.4m
+ucsc trf weighted angle5.26h
+Table 4.Median wall-clock time to compute the full pairwise distance matrix
+for each family on each dataset (pure Python implementation; no caching or
+parallelism).
+Figure 1.Best ARI achieved by each distance family onsplice.
+[10] Christopher D. Manning, Prabhakar Raghavan, and Hinrich Sch¨ utze,Introduction to information retrieval, Cambridge University Press, 2008.
+[11] Grant Molnar,weighted-angle-distance: reference implementation and experimental pipeline,
+https://github.com/grantmolnar/weighted-angle-distance, 2026, Accessed Apr. 22, 2026.

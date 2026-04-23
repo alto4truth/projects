@@ -1,0 +1,33 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+Accuracy on Gold Questions 0.94
+(2) Data Filtering:We removed samples with explicit advertising labels,
+i.e., those marked with sponsored tags,
+as they are clearly distinguishable
+from regular content and unlikely to
+mislead users. These traditional advertisements fall outside the scope of
+covert advertisements and were excluded from our dataset.
+(3) Data Anonymization:To further
+protect user privacy and mitigate the
+risk of information leakage, we applied anonymization to the dataset using open-source anonymization tools
+[30, 31]. Specifically, we masked
+personal information such as names,
+phone numbers, and email addresses
+in the text, and obscured potentially
+privacy-sensitive facial regions in images; examples are shown in Appendix F. We also manually reviewed
+a random sample of 30 data points after anonymization and found no signs
+of residual privacy leakage.
+3.2 Data Annotation
+We adopted manual annotation to curate a high-quality dataset. Five native Chinese-speaking students participated as annotators. They were paid
+$5 per hour, which exceeds the local
+minimum wage standard. All of them
+had substantial experience (> 1 hour/day) with RedNote.
+Because of the subjectivity and

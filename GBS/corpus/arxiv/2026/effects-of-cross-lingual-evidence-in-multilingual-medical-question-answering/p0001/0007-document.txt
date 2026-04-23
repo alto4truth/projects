@@ -1,0 +1,31 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+irst, retrieving evidence from English
+web search and providing it to LLMs yields the
+best performance for MMQA across high-resource
+languages, and combining English retrieval with
+the target language retrieval is the best strategy for
+low-resource languages. For models under 30B parameters, this English web-search strategy provides
+the greatest benefit, achieving an 8.2% improvement over the baseline. Second, larger models
+consistently outperform smaller models across all
+evaluation settings. However, for models of 70B
+parameters (or larger), incorporating retrieved evidence decreases performance by 2.4% on average,
+suggesting these models have already internalized
+relevant medical knowledge during pre-training.
+Third, and most importantly, the performance gap
+between high-resource and low-resource languages
+seems to be due to the heavy under-representation
+of low-resource languages during LLM pretraining,
+which can be compensated for by augmenting with
+English and target language evidence. Fourth, although the retrieved evidence helps smaller models
+to improve their accuracy, it still underperforms
+compared to the baselines, with the largest LLMs
+remaining much better in the task

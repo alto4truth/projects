@@ -1,0 +1,41 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 10
+section: a-weighted-angle-distance-on-strings-19
+chunk: 52
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+Proof.(1) If|X j|takes only finitely many values and infinitely manyX j are strings, then
+there are only finitely many possible strings among those terms. A Cauchy sequence in a
+finite metric space must be eventually constant.
+(2) We may therefore assume that eitherX j are measures for all largej, or thatX j are
+finite strings with|X j| → ∞.
+Fixn≥1. By Lemma 7.15 the sequenceu n(Xj) converges in{0} ∪S(R Σn
+). In our present
+case, for each fixednwe eventually have|X j| ≥n(ifX j are strings) orX j ∈ M τ (if they
+are measures), henceu n(Xj)̸= 0 for all largej. Therefore the limit lies in the unit sphere;
+write it asu ∞
+n .
+Define probability vectors on Σ n by
+pn(W) := u∞
+n (W)P
+U∈Σ n u∞
+n (U) , W∈Σ n.
+Sinceu ∞
+n ≥0 and∥u ∞
+n ∥2 = 1, the denominator is positive. Moreover, the mapu7→u/∥u∥ 1
+is continuous on the nonnegative unit sphere, so
+pXj
+n = un(Xj)
+∥un(Xj)∥1
+− →pn
+for each fixedn.
+We claim that (pn)n≥1 satisfies the Kolmogorov consistency relations, i.e. P
+a pn+1(W a) =
+pn(W) and P
+a pn+1(aW) =p n(W). ForX j ∈ M τ these equalities hold exactly (as discussed
+after Definition 7.11), so they pass to the limit immediately. ForXj a finite stringSof length
+L≥n+ 1, the corresponding empir

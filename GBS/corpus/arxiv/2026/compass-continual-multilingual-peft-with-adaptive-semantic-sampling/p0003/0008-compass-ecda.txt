@@ -1,0 +1,28 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 3
+section: compass-ecda
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+r transition. Full retraining, despite access
+to all historical data and comparable forward and backward transfer, underperforms on computational ef24
+
+Published in Transactions on Machine Learning Research (11/2025)
+ficiency (see Appendix F). EWC and random rehearsal fail to match COMPASS-ECDA’s adaptation rates
+per transition.
+Model capacity influences continual learning dynamics in our experimental setting. The smaller Phi-4-Mini
+model benefits most from COMPASS-ECDA’s targeted preservation strategy, attributable to insufficient capacity to store essential information via DoRA, as it suffers from the largest regressions in backward transfer
+when using methods such as naive fine-tuning. LLaMA-3.1 demonstrates similar patterns with enhanced stability, while Qwen2.5’s stronger multilingual pretraining amplifies COMPASS-ECDA’s effectiveness, yielding
+the highest absolute performance across all periods.
+The consistent pattern across architectures, aggregated over multiple target languages and averaged over 3
+randomseeds, validatesthegeneralizabilityofCOMPASS-ECDA’sapproach. Completetemporaltrajectories
+and statistical comparisons for all models are provided in Appendix D.
+5.6 COMPASS adaptation results in generalized multilingual benefits
+The benefits of COMPASS generalize across other evaluation tasks, even without distribution matching (i.e.,
+when cluster-level weights in COMPASS are not a dominant factor). The magnitude of improvement is most
+pronounced for languages that were initially poorly performing (MGSM) and on tasks that are similar to
+the fine-tuning objective (XQuAD) 8.

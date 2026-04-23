@@ -1,0 +1,31 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 4
+section: lm-o-t-l-tud-l-ic-b-itod-hb-ycb-v
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+thod without AMPR mechanism.
+Following the official BOP leaderboard protocols, all compared
+methods utilize SAM-6D for initial detection and segmentation.
+Our model achieves a mean accuracy of 76.5%, notably surpassing SAM-6D (70.4%) and MegaPose (50.9%). The performance
+on LM-O (77.0%) and YCB-V (88.6%) further evidences high
+robustness under heavy occlusion. These improvements can
+be largely attributed to the amodal-driven refinement, which
+can mitigate the pose drift commonly observed in traditional
+render & compare baselines [67].
+(3) Qualitative Analysis and Robustness:To qualitatively
+evaluate performance under adverse conditions, we visualize
+the pose estimation results in Fig. 4 and Fig. 5. As illustrated
+in Fig. 4, despite the presence of severe inter-object occlusion
+and cluttered backgrounds in the LM-O dataset, MAPRPose
+accurately recovers 6D poses by leveraging amodal masks to
+filter out non-target features.
+Notably, while existing state-of-the-art methods frequently
+suffer from intermittent detection failures or miss targets in
+occluded frames, our approach maintains high recall and
+stability. This robustness is further evidenced in Fig. 5, which
+demonstrates the mode

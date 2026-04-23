@@ -1,0 +1,31 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+he instruction and visual evidence.
+• Factual Accuracy (SK): correctness of knowledge claims against external facts.
+• Image-Text Consistency (SV ): fidelity of the
+textual response to the visual input.
+Together, these axes provide a comprehensive
+measure of data quality, capturing both semantic
+integrity and visual fidelity.
+3.2 Phase 1: Response Decomposition via
+Chain-of-Thought
+The first phase disentangles raw responses into
+verifiable components, separating visual descriptions from subjective inferences and factual claims.
+This is achieved through a three-step chain-ofthought (CoT) process, Ψdeconstruct, implemented
+with the Qwen3-235B-A22B-Instruct-2507-FP8
+model (Team, 2025). The result is an annotated
+response with explicit tags and a purified visual
+summary, which together form the basis for systematic auditing.
+Figure 2: Three-stage Chain-of-Thought (CoT) process
+for response decomposition, which (1) isolates subjective inferences and factual claims via semantic tagging,
+(2) purifies the text through visual distillation, and (3)
+refines the output into a cohesive, purely visual summary.
+Step 1: Semantic Tagging.The process begins by parsing the raw response Ri while stric

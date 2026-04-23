@@ -1,0 +1,20 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 2
+section: mnist
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+enerate more trivial mutants. The difference arises mainly from the circuit scale
+and encoding methods. HCQC adopts a small-scale circuit with a single output qubit (see Table 2),
+where limited entanglement concentrates information on the output qubit, amplifying mutation
+effects. The sensitivity of DRNN comes from angle encoding. It maps each input feature to qubit
+rotations with a constant circuit depth [56], so output-qubit mutations directly distort encoded
+states. In contrast, amplitude encoding (used in QCL and QCNN) distributes features globally
+across2 𝑛 basis states through an exponentially deep circuit [24], making few-qubit mutations less
+impactful. Their deeper, highly entangled circuits also spread local perturbations across qubits,
+narrowing the gap between output- and non-output-qubit mutations.
+Proc. ACM Softw. Eng., Vol. 3, No. FSE, Article FSE128. Publication date: July 2026.

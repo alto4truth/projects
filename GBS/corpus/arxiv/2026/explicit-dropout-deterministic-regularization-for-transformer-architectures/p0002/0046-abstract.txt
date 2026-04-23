@@ -1,0 +1,73 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 46
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+𝑇
+ff.(95)
+Thediscrepancybetweentheoriginalandperturbedoutputs
+is therefore
+𝐇𝑖 −𝐇 𝑖𝑡 = ̃𝐱𝑖𝑡𝐖𝑇
+ff,(96)
+where, ̃𝐱𝑖𝑡 =𝐱 𝑖 − (𝐦𝑖𝑡 ⊙𝐱 𝑖).
+Assuming𝑁 𝑇 stochastic training epochs with independently sampled dropout masks applied to𝐗, and denoting
+thestackeddroppedcomponentsatepoch𝑡by ̃𝐗𝑡,wedefine
+the feedforward dropout regularizer as
+𝐽ff = 1
+2𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+‖‖‖
+̃𝐗𝑡𝐖𝑇
+ff
+‖‖‖
+2
+𝐹
+.(97)
+Using‖𝐴‖ 2
+𝐹 = Tr(𝐴 𝑇 𝐴), we obtain
+𝐽ff = 1
+2𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+Tr (𝐖ff ̃𝐗𝑇
+𝑡 ̃𝐗𝑡𝐖𝑇
+ff
+).(98)
+Rearranging terms yields
+𝐽ff = 1
+2 Tr
+((
+1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+̃𝐗𝑇
+𝑡 ̃𝐗𝑡
+)
+𝐖𝑇
+ff𝐖ff
+)
+.(99)
+Using the definition of𝐁in Eq. (4), the regularizer admits
+the compact form
+𝐽ff = 1
+2 Tr(𝐁𝐖𝑇
+ff𝐖ff
+).(100)
+B. Relationship Between the Proposed
+Explicit Dropout Regularizer and the Prior
+Explicit Dropout Regularization [1]
+In this section, we show that the proposed explicit
+dropout regularizer can be decomposed into the previously
+derived explicit dropout regularizer [1] plus an additional
+structured attention-dependent term. This provides theoretical insight into how our formulation generalizes earlier
+explicit dropout formulations.
+B.1. Preliminaries
+For completeness and clarity, we rewrite the explicit
+dropout regularizer of [1] for the special

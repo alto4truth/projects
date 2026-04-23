@@ -1,0 +1,35 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+determinates with entriesΛuv =λ uv ifu→v∈DandΛ uv = 0else. Similarly,
+the matrixΩhas entriesΩ uv = Ωvu =ω uv ifu↔v∈Boru=v, andΩ uv = 0else. The matrixΣ
+has entriesΣ uv =σ uv foru≤vandΣ uv =σ vu else. It is useful to consider the mapping between
+polynomial rings
+τG :R[σ]− →R[θ]
+σuv 7− →[(I−Λ) −⊤Ω(I−Λ) −1]uv,
+which is dual to the parametrization in (3). Acyclicity ofGensures thatτG(σuv)is a polynomial.
+This polynomial exhibits a nice combinatorial structure given by treks. A trek in a mixed graphG
+is a walk whose consecutive edges do not have colliding arrowheads. In other words, a trek between
+nodesv l andu r is of one of the two following forms:
+vl ← · · · ←v 1 ↔u 1 → · · · →u r,
+or
+vl ← · · · ←v 1 =u 1 → · · · →u r,
+wherel, r≥1. The nodesv 1, . . . , vl are pairwise distinct and the nodesu 1, . . . , ur are pairwise
+distinct, but the sets{v1, . . . , vl}and{u 1, . . . , ur}are allowed to intersect. We refer to Sullivant
+et al. (2010) and references therein for more details on treks. For any trekπ, we associate a trek
+monomial given by
+π(θ) =ω v1u1
+l−1Y
+k=1
+λvkvk+1
+r−1Y
+k=1
+λukuk+1 ∈R[θ].
+Denote byT(v, w)the set of all treks fromvtow. Then, thetrek rule(Spirtes et al., 2000; Wright

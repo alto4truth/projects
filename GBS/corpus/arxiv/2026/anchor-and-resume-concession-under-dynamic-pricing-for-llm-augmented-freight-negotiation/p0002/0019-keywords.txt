@@ -1,0 +1,32 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+on historical outcomes and using SHAP analysis to identify the spread threshold at which
+concession posture should shift). Synthetic loads set 𝑟target at
+the midpoint of [ 𝑟min, 𝑟max], ensuring that 𝑅 = 𝑟target −𝑟 min
+equals half the spread for every load.
+4.1 Dynamic Pricing Environment
+All negotiations face dynamic pricing shifts. At a randomly
+chosen round (uniformly sampled from rounds 2 to 7), the
+orchestrator shifts 𝑟target by ±5–40%, simulating a pricing
+pipeline update. The shift schedule is pre-generated per
+(regime, load, repetition) triple and applied identically to
+every strategy, ensuring a controlled comparison. For fixed- 𝛽
+strategies, the shift changes the concession range but not𝛽,
+which can produce retractions. The two-index mechanism
+(Section 3.3) prevents retractions by construction.
+4.2 Broker Strategies
+Six broker strategies spanning three categories are compared:
+Time-dependent strategies.These compute each offer from
+the negotiation round and a fixed concession curve, independent of the carrier’s behavior.
+∙ Fixed-𝛽 Boulware( 𝛽 = 0 .6),Linear( 𝛽 = 1 .0),
+Conceder( 𝛽 = 2 .0): Classical Faratin tactics with
+a fixed 𝛽. Vulnerable to retractions under dynamic
+p

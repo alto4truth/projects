@@ -1,0 +1,25 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+sfavorfasteroptimization;
+however, higher-order and non-causal methods improve final performance at the
+cost of increased training complexity. From a practical standpoint, the bilinear
+transform emerges as a strong default choice, offering statistically significant
+gains with minimal computational overhead and fast convergence.
+5.2 Inference Speed
+Tables 3 and 4 show our benchmarked inference speeds across batch sizes to
+evaluate the efficiency of each advanced discretization method. BIL establishes
+an improvement in efficiency, outperforming the other methods in both lowlatency (with batch size 1) and high-throughput comparisons (with batch size
+512). As shown in Table 4, BIL achieves the lowest latency of 13.46 ms/img at
+batch size 1, making it the optimal choice for real-time applications. At batch
+size 512, it maximizes GPU saturation with a peak throughput of 4,804 img/s.
+While POL and FOH offer marginal gains at intermediate batch sizes (4–256),
+BIL provides the most robust solution for scalable deployment.
+For latency-critical applications (batch size 1), BIL is the superior discretization strategy at 13.46 ms, providing a distinct advantage over higher-order methods which m

@@ -1,0 +1,29 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 48
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+dundant or synonymous subtasks (Oversampling),
+(ii) missing core subtasks (Missing Skills), and (iii)
+the presence of spurious (non-classified) subtasks
+(Spurious Skills). To evaluate this, we construct a
+reference set by sampling ∼50 validation instructions and manually annotating their core subtasks,
+resulting in 23 unique skills. Generated subtasks
+are matched against this set using cosine similarity, and we compute the corresponding metrics.
+Coverage results are shown in Figure 7, while the
+remaining metrics are summarized in Table 4.
+We observe a clear relationship between ontology quality and downstream performance. As
+shown in Figure 7, models with higher coverage
+recover a larger fraction of the reference subtask
+set. At the same time, Table 4 shows that lowperforming models tend to exhibit higher oversampling and a larger number of missing and spurious
+subtasks.
+In particular, oversampling leads to an inflated
+and ambiguous subtask space, while missing skills
+result in incomplete plans that cannot be reliably executed. In contrast, structural issues such as cyclic
+dependencies, while undesirable, can be mitigated
+algorithmically (e.g., via cycle detection and pruning) and

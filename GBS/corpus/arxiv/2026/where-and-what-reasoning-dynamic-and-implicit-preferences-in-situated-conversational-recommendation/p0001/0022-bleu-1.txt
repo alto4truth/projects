@@ -1,0 +1,31 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 1
+section: bleu-1
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+models are optimized using LoRA rather than
+full-parameter tuning to maintain computational
+efficiency. The LoRA rank is set to r= 64 with
+scalingα= 16.
+All training-based baselines are tuned on the training set, and the best checkpoints are selected based
+on Recall@1 performance on the validation set.
+C Additional Implementation Details
+We provide further details on the model configuration and training process to ensure reproducibility.
+The only proprietary component in our pipeline,
+GPT-4o, is used in a one-time offline preprocessing step to build textual scene profiles. All online
+transition estimation, preference inference, and response generation rely on the open-source components listed below.
+Scene Transition Estimation (STE).For the
+STE module, we utilize Qwen3-Embedding-4B
+as the dense retriever and Qwen3-Reranker-4B as
+the fine-grained reranker. The generated target profile is never executed directly as a transition; it is
+used only as a semantic query against the candidate
+scene pool. To optimize the reranker, we apply
+LoRA fine-tuning to the attention modules (query
+and value projections). The LoRA rank is set to
+r= 64 with a scaling factor α= 16 and a dropout
+rate of 0

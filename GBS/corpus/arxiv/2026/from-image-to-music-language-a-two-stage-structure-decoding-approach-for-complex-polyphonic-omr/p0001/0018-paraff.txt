@@ -1,0 +1,26 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 1
+section: paraff
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+(single-pass).Chopin,ÉtudeOp. 10 No. 3, m. 34. The constraint
+system cannot resolve voice crossings in denser polyphony and again produces an error
+34
+
+solution. BeadSolver’s probability-guided search recovers the correct four-voice layout
+(q= 0.950).
+Row 3. BeadSolver → BeadSolver-Multipass.Chopin,ÉtudeOp. 10 No. 3, m. 57. Single-pass
+BeadSolver fixes a suboptimal partial assignment early and cannot escape it. Multipass
+search with escalating quota factors (f= 10,40,80 ) allows global backtracking and recovers
+four voices (q= 0.930).
+Row 4. BeadSolver-Multipass → Human annotation.Debussy,Suite Bergamasque— Clair de
+lune, m. 14. The multipass solver reaches a plausible partial solution (q= 0.778 ) but leaves
+bubbles in the timeline due to the missing of time warps attributes. Human correction
+finds the correct regulation and reaches q= 0.215 — lower raw score because there is an
+exceptional time warp fraction: 3/2, which break our assumption about time warp of tuplets.
+35

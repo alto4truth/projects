@@ -1,0 +1,28 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+sponse Length
+Base GRPO Ours
+Figure 4: Performance on general reasoning tasks.
+To verify the generalization capabilities of our
+method beyond specific domain tasks, we extended our evaluation to a suite of general reasoning benchmarks. Following the experimental
+setup in RLPR (Yu et al., 2025b), we utilized the
+WebInstruct dataset (Ma et al., 2025) for training, this dataset is characterized by a diverse
+semantic distribution, covering a wide range
+of disciplines including Physics, Mathematics
+Business, and Economics, thereby requiring the
+model to possess robust multi-domain reasoning abilities. We employed Qwen3-1.7B (Team,
+2025) as the backbone model and compared our
+proposed method against the Base model and the
+GRPO baseline. The evaluation was conducted on four challenging benchmarks: GPQA (Rein et al., 2024),
+MMLUPro (Wang et al., 2024), TheoremQA (Chen et al.), and the test split of WebInstruct. As shown
+in Figure 4, GRPO-VPS consistently outperforms baselines across all tasks. On GPQA and TheoremQA,
+it achieves 37.8% and 37.3% accuracy, surpassing GRPO (by 1.6% and 2.4%) and significantly beating
+the Base model (by 20.0% and 12.8%). Similarly, on MMLUPro and WebInstruct, o

@@ -1,0 +1,15 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 2
+section: items-in-scene510-1015-1520-2025-25
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+Conversational History(Turn-1) User: I'm trying to get more furniture for my bedroom. Is there a table here that wouldn't clash with my wardrobe?(Turn-1) System: Would you consider that table in the back to the right? It'sneutral brown color would blend well with anything!(Turn-2) User:Got any other ideas?(Turn-2) System:I'm afraid that's the only table here.(Turn-3) User:I really want it to be a Modern Arts table. No other brand will do.
+FurnitureStore (The scene where the conversation takes place)Scene-1 Items:item_1: {type: table; color: neutral brown; price: 27.99; ...}item_2: {type: chair; color: white; price: 16.49; ...}…
+Generated ResponsesMT-BART: Yes, this table is from this brand. LLaVA-NeXT(Fine-tuned): I think you can try the red table over there. Maybe it can meet your requirements.Qwen2.5-VL(Fine-tuned): Sure, this table is made by the Modern Arts brand, and it's especially convenient to use.SiPeR(Ours):In fact, this table is made by Modern Arts. Its designand colorwill definitely notclash with your wardrobe.
+Figure 9: Cases of generated responses for different models, where no scene transition is needed.
+Conversational History(Turn-1) User: Keep an eye out for nice s

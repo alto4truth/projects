@@ -1,0 +1,12 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 14
+section: 4-ripples
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+for vid in recent_changes:
+ripple_propagator.propagate(vectors[vid], vectors)

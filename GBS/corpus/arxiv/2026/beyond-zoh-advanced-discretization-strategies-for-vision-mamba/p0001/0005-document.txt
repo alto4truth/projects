@@ -1,0 +1,20 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+hnique that converts stable analog filters into equivalent digital filters, allowing analog designs to be implemented digitally, preserving stability [3] [21].
+4. Polynomial Interpolation (POL) – A higher-order approximation that fits
+polynomial curves through sample points, improving temporal smoothness
+[7] [2].
+5. Higher-Order Hold (HOH) – An extension of FOH using higher-degree polynomials to better approximate complex temporal variations [24].
+6. Runge–Kutta 4 (RK4) – A fourth-order integration method providing highprecision discretization for systems with fast-changing dynamics [5].
+By integrating these methods within a unified CUDA-based execution framework that preserves identical memory access patterns, kernel fusion, and scanbased recurrence across methods, we analyze how each affects model accuracy, training stability, and generalization across benchmark datasets such as
+ImageNet-1k [9], Cifar100 [15], ADE20K [32], and MS COCO [17].
+This work establishes a foundational understanding of how numerical methods, often overlooked in architectural design, directly influence the performance
+and stability of modern state space visual models. This work establishes discretization a

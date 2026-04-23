@@ -1,0 +1,28 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+occurs when activating the critic VLM for step-level
+process supervision. Full PGPO improves upon GRPO by 4.78% on TFV (from
+81.34% to 86.12%) and 4.61% on TQA (from 46.43% to 51.04%). This proves
+that while clipping and sampling optimizations help, the fundamental visual
+reasoning bottleneck remains the lack of verifiable, step-level logic grounding.
+Fig. 3:Training reward curves comparing different optimization strategies. Our full PGPO method (blue
+line) demonstrates superior final convergence and stability compared to
+GRPO (orange), DAPO (green), and a
+variant of PGPO lacking process supervision (red).
+Convergence and Stability Analysis.Figure 3 visualizes the training reward curves
+over 50 steps for the evaluated optimization methods. The standard GRPO baseline (orange) exhibits severe instability,
+highlighted by a catastrophic reward collapse around step 40. This is a classic symptom of reward hacking in visual domains, where the policy exploits
+a shortcut that suddenly breaks down
+on slightly out-of-distribution batches.
+DAPO (green) mitigates this collapse,
+showing a smoother curve, but plateaus
+early, failing to explore deeper logical
+trajectories. Remarkably, our full PGP

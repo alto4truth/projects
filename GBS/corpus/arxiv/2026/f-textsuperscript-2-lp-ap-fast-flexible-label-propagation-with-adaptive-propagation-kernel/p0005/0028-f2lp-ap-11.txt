@@ -1,0 +1,21 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 5
+section: f2lp-ap-11
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+in dispersion (σ= 0.012) due to structural complexity, the mean accuracy remains remarkably high at0.842. The combination
+of low volatility and high predictive accuracy underscores the effectiveness of our
+structure-aware strategy in mitigating heterophilous noise and providing reliable
+classifications regardless of graph topology.
+5 Parameter Sensitivity Analysis
+Experimental Design.To systematically evaluate the performance stability
+and parameter sensitivity of the proposed F2LP-AP model, we conduct an extensive sensitivity analysis. Two benchmark datasets with distinct network properties are selected: Cora, a high-homophily citation network (0.8488), and Texas, a
+low-homophily WebKB dataset (0.3078). This selection ensures a robust assessment of model adaptability across diverse topological structures. We focus on
+four pivotal hyper-parameters: the propagation step range (K min, Kmax) and
+the diffusion coefficient range (α min, αmax). Specifically, a grid search is performed overK min ∈ {1,2,3},K max ∈ {5,10,15},α min ∈ {0.05,0.1}, and
+αmax ∈ {0.1,0.2}. Following a 60/20/20 train-validation-test split, we report

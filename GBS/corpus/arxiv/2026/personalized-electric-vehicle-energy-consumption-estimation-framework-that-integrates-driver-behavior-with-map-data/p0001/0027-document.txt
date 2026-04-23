@@ -1,0 +1,31 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+he model correctly predicts deceleration behavior near traffic
+signals and at intersections with large heading changes (i.e., left or right
+turns).
+16
+
+The acceleration profile in Fig. 7 further illustrates the differences between the simulated and predicted profiles. The simulated acceleration from
+the PID Controller saturates at the predefined maximum and minimum limits, applying maximum acceleration during speed increases and maximum
+deceleration during braking. The driver-specific predicted acceleration, however, does not exhibit such saturation and instead reflects smoother, more
+realistic driving behavior. Both the predicted velocity and acceleration contain natural variations, unlike the smooth simulated profiles, capturing the
+variability present in real-world driving and the patterns learned from the
+training data.
+Power and SOC trajectories in Fig. 8 and Fig. 9 also follow expected
+patterns: positive acceleration yields positive power demand, while braking
+events produce regenerative power and corresponding SOC recovery.
+Figure 5: Map view of the chosen urban route.
+5.2. Freeway Route
+The freeway route between Canton, MI and Ann Arbor, MI used for testing shown in Fig. 10 features long segments of steady cruising. The LSTMpredicted velocity in Fig. 11 oscillates around the legal speed limit, reflecting
+typical driver micro-adjustments, whereas the PID reference speed used in
+inference remains smooth. These oscillations also appear in the predicted
+acceleration in Fig. 12, which reflects the driver’s personal driving style.
+17

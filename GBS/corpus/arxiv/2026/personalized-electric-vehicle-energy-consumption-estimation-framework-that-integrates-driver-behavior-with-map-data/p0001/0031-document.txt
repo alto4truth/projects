@@ -1,0 +1,32 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+te.
+23
+
+Figure 17: Predicted Acceleration for the chosen Hilly Terrain Route.
+Figure 18: Predicted power demand for the chosen Hilly Terrain Route.
+24
+
+Figure 19: Predicted energy Consumption for the chosen Hilly Terrain Route.
+estimation module. The end-to-end pipeline—comprising the Route Processor, Velocity Profile Generator, PID Controller, Driver LSTM Model, and
+BEV Energy Consumption Model—produced realistic velocity, power, and
+SOCtrajectoriesacrossurban, freeway, andhillyroutes. System-levelevaluations demonstrated that the LSTM model captures key behavioral patterns,
+including deceleration near intersections, speed-limit tracking on freeways,
+and grade-dependent responses on hilly terrain. The resulting energy and
+SOC profiles aligned with expected physical behavior, such as regeneration
+during downhill segments and increased power demand during hill climbs.
+The results highlight the effectiveness of combining learned driver behavior with physics-based modeling for context-aware BEV performance prediction. The modular architecture also supports extensibility and experimentation.
+Futureimprovementsincludeenhancingstop-eventbehaviorthroughlonger
+look-ahead context and richer training data, exploring attention-based or
+transformer architectures for variable-length temporal dependencies, and refiningtheenergymodelwithdetailedcomponent-levelefficiencymaps. Broader
+evaluation across additional drivers, routes, and environmental conditions
+would further strengthen generalization.
+25

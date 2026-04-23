@@ -1,0 +1,26 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+14 F. Ibrahim et al.
+to 256) reveal a volatile landscape where POL and FOH frequently outperform
+BIL and the other methods, as shown in Table 3. For example, at batch size
+32, POL peaks at 2,193 img/s. This suggests that our specific hardware kernel
+optimizations favor polynomial approximations at medium loads.
+The advanced discretization methods defined in this work increase numerical accuracy by introducing additional matrix operations; however, they incur
+almost equal or slightly better inference cost than ZOH, with practical latency
+differences typically small. This indicates a minimal tradeoff for deploying a more
+accurate model in scalable environments.
+6 Conclusion
+This study demonstrates that incorporating advanced discretization strategies
+yields measurable performance gains in visual tasks without any other changes
+to model parameters or architectural design. POL and HOH methods provide
+the highest accuracy, and BIL offers the most practical balance between precision and computational efficiency in classification, segmentation, and detection.
+BIL ensures that spatial frequencies encoded in image patches evolve correctly in
+the latent state, preserving edges, textures, and

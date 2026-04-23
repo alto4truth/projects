@@ -1,0 +1,30 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+stic depth.
+Augment dropout [10] separates the dropout in forward and
+backward passes and uses them with different rates, as forwardpassdropoutactsasadataaugmentationandbackward
+pass dropout acts as a process inserting noise to the model
+for improving generalization. It emphasized that the precise
+placement of dropout with respect to batch normalization
+and convolutions substantially affects both regularization
+strength and computational efficiency. [2] systematically
+explores ordering and insertion points of dropout and batch
+normalization, demonstrating that inappropriate placement
+can hurt convergence or waste compute, whereas carefully
+chosenpositionsyieldbetteraccuracy–efficiencytrade-offs.
+Figure 1:Transformer encoder architecture highlighting all
+locations where dropout can be applied, including within the
+multi-head attention mechanism and the feed-forward network.
+2.1. Dropout in Transformer Architectures
+Transformers [32] have become the dominant architecture for data modeling in language, vision, audio, and
+multimodal tasks, largely due to their ability to capture
+long-range dependencies through attention. A Transformer
+encoder consists of stacked layers, each composed o

@@ -1,0 +1,37 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+en urban route.
+18
+
+Figure 8: Predicted power demand for the chosen urban route.
+Figure 9: Predicted energy consumption for the chosen urban route.
+19
+
+Power and SOC profiles in Fig. 13 and Fig. 14 show near-zero mean power
+fluctuations and almost linear SOC decline in the freeway sections, consistent
+with low-variability freeway driving.
+Figure 10: Map view of the chosen freeway route.
+5.3. Hilly Terrain Route
+A hilly route in the Porcupine Mountains of Michigan shown in Fig. 15
+used for this test case includes an initial descent followed by a sustained
+climb. The driver-specific predicted velocity in Fig. 16 shows the subtle
+influence of elevation changes on vehicle speed. The corresponding predicted
+acceleration profile is shown in Fig. 17.
+Power and SOC profiles shown in Fig. 18 and Fig. 19, respectively, align
+with physical expectations: downhill sections exhibit predominantly negative
+power due to continuous regeneration, while uphill sections show consistently
+positive power and accelerated SOC depletion. Consequently, the downhill
+portion exhibits slow SOC depletion, while the uphill portion shows a much
+faster rate of energy consumption and SOC decline.
+6. Conclusion
+This work presented an integrated framework for personalized BEV range
+estimation that combines map-derived contextual features, driver-specific velocity prediction using an LSTM model, and a physics-based energy and SOC
+20

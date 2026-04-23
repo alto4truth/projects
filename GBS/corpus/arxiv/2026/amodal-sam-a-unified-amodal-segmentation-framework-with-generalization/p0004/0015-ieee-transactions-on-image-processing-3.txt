@@ -1,0 +1,30 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 4
+section: ieee-transactions-on-image-processing-3
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+herent mask
+generation abilities, as later demonstrated in IV-D. Therefore, an encoder-focused adaptation can bridge the domain
+gap across diverse tasks while preserving the model’s core
+functionality with the frozen decoder. The overall modeling
+process of Amodal SAM can be expressed as:
+M=F dec(Fprompt(B),F ′
+a-enc(I)),(3)
+whereMis the predicted mask for both visible and occluded
+regions of the target object, which is specified by an ROI
+boxBon the input imageI.F dec andF prompt denote SAM’s
+mask decoder and prompt encoder, respectively, whileF ′
+a-enc
+represents the adapted SAM encoder tailored for amodal
+segmentation.
+Prior-guided feature extraction.For the amodal segmentation task, an ROI boxBis needed in the input to indicate the
+target. We found it is beneficial to additionally incorporate a
+binary prior maskM spec into the feature encoder, as the spatial
+prior to guide the target-related feature generation. During
+inference,M spec can be obtained fromBby setting the value
+to 1 for the regions insideBand to 0 for the remaining regions

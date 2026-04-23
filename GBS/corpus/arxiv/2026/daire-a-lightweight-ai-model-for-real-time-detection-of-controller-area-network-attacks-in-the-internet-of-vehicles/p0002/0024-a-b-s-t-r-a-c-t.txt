@@ -1,0 +1,25 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 2
+section: a-b-s-t-r-a-c-t
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+h was trained locally across connected vehicles. Their framework
+incorporates a PPO-based client selection algorithm to enhance convergence, minimize overhead, and maintain model accuracy. It was trained
+on a real CAN bus dataset. The system achieved an average detection
+rate of 90.6% and an accuracy of 94%. However, the system was not
+able to accurately identify drop attacks and adapt to unseen threats.
+Huang et al. (2024) presented an FL-based IDS that employs
+MobileNet-Tiny to provide precise, real-time detection on edge devices. Xie et al. (2024) proposed IoV-BCFL, an intrusion detection
+framework that integrates FL with blockchain technology. The FL
+component enables distributed model training across vehicle nodes and
+aggregation at Road Side Units (RSUs), which reduces communication
+overhead and preserves data privacy. In addition, the blockchain-based
+logging mechanism utilizes RSA encryption and InterPlanetary File
+System (IPFS) to securely store and manage intrusion records. The
+system employs smart contracts to log detected attacks. This facilitates
+intruder tracking, vulnerability analysis, and forensic evidence collection. The results on public datasets showed that IoV-

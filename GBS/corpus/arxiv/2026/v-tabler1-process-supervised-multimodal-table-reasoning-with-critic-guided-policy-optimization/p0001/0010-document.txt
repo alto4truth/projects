@@ -1,0 +1,24 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+4 Authors Suppressed Due to Excessive Length
+2 Related Work
+2.1 Vision-Language Models for Structured Reasoning
+Recent advances in multimodal foundation models expand visual understanding
+from natural scenes to dense, structured documents like tables and charts. Unlike natural images, tables demand precise spatial-semantic alignment to decode
+hierarchical headers and rigid grid layouts [29]. Standard approaches rely heavily
+on Supervised Fine-Tuning (SFT), utilizing massive image-text datasets to align
+visual encoders with language models [36,45]. While SFT improves superficial
+structural recognition, it operates under an outcome-supervised paradigm. Models maximize the likelihood of the final token sequence, treating the intermediate
+logical derivation as a black box. Consequently, when faced with complex queries
+requiring multi-hop aggregation or precise numerical comparison, these models
+rely on memorized lexical correlations rather than genuine comprehension, frequently hallucinating plausible but incorrect answers [14]. We diverge from this
+paradigm by enforcing explicit Visual Chain-of-Thought reasoning, transforming
+table understanding from opaque pattern matching into a tra

@@ -1,0 +1,61 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 5
+section: apvh-0
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+providing a realistic and heterogeneous document collection. We constructed a dataset of 600 queries (300 monolingual and 300 cross-lingual) through
+7
+
+ORPHEAS: A Cross-Lingual Greek–English Embedding Model for Retrieval-Augmented GenerationA PREPRINT
+an expert-driven annotation procedure involving two domain specialists in legal scholarship and computational linguistics, who independently constructed queries following structured guidelines designed to simulate authentic user
+retrieval behavior. This yields two evaluation settings: DLBT (monolingual), where queries and cluster descriptions
+share the same language and DLBT (cross-lingual), where queries and responses reside in opposite languages.
+Table 3 presents the retrieval performance of all evaluated models on the DLBT datasets. In the monolingual setting,
+ORPHEAS consistently outperforms all competing models, achieving a 3%–13% improvement in Acc@3 over the
+baseline models. MPNet and MiniLM exhibit the weakest performance, reflecting their limited capacity for domainspecific Greek retrieval. As regards the cross-lingual setting, some interesting findings are revealed. Multilingual E5
+undergoes a substantial performance degradation of approximately 15% in Acc@3, despite its strong monolingual
+performance, whereas ORPHEAS maintains its leading position with a 3%–13% Acc@3 improvement over all competing models, further validating its effectiveness across linguistic settings. Notably, GEM-XLM-RoBERTa delivers
+competitive results in both settings, surpassing stronger baselines such as mGTE and Multilingual E5 in the crosslingual configuration, which further corroborates the quality of the proposed fine-tuning dataset in inducing robust
+semantic representations regardless of the underlying architecture.
+Table 3: Retrieval performance comparison of embedding models on the real-world DLBT deliberation platform
+Dataset Model Acc@3 Acc@10 NDCG@3 NDCG@10
+DLBT
+(monolingual)
+Multilingual E5 90.53 94.74 88.79 90.32
+MPnet 80.00 85.96 76.75 78.84
+MiniLM 81.40 86.67 78.01 79.83
+mGTE 88.77 92.28 84.74 86.02
+GEM-XLM-RoBERTa 85.61 93.68 81.67 84.56
+ORPHEAS 93.33 94.39 89.81 90.19
+DLBT
+(cross-lingual)
+Multilingual E5 75.60 82.00 72.83 75.18
+MPnet 81.60 87.20 78.38 80.48
+MiniLM 80.80 86.40 78.18 80.15
+mGTE 83.60 92.00 81.43 84.53
+GEM-XLM-RoBERTa 85.20 89.20 79.70 81.18
+ORPHEAS 88.40 94.40 85.48 87.54
+5 Conclusions and future research
+In this work, we presented ORPHEAS, a specialized Greek–English model for bilingual RAG applications, developed
+through a knowledge graph-based fine-tuning methodology augmented with a cross-lingual strategy. The development
+of ORPHEAS is motivated by the absence of high-quality bilingual embedding solutions for the Greek academic and
+industrial community, which operates in a predominantly bilingual Greek–English environment where specialized
+NLP resources remain scarce. The proposed approach addresses this critical gap by enabling robust monolingual and
+cross-lingual retrieval within a unified model, without sacrificing English retrieval capability.
+The experimental evaluation across public benchmarks and a real-world deliberation platform demonstrated that ORPHEAS outperforms state-of-the-art multilingual embedding models across all datasets and evaluation metrics, with
+statistically significant improvements in accuracy-based retrieval. The inclusion of GEM-XLM-RoBERTa as a secondary baseline further substantiates the quality of the proposed fine-tuning dataset, confirming that the knowledge
+graph-based methodology contributes meaningfully to retrieval quality, independent of the underlying architecture.
+Our future work is concentrated on extending ORPHEAS to additional languages relevant to the Greek academic and
+industrial community, as well as exploring the effect of varying chunk sizes on retrieval performance; thereby, broadening its applicability across diverse retrieval settings. Furthermore, we intend to evaluate the model on additional
+real-world datasets spanning a wider range of domains, which would further assess the generalization capacity and
+practical utility of ORPHEAS in operational deployment scenarios.
+Acknowledgements
+AWS resources were provided by the National Infrastructures for Research and Technology (GRNET) and funded
+by the EU Recovery and Resiliency Facility. This work received funding from the Horizon Europe research and
+innovation programme under Grant Agreement No. 101214389, project AIXPERT (An agentic, multi-layer, GenAIpowered backbone to make an AI system).
+8

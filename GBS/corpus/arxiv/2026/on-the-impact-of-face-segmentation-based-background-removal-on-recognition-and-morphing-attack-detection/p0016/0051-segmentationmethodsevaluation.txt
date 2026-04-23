@@ -1,0 +1,31 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 16
+section: segmentationmethodsevaluation
+chunk: 51
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+pper/lower lip,
+...). We start by determining the union of these masks to
+recover the GT mask for the complete face, resulting in 2,824
+test images with their corresponding GT face segmentation.
+Since the segmentation protocol followed for SAM requires
+the coordinates of the facial landmarks, we exclude the only
+image for which RetinaFace [13] was not able to detect any
+landmarks, resulting in 2,823 test images.
+B. Evaluation Metrics
+Let the true positives, false positives, true negatives, and
+false negatives be defined as TP, FP, TN, and FN, respectively. To evaluate whether the face is correctly segmented,
+we determine the mean intersection over union of the detected object (mIoU) and the recall of the prediction. The
+recall measures the segmentation method’s ability to find all
+positive instances, and is defined as the ratio between the TP
+and the ground truth positives:
+Recall= T P
+T P+F N .(1)
+ThemIoUis defined as the ratio between the intersection
+and the union of the predicted and ground truth masks:
+mIoU= T P
+T P+F P+F N .(2)

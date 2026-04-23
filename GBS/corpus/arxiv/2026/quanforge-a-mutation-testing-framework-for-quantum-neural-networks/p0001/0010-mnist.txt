@@ -1,0 +1,22 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 1
+section: mnist
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+gmented inputs via affine transformations,
+random cropping, brightness adjustment, blurring, sharpening and additive Gaussian and salt-andpepper noise and (4)Adv, adversarial inputs produced by quantum FGSM algorithm 2 [37]. Similar
+to Ori, we select inputs that remain correctly classified by the original model, i.e., the attack fails.
+For OOD and Adv, half of the original inputs are replaced with abnormal ones. These suites contain
+naturally or artificially hard-to-classify patterns and are thus more likely to trigger misbehaviors
+of mutants. In contrast, weak suites exhibit limited or biased distributions, including (1)HConf,
+high-confidence inputs far from the decision boundary, (2)Skewed, class-imbalanced inputs with
+ratios of 10:1 for binary tasks and 10:1:1 for ternary tasks, and (3)Small, a half-size suite. Except for
+Small, all suites have the same size as Ori.
+4.3.2 Configuration and Threshold Settings.In the mutant generation algorithm, the gate percentage is dynamically adjusted during search. The initial bounds for the binary search are set as
+𝑙𝑏= 0, 𝑢𝑏= 0.5since overly aggressive upper bounds like 1 will introduce a drastic impact and
+cause many trivial mutants during

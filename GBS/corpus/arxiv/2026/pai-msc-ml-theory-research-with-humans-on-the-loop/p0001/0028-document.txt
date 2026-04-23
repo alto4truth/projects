@@ -1,0 +1,23 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+esult does not subsume the new one.
+This mechanism matters because one of the most common failure modes of automated research is confident
+production of work that is, in fact, already established. By making skepticism the default, the system forces
+early confrontation with the prior literature rather than late-stage embarrassment.
+3.3 Theory–experiment independence
+A natural design instinct is to maximize context sharing between the mathematical and experimental tracks.
+In our experience, this improves local alignment but weakens both tracks (Lesson 3 in Section 2).
+The non-obvious design: sharelesscontext, getbetterpapers. The theory and experiment tracks share
+an explicit decomposition (track_decomposition.json) and common contribution claims, but they do
+notcontinuously share unrestricted working context. Instead, they exchange information at controlled
+synchronization points—especially before synthesis and at the beginning of a new cycle.
+Why does this work? When theory and experiments share too much context too early, they tend to collapse toward the same framing, inherit each other’s blind spots, and produce intermediate outputs that are
+9

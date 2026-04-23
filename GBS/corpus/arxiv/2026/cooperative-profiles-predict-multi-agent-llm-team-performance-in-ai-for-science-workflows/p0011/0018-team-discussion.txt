@@ -1,0 +1,80 @@
+title: Cooperative Profiles Predict Multi-Agent LLM Team Performance in AI for Science Workflows
+source: arxiv
+year: 2026
+document_id: cooperative-profiles-predict-multi-agent-llm-team-performance-in-ai-for-science-workflows
+authors: Shivani Kumar; Adarsh Bharathwaj; David Jurgens
+page: 11
+section: team-discussion
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20658v1
+
+[{agent id}]:{message}
+21
+
+Preprint. Under review.
+1 2 5 10 20 50
+Number of simulations per game
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6Mean absolute error (metric units)
+Aggregate Convergence
+95th percentile
+Mean absolute error
+1 2 5 10 20 50
+Number of simulations per game
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8Mean relative error (in std units)
+Per-Game Convergence
+Weakest Link
+Collective Risk
+O-Ring Team
+CPR
+Public Goods
+CPR+Sanction
+5 min9 min 18 min 45 min
+Wall-clock cost (6 games, median model)
+Figure 1: Convergence of game metric estimates as a function of the number of simulations.
+Left:aggregate mean absolute error across all models and games (shaded region: ±1 std;
+dashed: 95th percentile).Right:per-game convergence in units of the full-data standard
+deviation. All games show similar convergence profiles, with diminishing returns beyond
+10–20 simulations.
+D Simulation convergence analysis
+Each behavioral game configuration in Experiment was was run 50 times to estimate the
+distribution of model behaviors. However, in practice, fewer runs may be needed to estimate
+a model’s collaborative behavior. Therefore, we compute the error for each game for our
+metric of choice using bootstrapped samples from 50 simulations. Figure 1 shows the error
+across all six games (left) and per game (right) relative to how many total game simulations
+are used. Results suggest that collaborative behavior can be accurately estimated with ∼20
+simulations, though further simulations do still lower the error.
+E Prompt invariance analysis
+To verify that cooperative behavior is not driven by surface-level prompt wording, we run
+a separate regression using only the canonical and alternate-prompt conditions. This is
+a balanced comparison where the only difference is surface-level framing (“Now make
+your decision” versus “Please make your decision now”). This analysis excludes CoT, ToM,
+and parameter sweep data to avoid confounding the prompt comparison. The prompt
+variant effect, shown in Table 5 confirms that surface-level wording has no credible effect on
+Pareto proximity ( ˆβ= + 0.003, 95% CI [−0.004, +0.010]). As a result, we use a single prompt
+(Standard) for all subsequent analyses.
+F Full Experiment 1 regression table
+Table 6 reports all coefficients from the Bayesian regression predicting Pareto proximity
+(Section 3.2), including game fixed effects and family random intercepts omitted from the
+main paper.
+G Experiment 1 Behavioral Comparison
+Figure 2 shows behavioral profiles across all six games for 35 models. Models exhibit
+substantial heterogeneity. Small models (qwen3-4b, qwen3-8b, gemma-3-1b-it) tend toward
+high CPR extraction (9.5–10.0), near-maximum Weakest-Link effort (9.9–10.0), and excessive
+Collective Risk contribution (8.7–9.8 per round, well above the fair-share threshold of
+1.25). These models fail to differentiate between game structures, defaulting to extreme
+strategies. Larger models (olmo-3.1-32b, llama-3.3-70b, phi-4) show markedly lower CPR
+22

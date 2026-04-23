@@ -1,0 +1,99 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 6
+section: phi-llama-qwen
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+Benue-Congo ▲ ▲
+yor Yoruba Latin Atlantic-Congo Benue-Congo ▲
+zul Zulu Latin Atlantic-Congo Benue-Congo ▲
+B Dataset Language Coverage
+See Table 4.
+39
+
+Published in Transactions on Machine Learning Research (11/2025)
+Table 4: Language Resources and Translation Data
+Code Language Script F amily Subgrouping Resources
+A ya (Data▲/Coll.♦)
+Global MMLUMMLU ProX
+XNLI xquad
+MGSM8KOneRuler
+ara Arabic Arabic Afro-Asiatic Semitic High▲♦ ▲ ▲♦ ▲ ▲
+ces Czech Latin Indo-European Balto-Slavic High♦ ▲♦ ▲♦ ▲■
+deu German Latin Indo-European Germanic High▲♦ ▲ ▲♦ ▲ ▲ ▲ ▲■
+eng English Latin Indo-European Germanic High▲♦ ▲♦ ▲♦ ▲ ▲ ▲ ▲■
+eus Basque Latin Basque - High▲♦
+fra French Latin Indo-European Italic High▲♦ ▲ ▲♦ ▲ ▲ ▲■
+hin Hindi Devanagari Indo-European Indo-Aryan High▲♦ ▲ ▲♦ ▲ ▲ ▲■
+hun Hungarian Latin Uralic - High▲♦ ▲♦ ▲■
+ita Italian Latin Indo-European Italic High▲♦ ▲ ▲♦ ▲■
+jpn Japanese Japanese Japonic Japonic High▲♦ ▲ ▲♦ ▲ ▲■
+nld Dutch Latin Indo-European Germanic High▲♦ ♦ ▲■
+pes Persian Arabic Indo-European Iranian High▲♦ ▲♦ ▲■
+pol Polish Latin Indo-European Balto-Slavic High▲♦ ♦ ▲■
+por Portuguese Latin Indo-European Italic High▲♦ ▲ ▲♦ ▲■
+rus Russian Cyrillic Indo-European Balto-Slavic High▲♦ ▲♦ ▲♦ ▲ ▲ ▲ ▲■
+spa Spanish Latin Indo-European Italic High▲♦ ▲ ▲♦ ▲ ▲ ▲ ▲■
+srp Serbian Cyrillic Indo-European Balto-Slavic High▲♦ ♦ ▲♦ ▲■
+tur Turkish Latin Turkic Common Turkic High▲♦ ▲♦ ▲ ▲
+vie Vietnamese Latin Austroasiatic Vietic High▲♦ ▲♦ ▲♦ ▲ ▲ ▲■
+zho Chinese Han Sino-Tibetan Sinitic High▲♦ ▲ ▲♦ ▲ ▲ ▲
+ben Bengali Bengali Indo-European Indo-Aryan Mid▲♦ ▲ ▲♦ ▲
+bul Bulgarian Cyrillic Indo-European Balto-Slavic Mid♦ ▲
+ceb Cebuano Latin Austronesian Malayo-Polynesian Mid▲♦
+dan Danish Latin Indo-European Germanic Mid▲♦ ▲■
+ell Greek Greek Indo-European Graeco-Phrygian Mid▲♦ ♦ ▲ ▲
+fil Filipino Latin Austronesian Malayo-Polynesian Mid▲♦ ♦
+fin Finnish Latin Uralic Finnic Mid▲♦ ▲■
+heb Hebrew Hebrew Afro-Asiatic Semitic Mid♦ ♦
+ind Indonesian Latin Austronesian Malayo-Polynesian Mid▲♦ ▲ ▲♦
+kor Korean Hangul Koreanic Korean Mid▲♦ ▲ ▲♦ ▲■
+lit Lithuanian Latin Indo-European Balto-Slavic Mid▲♦ ♦
+msa Malay Latin Austronesian Malayo-Polynesian Mid▲♦ ▲♦
+ron Romanian Latin Indo-European Italic Mid♦ ▲♦ ▲
+swe Swedish Latin Indo-European Germanic Mid▲♦ ♦ ▲■
+tam Tamil Tamil Dravidian South Dravidian Mid▲♦ ▲■
+tha Thai Thai Tai-Kadai Kam-Tai Mid▲♦ ▲♦ ▲ ▲ ▲
+ukr Ukrainian Cyrillic Indo-European Balto-Slavic Mid▲♦ ▲♦ ▲♦ ▲■
+urd Urdu Arabic Indo-European Indo-Aryan Mid▲♦ ▲♦ ▲
+amh Amharic Ge’ez Afro-Asiatic Semitic Low▲♦ ▲♦
+gle Irish Latin Indo-European Celtic Low▲♦
+guj Gujarati Gujarati Indo-European Indo-Aryan Low▲♦
+hat Haitian Creole Latin Indo-European Italic Low▲♦
+hau Hausa Latin Afro-Asiatic Chadic Low▲♦ ♦
+ibo Igbo Latin Atlantic-Congo Benue-Congo Low▲♦ ♦
+jav Javanese Latin Austronesian Malayo-Polynesian Low▲♦
+kan Kannada Kannada Dravidian South Dravidian Low▲♦
+kir Kyrgyz Cyrillic Turkic Common Turkic Low▲♦ ♦
+kur Kurdish Latin Indo-European Iranian Low▲♦
+mal Malayalam Malayalam Dravidian South Dravidian Low▲♦
+mar Marathi Devanagari Indo-European Indo-Aryan Low▲♦ ▲♦
+mlg Malagasy Latin Austronesian Malayo-Polynesian Low▲♦ ♦
+mya Burmese Myanmar Sino-Tibetan Burmo-Qiangic Low▲♦
+nep Nepali Devanagari Indo-European Indo-Aryan Low▲♦ ♦ ▲♦
+nor Norwegian Latin Indo-European Germanic Low♦ ▲■
+nso Northern Sotho Latin Atlantic-Congo Benue-Congo Low▲♦
+ny Nyanja Latin Atlantic-Congo Benue-Congo Low♦ ♦
+pan Punjabi Gurmukhi Indo-European Indo-Aryan Low▲♦
+pus Pashto Arabic Indo-European Iranian Low▲♦
+sin Sinhala Sinhala Indo-European Indo-Aryan Low▲♦ ▲♦
+sna Shona Latin Indo-European Indo-Aryan Low▲♦ ♦
+snd Sindhi Arabic Indo-European Indo-Aryan Low▲♦
+som Somali Latin Afro-Asiatic Cushitic Low▲♦ ♦
+sot Southern Sotho Latin Atlantic-Congo Benue-Congo Low♦ ▲■
+sqi Albanian Latin Indo-European Albanian Low▲♦
+sun Sundanese Latin Austronesian Malayo-Polynesian Low▲♦
+swa Swahili Latin Atlantic-Congo Benue-Congo Low▲♦ ▲ ▲♦ ▲ ▲ ▲■
+tel Telugu Telugu Dravidian South Dravidian Low▲♦ ▲♦ ▲♦ ▲
+wol Wolof Latin Atlantic-Congo North-Central Atlantic Low▲♦ ▲♦
+xho Xhosa Latin Atlantic-Congo Benue-Congo Low▲♦
+yor Yoruba Latin Atlantic-Congo Benue-Congo Low▲♦ ▲ ▲♦
+zul Zulu Latin Atlantic-Congo Benue-Congo Low▲♦ ▲♦
+Legend:▲= human translated,♦= machine translated,■= templated
+C Per-Language Performance on Global MMLU & MMLU-ProX
+See tables 5 to 10.
+40

@@ -1,0 +1,33 @@
+title: Cooperative Profiles Predict Multi-Agent LLM Team Performance in AI for Science Workflows
+source: arxiv
+year: 2026
+document_id: cooperative-profiles-predict-multi-agent-llm-team-performance-in-ai-for-science-workflows
+authors: Shivani Kumar; Adarsh Bharathwaj; David Jurgens
+page: 5
+section: sanctioning-phase
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20658v1
+
+Here are the extractions from Phase 1:
+-{player id}: extracted{X}, phase 1 payoff:{Y}
+Resource pool: 100 capacity,{total}extracted,{remaining}remaining.
+Your current phase 1 payoff is{my payoff}.
+You may now spend tokens to sanction other players in your group who
+over-extracted.
+Each sanction token costs you 1.0 but reduces the target’s payoff by 2.0.
+Respond with JSON:{"sanctions":{"player id": <integer>, ...}}
+B.4.4 Collective Risk (Threshold Public Goods)
+Standard:
+Collective-Risk Social Dilemma (Climate Game).
+Over 10 rounds, all 10 players must collectively contribute at least 100
+tokens to avoid catastrophe.
+Each round, you have 10 tokens and decide how many to contribute.
+Tokens you don’t contribute are saved.
+At the end of round 10:
+- If the group total meets the threshold (100), everyone keeps their
+savings.
+- If not, there is a 50% chance everyone loses ALL their savings.
+The challenge: contribute enough collectively without sacrificing too much
+individually.
+Round status update:
+17

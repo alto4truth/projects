@@ -1,0 +1,25 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 2
+section: a-b-s-t-r-a-c-t
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+ethod processed real CAN data in near real-time
+with minimal error, but it still relies on supervised learning, limiting
+the detection of unknown attacks. The work by Sreelekshmi and Aji
+(2025) introduced a deep learning architecture that models CAN traffic
+as CANGraph-feature images. Their method transforms message interactions into graph structures and subsequently into images to capture
+complex structural and contextual patterns, which are then classified
+using a CNN. This approach aims to detect subtle anomalies by using
+the spatial feature extraction power of CNNs.
+Hanselmann et al. (2020) presented CANet, an unsupervised IDS for
+high-dimensional CAN bus data, which uses DL to detect abnormalities
+in the absence of labeled data, demonstrating excellent generalizability to various attack types. CANShield, a signal-level IDS for CAN
+developed in Shahriar et al. (2022) employs several auto-encoders
+and identifies stealthy intrusions more efficiently by evaluating signal behavior at the physical layer. A BERT language model is used
+in Alkhatib et al. (2022) to capture contextual links between CAN
+message sequences for high-accuracy detection. Ulmer (2023) proposed a DL-based IDS t

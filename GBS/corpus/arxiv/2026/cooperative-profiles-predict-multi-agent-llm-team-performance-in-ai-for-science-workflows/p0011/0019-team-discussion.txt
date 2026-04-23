@@ -1,0 +1,128 @@
+title: Cooperative Profiles Predict Multi-Agent LLM Team Performance in AI for Science Workflows
+source: arxiv
+year: 2026
+document_id: cooperative-profiles-predict-multi-agent-llm-team-performance-in-ai-for-science-workflows
+authors: Shivani Kumar; Adarsh Bharathwaj; David Jurgens
+page: 11
+section: team-discussion
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20658v1
+
+differentiate between game structures, defaulting to extreme
+strategies. Larger models (olmo-3.1-32b, llama-3.3-70b, phi-4) show markedly lower CPR
+22
+
+Preprint. Under review.
+Predictor ˆβ95% CI
+Model characteristics
+Intercept+.817†[+.770,+.861]
+log(size)−.057†[−.060,−.054]
+Thinking variant+.038†[+.029,+.047]
+Prompt effect
+Standard (vs. alternate)+.003[−.004,+.010]
+Variance components
+σf (family) .069[.042, .121]
+σ(residual) .234[.231, .236]
+R2 0.436
+N(standard / alternate) 23,925 (18,000 / 5,925)
+Table 5: Prompt invariance test. Bayesian regression predicting Pareto proximity using
+only canonical and alternate-prompt conditions (no CoT, ToM, or parameter sweeps). The
+prompt variant coefficient is not credible (+0.003, 95% CI [−0.004, +0.010]), confirming that
+standard and alternate prompt framings produce indistinguishable cooperative behavior.
+Game fixed effects and family random intercepts included (omitted for brevity). 4 chains ×
+2,000 samples; zero divergences.
+0
+2
+4
+6
+8
+10Effort
+Weakest Link
+Nash eq.
+Pareto opt.
+0
+2
+4
+6
+8
+10Contribution
+Collective Risk
+0
+2
+4
+6
+8
+10Withdrawal
+O-Ring Team
+0
+2
+4
+6
+8
+10Extraction
+Common Pool Resource
+0
+2
+4
+6
+8
+10Group-Pool Contribution
+Public Goods
+0
+2
+4
+6
+8
+10Extraction
+CPR + Sanctions
+deepseek-r1-distill-llama-70b
+deepseek-r1-distill-qwen-32b
+gemma-3-12b-it
+gemma-3-1b-it
+gemma-3-27b-it
+gemma-3-4b-it
+gpt-oss-20b
+granite-4.0-h-micro
+granite-4.0-h-small
+granite-4.0-h-tiny
+granite-4.0-h-tiny-think
+granite-4.0-micro
+granite-4.0-tiny-preview
+llama-3.1-8b-instruct
+llama-3.3-70b-instruct
+mistral-small-3.1-24b
+nemotron-3-nano-30b
+nemotron-h-8b-reasoning
+nemotron-nano-4b
+nemotron-nano-8b
+olmo-3.1-32b
+olmo-3.1-32b-think
+phi-4
+phi-4-reasoning-plus
+qwen3-0.6b
+qwen3-14b
+qwen3-14b-think
+qwen3-30b-a3b
+qwen3-30b-a3b-think
+qwen3-32b
+qwen3-32b-think
+qwen3-4b
+qwen3-8b
+qwen3-8b-think
+qwen3.5-35b-a3b
+qwen3.5-4b
+qwen3.5-9b
+Figure 2: Behavioral profiles across six games. Each subplot shows one game, with models
+arranged along the x-axis (sorted by family and size). The y-axis shows the primary
+behavioral metric. Dashed lines indicate the Nash equilibrium (red) and Pareto optimum
+(green); the shaded region spans the Nash–Pareto range. Point color indicates model family,
+marker shape distinguishes models within a family, and point size scales withlog2 of the
+model’s parameter count.
+extraction (4.1–5.3), moderate Weakest-Link effort (6.1–9.5), and near-optimal Collective
+Risk contribution (1.0–2.1). Most models cluster near the Pareto optimum for coordination
+games (Weakest-Link: 64% within 20% of Pareto) but scatter widely in commons dilemmas
+(CPR: <1% near Pareto), suggesting that coordination is substantially easier for LLMs than
+managing shared resources. The games show that LLMs do not exhibit a uniform pro-social
+bias; their cooperative tendencies are game-structure-dependent, consistent with human
+behavior.
+23

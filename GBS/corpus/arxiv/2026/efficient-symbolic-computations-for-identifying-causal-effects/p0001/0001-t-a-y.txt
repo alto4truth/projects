@@ -1,0 +1,26 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+Figure 1: Mixed graph corresponding to a conditionally randomized trial with imperfect adherence.
+covariance matrix of the observable random vectorX. Writing the structural equations (1) in vector
+form, we get that
+X= Λ ⊤X+ε,
+whereε= (ε v)v∈V is the noise vector andΛis the matrix of direct causal effects, that is,Λwv =λ wv
+whenever there is a directed edge fromwtovinGandΛ wv = 0else. By solving forX, we find
+thatX= (I−Λ) −⊤εand therefore the covariance matrix is given by
+Σ :=Var[X] = (I−Λ) −⊤Ω(I−Λ) −1,(2)
+whereΩ = (ω vw) =Var[ε]. If it is possible to recoverΛfrom the covariance matrixΣ = (σvw)via
+rational formulas in the entries ofΣ, then the graphGis said to berationally identifiable; we refer
+to Section 2 for a precise definition.
+Example 1.1.Consider a conditionally randomized study designed to evaluate the effect of a
+treatment on an outcomeY. LetTdenote the assigned treatment dose, which is randomized
+conditional on a baseline covariateL. Since not all individuals adhere to their assigned treatment,
+we introduceA, representing the treatment actually received; see Hernán and Robins (2025, Section
+16) for background on adherence. The primary interest then is in the direct causal

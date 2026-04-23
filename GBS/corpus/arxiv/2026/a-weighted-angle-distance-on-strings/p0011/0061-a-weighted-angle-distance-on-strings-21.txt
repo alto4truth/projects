@@ -1,0 +1,36 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 11
+section: a-weighted-angle-distance-on-strings-21
+chunk: 61
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+mplies
+ϕ(ak) =a k.
+Leta, b∈Σ be distinct characters. By Lemma 7.23,ϕpreservesθ 1, soθ 1(ϕ(ab), a) =
+θ1(ab, a) andθ 1(ϕ(ab), b) =θ 1(ab, b). As|ϕ(ab)|= 2, we conclude that [ϕ(ab)] 1 = [ab]1, so
+ϕ(ab)∈ {ab, ba}. Fora̸=b, define
+χ(a, b) :=
+(
+1 ifϕ(ab) =ab,
+−1 ifϕ(ab) =ba.
+Note that by bijectivity,χ(a, b) =χ(b, a). We claim thatχ(a, b) is independent of our choice
+ofa̸=b. If|Σ|= 2, this claim is trivial. Otherwise, leta, b, c∈Σ be distinct characters, and
+consider the stringabc, with bigramsabandbc. We haveθ 2(abc, ab), θ2(abc, bc)< π
+2 while
+θ2(abc, xy) = π
+2 for all other bigramsxy, so{ϕ(ab), ϕ(bc)}must be the bigrams ofϕ(abc).
+As a length 3 string has exactly two bigrams, we see{ϕ(ab), ϕ(bc)}must be the bigrams of
+some three-letter string. But this impliesχ(a, b) =χ(b, c) as desired, and there must exist a
+χ∈ { ±1}such thatϕ(ab) =
+(
+abifχ= 1,
+baifχ=−1 independent ofaandb.
+Suppose by induction that we are givenNandχ∈ { ±1}such thatϕagrees withRon
+Σ≤N ifχ=−1, andϕagrees withidon Σ ≤N ifχ= 1. LetS=s 1 . . . sN+1 be a string
+of lengthN+ 1 in Σ ∗, and letT 1 =s 1 . . . sN andT 2 =s 2 . . . sN+1 be the twoN-grams of
+S. Byθ N-invariance, we seeθ N(ϕ(S), ϕ(T1)), θN(ϕ(S), ϕ(T2))< π
+2 , soϕ(T

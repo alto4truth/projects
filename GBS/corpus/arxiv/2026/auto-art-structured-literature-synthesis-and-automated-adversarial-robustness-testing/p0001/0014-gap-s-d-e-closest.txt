@@ -1,0 +1,29 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+6, C7.
+(d) Proxy metrics can accelerate but not replace attackbased evaluation—supported by C5, C1.
+3.Contested Zones:
+(a) Adaptive attack suites as ground truthvs.attackindependent proxy metrics [C1 vs. C5].
+(b) Diffusion-based purification as viable defencevs.fundamentally broken paradigm [C6].
+(c) Average multi-attack robustness as meaningful progress
+vs.worst-case as the only valid measure [C2].
+4.Frontier Questions:
+(a) What training recipe produces models robust to adversarial attack unions, not just individual norms?
+(b) Under what conditions can autonomous LLM agents
+reliably replace human red teams for production code?
+5. Newcomer Reading List(selection criterion: foundational to understanding the field, not merely most cited):
+(a) Croce & Hein, 2020 [ 8]—why:establishes that
+parameter-free ensemble attacks are non-optional for
+honest evaluation; every subsequent paper in this corpus builds on or reacts to AutoAttack.
+(b) Daiet al., 2023 [ 5]—why:reframes robustness from a
+single-number claim to a multi-dimensional measurement problem; introduces the avg/worst-case distinction that dominates current debate.
+(c) Carliniet al., 2025 [ 4]—why:bridges adversarial ML
+and LLM ag

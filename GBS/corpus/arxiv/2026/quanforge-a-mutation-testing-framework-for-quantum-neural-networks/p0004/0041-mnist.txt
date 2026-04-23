@@ -1,0 +1,24 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 4
+section: mnist
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+ly. This illustrates the effectiveness of QuanForge in distinguishing the
+quality of test suites under noisy quantum conditions.
+4.8 Threats to Validity
+External Validity.Experiments are conducted on a limited set of datasets and QNN architectures.
+Additional architectures and larger-scale circuits could be explored to improve generalizability and
+scalability. Additionally, the simulated noise may differ from noise on real quantum hardware, which
+is device-specific and unpredictable. The parameter selections for different channels constitute
+another threat, which is alleviated by referring to examples used in open-source implementations.
+Internal Validity.We employ GLM and Cohen’s𝑑 to judge the mutation killing, which is commonly
+used in mutation testing for neural networks [23, 25]. Adversarial examples are generated using
+NES-based black-box gradient estimation. Alternative gradient estimators may lead to different
+perturbations. Redundant or equivalent mutants are not explicitly excluded. To mitigate this risk,
+we generate mutants by applying the same operator to different gate positions, thereby increasing
+structural diversity. Randomness in gate selection, input sampling, nois

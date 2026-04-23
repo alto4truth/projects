@@ -1,0 +1,54 @@
+title: Efficient Test-Time Inference via Deterministic Exploration of Truncated Decoding Trees
+source: arxiv
+year: 2026
+document_id: efficient-test-time-inference-via-deterministic-exploration-of-truncated-decoding-trees
+authors: Xueyan Li; Johannes Zenn; Ekaterina Fadeeva; Guinan Su; Mrinmaya Sachan; Jonas Geiping
+page: 2
+section: 6
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20500v1
+
+eepConf experiments (Fu
+et al., 2025) on MMLU-Pro (Wang et al., 2024c) with Qwen2.5-0.5B-Instruct. We include the
+best results achieved in Table 1.
+24
+
+Method 2 4 8
+Mean Confidence
+Weighted 0.2002 0.2578 0.3298
+Top Percent Weighted (10%) 0.1948 0.2532 0.2616
+Top Percent Weighted (25%) 0.2153 0.2199 0.2570
+Top Percent (10%) 0.2115 0.2343 0.2509
+Top Percent (25%) 0.2055 0.2153 0.2464
+Tail Mean Conf (64 Tokens)
+Weighted 0.2085 0.2472 0.3222
+Top Percent Weighted (10%) 0.2002 0.2199 0.2350
+Top Percent Weighted (25%) 0.2032 0.2077 0.2456
+Top Percent (10%) 0.1941 0.2146 0.2358
+Top Percent (25%) 0.1903 0.2161 0.2525
+Tail Mean Conf (10%)
+Weighted 0.1782 0.2252 0.3086
+Top Percent Weighted (10%) 0.1865 0.2077 0.1971
+Top Percent Weighted (25%) 0.1676 0.1956 0.2055
+Top Percent (10%) 0.1638 0.1850 0.2077
+Top Percent (25%) 0.1804 0.1933 0.2039
+Min Sliding Mean Conf (64 Tokens)
+Weighted 0.1895 0.2563 0.3283
+Top Percent Weighted (10%) 0.1873 0.2252 0.2464
+Top Percent Weighted (25%) 0.2092 0.2199 0.2418
+Top Percent (10%) 0.1842 0.2206 0.2593
+Top Percent (25%) 0.2077 0.2244 0.2214
+Bottom Sliding Mean Conf (10%, 64 Tokens)
+Weighted 0.2077 0.26310.3336
+Top Percent Weighted (10%) 0.1979 0.2206 0.2661
+Top Percent Weighted (25%) 0.1774 0.2183 0.2487
+Top Percent (10%) 0.1979 0.2237 0.2449
+Top Percent (25%) 0.1676 0.2183 0.2441
+Bottom Sliding Mean Conf (50%, 64 Tokens)
+Weighted 0.18950.26910.3139
+Top Percent Weighted (10%) 0.1918 0.2206 0.2578
+Top Percent Weighted (25%)0.21680.2290 0.2638
+Top Percent (10%) 0.1850 0.2115 0.2623
+Top Percent (25%) — 0.2199 0.2631
+Table 9: Results for DeepConf (Fu et al., 2025) on GSM8K (Cobbe et al., 2021) with Qwen2.50.5B-Instruct. See Appendix D.4 for details.
+25

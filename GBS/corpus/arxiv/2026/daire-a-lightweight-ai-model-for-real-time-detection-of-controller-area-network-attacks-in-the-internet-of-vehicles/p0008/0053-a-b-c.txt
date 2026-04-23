@@ -1,0 +1,27 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 8
+section: a-b-c
+chunk: 53
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+imbalance in the CICIoV2024 dataset. This robustness can be
+attributed to several architectural and methodological factors. First,
+spoofing attacks such as Gas Spoofing and Steering Wheel Spoofing
+inject messages with distinctive features that create strong signals
+detectable even with limited samples. The Sparse Categorical CrossEntropy loss function ensures that misclassifications on minority classes
+receive an appropriate penalty during training, preventing the model
+from being biased toward the predominant Normal class. Finally, the
+empirical design of our ANN architecture, with its controlled capacity
+via the neuron allocation formula, provides sufficient representational
+power to capture minority class patterns without overfitting. These
+design choices collectively enable DAIRE to achieve balanced performance across all attack categories, demonstrating its suitability for
+real-world IoV environments where attack frequencies are inherently
+imbalanced.
+Although DAIRE’s lightweight design and CAN-specific constraints,
+including message formats and permissible value ranges, may limit the
+feasibility of adversarial attacks, attackers familiar with CAN could still
+craft convincing

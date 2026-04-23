@@ -1,0 +1,30 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+pendent
+Strategies
+The fixed-𝛽 baselines exhibit the savings-agreement tradeoff
+described by Faratin et al. [ 1]: Boulware achieves the highest
+savings (0.722) at the lowest agreement rate (66.0%), while
+Conceder reaches 72.3% agreement at lower savings (0.636).
+Importantly, each fixed 𝛽 locks the strategy into a single
+posture regardless of deal economics. Boulware and Linear fail
+entirely against Hardliner carriers (0% agreement) because
+their slow concession never reaches the carrier’s reserve price
+within the deadline; Conceder closes 10.8% of Hardliner deals
+but at reduced savings (0.409). Against Anchoring carriers,
+Conceder achieves 50.8% agreement while Boulware manages
+only 29.9%.
+The two-index strategy adapts its posture per regime
+through the spread-derived 𝛽, producing regime-specific behavior that no single fixed 𝛽 can replicate. In narrow spreads
+(𝑆≤ 4%), it behaves as a Conceder ( 𝛽 = 3.0): 68.4% agreement with savings of 0.617, prioritizing deal closure when
+margins are thin. In medium spreads (4% < 𝑆≤ 8%), it transitions to Linear ( 𝛽 = 1.0): 66.3% agreement with savings
+of 0.697. In wide spreads ( 𝑆 > 8%), it shifts to Boulware
+(𝛽 = 0.4): 60.6% agreement with savi

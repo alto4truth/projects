@@ -1,0 +1,22 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 52
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+reotype. These values are consistently high across
+LLMs on both datasets, ranging from 0.72 for Llama-3 to 0.80 for Claude-Sonnet-4 on Race_SES dataset, and from
+0.74 for Llama-3 to 0.93 Gemini-2.0-Flash on Race_Gender, showing that LLMs models perform well when the correct
+answer follows the stereotype. In contrast, Acc counter measures the LLMs accuracy on questions where the correct
+answer contradicts a stereotype. These values are consistently lower than Accreinf, except for Llama-3 (it shows better
+Accreinf of 0.61 on Race_SES than on Race_Gender with 0.57), on Race_SES, ranging from 0.58 for Gemma-3 to 0.67 for
+GPT-4o, Gemini-2.5-Flash, and Claude-Sonnet-4, indicating that the LLM accuracy decreases when predictions require
+going against stereotype-consistent cues.
+Bias Score.sDIS measures the directional tendency of LLMs toward the benchmark-defined stereotyped group in the
+disambiguated context, regardless of prediction correctness. sDIS values are consistently higher on Race_Gender dataset
+than on Race_SES dataset across all models, taking 0.57 for Llama-3, and relatively higher values for the remaining
+LLMs, ranging from 0.94 for Gemma-3 to 0.99 for Gemini-2.5-Flash. This

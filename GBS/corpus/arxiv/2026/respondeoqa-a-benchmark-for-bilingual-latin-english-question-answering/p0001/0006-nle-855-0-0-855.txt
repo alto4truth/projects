@@ -1,0 +1,27 @@
+title: RespondeoQA: a Benchmark for Bilingual Latin-English Question Answering
+source: arxiv
+year: 2026
+document_id: respondeoqa-a-benchmark-for-bilingual-latin-english-question-answering
+authors: Marisa Hudspeth; Patrick J. Burns; Brendan O'Connor
+page: 1
+section: nle-855-0-0-855
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20738v1
+
+ch
+metrical foot in the order it appears in the verse.
+Forasingleline,thenumberoffeettypicallyranges
+from 3-6, and partial correctness is allowed.
+For another subset of scansion questions ("meter manipulation"), we use accuracy (see row 11 of
+Table 2). Each question gives a line of poetry and
+asks that the position of a single word be changed
+in order to make the verse valid pentameter or hexameter. Since only one word should be moved, we
+consider it correct (1) if the word is in the correct
+position and incorrect (0) otherwise.
+Finally, for long-form translation questions, we
+report the BLEU score (Papineni et al., 2002).10 AlthoughBLEUhasreceivedcriticismforitslowcorrelation with human judgments (Callison-Burch et al.,
+9In classical Latin orthography, both I and J are represented by a single letter; same with U and V. It is a common Latin NLP preprocessing step to normalize words to
+collapse these letter distinctions. For example, the Classical Language Toolkit, an NLP pipeline for pre-modern
+languages (Johnson et al., 2021), includes a JV replacer
+and recommends using it during preprocessing.
+10WeusethesacreBLEUimplementation(Post,2018).

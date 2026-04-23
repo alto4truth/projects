@@ -1,0 +1,63 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 1
+section: paraff
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+olic music is rendered
+into score form, converted into event-topology supervision, then augmented and packaged into
+measure-level training samples.
+18
+
+Training data statistics Value
+Groups (scores) 9,995
+Augmented measure samples 366,534
+Augmentation 32×
+Rendered-source groups 9,483
+Feedback-source groups 512
+Sampling weights 1 / 4 / 100
+Effective weighted samples 918,930
+Table 1: Training Dataset Statistics. Key properties ofevtopo-writer10k-combined.
+Category Samples % Weight Effective %
+Unannotated 295,554 80.6 1 32.2
+Verified (not patched) 67,444 18.4 4 29.4
+Patched 3,536 1.0 100 38.5
+Table 2: Training Sample Weights. Example weighting used for training-time sampling.
+Split Groups Samples
+Train 9,697 356,431
+Validation 198 6,392
+Unused 100 3,711
+Table 3: Train/Validation Split. Group-level split forevtopo-writer10k-combined.
+Paraff-generated symbolic music is converted to LilyPond, engraved with randomized layout, and
+then converted into measure-level event candidates with ground-truth structure. The second source is
+recognition-feedback data extracted from corrected scores, which provides hard cases that match the
+real distribution more closely. To emphasize high-quality corrected samples, we use three sampling
+weights (1, 4, 100), which yields 918,930 effective weighted samples. We do not currently report
+a dedicated cross-staff prevalence statistic for the training corpus. The generator and the feedback
+portion both include cross-staff patterns, but their relative frequency may differ from the independent
+LilyPond test set; we plan to include such stratified statistics in a future dataset release.
+Three-stage quality filtering.Because the rendered source is produced by a long toolchain, we
+apply quality checks at three points and drop any score that fails. The principle is to remove samples
+that are structurally ill-defined, numerically invalid, or obviously inconsistent in space-time ordering,
+rather than to overfit to a particular style. First, at the symbolic stage, we only keep measures that are
+parseable and structurally complete, and we reject degenerate cases such as empty declared staves
+or unclosed rhythmic constructs (e.g., broken beaming or invalid tuplet closure). Second, at the
+engraving stage, we treat rendering failures and known unstable engraving patterns as hard filters (e.g.,
+severe stem or beam anomalies reported by the engraver log), and we also drop samples that exceed a
+runtime budget. Third, after converting the rendered result into event-topology clusters, we keep only
+clusters that pass basic structural validity: they must contain real note/rest events, all coordinates and
+ticks must be finite, and the implied time order should not strongly contradict horizontal layout (a
+strong “time goes forward but moves left” pattern). During packaging we further remove clusters that
+are too small to train on, fall outside target label ranges, or lack a valid supervision order.
+Weighted sampling.The recognition-feedback portion is small by count but disproportionately
+important: it contains hard measures that match production error patterns. We therefore use weighted
+sampling so that corrected examples are seen more often during training, without losing the breadth
+of the rendered corpus. Table 2 summarizes the three weight tiers and their effective contribution.
+Split protocol.We split by score group to avoid leakage between training and validation. Following
+Table 3, we use 9,697 groups (356,431 samples) for training and 198 groups (6,392 samples) for
+validation; 100 groups are left unused by this split scheme.
+19

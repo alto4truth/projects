@@ -1,0 +1,29 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+Figure 3: Multi-block linear replacement fails catastrophically.R 2 degrades from 0.94 to 0.60
+across 5 replaced blocks, while perplexity increases by +151. Each replacement shifts the
+activation distribution, degrading the linear approximation for downstream blocks.
+4.5 Finding 5: 30% of Tokens Are Easy
+Finding 5.Approximately 30% of tokens can be classified as “computationally easy,” independently confirmed through two methods on two models.
+Method 1: Trained exit heads.On Mistral 7B, a dedicated prediction head trained at
+block 15 (500 steps, RMSNorm + Linear) achieves 30.2% top-1 agreement with the full model.
+Extended training plateaus at∼30%.
+Method 2: KL sensitivity.On GPT-2, 30.1% of tokens show low KL divergence (below
+median) when late blocks (8–11) are destroyed via INT2 quantization.
+Multi-exit routing with trained heads at blocks 15, 23, and 27 on Mistral yields:
+Table 4: Multi-exit routing: quality vs compute savings on Mistral 7B
+Confidence threshold Perplexity ∆ PPL Compute saved
+1.0 (baseline) 11.32 — 0%
+0.95 15.63 +4.31 6.4%
+0.80 21.98 +10.66 13.3%
+0.70 27.35 +16.04 17.4%
+0.50 47.07 +35.75 26.9%
+The quality-speed tradeoff is poor with post-hoc trained heads: even

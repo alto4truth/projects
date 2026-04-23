@@ -1,0 +1,24 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+the “StOP?” activities [6], where all OR team members pause
+their work and communicate for about 30-90 seconds during
+the surgical procedure. Furthermore, we extend the TeamOR dataset with a more fine-grained new activity class named
+“anesthesiologists being attentive (A.B.A.)”, where we annotate the moments when anesthesiologists concentrate on observing the surgical field or the laparoscopic monitor of the
+surgeons performing operational procedures. Such observable
+behaviors are theoretically linked to the concept of situation
+awareness, which enables team members to perceive elements
+in a situation, comprehend their meaning, and forecast future
+situation events and dynamics [16, 11]. In order to detect both
+“StOP?” and “A.B.A.” activities in the untrimmed surgical
+videos, we propose a self-supervised learning strategy, where
+we train a spatial-temporal transformer that encodes clip-level
+gaze features under supervision of the off-the-shelf visual features [38]. Then, we use gated fusion to augment video features with gaze features, and pass them through a temporal
+activity detection (TAD) network to obtain the results. Experiments on the 4D-OR and Team-OR datasets prove the valu

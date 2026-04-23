@@ -1,0 +1,57 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 2
+section: auto-art-config-yaml
+chunk: 63
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+target:
+framework: pytorch
+model_path: ./checkpoints/resnet50_robust.pt
+input_shape: [3, 32, 32]
+num_classes: 10
+evaluation:
+phases:
+- name: pre_screening
+gradient_masking:
+enabled: true
+fosc_threshold: 0.1 # Flag if FOSC > 0.1
+discrepancy_threshold: 0.15 # WB vs BB gap
+rdi:
+enabled: true
+num_samples: 500
+- name: multi_norm_attack
+norms: [l1, l2, linf, semantic, spatial]
+epsilons:
+linf: [0.01, 0.03, 0.05, 0.1, 0.3]
+l2: [0.1, 0.3, 0.5, 1.0, 2.0]
+l1: [1.0, 3.0, 5.0, 10.0]
+attacks_per_norm:
+linf: [fgsm, pgd, autopgd]
+l2: [carlini_wagner, deepfool]
+l1: [elastic_net]
+adaptive_selection:
+enabled: true
+memory_guided: true
+escalation_tiers: [fast, standard, exhaustive]
+parallel:
+workers: 4
+timeout: 3600
+- name: defense_evaluation
+defenses: [trades, spatial_smoothing, jpeg_compression]
+- name: compliance
+frameworks: [nist_ai_rmf, owasp_llm_top10, eu_ai_act]
+gates:
+min_robust_accuracy: 0.40
+max_attack_success_rate: 0.60
+gradient_masking_flag: fail
+output:
+formats: [json, markdown, sarif, html]
+sarif_version: "2.1.0"
+monitoring:
+drift_threshold: 0.1 # RDI drift > 10%
+accuracy_threshold: 0.05 # Accuracy drop > 5%
+Listing 1:AUTO-ART Y AML configuration for multi-norm evaluation with pre-screeni

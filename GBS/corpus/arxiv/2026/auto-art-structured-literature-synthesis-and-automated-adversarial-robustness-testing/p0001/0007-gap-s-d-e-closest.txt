@@ -1,0 +1,25 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+onfounds—the
+CNN-only validation leaves the metric’s validity for the fastestgrowing model families (ViTs, LLMs) entirely unsubstantiated.
+7 Master Synthesis
+Word budget:≤400 words total. No hedging.
+Established consensus.Ensemble attacks expose inflated
+robustness: Croce and Hein [C1] lower robust accuracy for
+>50 models by >10 pp. Gradient integrity is prerequisite to
+valid evaluation: Liet al.[C7] tie TRADES gaps to masking;
+Kassiset al.[C6] tie DBP failures to incorrect gradients. Multiattack evaluation matters: Daiet al.[C2] unify nine attack
+families; Daiet al.[C4] extend to evolving attacks.
+Active debates.Position A: adaptive attack suites are
+ground truth. Position B: attack-independent proxies or agent
+benchmarks compress evaluation cost [C5,C3]. On stochastic
+defences: diffusion projects toward clean massvs.DiffBreak
+5

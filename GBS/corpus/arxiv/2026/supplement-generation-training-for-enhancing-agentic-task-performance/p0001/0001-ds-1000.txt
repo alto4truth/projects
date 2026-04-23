@@ -1,0 +1,128 @@
+title: Supplement Generation Training for Enhancing Agentic Task Performance
+source: arxiv
+year: 2026
+document_id: supplement-generation-training-for-enhancing-agentic-task-performance
+authors: Young Min Cho; Daniele Bonadiman; Divya Bhargavi; Tamer Alkhouli; Salvatore Romeo; Dongwei Jiang; Khushbu Pahwa; Yubin Ge; Etsuko Ishii; Monica Sunkara; Yi Zhang
+page: 1
+section: ds-1000
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20727v1
+
+19%
+18%
+14%12%
+10%
+9%
+8%
+7%
+20%
+14%
+14%12%
+12%
+10%
+16% 19%
+18%
+15%14%
+7%
+7%
+5%
+16% 20%
+18%
+16%
+14%
+9%
+6%
+16%
+26%
+20%
+16%
+12%
+10%
+9%
+8%
+30%
+23%17%
+12%
+8%
+10%
+HotpotQA
+17%
+17%
+14%
+13%
+11%
+10%
+10%
+8%
+38%
+27%
+35% 35%
+31%
+34% 36%
+32%
+32%
+45%
+36%
+19%
+49%
+27%
+25%
+HLE
+36%
+12%12%
+11%
+11%
+8%
+9%
+51%
+15%
+11%
+23%
+87%
+7%
+6%
+84%
+12%
+86%
+11%
+88%
+10%
+SuperGPQA
+24%
+23%
+17%
+13%
+12%
+6%
+6%
+41%
+14%
+14%
+10%
+7%
+6%
+5%
+96% 100% 100% 100%
+Answer
+Answer & step by step reasoning
+Correct answer
+Step by step reasoning
+Background knowledge
+Summary
+Rephrasing
+One shot example
+Query
+Query & answer
+Mistakes
+Mistakes & solution
+Incorrect
+Incorrect answer
+Pairs
+Others
+Figure 6: Distribution of generated supplement types across training stages and benchmarks. After SFT, all
+benchmarks exhibit a quasi-uniform distribution across predefined types. As DPO iterations progress, new types
+emerge and the distributions converge toward a small number of dominant types tailored to each benchmark:Pairs
+for Spider,Answerfor SuperGPQA, and mixed strategies for DS-1000 and HotpotQA. The supplement generator is
+Qwen3-1.7B and the actor model is GPT-OSS-120B.
+Method v3.5-sonnet-v2 gpt-oss-120b Avg. Gain
+Spider DS-1000 HotpotQA HLE sup

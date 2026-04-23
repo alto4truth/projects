@@ -1,0 +1,27 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+ates with 95% bootstrap CIs.
+• Baselines:AutoAdvExBench [ 4], AgentBench, SWEbench (for code agent capability reference).
+• Ablation variables:(i) agent model (GPT-4, Claude,
+Llama 3), (ii) tool access (code execution vs. read-only),
+(iii) context window utilisation (4K, 32K, 128K).
+14 Discussion
+The evaluation crisis appears structural.Our synthesis
+suggests that the challenges facing adversarial evaluation are
+not isolated technical shortcomings but reflect a systemic pattern: five incompatible paradigms coexist (Section 4), and
+the two strongest assumptions—that fixed suites represent
+safety and that averages approximate worst cases—are contradicted by evidence within the corpus itself (Section 8). A
+plausible interpretation is that the field’s implicit evaluation
+contract—where proposers choose their own attack suite and
+report average-case numbers—creates incentives that systematically inflate robustness estimates.
+Positioning relative to prior work.To the best of our
+knowledge, no prior work in adversarial ML simultaneously:
+(i) applies structured meta-scientific analysis (seven protocols spanning citation tracing through assumption stresstesting) to evaluation methodology; (

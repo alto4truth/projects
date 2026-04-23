@@ -1,0 +1,24 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+onsensus for its own sake, but a research plan whose tradeoffs have been examined from
+multiple angles.
+ThismechanismdirectlyaddressesLesson2fromSection2: givingeachagentanexplicit, competingobjective
+consistentlyproducedbetterdecompositionsandmoreinformativedisagreementsthanasingleplannertrying
+to ideate, justify, and plan everything at once.
+3.2 Adversarial novelty falsification
+The literature review agent’s default stance isskepticism—it assumes the central claim is already known and
+tries to find the evidence. This is not “find related work.” It is “try to kill the novelty claim.”
+The agent assigns each claim one of four statuses:
+OPEN|PARTIAL|KNOWN|EQUIVALENT_KNOWN
+Multi-source search—including deep-research APIs, semantic scholar queries, and citation traversal—is employed not to decorate the introduction with related work, but to build a genuine case for or against novelty.
+A claim ratedKNOWNorEQUIVALENT_KNOWNtriggers a rethink: the system must either reformulate the contribution or provide explicit evidence that the existing result does not subsume the new one.
+This mechanism matters because one of the most common failure modes of automated research is confident
+production

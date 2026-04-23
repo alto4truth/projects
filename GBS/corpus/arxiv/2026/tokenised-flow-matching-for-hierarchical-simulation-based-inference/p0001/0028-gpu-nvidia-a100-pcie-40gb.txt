@@ -1,0 +1,63 @@
+title: Tokenised Flow Matching for Hierarchical Simulation Based Inference
+source: arxiv
+year: 2026
+document_id: tokenised-flow-matching-for-hierarchical-simulation-based-inference
+authors: Giovanni Charles; Cosmo Santoni; Seth Flaxman; Elizaveta Semenova
+page: 1
+section: gpu-nvidia-a100-pcie-40gb
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20723v1
+
+ction 3.2 these quantities are
+held fixed, while inference targets the global baseline transmissionβ0 and the site-specific seasonal
+amplitudesA s.
+28
+
+A.9 SEIR Model Inference with MCMC
+Hyperparameters.Table 8 summarises the NUTS configuration used for reference posterior
+computation.
+Convergence diagnostics.Table 9 reports convergence diagnostics for the SEIR reference
+posteriors. The elevated ˆR values (particularly for β0) and low effective sample sizes indicate
+challenging posterior geometry, motivating the use of ground-truth initialisation.
+A.10ℓ-C2ST Evaluation Protocol
+We evaluate posterior quality using the local classifier two-sample test (ℓ-C2ST) (Linhart et al.,
+2023), which diagnoses whether samples from the approximate posteriorqϕ(θ|x )are distinguishable
+from samples drawn from the jointp(θ, x)conditioned on the same observation.
+Classifier architecture.We use fully-connected neural networks with two hidden layers of 32
+units and ReLU activations. Each classifierdψ : Rdx+dθ → [0, 1]is trained using the Adam optimiser
+with learning rate3 × 10−4, a batch size of 100, and early stopping with patience of 100 epochs and
+a minimum improvement threshold of10−2 on a 90/10 train/validation split, for a maximum of 1000
+epochs.
+Test statistic.The test classifier is trained as an ensemble of 10 classifiers over 10 cross-validation
+folds to distinguish concatenated pairs(x, θ)from the joint distribution (class 0) versus(x, θq)where
+θq ∼q ϕ(θ|x )(class 1). Given a held-out observationxobs and posterior samples{θi}n
+i=1 ∼q ϕ(θ|
+xobs), the test statistic is the mean squared deviation from chance:
+ˆtMSE = 1
+n
+nX
+i=1
+
+dψ(xobs, θi)− 1
+2
+2
+.(11)
+Null distribution.The null distribution is constructed from an ensemble ofH = 100classifiers
+{d(h)
+ψ }H
+h=1, each trained on independently permuted class labels. This yields null statistics{ˆt(h)
+null}H
+h=1
+computed identically to the test statistic.
+p-value.Thep-value is the proportion of null statistics exceeding the test statistic:
+ˆp= 1
+H
+HX
+h=1
+1
+
+ˆt(h)
+null ≥ ˆtMSE
+
+.(12)
+29

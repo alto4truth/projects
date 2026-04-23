@@ -1,0 +1,17 @@
+title: Improving clinical interpretability of linear neuroimaging models through feature whitening
+source: arxiv
+year: 2026
+document_id: improving-clinical-interpretability-of-linear-neuroimaging-models-through-feature-whitening
+authors: Sara Petiton; Antoine Grigis; Raphaël Vock; Edouard Duchesnay
+page: 2
+section: abstract
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20675v1
+
+he original
+data [10]. We implemented both ZCA-cor, and an original
+regularized ZCA-cor as custom transformers compatible with
+the scikit-learn API. Whitening is applied in two steps: (i)
+between left and right hemisphere measures of the same region, to disentangle hemisphere-specific contributions; and
+(ii) between gray matter (GM) and cerebrospinal fluid (CSF)
+volumes within each brain region, given their typically inarXiv:2604.20675v1 [cs.LG] 22 Apr 2026

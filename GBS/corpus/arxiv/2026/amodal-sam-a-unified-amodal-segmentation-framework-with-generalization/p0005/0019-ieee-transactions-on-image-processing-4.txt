@@ -1,0 +1,30 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 5
+section: ieee-transactions-on-image-processing-4
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+encoder. The empirical efficacy of this hierarchical
+integration is further validated in Section IV-D.
+C. Data Adaptation
+Amodal segmentation poses a fundamental challenge that
+sets it apart from traditional object segmentation by necessitating the precise delineation of obscured object regions.
+However, as the data scale is essential to achieve an openworld model, existing amodal segmentation datasets [2], [7],
+[9] are limited in scale and scope, typically covering only specific domains with restricted object categories, making them
+inadequate for open-world applications. Moreover, manually
+curating a large-scale dataset with sufficient amodal masks
+for occluded objects would be prohibitively time-consuming
+and expensive.
+To address these challenges, we introduce a Target-Aware
+Occlusion Synthesis (TAOS) pipeline to accomplish the data
+adaptation. The TAOS pipeline can efficiently convert standard
+segmentation annotations available in the large-scale SA-1B
+dataset [1] into the required formats for amodal training,
+eliminating the necessity for manual labeling. Further details
+are outlined below.
+Target-Aware Occlusion Synthesis (TAOS).Since the
+current extensive segmentation datas

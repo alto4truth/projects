@@ -1,0 +1,62 @@
+title: AAC: Admissible-by-Architecture Differentiable Landmark Compression for ALT
+source: arxiv
+year: 2026
+document_id: aac-admissible-by-architecture-differentiable-landmark-compression-for-alt
+authors: An T. Le; Vien Ngo
+page: 1
+section: aac-fps-alt
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20744v1
+
+g radius does help), but the residual3–4%
+gap after coverage-aware regularization suggests the FPS candidate pool is the binding constraint on road
+40
+
+Table 14: ABLATIONRetrospective best-K 0 summary(appendix companion to the validation-split protocol in Table 6). AAC vs. ALT at equal matched-deployed-label-memory budgets on DIMACS NY and FLA
+(5-seed means, 100 queries per graph). Best expansion reduction per (graph, memory) group in bold. AAC
+rows show the best-performingK 0 configuration per budget, selectedretrospectivelyfrom the full Pareto
+sweep below; the validation-split version in the main text (Table 6) recovers the same ordering with a val–
+test gap of at most2.5%. A separate controlled Wilcoxon comparison (Section 5.3, Table 16) confirms ALT’s
+advantage on all four DIMACS graphs.
+Graph Method Bytes/V Exp. Red. (%) Mean Exp. Preproc. (s)
+NY
+AAC 32 80.2±3.6 24834 89.2
+ALT 3284.219855 1.5
+AAC 64 88.3±0.5 14677 108.4
+ALT 6491.011299 2.2
+AAC 128 92.3±0.3 9609 106.6
+ALT 12893.58152 3.1
+FLA
+AAC 32 75.4±2.4 129176 95.2
+ALT 3284.780400 3.2
+AAC 64 85.7±2.1 75242 64.6
+ALT 6487.764543 4.9
+AAC 128 92.1±1.1 41656 53.9
+ALT 12892.837920 8.2
+networks. Table 18 reports the same regularizer sweep on SBM and BA. On both synthetic graphs the
+regularizer is neutral to slightly negative: on SBM every non-zeroλcov is statistically indistinguishable from
+the baseline (p≳0.4), on BA the regularizer drifts the learner∼0.6%belowtheλcov=0baseline. This is
+the pattern predicted by the covering-radius reading: small-diameter synthetic graphs leave little covering
+slack for the regularizer to close, and the road-network1.3–1.4% gain is the regime where the extra signal
+matters. We report it aspartial evidence for the covering-radius mechanismrather than a general fix.
+Training-drift diagnostic on a road graph.To check that the training-objective drift is not specific
+to non-road synthetic graphs, we re-run the forced-first-mvs. trained comparison on DIMACS NY (264K
+nodes, directed,K ALT=8, matched memoryB=64B/v) with three seeds (42, 123, 456) and the same five
+training-epoch checkpoints used in the SBM/BA experiment of Section 5.9. Table 19 reports the resulting
+drift: at the architectural ceiling (91.20%, equal to FPS-ALTK=8on this cell), the trained selector stays
+1.7–3.3% below across the full0–1000-epoch window, and the gapwidens monotonically with more training
+from−1.67% at epoch 50 to−3.28% at epoch 1000.
+Hyperparameter and initialization robustness for training drift.Table 20 reports a
+hyperparameter-and-initialization sweep on the SBMB=32cell described at the end of Section 5.9. The
+take-away is that the training drift documented above is robust across the (learning rate, batch size,K0)
+hyperparameter grid we test, but vanishes when the compressor is initialized at the architectural ceiling
+(identity-on-first-minit), so the binding constraint is the default block-sparse initialization rather than a
+fundamental optimization barrier on this cell.
+C Ablation Studies
+We conduct three targeted ablation experiments on the OSMnx city graphs (Modena and Manhattan) to
+isolate the contributions of AAC’s key design choices. All experiments useK0=64teacher landmarks, seeds
+{42,123,456,789,1024}, and 100 random query pairs per configuration.
+Selection Strategy
+To understandwhyALT leads, Table 21 compares five selection strategies at matched memory (64 B/v,
+m=16): (i) AAC (default) (trained row-stochastic selection fromK 0=64teachers), (ii) Random-Subset
+41

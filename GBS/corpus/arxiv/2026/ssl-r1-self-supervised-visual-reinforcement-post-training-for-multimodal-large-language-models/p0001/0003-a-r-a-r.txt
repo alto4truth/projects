@@ -1,0 +1,24 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: a-r-a-r
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+mizes the policyπθ with the following objective:
+max
+πθ
+Ey∼πθ(x)[R(x, y)−βKL(π θ(y|x)||π 0(y|x))],(1)
+wherexis the input prompt,yis the generated response,R
+is the verifiable reward, andβcontrols the KL-divergence
+strength. Taking the prompt and response pair(x, y)as inputs,Rverifies ifymatches the ground-truth answer:
+R(x, y) =
+(
+1,ify=ground truth,
+0,otherwise. (2)
+Group Relative Policy Optimization.Unlike reinforcement learning algorithms such as PPO [52] that require a
+critic model to evaluate policy performance, Group Relative Policy Optimization (GRPO) [53] eliminates the need
+3

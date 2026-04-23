@@ -1,0 +1,30 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+w-complexity
+regimes, where over-regularization may otherwise degrade
+performance.
+Across datasets and modalities, explicit regularization
+appliedtovalues,orfeed-forwardnetworkcomponentsconsistently provides strong or state-of-the-art performance,
+while explicit query and key dropout demonstrate taskdependent sensitivity. The regularization from Arora et al.
+[1] consistently performs poorly when applied to attention
+input values, i.e., Q, K, and V, as the regularizer is based
+on dropping out whole specific features instead of some
+particulardimensionsinthefeatures.Thiscausesinstability
+in the attention output, therefore not allowing the model
+to learn the patterns fully. The results indicate that explicit
+dropout can match or exceed implicit methods, particularly
+on complex datasets and structured sequence tasks, supporting the effectiveness and generality of the proposed
+framework.
+4.3. Ablation Study
+We conduct ablation experiments on CIFAR-10 to analyze the effect of explicit dropout regularization across
+differentattentioncomponentsandhyperparametersettings.
+In particular, we evaluate explicit dropout applied independently to the key (K), query (Q), and value (V) projections
+wh

@@ -1,0 +1,26 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 2
+section: results
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+final readout
+operatorW∈R Nc×dmodel. Note that the nonlinear activation function Λ is applied elementwise, and is also
+distinct from the matrix of eigenvaluesΛin Eq. (8).
+This end-to-end expression completely describes the
+computation performed on an individual input by a general SSM composed of a linear recurrence and nonlinear
+readout, and is applicable (with modification) whether
+the SSM dynamics is diagonalized or not. We will utilize
+the expression to understand computation in S4D-Lin,
+but note that the analysis generalizes across SSMs. The
+mathematical expression also makes explicit why analyzing the complete forward pass in SSMs is difficult: even
+if one uses a completely standard linear recursion, which
+can be easily solved, the result is always passed through
+a nonlinear activation Λ that aides performance on realworld classification tasks. This means that, even if the
+high-dimensional mappings in the linear recurrencex k
+can be understood, it is very difficult to understand how
+the subsequent nonlinear transformation Λ interacts with

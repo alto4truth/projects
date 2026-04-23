@@ -1,0 +1,62 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 6
+section: c-qualitativeanalysis-ofclassifierrankings
+chunk: 82
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+: forme d’évasion du réel :Introduction La poésie est un
+genre littéraire qui permet d’exprimer des sentiments... : Thèse La poésie peut être consid20
+
+Published as a paper at 3rd DATA-FM workshop @ ICLR 2026, Brazil.
+Table 12: Spearman and Kendall correlations between family-specific classifiers and the French HQ
+baseline. High correlation in distant families (e.g., Uralic, Nordic) suggests cross-lingual transfer of
+quality signals, while the drop in "Romance (no French)" suggests potential syntactic interference.
+Experiment Spearman Kendall
+Romance (spa, fra, por, ita, ron, cat) MKC+ 0.8928 0.7173
+Uralic (fin, ekk, hun) MKC+ 0.8870 0.7073
+Nordic (swe, dan, nob, isl) MKC+ 0.8820 0.6990
+Nordic (swe, dan, nob, isl) MKC-e 0.8790 0.7014
+Germanic (deu, nld, en, afr, ltz) MKC+ 0.8750 0.6916
+Uralic (fin, ekk, hun) MKC-e 0.8651 0.6823
+Germanic (deu, nld, en, afr, ltz) MKC-e 0.8465 0.6585
+Slavic (pol, rus, ces, ukr, bul, srp, hrv) MKC+ 0.8387 0.6484
+Romance (spa, fra, por, ita, ron, cat) MKC-e 0.7808 0.5880
+Slavic (pol, rus, ces, ukr, bul, srp, hrv) MKC-e 0.7443 0.5523
+Indo-Aryan (hin, urd, ben, pan, mar) MKC+ 0.7157 0.5221
+Romance, no French (spa, por, ita, ron, cat) MKC-e 0.7139 0.5228
+Indo-Aryan (hin, urd, ben, pan, mar) MKC-e 0.6348 0.4565
+érée comme une forme d’évasion du réel... : Antithèse Cependant, la poésie peut également
+être considérée comme une représentation de la réalité... :Conclusion En fin de compte, la
+poésie peut être considérée à la fois comme une forme d’évasion du réel et une représentation de la réalité...
+Translation:Poetry-reality/poetry: a form of escape from reality :Introduction Poetry is
+a literary genre that allows the expression of feelings... :Thesis Poetry can be considered
+a form of escape from reality because it allows the author and reader to escape... :Antithesis However, poetry can also be considered a representation of reality... :Conclusion
+Ultimately, poetry can be considered both a form of escape from reality and a representation of reality...
+HQ Rank:18,773,069 (Score: 0.1301)→ML Rank:10,298 (Score: 0.9988)
+Shift:+18,762,771
+Analysis:The monolingualHQclassifier failed to prioritize this highly structured educational
+essay. In contrast, theMLclassifier correctly identified it as high-quality content. This suggests
+that Multilingual training sensitizes the model to universal academic markers (like "Introduction,"
+"Thesis," and "Conclusion") which appear across many languages in the MKC+ pool.
+Sample 2: Grammatically Fluent Nonsense
+Text:Cela façon dont la personne a une bouteille de vie dans la . Il s’agit d’attraction
+simplement pas sembler le problème avec vous mènera probablement vous aimez pas être
+exactement . Et pleine forme auprès de ce que c’est d’abord, les cadres supérieurs et plus
+faibles qui ne fonctionne de compliments semblerait être.
+Translation:This way in which the person has a bottle of life in the . It is a matter of
+attraction simply not to seem the problem with you will probably lead you do not like
+being exactly . And in great shape with what it is first, the senior and weaker executives
+who does not work of compliments would seem to be.
+HQ Rank:65,072 (Score: 0.9959)→ML Rank:18,768,564 (Score: 0.0199)
+Shift:-18,703,492
+Analysis:This text uses correct French words and localized syntax, but the meaning is total nonsense (e.g., “a bottle of life in the”). The monolingualHQmodel was fooled by the surface-level
+fluency, but theMLmodel correctly identified it as noise. This indicates that multilingual embeddings help the model verify semantic coherence, as “nonsense” rarely aligns well across different
+languages in latent space. In Figure C.2 we see that this behaviour generalizes to Spanish in much
+less pronounced way, but does not hold for Chinese.
+C.3 ROMANCE(NO-FRENCH) CLASSIFIER
+Sample 3: Formal/Liturgical Text (Psalms)
+21

@@ -1,0 +1,26 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+alhalla routing engine instance, with a public server athttps:
+//valhalla1.openstreetmap.deas fallback. API responses are merged into
+a unified dataset containing attributes such as speed limits, curvature, grade,
+elevation, heading, intersection type, and traffic control indicators. The resulting node-level attribute dataset forms the primary input to the Velocity
+Profile Generator and Driver LSTM modules.
+4.3. Velocity Profile Generator
+The Velocity Profile Generator applies a rule-based hierarchy to convert
+the road features into a reference velocity profile and speed-limit type that
+can be used by the PID Controller to generate a more physically accurate
+velocity profile. Each node is assigned a reference velocity and speed-limit
+type according to the following priority rules:
+1)Traffic control elements (Type 3):Presence of traffic signals, stop
+signs, or yield signs forces a stop (0 km/h).
+2)Intersection entry (Type 3):At 0% edge position which also has a
+heading change of>60 ◦, velocity is set to 0 km/h.
+8

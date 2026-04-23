@@ -1,0 +1,61 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 1
+section: paraff
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+ce in the solver.
+Without the learned picker, search alone provides only limited gains over greedy and leaves many
+measures unusable (see Table 8).
+22
+
+WithvtickWithoutvtick
+tick term2.4758.188
+tick_fixed term0.5286.117
+rel_tick term3.6188.126
+duration term1.2559.476
+Table 9:vtickablation results. Diagnostic terms reported by the topology model (lower is better):
+tick is RMSE of absolute tick prediction; tick_fixed is the same RMSE computed on fixed-prefix
+elements; rel_tick is RMSE of predicted pairwise tick differences; duration is RMSE of the
+EOS tick (i.e. the entire measure duration). All values are measured in the internal tick unit, where
+a quarter note equals 480 ticks. These numbers are computed from a one-pass forward (glimpse)
+evaluation on all measures in lilypond-topology. In the full BeadSolver loop, an incorrect search
+trajectory can temporarily worsen the structure and lead to higher tick RMSE than this glimpse
+metric.
+The design principle of the rule-based picker is to use as much accessible information as possible to
+construct explicit rules that reflect local topology prediction. It builds successor preferences from
+coarse horizontal grouping and left-to-right continuation, estimates ticks by linear interpolation
+between nearby anchors, passes through upstream feature vectors for division, dots, beam, and stem
+direction, and uses threshold rules for special cases such as grace notes, whole-measure rests, and
+likely duplicate events. In other words, it tries to describe the local next-step policy by hand, while
+leaving global consistency to the same search and evaluator used by BeadSolver.
+The results in Table 8 show that this is far from sufficient. Although the search framework is
+unchanged, replacing the learned picker by rules drops the perfect-measure rate from 83.00% to
+56.87%, voice match from 88.02% to 58.68%, and raises tick RMSE from 202.4 to 458.0. This
+large degradation demonstrates that the learned picker is not an optional refinement but a necessary
+component. More broadly, it reflects the difficulty of describing real staff-topology behavior with
+explicit rules alone: local continuation depends not only on horizontal proximity, but also on contextdependent duration semantics, voice exchange, cross-staff motion, tuplets, grace timing, and many
+engraving-dependent exceptions.
+At the same time, rule-based search is still slightly better than greedy decoding in some respects.
+Compared with greedy, it improves the perfect-measure rate from 50.71% to 56.87%, reduces anyfield event error from 30.65% to 29.61%, and lowers broken-beam and tick-twist diagnostics. This
+indicates that explicit search plus structural checking can repair some limited issues.
+Replacevtickby scalar MSE tick loss.We remove the mixed-radix vector code for tick prediction
+and train with the scalar tick head only. This increases tick-related errors and degrades duration
+consistency (see Table 9). This ablation is evaluated only on model-side metrics from training and
+one-pass forward prediction. We do not run the full search loop here, because floating-point tick
+regression changes the downstream rule evaluation itself and would make the search-stage comparison
+harder to interpret.
+Skip BeadSolver pre-pass.In Multipass decoding, we remove the lightweight pre-pass that assigns
+measure-level predispositions before search. This ablation mainly hurts measures with whole-measure
+rests and ambiguous duration cues. The largest effect appears on tick-related metrics, because the
+pre-pass gives the same BeadPicker a cleaner initial estimate of measure duration and fake-event
+semantics before the expensive search begins (see Table 10).
+Finally, Appendix C provides a qualitative failure-to-success progression across regulation strategies.
+These examples highlight typical error modes: greedy failures that can be repaired by equations,
+equations failures that require probability-guided search, and remaining hard cases where Multipass
+search or manual correction is needed.
+23

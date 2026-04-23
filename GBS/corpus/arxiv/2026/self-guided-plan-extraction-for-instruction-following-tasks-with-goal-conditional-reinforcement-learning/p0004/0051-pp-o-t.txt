@@ -1,0 +1,33 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 51
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+itions
+that align with our ontology constraints. This leads
+to more reliable curriculum construction and more
+effective RL training.
+(3) Some widely used LLMs fail to benefit
+from the alignment stage.We also conducted experiments with several other well-known models,
+includingmicrosoft/phi-4,mistralai/Mistral-7BInstruct-v0.2, andopenai/gpt-oss-20b, and found
+that the alignment stage does not provide any measurable benefit for them. Despite explicit prompt
+constraints on which subtasks should be used, these
+models tend to generate large numbers of synonymously similar subtasks. Consequently, the set of
+goals that the agent must recover becomes even
+Plan:
+gather_resour ce(resour ce_typ e = w o o d)
+creat e_it em(it em_typ e = table)
+creat e_it em(it em_typ e = w o o d en_pickaxe)
+gather_resour ce(resour ce_typ e = w o o d)
+gather_resour ce(resour ce_typ e = st one)
+creat e_it em(it em_typ e = table)
+creat e_it em(it em_typ e =st one_pickaxe)
+gather_resour ce(resour ce_typ e = ir on) ← Curren t Sub task
+Instruction: Harvest metallic resour ces for use.
+Plan:
+attack(it em = zombie)

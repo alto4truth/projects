@@ -1,0 +1,29 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 8
+section: a-weighted-angle-distance-on-strings-15
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+there is an explicit recursive
+formula expressingθ n(S, T)in terms of the finite set of distances
+{dρ(S, W), d ρ(T, W) :W∈Σ ≤n.}
+Consequently, the collection of functions(θ n)n≥1 is determined byd ρ.
+Proof.Letρ >0. We proceed by induction onn. Note that for anyS, and forWof length
+n, we have
+[S]n =
+X
+W∈Σ n
+c(S, W)[W] n =
+X
+W∈Σ n
+∥[S]n∥cosθ n(S, W)[W] n.
+Thus for anyS, T∈Σ ∗ we have
+θn(S, T) = arccos
+X
+W∈Σ n
+cosθ n(S, W) cosθ n(T, W)
+!

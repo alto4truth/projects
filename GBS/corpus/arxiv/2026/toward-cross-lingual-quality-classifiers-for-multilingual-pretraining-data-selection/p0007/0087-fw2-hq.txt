@@ -1,0 +1,27 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 7
+section: fw2-hq
+chunk: 87
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+Published as a paper at 3rd DATA-FM workshop @ ICLR 2026, Brazil.
+C.4 NORDICCLASSIFIER
+Sample 5: Public Park Information
+Text:Square de la place de la Réunion. Horaires: Ouvert en ce moment |jeudi 21/03||08:00
+à 18:00|... En 1849, le village dit « Grand Charonne » rejoint le hameau le « Petit Charonne
+»... Ce jardin contemporain a été éco labélisé en 2012... Le hêtre pourpre au feuillage rouge
+brun crée une continuité avec les coloris pourpres du fossé humide.
+Translation:Square of the Place de la Réunion. Hours: Open now |Thursday 03/21||08:00
+to 18:00|... In 1849, the village known as "Grand Charonne" joined the hamlet of "Petit
+Charonne"... This contemporary garden was eco-labeled in 2012... The purple beech with
+red-brown foliage creates continuity with the purple colors of the wet ditch.
+HQ Rank:327,597,576 (Score: 0.0001)→Nordic Rank:8,268,964 (Score: 0.3525)
+Shift:+319,328,612
+Analysis:This document is heavily “noisy,” starting with long tables of opening hours and
+ending with Twitter handles. The monolingualHQbaseline likely penalized the initial boilerplate
+so severely that it discarded the entire document. However, theNordicclassifier identifies the
+knowledge-dense middle

@@ -1,0 +1,30 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 3
+section: v2-5-7-8
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+20
+–Event 9: division=3 (eighth), stem down, beam=Continue, tick=960
+–Event 10: division=3 (eighth), stem down, beam=Close, tick=1200
+Current issues:
+1. beamBroken = true — the beam group 8–9–10 has events 5 and 7 between them, but they’re in
+different voices
+2. The voices are currently: [1,2,3], [4,6,9,10], [5,7,8] — three voices
+3. spaceTime = 0.375 (1440 * 0.375 = 540 ticks of unused time)
+Examining the feature data reveals a critical mismatch: event 6, which should be a quarter note, has its highest
+division confidence at index 2 (quarter note) with a value of 5.39, while event 7, an 8th rest, shows strongest
+confidence for an 8th note.
+Events 6 and 7 are very close (x= 19.56 vs 19.63), confirming they’re simultaneous or nearly so, meaning
+they occur in different voices.
+My voice distribution looks like this:
+• V oice 1: Staff 0 events (1, 2, 3)
+• V oice 2: Staff 1 stem-up events (4, 6)
+• V oice 3: Staff 1 stem-down/beamed events (5, 7, 8, 9, 10)
+The tricky part is managing tick positioning to prevent beam breaks. Event 5 at tick 240 and event 7 at tick
+480 seem to disrupt voice 3’s flow, causing the beam broken error.
+I’ll consolidate the voices into a single sequence for staf

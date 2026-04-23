@@ -1,0 +1,44 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+, 2025). Our code is available on GitHub:https://github.com/NilsSturma/
+DegBoundedIdentifiabilityand builds on top of theGraphicalModelspackage (Améndola et al.,
+2020). In our implementation, we also return the dehomogenized identifying polynomials. Moreover, we stop the algorithm as soon as identifying polynomials for all variables inλhave been found
+since the identifying polynomials for the remaining variables inωare then given via the formula in
+Remark 2.5.
+Example 5.5.The followingM2code uses our implementation of Algorithm 1 to verify rational
+identifiability of the graph in Figure 3.
+load ("DegBoundedIdentification.m2")
+M = {
+{
+{0, 1, 0, 1},
+{0, 0, 0, 0},
+{0, 0, 0, 1},
+{0, 0, 0, 0}
+},
+{
+{0, 0, 0, 0},
+{0, 0, 1, 0},
+{0, 1, 0, 1},
+{0, 0, 1, 0}
+}
+}
+n=4
+(A1, A2) = toSequence(M / matrix);
+D = digraph(toList(1..n), A1);
+B = bigraph(toList(1..n), A2);
+G = mixedGraph(D, B);
+degBd = 2;
+maxTime = 10;
+tian = true;
+DegBoundedIdentification(G, degBd, maxTime, tian)
+Lastly, we note that one might improve the implementation of our algorithm by parallelizing the
+for-loop in line 4 of Algorithm 1. We leave this open for future work.
+13

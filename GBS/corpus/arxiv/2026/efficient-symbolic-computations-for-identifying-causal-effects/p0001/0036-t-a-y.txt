@@ -1,0 +1,34 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+nstant or grows
+fast enough with the number of nodes, then the algorithm is polynomial time. The key ingredient
+to the proof of Theorem 5.1 is the next lemma. It relates the product of all trek weights to the
+superfactorial.
+Lemma 5.2.LetG= (V, D, B)be an acyclic mixed graph. Consider the trek-weightingwdefined
+in(5)and letw trek be the maximum length of any trek inG. Then, we have
+
+Y
+u≤v
+w(σuv)
+
+
+4
+≥sf(w trek),
+where sf(n) =Qn
+i=1 i!is then-th superfactorial forn∈N.
+The proof of Theorem 4.4 is based on Lemma 5.2 and the asymptotic behavior of the superfactorial,
+which is well understood. In particular, we relate the asymptotic behavior of sf(wtrek)to|V| wtrek,
+depending on how fastwtrek growths with the number of nodes|V|.
+Remark 5.3.If it is possible to bound IDG by a constant, then our procedure provides a quasipolynomial time algorithm to check rational identifiability.
+Remark 5.4.We can further reduce the complexity of checking rational identifiability via a graph
+composition due to Tian (Tian, 2005). For an acyclic mixed graphG= (V, D, B), denote by
+C1, . . . , Ck the pairwise disjoint node sets of the connected components of the bidirected part(V, B).
+LetB i =B∩(C i ×C i

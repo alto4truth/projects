@@ -1,0 +1,28 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+bot interaction [32, 18]. However, gaze-following and its applications in
+the OR still remain unexplored.
+In this work, we aim to introduce gaze-following research
+into the surgical domain. Specifically, we extend the 4DOR [26] and Team-OR [6] datasets with gaze annotations, including head bounding boxes and corresponding gaze points if
+the OR team members are looking inside the view. Then, we
+train a foundation model-based gaze estimation model [31]
+that can accurately follow the OR team members’ gazes in
+the complex OR scenes. Afterwards, we propose novel approaches to address three downstream tasks using the trained
+gaze-following model, including clinical role prediction and
+surgical phase recognition on the 4D-OR dataset, and team
+communication detection on the Team-OR dataset. For role
+and phase recognition, we propose a transformer-based approach that processes generated gaze heatmaps, and evaluate
+the classification results on the 4D-OR dataset using existing
+annotations.
+For team communication detection, we propose to detect
+the “StOP?” activities [6], where all OR team members pause
+their work and communicate for about 30-90 seconds during
+the surgical procedure. Furtherm

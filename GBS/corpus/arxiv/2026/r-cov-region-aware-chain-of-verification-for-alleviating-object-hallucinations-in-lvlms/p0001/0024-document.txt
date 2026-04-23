@@ -1,0 +1,33 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+85.89 93.00 93.02 87.00 87.92
+SelfCheck 88.67 88.27 88.67 88.59 90.33 89.53 89.22 88.80
+LURE 85.33 86.25 87.00 87.05 89.67 89.70 87.33 87.67
+LogicCheckGPT89.33 89.4091.00 90.79 92.67 92.25 91.00 90.81
+R-CoV (ours) 88.67 88.36 92.00 91.72 94.00 93.67 91.56 91.25
+Qwen2.5-VL
+Vanilla 85.67 83.65 86.33 84.29 86.67 84.62 86.22 84.19
+LogicCheckGPT 87.00 85.50 86.67 84.96 87.33 85.71 87.00 85.39
+R-CoV (ours) 87.33 86.13 87.67 86.35 89.00 88.00 88.00 86.83
+we set the number of sampled answersL= 7for region
+description, and the hallucination thresholdτ= 0.1for
+verification execution. We adopt the image overlaid with
+the bounding box as the visual prompt, where the shape of
+the bounding box is a rectangle, the color of the bounding
+box is red, and the size of the bounding box is 1 pixel. In
+addition, we employ GPT-3.5 Turbo (gpt-3.5-turbo-0125)
+as the default LLM to help process the generated text for
+entity extraction, verification execution, and final response
+generation.
+Note that we employ GPT-3.5 only for a fair comparison
+with the prior state of the art,i.e., LogicCheckGPT [49].
+We will show in the experimental section that our R-CoV
+can still achieve promising results without relying

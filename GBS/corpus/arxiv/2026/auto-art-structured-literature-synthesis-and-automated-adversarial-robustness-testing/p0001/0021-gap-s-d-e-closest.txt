@@ -1,0 +1,27 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+tic attack modules;
+developed by 100+ security researchers; (v)EU AI Act Article 15[ 48]: pre-screening gate and worst-case reporting
+address the explicit requirements for demonstrated robustness
+against adversarial examples and poisoning attacks (high-risk
+obligations apply August 2026); (vi)ETSI EN 304 223[ 51]:
+13 security principles across 5 lifecycle phases (design, development, deployment, maintenance, end-of-life) explicitly covering data poisoning, model obfuscation, and indirect prompt
+injection; (vii)ISO/IEC 24029-3[ 52]: statistical methods for
+neural network robustness assessment (DIS ballot Feb 2026),
+directly applicable to AUTO-ART’s certification modules.
+MITRE ATLAS technique IDs [37] are associated with each
+attack category for standardised threat classification (16 tactics,
+84 techniques as of v5.3.0, including agentic AI case studies).
+The CSA MAESTRO framework [53] provides complementary seven-layer threat modelling for multi-agent deployments.
+Output reports include compliance evidence in JSON and
+SARIF 2.1.0 formats suitable for audit workflows and CI/CD
+integration.
+8

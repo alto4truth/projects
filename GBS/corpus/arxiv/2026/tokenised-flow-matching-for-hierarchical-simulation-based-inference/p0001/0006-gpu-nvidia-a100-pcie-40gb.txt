@@ -1,0 +1,22 @@
+title: Tokenised Flow Matching for Hierarchical Simulation Based Inference
+source: arxiv
+year: 2026
+document_id: tokenised-flow-matching-for-hierarchical-simulation-based-inference
+authors: Giovanni Charles; Cosmo Santoni; Seth Flaxman; Elizaveta Semenova
+page: 1
+section: gpu-nvidia-a100-pcie-40gb
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20723v1
+
+on on most benchmark tasks, indicating that LF contributes
+sample-efficiency gains distinct from those of the tokenised flow-matching architecture itself.
+The benchmark reveals a task-specific trade-off between factorisation strategies. LF sampling
+is preferable when the observation model is simpler to approximate than the mapping from global
+parameters to observations; posterior factorisation should be favoured in the converse case. Practitioners can assess this by considering whether local parameters enter the observation model through
+simple transformations (favouring LF) or whether global parameters induce complex, nonlinear
+observation structure (favouring PF). When using LF sampling, we recommend monitoring persite surrogate loss and periodically comparing samples from the neural surrogate against held-out
+simulator outputs. This can be combined naturally with sequential refinement strategies such as
+SNLE, neural ratio estimation, or neural variational inference, and the single-site simulation budget
+is comparatively cheap to increase if these diagnostics reveal poor fit.
+TFMPE combines three separable ideas: likelihood-factorised training, tokenised encoders for
+13

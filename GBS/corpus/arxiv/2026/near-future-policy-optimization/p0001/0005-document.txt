@@ -1,0 +1,22 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+ize. Replayed trajectories stay close to the on-policy
+distribution and are readily learnable, but their quality is bounded by earlier checkpoints and may not support
+gains beyond the current policy. The key question is therefore how to find trajectories that are bothstrong
+enoughto teach the current policy something new andclose enoughfor it to actually learn from.
+We formalize this tension as a trade-off between two quantities associated with any off-policy trajectory
+source. The first issignal quality Q: among prompts on which the current policy fails, the fraction for which
+the source can produce a verified-correct trajectory. The second isvariance costV: the gradient variance
+that arises when trajectories drawn from a different policy are incorporated through importance weighting
+πθ/πoff-policy. The effective learning signal isS = Q/V:a source helps only when its signal quality is not
+overwhelmed by the variance it induces. As visualized in Figure 2(a), existing methods each occupy a
+suboptimal corner of this trade-off. When the auxiliary source is an external teacher [25] or a fully trained
+model (far-future policy) [36], its trajectories have highQ, but the large varianceV t

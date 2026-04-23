@@ -1,0 +1,29 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 8
+section: segformer-b0andsamachieve-the-closest-performance-to
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+ation networks used in this work
+can be found in the supplementary material.
+B. Morphing Attack Detection Triggering
+Table IV shows how the trigger frequency of MAD systems changes when performing background removal. While
+the FR performance results differed significantly between the
+three studied datasets, they present a similar tendency regarding MAD systems’ triggering. SPL and MixFaceNet-MAD
+benefit from the usage of background removal techniques,
+as they are significantly less triggered to incorrectly detect
+morphing attacks when segmentation is performed, regardless of the used segmentation technique. In particular, SAM
+works the best for FERET, resulting in a decrease of 15.43
+and 11.61 percentage points in terms of BPCER@t10% for
+SPL and MixFaceNet-MAD, respectively. A similar tendency
+is verified for FRGCv2. This is also the case for the IJB-C
+benchmark if we exclude the results of FCN + MobileNetv2
+and DANet, due to their extremely reduced FR performance.
+MADPromptS, however, is negatively affected by background removal. This impact is particularly evident when
+analyzing the BPCER@t1%, which rises from 7.82% when
+no segmentation is performed on IJB-C to 42.23% when
+segmen

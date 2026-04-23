@@ -1,0 +1,16 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 191
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+loser alignment. Country codes used in this section: AU Australia CA Canada CO Colombia FR France IR Iran JP Japan NG Nigeria NL Netherlands RU Russia
+
+Chapter 4: The World Values Benchmark 180
+US United States VN Vietnam
+Notes: • Apologies for some of the archaic wording (such as homosexuals instead of LGBTQIA+), I am replicating what is in the actual WVS and some of these questions were created some years ago. • In some cases, country data was not available at the time of analysis on some questions, notably France and Iran. Q22: Would you not like to have homosexuals as neighbours. On this item, PaLM’s raw singles overweighted “would not like as neighbours.” After applying prompt sets and Bayesian correction, distributions shifted toward “would accept.” In the graphs, the lower KL indicates closer alignment to human distributions. Here the corrected model distributions show lowest divergence from Russia and Vietnam on this item, while diverging most from the Netherlands. This should be read as a distributional proximity result for this item, not as evidence that those comparison populations are globally more tolerant.
+Figure 25: KL divergence for Q22 Would you not like to have homosexuals as neighbours? The results show the model is most closely aligned with Russia and Vietnam, and most unaligned with the Netherlands. Q150: Freedom vs. Security. This question probes political priorities: whether freedom or security is more important. PaLM-62B and PaLM-540B both weighted freedom heavily. On the graph, the model’s placement shows lowest L1 distance to the US, which also emphasises freedom more

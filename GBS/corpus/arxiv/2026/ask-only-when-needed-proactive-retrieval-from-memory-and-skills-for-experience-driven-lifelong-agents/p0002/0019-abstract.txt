@@ -1,0 +1,22 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 2
+section: abstract
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+ICALK@ECNU
+3.2 Experience-Enhanced Online Evolution
+In the online lifelong learning paradigm, an agent engages with a continuous stream of interactive tasks while two
+resources evolve through successive episodes: the accumulated experience base and the behavioral policy. These
+resources are naturally complementary. The experience base supplies factual knowledge, episodic precedents, and
+distilled behavioral patterns from which the policy can learn; a stronger policy, in turn, generates higher-quality
+trajectories that yield richer entries for the experience base. PROACTAGENTcloses this loop by unifying experience
+accumulation and policy optimization into a single iterative cycle (Figure 2 (a)): given a stream of tasks, the agent
+(1) interacts with the environment under the current policy πθ, augmented by proactive retrieval from a structured
+experience base D; (2) distills completed trajectories into typed experience entries that are incorporated into D; and
+(3) updates πθ via reinforcement learning on the collected trajectories, where retrieval decisions are optimized jointly
+with task actions through paired-branch process rewards (Section 3.3). This creates a self-reinforcing loo

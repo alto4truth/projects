@@ -1,0 +1,22 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 183
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+The resulting likelihood scores were normalised across the anchor set so that they summed to 100%, producing a probability distribution for that item.
+
+Chapter 4: The World Values Benchmark 172
+3. Where prompt sets were used, the normalised distributions from each paraphrase were averaged to produce a single item-level distribution according to a consistent aggregation procedure.
+Figure 23: Workflow for generating WVB model probability distributions from WVS items, including prompt construction, anchor scoring, normalisation, averaging across paraphrases, Bayesian adjustment, and scoring against WVS response distributions. For example, on the family-importance item, PaLM-62b returned a distribution heavily weighted toward “very important”, with smaller probabilities assigned to the remaining anchors. These distributions could then be directly compared with the observed human response distributions from the WVS. At the time, relatively few AI ethics projects evaluated models through anchor-level probability extraction rather than single-shot text outputs. Most benchmarks treated the model’s first generated response as its answer. By contrast, WVB treated the model as a probability generator whose outputs could be compared systematically with human survey distributions. This was a key step in making values evaluation more reproducible and distributionally sensitive.
+Select WVS item
+Create prompt set
+Define answer anchors
+Score question-anchor pairs
+Normalise probabilities
+Average across paraphrases
+Bayesian adjustment and scoring

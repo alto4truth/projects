@@ -1,0 +1,37 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+1 −𝑚 𝑡,𝑏𝑗)𝑋𝑎𝑖𝑌𝑎𝑏𝑋𝑏𝑗
+]
+(78)
+= 1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+𝑛∑
+𝑎=1
+𝑛∑
+𝑏=1
+((𝑋𝑎𝑖𝑌𝑎𝑏𝑋𝑏𝑗)(1 −𝑚 𝑡,𝑎𝑖 (79)
+−𝑚 𝑡,𝑏𝑗 +𝑚 𝑡,𝑎𝑖𝑚𝑡,𝑏𝑗))
+=
+𝑛∑
+𝑎=1
+𝑛∑
+𝑏=1
+(𝑋𝑎𝑖𝑌𝑎𝑏𝑋𝑏𝑗)[ 1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+(1 −𝑚 𝑡,𝑎𝑖 (80)
+−𝑚 𝑡,𝑏𝑗 +𝑚 𝑡,𝑎𝑖𝑚𝑡,𝑏𝑗)]
+To compute the inner summation, we can apply an
+importance sampling Monte Carlo integration method in
+:Preprint submitted to Elsevier Page 10 of 13

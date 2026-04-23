@@ -1,0 +1,31 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+ame
+i, we first sum up the normalized heatmaps into one, and pass
+it through fully-connected layers to obtain a frame-level gaze
+embeddingg i. Then, we generate a sparse 2D head position
+map for each frameithrough positional encoding [5], and pass
+the map through convolution and adaptive pooling layers to
+obtain a frame-level head embeddingh i. We add both embeddings to compute the frame-level scene embeddings i:
+si =g i +h i.(1)
+In our model, we also maintain learnable embeddings ofM
+roles. Based on the role prediction results, we prepare input
+role embeddings. If a role does not exist in theKframes, we
+set its embedding to zero. Subsequently, we pass the obtained
+Kscene embeddings andMrole embeddings as (K+M) tokens through a three-layer transformer encoder and obtain the
+clip-level features. Finally, we pass all the clip-level features
+through a temporal convolution network [15] and classify the
+output. We use cross-entropy loss during training.
+2.4. Team communication detection
+In this section, we combine the gaze-following model with
+the state-of-the-art TAD framework [6] to detect the “StOP?”
+and “A.B.A.” activities in real surgeries, as shown in Fig. 3.
+Specifically, we prop

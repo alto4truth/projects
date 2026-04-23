@@ -1,0 +1,39 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 3
+section: tcoon
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+redicting 6, 9, 12, 15, 18, 24, 36, 48, and 72 h-ahead biases in
+ADCIRC water level forecasts at 16 gauge stations along the U.S. Gulf Coast region
+33
+
+during Hurricane Idalia (2023). The model is trained on water level bias data from
+these stations from 11 historical hurricanes (see Table 1), with all data obtained from
+the Coastal Emergency Risk Assessement Historical Storm Archive [ 56, 61].
+Overall, the model is found to consistently yield low RMSE values even at increased
+prediction windows, with the median RMSE saturating to 0.9 m with prediction
+window increasing up to 72 h, corresponding to an improvement of more than 50%
+compared to the non-corrected water level predictions. The physics-based graph representation enables the model to adequately capture biases in gauge stations located at
+both severely storm-impacted and unaffected regions. An ablation analysis assessing
+architectures composed of different component subsets demonstrates the optimality
+of the design choices adopted for StormNet. Furthermore, the model is shown to yield
+similar accuracy compared to the previous LSTM-based bias prediction method of [ 77]
+for short prediction windows and the considered gauge stations, but lower RMSE by
+10% for prediction windows greater than 24 h. However, it requires shorter training
+times in all cases, making it promising for operational purposes.
+Note that this approach can only be used to perform bias correction on coordinates
+with both observed and numerically predicted data available, and further requires
+comparable amounts of training data to be available for each of the considered locations. Moreover, physical insight is incorporated in the model via the construction
+of the graph representation, but not on the learning process. Therefore, future work
+is intended for developing approaches for assessing biases in ungauged locations in a
+physically meaningful manner.
+StormNet can be used as a post-processing bias correction module for gauged locations in real-time operational forecasting systems, due to its consistent performance
+at increased prediction windows and its low inference time. Its ability to consistently
+alleviate systematic biases in storm conditions can improve the implementation of
+warning, prevention, and evacuation strategies during such critical conditions.
+34

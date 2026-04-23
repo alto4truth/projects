@@ -1,0 +1,98 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+nstrates state-of-the-art performance and high generalization, our model shares limitations
+common to generative frameworks and also has unique fail14
+
+ure modes related to its joint-generation task.
+Texture-Geometry Ambiguity:As a single-image model,
+GeoRelight can struggle with the ambiguity between a 3D
+object and a 2D texture. For example, a small object held
+by the subject (e.g., a flower) may be incorrectly interpreted
+as a 2D texture pattern. In such cases, the object is “baked”
+into the albedo map but is entirely absent from the surface
+normal and geometry (iNOD) outputs. This leads to a physically implausible relit image where the object appears as a
+flat pattern rather than a 3D object that should cast its own
+shadows.
+Temporal Inconsistency:GeoRelight is a single-image
+framework. Generating a sequence of images (e.g., by rotating the light source) requires multiple independent forward
+passes. Because the generative process is not deterministic, this can result in small inconsistencies between frames,
+leading to “temporal flickering” when viewed as a video.
+Enforcing temporal consistency for video relighting is a significant challenge and a clear direction for future work. Alternative sensing modalities such as event cameras, which
+naturally capture temporal changes with high temporal resolution [38, 40], could also provide complementary signals
+for temporally-consistent reconstruction.
+Out-of-Distribution Subjects:Though our model is robust, it can be challenged by subjects with extreme, outof-distribution (OOD) poses, severe occlusions, or highly
+complex, non-Lambertian materials (e.g., metallic or specular clothing) that are rare in our hybrid training data. Our
+disentangled outputs could also benefit downstream tasks
+such as physically plausible human-scene interaction estimation [44], where accurate geometry and lighting are essential for realistic contact and placement.
+References
+[1] K. S. Arun, T. S. Huang, and S. D. Blostein. Least-squares
+fitting of two 3-d point sets.IEEE Transactions on Pattern Analysis and Machine Intelligence, PAMI-9(5):698–
+700, 1987. 6, 13
+[2] Jonathan T Barron and Jitendra Malik. Shape, illumination,
+and reflectance from shading.IEEE transactions on pattern
+analysis and machine intelligence, 37(8):1670–1687, 2014.
+3
+[3] Harry Barrow, J Tenenbaum, A Hanson, and E Riseman. Recovering intrinsic scene characteristics.Comput. vis. syst, 2
+(3-26):2, 1978. 2
+[4] Shrisha Bharadwaj, Haiwen Feng, Giorgio Becherini, Victoria Fernandez Abrevaya, and Michael J. Black. GenLit:
+Reformulating single image relighting as video generation.
+InSIGGRAPH Asia Conference Papers ’25, New York, NY ,
+USA, 2025. Association for Computing Machinery. 2
+[5] Chris Careaga and Yagiz Aksoy. Physically controllable relighting of photographs. InProceedings of the Special Interest Group on Computer Graphics and Interactive Techniques
+Conference, SIGGRAPH Conference Papers 2025, Vancouver, BC, Canada, August 10-14, 2025, pages 105:1–105:10.
+ACM, 2025. 3
+[6] Sumit Chaturvedi, Mengwei Ren, Yannick Hold-Geoffroy,
+Jingyuan Liu, Julie Dorsey, and Zhixin Shu. Synthlight: Portrait relighting with diffusion model by learning to re-render
+synthetic faces.Proceedings of the IEEE/CVF Conference
+on Computer Vision and Pattern Recognition, 2025. 2, 12
+[7] Hila Chefer, Uriel Singer, Amit Zohar, Yuval Kirstain, Adam
+Polyak, Yaniv Taigman, Lior Wolf, and Shelly Sheynin.
+VideoJAM: Joint appearance-motion representations for enhanced motion generation in video models. InForty-second
+International Conference on Machine Learning, 2025. 3
+[8] Elena Garces, Carlos Rodriguez-Pardo, Dan Casas, and
+Jorge Lopez-Moreno. A survey on intrinsic images: Delving deep into lambert and beyond.International Journal of
+Computer Vision, 130(3):836–868, 2022. 2
+[9] Kai He, Ruofan Liang, Jacob Munkberg, Jon Hasselgren,
+Nandita Vijaykumar, Alexander Keller, Sanja Fidler, Igor
+Gilitschenski, Zan Gojcic, and Zian Wang. Unirelight:
+Learning joint decomposition and synthesis for video relighting, 2025. 2, 3, 4
+[10] Jonathan Ho and Tim Salimans. Classifier-free diffusion
+guidance, 2022. 10
+[11] Zeren Jiang, Chuanxia Zheng, Iro Laina, Diane Larlus, and
+Andrea Vedaldi. Geo4d: Leveraging video generators for
+geometric 4d scene reconstruction, 2025. 3
+[12] Haian Jin, Yuan Li, Fujun Luan, Yuanbo Xiangli, Sai Bi,
+Kai Zhang, Zexiang Xu, Jin Sun, and Noah Snavely. Neural
+gaffer: Relighting any object via diffusion. InAdvances in
+Neural Information Processing Systems, 2024. 2, 4, 6, 12,
+13
+[13] Tero Karras, Miika Aittala, Timo Aila, and Samuli Laine.
+Elucidating the design space of diffusion-based generative
+models, 2022. 4
+[14] Bingxin Ke, Anton Obukhov, Shengyu Huang, Nando Metzger, Rodrigo Caye Daudt, and Konrad Schindler. Repurposing diffusion-based image generators for monocular depth
+estimation. InProceedings of the IEEE/CVF Conference on
+Computer Vision and Pattern Recognition (CVPR), 2024. 3
+[15] Bingxin Ke, Kevin Qu, Tianfu Wang, Nando Metzger,
+Shengyu Huang, Bo Li, Anton Obukhov, and Konrad
+Schindler. Marigold: Affordable adaptation of diffusionbased image generators for image analysis, 2025. 3
+[16] Rawal Khirodkar, Timur Bagautdinov, Julieta Martinez, Su
+Zhaoen, Austin James, Peter Selednik, Stuart Anderson, and
+Shunsuke Saito. Sapiens: Foundation for human vision models.arXiv preprint arXiv:2408.12569, 2024. 6, 12
+[17] Hoon Kim, Minje Jang, Wonjun Yoon, Jisoo Lee, Donghyun
+Na, and Sanghyun Woo. Switchlight: Co-design of physicsdriven architecture and pre-training framework for human
+portrait relighting, 2024. 2, 11, 12
+[18] Diederik P. Kingma and Jimmy Ba. Adam: A method for
+stochastic optimization, 2017. 9
+[19] LAION. Releasing re-laion-5b: transparent iteration on
+laion-5b with additional safety fixes.https://laion.
+ai/blog/relaion-5b/, 2024. Accessed: 30 aug, 2024.
+5, 11
+15

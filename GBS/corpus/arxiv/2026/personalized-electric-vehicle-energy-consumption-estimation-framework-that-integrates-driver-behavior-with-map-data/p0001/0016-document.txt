@@ -1,0 +1,27 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+4. Theoretical Background and Implementation Details
+The implementation details for the above described modules are briefly
+described in this section.
+4.1. Map Display Handler
+TheMapDisplayHandlerautomatesrouteacquisitionfromOpenStreetMap
+using Selenium-controlled browser interactions after the user selects a route.
+AChromeDriverinstanceislaunchedanddirectedtohttps://www.openstreetmap.
+org/directions. The user specifies the start and end points, after which
+Selenium monitors URL changes and HTML page elements to detect successful route generation. Once detected, the module automatically triggers
+the “Download route as GeoJSON” option, producing a JSON file containing
+all GPS coordinates of the route for downstream processing.
+4.2. Route Processor
+The Route Processor extracts detailed node and edge-level features for
+each GPS coordinate using Valhalla’s Location, Map Matching, and Elevation APIs. The coordinates of the selected route from the GeoJSON
+file are partitioned into batches and processed in parallel through a locally hosted Valhalla routing engine instance, with a public server athttps:
+//valhalla1.openstreetmap.deas fallback. API responses are merged into
+a unified datase

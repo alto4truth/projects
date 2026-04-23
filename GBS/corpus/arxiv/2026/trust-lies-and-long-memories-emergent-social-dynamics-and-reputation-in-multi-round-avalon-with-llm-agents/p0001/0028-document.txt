@@ -1,0 +1,40 @@
+title: Trust, Lies, and Long Memories: Emergent Social Dynamics and Reputation in Multi-Round Avalon with LLM Agents
+source: arxiv
+year: 2026
+document_id: trust-lies-and-long-memories-emergent-social-dynamics-and-reputation-in-multi-round-avalon-with-llm-agents
+authors: Suveen Ellawela
+page: 1
+section: document
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20582v1
+
+dith Ringel Morris, Percy Liang, and Michael S Bernstein.
+Generative agents: Interactive simulacra of human behavior. InUIST, 2023.
+Wikipedia. The resistance (game). https://en.
+wikipedia.org/wiki/The_Resistance_(game),
+2024. Accessed: 2025-02-04.
+Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran,
+Karthik Narasimhan, and Yuan Cao. React: Synergizing
+reasoning and acting in language models. InICLR, 2023.
+A Agent Prompts
+This appendix documents all prompts used in our experiments.
+A.1 Role-Specific Knowledge
+Each agent receives role-specific context at the start of each
+game phase.
+Merlin:
+You are Merlin. You know these evil players: {evil_list}.
+Help good win WITHOUT revealing your identity, or the
+Assassin will kill you!
+Percival:
+You are Percival (good team). You see these players as
+Merlin: {merlin_and_morgana}. One is the real Merlin,
+one might be Morgana (evil). Protect Merlin!
+Assassin:
+You are the Assassin (evil team). Your evil teammates
+are: {evil_teammates}. Sabotage missions. If good wins
+3 missions, you guess who Merlin is!
+Morgana:
+You are Morgana (evil team). Your evil teammates are:
+{evil_teammates}. You appear as Merlin to Percival.
+Deceive and sabotage!
+Mordr

@@ -1,0 +1,22 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+Near-FuturePolicyOptimization (NPO),
+a simple mixed-policy scheme that guides the current policy using verified trajectories from a near-future
+checkpoint on the same training run. For each prompt, NPO replaces one slot of the rollout group with a
+correct trajectory that the future checkpoint actively re-generates, while the remaining slots retain original
+rollouts, leaving the underlying RL objective untouched. Because the guide is picked from the same training
+run,∆becomes a freely chosen hyperparameter rather than a quantity that drifts passively with training.
+We first validate NPO through two manual interventions at different training stages, treating them as probes
+of when near-future guidance helps. The first targets early training, using a slightly-ahead checkpoint from
+a short scout run to accelerate convergence. The second targets the late-stage plateau, using a stronger
+checkpoint obtained by continuing the same run past the plateau to break through the on-policy ceiling. As
+illustrated in Figure 1(a), both interventions produce clear gains over pure on-policy RLVR, showing that
+near-future guidance is useful across training stages. Building on this finding, we proposeAu

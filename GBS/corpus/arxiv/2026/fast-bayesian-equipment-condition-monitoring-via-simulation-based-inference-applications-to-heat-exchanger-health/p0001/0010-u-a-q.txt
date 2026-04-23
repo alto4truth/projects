@@ -1,0 +1,26 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+s flow rates, and failure mode indicators. The likelihood is typically constructed based on a
+well-defined physical model such as the one in Sec. IIB,
+incorporating measurement noise and potential process
+disturbances:
+yi =f(θ,x i) +ϵ i, ϵ i ∼ N(0, σ 2),(19)
+wheref(·)denotes the deterministic model mapping,x i
+are covariates or known inputs, andϵi are independent,
+normally distributed errors.
+Posteriorinferenceenablesbothpointandintervalestimation, as well as predictive uncertainty. The predictive
+distribution for new datay∗ given new inputx∗ is
+p(y∗ |y) =
+Z
+p(y∗ |θ,x ∗)p(θ|y)dθ,(20)
+fully accounting for parameter uncertainty. In most realistic settings, this integral cannot be evaluated analytically. Instead, posterior inference must rely on numerical methods such as Markov Chain Monte Carlo
+(MCMC, [43]) or variational inference [44]. MCMC constructs a Markov chain whose stationary distribution is
+the posteriorp(θ|y), which enables asymptotically exactsampling-based inferenceforboth continuousand discrete latent variables. In this work, we use Hamiltonian

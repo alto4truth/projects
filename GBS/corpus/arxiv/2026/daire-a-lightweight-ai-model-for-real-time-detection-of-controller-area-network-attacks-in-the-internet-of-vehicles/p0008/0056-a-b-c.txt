@@ -1,0 +1,29 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 8
+section: a-b-c
+chunk: 56
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+ted
+to the targeted function, leading to consistent, class-specific statistical deviations in a limited subset of input features. For example,
+speed spoofing primarily alters payload bytes corresponding to vehicle
+velocity signals, whereas RPM spoofing affects different byte fields
+linked to engine rotation. Fuzzy attacks, in contrast, inject random
+or malformed values across multiple identifiers and payload bytes,
+producing high-variance distributions that are distinct from structured
+spoofing patterns. Because these deviations are systematic and repeatable, the ANN learns stable decision boundaries based on correlations
+among specific identifiers and payload bytes. This is the reason why
+the proposed architecture is sufficient to achieve strong multi-class
+discrimination across spoofing categories.
+6. Discussion
+This section presents a comparison between DAIRE and six closely
+related state-of-the-art approaches, while also outlining potential future
+directions to enhance attack classification in IoV.
+6.1. Comparison with state-of-the-art works
+For a general comparison of DAIRE with other works, a literature
+review summary of recent works on IoV attack detection is presented in
+Ta

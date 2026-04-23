@@ -1,0 +1,59 @@
+title: Tokenised Flow Matching for Hierarchical Simulation Based Inference
+source: arxiv
+year: 2026
+document_id: tokenised-flow-matching-for-hierarchical-simulation-based-inference
+authors: Giovanni Charles; Cosmo Santoni; Seth Flaxman; Elizaveta Semenova
+page: 1
+section: gpu-nvidia-a100-pcie-40gb
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20723v1
+
+ola, A. J. Deep
+sets.Advances in Neural Information Processing Systems, 3 2017. doi: 10.48550/arXiv.1703.06114.
+URLhttp://arxiv.org/abs/1703.06114.
+17
+
+A Appendix
+A.1 Derivation of the Compositional Posterior Factorisation
+We derive the factorisationp(θ|y) ∝p (θ)1−ns
+Qns
+s=1 p(θ|ys)for i.i.d. observations y = (y1, . . . , yns).
+Applying Bayes’ rule to the full posterior and using conditional independence:
+p(θ|y)∝p(θ)
+nsY
+s=1
+p(ys|θ).(5)
+Applying Bayes’ rule a second time to each single-observation likelihood:
+p(ys|θ) = p(θ|ys)p(y s)
+p(θ) .(6)
+We substitute(6) into (5). Since the marginalsp(ys)do not depend on θ, they can be absorbed into
+the proportionality constant:
+p(θ|y)∝p(θ)
+nsY
+s=1
+p(θ|ys)
+p(θ) =p(θ) 1−ns
+nsY
+s=1
+p(θ|ys).(7)
+Tables 4 and 5 are the appendix companion to the benchmark results in Section 3.1. Table 4
+gives the exactℓ-C2ST means and 95% confidence intervals for the simulation-budget sweep at fixed
+ns = 50, while Table 5 reports the corresponding site-scaling results at fixedN= 5,000.
+A.2 Tokenisation Example and Detailed Architecture
+Figure 6 supplements Section 2.1 with a concrete token layout and an expanded view of the
+encoder-only architecture used by TFMPE.
+A.3 Benchmark task specifications
+We specify the six hierarchical SBI benchmark tasks summarised in Table 1. Each task was adapted
+from the non-hierarchical SBI benchmark (Lueckmann et al., 2021) under one of two hierarchical
+structures:separated, where the original parameters split naturally into global and site-level groups
+(Gaussian Linear, Gaussian Linear Uniform, SIR, SLCP); andpartial pooling, where new global
+hyperparameters govern the distribution of independently replicated local parameters across sites
+(Gaussian Mixture, Two Moons). Table 6 lists the simulator and prior distributions for every task.
+A.4 LF Sampling Algorithm
+A.5 Ablation experiments
+TFMPE introduces many novel components to SBI, we present the relative effects of these components
+in Figure 7. The experimental set up for each ablation is detailed below:
+Direct The posterior estimator was trained onn simulations per data point from the simulator
+instead of from the per-site neural surrogate. This experiment shows a rough estimate of the
+effects of surrogate approximation error on TFMPE’s posterior estimates.
+18

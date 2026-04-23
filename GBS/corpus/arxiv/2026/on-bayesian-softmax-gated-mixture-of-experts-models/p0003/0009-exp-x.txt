@@ -1,0 +1,62 @@
+title: On Bayesian Softmax-Gated Mixture-of-Experts Models
+source: arxiv
+year: 2026
+document_id: on-bayesian-softmax-gated-mixture-of-experts-models
+authors: Nicola Bariletto; Huy Nguyen; Nhat Ho; Alessandro Rinaldo
+page: 3
+section: exp-x
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20551v1
+
+’s theorem presented in Miller (2018) (Theorem 2.4),
+requiring measurability of the model with respect to parameters and parameter identifiability.
+40
+
+consistency on that space implies consistency on the original spaceΘ∞, thanks to the assumptions
+on the prior.
+Before delving into the proof, here is some useful notation. Given anyθ∈ Θk ⊆ Θ∞ and
+any permutation ρ : {1, . . . , k} → {1, . . . , k}, define θ[ρ] := (θρ(1), . . . , θρ(k)). Moreover, recall the
+decompositionΘ = Ω ×A, whereΩdenotes the space of parameters ω = (α1, β, σ2), and A is the
+space of gating bias parametersα0. Therefore, for allk∈N ,Θ k can be identified withΘk ≡ Ωk ×A k.
+Also, for allθ, θ′ ∈Θ ∞, let
+dΘ∞(θ, θ′) :=
+(
+min{∥θ−θ ′∥2,1}ifK(θ) =K(θ ′),
+1otherwise.
+By Propositions A.1 and A.2 of Miller (2023), this definition makes(Θ∞, dΘ∞)a Borel measurable
+subset of a Polish space, which we endow with the corresponding Borel sigma-algebra.
+Construction of the restricted model.For allk∈N, define the restricted expert space
+Ωk :={(ω 1, . . . , ωk)∈Ω k :ω 1 ≺ · · · ≺ω k},
+where, for all ω, ω′ ∈ Ω, ω≺ω ′ means that ω precedes ω′ lexicographically, and ω̸ = ω′. Now
+defineΘ k := Ωk ×A k and ˜Θ∞ :=S
+ℓ∈N Θℓ. For all k∈N and θ∈ Θk, let T (θ) = θ[ρ], where the
+permutation ρ is chosen such thatθ[ρ] ∈ Θk if possible (that is, if no two or more experts inθ share
+the same ω parameters), otherwise θ[ρ] = θ. Then, denotingθ∼ Π, we obtainΠ(T (θ) ∈ ˜Θ∞) = 1
+because the subset ofΩk where two or more experts share the same parameters has prior probability
+zero by the assumptions of the Theorem. DenotingB[ρ] = {θ∈ Θk : θ[ρ] ∈B} for all B⊆ Θk, the
+definition ofTimplies
+T −1(B) ={θ∈Θ k :T(θ)∈B}=
+[
+ρ∈Rk
+B[ρ],(29)
+where Rk denotes the space of all permutations of{1, . . . , k}. Letting ˜Q denote the pushforward of
+Πthrough T (i.e., the distribution ofT (θ)when θ∼ Π) restricted to ˜Θ∞, we obtain therestricted
+model8
+(Xi, Yi)|T(θ) iid∼g G(T(θ)) , i= 1, . . . , n
+T(θ)∼ ˜Q
+(30)
+by Theorem 10.2.1 of Dudley (2002). This is because gG(θ) = gG(T(θ)) and, for all measurable
+C⊆(X×R) n andB⊆ ˜Θ∞, the following holds:
+P((Xi, Yi)n
+i=1 ∈C, T(θ)∈B) =P((X i, Yi)n
+i=1 ∈C,θ∈T −1(B)) =
+Z
+B
+gn
+G(θ)(C) ˜Q(dθ),
+where measurability ofθ7→g (n)
+G(θ)(C)for all measurable C⊆ (X×R )n follows from the measurability
+of θ7→g G(θ)(C′)for all measurable C′ ⊆X×R (shown in the next paragraph) and from an
+application of Lemma 5.2 of Miller (2018).
+8We denote byP the joint probability measure over infinite data sequences and parameters implied by this model.
+41

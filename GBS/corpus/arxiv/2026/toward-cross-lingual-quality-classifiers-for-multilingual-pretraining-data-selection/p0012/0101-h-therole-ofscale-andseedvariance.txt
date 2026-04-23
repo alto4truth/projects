@@ -1,0 +1,53 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 12
+section: h-therole-ofscale-andseedvariance
+chunk: 101
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+pling is a more effective strategy for training
+quality filters than just increasing the number of training samples. These results motivate multilin27
+
+Published as a paper at 3rd DATA-FM workshop @ ICLR 2026, Brazil.
+Table 16: Evaluation of the monolingual HQ baseline versus a classifier trained on the expanded
+MKC-e pool on Spanish. The inclusion of instruction and synthetic data improves aggregate normalized accuracy by nearly 0.5%, indicating high utility for Spanish domain coverage.
+Benchmark No filtering HQ MKC-e
+ARC-Challenge 0.2991 0.30770.3291
+Belebele_c 0.34220.35330.3378
+GMMLU_c 0.3100 0.31500.3200
+HellaSwag 0.50060.52630.5075
+Include_c 0.3491 0.37270.3964
+M_MMLU_c 0.2814 0.29850.3137
+XNLI0.46180.4538 0.4566
+Aggregate acc_norm0.3635 0.37530.3801
+Average rank2.57 1.861.57
+Table 17: Comparison of standard HQ versus the MKC-e anchor set. The extended data provides
+a marginal gain in aggregate accuracy (+0.1%) but significantly improves performance on specific
+benchmarks like ARC-Challenge and XWinograd.
+Benchmark No filtering HQ MKC-e
+ARC-Challenge 0.2891 0.30710.3259
+Belebele_c 0.3444 0.35110.3533
+GMMLU_c 0.26250.29250.2650
+HellaSwag0.48830.4748 0.4647
+Include_c 0.3866 0.41530.4296
+M_MMLU_c 0.28310.29450.2929
+XNLI 0.47070.48550.4735
+Xwinograd 0.6386 0.65060.6747
+Aggregate acc_norm0.3954 0.40890.4099
+Average rank2.751.62 1.62
+gual and bootstrapped approaches introduced in the paper, which effectively average over topic and
+language variability to yield more stable quality signals.
+I ADDITION OFMKC-E DATASETS.
+To make our classifier highly multilingual beyond the coverage given by the Aya Collection (Singh
+et al., 2024), we extend the MKC+ pool with additional datasets (resulting in the MKC-e data). A
+hypothesis is that, beyond allowing us to train on more languages, this addition provides more topics
+and diversity, which can improve the performance of our filtering. In order to test this, we train some
+monolingual classifiers on the MKC-e data and evaluate them using the training of the 1B Apertus.
+Results are displayed in Tables 16, 17, and 18. While the training on MKC-e improves results for
+Spanish by almost 0.5% in terms of normalized accuracy, we find that the results are more nuanced
+for French, where the improvement is of 0.1%. However, the Arabic MKC-e classifier seems to
+perform worse than the “No filtering” baseline, which suggests adding this new data pool provides
+mixed results depending on the targeted language.

@@ -1,0 +1,30 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 8
+section: a-b-c
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+ieved the best results when 3 hidden layers
+were used. Fig. 5 shows the accuracy and loss plot during training and
+tuning of DAIRE when run with these values. Fig. 6 visually summarizes
+the average classification performance across different hidden layer
+configurations, demonstrating that DAIRE achieves optimal results with
+3 hidden layers. The consistent improvement in DT and reduction in
+false positive rates as the number of hidden layers increases from 1 to 3
+validates our architectural design choices. Based on these experiments,
+we designed DAIRE with hidden layers = 3, number of batches = 300, and
+epochs = 100, and used the same number of parameters for the rest of
+the experiments in this paper.
+5.3.2. Evaluation on CICIoV2024 dataset
+Using the optimal hyperparameters, we evaluated DAIRE on the
+complete CICIoV2024 dataset as listed in Table 4 with a total number
+of 1,408,219 CAN messages across six classes. It was partitioned into
+80% training and 20% testing. We ran the experiment and completed
+10 iterations each time using a different set of 20% for testing. The
+results obtained are shown in Table 7 and visualized using a confusion
+matrix in Fig. 7(c).
+Machine Learning with

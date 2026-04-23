@@ -1,0 +1,34 @@
+title: Trust, Lies, and Long Memories: Emergent Social Dynamics and Reputation in Multi-Round Avalon with LLM Agents
+source: arxiv
+year: 2026
+document_id: trust-lies-and-long-memories-emergent-social-dynamics-and-reputation-in-multi-round-avalon-with-llm-agents
+authors: Suveen Ellawela
+page: 1
+section: document
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20582v1
+
+ts (mirroring standard
+human play). Agents then generate a post-game reflection
+containing a self-assessment of their own performance and
+observations about each other player’s behavior; these reflections may therefore include explicit role identities (e.g., “Bob
+was evil this game”). At the start of subsequent games, agents
+receive their last 3 self-assessments along with accumulated
+observations about each player. This enables longitudinal
+study of reputation formation while keeping context manageable. Note that reputation in our setting reflects both
+behavioral style and known alignment history.
+4.3 Reasoning Effort Manipulation
+We manipulate reasoning depth using the
+reasoning_effort parameter available in GPT-5.1,
+across three levels:
+•Low:Minimal extended thinking
+•Medium:Moderate extended thinking
+•High:Maximum extended thinking
+This parameter controls the token budget allocated to internal
+reasoning before generating a response. Higher reasoning
+effort results in longer internal deliberation and typically
+more structured analysis. Average thinking time per decision
+was 7.5 seconds for Low, 37.5 seconds for Medium, and 107
+seconds for High.
+4.4 Experimental Conditions
+We col

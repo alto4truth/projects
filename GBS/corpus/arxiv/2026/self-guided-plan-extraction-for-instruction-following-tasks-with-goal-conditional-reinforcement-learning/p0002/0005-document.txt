@@ -1,0 +1,28 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 2
+section: document
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+Figure 2: Super Igor Pipeline: The pipeline consists of four stages: (1) a language model generates multiple plan
+options for a given instruction; (2) a policy model is trained via PPO to execute each plan in the environment; (3)
+each plan is validated by measuring its execution success rate; (4) the language model is optimized using Direct
+Preference Optimization (DPO)(Rafailov et al., 2023) based on plan performance scores. This iterative loop refines
+both plan generation and execution.
+Training plans generation (Cycle 1).
+Since the language model used for plan generation may not fully capture the exact dependencies
+and interaction rules of the target environment, we
+propose a structured procedure that separates the
+identification of goals from the reasoning about
+prerequisite constraints. The method unfolds in
+four steps.
+First, we build asubtask baseby extracting and
+canonicalizing possible subtasks from the instruction dataset, creating a unified vocabulary that reduces synonymy and ensures consistency. Each
+subtask is expressed in natural language, but in a
+strict normalized format that allows passing them
+one-by-one to the policy without ambiguity.
+Second, the model generate

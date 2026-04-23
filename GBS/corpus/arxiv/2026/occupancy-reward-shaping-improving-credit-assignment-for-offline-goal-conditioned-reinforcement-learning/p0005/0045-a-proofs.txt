@@ -1,0 +1,22 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 5
+section: a-proofs
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+nsistent with
+the shortest-path layer structure. For anyk≥1, ifs 1 ∈S k−1 ands 2 ∈S k, their successors under
+πD,s ′
+1 =f(s 1, πD(s1))ands ′
+2 =f(s 2, πD(s2))must maintain their relative layer ordering. That
+is,
+step∗(s′
+1, g)≤step ∗(s′
+2, g).
+Remark A.4.Assumption A.4 is a condition on the quality of the offline data, which is a standard
+requirement for obtaining theoretical guarantees in the offline RL setting (Zhan et al., 2022).
+16

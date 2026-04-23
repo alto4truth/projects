@@ -1,0 +1,27 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+ce implementations
+from GitHub repositories (filtered by stars >100 , active
+maintenance, diverse frameworks), creating standardised attack interfaces, and measuring agent performance on tasks
+that require understanding library APIs, version-specific behaviour, and environment coupling. Each task is annotated
+with a difficulty taxonomy: (i) single-function attacks (analogous to CTF), (ii) multi-file attacks requiring import tracing,
+(iii) environment-coupled attacks requiring build system understanding.
+Edge-case checklist:
+• Data leakage:Ensure benchmark code is not in foundation model training data by using repositories created after
+model training cutoff dates; provide contamination detection via canary strings.
+• Compute:LLM agent inference costs dominate; budget ∼$50–200 per full benchmark run (GPT-4 pricing).
+Feasible for academic budgets with open-weight models
+(Llama 3 70B, Mixtral).
+• Reproducibility:Fix agent system prompt, temperature (0.0
+for reproducibility), maximum turns (20), tool definitions.
+Report per-task success rates with 95% bootstrap CIs.
+• Baselines:AutoAdvExBench [ 4], AgentBench, SWEbench (for code agent capability reference).
+• Ablation variables:(i) age

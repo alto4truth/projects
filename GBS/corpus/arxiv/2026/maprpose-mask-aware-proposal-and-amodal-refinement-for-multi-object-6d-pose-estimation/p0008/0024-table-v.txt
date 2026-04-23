@@ -1,0 +1,32 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 8
+section: table-v
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+Ablation on Rendering Surrogate Fidelity.
+Method Renderer Type BOP AR↑Speed (FPS)↑
+nvdiffrast [43] Mesh-based 76.8 1.35
+MAPRPose (Ours) Point-based 76.5 1.47
+Difference (Ours/Baseline)99.6% 1.09
+upper-bound performance of the proposed MAPRPose, we
+first integrate it with a pre-trained Mask R-CNN detector [68]
+for initial object localization. As summarized in Table IV,
+the complete MAPRPose pipeline, leveraging the initialization
+combined with our AMPR mechanism, achieves an Average
+Recall (AR) of 78.7% in the challenging BOP benchmark
+datasets (LM-O, T-LESS and YCB-V). These datasets are
+characterized by severe occlusion, cluttered backgrounds, and
+complex multi-object interactions. A detailed ablation analysis
+reveals that removing the AMPR mechanism (w/o AMPR)
+causes a substantial performance drop to 74.5% ( −4.2%), with
+the most pronounced degradation observed on the occluded TLESS dataset (70.2% → 65.8%). This underscores the critical
+role of the amodal mask completion in recovering hidden
+geometry. Furthermore, disabling the ROI update (performing
+amodal mask prediction only) yields 76.3% ( −2.4% relative
+to the full model), highlighting the importance of dynamic
+pose-mask co-

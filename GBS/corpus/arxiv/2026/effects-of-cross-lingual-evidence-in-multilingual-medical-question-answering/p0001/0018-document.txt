@@ -1,0 +1,34 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+web search tool by Cohere API2 and Google Search
+using Serper API3. Although the former provides
+both retrieved documents and a summary generated
+by its underlying language model in response to
+the query, resulting in a more comprehensive answer, we do not include generated summaries in
+our experiments for fair comparison.
+The imbalance of the information available on
+the web for less-resourced languages is evident,
+and we report the ratio of the retrieved data per
+language in Table 2.
+3.3 Parametric knowledge of LLMs
+Our initial results show that the performance of
+the LLMs with more than 70B parameters excels
+in medical QA in English without any additional
+information, which leads us to hypothesize that
+these LLMs pre-trained on an immense amount of
+world knowledge encode sufficient information in
+the medical domain within their parameters (AllenZhu and Li, 2023; Ju et al., 2024; He et al., 2025).
+Therefore, to test this hypothesis, we ask LLMs
+to generate answers to the queries used for web
+search and generate an answer for the clinical case
+question. We generate these explanations both in
+English and in the target language. We provide
+language-specific generated queries and ans

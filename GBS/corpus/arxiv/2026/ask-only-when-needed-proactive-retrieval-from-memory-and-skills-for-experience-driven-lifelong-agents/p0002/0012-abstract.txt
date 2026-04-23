@@ -1,0 +1,22 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 2
+section: abstract
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+d schedules, external rules, or separate modules rather than learned as an intrinsic
+agent capability, leaving agents unable to recognize when current knowledge is insufficient and proactively seek the
+most relevant experience.
+Retrieval control for LLMs.A growing body of work studies how LLMs can control when and what to retrieve. In
+question answering, FLARE [25] triggers retrieval based on generation confidence, Self-RAG [26] generates reflection
+tokens to assess retrieval necessity, and Adaptive-RAG [27] routes queries by estimated complexity. In the agent setting,
+Toolformer and ReAct [7, 8] train models to interleave tool calls with reasoning, while IRCoT [28] further interleaves
+retrieval with chain-of-thought steps. These methods advance retrieval precision but share two limitations in the lifelong
+agent context. First, they operate over static or slowly changing knowledge bases [27, 25], whereas a lifelong agent must
+selectively access a repository that grows continuously through its own interaction history. Second, and more critically,
+retrieval decisions in all these systems remain passive, governed by confidence thresholds, supervised classifiers, or
+generation-time heu

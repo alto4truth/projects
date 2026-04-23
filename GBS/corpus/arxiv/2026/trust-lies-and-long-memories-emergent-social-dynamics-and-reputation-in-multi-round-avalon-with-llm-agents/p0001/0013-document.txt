@@ -1,0 +1,31 @@
+title: Trust, Lies, and Long Memories: Emergent Social Dynamics and Reputation in Multi-Round Avalon with LLM Agents
+source: arxiv
+year: 2026
+document_id: trust-lies-and-long-memories-emergent-social-dynamics-and-reputation-in-multi-round-avalon-with-llm-agents
+authors: Suveen Ellawela
+page: 1
+section: document
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20582v1
+
+ur experimental framework enables LLM agents to play repeated Avalon games while retaining memory of past interactions. This section describes the agent architecture, memory
+system, reasoning manipulation, and data collection procedures.
+4.1 Agent Architecture
+Following the ReAct paradigm [Yao et al., 2023], each agent
+is instantiated as a prompted LLM (OpenAI GPT-5.1 [OpenAI, 2025]) that interleaves reasoning with action. Each
+agent receives:
+• Role knowledge:Private information about their role
+and, for some roles, others’ identities
+• Game state:Public mission history, vote records, and
+discussion transcripts
+• Memory (tournament mode):Reflections from previous games including observations about other players
+Agents generate natural language discussion contributions,
+vote on team proposals, and (if on approved mission teams)
+choose to succeed or fail the mission.
+4.2 Memory System
+In tournament mode, agents retain memory across games
+through a structured reflection system. At the end of each
+game, all roles are revealed to all agents (mirroring standard
+human play). Agents then generate a post-game reflection
+containing a self-assessment of their own performance and
+observations

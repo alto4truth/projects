@@ -1,0 +1,23 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 54
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+Under Review
+16 Chaima Boufaied, Ronnie de Souza Santos, and Ann Barcomb
+models, indicating that favorable-outcome probabilities are highly sparse and unevenly distributed across subgroups,
+making the DF value unbounded and less substantively informative on this dataset. Table 6 shows results collected for
+all LLMs on the two used datasets in disambiguated context, using, in addition to the common metrics computed in
+Table 5, sDIS metric, along with Accuracyreinf and Accuracycounter metrics denoting accuracy on bias-reinforcing and
+bias-counter examples, respectively. Similar to the interpretation in Table 5, DF =𝑈 𝐵 indicates a subgroup received
+zero favorable predictions.
+Overall, while LLMs achieve higher accuracy in disambiguated contexts, the latter is systematically influenced by
+stereotype alignment rather than being explained by contextual information alone. LLMs perform better when the
+correct answer aligns with stereotypes and worse when it does not, indicating reliance on stereotype-consistent cues.
+This effect is especially strong in the Race_Gender setting, where directional bias is most pronounced. Although SF
+suggests low observed disparity, DF reveals that subgroup

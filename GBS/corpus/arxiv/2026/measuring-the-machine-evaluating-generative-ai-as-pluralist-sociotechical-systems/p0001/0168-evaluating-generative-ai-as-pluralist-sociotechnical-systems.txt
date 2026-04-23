@@ -1,0 +1,15 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 168
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+map. Sketch out an overview of the project. What are the unobservable constructs you are trying to measure; in our case that is values. But we aren’t
+
+Chapter 4: The World Values Benchmark 158
+comparing directly against values, rather a dataset created by the World Values Survey. Locate potential blockages on pipelines, in our case the digital divide of global Internet access and the curation choices of the training data. Even this very first step helps you see what you are really measuring and what you are comparing your measurements against.
+Figure 19: Sociotechnical mapping evaluation design - Step 1, Worldview. 2. World-view & hypothesis. State the primary hypothesis and normative world-view (if any) you bring to the test. Mark which quantities are observable vs unobservable (e.g., “values” are latent; outputs are observed). This forces explicit acknowledgement of the standpoint embedded in the evaluation, rather than leaving it implicit. For instance, this work takes the view that value pluralism is good. We can see that what we need to operationalise are the WVS questions into prompts, then prompt sets, then a benchmark method. We state our hypothesis clearly–prompt sets designed on the WVS questionnaire can measure dominant values in LLMs. Although these steps may seem simple and easy to bypass, they are essential for showing both others and the designer which assumptions are embedded in the benchmark design.

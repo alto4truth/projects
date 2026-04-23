@@ -1,0 +1,48 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+stochastic degradation model is implemented in NumPyro [52, 53], and the
+No-U-Turn Sampler [45] draws joint samples of the discrete failure modezand the continuous degradation parameters. This requires extensive simulator evaluations
+for every new observation. We found sufficient a setup
+made of 4 chains, each of2,000warm up steps and3,000
+samples, for a total of20,000MCMC evaluations per inference task. For SBI, we employ the scheme depicted in
+Figure 3 and in Ref.[32]. The neural density estimator is
+trained offline on a conservative50,000forward simulations, learning a direct mapping from the 25-dimensional
+summary statistics of the observed parameters to an
+approximate posterior distribution for the failure mode
+and failure parameters. For the neural density estimator within the Sequential Neural Posterior Estimation
+(SNPE) framework, we employed a Neural Spline Flow
+(NSF) architecture [47, 54]. Unlike simpler affine autore0 20 40 600
+20
+40
+60
+SBI posterior median
+τ
+0 0.03 0.06 0.090
+0.03
+0.06
+0.09
+SBI posterior median
+βf
+0 0.00075 0.0015
+MCMC posterior median
+0
+7.5e-04
+1.5e-03SBI posterior median
+βl
+0 1 2 3
+MCMC posterior median
+0
+1
+2
+3
+SBI posterior median
+λ
+FIG. 5: Scatterp

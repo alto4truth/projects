@@ -1,0 +1,31 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+embed subtle, contextaware flaws. The process is guided by a principled
+taxonomy (Table 2) spanning three critical dimensions for auditing:perceptual consistency,factual
+accuracy, andlogical coherence.
+Stage 1: Content Analysis.Each source response is analyzed by an LLM to identify whether
+it contains external knowledge or logical reasoning.
+This structured analysis, output in JSON, serves as
+a prior to ensure that subsequent errors are coherent
+with the intrinsic properties of the text.
+Stage 2: Contextual Error Selection.An
+error category is chosen via a probabilistic cascade. To counter their rarity, knowledge-related
+and reasoning-related errors are prioritized with
+probabilities of 0.8 and 0.6, respectively, while
+perceptual consistency serves as the default. Subtypes are selected randomly for consistency errors,
+whereas an additional LLM call determines the
+most plausible subtype for knowledge and reasoning cases.
+Stage 3: Guided Rewriting.The chosen error
+is injected by prompting the LLM with a targeted
+transformation instruction. A strict system prompt
+constrains the model to output only the modified
+text, ensuring automation and reproducibility.
+This injection strategy goe

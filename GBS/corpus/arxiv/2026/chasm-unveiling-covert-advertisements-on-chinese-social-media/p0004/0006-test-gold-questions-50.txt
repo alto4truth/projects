@@ -1,0 +1,31 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+Table 2: Zero-shot and in-context learning evaluation results on CHASM. From top to bottom, the
+two groups are: open-source MLLMs and proprietary MLLMs.Boldindicates the best overall
+performance across all models, and underlined indicates the best within each group. Bold and
+underlined together indicate that a model is both the best overall and the best within its group. The
+models marked with an * are reasoning MLLMs.Although GPT-4o and DeepSeek-V3 demonstrate
+similarly top F1-score performance among all models,noneof the models are sufficiently reliable for
+detecting covert advertisements.
+Model
+Metric Zero-Shot In-Context Learning
+P↑ R↑ F1↑ AUC↑ P↑ R↑ F1↑ AUC↑
+Open
+InternVL2.5 0.289 0.662 0.403 0.717 0.232 0.494 0.316 0.640
+Llava 0.182 0.359 0.242 0.567 0.145 0.721 0.241 0.568
+Qwen2.5-7B 0.473 0.378 0.421 0.660 0.505 0.380 0.434 0.664
+DeepSeek-VL2 0.166 0.749 0.272 0.612 0.000 0.000 0.000 0.500
+DeepSeek-V3 0.499 0.787 0.571 0.826 0.578 0.607 0.592 0.772
+Llama-4 0.382 0.770 0.511 0.798 0.408 0.508 0.453 0.703
+Proprietary
+Qwen-Max 0.426 0.852 0.568 0.846 0.440 0.836 0.576 0.844
+GLM4-Flash 0.408 0.489 0.445 0.695 0.218 0.408 0.284 0.603
+GLM4-Plus 0.385 0.328 0.354 0.627 0.167 0.200

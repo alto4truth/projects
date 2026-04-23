@@ -1,0 +1,30 @@
+title: The Expense of Seeing: Attaining Trustworthy Multimodal Reasoning Within the Monolithic Paradigm
+source: arxiv
+year: 2026
+document_id: the-expense-of-seeing-attaining-trustworthy-multimodal-reasoning-within-the-monolithic-paradigm
+authors: Karan Goyal; Dikshant Kukreja
+page: 1
+section: document
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20665v1
+
+rather than grounded visual
+truths, leading to benign looking catastrophic failures in real-world
+applications.
+2.3 Operationalising the Paradigm Shift: A New
+Diagnostic Agenda
+To successfully transition from observing dataset-induced heuristics to diagnosing fundamental architectural bottlenecks, the KDD
+community must align around a new empirical standard. Based
+on the necessity of preserving semantic equivalence, we propose
+that the future evaluation of multimodal world models must be
+anchored by six operational, highly testable research questions:
+• [RQ1] The Baseline Penalty:Do current VLM architectures incur a systematic, quantifiable performance penalty
+when extracting knowledge from visual inputs compared to
+processing equivalent (and potentially even lossy) symbolic
+textual representations?
+• [RQ2] The Architectural Origin:Can we mathematically
+distinguish and isolate whether a model’s inefficiency originates in the visual encoder (an incapacity to read visual
+features) or the cross-modal projection head (an incapacity
+to fuse separate semantic streams)?
+• [RQ3] Semantic Asymmetry:Do VLMs exhibit semantic
+inconsistency across modalities? If provided with equivalent informa

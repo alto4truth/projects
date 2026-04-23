@@ -1,0 +1,186 @@
+title: On Bayesian Softmax-Gated Mixture-of-Experts Models
+source: arxiv
+year: 2026
+document_id: on-bayesian-softmax-gated-mixture-of-experts-models
+authors: Nicola Bariletto; Huy Nguyen; Nhat Ho; Alessandro Rinaldo
+page: 3
+section: exp-x
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20551v1
+
+·[A n,1 +A n,2 −B n,1 −B n,2 +C n]→0.(28)
+For ease of presentation, let Fγ,j := exp(X ⊤α⋆
+1j) ∂γ N
+∂E γ (Y|X ; α⋆
+1j, β⋆
+j , σ⋆2
+j )and Hj(Y|X ) :=
+38
+
+limn→∞ Hn(Y|X;α ⋆
+1j), for all0≤γ≤4andj∈[K ⋆]. Then, we have
+lim
+n→∞
+An,1
+mnL2n
+=
+X
+j∈[K ⋆]:|Cj |=1
+h dX
+u=1
+t(u)
+1,j X(u)F0,j(Y|X) +
+d′
+X
+u′=1
+t(u′)
+2,j
+∂E
+∂β (u′) (X, β⋆
+j )F1,j(Y|X)
++ 1
+2 t3,jF2,j(Y|X)
+i
+p(X),
+lim
+n→∞
+An,2
+mnL2n
+=
+X
+j∈[K ⋆]:|Cj |>1
+h dX
+u=1
+t(u)
+1,j X(u) +
+dX
+u,v=1
+t(uv)
+4,j X(u)X(v)
+
+F0,j(Y|X)
++
+ d′
+X
+u′=1
+t(u′)
+2,j
+∂E
+∂β (u′) (X, β⋆
+j ) +
+d′
+X
+u′,v′=1
+t(u′v′)
+5,j
+∂2E
+∂β (u′)∂β (v′) (X, β⋆
+j )
++
+dX
+u=1
+d′
+X
+v′=1
+t(uv′)
+7,j X(u) ∂E
+∂β (v′) (X, β⋆
+j )
+
+F1,j(Y|X)
++
+1
+2 t3,j +
+d′
+X
+u′,v′=1
+t(u′v′)
+5,j
+∂E
+∂β (u′) (X, β⋆
+j ) ∂E
+∂β (v′) (X, β⋆
+j ) +
+dX
+u=1
+1
+2 t(u)
+8,j X(u)
+
+F2,j(Y|X)
++
+ d′
+X
+u′=1
+1
+2 t(u′)
+9,j
+∂E
+∂β (u′) (X, β⋆
+j )
+
+F3,j(Y|X) + 1
+8 t6,jF4,j(Y|X)
+i
+p(X),
+and
+lim
+n→∞
+Bn,1
+mnL2n
+=
+X
+j∈[K ⋆]:|Cj |=1
+dX
+u=1
+t(u)
+1,j X(u)Hj(Y|X)p(X),
+lim
+n→∞
+Bn,2
+mnL2n
+=
+X
+j∈[K ⋆]:|Cj |>1
+ dX
+u=1
+t(u)
+1,j X(u) +
+dX
+u,v=1
+t(uv)
+4,j X(u)X(v)
+
+Hj(Y|X)p(X),
+lim
+n→∞
+Cn
+mnL2n
+=
+K⋆
+X
+j=1
+t0,j[F0,j(Y|X)−H j(Y|X)]p(X).
+Note that for almost everyX, the set
+n
+Fγ,j(Y|X ), H j(Y|X ) : 0 ≤γ≤ 4, j∈ [K⋆]
+o
+is linearly
+independent with respect toY. Therefore, it follows that the coefficients of these terms in the limit
+in Equation (28) become zero.
+Forj∈[K ⋆]such that|C j|= 1, by considering the coefficients of
+•F 0,j(Y|X ), we havet0,j +Pd
+u=1 t(u)
+1,j X(u) = 0, for almost everyX. Then, we deduce t0,j =
+t(u)
+1,j = 0for allu∈[d];
+•F 1,j(Y|X ), we havePd′
+u′=1 t(u′)
+2,j
+∂E
+∂β(u′) (X, β⋆
+j ), for almost everyX. As the expert functionE is
+second-order strongly identifiable, we gett(u′)
+2,j = 0for allu ′ ∈[d ′];
+•F 2,j(Y|X), we havet 3,j = 0.
+39

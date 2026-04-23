@@ -1,0 +1,23 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 6
+section: a-weighted-angle-distance-on-strings-11
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+ARI and NMI are highly consistent as rankings of distances (Table 3), with Spearman
+correlations above 0.93 for every dataset. By contrast, silhouette has weak (and sometimes negative) rank correlation with ARI/NMI, most notably onstrseq. This is an expected consequence of our label-blind DBSCAN tuning: silhouette is used only to choose
+(ε,min samples) within each distance, and it should be interpreted as an internal “cluster
+compactness” diagnostic rather than a proxy for label recovery. The scatter in Figure 10
+illustrates this mismatch concretely.
+DBSCAN noise points are a key “escape valve” for distances that induce highly nonuniform neighborhoods. Figure 13 plots ARI against the noise fraction across all tested
+distances onucsc trf. On that dataset, high-performing methods achieve good ARI without
+labeling an extreme fraction of points as noise; onstrseqthe best weighted-angle setting
+(ρ= 0.6) yields a noticeably larger noise fraction than edit distances, suggesting a tradeoff
+between repeat-sensitivity and conservative cluster formation.
+6.Conclusion
+We introduced theρ-weighted angle distanced ρ, a multi-scale metric on Σ ∗ obtained by
+comparing alln-gram count profiles of tw

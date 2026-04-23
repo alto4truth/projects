@@ -1,0 +1,22 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 2
+section: results
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+4
+Figure 2.The oscillator network correspondence reveals S4D generates traveling waves in its dynamical state.
+(a)The mathematical correspondence embeds S4D into a ring topology with a specific structure of network connections, where
+connection strengths weaken with distance between nodes and phase delays shift systematically. The network adjacency matrix
+is depicted at right, with magnitude (top) and phase (bottom) of each element plotted in color code.(b)Eigenvalue spectrum
+of the S4D state-transition operator (i.e.D τ) in the complex plane. As details in Eq. (10), all modes share a common decay rate
+(real part), while the imaginary parts increase approximately linearly with mode index, forming a harmonic ladder of temporal
+frequencies.(c)Representative node trajectory in the complex plane, illustrating oscillatory dynamics with a slowly decaying
+amplitude.(d)Spatiotemporal evolution of node phases across time. Diagonal phase bands indicate coherent traveling waves
+propagating around the ring, with velocity determined by the eigenfrequencies of the dynamics operator.
+wave in the node dynamics at a specific spatial frequency
+(cf. Eq. 7). Further, we can use the eigenvalues from S4

@@ -1,0 +1,16 @@
+title: Structure-Augmented Standard Plane Detection with Temporal Aggregation in Blind-Sweep Fetal Ultrasound
+source: arxiv
+year: 2026
+document_id: structure-augmented-standard-plane-detection-with-temporal-aggregation-in-blind-sweep-fetal-ultrasound
+authors: Keli Niu; He Zhao; Qianhui Men
+page: 2
+section: abstract
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20591v1
+
+frame posterior
+pt =P(y t = 1|I 1:T ), wherey t = 1indicates a standard
+abdominal plane. Our pipeline (Fig. 1) for standard plane detection has two main stages:(i) Structure augmentation:
+a pretrained segmentation model applied on each US frame
+to identify the presence of abdominal structures and highlight them when present;(ii) Keyframe detection:a sliding
+window withcausalfusion moving forward across the temarXiv:2604.20591v1 [cs.CV] 22 Apr 2026

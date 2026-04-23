@@ -1,0 +1,37 @@
+title: Differentially Private Clustered Federated Learning with Privacy-Preserving Initialization and Normality-Driven Aggregation
+source: arxiv
+year: 2026
+document_id: differentially-private-clustered-federated-learning-with-privacy-preserving-initialization-and-normality-driven-aggregation
+authors: Jie Xu; Haaris Mehmood; Rogier Van Dalen; Karthikeyan Saravanan; Mete Ozay
+page: 3
+section: filter
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20596v1
+
+)
+PINA+RI( =8)
+(a)Clustering accuracy
+60 70 80 90 100
+round
+0.90
+0.91
+0.92
+0.93accuracy PINA( =2)
+PINA( =8)
+PINA+RI( =2)
+PINA+RI( =8)
+(b)Classification accuracy
+Fig. 3. Comparison of clustering and classification accuracy on
+CIFAR-10. PINA+RI denotes our proposed method with random
+initialization. Results are averaged over three runs.
+Ablation:Fig. 3a illustrates the clustering accuracy of IFCA
+and our proposed method under varying levels of added noise. As
+evident from the results, our method achieves optimal clustering with
+a stringent privacy budget ofϵ= 2. In contrast, incorporating LDP
+into IFCA throughout the entire training process has a detrimental
+effect on the clustering structure. Notably, our method attains optimal clustering even with random initialization when the privacy
+budget is relaxed toϵ= 8, demonstrating its robustness. Furthermore, as shown in Fig 3b, our novel initialization mechanism enables the algorithm to converge to the optimal clustering structure
+significantly faster than random initialization, resulting in accelerated convergence and improved classification accuracy.
+5. CONCLUSION
+In this work, we propose PINA, a privacy-preserving clustered FL
+framew

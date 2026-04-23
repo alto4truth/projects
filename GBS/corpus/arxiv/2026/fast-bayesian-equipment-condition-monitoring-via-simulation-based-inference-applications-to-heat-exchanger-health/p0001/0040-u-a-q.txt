@@ -1,0 +1,40 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 40
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+rsper diagnosis. Across a modern
+process plant where condition monitoring must be performed simultaneously on dozens of assets at high frequency, the near instantaneous posterior evaluation offered by SBI provides a pathway to real-time, risk-aware
+decision-making that is entirely intractable with classical
+Method Sim. calls Acc. Infer. time T rain cost
+MCMC 900 / call 100%2.4s / call —
+SBI 5,000 (once) 100%0.029s / call 19s
+TABLE III: Computational cost of inference at 100%
+accuracy for MCMC and SBI on an Apple M4 Pro
+laptop.
+0 2 4 6 8 10 12
+Inference Calls
+0
+2500
+5000
+7500
+10000
+Total Simulation Runs
+FIG. 10: Resource comparison at the minimal
+configuration achieving both≥95%classification
+accuracy on Scenario 2 (fouling,τ= 18). MCMC used 4
+chains with 150 burn-in+75 samples (900
+transitions/call); SBI used 5,000 training simulations.
+SBI is 82×faster per call after a break-even of∼6
+inference calls.
+Bayesian sampling.
+V. DISCUSSION
+This study demonstrates that simulation-based inference (SBI) provides a practical and scalable alternative
+to classical Bayesian sampling for condition monitoring
+of heat exchangers. Across all evaluated scenarios, SBI
+achieves diagnostic performance

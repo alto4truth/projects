@@ -1,0 +1,23 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+ct of tuning the retention rate used during multilingual and
+monolingual filtering. Increasing the retention rate consistently improves aggregate performance
+in French and Spanish, with ML at 15% outperforming the default 10% across most benchmarks.
+Gains are particularly pronounced on knowledge-intensive tasks such as Include (Romanou et al.,
+2024) and HellaSwag (Zellers et al., 2019), indicating that overly aggressive filtering can discard
+useful high-quality content.
+In Arabic, instead of using 56% like for FineWeb2-HQ, we try a retention rate of 10% and 20%,
+resulting in a replication of tokens of 10x and 5x, respectively. We see that the standard retention of
+56% yields the best overall performance when combined with multilingual filtering. This suggests
+that optimal retention rates are language-dependent, and that aggressive repetition of the same highquality data does not necessarily lead to the best performance. We further note that the ML gain
+over HQ for Arabic ( 0.5%) is comparable to the seed variance reported in Appendix H ( 0.3%), and
+should therefore be interpreted with caution pending multi-seed validation.
+Synthesis: When Does Multilingual Pooling Help?Across our f

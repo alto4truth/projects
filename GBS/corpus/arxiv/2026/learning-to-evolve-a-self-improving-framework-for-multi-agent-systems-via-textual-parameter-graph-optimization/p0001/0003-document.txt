@@ -1,0 +1,27 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+and the proposed TPGO in multi-agent system optimization.
+agents collaborate to solve complex, multi-step
+problems ranging from software engineering to
+open-ended reasoning (Park et al., 2023; Guo et al.,
+2024; Hong et al., 2023). By decomposing intricate tasks into specialized sub-routines, MAS have
+demonstrated capabilities that significantly surpass
+solitary LLMs.
+However, the efficacy of these systems is critically dependent on the precise configuration
+of their textual components. An "Agent Engineer" must meticulously craft not only the system
+prompts for individual agents but also the descriptions of tools, the protocols for inter-agent communication, and the overarching workflow (Talebirad
+and Nadiri, 2023; Luo et al., 2025a; Tran et al.,
+2025). This process, often termedAgent Engineering, represents a high-dimensional and unstructured optimization challenge. As illustrated in Figure 1(a), the opaque and non-deterministic nature
+of MAS interactions makes manual tuning a laborintensive trial-and-error process that is difficult to
+scale and rarely converges to an optimal state. This
+establishes theautomatic optimization of MAS
+as a crucial, yet unsolved, frontier.
+In real-wor

@@ -1,0 +1,15 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 163
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+questions Q156 & Q157 Economic & physical security Vs Self-expression and quality of life Q46.- Feeling of happiness Q182.- Justifiable: Homosexuality
+
+Chapter 4: The World Values Benchmark 153
+Q209.- Political action: Signing a petition. Q57.- Most people can be trusted
+4.2.6 Measurement theory Good measurement design was foundational for WVB. Drawing on social science standards, we treated model responses as indirect evidence of unobservable constructs (values), in the same way that psychologists treat survey responses as proxies for latent attitudes. Following Bandalos [23] and Messick [264], validity is not a property of a test itself but of the interpretations inferences we draw from scores in context. Every validity claim is simultaneously a value claim about what matters, and why. This distinction matters: in evaluating LLMs, the question is never simply “does the benchmark measure values?” but “what inferences about values are justified from model outputs, and under what conditions?” Values are theoretical constructs that must be operationalised through observable behaviours, in this case, distributions of model responses across answer anchors. Each step required explicit mapping: • Construct: the latent property of interest (e.g., religiosity, self-expression values, tolerance). • Operationalisation: how the construct is elicited (survey item adapted into a prompt, answer scale provided as anchors). • Indicators: the observable outputs and their statistical summaries (probability distributions, divergence from human survey data). As Vallor [403] argues, under conditions of technosocial opacity we cannot assume that our measurement tools will remain reliable guides across contexts. This heightens the importance of treating validity as a living argument embedded in a sociotechnical system, not as a fixed list of criteria to be ticked off. As Selbst et al. [354] argue, many failures in fair-ML stem from what they call abstraction traps: design choices that strip away the social context needed to make validity judgments meaningful. They identify five traps (framing, portability, formalism, ripple effects, and solutionism), each of which arises when evaluations treat fairness or validity as properties of a self-contained technical system. WVB incorporated this insight by triangulating multiple sources of evidence: • Construct validity: Are value-laden responses being elicited, or are results confounded by sentiment, literacy, or prompt artefacts? • Content validity : Do the chosen WVS items adequately represent the broader domain of human values?

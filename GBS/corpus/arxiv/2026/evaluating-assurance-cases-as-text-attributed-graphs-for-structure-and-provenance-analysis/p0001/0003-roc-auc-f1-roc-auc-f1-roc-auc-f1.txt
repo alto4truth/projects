@@ -1,0 +1,19 @@
+title: Evaluating Assurance Cases as Text-Attributed Graphs for Structure and Provenance Analysis
+source: arxiv
+year: 2026
+document_id: evaluating-assurance-cases-as-text-attributed-graphs-for-structure-and-provenance-analysis
+authors: Fariz Ikhwantri; Dusica Marijan
+page: 1
+section: roc-auc-f1-roc-auc-f1-roc-auc-f1
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20577v1
+
+diction .Table 4 presents the results of the semi-supervised scenario, where models are trained
+jointly on both human-authored and LLM-generated assurance
+cases and evaluated on the gold human dataset. This setup examines whether incorporating LLM-generated data can improve
+generalisation and robustness in link prediction when gold data is
+limited.The answer to RQ1c is: Yes, combining human and
+LLM-generated cases substantially boosts GNN performance,
+with UniGraph achieving the strongest generalisation across
+all models. In the Mix → Human setting, nearly all GNN models
+improve over the LLM-only condition, and UniGraph reaches the

@@ -1,0 +1,25 @@
+title: Tokenised Flow Matching for Hierarchical Simulation Based Inference
+source: arxiv
+year: 2026
+document_id: tokenised-flow-matching-for-hierarchical-simulation-based-inference
+authors: Giovanni Charles; Cosmo Santoni; Seth Flaxman; Elizaveta Semenova
+page: 1
+section: gpu-nvidia-a100-pcie-40gb
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20723v1
+
+and their application to tokenised hierarchical SBI is a
+promising direction for future work. For the time being, in regimes withns ≫ 100we recommend
+an MLP-based vector field as in Arruda et al. (2025), accepting some loss in robustness in exchange
+for tractable memory use.
+We release a benchmark suite to support ongoing evaluation of multiple hierarchical SBI tasks.
+Future work should extend the task set by adapting BernoulliGLM, Lotka-Volterra, and SLCP
+Distractors from the SBI benchmark (Lueckmann et al., 2021) with hierarchical structure that
+reflects scientifically motivated partial pooling. Introducing tasks with functional observations and
+local parameters would additionally enable systematic evaluation of tokenised estimators. We note
+that concurrent work on sample-efficient factorised posteriors (Arruda et al., 2025) and sequential
+refinement with truncated proposals (Deistler et al., 2022) may further improve the trade-offs
+explored here.
+TFMPE demonstrates that tokenised flow matching scales to realistic hierarchical inference with
+irregular data and expensive simulators. By replacing repeated simulator evaluations with fast
+surrogate samples, LF sampling reduces end-t

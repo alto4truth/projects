@@ -1,0 +1,32 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 3
+section: gap-root-cause-closest-shortcoming-feas-path-to-resolution
+chunk: 67
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+r each gate configuration. Seeds 1–5 averaged.
+Model Full Pipeline−FOSC−RDI FOSC Only
+Flag RDI Flag RDI Flag FOSC Flag FOSC
+Wang2023_WRN-70 — 0.78 — 0.78 — 0.04 — 0.04
+Pang2022_WRN-70 — 0.76 — 0.76 — 0.05 — 0.05
+Rebuffi2021_70 — 0.68 — 0.68 — 0.06 — 0.06
+Gowal2021_70 — 0.72 — 0.72 — 0.05 — 0.05
+Gowal2020_70 — 0.65 — 0.65 — 0.07 — 0.07
+Rebuffi2021_28 — 0.63 — 0.63 — 0.06 — 0.06
+Gowal2021_28 — 0.61 — 0.61 — 0.08 — 0.08
+Xu2023_WRN-28 — 0.59 — 0.59✓0.09 — 0.09
+Sehwag2021✓0.48 — 0.48✓0.11✓0.11
+Wong2020Fast✓0.34✓0.34✓0.14✓0.14
+F Statistical Significance
+All reported metrics include uncertainty estimates computed over 5 independent random seeds (data subsampling for RDI, attack
+initialisation for PGD/AutoPGD).
+• Kendallτ(RDI vs. AutoAttack):0.82±0.03(95% bootstrap CI: [0.71, 0.93],n= 10models×5 seeds).
+• FOSC masking detection rate: 11/12 known-masking configurations detected (92%, exact binomial 95% CI: [64%, 100%]).
+• Multi-norm worst-case gap:23.5±1.8pp (mean±std across 10 models).
+• Pre-screening speedup:30.2×median (IQR:[28.9×,31.4×]).
+We apply the Bonferroni correction for multiple comparisons across the ablation study (7 configurations × 3 metrics = 21
+tests; significance threshold

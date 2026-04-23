@@ -1,0 +1,29 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 8
+section: ieee-transactions-on-image-processing-6
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+Origin Image Occluded Image Amodal Mask Occluder Mask
+Fig. 6. Examples of the datasets we constructed. For each example showing the original image, the image after the occlusion was added, the amodal mask,
+and the mask of the occluder, respectively.
+which is based on adversarial learning [28] and necessitates
+the employment of a discriminator for implementation.
+Our Target-Aware Occlusion Synthesis (TAOS) technique
+enables the generation of occluded images while retaining the
+original unoccluded image. In the training of the open-domain
+model, the discriminators receive the original image and its
+corresponding mask as input. Specifically, the images and
+masks are concatenated, and their features are extracted using
+a multilayer network. These features undergo progressive
+downsampling, and the alignment between the predicted masks
+and the ground truth in terms of topology and morphology
+is assessed. To ensure robust consistency measurements, a
+sigmoid activation function is applied to confine the output
+values within a probability range of 0 to 1. During closeddomain training, where unobstructed images are not available,
+only the mask is utilized as input to the discriminator. In
+bo

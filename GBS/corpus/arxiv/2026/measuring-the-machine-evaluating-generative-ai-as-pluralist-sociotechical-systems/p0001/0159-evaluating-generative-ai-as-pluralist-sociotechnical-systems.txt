@@ -1,0 +1,21 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 159
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+nglish, prompting LLMs with persona No No No Models aligned more closely when prompted in dominant cultural language and with appropriate pretraining;
+
+contexts and testing Cultural Alignment under varying pretraining and language conditions. Introduced Anthropological Prompting to refine responses.
+misalignment increased for underrepresented personas and culturally sensitive topics.
+Choenni & Shutova Self-alignment: Improving alignment of cultural values in LLMs via in-context learning arXiv preprint [78]
+2024 LLaMA-3B, Mistral-7B, BLOOMZ Used cloze-style prompts derived from WVS items; in-context learning steered both English-centric and multilingual LLMs to align with cultural values. No No No In-context prompt tuning improved alignment in multiple languages, though GPT-4 remained particularly English-biased. Papadopoulou et al. LLMs as mirrors of societal moral standards arXiv preprint [299]
+2024 GPT-2, OPT, BLOOM, ERNIE Evaluated LLMs using moral items from WVS and Pew across 40+ countries, comparing model responses to human survey norms. No No No
+Models, including multilingual ones, displayed systematic biases and failed to accurately reflect moral subtleties; BLOOM performed relatively better but still lacked full cultural understanding. Li et al. Culturellm: Incorporating cultural differences into LLMs arXiv preprint [227]
+2024 GPT-3.5, Gemini, custom fine-tune
+Fine-tuned LLMs using a combination of 50 WVS seed samples with semantic augmentation to build CultureLLM models for nine cultures. No No No CultureLLM outperformed GPT-3.5 and Gemini Pro by ~8–9%, rivalling GPT-4 in cultural value alignment, showing promise for low-resource cultural adaptation. Chiu et al. Dailydilemmas: Revealing value preferences of LLMs with quandaries of daily life arXiv preprint [77]
+2024 GPT-4, Claude Created 1,360 everyday moral dilemmas and evaluated LLMs through WVS-informed value-theoretic frameworks (e.g. Self-expression vs Survival). No No No Models consistently prioritized self-expression values over survival; value preferences varied widely across models and dilemmas.

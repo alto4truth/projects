@@ -1,0 +1,54 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 2
+section: abstract
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+eward offline GCRL. While HIQL and SAW perform relatively well for rotation control, they perform poorly on other tasks. While SMORE performs poorly
+8
+
+Published as a conference paper at ICLR 2026
+overall, both n-step GCIQL and GCIQL-OTA perform well on density control but show poor performance on other tasks. GO-Fresh performs poorly overall on all tasks; we believe this is because
+graph-based reward shaping is ineffective in tasks with stochastic dynamics. ORS consistently
+achieves best performance across the Tokamak control, highlighting its effectiveness in complex
+real-world tasks.
+Figure 5:Left:ORS leads tolower average value non-monotonicityδ V at lower noise levels (σv) over expert
+trajectories compared to using sparse rewards or just using ˆV(, g) =r W (s, g);Center:ORS inducesless
+noisy estimatesof ˆV(s, g)over expert trajectories even for long horizons; andRight:ORS rewards over 5000
+state-action pairs (denoted as dots) for a single fixed goal (denoted asx)smoothly decay in magnitudewith
+temporal distance from goal. All plots in this figure are computed overantmaze-giant-navigate.
+How does ORS influence value learning? We analyze how ORS influences the learning dynamics
+of the induced value function onantmaze-giant-navigateby improving credit assignment. Following the setup in Sec. 3.2, we analytically compute ˆV(s, g)induced by ORS rewards under varying
+noise levelsσ v. Figure 5(left)reports how the averageδ V varies withσ v for sparse rewards, ORS,
+and a variant that directly uses ˆV(s, g) =r W (s, g). Relative to sparse rewards, ORS exhibitsδ V
+that is an order of magnitude smaller at lower noise levels. We plot the approximate value function ˆV(s, g)induced by ORS over the same 5 trajectories in Sec. 3.2 in Fig. 5(center), showing
+estimates that are much less noisy than sparse-reward ˆV(s, g)over long horizons.
+Finally, Figure 5(right)plots ORS rewards for a fixed goal over 5000 uniformly sampled stateaction pairs, each state displayed in the figure by its x-y position in the maze. ORS reward magnitudes decay smoothly with increasing temporal distance from goal, with dark dots corresponding to
+states (eg. ends of trajectories) very distant from goal.
+How do different design choices affect ORS? We now examine some key design choices behind
+ORS. First, we compare ORS with a baseline called L2 that computes the uses L2 distance to goal
+for reward shaping. Table 4 shows that L2 rewards are ineffective and can hurt performance as
+shown by GCIQL with L2 rewards performing worse than sparse-reward GCIQL.
+Table 2: ORS vs long-horizon sparse-reward offline GCRL strategies on OGBench tasks: Overall average
+(binary) success rate (%) across the 5 test time goals over 8 seeds per task per algorithm. We report the 95%
+bootstrapped C.I. size after the ± sign.
+Dataset HIQL SA W SMORE n-step GCIQL GCIQL-OTA Go-Fresh ORS (ours)
+antmaze-large-navigate91±286±5 22±5 53±9 90±4 88±3 88±7
+antmaze-giant-navigate72±748±9 1±1 1±1 26±5 30±10 56±9
+cube-double-play 6±240±72±2 4±3 3±2 17±645±7
+cube-triple-play 3±2 6±6 0±0 1±1 2±2 18±537±8
+puzzle-4x4-play 7±2 17±12 0±0 46±585±474±6 70±5
+puzzle-4x5-play 8±4 8±4 0±0 5±2 19±120±1 20±0
+puzzle-4x6-play 3±1 8±4 0±0 14±3 15±3 17±420±2
+scene-play 38±3 63±6 8±2 26±7 42±7 56±1080±4
+antmaze-large-explore 0±0 15±8 0±0 0±0 0±038±1022±7
+cube-triple-noisy 2±1 0±0 1±1 2±1 2±1 5±422±7
+puzzle-4x4-noisy 3±3 3±3 0±0 0±0 0±050±5 56±7
+puzzle-4x6-noisy 2±1 8±6 0±0 12±6 15±319±4 19±1
+scene-noisy 25±4 33±6 3±2 2±2 3±2 34±540±5
+Mean20.0 25.8 2.8 12.7 23.2 35.844.2
+9

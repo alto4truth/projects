@@ -1,0 +1,21 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: a-r-a-r
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+Figure 2.Overview of our SSL-R1 tasks.We design five verifiable self-supervised tasks for RL post-training, ranging from the image
+level to the pixel level.Rotation Prediction:an image is rotated by a certain angle, and the model is tasked with predicting the angle.Visual
+Similarity:two augmented views are cropped from an image, with several additional views from other images, and the task is to select the
+most visually similar views.Region Inpainting:an image is masked by a certain ratio, and the model is required to select the region that
+best fits the missing part.Patch Ordering:an image is partitioned into a grid of patches, shuffled into a sequence, and the model predicts
+the original patch order.Geometric Correspondence:points are sampled from an image, shuffled into a sequence, and the model finds the
+corresponding point on the transformed image for each point on the original image. Q: Question, A: Answer, R: Reward.
+that enables intrinsically verifiable supervision at scale, substantially improving the multimodal perception and understanding capabilities of MLLMs.
+3. Methodology
+Our SSL-R1 is a generic self-supervised RL post-training
+framework. As shown in Fig. 2, it inclu

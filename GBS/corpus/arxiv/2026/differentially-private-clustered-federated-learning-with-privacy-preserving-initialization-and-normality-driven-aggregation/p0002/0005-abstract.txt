@@ -1,0 +1,24 @@
+title: Differentially Private Clustered Federated Learning with Privacy-Preserving Initialization and Normality-Driven Aggregation
+source: arxiv
+year: 2026
+document_id: differentially-private-clustered-federated-learning-with-privacy-preserving-initialization-and-normality-driven-aggregation
+authors: Jie Xu; Haaris Mehmood; Rogier Van Dalen; Karthikeyan Saravanan; Mete Ozay
+page: 2
+section: abstract
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20596v1
+
+bal model, CFL simultaneously learns a set of cluster-specific
+models and dynamically assigns clients to the cluster whose data
+distribution best matches their local statistics. Clients that share a
+similar distribution form a cluster, making the data within each cluster less non-IID and enabling each cluster to converge faster and to
+a higher accuracy. Existing CFL algorithms, such as IFCA [11],
+rely on privileged server data that resembles users’ data to initialize
+cluster models. An alternative approach employs random restarts to
+initialize cluster models arbitrarily and repeat training until a stable
+clustering structure emerges. However, both strategies are problematic in a DP setting. The former requires access to non-public data
+at the server, which compromises privacy and undermines practicality. The latter consumes additional privacy budget, resulting in
+noisier client updates. Moreover, a na¨ıve application of LDP in CFL
+introduces excessive noise, which distorts the intrinsic cluster structure and severely degrades model performance. On the other hand,
+simply applying CDP to CFL requires the server to be fully trusted,
+which is impractical in adversarial settings. To pro

@@ -1,0 +1,27 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+raints.
+2.3 SPL Scoping
+Scoping defines the boundaries of a product line, identifies candidate features, and establishes variability assumptions [25, 32].
+These decisions shape all subsequent engineering activities and are
+widely recognized as among the most critical yet challenging in
+SPLE [3].
+Current validation practices rely heavily on informal stakeholder
+workshops, product roadmaps, and expert judgment, leaving consistency and feasibility unchecked until formal feature models exist [14, 20]. This delay causes late-stage rework when variability
+conflicts or infeasible assumptions surface during requirements
+engineering or implementation. Integrating automated analysis
+operations (AOs) directly into scoping can close this gap by providing early feedback on variability properties before formalization,
+enabling domain experts to iteratively refine scope decisions with
+confidence [5].
+2.4 Large Language Models for Reasoning
+Large Language Models (LLMs) such as GPT, Claude, and Gemini
+are transformer-based architectures with up to hundreds of billions
+of parameters, pre-trained on large text corpora [8]. Beyond traditional NLP tasks, they exhibit emergingreasoningcapabilities when

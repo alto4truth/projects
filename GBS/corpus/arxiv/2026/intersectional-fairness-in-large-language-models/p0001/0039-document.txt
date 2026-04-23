@@ -1,0 +1,37 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+Under Review
+12 Chaima Boufaied, Ronnie de Souza Santos, and Ann Barcomb
+𝑛non-UNKNOWN =
+𝑛∑︁
+𝑖=1
+1( ˆ𝑦𝑖 ≠UNKNOWN).
+where 𝑛biased represents the number of model outputs that reflect the targeted social bias (i.e., the bias target in negative
+contexts and the non-target in non-negative contexts), and 𝑛non-UNKNOWN is the total number of the model’s outputs
+that are not unknown from the disambiguated context only.
+sAMB.
+𝑠AMB =(1−Acc) ·𝑠 DIS
+where We define accuracy on a set of inputs as:
+𝐴𝑐𝑐= 1
+𝑛
+𝑛∑︁
+𝑖=1
+1[ ˆ𝑦𝑖 =𝑦 𝑖 ].
+The bias score scales the ambiguous bias score by inaccuracy in ambiguous settings, penalizing bias more when the
+model is frequently wrong.
+4.4.2 Evaluation Metric Formulation.
+SF.
+SF=max
+𝑠𝑖 ∈𝐺
+(| 𝑃𝑀 (𝑀(𝑥)=1) −𝑃 𝑀 (𝑀(𝑥)=1|𝑠 𝑖 )| ·𝑃(𝑠 𝑖 ))
+where 𝐺 refers to the set of sensitive attributes, 𝑠𝑖 ∈𝐺 an intersectional subgroup defined by the combination of
+two sensitive attributes, 𝑃𝑀 (𝑀(𝑥)= 1) the overall probability the model outputs a favorable prediction (i.e., the nonstereotyped answer in both negative and non-negative polarities), 𝑃𝑀 (𝑀(𝑥)= 1 |𝑠 𝑖 ) the same probability conditioned
+on subgroup 𝑠𝑖, and 𝑃(𝑠 𝑖 ) the subgroup proportion. As per adaptation of the metric with

@@ -1,0 +1,21 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+le 8
+rollouts per prompt, with a temperature of 1.0 and the maximum response length of 3,072 tokens. The batch
+size is set to 512, the mini-batch size to 128, and the learning rate to1×10 −6. The training is conducted on
+a single node with 8 × H800 GPUs. More hyperparameter settings can be found in Appendix A.1.
+Evaluation setup.We evaluate on four widely used math reasoning benchmarks, including the test sets of
+MATH, AIME 2024 (MAA, 2024), AMC23 (MAA, 2023) and OlympiadBench (He et al., 2024a). We set
+temperature to 1.0, toppset to 1, and maximum output length set to 3,072 tokens for inference. Due to the
+high variance of the outputs from reasoning models, we report the average Pass@1 over 4 runs. To ensure
+accurate evaluation, we utilize Math-Verify1 to check for answer equivalence.
+1https://github.com/huggingface/Math-Verify
+6

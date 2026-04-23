@@ -1,0 +1,41 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 2
+section: results
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+8
+O≈ 1
+T
+RX
+r=0
+ar 2−r
+rX
+m=0
+ r
+m
+
+W
+TX
+k=1
+
+(Aµ(k))⊙m ⊙( Aµ(k))⊙(r−m)
+
+,(32)
+whereA∈C dmodel×N has entriesA ℓi =α ℓi.
+Equation (32) provides an explicit expression for how
+S4 maps an individual input to a specific output, providing an end-to-end description of computation in the system. Further, this expression also provides direct mechanistic insight into how computation works in S4: the nonlinear activation function Λ decomposes into a hierarchy
+of interaction orders – where linear responses (r= 1)
+represent the waves excited by individual inputs, secondorder responses (r= 2) capture interactions between two
+waves, and higher-order responses (r≥3) capture multiwave interactions.
+The advantage of the Carleman embedding is that it
+provides a holistic insight into the interactions in a nonlinear system [33], in contrast to standard techniques like
+Taylor expansion that approximate a nonlinear system
+only in a restricted neighborhood. In addition, the Carleman embedding for the S4 computation does not require an extensive expansion: truncating the embedding
+only to second-order accounts for 94% of the complete
+SSM’s performance in classifying a real-world sequence
+(Fig. 4). Tru

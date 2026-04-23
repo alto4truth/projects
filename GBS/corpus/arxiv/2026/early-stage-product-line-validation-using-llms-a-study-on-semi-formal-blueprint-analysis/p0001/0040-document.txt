@@ -1,0 +1,26 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 40
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+and verification protocols to prevent automation bias, as approximately 1 in 10 analyses
+may contain errors.
+Threats to Validity.Our evaluation uses blueprints derived from
+UVL models to ensure reproducibility and oracle comparability. While this enables consistent benchmarking, it may underrepresent ambiguity and noise found in truly informal scoping
+artifacts. Moreover, the 16 evaluated AOs cover representative but
+not exhaustive FM tasks. We also evaluated a broad set of public
+LLM APIs, but not all commercially or academically available models. Results may vary for future versions or domain-specific finetuning. Finally, our strict exact-match scoring penalizes partially
+correct outputs, which may underestimate the practical reasoning
+capabilities of models in near-missing cases.
+7 Conclusion and Future Work
+We evaluated whether off-the-shelf LLMs can perform feature
+model AOs directly on semi-formal blueprints, where early feedback
+is most valuable. Reasoning-optimized models reach near-solver
+accuracy and offer actionable explanations, making them practical
+assistants for SPL scoping. Their minute-scale runtime is acceptable
+for accurate, automation-ready feedback before forma

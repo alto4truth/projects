@@ -1,0 +1,24 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 1
+section: mnist
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+ary search are set as
+𝑙𝑏= 0, 𝑢𝑏= 0.5since overly aggressive upper bounds like 1 will introduce a drastic impact and
+cause many trivial mutants during the initial search.𝑘𝑚𝑎𝑥 and 𝑖 are set as 10. For the mutation scope,
+the qubit range is set to include all qubits, and the depth range is set to [0%, 100%] , meaning that
+mutations can occur across the entire circuit by default. For thresholds, 𝜏𝑅𝑆𝐸 is 0.05 following [28],
+and 𝜏𝑡𝑟𝑖𝑣𝑖𝑎𝑙 is 75% following [38] to filter out mutants whose performance degrade significantly.
+The effects of threshold configurations are discussed in Section 4.7.2. Finally, for the PF mutation
+operator, noise 𝑥 is sampled from a Gaussian distribution N with a mean of 0 and a variance of 1.
+4.4 RQ1: Effectiveness in Assessing Test Data Quality
+Test data are essential for evaluating model performance and improving robustness, ultimately
+determining the generalizability and reliability of neural networks in real-world applications.
+High-quality test suites are typically more diverse and more likely to expose model imperfections.
+Since mutation operators introduce faults that alter the decision boundary, inputs near the original
+boundary are particularly sensitive

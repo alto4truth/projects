@@ -1,0 +1,28 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 61
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+assumption.
+ID Assumption Papers Relying Risk If False: What Changes
+A1 Fixed suite = safety C1, C2, C5 High Leaderboard rankings temporally bounded; continuous re-eval required
+A2 Average⇒worst-case Implicit High “Progress” metrics overstate deployment safety
+A3 RDI generalises C5, C9 Med–High Screening mis-ranks ViTs, LLMs
+A4 CTF⇒production Agent users Medium Low real-world ROI on agent investment
+A5 Single draws for
+stochastic
+Prior DBP Medium Entire defence class needs re-eval
+A6 CRT closes lifecycle
+gap
+C4 practitioners Medium False lifecycle confidence
+A7 TRADES defaults stable
+Deployments Medium Widespread overestimation
+A8 Checkpoints match
+code
+C8 users Low–Med Replication failures
+17

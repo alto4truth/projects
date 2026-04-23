@@ -1,0 +1,32 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+(3)
+refines the output into a cohesive, purely visual summary.
+Step 1: Semantic Tagging.The process begins by parsing the raw response Ri while strictly
+preserving its original wording. Subjective judgments (e.g., “the room feels cozy”) are wrapped
+in <INFER> tags, and knowledge-dependent claims
+(e.g., “this is a Bauhaus-style lamp”) are wrapped
+in <KNOW> tags. Untagged text is treated as purely
+visual description. This produces an annotated response Rannotated
+i that explicitly separates cognitive
+components without altering their content.
+Step 2: Visual Distillation.Next, the annotated
+response is distilled into a purely visual form. Segments within <INFER> or <KNOW> tags are either
+rewritten into neutral, descriptive statements or
+deleted if unverifiable. For example, “this is likely
+a wedding dress” becomes “a white dress”; unverifiable claims are dropped entirely. Untagged visual
+statements remain unchanged. The result is a draft
+Rdraft
+i containing only objective, image-grounded
+content.
+Step 3: Fluent Synthesis.Since distillation may
+fragment the text, a final synthesis step restores
+fluency and coherence. The draft response is reorganized into a single, natural paragraph w

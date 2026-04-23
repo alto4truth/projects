@@ -1,0 +1,42 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 5
+section: acknowledgments
+chunk: 46
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+ext.
+Figure 5.Topology and induced connectivity structure of the S4D operators.Each row shows the network representation and connectivity matrices induced by
+the eigenvalue spectrum of the diagonal recurrence operator.(a) S4D-Lin:λ n =− 1
+2 + iπn, yielding identical decay rates and linearly spaced imaginary parts and a circulant, Fourier-diagonalizable propagator.(b) S4D-Inv:
+λn =− 1
+2 + i N
+π
+
+N
+2n+1 −1
+
+, inverting the spectral ordering
+while preserving stability.(c) S4D-FouTD:λ n =− 1
+2+i 2πn
+N ,
+corresponding to a uniform Fourier frequency grid; differences
+in the displayed connectivity arise solely from this eigenvalue
+parameterization.
+C. Chebyshev Approximation of Carleman
+Embedding
+For Fig. 4, we implement a truncated polynomial approximation of the point-wise nonlinearity using Chebyshev polynomials. Chebyshev polynomials of the first
+kind are defined by
+T0(x) = 1, T 1(x) =x, T k+1(x) = 2xTk(x)−T k−1(x)
+and span the same degree-Kpolynomial space as monomials, while offering improved numerical stability.
+Given readout activationsy, we rescale and clip them
+to the interval [−1,1] and construct the lifted features
+z(y) =
+
+T0(y), T 1(y), . . . , T K(y)
+
+.
+The nonlinearity

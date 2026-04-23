@@ -1,0 +1,117 @@
+title: On Bayesian Softmax-Gated Mixture-of-Experts Models
+source: arxiv
+year: 2026
+document_id: on-bayesian-softmax-gated-mixture-of-experts-models
+authors: Nicola Bariletto; Huy Nguyen; Nhat Ho; Alessandro Rinaldo
+page: 3
+section: exp-x
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20551v1
+
+eB := {θ∈ ˜Θ∞ : dΘ∞(θ, T(θ⋆)) < ε} ⊆ ΘK⋆ for ε∈ (0, 1). Observe thatS
+ρ∈RK⋆ B[ρ]⊆ ˜B(θ⋆, ε), where
+˜B(θ⋆, ε) :=
+[
+ρ∈RK⋆
+{θ∈Θ ∞ :d Θ∞(θ, θ⋆[ρ])< ε}.
+42
+
+So by Equation (29),
+Π(θ∈ ˜B(θ⋆, ε)|(X i, Yi)n
+i=1)≡P(θ∈ ˜B(θ⋆, ε)|(X i, Yi)n
+i=1)
+≥P
+
+θ∈
+[
+ρ∈RK⋆
+B[ρ]|(X i, Yi)n
+i=1
+
+=P(T(θ)∈B|(X i, Yi)n
+i=1)
+→1asn→ ∞,
+(32)
+a.s.-g∞
+G(θ⋆), since gG(θ⋆) = gG(T(θ ⋆)) and the restricted model is consistent at allT (θ⋆) ∈ ˜Θ⋆. Finally,
+consistency for the number of experts follows immediately from Equation (32), sinceε < 1implies
+˜B(θ⋆, ε)⊆Θ K⋆
+and therefore
+Π(K=K ⋆ |(X i, Yi)n
+i=1)≡P(θ∈Θ K⋆
+|(X i, Yi)n
+i=1)
+≥P(θ∈ ˜B(θ⋆, ε)|(X i, Yi)n
+i=1)
+→1asn→ ∞,
+a.s.-g∞
+G(θ⋆)
+A.7 Proof of Corollary 1
+Note that
+Π
+
+
+
+
+G∈
+[
+j∈N
+Gj :d H(gG, gG⋆)≥M n
+p
+logn/n
+
+
+ |(X i, Yi)n
+i=1
+
+
+=
+X
+j∈N
+Π
+n
+G∈G j :d H(gG, gG⋆)≥M n
+p
+logn/n
+o
+|(X i, Yi)n
+i=1
+
+Π(K=j|(X i, Yi)n
+i=1)
+≤Π
+n
+G∈G K⋆ :d H(gG, gG⋆)≥M n
+p
+logn/n
+o
+|(X i, Yi)n
+i=1
+
++ Π(K̸=K ⋆ |(X i, Yi)n
+i=1),
+where the second addendum asymptotically vanishes almost surely by Theorem 6, while the first
+term can be dealt with exactly as in the proof of Theorem 2.
+A.8 Proof of Proposition 1
+Firstly, we expand equationgG(Y, X) =g G⋆(Y, X)for almost every(Y, X)as follows:
+KX
+j=1
+exp(α0j +X ⊤α1j)PK
+ℓ=1 exp(α0ℓ +X ⊤α1ℓ)
+N(Y|E(X, β j), σ2
+j )
+=
+K⋆
+X
+j=1
+exp(α⋆
+0j +X ⊤α⋆
+1j)
+PK⋆
+ℓ=1 exp(α⋆
+0ℓ +X ⊤α⋆
+1ℓ)
+N(Y|E(X, β ⋆
+j ), σ⋆2
+j ).(33)
+43

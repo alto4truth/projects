@@ -1,0 +1,31 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 3
+section: total-episodes-containings
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+a wooden pickaxe and collecting stone — steps
+that are also required for other goals. Consequently,
+agents may learn generic subroutines that maximize reward without truly grounding the linguistic
+instruction. To address this, FOCUS enforces a
+strict evaluation protocol: an instruction is considered successful only if all its specified goals are
+completed precisely as requested, with no extraneous achievements triggered. This prevents the
+agent from exploiting broad, non-specific strategies.
+To evaluate generalization, FOCUS employs two
+distinct test sets. TheParaphrasesset consists
+of Combo instructions from the training set reformulated with novel vocabulary and syntax. The
+New Objectsset introduces new combinations of
+Atomic goals that appeared during training but
+never occurred together in a single instruction. This
+structure allows FOCUS to assess both robustness
+to linguistic variation and compositional generalization.
+5.2 Experiments Setup
+In our pipeline, we generate plans using Qwen2.514B-Instruct2, fine-tune it for one epoch with DPO
+( β= 0.5,lr= 1×10 −5 ) to stabilize lo2https://huggingface.co/Qwen/Qwen2.
+5-14B-Instruct
+cal updates, and then train policies with PPO-T
+(l

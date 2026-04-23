@@ -1,0 +1,61 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 42
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+rerequisites precede dependents. The result
+is a linearized plan P containing the goals and all
+supporting subtasks (Algorithm 4).
+Algorithm 2Subtask Bank Update
+Require:Instruction streamD, language modelf LLM
+Ensure:Subtask bankB, goals plansP
+1: Initialize subtask bankB← ∅
+2: Initialize goals plansP ← ∅
+3:foreach instructionI∈ Ddo
+4: Identify goal subtasks conditioned onB:
+S←f LLM(I, B)
+5:foreach subtasks∈Sdo
+6:ifs /∈Bthen
+7:B←B∪ {s}
+8:end if
+9:end for
+10: Goals plan forI:P[I]←S
+11:end for
+12:returnB,P
+Algorithm 3Ontology Construction
+Require: Subtask bank B, language model fLLM, queries per
+passN, thresholdτ
+Ensure:Ontology graphG= (V, E)
+1: Initialize countscount(r, t)←0for allr, t∈B, r̸=t
+2:foreach target subtaskt∈Bdo
+3:fortwo passesdo
+4: Define candidate setC:
+C←
+(
+B\ {t},pass 1
+{r∈B:count(r, t)>0},pass 2
+5:fori= 1. . . Ndo
+6: Query prerequisites:
+R←f LLM(t, C)
+7:foreachr∈Rdo
+8:count(r, t)←count(r, t) + 1
+9:end for
+10:end for
+11:end for
+12:end for
+13: Initialize edge setE← ∅
+14:foreach pair(r, t)do
+15: Compute probability:
+ˆp(r→t) = count(r, t)
+N
+16: Compute Wilson lower boundLB(ˆp, N)
+17:ifLB≥τthen
+18:E←E∪ {(r→t)}
+19:end if
+20:end for
+21:returnG= (V=B, E)

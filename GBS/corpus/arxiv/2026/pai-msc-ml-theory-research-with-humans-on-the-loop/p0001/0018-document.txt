@@ -1,0 +1,20 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+or scope drift. The underlying
+difficulty is that the relevant notion of diminishing returns is conceptual rather than merely token-based:
+a run can continue to generate text while adding little scientific value. Our current response is to expose
+explicit stage gates, bounded iteration, and steering checkpoints. When the system judges that additional
+loops are likely to bring only marginal conceptual gain, it is encouraged to stop, surface the current state, and
+request a human steer. We do not regard this problem as fully solved, but treating stopping as a first-class
+systems problem already improves both cost and reliability.
+5. Parallel debugging remains expensive and only partially solved.Debugging a long, partially
+parallel research workflow is much slower than debugging a single-turn assistant. Failures may arise from
+6

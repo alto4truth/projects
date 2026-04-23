@@ -1,0 +1,30 @@
+title: Exploring High-Order Self-Similarity for Video Understanding
+source: arxiv
+year: 2026
+document_id: exploring-high-order-self-similarity-for-video-understanding
+authors: Manjin Kim; Heeseung Kwon; Karteek Alahari; Minsu Cho
+page: 3
+section: enc-blocks-3
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20760v1
+
+.2
+BasicGEBD [99] 76.8 86.6 60.0 71.0
+EfficientGEBD [99] 78.3 88.3 63.1 74.8
+BasicGEBD* [99] 76.9 86.4 60.1 71.2
+BasicGEBD+MOSS 79.4 89.0 68.5 76.6
+D.1 Temporal Action Detection
+Datasets.THUMOS-14[26] is a widely used benchmark for temporal action
+detection (TAD), containing 200 and 213 untrimmed videos for training and
+testing, annotated with 20 action classes.
+Implementation Details.We adopt AdaTAD [51] as our baseline, which adapts
+VideoMAE to a TAD model withTIA adapters. We insert a single MOSS module
+between the 6th VideoMAE block and the TIA adapter. Following [51], we train
+only the MOSS module and TIA adapters. We use 768 input frames with a
+resolution of 224×224 for training. For evaluation, we report the mean Average
+Precision (mAP) at different temporal Intersection over Union (tIoU) thresholds.
+Results.In Tab. 8, we summarize the TAD results on THUMOS-14. Our
+MOSS-enhanced model consistently outperforms AdaTAD baseline across all
+tIoU thresholds, reaching 72.2% and 74.1% average mAP with VideoMAE-B
+and L backbones respectively. These results demonstrate the versatility of MOSS
+module on longer video understanding.

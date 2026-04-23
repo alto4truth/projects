@@ -1,0 +1,22 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 1
+section: f2lp-ap-3
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+ucing a three-stage analytical pipeline that completely eliminates gradients and dynamically adjusts
+propagation parameters based on the Local Clustering Coefficient (LCC).
+2.2 Adaptivity to Graph Homophily and Heterophily
+Learning algorithms for graphs must possess the capability to handle diverse
+topological structures, accommodating both homophilous graphs (where connected nodes share similar labels) and heterophilous graphs (where linked nodes
+belong to different classes) [26]. Current mainstream methods typically rely on
+global learned parameters or complex attention mechanisms to capture structural variations, such as GPR-GNN, which decouples propagation via learned
+weights [8, 15]. Existing literature includes improvements like GraphSAGE, which
+assumes strong homophily, and methods like GPR-GNN or APPNP that strive
+for robustness across broader scenarios [8, 12, 13]. Yet, these methods face a distinct “homophily bottleneck” as their parameters are often global or require
+training, failing to achieve granular, node-wise adaptive adjustment [17]. This
+leads to drastic performance degradation on complex graphs with mixed structures. F 2LP-AP bridges this gap by coupling the pro

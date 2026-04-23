@@ -1,0 +1,32 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 18
+section: ablation-study-on-the-number-of-adapters
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+Method KINS COCOA-cls
+mIoU f mIoU o mIoU f u mIoU o
+one adapter 78.05 51.92 79.94 29.58
+two adapter 83.26 56.34 81.74 32.97
+full model 85.43 59.27 83.18 35.62
+Effectiveness of use points as promptSAM [1] features a
+versatile prompt encoder capable of handling various types of
+input prompts, such as points, boxes, and text. In the previous
+experiments, we used boxes as the prompt input. To evaluate
+whether Amodal SAM can also perform amodal segmentation
+with points as prompts, we designed this experiment. For
+comparison with the prior use of boxes, we randomly sampled
+two points within the visible region of the target object as the
+prompt input during both training and inference.
+The experiments were conducted on the KINS [7] and
+COCOA [2] dataset, and the results are presented in Table
+VII. Experimental results show that amodal sam still achieves
+good performance using points as the prompt input. For the
+COCOA [2] dataset, where object occlusion scenarios are
+more diverse and complex, using boxes as prompts may
+introduce ambiguity. In contrast, using points as prompts can
+mitigate this issue and even yield better performance.

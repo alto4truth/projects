@@ -1,0 +1,25 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 8
+section: a-b-c
+chunk: 48
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+en layers with batch size
+= 𝑡𝑟𝑎𝑖𝑛𝑖𝑛𝑔 𝑑𝑎𝑡𝑎 𝑠𝑖𝑧𝑒
+300 , and epochs = 100.
+5.3.3. Evaluation on the car-hacking dataset
+To evaluate generalizability, we tested DAIRE on a larger dataset,
+i.e., the Car-Hacking dataset, which contains over 3.2 million CAN messages. For this experiment, we used the complete Car-Hacking dataset
+as listed in Table 4. It was partitioned into 80% training and 20%
+testing. We ran the experiment and completed 10 iterations each time
+using a different set of 20% for testing, also known as 10-fold crossvalidation. The results obtained are shown in Table 7 and visualized
+using a confusion matrix in Fig. 7(f).
+5.3.4. Results analysis
+Fig. 8 presents the Coefficient of Variation (CV) (Brown, 1998)
+values obtained from 10-fold cross-validation for each attack type
+Machine Learning with Applications 23 (2026) 100859
+10

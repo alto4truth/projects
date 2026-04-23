@@ -1,0 +1,29 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+n Fig. 2.
+2.3. Clinical role prediction and surgical phase recognition
+With gaze annotations, we fine-tune a state-of-the-art gazefollowing model [31] using OR data, whose backbone is
+frozen during training. The model generates a gaze heatmap
+H ∈ R H×W for each person, and thus we useHas the sole input for clinical role prediction and surgical phase recognition.
+The frameworks are shown in Fig. 3.
+To predict each person’s role, we follow the tracking strategy in [26] to track each person, use Hungarian matching
+to associate heads and full bodies, and thus obtain a gaze
+heatmap trackletT ∈ R T×H×W for each person. Then, we pass
+Tthrough linear layers and a three-layer transformer encoder
+and compute the probability scores for each role. We train the
+model using cross-entropy loss. During inference, we further
+apply the unique role assignment [26], which guarantees that
+each human in a frame is assigned to a distinct role.
+For phase recognition, we encode gaze heatmaps within the
+nearestKframes to classify the central frame. For each frame
+i, we first sum up the normalized heatmaps into one, and pass
+it through fully-connected layers to obtain a frame-level gaze
+embeddingg i. Then, w

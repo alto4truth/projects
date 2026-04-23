@@ -1,0 +1,23 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 2
+section: da-2k
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+the greatest gains come
+from Geometric Correspondence, achieving an average gain
+of +2.13% across 13 benchmarks compared to the baseline. The second best-performing one is Patch Ordering
+(+1.92%), with Rotation Prediction coming next (+1.80%),
+followed by Visual Similarity (+1.60%). Even the least performant Region Inpainting task yields an average gain of
++1.46%.
+It is worth mentioning that no single task dominates the
+others across all benchmarks. In other words, each task has
+its own advantages in certain dimensions, and the differences can be very pronounced. Specifically, Geometric Correspondence excels at fine-grained and high-resolution perception (MMStar, HR-Bench-8K) as well as spatial understanding (DA-2K, OmniSpatial). In particular, it achieves
+a significant +6.28% accuracy improvement for monocular depth estimation on DA-2K. This is likely due to the
+fact that finding pixel-level geometric correspondence requires the model to leverage 3D-aware spatial cues for finegrained and geometric reasoning. Patch Ordering exhibits
+balanced performance improvements, ranking within the
+second place on more than half (7 out of 13) of the benchmarks, suggesting that inferring local p

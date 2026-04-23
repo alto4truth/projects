@@ -1,0 +1,25 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 2
+section: feret
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+e FPN
++ Resnet50, DANet, and FCN + MobileNetv2 result in
+a complete lack of recognition capacity. These results are
+accompanied by a significant decrease in the value of∆
+for all the analyzed techniques, which directly translates
+to a higher overlap between genuine and impostor scores
+distributions, as visually supported in the supplementary
+material. The decrease in∆is particularly high for DANet,
+FCN + MobileNetv2, and FPN + Resnet50, which aligns
+with the poor FR performance on images segmented with
+these techniques. These results are also visually supported
+by Figure 2, which displays some segmentation examples of
+IJB-C images using each of the seven considered methods.
+While images segmented by SegFormer-B0 and SAM are
+visually consistent, low-quality pictures, such as the one

@@ -1,0 +1,36 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 46
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+Under Review
+14 Chaima Boufaied, Ronnie de Souza Santos, and Ann Barcomb
+𝑝𝑟𝑒𝑑 𝑚 is the sum of all matching predictions over all questions, per context, per dataset, as follows:
+MFAA𝑚 = 1
+𝑄
+𝑄∑︁
+𝑞=1
+MFAA𝑚,𝑞,where MFAA 𝑚,𝑞 = 𝑐𝑚,𝑞
+𝑛 ×100
+where 𝑚𝑓𝑚,𝑞 is the number of runs (out of 𝑛) in which model 𝑚 produced the most frequent answer for question 𝑞∈𝑄 .
+GTC𝑚 = 1
+𝑄
+𝑄∑︁
+𝑞=1
+GTC𝑚,𝑞,where GTC 𝑚,𝑞 = 𝑔𝑚,𝑞
+𝑛 ×100
+where𝑔 𝑚,𝑞 is the number of runs (out of𝑛) in which model𝑚produced the correct answer for question𝑞∈𝑄.
+5 Evaluation
+5.1 RQ1: How fair are LLMs under ambiguous and disambiguated contexts, when evaluated on
+intersectional identity attributes?
+5.1.1 RQ1 Results in Ambiguous Context.As shown in Table 5, for each LLM, on each dataset, we report the model
+accuracy, along with thebias score(sAMB), and thefairness outcome(SF and DF).
+Accuracy.In ambiguous contexts, LLM accuracy reflects the model’s ability to correctly abstain by selecting the
+‘unknown’ (or similar answer options) when the context is under-informative. Llama3 exhibits consistently low accuracy
+across both datasets, with the poorest accuracy recorded on Race_Gender dataset (0.24) and only modest improvement
+observed on Race_SES

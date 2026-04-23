@@ -1,0 +1,38 @@
+title: RespondeoQA: a Benchmark for Bilingual Latin-English Question Answering
+source: arxiv
+year: 2026
+document_id: respondeoqa-a-benchmark-for-bilingual-latin-english-question-answering
+authors: Marisa Hudspeth; Patrick J. Burns; Brendan O'Connor
+page: 1
+section: nle-855-0-0-855
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20738v1
+
+Lat-Pros 0 0 122 122
+Jun-Schol 0 675 350 1025
+Total 1172 5215 1442 7829
+Table 4: Source of data verseus question formats
+(MC=multiple choice; 1-W SA=one-word short answer; Long A.=long answer).
+Our final dataset consists of 7,829 questionanswer pairs, with the most common format being
+1-word short answer (SA) sourced from Certamen
+(Table 4). Multiple choice questions have between
+3-7 options. Both MC and 1-word SA can be evaluated with accuracy, but long answers include a
+variety of output types which require separate evaluation strategies (see §6.1).
+Question-Answer Lang
+Content En–En La–En En–La La–LaTotal
+Geography 73 1 107 1 182
+History 253 0 685 3 941
+Literature 85 2 311 0 398
+Mythology 230 1 1283 8 1522
+Vocabulary 698 9 733 21 1461
+Grammar 192 122 894 106 1314
+Lit. Devices 28 1 27 0 56
+Read. Comp. 352 7 26 0 385
+Scansion 21 20 59 42 142
+Translation 854 91 483 0 1428
+Total 2786 254 4610 179 7829
+Table 5: Counts of question–answer language
+pairs versus question content type. Top rows
+areknowledge-basedand bottom rows areskillbased.
+Table 5 shows the number of QA pairs by language and content type. English questions with
+Latin answers make up the majority (4610), followed by Eng

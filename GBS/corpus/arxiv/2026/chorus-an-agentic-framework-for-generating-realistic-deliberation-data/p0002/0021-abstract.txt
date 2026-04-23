@@ -1,0 +1,25 @@
+title: CHORUS: An Agentic Framework for Generating Realistic Deliberation Data
+source: arxiv
+year: 2026
+document_id: chorus-an-agentic-framework-for-generating-realistic-deliberation-data
+authors: A. Koursaris; G. Domalis; A. Apostolopoulou; K. Kanaris; D. Tsakalidis; I. E. Livieris
+page: 2
+section: abstract
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20651v1
+
+onally invokesTto enrich comment
+7:PUBLISH(c)▷Post content to platform viaT
+8:H post
+i ← H post
+i ∪ {(ai, c)}▷Update post history ofi-th actor
+4 Use Case Scenario: Integration with DELIBERATE
+To validate CHORUSin a realistic deployment setting, we integrated the framework with DELIBERATE, an AI-powered
+web platform for facilitating citizen engagement on policy issues through structured online discussions. DELIBERATE
+employs NLP-based pipelines to extract thematic trends, identify consensus and contention and generate deliberation
+reports from user contributions [Livieris et al., 2026], supporting evidence-based policymaking through synthesized
+stakeholder insights. This section describes the pilot deployment configuration, presents the generated discussion
+outputs and reports the results of an expert evaluation assessing content realism, discussion coherence and analytical
+utility.
+The pilot scenario simulated a public deliberation titled “Extreme Weather Events Due to Climate Change” 2, instantiatingN= 10actors across four persona archetypes over a simulation horizon ofT= 20minutes. All agents are
+powered by Claude Sonnet 4.5, selected for its balance between generation quality an

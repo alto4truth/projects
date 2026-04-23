@@ -1,0 +1,20 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 5
+section: apvh-0
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+ORPHEAS 6.50 — —
+Multilingual E5 7.75 0.211 Failed to reject
+mGTE 8.25 0.099 Failed to reject
+GEM-XLM-RoBERTa 14.50 0.0 Rejected
+MPnet 18.25 0.0 Rejected
+MiniLM 19.75 0.0 Rejected
+(b) NDCG@3
+comments into thematic clusters, each associated with a title and a descriptive summary [Livieris et al., 2026]. The
+retrieval corpus comprises user comments, cluster titles and cluster summaries, providing a realistic and heterogeneous document collection. We constructed a dataset of 600 queries (300 monolingual and 300 cross-lingual) through
+7

@@ -1,0 +1,21 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+provement to the core SSM components within Mamba for large language
+modeling. The complex valued SSMs, when discretized using the general
+trapezoidal rule, yielded an equivalent real valued SSM equipped with datadependent Rotary Positional Embeddings (RoPE) [12] [20]. The successful
+application of this method resulted in precise algorithmic reasoning, with
+which previous SSM variants struggled. [1].
+In summary, prior work on state space models for vision has largely treated
+discretizationasafixedandsecondarydesignchoice,withZOHimplicitlyadopted
+across most Mamba-based architectures. Recent efforts, such as real-valued simplifications and trapezoidal discretization, demonstrate that revisiting numerical
+formulations can improve specific capabilities; however, these approaches are either task-specific, limited to language modeling, or evaluate a single alternative
+in isolation. In contrast, this work systematically examines discretization itself
+as a first-class modeling component, providing a comparison of five advanced

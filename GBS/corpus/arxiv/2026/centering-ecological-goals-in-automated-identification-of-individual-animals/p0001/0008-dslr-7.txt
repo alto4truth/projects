@@ -1,0 +1,61 @@
+title: Centering Ecological Goals in Automated Identification of Individual Animals
+source: arxiv
+year: 2026
+document_id: centering-ecological-goals-in-automated-identification-of-individual-animals
+authors: Lukas Picek; Timm Haucke; Lukáš Adam; Ekaterina Nepovinnykh; Lasha Otarashvili; Kostas Papafitsoros; Tanya Berger-Wolf; Michael B. Brown; Tilo Burghardt; Vojtech Cermak; Daniela Hedwig; Justin Kitzes; Sam Lapp; Subhransu Maji; Daniel Rubenstein; Arjun Subramonian; Charles Stewart; Silvia Zuffi; Sara Beery
+page: 1
+section: dslr-7
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20626v1
+
+optional. It is the only way to judge whether automated identification models can be safely and reliably deployed in a particular
+ecological study.
+9
+
+3.4 What Should be Recorded so Identities Remain Revisable and
+Reliable Over Time?
+Encounter histories do not emerge automatically from raw observations. Rather, they are
+assembled through a chain of data processing, candidate matching, expert review, and later
+correction.Identity records should therefore be treated as revisable scientific
+products rather than fixed facts.The key question is simple: if an important identity assignment is questioned later, can the study reconstruct how that decision was made
+and what information was available at the time? In practice, this requires a clear decision
+history. Authors should be able to recover the original image, recording, or encounter; the
+relevant metadata, such as date, site, and sensor; the candidate identities considered; the
+final decision; and whether that decision was made automatically, reviewed by an expert,
+and/or later revised [75]. This matters especially in long-term studies, where catalogs grow,
+marks change, and earlier assignments may need correction.
+Changes should also remain visible. When identities are merged, split, or relabeled, the
+earlier state should not disappear without a trace. Stable identifiers, dated catalog versions,
+and simple change logs allow analyses to refer to a known catalog state and to be updated
+transparently when the identity history changes. Any assignment that could materially affect
+abundance, survival, movement, or social inference should remain reviewable, ideally in perpetuity. In that sense, traceability should be part of ecological rigor [16]. It allows encounter
+histories to improve over time, and it makes automated identification more trustworthy as
+methods, data, and projects evolve. However, we currently lack the necessary off-the-shelf
+systems or data management tools to support this level of reproducibility and traceability
+without adding a substantial burden to data collectors and managers. Achieving this standard today would usually require dedicated database infrastructure, persistent identifiers,
+versioned data management, clear annotation and review protocols, and people with the
+time and technical capacity to maintain these systems over the long term. This outlines a
+clear priority for technological innovation moving forward.
+4 Framing Existing Projects Through this Lens
+Real deployments of automated individual animal identification rarely follow an ideal plan.
+Field logistics, annotation effort, shifting study goals, and incomplete metadata all leave
+lasting traces in the data, the workflow, and the effort required to achieve the intended
+outcome. We illustrate this using two case studies. Both evolved over time as researchers
+responded to practical constraints, new questions, availability of new methods and tools, and
+growing data scales of both number of individuals and observations per individual considered.
+4.1 Grevy’s Zebra: A Precision-sensitive Mark–recapture Setting
+The Great Grevy’s Rally (GGR) is a biannual photographic census of Grevy’s zebra in
+Kenya, carried out since 2016 [8]. During each rally, citizen scientists drive prescribed routes
+over two survey days and photograph zebras encountered along the way. The survey estimates
+population size from the numbers of individuals seen only on Day 1, only on Day 2, and on
+both days, using the Lincoln–Petersen estimator [65]. Because the survey window is short,
+the analysis assumes no recruitment, perfect survival over the two days, no migration, and
+equal sighting probability. This makes the system a clear example of how identification
+errors can affect ecological inference, as both false matches and missed links can bias the
+abundance estimate.
+A central practical issue is deciding which detections should enter the matching process
+at all. Some exclusions are obvious, such as heavily occluded animals, blurry images, etc.
+Others are less clear, e.g., two images may show the same zebra but from non-comparable
+views, or they may show the same side at angles or under occlusions that still prevent
+confident identification. In response, the workflow developed the notion of anidentifiable
+10

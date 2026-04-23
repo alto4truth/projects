@@ -1,0 +1,31 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+pensate for the lack of relevant documents in other
+languages, we conduct cross-lingual experiments.
+In this setting, we use half of the documents in
+English and the other half in the target language to
+guarantee an equal amount of retrieval across all the
+experimental settings. Nevertheless, as shown in
+Table 2, the amount of information is unequal and
+some document imbalance in languages takes place
+for Basque and Kazakh. As shown in Figure 2, it is
+evident that cross-lingual retrieval is the most optimal strategy for the low-resource languages, even
+when compared with monolingual English-only retrieval, and the performance accuracy becomes on
+par with the rest of the languages. On the contrary,
+the performance for Spanish, French and Italian
+is degraded under this setting, sometimes scoring
+even lower than the low-resource languages.
+5.4 Optimal Retrieval Strategy
+Based on the data illustrated in Figure 2, we can
+conclude that the most optimal strategy for the
+MMQA with external evidence is to retrieve in English for high-resource languages for which the digital presence is significant, and prefer cross-lingual
+retrieval for the underrepresented ones. Although
+retrieving in the

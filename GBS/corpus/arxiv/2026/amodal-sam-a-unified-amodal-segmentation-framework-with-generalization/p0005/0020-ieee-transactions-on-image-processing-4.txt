@@ -1,0 +1,22 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 5
+section: ieee-transactions-on-image-processing-4
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+essity for manual labeling. Further details
+are outlined below.
+Target-Aware Occlusion Synthesis (TAOS).Since the
+current extensive segmentation dataset only labels the visible
+regions, within TAOS, we choose to artificially create and
+model occlusions that could potentially occur among distinct
+objects.
+To generate an image featuring an occluded object, we
+first randomly select an image from the original dataset,
+i.e., SA-1B, containing an object within a predefined size
+range, designating this object as thetarget. Subsequently, we
+randomly crop an object (or a portion thereof) from another

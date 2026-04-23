@@ -1,0 +1,34 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+Table 4: Cross-domain generalization on MCPUniverse. TPGO is optimized on Browser Automation
+only.
+Method Browser Web Repo 3D
+ReAct (DS-V3.2) 20.51 16.36 42.18 60.03
++ TPGO28.03 18.18 44.91 63.16
+erative improvement. Both variants start at 26.41%.
+With GRAO, TPGO improves steadily to33.74%
+by iteration 3 and then remains stable. Without
+GRAO, performance is much less stable: it peaks
+at 30.03% in iteration 2, but then drops sharply to
+14.55% by iteration 4, far below the initial baseline.
+This suggests that, without historical context, the
+optimizer overfits to recent failures and introduces
+updates that hurt previously acquired capabilities.
+Overall, GRAO improves both final performance
+and optimization robustness by mitigating catastrophic forgetting.
+5.5 Cross-Domain Generalization
+To examine whether TPGO merely overfits to the
+task subset used for targeted validation, we conduct a cross-domain generalization study on MCPUniverse. We optimize the DeepSeek-V3.2-based
+ReAct agent using only the Browser Automation
+domain and then evaluate the resulting agent on
+three unseen domains without further optimization.
+As shown in Table 4, TPGO improves not only the
+in-domain Browser Autom

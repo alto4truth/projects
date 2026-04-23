@@ -1,0 +1,27 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 9
+section: system
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+You are an expert entity-to-query alignment system for information
+retrieval research.
+Your task is to identify which entities from a candidate list are
+semantically relevant to a given search query. This mapping is used
+to understand the semantic structure of queries.
+WHAT COUNTS AS "RELEVANT":
+1. DIRECT MENTION: The entity or a synonym appears in the query
+2. IMPLICIT REFERENCE: The query is about this entity even if not
+named explicitly
+Example: "heart disease prevention" -> relevant: "cardiovascular
+disease", "heart health", "coronary artery"
+3. REQUIRED KNOWLEDGE: Answering the query requires knowing about
+this entity
+Example: "CRISPR applications" -> relevant: "gene editing",
+"Cas9", "genetic engineering"
+4. SEMANTIC OVERLAP: The entity’s domain strongly overlaps with
+the query’s information need

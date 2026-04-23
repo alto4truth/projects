@@ -1,0 +1,43 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+The image depicts a small, cluttered
+kitchen with a wooden floor. The
+kitchen is equipped with a sink, an
+oven, and a stove. There are various
+items scattered around the kitchen,
+including a knife, a spoon, and a bowl.
+In addition to the kitchen appliances,
+there are several bottles and cups
+scattered throughout the room. A pair
+of scissors is also visible on the
+countertop. The overall scene gives the
+impression of a busy, lived-in space.
+Please describe the image in detail.
+kitchen, floor, sink, oven, stove, knife,
+spoon, bowl, bottle, cup, scissors, ...
+Assume the image width and height are
+normalized to [0, 1]. Locate the scissors
+and return its bounding box in the format
+[x_min, y_min, x_max, y_max], where
+[x_min, y_min] is the top-left corner and
+[x_max, y_max] is the bottom-right
+corner of the bounding box. Output only
+the four numbers in a single list. Do not
+include any explanation or extra text.
+[0.76, 0.5, 0.99, 0.87]
+Describe [0.76, 0.5, 0.99, 0.87]
+in the image in detail.
+The image features a green plastic
+bucket placed on the floor next to a
+sink. The bucket is positioned near the
+right side of the sink, and it appears to
+be filled with some items.
+<multiple region de

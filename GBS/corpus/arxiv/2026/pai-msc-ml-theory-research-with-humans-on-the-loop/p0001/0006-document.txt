@@ -1,0 +1,23 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+Why Academic Research Is Harder Than Current Agentic Search
+How is our setting different fromAutoResearch[43] and related systems?Not mainly because we target
+theory, but because academic research offers much weaker objective feedback. Many recent agentic successes
+depend on three favorable conditions:
+1.Bounded domain.AutoResearch edits a single file,train.py.
+2.Short evaluation loops.Each AutoResearch run is capped at five minutes.
+3.Automatic objectives.AutoResearch optimizes validation bits-per-byte; MLAgentBench [44] likewise studies executable ML tasks with clear goals and automatic evaluation.
+In more open-ended settings, evaluation itself becomes part of the problem. The AI Scientist [45], as
+pAI/MSc, relies on simulated review and an automated reviewer; Agent Laboratory [46] allows human
+guidance and finds that it improves research quality; and MLR-Bench [47] uses an LLM judge with structured
+rubrics.
+Academic research, especially theory, weakens all three assumptions. The search space is open-ended, significance may become clear only years later, as in delayed recognition and “sleeping beauties” [48], and no
+short-horizon scalar objective faithfully captures novelty, corr

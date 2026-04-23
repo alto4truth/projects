@@ -1,0 +1,30 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 14
+section: sam-promptsselection
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+As described in the main document, SAM [27] can receive
+input prompts that orient the model towards identifying the
+desired object. In this work, we consider two types of input
+prompts: a set of points describing coordinates that belong
+to the desired object and a bounding box that includes
+the desired object. The five facial landmarks extracted by
+RetinaFace [13] define the set of points fed as the first
+prompt. These points are known to belong to the face and
+orient the segmentation process towards the inclusion of important facial regions that may be occluded (such as the eyes,
+when glasses or sunglasses are present). The choice of an
+appropriate bounding box, however, is not as straightforward
+due to the distinct disposition of the faces inside the image
+frame. Figure 3 shows four examples of samples segmented
+with SAM using the perimeter of the image as the bounding
+box prompt. It can be easily seen that this technique is
+efficient for FERET [40], IJB-C [35], and the portrait images
+of FRGCv2 [39]; in these cases, the face occupies most of
+the frame, and using the image perimeter as a bounding box
+ensures that the biggest possible amount of relevant pixels
+is included inside t

@@ -1,0 +1,54 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 2
+section: r-e-s-u-lt-s
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+jacency matrix
+Data Related xi Observed water-level signal at gauge station i
+xmodeled
+i Modeled water-level (via ADCIRC) signal at gauge station i
+15
+
+2.4 Graph neural network
+Our proposed model integrates GCN and Graph Attention Networks (GAT) to capture
+both global topological dependencies and adaptive local feature importance within
+the graph. The overall architecture is described in detail in Section 2.5.
+2.4.1 Graph Convolution Network (GCN)
+The GCN layer aggregates feature information from a node’s local neighborhood
+through a normalized summation. It captures global structural information eﬀiciently
+through a spectral-based convolution. It can be presented as follows:
+hl+1
+i = σ
+0
+@ X
+j∈N (i)
+1
+cij
+ϕlhl
+j
+1
+A , (2)
+where N (i) denotes the set of nodes directly connected to node i, σ is the activation
+function.
+2.4.2 Graph Attention Network (GAT)
+Following a self-attention strategy [ 96], GAT learns the hidden features of each node
+by iteratively using node features to compute similarities. The GAT layer extends
+GCNs by applying an attention mechanism that learns to assign different weights to
+neighboring nodes, allowing the model to focus on more relevant features.
+At this stage, each node i is represented by a feature vector hl
+i ∈ RF , all node
+features can be expressed as hl = {hl
+1, hl
+2, . . . , hl
+N }, where N and F denote the total
+number of nodes and features, respectively. To project these input features into a
+higher-dimensional latent space, a shared linear transformation is applied using the
+weight matrix W ∈ RF ′×F . The transformed features are then used to compute
+pairwise attention scores between the connected nodes. The attention coeﬀicient eij
+between the nodes i and j is obtained as:
+16

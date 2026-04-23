@@ -1,0 +1,29 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 1
+section: sgr-json
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+: 28/min (tachypneic).
+the Stage 2 compiler:
+1. Extracts KV pairs: {heart rate: “105 bpm (tachycardic)”,blood pressure: “90/60 mmHg (hypotensive)”,spo2: “88%”,respiratory rate:
+“28/min (tachypneic)”}.
+2. Canonicalizes: all keys match the official item list.
+3. No FP-gates triggered for vital signs.
+4. Normalizes:heart rate→tachycardic,blood pressure→hypotensive,
+spo2→88,respiratory rate→tachypneic.
+The remaining 130 items are filled asunknown.
+3.2 Stage 2: Deterministic Compiler (0-LLM)
+Stage 2 performsno LLM calls. It implements a 4-step deterministic
+algorithm (Algorithm 3.2):
+Step 1: KV Extraction.Parse the Stage 1 summary text into a flat
+dictionary of item/value pairs by matchingKey: Value lines in
+each domain section. Lines with not stated or unknown values
+are skipped.
+Step 2: Canonicalization.Normalize item names via: (a) exact match
+against the official 134-item list; (b) case-folding and punctuation
+5

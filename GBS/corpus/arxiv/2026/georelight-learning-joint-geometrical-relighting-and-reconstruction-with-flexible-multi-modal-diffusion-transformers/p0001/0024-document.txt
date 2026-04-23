@@ -1,0 +1,84 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+escribed in the
+main paper, we compare against feed-forward estimators
+(VGGT, MoGe2) that predict point maps. Our evaluation
+process is as follows:
+12
+
+1. Normalize both the predicted and ground-truth point
+clouds to fit within a shared[−1,1] 3 bounding box.
+2. Align the predicted shape to the ground-truth shape using the Iterative Closest Point (ICP) algorithm [1].
+3. Calculate all geometry metrics (CD, F-Score) based on
+these normalized and aligned shapes.
+Normal EvaluationFor surface normal evaluation, all
+metrics (Angular Error, RMSE) are computed on the foreground pixels using the ground-truth segmentation mask
+10. Additional Results
+10.1. User Study
+GeoRelight is capable of jointly generating all five modalities in parallel from a single input image: a high-fidelity
+relit image under novel illumination, a clean albedo map,
+a detailed surface normal map, a segmentation mask, and
+a robust 3D reconstruction. The model generalizes well
+to out-of-distribution subjects, robustly handling a wide
+variety of ages, accessories, complex clothing, and nonstandard poses. Furthermore, GeoRelight supports controllable generation: rotating the target environment map produces physically-plausible relit images with dynamic shadows, while the estimated albedo and normal maps remain
+stable, and scaling the light intensity correctly modulates
+the brightness and shadow depth. We refer readers to our
+supplementary video for extensive visualization of joint
+generation results and controllable relighting.
+As mentioned in 9.1, a direct quantitative comparison
+with closed-source methods like LuxPostFacto [26] is not
+feasible due to data license restrictions. Hence, we conduct
+a user study to evaluate the performance.
+We asked 32 participants to evaluate a set of 20 randomly selected subjects from our in-the-wild test set. The
+study was divided into two tasks. The first task was a twoalternative forced-choice (2AFC) task for relighting. Participants were shown the input image and environment map,
+followed by the relit results from our GeoRelight and LuxPostFacto [26], and were asked, "Which relit image is better? Please focus on details such as hair and face". The
+second task was a three-alternative forced-choice (3AFC)
+task for geometry. Participants were shown the results from
+GeoRelight, MoGe2 [35], and VGGT [33]. To fairly evaluate the 3D shape, we provided rotating animations of each
+reconstruction and asked, "Which 3D reconstruction is better? Please focus on details such as eyes and hair". We
+randomize the order of each method in each question.
+We collected a total of 640 votes (32 participants × 20
+comparisons) for each task. The results demonstrate an
+overwhelming preference for our method. For relighting, in
+the comparison against LuxPostFacto, GeoRelight was preferred in93.8%(596.5) of votes, while LuxPostFacto was
+preferred in only6.2%(43.5) of votes. For geometry, in
+the reconstruction task, GeoRelight was preferred in93.4%
+(598.0) of votes, decisively outperforming both MoGe2 at
+5.2%(33.0) and VGGT at1.4%(9.0).
+Our user study measures perceived photorealism and geometric accuracy, which strongly validates our model’s superior performance, aligning with the quantitative metrics
+in the main paper.
+10.2. Qualitative Comparison on Relighting
+In Figure 14, we provide a qualitative comparison for the
+task of relighting on the HumanOLAT dataset. We compare GeoRelight against state-of-the-art methods, including DiffusionRenderer (DR) [22], IC-Light [47], NeuralGaffer [12], and DiLightNet [45].
+Our method consistently demonstrates superior photorealism and physical plausibility. We observe that many baselines struggle with these examples. DiffusionRenderer often produces results that are overly dark or lack contrast.
+DiLightNet shows significant instability, frequently introducing severe color artifacts. Methods like IC-Light and
+NeuralGaffer can struggle with correct exposure, color balance, or preserving fine details.
+In contrast, GeoRelight produces relit images that are
+free of artifacts and well-harmonized with the target illumination. Our method properly handles complex interactions between light, hair, and clothing, and accurately renders shadows consistent with the target environment map.
+10.3. Qualitative Comparison on Reconstruction
+We compare our 3D reconstruction against the leading feedforward geometry estimators, VGGT [33] and MoGe2 [35].
+We also provide qualitative comparison on geometry reconstruction in the main paper (Fig. 7).
+We observe that VGGT often produces overly smooth
+or “blobby” reconstructions. It captures the general human
+form but fails to preserve fine-grained details such as clothing folds, hair, or accessories.
+While MoGe2 is able to capture more high-frequency detail, it frequently introduces significant noise, “floater” artifacts, and non-manifold holes in the geometry. This results
+in a brittle and visually unappealing surface.
+GeoRelight successfully combines the strengths of both
+approaches. Our reconstructions are both robustly complete
+and rich in sharp detail. Our method accurately captures
+complex surfaces like clothing wrinkles, accessories, and
+hair, all while maintaining a coherent and clean 3D mesh.
+Notably, our reconstructions are comparable in quality to
+methods that use explicit surface representations such as
+neural surface fields [39], while being generated in a single forward pass without iterative optimization. We refer
+readers to our supplementary video, which shows these 3D
+reconstructions as rotating animations for a full multi-view
+13

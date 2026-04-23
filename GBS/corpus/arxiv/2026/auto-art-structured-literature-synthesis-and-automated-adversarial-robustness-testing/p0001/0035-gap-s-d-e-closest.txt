@@ -1,0 +1,37 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+Table 11:Feature comparison with existing frameworks.
+Feature AUTO-ARTARTCounterfitGarakPyRIT
+Evasion attacks✓ ✓ ✓— —
+Poison/extract/infer✓ ✓— — —
+LLM/agent attacks✓∼—✓ ✓
+Pre-screening (RDI)✓— — — —
+Grad. masking detect.✓— — — —
+Multi-norm worst-case✓— — — —
+Adaptive selection✓— — —∼
+NIST/OW ASP mapping✓— — — —
+EU AI Act compliance✓— — — —
+SARIF CI/CD output✓— — — —
+Y AML orchestration✓— —∼—
+13.2 Direction 2: Architecture-Conditional
+RDI Calibration for Vision Transformers
+and LLMs
+Core idea.RDI (Eq. 1) is validated only on CNN feature
+geometries [C5]. Vision Transformers produce patch-based
+representations with global attention patterns, and decoderonly LLMs produce sequential token embeddings—both have
+fundamentally different inter/intra-class distance structures
+than CNNs. We proposearchitecture-conditional calibration:
+learn a lightweight mapping gα :RDI raw 7→RDI cal that accounts for architecture-specific feature geometry. Concretely,
+for each architecture family F (CNN, ViT, LLM), fit an isotonic regression gF on a calibration set of (RDI, AutoAttack
+rank) pairs.
+Edge-case checklist:
+• Data leakage:Calibration set disjoint from evaluation set;
+calibration uses held-out Robus

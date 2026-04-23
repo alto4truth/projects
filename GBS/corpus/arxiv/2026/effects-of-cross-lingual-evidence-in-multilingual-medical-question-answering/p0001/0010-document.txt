@@ -1,0 +1,26 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+based retrieval, curated medical repositories or
+LLMs’ parametric knowledge interact with models ranging from 7B to 70B+ parameters across
+MMQA tasks, reporting detailed findings on their
+relative performance. This will allow us to conclude which strategy is better to perform MMQA,
+especially when low resourced language are involved. Our contributions are the following:
+This paper provides a systematic empirical analysis of different external evidence integration strategies for Multilingual Medical Question Answering
+(MMQA) across languages with varying resource
+availability and LLMs of different sizes. Our contributions are the following:
+• English-centric retrieval dominates multilingual medical QA.Across six languages
+and all tested models, retrieving evidence
+from English web sources consistently outperforms retrieval in the language of the question
+for high-resource languages. This highlights
+the combined impact of English-heavy medical content on the Web, on the databases of
+medical knowledge, and English-biased pretraining of current LLMs.
+• Cross-lingual retrieval is essential for lowresource languages.For Basque and Kazakh,
+we show that combining English and targetlanguage

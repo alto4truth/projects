@@ -1,0 +1,23 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+Published as a paper at 3rd DATA-FM workshop @ ICLR 2026, Brazil.
+2.Q3 (Hard Negatives):To sharpen the decision boundary, we sample documents that score
+in the 50th–75th percentile (the third quartile) of a preliminary classifier. These "Q3 negatives" typically represent fluent but low-utility text (e.g., repetitive procedural content),
+forcing the model to learn subtler distinctions beyond surface-level fluency.
+4 EVALUATION
+Qualitative Analysis.To understand how each classifier filters samples, we first verify that score
+distributions concentrate near zero with a flatter tail at higher scores. We then inspect the top and
+bottom 25 samples to confirm that highly-ranked samples are knowledge-rich and well-structured,
+while low-ranked ones are poorly written or uninformative. Using a monolingual FineWeb2-HQ
+classifier as baseline, we compute rank correlations (Spearman and Kendall) and analyze the top
+20 samples with the largest rank increases and decreases across classifiers. This reveals the filtering patterns each classifier prioritizes (e.g., grammar, content quality, symbols). Selected ranking
+changes are shown in Appendix C.
+Downstream Task Evaluation.To better understand how

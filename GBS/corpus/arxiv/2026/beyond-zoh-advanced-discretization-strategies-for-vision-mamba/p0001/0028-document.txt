@@ -1,0 +1,24 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+Beyond ZOH: Advanced Discretization Strategies for Vision Mamba 11
+Thisimprovementisachievedwithoutchangestothemodelcapacityorthetraining procedure, indicating that advanced discretization methods directly benefit
+segmentation tasks. The POL and HOH methods achieve the strongest segmentation performance, with mIoU scores of45.4and45.2, corresponding to gains
+of4.4and4.2over ZOH, respectively. These results suggest that higher-order
+approximations better capture fine-grained spatial transitions and boundary information for semantic segmentation. RK4 also improves over ZOH, although
+minimally, while FOH underperforms the baseline.
+4.3 Object Detection on COCO2017
+Settings.We evaluated object detection performance on the MS COCO 2017
+benchmark [17], which consists of 118K training images, 5K validation images,
+and 20K test images. All experiments use ViM as the backbone within the Cascade Mask R-CNN framework [6]. Unlike ViT-based backbones, ViM is used
+directly without architectural modifications for high-resolution processing.
+Training is performed using the AdamW optimizer with a weight decay of
+0.1and a total batch size of64. The learning rate is initialized at1×10−4 and
+decayed l

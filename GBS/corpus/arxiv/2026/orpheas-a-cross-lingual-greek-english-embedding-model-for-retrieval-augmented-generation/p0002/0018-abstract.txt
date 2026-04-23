@@ -1,0 +1,19 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+ogy defines hierarchical relationships where documents are decomposed into chunks via theHAS_CHUNK
+relation and each chunk is associated with its semantic components throughHAS_ENTITY,HAS_ATOMIC_FACTand
+HAS_QUESTIONrelations. Entities are further connected through domain-specificrelationedges, capturing the semantic network within the corpus. This structured representation enables systematic extraction of semantically coherent
+anchor-positive pairs for contrastive learning.
+Algorithm 1 outlines the three-stage methodology for constructing the knowledge graph, generating the fine-tuning
+dataset and applying cross-lingual augmentation. The algorithm operates on document corpusC, chunk sizesand sampling parametersm a,m q,m e (controlling atomic facts, questions and entity-based sentences per chunk), ultimately
+producing fine-tuning datasetDof semantically aligned anchor-positive pairs. In Stage I, the algorithm constructs
+knowledge graphGby segmenting documents into chunks and using large language models to extract entities, relationships, atomic facts and grounded questions, which are then mapped to the ontology and integrated into the graph.
+In Stage II, the algorithm generates trai

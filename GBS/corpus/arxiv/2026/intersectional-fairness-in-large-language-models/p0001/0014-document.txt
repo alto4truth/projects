@@ -1,0 +1,21 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+dels when those previously used are deprecated at the time of writing this paper and therefore cannot be reused
+for replication), using a very simple accuracy metric: each answer option is scored 1 if it matches the expert-labeled
+answer and 0 otherwise, then averaged across bias categories and question types. This facilitates straightforward model
+comparison and demonstrates a clear result: models perform substantially better on knowledge questions than on
+reasoning questions, indicating a decline in performance when bias requires nuanced reasoning or deduction. However,
+the used metric is limited because it treats fairness as merely selecting the correct option in a controlled multiple-choice
+setup, rather than measuring real-world harms, open-ended biased generation, consistency, or group-level disparities.
+Fairness in AI is commonly evaluated through both individual and group perspectives, each associated with different
+metric families and assumptions about what equitable treatment should mean [Baresi et al. 2023; Chen et al. 2024b;
+Cheng et al. 2021; Ferrara et al. 2024; Pham et al. 2025; Ramadan et al. 2025; Smith et al. 2025]. In the literature, individual
+fairness includes

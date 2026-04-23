@@ -1,0 +1,30 @@
+title: RespondeoQA: a Benchmark for Bilingual Latin-English Question Answering
+source: arxiv
+year: 2026
+document_id: respondeoqa-a-benchmark-for-bilingual-latin-english-question-answering
+authors: Marisa Hudspeth; Patrick J. Burns; Brendan O'Connor
+page: 1
+section: nle-855-0-0-855
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20738v1
+
+erved this was
+caused by the model not following directions and
+leaving explanations in its final answer.
+QwQ and o3-mini perform better on the constrained Latin translations than the unconstrained
+ones, outperforming LLaMa. If a model is correctly
+able to follow the given constraint, then the space
+of possible translations is smaller, so it should be
+easier to provide a translation closer to the reference(s).
+7. Discussion and Future Work
+Reasoning abilities are beneficial for some skillbased tasks (scansion, literary devices) but are unable to compensate for poorer foundational knowledge. Considering the added computational cost,
+it is unnecessary to use reasoning models for most
+tasks we tested. We also observed QwQ’s reasoning ability sometimes prevented it from coming to
+an answer at all, getting stuck in reasoning loops.
+However, o3-mini, the other reasoning model, did
+not have the same issue.
+In this paper, we use basic prompting strategies,
+butmoretargetedtechniquesmayneedtobedeveloped to improve performance in certain areas such
+as vocabulary, grammar, and especially scansion.
+All models lag behind when translating into Latin
+versus English. More work should investigate th

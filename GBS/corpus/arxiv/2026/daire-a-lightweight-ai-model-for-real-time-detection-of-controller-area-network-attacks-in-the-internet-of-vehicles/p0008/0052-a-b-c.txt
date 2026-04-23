@@ -1,0 +1,35 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 8
+section: a-b-c
+chunk: 52
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+S. Alam et al.
+Table 8
+Results of the experiments on CICIoV2024 dataset to evaluate the performance
+of our allocation scheme given in Eq. (1), comparing it with varying fixed
+neuron counts. An ↑ signifies that a higher value is preferable, while a ↓
+indicates that a lower value is preferable.
+Number of
+neurons in each
+layer
+Training time ↓ Testing time ↓ TPR ↑ FPR ↓
+𝑖 × 𝑐 (Eq. (1)) 80.69 s 10.1 s 99.998% 0.00000452
+10 98.9 s 11.1 s 99.989% 0.00001360
+25 150.1 s 11.6 s 99.989% 0.00001360
+50 165.86 s 12.2 s 99.998% 0.00000452
+100 236.26 s 12.7 s 99.998% 0.00000452
+200 452.83 s 13.1 s 99.998% 0.00000452
+By carefully selecting and optimizing various components of our
+model, DAIRE achieved a classification time of just 0.03 ms per sample
+and consumed 0.35 KB of memory when evaluated on the Car-Hacking
+dataset. This demonstrates DAIRE’s exceptional capability to classify
+IoV attacks in real-time.
+A critical observation from our results is DAIRE’s consistently high
+performance across both majority and minority classes, despite a significant imbalance in the CICIoV2024 dataset. This robustness can be
+attributed to several architectural and methodological factors. First,
+spoofing attacks su

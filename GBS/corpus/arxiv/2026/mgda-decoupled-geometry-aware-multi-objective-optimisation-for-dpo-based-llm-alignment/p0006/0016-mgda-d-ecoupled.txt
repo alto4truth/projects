@@ -1,0 +1,26 @@
+title: MGDA-Decoupled: Geometry-Aware Multi-Objective Optimisation for DPO-based LLM Alignment
+source: arxiv
+year: 2026
+document_id: mgda-decoupled-geometry-aware-multi-objective-optimisation-for-dpo-based-llm-alignment
+authors: Andor Vári-Kakas; Ji Won Park; Natasa Tagasovska
+page: 6
+section: mgda-d-ecoupled
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20685v1
+
++4.0%*
++1.9%*
++3.2%*
++4.1%*
++4.7%*
+Figure 5: Overall net win rates against the golden responses for Qwen2.5-0.5B-Instruct, relative to the −64.1% net win
+rate of REFERENCE. ∗ indicates statistically significant improvement over REFERENCE.
+leaving limited headroom for alignment gains without degrading general capabilities.
+A key factor underpinning the success of MGDA-DECOUPLEDin this domain is the homogeneity of the objective
+functions. Unlike general multi-task learning, where losses may have arbitrary units (e.g., MSE vs. Cross-Entropy)
+and span drastically different ranges, each objective in our setup uses the identical DPO formulation. Consequently,
+the loss values serve as a calibrated proxy for optimisation difficulty, where a higher lossLi indicates a task further
+from convergence. While MGDA-NORMALISEDdiscards information from the loss Li as well as information from the
+gradient magnitude ∥∇Li∥ via normalization (Equation 4), MGDA-DECOUPLEDactively preserves and uses those
+through the ratio∥∇L i∥/L i (Equation 5), a strategy that proves beneficial within the uniform loss landscape.
+The utility of such geometry-aware algorithms is intrinsically linked to the density of gradi

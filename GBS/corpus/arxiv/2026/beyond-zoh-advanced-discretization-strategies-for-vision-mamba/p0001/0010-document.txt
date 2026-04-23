@@ -1,0 +1,32 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+4 F. Ibrahim et al.
+discretization methods within a consistent ViM framework. By isolating discretization from other architectural changes, our study clarifies its independent
+impact on performance in visual tasks, establishing discretization as a key design
+choice rather than a fixed implementation detail.
+3 Methodology
+3.1 Preliminaries
+Mamba Selective State Space Model (S6)Mamba enhances the contextaware capabilities of traditional SSMs by making its parameters functions of the
+input. The original Mamba architecture was intended for 1D sequential data such
+as language tokens. SSMs map a 1D functionx(t)∈Rto an outputy(t)∈R
+through a hidden stateh(t)∈R N. Using the parametersA∈R N×N ,B∈
+RN×1 ,C∈R 1×N, the continuous system is defined by
+dh(t)
+dt =Ah(t) +Bx(t), y(t) =Ch(t) (1)
+For the discrete sequences defined by the inputxt = (x0, x1, . . .)∈R L, the
+continuous system parameters in Eq. (1) must be discretized using a step size
+∆. ZOH [30] is used as the simplest discretization method in [16,18,33]. Using
+step size∆, the continuous system parametersA,Bare converted to ¯A, ¯Bas
+¯A=e A∆,
+¯B= (A∆) −1(eA∆ −I)·∆B
+(2)
+and the discretized system equation can be represented as
+ht = ¯Aht−1

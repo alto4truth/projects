@@ -1,0 +1,16 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 8
+section: compass-ecda
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+the buffer reflects how susceptible the network architecture is to catastrophic
+forgetting, which remains low due to the nature of PEFT.
+D.5 Hyperparameter Selection for COMPASS-ECDA
+To determine optimal regularization strength EWC (λ) and loss weight for the DAR buffer (β), we performed
+a joint hyperparameter sweep over a predefined set of values for both hyperparameters. The search space for
+49

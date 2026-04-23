@@ -1,0 +1,34 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: a-r-a-r
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+. We denote the masked
+input image and the cropped region asI mask andI crop, respectively. GivenI mask and four candidate image regions
+(one ground-truth region plus three random regions) in a
+multiple-choice format, the model is prompted to select the
+correct regionI crop that best fits the missing part of the original image. The detailed prompt template for this task is
+provided in the supplementary material.
+1We set the minimal length as 28 to avoid overly small regions.
+Patch Ordering.Given an input imageI∈R H×W×3 ,
+we first partition it intoM×Ngrid of patches, each of
+size H
+M × W
+N . We denote the patch sequence asP=
+[p1, p2, ..., pM×N ], wherep i ∈R
+H
+M × W
+N ×3. We then apply a random permutationπ:{1,2, ..., M×N} 7→
+{1,2, ..., M×N}to obtain a shuffled patch sequence
+Pπ = [p π(1), pπ(2), ..., pπ(M×N) ]. GivenP π, the model
+is prompted to predict the correct patch orderingπ −1 =
+[π−1(1), π−1(2), ..., π−1(M×N)]that recovers the original image. The detailed prompt template for this task is
+provided in the supplementary material.
+Geometric Correspondence.Given an input imageI∈
+RH×W×3 , we first randomly selectKpoints 2 on the image.
+We denote the point sequence asP= [p 1, p2, .

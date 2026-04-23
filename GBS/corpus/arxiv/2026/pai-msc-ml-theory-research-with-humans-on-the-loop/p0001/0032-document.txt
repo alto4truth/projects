@@ -1,0 +1,25 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+The controller selects frontier claims from the claim graph, generates alternative proof strategies for each,
+and scores the resulting branches using a composite function:
+40% LLM-estimated promise of the strategy
+25% Impact on the claim graph (how many downstream claims are unblocked)
+15% Cost efficiency (expected tokens per unit of progress)
+10% Depth penalty (prefer shallower proofs)
+10% Sibling diversity (penalize strategies too similar to existing branches)
+The top-scoring candidates are executed in forked workspaces. Failed branches can spawn debugging children up to a configurable depth, while low-scoring branches are pruned. The corresponding artifacts—
+tree_search_state.jsonandtree_branches/—make the entire search process inspectable rather than
+hidden inside one monolithic prover call.
+The scoring formula itself reflects the care behind the system: it is not a generic “try again” loop, but a
+deliberate balance between exploration breadth, graph-level impact, and computational discipline.
+4 The System
+This section gives a single, self-contained walkthrough ofpAI/MSc. The workflow contains 23 specialist
+agents and 30 total graph nodes; the additional nodes are routing gates

@@ -1,0 +1,26 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+This work introduced an explicit formulation of dropout
+as an additive regularization mechanism for Transformer
+architectures, enabling direct and interpretable control over
+regularization strength across attention and feed-forward
+network components. Even though we did not identify a
+straightforward way to derive a unified regularization expressionwhendropoutisappliedsimultaneouslytomultiple
+input matrices within the attention block, explicit dropout
+regularizationcanbeinducedtomultiplearchitecturalcomponents by incorporating the corresponding regularization
+terms into the final loss.
+Extensive experiments across image classification, temporal action detection, and audio classification demonstrate
+that explicit dropout achieves performance comparable to,
+or exceeding, conventional implicit dropout strategies such
+as DropAttention and DropKey. In particular, explicit regularization applied to value projections and feed-forward
+network layers consistently yields strong and stable improvements across modalities, while explicit value-based
+regularization proves especially beneficial in more complex
+classification tasks such as CIFAR-100. Results on THUMOS14 further show that explicit

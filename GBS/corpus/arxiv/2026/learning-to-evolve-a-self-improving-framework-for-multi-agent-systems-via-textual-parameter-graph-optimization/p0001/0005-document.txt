@@ -1,0 +1,29 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+where the system must improve without a "golden"
+answer, relying on self-correction from execution
+feedback. On the other hand,imitative optimizationseeks to align the system’s behavior with desired outcomes by learning from expert demonstrations or ideal solutions.
+To alleviate this manual burden, the first wave of
+research has explored Automatic Prompt Optimization (APO) (Wang et al., 2023; Yuksekgonul et al.,
+2024). While promising, these methods fall short in
+addressing the unique complexities of MAS in two
+fundamental ways. First, they primarily focus on
+"flat" prompt optimization and lack thestructural
+awarenessrequired to navigate the intricate web
+of interactions within a multi-agent architecture. A
+system failure often stems not from a single flawed
+prompt, but from a subtle bug in a tool’s definition,
+a logical gap in the workflow, or a misaligned communication protocol, components that current APO
+methods are ill-equipped to identify and correct
+(Fang et al., 2025). Second, and more fundamentally, existing optimizers arestatic; they do not
+learn from the optimization process itself. They
+execute a search or apply a gradient-like update for
+a given problem, but they lack

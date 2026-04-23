@@ -1,0 +1,22 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+[Chataigner et al . 2025; Liu et al. 2024; Yang et al. 2025] adopt the original
+formulation from [Parrish et al. 2021] which distinguishes between ambiguous and disambiguated contexts, while
+others define alternative measures, serving the same purpose as the bias scores [Haider et al. 2025; Hida et al. 2024;
+Narnaware et al. 2025; Saffari et al. 2025; Wu et al. 2025].
+Another limitation lies in how LLM consistency is assessed. More in detail, most prior work does not test repeated
+runs of the same prompt but instead relies on indirect checks such as shuffling answer options in MCQ-based datasets,
+permuting questions, or even re-prompting with slight variations [Jin et al. 2024; Narnaware et al. 2025; Saffari et al.
+2025; Xu et al. 2025; Yang et al. 2025]. The closest setup to assessing consistency across different prompts is [Wang et al.
+2025], where the authors use five different random seeds to test controlled, reproducible differences in outputs. This,
+however, does not capture the full stochastic variation of LLM behavior.
+Building on these insights, our study advances the literature by evaluating multiple state-of-the-art LLMs under
+zero-shot settings on the social-bias-focus

@@ -1,0 +1,28 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 47
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+le instruction following in complex settings.
+B.2 Ablation Study: Skill Mastery Threshold
+We conducted an ablation study to analyze the sensitivity of the Skill Curriculum Learning to the mastery threshold parameter τ. Figure 6 presents the
+final performance of the Skill Curriculum Learning agent after 10 billion environment steps in
+CrafText-Symbolic configuration for different values ofτranging from0.5to0.9.
+The results demonstrate that τ= 0.7 provides
+an optimal balance for curriculum progression. We
+hypothesize that lower thresholds (τ= 0.5 ) allow
+the agent to progress too quickly to complex skills
+before achieving reliable proficiency, while higher
+thresholds (τ= 0.9 ) cause the agent to spend excessive time perfecting basic skills, slowing overall
+learning. The τ= 0.7 value strikes an optimal
+balance between progression speed and skill reliability.
+B.3 Analysis of Ontology Quality
+We investigate how the quality of subtask extraction affects downstream performance. In particular,
+we focus on three factors: (i) oversampling of redundant or synonymous subtasks (Oversampling),
+(ii) missing core subtasks (Missing Skills), and (iii)
+the presence of spurious (non-classified) subtas

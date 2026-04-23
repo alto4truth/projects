@@ -1,0 +1,24 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 2
+section: mnist
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+re 4 indicates that shallow-depth
+mutants exhibit more severe accuracy degradation on class 0, suggesting an output bias towards
+class 1. The bias still exists, but is less pronounced for deep-depth mutants.
+Generally, these findings suggest that QuanForge can be used not only for testing data quality
+but also for analyzing model internals. Vulnerable regions identified by specified-region mutation
+could inform future model development and enhancement. Other techniques in classical models,
+including fault localization [18], weight ranking [58], and performance recovery [50], could also be
+extended to quantum circuits in future research. From a quantum-specific perspective, the ansatz
+architecture design (e.g., more trainable gates) within these regions can be refined to investigate
+their correlation with model expressivity [15] and generalization [61].
+Answer to RQ2:Mutations at shallow depths have a greater impact on QNN performance, as
+early-stage gates extract foundational features whose perturbations propagate and amplify
+through the circuit. The sensitivity of QNNs to qubit-level mutations is affected by the specific
+circuit scale, encoding schema and entanglement complexity.

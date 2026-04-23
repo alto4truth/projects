@@ -1,0 +1,140 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 1
+section: rgb-xyz
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+. The process is initialized at i= 0
+by performing a standard CAD rendering to generate highfidelity reference RGB-D templates and their corresponding
+
+5
+XYZ-maps {Iref,Z ref} for all N×B hypotheses. Specifically,
+this hybrid strategy optimizes the trade-off between fidelity
+and speed: while the initial templates are produced via a full
+rendering engine to capture complex surface details, subsequent
+iterations leverage a fast GPU-accelerated RGB-XYZ reprojection mechanism to update the references. Following the
+generation of these templates, a weight-shared CNN encoder
+ϕ maps both the query Iq ∈R N×7×H×W and the synthesized
+multi-object references I(i)
+r ∈R (N×B)×7×H×W into a unified
+feature space. The encoded query features are expanded along
+the hypothesis dimension toF q ∈R (N×B)×C×H 0×W0, ensuring strict dimensional alignment with the reference features
+F(i)
+r =ϕ(I (i)
+r ).
+While traditional graphics engines like OpenGL [54] or
+PyTorch3D [55] incur prohibitive latency due to redundant
+rasterization, and even modern differentiable renderers such
+as nvdiffrast [43] remain sensitive to vertex complexity when
+scaling to hundreds of hypotheses, we implement a GPUacceleratedtensorized RGB-XYZ re-projectionmechanism
+for all subsequent refinement steps (i >0 ). This approach shifts
+the computational bottleneck from geometry-heavy rendering
+to a lightweight 2D image-space transformation, reducing periteration overhead while preserving spatial fidelity.
+Specifically, we pre-acquire a set of canonical reference
+representations {Iref , Zref } (consisting of RGB and depth
+maps) from an initial viewpoint. To synthesize the updated
+multi-instance references I(i)
+r ∈R (N×B)×7×H×W at iteration
+i, we apply a rigid transformation ∆Pi = [∆Ri|∆ti] and a
+re-projection functionWdirectly onto these reference maps:
+I(i)
+r =W(I ref , Zref ,∆P i),(7)
+where W denotes the RGB-XYZ re-projection operator. This
+operator generates a 7-channel tensor comprising the reprojected RGB channels, the transformed XYZ-map, and a
+derived binary visibility mask. By bypassing the entire rasterization pipeline, our re-projection is purely image-space driven
+and agnostic to the object’s mesh density. This ensures that
+the computational cost remains stable even for high-resolution
+meshes, providing the high-throughput performance necessary
+for efficient multi-object pose tracking and refinement.
+Following the generation of these templates, a weight-shared
+CNN encoder ϕ maps both the query Iq ∈R N×7×H×W
+(similarly structured with RGB-XYZ-Mask channels) and the
+synthesized references I(i)
+r into a unified feature space. The
+query feature is extracted as:
+Fq base =ϕ(I q),(8)
+which is then expanded along the hypothesis dimension
+to Fq ∈R (N×B)×C×H 0×W0 to enable seamless batch-level
+parallelization. Similarly, the reference features are obtained
+as:
+F(i)
+r =ϕ(I (i)
+r )∈R (N×B)×C×H 0×W0 .(9)
+The concatenated features F(i)
+concat ∈R (N×B)×2C×H 0×W0 are
+first processed by a Relational Encoder Erel, which leverages
+self-attention mechanisms to model the geometric correlations
+between the query image and the rendered hypotheses. The
+resulting latent representation is then passed to two parallel
+prediction heads:
+1) Confidence Score Head:This branch estimates the quality
+of each candidate hypothesis. It outputs a set of confidence
+scores s(i), which are used to rank or select the most
+accurate pose candidates:
+s(i) =σ
+
+Headconf
+
+Erel
+
+F(i)
+concat
+
+∈R (N×B)×1 (10)
+where σ denotes the sigmoid (or softmax) activation
+function.
+2) Pose Regression Head:This branch performs iterative
+refinement by predicting the relative 6D transformation. In
+a single forward pass, it regresses the incremental rotation
+and translation updates:
+(∆Ri,∆T i) =Head pose
+
+Erel
+
+F(i)
+concat
+
+∈R (N×B)×6
+(11)
+At each iterationi, the poses are recursively updated as:
+Ti+1 =T i + ∆Ti,R i+1 = ∆Ri ⊗R i.(12)
+In Eq(12), the rotation is updated by composing the current
+state with an incremental rotation ∆Ri via the quaternion
+product ⊗. This ∆Ri is typically computed as the exponential
+map of an update vector in theSO(3)Lie algebra.
+By replacing repetitive rendering with the Fast RGB-XYZ
+Re-Projection and leveraging the parallelized multi-instance
+inference pipeline, our framework achieves high-throughput
+performance while maintaining robustness even in complex
+multi-object scenarios.
+(2) Amodal Mask Prediction and ROI Re-Alignment:To
+address the systematic bias caused by ROI misalignment,
+particularly along the depth axis due to scale inconsistencies,
+we introduce an auxiliary mask branch in the AMPR module,
+inspired by space-time pixel clustering used in video object
+segmentation [56]. Instead of predicting the amodal mask
+directly, the mask prediction branch focuses on estimating the
+occluded regions Mocc specifically. Taking the concatenated
+features Fconcat = [F (i)
+r , Fq] as input, the ConvTransposebased [57] decoderDupsamples the latent representations to
+generate a pixel-wise occlusion probability map (as illustrated
+in the bottom-right of Fig. 3).
+Mocc =D([F concat])∈R N×B×H 0×W0 .(13)
+During training, the supervision is derived from the residual
+between the ground-truth amodal mask M gt
+occ and the visible
+mask Mvisib, denoted as M gt
+occ =M gt
+amodal ⊙(1−M visib). To
+ensure category-agnostic generalization, the mask branch is
+trained on the large-scale synthetic dataset from FoundationPose [24]. This allows the model to learn a robust geometric
+prior for shape completion, enabling zero-shot transfer to novel
+objects without category-specific fine-tuning. At inference time,
+the final amodal mask is obtained by the union of the visible
+and predicted occluded regions:M amodal =M visib ∪M occ.
+The predicted amodal mask serves two purposes. First, it
+corrects translation bias by providing a more accurate objectcentric bounding box. Second, it enforces scale consistency

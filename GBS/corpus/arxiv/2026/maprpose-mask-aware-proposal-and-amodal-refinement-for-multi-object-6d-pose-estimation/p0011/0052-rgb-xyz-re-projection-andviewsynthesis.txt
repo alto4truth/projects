@@ -1,0 +1,20 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 11
+section: rgb-xyz-re-projection-andviewsynthesis
+chunk: 52
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+sample
+contributes to a local neighborhood on the target image grid,
+enabling smooth aggregation of geometric and photometric
+signals while reducing discretization artifacts. The final synthesized outputs Mt
+xyz and Mt
+rgb are constructed from the same
+set of correspondences, ensuring strict cross-modal alignment.
+a) Assumption.:This formulation assumes locally consistent visibility and approximately view-invariant appearance,
+which holds under small baseline settings. Under large viewpoint changes, occlusion and non-Lambertian effects may
+violate these assumptions, degrading correspondence quality.

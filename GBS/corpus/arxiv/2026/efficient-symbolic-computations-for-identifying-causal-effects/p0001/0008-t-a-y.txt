@@ -1,0 +1,24 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+whenever the effectλLY is identified beforehand. By clearing the denominators of both identification
+formulas, we obtain two “identifying polynomials” for the effectλAY, which are as follows:
+λAY (σLT σLA −σ LLσT A)−σ LT σLY +σ LLσT Y andλ AY σT A −σ T Y +λ LY σLT .
+Note that the degree of the second polynomial is lower. Our algorithm finds identifying polynomials
+of the lowest possible degree, resulting in significantly more efficient computations.
+The organization of the paper is as follows. In Section 2, we introduce necessary tools and provide a
+definition of rational identifiability. In Section 3, we recall complexity results for Gröbner bases, and
+in Section 4 we establish how to check rational identifiability with homogeneous equations. Based
+on this, we then present our main result and our identification algorithm in Section 5. In Section 6,
+we compare our algorithm with the standard symbolic algorithm by Garcia-Puente et al. (2010)
+in numerical experiments. Finally, in Section 7, we relate our algorithm to the polynomial-time
+sufficient criteria that exist in the literature. The Appendix contains the proofs of all results.
+2 Rational Identifiability
+LetG= (V, D, B)be a mix

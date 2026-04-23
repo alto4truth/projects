@@ -1,0 +1,32 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 1
+section: rag-db
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+21.89 19.87 21.79
+Open-Ended Questions BLEU-4 07.58 08.67 07.63
+Open-Ended Questions CIDEr 46.85 44.27 45.56
+Open-Ended Questions SPICE 18.73 17.42 18.06
+Gemma-3-27B
+Yes/No Questions Accuracy 49.72 31.97 48.85
+Multiple-Choice Questions Accuracy 31.25 23.73 30.88
+Open-Ended Questions BERTScore 31.28 28.07 31.12
+Open-Ended Questions BLEU-1 76.85 67.28 76.38
+Open-Ended Questions BLEU-2 63.82 58.08 63.55
+Open-Ended Questions BLEU-3 28.01 18.99 27.57
+Open-Ended Questions BLEU-4 11.08 13.58 11.21
+Open-Ended Questions CIDEr 46.85 44.27 45.56
+Open-Ended Questions SPICE 18.73 17.42 18.06
+Table 4presents baseline results on our test benchmark, reporting off-the-shelf model performance
+across multiple question types and evaluation metrics. In addition to Accuracy, BLEU-𝑛, and
+BERTScore, we report CIDEr and SPICE to better capture consensus with human annotations and
+semantic consistency. These results establish reference scores for different LLMs.
+5 Conclusions and Future Work
+We presentedRSRCC, a benchmark for remote sensing change question-answering constructed
+through a hierarchical semi-supervised curation pipeline centered on Best-of-𝑁 ranking. By
+combiningsegmentation-basedcandidateloca

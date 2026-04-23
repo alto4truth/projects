@@ -1,0 +1,34 @@
+title: RespondeoQA: a Benchmark for Bilingual Latin-English Question Answering
+source: arxiv
+year: 2026
+document_id: respondeoqa-a-benchmark-for-bilingual-latin-english-question-answering
+authors: Marisa Hudspeth; Patrick J. Burns; Brendan O'Connor
+page: 1
+section: nle-855-0-0-855
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20738v1
+
+need to think through multiple steps to come to the
+correct answer (what declension/conjugation is the
+word, what are the correct endings for that declension/conjugation, what is the particular ending the
+question is asking for, and how does that ending
+combine with this lemma?), but an LLM may have
+seen all inflected forms neatly formatted together
+in its training data.
+LLaMA 3 QwQ o3-mini
+Setting Lat Eng Lat Eng Lat Eng
+Unconst. 25.50 45.41 18.53 39.91 23.42 43.29
+Const. 20.88 37.46 21.52 17.95 27.25 34.68
+Overall 23.7145.25 19.53 39.27 24.6743.14
+Table 8: BLEU scores for each translation setting
+and target language.
+Long-form TranslationOverall, LLaMa is the
+best model for translating into English, and o3-mini
+is best for translating into Latin.
+There are very few constrained translation questions where English is the target language, so results are less valid.
+LLaMa performs worse on constrained translations across each target language setting. QwQ
+sees a large drop on constrained translation when
+English is the target, but we observed this was
+caused by the model not following directions and
+leaving explanations in its final answer.
+QwQ and o3-mini perform better on the constr

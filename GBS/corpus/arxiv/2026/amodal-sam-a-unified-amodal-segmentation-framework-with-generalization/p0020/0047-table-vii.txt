@@ -1,0 +1,32 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 20
+section: table-vii
+chunk: 47
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+PERFORMANCE COMPARISON OF DIFFERENT PROMPTS.
+Prompt KINS COCOA-cls
+mIoU f mIoU o mIoU f mIoU o
+Box 85.43 59.27 83.18 35.62
+Points 84.74 58.52 82.76 36.28
+V. CONCLUDINGREMARKS
+Summary.In this work, we presented Amodal SAM, a
+framework that successfully extends SAM’s capabilities to
+open-world amodal segmentation through three synergistic
+aspects: model, data, and optimization. Our approach achieves
+state-of-the-art performance across multiple benchmarks while
+maintaining zero-shot capabilities, and can be readily extended
+to video applications. We believe this work can provide a
+solid foundation for future research in open-world visual scene
+understanding.
+Limitations & Future Work.The introduced TAOS serves
+as an autonomous data generation pipeline, eliminating the
+need for manual intervention. While a small portion of authentic occlusions may remain unprocessed due to missing
+annotations, this limitation does not significantly impact the
+method’s effectiveness. Notably, TAOS-generated data consistently improves performance across benchmark datasets, and
+addressing this constraint presents a promising opportunity to
+further enhance amodal segmentation capabilities.

@@ -1,0 +1,44 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 4
+section: ssl-r1
+chunk: 55
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+Answer: 270 Answer: 180 Answer: 90
+Determine the rotation angle of the image (clockwise direction)RotationPrediction
+Figure 6.Examples of the Rotation Prediction task.The ground-truth answer for each example is provided at the bottom.
+AB
+CD
+AB
+CDAnswer: C Answer: D
+AB
+CDAnswer: B
+Select the candidate image that is most visually similar tothe reference imageVisualSimilarity
+Figure 7.Examples of the Visual Similarity task.The ground-truth answer for each example is provided at the bottom.
+CD
+AB
+Answer: D
+AB
+CDAnswer: A
+A
+C
+B
+DAnswer: B
+Selectthe candidate image that best fits the missing part of the original imageRegionInpainting
+Figure 8.Examples of the Region Inpainting task.The ground-truth answer for each example is provided at the bottom.
+1 2 3
+4 5 6
+7 8 9Answer: 3, 6, 7, 2, 1, 8, 9, 5, 4
+1 2 3
+4 5 6
+7 8 9Answer: 7, 6, 9, 2, 4, 8, 3, 5, 1
+1 2 3
+4 5 6
+7 8 9Answer: 6, 4, 7, 5, 9, 2, 8, 1, 3
+Arrange the patches into the correct layout and provide the patch indices in raster-scan orderPatchOrdering
+Figure 9.Examples of the Patch Ordering task.The ground-truth answer for each example is provided at the bottom.
+14

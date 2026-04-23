@@ -1,0 +1,30 @@
+title: Trust, Lies, and Long Memories: Emergent Social Dynamics and Reputation in Multi-Round Avalon with LLM Agents
+source: arxiv
+year: 2026
+document_id: trust-lies-and-long-memories-emergent-social-dynamics-and-reputation-in-multi-round-avalon-with-llm-agents
+authors: Suveen Ellawela
+page: 1
+section: document
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20582v1
+
+low reasoning).
+2 Related Work
+2.1 LLMs in Social Deduction and Board
+Games
+Most directly related to our work isAvalonBench[Light
+et al., 2023], which introduced a benchmark for evaluating LLM agents in The Resistance: Avalon. AvalonBench
+focused on single-game performance with rule-based opponents; our work extends this in three key directions, motivated
+by bringing the game closer to how humans actually play it
+through multi-agent multi-round dynamics. When humans
+play repeatedly with the same group, they develop mental
+models of how each player behaves differently depending
+on their team assignment, noticing that someone might be
+“aggressive when evil” but “cautious when good.” First, we
+introduce cross-game memory to study how such reputation
+and trust dynamics develop over repeated interactions between the same LLM agents. Second, we systematically
+vary reasoning depth to isolate its effect on strategies used
+during game play. Third, we conduct detailed qualitative
+analysis of the natural language strategies that emerge, cataloging role-conditional reputation patterns and behavioral
+“tell” taxonomies that agents use to identify hidden roles.
+2.2 LLMs in Strategic Multi-Agent

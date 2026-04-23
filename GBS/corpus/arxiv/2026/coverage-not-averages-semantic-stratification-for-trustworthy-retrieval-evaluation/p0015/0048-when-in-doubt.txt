@@ -1,0 +1,60 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 15
+section: when-in-doubt
+chunk: 48
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+a43ebe6517f, 8fc062ac5cded5cbacb164e2b128f9914eb04727
+Delta: 0.327 | J: 0.361 | Clusters: 13 (1 new)
+[Q2] "information technology strategic impact"
+19
+
+Coverage, Not Averages Semantic Stratification for Trustworthy Retrieval Evaluation
+Docs (16): 14316b885f65d2197ce8c6d4ab3ee61fdab052b8, d1909ee7543ab92a8d8aad81af6c589278654b48, 42540
+e75173dea14c343a567f9fc722db8609e7e, 65e58981f966a6d1b62c1f7d889ae3e1c0a864a1, 5
+f09cb313b6fb14877c6b5be79294faf1f4f7f02, 4c341889abc15b296c85dd5b4e1356c664f633f4, 7
+bad7050e0f447ea68c1ff5838cd5392726ca388, c13ee933b7ddccb4a1ccc7820c09fda8f32d1fb5, 588
+b9fae704c1964d639a5f87c3793a1ad354e69, d60fcb9b0ff0484151975c86c70c0cb314468ffb, 37
+c998ede7ec9eeef7016a206308081bce0fc414, 8326f86876adc98c72031de6c3d3d3fac0403175,
+eec44862b2d58434ca7706224bc0e9437a2bc791, ac8877b0e87625e26f52ab75e84c534a576b1e77, 6
+e07fcf8327a3f53f90f86ea86ca084d6733fb88, 176d486ccd79bdced91d1d42dbd3311a95e449de
+Delta: 0.386 | J: 0.078 | Clusters: 4 (1 new)
+[Q3] "What are the TG13 guideline recommendations for biliary drainage timing and antimicrobial use in Grade II and
+III acute cholangitis patients?"
+Docs (1): e65881a89633b8d4955e9314e84b943e155da6a9
+Delta: 0.250 | J: 1.000 | Clusters: 3 (1 new)
+D.4. Zero-Query Cluster Analysis
+Table 9 provides detailed examples of zero-query clusters identified in NFCorpus. These clusters represent methodological
+topics (statistical methods, clinical trial designs, and survey techniques) that collectively span over 1,700 documents but
+receive no evaluation queries in the original benchmark. This systematic gap means retrieval performance on methodological
+queries (e.g., “What is a Cox proportional hazards model?”) remains entirely untested.
+Cluster Description Ent. Docs
+Statistical methods (Cox regression, hazard ratios) 104 470
+Multivariate analysis methods 135 325
+Clinical trial methods (RCTs, double-blind) 141 450
+Dietary assessment (food frequency questionnaire) 81 192
+Survey methodologies 70 89
+Healthy human participants 79 155
+Table 9.Zero-query clusters in NFCorpus span 1,700+ documents but have no evaluation queries.
+D.5. Retrieval Performance on Zero-Query Clusters
+To directly evaluate retrieval behavior in untested regions of the corpus, we generate queries targeting two zero-query
+clusters in NFCorpus and evaluate three retrieval methods using nDCG@10.
+Zero-Query Cluster Dense BM25 Hybrid
+Cancer cell lines 0.7950.8540.872
+Statistical methods 0.365 0.3360.483
+Table 10.Retrieval performance (nDCG@10) on queries generated for zero-query clusters.
+These results illustrate why coverage is critical for trustworthy evaluation. Thecancer cell linescluster achieves strong
+retrieval performance across all methods, yet this signal is entirely absent from the benchmark’s aggregate score due to the
+lack of evaluation queries. In contrast, thestatistical methodscluster represents a genuine blind spot, with substantially
+lower performance across all retrievers.
+The two clusters further reveal distinct retriever dynamics. BM25 outperforms dense retrieval oncancer cell lines, while the
+hybrid approach provides the largest improvement onstatistical methods, suggesting that different regions of the corpus
+favor different retrieval strategies.
+E. Additional Experiment Results
+E.1. Results on Additional Datasets
+Figures 7-12 present performance distributions and system comparisons for FiQA and SciDocs datasets.
+20

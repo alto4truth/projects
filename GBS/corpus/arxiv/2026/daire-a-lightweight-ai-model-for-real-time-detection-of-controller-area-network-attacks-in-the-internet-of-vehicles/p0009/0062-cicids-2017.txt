@@ -1,0 +1,73 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 9
+section: cicids-2017
+chunk: 62
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+rential privacy.
+
+Alladi
+et al.
+(2021)
+98.26% NR 1.55 ms NR VeReMi Extension ARM Cortex-A53; 1.2 GHz;
+single core.
+CAN data to image;
+Lightweight CNN.
+
+Fig. 9. Comparison of DAIRE with six state-of-the-art works.
+computational power alone does not account for the considerable time
+difference observed.
+DAIRE achieves an average DR of 99.78% on the Car-Hacking
+dataset, performing on par with or better than the six other studies. Its
+FPR of 0.04% surpasses the two other works that reported their FPRs.
+Our lightweight ANN model is developed through an empirical design
+approach, with a detailed explanation of the optimization process and
+how it was tailored to the specific task using experiments conducted on
+a subset of the dataset.
+6.2. Future works
+There are two deployment approaches for an IDS for a network
+of IoVs. Centralized and distributed (Taslimasa et al., 2023). In a
+centralized approach, the IDS is deployed on a remote cloud or an edge
+server. In a distributed approach, the IDS is deployed on each network
+node, i.e., an IoV, and the attack data is shared collaboratively. There
+are pros and cons in both approaches. A distributed approach is more
+secure and private and does not require high bandwidth. Whereas,
+centralized approach is more suitable for resource-constrained IoVs.
+Some disadvantages of a distributed approach are: lack of accuracy;
+heterogeneous network with different normal and abnormal behaviors;
+and the collaboration results may diverge from the global optimized
+point. Some disadvantages of a centralized approach are: the single
+point of failure, scalability, and the requirement of a large bandwidth.
+IDS deployment is an open research problem (Taslimasa et al., 2023).
+In the future, we would like to explore the installation and deployment
+of DAIRE as part of an IDS using a distributed approach on a network
+of IoVs using TinyML (Ray, 2022). In our opinion distributed approach
+is more scalable and secure.
+DAIRE is evaluated using datasets for wired networks that contain
+specific attacks, such as DoS, fuzzy, and spoofing. In the future, we
+would like to evaluate DAIRE against other types of generalized datasets
+that also contain malicious activities related to mobility features and
+data with varying traffic conditions, such as routing attacks, speed of
+vehicle, and distance between vehicles, etc.
+In the future, we aim to evaluate DAIRE against adversarial ML
+attacks (Malik et al., 2024). These attacks are designed to disrupt the
+prediction accuracy of an ML model by altering inputs, leading the
+model to misclassify. If successfully executed, they can greatly diminish
+a model’s precision and in the case of IoVs, can lead to severe damage.
+The Adversarial Robustness Toolbox (ART) (Nicolae et al., 2018) is an
+open-source Python library developed by IBM Research. It is designed
+to help researchers and practitioners assess and enhance the resilience
+of ML models against adversarial attacks. We will use ART to create
+adversarial examples of IoV attacks and evaluate DAIRE’s performance
+in response to these attacks.
+6.3. Real-world deployment considerations
+DAIRE is capable of detecting not only major types of CAN attacks
+but also less common attacks, such as Gas Spoofing and RPM Spoofing,
+which are crucial for real-world applications. With an inference time
+of just 0.03 ms, DAIRE offers deterministic latency, making it suitable
+Machine Learning with Applications 23 (2026) 100859
+13

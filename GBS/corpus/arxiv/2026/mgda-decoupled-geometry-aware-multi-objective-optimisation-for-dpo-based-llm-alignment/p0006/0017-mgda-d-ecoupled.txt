@@ -1,0 +1,22 @@
+title: MGDA-Decoupled: Geometry-Aware Multi-Objective Optimisation for DPO-based LLM Alignment
+source: arxiv
+year: 2026
+document_id: mgda-decoupled-geometry-aware-multi-objective-optimisation-for-dpo-based-llm-alignment
+authors: Andor Vári-Kakas; Ji Won Park; Natasa Tagasovska
+page: 6
+section: mgda-d-ecoupled
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20685v1
+
+hat proves beneficial within the uniform loss landscape.
+The utility of such geometry-aware algorithms is intrinsically linked to the density of gradient conflicts between
+objectives. While UltraFeedback contains four distinct objectives, some of them can be more correlated than conflicting
+on certain prompts (e.g.,Honestyvs.Truthfulness). Geometric gains would likely be more pronounced in settings
+involving more numerous or fundamentally opposing objectives (e.g.,Helpfulnessvs.Harmlessness[Bai et al., 2022]).
+However, we note that the conservative formulation of DPO itself can dampen these conflicts: the KL-divergence
+term acts as a shared pull towards the reference model, artificially aligning gradients, particularly when the penalty
+coefficientβis large.
+The UltraFeedback dataset represents a specific, somewhat constrained instance of the general pipeline shown in
+Figure 1, also shaping our results. First, all per-objective datasets Di originate from the same prompt-response pool,
+with samples simply re-paired according to objective-specific scores. As a result, there is substantial overlap across
+per-objective datasets, which may reduce the density of gradient conflicts. Second

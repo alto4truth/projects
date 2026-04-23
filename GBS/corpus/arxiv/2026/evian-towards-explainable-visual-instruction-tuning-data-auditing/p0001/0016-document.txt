@@ -1,0 +1,20 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+ks.
+By producing a triplet (SL, SK, SV ) with explicit explanations, Phase 2 delivers an interpretable and multi-dimensional quality assessment.
+These scores directly guide downstream data ranking and selection.
+3.4 Data Ranking and Selection
+To enable downstream filtering, the threedimensional score vector S is aggregated into a
+single scalar:
+Soverall = SL +S K +S V
+3 .(2)
+This default scheme assumes equal importance, but
+weights can be tuned for specific applications (e.g.,

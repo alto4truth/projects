@@ -1,0 +1,28 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 8
+section: a-b-c
+chunk: 58
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+r
+memory footprint than all the other six works.
+By specifically choosing and optimizing the different components of
+our model, DAIRE achieved a classification time of 0.03 ms per sample
+(input). Although Song et al. (Song et al., 2020) are using a deep CNN
+model but they still achieve a much better time of 0.15 ms per sample
+than others. They are using one of the CNN models, Reduced InceptionResNet, which consists of multiple sets of convolutional layers, and that
+may be one of the reasons their classification time is larger than DAIRE.
+Also, their memory consumption is larger because they convert CAN
+data into images. Yang et al. (2021) and Qin et al. (2024) also achieve
+a classification time < 1 ms, but the memory used by Yang et al. (2021)
+is much larger than DAIRE (because of stacking and clustering), and
+the use of a proprietary dataset in Qin et al. (2024) makes it difficult
+to compare with DAIRE.
+Although Huang et al. (2024) employs a lightweight CNN and has
+eliminated unnecessary layers, CNNs inherently include multiple convolutional layers and are designed to process images. As a result, their
+classification time remains significantly higher than that of DAIRE. For
+the sa

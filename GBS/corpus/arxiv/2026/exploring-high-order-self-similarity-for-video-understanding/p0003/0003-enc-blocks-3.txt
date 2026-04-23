@@ -1,0 +1,27 @@
+title: Exploring High-Order Self-Similarity for Video Understanding
+source: arxiv
+year: 2026
+document_id: exploring-high-order-self-similarity-for-video-understanding
+authors: Manjin Kim; Heeseung Kwon; Karteek Alahari; Minsu Cho
+page: 3
+section: enc-blocks-3
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20760v1
+
+positionk4 8 4 8 4 8 4 8
+Experimental Setup.We synthesize a controlled video clip with two sets of
+moving objects, each comprising three objects: a blue circle, a red heart, and
+a green cube (Fig. 8a). Objects within each set share the same motion—either
+horizontal or vertical movement. We select two green cubes as queries and visualize
+their STSS maps from the 1st- to the 3rd-order (Figs. 8b and 8c). Here, we
+define the STSS encoding functiong as vectorization over(L, U, V )dimensions,
+i.e.,g:R T×H×W×L×U×V →R T×H×W×(LU V) .
+Characteristics of STSS at Different Orders.The 1st-order STSS captures
+the motion flow of the query by establishing correspondences based on appearance
+across frames. However, it struggles to distinguish between visually similar objects
+in different sets, capturing the motion of other unintended objects. The 2nd-order
+STSS addresses this limitation by computing similarities based on motion patterns
+rather than appearance. It effectively identifies set of objects that shares similar
+motion with the query, distinguishing visually similar objects moving differently.
+The 3rd-order STSS extends this by grouping regions based on these motion
+segments, highlighting o

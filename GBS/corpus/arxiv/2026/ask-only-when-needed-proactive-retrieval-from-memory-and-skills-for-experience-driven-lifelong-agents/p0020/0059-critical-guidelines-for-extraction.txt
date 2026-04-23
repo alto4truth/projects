@@ -1,0 +1,29 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 20
+section: critical-guidelines-for-extraction
+chunk: 59
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+1. **FIELD: "when_to_use" (The Trigger Scope)**
+- **Definition:** Precisely define the context where this memory applies. You MUST
+consider three dimensions:
+a. **Task Requirement:** What is the user specifically asking for? (e.g., "When the
+task requires distinct counting of similar objects...")
+b. **Specific Scenario:** What is the current state of the agent? (e.g., "When the
+retrieved context is too long to fit in one prompt...")
+c. **Observation:** What feedback did the environment provide? (e.g., "When the tool
+execution returns a Timeout Error...")
+- **STRICT CONSTRAINT:**
+- Do NOT use specific dataset names (e.g., "In AlfWorld", "In HotpotQA").
+- Do NOT use specific entity names (e.g., "When looking for file ’data.csv’"). Instead,
+generalize it (e.g., "When looking for a target file that does not exist").
+2. **FIELD: "experience" (The Solution)**
+- **Definition:** A strict, actionable instruction on how to handle this exact situation
+correctly.
+- **Constraint:** **PURELY FORWARD-LOOKING.** Do NOT explain why the previous attempt
+failed. Do NOT include diagnosis or "The agent failed because..." statements.
+- **Content:** Directly provide the optimized logic or step-by-step pr

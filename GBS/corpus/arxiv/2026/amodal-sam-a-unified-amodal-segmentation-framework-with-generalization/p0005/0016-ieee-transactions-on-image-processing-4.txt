@@ -1,0 +1,71 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 5
+section: ieee-transactions-on-image-processing-4
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+Mask
+Downsampling
+Conv
+Spatial Completion
+Adapter
+Model Adaptation
+Data
+Adaptation Optimization Adaptation
+Prompt Encoder
+Mask Decoder
+Regional consistency
+Holistic topological
+regularization
+Segmentation
+Supervision
+Concatenate
+Sigmoid
+Gaussian
+Blur
+Mask
+Input
+ROI
+Block
+Block
+Block
+Block
+Block
+Block
+Feature
+Mask
+Soft
+Gating
+Image
+Feature
+Adapter
+Adapter
+Adapter
+Block
+ViT BlockMask Down
+Sample
+Mask
+Specified
+FeatureSoft
+Gating
+ConvConv
+LeakyReLUSigmoid
+×3
+Fig. 3. The Spatial Completion Adapter combines the image features and
+Mspec by concatenating them as input, and then iterates the feature selection
+and completion process three times.
+of the binary maskM spec. To this end, Eq. (3) is accordingly
+updated as:
+M=F dec(Fprompt(B),F ′
+a-enc(I, Mspec)).(4)
+It is important to note that the maskM spec might not
+be accessible during model training, given the absence of
+a dataset containing both occluded and full segmentation
+ground-truth masks of the target object. Our approach to tackle
+this challenge will be presented in III-C.
+Spatial Completion Adapter (SCA).In Eq. 4, incorporating the spatial prior viaM spec into the encoder underscores the
+need to devise a dedicated encoder capable

@@ -1,0 +1,33 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+Beyond ZOH: Advanced Discretization Strategies for Vision Mamba 13
+Table 3: Fastest method per batch size based on latency and throughput.
+Fastest MethodBatch SizeLatency (ms/img)Throughput (img/s)
+BIL 1 13.46 74.28
+POL 4 3.39 298.16
+FOH 8 1.70 587.08
+FOH 16 0.86 1164.25
+POL 32 0.48 2193.21
+ZOH 64 0.42 2257.83
+POL 128 0.38 2588.37
+FOH 256 0.32 3272.25
+BIL 512 0.21 4804.37
+Table 4: Summary of deployment scenarios.
+Deployment ScenarioBatch SizeBest Method Performance Improvement Over Baseline (ZOH)
+Real-Time/Edge 1 BIL 13.46 ms (Latency) 0.37% Faster
+High-Throughput / Cloud512 BIL 4,804 img/s (Throughput) 0.67% Faster
+Balanced / Batched 32 POL 2,193 img/s (Throughput)Context Dependent
+interactions among intermediate terms. This increases the risk of gradient instability and limits practical gains in accuracy under standard training regimes,
+consistent with its failure to surpass the practical significance threshold.
+These observations highlight a fundamental trade-off between convergence
+speedandaccuracy.Lower-order,causaldiscretizationsfavorfasteroptimization;
+however, higher-order and non-causal methods improve final performance at the
+cost of increased training complexity. From a

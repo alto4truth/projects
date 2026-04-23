@@ -1,0 +1,24 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+art in this
+more challenging benchmark.
+Results on GPT-4o assisted evaluation.Going beyond
+CHAIR, we employ GPT-4o for more comprehensive openended evaluation. The results are shown in Table 4. Our RCoV provides more accurate responses on all LVLMs while
+also enhancing the relevancy of the generated descriptions.
+Given that the visual understanding and language logic capabilities of GPT-4o have already reached a human level,
+it can more comprehensively assess the benefits brought by
+our method.
+4.3. Ablation Study
+We ablate our R-CoV using LLaV A-v1.5-7B as the default
+LVLM on the POPE benchmark. Several intriguing properties are observed.
+Sampled answer numbers.We first study the effect of
+the number of sampled answersLper region in the region
+6

@@ -1,0 +1,49 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+Published as a conference paper at ICLR 2026
+0 10 20 30 40
+Hours
+0.2
+0.4
+0.6Accuracy
+(a) Segment Granularity Variations
+n=8
+n=2
+n=4
+0 50 100 150 200 250
+Steps
+0.2
+0.4
+0.6Accuracy
+(b) Segment Strategy Variations
+Adaptive(n=4)
+Fixed token-count
+0 25 50 75 100 125 150
+Steps
+600
+700
+800
+900
+1000
+1100Average Length
+Response Length
+Adaptive(n=4)
+Fixed token-count
+Figure 2:(a)Effect of segment granularity by varying the average number of points per segment (n), evaluated by validation accuracy under the same wall-clock time.(b)Comparison between the proposed adaptive
+segmentation strategy and a fixed token-count partition baseline. All results are obtained on the MATH
+Evaluation dataset.
+achieved by GRPO-VPS. This discrepancy reveals a lack of generalization in PRM-based methods, which
+tend to overfit to familiar patterns seen during training. In contrast, our process supervision, grounded in the
+model’s own belief dynamics, offers more robust and consistent improvements across tasks, while reducing
+reasoning length by up to 34.0%.
+4.3 ABLATIONSTUDY
+Effect of segment granularity.To investigate the impact of segment granularity on the efficiency and
+performance of our adaptive strategy, we

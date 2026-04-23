@@ -1,0 +1,27 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+n distance
+between the predicted and ground truth gaze points.
+For clinical role prediction and surgical phase recognition,
+we evaluate them on the 4D-OR dataset, and use F1 score as
+the metric. For team communication detection, we evaluate
+it on the Team-OR dataset, and split the dataset into a train
+set and a test set with 60% and 40% videos, respectively. We
+report the average precision (AP) at different temporal intersections over union (tIoU) thresholds as the metrics.
+3.3. Implementation details
+We use the PyTorch framework to implement our approach
+with a single NVIDIA A100 GPU on the Ubuntu system. We
+train the gaze-following model for 15 epochs using the Adam
+optimizer with an initial learning rate of 1e-3. For role prediction, we train the model for 20 epochs using the AdamW optimizer with an initial learning rate of 1e-4. For phase recognition, we setKto 25, and train the model for 30 epochs using
+the AdamW optimizer with an initial learning rate of 1e-4. For
+team communication detection, we train the spatial-temporal
+gaze model for 40 epochs with a batch size (B) of 1,024, and
+use the AdamW optimizer with an initial learning rate of 1e-4.

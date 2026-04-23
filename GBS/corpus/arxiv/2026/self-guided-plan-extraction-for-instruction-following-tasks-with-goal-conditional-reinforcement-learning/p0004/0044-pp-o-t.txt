@@ -1,0 +1,49 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+raft_ it em(it em= )
+craft_ it em(it em= ) craft_ it em(it em= )
+Mak e plan options f or craft_ it em(it em= )
+gat her_ r esour ces(it em= )
+gat her_ r esour ces(it em= ) ,
+craft_ it em(it em= )
+gat her_ r esour ces(it em= )
+gat her_ r esour ces(it em= ) ,
+craft_ it em(it em= ) , craft_ it em(it em= )
+Figure 5: Training plans generation
+Algorithm 4Final Plan Generation from Ontology
+Require: Instruction I, goals mapping G, goals
+planP, ontologyG= (V, E)
+Ensure:Final planP
+1:Retrieve goal subtasks:S← G[I]
+2:Initialize plan vertex set:U←S
+3:foreachs∈Sdo
+4:Expand prerequisites via ontology:
+D←PREREQCLOSURE(s, G)
+5:U←U∪D
+6:end for
+7:Extract induced subgraph:G U ←G[U]
+8: Topologically sort GU to obtain ordered plan
+P
+9:returnP
+B Additional Experiments
+B.1 SuperIgor vs. SOTA LLMs
+Table 3: Model performance comparison
+Model Atom Combo
+SI_pixel (Cycle 1) 0.56 0.23
+Claude Sonnet 4.6 0.24 0.05
+OpenAI GPT-4.1 0.14 0.04
+Qwen/QWQ-32B 0.22 0.03
+Gemma-27B 0.06 0.02
+We additionally evaluate standalone LLM-based
+agents under the sameAtomandCombosettings
+(Table 3). While several models achieve moderate
+performance on atomic tasks, all of them exhibit
+a sharp degradation on compositional instructions

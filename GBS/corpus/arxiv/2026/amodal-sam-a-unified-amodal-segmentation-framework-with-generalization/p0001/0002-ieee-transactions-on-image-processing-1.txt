@@ -1,0 +1,30 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 1
+section: ieee-transactions-on-image-processing-1
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+e synthetic training
+data, and (3) novel learning objectives that enforce regional
+consistency and topological regularization. Extensive experiments
+demonstrate that Amodal SAM achieves state-of-the-art performance on standard benchmarks, while simultaneously exhibiting
+robust generalization to novel scenarios. We anticipate that this
+research will advance the field toward practical amodal segmentation systems capable of operating effectively in unconstrained
+real-world environments.
+Index Terms—Amodal segmentation, SAM, Open world,
+Amodal Video segmentation.
+I. INTRODUCTION
+T
+HE human visual system possesses the ability to interpolate unseen information, particularly through amodal perception, our capacity to mentally complete partially occluded
+objects. This innate ability has inspired a computer vision task
+called amodal segmentation, which aims to predict complete
+object shapes, including their hidden portions.
+Nonetheless, amodal segmentation remains challenging, as
+the existing methods primarily focus on amodal segmentation
+within the same domain witnessed during training. However,
+in open-world scenarios, models must generalize to novel
+object categories and contexts that ha

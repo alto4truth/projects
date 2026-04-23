@@ -1,0 +1,35 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+ing}
+3:r←RDI(f, X, Y){∼30×faster}
+4:ifg > τ mask then
+5:Flag unreliable; adjust attack weights
+6:end if
+7:Phase 2 — Multi-norm attack
+8:forp∈ {ℓ 1, ℓ2, ℓ∞,sem.,spat.}do
+9:Select attacks (adaptive memory-guided)
+10:Execute in parallel; record ASR, worst/avg
+11:end for
+12:Phase 3 — Defence evaluation
+13:Phase 4 — Compliance(NIST / OW ASP / EU AI Act)
+14:Phase 5 — ReportRin JSON, MD, SARIF, HTML
+15:Phase 6 — Gatepass/fail vs. thresholds
+16:returnR
+11.6 Compliance Mapping
+AUTO-ART maps evaluation results to seven regulatory frameworks: (i)NIST AI RMF[ 24]: MEASURE function maps to
+multi-norm attack execution; MANAGE function maps to remediation recommendations; (ii)NIST AI 600-1[ 49]: GenAIspecific risks (13 categories, 400+ actions) map to LLM redteaming modules; (iii)OWASP LLM Top 10[ 50]: 8/10
+categories fully covered (LLM01 Prompt Injection through
+LLM08, including new LLM07 System Prompt Leakage
+and LLM08 Vector/Embedding Weaknesses); 2/10 partial;
+(iv)OWASP Agentic Top 10[ 36]: ASI01 (Goal Hijack)
+and ASI02 (Tool Misuse) map to agentic attack modules;
+developed by 100+ security researchers; (v)EU AI Act Article 15[ 48]: pre-screening gate and worst-case reporting
+address the expl

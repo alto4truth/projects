@@ -1,0 +1,25 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+fairness, we denote 𝑀(𝑥) as the LLM model prediction for input 𝑥 (𝑥 is
+the question prompted to the LLM), 𝑦𝑖 as the ground truth label of the input 𝑥𝑖, 𝐺 as the set of unique combinations of
+sensitive attribute values (e.g.,𝐺=White woman, Black Man), and 𝑠𝑖, 𝑠𝑗 ∈𝐺 as specific combination of sensitive attribute
+values (e.g., 𝑠𝑖=White woman, 𝑠 𝑗 =Black man) . Let 𝑃𝑀 (𝑀(𝑥)=𝑦) denote the overall probability of prediction associated
+with label𝑦, and𝑃 𝑀 (𝑀(𝑥)=𝑦|𝑠 𝑖 )the conditional probability for the sensitive attribute value combination𝑠 𝑖.
+4.4.1 Bias Score Formulation.
+sDIS.
+𝑠DIS =2· 𝑛biased
+𝑛non-UNKNOWN
+−1
+where
+𝑛biased =
+𝑛∑︁
+𝑖=1
+1( ˆ𝑦𝑖 =bias_target∧pol 𝑖 =neg) +1( ˆ𝑦𝑖 =non_target∧pol 𝑖 =nonneg)

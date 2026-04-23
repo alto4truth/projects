@@ -1,0 +1,86 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+Published as a conference paper at ICLR 2026
+2 602 1202 1802 2402 30020
+200
+400
+600Count
+=805.6
+=700.3
+10th Step
+3 603 1203 1803 2403 30030
+200
+400
+600 =716.0
+=565.9
+20th Step
+12 612 1212 1812 2412 30120
+200
+400
+600
+=656.8
+=479.6
+50th Step
+3 603 1203 1803 2403 30030
+100
+200
+300
+400
+500
+600Count
+=1085.3
+=933.9
+13 613 1213 1813 2413 3013
+Response Length
+0
+100
+200
+300
+400
+500
+600 =876.6
+=766.5
+36 636 1236 1836 2436 30360
+100
+200
+300
+400
+500
+600 =728.0
+=584.3
+0 50 100 150 200 250
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7Accuracy
+Ours
+GRPO
+0 50 100 150 200 250
+Steps
+0.00
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30Average Grad Norm
+Ours
+GRPO
+Ours GRPO
+Figure 3:Left:Visualize the distribution of response lengths within the early training steps. GRPO method
+exhibits a longer tail, while our method shows a more concentrated distribution.Right:MATH Evaluation
+accuracy of GRPO and our method along training steps. Average gradient norm per update during training.
+4.4 UNDERSTANDINGHOWVPS WORKS
+Quality analysis for segment-wise process signal.A core premise of our approach is that the segment-wise
+process signal (∆C k) provides a reliable proxy for the correctness of intermediate reasoning steps. Unlike
+outcome-level signals,

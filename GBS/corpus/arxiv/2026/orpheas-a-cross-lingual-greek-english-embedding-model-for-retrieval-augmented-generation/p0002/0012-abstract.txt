@@ -1,0 +1,17 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+ings with strong performance across semantic textual similarity tasks, establishing it as a competitive benchmark for multilingual retrieval.
+Zhang et al. [2024] proposed mGTE, a multilingual embedding framework addressing long-context processing through
+Rotary Position Encoding supporting 8192-token contexts and hybrid dense-sparse retrieval with cross-encoder reranking. mGTE was trained on 2.8 billion multilingual text pairs across 75 languages and achieves state-of-the-art performance on several benchmarks. Nevertheless its reliance on Wikipedia and web-crawled data may introduce languagedistribution biases.
+Wang et al. [2024] introduced the E5 family of instruction-based multilingual embeddings, employing a two-stage
+training pipeline combining weakly-supervised contrastive pre-training on one billion multilingual pairs with supervised fine-tuning using mined hard negatives and knowledge distillation. Despite strong cross-lingual performance
+across 93 languages, E5 distributes its representational capacity broadly, potentially limiting its optimization for specific language pairs.
+Koursaris et al. [2026] proposed Themida, a specialized embedding model for the Greek legal domain

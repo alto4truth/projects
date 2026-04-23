@@ -1,0 +1,26 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+predictably by holding the sample value constant until the next
+time step. This leads to approximation errors with visual data because it assumes that the signal is constant between samples, with no slopes, no intermediate changes in textures, and no sudden jumps at patch boundaries, which may
+not accurately reflect the true nature of complex spatial data [19] [30]. This can
+result in such errors as edges getting smeared, textures losing sharpness, and
+spatial details drift across long sequences.
+In this study, we replace the ZOH operation with more advanced discretization methods, each designed to better capture dynamic changes between samples
+while keeping the ViM architecture and state update equations structurally identical. The general discrete-time state-space formulation remains:
+ht+1 = ¯Aht + ¯Bxt, y t =Ch t (4)
+with the ZOH approximating equation:
+y(t) =
+X
+n
+x(nT)·rect( t−nT−T /2
+T )
+where rect(t) is the rectangular function and the computation of¯Aand ¯Bdiffers
+according to the chosen discretization method.

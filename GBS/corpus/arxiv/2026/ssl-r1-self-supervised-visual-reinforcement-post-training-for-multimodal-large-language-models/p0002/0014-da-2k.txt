@@ -1,0 +1,50 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 2
+section: da-2k
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+Correspondence
+(4 vs. 6)
+Ordering
+(2x2 vs. 3x3)
+Rotation
+(90° vs 45°)
+Similarity
+(weak vs. strong)
+Inpainting
+(25% vs. 50%)
+50
+52
+54
+56
+58Average Performance (%)
+54.87
+Base
+55.98 56.11
+56.67
+55.95
+55.67
+57.00 56.79
+55.37
+56.47 56.33
+Figure 3.Effect of the SSL task difficulty.We vary the complexity of each task with two difficulty levels, and report the average
+performance across 13 vision-centric multimodal benchmarks.
+positional visual understanding: Winoground [58], and
+SugerCrepe++ [18].
+4.2. Main Properties
+We start by exploring SSL-R1 with each single SSL task,
+and then combine them for multi-task post-training. We
+adopt Qwen2.5-VL-3B-Instruct as the base MLLM for all
+experiments. Several intriguing properties are observed.
+Single-Task Post-Training.Table 2 (top section) studies the effect of individual SSL tasks for RL post-training.
+All SSL tasks surpass the baseline on most evaluation
+benchmarks, demonstrating that each SSL task contributes
+positively to vision-centric perception and understanding.
+Looking at the Avg. column, the greatest gains come
+from Geometric Correspondence, achieving an average gain
+of +2.13% across 13 benchmarks compared to the baseline. The second b

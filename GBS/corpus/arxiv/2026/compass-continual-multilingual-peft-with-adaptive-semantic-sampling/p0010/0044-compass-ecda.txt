@@ -1,0 +1,31 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 10
+section: compass-ecda
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+istical tests that leverage cross-language variance from our single-run experiments
+across 42 languages (Global-MMLU) and 29 languages (MMLU-ProX).
+52
+
+Published in Transactions on Machine Learning Research (11/2025)
+Permutation tests.For each pairwise comparison (e.g., COMPASS vs. Target), we perform approximate
+randomization tests by randomly shuffling the method labels across languages and recalculating the mean
+performance difference. We repeat this process 10,000 times to construct an empirical null distribution under
+the hypothesis of no systematic difference between methods. The p-value is computed as the proportion of
+permutations yielding a difference as large or larger than the observed difference. This approach tests
+whether COMPASS’s improvements are consistent across the language distribution or could arise from
+random variation.
+Effect sizes.We report Cohen’s d effect sizes to quantify the practical magnitude of improvements beyond
+statistical significance. Effect sizes are calculated using the pooled standard deviation across languages and
+interpreted using standard thresholds: small (d≈0.2), medium (d≈0.5), and large (d≥0.8). This addresses
+the concern that with 42 languages, even small differences may achieve statistical significance despite limited
+practical importance.
+Sign tests.To evaluate whether improvements are distributed across languages rather than driven by
+outliers, we use binomial sign tests that count how many languages improved with COMPASS versus how
+many regressed. We test against the null hypothesis of equal probability (50%).
+53

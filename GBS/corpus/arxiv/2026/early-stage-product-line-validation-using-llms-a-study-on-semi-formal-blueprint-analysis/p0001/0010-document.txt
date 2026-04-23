@@ -1,0 +1,27 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+dreds of billions
+of parameters, pre-trained on large text corpora [8]. Beyond traditional NLP tasks, they exhibit emergingreasoningcapabilities when
+properly prompted, including deductive inference, logical implication, and structured problem solving [17, 30, 37]. Benchmarks such
+as LogicBench [31] and ZebraLogic [24] confirm this potential but
+also reveal limitations, e.g., accuracy drops under multi-step inference or complex constraints. Studies further note that many models
+behave as “greedy reasoners, ” favoring short reasoning paths and
+failing under negation or deep logic.
+Prompting techniques, such asfew-shot,chain-of-thought[8, 21,
+35], andrationale decomposition[17], can elicit more structured reasoning without fine-tuning. These approaches have enabled LLMs
+to generate formal artifacts such as answer-set programs, CSPs,
+and UVL feature models directly from natural language [11, 16, 18,
+26]. For product line engineering, this suggests that well-prompted
+LLMs may serve as lightweight inference engines for analyzing
+semi-formalblueprints, providing early validation without relying
+exclusively on solver technology.
+3 Early Validation Workflow for SPL Scoping
+We propose anear

@@ -1,0 +1,55 @@
+title: Interval POMDP Shielding for Imperfect-Perception Agents
+source: arxiv
+year: 2026
+document_id: interval-pomdp-shielding-for-imperfect-perception-agents
+authors: William Scarbro; Ravi Mangal
+page: 3
+section: proofs
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20728v1
+
+Proof of Theorem V .1.We first prove by induction ontthat
+Bt ⊆ bBt for allt.
+Base case: by construction,B 0 ⊆ bB0.
+Inductive step: assumeB t ⊆ bBt. Consider any exact
+posterior beliefb ′ ∈ B t+1. By definition of the concrete
+reachable-belief set,b ′ is obtained by applying one exact
+action-observation update from some prior belief inB t using
+a perception uncertainty model inZ. Since the induction
+hypothesis givesB t ⊆ bBt, and since the propagated envelope
+is constructed to contain every such exact one-step posterior,
+we obtainb ′ ∈ bBt+1. HenceB t+1 ⊆ bBt+1.
+ThereforeB t ⊆ bBt holds for everyt.
+Now fix anyZ∈ Z. The posterior belief induced by history
+ht is someb Z
+t ∈ B t. Under that belief,
+Pr
+Z
+[a∈Ω(s t)|h t] =
+X
+s∈S
+bZ
+t (s)1[a∈Ω(s)] =ϕ a(bZ
+t ).
+Therefore,
+inf
+Z∈Z
+Pr
+Z
+[a∈Ω(s t)|h t] = inf
+b∈Bt
+ϕa(b).
+SinceB t ⊆ bBt, minimizing over the larger set bBt can only
+decrease the value, so
+inf
+b∈Bt
+ϕa(b)≥inf
+b∈ bBt
+ϕa(b) =p t(a).
+Ifa∈ bΞ(ht), then by definitionp t(a)≥β, which yields the
+claim.
+Proof of Theorem V .2.Condition on the eventE corr, so that
+the true perception uncertainty model satisfiesZ ∗ ∈ Z. For
+t= 0, . . . , H, let
+Et ={s 0, . . . , st ∈C},
+soSafe 0:H =E H. By assu

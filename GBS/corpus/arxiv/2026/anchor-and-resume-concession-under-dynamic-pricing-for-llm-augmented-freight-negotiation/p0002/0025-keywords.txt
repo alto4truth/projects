@@ -1,0 +1,27 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+mark 𝑟min and 𝑟max. Annotations indicate walk-away zones for Hardliner (round 8) and
+Anchoring (round 9).
+at 95% of the range, makes one large initial drop, then concedes only 2% per round; it walks away after round 9 if the
+broker remains below 50% of the range. Figure 1 plots each
+archetype’s concession curve over 10 rounds for a representative load (𝑟 min = $1,800,𝑟 max = $2,400).
+4.4 Scale and Metrics
+The rule-based evaluation runs 5×5×12×350 = 105,000 negotiations across 12 𝑆 values: 𝑆∈ { 1, 2, . . . ,8, 10, 12, 15, 20}%,
+providing 21,000 negotiations per strategy (95% CI ±0.7pp
+on agreement rate). Each cell of the design (one strategy ×
+one carrier × one 𝑆 value) contains 350 unique synthetic
+loads with independently sampled shift schedules. The LLM
+comparison adds an unconstrained condition at three representative 𝑆 values (2%, 6%, 15%): 5 × 5 × 3 × 15 = 1,125
+rule-based negotiations plus 1 × 5 × 3 × 15 × 10 = 2,250 LLM
+negotiations (10 repetitions per triple to capture stochastic
+variance). Every strategy faces identical pricing conditions
+per (regime, load) pair. The robustness experiment (Section 6) adds 1 × 5 × 3 × 15 × 30 = 6,750 negotiations with
+the two-index broker

@@ -1,0 +1,16 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+g yards, the
+standard Qwen3-VL-2B baseline correctly parses semantic intent but executes
+ungrounded reasoning (Figure 3, top right). It outputs 4911.0 after erroneously
+referencing 4911 receiving yards. Illustrating Visual Hallucination (Path 2), attention drifts to the receiving super-header, extracting the incorrect yds total.
+Lacking fine-grained process supervision, the baseline escapes penalization for
+failing to anchor attention to the correct visual bounding box.

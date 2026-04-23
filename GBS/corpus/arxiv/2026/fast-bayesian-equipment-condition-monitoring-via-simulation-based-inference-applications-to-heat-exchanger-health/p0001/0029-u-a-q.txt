@@ -1,0 +1,29 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+this regime, SBI remains statistically equivalent to the
+MCMC reference for failure-mode classification. Figure 5 provides a pointwise comparison of posterior medians obtained with MCMC (horizontal axis) and SBI
+(vertical axis) for all failure realizations. Each marker
+corresponds to one inference task, so the concentration
+of points around the identity line indicates sample-byScenario F ailure MCMC SBI
+mode accuracy accuracy
+1: Weak Fouling Fouling 100% 100%
+2: Batch SD Fouling 100% 100%
+3: Boiler FW Fouling 100% 100%
+4: Mild Leak Leakage 99.8% 100%
+5: Severe Leak Leakage 99.6% 100%
+6: No Failure None 98.2% 98.6%
+TABLE II: Categorical failure-mode identification
+accuracy for MCMC and SBI across the six scenarios.
+Examples of time evolution curves for the scenarios are
+shown in Fig 2.
+sample agreement between the amortized and samplingbased estimators. Across scenarios, the cloud is tightly
+alignedwiththediagonalformode-discriminativeparameters, confirming that SBI preserves the same central diagnostic conclusions as MCMC. The largest spread is observed for the changepointτ, particularly in sparse-event
+fouling regimes, where delayed and weakly informative

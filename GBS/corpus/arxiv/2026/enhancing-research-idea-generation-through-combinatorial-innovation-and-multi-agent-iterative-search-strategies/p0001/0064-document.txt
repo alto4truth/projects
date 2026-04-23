@@ -1,0 +1,19 @@
+title: Enhancing Research Idea Generation through Combinatorial Innovation and Multi-Agent Iterative Search Strategies
+source: arxiv
+year: 2026
+document_id: enhancing-research-idea-generation-through-combinatorial-innovation-and-multi-agent-iterative-search-strategies
+authors: Shuai Chen; Chengzhi Zhang
+page: 1
+section: document
+chunk: 64
+source_ref: https://arxiv.org/pdf/2604.20548v1
+
+!1')I2'"'G)%L."IP4IRAS%LTU9'"%I!%'G)%L:'I;')GM+I;%G)%'9L'(
+<L%'G)%AG'I;')GM+IU9'"%
+&'S)%'1I<L%'G)%AG'I<L(%
+=('G
+=('G
+;'S'M%'1I%+'I>)#'G
+2'"'G)%'1I!1')
+
+27 retrieved evidence, each agent independently proposes a research idea while exposing its reasoning process to the user (Appendix Figure A14). Finally, the generated ideas are compared through a competitive evaluation process to determine the final output idea (Appendix Figure A15). The full demo is publicly available on Hugging Face: https://huggingface.co/spaces/cshuai20/MAGenIdeas. 6 Discussion 6.1 Research Implications Theoretical Insights: This study contributes to the emerging research on automated scientific ideation by introducing a framework that integrates combinatorial innovation theory with multi-agent reasoning. Specifically, the proposed approach models research idea generation as a process of structured knowledge recombination guided by iterative planning and collaborative evaluation. The empirical results demonstrate that combining cross-domain knowledge planning with multi-agent collaboration significantly improves the diversity, novelty, and quality of generated research ideas compared with baseline systems. The ablation analysis fur-ther confirms that combinatorial knowledge planning expands the exploration space of LLMs, while multi-agent interaction mechanisms support iterative refinement and crit-ical evaluation of intermediate ideas. These findings provide empirical evidence that structured knowledge recombination and simulated collaborative reasoning can enhance the creative capabilities of LLM-based systems. More broadly, the results suggest that theoretical frameworks from in-novation studies can play an important role in guiding the design of generative AI sys-tems for scientific discovery. Practical Implications: From a practical perspective, the results indicate that collabo-rative multi-agent architectures provide an effective strategy for improving LLM-based research idea generation systems. Compared with single-agent prompting approaches, the introduction of multiple agents with differentiated roles enables the system to sim-ulate diverse cognitive perspectives during the ideation process. This mechanism pro-motes richer knowledge recombination and reduces the risk of prompt-induced concep-tual bias. Furthermore, grounding system design in established theoretical frameworks en-hances both the interpretability and robustness of the generation process. Based on the proposed framework, we have also developed a prototype research idea generation sys-tem designed for human–computer interaction scenarios, demonstrating the potential of the approach to support researchers in early-stage scientific exploration. 6.2 Limitations and Future Research Despite the promising results, this study has several limitations that open directions for future research.

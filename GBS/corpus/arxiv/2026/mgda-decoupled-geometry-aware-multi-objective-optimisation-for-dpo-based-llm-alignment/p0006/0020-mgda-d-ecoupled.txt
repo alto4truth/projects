@@ -1,0 +1,22 @@
+title: MGDA-Decoupled: Geometry-Aware Multi-Objective Optimisation for DPO-based LLM Alignment
+source: arxiv
+year: 2026
+document_id: mgda-decoupled-geometry-aware-multi-objective-optimisation-for-dpo-based-llm-alignment
+authors: Andor Vári-Kakas; Ji Won Park; Natasa Tagasovska
+page: 6
+section: mgda-d-ecoupled
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20685v1
+
+a natural generalisation by scalarising
+objectives; however, it compromises DPO’s efficiency by requiring the training of explicit reward models. Other
+approaches reformulate the problem as constrained optimisation [Kim et al., 2025] or controllable generation [Guo
+et al., 2024] to enforce secondary objectives. Closest to our work is AMoPO [Liu et al., 2025], which shares our goal of
+an efficient, reward-model-free framework, but balances objectives using generation confidence metrics rather than
+gradient geometry.
+A parallel line of research focuses on steerability, aiming to learn a set of policies or a single conditional policy
+that is capable of covering relevant regions of the objective space to suit diverse user preferences [Zhong et al., 2024,
+Gupta et al., 2025]. These methods typically rely on inference-time prompts or vectors to modulate model behaviour
+[Yang et al., 2024b, Wang et al., 2024]. Other approaches include model averaging, where models trained on separate
+objectives are fused in weight space [Ramé et al., 2023]. Similarly, Lin et al. [2024] propose interpolating the fine-tuned
+model with the reference model to mitigate the “alignment tax” [Askell et al., 2021]

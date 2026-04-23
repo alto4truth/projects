@@ -1,0 +1,47 @@
+title: Exploring Spatial Intelligence from a Generative Perspective
+source: arxiv
+year: 2026
+document_id: exploring-spatial-intelligence-from-a-generative-perspective
+authors: Muzhi Zhu; Shunyao Jiang; Huanyi Zheng; Zekai Luo; Hao Zhong; Anzhou Li; Kaijun Wang; Jintao Rong; Yang Liu; Hao Chen; Tao Lin; Chunhua Shen
+page: 1
+section: document
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20570v1
+
+and
+Success Validation
+Before-and-after States
+Original
+Bbox
+Modified
+Bbox
+2. Rewrite Or
+Enrich Captions
+Concrete Caption
+Move the rightest red chair
+10 centimeters to the left.
+Human Review
+and Refinement
+Manual review
+Identify residual
+annotation errors
+Correct ambiguous
+instructions
+Remove the
+rightest bottle
+from the scene,
+while keeping
+other objects
+unchanged.
+Semantic Label3D Bbox, Pose
+Generate Spatial Operations
+Synthetic Benchmark: GSI-Syn
+Real-world Benchmark: GSI-Real
+MLLM
+Figure 2.Benchmark curation pipeline.The pipeline builds both synthetic (GSI-Syn) and real-world (GSI-Real) benchmarks through
+unified scene processing, action generation, and validation. For GSI-Syn, scenes are sampled from diverse viewpoints, feasible actions are
+generated via 3D geometric checks, and a simulator validates outcomes before filtering failures and anomalies. For GSI-Real, clear frames
+are selected, 3D scene structure is reconstructed, and spatial operations are generated and validated on bounding boxes. Human review
+then refines captions and corrects residual annotation errors, ensuring high-quality spatial-editing supervision.
+need forI ′. Each sample in GSI-Real is represented as
+(I,

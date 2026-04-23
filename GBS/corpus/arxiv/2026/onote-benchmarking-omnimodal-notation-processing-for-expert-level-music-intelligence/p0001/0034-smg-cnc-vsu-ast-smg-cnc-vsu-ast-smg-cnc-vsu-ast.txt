@@ -1,0 +1,25 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+ectly rejected.
+Audio-to-Symbolic Transcription (AST) Evaluation: As a
+temporal audio transcription task, AST adopts a dual-dimensional
+alignment evaluation logic (pitch and temporal alignment). First,
+the canonical pitch sequence, note onset times, and duration ground
+truths are extracted from the audio references. Then, the modelgenerated symbolic notation is converted into a sequence aligned
+with a uniform time axis, which is dynamically aligned with the
+ground-truth sequence. Pitch matching accuracy and temporal
+alignment accuracy are calculated separately. Outputs that are unparseable, contain illegal symbolic representations, or have severely
+mismatched lengths with the ground truth are directly deemed invalid.
+Symbolic Music Generation & Aesthetics (SMG) Evaluation: As a generative task, SMG adopts a multi-level rule-based
+verification evaluation scheme. First, renderability verification is
+performed to check the grammatical completeness, symbolic legality, and format standardization of the generated notation, ensuring
+it can be normally parsed by mainstream music score engines. Second, music-theoretic and structural verification is conducted to
+validate the consistency of k

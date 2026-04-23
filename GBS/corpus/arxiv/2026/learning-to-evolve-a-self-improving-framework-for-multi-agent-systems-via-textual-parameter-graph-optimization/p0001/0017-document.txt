@@ -1,0 +1,25 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+for
+external tools.
+The complete textual configurationΘ is constituted
+by the aggregation of content from all nodes, such
+thatΘ = S
+vi∈V Content(vi).
+Edge Representation and System Dynamics (E).
+The directed edges E model the dependencies and
+logical flow between semantic units. An edge eij
+from node vi to vj signifies that the content of
+vi informs, constrains, or provides context for vj.
+These edges are crucial for defining the system’s dynamic behavior by representing relationships such
+as intra-agent flow connecting a Role Node to a
+Logic Node, tool integration linking a Logic Node
+to a Tool Node, and inter-agent communication

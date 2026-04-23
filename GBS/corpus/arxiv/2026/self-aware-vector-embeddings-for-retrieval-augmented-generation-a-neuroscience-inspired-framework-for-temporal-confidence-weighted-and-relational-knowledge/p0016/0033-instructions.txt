@@ -1,0 +1,27 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 16
+section: instructions
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+rity signal is already partly version-sensitive.
+Replicating the experiment with a dense retriever is a priority item on our roadmap. (iii)Single
+random seed.All main numbers useSEED=7; we report them with one decimal because statistical
+precision beyond that would be misleading on a benchmark this size. A multi-seed mean±σanalysis
+is planned. (iv)No live feedback stream.Feedback counts are drawn from a static prior; the
+reconsolidation dynamics in Section 5 cannot be fully evaluated without a longitudinal simulation
+or a real user study.
+11 Discussion
+11.1 Why Not Just Re-embed Everything?
+Re-embedding is a coarse tool. At corpus scale it is expensive, and—more importantly—it erases
+the history that makes audit and explanation possible. SmartVector’s archival design turns “why
+did the answer change?” into a traceable question: the superseding vector’s lineage, the ripple it
+emitted, and the feedback history are all first-class objects. Re-embedding throws that trace away.
+11.2 Failure Modes
+Several failure modes deserve explicit attention.Feedback poisoning:an adversary who can
+submit positive feedback can inflate confidence; rate-limits, feedback-source weighting, and anomaly
+det

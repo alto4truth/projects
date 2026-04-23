@@ -1,0 +1,28 @@
+title: The Expense of Seeing: Attaining Trustworthy Multimodal Reasoning Within the Monolithic Paradigm
+source: arxiv
+year: 2026
+document_id: the-expense-of-seeing-attaining-trustworthy-multimodal-reasoning-within-the-monolithic-paradigm
+authors: Karan Goyal; Dikshant Kukreja
+page: 1
+section: document
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20665v1
+
+e separate semantic streams)?
+• [RQ3] Semantic Asymmetry:Do VLMs exhibit semantic
+inconsistency across modalities? If provided with equivalent information in symbolic textual and symbolic visual
+forms, does the architecture asymmetrically penalise the act
+of “seeing” rather than “reading”?
+• [RQ4] The Scaling Paradox:Within a fixed architectural
+family, what does drastically increasing parameter scale actually achieve? Does scaling the underlying language engine
+alleviate the visual bottleneck, or paradoxically exacerbate
+it?
+• [RQ5] The Universal Constraint:Can we design a singular, mathematically sound criterion that detects, quantifies,
+and localises these multimodal failures across any given architecture?
+• [RQ6] Dataset Agnosticism:Can a diagnostic toolkit definitively prove that an integration failure is caused by an architectural bottleneck rather than dataset bias, eliminating the
+field’s reliance on data ablation and specially vetted “visionindispensable” benchmarks?
+3 The Modality Translation Protocol &
+High-Stakes KDD Case Studies
+We propose a radical new methodological approach: The Modality
+Translation Protocol. Instead of deleting information to test a model,
+this pro

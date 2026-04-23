@@ -1,0 +1,37 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 46
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+0.2 0.4 0.6 0.8 1.0
+Environment steps 1e10
+0.15
+0.20
+0.25
+0.30
+0.35
+0.40
+0.45Evaluation score
+sr=0.5
+sr=0.6
+sr=0.7
+sr=0.8
+sr=0.9
+Figure 6: Ablation of the skill-mastery threshold τ. The
+plot shows evaluation scores on the Atomic and Combo
+tasks during training for differentτvalues.
+Combosetting. This trend holds even for reasoningoriented models such as QWQ-32B, indicating that
+improvements in single-step reasoning do not directly translate to effective long-horizon planning.
+In contrast, the RL-trained SuperIgor agent maintains substantially higher performance and degrades more gracefully under composition. These
+results suggest that purely LLM-based approaches
+struggle with compositional planning and longhorizon credit assignment, consistent with observations in CrafText and related embodied benchmarks . We also observe sensitivity of LLM agents
+to prompt design and observation encoding, further
+limiting their stability and reproducibility. Overall, this comparison highlights the necessity of
+environment-grounded learning for reliable instruction following in complex settings.
+B.2 Ablation Study: Skill Mastery Threshold
+We conducted an ablation study to analyze the sensitivity of

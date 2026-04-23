@@ -1,0 +1,24 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 1
+section: grant-molnar
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+2 GRANT MOLNAR
+Contributions.We now summarize the main results of the paper.
+•A multi-scale cosine geometry on strings.For everyρ >0 we define the
+weighted angle distanced ρ on Σ ∗ and show that it is a metric (Proposition 7.1).
+The construction is alphabet-invariant: any permutation of Σ induces an isometry of
+(Σ∗, dρ).
+•Linear-time computation.We give a generalized suffix-tree (or suffix-array) algorithm that computesd ρ(S, T) in timeO(|S|+|T|) (Proposition 4.3), by reducing
+the necessary dot products and norms across allnas aggregates over internal nodes
+of the generalized suffix tree.
+•Empirical evaluation.In Section 5 we evaluated ρ inside a fixed DBSCAN clustering pipeline on three labeled sequence benchmarks, comparing against edit distances and fixed-scalek-gram baselines. The results suggest that weighted angle
+distances can be particularly effective on datasets whose class structure is driven
+by tandem-repeat statistics, while remaining competitive with classical baselines on
+more conventional corpora.
+•Quantitative control of local edits and repetition.We prove explicit Lipschitztype bounds for elementary edits (Theorem 7.3) and for stutter operations (Theorem 7.4), form

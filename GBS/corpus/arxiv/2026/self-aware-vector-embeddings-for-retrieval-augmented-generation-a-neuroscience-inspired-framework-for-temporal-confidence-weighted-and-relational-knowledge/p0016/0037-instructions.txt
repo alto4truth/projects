@@ -1,0 +1,25 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 16
+section: instructions
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+individual
+ingredients—temporal embeddings, forgetting curves, GNN-style propagation, uncertainty-aware
+retrieval, agentic memory—are each well-supported in the recent literature. The contribution of this
+paper is the operational synthesis: a lifecycle, a scoring function, a confidence equation, an update
+protocol, and a reproducible empirical evaluation. On our versioned-policy benchmark, the signals
+proposed here roughly double top-1 accuracy over plain cosine RAG (31.0%→62.0%), cut staleanswer rate nearly3×(35.0%→13.3%), halve Expected Calibration Error (0.470→0.244), and
+reduce per-edit re-embedding cost by 77%—while remaining robust across contradiction-injection
+rates from 0% to 75%. We believe this is the natural next layer of the RAG stack, and that the gap
+between 58% and 90% on versioned queries is neither a retriever problem nor a generator problem
+but a representation problem that a small amount of metadata and a principled update policy can
+largely close.
+Acknowledgments
+The author is grateful to Yong Min, CTO of Akribis Systems, for raising the practical problem
+that sparked this work—that production RAG pipelines silently return confidently wrong answers
+when their

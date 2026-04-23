@@ -1,0 +1,11 @@
+title: Enhancing Research Idea Generation through Combinatorial Innovation and Multi-Agent Iterative Search Strategies
+source: arxiv
+year: 2026
+document_id: enhancing-research-idea-generation-through-combinatorial-innovation-and-multi-agent-iterative-search-strategies
+authors: Shuai Chen; Chengzhi Zhang
+page: 1
+section: document
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20548v1
+
+13 Diversity: Similar to (Hu et al., 2024; Si et al., 2024), the proportion of unique ideas is used to measure the diversity of generated research ideas. Specifically, the same sim-ilarity measurement method as used in the novelty metric is employed, with the dupli-cation threshold set to 0.8. The diversity calculation formula is as follows: 𝐷𝑖𝑣𝑒𝑟𝑠𝑖𝑡𝑦=3*∑𝐼*!43(𝑚𝑎𝑥25!𝑠𝑖𝑚(𝑖,𝑗)<𝑡ℎ𝑟𝑒𝑠ℎ𝑜𝑙𝑑) (5) where n is the number of generated research ideas, sim(i,j) represents the cosine simi-larity between idea i and idea j, threshold denotes the similarity threshold, and I(·) is the indicator function that returns 1 when the condition is true and 0 otherwise. Comparative validation with top conference paper ideas: We collected peer-re-view data for ICLR 2025 from OpenReview, including 3,704 accepted papers and 4,931 rejected papers. Among the accepted papers, 213 were oral presentations, 380 were spotlight presentations, and 3,111 were poster presentations. To focus on the NLP domain, we used LLM-based text classification to identify NLP-related papers. This process yielded 842 accepted and 803 rejected NLP papers. To ensure a fair comparison, we excluded 72 controversial rejected papers whose ave

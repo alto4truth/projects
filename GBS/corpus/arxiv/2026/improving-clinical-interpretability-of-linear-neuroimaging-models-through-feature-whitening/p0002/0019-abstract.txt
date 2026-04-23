@@ -1,0 +1,18 @@
+title: Improving clinical interpretability of linear neuroimaging models through feature whitening
+source: arxiv
+year: 2026
+document_id: improving-clinical-interpretability-of-linear-neuroimaging-models-through-feature-whitening
+authors: Sara Petiton; Antoine Grigis; Raphaël Vock; Edouard Duchesnay
+page: 2
+section: abstract
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20675v1
+
+ed the use of a novel regularized
+ZCA-cor whitening approach to enhance the interpretability of linear classifiers trained on ROI-based neuroimaging
+features. Pairwise whitening was performed between left
+and right hemispheres as well as between GM and CSF volumes, and classifier weights were subsequently projected
+back into the original feature space. Our results demonstrate
+that whitening preserves classification performance while improving the alignment of model-derived region importance
+as established by the ENIGMA meta-analytic results. While
+we apply our method to pairs of regions informed by prior

@@ -1,0 +1,46 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+Model f + Data (X, Y) + YAML Config
+Phase 1: Pre-Screen (FOSC + RDI + WB/BB)
+Mask?
+Phase 2: Multi-Norm ( ℓ1 /ℓ2 /ℓ∞ /sem./spat.)
+Phase 3–4: Defence Eval + Compliance
+Phase 5–6: Report (SARIF/HTML) + Gate
+Flag:adjust
+attack weights
+Attacks
+(50+)
+Defences
+(28)
+Metrics
+RDI/FOSC
+Certify
+RS/IBP
+Comply
+NIST/EU
+ART v1.20+ / PyTorch / TF / sklearn / HF
+No Yes
+Figure 4:AUTO-ART evaluation pipeline. The pre-screening gate
+(Phase 1) runs FOSC and RDIbeforeexpensive multi-norm attacks.
+If gradient masking is detected, attack weights are adjusted and
+targeted evaluation replaces exhaustive search, yielding ∼30×faster
+screening compared to full AutoAttack (Table 10).
+Table 6:Explicit mapping from literature gaps to AUTO-ART modules.
+Gap Problem AUTO-ART Module
+G1 Worst-case multi-attack MultiNormEval: avg + worst
+across 5 norms
+G2 Agent transfer failure Agentic: DOM, RAG poison,
+context injection
+G3 Stochastic collapse Multi-sample eval: configurable draws per defence
+G4 RDI generalisation RDI + full-attack correlation
+validation mode
+G5 Continual robustness Adaptive selector + DriftMonitor
+tificates scalable to any network size; certified radii are computed with configurable confidence levels (

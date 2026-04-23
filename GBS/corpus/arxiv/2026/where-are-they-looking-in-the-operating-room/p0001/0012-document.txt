@@ -1,0 +1,27 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+ng “StOP?” activity that concerns all OR team
+members, “A.B.A.” is a more fine-grained activity that centers
+on the anesthesiologists. Specifically, it is characterized by
+anesthesiologists moving toward the operating table and concentrating on observing the surgical field or the laparoscopic
+monitor of the surgeons performing operational procedures,
+as shown in Fig. 2. After annotating all the videos, we have
+1,466 “A.B.A.” activities in total, with an average duration of
+24 seconds. Since the definition of “A.B.A.” activity is highly
+correlated with human gaze, we propose to evaluate the value
+of studying gaze-following by detecting these moments in the
+untrimmed videos. The challenges are three-fold: (1) the dramatic duration variance, as the longest one lasts 366 seconds,
+while the shortest one only lasts 1 second; (2) the ambiguity
+of similar activities, such as adjusting anesthesia equipment
+(which is close to laparoscopic monitor) or interacting with a
+colleague; (3) the occlusions by colleagues or medical equipment, as shown in Fig. 2.
+2.3. Clinical role prediction and surgical phase recognition
+With gaze annotations, we fine-tune a state-of-the-art gazefollowing model [31]

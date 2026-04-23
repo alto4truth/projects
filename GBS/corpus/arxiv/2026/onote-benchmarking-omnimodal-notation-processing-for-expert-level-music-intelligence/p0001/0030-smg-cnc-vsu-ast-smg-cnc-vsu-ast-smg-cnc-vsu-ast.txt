@@ -1,0 +1,20 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+he evaluation process first performs structural parsing of
+model outputs, then executes task-specific verification logic, and finally provides quantitative results from dimensions including pitch
+accuracy, temporal consistency, music-theoretic compliance, and
+structural integrity.
+C.2 Canonical Pitch Space Projection
+Prior to task-specific evaluation, to achieve fair comparison across
+notation systems, all model-generated notation outputs are uniformly mapped to a one-dimensional temporally ordered canonical pitch sequence. The specific processing logic is as follows: for
+guitar tablature, the symbolic string-fret correspondences are accurately converted to standardized MIDI pitches by combining string
+position, fret information, and standard tuning rules; for Jianpu
+(numbered musical notation), the corresponding absolute scientific

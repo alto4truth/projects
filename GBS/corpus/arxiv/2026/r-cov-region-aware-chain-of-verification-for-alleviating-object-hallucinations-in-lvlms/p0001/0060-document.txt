@@ -1,0 +1,26 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 60
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+for visualization.
+B.1. Yes-or-No Questions
+Figure 5 provides more examples with two yes-or-no questions: “Is there a handbag in the image?” and “Is there
+a truck in the image?”. Our R-CoV assigns a verification
+score of 0.67 to the existent object ‘handbag” and 0.00 to the
+hallucinated object “truck”, respectively. Since the score
+for “truck” is lower than our pre-defined threshold of 0.1,
+R-CoV effectively identifies the “truck” as the hallucinated
+object and corrects the initial response accordingly.
+For existent objects, the bounding box coordinates generated from the LVLM provide a rough location for them,
+which better instructs the LVLM to focus on specific image regions before generating the final answer. For nonexistent objects, the generated bounding box coordinates are
+still meaningful—they explain how the LVLM hallucinates
+to some extent. For example, when asked to provide the
+bounding box coordinates for the “truck”, the LVLM actually outputs the location of a car in the background. This
+indicates that the LVLM mistakes the “car” for a “truck”.
+After being prompted with the image containing the bounding box, the LVLM tends to refocus on the region of interest, where th

@@ -1,0 +1,63 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 2
+section: roc-auc
+chunk: 59
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+the robustness of our automated pipeline in producing reliable, diverse
+examples suitable for high-capacity change detection and captioning tasks.
+26
+
+Table 6: Summary of Processed Image Pairs
+Description Count
+Rows with at least one change 89,031
+Rows with no change 37,100
+Total individual changes 126,131
+J Human Agreement Across Dataset Creation Pipelines
+As summarized in the results section and illustrated in Figure 15, our full pipeline (Segmentation
++ Encoder + RLtR) achieves the highest human agreement of 98%, substantially outperforming
+all other baselines. Encoder-only and zero-shot models show limited semantic consistency, while
+few-shot adaptation-based on cosine-similarity retrieval-improves alignment across all LLMs. These
+results highlight the critical role of both visual filtering and reinforcement-based refinement in
+achieving human-level interpretability and reliability.
+Encoder Only
+Gemma 3 4B (Zero-Shot)Gemma 3 27B (Zero-Shot)Gemma 3 4B (Few-Shot)Gemma 3 27B (Few-Shot)
+Gemini 2.5 Flash (Zero-Shot)Gemini 2.5 Pro (Zero-Shot)Gemini 2.5 Flash (Few-Shot)Gemini 2.5 Pro (Few-Shot)
+Segmentation Only
+Ours (Seg+Enc+RLtR)
+Creation Pipeline
+0
+20
+40
+60
+80
+100Human Agreement (%)
+11%
+27% 29% 31%
+37%
+51%
+55% 57% 59% 61%
+98%
+Human Agreement
+Figure15: Humanagreementacrossdatasetcreationpipelines. Modelsaresortedinascendingorder
+by agreement rate. Few-shot variants consistently outperform their zero-shot counterparts, while our
+full method reaches near-perfect human alignment.
+K Prompt Engineering
+K.1 System Prompt for Gemma Filtering
+1. Instruction:The model is prompted as an expert in satellite image interpretation to score a
+query patch based on the presence of a specific target class{𝑠𝑒𝑙𝑒𝑐𝑡𝑒𝑑_𝑐𝑙𝑎𝑠𝑠} . It receives
+reference examples and must assign a score from 1 to 5 according to visibility and clarity.
+“You are an expert in recognizing objects from satellite
+images. Your task is to score a query image patch from 1 to
+5. You need to specify if {selected_class} appears in the
+image. All images are satellite images. Return only the
+numerical score (1, 2, 3, 4, or 5).”
+2.Scoring Guide:The scoring criteria used for filtering are defined as follows:
+“5: There is definitely a {selected_class} in the last image.
+The object’s shape, shadow, and features are clearly visible
+from above.
+27

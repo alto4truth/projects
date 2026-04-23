@@ -1,0 +1,15 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 2
+section: items-in-scene510-1015-1520-2025-25
+chunk: 42
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+ases of generated responses for different models, where no scene transition is needed.
+Conversational History(Turn-1) User: Keep an eye out for nice sweaters.(Turn-1) System: Please share your thoughts on the black one hanging up in the back right and the other black one folded up on the near end of the table in the back left.…(Turn-6) User: Now do you think you could find a nice blouse by Nature Photographers over here?
+FashionStore (Scene-1)[turn -1 to turn-5]FashionStore(Scene-2)[After turn-6]Scene-1 Items:item_1: {type: sweater; color: black; price: 32.99; ...}item_2: {type: sweater; color: black; price: 27.49; ...}…Scene-2 Items: item_25: {type: blouse; color: black; price: 44.99; ...}…
+Generated ResponsesMT-BART: No, there is no such blouse here. LLaVA-NeXT(Fine-tuned): I’m so sorry, I don’t have any blouses that match your description. Would you like to see other options?Qwen2.5-VL(Fine-tuned): I think you can try this blouse on the left.SiPeR(Ours):Yes, please come over here and take a look. We have beautiful vestsfrom this brand in our store. There's one on the rack directly in front of you. You can try it on.
+Figure 10: Cases of generated responses for different models wh

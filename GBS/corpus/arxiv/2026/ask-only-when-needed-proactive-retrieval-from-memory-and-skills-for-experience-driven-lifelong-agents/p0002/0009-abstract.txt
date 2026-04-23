@@ -1,0 +1,21 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 2
+section: abstract
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+action and learns both when and
+what to retrieve through paired-branch process rewards. By comparing continuations from identical interaction prefixes
+with and without retrieval, PROACTRL provides step-level supervision for retrieval decisions and encourages retrieval
+only when it leads to better task outcomes or higher efficiency. Together, these two components directly address the two
+central limitations of existing lifelong agents: passive experience invocation and decoupled online updating.
+We evaluate PROACTAGENTon SciWorld, AlfWorld, and StuLife, achieving success rates of 73.50% on SciWorld
+and 71.28% on AlfWorld while substantially reducing retrieval overhead, and attains performance competitive with
+proprietary models on StuLife. These results demonstrate that proactive retrieval, when coupled with joint memory and
+policy evolution, substantially improves both the effectiveness and efficiency of online lifelong agents.
+The main contributions of this work are as follows:
+2

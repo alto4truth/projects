@@ -1,0 +1,119 @@
+title: RefAerial: A Benchmark and Approach for Referring Detection in Aerial Images
+source: arxiv
+year: 2026
+document_id: refaerial-a-benchmark-and-approach-for-referring-detection-in-aerial-images
+authors: Guyue Hu; Hao Song; Yuxing Tong; Duzhi Yuan; Dengdi Sun; Aihua Zheng; Chenglong Li; Jin Tang
+page: 1
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20543v1
+
+annotation, we develop an advanced
+referring expansion and annotation engine (REA-Engine)
+that leverages the capabilities of powerful large multimodal
+
+UpdateFilter
+The man
+in a black
+shirt and
+grey pant
+while
+crossing
+the street
+×N
+Open-Vocabulary
+Detection
+Prompt for Object and Details
+Prompt for Whole Image
+Describe the [key objects],
+[colors], [characteristics], and
+their [spatial relationships]
+Describe the [whole image] with
+[background of the scene] and
+[interactions of objects]
+Referees
+Positive & Negative
+Samples
+"a man in
+black shirt is
+walking ...."
+"a truck with
+white paint is
+parked ..."
+"I can't find ..."
+"I can't help ..."
+"The silver sedan
+is parked on the
+zebra crossing."
+MFMs-assisted Referring Pair Generator
+Input
+Prompt
+The silver sedan is parked on the
+zebra crossing under the streetlight
+A black bicycle parked on the road, closest to
+the streetlight
+Parked on the zebra crossing, the silver sedan is lit
+up by the streetlight above
+A man
+wearing
+a black
+shirt is
+walking
+on the
+zebra
+crossing
+Human Experts
+Multimodal Foundation Models l 115k Annotations
+Semi-automated Vision-to-Text Expander
+l 11.4 Target No. l 12.5 Word No.
+Bbox-Description Pairs
+l10K+ RefAerial images
+l30+ Categories
+lDiverse conditions
+(areas, altitudes,
+weather , ...)
+UpdateFilter
+Figure 3. Overview of the referring expansion and annotation engine (REA-Engine). It is a semi-automated human-in-the-loop annotation
+framework that integrates large-scale multimodal foundation models (MFMs) with human experts to generate high-quality referring pair
+annotation for aerial images.
+foundation models (MFMs) for collaborative enhancement.
+As a result, REA-Engine enables semi-automated humanin-the-loop annotation workflows to produce fine-grained
+and reliable aerial referring detection datasets. As shown
+in Fig. 3, REA-Engine consists of two modules (including
+the Vision-to-Text Expander and MFMs-assisted Referring
+Pair Generator) guided by feedback from referees.
+3.2.1. Semi-automated Vision-to-Text Expander
+We first develop a vision-to-text expander (V2T expander)
+to efficiently expand aerial images with detailed language
+description containing global scene, salient object, finegrained details for referring pair generating. The V2T expander is a semi-automated human-in-the-loop workflow
+that leverages the powerful multimodal comprehend capabilities in off-the-shelf large MFMs (such as GPT4 [1] and
+CogVLM [27]) in conjunction with the guidance from human experts. As shown in Fig. 3, the V2T expander consists
+of 3 levels of semantic prompts and receives feedback from
+referees. Specifically, the global scene prompt elicits holistic scene-level description (such as contextual background),
+the salient object prompt guide the description of key entities, and the fine-grained prompt encompasses detailed attributes and relations (such as color, position, interactions).
+Furthermore, the referees empowered by MFMs and human
+experts operate in a closed feedback loop with follow-up
+MFMs-assisted referring pair generator and iterative human
+validation, facilitating continual improvement in both granularity, precision, and coverage of language descriptions.
+3.2.2. MFMs-assisted Referring Pair Generator
+We further develop a semi-automated MFMs-assisted referring pair generator (MaRP generator) to generate and refine the referring pair of{Bbox, description}from above
+preliminary descriptions. Specifically, we finetune a large
+foundation segmentation model (i.e. SAM [13]) as internal
+object detector to recognize and localize object entities reTable 2. Condition statistics of aerial images in RefAerial dataset.
+Condition Category StatisticsFlight Altitude (m)30 90 150 32% 40% 28%Camera Angle (°)0–30 30–60 60–90 25% 57% 18%Illumination Day Overcast Night 61% 21% 18%Weather Clear Cloudy Light rain65% 22% 13%Scene Type 25 /Target Category 32 /
+ferred to by coarse language expressions. Then, the image
+with object bounding box (Bbox) annotation will feed into
+a large MFMs again to generate more fine-grained and accurate referring descriptions, the external knowledge contained in general MFMs also enriches the semantic diversity
+of the detection descriptions. Finally, the MaRP generator
+generated pair candidates will be forwarded into the referees, where the MFMs and human experts further collaboratively refine to obtain the final referring pairs. In details,
+the referees conduct consistency validation, redundancy removal, and semantic correction to guarantee each referring pair is fine-grained, accurate, visible, and informationdense. During this process, the MFMs automatically filter
+and score image–text pairs, merging near-duplicate descriptions into unified candidates with associated confidence
+scores. Human experts review the high-confidence samples, providing corrections and quality judgments. Their
+feedback is then used to retrain and calibrate the MFMs,
+forming a closed-loop refinement cycle that typically converges within 3–5 iterations. The MaRP generator not only
+significantly reduces the burden of manual annotation, but
+also strengthens the capability of object perception and language understanding under complex scenarios, which lays
+a solid foundation for high-quality Bbox-description pairs.
+3.3. Dataset Details
+In this section, we provide statistics of our RefAerial and
+compare it with existing ground referring detection datasets.

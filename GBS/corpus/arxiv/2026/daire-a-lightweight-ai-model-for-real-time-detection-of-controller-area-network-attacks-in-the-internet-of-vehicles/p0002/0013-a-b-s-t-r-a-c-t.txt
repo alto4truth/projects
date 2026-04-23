@@ -1,0 +1,27 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 2
+section: a-b-s-t-r-a-c-t
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+S. Alam et al.
+Fig. 2. A basic CAN packet structure. SOF and RTR are 1 bit each. ACK is 2 bits. The ID bit is 11 bits in the base format and 29 bits in the extended format.
+This makes them ideal for processing structured data, such as CAN
+messages, where the input is numeric and does not exhibit spatial
+hierarchies.
+The core of an ML model is the ANN employed in the model.
+ANNs are designed to work like human brains. They have neurons
+interconnected with each other through layers that process information
+and learns by extracting patterns from the data. The input is processed
+by the network, and an output is generated. A loss function calculates
+the difference between the predicted and the true output. The loss is
+propagated back to the network with adjusted parameters, e.g., updated
+weights, to minimize the loss.
+In the context of IoV, the use of ANNs enables the detection and
+classification of cyberattacks based on the structure and timing of
+CAN messages. By adjusting weights using backpropagation and optimization algorithms like RMSprop, ANNs can be trained to distinguish between normal and malicious communication patterns with
+high accuracy and low latency. The lightweight and

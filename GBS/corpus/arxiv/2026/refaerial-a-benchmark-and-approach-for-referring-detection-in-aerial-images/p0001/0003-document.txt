@@ -1,0 +1,34 @@
+title: RefAerial: A Benchmark and Approach for Referring Detection in Aerial Images
+source: arxiv
+year: 2026
+document_id: refaerial-a-benchmark-and-approach-for-referring-detection-in-aerial-images
+authors: Guyue Hu; Hao Song; Yuxing Tong; Duzhi Yuan; Dengdi Sun; Aihua Zheng; Chenglong Li; Jin Tang
+page: 1
+section: document
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20543v1
+
+strategy is designed for coarse-to-fine referring target decoding. Eventually, the proposed SCS framework achieves
+remarkable performance on our aerial referring detection
+dataset and even promising performance boost on conventional ground referring detection datasets.
+*Corresponding author:ahzheng214@foxmail.com
+（a） （b）
+RefCOCO RefCOCOg
+RefCOCO+ RefAerial
+Area
+94.4
+1920x1080 11.4
+Target No.
+12.5 ±3.8
+5.6 ±10.5
+Word No.
+Resolution
+O2S Ratio
+Figure 1. (a) Comparing ground referring detection datasets with
+our RefAerial dataset. Non-target Area (opposite object-to-scene
+ratio) indicates the proportion of non-target regions in aerial images. Target No.: refers to the average number of referring objects
+per image. Word No.: the number of word tokens per expression. Resolution represents the average resolution of images in
+datasets. (b) The word cloud of referring descriptions in the RefAerial dataset. The words related to fine-grained attributes, objects, actions, positions, and colors appear frequently.
+1. Introduction
+Referring detection (a.k.a visual grounding) aims at locating the target regions in an image referred by a given
+descriptive language expression. It has wide applicatio

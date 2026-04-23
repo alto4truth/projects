@@ -1,0 +1,48 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+ed piecewise. When a dynamic pricing shift occurs at round 𝑘 with new parameters
+𝛽new,𝑅 new =𝑟 new
+target −𝑟 min:
+offer(𝑡) =
+⎧
+⎨
+⎩
+offer(𝑘−1) if offer(𝑘−1)> 𝑟 new
+target
+min
+(︀
+𝑓(𝜏(𝑡)), 𝑟 new
+target
+)︀
+otherwise
+(3)
+where 𝑓(𝜏) = 𝑟min + (𝜏 /𝑇)1/𝛽new ·𝑅 new is the Faratin curve
+evaluated at virtual position 𝜏, and 𝜏(𝑡) = 𝜏0 + (𝑡−𝑘 ) maps
+the negotiation round 𝑡∈ {𝑘, 𝑘+ 1, . . . , 𝑇} to the virtual
+position. The anchor point 𝜏0 = ⌈𝑇·𝛼 𝛽new
+0 ⌉ is theceilingof
+the real-valued position on the new curve whose offer equals
+the broker’s last offer, where 𝛼0 = (offer(𝑘−1) −𝑟 min)/𝑅new.
+The ceiling ensures 𝜏0 ≥𝑇·𝛼 𝛽new
+0 , so the first post-shift offer
+is at least as large as the previous one (see Proposition 3.1).
+Because 𝜏 is a virtual index, it may exceed 𝑇 after a shift;
+this is by design, as the min clamp in Case 2 caps the offer
+at𝑟 new
+target regardless of𝜏.
+∙ Case 1(hold): the broker has already conceded past
+its new target and cannot retract; it holds at its last
+offer.
+∙ Case 2(anchor-and-resume): the anchor step finds the
+virtual position on the new curve that matches (or
+slightly exceeds) the broker’s most recent offer, then
+resumes concession from there; the min clamp ensures
+th

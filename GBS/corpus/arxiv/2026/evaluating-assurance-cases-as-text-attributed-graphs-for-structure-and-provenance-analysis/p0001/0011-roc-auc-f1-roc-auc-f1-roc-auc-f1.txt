@@ -1,0 +1,29 @@
+title: Evaluating Assurance Cases as Text-Attributed Graphs for Structure and Provenance Analysis
+source: arxiv
+year: 2026
+document_id: evaluating-assurance-cases-as-text-attributed-graphs-for-structure-and-provenance-analysis
+authors: Fariz Ikhwantri; Dusica Marijan
+page: 1
+section: roc-auc-f1-roc-auc-f1-roc-auc-f1
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20577v1
+
+ature of these structural signatures
+may vary across different proprietary or open-source LLMs, our
+framework demonstrates that GNNs can successfully detect these
+synthetic patterns. When using synthetic data as training data
+for the link prediction task, while GPT-4o-generated assurance
+cases offer a valuable pre-training signal, their structural biases
+limit transferability to real assurance data. GNNs trained solely
+on synthetic graphs internalise stylistic patterns that are different
+from hierarchical patterns created by humans. This results in poor
+generalisation in linking prediction tasks. UniGraph’s robustness
+indicates that self-supervised objectives promote structure-aware
+learning regardless of specific graph topologies.
+The semi-supervised setting provides the best balance between
+generalisation and alignment with human reasoning. Models trained
+on both human and LLM-generated data show improved recall
+and robustness compared to those trained exclusively on one type.
+These results suggest that, despite their biases, LLM-generated assurance cases offer useful auxiliary supervision that aids GNNs
+in generalising reasoning link patterns in data-scarce situations.
+Specifica

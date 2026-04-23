@@ -1,0 +1,28 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 1
+section: bleu-1
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+input
+modalities made available to each model family for
+fair comparison.
+Inference-only Baselines (CoT & ICL).We
+evaluate three backbone MLLMs in inferenceonly modes: GPT-4o (OpenAI, 2024), LLaV ANeXT-7B (Liu et al., 2024), and Qwen2.5-VL-7BInstruct (Wang et al., 2024b).
+• Settings:For the open-source models (LLaV ANeXT and Qwen2.5-VL), we utilize 4-bit quantization to optimize memory usage. Inference
+is conducted with a temperature of 0.7 and a
+maximum token limit of 256. All inference-only
+vision-language baselines receive the raw scene
+image together with the dialogue history and the
+textual item metadata of the current scene.
+• In-Context Learning (ICL):For ICL settings,
+we retrieve the top-k (k= 2 ) semantically similar demonstrations using a dense encoder (consistent with our STE module) and prepend them
+to the conversation history as guidance.
+Training-based Baselines.We compare our
+method against fully supervised baselines, including small-scale multimodal models, text-based recommenders, and fine-tuned MLLMs.
+• Small Multimodal Models (ALBEF):We utilize ALBEF (Li et al., 2021) as a representative small-scale baseline. It is optimized via
+full-parameter fine-tuningusing a

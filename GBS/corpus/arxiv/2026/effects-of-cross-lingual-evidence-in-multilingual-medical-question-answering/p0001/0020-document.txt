@@ -1,0 +1,27 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+of similar size and are also included in popular initiatives, such as the Open Medical LLM
+2https://cohere.com/
+3https://serper.dev/
+Leaderboard in HuggingFace4.
+Taking into account that the four languages included in the original CasiMedicos corpus represent relatively high-resource languages from the
+same linguistic family with extensive digital presence and computational support, we sought to extend our analysis to encompass lower-resource
+linguistic contexts. Thus, we additionally translated the dataset into two low-resource languages,
+Basque and Kazakh, using Claude-3.5-Sonnet 5,
+and then manually revised all translations with native speakers of each language. Moreover, in order
+to guarantee that the translations are of high quality,
+we evaluate all the languages through backtranslation (Edunov et al., 2020). The details of this step
+are described in detail in Appendix C. The results
+correspond to professional-grade translation quality that typically aligns with human assessments
+of "good" translations. The native speakers also
+evaluated the translations as "high-quality" with
+minor errors in medical abbreviations.
+Such a multilingual coverage allows for a comprehensive evalu

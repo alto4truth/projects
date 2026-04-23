@@ -1,0 +1,37 @@
+title: Improving clinical interpretability of linear neuroimaging models through feature whitening
+source: arxiv
+year: 2026
+document_id: improving-clinical-interpretability-of-linear-neuroimaging-models-through-feature-whitening
+authors: Sara Petiton; Antoine Grigis; Raphaël Vock; Edouard Duchesnay
+page: 2
+section: abstract
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20675v1
+
+hitening enhances interpretability
+Tables 2 and 3 report the mean coefficients estimated from
+logistic regression using whitened and unwhitened features
+for BD vs. HC and SCZ vs. HC classification, respectively.
+Weights computed on whitened features were mapped back
+to the original feature space as described in Equation 3. The
+Original
+Feature Weight (±std)
+R Pallidum (GM)0.196±0.010
+R Cerebrum and Motor (GM)−0.138±0.007
+L Pallidum (GM)0.136±0.014
+R Superior Occipital Gyrus (GM)−0.120±0.017
+L Parahippocampus Gyrus (CSF)−0.115±0.007
+L Anterior Insula (GM)−0.111±0.006
+L Medial Frontal Cerebrum (GM)0.111±0.011
+Whitened
+Feature Weight (±std)
+R Pallidum (GM)0.249±0.013
+R Fourth Ventricle (CSF)0.194±0.022
+L Third Ventricle (CSF)0.176±0.060
+L Middle Cingulate Gyrus (CSF)0.164±0.011
+R Cerebrum and Motor (GM)−0.162±0.010
+L Cerebral White Matter (CSF)0.140±0.012
+L Parahippocampus Gyrus (CSF)−0.140±0.008
+Table 2. Top seven contributing brain regions and corresponding model weights (mean±std) for BD vs. HC classification. The mean is computed over the 10 CV folds regionwise.
+listed regions correspond to the seven features with the largest
+absolute coefficients, reflecting their importance in c

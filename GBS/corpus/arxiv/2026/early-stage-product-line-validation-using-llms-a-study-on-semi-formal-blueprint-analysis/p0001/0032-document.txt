@@ -1,0 +1,40 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+mini
+gemini-2.5-pro
+claudesonnet-4-think
+deepseekreasoner
+gemini-2.5flash
+llama-4maverick
+100 100 100 100 94 94 88 88 60 73
+100 100 100 100 100 100 94 75 53 67
+100 100 100 100 100 81 100 81 53 67
+100 100 100 94 100 69 94 81 40 67
+100 94 81 88 94 88 81 75 60 67
+100 100 100 88 94 62 62 75 27 27
+100 94 81 81 50 56 44 38 13 27
+Figure 5: Accuracy (%) of reasoning-optimized LLMs on 16
+AOs across 10 blueprints.
+Table 4: Average runtime (in second), token usage, and accuracy across all AOs and blueprints for representative models.
+Model ID Runtime (s) Tokens Accuracy (%)
+grok-4-reasoning3,046.7 505,874 89.7
+gemini-2.5-pro2,390.8 602,251 88.2
+gpt-5-mini6,118.3 843,251 88.9
+deepseek-reasoner9,508.4 561,290 82.8
+claude-sonnet-41,168.5 439,523 78.3
+llama-4-scout680.2 374,608 42.7
+FLAMA (Solver)† 18.45 – 100.0
+†Results on formal inputs; solver cannot process semi-formal blueprints.
+and Llama 4 Maverick perform worse (60–75%), mainly due to context overflow and output truncation. Within the general-purpose
+family (seeFigure 4), Claude Sonnet 4 leads with 78.3%, followed
+by GPT-4.1 and Grok 4 Fast Non Reasoning (60–68%), while Llama
+4 Scout is the weakest (42.7%).
+Takeaway.Reasoning-optimized mod

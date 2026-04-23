@@ -1,0 +1,34 @@
+title: Evaluating Assurance Cases as Text-Attributed Graphs for Structure and Provenance Analysis
+source: arxiv
+year: 2026
+document_id: evaluating-assurance-cases-as-text-attributed-graphs-for-structure-and-provenance-analysis
+authors: Fariz Ikhwantri; Dusica Marijan
+page: 1
+section: roc-auc-f1-roc-auc-f1-roc-auc-f1
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20577v1
+
+ssurance cases, achieving high accuracy and F1 scores. Models like GCN, GraphSAGE,
+and SAGE-3 layers reach near-perfect performance (Acc ≈ 0.97,
+F1 ≈ 0.98), highlighting the presence of semantic biases between
+human and LLM-generated in the graphs. In contrast, GAT and Unigraph show slightly lower performance, suggesting that attentionbased approaches may reduce sensitivity to superficial differences.
+These findings reveal that LLM-generated assurance cases irregularities can be detected in the graph structure which diverges from
+typical in human-authored cases. This structural bias can serve as a
+Table 7: [RQ2] Graph classification performance between
+Human vs LLMs assurance case to analyse bias in the data.
+Model Acc F1
+Decoder LLM (Text-Only) ICL
+Llama3.2-1B-ICL-4 .608±.271 .076±.069
+Llama3.1-8B-ICL-4 .208±.098 .178±.059
+Qwen2.5-7B-ICL-4 .628±.094 .120±.149
+Encoder LM + GNN
+GCN-1 layer .972±.00 .984±.00
+SAGE-1 layer .972±.00 .984±.00
+GAT-1 layer .944±.05 .969±.03
+MLM Self-Supervised+GNN
+UniGraph .939±.03 .964±.02
+Few-Shot Graph Cls (Encoder LM+GNN)
+GPrompt-GCN .747±.21 .834±.17
+GPrompt-SAGE .831±.07 .894±.05
+Table 8: [RQ3] The GNNExplainer result of Node and Edge
+explanation met

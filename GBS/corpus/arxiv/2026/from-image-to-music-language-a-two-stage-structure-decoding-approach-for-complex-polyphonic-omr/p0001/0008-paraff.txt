@@ -1,0 +1,65 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 1
+section: paraff
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+(e.g., informal rhythmic usage, slight engraving
+misalignment, or crowded layout patterns that break a simple space-time prior). As a result, a non24
+
+trivial fraction of manual annotations are caused by the evaluator underscoring the correct topology.
+A more robust learned evaluator, or a tighter verification layer with more sophisticated heuristics, is
+an important next step.
+Compute cost on very large measures.Our measure-level decoding is efficient for typical piano
+measures (tens of events), but it can become expensive for extreme cases with unusually many events.
+In the worst case, the search space is combinatorial: if n candidates can be ordered and assigned in
+many interchangeable ways, the number of distinct partial structures can grow on the order of n·2 αn,
+where α denotes the fraction of events that actually induce branching choices in search. Empirically,
+α is roughly 0.1. At the same time, each Pass expansion invokes a global-attention Transformer
+over the full candidate set, whose cost is roughly O(n2) due to self-attention. Taken together, the
+worst-case time complexity can be viewed as O(n3 ·2 αn), which quickly exceeds a practical budget.
+This is why very large measures are a bottleneck in production. Mitigations include tighter candidate
+pruning, coarse-to-fine search, and models with more efficient attention or factorized representations.
+Here, “large measures” refers specifically to the size of a single part in staff notation, that is, one
+instrument track. In full ensemble scores this issue usually does not grow in the same way, because
+most non-keyboard instruments have limited chordal capacity and their notation is not structurally
+coupled across parts.
+Dependence on visually sensitive semantics.Finally, the second-stage solver assumes that certain
+visually sensitive cues are already correct, because they define the structural frame of a measure.
+Examples include barlines (which define measure boundaries), staff assignment, and time-signature
+hints that define expected measure duration (though already partly mitigated by the design of the
+pre-pass glimpse). When these upstream predictions are wrong (or when the page is degraded and
+the cues are ambiguous), regulation may fail in ways that cannot be repaired by search alone, since
+the candidate set is missing the correct boundary conditions. Improving the robustness of these visual
+semantics, and exposing uncertainty in them to the decoder, remain important engineering priorities.
+6.3 Starry as an Agent-Assisted Annotation Scaffold
+Multimodal LLMs are another plausible direction for OMR in the long run, similar in spirit to how
+current LLM systems are used for data-to-formula recognition. However, given the current scale
+of music-structure supervision, general-purpose LLMs are still underfit in this domain. To reduce
+hallucinations and enforce correctness, we instead treat the existing OMR system and its rule-based
+evaluator as a scaffold for an annotation agent. As an early experiment toward scaling structured
+supervision, we explored using the Starry OMR system as a scaffold for an annotation agent. The
+basic idea is to turn “regulation failures” into small, self-contained tasks at the measure level. For each
+issue measure, the agent requests a cropped score image together with a compact serialization of the
+event candidates and the current (failed) regulation state. It then proposes a fix in a structured patch
+format that edits ticks, duration attributes, time-warp flags, and voice chains. A quality evaluator
+checks the proposed fix immediately and returns diagnostic metrics; if the measure still fails, the
+agent iterates.
+This loop is designed to be conservative. The agent is forced to output explicit structured edits rather
+than free-form text, and every fix is validated by the same structural checks used elsewhere in the
+pipeline. When a fix passes, the result is committed and the session can also record short feedback
+about which rules or guidelines were helpful. Figure 11 sketches the workflow. While this is only a
+preliminary trial, it illustrates a practical path to grow a high-fidelity structure corpus under limited
+human time: the production system proposes solutions, and an agent (with optional human oversight)
+focuses on the tail where decoding is hardest.
+Appendix F provides a complete rollout example of this agent-assisted annotation loop.
+7 Conclusion and Future Work
+We presented a production-grade two-stage OMR pipeline for complex piano scores, with an emphasis
+on the second stage: turning imperfect symbol candidates into an editable musical structure. The
+core conclusion is that structure decoding is not a thin post-processing step. For polyphonic notation,
+it requires global reasoning about voices, ticks, durations, and measure boundaries. Our topology
+25

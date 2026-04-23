@@ -1,0 +1,19 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 8
+section: constraints-logic
+chunk: 46
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+1. **Selection:** Extract a MAXIMUM of **2 Factual** and **2 Episodic** memories.
+2. **"when_to_use" Strategy:**
+* For *Factual*: Focus on the **Context Trigger** (e.g., "When using ‘pandas‘...").
+* For *Episodic (Logic)*: Focus on the **Situational Trigger** (e.g., "When the
+dataset is empty...").
+* For *Episodic (Time)*: Focus on the **Temporal Trigger** (e.g., "When it is Monday
+morning," "At 8:00 AM").
+3. **Minimum Output:** Do not output an empty result. You must find the most valuable
+takeaway, even if minor.

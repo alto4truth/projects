@@ -1,0 +1,40 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 50
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+receives the prompt type and the
+original prompt text, and outputs its TPG decomposition.
+D.2 Trajectory Diagnosis Prompt (Reflector
+LLM)
+Reflector System Prompt
+Role.Analyze an execution trajectory and producetextual
+gradients.
+Task.
+• Generatenegative gradients( δ−): abstract failure patterns caused by the agent, such as poor reasoning, missing verification, ineffective coordination, or tool misuse.
+• Generatepositive gradients( δ+): abstract successful
+patterns, such as systematic verification, effective tool
+use, or correct recovery behavior.
+Key instructions.
+• Describe generalizable behavioral patterns rather than
+task-specific facts.
+• Ignore failures caused purely by the environment or
+external services.
+• If a reference answer is provided, use it only to diagnose
+behavior; do not reveal or restate the answer.
+Example abstraction guidance.
+Bad:“The agent ignored that Ollie Watkins had 19 goals. ”
+Good:“The agent failed to validate its candidate against
+all required constraints before producing a final answer. ”
+Key output schema.
+{
+"summary": "<brief behavioral summary>",
+"error_list": ["<negative textual gradient>",
+...],
+"experience_list": ["<positive textual
+gradient>",

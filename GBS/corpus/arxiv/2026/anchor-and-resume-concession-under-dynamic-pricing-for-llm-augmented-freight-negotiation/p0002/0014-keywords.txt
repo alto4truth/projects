@@ -1,0 +1,38 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+tribution crosses zero).
+In this study we set 𝑐 = 3 throughout, placing the transition
+at 3% spread. We evaluate across three spread regimes: Narrow (𝑆≤ 4%, 𝛽 = 3.0, Conceder), Medium (4% < 𝑆≤ 8%,
+𝛽= 1.0, Linear), and Wide (𝑆 >8%,𝛽= 0.4, Boulware).
+3.3 Two-Index Anchor-and-Resume
+F ramework
+When 𝑟target shifts mid-negotiation, both the concession range
+and 𝛽 update simultaneously. The shape effect can dominate,
+causing the new offer to fall below the previous one. Such an
+offer retractionviolates the monotonic concession property
+standard in bilateral negotiation [ 17] and signals bad faith to
+the carrier. To prevent retraction, we decouple the negotiation
+round counter from the position on the Faratin curve using
+two separate indices:
+∙ Anegotiation index 𝑡∈ { 1, 2, . . . , 𝑇}: the actual round
+counter, always advancing by 1.
+∙ AFaratin index 𝜏∈ { 1, 2, . . .}: a virtual position on
+the current concession curve. Equal to 𝑡 when no shift
+has occurred; may differ from 𝑡 (and may exceed 𝑇 )
+after a shift.
+The complete framework is defined piecewise. When a dynamic pricing shift occurs at round 𝑘 with new parameters
+𝛽new,𝑅 new =𝑟 new
+target −𝑟 min:
+offer(𝑡) =
+⎧
+⎨
+⎩
+offer(𝑘−1) if offer

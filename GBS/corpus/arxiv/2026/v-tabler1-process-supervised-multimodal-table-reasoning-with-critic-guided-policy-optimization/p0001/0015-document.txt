@@ -1,0 +1,22 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+), which unifies the gradient stability of Direct Alignment Policy Optimization (DAPO) and the sampling efficiency of Length-aware Sampling for
+Policy Optimization (LSPO), while crucially injecting dense process-level feedback.
+Visual Chain-of-Thought GenerationLet an input query be a tuple(x, q), where
+xis the table image andqis the natural language question. The policy VLM
+generates a sequence of reasoning steps culminating in a final answer:y=
+(s1, a1, . . . , sK, aK,ans). To break the black-box nature of tabular reasoning,
+we enforce the generation of Visual Anchors (ak) alongside logical steps (sk).
+Rather than operating in raw pixel space, the policy VLM is supervised during
+an initial SFT phase to ground its reasoning in relative grid/logical coordinates
+(e.g.,<cell: Row 2, Col 3>). By explicitly outputting these coordinates and
+their corresponding cell values before executing any arithmetic or comparative
+logic, the model produces a V-CoT trajectory that is mathematically and structurally verifiable [33,40,45].

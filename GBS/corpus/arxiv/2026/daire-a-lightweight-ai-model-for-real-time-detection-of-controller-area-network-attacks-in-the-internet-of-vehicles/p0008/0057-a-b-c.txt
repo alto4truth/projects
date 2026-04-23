@@ -1,0 +1,26 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 8
+section: a-b-c
+chunk: 57
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+e-art works
+For a general comparison of DAIRE with other works, a literature
+review summary of recent works on IoV attack detection is presented in
+Table 1. In this section, we specifically compare DAIRE with six stateof-the-art works. All these six works report the classification (testing)
+time; two of them use the same dataset, and all of them employ an ML
+model to detect/classify IoV attacks. Table 9 presents a comparison of
+DAIRE with these six works. Fig. 9 visually summarizes the comparison. DAIRE achieves competitive DR while maintaining significantly
+faster classification times than all compared state-of-the-art approaches,
+validating its suitability for real-time IoV deployment.
+In IoV intrusion detection systems, the need for real-time responsiveness usually necessitates that each data packet be analyzed in under
+10 ms (ms) (Moubayed et al., 2020). All the works compared satisfy this
+requirement. Here we would like to highlight DAIRE’s superior ability
+to classify IoV attacks in real-time due to its better latency and smaller
+memory footprint than all the other six works.
+By specifically choosing and optimizing the different components of
+our model, DAIRE achieved a class

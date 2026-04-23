@@ -1,0 +1,24 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 4
+section: f2lp-ap-9
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+10 Yutong Shen*, Ruizhe Xia, Jingyi Liu, Yinqi Liu
+Fig. 2. F 2LP-AP Confusion Matrices.Results forTexas(Left),Cora(Center),
+andCiteSeer(Right). The dark, sharp diagonals confirm robust performance across
+varying homophily levels.
+Fig. 3.The ablation results for prototype computation methods, comparing the geometric median (GeoMedian, blue) and the arithmetic mean (Mean, green) across eight
+datasets. The results indicate thatGeoMedianachieves classification accuracy superior
+or equivalent to theMeanacross all benchmarks. Notably, the performance gains are
+more pronounced on low-homophily datasets, such asChameleon,Cornell, andSquirrel, thereby validating its efficacy as a robust prototype estimation strategy.
+propagation stepsKand teleport probabilityα. These results positionF 2LPAPas a compelling, high-performance solution for graph learning tasks where
+both accuracy and resource efficiency are paramount.
+4.3 Ablation study
+Experimental Setup.To rigorously evaluate the efficacy of the core components withinF 2LP-AP, we conducted 2 comprehensive sets of ablation studies
+across all eight benchmark datasets, encompassing a wide spectrum of graph
+homophily levels and network scales, wi

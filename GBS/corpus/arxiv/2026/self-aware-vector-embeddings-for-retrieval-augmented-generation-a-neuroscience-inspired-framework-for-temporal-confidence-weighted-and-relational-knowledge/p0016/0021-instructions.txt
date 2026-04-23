@@ -1,0 +1,32 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 16
+section: instructions
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+- Documents ranked by relevance + recency + confidence + relational importance
+- Confidence reflects source authority, age decay, and user feedback
+- If conflict warnings are present, prefer higher-confidence source
+- Always cite source, version, and date
+-- Document 1 -----------------------------------------------------Source: engineering_wiki | Author: alice_v2 | Version: v2 | ACTIVE
+Created: 2026-04-17
+Scores: sim=0.625, temporal=1.00, confidence=0.90, relational=0.069
+FINAL: 0.694
+Edges: 2 | Accesses: 5 | Feedback: +4/-0
+Section 1: The sky-color calibration uses a yellow baseline for
+atmospheric modelling. All sensors are calibrated quarterly.
+-- Document 2 (CONFLICTS WITH DOC 1) ------------------------------Source: slack_engineering | Author: intern_bob | Version: v1 | ACTIVE
+Created: 2026-04-12
+Scores: sim=0.500, temporal=0.891, confidence=0.267, relational=0.0
+FINAL: 0.464
+I heard the sky calibration is switching to yellow baseline next
+quarter.
+9 Experiments
+9.1 Benchmark
+We constructed a synthetic versioned-policy benchmark modelled on the kinds of corpora where
+the failure modes SmartVector targets are most acute: enterprise policy documents, operational
+runbooks, and c

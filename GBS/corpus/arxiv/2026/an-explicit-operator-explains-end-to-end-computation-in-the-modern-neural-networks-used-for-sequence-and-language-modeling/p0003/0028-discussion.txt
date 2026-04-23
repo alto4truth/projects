@@ -1,0 +1,27 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 3
+section: discussion
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+9
+linear processing.
+Nonlinear activation induces interactions
+between waves
+The nonlinear activation function induces interactions
+between waves in the SSM’s linear recurrence, amplifying the waves’ ability to store information about recent
+inputs in a complex spatiotemporal pattern of activity
+in the network. Using Carleman embedding, we derived
+an exact operator expression for the complete forward
+pass of S4, revealing how the GELU activation decomposes computation into a hierarchy of interactions between wave modes. This operator expression makes explicit how S4 combines information across timescales in
+real-world datasets: the readout weights determine which
+wave modes and nonlinear wave interactions contribute
+to the output classification. Truncating the Carleman
+embedding to first order reveals that the system stores
+information in the amplitude of traveling waves in the
+recurrent layer. Truncating the embedding to second order reveals quadratic interactionsµ i(k)µj(k) that capture interaction between waves and cross-frequency couplings. Higher-order truncations correspond to increasingly complex interactions between multiple waves. The
+lifting mechanism of the nonlinear act

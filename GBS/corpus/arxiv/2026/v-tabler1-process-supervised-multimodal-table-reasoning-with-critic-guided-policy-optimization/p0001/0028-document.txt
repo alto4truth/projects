@@ -1,0 +1,23 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+icit visual anchors before calculation, converting
+black-box guessing into verifiable arithmetic.
+Superiority over Conventional SFT.A direct comparison between our intermediate SFT checkpoints and the final RL-tuned models highlights the value
+of our Process-Guided Direct Alignment Policy Optimization (PGPO). For instance, moving from Qwen3-VL-2B (SFT) to V-tableR1 (2B) yields absolute
+gains of +9.19% on FinQA (15.30%→24.49%) and +9.00% on HiTab (36.45%
+→45.45%). Similarly, V-tableR1 (4B) improves over its SFT counterpart by
++10.10% on FinQA and +10.66% on HiTab (36.58%→47.24%). These substantial jumps prove that while SFT can teach a model the syntax of a reasoning
+chain, it is the critic-gated process rewards during RL that teach the model to
+reliably traverse multi-step logic without hallucinating intermediate values.
+Competitive Performance on Fact Verification (TFV).While the primary design of V-tableR1 targets complex numerical and multi-hop reasoning, it also
+exhibits exceptional strength in semantic verification. On TabFact and InfoTabs,
+V-tableR1 (4B) scores 87.95% and 88.94% respectively, effectively matching or
+surpassing the performance of much larger proprietary models

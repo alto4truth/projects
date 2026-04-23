@@ -1,0 +1,56 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 10
+section: a-weighted-angle-distance-on-strings-19
+chunk: 55
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+X
+a∈Σ
+pS
+n+1(W a)−p S
+n(W)
+
+≤ 1
+L−n+ 1 ,
+
+X
+a∈Σ
+pS
+n+1(aW)−p S
+n(W)
+
+≤ 1
+L−n+ 1 ,
+because the (n+ 1)-windows whose prefix isWaccount for alln-windows equal toWexcept
+possibly the last one, and similarly for suffixes (a boundary-term estimate). Since|X j| → ∞
+in the string case, the error tends to 0 withj, and passing to the limit gives the exact
+consistency relations for (p n).
+By the Kolmogorov extension theorem (see [17, Theorem 1.1.2]), there is a unique Borel
+probability measureµon Σ N such thatµ(Cyl(W)) =p n(W) for allnand allW∈Σ n. The
+second consistency relation is exactly the stationarity (shift-invariance) condition for the
+one-sided Kolmogorov model (see [17,§1.1]), henceµ∈ M τ(ΣN).
+Finally, by constructionu n(µ) =u ∞
+n for eachn, soθ n(Xj, µ)→0 for each fixedn. Since
+0≤θ n ≤π/2, givenε >0 chooseNwith π
+2
+P
+n>N ρn < ε/2, and then choosejlarge enough
+thatP
+n≤N ρnθn(Xj, µ)< ε/2. This yields bdρ(Xj, µ)< ε, proving bdρ(Xj, µ)→0.□
+Lemma 7.17.For everyµ∈ M τ(ΣN)and everyε >0, there exists a finite stringS∈Σ ∗
+such that bdρ(S, µ)< ε.
+Proof.Fixµandε >0. ChooseNsuch that
+π
+2
+X
+n>N
+ρn < ε
+2 .
+It suffices to constructSso thatθ n(S, µ) is small for each 1≤n≤N.
+Consider the de Bruijn digraphG N with vertex set ΣN−1 and edge set Σ N, where an edge
+W=w 1 · · ·w N goes from the prefixw 1 · · ·w N−1 to the suffixw 2 · · ·w N. The vectorp µ
+N is a

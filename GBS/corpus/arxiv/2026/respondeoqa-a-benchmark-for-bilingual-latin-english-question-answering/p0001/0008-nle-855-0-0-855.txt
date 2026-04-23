@@ -1,0 +1,36 @@
+title: RespondeoQA: a Benchmark for Bilingual Latin-English Question Answering
+source: arxiv
+year: 2026
+document_id: respondeoqa-a-benchmark-for-bilingual-latin-english-question-answering
+authors: Marisa Hudspeth; Patrick J. Burns; Brendan O'Connor
+page: 1
+section: nle-855-0-0-855
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20738v1
+
+nd o3-mini is
+worst performing. The reasoning models, QwQ
+and o3-mini, show an advantage over LLaMa on
+literary devices and scansion questions, although
+the best scansion accuracy (25%, o3-mini) is still
+far behind the other question types.
+High accuracy on the skill-based reading comprehension and translation questions is likely due
+to their questions being majority MC format.
+Effect of Question LanguageTo analyze the
+effect of the question language on performance,
+weonlyreportaccuracyonGrammarandScansion
+questions, since they have enough examples for
+each language pair.
+Although the Latin-English Grammar pairs have
+the highest accuracy in Figure 4, these are entirely
+Figure 4: Accuracy by question-answer language
+pair, for Grammar questions (left), and by question
+language for Scansion questions (right).
+MC formatted questions from NLE.
+Keeping the answer language fixed to Latin,
+LLaMA and QwQ have better performance when a
+Grammar question is asked in Latin rather than in
+English. This gap is larger for LLaMa (61% La-La,
+54% En-La) than for QwQ (50% La-La, 49% EnLa). For o3-mini, this effect is reversed, with a 10%
+drop in accuracy.
+Similarly,QwQperformsbetteronscansionquestions

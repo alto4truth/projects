@@ -1,0 +1,17 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 1
+section: rag-db
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+or an image patch𝑥 and a class prompt𝑡, respectively. Given cropped patches(𝑥before, 𝑥after), we
+encode the visual inputs with𝑓 𝜃 and compare them to the text embeddings of the class prompts
+{𝑡1, 𝑡2, . . . , 𝑡𝑛} using cosine similarity. If the expected class for the observed change does not appear
+among the top-𝑘 predictions of𝑥after with similarity above a threshold𝜏enc, the candidate is discarded
+as a likely false change. Otherwise, it is retained for further validation. This stage provides a fast
+semantic screening step before the more expensive RAG Best-of-𝑁validation.
+6

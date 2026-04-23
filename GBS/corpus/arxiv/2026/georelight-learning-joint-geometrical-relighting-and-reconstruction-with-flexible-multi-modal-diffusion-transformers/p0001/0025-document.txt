@@ -1,0 +1,62 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+rative optimization. We refer
+readers to our supplementary video, which shows these 3D
+reconstructions as rotating animations for a full multi-view
+13
+
+High-Resolution
+Image Generation
+Multi-View
+Generation
+Multi-View
+Mesh Carving
+Textured Mesh
+High Resolution,
+DR OurInput Background
+IC-Light NeuralGaffer DiLightNet
+GT
+Not
+Available
+Not
+Available
+Not
+Available
+Not
+Available
+Figure 14.Qualitative comparison on relighting on HumanOLAT.Our model (right) produces more physically-plausible results
+compared to open-source baselines.
+comparison.
+11. Extension to Video Relighting
+GeoRelight is primarily designed for single-image relighting and reconstruction by repurposing the temporal dimensionTof a pretrained video DiT as a modality dimension
+M. However, the framework can be naturally extended
+to multi-modal video relighting with minimal architectural
+modification.
+Architecture ModificationThe key change is in the positional encoding. In our static model, we apply a shared
+2D RoPE [31] (H×W) identically across allMmodalities
+to ensure spatial alignment. For the video extension, we replace this with a shared 3D RoPE (T×H×W) across allM
+modalities. This allows the model to reason about both spatial correlations across modalities and temporal consistency
+across frames, while still maintaining per-modality spatial
+alignment.
+Preliminary ExperimentTo validate this approach, we
+generated 4,000 synthetic human videos and trained a video
+variant of GeoRelight. Due to computational constraints,
+we use 17-frame videos at1280×832resolution, which
+are compressed to3×160×104latents using the Cosmos
+8×8×8causal V AE [27]. The model is initialized from our
+trained static GeoRelight weights. Our preliminary results
+show that this video extension achieves meaningful temporal consistency for multi-modal video relighting, confirming that the architecture supports this generalization. A full
+exploration of video relighting and reconstruction is an exciting direction for future work. Furthermore, our disentangled geometry and appearance outputs could serve as
+a foundation for downstream tasks such as 3D-consistent
+avatar creation [41, 43] and controllable 3D human generation [42].
+12. Limitations and Failure Cases
+While GeoRelight demonstrates state-of-the-art performance and high generalization, our model shares limitations
+common to generative frameworks and also has unique fail14

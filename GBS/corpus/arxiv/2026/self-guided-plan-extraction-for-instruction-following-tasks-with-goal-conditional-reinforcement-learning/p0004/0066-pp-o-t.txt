@@ -1,0 +1,59 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 66
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+precision bf16
+LoRA Configuration
+LoRA rank (r) 64
+LoRA alpha (α) 16
+LoRA dropout 0.1
+Quantization (4-bit)
+Quantization type nf4
+Compute dtype float16
+
+K AI Assistants Usage
+AI assistants were used solely for language editing and text refinement. All scientific contributions and
+conclusions are the sole responsibility of the authors.
+L Plans Generation: Prompt for plan generation
+You control an agent in a 2D game with simplified Minecraft environment.
+You will need to provide a detailed step-by-step plan for following the user’s instructions.
+You must include all the preliminary steps that it needs to complete.
+You are controlling an agent in a 2D game set within a simplified Minecraft-like environment.
+The agent starts from scratch with an empty inventory and no gathered resources.
+Your task is to generate a step-by-step plan that enables the agent to follow a given user instruction.
+What you must do:
+- Break down the instruction into atomic actions the agent needs to perform.
+- Include all necessary preliminary steps, such as gathering or crafting resources.
+- Assume the agent has nothing at the beginning -- you must plan from the ground up.
+- Output your answer as a Python list of strings.
+- Each string must represent one atomic skill invocation, written on a separate line.
+Format for each step:
+"skill_name(arg1 = value1, arg2 = value2, ...)"
+- skill_name: the name of the primitive skill or action the agent will execute.
+- Inside the parentheses, list all required arguments with their names and corresponding values.
+Example:
+gather_resource(resource_type = wood)
+Each of the step agents will be implemented without knowledge of what it did before,
+so it can only rely on observation and the current step.
+Therefore, each step must be self-sufficient and not require knowledge of past steps.
+"If the instruction doesn’t specify what the agent needs to do and is more general--like
+’Explore the world’ or ’Go out and examine the world around you’--send explore(object=world).
+In this case, the plan should consist of only one step: "explore(object=world)"."
+Send your answer as a python list.
+Instruction: Make a pickaxe from wood
+Answer:
+["gather_resource(resource_type = wood)",
+"gather_resource(resource_type = wood)",
+"create_item(item_type = table)",
+"gather_resource(resource_type = wood)",
+"gather_resource(resource_type = wood)",
+"create_item(item_type = wooden_pickaxe)"]
+Send your answer as a python list.
+Instruction: $INSTRUCTION$
+Answer:

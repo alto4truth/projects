@@ -1,0 +1,24 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 2
+section: da-2k
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+alanced performance improvements, ranking within the
+second place on more than half (7 out of 13) of the benchmarks, suggesting that inferring local patch relations for
+Figure 4.The training dynamics of SSL-R1.Left:Single-task
+rewards.Right:Multi-task rewards. All curves are exponentially
+smoothed for visualization.
+global spatial layout transfers to downstream tasks broadly.
+Rotation Prediction achieves the strongest performance improvement on MMVP (+9.34%), indicating that identifying image orientations helps understand CLIP-blind visual
+patterns. Visual Similarity shines on general visual perception and understanding, achieving the largest number of the
+best-performing results in the category of fine-grained perception and understanding. Typically, comparing appearance similarity among views requires strong (multi-object)
+semantic reasoning, which is beneficial for general VQA
+tasks. Region Inpainting stands out on fine-grained visual
+search (V*), yielding a promising +5.24% accuracy gain,
+demonstrating that inpainting local regions attends to pixellevel details and benefits contextual understanding and reasoning.
+Multi-Task Post-Training.Given that each SSL task improves vision

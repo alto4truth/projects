@@ -1,0 +1,31 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+previous failures, we compute
+aneffectiveness score, E(∆G)∈[0,1] , which
+quantifies the proposal’s success rate on the problematic task subset.
+Building an Optimization Experience Memory.
+Each optimization attempt is recorded as a structured entry in a persistentOptimization Experience Memory. This memory serves as a knowledge base of what has been tried and how well it
+worked. Each entry is a tuple containing three key
+components:
+• Problem Context (C):The semantic description of the error cluster that prompted the optimization.
+• Solution Proposal (∆G):The specific set of
+graph edit operations that were applied.
+• Outcome ( E):The resulting effectiveness
+score from the validation step.
+Over time, this memory accumulates a rich dataset
+of problem-solution-outcome triplets, documenting
+the system’s learning journey.
+Adaptive Proposal Generation via In-Context
+Learning.The Optimization Experience Memory enables the Optimizer LLM to evolve from
+a naive reasoner into an expert guided by experience. When a new error cluster with description
+Cnew is identified, the GRAO mechanism initiates
+a retrieval-augmented generation process. First, it
+retrieves historical problem contexts {Ck} fro

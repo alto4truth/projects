@@ -1,0 +1,23 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 7
+section: fw2-hq
+chunk: 86
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+pe de la discipline en 2010, tentera de se qualifier
+pour la finale...
+Translation:Myriam Soumaré qualified for the semi-finals of the 200m at the World Athletics Championships this Thursday in Moscow, finishing third in her heat in 22”83. The
+French sprinter, European champion in the discipline in 2010, will attempt to qualify for
+the final...
+Baseline Rank:13,957,851 (Score: 0.3891)→No-Fra Rank:318,322,669 (Score:
+0.0000)
+Shift:-304,364,818
+Analysis:While informative, this snippet was heavily penalized by the Romance-transfer model.
+This confirms our hypothesis that cross-family transfer pushes the model toward “Encyclopedic”
+quality anchors (like Wikipedia) and away from the more “common” reporting found in general
+web crawls.
+22

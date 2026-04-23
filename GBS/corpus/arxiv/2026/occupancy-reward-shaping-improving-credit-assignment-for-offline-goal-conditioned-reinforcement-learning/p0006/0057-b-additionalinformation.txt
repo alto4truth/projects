@@ -1,0 +1,20 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 6
+section: b-additionalinformation
+chunk: 57
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+t has
+to achieve an appropriate goal configuration of colors by pressing buttons by controlling a
+robot arm. We evaluate algorithms on play datasets ofpuzzle-4x4,puzzle-4x5andpuzzle4x6; and noisy datasets ofpuzzle-4x4andpuzzle-4x6. These are particularly challenging
+tasks (Park et al., 2024a).
+•Scene datasets:The scene tasks challenge sequential, long-horizon planning. They involve manipulating diverse objects: a cube, a window, a drawer and two locks.scene-play
+features a dataset collected using a scripted policy that randomly interacts with the objects.
+At test-time, the agent has to arrange objects into a given goal configuration. These tasks
+can involve up to 8 sub-tasks e.g. unlock a drawer, then open it, then put a cube in it and
+close it again, etc. The agent must therefore be able to stitch together multiple skills to
+21

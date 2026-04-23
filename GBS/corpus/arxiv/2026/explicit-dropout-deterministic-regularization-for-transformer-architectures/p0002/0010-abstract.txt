@@ -1,0 +1,39 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+, largely due to their ability to capture
+long-range dependencies through attention. A Transformer
+encoder consists of stacked layers, each composed of a
+multi-headattentionsublayer,afeed-forwardnetwork,residual connections, layer normalization, and dropout applied
+throughout (Fig. 1). In a standard encoder layer, the input
+𝐗∈ℝ 𝑁×𝑑, formed by𝑁tokens with embedding dimension𝑑, is first linearly projected into query, key, and value
+representations:
+𝐐=𝐗𝐖 𝑇
+𝑞 ,𝐊=𝐗𝐖 𝑇
+𝑘 ,𝐕=𝐗𝐖 𝑇
+𝑣 ,(1)
+where𝐖 𝑞,𝐖 𝑘,𝐖 𝑣 ∈ℝ 𝑑×𝑑 are trainable parameter matrices.
+The scaled dot-product attention mechanism computes
+similarityscoresstoredin𝐒,whicharenormalizedrow-wise
+by a softmax to obtain attention weights𝐀and the attention
+output:
+𝐒= 𝐐𝐊𝑇
+√
+𝑑
+,(2)
+𝐀= sof tmax(𝐒),Attention(𝐐,𝐊,𝐕) =𝐀𝐕.
+Equivalently, one may writeAttention(𝐐,𝐊,𝐕) =𝐀𝐕𝐃 −1,
+where𝐃= diag(𝐀1 𝑁 )contains the row sums of𝐀and
+1 𝑁 is an𝑁-dimensional vector of ones, highlighting the
+normalization inherent in the softmax.
+Dropout is typically applied at multiple locations inside this encoder block, such as the attention block or the
+feed-forward network. DropAttention [23] and DropKey
+[20] explore the different positionings of dropout within
+the multi-he

@@ -1,0 +1,19 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 5
+section: v2-5-7-8-9-10
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+on Patterns/Pitfalls:
+• Broken beams from split voice assignments— The beamed group (8, 9, 10) was split
+with 8 in voice 2 and 9, 10 in voice 1, breaking the beam even though the timing worked.
+• Misinterpreting simultaneous events— Events 6 (quarter note) and 7 (eighth rest) at
+tick 480 appeared to conflict, but belong to different voices.
+• Over-optimizing for spaceTime — The original assignment minimized gaps but broke
+beams; accepting somespaceTime(gaps at measure start/end) fixed the beam issue.
+Feedback session: 26.9 s, 57 649 input tokens, 656 output tokens.
+49

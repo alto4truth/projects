@@ -1,0 +1,28 @@
+title: A Hierarchical MARL-Based Approach for Coordinated Retail P2P Trading and Wholesale Market Participation of DERs
+source: arxiv
+year: 2026
+document_id: a-hierarchical-marl-based-approach-for-coordinated-retail-p2p-trading-and-wholesale-market-participation-of-ders
+authors: Patrick Wilk; Ethan Cantor; Yikui Liu; Jie Li
+page: 2
+section: abstract
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20586v1
+
+MARL-Based Coordinated P2P Electricity Trading
+limited information sharing and centralized handling of
+unmatched P2P supply and demand.
+(ii) Limited-Information Sharing for Privacy-Preservation:
+LSD-MADDPG, a DRL solution customized for the retail P2P management, employs a decentralized actorcritic architecture that reduces non-stationarity and uncoordinated outcomes through limited information sharing, balancing cooperative and competitive objectives of
+individual DERs with reduced computational costs. In
+LSD-MADDPG,prosumeragentsaccessonlytheirlocal
+states and customized “strategies”, i.e., the aggregator
+state and price signals, during training. Such a design
+reduces information exchange complexity and offers a
+more realistic, secure, and scalable approach than fully
+centralized or distributed methods.
+(iii) A Hierarchical DRL Design: SEAM-LESS innovatively
+employs parallel PPO and LSD-MADDPG learning to
+coordinate DERs’ wholesale and P2P market participation. A Stackelberg game is used to model the coordination between aggregator-level PPO for wholesale market
+bidding with prosumer-level LSD-MADDPG for retail
+P2P decision-making and clearing. PPO’s stable policy
+updates enable

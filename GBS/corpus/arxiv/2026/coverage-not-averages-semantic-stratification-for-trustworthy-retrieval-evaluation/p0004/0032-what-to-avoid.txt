@@ -1,0 +1,25 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 4
+section: what-to-avoid
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+- Queries that are too generic to meaningfully match the document
+- Queries that require information NOT in the document
+- Forced or unnatural combinations of keywords
+--USER:
+Generate a search query that this document would answer.
+Query Type: {query_type_description}
+{query_type_instructions}
+[RANDOMLY SAMPLED STYLE CONSTRAINTS - see Query Diversity Grid]
+{style_constraints}
+Document:
+Title: {doc_title}
+Content: {doc_text}
+Generate ONE search query matching the specified type and style
+constraints (just the query text, nothing else):
+Query diversity dimensions.Style constraints are randomly sampled from this 3x2 grid to ensure diverse query characteristics.

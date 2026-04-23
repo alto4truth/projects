@@ -1,0 +1,14 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 201
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+nt validity: Items are drawn from the World Values Survey, an established sociological instrument covering a wide range of cultural and moral domains.
+
+Chapter 4: The World Values Benchmark 190
+Construct validity: The mapping preserves key I-W dimensions (e.g. survival vs. self-expression; traditional vs. secular-rational), ensuring that outputs reflect the intended underlying constructs. Concurrent validity: Model value profiles are compared against WVS national distributions, allowing direct alignment with independent, empirical baselines. Ecological validity: Because WVS items address live and contested social issues, they provide contextually relevant tests that resonate with real-world moral and political debates. Threats: Analysis was limited to English-language prompts; model access was restricted to non-public systems, reducing reproducibility and scope for external validation. Metrics: Primary metrics were KL divergence (asymmetric information difference) and L1 distance (symmetric probability mass difference) between model output distributions and WVS national profiles. Analysis was reported at micro (item), meso (domain), and macro (aggregate placement) levels. Channels of Bias: Training data; prompt wording; anchor framing; aggregation (nation-level averages); researcher interpretation. Governance Impact: Provides audit signals for cultural drift; offers a transparent baseline for regulators and organisations seeking culturally inclusive evaluation methods; demonstrates teaching applications for Responsible AI. Risks & Possible Misuses: Results could be misused as normative rankings of countries or as definitive measures of cultural similarity. Profiles are descriptive, not endorsements. Limitations: Access limited to non-public models; results not directly reproducible. Nation-level mapping averages over internal diversity. Findings are snapshots tied to model versions current at testing (2021–22). Ethical Use & Authorship: Generative AI was used to generate benchmarked outputs; analysis, interpretation, and methodological design were human-led. All claims remain under the author’s responsibility.

@@ -1,0 +1,37 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 1
+section: rgb-xyz
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+−
+
+(Pi − ¯P)−(Q i − ¯Q)
+
+2
+2
+2σ2
+!
+,(5)
+which can be interpreted as a Gaussian kernel density estimate
+over alignment residuals, measuring the rigidity of the induced
+correspondence field. We retain the top- K hypotheses with the
+highest scores and select the best rotationR ∗ accordingly.
+Finally, translation is estimated independently to decouple
+rotational ambiguity. We compute the median pixel location
+within the object mask along with its corresponding depth value,
+and back-project it into 3D space using camera intrinsics:
+t∗ =zK −1[u, v,1] ⊤.(6)
+The resulting initialization Tinit = (R∗,t ∗) provides a robust
+starting point for subsequent refinement, while avoiding bias
+introduced by asymmetric geometry or partial visibility.
+C. Mask-Aware Pose Refinement
+(1) Iterative Pose Refinement Pipeline:To achieve precise
+pose alignment with high computational efficiency, we design
+an iterative refinement network based on a hybrid parallel
+render & compare scheme. The process is initialized at i= 0
+by performing a standard CAD rendering to generate highfidelity reference RGB-D templates and their corresponding

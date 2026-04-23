@@ -1,0 +1,49 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 6
+section: phi-llama-qwen
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+7.7 18.5 22.9 24.5 24.2
+St. Dev. 12.3 12.0 11.5 12.12 10.95 12.8 12.5 12.1
+Table 8: Per-language performance on MMLU-ProX (Phi4-Mini-Instruct-3.8B)
+44
+
+Published in Transactions on Machine Learning Research (11/2025)
+Language ZS T + COMPASS T F A T + R T + LR T + LS
+English (en) 45.2 47.2 43.6 47.1 35.3 44.7 45.7 45.2
+Chinese (zh) 31.9 38.8 33.4 38.4 27.7 34.4 35.3 34.9
+Japanese (ja) 24.9 30.9 26.0 30.0 21.7 26.9 27.8 27.3
+Korean (ko) 24 31.6 25.7 30.5 20.4 26.8 27.9 27.3
+French (fr) 31.2 37.6 33.1 37.6 28.2 33.9 34.8 34.4
+German (de) 32.2 39.1 34.2 39.1 29.0 35.1 36.1 35.6
+Spanish (es) 20.7 24.8 21.7 24.8 18.6 22.3 22.9 22.6
+Portuguese (pt) 37.8 45.7 39.8 45.2 33.6 41.0 42.1 41.6
+Arabic (ar) 13.4 17.7 14.3 17.1 11.2 15.0 15.6 15.3
+Thai (th) 27.9 34.8 29.1 33.8 24.5 30.1 31.2 30.7
+Hindi (hi) 20.5 26.6 21.8 25.7 17.4 22.7 23.6 23.1
+Bengali (bn) 18.8 25.4 20.2 24.5 15.4 21.2 22.2 21.7
+Swahili (sw) 15.1 20.2 16.3 19.4 12.6 17.0 17.7 17.3
+Czech (cs) 23.1 25.9 22.7 24.8 20.1 23.0 23.4 23.2
+Hungarian (hu) 25.5 27.5 25.0 26.9 22.2 25.2 25.6 25.3
+Indonesian (id) 22.6 25.1 22.2 24.0 19.6 22.4 22.8 22.6
+Italian (it) 34.8 38.3 34.1 36.7 30.3 34.3 34.9 34.5
+Marathi (mr) 19.7 22.5 19.4 21.5 17.1 19.6 20.1 19.8
+Nepali (ne) 17.3 20.1 17.2 19.2 14.6 17.4 18.0 17.7
+Russian (ru) 28.8 32.3 28.3 30.9 25.0 28.7 29.2 28.9
+Serbian (sr) 27.1 30.5 26.7 29.2 23.6 26.9 27.5 27.2
+Telugu (te) 14.2 17.5 14.2 16.1 11.9 14.4 15.4 15.2
+Ukrainian (uk) 24.1 26.7 23.4 25.6 20.7 23.6 24.1 23.8
+Urdu (ur) 14.2 15.9 14.0 15.3 12.3 14.1 14.4 14.2
+Vietnamese (vi) 31.3 35.2 30.8 33.6 27.2 31.1 31.7 31.4
+Wolof (wo) 0.4 0.5 0.4 0.5 0.3 0.4 0.5 0.4
+Yoruba (yo) 6.4 8.1 6.4 7.3 5.3 6.5 7.0 6.9
+Zulu (zu) 4.5 5.9 4.5 5.3 3.7 4.6 5.0 4.9
+Overall 22.8 26.9 23.2 26.1 19.6 23.7 24.4 24.0
+St. Dev. 9.9 11.0 10.0 11.0 8.5 10.2 10.4 10.3
+Table 9: Per-language performance on MMLU-ProX (Llama-3.1-Instruct-8B)
+45

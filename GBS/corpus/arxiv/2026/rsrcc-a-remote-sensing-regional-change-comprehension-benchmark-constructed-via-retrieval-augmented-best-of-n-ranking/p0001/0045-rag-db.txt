@@ -1,0 +1,72 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 1
+section: rag-db
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+mplesas is, without applying any of our filtering criteria, to
+maintain consistency with prior work and preserve the original dataset distribution.
+18
+
+1.Uniformity filter:Patches with low pixel intensity variation are discarded. If
+𝜎(𝑋)< 𝜏 std, 𝜏 std =0.08,(32)
+the patch is excluded.
+2.Low saturation filter:Patches with low mean saturation in HSV space are removed. If
+1
+𝐻𝑊
+𝐻∑︁
+𝑖=1
+𝑊∑︁
+𝑗=1
+𝑆𝑖 𝑗 < 𝜏sat, 𝜏 sat =0.15,(33)
+the patch is discarded.
+3.Vegetation filter:Using the Excess Green Index,
+ExG=2𝐺−𝑅−𝐵,(34)
+patches dominated by vegetation are removed if
+1
+𝐻𝑊
+𝐻∑︁
+𝑖=1
+𝑊∑︁
+𝑗=1
+ExG𝑖 𝑗 > 𝜏ExG, 𝜏 ExG =0.35.(35)
+Algorithm 3Patch Filtering Process
+1:Input:Image patch𝑋∈R 𝐻×𝑊×3 , thresholds𝜏std, 𝜏sat, 𝜏ExG
+2:Output:Keep or discard decision
+3:Compute pixel intensity standard deviation𝜎(𝑋)
+4:if𝜎(𝑋)< 𝜏 std then
+5:Discard patch
+6:end if
+7:Convert𝑋to HSV, compute mean saturation ¯𝑆
+8:if ¯𝑆 < 𝜏sat then
+9:Discard patch
+10:end if
+11:Compute Excess Green Index: ExG=2𝐺−𝑅−𝐵
+12:Compute mean ExG
+13:if ExG> 𝜏 ExG then
+14:Discard patch
+15:end if
+16:Keep patch
+F.1 IoU Threshold Calibration
+To determine an appropriate intersection-over-union (IoU) threshold for identifying true object-level
+changes, we conducted a controlled calibration experiment using human evaluation over a randomly
+selectedsubsetof100imagepairs. Eachpairwasmanuallyannotatedtoindicatewhethertheobserved
+differences corresponded to genuine structural change (e.g., new construction, building removal) or
+false change (e.g., illumination shifts, vegetation growth, or shadow variations). We then compared
+these binary human judgments against a continuous range of IoU values computed between masks at
+times𝑡and𝑡+Δ𝑡.
+Figure 6 illustrates the receiver operating characteristic (ROC) analysis used to optimize the IoU
+threshold 𝜏iou. The ROC curve evaluates the trade-off between true positive rate (TPR) and false
+positive rate (FPR) when varying𝜏iou over the interval[0,1] . The analysis achieved an area under the
+curve (AUC) of 0.91, confirming that IoU is a strong discriminator of true versus false changes. The
+optimal threshold𝜏iou =0.18 corresponds to the maximal Youden’s𝐽 index, representing the most
+balanced separation between changed and unchanged regions as perceived by human evaluators.
+To further illustrate the decision boundary, Figure 7 shows the ROC curve corresponding to the
+optimal threshold𝜏iou =0.18 . The near-perfect separation (AUC=0.79 ) demonstrates that human
+judgments align well with this empirical threshold, providing an interpretable and reproducible
+boundary for localizing true changes while suppressing noisy detections.
+19

@@ -1,0 +1,17 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+green) mitigates this collapse,
+showing a smoother curve, but plateaus
+early, failing to explore deeper logical
+trajectories. Remarkably, our full PGPO
+method (blue) not only recovers from
+early exploration dips (steps 5-10) but ultimately climbs to the highest sustained reward level (>0.7). The comparison
+between PGPO and its variant without process supervision (red) is particularly telling: while the outcome-only variant plateaus around 0.6, the full PGPO

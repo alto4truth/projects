@@ -1,0 +1,27 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 5
+section: a-weighted-angle-distance-on-strings-9
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+tuna (TPE sampler) forn trials=100. The objective is the silhouette score computed on non-noise points (DBSCAN noise label-1is removed
+before silhouette is evaluated). If DBSCAN produces fewer than two non-noise clusters, the
+silhouette is defined to be−1 to prevent degenerate solutions from being selected.
+Remark5.1.We made the decision to tune to the silhouette score because it is available
+without labels, is inexpensive onceDis computed, and it provides a consistent tuning
+criterion across all datasets and metrics. We emphasize that silhouette isnotassumed to
+correlate perfectly with ground-truth clustering quality; it is used only as a practical, labelfree model-selection heuristic.
+To avoid dataset-specific hand-tuning of theepsscale, we restrict the search range using
+quantiles of the observed pairwise distance distribution. Concretely, letDbe the multiset of
+upper-triangular entries ofD. We set
+eps∈
+h
+Quantile0.02(D),Quantile 0.20(D)
+i
+,
+with standard numeric guards when the interval degenerates. We search
+min samples∈ {3,5,8,13}.

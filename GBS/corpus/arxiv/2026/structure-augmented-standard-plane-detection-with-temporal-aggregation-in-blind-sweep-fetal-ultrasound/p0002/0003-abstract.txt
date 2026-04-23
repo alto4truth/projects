@@ -1,0 +1,21 @@
+title: Structure-Augmented Standard Plane Detection with Temporal Aggregation in Blind-Sweep Fetal Ultrasound
+source: arxiv
+year: 2026
+document_id: structure-augmented-standard-plane-detection-with-temporal-aggregation-in-blind-sweep-fetal-ultrasound
+authors: Keli Niu; He Zhao; Qianhui Men
+page: 2
+section: abstract
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20591v1
+
+iction (FGR) is a leading cause of perinatal
+morbidity and mortality, affecting about one in ten pregnancies worldwide [1]. For the early detection of FGR, it heavily
+relies on accurately identifying standard planes in obstetric
+ultrasound (US) to ensure precise fetal biometric measurements [2]. However, due to a shortage of skilled sonographers
+in low-resource settings [3], blind-sweep protocols [4] which
+scan along predefined trajectories have become a practical approach for estimating gestational age and detecting fetal abnormalities. These protocols call for accurate and reliable detection of biometry planes for measurement. Existing standard plane detection approaches [5, 6, 7, 8] mainly focus on
+multi-task learning, where the semantic understanding of the
+anatomical structures within the plane is learned simultaneously. One of the recent approaches [9] adopted biomedical
+imaging foundation models like BiomedCLIP [10] to learn
+the fetal image semantics, which accurately retrieves standard planes in less challenging freehand US scanning videos.
+However, performance of these models downgrades on blindsweep videos, where low-quality, non-standard planes or partially visible stand

@@ -1,0 +1,27 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 9
+section: ieee-transactions-on-image-processing-7
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+ularization. This synergistic
+integration not only validates the generalization of our SCA
+design but also establishes a resilient framework for openworld amodal video segmentation.
+IV. EXPERIMENTS
+A. Experimental Setup
+Data sources of TAOS pipeline.The SA-1B dataset [1]
+comprises 11 million varied, high-resolution, privacyprotecting images and 1.1 billion top-notch segmentation
+masks obtained through SAM’s data engine. This dataset
+offers well-labeled, category-independent, high-quality, multigranularity object masks. Utilizing these labeled masks enables the acquisition of necessary amodal annotations without
+human intervention via the proposed TAOS pipeline, as elaborated in Section III-C.
+Amodal segmentation benchmarks.To assess the effectiveness of our approach, we evaluate Amodal SAM on six amodal
+segmentation datasets including both image and video amodal
+segmentation benchmarks: KINS [7], COCOA [2], COCOAcls [9], D2SA [30], FISHBOWL [31], and MOViD-A [32].
+•KINS, an extensive traffic amodal dataset based on KITTI
+[26], comprises 14,991 images across 7 categories, with
+7,474 images for training and the rest for testing.
+•COCOA, a subset of the COCO dataset [33], consists of

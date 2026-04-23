@@ -1,0 +1,31 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+redicts production adversarial capability.Shared by:C3, agent-benchmarking community.Risk:
+Medium. Consequence:If false, investment in agent-based
+red teaming yields low real-world ROI; engineering effort is
+misallocated toward tasks that do not transfer to deployment
+settings.
+A5.Single randomness draws suffice for stochastic defence
+evaluation.Shared by:Prior DBP evaluations cited in C6.
+Risk: Medium. Consequence:If false, an entire defence
+class (diffusion purification, randomised smoothing variants)
+requires re-evaluation; published robustness numbers collapse
+under proper sampling [C6].
+A6.Continual robust training closes the deployment lifecycle gap.Shared by:C4, practitioners adopting CRT.Risk:
+Medium. Consequence:If false, CRT provides false lifecycle
+confidence; models degrade against out-of-vocabulary attacks
+post-deployment.
+A7.TRADES default hyperparameters yield stable robustness.Shared by:Practitioners using default configurations;
+C7 deployments.Risk: Medium. Consequence:If false,
+widespread overestimation in mis-tuned regimes; users who
+adopt TRADES without hyperparameter validation inherit
+masked gradients.
+A8.Leaderboard checkpoints faithfully match published code

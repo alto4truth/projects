@@ -1,0 +1,23 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 7
+section: a-sam
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+max
+D
+(EMg∼PGT(M) [logD(M g, I)]
++E Mp∼PA-SAM(M) [log(1−D(M p, I))]),
+(10)
+whereP GT andP A-SAM are the distributions of ground truth
+masks and predicted masks by the proposed Amodal SAM,
+respectively.
+To effectively extend the capabilities of SAM from the
+visible region segmentation to amodal segmentation while
+preserving its powerful zero-shot functionality, we propose
+Optimization Adaptation, as detailed in Section 3.4 of the main
+paper. This approach includes holistic topology regularization,

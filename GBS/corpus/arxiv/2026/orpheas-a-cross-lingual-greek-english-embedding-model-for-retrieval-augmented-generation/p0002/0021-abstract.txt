@@ -1,0 +1,42 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+ORPHEAS: A Cross-Lingual Greek–English Embedding Model for Retrieval-Augmented GenerationA PREPRINT
+Algorithm 1Fine-Tuning Dataset Generation for ORPHEAS
+Require:
+C: Document corpus
+O: Domain ontology
+s: Chunk size
+ma: Number of atomic facts per chunk
+mq: Number of questions per chunk
+me: Number of entity-based sentences per chunk
+Return:
+Fine-tuning datasetD
+1:G=∅ ▷Stage I
+2:for alldocumentd∈ Cdo
+3:Segmentdinto chunks:{c 1, . . . , ck}of sizes
+4:for allchunkc i do
+5:Extract entitiesE i, relationshipsR i, atomic factsA i using LLM
+6:Generate questionsQ i grounded inc i using LLM
+7:MapE i,R i,A i,Q i to ontologyO
+8:Integrate mapped elements into knowledge graphG
+9:D=∅ ▷Stage II
+10:for alldocumentd∈ Cdo
+11:for allchunkc i ∈ddo
+12:Retrieve fromG:
+13:(i)A i: randomly samplem a atomic facts linked toc i
+14:(ii)Q i: randomly samplem q questions answerable byc i
+15:(iii)E i: randomly samplem e sentences generated from 5 entities inc i
+16:for allanchorx∈A i ∪Q i ∪E i do
+17:Add(x, c i)toD ▷Anchor-positive pair
+18:for allpair(x, c i)∈Dwithxin Greekdo▷Stage III
+19:Translatexto English:x EN =Translate(x)
+20:Add(x EN, ci)toD ▷Cross-lingual anchor-positive pair
+21:for allpair(x, c i)∈Dfrom MS-MA

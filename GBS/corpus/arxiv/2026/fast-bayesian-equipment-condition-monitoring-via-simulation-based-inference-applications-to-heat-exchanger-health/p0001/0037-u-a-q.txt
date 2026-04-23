@@ -1,0 +1,24 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+ress test for probabilistic diagnosis under weak observability. In this regime, fouling evolves
+through sparse but potentially large stochastic jumps
+(low event rate,λ= 0.5, and relatively large jump scale,
+βf = 0.03), so the thermal response can resemble measurement noise over extended time windows. This setting is therefore informative for assessing whether the
+inference framework can separate persistent degradation
+dynamics from transient fluctuations. Both MCMC and
+SBI assign dominant posterior probability to the fouling
+mode (Table II) and recover a consistent posterior for
+the changepointτ. As shown in Fig. 9, marginal posteriors are also in close agreement across methods, indicating that amortized SBI preserves the main uncertainty
+structure of the MCMC reference posterior. Although
+both approaches show limited identifiability forλand,
+to a lesser extent,β f in this sparse-event regime, posterior predictive trajectories remain physically plausible
+and reproduce the observed trend in fouling resistance.
+From a reliability perspective, this is the key requirement for downstream condition monitoring tasks, such as

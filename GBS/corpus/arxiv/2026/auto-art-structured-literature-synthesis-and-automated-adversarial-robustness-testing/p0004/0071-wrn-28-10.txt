@@ -1,0 +1,38 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 4
+section: wrn-28-10
+chunk: 71
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+RB×640
+Worst-Case Loss
+Lunion = max p Lp
+EWC Reg.
+λ P
+i Fi(θi −
+θ∗
+i )2
+∇θ
+x+δ ∗
+logits∈R B×10
+Figure 11:Multi-norm adversarial training with curriculum scheduling (Direction 1). At each epoch, the curriculum scheduler Pt selects
+the perturbation norm; the worst-case loss Lunion takes the maximum across norms. EWC regularisation prevents catastrophic forgetting of
+robustness to earlier norms.
+20
+
+I Compliance Framework Mapping
+Table 17:Mapping between AUTO-ART modules and regulatory/standards requirements.
+Standard Requirement AUTO-ART Module Evidence Produced
+EU AI Act Art. 15 Robustness against adversarial examples
+Multi-norm evaluator,
+FOSC gate
+Worst-case accuracy, masking detection
+EU AI Act Art. 15 Resilience against data
+poisoning
+Poisoning attack suite
+(10+)
+Poisoning success rates, CI gate

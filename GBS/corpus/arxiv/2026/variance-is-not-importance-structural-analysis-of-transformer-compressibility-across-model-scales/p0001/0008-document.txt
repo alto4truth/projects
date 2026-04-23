@@ -1,0 +1,22 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+.
+3.4 Sensitivity Analysis
+We measure directional sensitivity via two methods:
+1.Perturbation-based: Add Gaussian noise along each PCA direction with standard deviationσ= 0.01· ∥x∥ 2 (1% of the per-token activationℓ 2 norm), measure the change in
+the model’s next-token log-probability averaged across held-out tokens.
+2.Canonical Correlation Analysis: Find directions in blockb’s output that best predict blockB’s output (the final block), via standard CCA formulated as singular value
+decomposition of the cross-covariance matrix Σ −1/2
+bB with ridge regularizationλ= 0.1.
+3.5 Early Exit
+We attach dedicated prediction heads (RMSNorm + Linear) at intermediate blocks, train them
+on calibration data to predict next tokens, and measure agreement with the full model’s predictions.
+3

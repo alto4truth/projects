@@ -1,0 +1,27 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 2
+section: feret
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+might arise from the background removal
+steps and be invisible in the FR performance evaluation
+if they are not enough to generate an overlapping region
+between genuine and impostor distributions. If these curves
+move towards each other after segmentation (smaller∆), the
+background removal task resulted in a less discriminative FR
+capacity, which might not directly translate into changes in
+FR verification accuracy. As seen in Table II, the average
+genuine cosine similarity decreases after each of the segmentation techniques is applied. This tendency is generally
+accompanied by a slight increase in average impostor scores,
+resulting in a decrease in∆in all the evaluated scenarios. These results expose a slight approximation tendency
+between the genuine and impostor curves after background
+removal, highlighting the existence of a negative impact on
+the FR scores distribution when segmentation is performed.
+Semi-Controlled Scenario:Table I also summarizes the
+FR performance and quality metrics results on FRGCv2.
+Similarly to FERET, it can be seen that the quality of the obtained samples does not fluctuate significantly after segmentation. This tendency is also associated with neglig

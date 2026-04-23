@@ -1,0 +1,33 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 2
+section: vocabulary-category-items
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+Lang Stage 1 Model F1 TP FP FN
+EN Mistral Large 3 (675B) 0.6543 236 170 128
+IT Mistral Large 3 (v3e)0.6905266 198 106
+IT Mistral Large 3 (v3a) 0.6900 266 201 106
+EN Qwen 3.5 (397B, think=off) 0.6411 236 211 128
+Smaller-scale ablations (train10):
+EN Gemini Flash (teacher) 0.6763 68 35 9
+EN MedGemma 4B (student) 0.6521 57 13 22
+EN SGR-only baseline 0.4384 39 44 39
+Table 2: Main results on dev80 (N=80; top rows, both languages) and
+ablations on train10 (N=10; bottom rows). All variants use the same
+deterministic Stage 2 compiler. v3e denotes the latest Stage 2 rule set
+with improved FP-drop gates for Italian. F1 = official macro-F1 scorer;
+TP/FP/FN = item-level counts.
+3.3 Optional UMLS Alias Mapping
+We curated a UMLS-based alias map for all 134 CRF items (coverage
+134/134) and integrated it as an optional pipeline mode (--use-umls-map
+ping) to reduce key-name brittleness in model outputs. The map associates
+each official item name with its UMLS CUI and preferred name, plus manually
+verified synonyms. This mode is activated in all final submissions.
+4 Experiments and Results
+We report results at three scales: train10 (for debugging), dev80 (open GT,
+used as a “sanity gate” before subm

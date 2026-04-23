@@ -1,0 +1,58 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 1
+section: paraff
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+tric coordinates (x, y1, y2,pivotX) , staff index, and apredispositioncomputed by a single forward pass of BeadPicker: predicted tick ˆti, division
+31
+
+distribution di, dots distribution δi, successor probability vector s, and scalar attributes
+(grace, timeWarped, fullMeasure, fake ).
+The algorithm must assign to every non-sentinel element:
+1. an integerorder oi (consecutive integers mark the same voice; a gap of more than one starts
+a new voice),
+2. a tick offsett i ≥0,
+3. a division classd i ∈ {0, . . . ,8}(whole through 256th) and dot countδ i ∈ {0,1,2},
+4. scalar attributes (beam state, stem direction, grace, timeWarp, fullMeasure).
+The ordering and duration assignments together determine the voice structure and the tick layout;
+scalar attributes are resolved deterministically from predispositions after search.
+B.2 Three-Phase Action Sequence
+Each search step handles exactly one event through three sub-decisions executed in sequence.
+Pass. Choose the next element to enter the chain (or EOS to close the current voice). The posterior
+distribution over candidates is the successor vector returned by BeadPicker. Selecting EOS
+when residue remains triggers a new voice: the BOS sentinel is re-entered and BeadPicker
+is re-queried with the updated prefix.
+Division. Assign a division class to the newly chained element. The posterior is the element’s
+predispositiondivisionVector.
+Dots. Select augmentation dots (0, 1, or 2). The posterior is dotsVector. Completing the dots step
+triggers one call to the evaluation function; if the partial solution is already complete or
+fatally erroneous the node is sealed.
+This factorisation mirrors the model output structure and keeps the branching factor small at each
+decision:O(n)for Pass, 9 for Division, 3 for Dots.
+B.3 Branch Selection and Pretentiousness Pruning
+At each node the branch with the highestadjusted probabilityis explored next:
+ˆpi = pi
+visits(c i) + 1 ,
+where pi is the node’s raw posterior probability for choicei and visits(c i) is the access count of child
+ci (zero if not yet created). This rule favours high-probability branches while ensuring every branch
+is eventually visited.
+Each time a branch with raw probability p is taken, the path’s accumulatedpretentiousnessincreases
+by min(100,−lnp) . When the total exceeds 100×λ (where λ is the ptFactor tolerance, typically
+1.0–1.6), the node is pruned: it returns the current partial evaluation and marks itself as exhausted
+(accessCount← ∞ ). Pretentiousness thus acts as a cumulative log-probability penalty that eliminates paths the model considers collectively implausible, analogous to a beam-search threshold but
+applied lazily during tree expansion.
+Algorithm 1 :DEDUCE(v,ctx)— one path from nodevto a leaf
+Input: nodev(type∈{Pass, Division, Dots}), context ctx = (picker, ptFactor)
+Output: ClusterEvaluation
+v.count←v.count+ 1
+ni←arg max i
+
+pi /(visits(c i) + 1)
+
+ifni=∅:v.count← ∞;returnEVALUATE(. . . )
+32

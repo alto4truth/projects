@@ -1,0 +1,24 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+EAS extends
+its scope to a diverse multi-domain corpus, which enables the model to retrieve relevant information regardless of
+whether the query and document languages match. It is worth noting that the primary motivation for the development
+of ORPHEAS is the needs of the Greek academic and industrial community and it is designed to serve researchers,
+engineers and practitioners working with Greek and English text across diverse domains in a bilingual environment.
+The contributions of this work are summarized as follows:
+• We develop ORPHEAS, a specialized Greek–English embedding model for RAG applications, capable of
+capturing domain-specific semantic structures and morphological nuances across diverse Greek corpora while
+maintaining robust cross-lingual alignment with English.
+• The development of ORPHEAS is based on a knowledge graph-based fine-tuning methodology, enforced
+with a cross-lingual augmentation strategy, enabling ORPHEAS to perform monolingual and cross-lingual
+retrieval within a unified model.
+• The presented experimental and statistical analysis demonstrate that ORPHEAS outperforms state-of-the-art
+multilingual embedding models across monolingual and cross-lingual

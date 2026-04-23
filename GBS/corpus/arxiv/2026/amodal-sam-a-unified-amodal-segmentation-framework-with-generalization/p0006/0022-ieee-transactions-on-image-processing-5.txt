@@ -1,0 +1,50 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 6
+section: ieee-transactions-on-image-processing-5
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+y, we adopt Gaussian Blur, which smooths each
+boundary pixel by normalizing the pixel value according to a
+predefined Gaussian kernel. Formally, a boundary pixel located
+at(x, y)in an imageIis smoothed as follows:
+G(x, y) = 1
+2πσ 2 exp
+
+− x2 +y 2
+2σ2
+
+,
+I ′(i, j) =
+k
+2X
+x=− k
+2
+k
+2X
+y=− k
+2
+G(x, y)·I(i+x, j+y).
+(6)
+Here,Gdenotes the Gaussian kernel with sizek. The overall
+pipeline is illustrated in Fig. 5.
+D. Optimization Adaptation
+The model architecture and training data adaptations necessitate refining SAM’s optimization process to better suit the
+amodal segmentation requirements.In addition to the vanilla
+segmentation lossL seg, we introduce two additional learning
+objectives for amodal segmentation: (1) regional consistency
+Lreg between the visible and occluded regions of the target
+object, and (2) holistic topological regularizationL hol based on
+adversarial learning. To this end, the overall learning objective
+Lis formulated as:
+L=L seg +L reg +L hol.(7)
+Segmentation Supervision.To begin with, we first adopt
+Dice loss and BCE loss to optimize the segmentation prediction:
+Lseg =L Dice +αL BCE,(8)
+Whereαis a balancing factor that is set to 10, following [14],
+[16], [27].
+Reg

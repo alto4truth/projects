@@ -1,0 +1,54 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 7
+section: a-weighted-angle-distance-on-strings-13
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+to be the number ofk-length windows inP Qthat cross fromPtoQ, and define
+(10)d k := max (0,min(m, k−1)−max(0, k−n−1) + 1)
+to be the number ofk-length windows inP aQthat include the newa. Ifm, n≥k, these
+equations simplify toc k =k−1 andd k =k.
+Each of thec k removed windows decreases one coordinate of [P Q] k by 1, and each of the
+dk new windows increases one coordinate by 1. By the triangle inequality,
+(11)∥[P aQ] k −[P Q] k∥ ≤c k +d k.
+Alsoθ Ledit+1(P aQ, P Q) = π
+2 . Since [P Q] k has nonnegative integer entries summing toL edit −
+k+ 1, we have∥[P Q] k∥ ≥ √Ledit −k+ 1, and similarly∥[P aQ] k∥ ≥ √Ledit −k+ 1. Hence,
+by (8),
+θk(P aQ, P Q)≤π· ck +d k
+2√Ledit −k+ 1 (k≤L edit).
+Therefore
+(12)d ρ(P aQ, P Q)≤
+X
+1≤k≤Ledit
+ρk ·π ck +d k
+2√Ledit −k+ 1 + π
+2 ρLedit+1.
+Fork≤K edit we haveL edit −k+ 1≥L edit/2, hence
+π ck +d k
+2√Ledit −k+ 1 ≤ π√2Ledit
+(ck +d k).
+Fork > K edit we useθ k(P aQ, P Q)≤π/2. Thus
+dρ(P aQ, P Q)≤ π√2Ledit
+X
+1≤k≤Kedit
+ρk(ck +d k) + π
+2
+∞X
+k=Kedit+1
+ρk + π
+2 ρLedit+1.
+Fork≤K edit, we havec k +d k ≤2 min(k, M edit), so
+X
+1≤k≤Kedit
+ρk(ck +d k)≤2
+∞X
+k=1
+ρk min(k, Medit) = 2AMedit(ρ).
+Substituting this and evaluating the tail P∞
+k=Kedit+1 ρk yields (5).
+We now turn our att

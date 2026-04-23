@@ -1,0 +1,67 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+O), a simple mixed-policy
+scheme that learns from a policy’s own near-future self: a later checkpoint from the same training
+run is a natural source of auxiliary trajectories that is both stronger than the current policy and
+closer than any external source, directly balancing trajectory quality against variance cost. We
+validate NPO through two manual interventions, early-stage bootstrapping and late-stage plateau
+breakthrough, and further proposeAutoNPO,an adaptive variant that automatically triggers
+interventions from online training signals and selects the guide checkpoint that maximizesS. On
+Qwen3-VL-8B-Instruct with GRPO, NPO improves average performance from 57.88 to 62.84, and
+AutoNPO pushes it to 63.15, raising the final performance ceiling while accelerating convergence.
+0 100 200 300 400 500
+Training Step
+0.35
+0.40
+0.45
+0.50
+0.55Validation Accuracy
+~2.1× speedup
+Higher
+ceiling
+Early
+Intervention
+Late
+Intervention
+(a) Validation accuracy during training
+GRPO
+NPO (early)
+NPO (early+late)
+AutoNPO
+MMMU-Pro MathVista MathVision WeMath Average40
+45
+50
+55
+60
+65
+70
+75
+80
+85Accuracy (%)
+51.8
+73.8
+47.4
+54.1
+57.9
+55.8
+76.2
+48.8
+56.6
+60.2
+55.5
+78.5
+55.5
+62.7
+61.5
+57.1
+76.3
+54.6
+67.0

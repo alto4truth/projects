@@ -1,0 +1,29 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+without distortion. Second, this
+model requires data that is both photorealistic and has accurate 3D geometry labels, which is difficult to acquire. We
+observe that synthetic trained model is robust to produce
+good intrinsics and geometry. Hence use our own model
+to annotate pseudo labels for photorealistic images from
+light stage and in-the-wild data. Then, we use the strategic
+mixed-data training procedure (Sec. 3.4) where we leverage
+our model’s flexibility to train on a mix of synthetic data
+(for perfect labels) and real-world data (for photorealism).
+Our unified multi-modal DiT model achieves state-ofthe-art results in both photorealistic relighting and highfidelity 3D reconstruction from a single in-the-wild image.
+In summary, our contributions are:
+• A unified Multi-Modal Diffusion Transformer framework
+that jointly generates relit images, intrinsic color, surface
+normal details, and 3D geometry.
+• iNOD, a novel and V AE-friendly depth representation
+that isotropically preserves 3D geometry in latent space.
+• A strategic mixed-data training methodology that combines synthetic data with auto-labeled real-world images
+to achieve both geometric accuracy and photorealism.
+2. Re

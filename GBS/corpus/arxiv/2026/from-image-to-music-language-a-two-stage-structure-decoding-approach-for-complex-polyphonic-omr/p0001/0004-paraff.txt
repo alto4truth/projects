@@ -1,0 +1,64 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 1
+section: paraff
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+same candidate event set from
+the visual stage and must output a structured result: voice chains, tick positions, and duration-related
+attributes.
+20
+
+Training Test
+Datasetwriter10k-combined lilypond-topology
+Primary source Paraff render + feedback Independent LilyPond corpus
+Groups (scores) 9,995 107
+Measure samples 366,534 5,317
+Weighting 1 / 4 / 100 uniform
+Purpose model training generalization evaluation
+Table 6: Train-Test Independence. Summary of train vs test construction.
+Event-level comparison against ground truth.We match events by stable event ID and use the
+ground-truth data as the denominator. The main event-level view is therefore a direct field-error
+comparison rather than a detector-style precision/recall score. We report per-field error rates for
+tick, division, dots, beam, and timeWarp, plus anany-fielderror rate that marks an event wrong
+if any of the six core fields differ. Tick RMSE is reported separately in raw tick units. Following
+the comparison script, tick matching uses a tolerance of ±1 tick for the event-level error rate, while
+RMSE uses the raw difference.
+Measure-level exactness and internal diagnostics.At the measure level, we report three exactmatch tiers against ground truth:perfect,voice match, andtick exact. A measure isperfectwhen the
+voice partition matches ground truth and all core event fields match.Voice matchignores attribute
+differences and only requires the canonicalized voice sets to agree.Tick exactrequires a voice
+match and exact tick values for all events. In addition, we report internal structural diagnostics
+from the evaluator in Appendix B, including average quality score, tick-twist, surplus time, and
+broken-beam rate. These diagnostics do not compare against ground truth directly; they measure the
+self-consistency of the produced result.
+5.4 Configurations
+Training configuration (BeadPicker).BeadPicker is a 16-layer Transformer encoder ( dmodel=128,
+8 heads, dinner=512) with dropout 0.1, totaling about 3.24M parameters. We initialize all weight
+matrices with Xavier-uniform initialization and a depth-scaled gain (g= 32 −1/2) to keep the 16-layer
+stack stable at the start of training. Training uses multi-task supervision with a dominant weight on
+the successor head; we mix large-scale rendered samples with recognition-feedback samples and
+apply moderate augmentation to remain robust to layout variation and imperfect candidates. The full
+hyperparameter list is provided in Appendix A.
+Decoding configuration (BeadSolver).We evaluate two decoding budgets.Single-passBeadSolver
+uses a fixed search budget and is meant to reflect the core capability of the model-guided solver
+under a practical compute constraint.Multi-passBeadSolver runs multiple passes with escalating
+budgets and returns the best solution found across passes; it is used to probe the upper bound of the
+method when more compute is available. In our implementation, the passes share the same model
+and evaluation function, and only differ in search quota; the multi-pass setting can also include a
+lightweight pre-pass that assigns measure-level predispositions (e.g., estimated measure duration)
+before search, which improves robustness on ambiguous measures.
+5.5 Results
+Our main comparison evaluates on the independent LilyPond test set against ground-truth topology
+and reports both event-level and measure-level metrics (see Table 7).
+Overall, greedy regulation struggles mainly on tick placement and voice organization: 30.65% of
+scored events contain at least one field error, and only 50.71% of measures are fully correct. The
+linear-equations baseline closes much of this gap, but it remains brittle on ambiguous timing and
+time-warp structure. BeadSolver improves substantially once learned local guidance is combined
+with search, reducing any-field event error to 5.91% and raising the perfect-measure rate to 83.00%.
+Multipass decoding improves the tail further. It reaches 86.80% perfect measures and lowers tick
+RMSE from 202.4 to 41.2. One detail is worth noting: the internal evaluator terms do not always
+21

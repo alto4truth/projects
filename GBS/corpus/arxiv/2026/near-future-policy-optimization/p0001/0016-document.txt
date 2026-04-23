@@ -1,0 +1,36 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+out group
+at steptis formed.
+Before the NPO segment begins, we useπ(t+∆) to roll out each promptx offline, run the verifier, and keep
+one correct trajectory per prompt (with optional length or entropy filtering) as the guidance trajectoryo′
+x.
+Prompts on whichπ(t+∆) fails to produce any correct trajectory are dropped from the guidance set. This
+cache is computed once and reused throughout the NPO segment, which spans roughly 40 training steps in
+our main experiments (Figure 1(a)), so the segment itself incurs no extra rollout cost fromπ(t+∆).
+At stept, for a promptxthe current policy samples a full on-policy group ofntrajectories,
+oi ∼π (t)(· |x), i= 1, . . . , n,(2)
+and we compute the on-policy pass-rateˆp(x) = 1
+n
+Pn
+i=1 r(x, oi). The cached guidance trajectory is injected
+only when the current policy is struggling onx: if ˆp(x) ≤τ gate and o′
+x exists in the cache, we replace then-th
+slot by o′
+x; otherwise the on-policy group is used unchanged. Writing the chosen trajectory in then-th slot as
+˜on, the resulting group is
+GNPO(x) ={o 1, . . . , on−1,˜on},˜o n =
+(
+o′
+x ifˆp(x)≤τ gate ando ′
+x exists,
+on otherwise. (3)
+4

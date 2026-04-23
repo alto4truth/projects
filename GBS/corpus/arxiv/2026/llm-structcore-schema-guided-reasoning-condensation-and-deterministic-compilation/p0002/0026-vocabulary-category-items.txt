@@ -1,0 +1,27 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 2
+section: vocabulary-category-items
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+models can outperform
+32B baselines.
+7 Conclusion
+LLM StructCore emphasizes contract alignment, format stability, and reproducible post-processing for CRF filling under extreme sparsity. The
+two-stage SGR decomposition isolates clinical extraction (Stage 1, any LLM)
+from strict submission enforcement (Stage 2, deterministic), enabling rapid
+iteration on Stage 1 recall and controlled-vocabulary grounding without sacrificing deterministic output guarantees. Our best submitted system achieves
+F1 = 0.63 on the Codabench test set (EN), placing within 0.05 of the top-1
+team (Aurum, F1 = 0.68). The pipeline is fully language-agnostic: Italian
+dev80 achieves F1 = 0.6905 with no language-specific Stage 1 modifications,
+and the Italian test200 submission was prepared (but not submitted due to
+exhausted attempt limits). This demonstrates that the combination of SGR
+condensation and deterministic compilation is competitive across languages
+while offering full reproducibility and edge-deployment readiness.
+Future work will focus on: (i) improving Stage 1 recall for high-FN items
+through domain-specific checklists and few-shot examples; (ii) exploring
+hybrid Stage 2 approaches that combine dete

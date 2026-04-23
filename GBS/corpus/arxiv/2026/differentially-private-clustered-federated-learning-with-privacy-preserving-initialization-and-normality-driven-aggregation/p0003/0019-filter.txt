@@ -1,0 +1,26 @@
+title: Differentially Private Clustered Federated Learning with Privacy-Preserving Initialization and Normality-Driven Aggregation
+source: arxiv
+year: 2026
+document_id: differentially-private-clustered-federated-learning-with-privacy-preserving-initialization-and-normality-driven-aggregation
+authors: Jie Xu; Haaris Mehmood; Rogier Van Dalen; Karthikeyan Saravanan; Mete Ozay
+page: 3
+section: filter
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20596v1
+
+ly reduced update
+magnitudes after aggregation, leading to slow convergence. To address this, we propose this novel scaling mechanism, which restores
+the intendedℓ 2 norm of the updates to global cluster models. This
+improves both the robustness and fairness of the proposed framework. To avoid applying amplified noise to a global cluster model
+with zero contributing clients, we zero out the update whenever the
+test statistic reaches the threshold of0.99.
+4. EXPERIMENTS
+Experimental settings:We use privacy budget ofϵ∈ {2,8}which
+are commonly used in existing works [8, 9] andδ= 1
+|K|1.1 [2]. Following [2, 31, 26], we simulate a cohort size of 10k with a smaller
+cohort size to achieve a more realistic signal-to-noise ratio which
+represents industry scale more closely. We use rotated CIFAR-10
+(C= 2), rotated FMNIST (C= 4) and FEMNIST (C= 2) for
+our experiments. Following [11], we generate the first two by applying the same rotation (0, 180 degrees for CIFAR-10 and 0, 90, 180,
+270 degrees for FMNIST) to all images of a client. We set the total number of clients to 5,000 for CIFAR-10/FMNIST and 2,840 for
+FEMNIST. We use standard data augmentation (e.g. random cropping and horizontal flip

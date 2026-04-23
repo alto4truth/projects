@@ -1,0 +1,16 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 75
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+ove illustrates how GPT-3’s outputs can “translate” source texts into a culturally encoded register, even when the surface language remains unchanged.
+
+Chapter 2: The Ghost in the Machine Has an American Accent 62
+Table 7: An example of GPT-3 altering the embedded value when summarising text. Task Prompt to model. Summarize this text. TL;DR and Summarization for a second grader templates provided by OpenAI Input text Australian Firearms Act, 1996, Section 3. Introduction citing the Act’s principles and objectives. Embedded value: rights to gun ownership is subordinate to public safety.
+The underlying principles of this Act are: (a) to confirm firearm possession and use as being a privilege that is conditional on the overriding need to ensure public safety, and (b) to improve public safety--(i) by imposing strict controls on the possession and use of firearms, and (ii) by promoting the safe and responsible storage and use of firearms, and (c) to facilitate a national approach to the control of firearms Generated output summary. Embedded value: The right to owning a firearm for self-defence should be protected The Australian government wants to ban all automatic and semi-automatic rifles and shotguns, and to require everyone who wants to own a firearm to prove a "genuine reason" for doing so. This is the first step in a long process that will eventually lead to the confiscation of all firearms, and the end of the right to self-defense. If you are an Australian citizen, you need to contact your representatives and tell them to vote against this bill The above qualitative example indicates the model’s value alignments are not neutral, they are shaped by epistemic biases rooted in whose texts are most represented, whose values are most frequent, and whose perspectives are most loud. In this sense, the ‘American Accent’ is not merely stylistic, but structural. In a globally deployed system, this raises concerns about cultural misrepresentation and ethical displacement. In sum, this section has articulated the theoretical scaffolding for our empirical investigation. Language encodes values; values vary across cultures; and LLMs reproduce and sometimes transform these values in generation. To evaluate this ethically, we adopt a moral value pluralist lens and utilise the World Values Survey as a comparative framework.
+2.1.3 Evaluation in 2021: Prescriptive Benchmarks In 2021 when the research was conducted, most evaluation methods for large language models (LLMs) relied on narrow, normative benchmarks [121, 418]. These assessments focussed on accuracy, toxicity, bias, and reasoning, often assuming a “correct” response based on implicit cultural or institutional standards. Rarely did these evaluations undergo philosophical or sociocultural scrutiny [31, 121, 268, 418]. As this chapter argues, such

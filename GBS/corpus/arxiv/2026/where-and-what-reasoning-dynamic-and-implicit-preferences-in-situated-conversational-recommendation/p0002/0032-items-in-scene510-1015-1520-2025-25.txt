@@ -1,0 +1,31 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 2
+section: items-in-scene510-1015-1520-2025-25
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+and the
+qualitative example in Figure 10, where baselines
+without reliable transition reasoning are more likely
+to end in passive or erroneous responses. We therefore view the main remaining challenge of STE not
+as free-form hallucination, but as disambiguating
+among semantically neighboring real scenes under
+limited conversational evidence.
+E Prompting Templates
+We present the detailed templates used for data
+construction and model training. First, to ensure
+standard dialogue state tracking, we adhere to a predefined schema of intents and slots. As illustrated
+in Figure 6, representative intents include requesting product details (i.e., REQUEST:GET), comparing
+items (i.e., REQUEST:COMPARE), and adding items
+to the shopping cart (i.e., REQUEST:ADD_TO_CART).
+Corresponding slots may include attributes such as
+customer review, color, and price.
+Furthermore, regarding the Bayesian Inverse Inference module, we structure the instruction tuning
+data as shown in Figure 7. This template integrates
+the visual scene snapshots, the dialogue history,
+and hypothetical user preferences (like/dislike) to
+formulate the input, while the output is the corresponding dialogue state. This structured fo

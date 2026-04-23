@@ -1,0 +1,39 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+3
+whereC min = min(C hot, Ccold). The heat exchanger effectiveness,ϵ, represents the ratio of actual heat transfer
+to the maximum thermodynamic limit. Here,ϵis determined by the Number of Transfer Units (NTU) and the
+capacity rate ratior:
+NTU= U A
+Cmin
+, r= Cmin
+Cmax
+,(7)
+ϵ= 1−exp[−NTU(1−r)]
+1−rexp[−NTU(1−r)] .(8)
+The product of the overall heat transfer coefficientUand
+the exchange areaAis denoted asU A, which characterizes the heat transfer capability of the equipment. The
+outlet temperatures are then directly recovered from the
+energy balance:
+Thot,out =T hot,in − Q
+Chot
+Tcold,out =T cold,in + Q
+Ccold
+.
+B. Stochastic Modeling of F ailure Mechanisms
+For each of the failure mechanisms object of this
+study, degradationismodeledbyintroducingastochastic
+time-dependency into the parameters of the deterministic model in Sec. IIA, aligning with recent reliability
+frameworks for stochastic degrading devices [39]. These
+stochasticformulationsareselectednotbecausetheynecessarily provide a more accurate physical representation
+of degradation than existing deterministic models, but
+rather as tunable, multi-parameter frameworks for failure evolution. By adjusting the event frequency and the
+s

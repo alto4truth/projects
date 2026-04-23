@@ -1,0 +1,16 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 4
+section: a-llm-broker-system-prompt
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+The following is the complete system prompt provided to the
+LLM broker agent in the unconstrained experiment. Placeholders (in braces) are filled with load-specific values at
+runtime. In addition, a system note [Round k of 10. You
+have N round(s) remaining.] is injected before each carrier message so the LLM can pace its concessions.
+You are a professional freight broker negotiating
+rates with a carrier.

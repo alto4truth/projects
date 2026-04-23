@@ -1,0 +1,23 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 2
+section: abstract
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+-world systems.
+2 RELATEDWORK
+Offline GCRL.Offline GCRL has been a long-standing area of research in RL (Kaelbling, 1993;
+Schaul et al., 2015), stemming from a necessity to build innovative algorithms taking advantage of
+its rich metric structures, probabilistic goal-reaching interpretations and sub-goal compositionality.
+As a result, diverse types of algorithms exist in offline GCRL based on behavioral cloning (Yang
+et al., 2022; Hejna et al., 2023), actor-critic methods (Haarnoja et al., 2018; Kostrikov et al., 2021),
+hind-sight goal relabeling (Andrychowicz et al., 2017) as well as more specialized approaches based
+on metric learning (Wang et al., 2023a; Reichlin et al., 2024; Park et al., 2024c), contrastive reinforcement learning (Eysenbach et al., 2022), dual RL (Ma et al., 2022; Sikchi et al., 2023b) and
+hierarchical RL (Chane-Sane et al., 2021; Park et al., 2023; Zhou & Kao, 2025).
+Hierarchical RL methods (Chane-Sane et al., 2021; Park et al., 2023) address the challenges posed
+by long-horizon, sparse-reward tasks with a two-level policy structure where the high level policy
+predicts sub-goals that a low-level policy learns to reach. Methods such as Ahn et al. (2025) addres

@@ -1,0 +1,32 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 75
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+the entire original
+dataset, validating the efficacy of our pipeline in
+extracting high-value samples from standard distribution data.
+Experimental Setup.We established a rigorous baseline using the “Origin Full” configuration,
+where the Qwen2-VL-2B model was fine-tuned on
+the complete pool of 300,000 raw samples derived
+from the eight foundational datasets prior to any
+defect injection. This represents the upper bound
+of data quantity without our intervention. This
+baseline was compared against the “EVIAN (10K)”
+model, which was fine-tuned on the top-10,000
+samples selected by our framework. Both models
+utilized identical model architectures and training
+hyperparameters and were evaluated using the standard VLMEvalKit suite to ensure a fair comparison
+focused strictly on data efficiency and quality.
+Results.As shown in Table 8, the EVIANselected subset achieves a higher average score
+of 70.20 compared to 70.07 for the full original
+dataset, despite utilizing only approximately 3.3%
+of the total training volume. While the full dataset
+exhibits a slight advantage on knowledge-heavy
+benchmarks such as MMBench, SEEDBench, and
+ScienceQA, likely attributable to the broader exposure to

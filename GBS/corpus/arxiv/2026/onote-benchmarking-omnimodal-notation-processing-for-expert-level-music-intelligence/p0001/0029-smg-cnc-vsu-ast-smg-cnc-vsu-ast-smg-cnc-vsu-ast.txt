@@ -1,0 +1,28 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+components: 1)Expert Persona:Assigning a strict
+and domain-specific role (e.g., a rigorous music theory professor
+or a fingerstyle guitar master) to calibrate the model’s evaluation
+standards. 2)Objective Verification Constraints:Mandating the
+mathematical verification of rhythmic values (e.g., exactly 4.0 beats
+per measure) and structural layouts before assessing subjective
+aesthetics. 3)Standardized Output Format:Forcing the model to
+output a parsable, continuous score (ranging from 1 to 5) without
+generating redundant conversational text.
+The detailed critic prompts corresponding to the three primary
+notation formats (ABC Notation, Jianpu, and ASCII Guitar Tablature) are presented in Figure 8.
+C ONOTE Evaluation Metrics Implementation
+Details
+C.1 Overall Evaluation Framework
+The ONOTE benchmark designs independent automated evaluation
+logics for four distinct tasks, all implemented through deterministic rules and sequence matching algorithms without subjective
+scoring or LLM-as-a-judge, ensuring reproducibility and impartiality. The evaluation process first performs structural parsing of
+model outputs, then executes task-specific verification logic, and finally provides quantit

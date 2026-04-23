@@ -1,0 +1,65 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 2
+section: r-e-s-u-lt-s
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+rect the physics-based (ADCIRC) modeled
+water levels, thereby improving the accuracy and reliability of storm surge forecasts
+within CERA platform.
+11
+
+CERA Platform
+0 2000 4000 6000 8000 10000
+Time (mins.)
+2
+0
+2
+4
+6
+8
+10
+Water level (ft.)
+Springmaid Pier, SC (8661070, NOAA-NOS)
+Observed
+Modeled
+Offset
+A. Signal Processing
+Nodes (Stations)
+V = {•, •, •, •, •}
+Edges
+(Functional Dependencies)
+• Compute pairwise correlation ρij from
+observed water level.
+• Keep edges if ρij > ρ min and dij < d max.
+Et = {(vi, vj) | ρij > ρ min, d ij < d max}
+B. Graph Computation
+StormNet
+G = ⟨X, E, V ⟩
+Input Output
+Time
+t1 t
+C. Offset Prediction
+Fig. 1 : Overview of the proposed spatio-temporal learning pipeline for bias correction in hurricane storm surge forecasting StormNet. (A) Data preprocessing: include
+computation of offsets between modeled and observed water levels at each gauge station. (B) Graph computation: construction of the spatio-temporal graph G = ( V, E),
+where nodes represent stations and edges represent correlations betweeen stations. (C)
+Offset prediction: the proposed StormNet model forecasts future offsets ˆoi(t), which
+are subsequently used to correct the physics-based (ADCIRC) modeled water levels.
+2.2 Data Acquisition and Preprocessing
+Observed and modeled water elevation time series data at an hourly resolution from 13
+historical U.S. hurricanes (Table 1) are extracted from the Historical Storm Archive by
+CERA [56, 61] and visualized with the online interactive CERA framework [ 30]. Gauge
+station data from NOAA, U.S. Geological Survey, Texas Coastal Ocean Observation
+Network and other U.S. agencies were used as observed values, while modeled water
+elevation for each gauge station location was produced by ADCIRC [ 27]. The offset
+timeseries (Eq. 1) is calculated by the difference between the modeled values from their
+observed counterparts at each time interval for each station and TC. Offset values
+outside the range of three standard deviations (calculated on the whole dataset) were
+eliminated.
+Our study focuses on the Gulf Coast of the U.S., due to its high susceptibility to
+hurricane events; therefore, only data from gauge stations in this region are included.
+12

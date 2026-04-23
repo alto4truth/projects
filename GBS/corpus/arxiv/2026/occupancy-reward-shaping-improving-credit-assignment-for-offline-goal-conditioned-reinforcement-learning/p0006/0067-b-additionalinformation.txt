@@ -1,0 +1,30 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 6
+section: b-additionalinformation
+chunk: 67
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+net update rate (occupancy model) 0.005
+Discount factorγ(occupancy model) 0.99
+Flow steps 22 (antmaze-giant-navigate), 55 (antmaze-large-navigate), 45 (other tasks)
+Reward (pD
+cur, pD
+traj , pD
+rand) ratio for goal sampling (0.2, 0.5, 0.3)
+We added a warm-start stage without bootstrapping to the occupancy model by training it to predict
+future statess + distributed according to a geometric distribution over trajectory timestepst τ ∼
+Geom(1−γ)starting the current states:
+Lpretrain(θ) =E stτ =x1∼D,tτ ∼Geom(1−γ),
+x0∼N(0, I d),t∼Unif([0,1])
+h
+∥vθ(t, s, a, xt)−(x 1 −x 0)∥2
+2
+i
+(8)
+for the first 1M epochs and then training it using the bootstrapping loss in Sec. 4.1 for next next 1M
+epochs, however we did not see any consistent improvements from doing this.
+25

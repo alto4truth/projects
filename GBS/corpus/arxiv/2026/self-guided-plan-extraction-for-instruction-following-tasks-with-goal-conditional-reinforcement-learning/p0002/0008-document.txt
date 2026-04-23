@@ -1,0 +1,30 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 2
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+4.2 Policy Learning
+After the plans have been generated, we train a
+reinforcement learning agent using the stepwise
+plan observation setting (Subsection 3). At each
+timestep, the agent observes the environment and
+receives an embedding of the current plan step. It
+must learn to align actions with plan steps based
+on a delayed reward signal provided only upon
+successful completion of the entire plan. We use
+the PPO algorithm to train the policy.
+Algorithm 1Skill Curriculum Learning
+Require:Set of all plansP, success-rate thresholdτ
+1: Initialize mastered skillsM ← ∅
+2: Initialize PPO agentπ θ
+3: Initialize active plans
+S ← {p∈ P |pcontains exactly one skill}
+4:whiletraining not convergeddo
+5: Trainπ θ on active plansSand collect rollouts
+6: For each skills, compute success rate:
+SR(s) = # Successful episodes containings

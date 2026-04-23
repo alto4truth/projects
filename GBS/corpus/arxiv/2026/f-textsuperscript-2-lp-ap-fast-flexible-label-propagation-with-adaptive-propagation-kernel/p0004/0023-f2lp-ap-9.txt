@@ -1,0 +1,16 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 4
+section: f2lp-ap-9
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+prehensive sets of ablation studies
+across all eight benchmark datasets, encompassing a wide spectrum of graph
+homophily levels and network scales, with classification accuracy serving as the
+primary evaluation metric. The first set investigates the effectiveness of the adaptive propagation strategy by benchmarking the fullF 2LP-APframework, characterized by its adaptiveKandαparameters, against the non-adaptive variant
+FixedAPPNPProto(with fixedK= 5 andα= 0.1) and the propagation-free
+baselinePrototypeOnlyGeoMed. The second set validates the robustness of utilizing the geometric median for prototype computation by comparing our proposedPrototypeOnlyGeoMedagainstPrototypeOnly-Mean, which relies on the

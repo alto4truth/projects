@@ -1,0 +1,23 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+2 Engineering Lessons and Design Requirements
+This section has two goals. First, it makes explicit the main engineering difficulties we encountered while
+buildingpAI/MSc, so that future work can attack them directly rather than rediscover them piecemeal.
+Second, it serves as guidance for users who may customize or extend the system: it documents which design
+choices were responses to concrete workflow failures, which problems we believe are only partially solved,
+and which interface contracts should be preserved if one wants the pipeline to remain reliable. We present
+these lessons in the same order in which they typically appear during a research-to-paper run.
+2.1 Difficulties Encountered
+1. Ideation quality improved when planning became debate rather than monologue.One
+of our earliest observations was that single-agent ideation tended to converge too quickly to generic or
+aesthetically plausible project plans. Quality improved substantially when the early planning phase was
+reformulated as a structured debate among multiple agents rather than a single agent trying to ideate,
+justify, and plan everything at once. This was also oserved, but implemented differently by Du et al. [52]

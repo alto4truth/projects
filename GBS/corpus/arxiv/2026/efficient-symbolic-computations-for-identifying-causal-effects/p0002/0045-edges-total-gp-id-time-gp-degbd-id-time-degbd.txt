@@ -1,0 +1,27 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 2
+section: edges-total-gp-id-time-gp-degbd-id-time-degbd
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+olynomials
+is bounded.
+Assumption 7.1.There is a constants≥1such that|pa(v)| ≤sfor allv∈V.
+The Half-Trek Criterion by Foygel et al. (2012a, Theorem 1) was a breakthrough in developing
+sufficient graphical criteria for rational identifiability that run in polynomial time. If a graphGis
+certified to be rationally identifiable by recursively applying the Half-Trek Criterion, we say thatG
+is HTC-identifiable.
+Proposition 7.2.LetGbe HTC-identifiable and suppose that Assumption 7.1 holds. Then there
+is an identifying order≺and a corresponding set of identifying polynomialsP≺ such thatmax g∈P≺
+deg(g)≤2s+ 1.
+Next, we consider the Instrumental Cutset criterion by (Kumor et al., 2019, Theorem 5.1). It also
+runs in polynomial time but only applies to acyclic graphs. A mixed graphG= (V, D, B)is acyclic
+if the induced directed graph(V, D)is acyclic. If a graphGis certified to be rationally identifiable
+by recursively applying the Instrumental Cutset criterion, we say thatGis IC-identifiable.
+Proposition 7.3.Let an acyclic mixed graphGbe IC-identifiable and suppose that Assumption 7.1
+holds. Then there is an identifying order≺and a corresponding set of identifying polynomialsP≺
+such thatmax g∈P≺

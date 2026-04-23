@@ -1,0 +1,24 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+ractable.
+The lower dimensional representation can be designed
+from knowledge or learned through an embedding neural network. In this study, we construct a set of summary statistics tailored to the heat exchanger measurements. Features are derived from the hot-side temperaturedifferenceT hot,in−Thot,out, thecold-sidetemperature
+differenceT cold,out −T cold,in, the hot-side mass-flow loss
+˙mhot,in −˙mhot,out, and the outlet temperaturesT hot,out
+andT cold,out. For each of these five signals, the mean,
+standard deviation, early-to-late change, dynamic range,
+and a linear trend measure are computed to yield a 25dimensional summary statistic vector. These summaries
+are designed to capture the temporal signatures most informative for both failure-mode identification and estimation of the associated degradation parameters.
+F. Scoring and distance measures
+To compare performance of SBI against MCMC, we
+use metrics that assess both the similarity between inferred posteriors and their quality with respect to the
+ground-truth parameters. The Wasserstein distance between the SBI and MCMC posteriors quantifies the discrepancy between the amortized SBI posterior and the
+MCMC reference posterior

@@ -1,0 +1,24 @@
+title: MGDA-Decoupled: Geometry-Aware Multi-Objective Optimisation for DPO-based LLM Alignment
+source: arxiv
+year: 2026
+document_id: mgda-decoupled-geometry-aware-multi-objective-optimisation-for-dpo-based-llm-alignment
+authors: Andor Vári-Kakas; Ji Won Park; Natasa Tagasovska
+page: 2
+section: group-dro
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20685v1
+
+Table 1: Per-objective win/tie/loss rates (%) against the golden responses for Gemma-2-2b-it. In each column,bold
+indicates the highest net win rate, and ∗ indicates statistically significant improvement over REFERENCE.
+Algorithm Instruction Following Honesty Helpfulness Truthfulness
+MGDA-DECOUPLED51.8/3.0/45.2 ∗ 29.2/47.2/23.656.5/6.3/37.1 ∗ 51.1/10.0/38.9
+MGDA-NORMALISED50.9/2.9/46.2 29.1/46.8/24.0 55.8/6.3/37.9 50.5/10.0/39.5
+GROUPDRO 51.2/2.9/45.929.4/47.5/23.1 ∗ 56.2/6.5/37.3 50.7/10.0/39.3
+CDPO 50.9/2.9/46.2 29.2/47.6/23.2 55.2/6.5/38.3 50.5/10.1/39.4
+UNIFORM51.4/3.1/45.5 28.9/47.4/23.7 56.3/6.4/37.2 51.1/9.7/39.2
+REFERENCE51.0/2.7/46.3 29.0/47.1/23.9 55.6/6.5/37.9 50.8/9.7/39.5
+single cumulative score for each response. Preference pairs are then constructed based on this total score, reducing the
+problem to standard single-objective DPO.
+Training details.We train for 1 epoch, with the total number of steps determined by the largest per-objective dataset.
+Smaller datasets are oversampled to ensure that a valid minibatch is available for every objective at each step. We
+perform full-parameter fine-tuning using the Adam optimiser [Kingma and Ba, 2015] with a learning rate of 5e

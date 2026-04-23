@@ -1,0 +1,15 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+. Our
+framework explicitly penalizes Path 3 by isolating the verification of visual anchors from the final answer [10].
+Process Evaluation via Critic VLMWe evaluate the fidelity of the generated VCoT using a separate critic VLM. A fundamental challenge in training a reliable
+process verifier is acquiring high-quality negative examples of reasoning trajectories. To construct the critic’s training distribution, we synthesize erroneous
+V-CoTs by perturbing high-quality reasoning chains. Specifically, we use an aux-

@@ -1,0 +1,26 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 2
+section: results
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+tep. The two systems
+become fully equivalent by matching the eigenvalue matrices –Λin Eq. (8) andDin Eq. (9) – and the input
+projection matrices. 1 Importantly, the nonlinear coordinate transformationx i =e iψi that renders the oscillator network exactly solvable is also what establishes the
+mathematical correspondence with S4D-Lin. The central
+distinction between the systems, then, is that the oscillator network dynamics unfold in a precisely defined eigenbasis given by the unitary operatorF, whereas S4D-Lin
+leaves this eigenvector basis unspecified. This oscillator
+correspondence thus provides both an explicit eigenbasis
+in which the SSM dynamics evolve and, as demonstrated
+in the following section, a ring topology in which the
+SSM’s latent state can be understood in terms of traveling waves. This theoretical foundation will, in turn, allow
+an explicit characterization of computation in these systems during sequence classification.
+Traveling waves in S4D’s recurrent layer
+distinguish simple inputs
+We can now use the framework introduced in the previous sections to analyze the dynamics in the recurrent
+layer of S4D. Specifically, using the explicit basisFfrom
+the nonlinear oscilla

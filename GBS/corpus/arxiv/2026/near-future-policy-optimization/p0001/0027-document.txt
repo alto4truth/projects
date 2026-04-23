@@ -1,0 +1,23 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+urrent frontier models and therefore useful for probing the tail of the reasoning distribution. We report
+accuracy (%) on each benchmark and use the unweighted meanAvg.as the overall metric.
+Models and Baselines.All experiments use Qwen3-VL-8B-Instruct [ 2] as the base policy, and every
+RL method is implemented on the same GRPO-style group-based RLVR backbone so that differences in
+performance reflect the choice of trajectory source. We compare NPO against four baselines that populate
+different regions of the quality–proximity spectrum discussed in Section 2: GRPO [20], thepure on-policy
+reference; LUFFY [25], which imports trajectories from a strongerexternal teacherand represents the
+high-quality but high-shift regime; ExGRPO [35], which reuses successful trajectories fromhistorical replay
+buffers; and RLEP [36], which replays trajectories from afar-futuremodel. We additionally report theBase
+LLMwithout post-training as a reference point for the overall gains.
+Implementation Details.Our implementation is built on the EasyVideoR1 [18] framework. The maximum
+context length is 8192 tokens, split into a prompt budget of 4096 and a response budget of 4096, applied
+consistently at trai

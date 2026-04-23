@@ -1,0 +1,28 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+eval systems,
+which excel at identifying information that directly
+addresses the posed search query. In contrast to
+the medical document collection data stores, websearch engines more efficiently identify and prioritize content with high semantic relevance to
+the immediate query context. This distinction becomes particularly significant when compared to
+pre-defined knowledge bases such as MedExpQA,
+where document retrieval relies on similarity metrics that may identify topically related but not always directly applicable content.
+5.2 Multilingual Search Results
+In the multilingual retrieval, the observations made
+from the English search results are more evident.
+No matter the parameter size of the models, we
+conclude that there are no major improvements in
+the performance. Larger models generally perform
+better than smaller ones. However, with target language documents, the gains from increasing model
+size are less dramatic than when the retrieved documents are in English. Moreover, the gap between
+higher and lower resourced languages is more evident, which could be explained primarily by the
+lack of sufficient information in the language in
+the pre-training data and the external k

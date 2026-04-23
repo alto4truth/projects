@@ -1,0 +1,34 @@
+title: Improving clinical interpretability of linear neuroimaging models through feature whitening
+source: arxiv
+year: 2026
+document_id: improving-clinical-interpretability-of-linear-neuroimaging-models-through-feature-whitening
+authors: Sara Petiton; Antoine Grigis; Raphaël Vock; Edouard Duchesnay
+page: 2
+section: abstract
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20675v1
+
+Original
+Feature Weight (±std)
+Right Pallidum (GM)0.261±0.012
+Left Pallidum (GM)0.174±0.008
+Right Putamen (GM)0.152±0.014
+Left Putamen (GM)0.128±0.014
+Left Accumbens (CSF)−0.116±0.007
+Left Frontal Pole (GM)0.111±0.008
+Right Angular Gyrus (CSF)−0.108±0.008
+Whitened
+Feature Weight (±std)
+Right Pallidum (GM)0.311±0.015
+Right Putamen (GM)0.169±0.019
+Left Exterior Cerebellum (CSF)−0.164±0.012
+Left Hippocampus (CSF)−0.159±0.013
+Right Central Operculum (CSF)0.145±0.017
+Right Cerebrum and Motor (CSF)−0.137±0.022
+Left Anterior Cingulate Gyrus (CSF)−0.136±0.018
+Table 3. Top seven contributing brain regions and corresponding model weights (mean±std) for SCZ vs. HC classification. The mean is computed over the 10 CV folds regionwise.
+knowledge of brain structure, applying it to the full set of features would yield results closely related to Haufe’s forward
+models [3].
+While whitening has been applied in neuroimaging primarily as a dimensionality reduction technique (e.g., via PCA
+or ICA) or for noise reduction in EEG and fMRI signals [7, 8],
+it had not previously been used to improve the interpretability of neuroimaging models. Looking ahead, while whitening extensions have been explored in de

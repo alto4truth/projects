@@ -1,0 +1,23 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 3
+section: ieee-transactions-on-image-processing-2
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+n-World Scenarios.Despite significant
+advancements, conventional amodal segmentation methodologies predominantly operate under a closed-world assumption,
+restricted to a predefined taxonomy of object categories [2],
+[7], [9]. Such a paradigm inherently lacks the flexibility to
+generalize to novel or ”out-of-distribution” (OOD) objects
+encountered in complex, unstructured environments. Furthermore, evidence suggests that existing models exhibit a pronounced sensitivity to domain shifts; for instance, representations learned from curated indoor datasets often undergo substantial performance degradation when deployed in disparate
+contexts, such as autonomous driving or aerial surveillance.
+This decrease in robustness can be attributed to the multifaceted variations in object appearances, diverse textures, and
+the intricate, often unpredictable, occlusion patterns characteristic of real-world scenes. Consequently, there is an exigent
+need for a category-agnostic amodal segmentation framework
+capable of zero-shot generalization. In this work, we mitigate
+these limitations by harnessing the potent zero-shot capabilities and rich geometric priors of the Segment Anything Model
+(SAM) [1]. B

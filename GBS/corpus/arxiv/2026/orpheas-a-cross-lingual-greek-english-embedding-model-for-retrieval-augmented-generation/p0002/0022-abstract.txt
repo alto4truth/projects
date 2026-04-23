@@ -1,0 +1,27 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+reekdo▷Stage III
+19:Translatexto English:x EN =Translate(x)
+20:Add(x EN, ci)toD ▷Cross-lingual anchor-positive pair
+21:for allpair(x, c i)∈Dfrom MS-MARCOdo
+22:Translatexto Greek:x GR =Translate(x)
+23:Add(x GR, ci)toD ▷Cross-lingual anchor-positive pair
+24:returnD
+This specialized fine-tuning enables ORPHEAS to capture the linguistic nuances, semantic structures and domainspecific terminology of academic and technical texts, while maintaining robust monolingual and cross-lingual retrieval
+capabilities.
+4 Experimental Analysis
+In this section, we conduct a comprehensive evaluation of the proposed ORPHEAS model for RAG application and
+compare its performance against that of the most efficient and widely used embedding models: Microsoft’s Multingual
+E5 [Wang et al., 2024], MPnet [Song et al., 2020], MiniLM [Reimers and Gurevych, 2019] and mGTE [Zhang et al.,
+2024]. To further assess the quality of the generated fine-tuning dataset independently of the model architecture, we
+include GEM-XLM-RoBERTa [Apostolopoulou et al., 2025] in our experimental analysis, a model pre-trained on a
+large Greek–English corpus, which is fine-tuned following the same high-quality dataset as ORPHEAS.
+To com

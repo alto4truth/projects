@@ -1,0 +1,34 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+Published as a paper at 3rd DATA-FM workshop @ ICLR 2026, Brazil.
+Table 1: Comparison of models trained without filtering, with monolingual high-quality (HQ) filtering, and with our multilingual (ML) classifier on Chinese. The ML strategy achieves the highest
+aggregate accuracy and best average rank, supporting the hypothesis that quality features are transferable.
+Benchmark No filtering HQ ML
+Agieval Cn 0.36180.36440.3457
+ARC 0.2855 0.31450.3171
+Belebele_c 0.3011 0.32000.3222
+Ceval-valid 0.2288 0.24890.2615
+Cmmlu_c 0.3206 0.34710.3608
+GMMLU_c 0.2800 0.30750.3200
+Include_c 0.3468 0.35230.3541
+MMLU_c 0.2772 0.29400.2987
+PAWS 0.5520 0.55350.5610
+Xcopa 0.5860 0.59200.6080
+XNLI 0.3546 0.40720.4189
+Xstorycloze 0.65590.66250.6625
+XWinograd 0.68060.68250.6766
+Aggregate acc_norm0.4024 0.41900.4236
+Average rank2.85 1.771.31
+Table 2: Comparison of models trained without filtering, with monolingual high-quality (HQ) filtering, and with our multilingual (ML) classifier on Spanish. The ML strategy achieves the highest
+aggregate accuracy and best average rank, supporting the hypothesis that quality features are transferable.
+Benchmark No filtering HQ ML
+ARC-Challenge 0.2991 0.30770.3248
+Belebele

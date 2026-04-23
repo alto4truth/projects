@@ -1,0 +1,81 @@
+title: On Bayesian Softmax-Gated Mixture-of-Experts Models
+source: arxiv
+year: 2026
+document_id: on-bayesian-softmax-gated-mixture-of-experts-models
+authors: Nicola Bariletto; Huy Nguyen; Nhat Ho; Alessandro Rinaldo
+page: 3
+section: exp-x
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20551v1
+
+1j),
+A(j)
+n,2,3 :=
+X
+i∈Cj
+exp(αn,0i)
+d′
+X
+u′=1
+1
+2(∆βn,ij)(u′)(∆σ2
+n,ij) ∂E
+∂β (u′) (X, β⋆
+j ) exp(X⊤α⋆
+1j),
+A(j)
+n,2,4 :=
+X
+i∈Cj
+exp(αn,0i)1
+8(∆σ2
+n,ij)2 exp(X ⊤α⋆
+1j),
+for allj∈[K ⋆] :|C j|>1.
+Next, we rewriteBn asB n =B n,1 +B n,2, where
+Bn,1 :=
+X
+j∈[K ⋆]:|Cj |=1
+X
+i∈Cj
+exp(αn,0i)[Hn(Y|X;α n,1i)−H n(Y|X;α ⋆
+1j)]p(X),
+Bn,2 :=
+X
+j∈[K ⋆]:|Cj |>1
+X
+i∈Cj
+exp(αn,0i)[Hn(Y|X;α n,1i)−H n(Y|X;α ⋆
+1j)]p(X).
+By applying first-order and second-order Taylor expansions, we have
+Bn,1 =
+X
+j∈[K ⋆]:|Cj |=1
+X
+i∈Cj
+exp(αn,0i)
+dX
+u=1
+(∆αn,1ij)(u)X(u)Hn(Y|X;α ⋆
+1j) +R n,3(Y|X),
+Bn,2 =
+X
+j∈[K ⋆]:|Cj |>1
+X
+i∈Cj
+exp(αn,0i)
+h dX
+u=1
+(∆αn,1ij)(u)X(u)Hn(Y|X;α ⋆
+1j),
++
+dX
+u,v=1
+(∆αn,1ij)(u)(∆αn,1ij)(v)
+1 + 1{u=v}
+X(u)X(v)Hn(Y|X;α ⋆
+1j)
+i
++R n,4(Y|X),
+where Rn,ℓ(Y|X ), for ℓ∈ { 3, 4}, are Taylor remainders such thatRn,ℓ(Y|X )/L2n → 0as n→ ∞ .
+36

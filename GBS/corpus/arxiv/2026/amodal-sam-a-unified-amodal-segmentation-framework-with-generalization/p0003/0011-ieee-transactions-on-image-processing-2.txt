@@ -1,0 +1,21 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 3
+section: ieee-transactions-on-image-processing-2
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+success
+of these adaptation schemes, extending SAM’s capabilities
+to the amodal domain presents a unique challenge. While
+we adopt the principle of adapter-based tuning, we observe
+that the naive adapter-based adaptation schemes yield suboptimal performance for this challenging task as shown in
+later experiments. This inadequacy stems from a fundamental representational gap: SAM is inherently ”modal-centric,”
+having been optimized to delineate visible object boundaries.
+Amodal segmentation, conversely, requires occlusion-aware
+hallucination and geometric reasoning to infer the morphology
+of regions sequestered behind occluders. Simple adapters often
+fail to bridge this gap as they lack the specialized mechanisms

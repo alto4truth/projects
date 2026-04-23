@@ -1,0 +1,16 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 8
+section: table-v
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+update (performing
+amodal mask prediction only) yields 76.3% ( −2.4% relative
+to the full model), highlighting the importance of dynamic
+pose-mask co-optimization for robust convergence under partial
+visibility. Compared to the strong FoundationPose [24] baseline
+(76.4%) with the same detection inputs, our method delivers a

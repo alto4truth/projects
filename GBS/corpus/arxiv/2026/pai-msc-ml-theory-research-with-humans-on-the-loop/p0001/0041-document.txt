@@ -1,0 +1,49 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+proofreading, reviewer-style critique,
+copyediting traces, claim-traceability files, resource inventories, and revision logs. These are tedious but
+15
+
+structurally well suited to an artifact-centric pipeline. Some of the “boring graduate student work” is indeed
+becoming tractable—not because the machine understands the science end to end, but because many parts
+of scientific production are really state-management and transformation problems.
+6.3 What remains stubbornly human
+Thehardestpartsofresearchremainstronglyhuman-centered. Noveltyjudgmentsareopen-worldjudgments.
+Strong baseline selection depends on field knowledge and taste. Mathematical correctness often hinges on
+subtle proof obligations that resist shallow verification. Experimental interpretation depends on whether
+the chosen measurements actually address the scientific question. Even manuscript quality has a humandependent layer: deciding what the paper isreally about, what should be emphasized, and what evidence is
+persuasive to a given community.
+This is why the right control model for the present release ishuman on the loop, nothuman out of the
+loop. The system can propose, decompose, execute, and draft; the human remains responsible for owning
+the claims.
+6.4 Toward stronger evaluation
+The next milestone is not “more features” but a stronger evaluation program. A convincing benchmark
+would need repeated runs across multiple task families, explicit logging of human steering interventions,
+external citation-faithfulness audits, reruns of generated experiments, and expert assessments of theorem
+and manuscript quality. It should also include ablations isolating the value of counsel, tree search, strict
+editorial enforcement, and campaign-style repair.
+The present release is best understood as an infrastructure milestone. It makes those evaluations possible by
+standardizing workflow state, artifact contracts, and operating modes. The stronger scientific claims should
+come only after that measurement program is in place.
+7 Conclusion
+pAI/MScis best described, in its present form, as a human-on-the-loop, artifact-centric research-to-paper
+pipeline. Its contribution is not that it solves scientific truth or automates novelty judgment, but that it
+turns a research task into a traceable workspace with planning artifacts, theory and experiment branches,
+revision loops, manuscript outputs, and explicit validation gates.
+That contribution is already meaningful. It moves the problem from “how do I keep a long sequence of model
+calls coherent?” to “how do I inspect, guide, and validate a structured research workspace?” The guarantees,
+limitations, runtime modes, safety notes, and submission checklist all point to the same conclusion: the
+present system is a substantial step toward reducing human steering burden, but its outputs still require
+expert verification before any scientific claim is trusted or submitted.
+The next phase should therefore focus on benchmarked evaluation. If future work can pair the current architecture with rigorous measurements of citation faithfulness, experiment reproducibility, theorem reliability,
+and human steering reduction, thenpAI/MScwill provide not only a useful release but also clearer scientific
+understanding of what parts of research automation are truly becoming tractable.
+16

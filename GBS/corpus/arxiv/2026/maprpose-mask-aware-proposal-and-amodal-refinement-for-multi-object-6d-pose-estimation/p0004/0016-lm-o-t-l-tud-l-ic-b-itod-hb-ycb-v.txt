@@ -1,0 +1,20 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 4
+section: lm-o-t-l-tud-l-ic-b-itod-hb-ycb-v
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+gets in
+occluded frames, our approach maintains high recall and
+stability. This robustness is further evidenced in Fig. 5, which
+demonstrates the model’s resilience to sensor noise and lowtexture surfaces on YCB-V . Unlike competing methods that
+often produce jittery or misaligned predictions due to partial
+visibility, our iterative mask-guided refinement ensures that
+predicted poses remain tightly aligned with the underlying
+geometry. By mitigating the ”missing detection” issue common
+in complex environments, MAPRPose achieves superior fidelity,
+providing a more reliable foundation for downstream tasks.

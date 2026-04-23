@@ -1,0 +1,76 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 1
+section: paraff
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+passed as a global
+per-measure scalar, giving the model a coarse prior on total measure duration without hard-wiring a
+specific search constraint.
+28
+
+A.2 BeadPicker Architecture and Training
+BeadPicker is a transformer encoder that reads the full candidate sequence in a single forward pass
+and produces predictions for all output heads jointly. See Table 12 for architecture hyperparameters
+and Table 13 for training configuration.
+Table 12: BeadPicker Architecture. Architecture hyperparameters.
+Parameter Value
+dmodel 128
+dinner (FFN) 512
+Attention headsn head 8
+Encoder layersn layers 16
+dk =d v 16
+Local feature dimension 16
+Feature activation tanh
+Positional encoding sinusoidal [11] (cycle 1 000)
+usePivotX✓
+with_time8th✓
+Rectifier version v3
+Dropout 0.1
+Trainable parameters 3.24 M
+Table 13: BeadPicker Training. Training hyperparameters.
+Parameter Value
+Batch size 1
+Optimizer Adam (β 1=0.9,β 2=0.98,ε=10 −9)
+LR schedule InvSqrt (d model=128, lr_mul=0.2, warmup=8,000steps)
+Epoch size 6 000 steps
+Total epochs 6 400
+Training samples 356 431 (97% split by group)
+GPU2×RTX3090
+The model has ten output heads: successor (next-node selection), tick (absolute tick position),
+division (9 categories), dots (3 categories), beam (4 categories), stemDirection (3 categories),
+grace, timeWarped, fullMeasure, and fake (binary). The successor head carries the largest
+loss weight, since it governs chain structure and is the primary search objective. All other heads use
+individually tuned loss weights that down-weight uncertain or rare attributes.
+A.3 Search Budget
+BeadSolver maintains a priority queue over partial successor assignments and expands up to aquota
+of nodes at each position. The quota is:
+Q(n, f) = min
+
+(n+1)fln(n+2)
+
+,
+l
+Qmax ·min
+
+1,
+
+24
+n+1
+2m
+,
+where n is the number of candidate events in the measure, f is the quota factor, and Qmax = 1 000.
+The logarithmic first term scales search effort with measure complexity; the quadratic second term
+caps expansion for short measures.
+Single-pass BeadSolver uses f= 40 . BeadSolver-Multipass runs three passes with escalating factors
+(f= 10 , 40, 80) and returns the best solution found across all passes. The estimateMeasure
+pre-pass (version 3) is not a separate model: it uses the same BeadPicker and performs one glimpse
+forward pass per cluster under a minimal prefix (only BOS fixed) to populate per-element predispositions, including fullMeasure and tick/duration-related fields, and to re-estimate measure duration
+when the time signature is doubtful. This prevents whole-measure rests from being drawn into voice
+assignment and substantially reduces irregularTick errors, at the cost of a minor increase in
+average tick-twist (see Table 10).
+29

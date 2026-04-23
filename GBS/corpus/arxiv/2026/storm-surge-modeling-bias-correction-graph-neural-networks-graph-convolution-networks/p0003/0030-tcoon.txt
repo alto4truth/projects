@@ -1,0 +1,21 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 3
+section: tcoon
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+in at least 12 to 48 hours [ 101]. From Figure 7, it can be seen that uncorrected modeled water levels for the three selected stations tend to underestimate water levels by
+∼ 0.25−0.35 m. This leads to modeled values below the minor flooding threshold during landfall in the Apalachicola station, which is exceeded by the observed water levels
+(“false negative”). A similar situation occurs for Cedar Key at landfall, with the modeled water levels predicted to lie between moderate and major flooding thresholds, but
+the observed ones actually exceeding the major flooding threshold. Bias-corrected values obtained with StormNet appear to correctly predict the exceedance of the minor
+flooding threshold in the Apalachicola station even with a 72 h window, as well as the
+exceedance of the major flooding threshold in the Cedar Key station but only for a 12
+h-ahead prediction. In the latter case, the exceedance of the major flooding threshold
+was properly captured up to 15 h ahead. This performance is in line with the NOAA
+requirements for issuing an advisory/warning/watch, which requires lead time of at
+least 12 h ahead of the expected event.
+27

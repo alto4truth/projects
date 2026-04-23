@@ -1,0 +1,27 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 2
+section: a-b-s-t-r-a-c-t
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+entifying known attacks, but it
+struggles with unknown threats. To address this limitation, researchers
+have turned to ensemble learning methods, which combine multiple
+classifiers to improve detection accuracy and robustness (Yazdinejad
+et al., 2023). These models use feature engineering and meta-learning
+(stacking and voting techniques) to enhance classification performance,
+making them highly effective for securing IoV networks. Given the constraints of modifying legacy in-vehicle systems, lightweight IDS solutions that detect anomalies without adding overhead are essential (Song
+et al., 2020).
+Deep Learning (DL), a subset of ML, models have demonstrated
+superior capabilities in learning data representations and identifying
+anomalous patterns (Tangade et al., 2019). These methods excel at
+identifying complex patterns in large volumes of data and can be
+trained to detect subtle deviations from normal behavior (LeCun et al.,
+2015). This helps identify cyber-attacks in real-time. Recent works
+have explored neural networks, including convolutional and recurrent
+architectures, to model temporal dependencies and classify anomalous
+CAN messages. However, challenges remain in achieving

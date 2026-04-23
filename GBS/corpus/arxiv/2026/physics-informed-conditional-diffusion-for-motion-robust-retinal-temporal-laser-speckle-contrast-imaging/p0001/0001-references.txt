@@ -1,0 +1,40 @@
+title: Physics-Informed Conditional Diffusion for Motion-Robust Retinal Temporal Laser Speckle Contrast Imaging
+source: arxiv
+year: 2026
+document_id: physics-informed-conditional-diffusion-for-motion-robust-retinal-temporal-laser-speckle-contrast-imaging
+authors: Qian Chen; Yuehao Chen; Qiang Wang; Lei Zhu; Yanye Lu; Qiushi Ren
+page: 1
+section: references
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20594v1
+
+T able S1.Detailed Network Configuration and Hyperparameters for RetinaDiff.
+Category Parameter / Setting
+Data Processing & Normalization
+Physical Prior ComputationF phy = 1/K 2, whereK=σ/µ
+Robust Normalization Range Percentile clipping at [0.5%, 99.5%]
+Input Normalization Scale Mapped to [−1,1]
+Network Architecture (Modified U-Net)
+Input Channels 7 (1 Latent + 1 Prior + 5 Raw Speckle)
+Output Channels 1 (Predicted Noiseϵ)
+Base Channels 64
+Channel Multipliers (1,2,4,8)→(64, 128, 256, 512)
+Down-sampling Blocks DownBlock2D, AttnDownBlock2D
+Attention Mechanism Self-Attention incorporated at lower resolutions
+Training Hyperparameters
+Optimizer AdamW
+Learning Rate 1×10 −4
+Loss Function Mean Squared Error (MSE)
+Patch Size 384×384 pixels (Random Crop)
+Effective Batch Size 4 (via Gradient Accumulation)
+Training Schedule Linear Beta Schedule
+Diffusion Timesteps (T) 1000
+Inference & Sampling (DDIM)
+Sampler Denoising Diffusion Implicit Models (DDIM)
+Inference Steps (S) 100
+Prediction Type Epsilon (ϵ)
+Value Clipping Disabled (clip sample = False)
+Conflict of Interest
+The authors declare no conflict of interest.
+Data Availability Statement
+The data that support the findings of this study are ava

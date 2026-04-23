@@ -1,0 +1,36 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 2
+section: r-e-s-u-lt-s
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+bathymetry, and land cover representation. Additional sources of
+bias include inaccuracies in atmospheric forcing from parent meteorological models,
+7
+
+simplified physical parameterizations like bottom friction, and the use of coarseresolution topographic and bathymetric data that fail to capture critical coastal
+features [ 42–46]. Moreover, physical drivers such as rainfall-runoff processes, largescale oceanic circulations, and hydrological inputs are often omitted to increase
+computational performance or stability [ 47]. The combined effect of such uncertainties has been shown to introduce substantial biases that impact the accuracy of
+storm surge predictions [ 48, 49]. This is crucial for the design and implementation
+of response and prevention strategies, as for instance, regarding water levels, only
+0.3 to 0.7 m have been shown to separate minor, high-tide flooding, from severe
+and destructive floods [ 50]. Typical methods to quantify and treat uncertainties
+and biases in storm surge models in the context of either operational forecasting
+or research purposes include probabilistic methods, data assimilation and other statistical approaches [ 43, 47, 51–53]. Furthermore, significant efforts have been made
+for the systematic collection of data from historical measurements and hindcasts in
+curated datasets (e.g., [ 54–56]), which is crucial for extracting trends, analyzing model
+accuracy, and enabling data-driven forecasting and bias correction approaches.
+The vast and rapid developments in the field of machine learning (ML) in the
+last decade have also motivated numerous efforts for the implementation of ML algorithms for enhancing forecasting capabilities. Such models are typically trained on
+historical, hindcast and/or synthetic data, motivating efforts for global datasets, such
+as the Global Extreme Sea Level Analysis (GESLA) [ 57], the European Centre of
+Medium-Range Weather Forecasts Reanalysis (ERA) [58], and the Coastal Dataset for
+the Evaluation of Climate Impact (CoDEC) [ 59], but also TC- and location-specific
+data collections, such as the HURDAT dataset by the National Oceanic and Atmospheric Administration (NOAA) [ 60], the Historical Storm Archive by CERA [ 56, 61],
+the Western North Pacific Tropical Cyclone Database [ 62], and the Digital Typhoon
+dataset [ 63]. ML models for enhancing forecasting accuracy can be generally split
+8

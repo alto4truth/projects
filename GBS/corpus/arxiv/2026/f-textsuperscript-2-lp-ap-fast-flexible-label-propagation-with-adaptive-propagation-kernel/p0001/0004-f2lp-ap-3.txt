@@ -1,0 +1,26 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 1
+section: f2lp-ap-3
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+4 Yutong Shen*, Ruizhe Xia, Jingyi Liu, Yinqi Liu
+layer [25, 23, 32]. While some methods have begun exploring metric learning for
+node classification, most implementations remain vulnerable to noise or outliers
+in real-world data [14, 10]. Such mean-based prototype construction is highly
+susceptible to interference from “straggler” nodes or mislabeled examples, causing the classification baseline to shift and compromising predictive accuracy [29,
+4, 2]. In contrast, F 2LP-AP employs a robust prototype construction scheme
+based on the Geometric Median and performs analytical classification via cosine
+distance. This significantly enhances the system’s resistance to data noise and
+anomalies, providing a solid foundation for accurate classification in a trainingfree environment.
+3 Method
+3.1 Overview of F 2LP-AP Pipeline
+In this section, we present the overall framework of the proposedF 2LP-AP.
+Given a graphG= (V,E) with an associated node feature matrixX∈R n×d
+wheren=|V|, letV L ⊂ Vdenote the set of training nodes with labelsY L. The
+core philosophy ofF 2LP-APis to construct a predictive pipeline that is entirely
+decoupled from gradient-based training and capable of adaptive evolution

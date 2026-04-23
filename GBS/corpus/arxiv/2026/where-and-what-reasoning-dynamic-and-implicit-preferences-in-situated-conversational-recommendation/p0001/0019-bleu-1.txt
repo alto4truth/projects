@@ -1,0 +1,32 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 1
+section: bleu-1
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+g. #objects mentioned per dialog 4.7 4.4
+Avg. #objects in scene 19.7 19.7
+Table 4: Statistics of the experimental datasets.
+Beyond the raw corpus size, we also quantify
+the two central challenges studied in this paper.
+First, dynamic scene transitions are a frequent phenomenon in our evaluation setting: by construction, 50% of the dialogues in the repurposed test
+split require moving to a different scene, which
+ensures that transition reasoning is not a marginal
+corner case. Second, implicit preference discovery
+is particularly prominent in SCREEN. We identify
+dialogues whose initial user request does not fully
+specify the target item attributes and therefore requires refinement through later interaction. Under
+this definition, over 90% of SCREEN dialogues
+require the system to progressively infer implicit
+preferences from multi-turn conversational feedback.
+B Baseline Implementation Details
+We provide the specific implementation configurations for the baseline models, categorized by their
+learning paradigms. We also clarify the exact input
+modalities made available to each model family for
+fair comparison.
+Inference-only Baselines (CoT & ICL).We
+evaluate three backbone MLLMs in in

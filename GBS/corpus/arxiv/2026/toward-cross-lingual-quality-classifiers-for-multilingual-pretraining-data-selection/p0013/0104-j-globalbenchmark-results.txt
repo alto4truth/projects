@@ -1,0 +1,67 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 13
+section: j-globalbenchmark-results
+chunk: 104
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+538 0.4707 0.45660.47830.4562 0.4667
+Aggregate acc_norm0.3635 0.3753 0.3836 0.3801 0.38550.38970.3887
+Average rank6.29 5.14 3.71 4.14 3.57 2.712.14
+29
+
+Published as a paper at 3rd DATA-FM workshop @ ICLR 2026, Brazil.
+Table 20: Chinese comprehensive benchmark results. Final comparison of all filtering strategies.
+The ML strategy secures the best rank and aggregate accuracy, demonstrating that multilingual signal provides the most robust quality filter for Chinese logographic text.
+Benchmark No filtering HQ HQ seed MKC-e ML ML
+(15%)
+ML
+(Q3)
+Agieval Cn 0.3618 0.3644 0.3625 0.3609 0.3457 0.34970.3658
+ARC 0.2855 0.3145 0.3000 0.31620.31710.3068 0.3085
+Belebele_c 0.3011 0.3200 0.3256 0.3433 0.3222 0.33560.3478
+Ceval-valid 0.2288 0.2489 0.2444 0.25560.26150.2370 0.2467
+Cmmlu_c 0.3206 0.3471 0.3445 0.3581 0.3608 0.34660.3688
+GMMLU_c 0.2800 0.3075 0.31750.32000.3200 0.3025 0.3200
+Include_c 0.3468 0.3523 0.3523 0.3541 0.35410.37800.3670
+M MMLU_c 0.2772 0.2940 0.2937 0.29590.29870.2927 0.2978
+PAWS 0.5520 0.5535 0.5360 0.54350.56100.5570 0.5480
+Xcopa 0.5860 0.59200.62000.5940 0.6080 0.6160 0.6020
+XNLI 0.3546 0.4072 0.3779 0.40560.41890.3980 0.3627
+Xstorycloze 0.6559 0.6625 0.6605 0.6618 0.6625 0.66780.6750
+XWinograd 0.6806 0.68250.69640.6925 0.6766 0.6865 0.6667
+Aggregate acc_norm0.4024 0.4190 0.4178 0.42320.42360.4211 0.4213
+Average rank6.38 3.85 4.46 3.232.693.92 3.00
+Table 21: Arabic comprehensive benchmark results. Final comparison of all filtering strategies. The
+ML strategy (56% retention) remains the dominant approach, while aggressive filtering (10-20%)
+consistently underperforms regardless of the classifier used.
+Benchmark No
+Filtering HQ HQ
+seed MKC-e ML ML
+(Q3)
+HQ
+(10%)
+HQ
+(20%)
+ML
+(10%)
+ML
+(20%)
+ARC-Easy 0.27160.28980.2838 0.2728 0.2855 0.2750 0.2720 0.2771 0.2741 0.2762
+AlGhafa PIQA-MT0.51940.5145 0.5095 0.4970 0.5112 0.5085 0.5019 0.5090 0.4948 0.5128
+AlGhafa RACE 0.2715 0.2775 0.2879 0.27530.28830.2792 0.2747 0.2834 0.2765 0.2786
+AlGhafa SciQ 0.4261 0.4432 0.4492 0.4422 0.4503 0.4322 0.4503 0.41710.45730.4563
+ARC-Challenge 0.2678 0.2660 0.2720 0.26430.27970.2601 0.2669 0.2772 0.2712 0.2626
+Belebele_c 0.3222 0.3233 0.3289 0.3244 0.31220.34440.3378 0.2944 0.3278 0.3256
+GMMLU_c 0.2475 0.2575 0.2450 0.2550 0.2700 0.2575 0.2475 0.25500.27250.2525
+HellaSwag 0.3909 0.3873 0.3909 0.38820.39250.3870 0.3592 0.3728 0.3747 0.3857
+Include_c 0.3025 0.2681 0.2844 0.29530.30430.2754 0.2717 0.2772 0.2844 0.2790
+M_MMLU_c 0.2669 0.2614 0.2653 0.2628 0.2646 0.2615 0.26520.26740.2618 0.2634
+AlGhafa PIQA 0.6132 0.6088 0.6126 0.6121 0.6110 0.6072 0.5958 0.6023 0.60390.6143
+XNLI 0.3349 0.3309 0.3317 0.3349 0.33490.33730.3325 0.3333 0.3325 0.3357
+XStoryCloze 0.5903 0.59230.59300.5890 0.5811 0.5831 0.5877 0.5817 0.5784 0.5804
+Aggregate acc_norm0.3711 0.3708 0.3734 0.37030.37580.3699 0.3664 0.3652 0.3700 0.3710
+Average rank5.00 5.77 4.08 5.853.465.85 6.92 6.08 6.08 5.15

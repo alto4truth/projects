@@ -1,0 +1,23 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+4]. This dataset provides contemporary informal Greek language
+usage and social discourse patterns.
+•MS-MARCO 7: A large-scale English information retrieval dataset containing diverse queries and passages
+from web documents [Bajaj et al., 2016]. The passages are processed through the same knowledge graph
+construction pipeline as the Greek corpora, enabling extraction of entities, atomic facts and grounded questions, while the existing queries are directly used as anchors. Notice that only the training split is used for
+fine-tuning dataset generation.
+3.2 Knowledge Graph-Based Fine-Tuning Methodology
+For developing ORPHEAS, we adopted the knowledge graph-based fine-tuning methodology proposed by Koursaris
+et al. [2026]. This approach leverages structured knowledge extraction to generate semantically enriched training data
+through contrastive learning. In detail, the methodology employs a domain-specific ontologyO, which structures
+the knowledge graph around five core concepts: DOCUMENT, CHUNK, ENTITY, QUESTIONand ATOMIC_FACT.
+The ontology defines hierarchical relationships where documents are decomposed into chunks via theHAS_CHUNK
+relation and each chunk is associated with its sema

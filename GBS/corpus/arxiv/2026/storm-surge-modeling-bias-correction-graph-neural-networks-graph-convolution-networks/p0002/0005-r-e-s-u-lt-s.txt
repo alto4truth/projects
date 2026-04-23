@@ -1,0 +1,37 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 2
+section: r-e-s-u-lt-s
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+eholders seeking computationally eﬀicient tools for improving the accuracy and
+reliability of storm surge predictions during extreme weather events.
+5
+
+1 Introduction
+The likelihood and severity of intense tropical cyclones (TC) and extreme storm
+surge events have been shown to be quite susceptible to climate variability and follow
+increasing trends over the last few decades [ 1, 2]. Furthermore, the behavior of TC is
+becoming more detrimental to coastal regions. Specifically, the maximum intensity of
+TC has been found to shift towards shorelines by 30 km per year, and the frequency
+of nearshore TC has been increased by factor of 2, over the period 1982–2018 [ 3]. TCs
+are also found to be more likely to stall in coastal regions, cause increased rainfall,
+and decay more slowly over land [ 4–6]. The rapid intensification (RI) of TC shortly
+before landfall is another increasingly prevalent phenomenon, threatening coastal communities worldwide [ 7, 8]. RI has been a major characteristic of many severe TCs,
+with recent examples being Hurricanes Idalia (2023) [ 9], Ian (2022) [ 10] and Ida
+(2021) [ 11] in the United States (U.S.), Cyclone Mocha (2023) in the Bay of Bengal
+[12], Typhoon Rai (2021) in Philippines [ 13] and Typhoon Hato (2017) in the South
+China Sea [ 14]. RI has been attributed and/or correlated to circulation events within
+the TC, such as warm-core eddies in the inner core, eyewall mesovortices and convective bursts, and their interplay with larger-scale environmental conditions, such
+as vertical wind shear, sea surface temperature, moisture, stratospheric gravity wave
+activity, sea spray-induced heat fluxes and river plumes [ 9, 15–20]. TC intensification
+rate has been found to increase in coastal regions in the last four decades, due to
+increasing relative humidity and decreasing vertical wind shear in such regions, compared to the open ocean [ 7]. Consequently, while forecasting accuracy has increased
+in terms of predicting TC paths over the last years, the presence of events with such
+rapid intensity changes and the complexity of the multiscale underlying processes,
+pose a significant challenge for predicting TC intensity [ 21–23].
+6

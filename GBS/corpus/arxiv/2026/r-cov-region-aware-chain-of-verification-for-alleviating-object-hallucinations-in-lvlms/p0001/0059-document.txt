@@ -1,0 +1,32 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 59
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+Appendix
+In this supplementary material, we provide the detailed
+prompt templates in Section A and visualize more qualitative results in Section B, respectively.
+A. Prompt Templates
+In this section, we provide the detailed prompt templates
+used in the following stages: entity extraction, verification
+execution, and final response generation. In addition, we
+provide the detailed prompt template used for GPT-4o assisted evaluation.
+A.1. Entity Extraction
+The prompt template for entity extraction is detailed in Table 9.
+A.2. Verification Execution
+The prompt template for verification execution is detailed
+in Table 10.
+A.3. Final Response Generation
+The prompt template for final response generation is detailed in Table 11.
+A.4. GPT-4o Assisted Evaluation
+The prompt template for GPT-4o assisted evaluation is detailed in Table 12.
+B. More Qualitative Results
+In this section, we present more qualitative results, including two types of questions: (i) yes-or-no questions, and (ii)
+open-ended questions. We use LLaV A-v1.5-7B as an exemplar LVLM for visualization.
+B.1. Yes-or-No Questions
+Figure 5 provides more examples with two yes-or-no questions: “Is there a handbag in the image?” and “Is

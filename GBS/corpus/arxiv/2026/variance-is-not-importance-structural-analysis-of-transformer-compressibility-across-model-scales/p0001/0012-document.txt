@@ -1,0 +1,17 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+budget)
+Method Output MSE vs INT4
+INT4 (direct) 0.000679 baseline
+DCT + INT4 0.001935 2.8×worse
+SVD rank-384 + INT4 0.001359 2.0×worse
+Rotated INT8/INT2 0.016882 24.8×worse
+5

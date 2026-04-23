@@ -1,0 +1,32 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 5
+section: a-appendix
+chunk: 48
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+. Compared to GRPO, our method exhibits a consistently
+lower entropy loss throughout training, indicating more stable and confident policy updates.
+16
+
+Published as a conference paper at ICLR 2026
+A.4.3 SENSITIVITYANALYSIS ONα
+We further analyze the sensitivity of the weighting factorα, which balances the trajectory-level outcome
+advantage and the segment-level process supervision in Eq. (6). Specifically,αcontrols the relative contribution of the segment-wise progress signal∆C k to the overall hybrid advantage.
+We conduct a sensitivity study by varyingαover a wide range while keeping all other training settings
+fixed. As shown in Table 6, our method achieves the best performance atα= 1.2. Moreover, performance is
+relatively insensitive toαwithin the range [0.8, 1.4].
+Table 6: Sensitivity analysis onα.
+α 0.0 0.2 0.4 0.8 1.0 1.2 1.4 1.6
+Acc (%) 68.8 70.0 70.5 71.7 72.0 72.2 71.9 69.7
+A.5 QUALITATIVEANALYSIS OFSEGMENT-WISEPROCESSSIGNALS.
+To qualitatively evaluate the effectiveness of our progress signal, we present representative cases where the
+segment-wise signal∆C k successfully distinguishes contributive from harmful reasoning steps. As shown
+in Figure 8 and 7 , positive increments in∆C k correspond to steps that strengthen the model’s belief in
+the correct answer, while negative increments highlight misleading or incorrect reasoning. These examples
+demonstrate that our process supervision can reliably identify the strengths and weaknesses within a model’s
+reasoning trajectory, providing interpretable and fine-grained feedback throughout the generation process.
+17

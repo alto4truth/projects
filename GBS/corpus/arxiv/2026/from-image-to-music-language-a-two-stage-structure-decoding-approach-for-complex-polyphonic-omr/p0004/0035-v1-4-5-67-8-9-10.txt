@@ -1,0 +1,27 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 4
+section: v1-4-5-67-8-9-10
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+V0 [1,2,3] V1 [4,5,6,7,8,9,10]
+Figure 15: Attempt 1 topology. Merging all staff-1 events into one voice places ev. 6 and ev. 7 (both
+tick 480) in the same voice, producingtickOverlapped=true.
+Agent Turn 3: Analysis and Rethink
+[Assistant]
+I see the issue — events 6 and 7 are both at tick 480, which causes overlap in a single voice. Looking
+at the image more carefully:
+• Event 6 (quarter note, stem up) and event 7 (8th rest) appear to be at the same x position,
+meaning they occur simultaneously but in different voices.
+• The quarter note is in one voice, the 8th rest is in another voice.
+So the original voice separation was correct in separating these simultaneous events. The issue is that
+the beamed group (8, 9, 10) needs to be in a continuous voice without gaps.
+Let me reconsider. The original had voice 2 as[4,6,9,10]and voice 3 as[5,7,8].
+Tracing original voice 2:[4,6,9,10]
+• 4 at tick 0 (quarter = 480)→ends at 480
+• 6 at tick 480 (quarter = 480)→ends at 960
+46

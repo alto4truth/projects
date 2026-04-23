@@ -1,0 +1,65 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 50
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+oals_agentor tobrainstorm_agent; a failed duality gate triggers
+follow-up literature work; and a failed validation gate returns control to writeup.
+24
+
+Human steering surfaces.The system exposes: (i) an initial task specification passed to the launcher;
+(ii) live steering through a TCP control socket and HTTP API during execution; (iii) resume from a named
+stage; (iv) context injection via aninputs/directory; and (v) campaign-level control when the optional
+campaign engine is used.
+A.2 Agent inventory and specialist roles
+The current release decomposes work into the following specialist agents, grouped by phase.
+Phase Agent Role
+Discovery persona_council Three-perspective debate (practitioner,
+theorist, narrative) to evaluate direction
+Discovery literature_review_agent Literature grounding and feasibility gate
+Planning brainstorm_agent Convert research prompt to operational ideas
+Planning formalize_goals_agent Structured goal state, milestone definition
+Theory math_literature_agent Mathematical literature review for the theory
+track
+Theory math_proposer_agent Propose claims, lemmas, and theorem
+statements
+Theory math_prover_agent Construct proof drafts
+Theory math_rigorous_verifier_agent Rigorous verification of proof drafts
+Theory math_empirical_verifier_agent Empirical/numerical checks on mathematical
+claims
+Theory proof_transcription_agent Transcribe accepted proofs into paper
+workspace
+Experiment experiment_literature_agent Empirical literature review and baseline
+identification
+Experiment experiment_design_agent Experimental design specification
+Experiment experimentation_agent Execute experiments (local subprocess, Docker,
+or SLURM)
+Experiment experiment_verification_agent Post-hoc verification of experimental results
+Experiment experiment
+_transcription_agent
+Transcribe results into paper workspace
+Synthesis track_merge Merge theory and experiment outputs
+Synthesis verify_completion Three-way routing: complete / incomplete /
+rethink
+Synthesis formalize_results_agent Structured results assessment
+Editorial resource_preparation_agent Prepare assets, bibliography, resource inventory
+Editorial writeup_agent Manuscript generation (markdown or LATEX)
+Editorial proofreading_agent Copyediting and revision artifacts
+Editorial reviewer_agent Internal review with scoring
+Editorial validation_gate Final artifact-contract and review-threshold
+check
+Table 4: Agent inventory in the currentpAI/MScrelease, grouped by pipeline phase.
+A.3 Theory track details
+The theorem-oriented path is optional and enabled only when the planner selects theory work and
+math agents are available (–enable-math-agents). The path includes six agents:math_literature_
+agent,math_proposer_agent,math_prover_agent,math_rigorous_verifier_agent,math_empirical_
+verifier_agent, andproof_transcription_agent.
+Thecorrespondingartifactsurfaceisexplicit: themathworkspacestoresaclaimgraphinclaim_graph.json,
+proof files underproofs/, verification traces underchecks/, and a reusable lemma store inlemma_
+library.md. The mathematical path is treated as a workspace with claims, dependencies, and verification traces rather than as one long free-form proof draft.
+25

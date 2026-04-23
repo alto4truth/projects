@@ -1,0 +1,136 @@
+title: Centering Ecological Goals in Automated Identification of Individual Animals
+source: arxiv
+year: 2026
+document_id: centering-ecological-goals-in-automated-identification-of-individual-animals
+authors: Lukas Picek; Timm Haucke; Lukáš Adam; Ekaterina Nepovinnykh; Lasha Otarashvili; Kostas Papafitsoros; Tanya Berger-Wolf; Michael B. Brown; Tilo Burghardt; Vojtech Cermak; Daniela Hedwig; Justin Kitzes; Sam Lapp; Subhransu Maji; Daniel Rubenstein; Arjun Subramonian; Charles Stewart; Silvia Zuffi; Sara Beery
+page: 1
+section: dslr-7
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20626v1
+
+n K k bN NBias
+– 2 1 1 2 2 –
+Merge 1 1 1 1 2 under
+Merge 1 1 0NaN2 undefined
+Split 2 2 2 2 2 exact
+Split 3 2 2 3 2 over
+Split 2 2 1 4 2 strong over
+13
+
+Table 2Glossary of key ecological, workflow, and machine-learning terms used in the field of
+individual identification. We clarify terms used throughout the paper and help connect language that
+is often used differently across ecology, computer vision, and machine learning.
+Term used: Also known as: Definition:
+AnnotationManual labeling,
+label, metadata
+Information or a process of adding context to a record, including
+identity, bounding box, viewpoints, or other metadata.
+DatabaseGallery, catalog,
+reference set,
+templates
+A collection of previously identified individuals and their records,
+used as the reference against which new observations are compared.
+DetectionSighting, recording,
+sample, image
+A record, such as an image or an acoustic recording, that might
+contain a set of signatures.
+EncounterOccurrence, Event,
+Observation
+A set of data, such as a burst of images, a short video, or a sequence
+of voice calls, collected from the same event or at a short time scale.
+False matchFalse link, merging
+error
+An error in which records from different individuals are incorrectly
+treated as belonging to the same individual.
+Human-inthe-loop
+Expert-guided
+workflow
+A workflow in which automated methods assist with tasks such
+as filtering or candidate retrieval, while people remain involved in
+reviewing uncertain or high-impact decisions.
+Identifiable
+record
+Usable record,
+matchable record
+A record that clearly shows enough of the relevant features to support a reliable identification.
+Mark–
+recapture
+Capture–recapture,
+capture-markrecapture
+A family of methods that uses repeated observations of individuals to estimate abundance, survival, movement, or other population
+parameters.
+Missed linkMissed match,
+splitting error
+An error in which records from the same individual are incorrectly
+treated as belonging to different individuals.
+QueryNew encounter, test
+encounter
+A new encounter that is compared against the database to find a
+match or determine whether it may represent a new individual.
+SignatureMorphological
+characteristic,
+pattern, vocal/visual
+signal
+A feature or combination of features that helps distinguish one individual from another across encounters, such as coat patterns, scars,
+fin shapes, whisker spots, or call structure.
+Stable identity
+Persistent identifierA lasting identifier assigned to an individual so that records and
+later corrections can be tracked consistently over time.
+TraceabilityAudit trail, decision
+history
+Ability to reconstruct how an identity decision was made, what evidence was used, and how those factors may have changed over time.
+Animal
+Re-ID
+Identification of
+individual animals
+The process of recognizing the same individual animal across different observations, such as images, video, or audio recordings.
+Candidate
+match
+Retrieved candidateA possible identity returned by the system for review, usually as
+part of a ranked shortlist.
+ClassificationCategorizationAssigning a query directly to one of a fixed set of known individuals.
+Closed-set
+setting
+Identification with
+only known IDs
+A setting in which every query is assumed to belong to one of the
+known individuals already present in the database.
+Encounteraware split
+Grouped splitAn evaluation design in which records from the same encounter are
+kept together, to avoid leakage between training and testing.
+EmbeddingFeature vector,
+representation
+A numerical representation of data that should capture features useful for distinguishing individuals.
+Evaluation
+metric
+Performance metricA numerical measure used to summarize performance, such as identification accuracy or the quality of ranked retrieval results.
+Metric
+learning
+Representation or
+similarity learning
+A machine-learning approach that trains a method to place records
+from the same individual close together, and records from different
+individuals farther apart, in an embedding space.
+Object
+Detection
+LocalizationThe step of locating an animal, or a relevant body part, within an
+image, video frame, or sound recording.
+Open-set
+setting
+Identification with
+some unknowns
+A setting in which some queries may belong to previously unseen
+individuals, so the system must both recognize known individuals
+and allow for new ones.
+RetrievalSimilarity search,
+ranking
+Returning a ranked list of the most similar records in the database
+for a given query.
+Time-aware
+split
+Temporal splitAn evaluation design in which training uses earlier observations and
+testing uses later ones, to better reflect real monitoring conditions.
+Verificationre-identification,
+1-to-1 matching
+A binary classification task that determines whether two observations correspond to the same individual.
+14

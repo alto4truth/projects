@@ -1,0 +1,29 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+logical integrity is not merely an auxiliary
+metric but a critical factor for complex reasoning
+tasks.
+In contrast, relying solely on Image-Text Consistency (SV ) presents an inverse trade-off. While it
+yields a stable average score (65.36) by avoiding
+logical traps, it exhibits a marked drop on POPE
+(68.56), falling well below the random baseline.
+This sharp decline reveals that visual consistency
+alone is an insufficient proxy for data quality; without the structural constraints of logical and factual
+verification, the curation process fails to filter out
+subtle hallucinations, leaving the model vulnerable to object fabrication. Thus, EVIAN’s comprehensive auditing is essential: SV ensures visual
+relevance, whileS L andS K are essential for guaranteeing logical coherence and factual precision.
+6 Conclusion
+In this work, our proposed visual instruction tuning data auditing methodEVIAN, advances LVLM
+data quality auditing through three contributions:
+a 300K-sample benchmark with systematically injected defects, a “Decomposition-then-Evaluation”
+paradigm that separates visual, inferential, and
+factual components, and the EVIAN framework,
+which scores data along Image-Text Consistenc

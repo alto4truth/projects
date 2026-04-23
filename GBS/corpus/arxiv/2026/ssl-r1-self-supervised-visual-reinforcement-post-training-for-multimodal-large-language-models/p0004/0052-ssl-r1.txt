@@ -1,0 +1,47 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 4
+section: ssl-r1
+chunk: 52
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+You are given one reference image and four candidate images.
+Each image may include augmentations (e.g., random cropping,
+flipping, color adjustments, grayscale conversion, or blurring).
+Here is the reference image:
+<image>
+Task:
+Compare the reference image with each candidate image and
+determine which candidate image is most visually similar to the
+reference image.
+Select the correct answer from the following 4 choices:
+(A) <image>
+(B) <image>
+(C) <image>
+(D) <image>
+The final answer should be a single letter.
+Visual Similarity
+You are given nine shuffled image tiles that were created by slicing
+one image into a 3*3 grid.
+Here are the tiles, each tagged with an index reflecting the current
+(shuffled) order in which they are shown:
+Tile 1: <image>
+Tile 2: <image>
+Tile 3: <image>
+Tile 4: <image>
+Tile 5: <image>
+Tile 6: <image>
+Tile 7: <image>
+Tile 8: <image>
+Tile 9: <image>
+Task:
+Mentally reassemble the original image, arranging the tiles into the
+correct 3*3 layout and provide the tile indices in raster-scan order
+(left-to-right, top-to-bottom), separated by commas.
+Answer format example:
+5, 1, 3, 7, 9, 2, 4, 8, 6
+Patch Ordering
+You are given an image and its rotated version. The i

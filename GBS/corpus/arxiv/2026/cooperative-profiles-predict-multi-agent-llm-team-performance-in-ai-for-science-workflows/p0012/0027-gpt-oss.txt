@@ -1,0 +1,27 @@
+title: Cooperative Profiles Predict Multi-Agent LLM Team Performance in AI for Science Workflows
+source: arxiv
+year: 2026
+document_id: cooperative-profiles-predict-multi-agent-llm-team-performance-in-ai-for-science-workflows
+authors: Shivani Kumar; Adarsh Bharathwaj; David Jurgens
+page: 12
+section: gpt-oss
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20658v1
+
+73,082
+qwen3-8b 92 137,624 50,751 188,376
+qwen3-0.6b 136 174,636 35,123 209,759
+qwen3-32b 42 176,973 63,793 240,767
+qwen3-14b 50 185,882 61,093 246,976
+qwen3.5-9b 38 223,816 45,279 269,096
+gpt-oss-20b 121 265,990 33,952 299,943
+qwen3-8b-think 72 243,678 84,457 328,136
+qwen3-14b-think 48 258,161 79,608 337,770
+qwen3-30b-a3b-think 73 329,764 40,217 369,982
+qwen3-32b-think 19 310,966 92,112 403,079
+qwen3.5-35b-a3b 60 444,307 36,803 481,111
+Median87 101,118 29,654 129,466
+Table 10: AI-for-Science token usage per model, sorted by total tokens per run. Input/run
+and Output/run are mean tokens per simulation run (5 runs per condition). Tokens include
+both prompt and generation tokens (including reasoning tokens for thinking models).
+User prompt template.

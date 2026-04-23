@@ -1,0 +1,26 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 5
+section: a-weighted-angle-distance-on-strings-9
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+ports, for each dataset, the best ARI/NMI achieved by each distance family (maximizing over its parameter sweep).
+The main qualitative patterns are:
+•splice: no method clusters well.All distances collapse to a single dominant
+cluster and achieve essentially zero ARI/NMI (best ARI≈0.0003). See also the flat
+weighted-angle sweep in Figure 3.
+•strseq: edit distances dominate.LCS achieves ARI = 0.8825 and NMI = 0.8970,
+with the other two edit baselines close behind. The weighted angle distance is competitive with thek-gram baselines (best atρ= 0.6 with ARI = 0.5060, NMI = 0.7527),
+but it does not outperform classical edit distances on this dataset. Figure 6 shows a
+clear “sweet spot” aroundρ∈[0.5,0.7].
+•ucsc trf: weighted angle dominates.Here the weighted angle distance is the
+strongest method overall (best ARI atρ= 0.6: ARI = 0.4596, NMI = 0.8632), while
+edit distances fail catastrophically (ARI≈0, NMI≈0.02). This is the cleanest
+evidence in our suite that the weighted angle construction captures repeat-driven
+structure that is largely invisible to generic edit distances. Theρ-sweep in Figure 9
+is stable over a broad plateau, with best NMI attained atρ= 1.0.
+These rankings agree with

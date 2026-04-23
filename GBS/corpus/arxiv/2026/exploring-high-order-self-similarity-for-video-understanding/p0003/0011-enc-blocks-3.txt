@@ -1,0 +1,24 @@
+title: Exploring High-Order Self-Similarity for Video Understanding
+source: arxiv
+year: 2026
+document_id: exploring-high-order-self-similarity-for-video-understanding
+authors: Manjin Kim; Heeseung Kwon; Karteek Alahari; Minsu Cho
+page: 3
+section: enc-blocks-3
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20760v1
+
+mporal dynamics.
+However, performance saturates when L exceeds 5, providing no significant
+additional gains. Similarly, varying the temporal window size of the 2nd-order
+STSS while fixing that of the 1st-order yields comparable results. Based on these
+results, we set the temporal window sizeL = 5for both the 1st- and 2nd-order
+STSS.
+Module Position.In Tab. 10b, we examine the effect of different positions and
+the numbers of the MOSS module. The results show that the MOSS module
+is beneficial for all the cases but the performance depends on the position of
+the module. MOSS module inserted after the 4th image encoder block performs
+the best. We interpret these results as a trade-off between the robustness of the
+STSS transformation and the effectiveness of temporal modeling; Inserting the
+module too early may lead to noisy STSS transformation due to insufficient visual
+semantics in the feature maps, whereas inserting the module too late limits the

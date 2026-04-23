@@ -1,0 +1,23 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+points, and stored trajectories drift away from the evolving policy over time.
+NPO is closest in spirit to the replay-based family, yet differs in a key way: instead of reusing past trajectories,
+it takes a later checkpoint on the same optimization path to actively regenerate verified-correct trajectories
+on the current prompts, yielding guidance that is stronger than historical replay while remaining much closer
+to the current policy than any external teacher.
+5.2 Self-Distillation and Self-Taught
+Self-distillation and self-Taught methods explore how a model can learn from a stronger version of itself.
+Context distillation showed that the same model can serve as both teacher and student when given privileged
+context [22], ReST and STaR bootstrap reasoning traces from the model’s own successful generations [7, 34],
+and recent on-policy distillation methods provide token-level guidance from an internal or external teacher on
+the student’s own rollout distribution [1, 10, 14, 21, 38].
+NPO shares the intuition that a model can benefit from a stronger self, but the source of that strength
+is different: rather than conditioning the same-step model on extra context or demonstrations, NPO

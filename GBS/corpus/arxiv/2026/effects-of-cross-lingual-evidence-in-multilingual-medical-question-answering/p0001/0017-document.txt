@@ -1,0 +1,22 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+re 3
+show that for the majority of the latest models, 10
+documents is the most beneficial strategy, while
+adding more documents results in marginal gains
+or even performance degradation. Henceforth, we
+use the top 10 retrieved documents in our experiments.
+3.2 Web Search
+As we established that 10 documents is the most
+beneficial strategy, we aimed to retrieve 10 documents from the other resources. First, we generate
+search queries, as described in Appendix A. We retrieve documents from the web using two APIs: the
+1https://meta.wikimedia.org/wiki/List_of_
+Wikipedias_by_language_group

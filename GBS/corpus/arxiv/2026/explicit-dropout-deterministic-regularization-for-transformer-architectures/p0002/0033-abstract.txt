@@ -1,0 +1,39 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+ention Sequence
+Dropout on
+FF network
+Accuracy (%)
+DropAttention [23] Implicit 84.84±0.89
+DropKey [20] Implicit 84.84±0.89
+None Implicit 85.00±0.86
+(Q) Arora et al. [1] Explicit 85.31±0.86
+(K) Arora et al. [1] Explicit 84.22±1.02
+(V) Arora et al. [1] Explicit 85.16±0.55
+None Arora et al. [1] 84.84±0.43
+None Explicit 85.16±0.55
+Explicit (Q) Explicit 85.68±0.65
+Explicit (K) Explicit85.78±0.65
+Explicit (V) Explicit 85.00±0.86
+Explicit (AV) Explicit 85.00±0.35
+dropout, reinforcing that controlling noise primarily in the
+valuestreamretainsthemostbeneficialregularizationeffect.
+Overall, these results highlight that the placement of
+dropout within the attention mechanism critically governs
+training stability. Moderate dropout regularization on the
+value projection strikes the right balance between representation smoothing and information retention, improving generalization on CIFAR-10 without sacrificing convergence
+speed.
+Thefullsetofablationresultsfortheremainingdatasets
+is reported in Section 3 of the supplementary reader.
+5. Conclusions
+This work introduced an explicit formulation of dropout
+as an additive regularization mechanism for Transformer
+architectures, enabling direct and int

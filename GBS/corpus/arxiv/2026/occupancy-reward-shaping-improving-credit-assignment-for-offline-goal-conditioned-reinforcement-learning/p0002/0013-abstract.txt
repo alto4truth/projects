@@ -1,0 +1,21 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 2
+section: abstract
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+vθ(t, xt)−(x 1 −x 0)
+
+2
+2 (1)
+whereUnif([0,1])denotes uniform sampling between 0 and 1 andx t = (1−t)x 0 +t x 1 is the
+linear interpolation betweenx 0 andx 1. On convergence,v θ(t, xt)learns the velocity field which
+transforms samples fromp 0 to samples fromp data by numerically integrating the ODE. In this
+paper, following Lipman et al. (2024); Park et al. (2025), we use linear interpolation between base
+and target distributions and uniform time sampling. As in Park et al. (2025), we find that the Euler
+method is sufficient for solving the ODE.
+3

@@ -1,0 +1,26 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 77
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+Table 7: Cross-architecture validation usingInternVL2-2B. We report the performance on 10K subsets.Bold
+denotes the best result, and underlined denotes the second best. Note that the MME and MMBench columns have
+been mapped to their standard metric scales based on the raw logs. OurEVIANconsistently outperforms baselines
+even on a different model architecture.
+Model MME MMBench SEEDBench ScienceQA A-OKVQA POPE Avg
+Random 1776.87 0.3857 0.6064 0.7313 0.5467 87.18 62.94
+BLIP-2 1754.31 0.6945 0.6888 0.9132 0.7467 87.10 75.68
+EVIAN (Ours) 1796.41 0.7096 0.6971 0.9246 0.7624 87.37 76.82
+Table 8: Comparison between the full original dataset and the EVIAN-selected subset. The “Origin Full” model is
+trained on the unmodified 300K source data. EVIAN achieves a higher average score using only 1/30th of the data,
+demonstrating superior data efficiency and quality verification.
+Model MME MMBench SEEDBench ScienceQA A-OKVQA POPE Avg
+Origin Full (300K) 1715.030.6734 0.6416 0.7287 0.7511 79.68 70.07
+EVIAN (10K) 1876.89 0.6463 0.6359 0.7115 0.7493 79.87 70.20
+scales, EVIAN secures a substantial lead on MME
+(+161.86) and maintains highly competitive performance on hallucination and reasoning tasks.

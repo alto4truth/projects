@@ -1,0 +1,21 @@
+title: RefAerial: A Benchmark and Approach for Referring Detection in Aerial Images
+source: arxiv
+year: 2026
+document_id: refaerial-a-benchmark-and-approach-for-referring-detection-in-aerial-images
+authors: Guyue Hu; Hao Song; Yuxing Tong; Duzhi Yuan; Dengdi Sun; Aihua Zheng; Chenglong Li; Jin Tang
+page: 1
+section: document
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20543v1
+
+nguishes from conventional ground referring detection datasets by 4 characteristics: (1) low but diverse object-to-scene ratios, (2)
+numerous targets and distractors, (3) complex and finegrained referring descriptions, (4) diverse and broad scenes
+in the aerial view. We also develop a human-in-the-loop
+referring expansion and annotation engine (REA-Engine)
+for efficient semi-automated referring pair annotation. Besides, we observe that existing ground referring detection approaches exhibiting serious performance degradation on our aerial dataset since the intrinsic scale variety
+issue within or across aerial images. Therefore, we further
+propose a novel scale-comprehensive and sensitive (SCS)
+framework for referring detection in aerial images. It consists of a mixture-of-granularity (MoG) attention and a twostage comprehensive-to-sensitive (CtS) decoding strategy.
+Specifically, the mixture-of-granularity attention is developed for scale-comprehensive target understanding. In addition, the two-stage comprehensive-to-sensitive decoding
+strategy is designed for coarse-to-fine referring target decoding. Eventually, the proposed SCS framework achieves
+remarkable performance on our aeria

@@ -1,0 +1,28 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 16
+section: instructions
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+ingly dominate the top-1 result. SmartVector
+maintains 55–65% overall accuracy throughout and keeps its stale rate in the 5–25% band. The gap
+is widest at moderate noise rates (15–50%), where SmartVector’s advantage reaches 30+ points.
+This is the setting most representative of real enterprise corpora, where high-authority canonical
+documents coexist with a long tail of informal, recent sources.
+Noise rate Plain RAG acc SV acc Plain stale % SV stale %
+0% 31.7% 60.0% 25.0% 21.7%
+15% 31.2% 64.8% 43.3% 21.7%
+30% 32.8% 62.0% 43.3% 10.0%
+50% 31.3% 62.0% 43.3% 5.0%
+75% 31.6% 55.5% 46.7% 25.0%
+Table 4:Robustness sweep over contradiction-injection rate. Plain RAG’s stale rate nearly doubles as rumor
+density grows; SmartVector holds a 30+ point accuracy advantage across the regime.
+10.5 Update cost
+For each of the 60 topics, we simulated a single-word edit to the latest canonical version and counted
+re-embeddings required to apply the edit. Plain RAG conservatively reindexes every chunk of the
+affected document: with 4 versions per topic, that is a mean of 4.35 re-embeddings per edit (slightly
+above 4 because some topics also have a Slack rumor that indexers typically include). SmartVector’

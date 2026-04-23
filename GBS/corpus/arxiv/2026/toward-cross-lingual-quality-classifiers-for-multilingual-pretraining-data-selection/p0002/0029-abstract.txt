@@ -1,0 +1,32 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+Published as a paper at 3rd DATA-FM workshop @ ICLR 2026, Brazil.
+Table 5: Comparison of benchmark results using standard random negatives vs. Q3 negatives (fluent
+but low-utility text) in French. Q3 sampling consistently yields superior aggregate performance,
+with the monolingual classifier (Q3) performing slightly better than the ML (Q3) classifier.
+Benchmark No filtering HQ Q3 ML ML (Q3)
+ARC-Challenge 0.2891 0.3071 0.31050.31650.3054
+Belebele_c 0.3444 0.35110.37110.3511 0.3633
+GMMLU_c 0.2625 0.2925 0.3025 0.29000.3075
+HellaSwag 0.4883 0.4748 0.47270.49560.4911
+Include_c 0.3866 0.4153 0.4272 0.42240.4582
+M_MMLU_c 0.2831 0.2945 0.2992 0.29270.3007
+XNLI 0.4707 0.48550.48760.4807 0.4767
+XWinograd 0.6386 0.65060.66270.6024 0.6145
+Aggregate acc_norm0.3954 0.40890.41670.4064 0.4147
+Average rank4.50 3.002.003.00 2.38
+Table 6: Comparison of benchmark results using standard random negatives vs. Q3 negatives (fluent
+but low-utility text) in Spanish. Q3 sampling consistently yields superior aggregate performance.
+Benchmark No filtering HQ ML ML (Q3)
+ARC-Challenge 0.2991 0.3077 0.32480.3282
+Belebele_c 0.34220.35330.34560.3533
+GMMLU_c 0.3100 0.3150 0.32500.3275
+HellaSwag 0.5006 0.5263 0.53100

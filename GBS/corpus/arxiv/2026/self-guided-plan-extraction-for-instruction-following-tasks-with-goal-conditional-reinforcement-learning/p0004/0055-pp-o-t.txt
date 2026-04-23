@@ -1,0 +1,31 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 55
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+resources, craft items, and navigate diverse terrains
+to survive and complete tasks.
+The core of our approach lies in the hierarchical decomposition of complex goals. As shown
+on the right, a high-level instruction, which may
+be ambiguous or require long-term planning (e.g.,
+"Craft an iron pickaxe."), is first translated into a
+deterministic, multi-step plan. Each step in this
+plan constitutes a distinct subtask.
+Crucially, the agent’s policy is not conditioned
+on the entire plan. Instead, it focuses solely on the
+currently active subtask. This transforms a challenging long-horizon problem into a more tractable
+sequence of short-horizon tasks. The agent’s objective at any moment is to complete the highlighted
+subtask and then invoke the DONE action. For example, optimal agent can choose DONE action
+based on the inventory state (when completing
+subtasks such as collecting resources and crafting
+items), player status (for subtasks that are related
+to eating, drinking or sleeping) or map state (for
+subtasks such as placing blocks).
+Upon successful completion, the framework provides the next subtask in the sequence, guiding the
+agent through the overall plan until the final goal is
+ac

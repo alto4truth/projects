@@ -1,0 +1,73 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 51
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+e statistical features are overall
+quite similar and are insufficient on their own to reliably distinguish covert advertisements from
+normal posts.
+26
+
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+0
+500
+1000Count
+Number of Images
+0.05
+0.10
+0.15
+Ratio
+0 97 194 291 388 485 582 679 776 873 970
+0
+500
+1000Count
+Post Text Length
+0.000
+0.002
+0.004
+Ratio
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+0
+500
+1000Count
+Number of Comments
+0.0
+0.1
+Ratio
+0 8 16 24 32 40 48 56 64 72 80
+0
+250
+500Count
+Avg. Comment Length
+0.000
+0.025
+0.050
+Ratio
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+0
+250
+500Count
+Number of Tags
+0.00
+0.05
+0.10
+Ratio
+Normal Post (Number)
+Covert Ad (Number)
+Normal Post Ratio
+Covert Ad Ratio
+Figure 7: Feature Distributions of Normal Posts and Covert Advertisements
+H Examples of the Error Types
+In this chapter, we discuss concrete examples of the four common error types listed in Section H, as
+illustrated in Figure 8.
+The first common issue is failing to detect hidden clues in the comments or images. As shown in
+the top row of Figure 8, the left subfigure contains a large highlighted area (red box) showing a
+specific branded product along with its price, which indicates a clear promotional intent. In the right
+subfigure, the red box highlights a comment asking users to send a private message, a common tactic
+used to evade platform review while promoting products.
+27

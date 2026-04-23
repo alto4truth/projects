@@ -1,0 +1,24 @@
+title: Enhancing Research Idea Generation through Combinatorial Innovation and Multi-Agent Iterative Search Strategies
+source: arxiv
+year: 2026
+document_id: enhancing-research-idea-generation-through-combinatorial-innovation-and-multi-agent-iterative-search-strategies
+authors: Shuai Chen; Chengzhi Zhang
+page: 1
+section: document
+chunk: 63
+source_ref: https://arxiv.org/pdf/2604.20548v1
+
+-based eval-uation by clarifying which aspects of failure remain difficult to detect under existing automatic or semi-automatic assessment procedures.
+
+26
+5 Demonstration We develop an interactive demonstration system based on the proposed multi-agent iterative search framework for research idea generation. In the Hugging Face demo, the collaborative team size is automatically determined by the number of authors of the user-selected paper. The complete agent system consists of these team agents, together with one search agent and one evaluation agent. The maximum number of iterative refinement rounds is set to three, which clarifies the exact demo configuration and im-proves reproducibility. As illustrated in Figure 12, the demonstration workflow begins with a user-provided research topic. The topic is first passed to an LLM-based literature search agent with autonomous search-path planning capability. By integrating the Semantic Scholar API, the agent performs topic-oriented literature retrieval and relevance verification, and then returns a refined list of highly relevant papers. The user selects one paper from this list as the basis for subsequent analysis. The system then applies the proposed multi-agent iterative search framework to analyze the selected paper and generate a novel research idea. The interface adopts a two-column layout. The left panel displays the retrieved lit-erature and allows users to select papers for further exploration, while the right panel provides the user–LLM interaction interface and presents the full reasoning and gener-ation process in real time (see Appendix Figure A11). To illustrate the workflow, we use Research Idea Generation as the input topic. The right panel shows the complete action trajectory of the literature search agent, including search planning, Semantic Scholar retrieval, and relevance verification. At the same time, the left panel presents the retrieved papers and their detailed information for user selection (Appendix Figure A12). In our example, we select “ResearchAgent”: Iterative Research Idea Generation over Scientific Literature with Large Language Models as the input paper. The system then automatically extracts its abstract, references, and au-thor information, generates initial research ideas, and synchronously displays the rea-soning process. These initial ideas are further used to support deeper related-knowledge retrieval (Appendix Figure A13).
+Figure. 12. Demonstration Process Next, the initial research ideas and retrieved knowledge are provided to the virtual sci-entist agents, each of whom is instantiated with the background information of the se-lected paper’s author(s). Based on both prior background knowledge and newly
+!"#A%
+&'(')G(+I-.#LM
+!1')I2'"'G)%L."IP4IRAS%LTU9'"%I!%'G)%L:'I;')GM+I;%G)%'9L'(
+<L%'G)%AG'I;')GM+IU9'"%
+&'S)%'1I<L%'G)%AG'I<L(%
+=('G
+=('G
+;'S'M%'1I%+'I>)#'G
+2'"'G)%'1I!1')

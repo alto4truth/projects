@@ -1,0 +1,47 @@
+title: CHORUS: An Agentic Framework for Generating Realistic Deliberation Data
+source: arxiv
+year: 2026
+document_id: chorus-an-agentic-framework-for-generating-realistic-deliberation-data
+authors: A. Koursaris; G. Domalis; A. Apostolopoulou; K. Kanaris; D. Tsakalidis; I. E. Livieris
+page: 2
+section: abstract
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20651v1
+
+CHORUS: An Agentic Framework for Generating Realistic Deliberation DataA PREPRINT
+responds to existing contributions rather than initiating independent arguments. In the reply case, the agent reasons
+over the post histories of all other actorsSN
+j=1 Hpost
+j to select a target postt∗, either to agree or disagree with, consistent
+with its personaρ i. In both cases, the agent may optionally invoke the shared tool suiteT. For instance, performing
+web searches to incorporate references prior to generating content. The resulting postcis published to the platform
+viaTand recorded inH post
+i .
+Algorithm 3POST(a i)
+Parameters:
+ρi: Persona of thei-th actora i
+preply
+i ∈[0,1]: reply probability of actora i
+Inputs:
+ai: actor
+Output:
+UpdatedH post
+i
+1:Drawv∼ U(0,1)
+2:ifv≤p reply
+i then▷Reply with probabilityp reply
+i
+3:t ∗ ←AGENT i(∪N
+j=1Hpost
+j , ρ i)▷Agent selects target to agree or disagree with
+4:c←AGENT i(t∗,T)▷Agent optionally invokesTto enrich reply
+5:else▷New comment with probability1−p reply
+i
+6:c←AGENT i(∪N
+j=1Hpost
+j , ρ i,T)▷Agent optionally invokesTto enrich comment
+7:PUBLISH(c)▷Post content to platform viaT
+8:H post
+i ← H post
+i ∪ {(ai, c)}▷Update post history ofi-th actor
+4 Use C

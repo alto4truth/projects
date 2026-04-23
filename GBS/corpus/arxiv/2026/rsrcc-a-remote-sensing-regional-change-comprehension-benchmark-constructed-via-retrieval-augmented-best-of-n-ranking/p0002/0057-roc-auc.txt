@@ -1,0 +1,27 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 2
+section: roc-auc
+chunk: 57
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+tyandrobustness,reinforcing
+its ability to focus on meaningful change patterns while avoiding false positives induced by random
+spatial variations.
+24
+
+< 𝐵𝑒𝑓𝑜𝑟𝑒 >< 𝐴𝑓𝑡𝑒𝑟 > < 𝑂𝑢𝑟𝑠 > < 𝐿𝐸𝑉𝐼𝑅 >
+Figure 13: Visual comparison on challenging small-object cases. Our method demonstrates superior
+adaptabilityindetectingfine-grainedchangessuchasswimmingpools,whichoftenoccupyverysmall
+regions within high-resolution images. Compared toLEVIR, our approach successfully identifies
+subtle localized changes while avoiding false positives in surrounding areas.
+I Class Distribution Analysis
+Table 5 and Figure 14 present the distribution of detected changes across semantic categories in
+our generated dataset (test only). The results indicate a clear dominance of thebuildingandtree
+classes, which together account for over 64% of all detected changes. This imbalance aligns with the
+urban–suburban nature of the underlying LEVIR-CD imagery, where most structural and vegetation
+modifications occur.
+25

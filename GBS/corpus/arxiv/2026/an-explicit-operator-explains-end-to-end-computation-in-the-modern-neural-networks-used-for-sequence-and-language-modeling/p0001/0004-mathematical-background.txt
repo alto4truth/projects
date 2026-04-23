@@ -1,0 +1,38 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 1
+section: mathematical-background
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+eKteiψ(0)
+
+(4)
+whereψ(0)∈C N are the initial conditions in terms of
+theψ-coordinate, and scalar functions (here Arg, log,
+and modulus) are taken elementwise when applied to a
+vector.
+Finally, we can utilize the exact solution Eq. (3) to
+propagate the recurrent dynamics in terms of thexcoordinate in discrete steps of timeτ k:
+xk =e Kτ kxk−1 .(5)
+The matrix exponential serves as an exact propagator
+to bring the continuous-time dynamics from time point
+τ(k−1) toτ k. We can then use the exact solution in
+Eq. (5) to define a dynamics operatorD τ =e Kτ that
+propagates the state of the network forward in time. The
+operatorD τ is applied at discrete timek−1 to evolve
+the state of the network to discrete timek. In terms of
+this operator, we can write Eq. (5) asx k =D τ xk−1.
+Intuition from the theory of coupled oscillators becomes useful at this point: across a range of phase lags,
+Figure 1.The nonlinear oscillator network produces
+rich spatiotemporal dynamics across its ring topology. (a)The network is composed ofNnodes arranged
+on a one-dimensional ring (left), resulting in a network adjacency matrix with connections between nodes in a neighborhood ofnsteps on the ring with boundaries conditions
+(right).(b)For specific combinations of network connectivity
+and phase-lags, traveling waves emerge in the phase dynamics (Arg(x j(t))∀j), here plotted in color-code as a function
+of node position and time.(c)Different spatiotemporal patterns are possible: a localized pocket of synchronization that
+co-exist with asynchronous behavior, known as a “chimera”
+state [16, 19], emerges in the phase dynamics of the network
+with homogeneous phase lag.

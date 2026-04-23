@@ -1,0 +1,24 @@
+title: Improving clinical interpretability of linear neuroimaging models through feature whitening
+source: arxiv
+year: 2026
+document_id: improving-clinical-interpretability-of-linear-neuroimaging-models-through-feature-whitening
+authors: Sara Petiton; Antoine Grigis; Raphaël Vock; Edouard Duchesnay
+page: 2
+section: abstract
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20675v1
+
+r the 10 CV folds regionwise.
+listed regions correspond to the seven features with the largest
+absolute coefficients, reflecting their importance in classification. Whitening improved the interpretability of regression coefficients by increasing their alignment with ENIGMA
+meta-analyses for both BD and SCZ (see [18, 19, 20, 21]
+for listings of ENIGMA-derived significant regions). In BD,
+whitening significantly strengthened correlations with cortical rankings and elevated subcortical regions (ventricles, hippocampus, thalamus, amygdala) closer to literature findings.
+In SCZ, whitening improved the ranking of key cortical and
+subcortical regions (hippocampus, inferior temporal gyrus,
+fusiform gyrus, lateral ventricles), even though overall correlations remained insignificant due to atlas differences. Across
+both disorders, whitening consistently enhanced the biological plausibility of classifier-derived ROI importance, underscoring its utility for more interpretable neuroimaging classification.
+4. CONCLUSION
+In this study, we investigated the use of a novel regularized
+ZCA-cor whitening approach to enhance the interpretability of linear classifiers trained on ROI-based neuroimaging
+f

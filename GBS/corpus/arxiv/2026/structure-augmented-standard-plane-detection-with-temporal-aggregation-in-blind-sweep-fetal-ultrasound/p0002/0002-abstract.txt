@@ -1,0 +1,26 @@
+title: Structure-Augmented Standard Plane Detection with Temporal Aggregation in Blind-Sweep Fetal Ultrasound
+source: arxiv
+year: 2026
+document_id: structure-augmented-standard-plane-detection-with-temporal-aggregation-in-blind-sweep-fetal-ultrasound
+authors: Keli Niu; He Zhao; Qianhui Men
+page: 2
+section: abstract
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20591v1
+
+In low-resource settings, blind-sweep ultrasound provides a
+practical and accessible method for identifying fetal growth
+restriction. However, unlike freehand ultrasound which is
+subjectively controlled, detection of biometry plane in blindsweep ultrasound is more challenging due to the uncontrolled
+fetal structure to be observed and the variaties of oblique
+planes in the scan. In this work, we propose a structureaugmented system to detect fetal abdomen plane, where the
+abdominal structure is highlighted using a segmentation prior.
+Since standard planes are emerging gradually, the decision
+boundary of the keyframes is unstable to predict. We thus
+aggregated the structure-augmented planes with a temporal sliding window to help stabilise keyframe localisation.
+Extensive results indicate that the structure-augmented temporal sliding strategy significantly improves and stabilises
+the detection of anatomically meaningful planes, which enables more reliable biometric measurements in blind-sweep
+ultrasound.
+1. INTRODUCTION
+Fetal growth restriction (FGR) is a leading cause of perinatal
+morbidity and mortality, affecting about one in ten pregnancies worldwide [1]. For the early detection of

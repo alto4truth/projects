@@ -1,0 +1,32 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 2
+section: document
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+te these plans in the environment by interacting with it and maximizing delayed
+rewards.
+The training process proceeds through the following stages:
+1. Plan Generation(4.1): The LLM extracts
+possible subtasks from instructions and generates multiple candidate plans in natural language during the initial cycle (Cycle 1). In
+subsequent cycles (Cycle 2–N), the candidate
+pool is iteratively refined by filtering and reprioritization, based on how well the plans
+align with the RL agent’s performance.
+2. Policy Learning(4.2): The RL agent is
+trained to execute the selected plans in the
+environment.
+3. Plan Validation(4.3): The quality of candidate plans is evaluated according to the RL
+agent’s success rate and execution trajectories.
+4. LLM Fine-Tuning(4.4): The language
+model is fine-tuned with feedback derived
+from validation, aligning its scoring of plans
+with the agent’s actual performance.
+4.1 Plan Generation
+In our approach, we first generate all possible plans
+for the training set in zero-shot mode during the
+initial cycle. In subsequent cycles, we progressively reduce the set of candidate plans by filtering
+out those that perform poorly for the agent. Concretely, the initial cycle

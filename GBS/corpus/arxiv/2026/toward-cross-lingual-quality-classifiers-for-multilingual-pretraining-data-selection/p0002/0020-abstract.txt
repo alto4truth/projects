@@ -1,0 +1,19 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+(2025), XNLI (Conneau
+et al., 2018), and Include (Romanou et al., 2024). While HQ occasionally yields marginal gains on
+individual tasks, ML provides more stable and stronger overall performance.
+These results are consistent with the hypothesis that data quality corresponds to a shared structure in
+XLM-RoBERTa’s representation space. However, we cannot determine whether this reflects abstract
+semantic features or cross-lingual formatting regularities in the positive anchor datasets. By jointly
+modeling quality across languages, the classifier captures features that transfer effectively across
+linguistic boundaries, leading to improved downstream generalization.
+5

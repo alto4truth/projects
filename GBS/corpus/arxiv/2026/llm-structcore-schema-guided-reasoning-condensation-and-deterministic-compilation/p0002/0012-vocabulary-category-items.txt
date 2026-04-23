@@ -1,0 +1,30 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 2
+section: vocabulary-category-items
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+System Variant F1 Lang Team Status
+Mistral L3→Stage2(det) 0.63 EN DocUA Submitted
+No FP-gates variant 0.61 EN DocUA Submitted
+Claude Sonnet→Stage2(det) 0.62 EN DocUA Evaluated †
+Mistral L3 recall (v3e) — IT DocUA Prepared ‡
+Table 3: Test200 results on Codabench. All DocUA variants use deterministic
+Stage 2 + UMLS mapping.†Evaluated but not submitted as final entry
+due to participation limits.‡Italian variant prepared (Stage 1 SGR9 recall,
+chars=8000, multi-slice, rules_v3e) but not submitted due to exhausted
+attempt slots.
+filters. (4) The student model (MedGemma 4B, local) achieves F1=0.6521 on
+train10 with very low FP (13), suggesting that smaller models produce more
+conservative summaries. (5) Italian dev80 achieves higher F1 (0.6905) than
+English (0.6543) with more TP (266 vs. 236) and fewer FN (106 vs. 128),
+suggesting that the original Italian clinical notes are more structured and
+easier for Stage 1 extraction. Thev3e rule set reduces 3 FP compared to
+v3a (198 vs. 201) through tighter FP-drop gates onchest pain,heart failure,
+andarrhythmia.
+Multi-slice input ablation.Both dev80 teacher runs use themiddle+h
+ead_tail multi-slice strategy withw=4. Compared to single-window runs

@@ -1,0 +1,20 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 16
+section: instructions
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+is a mean of 4.35 re-embeddings per edit (slightly
+above 4 because some topics also have a Slack rumor that indexers typically include). SmartVector’s
+diff-overlap update re-embeds only the single chunk whose source offsets intersect the edit, for a
+mean of 1.0 re-embedding—a 77.0% reduction—plus 0.13 scalar ripple messages per edit in this
+sparsely-connected corpus. On denser graphs the absolute ripple count rises, but ripples areO(1)
+arithmetic updates and cost orders of magnitude less than an embedding call.
+10.6 Calibration
+The ECE column in Table 2 shows that SmartVector’s confidence score is substantially better
+calibrated than plain cosine similarity. Plain RAG’s similarity-as-confidence proxy yields an ECE of
+13

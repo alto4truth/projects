@@ -1,0 +1,23 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+attributes for these discretized coordinates using the Route Processor module, ensuring fine-grained spatial resolution for inference. Using the PID Controller generated velocity profile as past driving context and both past and future map
+features as environmental inputs, the pre-trained LSTM network conducts batch inference to predict driver-specific future velocities along
+the entire route.
+This prediction leverages the bidirectional LSTM architecture’s ability
+to process temporal sequences in both forward and backward directions, effectively modeling how drivers anticipate upcoming road geometry when modulating speed. Post-processing using Butterworth and
+zero-phase filtering removes any high-frequency noise in the predictions
+while introducing zero phase lag. This results in a refined personalized
+velocity profile that is informed by both route context and individual
+driving style.
+6)BEV Energy Consumption Model:The predicted velocity profile feeds into the BEV Energy Consumption Model, which employs a
+physics-based backward model to estimate energy requirements. The
+model computes instantaneous acceleration from the velocity gradient,
+6

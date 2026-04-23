@@ -1,0 +1,38 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+Table 1
+Effect of implicit and explicit dropout regularization on CIFAR-10 with dropout ratio of 0.2 using a 7-layer Vision Transformer.
+Results report test accuracy.
+Dropout on Attention
+Sequence
+Dropout on FF
+network
+Accuracy (%)
+DropAttention (Implicit) [23] Implicit 85.24±0.75
+DropKey (Implicit) [20] Implicit 85.45±0.41
+None Implicit 85.14±0.63
+(Q) Arora et al. [1] Explicit 61.08±0.80
+(K) Arora et al. [1] Explicit 47.01±1.58
+(V) Arora et al. [1] Explicit 59.22±1.80
+none Arora et al. [1] 86.02±0.51
+None Explicit 86.14±0.36
+Explicit (Q) Explicit 83.92±0.98
+Explicit (K) Explicit 84.06±0.85
+Explicit (V) Explicit86.38±0.44
+Explicit (AV) Explicit 86.11±0.41
+4. Experiments
+Weevaluatetheproposedexplicitdropoutregularization
+acrossdiversetasksandTransformerarchitectures.Ourgoal
+is to assess whether formulating dropout as an explicit, additiveregularizercanmatchorevenexceedtheperformance
+of commonly used implicit dropout strategies, including
+DropAttention[23]andDropKey[20],whileprovidingmore
+direct control over regularization strength. In addition, we
+alsoadaptpriorexplicitdropoutformulationsforTransformers and perform direct comparisons. This allows us to evaluate whether our formulati

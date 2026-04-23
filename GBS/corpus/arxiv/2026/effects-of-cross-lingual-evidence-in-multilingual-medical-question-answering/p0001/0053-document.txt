@@ -1,0 +1,31 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 53
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+BERTScore (Zhang et al., 2019), COMET (Rei
+et al., 2020), ChrF (Popovi ´c, 2015) and ChrF++
+(Popovi´c, 2017). BERTScore values suggest that
+90-96% of semantic content is preserved during
+the translation cycle, while COMET scores of 0.830.86 correspond to professional-grade translation
+quality that typically aligns with human assessments of "good" translations.
+BERTScoreCOMETChrF ChrF++
+ES→EN→ES 0.9498 0.8538 83.48 82.05
+ES→IT→ES 0.9646 0.8643 88.45 87.58
+ES→FR→ES 0.9513 0.8564 84.61 83.23
+ES→KZ→ES 0.9013 0.8349 71.00 68.75
+ES→EU→ES 0.9437 0.8549 82.22 80.70
+Table 3: Results of backtranslation from Spanish (original language of the dataset) to each language.
+D Statistical Significance
+To establish whether performance differences between the baseline (without retrieval) and each retrieval strategy are statistically significant, we performed chi-square tests of independence on model
+prediction outcomes. For each language and model,
+we constructed a 2×2 contingency table comparing
+correct vs. incorrect predictions under the baseline and retrieval-augmented conditions. All the
+comparisons produced p-values < 0.001. Given the
+large and consistent effect sizes observed across
+languages an

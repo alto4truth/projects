@@ -1,0 +1,28 @@
+title: Interval POMDP Shielding for Imperfect-Perception Agents
+source: arxiv
+year: 2026
+document_id: interval-pomdp-shielding-for-imperfect-perception-agents
+authors: William Scarbro; Ravi Mangal
+page: 3
+section: proofs
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20728v1
+
+Combining these two bounds,
+Pr[st+1 ∈C|h t, Et,E corr]≥Pr[a t ∈Ω(s t)|h t,E corr]·γ≥βγ.
+Therefore,
+Pr(Et+1 |E t,E corr)≥βγ.
+Applying the chain rule overt= 0, . . . , H−1yields
+Pr(EH | Ecorr) =
+H−1Y
+t=0
+Pr(Et+1 |E t,E corr)≥(βγ) H .
+SinceSafe 0:H =E H, this is exactly the desired inner bound.
+Finally, by construction of the confidence set,Pr(E corr)≥
+λ. Equivalently, with outer probability at leastλover the
+random training dataset, the conditional closed-loop safety
+probability is at least(βγ) H. This is exactly
+Pr
+
+Pr [Safe0:H]≥(βγ) H
+≥λ.

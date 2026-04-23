@@ -1,0 +1,27 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 8
+section: segformer-b0andsamachieve-the-closest-performance-to
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+s impact is particularly evident when
+analyzing the BPCER@t1%, which rises from 7.82% when
+no segmentation is performed on IJB-C to 42.23% when
+segmenting with SegFormer-B0, and even higher values for
+the remaining methods. These results suggest that SPL and
+MixFaceNet-MAD tend to get triggered by background information that might be erroneously interpreted as containing
+morphing artifacts. When this information is substituted by
+a white background, these systems stop being triggered by
+such cues, resulting in significantly lower BPCER values.
+MADPromptS works in a fundamentally different way, as it
+relies on CLIP’s built-in knowledge to classify each sample.
+Hence, the obtained results show that the pre-trained ViT
+large architecture of CLIP tends to associate white backgrounds with morphing cues, resulting in a significant MAD
+triggering increase for segmented samples.
+Two main conclusions can be drawn from the obtained results. On one side, it is essential to test the MAD systems applied on top of border control images on segmented datasets
+before their deployment in EES applications, since different
+MAD systems present significantly different behaviors when

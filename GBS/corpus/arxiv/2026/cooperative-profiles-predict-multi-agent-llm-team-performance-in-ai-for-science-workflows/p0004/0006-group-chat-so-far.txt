@@ -1,0 +1,44 @@
+title: Cooperative Profiles Predict Multi-Agent LLM Team Performance in AI for Science Workflows
+source: arxiv
+year: 2026
+document_id: cooperative-profiles-predict-multi-agent-llm-team-performance-in-ai-for-science-workflows
+authors: Shivani Kumar; Adarsh Bharathwaj; David Jurgens
+page: 4
+section: group-chat-so-far
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20658v1
+
+tandard:
+Common-Pool Resource Game.
+There is a shared resource pool with 100 tokens.
+Each player can extract between 0 and 10 tokens from the pool.
+16
+
+Preprint. Under review.
+After all extractions, the remaining pool is multiplied by 3.0
+(sustainability factor) and split equally among all 10 players.
+Your payoff = tokens you extracted + your share of the regenerated pool.
+Over-extraction depletes the pool for everyone.
+Alternate:
+You are participating in a shared resource activity. There is a common
+pool containing 100 tokens that all 10 participants share.
+Each participant may withdraw between 0 and 10 tokens from the pool. After
+everyone has made their withdrawal, the tokens remaining in the pool are
+multiplied by 3.0 (representing natural replenishment) and the result is
+divided equally among all participants.
+Your earnings are the tokens you withdrew plus your share of the replenished
+pool. Keep in mind that the more everyone withdraws, the less remains for
+replenishment, which affects everyone’s share.
+B.4.3 CPR with Internal Sanctioning
+Standard:
+Common-Pool Resource Game with Sanctioning.
+PHASE 1 - Extraction:
+There is a shared resource pool with 100 tokens.
+Each player can extract between 0 and 10 tokens.
+Remaining pool is multiplied by 3.0 and split among all 8 players.
+PHASE 2 - Sanctioning:
+After seeing extractions, you can spend tokens to sanction other players.
+Each sanction token costs you 1.0 but reduces the target’s payoff by 2.0.
+Final payoff = extraction + sustainability share - sanction costs - sanction
+impacts received.
+Phase 2 sanctioning prompt:

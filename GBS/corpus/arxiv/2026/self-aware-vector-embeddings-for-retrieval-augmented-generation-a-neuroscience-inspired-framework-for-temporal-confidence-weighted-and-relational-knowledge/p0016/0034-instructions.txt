@@ -1,0 +1,24 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 16
+section: instructions
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+ntion.Feedback poisoning:an adversary who can
+submit positive feedback can inflate confidence; rate-limits, feedback-source weighting, and anomaly
+detection are needed.Ripple runaway:dense graphs risk cascade explosion; the hardDmax bound
+and per-hop attenuation are our first-line mitigation, but heavy-tailed degree distributions may
+require a top-k propagation cap.Wrong-authority priors:the source-authority enum is a crude
+instrument—a Slack message from a subject-matter expert may be more reliable than a wiki page.
+Per-author reliability priors, learned over time from feedback, are a natural extension.Cold-start
+confidence:newly-ingested vectors are UNCONSOLIDATED with low access_count; a naïve
+scorer would deprioritize them. The design addresses this by keeping UNCONSOLIDATED vectors
+queryable and by using the source-authority prior as an anchor until feedback arrives.
+11.3 Relationship to Parametric Knowledge
+SmartVector is a non-parametric substrate. Nothing in the framework prevents combining it
+with parametric-knowledge confidence estimates (e.g., lookback-ratio or signal-to-noise UQ at the
+generator). The most promising integration is an arbiter policy that compares query-c

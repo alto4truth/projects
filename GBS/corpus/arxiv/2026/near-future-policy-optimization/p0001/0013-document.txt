@@ -1,0 +1,22 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+high on theQ axis, but their large variance disk reflects a distributional gap so wide that the policy cannot
+absorb the signal, leaving the effective learning signalS far smaller than the highQ would suggest. Far-future
+replay methods (e.g., RLEP), which guide training with trajectories from a fully trained model, exhibit the
+same pattern: strong dot but large disk, and therefore a triangle well below the dot. Past-trajectory replay
+(e.g., ExGRPO) keeps its disk moderate, but its dot is itself lower, since trajectory quality is capped by
+earlier checkpoints. Pure on-policy RLVR (GRPO) stays on the right of the plane with a small disk, yet
+both its dot and its triangle are low, since the current policy cannot go beyond its own exploration frontier.
+A later checkpoint on thesameoptimization run naturally escapes above failure modes. Because it shares
+initialization, architecture, and optimization history with the current policy and differs only by a bounded
+number of gradient steps, its parameter distance from the current policy stays small and controllable, which
+keeps V (∆)low (see Appendix B for the formal bound). At the same time, further optimization makesQ(∆)
+exceed both the c

@@ -1,0 +1,32 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 2
+section: items-in-scene510-1015-1520-2025-25
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+(3) Situatedness (Situat.): degree of tailoring to
+the current dialogue state and scene; effective
+use of situational cues.
+• Weak (0): generic; ignores the specific context.
+• Moderate (1): partial awareness of context
+with limited adaptation.
+• Excellent (2): strongly context-aware and
+responsive to the user’s immediate needs and
+environment.
+To quantify inter-annotator agreement, we adopt
+Fleiss’ kappa (Fleiss, 1971) computed per dimension. Figure 5 presents the human evaluation results. We observe that each obtained Fleiss’ kappa
+falls into the range [0.47,0.53] , indicating moderate agreement among annotators. Notably, our
+SiPeR achieves the highest scores across all three
+metrics. These gains indicate that the integration
+of scene transition estimation and Bayesian inverse
+reasoning with ToM enables more faithful preference modeling. Consequently, it results in more
+coherent, informative responses that are contextually grounded.
+H Case Study
+Case A: No scene transition required (Figure 9).
+In this scenario, the user holds both an explicit constraint (brandModern Arts) and an implicit visual
+preference (compatibility with theirwardrobe). As
+shown in Figure 9, baseline models e

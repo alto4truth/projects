@@ -1,0 +1,18 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+large language models were trained on predominantly English texts resulting in biases toward western and US-centric normative views and ethics [192].
+
+Chapter 1: Epistemological Rumbles in Responsible AI 29
+Table 2: Examples of common AI problems that constructivist evaluations could address. Assessment type Description Potential limitations Model Interpretability and explainability
+To emphasise understanding the rationale behind AI decisions, going beyond evaluating quality of outputs to explore the “why” of model choices.
+In the case of a medical diagnostic AI, not only is the diagnosis vital, but also the rationale behind it. In a scenario where an AI system is trained to detect Covid-19 from chest x-rays, the AI may rely on confounding factors not medical pathology[100]. This is "shortcut learning" (aka the Clever Hans phenomenon) where the AI uses superficial clues that are not relevant to the actual medical condition leading to a false sense of accuracy. A more sociotechnical and constructivist evaluation of the system would encompass these broader considerations and require a model to state the reasons for a diagnosis. Representation of Knowledge Evaluate the conceptual links and hierarchies that a model constructs. This can oﬀer insights into the correlations it has learned to replicate and where important gaps may occur.
+For example, when GPT4(Vision) was asked to interpret the symbol of the Templar Cross, it did so accurately in the historical context of the 12th Century Knights Templar. It failed to mention its more modern association with US hate groups [293]. A constructivist evaluation would seek to uncover problematic gaps in how the model is representing knowledge around historical symbols and their contemporary social issues. Social Implications Evaluate if a model’s outputs are aligned with societal values and norms. Additionally, consider which societies and whose norms the model is aligned to.
+Consider the case of a person of Asian appearance tasking an image generator model to alter her headshot photo to appear more professional. Due to inherent racial bias a model may alter the photo to make the person look Caucasian [58]. A constructivist evaluation would seek to draw out and spotlight these toxic biases by ensuring the success metric included the generated output remain true to essential characteristics of the original image. Other pathways of human influence on GenAI include: model architecture, articulation of goals, benchmark design, prompt engineering, fine-tuning, reinforcement learning through human feedback (RLHF), and constitutional AI methods. Considering the multiple avenues of incorporating toxic biases and normative assumptions into an AI system and how those avenues interact with one another to produce a harmful or inappropriate model, is an inherently constructivist endeavour. It requires a holistic view of the model's genesis and evolution as well as acknowledgment of the subjective inputs at

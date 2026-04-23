@@ -1,0 +1,84 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+e ground-truth metric depth and
+known camera intrinsics. The process, detailed in Algorithm 1, is designed to be simple, fast, and distortion-free.
+11
+
+Figure 13.Limitation of Point Map in Latent Space.As a
+popular geometry representation [33, 36] in image sapce, point
+map shows strong limitation in latent space. Although visually the
+point map looks similar before and after V AE, the boundary lost
+huge precision (please zoom in) and it contains much noise after
+V AE.
+The key steps are (1) Unprojection to a metricallyaccurate 3D point cloud, (2) Isotropic Normalization where
+the entire point cloud is scaled to fit a[−1,1]cube based on
+its longest axis, and (3) Orthographic Projection where we
+simply take thez-value of the normalized points and write
+it into a 2D map. This process preserves the relative 3D
+geometry and aspect ratio of the subject while ensuring the
+final 2D map is in a V AE-friendly[−1,1]range.
+8.2. Dilation for V AE Artifacts
+As noted in the main paper (Sec. 3.3) and visually demonstrated in our main paper’s Fig. 2, the pretrained Cosmos
+V AE [27], like most V AEs, can struggle with the extremely
+sharp boundaries of a foreground silhouette against a blank
+background.
+When a standard iNOD map is passed through the V AE
+(encoded and then decoded), this compression can introduce minor "ringing" or noise artifacts at the very edge of
+the geometry. To solve this and ensure a clean, robust geometric boundary after decoding, we apply a simple 2D morphologicaldilationoperation to the iNOD map before it is
+passed to the V AE. We use the assign neighbor iNOD value
+to dilated pixels. The background pixels are assigned to 0.
+This slightly thickens the silhouette’s boundary, providing
+a small buffer that is more robust to the V AE’s lossy compression. After decoding, we use original mask to "cut off"
+the dilated region which contains noise. Then we obtain
+noise-free iNOD geometry.
+The effectiveness of this simple step is shown in Fig.2
+in main paper. The non-dilated iNOD produces noticeable
+boundary artifacts after being decoded, while the dilated
+version results in a clean, sharp, and artifact-free geometric boundary.
+9. Evaluation Details
+This section provides additional specifics on the baseline
+configurations and metric implementations used for the
+comparisons in our main paper (Sec 4.3).
+To ensure a fair and reproducible comparison, we used
+publicly available code and pretrained models for all baselines wherever possible. We also tried our best effort for
+evaluating close-sourced human-centric relighting methods
+by contacting their authors. Due to license of our evaluation data [32], we are prohibited to redistribute any of them
+to conduct quantitative comparison. Hence, we share our
+in-the-wild evaluation images and focus on qualitative comparison and user study with them.
+9.1. Baseline Configurations
+Appearance BaselinesFor methods taking square images [12, 45, 46] as input, we pad our vertical image horizontally and resize to the desired input resolution. For others we directly resize our image into their desired resolution.
+For DiLightNet [45] which takes additional text prompt
+as input, we use the unified prompt "A real photo of a human". For IC-Light [47] which takes background image instead of environment map as input, we render background
+image from conditioning environment map using Blender
+and use as its input.
+For closed-source baselines, we get reply from authors of
+LuxPostFacto [26] and deeply appreciate them for sharing
+inference results onface croppedin-the-wild images with
+us. LuxPostFacto is a face-centric relighting methods and
+can have downgrading performance when the input face
+crop is small or blurry. For TotalRelighting [28], SynthLight [6], and SwitchLight [17], we cannot get reply from
+authors on time and will include the comparison at first moment when we obtain their inference results from authors.
+Geometry BaselinesFor VGGT [33], we use the 1B
+model and pad our input image into square format and
+resize to the desired input resolution. For MoGe2 [35]
+we use the largest model which has 331M parameters and
+supports metric-scale reconstruction and normal estimation.
+For Sapiens [16], we use the normal normal estimator with
+2B parameters.
+9.2. Metric Implementation Details
+Relighting and Albedo EvaluationTo mitigate the factor of scale ambiguity in lighting and albedo, we follow
+the protocol from DiffusionRenderer [22] and apply chromatic alignment (a scale-invariant evaluation) between the
+ground-truth and predicted images for all evaluated methods. All metrics are computed on the foreground pixels.
+Geometry (Point Cloud) EvaluationAs described in the
+main paper, we compare against feed-forward estimators
+(VGGT, MoGe2) that predict point maps. Our evaluation
+process is as follows:
+12

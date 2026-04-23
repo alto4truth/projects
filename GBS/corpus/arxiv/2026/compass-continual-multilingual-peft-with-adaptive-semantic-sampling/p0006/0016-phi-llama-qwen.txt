@@ -1,0 +1,61 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 6
+section: phi-llama-qwen
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+kely exists a threshold beyond which
+performance cannot be improved without re-clustering the entire data pool from scratch (i.e., a "reset" of the
+29
+
+Published in Transactions on Machine Learning Research (11/2025)
+adaptation process). The current work does not define or investigate this threshold, leaving open questions
+about the framework’s stability over very long time horizons.
+Finally, the entire data selection strategy is bottlenecked by encoder performance. The quality of the
+multilingual embeddings produced by the encoder model is paramount. Our ablation studies confirm this
+dependency, showing that lower-quality embeddings degrade performance. Any biases or weaknesses in the
+encoder will be propagated and potentially amplified by the selection process.
+Our empirical analysis reveals a specific manifestation of this encoder dependency: the "indiscriminate sampling" phenomenon where languages such as Malagasy, Malay, Tamil, Telugu, and Sinhala, which were not
+included in Jina3’s primary tuning set, were sampled disproportionately across unrelated target languages.
+Consequently, examples from these under-tuned languages contaminate the auxiliary data selection for targets with which they share no linguistic or topical affinity.
+This finding demonstrates that COMPASS’s sampling is systematically biased by encoder quality disparities
+across languages. When the encoder fails to capture precise semantic distinctions for certain languages,
+COMPASS’s cluster-based selection inherits and amplifies these flaws. It also highlights the hidden cost of
+general-purpose multilingual encoders: even when a language is nominally "supported," insufficient tuning
+can render it harmful to the selection process. Encoder selection and evaluation beyond aggregate metrics
+(e.g., average performance on MMTEB) would serve as a proactive diagnostic of per-language embedding
+quality, which might be addressed by either developing encoder-aware sampling weights that down-weight
+languages with known embedding deficiencies, or investigating whether fine-tuning the embedding model on
+a subset of the auxiliary data pool could reduce indiscriminate sampling by improving representation quality
+for under-tuned languages.
+6.2 Future Work
+The current framework’s modularity invites exploration into more sophisticated adapter architectures. Instead of treating adapters as monolithic, language-specific modules, future work could view them as carriers
+of composable "semantic skills." For instance, an adapter trained on Spanish legal text learns both "Spanish
+grammar" and "legal concepts." This perspective opens up several research directions. One is the development of merged adapters, where router scores from a language identification model could be used to combine
+multiple adapters at inference time. Another direction is the application of COMPASS to stacked adapters,
+where a language-specific adapter could be composed with a task-specific one (e.g., Spanish adapter + medica
+QA adapter) for more fine-grained specialization.
+While COMPASS focuses on distributional alignment, its framework could be extended to tackle broader
+systemic issues in multilingual NLP. For cross-lingual security, the distribution-guided approach could be
+adapted to select training examples that explicitly cover safety-critical scenarios in multiple languages,
+potentially reducing the jailbreaking success rates that can jump from≤1%to79%when translating unsafe
+inputs (Yong et al., 2024). For tokenization efficiency, COMPASS could be combined with script-aware
+sampling strategies that ensure balanced representation of non-Latin scripts during fine-tuning, potentially
+mitigating token length discrepancies that lead to inefficient encoding and decoding of non-Latin inputs (Cui
+et al., 2024; Ji et al., 2023). Regarding privacy preservation, enhanced multilingual capabilities may improve
+downstream multilingual preference alignment and safety tuning, strengthening defenses against sensitive
+training data extraction, personally identifiable information (PII) reconstruction, membership inference,
+and gradient leakage (Lukas et al., 2023; Li et al., 2024; Nasr et al., 2023).
+The principles of distribution-guided sampling are also domain-agnostic and could be extended to new
+applications. A compelling future direction is to adapt COMPASS for specialized multilingual domains such
+as multilingual code generation. In this context, the "target distribution" could be defined by a specific
+codebase, API, or programming style, and the framework could be used to select the most relevant code
+snippets from a vast, multilingual corpus of open-source projects to fine-tune a code-generating model.
+To address the "performance-blind" nature of the current update trigger, a multi-signal trigger system should
+be developed. The decision to update an adapter could be based on a learned score that integrates multiple
+signals: distribution divergence, performance degradation, uncertainty increase, and user feedback signals.
+30

@@ -1,0 +1,42 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+Early-Stage Product Line Validation Using LLMs: A Study on
+Semi-Formal Blueprint Analysis
+Viet-Man Le
+v.m.le@tugraz.at
+Graz University of Technology
+Graz, Austria
+Thi Ngoc Trang Tran
+trang.tran@tugraz.at
+Graz University of Technology
+Graz, Austria
+Sebastian Lubos
+sebastian.lubos@tugraz.at
+Graz University of Technology
+Graz, Austria
+Alexander Felfernig
+alexander.felfernig@tugraz.at
+Graz University of Technology
+Graz, Austria
+Damian Garber
+damian.garber@tugraz.at
+Graz University of Technology
+Graz, Austria
+Abstract
+We study whether Large Language Models (LLMs) can performfeature model analysis operations(AOs) directly onsemi-formal textual
+blueprints, i.e., concise constrained-language descriptions of feature
+hierarchies and constraints, enabling early validation in Software
+Product Line scoping. Using 12 state-of-the-art LLMs and 16 standard AOs, we compare their outputs against the solver-based oracle
+FLAMA. Results show thatreasoning-optimized models(e.g., Grok 4
+Fast Reasoning, Gemini 2.5 Pro) achieve 88–89% average accuracy
+across all evaluated blueprints and operations, approaching solver
+correctness. We identify systematic errors in structural parsing and
+constraint reasoning,

@@ -1,0 +1,23 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 5
+section: a-weighted-angle-distance-on-strings-9
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+nvisible to generic edit distances. Theρ-sweep in Figure 9
+is stable over a broad plateau, with best NMI attained atρ= 1.0.
+These rankings agree with the per-distance “best-to-worst” listings in our run summary.
+Remark5.2.The experiments above emphasize clustering quality rather than speed. In our
+current reference implementation [11], weighted angle distance computations are substantially slower than the baselines, despite being linear-time per pair in principle: the bottleneck
+is Python-level overhead combined with the need to computeO(N 2) pairwise distances for
+DBSCAN, with no caching across parameter sweeps and no parallelism. We therefore report
+timing only as a coarse reference (Table 4) and view performance optimization (vectorization, memoization of repeated trigonometric calls, and parallel distance-matrix construction)
+as future work.
+Table 2 summarizes how sensitive the weighted angle method is toρ. Across our three
+datasets, the choiceρ= 0.6 maximizes ARI in all cases, whileρ= 1.0 slightly improves NMI
+onucsc trf. The variability acrossρis largest onstrseq(where the task is “easier” for
+edit distances and weighted angle competes with them), and smallest onucsc trf(wher

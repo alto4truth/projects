@@ -1,0 +1,44 @@
+title: Efficient Test-Time Inference via Deterministic Exploration of Truncated Decoding Trees
+source: arxiv
+year: 2026
+document_id: efficient-test-time-inference-via-deterministic-exploration-of-truncated-decoding-trees
+authors: Xueyan Li; Johannes Zenn; Ekaterina Fadeeva; Guinan Su; Mrinmaya Sachan; Jonas Geiping
+page: 2
+section: 6
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20500v1
+
+ng vLLM.
+At higher ε, inference time is shorter than the baseline. The performance boost is also more
+obvious since far fewer tokens are generated.
+23
+
+D.4 Deep Think with Confidence (DeepConf) (Fu et al., 2025)
+DeepConf (Fu et al., 2025) is a test-time method that filters out reasoning traces of low
+quality when doing inference or after inference. We only investigate the offline version of
+DeepConf.
+Fu et al. (2025) defines the token confidence as the negative average log-probability of the
+top-ntokens at a given positioni
+Ci =− 1
+n
+n
+∑
+j=1
+logP top
+i (j), (14)
+where n denotes the number of tokens considered and Ptop
+i returns the probabilities of top
+tokens ordered decreasingly at position i. The average trace confidence is simply defined as
+the mean over all token confidences.
+Additionally, DeepConf introduces group confidence for groups of tokens, bottom 10%
+group confidence, lowest group confidence, and tail confidence. For voting, DeepConf
+introduces confidence-weighted majority voting that weights each answer by its confidence,
+and confidence filtering that filters the top-p% of traces.
+In our experiments, we set the group size to 64 tokens (as opposed to 2048 for the original
+work) as we are working with reasoning problems that require fewer tokens. We experiment
+withp∈ {10, 25}%.
+Table 9 shows results for all DeepConf experiments (Fu et al., 2025) on GSM8K (Cobbe et al.,
+2021) with Qwen2.5-0.5B-Instruct. Table 10 shows results for all DeepConf experiments (Fu
+et al., 2025) on MMLU-Pro (Wang et al., 2024c) with Qwen2.5-0.5B-Instruct. We include the
+best results achieved in Table 1.
+24

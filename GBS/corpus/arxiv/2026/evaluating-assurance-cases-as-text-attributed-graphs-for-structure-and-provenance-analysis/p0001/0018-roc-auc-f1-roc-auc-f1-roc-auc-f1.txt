@@ -1,0 +1,29 @@
+title: Evaluating Assurance Cases as Text-Attributed Graphs for Structure and Provenance Analysis
+source: arxiv
+year: 2026
+document_id: evaluating-assurance-cases-as-text-attributed-graphs-for-structure-and-provenance-analysis
+authors: Fariz Ikhwantri; Dusica Marijan
+page: 1
+section: roc-auc-f1-roc-auc-f1-roc-auc-f1
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20577v1
+
+networks can effectively learn reasoning
+and linkage patterns across two different types of assurance case
+structures. For RQ1,link predictionexperiments demonstrated
+that GNNs perform well when trained on verified human-authored
+assurance cases (RQ1a). However, their performance declines in
+the LLMs-only data (RQ1b). It can transfer relational knowledge
+from the LLMs-generated data to real cases in a semi-supervised
+setting (RQ1c). This result highlights the structural and semantic
+gap between human and LLM reasoning.
+For RQ2a,graph classificationanalysis revealed that GNNs are
+capable of distinguishing human-authored from LLM-generated
+assurance cases by uncovering systematic structural biases. Finally,
+RQ2b showed thatexplanationfidelity remains limited, suggesting
+that current GNN explainers only partially capture the consistent
+reasoning paths of human vs LLMs assurance cases. Overall, these
+findings highlight the potential and challenges of graph-based reasoning in assurance cases.
+Beyond the detection of structural biases, these findings establish a foundation for transitioning from static evaluation toward
+the iterative refinement of LLM-generated assurance cases. Future
+w

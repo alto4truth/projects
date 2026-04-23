@@ -1,0 +1,25 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+thms and suggest that adaptive per-token computation allocation may be more fruitful than static weight
+compression. We conclude with a mapping of each finding to actionable guidance for practitioners.
+2 Related Work
+2.1 Post-Training Quantization
+GPTQ [1] uses second-order information (the Hessian of the reconstruction error) to perform
+optimal sequential weight rounding. AWQ [2] protects important weights by scaling activationaware channels before quantization. SpQR [3] stores outlier weights at higher precision while
+quantizing the majority to lower precision.
+2.2 Rotation-Based Quantization
+QuIP# [4] applies random Hadamard rotations to improve weight incoherence before quantization. SpinQuant [5] demonstrates that learned rotations outperform random ones. ResQ [6]
+uses PCA-based projections to minimize quantization error.
+2.3 Layer Pruning and Linearity
+Razzhigaev et al. [7] demonstrate that transformer blocks are approximately linear, with linearity scores of 0.99+ in many layers. Gromov et al. [8] show that up to 50% of layers can
+be removed from large models with minimal quality loss. ShortGPT [9] introduces a Block
+Influence metric for identifying removable layers.
+2.4 KV-

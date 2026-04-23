@@ -1,0 +1,24 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+Conference’17, July 2017, Washington, DC, USA Menghe Ma *, Siqing Wei*, Yuecheng Xing*, Yaheng Wang, Fanhong Meng, Peijun Han, Luu Anh Tuan, and Haoran Luo †
+LLM-as-a-Judge: Evaluation Prompts for Automated Scoring
+Critic A: ABC Notation Evaluation
+Role:As an extremely strict music theory professor, review and score AI-generated text-based ABC notation. Evaluate the
+model’s proficiency by analyzing rhythmic values and musicality (Score 1-5).
+1. Rhythmic Verification:A correct score contains exactly 4.0 beats per measure. The sum of rhythmic values between two|
+symbols must equal 4.0. (Score 5: All correct; Score 3: Half correct; Score 1: All incorrect).
+2. Aesthetic Analysis:Motif development, melodic contour, and rhythmic groove should be rich and logical. (Score 5: Complete
+motif and beautiful melody; Score 3: Discernible motif; Score 1: Lacks motif, unappealing).
+Output Constraints:Output ONLY the final scores without analysis. Format:Technical Score: [ ]/5, Aesthetic Score:
+[ ]/5, Average Score: [ ]/5.
+Critic B: Numbered Musical Notation (Jianpu) Evaluation
+Role:As an extremely strict music theory professor, review and score AI-generated Jianpu based on rhythmic values and
+musi

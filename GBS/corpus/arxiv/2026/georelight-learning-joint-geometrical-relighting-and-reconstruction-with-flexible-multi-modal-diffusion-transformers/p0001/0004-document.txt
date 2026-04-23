@@ -1,0 +1,22 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+-pixel
+mapping. This approach is often limited in physical plausibility due to the absence of geometric modeling, failing to
+produce realistic shadows or highlights that are consistent
+with the subject’s 3D shape. Second, and more common,
+are sequential pipelines [17, 22, 28, 46]. These methods
+first predict a set of intermediate buffers like albedo and surface normals which are passed to a separate neural rendering module to synthesize the final image. The critical flaw
+in this sequential design is error accumulation [9]: any inaccuracies in the initial geometry estimation are baked into
+the buffers and cannot be corrected by the renderer.
+In this paper, we argue thatrelighting and geometry reconstruction are not separate sequential tasks, but are mutually beneficial and must be solved jointly. This synergy is
+two-fold. First, accurate 3D geometry is essential for the relighting model to render physically-plausible local shading
+and, crucially, to form correct cast shadows. Conversely,
+the appearance of shading in the image provides powerful shape-from-shading cues that can refine the underlying geometry estimation. We introduceGeoRelight, a unified generative framework that first

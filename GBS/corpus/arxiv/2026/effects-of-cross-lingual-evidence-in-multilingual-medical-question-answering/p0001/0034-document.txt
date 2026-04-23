@@ -1,0 +1,30 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+languages for which the digital presence is significant, and prefer cross-lingual
+retrieval for the underrepresented ones. Although
+retrieving in the language of the question can reach
+significant gains for resource-rich languages, they
+still slightly fall short compared to the English retrieval. Similarly, for the well-known repositories
+such as PubMed, Wikipedia and medical textbooks,
+since they are in English, they are most helpful for
+Spanish, English, Italian and French, but not for
+Kazakh and Basque. Nevertheless, they underperform compared to the monolingual web retrieval,
+which may be motivated by the limited knowledge
+incorporated in these well-known medical knowledge sources.
+6 Discussion
+6.1 External Sources Analysis
+Based on the results described in Section 5 and Appendices M-R, we can conclude that smaller <30B
+parameter models benefit from the data provided
+from external sources. Nevertheless, the obvious
+gain is obtained for English and less frequently for
+French, Spanish and Italian.
+Despite these gains, overall, we see how the accuracy of the correct answer drops more frequently
+in the large models, indicating that either no external knowledge is beneficial or that

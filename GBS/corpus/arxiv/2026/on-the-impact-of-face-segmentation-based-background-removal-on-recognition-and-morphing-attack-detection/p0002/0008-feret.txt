@@ -1,0 +1,24 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 2
+section: feret
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+Fig. 2. Pictures from the original FERET, FRGCv2 and IJB-C datasets before and after background removal. The margins were added to highlight the
+images’ borders after background removal. Notice that the more controlled conditions on which FERET and FRGCv2 images were captured facilitate the
+segmentation task, resulting in efficient background removal by most techniques, and small face image quality and FR performance oscillations (Table I).
+For IJB-C, low-quality pictures (last column) are not easily segmented by all methods, with FPN + Resnet50, DANet, and FCN + MobileNetv2 resulting
+in significant facial occlusions. This phenomenon directly impacts average image quality and FR performance (Table III).
+data, although with non-negligible performance drops. The
+superiority of these methods in maintaining FR performance
+integrity is supported by the higher average FIQA scores
+achieved by these strategies in comparison to the remaining
+methods. BiSeNetv2 and Fast SCNN are associated with
+a further drop in FR performance and quality, while FPN
++ Resnet50, DANet, and FCN + MobileNetv2 result in
+a complete lack of recognition capacity. These results are
+accompanied by a significant decre

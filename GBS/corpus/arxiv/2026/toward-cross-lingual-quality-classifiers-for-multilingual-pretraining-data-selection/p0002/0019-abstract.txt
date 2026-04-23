@@ -1,0 +1,29 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+verage rank, supporting the hypothesis that quality features are transferable.
+Benchmark No filtering HQ ML
+ARC-Challenge 0.2991 0.30770.3248
+Belebele_c 0.34220.35330.3456
+GMMLU_c 0.3100 0.31500.3250
+HellaSwag 0.5006 0.52630.5310
+Include_c 0.3491 0.37270.3891
+M_MMLU_c 0.2814 0.29850.3050
+XNLI 0.4618 0.45380.4783
+Aggregate acc_norm0.3635 0.37530.3855
+Average rank2.86 2.001.14
+knowledge, and also to balance the dominance of the Aya Collection dataset in terms of size and
+representation. The detailed counts for each language can be found in the appendix A.
+Tables 1 and 2 evaluate the effect of multilingual quality filtering on downstream performance for a
+1B model in Chinese and Spanish. The multilingual classifier (ML) achieves the highest aggregate
+accuracy and lowest average rank in both languages, outperforming both No filtering and monolingual high-quality filtering (HQ).
+Improvements are observed consistently across diverse reasoning and natural language understanding benchmarks, such as ARC Clark et al. (2018), GMMLU Singh et al. (2025), XNLI (Conneau
+et al., 2018), and Include (Romanou et al., 2024). While HQ occasionally yields marginal gains on
+individual tasks, ML provides

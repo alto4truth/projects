@@ -1,0 +1,24 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+equire new
+experiments, and writing may reveal unresolved inconsistencies.
+•Separate structural validation from scientific truth.The system can validate artifact existence,
+parseability, selected internal consistency properties, and review-gate thresholds. It cannot certify
+scientific correctness, novelty, or acceptance probability.
+•Make long runs resumable, steerable, and budget-aware.Checkpointing, stage-based resume,
+live steering hooks, and budget traces are operational requirements rather than convenience features.
+•Expose multiple enforcement levels.The same architecture should support lighter exploratory
+runs and stricter paper-oriented runs, with different validation thresholds and artifact expectations.
+2.3 Artifact Contracts
+A run is not treated as successful merely because it produces fluent prose. It is expected to produce a papercentered workspace with explicit deliverables for discovery, planning, execution, synthesis, and editorial
+review. This artifact contract is the main interface between the workflow and the researcher. It serves
+both goals of the present section: it tells future researchers which interface stabilized the pipeline, and it
+warns customizers which

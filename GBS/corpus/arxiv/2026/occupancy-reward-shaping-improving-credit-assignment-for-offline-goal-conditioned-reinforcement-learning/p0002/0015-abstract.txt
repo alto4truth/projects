@@ -1,0 +1,46 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 2
+section: abstract
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+easure
+over future states of the dataset policyπ D has the
+following recursive form (Sutton, 1995; Janner et al.,
+2020a; Schramm & Boularias, 2024):
+4
+
+Published as a conference paper at ICLR 2026
+dπD
+θ (s+ |s, a) = (1−γ)p(s ′ |s, a) +γ d πD
+θ−
+(s+ |s ′, a′),∀(s, a, s ′, a′)∈ D(2)
+This recursive form, reminiscent of temporal difference learning, allows learningd πD(s+ |s, a)
+parameterized byθas a mixture over two components:1.the transition function and2.a target
+dπD(s+ |s ′, a′)over subsequent future states underπ D (parameterized byθ −, a time-delayed
+version ofθ). This approach naturally stitches together future states under intersecting trajectories
+inD. To accurately represent the multi-modality inherent ind πD and to enable efficient computation
+of the ORS reward function (explained in Sec. 4.2), we learndπD using a flow matching model with
+the following loss (Farebrother et al., 2025) :
+Lflow(θ) = (1−γ)L next(θ) +γL future(θ);∀(s, a, s ′, a′)∈ D(3)
+Lnext(θ) =E s′=x1∼D
+x0∼N(0, I d)
+t∼Unif([0,1])
+h
+∥vθ(t, s, a, xt)−(x 1 −x 0)∥2
+2
+i
+;
+Lfuture(θ) =E s+=x1∼d
+πD
+θ−
+(.|s′,a′)
+x0∼N(0, I d)
+t∼Unif([0,1])
+h
+
+vθ(t, s, a, xt)−sg[v θ−(t, s′, a′, xt)]

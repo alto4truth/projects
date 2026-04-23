@@ -1,0 +1,22 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 2
+section: abstract
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+The temporal lag between actions and their long-term consequences makes credit
+assignment a challenge when learning goal-directed behaviors from data. Generative world models capture the distribution of future states an agent may visit,
+indicating that they have captured temporal information. How can that temporal
+information be extracted to perform credit assignment? In this paper, we formalize
+how the temporal information stored in world models encodes the underlying geometry of the world. Leveraging optimal transport, we extract this geometry from
+a learned model of the occupancy measure into a reward function that captures
+goal-reaching information. Our resulting method,Occupancy Reward Shaping
+(ORS), largely mitigates the problem of credit assignment in sparse reward settings. ORS provably does not alter the optimal policy, yet empirically improves
+performance by2.2×across 13 diverse long-horizon locomotion and manipulation tasks. Moreover, we demonstrate the effectiveness of ORS in the real world
+for controlling nuclear fusion on 3 Tokamak control tasks.
+Code:https://github.com/aravindvenu7/occupancy reward shaping
+Website:https://github.com/aravindvenu7.github.io/website/ors

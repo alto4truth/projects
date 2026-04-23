@@ -1,0 +1,23 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 2
+section: edges-total-gp-id-time-gp-degbd-id-time-degbd
+chunk: 57
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+he other hand, iff∈ Iwh ∩R[θ id, σ, h], thenf deh ∈
+(I wh ∩R[θ id, σ, h])deh and hencef deh ∈(I wh)deh ∩R[θ id, σ] =I ∩R[θ id, σ]. But iffdeh ∈ I ∩R[θ id, σ],
+then it must also be the case thatf∈(I ∩R[θ id, σ])wh.
+Proof of Lemma 4.2.First, note that by Proposition 4.1 (ii), it holds thatI wh ∩R[θ id, σ, h] =
+(I ∩R[θ id, σ])wh. Now, suppose thatq∈θ rem is rationally identifiable. Then, by Lemma 2.7, the
+idealIcontains an element of the formqa(θid, σ)−b(θ id, σ)witha, b∈R[θ id, σ]anda̸∈ I ∩R[θ id, σ].
+Hence, the idealI wh contains the polynomial(qa(θ id, σ)−b(θ id, σ))wh =q˜a(θid, σ, h)− ˜b(θid, σ, h)
+with˜a,˜b∈R[θ id, σ, h]. Since˜adeh =aanda̸∈ I ∩R[θ id, σ], it holds that˜a̸∈(I ∩R[θ id, σ])wh.
+For the other direction, suppose that the idealIwh contains an element of the formqa(θid, σ, h)−
+b(θid, σ, h)witha, b∈R[θ id, σ, h]anda̸∈ I wh ∩R[θ id, σ, h]. It follows that the dehomogenized
+polynomialqa(θ id, σ, h)deh −b(θ id, σ, h)deh is an element ofIanda(θ id, σ, h)deh ̸∈ I ∩R[θ id, σ]. We
+conclude by Lemma 2.7 thatqis rationally identifiable.
+20

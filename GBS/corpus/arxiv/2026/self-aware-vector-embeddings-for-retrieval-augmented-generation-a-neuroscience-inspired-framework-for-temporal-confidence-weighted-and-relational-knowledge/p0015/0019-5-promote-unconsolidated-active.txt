@@ -1,0 +1,29 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 15
+section: 5-promote-unconsolidated-active
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+for v in vectors.unconsolidated(): v.status = ACTIVE
+7 Surgical Updates
+Aminortextualeditshouldnotforcere-embeddinganentiredocument. Usingstored source_offset_start/end,
+the update pipeline diffs the old and new text, finds only the vectors whose offsets overlap a changed
+range, deprecates those vectors, creates replacements, transfers edges, and queues the new IDs for
+ripple propagation. In the limit this turns “change one word” from “re-embed 200 chunks” into
+“re-embed one chunk.” This is the operational backbone of the relational property—without surgical
+updates,depended_byedges would rot every time a document was touched.
+def ingest_update(doc_id, old_text, new_text):
+changes = diff(old_text, new_text)
+affected = [v for v in vectors_by_doc[doc_id]
+for c in changes
+if v.offset_start < c.end and v.offset_end > c.start]
+for old in affected:
+old.status = DEPRECATED
+new = rebuild_from_new_text(old, new_text)
+new.supersedes = old.vector_id
+new.depends_on = old.depends_on
+9

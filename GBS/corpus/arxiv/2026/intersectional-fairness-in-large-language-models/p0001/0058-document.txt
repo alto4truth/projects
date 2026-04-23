@@ -1,0 +1,38 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 58
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+Under Review
+Intersectional Fairness in Large Language Models 17
+Table 5. RQ1 Results in Ambiguous Context.
+LLM Dataset Accuracy sAMB SF DF
+Llama-3
+Race_SES 0.46 0.01 0.01 1.09
+Race_Gender 0.24 0.01 0.01 0.53
+Gemma-3
+Race_SES 0.82 0.05 0.02𝑈 𝐵*
+Race_Gender 0.99 0.01 0.01𝑈 𝐵
+GPT-4o
+Race_SES 0.90 0.01 0.02𝑈 𝐵
+Race_Gender 1.00 0.00 0.00𝑈 𝐵
+Gemini-2.0-Flash
+Race_SES 0.91 0.01 0.02𝑈 𝐵
+Race_Gender 0.99 0.00 0.00𝑈 𝐵
+Gemini-2.5-Flash
+Race_SES 0.89 0.01 0.02𝑈 𝐵
+Race_Gender 0.99 – 0.00 0.00
+Claude-Sonnet-4
+Race_SES 0.89 0.02 0.02𝑈 𝐵
+Race_Gender 1.00 – 0.00 0.00
+- denotes that there were no non-‘unknown’ responses available from which to compute the bias score.
+* UB denotes an unbounded DF value, which, according to the DF definition in Section 4.4 occurs when at least one subgroup has zero
+probability of the favorable outcome while another subgroup has a non-zero probability.
+consistency in answering the ground truth questions, although their dispersion remains noticeable, ranging from 15.36%
+for Gemini-2.5-Flash to 22.03% for Gemini-2.0-Flash. Overall, while certain LLMs consistently answer most of the
+questions correctly, this does not imply total correctness across all runs for all questi

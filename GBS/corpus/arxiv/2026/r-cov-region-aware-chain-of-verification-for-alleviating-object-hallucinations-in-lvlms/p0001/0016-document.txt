@@ -1,0 +1,27 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+entities due
+to nonexistence. In the subsequent stages, we will use this
+as a cue for region-level verification.
+Stage 4: Region description.LetR={r i}, i= 1, ..., N
+denote the set of generated region coordinates. In this stage,
+we aim for region-level verification questions conditioned
+onR. Specifically, we prompt the LVLM to describe each
+specific region in the image independently, using the following template: “Describe{coordinate}in the image in
+detail.”, where{coordinate}is one of ther i ∈ R. We repeat this step multiple times for each region to produce a set
+of diverse answers, which proves to be beneficial for performance improvements, as shown in the experimental section.
+To better instruct the LVLM to focus on local regions,
+we also explore several ways to provide the image content
+to the LVLM. Specifically, for each entitye i, we consider
+the following forms of image prompts: (i) the original image, (ii) the image overlaid with the bounding box coordinatesr i, and (iii) a crop from the original image using the
+bounding box coordinatesr i. In (ii), we further investigate
+different shapes, colors, and sizes of visual prompts to draw
+on top of the image. We will show the eff

@@ -1,0 +1,19 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 5
+section: acknowledgments
+chunk: 47
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+tionsy, we rescale and clip them
+to the interval [−1,1] and construct the lifted features
+z(y) =
+
+T0(y), T 1(y), . . . , T K(y)
+
+.
+The nonlinearity is approximated by a truncated Chebyshev series fitted via weighted least squares, giving a
+polynomial (Carleman) feature map applied at the readout.

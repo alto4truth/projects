@@ -1,0 +1,22 @@
+title: MGDA-Decoupled: Geometry-Aware Multi-Objective Optimisation for DPO-based LLM Alignment
+source: arxiv
+year: 2026
+document_id: mgda-decoupled-geometry-aware-multi-objective-optimisation-for-dpo-based-llm-alignment
+authors: Andor Vári-Kakas; Ji Won Park; Natasa Tagasovska
+page: 4
+section: mgda-d-ecoupled
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20685v1
+
+e nuanced picture. While MGDANORMALISEDhas slightly higher net win rates on 3 out of 4 objectives, MGDA-DECOUPLEDshows the highest
+improvement in overall quality ( +4.7% vs +4.1%). In contrast to Gemma-2-2b-it, all fine-tuning algorithms on
+Qwen2.5-0.5B-Instruct achieved statistically significant gains over REFERENCE.
+Discussion
+In multi-objective optimisation, it is useful to distinguish betweenoptimisation efficiency(moving closer to the true
+Pareto front), addressed bya posteriorimethods, andoptimisation preference(moving along the front to a specific
+trade-off), addressed bya priorimethods [Deb, 2011]. The strict dominance of MGDA-DECOUPLEDover UNIFORM
+across all objectives with both models suggests that MGDA-DECOUPLEDachieves a solution closer to the Pareto front.
+In contrast, the trade-off profile observed, for example, between MGDA-DECOUPLEDand MGDA-NORMALISED
+on Qwen2.5-0.5B-Instruct (where each method wins on a different set of objectives) indicates that they gravitate towards
+distinct non-dominated stationary points on the Pareto front. Since neither method uses explicit preference vectors,
+these trade-offs are inherent to the algorithms. It is worth noting that the perfo

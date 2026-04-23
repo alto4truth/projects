@@ -1,0 +1,67 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 2
+section: results
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+he (infinite) Carleman lift
+z(y) :=
+
+
+1
+y
+y⊗2
+y⊗3
+...
+
+
+,(23)
+and diagonal-selection operatorsS r ∈R dmodel×dr
+model satisfyingS r(y⊗r) =y ⊙r,the nonlinearity can be written
+as
+Λ(y) =H ∞ z(y),(24)
+H∞ :=
+
+a0I a 1S1 a2S2 a3S3 · · ·
+
+.(25)
+We can define a complex scalar
+Ak,ℓ :=
+NX
+i=1
+αℓi µi(k).(26)
+and use it in Eq. (21) to rewrite the feature vectors as
+yk,ℓ = 1
+2(Ak,ℓ + Ak,ℓ).(27)
+Then for each orderr,
+y r
+k,ℓ = 2−r
+rX
+m=0
+ r
+m
+
+A m
+k,ℓ Ak,ℓ
+r−m
+.(28)
+Now, using Eq. (26) we can write them-th power of the
+complex scalar as
+A m
+k,ℓ =
+X
+i1,...,im
+αℓi1 · · ·α ℓim µi1(k)· · ·µ im(k),(29)
+Ak,ℓ
+r−m
+=
+X
+j1,...,jr−m
+αℓj1 · · · αℓjr−m µj1(k)· · · µjr−m(k).
+(30)
+Thus capturing the features of the data depends on nonlinear wave interactions of the form
+µi1 · · ·µ im µj1 · · · µjr−m ,

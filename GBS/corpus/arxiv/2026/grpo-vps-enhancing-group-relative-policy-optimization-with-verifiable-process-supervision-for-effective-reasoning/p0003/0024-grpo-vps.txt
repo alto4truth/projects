@@ -1,0 +1,21 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+substantially reducing output length compared
+to GRPO.
+Comparison with outcome supervised RL.Compared to GRPO and its recent variants, GRPOVPS achieves the highest overall accuracy across all benchmarks while substantially shortening the reasoning length. On Qwen2.5-Math-1.5B, it improves Pass@1 by more than 3% over GRPO and sustains
+a comparable margin on the 7B model, with an average reduction of 10–11% in output length. GRPOVPS achieves larger gains in accuracy and produces shorter outputs. These results suggest that our method
+improves both effectiveness and efficiency of policy updates, leading to more focused reasoning traces. On
+Gemma-2-2B-it, our method further reduces the output length compared to GRPO while achieving higher
+accuracy. Although the Gemma base model exhibits shorter responses, training with reinforcement learning
+unlocks its long-chain reasoning behavior, as further evidenced in Appendix A.4.1.
+Comparison with model-based process supervision.Compared to S-GRPO, which uses multi-rollout
+early-exit probing to assign segment-level rewards, our method achieves higher accuracy and shorter outputs.
+To ensure a fair comparison, we adopt the same GRPO training pipe

@@ -1,0 +1,19 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 14
+section: k-limitations
+chunk: 105
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+We acknowledge several limitations that constrain the generalizability of our findings:
+Statistical Rigor.Due to the computational cost of training 1B parameter models, all primary
+results are reported as single runs. Seed variance experiments (Tables 14 and 15) show that changing
+the classifier sampling seed shifts aggregate accuracy by∼0.3% in Arabic and∼0.8% in French.
+For Arabic in particular, the ML gain over HQ (∼0.5%) is comparable to this noise range and should
+therefore be interpreted with caution. Future work should employ multiple seeds per condition to
+establish confidence intervals.
+Embedding Space Interpretation.While our cross-lingual transfer results are empirically consistent, we cannot determine whether they reflect a genuinely abstract quality structure in the embedding space or shared formatting across our positive anchor datasets, such as Wikipedia markup or
+30

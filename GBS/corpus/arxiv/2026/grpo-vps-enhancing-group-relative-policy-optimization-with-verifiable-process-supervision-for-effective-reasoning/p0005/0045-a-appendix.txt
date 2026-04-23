@@ -1,0 +1,51 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 5
+section: a-appendix
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+A.1 EXPERIMENTALSETTINGS
+All hyperparameter settings are listed in Table 4, our experiments are performed on 8 × H100 GPUs.
+13
+
+Published as a conference paper at ICLR 2026
+Hyperparameter Values
+learning rate 1.0e-6
+temperature 1.0
+Number of responses per question 8
+batch size 512
+α 1.2
+εlow 0.2
+εhigh 0.27
+ppo mini-batch size 128
+(top P, top k) (1.0, -1)
+gradient checkpointing True
+max response length 3072
+bf16 True
+n 4
+τ 0.95
+Table 4: Hyperparameters used for GRPO-VPS
+A.2 PROMPTTEMPLATES
+For math reasoning tasks, we adopt the prompt templates for Qwen Math families (Yang et al., 2024) and
+Gemma (Team, 2024a).
+Prompt A.1: Template for Qwen2.5-Math models
+<|im start|>system
+You are a helpful assistant.<|im end|>
+<|im start|>user
+{input}
+Please reason step by step, and put your final
+answer within\boxed{}.<|im end|>
+<|im start|>assistant
+Prompt A.2: Template for Gemma
+<bos>
+<start of turn>user
+{input}
+Please reason step by step, and put your final answer within <answer>
+</answer>.<end of turn>
+<start of turn>model
+For general reasoning tasks, we adopt the prompt templates for Qwen3 (Team, 2025) model.
+14

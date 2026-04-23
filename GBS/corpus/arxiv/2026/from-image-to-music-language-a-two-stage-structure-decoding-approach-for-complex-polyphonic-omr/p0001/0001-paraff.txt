@@ -1,0 +1,56 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 1
+section: paraff
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+YAML scores
+10,000 scores, 85 MB
+Score Rendering
+LilyPond +
+Puppeteer
+Rendered images
++ LilyPond source
+Event-Topology
+Extraction
+scoreTopologyAutomate
+3-stage
+filtering
+.evtopo.json
+9,483 files (94.8%)
+OMR Annotation
+Library
+StarrySpartito
+.spartito.json
+1,449 annotated scores
+Topology
+Conversion
+spartitoToCluster
+Quality gate
++ BeadPicker
+.evtopo.json
+512 files
+evtopo-combined/
+9,995 groups (symlink)
+Augmentation
++ Packaging
+preprocess...py ×32
+evtopo-writer10kcombined.zip
+366,534 samples, 18 GB
+Path A: Rendered Path B: Recognition Feedback
+randomizeMarkupEngrave() for
+layout diversity
+visual features
+extracted from
+rendered images
+exclude samples
+solvable by simple
+or ONNX picker
+Figure 10: Training-data pipeline for topology recognition. Structured symbolic music is rendered
+into score form, converted into event-topology supervision, then augmented and packaged into
+measure-level training samples.
+18

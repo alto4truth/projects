@@ -1,0 +1,15 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 15
+section: l-futurework
+chunk: 108
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+tegy warrants further investigation.
+Relying on a static count (e.g.,200,000samples) is likely suboptimal. Future work should explore
+adaptive criteria based on score distribution analysis, variance, or density heuristics to dynamically
+determine eligibility for Q3 sampling. This would optimize the trade-off between refining the decision boundary and preserving valid high-quality tokens in medium-resource languages.
+31

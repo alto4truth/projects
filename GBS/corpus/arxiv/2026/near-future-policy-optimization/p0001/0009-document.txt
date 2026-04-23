@@ -1,0 +1,55 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+final performance
+Training Stability
+Trajectory Quality
+(a) Quality-Proximity Trade-off
+0 50 100 150 200 250 300
+Checkpoint distance Δ (steps)
+0.00
+0.05
+0.10
+0.15
+0.20
+Quality Gain Q(Δ)
+(b) Q(Δ) vs. V(Δ) Decomposition
+Q(Δ)
+V(Δ)
+0 50 100 150 200 250 300
+Checkpoint distance Δ (steps)
+0.00
+0.01
+0.02
+0.03
+0.04Effective signal (Δ) = Q/V
+Δ∗ = 20
+Δ∗ = 70
+(c) Effective Learning Signal (Δ)
+Current policy
+Step T = 0
+Step T = 50
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Variance Cost V(Δ)
+Figure 2Quality–stability trade-off and the effective learning signalS(∆).(a)For each source, thedotmarks its
+position on these two axes, the surrounding shadeddiskvisualizes the magnitude of its variance costV (larger disk,
+larger V), and thetrianglemarks the portion of the trajectory quality that is effectively usable under the variance
+cost it induces. NPO targets the high-S region in the upper-right of the plane.(b) Q(∆)(blue) and V (∆)(red)
+measured on a vanilla GRPO run with Qwen3-VL-8B-Instruct:Q rises concavely whileV grows exponentially.(c)The
+ratioS(∆)exhibits a clear interior maximum for both anchorsT=0andT=50, confirming the predicted U-shape.
+2. NPO is plug-and-play and objective-preserving. Both theoretically and em

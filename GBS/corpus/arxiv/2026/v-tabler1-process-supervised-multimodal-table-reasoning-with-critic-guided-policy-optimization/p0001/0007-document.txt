@@ -1,0 +1,25 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+V-tableR1: Process-Supervised Multimodal Table Reasoning 3
+relations receives the exact same training signal as one that reasons correctly at
+everystep[12,27,35].Figure1makesthiscontrastconcrete—outcome-supervised
+VLMs treat inference as a black box and fail on queries requiring explicit cell
+localization, while process-supervised models expose and verify each reasoning
+step, yielding correct answers [31].
+To overcome the inherent limitations of rigid SFT sequence modeling and
+outcome-driven reward hacking, we introduceV-tableR1, a process-supervised
+reinforcement learning framework designed to elicit rigorous, verifiable reasoning
+from MLLMs on tabular tasks. V-tableR1 trains a VLM to produce an explicit,
+verifiable chain-of-thought that localizes cells, validates intermediate values, and
+resolves multi-hop dependencies before committing to a final answer. Instead
+of relying on sparse outcome rewards that encourage shortcut learning, we proposeProcess-Guided Direct Alignment Policy Optimization (PGPO).
+PGPO is a novel GRPO-based [25] reinforcement learning algorithm that seamlessly integrates decoupled policy constraints with dynamic, length-aware data
+sampling. By directly inject

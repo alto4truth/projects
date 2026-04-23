@@ -1,0 +1,26 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+that isλ wv = 0ifw→v̸∈D. If the graphGis acyclic, then
+the matrixI−Λis invertible for allΛ∈R D, whereIdenotes thep×pidentity matrix. Finally,
+we write PD(p)for the cone of positive definitep×pmatricesΩ = (ω wv)and we let PD(B)be the
+subcone of matrices with supportB, that is,ωwv = 0ifw↔v̸∈B.
+Definition 2.1.The linear structural equation model given by the acyclic mixed graphG=
+(V, D, B)withV={1, . . . , p}is the set of allp×pcovariance matrices
+Σ = (I−Λ) −⊤Ω(I−Λ) −1
+forΛ∈R D andΩ∈PD(B).
+A linear structural equation model is identifiable if the parameter matricesΛ∈RD andΩ∈PD(B)
+can be uniquely recovered fromΣ. In other words, identifiability holds if the parametrization
+(Λ,Ω)7→(I−Λ) −⊤Ω(I−Λ) −1 (3)
+is injective on the domainRD ×PD(B), or on a dense open subset. Since the parametrization is
+a rational function, the inverse, if it exists, is an algebraic function. Most interest in the literature
+is given torational identifiability, which refers to settings where the inverse is also given by a
+rational function. That is, each direct causal effectλ wv is identified by a rational formula, i.e.,
+4

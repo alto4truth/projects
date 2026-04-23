@@ -1,0 +1,24 @@
+title: Differentially Private Clustered Federated Learning with Privacy-Preserving Initialization and Normality-Driven Aggregation
+source: arxiv
+year: 2026
+document_id: differentially-private-clustered-federated-learning-with-privacy-preserving-initialization-and-normality-driven-aggregation
+authors: Jie Xu; Haaris Mehmood; Rogier Van Dalen; Karthikeyan Saravanan; Mete Ozay
+page: 3
+section: filter
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20596v1
+
+Table 1. Results and comparisons on rotated CIFAR-10, rotated FMNIST and FEMNIST. We boldface the best accuracy.
+Rotated CIFAR-10 Rotated FMNIST FEMNIST
+Methodϵ=∞ϵ= 2ϵ= 8ϵ=∞ϵ= 2ϵ= 8ϵ=∞ϵ= 2ϵ= 8
+FedAvg 92.1±0.10 90.2±0.28 90.5±0.15 87.8±0.11 86.0±0.05 86.2±0.05 81.1±0.20 79.2±0.20 79.4±0.11
+FedProx (µ= 0) 92.3±0.28 90.4±0.20 90.6±0.20 87.8±0.10 86.1±0.10 86.2±0.10 80.8±0.11 79.2±0.05 79.3±0.11
+FedProx (µ= 1) 92.2±0.26 90.3±0.20 90.6±0.10 87.9±0.10 86.0±0.20 86.2±0.05 81.0±0.05 79.4±0.10 79.5±0.20
+FedNova 90.3±0.10 89.7±0.41 89.9±0.23 88.8±0.45 86.9±1.21 87.0±0.97 80.4±0.37 79.5±0.15 80.0±0.60
+IFCA94.3±0.2034.4±2.26 73.8±2.54 89.4±0.46 21.4±1.15 64.3±3.20 81.7±1.19 4.6±0.25 5.5±0.37
+PINA (Ours) 93.8±0.3092.6±0.25 92.9±0.15 89.9±0.10 88.9±0.28 89.0±0.23 83.7±0.10 82.3±0.30 82.5±0.11
+wherew i denotes the Shapiro-Wilk test statistic for theith cluster’s
+aggregated updates. Since each client shares updates to all cluster
+models, including the ones that are not selected and trained, clusters
+chosen by only a few clients experience significantly reduced update
+magnitudes after aggregation, leading to slow convergence. To address this, we propose this novel scaling mechanism, which restores

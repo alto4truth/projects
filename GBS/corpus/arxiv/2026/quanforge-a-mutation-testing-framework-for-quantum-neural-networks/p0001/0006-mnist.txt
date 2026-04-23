@@ -1,0 +1,33 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 1
+section: mnist
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+as rotation angles
+to multiple qubits, combined with extra trainable parts to form a universal classifier. It addresses
+the limited expressivity of a single qubit with fewer quantum computational resources. DRNN
+adopts a block-stacking structure and angle encoding.
+Considering the time overhead, we adjust the image size of the DRNN to8 × 8and configure it
+with 6 qubits, while the other QNNs are set to 8 qubits and images are downsampled to16×16.
+To obtain reliable QNN outputs, we need to estimate the minimum number of measurements𝑠 to
+achieve an error bound 𝜖 with a confidence level of 𝛿. Let 𝑃𝑖 ={𝑋 (1)
+𝑖 , . . . , 𝑋 (𝑠)
+𝑖 } be the outcomes of
+𝑠 measurements on 𝑖-th qubit where 𝑋 (𝑗)
+𝑖 is bounded and independent of each other. The average
+estimate is ˆ𝜇= 1
+𝑠
+Í𝑠
+𝑗=1 𝑋 (𝑗)
+𝑖 . The precise QNN outputs are defined as the expectation value of
+measurement results, denoted as 𝜇. Based on Hoeffding’s inequality, for each qubit, we can obtain
+𝑃𝑟(| ˆ𝜇−𝜇| ≥𝜖) ≤ 2exp(−2𝑠𝜖 2). Then the union bound is applied to all qubits and the total probability
+is bounded by1 −𝛿 , producing2 𝑞exp(− 2𝑠𝜖 2) ≤ 1 −𝛿 . Finally, we obtain𝑠≥ 1
+2𝜖2 log( 2𝑞
+1−𝛿 ), indicating
+that measurement times scale logarithmical

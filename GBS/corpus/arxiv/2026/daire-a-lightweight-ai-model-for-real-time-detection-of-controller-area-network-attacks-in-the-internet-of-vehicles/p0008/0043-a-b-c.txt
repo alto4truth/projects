@@ -1,0 +1,28 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 8
+section: a-b-c
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+0
+were computed empirically, conducting similar experiments each time
+with different values of the number of batches and epochs. Based on our
+previous experience (Alam & Demir, 2024) of designing and developing
+lightweight ML models, we tried values in the range from 100–500 for
+selecting the best of these two parameters. We employed a random
+search methodology for hyperparameter optimization, exploring the
+following ranges: number of hidden layers from 1 to 5, batch size
+from 100 to 500, and number of epochs from 100 to 500. A randomly
+selected 50% subset of the CICIoV2024 dataset was used for this tuning
+phase. For each combination, we performed 10-fold cross-validation to
+ensure robustness and avoid overfitting. The optimal configuration was
+found to be: hidden layers = 3, batch size = training data size/300,
+and epochs = 100. This configuration achieved the best balance between high detection accuracy and low computational latency. The
+experiments with different hidden layers in the range from 1 – 5 are
+shown in Table 6. DAIRE achieved the best results when 3 hidden layers
+were used. Fig. 5 shows the accuracy and loss plot during training and
+tuning of DAIRE when run with these

@@ -1,0 +1,25 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis SAC ’26, March 23–27, 2026, Thessaloniki, Greece
+is extensible, allowing any operation expressible in natural
+language to be incorporated into the workflow.
+(3) Step 3 - Feedback and refinement:The engine returns actionable findings such as inconsistencies, dead features, or product
+counts. Based on this feedback, the domain expert revises the
+blueprint and, where necessary, updates scoping outputs. All
+these three steps are repeated until stabilization.
+The iteration yields avalidated blueprintand updated scoping
+dossier. These can (i) be compiled to a formal feature model for
+solver-based verification and (ii) seed draft UVL generation to reduce modeling effort [11]. In short, blueprints capture early variability decisions in a form LLMs can analyze, providing timely feedback
+before full formalization.
+The workflow provides the context for our empirical evaluation.
+Our study does not assess the workflow itself but investigates a critical question it raises:Are off-the-shelf LLMs capable of performing
+feature model analysis operations directly on semi-formal blueprints?
+The next section prese

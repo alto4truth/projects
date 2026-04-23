@@ -1,0 +1,27 @@
+title: Improving clinical interpretability of linear neuroimaging models through feature whitening
+source: arxiv
+year: 2026
+document_id: improving-clinical-interpretability-of-linear-neuroimaging-models-through-feature-whitening
+authors: Sara Petiton; Antoine Grigis; Raphaël Vock; Edouard Duchesnay
+page: 2
+section: abstract
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20675v1
+
+ly amygdala,
+hippocampus, putamen, and anterior cingulate gyrus correlations were plotted for clarity and due to their known relationships to BD and SCZ.
+reflect that whitening matrices were estimated on the training
+set of each CV fold, including both patients and HC; while
+GM-CSF correlations are expected to be stable across individuals, left-right hemisphere correlations may vary across
+diagnostic classes.
+The ZCA-cor whitening matrices were computed using
+the training set and subsequently applied to the testing set
+for each of the 10 CV folds, thereby preventing data leakage. Figures 1 and 2 were obtained using the training set of
+the first fold of the BD dataset, using standardized features to
+accurately reflect the transformations applied before classification. In Figure 1, after whitening, the correlations between
+the homologous regions in the left and right hemispheres are
+markedly reduced, most clearly illustrated in the putamen (the
+four red squares at the center of the plot). Inverse correlations
+between GM and CSF are also attenuated, particularly visible in the bilateral amygdala (top-left of the plot). Figure
+2 highlights the disentanglement of left/right and GM/CSF
+m

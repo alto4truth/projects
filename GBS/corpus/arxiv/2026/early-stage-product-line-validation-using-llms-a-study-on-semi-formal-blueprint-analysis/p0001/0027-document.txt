@@ -1,0 +1,70 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+yield higher accuracies than solver-free ones for both model families: 68.8% vs. 56.0%
+for general-purpose and 83.5% vs. 79.2% for reasoning-optimized
+2Supplementary appendix: https://doi.org/10.5281/zenodo.17913681
+AO1
+AO2
+AO3
+AO4
+AO5
+AO6
+AO7
+AO8
+AO9
+AO10
+AO11
+AO12
+AO13
+AO14
+AO15
+AO16
+claudesonnet-4
+gpt-4.1
+grok-4-nonreasoning
+deepseek-chat
+llama-4-scout
+100 50 80 40 70 100 70 80 90 100 90 50 90 80 70 90
+50 40 50 30 50 100 70 70 80 100 100 50 80 70 60 100
+40 40 30 20 50 90 80 60 80 90 80 50 50 70 60 100
+30 30 60 10 40 100 70 60 80 80 80 25 60 60 50 90
+30 20 30 20 30 40 50 40 70 90 90 13 40 40 20 40
+Figure 2: Accuracy (%) of general-purpose LLMs across AOs.
+AO1
+AO2
+AO3
+AO4
+AO5
+AO6
+AO7
+AO8
+AO9
+AO10
+AO11
+AO12
+AO13
+AO14
+AO15
+AO16
+grok-4reasoning
+gpt-5-mini
+gemini-2.5-pro
+claudesonnet-4-think
+deepseekreasoner
+gemini-2.5flash
+llama-4maverick
+100 80 100 80 90 100 80 90 100 100 100 100 60 90 70 100
+100 80 70 80 80 100 80 100 100 100 100 75 90 90 80 100
+100 70 90 80 80 100 80 90 100 100 90 100 90 90 80 100
+100 70 80 60 80 100 70 80 90 100 100 75 90 90 80 80
+90 80 100 30 50 100 80 90 100 100 90 75 90 80 70 90
+60 60 80 50 80 80 80 70 80 100 90 63 70 80 60 80
+60 30 30 30 60 80 70 60 80 70 100

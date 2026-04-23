@@ -1,0 +1,23 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+eb-Edu (Penedo et al.,
+2024) reached the performance of LLMs trained on350Btokens of raw English data using only
+10% of tokens through LLM-based filtering. Building upon this, FineWeb2-HQ (Messmer et al.,
+2025) extended model-based filtering to multilingual data, training classifiers for 20 languages
+and demonstrating that 15% of tokens could match the performance of models trained on the full
+FineWeb2 (Penedo et al., 2025) dataset.
+While model-based filtering has proven effective for high-resource languages, the multilingual domain faces a critical challenge: many languages lack sufficient native high-quality data to train
+effective standalone classifiers. This work investigates whether quality classifiers can generalize
+across languages by exploiting shared semantic structures in multilingual embedding spaces, which
+would enable high-resource languages to effectively support filtering for low-resource ones.
+We hypothesize that quality is a measurable density of information and logical coherence rather than
+subjective preference. We assume high-quality text may be distinguished in the embedding space by
+grammatical coherence, where formal structures create distinct activation patt

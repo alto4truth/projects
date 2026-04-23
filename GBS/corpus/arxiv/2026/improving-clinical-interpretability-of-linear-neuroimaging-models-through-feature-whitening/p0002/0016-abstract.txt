@@ -1,0 +1,30 @@
+title: Improving clinical interpretability of linear neuroimaging models through feature whitening
+source: arxiv
+year: 2026
+document_id: improving-clinical-interpretability-of-linear-neuroimaging-models-through-feature-whitening
+authors: Sara Petiton; Antoine Grigis; Raphaël Vock; Edouard Duchesnay
+page: 2
+section: abstract
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20675v1
+
+Fig. 2. Sphering of GM/CSF and left/right ROI pairs from the
+BD dataset. Top (blue): left anterior cingulate gyrus GM vs.
+CSF before (left) and after (right) whitening. Bottom (green):
+left vs. right hippocampus GM before and after whitening.
+Arrows show eigenvectors scaled up by 1.5 for clarity.
+BD vs. HC SCZ vs. HC
+ROC-AUC BAcc ROC-AUC BAcc
+Original76.39±3.88 69.58±4.15 81.68±2.89 73.76±4.27
+Whitened76.24±4.37 69.65±3.49 81.0±3.12 72.41±3.58
+Table 1. Classification test set results for BD vs. HC and
+SCZ vs. HC with and without whitening. Values are reported
+as percentages of mean±standard deviation across CV folds.
+3.2. Whitening preserves classification performance
+Applying whitening did not affect classification performance
+(see Table 1). A Student’s t-test comparing ROC-AUC and
+BAcc across cross-validation folds revealed no significant differences between classifiers trained on whitened versus unwhitened features (p >0.05). In all experiments, theL 2 regularization parameterCwas fixed at0.01, as determined via
+grid search.
+3.3. Whitening enhances interpretability
+Tables 2 and 3 report the mean coefficients estimated from
+logistic regression using whitened and unwhitened featur

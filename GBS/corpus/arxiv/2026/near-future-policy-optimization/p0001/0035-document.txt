@@ -1,0 +1,24 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+r-policy property of the guide makes it safe to omit.
+5 Related Work
+5.1 Mixed-Policy RLVR
+RLVR has become the dominant post-training recipe for reasoning models [8, 20, 31], and while GRPO
+variants such as DAPO, GSPO, and SAPO improve the on-policy optimization [4, 6, 20, 26–28, 30, 31, 39],
+a growing line of work shows that the choice of trajectory source matters just as much. One category
+imports stronger supervision from outside the current policy: LUFFY mixes external teacher traces into
+training [25], Prefix-RFT injects expert prefixes [9], and ReLIFT, SRFT, and TRAPO interleave RL with
+targeted supervised updates [5, 16, 23]. These methods provide high-quality trajectories but introduce a large
+distributional gap. The other category reuses successful trajectories from training itself: RePO and ExGRPO
+maintain replay buffers of historical successes [11, 35], and RLEP restarts training with replayed experience
+from a stronger seed policy [36]. These stay closer to the current policy but are bounded by the quality of
+earlier checkpoints, and stored trajectories drift away from the evolving policy over time.
+NPO is closest in spirit to the replay-based family, yet differs in a k

@@ -1,0 +1,29 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 2
+section: a-b-s-t-r-a-c-t
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+S. Alam et al.
+Field (Payload), which can carry up to 64 bits of payload. A 16-bit
+Cyclic Redundancy Check (CRC) ensures message integrity by detecting
+transmission errors in the CAN frame, while the ACK field (2 bits)
+confirms successful receipt.
+The lack of authentication and encryption in the CAN protocol
+significantly exposes the network to various cyber threats (Yang et al.,
+2023). Attackers can exploit these weaknesses by injecting fabricated
+messages with forged Arbitration IDs, effectively spoofing legitimate
+ECUs on the network. DoS attacks may be carried out by overwhelming
+the bus with a stream of high-priority frames, especially those containing dominant 0 bits in the Arbitration Field, thereby obstructing normal
+communication. Attackers tamper with the Data Field to change critical
+payloads, such as changing speedometer readings or sensor values,
+posing serious risks to vehicle functionality and passenger safety.
+3. Related works
+The IoV relies heavily on the CAN bus, which inherently lacks
+security mechanisms, rendering it susceptible to cyber threats such
+as spoofing and DoS attacks. These vulnerabilities arise due to the
+CAN protocol’s transmission of unencrypted me

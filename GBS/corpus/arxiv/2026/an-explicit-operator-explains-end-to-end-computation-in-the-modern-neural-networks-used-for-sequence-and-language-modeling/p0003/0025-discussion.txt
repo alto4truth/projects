@@ -1,0 +1,25 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 3
+section: discussion
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+A central challenge in the theory of machine learning
+is to understand what computations trained neural networks actually perform. While much theoretical work has
+provided insight into the learning dynamics of deep networks [34] – that is, how a randomly initialized network
+evolves during training – theoretical analyses typically do
+not characterize the forward pass of the network – where
+an individual input sequence drives the network to generate a specific output. The results presented here represent a first step in providing a theoretical description
+of the forward pass in SSMs, providing new insight into
+how S4 generates individual outputs through its trained
+connection weights.
+By identifying a precise mathematical correspondence
+between SSMs and nonlinear oscillator networks, this
+work demonstrates that a large class of linear timeinvariant SSMs that have achieved state-of-the-art performance on sequence processing benchmarks can be
+completely understood in terms of traveling waves. Complex spatiotemporal patterns – and traveling waves, in
+particular – have recently been of interest for computation in both state-space models and the wider class of
+recurrent neural networks (R

@@ -1,0 +1,27 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation AAMAS’27, 2027,
+Figure 3: Sensitivity of the two-index strategy to calibration constant 𝑐. (a) By spread regime across 12 𝑆
+values. (b) By carrier persona. Lower 𝑐 produces more Boulware behavior (higher savings, lower agreement);
+higher𝑐improves deal closure against adversarial carriers.
+67.3% agreement but captures only 0.642 in savings. The
+value 𝑐 = 3 sits at the inflection point, matching Fixed Linear
+savings (0.690) at 65.1% agreement. Zero retractions hold at
+every𝑐value tested.
+Figure 3(a) shows that the gap between 𝑐 = 1 and 𝑐 = 6
+widens as 𝑆 increases: 𝑐 has greater impact in wide-spread
+regimes. Figure 3(b) shows the per-carrier breakdown: against
+Cooperative and Deadline carriers, all 𝑐 values achieve near100% agreement, but lower 𝑐 captures higher savings (Cooperative: 0.89 at 𝑐 = 1 vs. 0.77 at 𝑐 = 6). Against adversarial
+carriers, higher 𝑐 improves agreement (Hardliner: 1.8% at
+𝑐= 1 to 9.4% at𝑐= 6; Anchoring: 10.2% to 34.3%).
+6 COMP ARISON WITH LLM BROKER
+This section presents two LLM experiments. The first compares the two-index strategy against an unconstrained LLM
+broker (GPT-O

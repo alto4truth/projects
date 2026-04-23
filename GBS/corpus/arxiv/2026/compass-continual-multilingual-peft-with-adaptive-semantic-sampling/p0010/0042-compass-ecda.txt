@@ -1,0 +1,88 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 10
+section: compass-ecda
+chunk: 42
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+edλ= 2andβ= 0.1as the most effective combination. These
+values were subsequently used for all COMPASS-ECDA experiments presented in the main paper.
+50
+
+Published in Transactions on Machine Learning Research (11/2025)
+80 85 90 95 100 105 110 115 120
+Number of Clusters (K)
+0
+2
+4
+6
+8
+10Number of Target Languages
+1
+2 2 2
+6 6
+9
+6
+8
+K-Means: Optimal K Distribution
+5 10 15 20
+Minimum Cluster Size
+0
+5
+10
+15
+20
+25Number of Target Languages
+4
+16
+22
+HDBSCAN: Optimal Min Cluster Size
+1 5 10
+Minimum Samples
+0
+5
+10
+15
+20
+25Number of Target Languages4
+23
+15
+HDBSCAN: Optimal Min Samples
+Figure 12: Distribution of optimal clustering parameters across 42 target languages.Left:K-means optimal cluster number (K) selected by maximizing silhouette score.Middle:HDBSCAN optimal minimum
+cluster size selected by maximizing DBCV score.Right:HDBSCAN optimal minimum samples parameter.
+The balanced distribution between 5 and 10 indicates moderate density requirements for effective semantic
+clustering.
+E Clustering Methods
+COMPASS’s performance depends on the quality of semantic clustering. We evaluated multiple clustering
+algorithms and conducted parameter sweeps to identify optimal configurations for each target language.
+For practical scenarios, we recommend conducting similar clustering hyperparameter investigations for each
+language, considering additional hyperparameter values beyond the upper bounds considered in this study.
+In this study, we use clustering metrics instead of downstream performance for efficiency, as fine-tuning each
+adapter is relatively costly and labeled test data may not be available prior to deployment.
+K-Means Clustering.Our K-means implementation was configured to test a range of clusters fromK= 10
+toK= 120in steps of 5. We used the k-means++ initialization method with 10 different seeds for each
+value ofKand evaluated cosine distance metrics. The final number of clusters per target language was
+selected by maximizing the silhouette score. Across all 42 languages, optimalKranged from 80 to 120, with
+no language achieving optimal performance belowK= 80(Figure 12, left panel). The distribution is heavily
+weighted toward higher values (K≥100) for 29 languages.
+HDBSCAN Clustering.For HDBSCAN, we conducted a grid search over parameter combinations to find
+optimal configurations, evaluating cluster quality using the Density-Based Clustering Validation (DBCV)
+score, which accounts for varying cluster densities and shapes while penalizing noise points. We performed
+a grid search over minimum cluster sizes of[5,10,15,20]and minimum samples of[1,5,10]. The optimal
+minimum cluster size varied across languages (Figure 12, middle panel), though the majority of languages
+(22/42) achieved optimal clustering withmin_cluster_size= 20. Only 4 languages required smaller values
+of 10, corresponding to low-resource languages. The minimum samples parameter, which determines core
+point density constraints, balanced between 5 and 10 (Figure 12, right panel), with preference for 5 samples.
+Only4languages(9.5%)achievedbestperformancewithmin_samples= 1. Thepreferenceformin_samples∈
+{5,10}indicates that COMPASS requires moderate density thresholds to distinguish meaningful semantic
+clusters from noise, and larger minimums may net even better clustering.
+Hierarchical Agglomerative Clustering.For hierarchical agglomerative clustering, we implemented a
+two-step approach using Ward’s linkage method to build a hierarchical cluster tree andfclusterto cut the
+dendrogram at an optimized number of clusters. After clustering, we compute cluster centers as the mean of
+all embeddings in each cluster for allocating cluster assignments. We evaluated both Euclidean and cosine
+distance metrics. For cosine similarity, we normalize embeddings before computing the distance matrix. The
+number of clusters was selected by maximizing the silhouette score over the rangeK= 80toK= 120,
+51

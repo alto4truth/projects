@@ -1,0 +1,74 @@
+title: Efficient Test-Time Inference via Deterministic Exploration of Truncated Decoding Trees
+source: arxiv
+year: 2026
+document_id: efficient-test-time-inference-via-deterministic-exploration-of-truncated-decoding-trees
+authors: Xueyan Li; Johannes Zenn; Ekaterina Fadeeva; Guinan Su; Mrinmaya Sachan; Jonas Geiping
+page: 2
+section: 6
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20500v1
+
+33.22 35.60 37.49
+Table 8: Performance (maj@k and pass@k) of various methods on GSM8K, Humaneval and
+MMLU-Pro with the Llama3.2-3B-Instruct model.
+22
+
+D.2 Additional Results on Accuracy and Number of New Tokens Generated
+As an extension to Figure 8 (left) which only shows DLE with ε-sampling for k= 32, we
+additionally provide results for k= 8. We draw the same conclusion that DLE uses fewer
+tokens for the same accuracy.
+2000 4000
+Number of new tokens generated
+0.35
+0.40
+0.45
+0.50
+Accuracy
+0.45
+0.40
+0.35
+0.30
+0.25
+0.20
+0.15
+0.10
+0.05
+0.01
+ε
+ε-sampling (k = 32)
+DLE (ε-sampling, k = 8)
+ε-sampling (k = 8)
+DLE (ε-sampling, k = 8)
+Figure 14: DLE with ε-sampling outperforms ε-sampling with far fewer new tokens generated. Number of new tokens is counted on average for each question.ε is marked with colors
+indicating its value. Stochastic self-consistency generates many more tokens to achieve a
+similar performance as DLE.
+D.3 Additional Results on Inference Speed
+In the main body, we discussed the inference speed benefit of using SGLang, which can
+output the cached token count for each generation request. However, vLLM does not output
+such data, so we cannot directly measure its cache retrieval rate. We can still see that there
+is some speed benefit from using DLE withε-sampling at highεthresholds.
+0.0 0.2 0.4
+ε
+0
+10
+20
+Runtime
+(minutes)
+0.0 0.2 0.4
+ε
+0.35
+0.40
+0.45
+Accuracy
+0.0 0.2 0.4
+ε
+50
+100
+150
+New tokens
+generated
+ε-sampling DLE (ε-sampling, DIVFIRST )
+Figure 15: Inference time and performance for DLE with ε-sampling, measured using vLLM.
+At higher ε, inference time is shorter than the baseline. The performance boost is also more
+obvious since far fewer tokens are generated.
+23

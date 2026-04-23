@@ -1,0 +1,32 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 1
+section: msc-scc-zqc-msc-scc-zqc
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+are obscured by aggregate metrics. We
+present results on NFCorpus, with additional failure modes
+for FiQA and SciDocs reported in Appendix E
+Failure Mode 1: Semantic-Lexical Disconnect.Several
+clusters reveal mismatches between query semantics and
+document content due to how relevance was annotated. For
+example, queries like “Arkansas” or “Iowa Women’s Health
+Study” (nDCG ≈ 0.14) are judged relevant to documents
+discussing researchconducted inthese locations or reporting
+findingsfromthese studies, but the names never appear in
+document. Similarly, researcher names and organizations
+are judged relevant to documents that never mention them.
+These queries are unanswerable from document content
+alone, a corpus construction issue, not a retriever limitation.
+Failure Mode 2: Register Mismatch.In NFCorpus,
+health misinformation queries (nDCG = 0.14) like “Raw
+Food Diet Myths” use colloquial language, while relevant
+documents use scientific terms. This linguistic register gap
+makes retrieval structurally difficult regardless of method.
+Contrast: Well-Aligned Strata.In contrast, strata with
+strong query-document alignment (endocrine disruptors
+(nDCG = 0.76), food additives (0.69), respirat

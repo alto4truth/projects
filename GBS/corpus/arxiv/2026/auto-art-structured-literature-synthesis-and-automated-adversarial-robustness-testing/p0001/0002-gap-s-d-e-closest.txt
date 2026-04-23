@@ -1,0 +1,22 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+st-case gap.
+Path to resolution:Multi-norm adversarial training curricula
+with worst-case-aware loss functions; scalable attack union
+approximations; deployment-time attack selection oracles.
+G2: Agent transfer failure (CTF→real)(S5×D4×E4).
+Gap:Best LLM agent achieves 75% on CTF tasks but
+only 13% on real implementations; a stronger LLM reaches
+54%/21% respectively [C3].
+Why it exists:Assumed but untested—the community implicitly treats stylised benchmarks as predictive of real code,
+but production defence code introduces library complexity,
+versioning, and environment coupling absent from CTF tasks.
+4

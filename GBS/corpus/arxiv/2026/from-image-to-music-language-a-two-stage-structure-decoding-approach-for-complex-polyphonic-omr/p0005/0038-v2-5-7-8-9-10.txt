@@ -1,0 +1,36 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 5
+section: v2-5-7-8-9-10
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+V0 [1,2,3] V1 [4,6] V2 [5,7,8,9,10]
+Figure 16: Fix summary topology. V oice 0 (red): staff-0 events [1,2,3]. V oice 1 (green): staff-1
+stem-up partial [4,6]. V oice 2 (purple): staff-1 stem-down with full beam group [5,7,8,9,10]. The
+beam Open→Continue→Close sequence is now intact within a single voice.
+Agent Turn 5: Final Output
+[Assistant]
+[Thinking]
+The fix works. Now the measure hasfine=true,error=false, andbeamBroken=false. The spaceTime
+is still 0.375, but that’s acceptable forfine=true.
+Let me output the final JSON.
+[Assistant]The fix resolves the beam break by keeping the beamed group (8, 9, 10) together in
+voice 2, while voice 1 handles the simultaneous quarter note at tick 480.
+{"fixes": [{
+"measureIndex": 274,
+"voices": [[1,2,3], [4,6], [5,7,8,9,10]],
+"duration": 1440,
+"status": 0
+}]}
+Fix (status=0 Solved)V oices:[[1,2,3],[4,6],[5,7,8,9,10]]
+Session: 220.5 s, 125 101 input tokens, 8 388 output tokens.
+Agent Feedback
+After the annotation session, the system posed three follow-up questions to the agent.
+[User]
+Based on your annotation experience just now, please provide a brief summary:
+(1) Which principles in the system prompt were most helpful for your annotation
+work? (

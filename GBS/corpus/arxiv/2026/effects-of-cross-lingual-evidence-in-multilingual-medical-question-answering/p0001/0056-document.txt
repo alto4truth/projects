@@ -1,0 +1,43 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 56
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+E Performance of retrieving different numbers of documents using MedExpQA as
+context.
+Figure 3: Performance of different models under different document counts from MedExpQA.
+[clinical case question]
+V oici les options possibles:
+[set of options]
+Prompt used for Italian experiments:
+[IT] Sei un assistente medico qualificato
+incaricato di rispondere a domande
+mediche a risposta multipla per scopi
+di ricerca. Il tuo obiettivo è analizzare
+il caso clinico fornito, considerare le
+opzioni fornite e selezionare la risposta
+corretta. Ti verrà fornita una serie di
+documenti pertinenti che ti aiuteranno a
+trovare la risposta corretta, ad analizzarli
+e a rispondere alla domanda.
+[IT] Ecco i documenti:
+[set of retrieved documents]
+[IT] Ecco il caso clinico:
+[clinical case question]
+[IT] Ecco le opzioni possibili:
+[set of options]
+Prompt used for Basque experiments:
+[EU] Medikuntzako laguntzaile trebea
+zara, ikerketa-helburuetarako aukera
+anitzeko galdera medikoei erantzuteko
+ardura duena. Zure helburua kasu
+klinikoa aztertzea, emandako aukerak
+kontuan hartzea eta erantzun zuzena
+hautatzea da. Erantzun zuzena aurkitzen, aztertzen eta galderari erantzuten
+lagunduko dizuten dokumentu multzo
+garr

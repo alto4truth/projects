@@ -1,0 +1,30 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+n toward 𝑟target,
+not 𝑟max; the maximum rate 𝑟max serves only as a hard walkaway ceiling. The parameter 𝛽 controls the concession shape:
+𝛽 < 1 is Boulware (hold firm), 𝛽 = 1 is linear, and 𝛽 > 1
+is Conceder (concede quickly). In the original formulation,
+𝛽 is a fixed constant chosen before the negotiation begins.
+We replace it with a function of the pricing model’s current
+spread:
+𝛽= 𝑐
+𝑠×100 (2)
+where 𝑠 = (𝑟target −𝑟 min)/𝑟min is the fractional spread between the pricing model’s target rate and the floor, and 𝑐 > 0
+is a calibration constant. When 𝑟target is not available, 𝑟max is
+used as the default. The constant 𝑐 is the only free parameter
+in the framework and represents the spread percentage at
+which the strategy transitions from Conceder (𝛽 > 1) to Boulware (𝛽 < 1). It can be set by domain expertise (choosing the
+spread below which deal closure is prioritized over margin
+capture) or from historical data (e.g., training a settlement
+classifier and using SHAP analysis [ 10] to identify the spread
+threshold at which the feature’s contribution crosses zero).
+In this study we set 𝑐 = 3 throughout, placing the transition
+at 3% spread. We evaluate across three spread regimes: Narrow (

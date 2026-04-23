@@ -1,0 +1,29 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+12
+predicting the Remaining Useful Life of the equipment.
+Even when individual parameters are weakly identifiable,
+the inferred posterior ensemble still supports robust fault
+recognition and uncertainty-aware forecasting of degradation progression. Accurately recovering these parameters and their associated uncertainties is a critical first
+step for downstream
+A. Resources consumption
+The primary motivation for adopting SBI in industrial
+asset management is its exceptional computational scalability at deployment time. As summarized in Table III,
+MCMC must restart its iterative sampling process from
+scratch for every new diagnostic request (inference), so
+its total simulation cost grows linearly with the number
+of inference tasks.
+Incontrast, SBItrainingisaone-timeofflinephasewhose
+upfront cost is rapidly amortized over subsequent diagnoses. We therefore pushed both approaches to a compact setup where the simulator calls are as few as possible
+while retaining acceptable accuracy on the parameters
+posteriors, in order to test the computational cost of inferenceinthetwocases. MCMCwasrunon4chainswith
+150 burn-in and 75 samples (900 transitions/call) while
+SBI was trained on 5,000 simul

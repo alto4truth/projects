@@ -1,0 +1,28 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 4
+section: ssl-r1
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+Table 6.Performance of SSL-R1 on other base models.We take
+MiMo-VL as an example, and report the average accuracy across
+13 vision-centric multimodal benchmarks.
+Model Vision-Centric Avg.
+MiMo-VL-7B-SFT [71] 63.77
++ Visual Jigsaw [70] 65.14 (+1.37)
++ SSL-R1 66.65 (+2.88)
+on reasoning models that have undergone intensive RL
+post-training. Table 5 presents the results of applying
+SSL-R1 to a strong multimodal reasoning model,i.e.,
+ThinkLite-VL. Apart from previous vision-centric multimodal benchmarks, we also evaluate the models on
+reasoning-centric multimodal benchmarks, including MathVista [43], MathVision [62], MathVerse [83], MMMU [80],
+and EMMA [24]. Despite the reasoning-intensive posttraining ThinkLite-VL has undergone, SSL-R1 still yields
+an average gain of 2.06%, further boosting its visual perception and understanding while preserving strong reasoning
+capabilities. It should be well noted that Visual Jigsaw degrades the performance on several reasoning-heavy benchmarks (e.g., MathVista, MathVerse, MMMU), whereas our
+SSL-R1 consistently outperforms the baseline on all benchmarks.
+How Does SSL-R1 Perform on Other Base Models?Our
+results thus far are based on Qwen2.5-VL archit

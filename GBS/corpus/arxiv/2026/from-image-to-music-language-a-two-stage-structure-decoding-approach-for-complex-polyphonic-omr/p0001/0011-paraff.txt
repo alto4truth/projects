@@ -1,0 +1,58 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 1
+section: paraff
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+for pianoform sheet music.International Journal on Document Analysis and Recognition
+(IJDAR), 26(3):347–362, 2023. doi:10.1007/s10032-023-00432-z.
+27
+
+[20] P. Torras, S. Biswas, and A. Fornés. A unified representation framework for the evaluation of
+optical music recognition systems.arXiv:2312.12908, 2023. arXiv:2312.12908.
+[21] G. Yang, M. Zhang, L. Qiu, Y . Wan, and N. A. Smith. Toward a more complete OMR solution.
+arXiv:2409.00316, 2024. arXiv:2409.00316.
+[22] B. Meyer, L. Tuggener, S. Hänzi, D. Schmid, E. Ayfer, B. F. Grewe, A. Abdulkadir, and
+T. Stadelmann. A document is worth a structured record: Principled inductive bias design for
+document recognition.arXiv:2507.08458, 2025. arXiv:2507.08458.
+Appendices
+A Implementation Notes
+This appendix collects the engineering details that support reproducibility of the BeadSolver system:
+the exact input representation fed to the model, the architecture and training hyperparameters, the
+search budget formulas, and the interface used to feed annotated corrections back into the training
+pipeline.
+A.1 Input Representation
+Element types.Each measure is represented as a flat sequence of elements. Five element types are
+used: PAD (padding, index 0), BOS (beginning of sequence, index 1), EOS (end of sequence, index 2),
+CHORD (index 3), and REST (index 4). In a decoded sequence, the model predicts a successor chain
+that begins atBOSand ends atEOS; chords and rests form the body of the structure.
+Geometric fields.Each element carries five geometric scalars in staff-space units (one unit = one
+staff space): x (horizontal position), pivotX (horizontal anchor, used when the visual centre of mass
+is not centred on the event position, e.g. for chords with mixed stem directions), y1 and y2 (upper
+and lower staff-vertical extent), and staff (integer staff index within the system, zero-based). During
+training, mild data augmentation is applied: x and pivotX receive Perlin noise, y1 and y2 receive
+Gaussian noise (σ= 0.12 ), and the whole x-axis is optionally rescaled by a log-normal factor to
+simulate horizontal spacing variation.
+Local attribute feature vector.In addition to geometry, each element receives a 16-dimensional
+real-valued feature vector that encodes soft evidence about local rhythmic and notational attributes,
+as estimated by the visual models. These arenothard decisions: the values are log-likelihood-style
+scores that convey prior knowledge without committing the model to a specific interpretation. See
+Table 11 for the 16 components.
+Table 11: Local Attribute Feature Vector. Composition of the 16-dimensional local attribute feature
+vector.
+Field Dims Candidates
+division7≥0,≥1, . . . ,≥6(duration-class lower bounds)
+dots2≥1dot,≥2dots
+beam3 Open, Continue, Close
+stemDirection2 Up, Down
+grace1 grace-note flag
+tremoloCatcher1 tremolo-receiving event flag
+Time-signature context.An additional scalar time8th encodes the expected measure duration
+in eighth-note ticks (capped at 16). It is derived from the time signature and passed as a global
+per-measure scalar, giving the model a coarse prior on total measure duration without hard-wiring a
+specific search constraint.
+28

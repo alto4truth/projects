@@ -1,0 +1,26 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+mparison between mainstream and reasoning-focused architectures.
+To ensure comparability, every model is queried under identical conditions: temperature=0, unrestricted context and output
+lengths within provider limits, and a uniform prompting and evaluation pipeline. This setup yields deterministic completions that
+expose each model’s inherent reasoning behavior.Table 1lists the
+evaluated models along with their type, context-window size, and
+maximum output length.
+4.3 Blueprints and Dataset
+To evaluate LLM-based analysis in a controlled and reproducible setting, we deriveblueprintsfrom existing UVL feature models rather
+than from raw scoping inputs. While scoping artifacts represent
+the natural source for early validation, they are rarely standardized
+and lack solver-based ground truth. In contrast, UVL models are
+publicly available, semantically precise, and compatible with solver
+analysis, enabling reproducible comparison against an oracle.
+We collected models from two established repositories,UVLHub[33] and theFeature-Model-Benchmark v1.0[34], and selected
+tenrepresentative cases covering both toy (e.g., SW, SMW) and large,
+real-world product lines (e.g.,BDB,CNNl/f). Each mode

@@ -1,0 +1,30 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 65
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+Table 11.Prompt template for final response generation.{In-context examples}are in-context examples for better instruction.{Input
+query}is the question asked by the user.{Input passage}is the initial response to be corrected.{Input information}is the supplementary
+information from the verification execution stage.
+System prompt
+You are a language assistant that helps to refine a passage according to instructions.
+Prompt
+You are given a query, a passage and supplementary information.
+[Task]
+You are required to correct and output the refined passage in a fluent and natural style, following these rules:
+1. Correct the sentences in the passage if they are inconsistent with the supplementary information. Remove
+the objects that are confirmed to not exist in the supplementary information.
+2. Do not modify correct sentences and introduce additional information.
+3. When giving refined passage, also pay attention to the given query. The refined passage should be a
+reasonable answer to the query.
+4. Note the dining table is equivalent to the table.
+Output only the corrected passage, without introducing extra contents.
+Here are examples:
+{In-context examples}
+Now complete the following:
+[Quer

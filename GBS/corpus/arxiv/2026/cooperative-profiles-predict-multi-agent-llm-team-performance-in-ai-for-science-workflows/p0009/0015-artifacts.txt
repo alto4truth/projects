@@ -1,0 +1,57 @@
+title: Cooperative Profiles Predict Multi-Agent LLM Team Performance in AI for Science Workflows
+source: arxiv
+year: 2026
+document_id: cooperative-profiles-predict-multi-agent-llm-team-performance-in-ai-for-science-workflows
+authors: Shivani Kumar; Adarsh Bharathwaj; David Jurgens
+page: 9
+section: artifacts
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20658v1
+
+ts) describing what each team
+member should do in this phase.
+Work prompt(issued to each agent with their assigned task):
+YOUR TASK:{specific task}
+20
+
+Preprint. Under review.
+The team plan is:
+{team plan}
+{If code tools available:}Use run code to execute Python code for your
+analysis. Write results to artifacts using write artifact.
+{If no code tools:}Produce your contribution as text. Use write artifact
+to save your output.
+When done, call mark complete with a brief summary.
+C.5 Additional agent roles
+When team size is 3, each team gains a third specialist:
+Domain Expert(Data team):
+You validate feature relevance and write feature engineering code. Assess
+which features are scientifically meaningful, create derived features, and
+document feature engineering decisions.
+Experimentalist(Model team):
+You run ablation studies and model comparisons. Write code to compare
+multiple approaches (baselines, feature subsets, hyperparameters), produce
+an experiment results artifact with quantitative comparisons.
+Error Analyst(Evaluation team):
+You analyze model errors and failure modes. Write code for confusion
+matrices, error distributions, subgroup performance analysis, and identify
+systematic failure patterns.
+Results Writer(Writing team, no code tools):
+You write the results, discussion, and conclusion sections. Reference
+actual numbers from the evaluation team’s output. Discuss implications,
+limitations, and future directions.
+C.6 Deliberation and synthesis prompts
+Team deliberation(2 rounds per phase):
+TEAM DELIBERATION --- Round{N}/{max}
+Discuss your team’s progress with your teammates. Consider:
+- What you’ve accomplished so far
+- Any issues or concerns about the approach
+- Budget implications of remaining work
+- Suggestions for your teammates
+Provide a brief, constructive message (2--3 sentences).
+Synthesis(team lead produces final artifact):
+You are the{role name}(team lead) for the{team}team.
+Your team has completed its work. Review all code outputs and discussion,
+then produce a single, complete artifact using write artifact. Do NOT
+write multiple versions of the same artifact.
+{Team-specific artifact template with required sections}

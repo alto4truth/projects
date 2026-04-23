@@ -1,0 +1,29 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+V-tableR1: Process-Supervised Multimodal Table
+Reasoning with Critic-Guided Policy
+Optimization
+Yubo Jiang1,2 Yitong An1 Xin Yang2 Abudukelimu Wuerkaixi2 Xuxin
+Cheng2 Fengying Xie1,3
+Zhiguo Jiang3 Cao Liu2 Ke Zeng2† Haopeng Zhang1,3†
+1School of Astronautics, Beihang University, Beijing 102206, China
+2Longcat Interaction Team, Meituan, Beijing 100102, China
+3Tianmushan Laboratory, Beihang University, Hangzhou 311115, China
+{jbond0409, zhanghaopeng}@buaa.edu.cn (Y.J., H.Z.)
+No Institute Given
+Abstract.We introduce V-tableR1, a process-supervised reinforcement
+learning framework that elicits rigorous, verifiable reasoning from multimodal large language models (MLLMs). Current MLLMs trained solely
+on final outcomes often treat visual reasoning as a black box, relying on
+superficial pattern matching rather than performing rigorous multi-step
+inference. While Reinforcement Learning with Verifiable Rewards could
+enforce transparent reasoning trajectories, extending it to visual domains
+remains severely hindered by the ambiguity of grounding abstract logic
+into continuous pixel space. We solve this by leveraging the deterministic grid structure of tables as an ideal visual testbed. V-table

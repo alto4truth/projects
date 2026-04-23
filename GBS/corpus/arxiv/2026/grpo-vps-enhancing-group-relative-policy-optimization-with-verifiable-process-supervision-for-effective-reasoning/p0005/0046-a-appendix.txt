@@ -1,0 +1,64 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 5
+section: a-appendix
+chunk: 46
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+thin <answer>
+</answer>.<end of turn>
+<start of turn>model
+For general reasoning tasks, we adopt the prompt templates for Qwen3 (Team, 2025) model.
+14
+
+Published as a conference paper at ICLR 2026
+Prompt A.3: Template for Qwen3 models
+<|im start|>system
+A conversation between User and Assistant. The user asks a question,
+and the Assistant solves it.
+The assistant first thinks about the reasoning process in the mind
+and then provides the user with the answer.
+The reasoning process and answer are enclosed within <think> </think>
+and <answer> </answer> tags, respectively,
+i.e., <think> reasoning process here </think> <answer> answer here
+</answer>.
+<|im end|>
+<|im start|>user
+{input}
+<|im end|>
+<|im start|>assistant
+A.3 DISCLOSURE OFLLMUSAGE.
+This paper benefited from language editing and phrasing suggestions provided by ChatGPT (OpenAI), which
+was used solely for grammar correction and clarity improvement. No LLM was used for generating research
+ideas, experimental design, data analysis, or writing substantive technical content.
+A.4 EXTENDEDEMPIRICALRESULTS
+A.4.1 RESPONSELENGTHDYNAMICS ACROSSMODELFAMILIES
+0 50 100 150 200 250
+Steps
+500
+1000
+1500
+2000
+2500Average Length
+(a) Gemma Response Length
+Ours
+GRPO
+0 20 40 60 80 100 120 140
+Steps
+600
+700
+800
+900
+1000
+1100Average Length
+(b) Qwen Response Length
+Ours
+GRPO
+Figure 5: Response length dynamics under reinforcement learning for Gemma and Qwen Math models,
+showing opposite evolution trends across training.
+We observe opposite response-length dynamics between Gemma and Qwen Math models under reinforcement learning, as illustrated in Figure 5. Gemma base model exhibits extremely short responses at initialization, due to its instruction-tuned alignment, which explicitly suppresses verbosity and favors concise, direct
+answers. As training progresses, both methods gradually increase the response length, as longer reasoning
+15

@@ -1,0 +1,20 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+methodology described in Algorithm 1. The fine-tuning
+process employed Multiple Negatives Ranking Loss [Henderson et al., 2017], a contrastive learning objective, which
+trains the model to produce embeddings where anchors are positioned closer to their corresponding positive chunks in
+the embedding space while being distant from negative samples drawn from other documents in the batch.
+4https://www.et.gr
+5https://www.adjustice.gr
+6https://huggingface.co/datasets/IMISLab/GreekReddit
+7https://microsoft.github.io/msmarco/
+8https://huggingface.co/intfloat/multilingual-e5-base
+4

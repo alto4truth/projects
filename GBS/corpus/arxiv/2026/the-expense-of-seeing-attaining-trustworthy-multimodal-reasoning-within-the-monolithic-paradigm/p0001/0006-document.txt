@@ -1,0 +1,20 @@
+title: The Expense of Seeing: Attaining Trustworthy Multimodal Reasoning Within the Monolithic Paradigm
+source: arxiv
+year: 2026
+document_id: the-expense-of-seeing-attaining-trustworthy-multimodal-reasoning-within-the-monolithic-paradigm
+authors: Karan Goyal; Dikshant Kukreja
+page: 1
+section: document
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20665v1
+
+nitiatives within the representation learning community,
+such as MATHVERSE [15], SeePHYS [14] and MMStar [3], have
+attempted to uncover and quantify this phenomenon. MATHVERSE
+[15] introduced problem versions with varying visual-textual information balance and observed that some VLMs achieve higher
+accuracy when visual input was removed entirely. SeePHYS [14]
+extended this to Physics, distinguishing “vision-essential” from
+“vision-optional” problems. MMStar [3] proposed heuristic metrics like Multimodal Gain and Multimodal Leakage, and a manually vetted vision-indispensable dataset for multimodal assessment.
+However, we assert that these approaches violate the rigorous Foundations of Knowledge Discovery. By ablating (removing) data to test
+models, they successfully exposedataset biasesbut fundamentally
+arXiv:2604.20665v1 [cs.CV] 22 Apr 2026

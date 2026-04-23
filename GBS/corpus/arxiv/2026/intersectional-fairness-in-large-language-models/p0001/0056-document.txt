@@ -1,0 +1,22 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 56
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+ifferent LLMs
+w.r.t., the Most Frequent Answer Accuracy (MFAA) and the Ground-Truth Correctness (GTC) across 20 repeated runs.
+Regarding the MFAA metric, the minimum observed consistency ranges from 35% (Llama 3) to 55% (Gemma-3 and
+Claude-Sonnet-4), indicating that certain questions trigger substantial instability, particularly for Llama 3. While the
+maximum MFAA reaches 100% for all models, which at first glance suggests that every LLM is capable of perfect
+internal consistency, this maximum alone is not equally meaningful across LLMs. For instance, for Llama 3, the average
+consistency is only 73.38% with a relatively large standard deviation of 20.85%, indicating that its 100% scores are
+occasional peaks rather than typical behavior. In contrast, the remaining LLMs achieve a higher overall consistency
+across runs. For example, Gemma-3 achieves an average of 99.65%, with the smallest standard deviation of 3.02% across
+LLMs. Overall, while most models appear behaviorally consistent in producing the same answers across runs, this
+consistency does not imply that LLMs are always consistent for all questions. Thus, MFAA helps us assess the response
+consistency of LLMs, which is not co

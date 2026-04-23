@@ -1,0 +1,73 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+ecodes 3D geometry for subjects
+with increasing Depth-to-Height (D:H) ratios, from humans
+(∼0.1) to objects like buildings (3.0). The representation
+6
+
+High-Resolution
+Image Generation
+Multi-View
+Generation
+Multi-View
+Mesh Carving
+Textured Mesh
+High Resolution,
+DR OurInput Background
+IC-Light NeuralGaffer DiLightNet
+GT
+Not
+Available
+Not
+Available
+Not
+Available
+Not
+Available
+Figure 6.Qualitative comparison on relighting.Our model (right) produces more physically-plausible results compared to baselines on
+both the HumanOLAT dataset [32] and challenging in-the-wild images. Please refer to our supplementary for more results1.
+Synthetic Data LightStage Data HumanOLAT [32]
+Method PSNR↑SSIM↑LPIPS↓RMSE↓ PSNR↑SSIM↑LPIPS↓RMSE↓ PSNR↑SSIM↑LPIPS↓RMSE↓
+IC-Light 18.49 0.880 0.113 0.222 20.90 0.859 0.119 0.172 19.79 0.930 0.086 0.185
+NeuralGaffer18.84 0.929 0.105 0.220 18.88 0.893 0.097 0.222 20.77 0.948 0.085 0.165
+DiLightNet14.51 0.859 0.121 0.355 18.03 0.870 0.105 0.243 14.23 0.905 0.094 0.337
+DiffusionRenderer19.28 0.886 0.119 0.203 21.09 0.862 0.120 0.169 17.58 0.899 0.100 0.229
+GeoRelight 27.22 0.941 0.057 0.079 25.87 0.907 0.086 0.092 21.17 0.935 0.086 0.161
+Table 3.Relighting evaluation for human images.Our method achieves state-of-the-art relighting performance. Although NeuralGaffer
+achieves higher metric on HumanOLAT, it cannot faithfully recover details in relit images. More comparisons are in supplementary.
+remains effective as long as the D:H ratio is moderate;
+extremely elongated scenes (e.g., tunnels with D:H>10)
+would compress the depth range, potentially degrading reconstruction quality. Consequently, the generalizability of
+iNOD unlocks the potential of our framework for joint relighting, intrinsic decomposition, and 3D reconstruction in
+broader object-centric domains.
+4.3. Comparison with State-of-the-art
+Relighting PerformanceWe first evaluate our primary task
+of relighting. Tab. 3 shows the quantitative comparison on
+our synthetic, light stage, and HumanOLAT datasets. Our
+method significantly outperforms all open-source generalpurpose baselines, including DiffusionRenderer (DR), NeuralGaffer, and DiLightNet, across all datasets and metrics.
+We observe that the gap on HumanOLAT is smaller than our
+hold-out evaluation data, which can be possible due to the
+artifacts in the ground-truth. Due to data license limitation,
+we could not obtain quantitative results for closed-source
+1The images in Figures 1, 6 (second and third row), 7, 8, and 9 are
+synthetic images created using a generative model.
+methods [26], we conduct a user study on in-the-wild inference in supplementary. Fig. 6 provides a qualitative comparison, showing that our model produces more realistic
+and detailed results. Our qualitative results on in-the-wild
+images (Fig. 6, row 3) confirm this. Our method generates physically-plausible shading and shadows that are consistent with the new illumination, while other methods like
+IC-Light and DiLightNet produce artifacts or fail to match
+the illumination.
+Geometric & Intrinsic Estimation PerformanceWe report the quantitative comparison of fullbody and portrait reconstruction on our synthetic data in Tab. 4. We achieve
+superior performance compared to SoTA general purpose
+reconstructor VGGT [33] and MoGe2 [35]. Fig. 8 qualitatively confirms this, showing our model captures detailed
+shapes where others produce distorted or over-flattend results. Similarly, Tab. 5 demonstrates our leadership in estimation of albedo and surface normal. Fig. 7 shows that our
+model can recover fine-grained surface details in clothing,
+skin, and hair.
+7

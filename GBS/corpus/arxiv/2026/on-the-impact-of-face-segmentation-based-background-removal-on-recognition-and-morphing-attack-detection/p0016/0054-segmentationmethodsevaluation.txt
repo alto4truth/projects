@@ -1,0 +1,47 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 16
+section: segmentationmethodsevaluation
+chunk: 54
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+in genuine/impostor distributions’ overlap between
+segmentation methods directly translate to the performance discrepancies verified in FR evaluation.
+
+Fig. 9. Joint visualization of the metrics evaluated for IJB-C and its segmented variants in the main paper, namely TAR@FAR=1e-4,∆, the FIQA metric
+(top block), and BPCER@t10% for the three evaluated MAD methods (bottom block).
+However, it is important to keep in mind that metrics
+such as the recall andmIoUhide segmentation failures
+when a significant portion of the background is considered as
+belonging to the object. This is particularly true for recall,
+butmIoUis also associated with this phenomenon when
+the object occupies a significant portion of the image (FP is
+bounded to a low value if TP is high), as happens on the
+CelebAMask-HQ dataset (Figure 10). This poor segmentation will also be hidden when evaluating the FR performance
+on the segmented samples, as inappropriate background
+removal approximates the samples to their original unsegmented versions. Hence, we also report the precision, which
+measures the accuracy of positive predictions, that is, how
+many predicted positives are actual positives:
+P recision= T P
+T P+F P .(3)
+C. Results
+Table V shows the segmentation evaluation results of the
+seven methods used for background removal in this work.
+While most methods achieve values ofmIoU, precision,
+and recall above 90%, BiSeNetv2 and Fast SCNN achieve
+significantly lowermIoUand recall values than the remaining methods, suggesting that they possess a lower capacity
+to correctly identify the desired object. This tendency can
+be visually confirmed in Figure 10, where it is shown that
+these networks struggle to correctly segment some samples.
+However, it should be kept in mind that these results are not
+directly translatable to what is verified with other datasets,
+namely those considered in the main paper, due to their
+significantly different characteristics. In particular, it should
+be noted that the images contained in CelebAMask-HQ
+are high-quality samples that do not possess significant
+background noise, as the face occupies most of the sample.
+While these results do not directly translate to the tendencies
+observed in the main paper, there is no other face seg-

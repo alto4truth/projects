@@ -1,0 +1,33 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+evaluated the translations as "high-quality" with
+minor errors in medical abbreviations.
+Such a multilingual coverage allows for a comprehensive evaluation of external knowledge integration strategies across a spectrum of languages,
+from well-supported higher-resource languages to
+underrepresented language families (Pfeiffer et al.,
+2022; Chang et al., 2024).
+4.1 Language of Retrieval
+We retrieve external evidence from the sources described in Section 3. Based on the multilingual
+availability of the sources, we aim to investigate
+an optimal strategy for multilingual retrieval in
+MMQA tasks. Therefore, we obtain results in three
+settings: monolingual, when retrieval is always
+in one language, i.e., English; multilingual, when
+the evidence is retrieved in the language of the
+question; and cross-lingual, when one part of the
+retrieval is done in English and the other in the
+language of the question Liu et al. (2025). In our
+experiments, we retrieve the same number of 10
+documents for every setting.
+4.2 Models
+To systematically evaluate the influence of different types and levels of external knowledge sources
+described in the preceding sections, we conducted
+comprehensive experiments u

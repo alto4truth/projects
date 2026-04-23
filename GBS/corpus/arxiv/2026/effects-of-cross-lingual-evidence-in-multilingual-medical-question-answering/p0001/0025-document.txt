@@ -1,0 +1,29 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+53) 78.53(4.49) 77.87(3.66) 74.4(5.06) 78.8(4.12) 77.07(6.94)
+Table 1: Performance comparison across different monolingual English retrieval methods, model sizes and languages.
+The models are grouped by the parameter size. The underlined and bold results show the best results per language
+(row), andbold textmeans the best performing model per parameter count (column). The ↓ indicates the drop in
+performance and = indicates no improvement compared to the baseline. Underlined results correspond to the best
+results for each language in a given retrieval setting.
+language models. Our experimental setup included
+the following models:
+• Qwen(Bai et al., 2023): the 8B, 14B, and
+32B parameter versions from Qwen 3, and the
+72B parameter instruction-tuned model from
+Qwen 2.5.
+• Llama(Touvron et al., 2023): Llama3.1Instruct models with 8B and 70B parameters.
+• Gemma(Team et al., 2025): Instructiontuned version of Gemma models with 12B
+and 27B parameters, andMedGemma(Sellergren et al., 2025) with 27B parameters.
+The goal of the model is to analyze the question,
+provide contextual documents that help to find the
+correct answer and choose the correct option. This
+enables us to investigate the tr

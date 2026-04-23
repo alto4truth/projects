@@ -1,0 +1,92 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+erence
+(e.g. Segmentation, Normal) Input Image Environment
+Albedo
+❄
+
+Enc
+Albedo
+(as target)
+Normal
+(as condition)
+iNOD
+(as target)
+Relit
+(as target)
+❄
+
+Dec
+Figure 3.The GeoRelight Pipeline.GeoRelight processes up to five target modalities, usingc switch to signal which ones are targets and
+conditions (the figure shows one specific usecase). It is guided by a global image conditionz I and a specific illumination conditionz E.
+being processed. Before being passed to DiT blocks, each
+modality’s embedding is broadcast toRH×W×C type and concatenated channel-wise to its corresponding latent. Furthermore, to ensure that a pixel at position (x,y) in one modality
+(e.g. relit image) can be spatially correlated with the same
+pixel in others (e.g. normal map) in the attention mechanism, we use ashared spatial positional embeddingto replace original temporal 3D RoPE [31] across all modalities,
+making the modality’s own position invariant. More specifically, we apply the same 2D RoPE to all modalities.
+Finally, the key to our framework’s flexibility is the
+modality switch maskc switch∈RH×W×1 . This binary mask,
+concatenated to each modality, signals whether it is a
+“clear” input condition (use 1) or a “noisy” target to be
+generated (use 0). This switch implicitly tells the model
+to either condition on this modality or to generate it. This
+mechanism is the core enabler for our strategic mixed-data
+training (Sec. 3.4) and allows for flexible, powerful control
+during inference, as demonstrated in our ablations.
+3.2. Joint Relighting and Reconstruction
+As illustrated in Figure 3, our model is designed to jointly
+denoise five target latent modalities from a single input imageI: intrinsic albedoz a, a segmentation maskz s, surface
+normalsz n, geometric shapez g, and final relit imagez IE.
+To guide this complex multi-modal generation, we introduce two distinct types of conditioning. We use the original input image asglobal condition. This image contains
+the core information about the subject’s identity, shape, and
+texture that all target modalities must share. Unlike UniRelight [9], which treats the input as just another modality to
+denoise, we concatenate latentz I channel-wise to all five
+target modalitiesz m, ensuring its information is present in
+every step of the joint denoising process uniformly.
+The second is the illumination condition E, which is required only for the relit imagez IE. A key challenge is that
+Eis a High Dynamic Range (HDR) map, which the pretrained LDR-based V AE cannot encode faithfully. To solve
+this, we follow the established practice of [12, 22] and decompose the HDR map into three LDR-compatible representations: a Reinhard tonemapped [30] panoramaE ldr, a
+normalized log-intensity mapE log, and a directional map
+Edir. These are encoded into a joint lighting latentz E.
+This latent is concatenated only to the relit image latent
+zIE, while zero-padded placeholders are used for all other
+modalities to maintain a consistent tensor shape.
+Thus, the full input for any single modality m in our DiT
+is a stack containing its noisy latentz m
+τ , the global conditionz I , its specific illumination condition (eitherz E or
+zeros), and our flexible conditioning embeddingscmodal and
+cswitch. The model is then optimized using a denoising score
+matching objective [13]. At inference, this design allows us
+to either generate all modalities from pure noise or, by using thec switch, provide any combination of clear modalities
+to guide the generation of the others.
+3.3. Isotropic Normalized Orthographic Depth
+As we established in Sec. 2.2 and 3.1, a V AE-friendly geometry representation is critical for our joint model. Standard point maps are corrupted by V AE encoding and normalized depth is anisotropic (Fig. 2). To solve this, we
+propose isotropic Normalized Orthographic Depth (iNOD),
+a simple yet effective representation that is dense, V AEfriendly, and perfectly preserves relative 3D geometry.
+The creation of an iNOD is straightforward. Given
+ground-truth metric depth and camera intrinsics (available
+during synthetic data creation), we first unproject the pixels to acquire a metric 3D point cloud. The key step is our
+isotropic 3D normalization: instead of scaling only the zaxis, we scale the entire 3D geometry to fit within a [-1, 1]
+bounding box based on its longest edge. This operation discards absolute scale but maintains the relative 3D geometry
+and aspect ratio of the subject. From this normalized 3D
+shape, we orthographically project it onto the XY-plane by
+simply taking the z-value of each point. This final orthographic depth map is naturally in the [-1, 1] range required
+by the pretrained V AE. We then assign this z-value back to
+the corresponding pixel to create a dense, pixel-aligned 2D
+map that represents a distortion-free 3D shape.
+This iNOD representation has all the properties we require. It is a V AE-friendly 2D image with 1-DoF that
+eliminates the noise artifacts seen in point map encoding
+with 3-DoF. Most importantly, because the normalization is
+isotropic, the 3D non-distorted shape can be recovered with
+a simple orthographic unprojection, eliminating the need
+for camera intrinsics during inference, which is a major advantage over standard depth maps. We find that V AE compression can create boundary artifacts due to nearest neighbor sampling, so we apply a simple dilation to the iNOD
+foreground, which results in a clean and robust geometry
+4

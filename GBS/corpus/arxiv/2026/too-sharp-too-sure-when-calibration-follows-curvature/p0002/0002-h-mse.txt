@@ -1,0 +1,26 @@
+title: Too Sharp, Too Sure: When Calibration Follows Curvature
+source: arxiv
+year: 2026
+document_id: too-sharp-too-sure-when-calibration-follows-curvature
+authors: Alessandro Morosini; Matea Gjika; Tomaso Poggio; Pierfrancesco Beneventano
+page: 2
+section: h-mse
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20614v1
+
+GN (θ) = 1
+n
+X
+i
+Ji(θ)⊤H MSE
+z,i Ji(θ) = 2
+K · 1
+n
+X
+i
+Ji(θ)⊤Ji(θ),
+so the eigenvalues ofH MSE
+GN (θ) are governed entirely by the JacobiansJi(θ), with no probability-dependent factordiag(p)−
+pp⊤ to drive curvature toward zero. Combined with the underconfidence analysis of Appendix E.1, this explains why neither
+sharpness nor training ECE collapse under MSE in the interpolation regime, in contrast with the CE case.
+33

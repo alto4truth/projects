@@ -1,0 +1,22 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 61
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+ly favored certain stereotypes across the 20 runs.
+As shown in Figure 2, the prevalence of stereotyped responses varies across models. LLaMA-3 exhibited the highest
+tendency toward stereotypes, producing a notably larger number of stereotyped answers (112) than all other models.
+Gemini-2.5-Flash, Gemma-3, and Gemini-2.0-Flash displayed moderate levels of stereotyped responses (with 12, 11, and
+9 stereotyped answers, respectively), while GPT-4.0 showed a comparatively lower incidence with five stereotyped
+answers. Claude-Sonnet-4, however, produced no stereotyped responses, highlighting clear differences in how models
+responded to the different questions with negative polarity in ambiguous context.
+In disambiguated contexts (see Figure 3), except for Claude-Sonnet-4, Gemini-2.0-Flash, and GPT-4.0, the remaining
+LLMs produced stereotyped errors, with LLaMA-3 showing the highest stereotyped wrong answers (58), followed by
+Gemma-3 and Gemini-2.5-Flash, which showed the lowest incidence of stereotyped answers, producing three and
+one such stereotyped responses, respectively. While half of the evaluated LLMs produced no stereotyped answers
+in negative polarity, the remaining models exhib

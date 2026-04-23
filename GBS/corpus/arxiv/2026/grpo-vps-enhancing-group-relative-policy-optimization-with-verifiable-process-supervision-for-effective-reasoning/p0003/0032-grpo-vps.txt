@@ -1,0 +1,38 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+Published as a conference paper at ICLR 2026
+nal serves as a lightweight yet effective indicator of reasoning quality, complementing trajectory-level outcome signals. Additional qualitative examples illustrating this alignment with human judgment are provided
+in the Appendix A.5.
+Sample efficiency and optimization stability.Recent studies prove dense reward signals can improve the
+sample efficiency and optimization stability of reinforcement learning systems by providing more frequent
+and informative feedback during training (Setlur et al., 2024; Chan et al., 2024). Our method introduces
+verifiable, model-free process supervision to construct dense, segment-wise signals that guide the optimization process more precisely than trajectory-level binary rewards alone. As shown in Figure 3, our method
+achieves faster convergence and more stable gradient updates compared to standard GRPO.
+4.5 GENERALREASONINGBENCHMARKS
+GPQAMMLUPro
+TheoremQA WebInstruct
+20
+40
+60
+80
+(a) Accuracy (%)
+GPQAMMLUPro
+TheoremQA WebInstruct
+0
+568
+1137
+1706
+2275
+(b) Response Length
+Base GRPO Ours
+Figure 4: Performance on general reasoning tasks.
+To verify the generalization capabilities of our
+method beyond specific

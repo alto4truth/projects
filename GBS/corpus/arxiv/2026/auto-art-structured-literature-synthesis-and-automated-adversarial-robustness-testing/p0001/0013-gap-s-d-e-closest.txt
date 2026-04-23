@@ -1,0 +1,50 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+Central Claim: Robustness is only as credible as the evaluation protocol
+Ensembles reveal
+overestimation
+C1,C3
+avg ̸= worst-case
+robustness
+C2,C4
+Gradient integrity
+prerequisite
+C6,C7
+Proxies accel.
+not replace
+C5,C1
+Suites vs.
+proxies
+DBP viable
+vs. broken
+Avg progress
+vs. worst-case
+Multi-attack
+training recipe?
+Agents replace
+human red teams?
+ClaimPillarsContestedFrontier
+Figure 3:Knowledge map of adversarial robustness evaluation. Four
+layers: established central claim, four supporting pillars with corpus
+evidence (C1–C7), three contested zones, and two frontier questions.
+uation protocol that measures it. No single claim fully
+unifies the field; a competing centre—robustness should
+be certified, not just tested—exists in the randomisedsmoothing lineage but is minority-held in this corpus.
+2.Supporting Pillars:
+(a) Ensemble attacks reveal systematic overestimation—
+supported by C1, C3.
+(b) Multi-attack: average ̸= worst-case robustness—
+supported by C2, C4.
+(c) Gradient integrity is prerequisite to valid evaluation—
+supported by C6, C7.
+(d) Proxy metrics can accelerate but not replace attackbased evaluation—supported by C5, C1.
+3.Contested Zones:
+(a) Adaptive attack suites as g

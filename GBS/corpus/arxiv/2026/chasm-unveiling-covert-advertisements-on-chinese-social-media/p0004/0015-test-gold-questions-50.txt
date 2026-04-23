@@ -1,0 +1,50 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+Conversely, MLLMs under zero-shot settings frequently misclassify normal posts as covert advertisements, resulting in lower precision. These findings underscore the high effectiveness of our dataset in
+enhancing covert advertisement detection. More detailed error analysis is in Section 5.1.
+4.3 Which parts of posts help detect covert advertisements?
+Precision Recall F1 Score AUC
+Metric
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0Score
+0.68
+0.44
+0.54
+0.71
+0.65
+0.59
+0.62
+0.770.78
+0.73
+0.76
+0.85
+Impact of Removing Different Modalities
+w/o comments w/o images Baseline
+Figure 3: Impact of Removing Different Modalities on
+CHASM. Removing either images or comments significantly
+degrades model performance.
+We utilize the best-performing model,
+the fine-tuned Qwen2.5-7B, for our
+experiments. We retrained the model
+using the same hyperparameters in
+the absence of images or comments.
+Our results, shown in Figure 3, indicate that removing either images
+or comments significantly degrades
+the model’s performance, highlighting that covert advertisement detection is a multi-modal task, and comments also play a critical role in enabling accurate detection.
+5 Discussion
+In this section, we provide an in-depth
+er

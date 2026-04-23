@@ -1,0 +1,25 @@
+title: Interval POMDP Shielding for Imperfect-Perception Agents
+source: arxiv
+year: 2026
+document_id: interval-pomdp-shielding-for-imperfect-perception-agents
+authors: William Scarbro; Ravi Mangal
+page: 4
+section: typing-andbeliefsemantics
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20728v1
+
+pdate, then the beliefs actually reachable
+after the update are contained in the concretization of the
+abstract envelope produced by our propagation step. Template
+polytopes are one concrete realization of this recipe: they
+preserve affine prediction, admit conservative relaxations for
+the bilinear coupling introduced by uncertain observation
+likelihoods, and reduce extremal query evaluation to LP.
+This viewpoint also clarifies portability. The method does
+not rely on the interval perception uncertainty model being
+rectangular. More generally, it applies to any perception uncertainty model represented by a convex polytope of admissible
+observation probabilities: the prediction step remains affine,
+the uncertain observation update can still be lifted into a
+convex belief-envelope computation, and runtime admissibility
+is still obtained by optimizing linear objectives over that
+envelope.

@@ -1,0 +1,25 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+GPT-4o (ZS) 0.464 0.836 0.597 0.851
+Qwen2.5 (ZS) 0.473 0.378 0.421 0.660
+InternVL(ZS) 0.289 0.662 0.403 0.717
+Overall, GPT-4o achieved the highest F1 score
+in the zero-shot setting, while DeepSeek-V3 performed best with in-context learning. Despite
+some models showing high recall, precision remained low across both settings. Large-scale
+open-source MLLMs achieved performance
+comparable to that of proprietary MLLMs, while
+both of them outperformed small-scale opensource MLLMs. Among small-scale opensource models, InternVL and Qwen2.5-7B perform better than others.
+However, even the top-performing models, GPT4o and DeepSeek-V3, arenotsufficiently reliable for detecting covert advertisements, especially regarding the most concerned metric, F1score; Their best performances are only 0.597
+and 0.592, respectively. The results empirically show the inherent complexity and subtlety of covert
+advertisements, indicating that it is challenging for MLLMs to grasp the fine-grained human standards
+for identifying covert advertisements through prompting alone.
+Reasoning MLLMs, such as Step-R1-V-Mini and Gemini 2.5 Pro, achieve relatively good performance
+in both zero-shot and in-context learning

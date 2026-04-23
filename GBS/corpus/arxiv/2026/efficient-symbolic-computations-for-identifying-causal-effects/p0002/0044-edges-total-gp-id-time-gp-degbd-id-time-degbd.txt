@@ -1,0 +1,25 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 2
+section: edges-total-gp-id-time-gp-degbd-id-time-degbd
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+not identify any graph while our method is still able to verify rational identifiability of many graphs
+within reasonable time.
+7 Comparison to Existing Sufficient Criteria
+In this section, we show that our algorithm subsumes many polynomial-time sufficient criteria in
+the literature under a bound on the maximal number of parents. This means that our algorithm
+certifies rational identifiability for a given input graph ifdis large enough whenever the given
+criteria certify it. A caveat is that the criteria from the literature are polynomial time, while our
+algorithm is, in general, only quasi-polynomial time. On the other hand, our algorithm provably
+finds an identification formula up to degreedwhenever such a formula exists, while the criteria in
+the literature are only sufficient conditions. To show that Algorithm 1 subsumes another criterion,
+observe that by Corollary 4.5 it suffices to show that the criterion yields an identifying order together
+with a set of identifying polynomials such that the maximum degree of the identifying polynomials
+is bounded.
+Assumption 7.1.There is a constants≥1such that|pa(v)| ≤sfor allv∈V.
+The Half-Trek Criterion by Foygel et al. (2012a, Theorem 1)

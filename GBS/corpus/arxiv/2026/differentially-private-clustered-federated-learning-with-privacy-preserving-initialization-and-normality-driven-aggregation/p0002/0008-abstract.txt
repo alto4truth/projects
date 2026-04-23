@@ -1,0 +1,40 @@
+title: Differentially Private Clustered Federated Learning with Privacy-Preserving Initialization and Normality-Driven Aggregation
+source: arxiv
+year: 2026
+document_id: differentially-private-clustered-federated-learning-with-privacy-preserving-initialization-and-normality-driven-aggregation
+authors: Jie Xu; Haaris Mehmood; Rogier Van Dalen; Karthikeyan Saravanan; Mete Ozay
+page: 2
+section: abstract
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20596v1
+
+against imbalanced client participation.
+• Our extensive experiments demonstrate that PINA consistently
+outperforms existing DP-FL methods on non-IID data by an average of2.9%in test accuracy, particularly in more realistic,
+naturally non-IID environments.
+2. PRELIMINARY
+2.1. Federated Learning (FL)
+Overview of FL: At the start of each communication roundt,
+a global modelW t is provided by the server and a randomly
+sampled user setK t is constructed. Each userk∈ K t trains
+the model locally to obtainW t
+k and shares the model difference
+∆t
+k =W t
+k −W t back to the server. The server aggregates the
+updatesW t+1 =W t + 1
+|Kt|
+P
+k∈Kt ∆t
+k, and then proceeds to the
+next round.
+2.2. Differential Privacy
+Differential privacy (DP) provides a formal definition to quantify the
+amount of private information an algorithm leaks regarding its input
+data. Formally, DP is defined as follows:
+Definition (Differential Privacy [3])A randomized mechanismM:
+D → Rsatisfies (ϵ,δ)-DP if for any pair of adjacent datasetsDand
+D′, and any subset of outputsS ⊆ R, we have
+Pr[M(D)∈ S]≤exp(ϵ)·Pr[M(D ′)∈ S] +δ,(1)
+where (ϵ,δ) is known as the privacy budget.
+Following [2], we use Gaussian mechanism [13] with noi

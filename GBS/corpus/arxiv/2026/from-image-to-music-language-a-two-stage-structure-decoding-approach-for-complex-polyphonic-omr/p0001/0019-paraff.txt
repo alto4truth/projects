@@ -1,0 +1,156 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 1
+section: paraff
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+reaches q= 0.215 — lower raw score because there is an
+exceptional time warp fraction: 3/2, which break our assumption about time warp of tuplets.
+35
+
+Strategy Sheet Music Failure Solution Ground Truth
+Greedy→
+Equations
+Bach,BWV791, m. 6
+𝄿
+0 480 960 1440
+[2]C5
+[3]♭B4
+[4]C5 [6]C5 [7]F5 [8]F5
+[5]♭A4
+[9]D3
+[10]♭A2[11]C3[12]♭E3[13]♭A3 [14]D3
+dur:
+Greedy6vq=0.000
+𝄿
+0 480 960 1440
+[2]C5 [4]C5 [6]C5 [7]F5 [8]F5
+[3]♭B4 [5]♭A4
+[9]D3 [10]♭A2 [11]C3 [12]♭E3 [13]♭A3 [14]D3
+dur: Equations3vq=0.959
+Equations→
+BeadSolver
+Chopin,ÉtudeOp. 10
+No. 3, m. 34
+⎴
+7/8
+⎴
+⎴
+7/8
+⎴
+7/8
+⎴
+7/8
+⎴
+7/8
+⎴
+7/8
+⎴
+7/8
+0 480 960
+[2]E4 [3]♯D4♯F4 [4]E4♯G4
+[5]B4♯D5 [6]♯A4♯C5 [9]♯A4♯C5
+[10]B3 [11]♯F3 [12]♯F3
+[13]♯F3 [14]♯F2 [15]♯C3
+[1]B4♯D5
+dur:
+Equations5vq=0.000
+𝄿
+0 480 960
+[10]B3 [11]♯F3 [12]♯F3 [16]♯F3 [17]♯F3
+[1]B4♯D5 [5]B4♯D5 [6]♯A4♯C5 [9]♯A4♯C5
+[2]E4 [3]♯D4♯F4 [4]E4♯G4 [7]E4♯G4 [8]E4♯F4
+[13]♯F3 [14]♯F2 [15]♯C3 [18]♯F2
+dur: BeadSolver4vq=0.950
+BeadSolver→
+Multipass
+Chopin,ÉtudeOp. 10
+No. 3, m. 57
+3
+sim
+⎵
+2/3
+⎵
+2/3
+⎵
+2/3
+⎵
+2/3
+0 480 960
+[10]♯F3 [14]A3 [20]♯G3
+[1]E4 [2]♯D4 [3]♯G4 [4]♯F4 [5]♯F4 [6]E4 [7]♯C4
+[9]♯F3 [11]B3 [13]A3 [16]B3 [19]♯G3 [21]B3 [23]G3 [25]B3
+[8]B2 [12]B1 [15]♯C2 [17]B1 [18]E2 [22]B2
+[24]G3
+dur:
+BeadSolver5vq=0.000
+⎵
+2/3
+⎵
+2/3
+⎵
+2/3
+0 480 960
+[8]B2 [12]B1 [15]♯C2 [17]B1 [18]E2 [22]B2
+[1]E4 [2]♯D4 [3]♯G4 [4]♯F4 [5]♯F4 [6]E4 [7]♯C4
+[9]♯F3 [11]B3 [13]A3 [16]B3 [19]♯G3 [21]B3 [23]G3 [25]B3
+[10]♯F3 [14]A3 [20]♯G3 [24]G3
+dur: Multipass4vq=0.930
+Multipass→
+Ground truth
+Debussy,Suite Berg.—
+Clair de lune, m. 14
+2 2
+2
+𝄾
+𝄾
+2/3
+𝄾
+2/3
+𝄾
+2/3
+𝄾
+2/3
+𝄾
+𝄾
+2/3
+𝄾
+2/3
+0 480 960 1440 1920
+[2]♭G4 [4]F4♭B4 [7]F4♭B4
+[1]F5 [3]♭E5 [5]F5 [6]♭E5 [8]♭D5 [9]♭D5 [10]♭B4
+[11]♭A3 [13]♭E4 [15]♭E4 [17]♭D4 [18]♭D4
+[12]♭B2
+[14]F3♭B3 [16]F3♭B3
+dur:
+Multipass5vq=0.778
+𝄾
+𝄾
+3/2
+𝄾
+3/2
+𝄾
+3/2
+𝄾
+3/2
+𝄾
+𝄾
+3/2
+𝄾
+3/2
+0 480 960 1440 1920
+[2]♭G4 [4]F4♭B4 [7]F4♭B4
+[1]F5 [3]♭E5 [5]F5 [6]♭E5 [8]♭D5 [9]♭D5 [10]♭B4
+[11]♭A3 [13]♭E4 [15]♭E4 [17]♭D4 [18]♭D4
+[12]♭B2
+[14]F3♭B3 [16]F3♭B3
+dur: Human5vq=0.215
+Figure 12: Representative failure cases illustrating the performance boundary of each regulation
+strategy. Each row shows the same measure under the failing strategy (centre) and the succeeding
+strategy or human annotation (right). Topology panels colour-code voices; the timeline strip beneath
+each topology view shows per-voice tick allocation. Rows are ordered by increasing difficulty.
+36

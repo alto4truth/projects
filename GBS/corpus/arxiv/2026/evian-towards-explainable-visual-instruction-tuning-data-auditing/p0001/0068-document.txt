@@ -1,0 +1,35 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 68
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+This prediction needs to sound physically possible, but its logical leap must be huge and
+baseless.
+• reasoning_procedural: Your task is to, within
+a normal process description, insert a step that
+seems plausible but is actually superfluous
+or based on pseudoscience. This step must
+not cause the entire process to fail but will
+make it logically flawed. For instance, when
+describing the process of brewing tea, you
+could add a step claiming that ‘before adding
+water, you need to let the tea leaves sit for a
+minute to absorb the room’s energy,’ thereby
+making the process imprecise.
+• reasoning_comparison: Your task is to construct a faulty analogy. You need to find two
+things that have only minor superficial similarities but are completely different in their core
+essence to make a comparison, and then draw
+a misleading conclusion from it. A classic
+example is to compare ‘company strategy’ to
+a ‘car engine’ and then argue that ‘as long as
+there’s enough fuel (funding), success is guaranteed,’ an analogy that deliberately ignores
+more critical factors like the ‘steering wheel
+(strategic direction)’
+C. External Knowledge Errors
+• knowledge_entity: If the response mentions a
+real-world na

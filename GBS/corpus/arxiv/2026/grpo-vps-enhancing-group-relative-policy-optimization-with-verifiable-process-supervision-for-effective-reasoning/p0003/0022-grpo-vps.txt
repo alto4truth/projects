@@ -1,0 +1,26 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+Published as a conference paper at ICLR 2026
+Table 1: Experimental results on Qwen-Math Models. BASE denotes the corresponding Qwen or Gemma
+base model without any fine-tuning.
+Model AMC23 AIME24 MATH OLYMPIAD OverallPass@1 AvgTokenPass@1 AvgTokenPass@1 AvgTokenPass@1 AvgTokenPass@1 AvgToken
+Qwen2.5-Math-1.5B
+Outcome Supervision OnlyBASE 16.3 5534 5.8 5782 22.6 5008 19.0 4624 15.9 5237GRPO 46.9 3872 18.3 4655 68.8 2749 30.0 3811 41.0+25.1 3772−28.0%
+DrGRPO 44.4 3681 20.04878 70.5 2757 30.8 3707 41.4+25.5 3756−28.3%
+GSPO 45.0 4044 13.3 5146 68.0 2778 28.9 3727 38.8+22.9 3924−25.1%
+With Process SupervisionGRPO w/ Skywork-1.5B50.0 3527 11.7 4738 71.4 2758 29.8 3403 40.7+24.8 3607−31.1%
+S-GRPO 46.3 3535 14.2 4580 67.5 2664 28.33313 39.1+23.2 3523−32.7%
+GRPO-VPS 55.0 3425 15.0 4278 72.2 2391 32.1 3326 43.6+27.7 3355−35.9%
+Qwen2.5-Math-7B
+Outcome Supervision OnlyBASE 23.8 4485 10.8 5390 31.9 4370 18.8 4699 21.3 4736GRPO 62.5 3552 30.0 4730 75.4 2671 36.8 3527 51.2+29.9 3620−23.6%
+DrGRPO 64.4 3496 28.3 4449 75.5 2700 35.9 3490 51.0+29.7 3534−25.4%
+GSPO 60.6 3725 30.8 4191 75.2 2661 36.8 3481 50.9+29.6 3515−25.8%
+With Process SupervisionEurus-2-7B-PRIME 65.04368 15.0 5731 78.33024 42.24405

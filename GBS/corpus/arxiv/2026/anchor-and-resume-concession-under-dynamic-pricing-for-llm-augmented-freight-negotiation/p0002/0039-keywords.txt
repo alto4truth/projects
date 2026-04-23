@@ -1,0 +1,24 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+oulware), while maintaining zero retractions
+by construction. All three fixed- 𝛽 baselines produce retractions under identical conditions. In a comparison experiment
+(3,375 negotiations), the framework achieves performance
+comparable to a 20-billion-parameter unconstrained LLM
+broker. A robustness test against LLM-powered carrier agents
+(6,750 negotiations) confirms that the framework generalizes
+beyond scripted opponents, achieving 75.8% agreement with
+comparable savings.
+Natural extensions include multi-issue negotiation (pickup
+windows, detention, payment terms), carrier-specific 𝑐 values
+learned from historical interactions, and calibration against
+real carrier behavior. The sensitivity analysis (Section 5.4)
+suggests that 𝑐 could be learned from historical outcomes
+using Bayesian optimization or contextual bandits.

@@ -1,0 +1,21 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+penAI et al., 2024).
+•MURI-IT (Wikipedia Subset) (Köksal et al., 2024):A dataset containing instructionoutput pairs across 200 languages. We specifically extracted theWikipedia subsetto ensure samples reflect factual, encyclopedic prose and are knowledge-rich. Furthermore,
+MURI-IT contains samples combining different languages. As our goal is to ablate classifier behaviour for different languages, we decided not to include multiple languages in a
+given sample.
+•EuroBlocks-SFT-Synthetic (Martins et al., 2025):Multilingual synthetic data for Supervised Fine-Tuning used to train the EuroLLM 9B Instruct model. It spans 35 languages.
+•WikiQA (Apertus et al., 2025): A dataset linking real-world user queries to factual
+Wikipedia answer sentences. With 65 languages, it provides a stronger focus on lowresource languages.
+Negative Anchors (FineWeb2).We use the raw FineWeb2 (Penedo et al., 2025) corpus as our
+source of negative samples. We assume a random sample from this web-scale crawl primarily contains boilerplate, informal prose, or noise.
+3.2 SAMPLING ANDDATAPREPARATION
+Balancing and Preprocessing.To ensure consistency, all samples are processed into 768dimensional embeddings using the

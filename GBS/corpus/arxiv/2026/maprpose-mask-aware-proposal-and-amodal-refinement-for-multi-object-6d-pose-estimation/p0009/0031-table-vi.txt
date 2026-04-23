@@ -1,0 +1,33 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 9
+section: table-vi
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+Performance Sensitivity to Batch Configurations.
+N (N×B) GPU Utilization FPS (Multi-object) BOP (AR %)
+3 3×7 = 21 70% 1.20 76.1
+5 5×7 = 35 92% 1.47 76.5
+7 7×7 = 49 94% 1.50 76.5
+point-based RGB-XYZ re-projection directly applies rigid
+transformations and fast image-space warping to pre-rendered
+RGB-XYZ maps, thereby bypassing the expensive mesh
+rasterization process. This experiment isolates the rendering
+component while keeping the rest of the tensorized refinement
+pipeline unchanged. As shown in Table V, our point-based
+approach achieves nearly identical performance to the meshbased baseline, with only minor differences of −0.3% in BOP
+AR.
+These results indicate that the geometric and photometric
+information captured by our RGB-XYZ spatial warping is
+sufficient to guide the AMPR mechanism. The small accuracy
+gap represents an acceptable trade-off given the substantial
+computational savings, particularly in multi-instance and multihypothesis refinement scenarios (further analyzed in Sec. IV-E).
+E. Runtime Analysis
+We evaluate the computational efficiency of MAPRPose
+from two perspectives: single-object latency and system-level
+throughput.
+As shown in Table III, our method achieves

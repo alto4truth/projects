@@ -1,0 +1,108 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 5
+section: a-proofs
+chunk: 53
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+D(s′
+b, g)−M πD(s′
+a, g)]≥0. Therefore, we have a lower bound on the single-step cost
+difference:
+M πD(sb, a∗(sb), g)−M πD(sa, a∗(sa), g)≥(1−γ)∆ Φ.
+19
+
+Published as a conference paper at ICLR 2026
+Now, let’s consider the two shortest-path trajectories starting froms 1 ∈S k−1 ands 2 ∈S k.
+Letτ ∗
+1 = (s 1,0, s1,1, . . . , s1,k−1 =g)be the trajectory starting froms 1,0 =s 1. Letτ ∗
+2 =
+(s2,0, s2,1, . . . , s2,k =g)be the trajectory starting froms 2,0 =s 2. By definition of the shortest-path
+policy, we haves 1,t ∈S k−1−t ands 2,t ∈S k−t fort∈[0, k−1].
+The value functions are the sum of discounted negative costs:
+V ∗(s1, g) =−
+k−2X
+t=0
+γtM πD(s1,t, a∗(s1,t), g)
+V ∗(s2, g) =−
+k−1X
+t=0
+γtM πD(s2,t, a∗(s2,t), g)
+Let’s analyze the differenceV ∗(s1, g)−V ∗(s2, g):
+V ∗(s1, g)−V ∗(s2, g) =
+k−1X
+t=0
+γtM πD(s2,t, a∗(s2,t), g)−
+k−2X
+t=0
+γtM πD(s1,t, a∗(s1,t), g)
+=γ k−1M πD(s2,k−1, a∗(s2,k−1), g) +
+k−2X
+t=0
+γt
+h
+M πD(s2,t, a∗(s2,t), g)−M πD(s1,t, a∗(s1,t), g)
+i
+.
+For each term in the summation (fort∈[0, k−2]), we haves 1,t ∈S k−1−t ands 2,t ∈S k−t.
+Applying our single-step cost difference result, we get:
+M πD(s2,t, a∗(s2,t), g)−M πD(s1,t, a∗(s1,t), g)≥(1−γ)∆ Φ.
+The last term for theτ ∗
+2 trajectory isM πD(s2,k−1, a∗(s2,k−1), g). Sinces 2,k−1 ∈S 1, its successor
+isg∈S 0. We knowM πD ≥0. So we can lower bound the entire difference:
+V π∗
+W (s1, g)−V π∗
+W (s2, g)≥γ k−1 ·0 +
+k−2X
+t=0
+γt(1−γ)∆ Φ
+= (1−γ)∆ Φ
+k−2X
+t=0
+γt
+= (1−γ)∆ Φ
+1−γ k−1
+1−γ
+= (1−γ k−1)∆Φ.
+Sincek≥1andγ∈(0,1), the term(1−γ k−1)is strictly positive. As∆ Φ >0, the entire lower
+bound is strictly positive. This completes the proof.
+Theorem A.1(Equivalence of the Q-learning Optimum and the Shortest Path).Under Assumptions A.1-A.4 and noting thatrW (s, a∗, g)> r W (s, abad, g)(Sec A.4), the greedy policy with respect
+toQ ∗ is the optimal shortest-path policyπ ∗.
+Proof.We must show that for any state(s, g), the shortest-path actiona ∗ =π ∗(.|s, g)is the unique
+maximizer of the action-value functionQ ∗(s, a, g)and is therefore, the same action chosen by
+πgreedy(.|s, g). That is, for any non-shortest-path actiona bad ̸=a ∗:
+Q∗(s, a∗, g)> Q ∗(s, abad, g).
+Let’s analyze the difference∆Q=Q ∗(s, a∗, g)−Q ∗(s, abad, g). Let the successor states bes ∗ =
+f(s, a ∗)ands bad =f(s, a bad).
+∆Q=
+h
+rW (s, a∗, g) +γV ∗(s∗, g)
+i
+−
+h
+rW (s, abad, g) +γV ∗(sbad, g)
+i
+=
+h
+−M πD(s, a∗, g) +γV ∗(s∗, g)
+i
+−
+h
+−M πD(s, abad, g) +γV ∗(sbad, g)
+i
+=
+h
+M πD(s, abad, g)−M πD(s, a∗, g)
+i
+| {z }
+Term 1
++γ
+h
+V ∗(s∗, g)−V ∗(sbad, g)
+i
+| {z }
+Term 2
+20

@@ -1,0 +1,33 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 2
+section: a-weighted-angle-distance-on-strings-3
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+y.
+Definition 2.6.Let Σ be a finite alphabet, and letρ >0 be arbitrary. We define the
+ρ-weighted angle distanced ρ : Σ∗ ×Σ ∗ →R ≥0 as
+dρ : (S, T)7→
+X
+n≥1
+ρnθn(S, T),
+where
+θn(S, T) :=θ([S] n,[T] n).
+Note thatθ([S] n,[T] n) = 0 whenevern >max (|S|,|T|), sod ρ is well-defined even when
+ρ≥1.
+In essence, for each scalen, we embed a stringSas itsn-gram count vector [S] n, and compare two strings by the angle between these vectors (so we compare patterns, not lengths).
+Thend ρ(S, T) is given by summing these angular discrepancies across all scales, with an exponential weightρ n that lets you tune how much you care about longer vs. shorter structure.
+Example 2.7.Let Σ ={a, b}, takeS=abandT=ba, and fixρ >0. At scalen= 1, both
+strings have the same unigram counts, so
+[S]1 ={a: 1, b: 1}= [T] 1
+and thusθ 1(S, T) = 0. At scalen= 2, the bigram vectors are supported on different
+coordinates,
+[S]2 ={ab: 1},[T] 2 ={ba: 1},
+so [S] 2 and [T] 2 are orthogonal, andθ 2(S, T) =π/2. All higherncontribute 0, hence
+dρ(S, T) =ρ 2 · π
+2 .
+Proposition 2.8.For anyρ >0, the mapd ρ : Σ∗ ×Σ ∗ →R ≥0 is a metric.

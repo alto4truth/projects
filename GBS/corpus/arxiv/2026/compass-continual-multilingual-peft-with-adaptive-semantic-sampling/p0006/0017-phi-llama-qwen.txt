@@ -1,0 +1,58 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 6
+section: phi-llama-qwen
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+learned score that integrates multiple
+signals: distribution divergence, performance degradation, uncertainty increase, and user feedback signals.
+30
+
+Published in Transactions on Machine Learning Research (11/2025)
+Alternatively, consider that the data-centric approach of COMPASS-ECDA is complementary to parametercentric continual learning methods. A promising avenue is to integrate COMPASS-ECDA with the parameter
+preservation mechanisms of methods like CURLoRA. A hybrid system combining targeted rehearsal of
+distributional anchors with principled parameter regularization beyond EWC could prove highly robust.
+Addressing bias propagation requires integrating fairness constraints into the sampling objective. Future
+work should explore debiasing objectives that penalize selection of stereotypical associations and cluster-level
+auditingtoidentifywhethercertaintopics(e.g., gender, religion, socioeconomicstatus)aredisproportionately
+represented or omitted. Privacy-preserving Cluster interpretability methods, such as Clio Tamkin et al.
+(2024), may provide human oversight of the selection process in real-world applications.
+Ultimately, the solution to the LRL data scarcity problem lies beyond any single algorithm, underscoring
+the importance of large-scale, collaborative data creation and curation efforts. Initiatives like SeaCrowd,
+which is building comprehensive, standardized corpora for nearly 1,000 Southeast Asian languages, are
+essential high-quality, localized datasets and benchmarks needed to train and evaluate equitable multilingual
+models (Lovenia et al., 2025). While COMPASS provides an efficient framework for leveraging existing data,
+the long-term solution requires expanding the multilingual data ecosystem itself.
+Broader Impact Statement
+The motivation for this work is to address and mitigate linguistic inequality prevalent in LLMs, thereby
+making advanced technologies more accessible and effective for speakers of low-resource languages. By
+improving model performance in a parameter- and data-efficient manner, our framework has the potential to
+foster greater digital inclusion and enable development of culturally and contextually relevant AI applications
+in underserved communities. Furthermore, enhancing the multilingual capabilities of base models is a crucial
+prerequisite for developing robust and equitable cross-lingual safety and alignment mechanisms, reducing the
+risk of users inadvertently bypassing safety guardrails when interacting in non-English languages.
+However, improved multilingual generation could be leveraged for malicious purposes, such as creating more
+convincing and targeted misinformation, spam, or propaganda across a wider range of languages, potentially
+impacting communities that are not well-equipped to detect or counter such threats. Additionally, our datacentric approach is dependent on the quality and composition of the underlying data sources and embedding
+models. The framework could inadvertently amplify existing societal biases present in the auxiliary data
+pool or in the multilingual text encoder used for semantic clustering. COMPASS does not explicitly audit
+or correct for bias, meaning that if the target data distribution itself reflects biases, the model will learn to
+replicate them.
+Beyond encoder biases, COMPASS’s data selection strategy could amplify biases present in the auxiliary data
+pool. High-performing semantic clusters are preferentially sampled, which may overrepresent majority viewpoints or Western-centric content even within non-Western languages, potentially marginalizing alternative
+cultural or institutional frameworks in affected communities.
+Our distribution-aware sampling prioritizes auxiliary data matching target usage patterns, which may inadvertently sample culturally sensitive content (e.g., indigenous knowledge, minority language expressions,
+religious texts) without proper cultural context or community consent. While COMPASS does not modify
+such content, the selection and repurposing of low-resource language data raises ethical questions about data
+sovereignty and appropriate use that warrant engagement with linguistic communities, especially those that
+have less agency in dictating data usage concerns.
+Lastly, the continual adaptation paradigm in COMPASS-ECDA requires periodic retraining cycles, which
+has associated environmental costs. While adapter-based approaches are more efficient than repeatedly
+training full models, production deployments should carefully consider the environmental impact of update
+frequency and explore strategies such as batching updates across multiple languages to reduce computational
+overhead.
+31

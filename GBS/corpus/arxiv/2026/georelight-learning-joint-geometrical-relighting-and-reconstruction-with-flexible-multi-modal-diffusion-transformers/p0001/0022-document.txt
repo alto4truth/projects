@@ -1,0 +1,94 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+thetic data and in-the-wild
+images. It is sourced from the Codec Avatar Studio [25]
+and Relightable Full-Body Gaussian Codec Avatars [37]
+datasets.
+10
+
+Figure 12.Robustness of our Auto-Labeler.Our auto-labeled
+albedo (shown) and other intrinsics are consistent across multiple
+views of the same subject from our Dome dataset, demonstrating
+the high quality of our pseudo-ground-truth.
+Paired Data CreationThis dataset is critical because its
+light stage capture setup, which employs 1024 individually
+controllable white LED light sources with known locations,
+allows us to create paired real-world training data. The
+captured videos consist of alternating fully-lit frames and
+partially-lit frames (random 10-20 lights) at 60 Hz.
+Due to fast motion, we cannot reliably warp frames to
+perform traditional image-based relighting as in [17, 26,
+28]. Hence, we treat neighboring frames as the paired input and relit image. To generate the corresponding illumination conditionE, we map the 3D LED light locations and
+intensities from the partially-lit frame to an equirectangular
+image (Fig. 11, simulating a sparse environment map. This
+process provides us with realistic, photometrically-aligned
+pairs of (Input, Target Light, Target Relit Image), which we
+use for the "Default" and "Rendering" training modes (Table 1 in main paper).
+7.3. In-the-wild Data
+To further enhance diversity and photorealism, we use a
+large-scale in-the-wild dataset. We sample 10K human images from the CosmicMan [21] and ReLaion [19] datasets
+as our data pool.
+Label ScarcityThis dataset is defined by what it lacks.
+UnlikeSynthandDome,ITWimages have no groundtruth intrinsics, no paired relit image, and no known illumination conditionE. It is used exclusively for our
+"Intrinsic→Relit" task.
+7.4. Auto-Labeling Process
+The "auto-labeling" process is the important component of
+our strategic mixed-data training, inspired by [22, 26]. We
+use the model trained exclusively on ourSynthdataset
+(Stage 1) as our "auto-labeler."
+We run this model in inference mode over our entire
+Dome and ITW datasets. For each real-world image, we
+generate and save the four corresponding pseudo-groundtruth intrinsic maps: albedo (z a), segmentation mask (z s),
+surface normals (z n), and our iNOD geometry (z g). As
+shown in Fig 12, this auto-labeler is surprisingly robust,
+generating high-quality, view-consistent intrinsics even for
+real-world subjects. This process is what enables us to use
+the Dome and ITW datasets for our advanced training tasks
+in Stage 2.
+8. Additional Details on iNOD
+Our novel geometry representation, isotropic Normalized
+Orthographic Depth (iNOD), is a core contribution of our
+work. Unlike point map which is unsuitable for latent diffusion due to the noise introduced after encoding and decoding (Fig. 13), our iNOD is naturally suitable for being
+applied in latent diffusion model. We provide a more detailed algorithm for its creation and a justification for our
+dilation-based boundary refinement.
+8.1. iNOD Creation Algorithm
+Algorithm 1iNOD Creation from a Metric Depth Map
+1:Input:metric_depth(H, W),cam_intrinsics
+(K)
+2:Output:inod_map(H, W)
+3:
+4:Step 1: Unproject to 3D point cloud
+5:pixels_uv←create_pixel_grid(H, W)
+6:cam_points←unproject(pixels_uv,
+metric_depth,K)
+7:
+8:Step 2: Find scaling factor for isotropic normalization
+9:min_bound←min_axis(cam_points.xyz)
+10:max_bound←max_axis(cam_points.xyz)
+11:max_edge←max(max_bound-min_bound)
+12:
+13:Step 3: Apply isotropic normalization
+14:center←(min_bound+max_bound) / 2
+15:norm_points←(cam_points.xyz-center) /
+max_edge
+16:
+17:Step 4: Create map via orthographic projection
+18:iNOD←create_empty_map(H, W, value = 0)
+19:fori←1tonum_pointsdo
+20:u, v←pixels_uv[i]
+21:inod_map[v, u]←norm_points.z[i]
+22:end for
+23:
+24:returniNOD
+As described in the main paper (Sec. 3.3), iNOD is generated from a source 3D point cloud. For ourSynthdata,
+this is computed from the ground-truth metric depth and
+known camera intrinsics. The process, detailed in Algorithm 1, is designed to be simple, fast, and distortion-free.
+11

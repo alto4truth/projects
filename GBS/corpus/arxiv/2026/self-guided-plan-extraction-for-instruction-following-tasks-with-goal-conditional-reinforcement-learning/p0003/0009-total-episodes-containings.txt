@@ -1,0 +1,35 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 3
+section: total-episodes-containings
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+7:ifSR(s)≥τthen
+8: Add to mastered skillsM ← M ∪ {s}
+9:end if
+10: Update plans
+S ← {p∈ P |phas at most one unmastered skill}
+11:end while
+12:returnπ θ,M
+To address the sparse reward problem in training,
+we introduceSkill Curriculum Learning. The
+core principle is to create a dynamic curriculum
+that begins with the simplest single-subtask tasks,
+allowing the agent to learn foundational behaviors
+under a relatively dense reward signal.
+As the agent trains, we monitor its Success Rate
+(SR) for each subtask. Once a subtask’s SR surpasses a predefined threshold τ, it is marked as
+"mastered." This mastery triggers an update to the
+curriculum: the set of active training plans is expanded to include any plan composed of already
+mastered subtasks and, at most, one new, unmastered subtask. This incremental expansion, detailed
+in Algorithm 1, ensures a smooth learning gradient
+and prevents the agent from being overwhelmed.
+4.3 Plan Validation
+To evaluate each proposed plan, we run the RL
+agent multiple times using that plan as input. Because the environment is highly stochastic, a single
+rollout is insufficient; instead, we aggregate metrics such as average success rate to obtain a reliable
+e

@@ -1,0 +1,23 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+Under Review
+Intersectional Fairness in Large Language Models 5
+While these benchmark datasets have been widely used, only a few studies explicitly examine intersectionality, where
+multiple identity dimensions interact to shape outcomes [Haider et al. 2025; Liu et al. 2024; Tomar et al. 2025; Wu et al.
+2025].
+Several BBQ-based studies assess fairness using the bias scores sDIS and sAMB [Chataigner et al. 2025; Liu et al.
+2024; Parrish et al. 2021; Yang et al. 2025; Zhuo et al. 2023]. These two metrics are valuable for quantifying specific
+stereotype-driven bias in LLMs, given QA-based datasets with both ambiguous and disambiguated contexts. While
+the former is designed to calculate the proportion of biased model predictions when the context provides enough
+information to answer the question, the latter measures the severity of bias by scaling sDIS with error frequency [Parrish
+et al. 2021], reflecting the harm of confidently biased guesses in uncertain scenarios. Additionally, the way bias scores
+are computed also varies: some studies [Chataigner et al . 2025; Liu et al. 2024; Yang et al. 2025] adopt the original
+formulation from [Parrish et al. 2021] which distinguishes between am

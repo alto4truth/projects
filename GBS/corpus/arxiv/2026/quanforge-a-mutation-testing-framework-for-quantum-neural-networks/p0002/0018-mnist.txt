@@ -1,0 +1,16 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 2
+section: mnist
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+yRate, and NontrivialityRate. As mentioned before, after mutating different parts,
+we adoptthe same test suiteto compute metrics, with focus on differences in model robustness.
+Generally, a higher KR or a lower NR indicates that more killable or trivial mutants are generated
+and thus the model is less robust to the target region. For presentation, we categorize MOs as
+Add, Delete, Replace, Modify (gate), and Modify (param), where Modify (gate) denotes the average
+Proc. ACM Softw. Eng., Vol. 3, No. FSE, Article FSE128. Publication date: July 2026.

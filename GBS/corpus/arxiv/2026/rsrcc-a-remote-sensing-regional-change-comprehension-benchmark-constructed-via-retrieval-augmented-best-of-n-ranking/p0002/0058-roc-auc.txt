@@ -1,0 +1,91 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 2
+section: roc-auc
+chunk: 58
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+This imbalance aligns with the
+urban–suburban nature of the underlying LEVIR-CD imagery, where most structural and vegetation
+modifications occur.
+25
+
+While smaller categories such asroads,sidewalks, andparking lotsappear less frequently, they
+provide valuable diversity for model generalization. The long-tail behavior visible in Figure 14
+emphasizes the need for adaptive sampling and weighting during training to ensure balanced learning
+across object types. Overall, this distribution validates the coverage of both man-made and natural
+change patterns in our dataset.
+Table 5: Number of Detected Changes per Class in the Test Set. The proportion represents the ratio
+of each class relative to the total number of detected changes.
+Changed Object Category Number of Changes Proportion (%)
+Building 53003 42.06
+Tree 28426 22.52
+Sidewalk 9920 07.86
+Road paved 7000 05.55
+Swimming pool 3539 02.80
+Parking lot 3253 02.58
+Water 2998 02.38
+Trail 2628 02.08
+Shipping container 2305 01.83
+Road unpaved 1964 01.56
+Athletic field 1872 01.48
+Driveway 1747 01.38
+Railway tracks 1686 01.34
+Painted median 1575 01.25
+Crosswalk 1429 01.13
+Bike lane 1383 01.10
+Track 857 00.68
+Stairs 546 00.43
+Total 126131 100.00
+0 5 10 15 20 25 30 35 40
+Proportion (%)
+Building
+Tree
+Sidewalk
+Road paved
+Swimming pool
+Parking lot
+Water
+Trail
+Shipping container
+Road unpaved
+Athletic field
+Driveway
+Railway tracks
+Painted median
+Crosswalk
+Bike lane
+Track
+Stairs
+Changed Object Category
+42.1%
+22.5%
+7.9%
+5.5%
+2.8%
+2.6%
+2.4%
+2.1%
+1.8%
+1.6%
+1.5%
+1.4%
+1.3%
+1.2%
+1.1%
+1.1%
+0.7%
+0.4%
+Figure14: Classdistributionofdetectedchangesinthetestset. Themajorityofchangescorrespondto
+buildingandtreecategories, followed by smaller contributions from man-made and natural structures.
+This distribution highlights the long-tail nature of the dataset.
+Table 6 provides a quantitative summary of our dataset after the automated filtering and validation
+stages. Out of the total 10,007 processed image pairs, 89,031 contain at least one verified change,
+while 37,100 are classified asno-changesamples. In total, the dataset includes 126,131 individual
+annotated changes, demonstrating both large-scale coverage and a significant volume of descriptive
+data. These statistics confirm the robustness of our automated pipeline in producing reliable, diverse
+examples suitable for high-capacity change detection and captioning tasks.
+26

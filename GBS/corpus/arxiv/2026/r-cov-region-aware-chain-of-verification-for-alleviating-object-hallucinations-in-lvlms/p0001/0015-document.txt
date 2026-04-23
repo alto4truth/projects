@@ -1,0 +1,30 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+s, we prompt
+the LVLM to provide the position of each extracted entity
+in the image, using the form of bounding box coordinates.
+Specifically, given the query image, we prompt the LVLM
+with the following instruction template: “Assume the image width and height are normalized to [0, 1]. Locate the
+{entity}and return its bounding box in the format [x min,
+y min, x max, y max], where [x min, y min] is the top-left
+corner and [x max, y max] is the bottom-right corner of
+the bounding box. Output only the four numbers in a single
+list. Do not include any explanation or extra text.” This in1https://platform.openai.com/docs/models/gpt-3.5-turbo
+2Note that we use GPT-3.5 here for a fair comparison with previous
+methods. In Section 4.4, we show that R-CoV can still achieve decent
+results without relying on any other models.
+struction allows us to obtain the bounding box coordinates
+for each entitye i from the LVLM. Note that the bounding
+box coordinates generated in this stage can be inaccurate,
+i.e., the regions do not necessarily contain the entities due
+to nonexistence. In the subsequent stages, we will use this
+as a cue for region-level verification.
+Stage 4: Region description.LetR={r i

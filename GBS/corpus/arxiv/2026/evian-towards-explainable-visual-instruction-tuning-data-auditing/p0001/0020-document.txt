@@ -1,0 +1,31 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+on. A strict system prompt
+constrains the model to output only the modified
+text, ensuring automation and reproducibility.
+This injection strategy goes beyond simple noise
+addition: it produces realistic, semantically rich
+corruptions aligned with the three audit dimensions.
+As a result, the benchmark offers a challenging
+testbed for assessing whether auditing pipelines
+can detect not only superficial inconsistencies but
+also deeper factual and logical flaws.
+5 Experiments
+5.1 Experimental Setup
+Baselines.We compare our method against a diverse set of data auditing baselines spanning visuallanguage pretraining filters and recent visual instruction tuning approaches. Specifically, we consider: (1)Random Sampling, which randomly
+selects 10,000 samples as a non-selective lower
+bound; (2)Image-Text Similarity Filters, includingCLIPScore(ViT-B/32),ALBEF,BLIP, and
+BLIP-2, which rank the full data pool by holistic
+image-text similarity and select the top 10,000 samples; (3)SCALE, a multi-stage filtering method
+that evaluates modality quality, relevance, clarity,
+and task rarity using a weighted scoring scheme;
+and (4)Qwen2.5-VL-7B-Instruct-A WQ, which
+directly scores sample quality via mo

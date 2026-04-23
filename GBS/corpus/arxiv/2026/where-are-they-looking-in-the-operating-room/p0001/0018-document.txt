@@ -1,0 +1,50 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+f v to ensure semantic consistency. Concretely, we sample a batch of clips and obtain the
+gaze and visual features. Then, we use InfoNCE loss [22] to
+conduct contrastive learning:
+LInfoNCE =− 1
+B
+BX
+i=1
+log
+exp(sim(f i
+g,f i
+v)/τ)
+PB
+j=1 exp(sim(f ig,f j
+v )/τ)
+,(2)
+whereBis the batch size, sim(·,·) is the cosine similarity, and
+τis the temperature.
+Afterwards, we use the gaze features to augment existing
+features in the TAD framework. For each clip at timet, we
+use a gated fusion strategy that translates the gaze features
+f t
+g into importance scores through a fully-connected layer and
+the sigmoid function. Then, after obtaining the concatenated
+visual and action features [9]f t
+v,a, we use dot product along
+with a residual connection to obtain the final clip features:
+f t =f t
+v,a +
+
+σ(W·f t
+g +b)⊙f t
+v,a
+
+,(3)
+whereσ(·) is the sigmoid function andWandbare weights
+and biases.
+Finally, we pass all the clip features through the TAD
+model, obtain the instant features, and detect the activities using a regression head and a classification head. During training, we use the same regression and classification losses as
+in [6]. During inference of detecting “A.B.A.”, since it is an
+ane

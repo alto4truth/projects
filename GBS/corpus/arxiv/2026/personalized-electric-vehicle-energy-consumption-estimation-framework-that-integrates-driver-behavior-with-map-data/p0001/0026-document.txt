@@ -1,0 +1,49 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+ery power over time. The final
+energy consumption per kilometer in Wh/km is computed as:
+EC= 1
+3600d
+Z
+Pbatt(t)dt(14)
+wheredis total distance (km).
+15
+
+SOC Dynamics..Battery state of charge evolves according to:
+∆SOC(t) = Pbatt(t)
+3600C W
+,(15)
+SOC(t) =SOC(t−1)−∆SOC(t),(16)
+whereC W is battery capacity (Wh). SOC is constrained to the operating
+range[20%,95%]for battery health preservation.
+4.6.2. Implementation
+The Driver LSTM model-predicted velocity profile feeds directly into the
+BEV Energy consumption model, propagating driver-specific speed and acceleration transients through tractive power, regenerative braking efficiency,
+and SOC calculations. This sensitivity to behavioral dynamics enables personalized range estimation reflecting both route geometry and individual
+driving style.
+5. Testing and Results
+To evaluate end-to-end system performance, the pipeline was tested on
+three representative route types designed to capture diverse driving conditions: urban route, freeway route, and hilly terrain route.
+5.1. Urban Route
+Urban driving exhibits repeated acceleration and deceleration due to traffic control devices and intersection density. On the Detroit downtown route
+in Fig. 5, the Driver LSTM-predicted velocity of Fig. 6 captures the deceleration trends near intersections but does not always reach a full stop, typically
+only dropping below 5 mph for each intersection. This behavior is likely
+due to the limited future context (100 m) chosen in the LSTM architecture,
+which may be insufficient to perfectly model full vehicle stops.
+Additionally, the ground-truth dataset used for training does not always
+contain zero-speed samples for traffic signals or yield signs. As a result, the
+LSTM model appears to have learned that a full stop is not always required—
+aninterpretationthatalignswithreal-worlddriving, wheregreentrafficlights
+or yield signs during low traffic conditions often eliminate the need to stop.
+Nevertheless, the model correctly predicts deceleration behavior near traffic
+signals and at intersections with large heading changes (i.e., left or right
+turns).
+16

@@ -1,0 +1,22 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+igh-resource languages like French, we show that refining the decision
+boundary through third quartile sampling (Q3) or tuning the retention rate is necessary to fully leverage the multilingual signal.
+1 INTRODUCTION
+As machine learning architectures and optimization strategies have matured, the focus of the community has shifted toward the foundational element of model performance: data quality. Previous
+work has demonstrated that “more” is not synonymous with “better” (Raffel et al., 2020; Penedo
+et al., 2023). Building on this insight, recent efforts have shown that aggressively curating highquality subsets from web-scale corpora can match or exceed the performance of models trained on
+far larger datasets (Li et al., 2025; Penedo et al., 2024; Messmer et al., 2025).
+Historically, data curation relied on heuristic-based filtering (Nguyen et al., 2023; Raffel et al.,
+2023; Rae et al., 2022; Penedo et al., 2023). However, the emergence of model-based classifiers
+has enabled a more nuanced selection of semantically dense content. FineWeb-Edu (Penedo et al.,
+2024) reached the performance of LLMs trained on350Btokens of raw English data using only
+10% of tokens through LLM-based filte

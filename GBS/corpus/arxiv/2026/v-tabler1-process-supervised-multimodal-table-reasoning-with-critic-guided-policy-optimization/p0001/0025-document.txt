@@ -1,0 +1,27 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+al anchoring to associate values with their hierarchical row and
+column headers.
+–TAT-QA [48]: A hybrid question-answering dataset that involves extracting
+information from both tables and unstructured text. It assesses a model’s
+ability to seamlessly fuse multimodal and textual evidence for complex financial arithmetic.
+–TabMWP [20]: A dataset of tabular math word problems. It requires models
+to perform multi-step mathematical reasoning explicitly grounded in the
+contextual tabular data.
+–WikiTableQuestions(WTQ)[22]:AhighlycompositionaldatasetoverWikipedia
+tables. It demands complex queries involving aggregations, superlatives, and
+multi-hop cell lookups.
+4.2 Main Results
+Table 2 presents the performance of V-tableR1 against a comprehensive suite
+of state-of-the-art vision-language models, ranging from closed-source APIs to
+large-scale open-weights models. The results demonstrate that explicitly supervising the reasoning process significantly outperforms traditional outcomesupervised approaches, especially in tasks demanding rigorous logical derivation.
+Dominance on Complex Question Answering (TQA).The TQA benchmarks
+(FinQA, HiTab, TAT-QA, TabMWP, WTQ) represent the most stringent

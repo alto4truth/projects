@@ -1,0 +1,44 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+SAC ’26, March 23–27, 2026, Thessaloniki, Greece V.M. Le et al.
+SW
+SMW
+IDE
+SMG
+COM
+SEA
+CVE
+BDB
+CNNl
+CNNf
+claudesonnet-4
+gpt-4.1
+grok-4-nonreasoning
+deepseek-chat
+llama-4-scout
+100 100 94 88 94 62 88 56 38 63
+100 100 81 81 56 62 50 69 31 50
+100 94 81 81 56 50 50 44 31 25
+94 81 69 62 44 50 69 44 19 56
+75 88 50 50 31 25 44 38 13 13
+Figure 4: Accuracy (%) of general-purpose LLMs on 16 AOs
+across 10 blueprints.
+one modelsubsumesanother (i.e., no counterexample is identified).
+This verification-style framing lowers the need for complete search
+and tends to be more robust to local parsing noise. By contrast,
+solver-free AOs (e.g.,AO4–AO9) require the model toparse and count
+structural relationships such asmandatory,optional, oralternative
+features; small semantic misunderstandings, e.g., interpreting “A
+must have B or C” as two mandatory children instead of an alternative group, lead to systematic counting errors and lower accuracies.
+Difficulty levels vary markedly across AOs and model families.
+For general-purpose LLMs, the hardest AOs are AO2 (leaf count),
+AO4 (mandatory count), and AO12 (#valid configurations), all averaging below 50% accuracy, reflecting persistent semantic errors
+an

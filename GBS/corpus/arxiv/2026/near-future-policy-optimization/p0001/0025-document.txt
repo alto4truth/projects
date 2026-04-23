@@ -1,0 +1,24 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+Execution.Once∆ ⋆ is chosen, AutoNPO applies the Section 3.1 offline cache procedure withπ(t) as the
+guide, but restricts it to prompts inB∆⋆ rather than the full segment:π(t) is rolled out on everyx∈ B ∆⋆,
+outputs are verified, and one correct trajectory per prompt is cached. Training then rolls back to checkpoint
+t− ∆⋆ and resumes with the NPO mechanism applied to that segment; during replay, the cached substitution
+fires whenever a sampled prompt lies inB∆⋆, and other prompts follow pure on-policy rollouts. Unlike
+the manual interventions in Section 3.2, which cache guidance for every prompt in the segment and gate
+substitution online viaˆp(x) ≤τ gate, AutoNPO restricts both cache generation and substitution toB∆⋆, which
+avoids cache cost on easy prompts. Once the run catches back up to stept, the controller enters a short
+cooldown before arming again. Algorithm 1 gives the full procedure.
+4 Experiments
+4.1 Experimental Setup
+Training Data and Benchmarks.We train on MMFineReason-123K [ 12], a challenging subset derived
+from the MMFineReason-1.8M corpus via difficulty-based filtering: each training sample is rolled out four
+times with Qwen3-VL-4B-Thinking [2], and only those on w

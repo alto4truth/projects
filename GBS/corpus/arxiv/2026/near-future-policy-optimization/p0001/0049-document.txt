@@ -1,0 +1,25 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 49
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+ˆQ(∆)←pass-rate ofπ (t) onB ∆
+21:ifˆp > τ pass then
+22:∆ ⋆ ←arg max ∆ ˆQ(∆)/ ˆV(∆)▷Eq. (6)
+23:G ←verified-correct re-rollout ofπ (t) onB ∆⋆
+24:load model weights and dataloader state from checkpointt−∆ ⋆
+25:t resume ←t;in_retro←True
+26:end if
+27:alert←0
+28:end if
+29:end if
+30:ifin_retroand current step≥t resume then
+31:in_retro←False;G ← ∅;t cool ←t+T cool
+32:end if
+33:end for
+13

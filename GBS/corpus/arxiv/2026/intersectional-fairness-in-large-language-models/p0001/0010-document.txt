@@ -1,0 +1,21 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+do not produce
+discriminatory outcomes or behaviors for inputs associated with particular groups or individuals [Soremekun et al.
+2022]. More in detail, bias can be described as individual, which requires that comparable individuals receive comparable
+treatment [Chen et al. 2024a], for instance, two equally qualified candidates differing only in gender should have similar
+chances of being selected by an AI-powered recruitment system, or group, where outcomes should be distributed
+equitably across demographic groups [Baresi et al. 2023; Boufaied et al. 2025; Chen et al. 2024a; Ryan et al. 2023], for
+instance, individuals with similar financial profiles should face equal chances of loan approval regardless of their gender.
+Fairness evaluation typically focuses on sensitive attributes such as race, gender, age, and religion [Li et al. 2023]. It
+can be carried out at the level of a single sensitive attribute (a.k.a., single fairness) or through combinations of two
+or many sensitive attributes (a.k.a. intersectional fairness [Li et al . 2023; Parrish et al. 2022]). For example, a model
+may favor a white woman over a more qualified black woman (race is the only sensitive attribute at pla

@@ -1,0 +1,22 @@
+title: MGDA-Decoupled: Geometry-Aware Multi-Objective Optimisation for DPO-based LLM Alignment
+source: arxiv
+year: 2026
+document_id: mgda-decoupled-geometry-aware-multi-objective-optimisation-for-dpo-based-llm-alignment
+authors: Andor Vári-Kakas; Ji Won Park; Natasa Tagasovska
+page: 2
+section: group-dro
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20685v1
+
+where the normalised ∇L2 necessitates wasteful zig-zag
+corrections, slowing down the tangential momentum towards the optimum. In contrast, MGDA-DECOUPLEDleverages
+the gradient-to-loss ratio as a proxy for distance to optimality. By recognising that L1 has smaller gradient magnitude
+relative to its remaining loss, it assigns higher weight to ∇L1, preventing the local steepness of ∇L2 from dictating the
+optimisation trajectory. This allows MGDA-DECOUPLEDto reach the shared optimum faster than the other algorithms.
+3 Experiments
+Models.We evaluate our methods on two state-of-the-art small language models: Gemma-2-2b-it [Rivière et al.,
+2024], a 2.6B-parameter model trained via knowledge distillation, and Qwen2.5-0.5B-Instruct [Yang et al., 2025], a
+0.5B-parameter model trained on an 18-trillion-token corpus. Both models are initialised from their official instructionfinetuned checkpoints. As these models represent instruction-finetuned reference points, we apply DPO directly without
+an additional supervised fine-tuning (SFT) stage.
+Datasets.We utilise the UltraFeedback dataset [Cui et al., 2023], consisting of 64k prompts, which we split into
+training (49k) and test (15k) sets. Each s

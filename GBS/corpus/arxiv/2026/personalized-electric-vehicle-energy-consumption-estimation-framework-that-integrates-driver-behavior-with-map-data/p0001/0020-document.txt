@@ -1,0 +1,41 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+Figure 2: Block diagram representation of cascaded PID vehicle dynamics model.
+via Euler’s method with a small timestephto minimizeO(h2)truncation error.
+Command Velocity Generator..At each timestep, the module computes a
+look-ahead horizon,
+sh(t) = LUTamax(v(t)),
+using the worst-case stopping distances from a 1-D pre-computed LUT for
+initial acceleration,a 0 = 2m/s 2. All speed limit change events withinsh(t)
+are identified, and required deceleration distancesr(t)is computed as:
+sr(t) =
+
+
+
+LUTamax(v(t)),Type 3 (Stop),
+LUTamax(v(t)) v(t)−v f(t)
+v(t) ,Type 2 (Curve). (5)
+wherev f(t)is the reference velocity at the curve event.
+State transitions occur when distance to event,sf(t)−s(t), drops below
+sr(t). Heres f(t)is the absolute distance to the future event. In Stop Event
+Tracking, the command velocity is set tovc(t) = 0until the vehicle halts
+at or befores f(t). In Curve Speed Tracking, commanded velocity smoothly
+decelerates by setting:
+vc(t) =v f(t)−
+
+vf(t) tanh
+ k sr(t)
+sf(t)−s(t)
+
+
+,(6)
+ensuring curve speed attainment before event onset.
+10

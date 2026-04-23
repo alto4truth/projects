@@ -1,0 +1,92 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+in the  HiMamba architecture, with each
+incorporating a single direction scanning SSM. The head of the architecture
+implements an upsampling layer to produce High Resolution Output Image.
+HxWxCLayer
+Norm
+Layer
+Norm
+Local
+SSM
+Region
+SSM
+Fusion
+Module
+H/n x W/n x CConv
+AvgPool
+Lin. Proj
+SSM
+SiLU
+Layer
+Norm
+Local SSM
+Region SSM
+HxWxC
+HxWxC
+HxWxC
+(H / n) x (W / n) x C
+Lin. Proj Lin. Proj
+(H / n) x (W / n) x C
+DepthWise Conv SiLU
+Lin. Proj
+SSM
+SiLU
+Layer
+Norm
+HxWxC
+Lin. Proj Lin. Proj
+Depth-Wise
+Conv SiLU
+Lin. Proj
+(f) Famba-V Architecture
+(g) Hi-Mamba Block
+Patch Embeddings
+(inc. Spatial Position / Cls Token)
+Vision Mamba (ViM) Architecture
+Layer
+Norm
+Forward
+Conv1d
+Backward
+Conv1d
+Lin. ProjLin. Proj
+X
+Z
+Lin. Proj
+Forward Selective
+SSM
+(State Space Model)
+Backward Selective SSM
+(State Space Model)
+SiLU
+MLP
+The VSS Block is repeated 4 times in VMamba architecture, with
+a downsampling between each block shown above.
+(b) VMamba Architecture (Visual State Space - VSS Block)
+Patch Embeddings
+(inc. Spatial Position / Cls Token)
+Layer
+Norm
+Depth-Wise Conv
+Lin. Proj
+2D-Selective Scan
+(SS2D)
+Layer
+Norm
+Lin. Proj
+Layer
+Norm FFN
+SiLU
+Patch Embeddings
+(inc. Spatial Position / Cls Token)
+MLP
+Conv1d

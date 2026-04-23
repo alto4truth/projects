@@ -1,0 +1,28 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+t the segment-wise
+process signal (∆C k) provides a reliable proxy for the correctness of intermediate reasoning steps. Unlike
+outcome-level signals, which uniformly credit or penalize every token in a trajectory,∆C k directly reflects
+how each step changes the model’s belief in the correct answer.
+To quantitatively validate this hypothesis, we align our progress signal with segment-level human annotations from the PRM800K dataset (Lightman et al., 2023),which contains 800K reasoning steps labeled as
+-1 (incorrect/harmful), 0(neutral/uninformative), or +1 (correct/contributive). For evaluation, we randomly
+sample 100 held-out questions, each paired with six diverse model responses. For each reasoning segment,
+we discard neutral steps with label 0 and discretize∆C k into predicted class labels.
+Table 3: Classification performance of our segment-wise
+progress signal∆C k against PRM800K segment-level
+human labels. DS-R1-1.5B: DeepSeek-R1-Distill-Qwen1.5B (DeepSeek-AI, 2025).
+Model Precision↑Recall↑F1-score↑
+Qwen2.5-0.5B 0.738 0.767 0.752
+DS-R1-1.5B 0.735 0.848 0.787
+Qwen2.5-Math-1.5B 0.741 0.774 0.757
+Qwen2.5-Math-7B 0.741 0.771 0.756
+Qwen2.5-32B 0.765 0.844 0.803
+Table 3 reports the

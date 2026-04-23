@@ -1,0 +1,32 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+porates the critic’s feedback via a piecewise gating mechanism, governed by hyperparametersα,β,τ high, andτ low:
+R(y) =
+
+
+
+Rbase +α,ifR base >1andr proc > τ high
+rfmt +β,ifR base >1andr proc < τ low
+Rbase +α·r proc,ifR base >1andτ low ≤r proc ≤τ high
+Rbase,otherwise.
+(2)
+This formulation yields a Golden-Case Bonus (α) for trajectories that achieve
+both outcome correctness and near-perfect structural reasoning. Conversely, it
+applies a Conservative Penalty to shortcut guesses (Path 3), reducing the answer
+credit toβto mitigate reward hacking without stifling benign exploration.
+Process-Guided Direct Alignment Policy Optimization (PGPO)Inspired by the
+successes of GRPO [25] in text-only reasoning and its subsequent variants,
+DAPO [37] and LSPO [4], we optimize the policy VLM using our proposed
+PGPO algorithm. PGPO adapts the decoupled clipping bounds of DAPO for
+stability and the length-aware dynamic sampling of LSPO for efficiency, explicitly tailored for multimodal process supervision.
+Foragivenquery(x, q),wesampleagroupofGreasoningtrajectories{y i}G
+i=1
+from the old policyπθold. Standard GRPO estimates the advantageˆAi by normalizing the outcome rewards within the group.

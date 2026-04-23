@@ -1,0 +1,14 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 150
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+uctGPT from March 2022 [296]. It reports a single “win rate” against a GPT-3 baseline, collapsing diverse human preference judgements into one number.
+
+Chapter 4: The World Values Benchmark 140
+Figure 14: This chart is taken from Anthropic’s Constitutional AI: Harmlessness from AI Feedback (Bai et al., 2022). It reports a single combined accuracy score for helpfulness, honesty, and harmlessness (HHH), collapsing heterogeneous evaluative criteria into one number. This pattern continues across major release papers. OpenAI’s GPT-4 report in 2023 [4] presents bar exam scores, Massive Multitask Language Understanding (MMLU) accuracy, and SAT-style results as commensurable indicators of capability. Google’s PaLM release paper in 2022 [79] reports performance across 29 tasks as an “average accuracy,” while Meta’s LLaMA in 2023 [392] condenses dozens of benchmark scores into a single table row. Anthropic likewise reports Claude’s performance as a single preference percentage [22]. These aggregates serve communicative clarity, but they flatten evaluative nuance: different constructs, cultural assumptions, and trade-offs are obscured behind a single number. The result is an illusion of objectivity, where complex judgements appear as simple leaderboard facts. More recent evaluation frameworks have attempted to move toward multi-metric and scenario-based reporting, yet the underlying tendency to collapse heterogeneous constructs into comparative signals persists. Even where explicit averaging is avoided, performance is still communicated through summary indicators such as preference percentages, curated benchmark bundles, or highlighted “best-in-class” results. OpenAI’s GPT-4.1 announcement foregrounds SWE-bench Verified as a headline indicator of coding ability, and its o3 release presents state-of-the-art performance across Codeforces, SWE-bench, and MMMU as evidence of broad model capability [294]. Anthropic’s May 2025 Claude 4 launch similarly uses leadership on SWE-bench and Terminal-bench to support broad comparative claims about model quality [15]. Aggregation thus reappears in subtler rhetorical form: not always as a single number, but through selective benchmark framing that still invites general conclusions about overall capability.

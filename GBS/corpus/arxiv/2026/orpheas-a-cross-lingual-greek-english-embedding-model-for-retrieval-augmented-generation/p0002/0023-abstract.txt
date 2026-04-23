@@ -1,0 +1,17 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+rimental analysis, a model pre-trained on a
+large Greek–English corpus, which is fine-tuned following the same high-quality dataset as ORPHEAS.
+To compare the retrieval performance of the evaluated models, we employ two metrics at two retrieval depths: Accuracy atk(Acc@k), which measures the proportion of queries where at least one relevant document appears within
+the top-kretrieved results; and Normalized Discounted Cumulative Gain atk(NDCG@k), which considers both the
+relevance and ranking position of retrieved documents. Both metrics are reported atk∈ {3,10}as in [Koursaris et al.,
+2026] to capture performance characteristics at different retrieval depths: shallow retrieval (top-3) emphasizes precision in surfacing the most relevant content, while extended retrieval (top-10) assesses the model’s ability to maintain
+5

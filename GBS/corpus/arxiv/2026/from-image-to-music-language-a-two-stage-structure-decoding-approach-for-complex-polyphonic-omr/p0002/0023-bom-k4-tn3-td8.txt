@@ -1,0 +1,60 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 2
+section: bom-k4-tn3-td8
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+recisely the structural domain
+BeadSolver is designed to handle.
+The Paraff implementation is open-sourced athttps://github.com/findlab-org/paraff.
+38
+
+E Symbol Semantic Type Inventory
+See Table 16 for the label definitions used by the semantic model. In Starry, semantic labels fall into
+two basic geometric kinds: point labels and vertical-line labels. In the training annotations, both are
+marked in red on the score image and used directly as supervision targets for the semantic model.
+The table gives the full inventory of these labels together with a representative glyph for each type.
+For readability, the labels are grouped by musical role; theContextualgroup covers helper tokens
+that carry pitch-position or rendering metadata rather than independent note events.
+Table 16: Semantic Type Inventory. Full semantic type inventory with example glyphs.
+Type Category Case Description
+ClefGClef
+G clef (treble clef)
+ClefFClef
+F clef (bass clef)
+ClefCClef
+C clef (alto / tenor clef)
+NoteheadS0Notehead
+Whole-note head (open, wide oval)
+NoteheadS1Notehead
+Half-note head (open oval)
+NoteheadS2Notehead
+Filled notehead (quarter, eighth, . . . )
+vline_StemStem
+Vertical stem line
+Flag3Flag
+Eighth-note (and upper) flag on stem
+BeamLeftBeam
+Beam group, left endpoint
+BeamContinueBeam
+Beam group, interior segment
+BeamRightBeam
+Beam group, right endpoint
+TremoloLeftTremolo
+Tremolo stroke, left endpoint
+TremoloMiddleTremolo
+Tremolo stroke, interior
+TremoloRightTremolo
+Tremolo stroke, right endpoint
+DotDuration
+Augmentation dot
+Rest0Rest
+Breve rest (double whole)
+Rest1Rest
+Whole rest
+(continued on next page)
+39

@@ -1,0 +1,18 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 2
+section: mnist
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+s, shallow-depth gates similarly extract coarse-grained
+features and establish early quantum correlations. As the circuit deepens, additional transformations
+build on this foundation, propagating information through more complex interactions. Thus, early
+mutations are amplified through the circuit, whereas deep mutations exert more localized effects.
+4.5.2 RQ2.2. Mutation at Different Qubits.In current QNN designs, model outputs are typically
+defined by the expectation values measured on specific qubits. It is intuitive to consider that
+mutating these output qubits might have a more direct and significant impact on model behavior,
+Proc. ACM Softw. Eng., Vol. 3, No. FSE, Article FSE128. Publication date: July 2026.

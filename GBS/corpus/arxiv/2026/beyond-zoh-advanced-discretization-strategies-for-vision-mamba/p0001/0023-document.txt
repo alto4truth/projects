@@ -1,0 +1,25 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+rateadvanceddiscretizationschemes
+into ViM. All experiments were trained according to the original ViM-Ti model
+in [33] on 4 A100 GPUs. The continuous-to-discrete conversion is evaluated on
+three tasks: image classification, semantic segmentation, and object detection.
+The resulting discrete-time parameters ¯Aand ¯Breplace the default ZOH matrices used in the state update function. The rest of the ViM pipeline from [33]
+remains unchanged as shown in Fig.1, ensuring comparability across all experiments.Afterdiscretization,theViMlayerupdatesthehiddenstateusingEq.(4).
+4.1 Image Classification on ImageNet-1k & Cifar100
+Settings.The original ViM model was trained on the ImageNet-1K dataset [9]
+and Cifar100 dataset [15]. The top-1 and top-5 accuracy on the validation set are
+reported. Training settings were maintained according to [25] with the same data
+augmentations defined in the original work (random cropping, random horizontal
+flipping, label-smoothing regularization, mixup).
+Results.Table 1 illustrates an improved, more efficient learning strategy
+for State Space Models to accurately classify different images. Using the same
+ViM model with no other architectural changes, BIL result

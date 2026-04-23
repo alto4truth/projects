@@ -1,0 +1,130 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 7
+section: ivn-ids
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+ning phase. For each combination, we performed 10-fold cross-validation to ensure robustness and
+Machine Learning with Applications 23 (2026) 100859
+7
+
+S. Alam et al.
+avoid overfitting. Our experiments revealed that the number of hidden
+layers was the most sensitive hyperparameter, significantly influencing
+both accuracy and computational efficiency. The final selected values
+were then applied to train the model on the full dataset. Based on our
+empirical evaluations, we chose the following hyperparameter settings:
+ℎ𝑖𝑑𝑑𝑒𝑛 𝑙𝑎𝑦𝑒𝑟𝑠 = 3; 𝑒𝑝𝑜𝑐ℎ𝑠 = 100; and
+𝑏𝑎𝑡𝑐ℎ 𝑠𝑖𝑧𝑒 = 𝑡𝑟𝑎𝑖𝑛𝑖𝑛𝑔 𝑑𝑎𝑡𝑎 𝑠𝑖𝑧𝑒
+𝑛𝑢𝑚𝑏𝑒𝑟 𝑜𝑓 𝑏𝑎𝑡𝑐ℎ𝑒𝑠 (2)
+where, 𝑛𝑢𝑚𝑏𝑒𝑟 𝑜𝑓 𝑏𝑎𝑡𝑐ℎ𝑒𝑠 = 300.
+ReLU (Rectified Linear Unit) was selected as the activation function
+due to its computational efficiency. Other model parameters were
+determined accordingly based on the use of ReLU. Specifically, Kaiming
+initialization was adopted, as it is widely recommended for neural
+network layers employing ReLU activation. This initialization strategy samples initial weights from a normal distribution optimized for
+ReLU, helping to alleviate issues related to vanishing or exploding
+gradients. As a result, it enhances training stability and accelerates
+convergence. Additionally, L2 regularization was applied to reduce
+overfitting and constrain model weights, as it is a commonly used
+and effective regularization technique when working with ReLU-based
+networks.
+These choices reflect a balance between model complexity and
+training efficiency, and they significantly contributed to the performance of our proposed approach.
+4.3. Model training configuration
+A loss function helps ML algorithms to optimize the model’s predictions. They accomplish this by measuring error in the model’s predictions by providing a quantitative metric for the model’s accuracy.
+During training, the optimization algorithm uses this loss function
+to adjust the model’s parameters to reduce the error and improve
+the model’s predictions. For designing a lightweight ML model that
+classifies several different types of attacks, specifically DoS and various
+Spoofing attacks, we need a loss function that works well and helps
+in optimizing multinomial classification. For this purpose, we use the
+Sparse Categorical Cross-Entropy (SCCE) as the loss function, which is
+well-suited for multi-class classification with integer-encoded labels
+and reduces memory overhead compared to one-hot encoded alternatives (Gordon-Rodriguez et al., 2020). Unlike CCE (Categorical CrossEntropy), which represents classes as vectors, SCCE represents classes
+as numbers (integers), which means it is memory and computationally
+efficient. This is essential when deploying models in latency-sensitive
+and resource-constrained environments like the IoV. Our choice to use
+SCCE in designing DAIRE was based on its suitability for multi-class
+classification, but also because of its lightweight nature. This aligns
+with our goal of achieving real-time detection without overloading
+vehicular processing units.
+For optimization, we use Root Mean Square Propagation
+(RMSprop) (Hinton et al., 2012), a variant and an improvement over
+the standard Gradient Descent. RMSprop employs an adaptive learning
+rate method that adjusts step sizes based on recent gradient magnitudes, leading to stable and fast convergence in practice. It is computationally efficient and simpler compared to other adaptive learning
+methods, such as Adam
+These choices support our objective of lightweight and real-time
+deployment in IoV environments, where computational efficiency and
+training stability are critical. The mathematical details of SCCE and RMSprop follow standard definitions and are omitted for brevity; readers
+are referred to the original literature for details.
+5. Experimental evaluation
+We undertook an empirical evaluation to comprehensively assess
+the performance of DAIRE. This section details the dataset, evaluation
+metrics, our empirical study, the results achieved, and the analysis. All
+experiments were executed on an Intel 8 Core i7-7700 equipped with
+16 GB of RAM, operating on Ubuntu 24.04.
+Table 4
+Distribution of the two datasets used in this paper to
+evaluate our proposed model DAIRE.
+Attack type (class) Number of CAN messages
+CICIoV2024
+Normal/Benign 1,223,737
+DoS 74,663
+Gas Spoofing 9991
+RPM Spoofing 54,900
+Speed Spoofing 24,951
+Steering Wheel Spoofing 19,977
+Total 1,408,219
+Car-Hacking
+Normal/Benign 928,136
+DoS 587,520
+Fuzzy 491,846
+Gear Spoofing 597,251
+RPM Spoofing 654,896
+Total 3,259,649
+Grand Total 4,667,868
+5.1. Dataset
+We selected two of the popular and recent IoV security datasets,
+CICIoV2024 (Neto et al., 2024) and Car-Hacking (Song et al., 2020), to
+evaluate the performance of our model. These datasets were generated
+on real vehicles and include DoS, Fuzzy, RPM Spoofing, Speed Spoofing,
+Gas Spoofing, Gear Spoofing, and Steering Wheel Spoofing attacks, and
+also Attack-Free (normal) data. The selection of these datasets was
+guided by their real-world fidelity, comprehensive attack coverage,
+and complementary characteristics that collectively enable a thorough
+evaluation of DAIRE. Both datasets were generated from actual vehicular systems, ensuring authentic CAN bus behavior, and include
+diverse attack types. While CICIoV2024 features naturally imbalanced
+attack frequencies that mirror realistic operational conditions, the CarHacking dataset provides a more balanced distribution with a larger
+sample size. This combination allows us to assess DAIRE’s robustness
+across different data distributions while enabling direct comparison
+with state-of-the-art methods that commonly use these established
+benchmarks. The datasets’ focus on intra-vehicle CAN attacks aligns
+precisely with DAIRE’s threat model, making them more suitable than
+alternatives such as synthetically-generated datasets. Table 4 provides
+the distribution of these two datasets after preprocessing.
+As we can see from Table 4, both datasets contain a large number
+of samples in each class, which is suitable for training our proposed
+lightweight ML model DAIRE. The Car-Hacking dataset is more balanced than CICIoV2024. Using the Pareto principle (Pareto, 1919), for
+evaluating DAIRE, we partitioned the dataset into 80% training and
+20% testing. For tuning DAIRE’s hyperparameters, we used the newer
+CICIoV2024 dataset and randomly chose 50% of the samples from each
+class for tuning these parameters.
+5.2. Evaluation metrics
+The lightweight ML model DAIRE proposed in this paper learns from
+the previous attacks and then detects and predicts the class of the new
+attack against IoV. DAIRE performs multinomial classification to detect
+and classify such attacks. One of the most commonly used methods
+for evaluating and visualizing the performance of such a classifier
+is the confusion matrix (Fawcett, 2006). A confusion matrix serves
+as a powerful tool for evaluating and visualizing the performance of
+a classifier. By leveraging this matrix, we gain crucial insights into
+the classifier’s strengths and weaknesses, paving the way for targeted
+improvements. Moreover, the confusion matrix enables us to calculate
+essential evaluation metrics, ensuring our classifier operates at its
+Machine Learning with Applications 23 (2026) 100859
+8

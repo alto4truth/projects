@@ -1,0 +1,29 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+ontrol (Yin et al., 2024; Li et al., 2025;
+Pang et al., 2025; Yue et al., 2024). An important
+factor of this success isVisual Instruction Tuning
+(VIT), which aligns visual representations with language instructions to enhance instruction-following
+capability (Liu et al., 2023). However, the effectiveness of VIT hinges on the quality of the underlying
+training data, which must strike a delicate balance
+between adhering to user commands and maintaining fidelity to visual inputs.
+Existing datasets and filtering methods fall short
+of this requirement. Large-scale data synthesis
+(e.g., LLaV A-Instruct-150K) improves instruction
+following but often introduces noise (Liu et al.,
+2024c; Tang et al., 2024), while similarity-based
+filtering methods (e.g., CLIP score) promote visual
+grounding but lack the granularity to detect subtle
+semantic flaws (Wang et al., 2024a). As a result,
+current LVLMs frequently suffer from fine-grained
+errors, including object hallucination, attribute misattribution, factual inconsistency, and flawed reasoning (Liu et al., 2024a; Bai et al., 2024; Chen
+et al., 2024d). These deficiencies reveal a fundamental bottleneck: prevailing approaches rely on
+coarse, uni-di

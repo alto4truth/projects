@@ -1,0 +1,24 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+low-variance property that
+motivates NPO in the first place. Compared with the standard RLVR objective, the only change is that, on
+prompts the current policy struggles with, then-th rollout is optionally replaced by a verified-correct sample
+fromπ (t+∆); the clipped objective, the verifier, and the group-relative advantage are all unchanged.
+3.2 Two Manual Interventions
+We first validate NPO through two manual interventions at different training stages, treating them as probes
+ofwhennear-future guidance helps. Both share the mechanism described above and differ only in howπ(t+∆)
+is obtained and which training window is replayed.
+Early-Stage Bootstrapping.In the first few training steps, most rollout groups contain no correct trajectory
+and the gradient signal collapses. The early intervention targets this cold-start regime: we train the base
+model for a short scout segment and take its final checkpoint asπ(t+∆). We then restart training from the
+same base weights and use the scout checkpoint to supply guidance trajectories during the initial window.
+Because the scout is only slightly ahead, its trajectories remain close to the restarting policy while still solving
+prompts the fres

@@ -1,0 +1,31 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+10 Authors Suppressed Due to Excessive Length
+T able 1:Overview of the tabular reasoning datasets evaluated in this study. The
+datasets span Table Fact Verification (TFV) and Table Question Answering (TQA).
+Average image resolution and file size are calculated from the test splits.
+Dataset Number of Samples Image Characteristics (Test)
+SFT Train RL Train Test Avg. Resolution (W×H) Avg. Size (KB)
+Table Fact Verification (TFV)
+TabFact 5,250 3,648 3,779 1360×409 103.2
+InfoTabs - - 1,200 1425×392 60.4
+Table Question Answering (TQA)
+FinQA 2,569 583 1,133 1838×308 82.4
+HiTab 3,195 1,546 1,584 1242×458 77.6
+TabMWP 4,412 3,791 2,686 269×192 20.7
+WTQ 5,738 5,887 2,344 1140×520 106.9
+TAT-QA - - 736 1506×358 77.6
+(24.27% and 74.34%) and performing highly competitively with the large-scale
+QVQ-72B (23.12% and 82.20%). This confirms our core hypothesis: increasing
+parameter scale without explicitly grounding the reasoning trajectory is inefficient for complex mathematical and structural tasks. By contrast, V-tableR1
+forces the model to output explicit visual anchors before calculation, converting
+black-box guessing into verifiable arithmetic.
+Superiority over Conventional SFT.A direct compariso

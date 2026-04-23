@@ -1,0 +1,34 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+ned with auto-generated plans
+generalize on unseen goals better than those
+trained with Oracle plans.
+On Combo tasks, Oracle achieves 0.43, while
+SuperIgor reaches 0.21. But on New Object tasks
+(Figure 3 (c)), Oracle drops sharply to ≈0.22 ,
+while SI decreases more moderately to 0.12–0.17.
+Thus, although SI lags in absolute terms, its performance is more stable: the Oracle–SI gap shrinks
+from 0.25 on Combo to only 0.05–0.10 on New
+Object tasks. We attribute this stronger generalization precisely to the fact that SI agents learn from
+multiple alternative plans per instruction, which
+exposes them to richer variability during training.
+c) Agents trained with auto-generated plans
+do not lose performance when instructions are
+paraphrased.
+Paraphrases reuse (Figure 3 (d)) the same goals
+as in Combo tasks but are expressed in different
+linguistic forms. In Cycle 1, SI achieves 0.07 on
+Combo and 0.09 on Paraphrases. In Cycle 2, SI
+remains stable, with 0.21 on Combo and 0.20 on
+Paraphrases. This shows that SuperIgor agents
+can successfully transfer their learned strategies to
+differently worded instructions, maintaining performance even when the language of the goal changes.
+RQ2. Policy Tra

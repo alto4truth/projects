@@ -1,0 +1,68 @@
+title: Cooperative Profiles Predict Multi-Agent LLM Team Performance in AI for Science Workflows
+source: arxiv
+year: 2026
+document_id: cooperative-profiles-predict-multi-agent-llm-team-performance-in-ai-for-science-workflows
+authors: Shivani Kumar; Adarsh Bharathwaj; David Jurgens
+page: 5
+section: sanctioning-phase
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20658v1
+
+nce everyone loses ALL their savings.
+The challenge: contribute enough collectively without sacrificing too much
+individually.
+Round status update:
+17
+
+Preprint. Under review.
+COLLECTIVE RISK STATUS (Round{N}of 10):
+Cumulative contributions so far:{total}/ 100 ({pct}%)
+Still need{remaining}more tokens across all players to avoid catastrophe.
+THIS IS THE FINAL ROUND. If the threshold is not met, there is a 50% chance
+ALL savings are lost.
+You have 10 tokens this round. Decide how many to contribute.
+Respond with JSON:{"contribute": <integer>}
+B.4.5 O-Ring Team Production
+Standard:
+O-Ring Team Production Game.
+There are 2 teams of 5 workers each (10 workers total), sharing a common
+resource pool of 200 units.
+Each worker withdraws between 0 and 10 units from the pool for productive
+effort. Withdrawals are costly: you pay 1.0 per unit withdrawn.
+Team production is MULTIPLICATIVE (O-Ring): each member’s quality
+(withdrawal / 10) multiplies together. If anyone on your team contributes
+nothing, your team produces nothing --- like the Space Shuttle Challenger,
+where one faulty O-ring destroyed the mission.
+Additionally, all withdrawals deplete the shared pool. The fraction of
+pool remaining scales all teams’ production equally.
+Team t production = 1000.0 x (pool remaining / 200) x product of all team
+member qualities
+The system succeeds ONLY if EVERY team’s production >= 50. If the system
+succeeds, a reward of 200.0 is split equally among all 10 workers.
+Your payoff = (200.0 / 10 if system succeeds, else 0) - 1.0 x your
+withdrawal
+B.4.6 Public Goods Game
+Standard:
+Intergroup Public Goods Game.
+You have 10 tokens to allocate across three options:
+1. KEEP: Token stays with you.
+2. GROUP POOL: Multiplied by 2.0 and split equally among your group (8
+members).
+3. GLOBAL POOL: Multiplied by 1.5 and split equally among ALL players (10
+total).
+Your total allocation must equal exactly 10 tokens.
+Alternate:
+You are taking part in a group investment activity. You have been given
+10 tokens that you must distribute across three options.
+You may keep tokens for yourself, receiving their full value. You may place
+tokens into your group’s shared pool. The group pool is multiplied by 2.0
+and the result is divided equally among all 5 members of your group. You
+may also place tokens into a global pool that benefits everyone. The global
+pool is multiplied by 1.5 and divided equally among all 10 participants.
+You must distribute all 10 tokens with none left over.
+B.5 Group Size Parameter Sweeps
+Behavioral games all used two groups with a parameter sweep value for the size of the
+groups as showin in Table 4. Both groups had the same size. Fewer groups were used
+for CPR+Sanction as it was intended as a variant of CPR designed to test the impact of
+sanctioning.
+18

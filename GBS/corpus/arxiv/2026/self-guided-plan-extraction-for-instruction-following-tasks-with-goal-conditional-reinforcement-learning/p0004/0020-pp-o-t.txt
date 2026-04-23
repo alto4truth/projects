@@ -1,0 +1,22 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+nsfer their learned strategies to
+differently worded instructions, maintaining performance even when the language of the goal changes.
+RQ2. Policy Training under Sparse Feedback
+a) Skill Curriculum Learning significantly improves subtask acquisition under sparse feedback, compared to unstructured training
+We evaluate the training process by the number of unique subtasks the agent masters over time.
+A subtask is considered "mastered" once its success rate surpasses a 70% threshold. This metric
+provides a clearer insight into the agent’s growing
+capabilities and its ability to handle compositional
+tasks. We compare three configurations, with the
+results visualized in Figure 4.
+The agent trained withSkill Curriculum on
+Oracle Planssets a practical upper bound for performance. By the 10 billion step mark, it success-

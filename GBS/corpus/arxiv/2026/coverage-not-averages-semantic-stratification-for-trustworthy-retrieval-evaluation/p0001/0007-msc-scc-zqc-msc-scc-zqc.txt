@@ -1,0 +1,22 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 1
+section: msc-scc-zqc-msc-scc-zqc
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+., 2024) explore corpus stratification to improve retrieval efficiency and quality. GraphRAG
+is most closely related, but our approach detects relationships directly in semantic space and uses stratification for
+benchmark diagnosis rather than retrieval optimization.
+Synthetic Data Generation.To reduce manual annotation
+costs, RAGEval (Zhu et al., 2025), Long 2RAG (Qi et al.,
+2024), and DataMorgana (Filice et al., 2025) use schemadriven pipelines to generate grounded QA data. While effective for scaling evaluation, these methods do not address
+systematic coverage gaps across corpus semantic regions.
+See Appendix F for further discussion on related works.
+7. Limitations
+This work has several limitations that suggest directions
+for future research. First, our evaluation is conducted on
+8

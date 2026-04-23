@@ -1,0 +1,82 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+Beyond ZOH: Advanced Discretization Strategies for Vision Mamba 5
+Patch Embeddings
+(inc. Spatial Position)
+a
+The PlainMamba Block is repeated L times with a Global
+Pooling Layer  at the end.
+Depth-Wise
+Conv
+SSM x4
+Lin. ProjLin. Proj
+Lin. Proj
+Direction Aware Update
+{𝛩1,𝛩2,𝛩3,𝛩4,𝛩5}
+SiLU
+SiLU
+X
+Z
+MLP
+(d) PlainMamba Block
+(c) LocalMamba Architecture
+Patch Embeddings
+(inc. Spatial Position)
+MLP
+Layer
+Norm
+Conv1d
+Lin. Proj
+Lin. Proj
+X
+Z
+Lin. Proj
+SiLU
+SiLU Layer
+NormSASF
+FFN
+Layer
+Norm
+The Spatial Mamba Block is repeated 4 times in the Spatial Mamba
+architecture, with a downsampling between each block shown above.
+(e) SpatialMamba Block
+Patch Embeddings
+(inc. Spatial Position / Cls Token)
+MLP
+Layer
+Norm
+Forward
+Conv1d
+Backward
+Conv1d
+Lin. ProjLin. Proj
+X
+Z
+Lin. Proj
+Forward Selective
+SSM
+Backward Selective
+SSM
+SiLU
+Token
+Fusion
+Token
+Fusion
+Token Fusion Block; ﬁnds the most similar pairs of
+tokens from two token sets, fuses the connected tokens.
+Patch Embeddings
+(inc. Spatial Position)
+FFN
+Layer
+Norm
+The HiMamba Block is repeated 4 times in the  HiMamba architecture, with each
+incorporating a single direction scanning SSM. The head of the architecture
+implements an upsampling layer to

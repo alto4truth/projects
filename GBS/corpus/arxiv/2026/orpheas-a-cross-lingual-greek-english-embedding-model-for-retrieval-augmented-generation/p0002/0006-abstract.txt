@@ -1,0 +1,20 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+e their representational capacity across numerous languages [Wang et al.,
+2024, Zhang et al., 2024], limiting their optimization for Greek-specific morphological structures and domain-specific
+semantic relationships. Therefore, the development of specialized bilingual Greek–English embedding models constitutes a scientific and practical necessity for the Greek research community [Koursaris et al., 2026].
+The development of high-quality embedding models for RAG typically involves a fine-tuning stage usually over
+domain-specific data, where the model learns to align query and document representations in a shared semantic space.
+Traditional fine-tuning methodologies for embedding models rely on synthetic query-document pair generation from
+document chunks [Bonifacio et al., 2022, Neeser et al., 2025]. While adequate for general domains, these approaches
+rely on surface-level textual patterns and simple positive-negative pair formulations, failing to capture the structured
+semantic relationships and hierarchical dependencies that characterize specialized corpora. Recently, Koursaris et al.
+[2026] attempted this limitation by treating a Knowledge Graph (KG) as a primary source for train

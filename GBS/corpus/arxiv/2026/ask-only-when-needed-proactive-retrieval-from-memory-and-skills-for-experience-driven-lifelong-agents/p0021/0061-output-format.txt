@@ -1,0 +1,34 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 21
+section: output-format
+chunk: 61
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+21
+
+ICALK@ECNU
+Output strictly a JSON object containing 1-3 memory objects. No markdown text outside the
+JSON.
+‘‘‘json
+{{
+"skills": [
+{{
+"when_to_use": "When [Task Requirement / Specific Scenario / Observation] matches...",
+"experience": "[Actionable, step-by-step strategy to succeed]."
+}}
+]
+}}
+‘‘‘
+E.4 Comparative Skill Extraction Prompt
+The following prompt distills contrastive insights from matched trajectory pairs. It compares a higher-quality trajectory
+against a lower-quality one sharing the same task, identifies the divergence point, and formulates a reusable rule that
+captures why the better continuation succeeded. Comparative entries produced from PROACTRL paired branches carry
+the strongest contrastive signal because the two trajectories share the same interaction prefix up to the branching step.
+Comparative Skill Extraction Prompt
+You are an expert Meta-Cognitive Analyst reviewing two trajectories for the exact same
+task.
+Your goal is to extract high-utility **Contrastive Memories** by comparing a higherquality trajectory against a lower-quality one and distilling a reusable, forwardlooking rule.

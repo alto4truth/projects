@@ -1,0 +1,28 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 1
+section: msc-scc-zqc-msc-scc-zqc
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+NFCorpus 50.9% 11% 182 90.3% 53% 36
+FIQA 60.9% 38% 232 100% 56% 0
+SciDocs 89.2% 48% 69 99.7% 65% 2
+Table 4.Coverage metrics for aggregate (original BEIR) vs stratified (coverage-aware generated) evaluation queries.
+pendix D.4 for details). Note that documents in these clusters may still be retrieved for other queries, but the concepts
+themselves are never directly tested. A retrieval system
+could fail completely on such queries and the benchmark
+would not detect it.
+We empirically confirm this by evaluating retrieval performance on queries generated within zero-query clusters, revealing both unobserved strengths and systematic failure
+modes that are untested in the NFCorpus benchmark (Appendix D.5).
+5.4. Interpretable Diagnostics
+Stratified evaluation enables diagnosis ofwhyretrieval fails
+within specific semantic regions, including corpus-level,
+retrieval-agnosticfailure modes where success is fundamentally impossible due to limitations in corpus structure.
+By isolating these cases, stratified evaluation reveals failure patterns that are obscured by aggregate metrics. We
+present results on NFCorpus, with additional failure modes
+for FiQA and SciDocs reported in Appendix E
+Failure

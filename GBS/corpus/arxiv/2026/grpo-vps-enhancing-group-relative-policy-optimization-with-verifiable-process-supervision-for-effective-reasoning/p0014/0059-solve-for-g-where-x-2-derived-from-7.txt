@@ -1,0 +1,51 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 14
+section: solve-for-g-where-x-2-derived-from-7
+chunk: 59
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+x = 9)
+x_value = 2
+solution_for_g = solve(quadratic_eq.subs(x,
+x_value), g)
+print(solution_for_g)
+```
+```output
+[2]
+```
+The calculated value of \( g \) is indeed:
+\[
+\boxed{2}
+\]
++0.6
+-0.1
+<think>
+Okay, let's see. The problem says that 2.5
+coulombs of charge flow through a resistor, and
+the electric potential energy of that charge
+decreases by 0.40 joules. We need to find the
+potential difference across the resistor.
+Hmm, I remember that electric potential energy
+change is related to the work done by the electric
+field. The formula that comes to mind is
+something like
+2.5 C of charge flows through a resistor, and the
+electric potential energy of that charge decreases
+by 0.40 J. What is the potential difference across
+the resistor?
+energy equals charge times voltage. Wait, yes,
+the potential difference (voltage) is equal to the
+change in electric potential energy divided by
+the charge. So, V = ΔU / Q.
+Let me verify that. The work done (which is the
+change in potential energy) is equal to the
+charge times the voltage. So,
+W = Q * V. Therefore, solving for V gives V = W
+/ Q.
+In this case, the change in potential energy is
+0.40 J, and the charge is 2.5 C. So plugging
+those numbers in,

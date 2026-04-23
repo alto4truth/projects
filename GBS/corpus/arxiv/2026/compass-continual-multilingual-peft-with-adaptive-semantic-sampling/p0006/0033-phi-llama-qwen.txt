@@ -1,0 +1,54 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 6
+section: phi-llama-qwen
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+Physics (University), Biology (University),
+Chemistry (University), Psychology (Professional), Computer Security, Econometrics, Electrical Engineer46
+
+Published in Transactions on Machine Learning Research (11/2025)
+ing, International Law, Jurisprudence, Logical Fallacies, Machine Learning, Management, Marketing, Medical Genetics, Moral Disputes, Moral Scenarios, Philosophy, Accounting (Professional), Law (Professional),
+Medicine (Professional), Security Studies, US Foreign Policy, World Religions, Formal Logic, and Human
+Sexuality.
+D.2 Temporal Distribution Shift Subject Allocation
+Real-world deployment involves sequential distribution shifts as user interests evolve. To evaluate the
+COMPASS-ECDA trigger mechanism, we simulate temporal dynamics through subject-based distribution
+changes reflecting natural query evolution across five distinct periods.
+T1 - Initial Deployment (27 subjects)The initial period T1 establishes COMPASS adapters trained
+on a subset of 27 Global MMLU subjects.
+T2 - STEM Expansion (10 new subjects)Period T2 introduces a distribution shift toward advanced
+STEM content from MMLU-ProX, including Computer Science (University), Mathematics (University),
+Medicine (University), Physics (University), Biology (University), Chemistry (University), Computer Security, Electrical Engineering, Genetics, and Machine Learning. This shift simulates users adopting the system
+for advanced technical applications.
+T3 - Humanities Diversification (10 new subjects)The user base diversifies to include: Philosophy,
+World Religions, Moral Scenarios, Moral Disputes, Human Sexuality, Psychology (Professional), Formal
+Logic, Business Ethics, Jurisprudence, and Logical Fallacies. This shift represents expansion into ethical,
+legal, and philosophical domains previously absent from the training distribution.
+T4 - Professional Integration (10 new subjects)Enterprise adoption brings professional domains:
+Management, Marketing, Accounting (Professional), Medicine (Professional), Law (Professional), Clinical
+Knowledge, Econometrics, Security Studies, US Foreign Policy, and International Law.
+T5 - Cyclical Return (10 old subjectsThe distribution returns to the original T1 subject set assessed
+on MMLU ProX samples, simulating a seasonal usage pattern. To control for data size, we randomly
+selected 10 of the original 27 subjects, resulting in: Anatomy, Astronomy, Conceptual Physics, High School
+Mathematics, High School Psychology, Miscellaneous, Nutrition, Prehistory, Public Relations, and Virology.
+Table 11 reveals the trade-offs across different threshold values, evaluated across a range from 0.05 to
+0.30. Aggressive thresholds below 0.15 trigger excessive updates, withθJS = 0.05producing a 66.7%
+false positive rate where updates occur during stable distributions. This wastes computational resources
+and risks destabilizing well-adapted models through unnecessary retraining. Conservative thresholds above
+0.20 exhibit the opposite problem, failing to respond promptly to distribution shifts. AtθJS = 0.30, the
+system triggers only once across all five temporal periods, missing critical adaptation opportunities during
+the T2 STEM expansion and T3 humanities diversification. The large sample average delay means the model
+operates suboptimally for extended periods.
+The threshold value of 0.15 emerges as optimal, achieving zero false positives while maintaining prompt
+response to distribution shifts with an average delay of 2,180 samples. This threshold identifies all four
+major distribution transitions (T1→T2, T2→T3, T3→T4, T4→T5) without spurious triggers during stable
+periods. The computational cost remain manageable and comparable to the ideal setting of knowing the
+fixed-intervals in advance. While 0.15 serves as a robust default, for practical deployment scenarios we
+anticipate that language-specific calibration is desired, as low resource languages may benefit from higher
+thresholds to avoid unstable updates with limited validation data.
+47

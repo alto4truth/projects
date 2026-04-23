@@ -1,0 +1,26 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+aerodynamic, inertial, and gravitational components [17, 18]. Modern approaches integrate predictive velocity forecasting with energy management
+systems, demonstrating that accurate speed prediction directly improves energy allocation and range estimation [19].
+Despite significant advances, behavioral variability and route uncertainty
+remain major sources of estimation error in energy consumption. Current
+literature lacks comprehensive personalized frameworks that jointly encode
+driver-specific behavior and future road geometry for long-horizon prediction.
+This gap motivates the breadth of this research work.
+3. System Architecture
+3.1. Motivation and Framework Overview
+Theliteraturereviewidentifiedthreecriticalgapsinexistingvehiclespeed
+prediction and energy consumption estimation frameworks: (1) insufficient
+integration of driver-specific behavioral modeling with route data context,
+(2) limited capability for long-horizon personalized prediction, and (3) inadequate coupling between data-driven velocity forecasting and physics-based
+energy consumption models. To address these limitations, we propose a
+modular system architecture that unifies personalized driver modeling with
+compr

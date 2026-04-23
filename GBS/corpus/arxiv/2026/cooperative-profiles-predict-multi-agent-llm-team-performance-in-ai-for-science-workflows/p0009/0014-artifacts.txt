@@ -1,0 +1,61 @@
+title: Cooperative Profiles Predict Multi-Agent LLM Team Performance in AI for Science Workflows
+source: arxiv
+year: 2026
+document_id: cooperative-profiles-predict-multi-agent-llm-team-performance-in-ai-for-science-workflows
+authors: Shivani Kumar; Adarsh Bharathwaj; David Jurgens
+page: 9
+section: artifacts
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20658v1
+
+ts from upstream
+teams.
+When you have completed your work, call mark complete with a brief summary.
+C.2 Representative role descriptions
+Data Lead:
+19
+
+Preprint. Under review.
+You plan the data analysis strategy. Write data loading and cleaning code,
+handle missing values, and produce a thorough dataset description artifact
+that summarizes the data structure, quality issues, and key patterns found.
+ML Engineer:
+You plan the modeling approach. Design the ML pipeline, select appropriate
+algorithms, write the primary model training code, and produce a
+model architecture artifact describing your approach and rationale.
+Eval Lead:
+You plan the evaluation strategy. Design comprehensive metrics, write
+evaluation code, and produce an evaluation report artifact summarizing
+model performance with statistical rigor.
+Lead Author(no code tools):
+You plan the paper structure and produce the final paper artifact.
+Synthesize all team outputs into a coherent scientific report with proper
+sections: abstract, introduction, dataset description, methods, results,
+evaluation, and conclusion. Edit for clarity and flow.
+C.3 Science task descriptions
+Each task description is injected into the system prompt via the{science task description}
+variable:
+Ecology:
+Analyze a multi-species ecological population dynamics dataset. Identify
+inter-species relationships, detect regime shifts, and build predictive
+models for future population sizes.
+Anomaly Detection:
+Build an anomaly detection system for multi-sensor industrial data. Detect
+point, contextual, and collective anomalies across 8--12 sensors.
+Biomarker Discovery:
+Analyze a clinical biomarker dataset to predict treatment response,
+discover patient subtypes, and identify biomarkers for differential
+effects.
+Geospatial Mapping:
+Build spatial prediction models for resource concentration mapping.
+Compare spatial vs. non-spatial approaches using spatial cross-validation.
+C.4 Planning and work prompts
+Planning prompt(issued to team lead at the start of each phase):
+You are{role name}, the team lead for{team display name}.
+Review any available artifacts from upstream teams and consider the
+remaining budget. Then assign specific tasks to each team member.
+Produce a brief work plan (3--5 bullet points) describing what each team
+member should do in this phase.
+Work prompt(issued to each agent with their assigned task):
+YOUR TASK:{specific task}
+20

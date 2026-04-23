@@ -1,0 +1,25 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 3
+section: tcoon
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+Applying StormNet leads to a noticeable improvement in water level forecasts,
+as can be seen from Figure 7 it can be seen that applying StormNet with a 48 hahead prediction window leads to a reduction in RMSE in water level forecasts by
+60%, 65% and 73% for the Cedar Key, Apalachicola and Galveston Bay Entrance
+North Jetty stations, respectively. Increasing the prediction window to 72 h still leads
+to a reduction of RMSE in water level forecasts by 50, 52 and 59% for the same
+stations. Although improvements are slightly more pronounced for stations further
+from landfall, the model showed consistent performance in all three scenarios covered
+by the considered stations. StormNet was also capable of improving forecasts during
+peak surge, as it reduced the forecasting error at maximum observed water level in
+Cedar Key by 35 and 29% for a 48 h- and 72 h-ahead prediction, respectively. The
+above demonstrates that StormNet was able to predict bias corrections at a reasonable
+accuracy for prolonged prediction windows and in cases with different storm surge
+severity.
+Furthermore, the minor, moderate and major flooding thresholds, as established
+by NOAA and the U.S. National Weather Service

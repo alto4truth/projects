@@ -1,0 +1,27 @@
+title: Exploring High-Order Self-Similarity for Video Understanding
+source: arxiv
+year: 2026
+document_id: exploring-high-order-self-similarity-for-video-understanding
+authors: Manjin Kim; Heeseung Kwon; Karteek Alahari; Minsu Cho
+page: 3
+section: enc-blocks-3
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20760v1
+
+e additionally
+conduct experiments on DiST [61] by inserting a single MOSS module between
+the spatial encoder and the integration branch. The results in Tab. 10e show
+that MOSS substantially improves performance with marginal computational
+overhead in all settings, demonstrating its flexibility in different image-to-video
+transfer methods.
+Spatial Encoders.In Tab. 10d, we evaluate MOSS on ViT-B pretrained on
+three different objectives: CLIP [62], DINO [9] and MAE [22]. The results show
+that both 1st- and 2nd-order STSS consistently improve performance across
+all pre-training objectives. Among the three encoders, CLIP achieves the best
+performance due to its generalizable visual representations, leading us to adopt
+it as our default spatial encoder.
+D.4 Efficiency Comparison
+We compare the efficiency of our MOSS models to existing efficient tuning methods [46,58,61,92,93] in terms of FLOPs, the number of trainable parameters,
+memory footprint, and accuracy on Something-Something V2. The results are
+summarized in Tab. 11. Compared to the baseline Side4Video [93], our MOSS-S
+model significantly reduces the number of trainable parameters and memory footprints by 71% and 48% respectivel

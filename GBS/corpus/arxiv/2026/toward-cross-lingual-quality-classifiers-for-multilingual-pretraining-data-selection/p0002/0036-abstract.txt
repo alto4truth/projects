@@ -1,0 +1,31 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+Published as a paper at 3rd DATA-FM workshop @ ICLR 2026, Brazil.
+Table 9: Evaluation of standard (56%) vs. aggressive (10%, 20%) filtering with replication. Unlike
+high-resource languages, reducing Arabic retention to increase token replication degrades performance.
+Benchmark HQ ML HQ (10%) HQ (20%) ML (10%) ML (20%)
+ARC-Easy0.28980.2855 0.2720 0.2771 0.2741 0.2762
+AlGhafa PIQA-MT0.51450.5112 0.5019 0.5090 0.4948 0.5128
+AlGhafa RACE 0.27750.28830.2747 0.2834 0.2765 0.2786
+AlGhafa SciQ 0.4432 0.4503 0.4503 0.41710.45730.4563
+ARC-Challenge 0.26600.27970.2669 0.2772 0.2712 0.2626
+Belebele_c 0.3233 0.31220.33780.2944 0.3278 0.3256
+GMMLU_c 0.2575 0.2700 0.2475 0.25500.27250.2525
+HellaSwag 0.38730.39250.3592 0.3728 0.3747 0.3857
+Include_c 0.26810.30430.2717 0.2772 0.2844 0.2790
+M_MMLU_c 0.2614 0.2646 0.26520.26740.2618 0.2634
+AlGhafa PIQA 0.6088 0.6110 0.5958 0.6023 0.60390.6143
+XNLI 0.3309 0.3349 0.3325 0.3333 0.33250.3357
+XStoryCloze0.59230.5811 0.5877 0.5817 0.5784 0.5804
+Aggregate acc_norm0.37080.37580.3664 0.3652 0.3700 0.3710
+Average rank3.622.314.31 3.69 3.69 3.23
+Table 10: Aggregated macro and micro metrics for all strategies using a 10% retention rate. The
+ML (Q3) strategy achi

@@ -1,0 +1,29 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+Figure 1: Overview of the two-phase EVIAN framework, which first decomposes a response into visual, inferential,
+and factual components and then evaluates them along the orthogonal dimensions of Image–Text Consistency,
+Logical Coherence, and Factual Accuracy.
+3.3 Phase 2: Multi-faceted Quality
+Assessment
+The second phase conducts a multi-faceted evaluation of each decomposed response along three
+orthogonal dimensions: logical coherence, factual
+accuracy, and image-text consistency. We employ Qwen2.5-VL-7B-Instruct-AWQ (Bai et al.,
+2025) as an automated auditor, which assigns interpretable 1–5 scores and textual rationales based on
+a detailed rubric. This step provides fine-grained
+diagnostics of different error types while producing
+standardized quality scores that can be aggregated
+for ranking and selection.
+Logical Coherence (SL).This dimension evaluates whether reasoning in the <INFER> tags follows
+plausibly from visual evidence. Scores increase
+with reasoning strength: a default of 2 when no
+inference is given, 3 for plausible but unsubstantiated claims, 4 for well-supported reasoning, and 5
+for logically undeniable conclusions. This rubric
+rewards depth of reasoning while pena

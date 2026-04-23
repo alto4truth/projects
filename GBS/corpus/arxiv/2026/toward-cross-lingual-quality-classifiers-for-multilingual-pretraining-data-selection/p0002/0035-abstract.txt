@@ -1,0 +1,20 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+H ( 0.3%), and
+should therefore be interpreted with caution pending multi-seed validation.
+Synthesis: When Does Multilingual Pooling Help?Across our four languages, we observe a
+pattern: the key insight is not that multilingual poolingalwaysdominates, but that it provides a reliable baseline across languages, while language-specific optimization (negative sampling strategy,
+retention rate, anchor curation) can yield comparable or superior results when tuned appropriately.
+These findings provide evidence that the classifier learns language-agnostic markers in the embedding space by training on multiple languages. Note on Stochasticity: While multilingual pooling
+improves overall rank stability, our ablations show that downstream aggregate accuracy remains
+sensitive to the classifier’s initial sampling seed (shifting by 0.3% in Arabic and 0.8% in French).
+We provide a more detailed analysis of these seed variances in Appendix H.
+9

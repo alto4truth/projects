@@ -1,0 +1,28 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 3
+section: da-2k
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+Winoground
+SugarCrepe++Model
+test fine en dev test test lite test test test test val g-acc test
+Avg.
+Representative Reasoning Models:
+ThinkLite-VL-7B [66] 55.33 59.95 84.19 68.12 76.96 46.17 73.70 35.78 78.09 42.60 58.46 35.25 61.49 59.70
+VL-Cogito-7B [79] 55.33 56.64 82.98 69.62 79.58 47.63 72.26 35.78 79.82 44.29 56.43 38.25 63.59 60.17
+LLaV A-Critic-R1-7B [64] 53.33 57.80 83.16 67.50 78.01 45.18 68.52 35.28 78.50 42.73 53.82 34.75 61.93 58.50
+Baseline vs. Ours (3B):
+Qwen2.5-VL-3B [4] 43.33 51.49 77.15 64.12 76.44 42.68 59.59 35.21 77.31 45.27 51.89 27.75 61.05 54.87
++ Visual Jigsaw [70] 50.67 53.88 78.44 66.50 78.53 42.26 63.03 36.43 78.63 46.12 55.42 27.25 60.21 56.72
++ SSL-R1 54.67 57.67 78.52 68.75 80.63 43.67 61.58 35.60 77.68 46.84 61.70 29.25 61.49 58.31
+∆(vs. baseline) +11.34 +6.18 +1.37 +4.63 +4.19 +0.99 +1.99 +0.39 +0.37 +1.57 +9.81 +1.50 +0.44 +3.44
+Baseline vs. Ours (7B):
+Qwen2.5-VL-7B [4] 54.66 59.75 83.33 67.38 76.96 43.41 71.89 35.07 77.68 42.66 54.45 37.00 61.59 58.91
++ Visual Jigsaw [70] 59.33 60.86 83.68 70.88 82.20 47.58 74.79 36.41 80.27 45.21 59.82 39.25 63.04 61.79
++ SSL-R1 60.00 62.81 84.11 71.75 81.68 49.87 74.07 36.50 81.05 45.40 63.54 41.25 63.67 62.75
+∆

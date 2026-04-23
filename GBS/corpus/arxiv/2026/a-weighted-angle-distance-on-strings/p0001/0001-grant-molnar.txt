@@ -1,0 +1,26 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 1
+section: grant-molnar
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+Abstract.We define a multi-scale metricd ρ on strings by aggregating angle distances
+between alln-gram count vectors with exponential weightsρ n. We benchmarkd ρ in DBSCAN clustering against edit andn-gram baselines, give a linear-time suffix-tree algorithm
+for evaluation, prove metric and stability properties (including robustness under tandemrepeat stutters), and characterize isometries.
+1.Introduction
+This paper was motivated by a simple question: can we define a natural metric on strings
+for which
+(ab)4 =ababababand (ab) 20 =abababababababababababababababababababab
+are close?
+In many symbolic-sequence settings—including text processing, computational biology,
+and log or trace analysis—repeated use of a short motif is often semantically mild: the string
+“stutters” without changing its essential type. Classical edit distances (e.g. Levenshtein or
+Damerau–Levenshtein) treat this as a large change, since inserting additional tandem copies
+requires many operations, and the distance grows linearly with the number of repeated
+blocks. When repetition scale is a nuisance factor rather than a signal, this behavior is
+undesirable.
+Rather than introducing new edit operations, we take a fea

@@ -1,0 +1,68 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 3
+section: tcoon
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+ase of the
+two-day period around landfall, showing approximately 11% and 12% lower average
+RMSE throughout all stations in each case, respectively.
+29
+
+RMSE (m)
+0.14 (max.)
+0.03 (min.)
+500 km
+24h (full test set)
+Best model:
+Stor
+mNetLSTM
+(a)
+RMSE (m)
+0.14 (max.)
+0.03 (min.)
+500 km
+24h (2 days ar
+ound landfall)Best model:
+Stor
+mNetLSTM
+(b)
+RMSE (m)
+0.14 (max.)
+0.03 (min.)
+500 km
+36h (full test set)
+Best model:
+Stor
+mNetLSTM
+(c)
+RMSE (m)
+0.14 (max.)
+0.03 (min.)
+500 km
+36h (2 days ar
+ound landfall)Best model:
+Stor
+mNetLSTM
+(d)
+Fig. 8 : Comparison of bias correction predictions generated with StormNet and a
+sequential LSTM-based approach (”LSTM”) [ 77] for Hurricane Idalia (2023). Gauge
+stations in which StormNet (LSTM) yields better performance are denoted with purple (yellow), while larger (smaller) data point radii represent greater (lower) values of
+RMSE for the considered station. Each station is represented only by the model that
+yields the lowest RMSE (i.e., the best model). The gray-outlined dark blue line indicates the storm track. 24 h- and 36 h-ahead predictions are shown in (a, b) and (c, d),
+respectively. Predictions for the full test dataset are shown in (a, c) while predictions
+for a 2-day period around landfall are shown in (b, d).
+The performance of the two models in the three stations representing areas of
+high, medium and, low storm impact examined in the previous section is presented in
+Figure 9. StormNet-corrected water levels yield consistently lower RMSE compared
+with their LSTM-corrected counterparts for both prediction windows (24 and 36 h).
+StormNet also captures the peak surge during landfall at the Cedar Key station
+(8727520, NOAA-NOS, high severity example) better than LSTM. In the Apalachicola
+station (8728690, NOAA-NOS, medium severity example), applying StormNet leads
+to slightly over-predicting water levels at peak surge, while the LSTM model, although
+capturing the correct value for 24 h-ahead corrections, slightly underestimate the
+30

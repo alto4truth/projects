@@ -1,0 +1,21 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+malformed artifacts, routing errors, stale intermediate state, synchronization bugs between tracks, or interactions between multiple agents that only become visible late in the run. When these failures occur after
+several hours of execution, the cost of diagnosis can be substantial. We do not currently know how to make
+this problem easy. What we do instead is make failure state external and inspectable: the system persists
+checkpoints, intermediate messages, budget traces, and mode-specific workspaces so that a run can be resumed, audited, or post-mortemed rather than restarted from scratch. This does not remove the debugging
+burden, but it makes it more manageable and far less opaque.
+2.2 Implications on Workflow-Level Design Requirements
+Taken together, the observations above led us to treat workflow design itself as a first-class systems problem.
+In our experience, long research runs become unreliable when intermediate state is implicit, when theory
+and experiments evolve without a shared contract, or when apparently polished drafts are produced without
+the artifacts needed to inspect how those drafts were assembled. The current release therefore follows seven
+design requirement

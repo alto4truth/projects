@@ -1,0 +1,24 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+BBQ offers a broad scope of
+demographic coverage, most of its datasets are not suitable for analyzing intersectional fairness, except for the two
+following datasets:
+• SES by race/ethnicity 9 (Race_SES dataset). The original dataset consists of 11,160 MCQs (see Column Total
+Questions in Table 2). The dataset questions combine race/ethnicity and the SES of individuals, along with their
+occupations, to assess fairness between different intersecting identity groups.
+• Gender by race/ethnicity 10 (Race_Gender dataset). The original dataset consists of 15,960 MCQs (see Column
+Total Questions in Table 2). The dataset questions combine race/ethnicity and gender to assess fairness across
+intersecting identity groups.
+Each dataset consists of various questions from differentambiguousanddisambiguatedcontexts. The former are
+designed in a way that the correct answer is ‘unknown’ (or similar expressions/terms 11, used interchangeably in
+the datasets), prompting models to avoid biased assumptions when information is incomplete. In contrast, the latter
+questions have a clearly correct answer, based on a concrete context, allowing for more direct fairness evaluation. These
+two categories can be b

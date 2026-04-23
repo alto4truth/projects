@@ -1,0 +1,24 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+group within a mixed-policy framework. We encourage follow-up work to explore alternative mechanisms for
+injecting learnable signals from the near-future self, such as On-Policy Distillation.
+This paper is the second contribution in our research program onSelf-Taught RLVR, a conceptual framework
+we propose to unify the study of how reasoning models can learn from themselves. We explore three
+complementary dimensions of self-guidance: our prior work [29] studies theinformed self—a self augmented
+by privileged information that teaches the base self; the present work focuses on thetemporal self—a
+near-future self teaching its past self; and our upcoming work will introduce theparallel self. While each
+paper is self-contained, they collectively instantiate the Self-Taught RLVR paradigm.
+References
+[1] Rishabh Agarwal, Nino Vieillard, Yongchao Zhou, Piotr Stanczyk, Sabela Ramos Garea, Matthieu Geist, and
+Olivier Bachem. On-policy distillation of language models: Learning from self-generated mistakes. InThe Twelfth
+International Conference on Learning Representations, 2024.
+[2] Shuai Bai, Yuxuan Cai, Ruizhe Chen, Keqin Chen, Xionghui Chen, Zesen Cheng, Lianghao Deng, Wei Ding, Chang
+Gao,

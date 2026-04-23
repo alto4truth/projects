@@ -1,0 +1,28 @@
+title: Exploring High-Order Self-Similarity for Video Understanding
+source: arxiv
+year: 2026
+document_id: exploring-high-order-self-similarity-for-video-understanding
+authors: Manjin Kim; Heeseung Kwon; Karteek Alahari; Minsu Cho
+page: 3
+section: enc-blocks-3
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20760v1
+
+Exploring High-Order Self-Similarity for Video Understanding 3
+Fig.9: Real-robot platform.We specify the robot specifications and other environment settings.
+B Implementation Details
+In Tabs. 6 and 7, we provide detailed model configurations and training hyperparameters across different model scales and datasets. All models are trained using
+8 NVIDIA RTX 6000 Ada GPUs.
+C Experimental Setup for Real-World Robotic Tasks
+In Fig. 9, we provide the detailed setup for real-world robotic tasks. We use a
+Franka Research 3 robot arm and a DROID gripper. A single ZED camera with a
+resolution of 720×1280 is mounted on the side, facing the 27-inch display. We use
+the visual observation after resizing it to 224×224 resolution. The VLA model
+is provided with a view containing only the display, with the robot’s motion
+intentionally excluded. We use absolute joint position as action mode. The text
+instructions used for each task are as follows.
+–MoveSense (Left/Right): Point left when the circle on the display moves left,
+and point right when it moves right.
+–MoveSense (CW/CCW): Point right when the circle on the display moves
+clockwise, and point left when it moves counterclockwise.
+–PongPredict:

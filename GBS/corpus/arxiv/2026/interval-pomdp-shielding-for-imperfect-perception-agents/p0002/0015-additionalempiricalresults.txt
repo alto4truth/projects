@@ -1,0 +1,18 @@
+title: Interval POMDP Shielding for Imperfect-Perception Agents
+source: arxiv
+year: 2026
+document_id: interval-pomdp-shielding-for-imperfect-perception-agents
+authors: William Scarbro; Ravi Mangal
+page: 2
+section: additionalempiricalresults
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20728v1
+
+uded because our modified
+Refuel observation model hides the safety-critical variables,
+which greatly increases support aliasing and makes the offline
+support-MDP breadth-first exploration intractable. Still, the
+comparison among the three feasible baselines is revealing.
+Single-Belief is the strongest lightweight zero-failure shield,
+reaching0%fail at about79%stuck under uniform perception
+and58%stuck under the adversarial regime. Observation is

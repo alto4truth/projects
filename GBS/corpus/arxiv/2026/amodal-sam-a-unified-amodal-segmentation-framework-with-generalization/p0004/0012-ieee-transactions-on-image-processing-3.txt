@@ -1,0 +1,73 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 4
+section: ieee-transactions-on-image-processing-3
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+Mask
+Downsampling
+Conv
+Spatial Completion
+Adapter
+Model Adaptation
+Data
+Adaptation Optimization Adaptation
+Prompt Encoder
+Mask Decoder
+Regional
+consistency
+Holistic topological
+regularization
+Segmentation
+Supervision
+concat
+Conv
+Gaussian
+Blur
+ROI
+Block
+Block
+Block
+Block
+Block
+Block
+Feature Mask
+Soft
+GatingFeature
+Adapter
+Adapter
+Adapter
+Block
+Mask
+Input
+ConvConv
+Soft
+GatingFeature
+Prompt Encoder
+Mask Decoder
+Regional
+consistency
+Memory
+Attention
+Holistic topological
+regularization
+Memory Bank
+Image
+Video
+Segmentation
+Supervision
+Source
+Dataset
+Random
+Selection
+Block
+Fig. 2. The overall structure of the proposed Amodal Segment Anything Model(SAM) includes three key aspects for the adaptation from SAM to Amodal
+SAM: data, model, and optimization. The process of data adaptation involves an automated pipeline for converting generic segmentation annotations into those
+necessary for amodal segmentation. Model adaptation is realized through the Spatial Completion Adapter (SCA) in a manner focused on the encoder-tuning.
+Optimization adaptation is performed using a composite learning objective.
+needed to disentangle visible features from occluded priors. In
+the following sections, we demons

@@ -1,0 +1,24 @@
+title: Structure-Augmented Standard Plane Detection with Temporal Aggregation in Blind-Sweep Fetal Ultrasound
+source: arxiv
+year: 2026
+document_id: structure-augmented-standard-plane-detection-with-temporal-aggregation-in-blind-sweep-fetal-ultrasound
+authors: Keli Niu; He Zhao; Qianhui Men
+page: 2
+section: abstract
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20591v1
+
+rving Redundancy Suppression (PRS)
+To mitigate temporal jitter and short-lived spurious peaks
+while preserving true peaks, we propose PRS, a post-hoc,
+peak-preserving smoothing method that consolidates detections into compact segments.(1) Smoothing:we apply
+Savitzky–Golay (SG) and an exponential moving average
+(EMA) to the posterior sequence to obtainp sg andp ema. A
+convex weightλ∈(0,1)balances short-term detail of SG
+against longer-term stability of EMA, and a small downward
+clampδ >0prevents shaving strong peaks. Letz t be the
+output logit from BiTT, and letp(t) =σ(z t)∈(0,1)denotes
+its probability att. The smoothing step is denoted as:
+psmooth(t) = max
+
+λ psg(t) + (1−λ)p ema(t), p(t)−δ

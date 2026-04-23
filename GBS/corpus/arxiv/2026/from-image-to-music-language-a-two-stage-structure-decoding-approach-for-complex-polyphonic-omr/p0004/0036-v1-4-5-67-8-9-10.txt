@@ -1,0 +1,52 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 4
+section: v1-4-5-67-8-9-10
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+10]and voice 3 as[5,7,8].
+Tracing original voice 2:[4,6,9,10]
+• 4 at tick 0 (quarter = 480)→ends at 480
+• 6 at tick 480 (quarter = 480)→ends at 960
+46
+
+• 9 at tick 960 (8th = 240)→ends at 1200
+• 10 at tick 1200 (8th = 240)→ends at 1440
+V oice 3:[5,7,8]
+• 5 at tick 240 (8th = 240)→ends at 480
+• 7 at tick 480 (8th rest = 240)→ends at 720
+• 8 at tick 720 (8th = 240)→ends at 960
+The problem is that the beam is 8–9–10. For the beam to not be broken, all three events need to be in
+the same voice in sequence. The original has 8 in voice 3, and 9, 10 in voice 2. So when rendering
+voice 2 we see 4,6,9,10 — the beam starts at 9 ( Continue), but where’s theOpen? It’s in voice 3
+(event 8). Hence, broken beam.
+To fix: put 8, 9, 10 all in the same voice, consecutively.
+Let me try: voice 2= [4,6], voice 3= [5,7,8,9,10]:
+• V oice 2:0→480→960(gap 960–1440)
+• V oice 3:240→480→720→960→1200→1440(fills the measure!)
+Both voices have gaps (partial voices), but the beam group 8, 9, 10 is now consecutive in voice 3.
+This is the structure I’ll submit.
+Agent Turn 4: Secondevaluate_fixCall
+voices: [[1, 2, 3], [4, 6], [5, 7, 8, 9, 10]]
+events: [
+{id:1, tick:0}, {id:2, tick:240}, {id:3, tick:480},
+{id:4, tick:0}, {id:6, tick:480},
+{id:5, tick:240}, {id:7, tick:480},
+{id:8, tick:720, beam:"Open"},
+{id:9, tick:960, beam:"Continue"},
+{id:10, tick:1200, beam:"Close"}
+]
+duration: 1440
+[Tool result]
+BEFORE (m274): fine=false, error=false, tickTwist=0.046
+qualityScore=0.874, spaceTime=0.375, surplusTime=0, beamBroken=true
+Events: 10 total, 10 valid, 0 fake, 0 null
+AFTER (m274): fine=true, error=false, tickTwist=0.046
+qualityScore=0.874, spaceTime=0.375, surplusTime=0, beamBroken=false
+Events: 10 total, 10 valid, 0 fake, 0 null
+d(tickTwist)=+0.000 -> FIXED!
+47

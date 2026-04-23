@@ -1,0 +1,56 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+eMath Average40
+45
+50
+55
+60
+65
+70
+75
+80
+85Accuracy (%)
+51.8
+73.8
+47.4
+54.1
+57.9
+55.8
+76.2
+48.8
+56.6
+60.2
+55.5
+78.5
+55.5
+62.7
+61.5
+57.1
+76.3
+54.6
+67.0
+62.8
+57.2
+79.2
+55.7
+66.0
+63.1
+(b) Performance comparison on reasoning tasks.
+Base Model
+GRPO
+Previous Best
+NPO (Ours)
+AutoNPO (Ours)
+Figure 1 (a)Training dynamics: NPO’s early-stage intervention accelerates convergence by∼2.1×, while the latestage intervention pushes beyond the vanilla GRPO plateau to a higher ceiling. AutoNPO unifies both interventions
+by triggering them automatically from online training signals.(b)Benchmark performance: NPO and AutoNPO
+consistently outperform GRPO and the best existing baseline across representative reasoning benchmarks.
+1
+arXiv:2604.20733v1 [cs.LG] 22 Apr 2026

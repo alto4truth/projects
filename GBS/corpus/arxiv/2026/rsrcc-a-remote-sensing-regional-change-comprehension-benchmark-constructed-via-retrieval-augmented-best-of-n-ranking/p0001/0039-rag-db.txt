@@ -1,0 +1,24 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 1
+section: rag-db
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+whereC 𝑁 (𝑥)denotes a randomly sampled subset of𝑁candidates.
+Under mild assumptions on the score distribution, the probability that𝑐★ corresponds to a true
+change region increases exponentially with𝑁. Consequently, Best-of-𝑁 acts as a noise suppression
+mechanism that amplifies semantically consistent regions while discarding spurious candidates.
+This interpretation explains the observed robustness to segmentation backbone choice and random
+cropping, as reported in Section H. Without Best-of-𝑁, we observe frequent failure cases in which
+visually salient but semantically irrelevant regions dominate the reasoning process. This confirms
+that the filtering stage is necessary rather than merely beneficial.
+D Qualitative Comparison: Missed Changes
+Figure 5 illustrates qualitative examples highlighting cases where our method successfully detects
+meaningful semantic changes that are labeled as “no change” in the public [4] dataset. While others
+providestrongbuilding-levelannotations,itoccasionallyomitsfine-grainedstructuralorsurface-level
+changes (e.g., new roads, terrain modifications, or partial constructions).
+Our segmentation pipeline demonstrates greater sensitivity to these overlooked

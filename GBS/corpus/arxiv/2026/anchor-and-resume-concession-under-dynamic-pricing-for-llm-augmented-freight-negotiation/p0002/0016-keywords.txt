@@ -1,0 +1,53 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+ition on the new curve that matches (or
+slightly exceeds) the broker’s most recent offer, then
+resumes concession from there; the min clamp ensures
+the offer never exceeds𝑟 new
+target.
+Acceptance is handled separately by the scoring function
+𝑉 (𝑥) = (𝑟target −𝑥 )/𝑅: the broker accepts the carrier’s offer
+when 𝑉 (𝑜𝑐) ≥𝑉 (offer(𝑡)), i.e., when the carrier’s rate scores
+at least as well as the broker’s own counter-offer. This is the
+same acceptance criterion used by all fixed-𝛽strategies.
+3.4 F ormal Properties
+Proposition 3.1 (Monotonicity).If a dynamic shift
+occurs at round𝑘, then offer(𝑘)≥offer(𝑘−1).
+Proof.The anchor step sets
+𝛼0 = offer(𝑘−1)−𝑟 min
+𝑅new
+, 𝜏 *
+0 =𝑇·𝛼 𝛽new
+0
+so (𝜏 *
+0 /𝑇) 1/𝛽new =𝛼 0 by construction. With𝜏 0 =⌈𝜏 *
+0 ⌉:
+offer(𝑘)−offer(𝑘−1) =
+[︃(︂⌈𝜏*
+0 ⌉
+𝑇
+)︂1/𝛽new
+−
+(︂𝜏*
+0
+𝑇
+)︂1/𝛽new
+]︃
+𝑅new
+Since ⌈𝜏 *
+0 ⌉ ≥𝜏 *
+0 and 𝑓(𝑥) = ( 𝑥/𝑇 )1/𝛽 is non-decreasing
+for 𝛽 > 0, the bracketed term is ≥ 0. Since 𝑅new > 0,
+offer(𝑘)≥offer(𝑘−1).□
+Boundedness.The min clamp in Case 2 ensures offer(𝑡) ≤
+𝑟new
+target for all 𝑡. Once 𝜏(𝑡) ≥𝑇 , the unclamped offer would
+3

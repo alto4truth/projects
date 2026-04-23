@@ -1,0 +1,30 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 2
+section: mnist
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+FSE128:18 Minqi Shao, Shangzhou Xia, and Jianjun Zhao
+Table 7. Comparison between MOs in the capability of generating killable and nontrivial mutants (MNIST).
+On each QNN,boldindicates the highest KillabilityRate or NontrivialityRate across all MOs.
+type name QCL QCNN HCQC DRNN
+KR (%) NR (%) KR (%) NR (%) KR (%) NR (%) KR (%) NR (%)
+Add RGA 83.49 47.44 69.39 56.12 68.9568.68 90.95 54.05
+Delete RGD 94.32 41.35 94.3845.83 84.20 53.40 96.18 52.56
+Replace GR 87.11 41.84 85.85 51.22 76.04 55.81 88.79 53.33
+Modify (gate)
+GPM 96.94 37.50 87.41 46.29 80.82 53.15 91.89 45.68
+GSM 91.84 48.42 87.41 46.30 87.14 55.71 97.84 41.35
+GRT 91.05 44.47 92.29 36.25 86.44 53.56 92.55 42.34
+Modify (param)
+PF 98.75 53.75 93.9261.79 81.75 61.75 98.8271.18
+PSF 91.74 41.96 83.58 50.75 80.00 64.47 98.92 46.22
+PS 84.20 46.80 91.14 37.14 89.4751.84 99.0542.86
+the same configuration compared to other types, leading to unfair comparison. Also, similar to
+RQ2, we use the same test suite to compute metrics for the same QNN and MO.
+The results in Table 6 show that different gate types have markedly different impacts on model
+performance, depending on both the gate category and the operator applied. For the Add opera

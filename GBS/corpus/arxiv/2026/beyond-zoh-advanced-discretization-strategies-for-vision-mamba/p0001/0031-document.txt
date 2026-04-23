@@ -1,0 +1,27 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+12 F. Ibrahim et al.
+Fig.6: Statistical scatter plot - performance vs. efficiency. Mean±standard
+deviation (std) of different methods.
+showed a statistically significant improvement in accuracy of2.66%(p<0.001),
+well above the threshold of0.70%, with an observed decrease in performance of
+11.23%. This decrease is expected as it follows the increasing order of computational operations required to solve each advanced discretization method. POL
+achieved a statistically significant improvement in accuracy of2.33%(p<0.001)
+with an observed decrease in throughput of9.13%. FOH and RK4 did not meet
+the required accuracy threshold and therefore do not offer statistically significant
+improvements. FOH improved accuracy by only0.48%(below the threshold of
+0.70%) and did not show statistical significance (p=0.97). RK4 improved accuracy by only0.68%(p<0.001), also below the practical significance threshold.
+BIL, HOH, and POL provide statistically significant accuracy gains, with modest
+throughput trade-offs.
+5 Discussion
+5.1 Peak Performance and Training Convergence
+Beyond the final precision, we observe substantial differences in the convergence
+speed across discretization methods, represented

@@ -1,0 +1,21 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+tention plays
+an important role in surgical workflow analysis. In this work, we introduce the concept of gaze-following to the surgical domain,
+and demonstrate its great potential for understanding clinical roles, surgical phases, and team communications in the OR.
+Methods:We extend the 4D-OR dataset with gaze-following annotations, and extend the Team-OR dataset with gazefollowing and a new team communication activity annotations. Then, we propose novel approaches to address clinical role
+prediction, surgical phase recognition, and team communication detection using a gaze-following model. For role and phase
+recognition, we propose a gaze heatmap-based approach that uses gaze predictions solely; for team communication detection,
+we train a spatial-temporal model in a self-supervised way that encodes gaze-based clip features, and then feed the features into
+a temporal activity detection model.
+Results:Experimental results on the 4D-OR and Team-OR datasets demonstrate that our approach achieves state-of-the-art
+performance on all downstream tasks. Quantitatively, our approach obtains F1 scores of 0.92 for clinical role prediction and 0.95
+for surgical phase recognition. Furthermore,

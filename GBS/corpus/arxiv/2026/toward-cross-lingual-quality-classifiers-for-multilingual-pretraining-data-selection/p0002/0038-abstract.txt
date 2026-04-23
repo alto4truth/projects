@@ -1,0 +1,22 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+3.0 ranks) and Arabic (2.31 ranks). We also introduce the Q3 sampling
+strategy, which refines decision boundaries by training against fluent but low-utility text rather than
+random negatives, offering a complementary approach to multilingual pooling for high-resource
+languages. No single strategy dominates. For French, Q3 negatives, ML (15%), and ML (Q3)
+all achieve comparable results, suggesting practitioners should select based on computational constraints and available data. The 10% threshold from prior work may be overly aggressive when
+using our ML classifier; increasing to 15% improved French performance substantially (40.64%
+to 42.09%), which indicates that this hyperparameter needs language-specific tuning. However,
+when comparing all approaches (Table 10), we find that the ML (Q3) strategy is the one dominating in terms of performance, which means combining our methods leads to better results. Overall,
+our findings suggest that multilingual pooling can help democratize high-quality data curation for
+underrepresented languages while boosting performance on high-resource languages, though the
+effectiveness varies by language family and resource level.
+10

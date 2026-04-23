@@ -1,0 +1,16 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 7
+section: function-to-find-prime-numbers-divisible-by-39
+chunk: 51
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+def count_prime_divisible_by_39(limit):
+count = 0
+for num in range(2, limit + 1):
+if is_prime(num) and num % 39 == 0:
+count += 1
+return count

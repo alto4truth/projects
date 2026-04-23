@@ -1,0 +1,75 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 59
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+in Basque
+R Error rate by every external knowledge source and LLM in Kazakh
+Figure 9: Error rate by every external knowledge source and LLM in Kazakh
+
+H Generated queries and explanations
+Generated query Generated answer
+[EN] What are
+the common
+complications of
+acute myocardial
+infarction?
+Common complications of acute myocardial infarction include heart failure, arrhythmias, and cardiac rupture. Other complications are pericarditis, mitral regurgitation, ventricular septal defect, cardiogenic shock, and pulmonary edema.
+Thromboembolism and Dressler syndrome can also occur.
+[ES] ¿Cuáles son
+las complicaciones
+comunes del infarto agudo de miocardio?
+Las complicaciones comunes del infarto agudo de miocardio incluyen insuficiencia
+cardíaca, arritmias, choque cardiogénico, rotura ventricular y muerte súbita. La
+insuficiencia cardíaca es frecuente y puede resultar de la pérdida de función del
+músculo cardíaco. Las arritmias pueden ser mortales si no se tratan rápidamente.
+El choque cardiogénico ocurre cuando el corazón no bombea suficiente sangre. La
+rotura ventricular es rara pero grave.
+[IT] Quali sono
+le complicanze
+più comuni
+dell’infarto miocardico acuto?
+Le complicazioni comuni dell’infarto miocardico acuto includono insufficienza
+cardiaca, aritmie, morte improvvisa, rottura del setto interventricolare e tromboembolismo. L’insufficienza cardiaca è una delle complicazioni più comuni e può
+essere causata da una riduzione della funzione contrattile del cuore. Le aritmie,
+come la fibrillazione ventricolare e la tachicardia ventricolare, possono verificarsi
+a causa della lesione del miocardio. La morte improvvisa può verificarsi a causa
+di aritmie gravi o di una grave insufficienza cardiaca. La rottura del setto interventricolare e il tromboembolismo sono complicazioni meno comuni, ma possono
+essere gravi e potenzialmente letali.
+[FR] Quelles sont
+les complications
+courantes d’un infarctus aigu du myocarde?
+Les complications courantes de l’infarctus aigu du myocarde comprennent
+l’insuffisance cardiaque, l’arrêt cardiaque, la fibrillation ventriculaire, la rupture
+du muscle cardiaque et l’embolie pulmonaire. L’insuffisance cardiaque est une
+complication majeure qui peut survenir immédiatement ou des semaines après
+l’infarctus. Les autres complications incluent la tamponnade cardiaque, la thrombose veineuse profonde et la pneumonie. Les complications peuvent varier en
+fonction de la gravité de l’infarctus et de la rapidité du traitement. Un traitement
+précoce et des soins appropriés peuvent contribuer à prévenir ou à atténuer ces
+complications.
+[EU] Zeintzuk
+dira miokardioko
+infartu akutuaren konplikazio
+ohikoenak?
+Miokardio infartu akutuaren konplikazio arruntenak bihotz-gutxiegitasuna, takikardia bentrikularrak, blokeo aurikulobentrikularra eta arritmia kardiakoa dira. Konplikazio hauek heriotza kardiakoa eragin dezakete. Bihotz-gutxiegitasunak bihotzak odola ponpatzeko duen gaitasuna murrizten du. Takikardia bentrikularrak
+bihotzaren taupada azkarra eragiten du. Arritmia kardiakoak bihotzaren erritmoa desordenatzen du. Bihotzeko aneurisma ere gerta daiteke. Konplikazio hauek
+tratatu eta prebenitzeko, medikuak sendagaiak, kirurgia eta beste tratamendu batzuk
+erabiltzen ditu. Konplikazio hauek tratatzeko, ospitalean sartzea eta jarraipena
+behar da.
+Table 4: Example of generated queries and generated answers to those queries for each language.
+I Monolingual evidence results with Serper API
+Params 8B 12B-14B 27-32B >=70B Avg (Std.)
+Models LLaMA Qwen Gemma Qwen Gemma MedGemma Qwen LlaMA Qwen
+8B 8B 12B 14B 27B 27B 32B 70B 72B
+Web-search (Serper)
+ES 68.0 68.8 72.8 77.6 71.2 76.8 80.0 79.2 76.8 74.58 (4.23)
+FR 68.0 69.6 67.2 76.0 69.6 75.2 78.4 80.8 77.6 73.6 (4.76)
+IT 65.6 69.6 69.6 80.0 69.6 76.0 76.8 79.2 80.0 74.04 (5.16)
+EU 55.2 58.4 66.4 66.4 69.6 76.8 68.0 76.0 63.2 66.67 (6.77)
+KK 54.4 60.0 61.6 58.4 66.4 74.4 68.0 70.4 60.8 3.82 (6.02)
+Table 5: Performance comparison across different monolingual English retrieval methods using Serper API.

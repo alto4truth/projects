@@ -1,0 +1,28 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 42
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+agreement but not calibration—
+a high τ does not guarantee that RDI absolute values are
+meaningful thresholds for deployment decisions.
+Limitations.(i) Corpus is nine sources; broader surveys
+may reveal additional patterns. (ii) AUTO-ART does not yet
+implement certified multi-norm training (G1) or longitudinal
+benchmark versioning (G2). (iii) Pre-screening gate accuracy depends on model architecture; FOSC is less informative
+for non-differentiable components. (iv) Evaluation uses RobustBench models on CIFAR-10; ImageNet and multimodal
+validation is future work. (v) Runtime benchmarks (Table 10)
+are single-GPU; distributed scaling behaviour is untested.
+Broader impact and responsible use.Rigorous evaluation
+protects downstream users from false safety assurances; conversely, the same tools could be repurposed to find and exploit
+model vulnerabilities. AUTO-ART mitigates this dual-use
+risk through several mechanisms: attack results are reported
+in defensive SARIF format (designed for security workflows,
+not weaponisation), compliance integration maps findings to
+remediation actions rather than exploit chains, and the framework’s open-source licence encourages transparent auditing.
+We

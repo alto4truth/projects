@@ -1,0 +1,21 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+asoningtrajectories{y i}G
+i=1
+from the old policyπθold. Standard GRPO estimates the advantageˆAi by normalizing the outcome rewards within the group. In PGPO, we utilize the composite rewardR(y i)(which includes the critic’s process feedback) to compute
+the advantage:
+ˆAi = R(yi)−mean({R(y j)}G
+j=1)
+std({R(yj)}G
+j=1) . (3)
+Decoupled Policy Constraints.Following DAPO, we decouple the clipping constraints on the importance sampling ratio to stabilize the optimization of long
+reasoning chains. We define the token-level ratioρi,t(θ) = πθ(yi,t|x,q,yi,<t)
+πθold (yi,t|x,q,yi,<t). The

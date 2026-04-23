@@ -1,0 +1,20 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+IONSTUDY
+Effect of segment granularity.To investigate the impact of segment granularity on the efficiency and
+performance of our adaptive strategy, we evaluate the impact of segment granularity by varying the average number of pointsnper segment. As shown in Figure 2(a),n= 4achieves the optimal trade-off
+between training efficiency and performance under the same wall-clock time. While finer-grained segmentation (n= 2) provides more precise local adjustments, it incurs prohibitive computational overhead that
+slows convergence. This confirms that our segment-level design effectively strikes a balance between computational economy and optimization precision, avoiding the excessive costs associated with fine-grained
+estimation while ensuring superior learning dynamics.
+Comparison of Different segment strategies.We compare our adaptive segmentation strategy with a naive
+fixed token-count partition baseline, where each response is evenly divided into a fixed number of segments.
+For the fixed baseline, we set the number of segments to 6, exceeding the effective segmentation budget of
+our adaptive method. As shown in Figure 2(b), the adaptive strategy converges faster, achieves higher accu

@@ -1,0 +1,15 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 189
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+ion to emerge more clearly. OutputBias thus improved construct validity, ensuring distributions reflected question content rather than model defaults.
+
+Chapter 4: The World Values Benchmark 178
+Figure 24: Iterative versions of the WVB. A schematic overview showing how the benchmark evolved from unstable single-prompt runs (Naïve), to greater reliability through prompt sets (InputSensitivity), to adjusted distributions correcting anchor bias (OutputBias). Taken together, the three versions demonstrate a progression from instability (Naïve) to improved reliability (InputSensitivity), to strengthened construct validity (OutputBias). Only the final version was used in the Results section, but documenting the earlier iterations was essential: it shows why methodological safeguards are necessary and how descriptive benchmarking can be systematically improved.
+4.3.8 Summary of key challenges 10-point scales. One of the most persistent problems came from WVS questions that used 10-point response intervals (e.g. “indicate on a scale of 1 to 10 whether behaviour X is justifiable”). Alternative remappings, including three- and four-point bins, were considered but rejected because they imposed arbitrary cut-points and new lexical anchors. Binary collapse was therefore adopted as the least distortive compromise under the limits of the models available at the time. In pilot tests the models could not produce meaningful distributions across such fine-grained anchors: responses became noisy, flat, or collapsed to extremes. Moreover, human data for some items (e.g. Q109) are heavily clustered at one end of the scale, which made comparisons fragile. After extensive discussion we collapsed these scales into binary categories (positive/negative). Human survey responses were

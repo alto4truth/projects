@@ -1,0 +1,26 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 67
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+Table 12.Prompt template for GPT-4o assisted evaluation.{Response of Assistant 1}and{Response of Assistant 2}are the initial
+response and the final response, respectively.
+System prompt
+You are required to score the performance of two AI assistants in describing a given image.
+Prompt
+You should pay extra attention to the hallucination, which refers to the part of descriptions that are inconsistent
+with the image content, such as claiming the existence of something not present in the image or describing
+incorrectly in terms of the counts, positions, or colors of objects in the image. Please rate the responses of the
+assistants on a scale of 1 to 10, where a higher score indicates better performance, according to the following
+criteria:
+1: Accuracy: whether the response is accurate with respect to the image content. Responses with fewer
+hallucinations should be given higher scores.
+2: Relevancy: whether the response directly follows the instruction.
+Please output the scores for each criterion, containing only two values indicating the scores for Assistant 1 and
+2, respectively. The two scores are separated by a space. Following the scores, please provide an explanation of
+your evalua

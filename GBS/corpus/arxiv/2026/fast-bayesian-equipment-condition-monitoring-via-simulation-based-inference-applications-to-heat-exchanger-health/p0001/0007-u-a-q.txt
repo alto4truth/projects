@@ -1,0 +1,34 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+(1−e −λ)·β f ·g f .(14)
+Fort > τ, the total accumulated fouling is the sum of
+these independent increments over the active duration of
+the failure. Thus, by Wald identity, the expectation of
+R(t)is linear in time:
+E[R(t)]≈
+
+(1−e −λ)β f gf
+
+(t−τ).(15)
+compatibly with the well known Ebert-Panchal model
+[42]. This derivation shows that the process is linear in
+time relative to the random failure pointτ. This formulation is consistent with the first-order behavior of deterministic fouling laws while retaining the random-event
+structure necessary to represent the intermittent and unpredictable nature of industrial fouling.
+2. Leakage with Fluid Loss.Internal leakage is
+modeled as a diversion of fluid from the primary hotstream flow path, representing a shell-side bypass or a
+loss of integrity in the tube-to-header seals. We define
+a time-dependent leak fractionL(t)∈[0,1)that reduces
+the effective mass flow rate participating in the heat exchange:
+˙mhot,out(t) = ˙mhot,in(1−L(t)).(16)
+This reduction in the hot-side thermal mass decreases the
+heat capacity rateChot, altering the capacity rate ratior.
+This results in a simultaneous reduction in outlet mass
+flow and a decrease inThot,out.

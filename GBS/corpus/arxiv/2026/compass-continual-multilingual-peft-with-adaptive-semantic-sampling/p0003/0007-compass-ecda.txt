@@ -1,0 +1,19 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 3
+section: compass-ecda
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+Figure 7: Temporal performance evolution for Qwen2.5-7B-Instruct. Note that time step 0 includes the
+initial 500 samples from the time period transition of T1 to T2 (i.e., the increments are 0-indexed on the
+x-axis.
+The cyclical return in T5 provides insights into knowledge retention. COMPASS-ECDA recovers T1 performance while maintaining T2-T4 knowledge, demonstrating that distributional anchors successfully preserve
+knowledge across non-adjacent periods. Naive fine-tuning recovers T1 performance but has largely forgotten
+T2-T4 subjects, regressing below its initial performance state relative to T1.
+When considering performance across all temporal transitions, COMPASS-ECDA achieves a superior balance of forward and backward transfer. Against naive fine-tuning, COMPASS-ECDA achieves comparable
+forward transfer while significantly reducing backward transfer per transition. Full retraining, despite access
+to all historical data and comparable forward and backward transfer, underperforms on computational ef24

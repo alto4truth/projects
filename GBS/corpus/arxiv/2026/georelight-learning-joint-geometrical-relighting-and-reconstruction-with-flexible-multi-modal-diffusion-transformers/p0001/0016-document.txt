@@ -1,0 +1,84 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+ndary artifacts due to nearest neighbor sampling, so we apply a simple dilation to the iNOD
+foreground, which results in a clean and robust geometry
+4
+
+High-Resolution
+Image Generation
+Multi-View
+Generation
+Multi-View
+Mesh Carving
+Textured Mesh
+High Resolution,
+DR RGBX GTInput Our
+Not
+Available
+Not
+Available
+Not
+Available
+/home/yuxuanxue/Downloads/1024/auto-labeling/dataloader_lighticon_autolabeling/debug_georelight_lighticon_autolabeling_1/
+/home/yuxuanxue/Downloads/1024/auto-labeling/example_dataloading/
+/home/yuxuanxue/Downloads/1028/debug_georelight_itw_autolabeling/
+Synthetic
+Light
+Stage
+In-the-wild
+Input Environment SegmentationRelit Albedo Normal Dilated iNOD Decoded 3D Geometry from iNOD (for reference)
+Auto-Labeled Intrinsics
+Figure 4.Our Strategic Mixed-Data Training Sources.We combine (a) fully-labeled Synthetic data, (b) Light Stage data with paired
+lighting, and (c) In-the-wild data. We use our synthetic data pre-trained model to auto-label intrinsics for (b) and (c).
+Mode Clear Latent Noisy Latent Global Condition Dataset
+Default -z all zI,zE Synth,Dome
+Renderingz a,zn,zg,zs zIE zE Synth,DomeIntrinsic→Relitza,zn,zg,zs zIE -ITW
+Geometry→Relitzn,zg,zs zIE,za zE Synth,DomeRelit→GeometryzIE,za,zs zn,zg -Synth
+Table 1.Strategic training for mixing synthetic and real data.
+boundary after decoding shown in Fig. 2. Please refer to our
+supplementary for detailed instructions on creating iNOD.
+3.4. Strategic Mixed Post-Training
+A fundamental challenge for using synthetic data is the
+“synthetic-real gap”. Synthetic data provides perfect
+ground-truth labels but it may result in a model that achieves
+less photorealism. Conversely, real-world images are photorealistic but lack the ground-truth intrinsics and geometry
+labels, and are extremely complicated to acquire.
+To solve this, we first create a hybrid dataset. In our
+observation, synthetic trained model achieves good intrinsics and geometry recovery. Hence, we leverage our initially trained synthetic model to “auto-label” [22] our realworld data sources: a high-quality light stage data (Dome)
+as in [25, 37] and a large-scale in-the-wild dataset (ITW)
+from [19, 21]. This step provides us with pseudo-groundtruth intrinsics (za,z n,z g,z s ) for our photorealistic data.
+Our light stage data contains paired relit images with
+light position and intensity from controllable LEDs. However, the ITW data lacks paired relit images and target illumination. We therefore designed a strategic mixed posttraining approach, detailed in Table 1, which leverages the
+full flexibility of our multi-modal architecture (Sec. 3.1).
+Instead of one monolithic task, we train the model on different tasks tailored to the strengths of each data source.
+On ourSynthandDomedatasets, where we have complete labels, we train the full joint pipeline using the “Default” and “Rendering” modes. This teaches the model
+the physical relationships between geometry, intrinsics,
+and lighting. For images inITW, we use a specialized
+“Intrinsic→Relit” task. In this mode, we provide our autolabeled intrinsics as a clear condition (by settingc switch= 1)
+and task the model with denoising only the original, photorealistic imagez IE. Unavailable conditions such as input
+Iand illuminationEare dropped as 0. This crucial step
+directly teaches the model how to synthesize photorealistic
+human appearance from its own intrinsic predictions, using real-world images as the target, without ever needing a
+ground-truth relit pair. This strategic use of our flexible architecture allows the model to learn physical accuracy from
+synthetic data while simultaneously learning complex, realistic appearance from in-the-wild data, all within a single
+unified framework.
+4. Experiments
+4.1. Experiment Settings
+Implementation DetailsWe initialize our DiT from the
+inverse rendering model of DiffusionRenderer-Cosmos7B [22] and use the pretrained Cosmos causal V AE, which
+remains frozen. Our training is conducted in two stages.
+First, we train purely on synthetic data for 30K steps to
+learn the fundamental disentanglement of intrinsics and relighting. We then use this model to "auto-label" our realworld datasets. Then, we apply our strategic mixed-data
+training (Sec. 3.4) for 10K steps, training on a combined
+dataset of synthetic and real data. A training batch contains
+128 samples at resolution of832×1280pixels from our hybrid dataset. The total training of two stages takes around
+5 days on 64 A100 GPUs. Our 7B-parameter DiT requires
+5

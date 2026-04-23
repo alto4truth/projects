@@ -1,0 +1,25 @@
+title: Exploring High-Order Self-Similarity for Video Understanding
+source: arxiv
+year: 2026
+document_id: exploring-high-order-self-similarity-for-video-understanding
+authors: Manjin Kim; Heeseung Kwon; Karteek Alahari; Minsu Cho
+page: 3
+section: enc-blocks-3
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20760v1
+
+. 9, we present the results on Kinetics-GEBD and TAPOS. Compared to our baseline (BasicGEBD), our MOSS module substantially improves
+performance at F1@0.05 scores increasing by 2.5%p and 8.4%p on Kinetics-GEBD
+and TAPOS, respectively, achieving new state-of-the-art results. These significant improvements demonstrate that our proposed module effectively captures
+fine-grained temporal changes in both motion and objects, which is crucial for
+accurate event boundary detection.
+D.3 Additional Ablation Experiments
+We present additional ablation studies on Something-Something V1 and Diving48.
+Unless otherwise specified, we follow the experimental settings in Secs. 4.2 and B.
+Temporal Window SizeL.In Tab. 10a, we examine the effect of the size of
+temporal windowLfor STSS transformation while keeping the spatial window size
+fixed as( U, V ) = (9 , 9). We first vary the temporal window size of the 1st-order
+STSS keeping that of the 2nd-order STSS constant. We observe that increasingL
+from 3 to 5 improves performance by capturing longer-range temporal dynamics.
+However, performance saturates when L exceeds 5, providing no significant
+additional gains. Similarly, varying the temporal window si

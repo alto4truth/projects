@@ -1,0 +1,45 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+8 F. Ibrahim et al.
+Higher Order Hold (HOH)
+Sample Points
+HOH
+Coefﬁcient CalculationInput Signal
+x(t)
+Output
+y(t)
+Fig.4: HOH uses multiple samples to construct a higher-order polynomial approximation of the signal within the sampling interval, providing smoother reconstruction with potentially lower error than ZOH/FOH.
+Runge-Kutta 4 (RK4)
+Calc k1, k2, k3, k4 Weighted Sum
+ODE / Input Signal Output
+Fig.5: RK4 is a fourth-order iterative method that approximates the value at
+the current time step determined by the previous time step value, where each
+increment is the product of the size of the interval and an estimated weighted
+average of the four slopes [5] [2].
+¯B=
+nX
+i=0
+A−(i+1) (eA∆ − Pi
+k=0
+(A∆)k
+k! )
+i! B(13)
+where,n= 0corresponds to ZOH;n= 1represents FOH;n >1denotes higher
+order(quadratic,cubic).AsshowninFig.4,HOHofferssuperioraccuracyforsystems with rapidly changing inputs, such as changes in dynamic textures [7] [24].
+Runge–Kutta4(RK4)providesafourth-ordernumericalintegrationscheme
+to approximate the continuous time dynamics of the system with high precision.
+For a given step size∆:
+k1 =Ah t +Bx t (14)
+k2 =A(h t + ∆
+2 k1) +Bx t+∆/2 (15)
+k3 =A(h t + ∆
+2 k2) +Bx t+∆/2 (16)
+k4

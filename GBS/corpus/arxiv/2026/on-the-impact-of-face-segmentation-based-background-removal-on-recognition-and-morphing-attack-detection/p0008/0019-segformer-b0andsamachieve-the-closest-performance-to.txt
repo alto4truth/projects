@@ -1,0 +1,30 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 8
+section: segformer-b0andsamachieve-the-closest-performance-to
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+ues exhibit a visible negative impact
+on FR performance and image quality. The differences in
+the results between the analyzed segmentation techniques
+highlight that the choice of an appropriate segmentation
+method is essential to mitigate image quality deterioration
+and, thus, FR performance drops. While for datasets acquired
+in extremely controlled conditions, such as FERET, the
+effects of background removal do not significantly affect
+the obtained results, images acquired under more challenging conditions expose the importance of properly assessing
+the segmentation capacity of these systems in uncontrolled
+environments before their deployment in highly sensitive
+applications such as ESS for border control. The degradation in FR performance after background removal may be
+attributed to the limited accuracy of the segmentation models.
+In particular, models such as DANet fail to reliably separate
+the background in challenging samples, as illustrated in
+Figure 2. A complementary evaluation of the segmentation
+performance of all segmentation networks used in this work
+can be found in the supplementary material.
+B. Morphing Attack Detection Triggering
+Table IV shows how the trigger fr

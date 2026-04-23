@@ -1,0 +1,23 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 2
+section: abstract
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+online GCRL. We address the challenge of learning shaped rewards for credit assignment in Offline GCRL. The closest work to ours, Mezghani et al. (2023), uses both a local reward
+computed with a local temporal distance classifier and a “global” reward computed using shortest
+path search on a graph constructed using the local distance classifier. While graph-based methods
+scale poorly with task complexity, we learn a single reward function capable of directly encoding
+global, long-horizon goal-reaching information for credit assignment by leveraging the occupancy
+measure. Our experiments show the effectiveness of ORS over prior state-of-the-art work.
+3 BACKGROUND
+3.1 NOTATION
+Goal-Conditioned Reinforcement Learning:We consider an infinite-horizon controlled Markov
+Process (a MDP (Puterman, 2014) without rewards) defined by(S,A, µ, p, γ)with state spaceSand
+action spaceA.p:S×A×S→Rdenotes the transition function whileµdenotes the initial state
+distribution. The discount factor is denoted byγ∈(0,1). A policyπ(a|s):S×A→Ris a probability distribution mapping states to actions. Each policy induces a conditional state-action occupancy
+distributiond π(s+ |s, a)over future statess +:d π(s+

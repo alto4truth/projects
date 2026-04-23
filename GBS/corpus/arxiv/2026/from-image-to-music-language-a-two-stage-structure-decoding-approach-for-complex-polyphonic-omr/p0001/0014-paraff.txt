@@ -1,0 +1,66 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 1
+section: paraff
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+n back by human and agent annotators when
+correcting measures, and are the canonical input to the annotation feedback loop described in
+Appendix F.
+30
+
+Greedy RuleBased Equations BeadSlvr BS-nopre MultipassGold.
+EvalPerf% 46.62 52.23 64.66 76.66 78.3079.6980.78
+EvalFine% 60.75 64.43 79.65 90.30 92.9895.1197.87
+EvalErr% 30.79 33.63 12.54 7.22 4.211.370.55
+V oiceRug% 0.00 0.00 0.38 0.00 0.00 0.00 0.00
+CmplxTW% 0.00 0.00 3.87 0.00 0.00 0.00 0.11
+FracWrp% 0.00 0.00 6.58 1.54 0.81 2.09 1.18
+IrrTick% 5.87 0.49 3.18 0.75 1.41 0.68 0.34
+TickOvlp% 0.32 21.99 4.98 1.82 0.11 0.09 0.39
+BeamBrk% 19.62 15.65 6.96 2.13 2.41 2.07 0.00
+TW≥1% 0.09 0.00 2.28 0.08 0.08 1.03 0.15
+SpaceAvg 1.7248 0.6368 0.2004 0.0985 0.4356 0.2315 0.0756
+SurpAvg 0.1 88.9 16.4 4.4 0.0 0.3 0.0
+TW Avg 0.1099 0.0716 0.19610.04850.0574 0.1057 0.0498
+DurRate 1.1736 0.9860 0.9822 0.9990 1.0354 1.0002 0.9989
+QS avg 0.6341 0.6370 0.8169 0.9052 0.93260.95670.9616
+NullEvs 0 12875 3538 2734 362 139 68
+FakeEvs 6 1879 3541 2211 371 541 518
+WarpEvs 0 0 11272 11329 9744 11515 11717
+IrrWrpN 0 0 448 0 0 0 52
+GraceN 1504 1488 1504 588 606 573 633
+Table 14: evaluateMeasure diagnostics across all 5,317 measures per experiment.Gold.is the
+hand-annotated ground truth of the lilypond-topology test set, included as a quality reference for
+the annotations themselves; note that its non-zeroEvalErr(0.55%) reflects edge cases where the rulebased evaluateMeasure checker flags valid annotations as erroneous—a limitation of the evaluation
+heuristics rather than annotation mistakes;RuleBasedandBS-nopre(BeadSolver-Multipass without
+pre-pass) are ablation variants; the remaining four columns (Greedy, Equations, BeadSlvr, Multipass)
+are from the main-results comparison. All metrics are computed on the experiment output alone,
+without reference to the golden ground truth.Top block: tier and diagnostic flags (% of measures).
+EvalPerf: all fields valid, no irregular ticks, no beam breaks, no voice ruggedness.EvalFine: passes
+a relaxed quality check.EvalErr: fails the fine check.VoiceRug(uneven voice fill),CmplxTW
+(complicated time-warp),FracWrp(fractional warp denominator),IrrTick(irregular tick positions),
+TickOvlp(overlapping tick ranges),BeamBrk(broken beam group),TW ≥1(tick-twist ≥1 ).Bottom
+block: numeric averages and event counts.SpaceAvg: space-time product.SurpAvg: surplus time
+(ticks).TWAvg: tick-twist average.DurRate: note-duration sum / measure duration.QS avg:
+composite quality score.NullEvs/FakeEvs/WarpEvs: null-tick, fake, and time-warped event counts.
+IrrWrpN: irregular warp groups.GraceN: grace notes. Source: goldenCompare.md (2026-04-22),
+lines 29–49.
+B Algorithm Summary
+This appendix provides a self-contained walkthrough of the BeadSolver topology-recognition loop.
+The goal is to make the design intent clear: why the loop is structured the way it is, what each
+sub-step decides, and how the evaluation function keeps the search honest. Readers who want
+implementation details can cross-reference Appendix A; those interested in the experimental setup
+should see Section 5.
+B.1 Problem Statement
+A measure is decomposed into one or moreevent clusters, each corresponding to a staff group
+(corresponding to an instrument, e.g. grand staff for piano). Within each cluster the algorithm
+receives:
+•n candidate event elementse1, . . . , en of type CHORDor REST, bracketed by a BOS sentinel
+e0 and an EOS sentinele n+1;
+• each element carries geometric coordinates (x, y1, y2,pivotX) , staff index, and apredispositioncomputed by a single forward pass of BeadPicker: predicted tick ˆti, division
+31

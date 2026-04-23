@@ -1,0 +1,25 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 7
+section: fw2-hq
+chunk: 88
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+enalized the initial boilerplate
+so severely that it discarded the entire document. However, theNordicclassifier identifies the
+knowledge-dense middle section (historical facts and detailed botanical descriptions). This suggests
+that cross-family transfer models can be more robust to localized boilerplate, focusing instead on
+the global density of information.
+Sample 6: E-commerce Boilerplate (Empty Cart)
+Text:Toutes les catégories V otre panier est vide! Index des marques: 0 - 9 A B C D E...
+Ce produit est en rupture de stock. V ous pouvez remplir ce formulaire pour être notifié...
+Translation:All categories Your cart is empty! Brand index: 0-9 A B C D E... This
+product is out of stock. You can fill out this form to be notified...
+Baseline Rank:6,322,191 (Score: 0.6707)→Nordic Rank:320,914,784 (Score: 0.0000)
+Shift:-314,592,593
+Analysis:Even without knowing French, theNordicmodel identifies the structural signature of lowutility e-commerce pages (e.g., brand lists, empty cart messages). These patterns are cross-lingual,
+allowing the model to effectively filter web noise in languages it has never seen, compared to the
+HQ baseline, which gave it a high score due to its fluent writin

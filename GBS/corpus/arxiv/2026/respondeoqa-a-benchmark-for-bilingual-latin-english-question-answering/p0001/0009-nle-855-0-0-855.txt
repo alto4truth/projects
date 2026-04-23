@@ -1,0 +1,30 @@
+title: RespondeoQA: a Benchmark for Bilingual Latin-English Question Answering
+source: arxiv
+year: 2026
+document_id: respondeoqa-a-benchmark-for-bilingual-latin-english-question-answering
+authors: Marisa Hudspeth; Patrick J. Burns; Brendan O'Connor
+page: 1
+section: nle-855-0-0-855
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20738v1
+
+than for QwQ (50% La-La, 49% EnLa). For o3-mini, this effect is reversed, with a 10%
+drop in accuracy.
+Similarly,QwQperformsbetteronscansionquestions asked in Latin (21%) than those asked in English (18%). However, this is reversed for LLaMa,
+with 7% accuracy on scansion questions asked in
+Latinand12%onthoseaskedinEnglish. Accuracy
+isaboutthesameforo3-miniforEnglish(24%)and
+Latin (25%) questions.
+Figure 5: Difference in accuracy: multihop - regular
+for 1-word SA questions.
+Multihop questionsSurprisingly, all the LLMs
+performed better overall on the multihop questions
+(Figure 5). Some content types (history, literature,
+mythology) showed mild regressions on multihop
+questions. These mixed results may be due to the
+subjectivity of what qualifies as a distinct step of
+reasoning. In addition, tasks that require multiple
+steps of reasoning for a human may have answers
+that are directly stated in LLM training data. For
+example, a grammar question may ask for a word
+to be inflected to a particular form. A human may

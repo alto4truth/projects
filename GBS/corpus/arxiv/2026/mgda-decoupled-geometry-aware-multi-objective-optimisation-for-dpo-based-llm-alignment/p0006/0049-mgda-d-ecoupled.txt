@@ -1,0 +1,33 @@
+title: MGDA-Decoupled: Geometry-Aware Multi-Objective Optimisation for DPO-based LLM Alignment
+source: arxiv
+year: 2026
+document_id: mgda-decoupled-geometry-aware-multi-objective-optimisation-for-dpo-based-llm-alignment
+authors: Andor Vári-Kakas; Ji Won Park; Natasa Tagasovska
+page: 6
+section: mgda-d-ecoupled
+chunk: 49
+source_ref: https://arxiv.org/pdf/2604.20685v1
+
+Table 6: Qwen overall win, tie, and loss rates against golden responses.
+Algorithm Win (%) Tie (%) Loss (%)
+MGDA-DECOUPLED18.8 3.0 78.2
+MGDA-NORMALISED18.5 2.9 78.6
+GROUPDRO 18.2 2.7 79.1
+CDPO 17.5 2.7 79.8
+UNIFORM18.5 3.0 78.6
+REFERENCE16.6 2.7 80.7
+A.4 Sample model responses
+Example 1
+Prompt:Why shouldn’t you mention Macbeth in a theater?
+MGDA-Decoupled: You shouldn’t mention Macbeth in a theater for a few reasons, primarily focused on avoidingbad
+luck and disrespecting the artistic integrityof the play.
+1. The Curse of Macbeth:
+• Folklore:There is a long-standing superstition that mentioning Macbeth’s name in a theater will bring bad
+luck to the production or even harm those involved. This idea stems from Shakespearean tragedies and their
+darker themes.
+• Modern Impact:While not universally believed, it can be seen as disrespectful to the play and its context.
+2. Artistic Integrity:
+• Respect for the Play:By mentioning Macbeth directly, you might inadvertently shift focus away from the
+work itself and into superstitious beliefs.
+• Subtlety:The beauty of theater lies in the mystery and intrigue created by the story. Introducing Macbeth
+explicitly can remove the element of surpris

@@ -1,0 +1,22 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+stage.
+4)PID Controller:To generate realistic driving data that captures vehicle dynamics such as acceleration limits, the PID Controller module simulates longitudinal motion by tracking the reference velocity
+through cascaded proportional-integral-derivative control. Through
+numerical integration of coupled ordinary differential equations, the
+controller produces smooth, jerk-limited, and acceleration-limited velocity profiles. This simulation generates time-series data including velocity, acceleration, jerk, and position that realistically represent how
+a vehicle would respond to route geometry and legal constraints. The
+resulting velocity profile serves as the “past driving data” required for
+personalized prediction in the Driver LSTM Module.
+5)Driver LSTM Module:The Driver LSTM Module represents the
+core contribution of the framework—a bidirectional LSTM network
+that performs personalized, map-aware velocity prediction. The module first discretizes the route into uniformly spaced 1-meter intervals
+and retrieves corresponding node attributes for these discretized coordinates using the Route Processor module, ensuring fine-grained spatial resolution for inference. Using the PID C

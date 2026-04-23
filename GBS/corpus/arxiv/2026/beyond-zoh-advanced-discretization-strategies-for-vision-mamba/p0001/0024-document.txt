@@ -1,0 +1,20 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+ning strategy
+for State Space Models to accurately classify different images. Using the same
+ViM model with no other architectural changes, BIL results in an accuracy of
+71.95%, a0.83%improvement from the original ZOH method used in [33]. This
+improvement, while not a large improvement, is achieved with approximately the
+same convergence of 232 epochs, indicating a more efficient numerical method
+integrated within the model. The POL and HOH methods are the most accurate, while requiring more training epochs before reaching their maximum
+performance of72.76%and72.74%, a1.64%and1.62%, respectively. To verify
+these results, the same comparison procedure was trained and evaluated on Cifar100 [15], showing a similar improved top-1 accuracy by approximately2.32%
+for the HOH compared to ZOH, and0.85%improvement for BIL. The results

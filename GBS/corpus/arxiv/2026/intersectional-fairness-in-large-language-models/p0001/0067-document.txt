@@ -1,0 +1,23 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 67
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+ersections. Subgroup
+fairness analysis highlights additional nuances: although some metrics suggest low observable disparity, others reveal
+uneven outcome distributions or become less informative due to sparsity, underscoring the importance of careful metric
+interpretation.
+Compared with [Parrish et al. 2022], our findings show a different ambiguous-context pattern for modern LLMs:
+whereas BBQ reports stronger biased responding under under-informative contexts, our results show that many
+models more often select theunknownoption, which makes subgroup fairness metrics less informative in this setting.
+In disambiguated contexts, our results diverge from the inconclusive intersectional patterns reported in the BBQ
+benchmark. Specifically, we observe consistent and systematic differences across intersectional datasets: Race_Gender
+exhibits strong directional bias, while Race_SES reveals bias primarily through performance asymmetries. This suggests
+that intersectional bias is not uniformly expressed, but instead depends on how stereotype information interacts with
+the prediction task.
+While BBQ primarily relied on accuracy and bias scores, we additionally consider subgroup fairness meas

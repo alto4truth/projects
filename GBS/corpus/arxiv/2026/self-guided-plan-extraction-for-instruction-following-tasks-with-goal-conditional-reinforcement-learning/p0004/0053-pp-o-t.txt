@@ -1,0 +1,22 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 53
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+onally compare DPO and GRPO as alternative methods for planner fine-tuning. While
+GRPO and PPO are in principle applicable to this
+setting, recent work suggests that GRPO can provide a stronger and more stable optimization signal
+for reward-based language model training. To evaluate whether this also holds in our setup, we replace
+DPO with GRPO in the planner fine-tuning stage
+and measure downstream policy performance on
+the validation split. Results are reported in Table 6.
+We find that DPO achieves better performance
+than GRPO in our setting, improving success rate
+from 0.18 to 0.21 while also reducing the number
+of unsolved instructions from 175 to 166. We attribute this to the structure of the planner objective:
+although dense execution scores are available, the

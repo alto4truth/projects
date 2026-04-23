@@ -1,0 +1,32 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+sts an identification formula up to a pre-specified degreed, our algorithm
+finds it in quasi-polynomial time. Note that our algorithm also returns the symbolic formulas for
+identifying the direct causal effects. Moreover, our result implies that any identification method
+restricted to searching for formulas of bounded degree is subsumed by our approach: whenever such
+a formula exists, our method will also find it in quasi-polynomial time.
+Example 1.3.We return to the earlier example of a conditionally randomized study with imperfect
+adherence, represented by the graph in Figure 1. For this graph, all direct causal effects in the linear
+model (1) are rationally identifiable. If we apply the standard Gröbner basis methods as in GarciaPuente et al. (2010), we find the identification formulas
+λLT = σLT
+σLL
+, λ LY = σLY
+σLL
+, λ T A = σT A
+σT T
+, λ AY = σLT σLY −σ LLσT Y
+σLT σLA −σ LLσT A
+,
+where, for example, the causal effectλAY corresponds to the directed edgeA→Y. However, the
+effectλ AY is also identified via the formula
+λAY = σT Y −λ LY σLT
+σT A
+3

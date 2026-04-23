@@ -1,0 +1,22 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 65
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+Under Review
+20 Chaima Boufaied, Ronnie de Souza Santos, and Ann Barcomb
+Overall, stereotyped errors emerged in both ambiguous and disambiguated contexts, with stronger effects under
+ambiguity, where several models defaulted to biased attributions despite the correct answer being ‘unknown’. Although
+Claude-Sonnet-4 showed no stereotyped errors in both contexts, it still lacked consistency across runs (minimum MFAA
+of 55%) and even reached zero ground-truth correctness for some questions (see Table 7). These findings suggest that,
+despite performance differences, none of the evaluated LLMs can yet be considered fully reliable in contexts where AI
+fairness across demographic attributes is essential.
+RQ2 Summary.LLMs exhibit varying degrees of response consistency, with MFAA showing that repeated
+outputs are not uniformly stable across questions, particularly for LLaMA-3, while GTC reveals significant
+differences in correctness, with stronger models achieving high but not perfect reliability. Importantly, consistency does not guarantee correctness, as all models demonstrate both perfect and failed responses across
+runs. Analysis of negative polarity questions further shows that stereo

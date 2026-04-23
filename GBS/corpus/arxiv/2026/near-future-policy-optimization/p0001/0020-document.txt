@@ -1,0 +1,18 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+guidance is useful across training stages rather than confined to a single regime, motivating the adaptive
+controller described next.
+3.3 AutoNPO: Adaptive Intervention
+The two manual interventions in Section 3.2 rely on the user inspecting training curves to choose both an
+intervention point and a rollback distance. These choices are brittle across domains and datasets, and scale
+poorly to longer runs or multiple tasks. AutoNPO replaces them with an online controller built from signals
+already logged during standard RLVR training.
+5

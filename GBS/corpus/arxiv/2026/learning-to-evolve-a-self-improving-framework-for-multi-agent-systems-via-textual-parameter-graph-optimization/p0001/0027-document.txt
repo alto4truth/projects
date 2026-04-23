@@ -1,0 +1,38 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+Table 1: Performance on the MCP-Universe benchmark, anexploratory optimizationscenario. TPGO significantly
+enhances the success rate of ReAct agents across all four complex task domains by learning from execution feedback.
+Model Repository
+Management
+3D
+Designing
+Browser
+Automation
+Web
+Searching
+Overall
+Success Rate
+ReAct(GPT-4.1) 36.70 55.26 26.41 5.45 30.96
++ TPGO(1 iters.) 40.79 52.63 27.05 8.33 32.2
++ TPGO(3 iters.) 41.21 60.53 32.41 12.73 36.72
++ TPGO(5 iters.)41.21(+4.51)65.79(+10.53)33.74(+7.33)14.55(+9.10)38.82(+7.86)
+ReAct(DeepSeek-V3.2) 42.18 60.03 20.51 16.36 34.77
++ TPGO(1 iters.) 40.85 60.52 20.38 17.14 34.72
++ TPGO(3 iters.) 44.18 63.16 26.13 21.81 38.82
++ TPGO(5 iters.)45.52(+3.34)63.16(+3.13)28.03(+7.52)30.73(+14.37)41.86(+7.16)
+Table 2: Performance on the GAIA validation set, animitative optimizationscenario. TPGO boosts the success
+rate of the MiroFlow baseline by learning to align with the correct final answer, while also halving the average
+execution time.
+Model Level 1 Level 2 Level 3 Overall Avg Time (s)
+MiroFlow (GPT-5) 78.8 77.5 44.4 73.8 4014
++ TPGO(1 iters.) 76.9 71.2 45.5 70.59 3680
++ TPGO(3 iters.) 82.1 73.1 54.5 75.7 2278
++ TPGO(5 iters.)90.6(+15.0%)79.

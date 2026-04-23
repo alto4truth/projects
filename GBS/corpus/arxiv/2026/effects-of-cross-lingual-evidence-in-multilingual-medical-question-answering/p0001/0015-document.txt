@@ -1,0 +1,32 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+Figure 2: The comparison between different retrieval settings: monolingual, multilingual and cross-lingual across
+different models.
+provement in accuracy on the MedQA benchmark.
+MedExpQA (Alonso et al., 2024) is a benchmark
+designed to evaluate medical question-answering
+systems that leverage external knowledge sources,
+with a focus on multilingual capabilities. Xiong
+et al. (2024b) proposed a retrieval system that iteratively improves search results by incorporating
+continuous follow-up questions. Kim et al. (2025a)
+provided a comprehensive evaluation of RAG on
+different medical tasks.
+3 Sources of Medical Information
+This section details the methodology adopted to
+answer our research questions. We aim to identify
+the optimal strategy for selecting external knowledge sources for MMQA and analyze how different sources influence answer quality: curated
+medical knowledge repositories (Section 3.1), retrieved from the Web (Section 3.2), or the parametric knowledge encoded in LLMs (Section 3.3).
+3.1 Retrieving From Medical Knowledge
+Sources
+In the MedExpQA benchmark (Alonso et al., 2024),
+a collection of 32 related documents was retrieved
+using MedRAG method Xiong et al. (2024a) from
+m

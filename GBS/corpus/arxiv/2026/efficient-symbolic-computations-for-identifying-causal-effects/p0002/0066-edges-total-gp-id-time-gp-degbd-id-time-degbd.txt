@@ -1,0 +1,83 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 2
+section: edges-total-gp-id-time-gp-degbd-id-time-degbd
+chunk: 66
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+tifiable, then the identifying polynomials for the
+parametersλare given as follows. Let pa(v) ={p 1, . . . , pk}be the set of parents of a nodev∈V.
+23
+
+Moreover, letY 1
+v , Y 2
+v ⊆Vbetwodisjointsetssuchthat|Y 1
+v |+|Y 2
+v |=kandletY 1
+v ⊔Y 2
+v ={y 1, . . . , yk}
+be their union. Define a matrixAand a vectorbas
+Aij =
+(
+[(I−Λ) ⊤Σ]yipj ify i ∈Y 1
+v ,
+Σyipj ify i ∈Y 2
+v , andb i =
+(
+[(I−Λ) ⊤Σ]yiv ify i ∈Y 1
+v ,
+Σyiv ify i ∈Y 2
+v .
+For eachj∈[k], we consider the polynomialsλpj v det(A)−det(A j), whereAj is formed by replacing
+thej-th column ofAbyb. HTC-identifiability implies that there exist setsY1
+v , Y 2
+v ⊆Vof the above
+formforeachnodev∈Vsuchthatthepolynomialsλ pj v det(A)−det(Aj)areidentifyingpolynomials
+for allλ pj v with respect to an identifying order≺. In particular, the order ensures that the setY1
+v
+only contains nodes such that the matrixAand the vectorbonly contain variablesλwy that precede
+λpv with respect to≺. Now, observe that, for eachv∈V, the entries ofAandbare polynomials
+of degree at most2, which implies by Assumption 7.1 thatdet(A)anddet(Aj)are polynomials of
+degree at most2pa(v)≤2s.
+To conclude the proof, we place all parametersωuv after the parametersλin the identifying order.
+By Remark 2.5, this yields identifying polynomials for all parametersωuv of degree at most3≤
+2s+ 1.
+Proof of Proposition 7.3.IC-identifiability implies that there is an identifying order≺on the parametersλ. Consider a variableλ xy ∈λand letθ id ={λ ij ∈λ:λ ij ≺λ xy}be the preceding
+variables that are already certified to be rationally identifiable by the IC criterion. LetΛid be the
+matrix with entriesΛid
+ij =λ ij ifλ ij ∈θ id andΛ id
+ij = 0else. Then, the identifying polynomial forλxy
+is of the following form.
+LetT⊆pa(y)\ {x}be a subset of the parents ofy, and denoteT⊔ {x}={t 1, . . . , tk}. Moreover,
+letS 1, S2 ⊆Vbe two disjoint sets of nodes such that|S1|+|S 2|=k, and letS 1 ⊔S 2 ={s 1, . . . , sk}
+be their union. Define a matrixAand a vectorbas
+Aij =
+(
+[(I−Λ id)⊤Σ]sitj ifs i ∈S 1,
+Σsitj ifs i ∈S 2, andb i =
+(
+[(I−Λ id)⊤Σ(I−Λ id)]siy ifs i ∈S 1,
+[Σ(I−Λ id)]siy ifs i ∈S 2.
+Recall thatx=t j for somej∈[k]. We consider the polynomialλ xy det(A)−det(A j), whereA j is
+formed by replacing thej-th column ofAbyb. IC-identifiability implies that there exist setsS1, S2
+andTof the above form such that the polynomialλxy det(A)−det(A j)is an identifying polynomial
+forλ xy with respect to≺.
+It remains to observe that the entries ofAare polynomials of degree at most2, and that the
+entries ofbare polynomials of degree at most3. By Assumption 7.1 we conclude thatdet(A)is
+a polynomial of degree at most2pa(y)≤2sand thatdet(A j)is a polynomial of degree at most
+2pa(y) + 1≤2s+ 1. Hence, the degree of the identifying polynomialλ xy det(A)−det(A j)is at
+most2s+ 1.
+To conclude the proof, we place all parametersωuv after the parametersλin the identifying order.
+By Remark 2.5, this yields identifying polynomials for all parametersωuv of degree at most3≤
+2s+ 1.
+Proof of Proposition 7.4.AC-identifiability implies that there is an identifying order≺on the variablesλ. Consider a variableλ xy ∈λand letθ id ={λ ij ∈λ:λ ij ≺λ xy}be the preceding variables
+that are already certified to be rationally identifiable by the AC criterion. LetΛid be the matrix
+with entriesΛ id
+ij =λ ij ifλ ij ∈θ id andΛ id
+ij = 0else.
+Now, we will construct the identifying polynomial forλxy. LetT⊆pa(y)\ {x}be a subset of the
+parents ofy, and letS={s 1, . . . , sk} ⊆Vbe another set of nodes such that|S|=|T|+ 1 =k.
+24

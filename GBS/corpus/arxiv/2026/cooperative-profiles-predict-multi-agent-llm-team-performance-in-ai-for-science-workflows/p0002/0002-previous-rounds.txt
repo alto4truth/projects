@@ -1,0 +1,22 @@
+title: Cooperative Profiles Predict Multi-Agent LLM Team Performance in AI for Science Workflows
+source: arxiv
+year: 2026
+document_id: cooperative-profiles-predict-multi-agent-llm-team-performance-in-ai-for-science-workflows
+authors: Shivani Kumar; Adarsh Bharathwaj; David Jurgens
+page: 2
+section: previous-rounds
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20658v1
+
+--- Round{N}---
+{round summary}
+GROUP DELIBERATION (your group’s discussion before this decision):
+[{player id}]:{message}
+Now make your decision. Your total allocation must equal exactly
+{endowment}tokens.
+Respond with EXACTLY this JSON format (fill in integer values):
+{schema example}
+B.3 Deliberation prompt template
+When deliberation is enabled, agents discuss strategy before deciding:
+This is the GROUP DELIBERATION phase. You can discuss strategy with your
+group members before making your actual decision.

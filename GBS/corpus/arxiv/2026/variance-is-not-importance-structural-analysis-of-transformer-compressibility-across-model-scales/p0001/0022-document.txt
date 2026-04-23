@@ -1,0 +1,33 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+ssion should respect the geometry of the computation,
+not the geometry of the representation. Methods that operate uniformly on all directions (quan12
+
+Figure 9: Early exit head agreement with full model on Mistral 7B. Naive heads (untrained)
+achieve poor agreement, while trained heads (500 steps) show substantial improvement—
+demonstrating that prediction-relevant information is present at intermediate depths but encoded differently than the final head expects.
+tization) outperform methods that selectively discard directions (rank reduction), because the
+directions that appear dispensable by energy-based criteria are often computationally critical.
+7 Discussion
+7.1 Why Static Compression Is Hard
+Our experiments reveal a fundamental tension: the structural properties that make individual blocks compressible (approximate linearity, concentrated variance) do not compose across
+blocks. The residual connection architecture preserves all errors additively, while each approximation shifts the activation distribution for downstream computation. This is not a failure of
+any particular compression method—it is a structural property of the residual stream itself.
+The practical ceiling is set by direct quantization methods (GPTQ, AWQ), which sidestep
+the composition problem by operating uniformly on all directions within each layer. The “free
+lunch” of exploiting structural redundancy appears limited to single blocks (3% of the model)
+or marginal quantization improvements (NF4’s 1.2×better MSE). Our companion paper [16]
+confirms this empirically across five models: quantization outperforms rank reduction by 4–364
+PPL at matched storage budgets.
+7.2 The Promise of Adaptive Computation
+The 30% easy-token finding suggests a different path: rather than compressing the model
+statically, allocate computation dynamically per token. Easy tokens (30%) could exit early at
+13

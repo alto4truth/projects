@@ -1,0 +1,28 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+ed
+regularization proves especially beneficial in more complex
+classification tasks such as CIFAR-100. Results on THUMOS14 further show that explicit value dropout improves
+temporalmodelingperformance,achievingthehighestmean
+AveragePrecisionacrossmultiplefeatureextractors.Theablationstudyconfirmsthattheproposedformulationprovides
+fine-grainedcontroloverregularizationstrengththroughthe
+choice of the regularization coefficients and dropout ratio,
+allowingpractitionerstobalancegeneralizationandregularization capacity.
+Although derived for the processing blocks used in
+Transformer architectures, the proposed explicit dropout
+regularizationnaturallyextendstoconvolutionaloperations.
+A convolution operation can be rewritten as a vector-based
+affinetransformationbyextractinglocalpatchesfromtheinputfeaturemaps,flatteningthemintovectors,andreshaping
+the convolutional kernels into an equivalent weight matrix
+𝐖conv while preserving structured weight sharing [4]. The
+corresponding explicit dropout regularizer has the same
+structure as the one derived for the feed-forward network
+:Preprint submitted to Elsevier Page 7 of 13

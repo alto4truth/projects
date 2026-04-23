@@ -1,0 +1,24 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 158
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+with developed democracies (Australia, UK, US); progressive on social issues, neutral on institutional trust; reflected affluent liberal democracies.
+
+Durmus et al. Towards measuring the representation of subjective global opinion (Anthropic preprint) [112]
+2023 RLHF-tuned models Built GlobalOpinionQA using 353 WVS-7 and 2,203 Pew items; compared model outputs with national survey data. No No No Aligned most with US/Western nations; cultural prompting and translation gave limited improvements, often adding stereotypes. Tao et al. Tao, Yan, et al. Cultural bias and cultural alignment of LLMs. (PNAS Nexus) [381]
+2024 GPT-3, GPT-3.5, GPT-4 Used 10 WVS-derived value questions to probe GPT-3, GPT-3.5, and GPT-4 with and without “cultural prompting,” comparing single-response patterns to survey distributions.
+No No No
+Default outputs reflected Western-European values. Cultural prompting improved alignment in over 70 % of countries but did not fully eliminate bias. Qu & Wang Performance and biases of LLMs in public opinion simulation (HSS Communications) [285]
+2024 ChatGPT Employed socio-demographic data from WVS Wave 6 to assess ChatGPT’s ability to simulate public opinion across countries and demographic groups. No No No
+ChatGPT performed well for Western, English-speaking, developed countries( especially US) but poorly for Global South regions; demographic biases (gender, education, socio-economic class) were also observed. Zhao et al. Worldvaluesbench: A large-scale benchmark dataset for multi-cultural value awareness of language model arXiv preprint [432]
+2024 GPT-3.5, Vicuna-7B, Alpaca-7B Created WorldValuesBench, a large-scale benchmark from WVS Wave 7. Over 20 million examples of (demographics + value question → answer) and tested model performance with Wasserstein-1 distance.
+No No No
+All tested models struggled with multi-cultural value prediction; GPT-3.5 performed best yet matched human distributions within a 0.2 distance threshold for under 75% of items. Alkhamissi et al. Investigating cultural alignment of LLMs arXiv preprint [10]
+2024 GPT-3.5, mT0-XXL, LLaMA-2-chat
+Simulated sociological surveys using WVS-7 items in Arabic and English, prompting LLMs with persona No No No Models aligned more closely when prompted in dominant cultural language and with appropriate pretraining;

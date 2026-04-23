@@ -1,0 +1,18 @@
+title: Render-in-the-Loop: Vector Graphics Generation via Visual Self-Feedback
+source: arxiv
+year: 2026
+document_id: render-in-the-loop-vector-graphics-generation-via-visual-self-feedback
+authors: Guotao Liang; Zhangcheng Wang; Juncheng Hu; Haitao Zhou; Ziteng Xue; Jing Zhang; Dong Xu; Qian Yu
+page: 2
+section: technical-constraints
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20730v1
+
+method employs a differentiable renderer to optimize path parameters and
+introduces component-wise path initialization to improve topology extraction.
+
+18 G. Liang et al.
+Image-to-SVG System Prompt
+You are an expert SVG artist and visual reverse-engineering model. Your task
+is to reconstruct Scalable Vector Graphics (SVG) code incrementally based on a
+visual feedback loop.

@@ -1,0 +1,30 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+•Through extensive experiments across image classification, temporal action detection, and audio classification tasks, we show that explicit dropout consistently matches or outperforms standard implicit
+dropout variants.
+Thecodefortheprojectcanbefoundathttps://github.com/
+vidhi0206/Explicit-dropout.
+2. Related Works
+Dropout was introduced in [15] as a simple yet effective
+method to improve generalization and reduce overfitting by
+preventing co-adaptation. It has since become a standard
+component of deep neural networks, including convolutional, feed-forward, and Transformer architectures. From
+a theoretical perspective, dropout has been interpreted as
+training an implicit ensemble of subnetworks [29] or as approximateBayesianinferenceundervariationalassumptions
+[8].
+A complementary line of work treats dropout through
+complexitymeasuresandgeneralizationbounds.Rademacher
+based analyses derive bounds on the generalization gap
+that depend explicitly on dropout rates, revealing that the
+stochastic masks induce data-dependent regularizers that
+adapt to the learned representations [34, 1]. These results
+motivate adaptive dropout schemes that optimize dropout
+rates to minimize theoretical

@@ -1,0 +1,33 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+set of (RDI, AutoAttack
+rank) pairs.
+Edge-case checklist:
+• Data leakage:Calibration set disjoint from evaluation set;
+calibration uses held-out RobustBench entries not in the
+main evaluation.
+• Compute:RDI computation on ViT-B/16 requires ∼2 GB
+VRAM for 500 samples; LLM RDI on 7B models requires
+∼14 GB (single A100). Calibration fitting is trivial (<1 s).
+• Reproducibility:Layer selection heuristic (which layer’s
+features to use), centroid computation for imbalanced
+classes, isotonic regression implementation.
+• Baselines:Raw RDI [ 43], Clever score [ 54], Lin region
+counting.
+• Ablation variables:(i) layer choice (penultimate vs. multilayer aggregation), (ii) calibration method (isotonic vs. Platt
+scaling vs. temperature), (iii) number of calibration models
+(5, 10, 20).
+13.3 Direction 3: Ecologically Valid Agent RedTeaming Benchmarks
+Core idea.Carliniet al.[C3] demonstrated a 4–6 × gap
+between LLM agent success on CTF-like tasks and production defence code. We propose constructing anecologically
+validbenchmark by sampling real defence implementations
+from GitHub repositories (filtered by stars >100 , active
+maintenance, diverse frameworks), creating standardised attack interfaces

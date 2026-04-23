@@ -1,0 +1,19 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 10
+section: ieee-transactions-on-image-processing-8
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+Visible Mask
+Amodal Mask
+Occlusion Mask
+Occlusion Mask
+Fig. 9. The occlusion mask delineates the occluded region within the amodal
+mask. mIoU f assesses the predictive accuracy of the amodal mask, whereas
+mIoUo evaluates the predictive accuracy of the occlusion mask. During
+evaluation, even if the model’s predicted mask solely includes visible regions,
+mIoUf might surpass 50, whereas mIoU o could remain at 0.

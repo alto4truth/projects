@@ -1,0 +1,29 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+ability to validate that lab findings transfer to operational settings.
+Step 3: Weakest methodology.Among peer-reviewed
+entries, Songet al.[C5] is most vulnerable to methodological
+criticism:
+• Sample size adequacy:Validated on a per-paper selection
+of CNN models; no systematic sampling across architecture
+families or scales.
+• Control for confounds:Feature-space geometry varies fundamentally between CNNs (local receptive fields), ViTs
+(global attention), and decoder-only LLMs (sequential token embeddings). The metric’s inter/intra-class distance
+ratio may conflate architecture-specific geometry with genuine robustness signal.
+• Replicability:Code availability is partial; key implementation details (layer selection heuristic, centroid computation
+for imbalanced classes) are underspecified.
+• Transparency of reporting:Confidence intervals on the
+correlation between RDI and attack-based rankings are
+not reported; the ∼30× speedup claim lacks wall-clock
+variance across hardware configurations.
+Criterion most clearly failed:Control for confounds—the
+CNN-only validation leaves the metric’s validity for the fastestgrowing model families (ViTs, LLMs) entirely unsubstantiated.
+7 Master Sy

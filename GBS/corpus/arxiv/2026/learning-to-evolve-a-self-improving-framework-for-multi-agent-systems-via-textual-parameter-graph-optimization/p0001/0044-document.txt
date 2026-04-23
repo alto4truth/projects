@@ -1,0 +1,30 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+B Ethical Considerations
+No human participants, crowdsourcing, or personally identifiable information (PII) were involved in
+this research. All experiments were conducted on
+public benchmarks and standard evaluation splits.
+This work studies the automatic optimization of
+multi-agent systems through textual configuration
+updates. A potential risk is that improving agent
+reasoning, tool use, and coordination may also increase the capabilities of such systems in ways that
+could be misused. To mitigate this concern, we
+restrict our study to benchmark-based evaluation in
+controlled settings and do not investigate harmful
+tasks or safety-sensitive real-world deployment.
+In addition, our framework relies on LLMgenerated feedback and optimization proposals,
+which may reflect model errors or biases. Accordingly, the optimized systems should not be
+interpreted as having formal safety guarantees.
+We therefore view TPGO as a research framework intended for controlled experimentation, and
+any practical deployment should include appropriate human oversight and application-specific safeguards.
+C Implementation Details
+Models and optimization budget.We implement TPGO through an OpenAI-compatible
+A

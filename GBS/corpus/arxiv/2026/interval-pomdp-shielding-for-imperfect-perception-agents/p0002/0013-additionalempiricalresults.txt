@@ -1,0 +1,30 @@
+title: Interval POMDP Shielding for Imperfect-Perception Agents
+source: arxiv
+year: 2026
+document_id: interval-pomdp-shielding-for-imperfect-perception-agents
+authors: William Scarbro; Ravi Mangal
+page: 2
+section: additionalempiricalresults
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20728v1
+
+reaks this deadlock because the
+Fig. 6. Obstacle Pareto scatter over thresholdβunder adversarial perception.
+With only three observations for fifty states, memoryless posterior reasoning
+collapses toward the same extreme point as support-only shielding. Beliefhistory remains essential, and interval reasoning improves safety at every
+threshold.
+action-observation sequence rules out large parts of the support
+even when the current observation does not. Single-Belief
+exploits that history, Fwd-Sampling adds a substantial extra
+layer of conservatism, and the envelope improves on both at
+every threshold by treating interval uncertainty adversarially
+rather than as a point estimate. At the best threshold, FwdSampling reaches7%fail and84%stuck, much closer to
+Envelope’s3%/85%than to Single-Belief’s14%/50%. This
+case suggests that in heavily aliased perception problems,
+quantitative belief-mass reasoning is not just more fine grained
+than support reasoning; it changes which shields are usable at
+all.
+B. Near-Bijective and Large-Scale Regimes
+CartPole and Refuel delimit the other two operating
+regimes. CartPole uses deliberately degraded perception, but
+it still has 82 observation labels fo

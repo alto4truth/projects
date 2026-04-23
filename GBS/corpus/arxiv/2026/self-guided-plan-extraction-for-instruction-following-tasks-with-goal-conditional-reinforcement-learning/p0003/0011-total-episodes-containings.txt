@@ -1,0 +1,28 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 3
+section: total-episodes-containings
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+itial
+progress without explicitly labeling them as incorrect.
+5 Experiments
+In this section, we describe the experiments conducted to answer the following research questions
+(RQ):
+RQ1. (Effectiveness and Generalization of
+Auto-Generated Plans): How well can the SuperIgor agent learn to follow instructions by leveraging LLM-generated plans, and how well does
+this learned behavior generalize to new instructions? We measure effectiveness as the agent’s
+final success rate on training tasks (Atomic and
+Combo splits). We measure generalization using
+final success rates on two test sets: Paraphrases
+(same goals, new wording) and New Objects (new
+goal combinations).
+RQ2. (Policy Training under Sparse Feedback): How well can the SuperIgor policy model
+be trained to follow plans under sparse feedback?
+The primary metric for this is the final SR on the
+training tasks.
+RQ3. (Agent Effectiveness with Iterative SuperIgor Cycles): How does the agent’s performance evolve over multiple iterations of the SuperIgor planning-training cycle?

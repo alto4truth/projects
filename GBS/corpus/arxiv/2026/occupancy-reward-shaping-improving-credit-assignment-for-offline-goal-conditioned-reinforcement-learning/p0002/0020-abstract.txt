@@ -1,0 +1,63 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 2
+section: abstract
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+ormation present in the dataset occupancy measure without having to estimate the new occupancy
+measure at each intermediate policy improvement step.
+6
+
+Published as a conference paper at ICLR 2026
+4.4 METHODSUMMARY
+ORS has 3 stages:1.Train the flow matching occupancy modeld πD
+θ using Eq. 3;2.Train the reward
+functionr W
+ψ using Eq. 5; and3.Train a goal-conditioned policy using any offline GCRL algorithm
+that uses a TD-learning critic. Stages 1 and 2 that involve learningd πD
+θ andr W
+ψ are summarized in
+Alg. 1. Details on architecture and hyperparameters are provided in Appendix B.6.
+5 EXPERIMENTS
+In this section, we present an extensive empirical analysis of ORS across a variety of challenging
+long-horizon offline GCRL tasks. We then conduct detailed analyses and ablations to dissect key
+design choices underlying our algorithm.
+Tasks:For our empirical analysis, we primarily use OGBench (Park et al., 2024a), a benchmark
+specifically built for evaluating offline GCRL algorithms. We choose OGBench over older benchmarks such as Fu et al. (2020); Tarasov et al. (2023) for its task diversity, challenging long-horizon
+sparse-reward tasks that are unsaturated as of 2025, and comprehensive multi-goal evaluation.
+OGBench tasks are broadly categorized into 4 types: maze navigation, cube manipulation, puzzle
+manipulation, and scene tasks. We select tasks with varying levels of task complexity and planning
+horizon. from OGBench to be representative of these 4 categories. Within each category, we include
+tasks of varying complexity (e.g., cube-double and cube-triple) and varying dataset quality (e.g.,
+cube-triple-play and cube-triple-noisy). We provide a detailed explanation of tasks in Appendix B.1.
+To demonstrate effectiveness in real-world settings, we evaluate ORS on actuator control tasks in a
+nuclear fusion reactor called a Tokamak. We use raw sensor and actuator data collected from the
+DIII-D tokamak located in San Diego, CA, USA. ORS controls 4 actuators that influence evolution
+of plasma in the Tokamak, a system characterized by highly non-linear, stochastic dynamics and
+complex physics. We evaluate over 3 separate tasks, each tracking a certain scalar or profile state
+variable:β N (normalized ratio between plasma pressure and magnetic pressure), Electron density
+and Ion rotation. These quantities critically influence plasma stability and overall power output
+required for commercially viable nuclear fusion. Please refer to Appendix B.2 for further details.
+Baselines:We compare ORS against a set of representative baselines. These include Goal Conditioned Behavioral Cloning (GCBC) (Ghosh et al., 2019); Goal-Conditioned Implicit Q Learning
+(GCIQL) (Kostrikov et al., 2021) and Goal-Conditioned Implicit Value Learning (GCIVL) (Park
+et al., 2023) which approximate value functions using expectile regression (Newey & Powell,
+1987) and recover policies using behavior-constrained deterministic policy gradient (DDPG + BC)
+and advantage-weighted regression (AWR), respectively (Park et al., 2024b). Quasimetric RL
+(QRL) (Wang et al., 2023a) learns a specialized quasimetric goal-conditioned value function with a
+dual objective. Contrastive RL (CRL) (Eysenbach et al., 2022) fits a Monte Carlo goal-conditioned
+value function using contrastive learning and extracts a greedy policy from it.
+We also compare ORS to several methods designed for long-horizon, sparse-reward settings.GoFresh(Mezghani et al., 2023) learns a shaped reward as a sum of a local reward from a temporal distance classifier between states and a global reward computed by shortest-path search on a
+graph constructed with the local distance classifier.SMORE(Sikchi et al., 2023a) is an occupancymatching method that uses dual RL to learn unnormalized densities that reflect the distance to goal.
+Hierarchical Implicit Q Learning (HIQL) (Park et al., 2023) trains a low-level policy to reach goals
+sampled from a high-level policy, both trained via a single GCIVL-style value function. Subgoal
+Advantage-Weighted Policy Bootstrapping (SA W) (Zhou & Kao, 2025) improves over HIQl by
+training a non-hierarchical goal-conditioned policy by bootstrapping on subgoal-conditioned policies with advantage-weighted importance sampling.n-step GCIQLandGCIQL-OTAuse different
+techniques to learn a GCIQL critic using n-step TD learning (De Asis et al., 2018; Ahn et al., 2025).
+These baselines ensure a standalone comparison of our method against two key strategies to horizon
+reduction in RL. Both ORS and Go-Fresh use GCIQL with a Gaussian policy, owing to its popularity and simplicity and to ensure fair comparison. We build on the codebase of OGBench and make
+use of the official implementation for Go-Fresh. All algorithms use hindsight relabeling (Kaelbling,
+7

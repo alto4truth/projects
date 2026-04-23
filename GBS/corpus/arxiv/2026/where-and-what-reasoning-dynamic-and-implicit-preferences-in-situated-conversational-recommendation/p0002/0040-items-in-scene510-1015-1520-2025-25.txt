@@ -1,0 +1,21 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 2
+section: items-in-scene510-1015-1520-2025-25
+chunk: 40
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+tem (Nature Photographersblouse) that is absent in the current location (Scene-1, containing sweaters) but available
+in a different section (Scene-2). Baselines lacking
+visual grounding or spatial awareness fail significantly:ALBEFremains anchored to the current
+view, merely describing the visible sweaters, while
+ReGeShallucinates that the item is “right here.”
+Notably, even the advancedQwen2.5-VL, while
+correctly recognizing the item’s absence in the current scene, adopts a passive stance (“No blouses
+here”), resulting in a conversational dead-end. Conversely,SiPeRleverages its Scene Transition Estimation (STE) mechanism to detect the mismatch
+between the user’s request and the current environment. It proactively guides the user to the correct
+location (“come over here”) and accurately grounds
+the target item in the new scene, showcasing superior situatedness and navigational capability.

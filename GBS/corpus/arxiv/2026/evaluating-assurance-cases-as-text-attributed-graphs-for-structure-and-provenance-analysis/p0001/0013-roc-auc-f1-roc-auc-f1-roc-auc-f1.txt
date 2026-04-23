@@ -1,0 +1,16 @@
+title: Evaluating Assurance Cases as Text-Attributed Graphs for Structure and Provenance Analysis
+source: arxiv
+year: 2026
+document_id: evaluating-assurance-cases-as-text-attributed-graphs-for-structure-and-provenance-analysis
+authors: Fariz Ikhwantri; Dusica Marijan
+page: 1
+section: roc-auc-f1-roc-auc-f1-roc-auc-f1
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20577v1
+
+nal explanations often lack reliability. Many models prioritise node features
+from language embeddings over the edge between nodes, indicating reliance on semantic instead of structure when distinguishing
+between human and LLM-generated content.
+SAGE often focus heavily on node-level cues, which biases provenance detection. However, UniGraph maintain a balance between
+node and edge fidelity, sacrificing edge interpretability, thus creating a trade-off between predictive accuracy and structural faithfulness, effectively capturing both content and structure.
+These findings enhance previous studies on assurance case explainability. Past study [17] concentrated on text perturbation and

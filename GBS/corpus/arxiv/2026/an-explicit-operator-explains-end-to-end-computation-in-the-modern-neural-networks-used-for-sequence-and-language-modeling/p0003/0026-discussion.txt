@@ -1,0 +1,26 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 3
+section: discussion
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+g waves, in
+particular – have recently been of interest for computation in both state-space models and the wider class of
+recurrent neural networks (RNNs) [20, 29, 35–39], in addition to biological brains [25, 40]. The framework introduced here shows that these wave dynamics are not
+merely byproducts of the dense interconnectivity in the
+recurrent layer of these systems, but instead are a fundamental computational mechanism through which SSMs
+process sequence information.
+Traveling waves are the computational
+substrate of SSMs
+The correspondence established in this work reveals
+that diagonal SSMs like S4D-Lin are mathematically
+equivalent to a specific, exactly solvable nonlinear oscillator network. In the eigenbasis provided by this connection, the recurrent dynamics in S4 unfold as waves traveling around the network’s one-dimensional ring topology,
+rather than relatively abstract transformations on a latent state space. This physical insight provides, in turn,
+a concrete physical meaning for S4’s complex-valued parameterization: the recurrent operatorD τ implements a
+bank of input-driven traveling wave modes, each with a
+specific spatial frequency.
+The operatorD τ performs a high

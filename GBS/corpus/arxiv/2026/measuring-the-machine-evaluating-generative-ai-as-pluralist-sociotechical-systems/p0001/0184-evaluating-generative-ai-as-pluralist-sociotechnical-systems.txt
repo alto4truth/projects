@@ -1,0 +1,20 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 184
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+Create prompt set
+Define answer anchors
+Score question-anchor pairs
+Normalise probabilities
+Average across paraphrases
+Bayesian adjustment and scoring
+
+Chapter 4: The World Values Benchmark 173
+4.3.4 Bayesian adjustment of anchor bias Early experiments revealed a systematic skew in model outputs. Across many items, models showed a strong preference for positive anchors such as “very important”, and in some cases assigned near-zero probability to anchors containing terms such as “rather”, regardless of the substantive content of the question. This pattern suggested anchor bias arising from model priors rather than meaningful alignment with human response distributions. If left uncorrected, it risked overstating majoritarian tendencies and obscuring minority positions. Step 1: Estimating model priors. To quantify this baseline skew, I first estimated the prior probability the model assigned to each anchor in neutral contexts, that is, minimally informative prompt contexts before conditioning on any specific survey question. In practice, this involved scoring anchors such as “very important”, “rather important”, “not very important”, and “not at all important” without substantive survey content that would favour one anchor over another. The resulting distribution provided an estimate of the model’s default weighting of these anchors and showed that some, especially “very important”, carried disproportionately high prior probability. These estimated priors were then used consistently across items when adjusting anchor-level likelihoods prior to scoring. Step 2: Applying Bayes’ rule. Once anchor priors were estimated, the model’s likelihood scores for each survey item were adjusted to reduce the influence of default anchor preferences. This was done by dividing the observed likelihood for each anchor by its prior probability and then renormalising the result. The effect was to reduce the weight of anchors that the model preferred by default and to make question-specific variation more visible in the resulting distribution. Step 3: Producing adjusted distributions for analysis. After applying Bayes’ rule, the corrected anchor scores were renormalised so that each distribution summed to 100%. These adjusted distributions were then carried forward into the scoring phase (Section 4.3.6), where alignment with WVS country data was quantified using Lebesgue-1 (L1) distance and Kullback-Leibler (KL) divergence 9. In this way, Bayesian adjustment functioned as an integral part of the pipeline, converting raw likelihood scores into distributions better suited for descriptive comparison.
+9 L1 distance (also called the L1 norm or Manhattan distance) measures the overall difference between two sets of values by adding up the absolute difference at each point. Kullback-Leibler (KL) divergence measures the difference between two probability distributions by asking how much information is lost, or how surprised we would be, if one distribution is used to stand in for the other. Put simply, L1 shows how far apart two sets of values are overall, while KL shows how differently their probabilities are organised. Unlike L1 distance, KL divergence is directional and is not a true distance metric.

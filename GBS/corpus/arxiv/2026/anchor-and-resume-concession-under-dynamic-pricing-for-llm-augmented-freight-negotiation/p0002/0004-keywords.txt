@@ -1,0 +1,31 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+ingle day as commercial shipping
+through the strait halted [ 18], forcing brokerages to revise
+carrier rate targets across hundreds of active negotiations
+simultaneously. A negotiation agent that cannot adapt its
+concession behavior in response to such updates will either
+overpay on deals where the target has tightened or lose deals
+where it has loosened.
+Faratin et al. [1] formalized the concession curve through
+a shape parameter 𝛽 that determines how aggressively the
+agent concedes over time (Section 3.2). However, a single
+fixed 𝛽 cannot be universally optimal. Loads with narrow
+price spreads (1–2%) leave little room, so the broker should
+concede quickly to secure coverage. Loads with wide spreads
+(15%+) offer substantial room, so the broker should hold
+firm. The problem is compounded in production settings
+where the pricing model can update its estimateduringan
+active negotiation, changing the effective spread. A fixed
+𝛽 cannot respond to these updates. An alternative is to
+delegate pricing decisions entirely to an LLM, but this introduces per-round inference cost that limits horizontal scaling,
+non-deterministic outputs that complicate auditability, and
+operational dependence

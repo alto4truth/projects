@@ -1,0 +1,29 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 4
+section: ssl-r1
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+sistently outperforms the baseline on all benchmarks.
+How Does SSL-R1 Perform on Other Base Models?Our
+results thus far are based on Qwen2.5-VL architecture and
+its post-trained models. Actually, our designed SSL tasks
+are agnostic to architectures. To examine the general effectiveness of our method on other base models, we further apply SSL-R1 on a stronger base model,e.g., MiMoVL-7B-SFT-2508 [71]. As shown in Tab. 6, SSL-R1 again
+significantly outperforms the baseline and surpasses Visual
+Jigsaw by a clear margin.
+5. Conclusion
+We have introduced SSL-R1, a generic self-supervised RL
+post-training framework that derives intrinsically verifiable
+rewards from input images. SSL-R1 is vision-centric, costeffective, and scalable, requiring neither human nor external
+model supervision. Our extensive experiments demonstrate
+that SSL-R1 achieves substantial and consistent improvements on a wide range of multimodal understanding and
+reasoning benchmarks. We hope our explorations can pave
+the way for enabling RLVR at scale.
+References
+[1] Jean-Baptiste Alayrac, Jeff Donahue, Pauline Luc, Antoine
+Miech, Iain Barr, Yana Hasson, Karel Lenc, Arthur Mensch,
+Katherine Millican, Malcolm Reynolds,

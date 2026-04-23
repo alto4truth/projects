@@ -61,6 +61,10 @@ def slugify(value: str) -> str:
     return collapsed or "document"
 
 
+def safe_text(value: str) -> str:
+    return value.encode("utf-8", errors="replace").decode("utf-8")
+
+
 def normalize_text(raw: str) -> str:
     raw = html.unescape(raw)
     raw = raw.replace("\r\n", "\n").replace("\r", "\n")
@@ -220,20 +224,21 @@ def write_chunks(chunks: list[Chunk], output_dir: Path) -> Path:
     for chunk in chunks:
         page_dir = base_dir / f"p{chunk.page:04d}"
         page_dir.mkdir(parents=True, exist_ok=True)
-        filename = f"{chunk.chunk:04d}-{chunk.section}.txt"
+        section_slug = (slugify(chunk.section) or "section")[:80]
+        filename = f"{chunk.chunk:04d}-{section_slug}.txt"
         chunk_path = page_dir / filename
         header = (
-            f"title: {chunk.title}\n"
-            f"source: {chunk.source}\n"
-            f"year: {chunk.year}\n"
-            f"document_id: {chunk.document_id}\n"
-            f"authors: {'; '.join(chunk.authors)}\n"
+            f"title: {safe_text(chunk.title)}\n"
+            f"source: {safe_text(chunk.source)}\n"
+            f"year: {safe_text(chunk.year)}\n"
+            f"document_id: {safe_text(chunk.document_id)}\n"
+            f"authors: {safe_text('; '.join(chunk.authors))}\n"
             f"page: {chunk.page}\n"
-            f"section: {chunk.section}\n"
+            f"section: {safe_text(chunk.section)}\n"
             f"chunk: {chunk.chunk}\n"
-            f"source_ref: {chunk.source_ref}\n\n"
+            f"source_ref: {safe_text(chunk.source_ref)}\n\n"
         )
-        chunk_path.write_text(header + chunk.text + "\n", encoding="utf-8")
+        chunk_path.write_text(header + safe_text(chunk.text) + "\n", encoding="utf-8")
         manifest["chunks"].append(
             {
                 "path": str(chunk_path.relative_to(output_dir)),

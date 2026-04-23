@@ -1,0 +1,31 @@
+title: A Hierarchical MARL-Based Approach for Coordinated Retail P2P Trading and Wholesale Market Participation of DERs
+source: arxiv
+year: 2026
+document_id: a-hierarchical-marl-based-approach-for-coordinated-retail-p2p-trading-and-wholesale-market-participation-of-ders
+authors: Patrick Wilk; Ethan Cantor; Yikui Liu; Jie Li
+page: 2
+section: abstract
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20586v1
+
+gregator
+profit by funneling all energy through the aggregator at its
+bid/offer spread, elevating buyer costs and reducing seller
+revenues the most. Compared to RB P2P’s uniform pricing, RL-based market solutions introduce competition by
+enabling distinct price bids.
+SEAM-LESS notably enhances seller revenues while
+maintaining buyer costs similar to those under RB Agg,
+demonstrating that prosumer agents effectively exploit market power without excessive manipulation, aided by the
+aggregator fallback price mechanism. This is evident by
+the aggregator’s increased profit in SEAM-LESS over RB
+P2P, as mismatches in competitive pricing cause some
+trades to revert to the aggregator for settlement. Despite
+limitedinformationsharingamongprosumers,ascompared
+to MARL-Conv, SEAM-LESS successfully learns optimal
+bidding strategies for prosumers. Figure. 4 illustrates that
+P2P settling prices often surpass the wholesale clearing
+price, boosting seller revenues while buyer costs align more
+closely with the aggregator’s sell price.
+As shown in Table 4, SEAM-LESS yields the best Sum
+P2P reward (5.91), surpassing all other methods. Notably,
+Buyer 1 shifts from a negative reward of -0.22 to a positiv

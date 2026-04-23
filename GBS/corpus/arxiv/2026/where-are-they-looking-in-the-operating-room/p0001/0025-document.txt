@@ -1,0 +1,32 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+azeFollow dataset [28]
+with the ones fine-tuned on the 4D-OR and Team-OR datasets.
+As shown in Table 2, the fine-tuned models perform significantly better, indicating the necessity of domain adaptation in
+the OR scenes.
+Table 2: Performance of Gaze-LLE models evaluated on the extended 4DOR [26] and Team-OR [6] datasets.
+Model 4D-OR Team-OR
+AUC↑L2↓ AUC↑L2↓
+Pretrained (ViT-B)0.9652 0.09380.9651 0.1010
+Pretrained (ViT-L)0.9697 0.08410.9687 0.0960
+Ours (ViT-B)0.98680.0571 0.9898 0.0558
+Ours (ViT-L)0.98600.0562 0.9904 0.0539
+Clinical role prediction and surgical phase recognition:We
+compare our approach with the ones that use semantic scene
+graph (SSG) [24, 23?, 27]. We train our models 10 times
+and report the average performance. For role prediction in Table 3, our method performs much better, showing how much
+the unique gaze patterns of each role contribute to the task.
+For phase recognition in Table 4, our method performs slightly
+worse than the best ones. According to the visualization of our
+predictions in Fig. 5, the errors are highly concentrated at the
+phase boundaries, which is understandable because we only
+use the ambiguous gaze predictions to recognize the phases
+without any

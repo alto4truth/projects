@@ -1,0 +1,25 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 5
+section: a-proofs
+chunk: 47
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+ayer indexkand show thatW 2
+2 (δg, dπD(s+ |s, a)) =M πD(s, a, g)in Sec. A.2. We can now
+re-write the first part of the proposition as:
+1(Layer Monotonicity ofM πD).Under Assumptions A.1, A.3 and A.4, the functionM πD is monotonically increasing with respect to the shortest-path layer indexk. For goalgand anyk≥1, if
+s1 ∈S k−1 ands 2 ∈S k, we have:
+M πD(s1, g)≤M πD(s2, g).
+It is important to note that the indiceskhere are such thatk= 0refers to the goal state, i.e. index
+k−1defines a state closer to goal than indexk.
+Proof.Let us define the Bellman operatorT πD which maps a functionMto a new functionT πD M:
+(T πD M)(s, g) = (1−γ)Φ(f(s, π D(s)), g) +γM(f(s, π D(s)), g).
+We prove this statement by analyzing the properties of the Bellman evaluation operatorT πD associated with the policyπ D.
+The functionM πD is the unique fixed point of this operator, satisfyingMπD =T πD(M πD). The existence and uniqueness of this fixed point, and the convergence of value iteration(Mi+1 =T πD Mi)
+to it from any starting functionM 0, is guaranteed by the Banach Fixed-Point Theorem. This is
+because the operatorT πD is acontraction mappingdue to the discount factorγ <1.
+To show this, we take any two functi

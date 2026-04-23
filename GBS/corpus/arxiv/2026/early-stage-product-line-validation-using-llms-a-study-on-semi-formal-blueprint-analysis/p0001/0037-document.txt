@@ -1,0 +1,28 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+evel
+accuracy on many analyses but remain sensitive to structural ambiguity, scale, and context limits. Most errors stem from incomplete
+constraint reasoning rather than random noise. In summary, LLMs
+can already serve as reliable early validators of variability models
+when paired with simple safeguards and ensemble strategies.
+6 Discussion
+Where LLMs fit in early scoping.Our results support a pragmatic
+placement of LLMs at theearlieststage, when blueprints are semiformal and solver-ready model is not yet available. In this context,
+reasoning-oriented models provideverification-stylefeedback with
+near-solver accuracy (e.g., forAO10,AO11,AO16), quick structural
+sanity checks (e.g., forAO1,AO3,AO6,AO9), and concise explanations
+that help stakeholders refine scope decisions before formalization.
+Accuracy and explainability over speed.Because early validation
+is iterative and not latency-critical, we prioritize correctness and
+interpretability over raw speed. The observed runtime/token overheads are acceptable in practice given the benefit of solver-like
+guidancewithoutrequiring a formal model. Reasoning-optimized
+models (e.g., Grok 4 Fast Reasoning, Gemini 2.5 Pro, GPT-5 mini)
+therefo

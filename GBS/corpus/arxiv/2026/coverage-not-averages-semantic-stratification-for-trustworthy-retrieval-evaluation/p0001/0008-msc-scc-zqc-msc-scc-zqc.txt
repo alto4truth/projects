@@ -1,0 +1,31 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 1
+section: msc-scc-zqc-msc-scc-zqc
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+Coverage, Not Averages Semantic Stratification for Trustworthy Retrieval Evaluation
+a limited set of datasets and embedding models. Broader
+validation across more diverse domain, other languages,
+domains, and benchmark suites is necessary. Second, the
+queries used in our experiments are synthetically generated
+and verified by LLMs. Although this enables scalable evaluation, it may introduce biases or overlook subtle errors.
+Incorporating human evaluation would provide a stronger
+calibration and improve the reliability of the assessment.
+Finally, the extraction performance depends on the design
+of prompts, which were not exhaustively optimized. Prompt
+engineering could further improve extraction quality.
+8. Conclusion
+By formalizing retrieval evaluation as a statistical estimation
+problem under structured heterogeneity, we explain why
+aggregate metrics can yield biased and decision-unstable
+assessments. Our semantic stratification framework grounds
+evaluation in corpus structure, exposes previously hidden
+failure modes, and enables more transparent and trustworthy
+system comparison. We hope this work encourages a shift
+toward coverage-aware evaluation protocols for retrieval
+and RAG

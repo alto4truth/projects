@@ -1,0 +1,25 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+n ambiguous and disambiguated contexts
+involving intersectional identity attributes?
+4.2 Used LLMs
+As we are extending a recent work [Simpson et al. 2024] on comparative assessment of LLM fairness using six different
+models, our main focus was to replicate the work with the following models: GPT-4o, Llama 3, Gemma-1.1, Gemini
+1.0 Pro, Gemini 1.5 Pro, and Claude 3.5 Sonnet. According to the Gemini documentation2, both Gemini versions have
+been deprecated, we therefore replaced them with the non-deprecated successors, replacing Gemini 1.0-Pro with
+Gemini-2.0-Flash, and Gemini 1.5-Pro with Gemini-2.5-Flash. Further, due to the deprecation of Claude-3.5 Sonnet, we
+replaced the latter with Claude-Sonnet-4. Additionally, since Gemma-1.1-7b-it and other closely related models were
+inaccessible, we used google/gemma-3-27b-it as the accessible alternative for our experiments.
+In the following, we briefly describe each of the models used in our experiments:
+• GPT-4o model 3 in an OpenAI model that takes text, audio, and video inputs and is able of generating
+combinations of them. It includes built-in safety across modalities via filtered training data and post-training
+behavior refinement.
+•

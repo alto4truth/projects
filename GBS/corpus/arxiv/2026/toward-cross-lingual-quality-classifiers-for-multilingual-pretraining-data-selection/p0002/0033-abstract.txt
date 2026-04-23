@@ -1,0 +1,39 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+Published as a paper at 3rd DATA-FM workshop @ ICLR 2026, Brazil.
+Table 7: Comparison between 10% and 15% retention using the ML classifier. Increasing the retention rate to 15% improves accuracy across most benchmarks, suggesting the default 10% threshold
+is overly aggressive when using our classifier on French.
+Benchmark ML ML (15%)
+ARC-Challenge0.31650.3139
+Belebele_c 0.35110.3611
+GMMLU_c0.29000.2875
+HellaSwag 0.49560.5135
+Include_c 0.42240.4726
+M_MMLU_c 0.29270.2991
+XNLI0.4807 0.4807
+XWinograd 0.60240.6386
+Aggregate acc_norm0.40640.4209
+Average rank1.621.25
+Table 8: Comparison between 10% and 15% retention using the ML classifier on Spanish. Similar
+to French, the 15% retention rate yields a higher aggregate accuracy and better average rank when
+using our ML classifier.
+Benchmark ML ML (15%)
+ARC-Challenge 0.32480.3436
+Belebele_c 0.34560.3500
+GMMLU_c0.32500.3225
+HellaSwag 0.53100.5440
+Include_c 0.38910.4036
+M_MMLU_c 0.30500.3080
+XNLI0.47830.4562
+Aggregate acc_norm0.38550.3897
+Average rank1.711.29
+Tables 7, 8, and 9 analyze the effect of tuning the retention rate used during multilingual and
+monolingual filtering. Increasing the retention rate consistently improves aggregate perf

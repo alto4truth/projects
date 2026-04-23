@@ -1,0 +1,22 @@
+title: A Hierarchical MARL-Based Approach for Coordinated Retail P2P Trading and Wholesale Market Participation of DERs
+source: arxiv
+year: 2026
+document_id: a-hierarchical-marl-based-approach-for-coordinated-retail-p2p-trading-and-wholesale-market-participation-of-ders
+authors: Patrick Wilk; Ethan Cantor; Yikui Liu; Jie Li
+page: 2
+section: abstract
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20586v1
+
+after P2P trades
+is handled by the aggregator, who always clears in the
+wholesale market and sells to/buys from the prosumers
+at the maximum markup𝜌𝑚𝑎𝑥.
+•MARL-Conv:Instead of LSD-MADDPG which maintains information privacy during centralized training, a
+conventional MADDPG is adopted. In this setting, all
+MADDPG agents share observations and actions with
+their centralized critic, while PPO shares only its actions.
+The simulation parameters for MADDPG and LSDMADDPG, as well as PPO are presented in Table 1. Each
+episode was simulated over a 24-hour period, from (00:00)
+to (23:59), corresponding to the hourly day-ahead market.
+P. Wilk et al.:Preprint submitted to ElsevierPage 7 of 11

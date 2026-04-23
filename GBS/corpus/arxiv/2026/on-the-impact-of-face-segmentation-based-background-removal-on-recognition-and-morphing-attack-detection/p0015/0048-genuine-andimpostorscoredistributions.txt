@@ -1,0 +1,32 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 15
+section: genuine-andimpostorscoredistributions
+chunk: 48
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+w all of them together
+in the same plot. In particular, we plot a graph showing
+the values TAR@FAR=1e-4,∆and the FIQA metric for
+IJB-C and its segmented variants. We include an extra
+graph with the values of BPCER@t10% achieved by the
+three considered MAD methods. We do not include this
+analysis for FERET and FRGCv2 due to the absence of
+significant differences in FR performance and image quality
+after segmentation for these datasets. As it can be easily
+seen, the FR performance,∆, and image quality values
+follow a similar tendency regardless of the network used
+to evaluate the considered dataset (Figure 9). This behavior
+is not surprising given the connection between these three
+metrics, with lower face image quality and higher overlap
+between genuine and impostor scores distributions (lower
+∆) being usually associated with poorer FR performance.
+Regarding the MAD evaluation, the results of MADPromptS
+[6] also follow a similar tendency, with datasets that achieve
+higher quality / FR performance triggering the MAD systems wrongly less often (lower BPCER@t10%). For SPL
+[16] and MixFaceNet-MAD [9], however, datasets with a
+poorer recognition performance are generally less prone
+to tr

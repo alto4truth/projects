@@ -1,0 +1,27 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 5
+section: acknowledgments
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+currence operators into the oscillator network context, using
+the expressionK=F DF † (as in Fig. 2). The resulting network adjacency matrix for S4D-Lin has connection strengths that decay with distance between nodes,
+and phase offsets that change linearly with distance
+(Fig. 5a). The network adjacency matrix resulting from
+S4D-Inv has connection strengths that decrease similarly
+with distance between nodes (Fig. 5b, middle panel), but
+these strengths decrease more slowly than for S4D-Lin.
+Phase offsets in the resulting network are nearly constant
+(Fig. 5b, right panel). The network adjacency matrix for
+S4D-DFouT shows similar decay in connection strength
+and change in phase offset to S4D-Lin (Fig. 5c). In all
+cases, the recurrent evolution admits an exact modal decomposition, and differences between parameterizations
+arise from eigenvalue allocation and readout structure
+rather than from changes in the linear propagator itself;
+consequently, each variant is amenable to the same modal
+and operator-level analysis developed in the main text.
+Figure 5.Topology and induced connectivity structure of the S4D operators.Each row shows the network representation and connectivity matrices ind

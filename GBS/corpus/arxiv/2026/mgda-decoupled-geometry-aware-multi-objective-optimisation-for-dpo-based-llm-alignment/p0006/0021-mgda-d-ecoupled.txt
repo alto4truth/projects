@@ -1,0 +1,19 @@
+title: MGDA-Decoupled: Geometry-Aware Multi-Objective Optimisation for DPO-based LLM Alignment
+source: arxiv
+year: 2026
+document_id: mgda-decoupled-geometry-aware-multi-objective-optimisation-for-dpo-based-llm-alignment
+authors: Andor Vári-Kakas; Ji Won Park; Natasa Tagasovska
+page: 6
+section: mgda-d-ecoupled
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20685v1
+
+Similarly, Lin et al. [2024] propose interpolating the fine-tuned
+model with the reference model to mitigate the “alignment tax” [Askell et al., 2021], or the degradation of general
+capabilities that alignment methods may introduce.
+6 Conclusion
+In this work, we introduced MGDA-DECOUPLED, a novel geometry-aware algorithm for multi-objective LLM
+alignment designed to ensure simultaneous improvement across all objectives while remaining sensitive to their
+respective convergence dynamics. We systematically evaluated our proposed algorithm against other lightweight, rewardmodel-free algorithms and benchmarked strategies with varying levels of adaptivity, from fixed linear scalarisation to
+dynamic schemes based on loss values and gradient geometry.
+9

@@ -1,0 +1,42 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 6
+section: b-additionalinformation
+chunk: 68
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+Published as a conference paper at ICLR 2026
+B.7 POLICYTRAININGHYPERPARAMETERS
+We first list hyperparameters common to all algorithms in Table 9:
+Table 9: Common hyperparameters for policy training.
+Hyperparameter Value
+Optimizer Adam (Kingma & Ba, 2014)
+Learning rate 0.0003
+Batch size 1024
+Architecture MLP
+MLP size (Actor and Critic){512, 512, 512}
+Nonlinearity GELU (Hendrycks & Gimpel, 2016)
+Layer normalization True
+Target critic update rate 0.005
+Critic (pD
+cur, pD
+traj , pD
+rand) ratio for goal sampling (0.2, 0.5, 0.3)
+We then provide specific hyperparameters used for ORS and Go-Fresh (which use GCIQL as the
+base algorithm to train policies) in Table 10:
+Table 10: Specific hyperparameters for policy training: ORS and Go-Fresh
+Datasetα(BC-coefficient)κ(Expectile)γActor (p D
+cur, pD
+traj, pD
+rand) reward scaling for ORS (linear scalingx: (r/x))
+puzzle-4x4-play 0.6 0.6 0.99 (0, 1, 0) 0.75
+puzzle-4x5-play 0.6 0.6 0.99 (0, 0.5, 0.5) 0.75
+puzzle-4x6-play 0.6 0.9 0.99 (0, 0.5, 0.5) 0.25
+cube-double-play 0.3 0.75 0.99 (0, 0.5, 0.5) 0.25
+cube-triple-play 0.3 0.9 0.99 (0, 0.5, 0.5) 0.25
+scene-play 0.3 0.75 0.99 (0, 0.5, 0.5) 0.75
+antmaze-large-navigate 0.15 0.6 0.995 (0, 1, 0) 2.0
+antmaz

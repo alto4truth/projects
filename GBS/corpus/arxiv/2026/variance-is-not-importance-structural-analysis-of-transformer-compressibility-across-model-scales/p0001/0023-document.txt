@@ -1,0 +1,66 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+s a different path: rather than compressing the model
+statically, allocate computation dynamically per token. Easy tokens (30%) could exit early at
+13
+
+Table 9: From structural findings to practitioner guidance
+Finding Implication Recommendation
+1. Variance̸= importance
+PCA, activation magnitude, and
+output variance are poor proxies
+for which dimensions to compress
+Use downstream-aware importance metrics or compress uniformly via quantization
+2. Conditional linearity
+Single-block linear replacement
+works; multi-block fails due to
+distribution shift
+Limit linear approximation
+to≤1 contiguous block;
+prefer direct quantization
+for multi-block compression
+3. Reconstruction wall Factored quantization amplifies
+errors through cross-terms
+Quantize weights directly
+(GPTQ, AWQ) rather
+than factoring first
+4. Linearity gradient Early blocks are nonlinear (must
+preserve); late blocks are nearlinear (safe to compress)
+Allocate compression
+budget unevenly: protect
+early blocks, compress late
+blocks more aggressively
+5. 30% easy tokens A substantial fraction of tokens
+require minimal computation
+Invest in adaptive pertoken computation (early
+exit, speculative decoding)
+rather than static compression alone
+intermediate layers, while hard tokens receive full computation. The linearity gradient provides
+a structural basis for this: later blocks (highR 2) perform near-linear refinement that may be
+unnecessary for tokens already confidently predicted.
+However, our experiments show this requires more than post-hoc analysis—the model must
+be fine-tuned to support early exit, either through multi-exit training objectives or LoRA-based
+dual-loss approaches that push prediction-relevant information into early blocks.
+7.3 Variance vs Importance: Implications Beyond Compression
+The strong decorrelation between PCA and CCA directions (96% different) has implications
+beyond compression. It suggests that analyses based on activation variance—a common tool
+in interpretability research, pruning, and feature attribution—may systematically misidentify
+which dimensions are functionally important. Any method that equates “large activation” with
+“important activation” is vulnerable to this failure mode.
+7.4 Limitations
+Our study has several limitations. (1) We test only two models (GPT-2 124M and Mistral 7B);
+while these span 58×in scale and differ in architecture (MHA vs GQA), additional architectures
+are needed. (2) All experiments use WikiText-2; cross-domain validation would strengthen the
+findings. (3) Evaluation uses 16 calibration samples for most experiments—sufficient for the
+structural measurements reported but below the≥1,000-chunk threshold we recommend for
+perplexity evaluation in deployment contexts. (4) We do not test models larger than 7B, where
+compression behavior may differ.
+14

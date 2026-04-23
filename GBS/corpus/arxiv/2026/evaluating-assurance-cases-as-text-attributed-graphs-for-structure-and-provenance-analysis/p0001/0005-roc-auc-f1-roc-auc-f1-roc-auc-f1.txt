@@ -1,0 +1,26 @@
+title: Evaluating Assurance Cases as Text-Attributed Graphs for Structure and Provenance Analysis
+source: arxiv
+year: 2026
+document_id: evaluating-assurance-cases-as-text-attributed-graphs-for-structure-and-provenance-analysis
+authors: Fariz Ikhwantri; Dusica Marijan
+page: 1
+section: roc-auc-f1-roc-auc-f1-roc-auc-f1
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20577v1
+
+ce decrease, with ROC-AUC dropping from 0.855 to 0.677.
+This confirms that structural connectivity provides a critical signal
+for link prediction that cannot be captured by semantic text embeddings alone, directly addressing concerns regarding the motivation
+for a graph-based approach.
+Furthermore, we evaluated the impact of GNN depth across
+architectures 6. Results indicate that 1-layer models generally outperform 3-layer variants, with UniGraph showing a decrease in
+AUC from 0.855 to 0.833 at greater depths. This suggests that link
+inference in assurance cases relies primarily on local neighbourhood information; deeper architectures likely introduce noise or
+suffer from over-smoothing due to the hierarchical nature of argument graphs. GCN was the sole exception, showing improved
+performance with increased depth.
+7.2 RQ2: Graph classification for Provenance
+Detection
+RQ2a: Graph classification Human vs LLMs.The results in Table 7
+indicate that graph-based models can effectively differentiate between human-authored and LLM-generated assurance cases, achieving high accuracy and F1 scores. Models like GCN, GraphSAGE,
+and SAGE-3 layers reach near-perfect performance (Acc ≈ 0.97,
+F1 ≈

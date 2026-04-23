@@ -1,0 +1,20 @@
+title: The Expense of Seeing: Attaining Trustworthy Multimodal Reasoning Within the Monolithic Paradigm
+source: arxiv
+year: 2026
+document_id: the-expense-of-seeing-attaining-trustworthy-multimodal-reasoning-within-the-monolithic-paradigm
+authors: Karan Goyal; Dikshant Kukreja
+page: 1
+section: document
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20665v1
+
+Studies
+We propose a radical new methodological approach: The Modality
+Translation Protocol. Instead of deleting information to test a model,
+this protocol preserves the exact semantic payload of a data sample
+while translating its modality across different representation states.
+Let 𝑆(·) denote the primary evaluation metric (e.g., Accuracy, Exact Match) of a modelM on a given task. For any single multimodal
+data sample, we define three distinct modulations:
+(1)𝑆 𝐹𝑢𝑙𝑙 (Standard VLM):Evaluated with standard visual input
+𝑉and textual input𝑇.
+𝑆𝐹𝑢𝑙𝑙 =𝑆(M (𝑉 , 𝑇))(1)

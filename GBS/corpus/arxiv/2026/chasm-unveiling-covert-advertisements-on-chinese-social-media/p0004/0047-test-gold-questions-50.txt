@@ -1,0 +1,58 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 47
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+ults are shown
+in Table 7. These baselines underperform compared to fine-tuned MLLMs, further highlighting the
+difficulty and subtlety of the task.
+22
+
+Table 6: Open-source and proprietary MLLMs with parameter counts and links.
+Model Parameters Link
+Deepseek-vl2-small [32] 16B Model_Link
+InternVL2.5-8B [33] 8B Model_Link
+LLaV A-NeXT-8B-hf [22] 8B Model_Link
+Qwen2.5-VL-7B-Instruct [23] 7B Model_Link
+Deepseek-V3 [21] 671B Model_Link
+Llama-4-Maverick [34] 400B Model_Link
+Qwen2.5-Max [35] - Model_Link
+GLM-4-Flash-250414 [36] - Model_Link
+GLM-4-Plus [36] - Model_Link
+Gpt-4o-2024-08-06 [20] - Model_Link
+Gpt-4o-mini-2024-07-18 [20] - Model_Link
+Gemini-2.0-flash [37] - Model_Link
+QvQ-Max [38] - Model_Link
+Step-R1-V-Mini [39] - Model_Link
+Gemini 2.5 Pro [24] - Model_Link
+Table 7: Performance of lightweight baseline models on the CHASM dataset.
+Model Accuracy Precision Recall F1 Score
+TF-IDF + LR 0.647 0.655 0.648 0.644
+TF-IDF + SVM 0.624 0.629 0.624 0.620
+BERT + ResNet 0.653 0.722 0.653 0.615
+CLIP 0.622 0.622 0.622 0.622
+D Prompt Template
+Zero-shot Prompt
+Your task is to determine whether a social media post contains advertising content. The
+input may include tweets, images, and comments. If the input contains persuasive content
+encouraging shopping, output ’1’ to indicate the presence of an advertisement. If the input is
+just general life-sharing content or unrelated to products, output ’0’. Please output only ’1’ or
+’0’ without any additional text.
+Few-shot Prompt
+Your task is to determine whether a social media post contains advertising content. The
+input may include tweets, images, and comments. If the input contains persuasive content
+encouraging shopping, output ’1’ to indicate the presence of an advertisement. If the input is
+just general life-sharing content or unrelated to products, output ’0’. Please output only ’1’ or
+’0’ without any additional text.
+[A Selected Convert Advertisement Example]
+[A Selected Non-Convert Advertisement Example]
+E Can more detailed prompts lead to better detection performance?
+Because the experiments in Section 4.2 show that, in both zero-shot and in-context learning settings,
+MLLMs do not follow the same criteria as humans when identifying covert advertisements, we
+attempted to provide more detailed evaluation standards directly in the prompt. However, as shown in
+23

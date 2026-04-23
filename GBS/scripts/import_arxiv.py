@@ -175,6 +175,7 @@ def write_daily_feed(imported: list[dict], feed_dir: Path) -> None:
 def main() -> None:
     query = sys.argv[1] if len(sys.argv) > 1 else DEFAULT_QUERY
     limit = int(sys.argv[2]) if len(sys.argv) > 2 else 25
+    start = int(sys.argv[3]) if len(sys.argv) > 3 else 0
 
     corpus_dir = ROOT / "corpus"
     catalog_dir = ROOT / "catalogs"
@@ -182,7 +183,7 @@ def main() -> None:
     catalog_dir.mkdir(parents=True, exist_ok=True)
     feed_dir.mkdir(parents=True, exist_ok=True)
 
-    root = fetch_atom(query=query, start=0, max_results=limit)
+    root = fetch_atom(query=query, start=start, max_results=limit)
     entries = parse_entries(root)
     imported: list[dict] = []
 

@@ -1,0 +1,14 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 200
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+ting models against established social-science baselines, allowing their value reflections to be seen with greater clarity and contested where needed.
+
+Chapter 4: The World Values Benchmark 189
+Model Card — Full Chapter 4: The World Values Benchmark Stance: Descriptive. WVB profiles model behaviour against human value distributions, making assumptions visible but not prescribing outcomes. Aim & Intended Use: To evaluate large language models by situating their outputs within existing cross-cultural value baselines (World Values Survey). Intended for auditing, comparison, and governance discussions. Not designed to grade nations or to endorse any value set as normative. Constructs / Operationalisation / Indicators: Constructs: Cultural values (e.g. religiosity, freedom vs. security, abortion attitudes). Operationalisation: World Values Survey items adapted into prompts with balanced anchors. Indicators: Distribution of model responses across anchors; distances to national profiles; aggregate placement on the Inglehart–Welzel cultural map. Interaction Context: Models tested included LaMDA (Google, 2021-2022) and PaLM (Google, 2022). Access was via internal research programme during internship. Runs conducted between Dec 2021–Nov 2022. Prompts: adapted WVS items across 12 domains. Archive includes prompt IDs, system prompts, and recorded outputs. Prompting & Controls: Prompt sets: 6–12 paraphrases per WVS item. Anchors: balanced, randomised presentation. Adjustment: normalisation of raw likelihoods and light Bayesian prior correction. Framing: world-value worldview anchoring, documented in prompt sets. Validity Evidence: Face validity: The adapted prompts retain the look and feel of established survey items, making the construct–proxy link visible at the surface level. Content validity: Items are drawn from the World Values Survey, an established sociological instrument covering a wide range of cultural and moral domains.

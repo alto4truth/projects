@@ -1,0 +1,30 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 12
+section: comparison-withexistingmethods
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+Method COCOA-cls D2SA
+pix2gestalt 79.08 81.82
+SAMBA 81.82 90.87
+Amodal SAM 83.18 91.62
+Qualitative evaluation.The visual comparison is demonstrated in Fig. 10, from which we can observe that the
+proposed model shows superior amodal segmentation ability
+compared to the recent state-of-the-art methods.
+C. Evaluation of Amodal Video Segmentation
+For comparison in the video amodal segmentation, we conducted additional experiments using our model for the video
+amodal segmentation task. Table III presents a comparison
+between our approach and several competing methods on
+the FISHBOWL and MOViD-A datasets. Our Amodal SAM
+outperforms all current state-of-the-art techniques, including
+image-level and video-level baselines, across both datasets.
+D. Ablation Study
+This section shows the ablation study conducted to assess
+the impact of our designs. In all experiments, the model
+is trained on our customized amodal dataset obtained from
+SA-1B, and evaluated on amodal segmentation datasets, as
+depicted in Table IV, Table V and Table VI.

@@ -1,0 +1,39 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 8
+section: a-b-c
+chunk: 47
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+= 3
+Normal/Benign 99.99% 0% 99.99% 99.99% 99.99%
+DoS 100% 0% 99.99% 99.97% 99.94%
+Gas Spoofing 100% 0% 100% 100% 100%
+RPM Spoofing 99.99% 0% 99.99% 99.99% 100%
+Speed Spoofing 100% 0% 100% 100% 100%
+Steering Wheel Spoofing 99.95% 0% 99.94% 99.97% 100%
+Average 99.99% 0% 99.99% 99.99% 99.99%
+hidden layers = 4
+Normal/Benign 99.99% 0% 99.99% 99.99% 99.99%
+DoS 100% 0% 99.99% 99.99% 99.99%
+Gas Spoofing 100% 0% 100% 100% 100%
+RPM Spoofing 99.99% 0% 99.99% 99.94% 99.89%
+Speed Spoofing 100% 0% 99.99% 99.96% 99.92%
+Steering Wheel Spoofing 99.95% 0% 99.99% 99.97% 100%
+Average 99.99% 0% 99.99% 99.98% 99.97%
+hidden layers = 5
+Normal/Benign 99.99% 0% 99.99% 99.99% 99.9%
+DoS 100% 0% 99.99% 99.96% 99.93%
+Gas Spoofing 100% 0% 99.99% 99.89% 99.79%
+RPM Spoofing 99.99% 0% 99.99% 99.97% 99.95%
+Speed Spoofing 100% 0% 99.99% 99.97% 99.94%
+Steering Wheel Spoofing 99.95% 0% 99.99% 99.97% 100%
+Average 99.99% 0% 99.99% 99.96% 99.94%
+Fig. 6. Average classification results by DAIRE on the 50% randomly chosen samples from the CICIoV2024 dataset using different hidden layers with batch size
+= 𝑡𝑟𝑎𝑖𝑛𝑖𝑛𝑔 𝑑𝑎𝑡𝑎 𝑠𝑖𝑧𝑒
+300 , and epochs = 100.
+5.3.3. Evaluation on the car-hacking dataset
+To evaluate generalizability, we t

@@ -1,0 +1,36 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 8
+section: table-v
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+10
+FoundationPose Co-op
+Freeze
+MAPRPose (Ours)
+Frame D
+Frame E
+Frame F
+MAPRPose
+(w/o AMPR)
+Fig. 5: Qualitative Comparison on YCB-V Scenes.We compare various methods (FoundationPose, Co-op, FreeZe, MAPRPose (w/o
+AMPR) and MAPRPose) for estimating object poses across frames D, E, and F on YCB-V dataset. White boxes denote the ground truth
+poses, while colored boxes (blue, red, green, etc.) represent the estimated poses.MAPRPose (w/o AMPR)denotes our MAPRPose method
+without AMPR mechanism.
++2.3% AR gain.
+These numerical gains are further supported by our qualitative analysis. The effectiveness of the full refinement module
+is illustrated through visual comparisons on challenging frames
+from LM-O (Fig. 4) and YCB-V (Fig. 5).
+Qualitative results in Figs. 4 and 5 further validate these
+improvements; while our full model remains robust, baseline
+approaches exhibit either substantial estimation errors or
+complete detection failure in highly occluded and cluttered
+scenarios.
+White bounding boxes denote ground-truth poses, while
+colored boxes represent predictions from our full model, its
+w/o AMPR variant, and competing methods. On LM-O dataset
+(Fig. 4, frames A–C), Frames A and B are mainly

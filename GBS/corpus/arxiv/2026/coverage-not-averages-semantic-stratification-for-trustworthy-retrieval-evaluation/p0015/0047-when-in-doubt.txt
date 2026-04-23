@@ -1,0 +1,65 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 15
+section: when-in-doubt
+chunk: 47
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+se of different date varieties in healthy versus type 2 diabetic adults"
+Docs (2): MED-3897, MED-3907
+Delta: 0.429 | J: 0.444 | Clusters: 4 (4 new)
+18
+
+Coverage, Not Averages Semantic Stratification for Trustworthy Retrieval Evaluation
+Entity Description
+apple juice A beverage made from the pressing and
+processing of apples
+cranberry juice A beverage made from cranberries, often studied for health benefits
+fruit juice Beverage made by extracting liquid
+from fruits
+cranberries A fruit known for its health benefits, particularly for urinary health
+grapefruit A citrus fruit known for its potential interactions with medications
+pomegranate juice Juice extracted from pomegranate,
+known for its health benefits
+red wine A type of wine made from dark-colored
+grape varieties
+white wine A type of wine made from green grapes
+noni juice Juice derived from noni fruit, marketed
+for health benefits
+mangosteen juice Juice extracted from mangosteen, associated with health claims
+hibiscus tea A herbal tea made from dried petals of
+hibiscus flowers
+cherry juice A beverage made from cherries, noted
+for health benefits
+smoothie A blended beverage typically made
+from fruits and vegetables
+bladder infection An infection of the urinary bladder (frequently studied in relation to cranberry
+juice)
+... and 53 more entities
+Table 8.Example Semantic Cluster: Fruit Juices & Beverages (Cluster 118, NFCorpus)
+Sample generated FIQA queries with strata values and relevant documents. Example queries show increase in Zero-Query
+Cluster coverage.
+[Q1] "reverse stock split investor impact"
+Docs (16): 579056, 507021, 229707, 477951, 388065, 304085, 502970, 513620, 237390, 581848, 159439, 129481,
+524940, 512914, 245654, 352130
+Delta: 0.587 | J: 0.031 | Clusters: 2 (2 new)
+[Q2] "Chinese public opinion of Donald Trump during 2016-2020 presidential elections"
+Docs (4): 541283, 279360, 291836, 106268
+Delta: 0.800 | J: 0.333 | Clusters: 4 (3 new)
+[Q3] "economic confirmation bias in academic research debates"
+Docs (8): 303978, 498180, 187090, 457235, 394096, 382709, 118092, 394357
+Delta: 0.707 | J: 0.069 | Clusters: 2 (1 new)
+Sample generated SciDocs queries with strata values and relevant documents. Example queries show increase in Zero-Query
+Cluster coverage.
+[Q1] "neural encoding auditory stimuli"
+Docs (10): 620b7d0d5e2ceeba58d808dc3d7b09a9fb57831c, 4934ac57123efbfbde139ec846452acd95520b40, 3
+c203e4687fab9bacc2adcff2cbcab2b6d7937dd, 6d3f38ea64c84d5ca1569fd73497e34525baa215, 8
+bfedec4b58a5339c7bd96e367a2ed3662996c84, 6042669265c201041c7523a21c00a2ab3360f6d1,
+ca579dbe53b33424abb13b35c5b7597ef19600ad, f18821d47b2bee62a7b3047ed7b71a5895214619,
+bdfb20d112069c106a9535407d107a43ebe6517f, 8fc062ac5cded5cbacb164e2b128f9914eb04727
+Delta: 0.327 | J: 0.361 | Clusters: 13 (1 new)
+[Q2] "information technology strategic impact"
+19

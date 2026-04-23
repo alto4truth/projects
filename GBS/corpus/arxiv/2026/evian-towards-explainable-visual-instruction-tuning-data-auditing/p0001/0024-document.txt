@@ -1,0 +1,33 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+ting the metric’s strong discriminative capability. Furthermore, the concentration of
+defective samples in the mid-range, instead of accumulating at the lowest scores, shows that EVIAN
+detects subtle, context-dependent defects such as
+logical fallacies, not merely coarse inconsistencies.
+Although a small fraction of injected samples retain
+higher scores due to nuanced semantic ambiguities,
+the pronounced distributional gap overall provides
+strong evidence that EVIAN functions as a robust,
+fine-grained filter for high-quality data curation.
+5.3 Downstream Task Performance
+To evaluate the practical impact of EVIAN, we
+fine-tuned models on 10K-sample subsets curated
+by different methods and compared their downstream performance across multiple benchmarks.
+As shown in Table 3,the model trained on the
+EVIAN-selected subset achieves the current best
+performance(average score of 70.20), surpassing
+both the previous SOTA method (SCALE, 67.41)
+and the model trained on the full 300K unfiltered
+dataset (63.77). This “less is more” result highlights the diagnostic precision of EVIAN, which
+consistently extracts higher-quality data from a
+noisy pool.
+These gains stem from EVIAN’s
+“Decomposition

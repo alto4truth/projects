@@ -1,0 +1,17 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 40
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+els: the
+reliance on outcome-supervised training, which inadvertently encourages visual
+hallucinations and shortcut guessing during multi-step reasoning. To address
+this, we introduced V-tableR1, a framework that forces models to explicitly generate and verify visual chain-of-thought anchors. At the core of our approach
+is Process-Guided Direct Alignment Policy Optimization, a novel RL algorithm
+that integrates decoupled policy constraints, length-aware dynamic sampling,
+and most importantly, dense step-level feedback from a critic VLM. Our extensive evaluations across seven complex tabular benchmarks prove that process supervision fundamentally shifts multimodal inference from opaque pattern matchingtorigorouslogicalderivation.Theresulting4B-parameterV-tableR1achieves

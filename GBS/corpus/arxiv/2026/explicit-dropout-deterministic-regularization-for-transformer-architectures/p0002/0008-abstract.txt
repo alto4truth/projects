@@ -1,0 +1,25 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+hat
+adapt to the learned representations [34, 1]. These results
+motivate adaptive dropout schemes that optimize dropout
+rates to minimize theoretical generalization bounds, rather
+than tuning them as fixed hyperparameters [34].
+Beyond vanilla dropout, many works adapt the dropout
+rate or structure of masking. Concrete Dropout [9] introduces a continuous relaxation of Bernoulli dropout using
+the Concrete distribution, enabling gradient-based optimization of dropout probabilities within a Bayesian framework. Variational Nested Dropout [5] organizes features
+into nested subnetworks with learned importance, while
+Rademacher [34] dropout derives adaptive masks by optimizing generalization-gap bounds. Y-Drop [11] uses conductance based scores to drop influential neurons in fully
+connected layers, and Progressive Data Dropout [27] removestrainingsamplesinacurriculummannertoregularize
+deep face recognition. Stochastic-depth-style method [24]
+viewslayer-wisedropoutasaformofdepth-wiseregularization that can be interpreted as a variant of stochastic depth.
+Augment dropout [10] separates the dropout in forward and
+backward passes and uses them with different rates, as forwardpassdropoutactsasa

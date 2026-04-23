@@ -1,0 +1,24 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+t of solver-like
+guidancewithoutrequiring a formal model. Reasoning-optimized
+models (e.g., Grok 4 Fast Reasoning, Gemini 2.5 Pro, GPT-5 mini)
+therefore offer a practical operating point: near-solver accuracy
+with stable formatting and useful rationales that fit within minutesscale review cycles typical of scoping workshops.
+Leveraging model complementarity.Top performers exhibit complementary strengths across blueprints and AOs. Grok 4 Fast Reasoning demonstrates exceptional robustness on large, constraintdense models such as BDB, CNNl, and CNNf, where other models
+suffer truncation or incomplete propagation. In contrast, GPT-5
+mini achieves the highest consistency on mid-size blueprints (COM,
+SEA) and complex solver-based tasks (AO12, AO15), benefiting from
+deeper constraint reasoning. Gemini 2.5 Pro performs best on compact to medium blueprints (CVE, SMG) and excels in maintaining
+strict XML conformance and stable formatting even under long
+outputs. These differences suggest that the models compensate for
+each other’s weaknesses: Grok handles scale and constraint density, GPT-5 mini excels in fine-grained constraint reasoning, and
+Gemini maintains strict output conformance. Simp

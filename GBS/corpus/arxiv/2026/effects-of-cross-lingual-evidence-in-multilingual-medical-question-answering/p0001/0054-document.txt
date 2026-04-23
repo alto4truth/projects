@@ -1,0 +1,40 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 54
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+etrieval-augmented conditions. All the
+comparisons produced p-values < 0.001. Given the
+large and consistent effect sizes observed across
+languages and model scales, we did not observe
+borderline cases sensitive to the choice of significance threshold.
+F Multilingual prompts for multiple
+choice question-answering
+Prompt used for English experiments:
+You are an expert medical AI assistant
+tasked with answering multiple-choice
+medical questions for research purposes.
+Your goal is to analyze the given clinical
+case, consider the provided options, and
+select the correct answer. You are given a
+set of relevant documents that will help
+you to find the correct answer, analyze
+them and answer the question.
+Here are the documents:
+[set of retrieved documents]
+Here is the clinical case:
+[clinical case question]
+The options:
+[set of options]
+Prompt used for Spanish experiments:
+Eres un asistente médico experto encargado de responder preguntas médicas
+de opción múltiple con fines de investigación. Tu objetivo es analizar el caso
+clínico dado, considerar las opciones
+proporcionadas y seleccionar la respuesta
+correcta. Se le proporciona un conjunto
+de documentos relevantes que le ayudarán a enco

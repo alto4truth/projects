@@ -1,0 +1,120 @@
+title: On Bayesian Softmax-Gated Mixture-of-Experts Models
+source: arxiv
+year: 2026
+document_id: on-bayesian-softmax-gated-mixture-of-experts-models
+authors: Nicola Bariletto; Huy Nguyen; Nhat Ho; Alessandro Rinaldo
+page: 3
+section: exp-x
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20551v1
+
+zero. From the coefficients of the
+terms:
+•exp(X ⊤α⋆
+1j)N(Y|X;α ⋆
+1j, β⋆
+j , σ⋆2
+j )forj∈[K ⋆], we get
+1
+L2n
+·
+K⋆
+X
+j=1
+
+X
+i∈Cj
+exp(αn,0i)−exp(α ⋆
+1j)
+
+→0;
+•X (u) exp(X ⊤α⋆
+1j)N(Y|X;α ⋆
+1j, β⋆
+j , σ⋆2
+j )forj∈[K ⋆] :|C j|= 1andu∈[d], we get
+1
+L2n
+·
+X
+j∈[K ⋆]:|Cj |=1
+X
+i∈Cj
+exp(αn,0i)∥∆αn,1ij∥ →0;
+• ∂E
+∂β(u′) exp(X ⊤α⋆
+1j) ∂N
+∂E (Y|X;α ⋆
+1j, β⋆
+j , σ⋆2
+j )forj∈[K ⋆] :|C j|= 1andu ′ ∈[d ′], we get
+1
+L2n
+·
+X
+j∈[K ⋆]:|Cj |=1
+X
+i∈Cj
+exp(αn,0i)∥∆βn,ij∥ →0;
+•exp(X ⊤α⋆
+1j) ∂2N
+∂E2 (Y|X;α ⋆
+1j, β⋆
+j , σ⋆2
+j )forj∈[K ⋆] :|C j|= 1, we get
+1
+L2n
+·
+X
+j∈[K ⋆]:|Cj |=1
+X
+i∈Cj
+exp(αn,0i)|∆σ2
+n,ij| →0;
+•X (u)X(v) exp(X ⊤α⋆
+1j)N(Y|X;α ⋆
+1j, β⋆
+j , σ⋆2
+j )forj∈[K ⋆] :|C j|>1andu, v∈[d], we get
+1
+L2n
+·
+X
+j∈[K ⋆]:|Cj |>1
+X
+i∈Cj
+exp(αn,0i)∥∆αn,1ij∥2 →0;
+•
+ ∂2E
+∂β(u′) (X, β⋆
+j )
+2 exp(X ⊤α⋆
+1j) ∂2N
+∂E2 (Y|X ; α⋆
+1j, β⋆
+j , σ⋆2
+j )for j∈ [K⋆] : |Cj|> 1and u′ ∈ [d′], we get
+1
+L2n
+·
+X
+j∈[K ⋆]:|Cj |>1
+X
+i∈Cj
+exp(αn,0i)∥∆βn,ij∥ →0;
+•exp(X ⊤α⋆
+1j) ∂4N
+∂E4 (Y|X;α ⋆
+1j, β⋆
+j , σ⋆2
+j )forj∈[K ⋆] :|C j|>1, we get
+1
+L2n
+·
+X
+j∈[K ⋆]:|Cj |>1
+X
+i∈Cj
+exp(αn,0i)|∆σ2
+n,ij|2 →0;
+37

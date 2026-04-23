@@ -1,0 +1,22 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 8
+section: compass-ecda
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+Figure 10: Temporal performance evolution for Phi-4-Mini-Instruct-3.8B across five distribution shifts. Despite limited model capacity, COMPASS-ECDA (dark blue) maintains stable adaptation with minimal forgetting. The pronounced forgetting in naive fine-tuning (light blue) underscores the importance of explicit
+retention mechanisms for smaller models.
+Method PROX T1 PROX T5 PROX Overall MMLU T1 MMLU T5 MMLU Overall
+Naive Fine-tuning 0.406±0.002 0.420±0.026 0.430±0.023 0.604±0.002 0.491±0.036 0.522±0.058
+Full Retraining 0.408±0.001 0.427±0.010 0.425±0.013 0.600±0.001 0.591±0.005 0.590±0.007
+EWC 0.402±0.001 0.418±0.016 0.422±0.016 0.603±0.001 0.576±0.011 0.580±0.016
+Random Rehearsal 0.402±0.002 0.417±0.012 0.418±0.013 0.600±0.002 0.570±0.010 0.579±0.014
+COMPASS-ECDA 0.405±0.002 0.437±0.015 0.431±0.019 0.600±0.001 0.591±0.006 0.592±0.007
+Table 14: Aggregate performance metrics for Qwen2.5-7B-Instruct.
+Table 15 reveals diminishing returns beyond 5% distribution anchor buffer size in terms of mitigating forgetting. Ultimately, the size of the buffer reflects how susceptible the network architecture is to catastrophic
+forgetting, which remains low due to the nature of PEFT.
+D.5 Hyperpara

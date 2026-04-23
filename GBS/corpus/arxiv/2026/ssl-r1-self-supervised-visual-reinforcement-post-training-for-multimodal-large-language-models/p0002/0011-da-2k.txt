@@ -1,0 +1,27 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 2
+section: da-2k
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+62.18 36.4678.95 46.90 60.20 30.25 61.5358.23
+✓ ✓ ✓ ✓ ✓54.6757.6778.5268.75 80.6343.67 61.58 35.60 77.68 46.8461.7029.25 61.49 58.31
+∆max(vs. baseline) +12.67 +6.18 +1.80 +4.63 +4.19 +1.98 +2.59 +1.25 +1.82 +1.96 +9.81 +3.00 +0.48 +3.44
+4. Experiments
+4.1. Implementation Details
+SSL Task Setup.Unless otherwise specified, we implement the following configurations for each SSL task. We set
+S= 4for rotation prediction,α= 0.5for region inpainting,M=N= 3for patch ordering, andK= 6for geometric correspondence. For visual similarity, we apply the
+standard image augmentations following [12]: a224×224pixel random resized crop with a random horizontal flip,
+followed by a random color distortion, random grayscale
+conversion, and random Gaussian blur.
+Training Data.We use 118K raw images from COCO [36]
+as our data source to create training data. Specifically, for
+each task introduced in Sec. 3.2, we apply the corresponding data augmentation and prompt construction process to
+generate self-supervised question-answer pairs as training
+data. The final dataset consists of 591K question-answer
+pairs in total, dubbed as SSL-R1-591K, which balances
+each task in equal proportion and exhibits diverse

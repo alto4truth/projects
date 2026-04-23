@@ -1,0 +1,23 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 2
+section: results
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+gy of the
+traveling wave modes in the recurrent layer is already
+enough to distinguish simple sinusoidal inputs embedded
+in noise, classification of real-world data requires nonlinear wave interactions that depend on their relative phase,
+extracting information beyond wave amplitude alone.
+The explicit expression for the system’s output (Eq. 13)
+then admits the exact Carleman representation
+O= 1
+T W
+TX
+k=1
+H∞ z(yk),(31)
+which can be truncated to orderR,

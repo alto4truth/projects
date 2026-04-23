@@ -1,0 +1,45 @@
+title: Trust, Lies, and Long Memories: Emergent Social Dynamics and Reputation in Multi-Round Avalon with LLM Agents
+source: arxiv
+year: 2026
+document_id: trust-lies-and-long-memories-emergent-social-dynamics-and-reputation-in-multi-round-avalon-with-llm-agents
+authors: Suveen Ellawela
+page: 1
+section: document
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20582v1
+
+l Team Discussion Prompt
+When good wins 3 missions, evil players discuss before assassination:
+Discuss who you think Merlin is among the good players.
+Analyze their behavior and statements in first person
+(as yourself). Be specific and analytical. Keep it to
+2-3 sentences. Speak naturally as if talking to your
+evil teammates.
+A.7 Assassination Decision Prompt
+Based on all the discussions and your teammates’
+analysis, choose who you think is Merlin from the
+good players. Respond ONLY with JSON:
+{"guess": "PlayerName",
+"reasoning": "your analysis in 2-3 sentences"}
+A.8 Post-Game Reflection Prompt
+After each game, agents generate reflections for cross-game
+memory:
+Reflect on your performance in this game. Respond
+with JSON:
+{
+"self_assessment": "What you did well and what you
+could improve (2-3 sentences)",
+"player_observations": {
+"PlayerName1": "Brief observation about their
+playstyle or patterns",
+"PlayerName2": "Brief observation...",
+...
+}
+}
+Make observations about ALL other players (not yourself).
+B Game Configuration by Player
+Count
+5 players:Merlin, 2 Loyal Servants (Good) vs Assassin, 1
+Minion (Evil).
+6 players:Merlin, Percival, 2 Loyal Servants (Good) vs
+Morgana, Mordred (Ev

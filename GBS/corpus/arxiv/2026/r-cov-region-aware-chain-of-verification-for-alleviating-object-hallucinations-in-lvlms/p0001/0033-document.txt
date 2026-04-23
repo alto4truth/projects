@@ -1,0 +1,24 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+y settingτ= 0.1. We observe a noticeable performance drop when continuing to increase the threshold. A higher threshold tends to misclassify a large number of existent objects as nonexistent, thus
+causing a drastic increase in false negatives.
+Image prompt type.Table 5c studies the types of image
+prompts to use in the region description stage. The results
+demonstrate that using the image content overlaid with the
+generated bounding box leads to better performance than
+using the original image. Apart from the text prompt, using such a visual prompt better instructs the model to focus
+on the region of interest when producing answers. Another
+na¨ıve way to utilize the local information is to crop the image with the generated bounding box coordinates. However,
+we observe that simply cropping the image significantly degrades the performance due to the loss of the image context.
+Bounding box shape.Given the bounding box coordinates,
+how to draw the shape on top of the image is worth exploring. We consider three possible shapes with the provided coordinates: rectangle, incircle, and circumcircle. As
+shown in Table 5d, all shapes can significantly surpass the
+baseline, where a standard rec

@@ -1,0 +1,25 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 2
+section: abstract
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+istribution mapping states to actions. Each policy induces a conditional state-action occupancy
+distributiond π(s+ |s, a)over future statess +:d π(s+ |s, a) = (1−γ) P∞
+∆t=1 γ∆t−1 P(st+∆t =
+s+ |s, a, π), which we refer to as the occupancy measure for simplicity.
+The objective of GCRL is to reach any goal,g∈ S, from another states∈ Sin the minimum
+number of steps. A goal-conditioned policyπ(a|s, g):S×S×A→Rmaps states and goals
+to actions. Formally, the aim is to learn the optimal shortest-path policyπ ∗(a|s, g)that maximizesE τ∼p(τ|g)
+P∞
+t=0 γtδg(st)wheretis the timestep,p(τ|g) =µ(s 0)π(a0 |s 0, g)p(s1 |
+s0, a0)· · ·p(s i |s i−1, ai−1)· · ·andδ g is a Dirac delta at goalg. Such a policy reachesgin the
+minimum number of steps. In this paper, we focus on offline GCRL. In particular, agents cannot
+interact with the environment for learning but have access to an offline dataset of trajectoriesD,
+where each trajectory isτ= (s 0, a0, s1, a1, . . . ,;, s T ). We denote the dataset behavioral policy by
+πD(a|s)and the dataset occupancy measure corresponding toπ D byd πD(s+ |s, a).
+Flow Matching:Flow matching aims to learn to sample from a distributionp data, given a finite number of samplesx

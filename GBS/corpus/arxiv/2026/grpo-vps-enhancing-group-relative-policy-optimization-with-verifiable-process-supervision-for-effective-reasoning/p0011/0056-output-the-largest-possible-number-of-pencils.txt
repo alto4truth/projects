@@ -1,0 +1,60 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 11
+section: output-the-largest-possible-number-of-pencils
+chunk: 56
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+in a package
+print(gcd)
+```
+```output
+8
+```
+The largest possible number of pencils in a
+package is \(\boxed{8}\).
+noninformative tokens
++0.6
++0.2
+-0.3
++0.9
+Figure 7: Example to show
+18
+
+Published as a conference paper at ICLR 2026
++0.1
++0.2
+To solve the problem \( 7 \bowtie g = 9 \)
+where \( a \bowtie b = a + \sqrt{b + \sqrt{b +
+\sqrt{b + \ldots}}} \), we need to examine the
+structure of the expression and derive an
+equation for \( g \).
+First, we recognize that the nested square
+root expression can be represented as a
+single variable \( x \).
+Let:
+\[ x = \sqrt{g + \sqrt{g + \sqrt{g + \ldots}}} \]
+By squaring both sides, we get:
+\[ x^2 = g + x \]
+By squaring both sides, we get:
+\[ x^2 = g + x \]
+Rearrange this equation to a quadratic form:
+\[ x^2 - x - g = 0 \]
+Given \( 7 \bowtie g = 9 \):
+\[ 7 + x = 9 \]
+Therefore, solve \( x \):
+\[ x = 9 - 7 \]
+\[ x = 2 \]
+Substitute \( x = 2 \) into the quadratic
+equation derived above:
+\[ 2^2 - 2 - g = 0 \]
+\[ 4 - 2 - g = 0 \]
+\[ 2 - g = 0 \]
+\[ g = 2 \]
+Finally, let's verify our result through
+Python computation to ensure accuracy.
+```python
+from sympy import symbols, Eq, solve

@@ -1,0 +1,32 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 16
+section: segmentationmethodsevaluation
+chunk: 50
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+When evaluating how background removal techniques
+affect downstream tasks such as FR and MAD, it is important
+to keep in mind that the verified performance changes might
+derive from inappropriate background removal. While it is
+impossible to ensure perfect segmentation, the quality of
+the employed segmentation techniques should be enforced
+in advance to ensure that verified performance fluctuations
+can be mapped to the act of background removal, and not
+to the specific technique being employed. In this section, we
+describe the experimental setup and results of this evaluation.
+A. Evaluation Dataset
+We evaluate the seven background removal techniques
+considered in this work on an independent database, namely
+the CelebAMask-HQ test subset [52]. CelebMask-HQ mask
+is a high-quality dataset labeled according to CelebA-HQ
+[26], which contains 30,000 high-resolution face images
+from CelebA [31]. Each image is accompanied by a series of
+ground truth (GT) binary segmentation masks for 19 facial
+elements [52] (left/right brow, left/right eye, upper/lower lip,
+...). We start by determining the union of these masks to
+recover the GT mask for the complete face, resulting in 2,824
+test images wi

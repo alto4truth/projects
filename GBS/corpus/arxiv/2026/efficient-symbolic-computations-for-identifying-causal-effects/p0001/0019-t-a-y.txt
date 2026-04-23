@@ -1,0 +1,20 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+accessible introduction to Gröbner bases is provided in Cox et al. (2015). We briefly outline the
+key properties, orienting ourselves to the exposition in Garcia-Puente et al. (2010).
+For an integer vectoru∈N m, we denote a monomial inR[x1, . . . , xm]byx u =x u1
+1 xu2
+2 · · ·x um
+m . A
+monomial order≺on the polynomial ringR[x 1, . . . , xm]is a total ordering of all monomials in the
+ring, which respects multiplication and sets1as the smallest monomial. Concretely, this means
+that wheneverx u ⪯x v thenx w ·x u ⪯x w ·x v and that1⪯x u for allu∈N n. Because≺is a
+7

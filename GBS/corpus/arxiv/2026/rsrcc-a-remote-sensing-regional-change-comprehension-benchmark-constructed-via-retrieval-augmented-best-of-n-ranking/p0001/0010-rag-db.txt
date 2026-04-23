@@ -1,0 +1,23 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 1
+section: rag-db
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+. More generally, when the objective is
+confidence-based filtering rather than single-hypothesis selection, we retain only those candidates
+satisfying 𝑟 𝑗 > 𝜏, for a fixed threshold𝜏. This procedure can be interpreted as an inference-time
+surrogate for preference-guided selection: instead of updating model parameters, we rank or filter
+candidate semantic interpretations according to a retrieval-conditioned reward signal. Retrieval is
+essential here because it constrains the judgment to locally relevant reference cases, thereby reducing
+instability that may arise when ambiguous regions are scored in isolation. In our pipeline, this
+Best-of-𝑁 stage serves as the main ambiguity-resolution mechanism and substantially improves the
+semantic precision of the final curated benchmark. Prompt details are provided in Appendix K, and
+additional implementation details appear in Appendix F.
+Question-Answer ExtractionAfter identifying candidate change regionsB={𝑏 1, 𝑏2, . . . , 𝑏𝑁 },
+we use a LLM to generate question-answer pairs for each localized change instance. Each region
+𝑏𝑖 is overlaid on the corresponding image pair(𝑥before, 𝑥after) so that the model receives a regiongrounded view of the

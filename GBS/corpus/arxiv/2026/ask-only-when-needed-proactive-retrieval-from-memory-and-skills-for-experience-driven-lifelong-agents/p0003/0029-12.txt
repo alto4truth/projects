@@ -1,0 +1,62 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 3
+section: 12
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+proactively identify gaps in current knowledge and initiate searches on its own, thereby achieving higher task success
+rates and greater efficiency.
+6
+
+ICALK@ECNU
+4 Experiments
+Our experiments are designed to answer three research questions:
+•RQ 1: Does learned proactive retrieval outperform passive retrieval baselines? (§4.2, §4.4)
+• RQ 2: Does joint co-evolution of experience and policy outperform approaches that evolve either resource in isolation,
+and what is the contribution of each component? (§4.2, §4.3)
+• RQ 3: Does proactive retrieval yield efficiency gains alongside accuracy improvements, and does the benefit
+generalize across model scales? (§4.4)
+4.1 Experimental setup
+Datasets.We evaluate PROACTAGENTon three interactive benchmarks: SciWorld [ 2], AlfWorld [1], and StuLife [4].
+SciWorld and AlfWorld report the success rate (SR) and the average number of interaction rounds, whereas StuLife
+reports the SR and StuGPA. For SciWorld and AlfWorld, we adopt the training splits of AgentGym-RL [ 31] and
+evaluate on the test set of AgentGym-RL (SciWorld) and the official test set (AlfWorld). Because StuLife provides no
+training set, evaluation on this benchmark is restricted to methods capable of evolving entirely online. For methods that
+involve reinforcement learning, a cold-start phase on the training set precedes policy optimization; methods without a
+training set (StuLife) rely solely on online evolution.
+Baselines.Unless noted otherwise, all primary experiments utilize Qwen2.5-7B-Instruct as the base model; a scaling
+experiment with Qwen2.5-3B-Instruct is also reported. We compare against offline baselines that maintain static
+parameters after deployment (ReAct [ 8], SFT, and GRPO [ 32]) as well as online baselines that evolve over the
+test stream (GRPO with online parameter evolution, AWM, Reflexion [ 10], MemoryBank [ 13], Mem0 [ 24], and
+GRPO+Reflexion).
+Evaluation protocol.Methods trained solely on fixed datasets (SFT and GRPO) areoffline: both the weights and the
+knowledge remain static after deployment. All remaining methods areonline, evolving over the test stream through
+memory evolution (the D grows with incoming trajectories), online parameter evolution (single-instance reinforcement
+learning updates the policy), or the co-evolution of both. PROACTAGENTperforms online co-evolution in which
+experience accumulation and the adaptation of parameters are tightly interleaved at single-instance granularity.
+4.2 Main Results
+Table 1 presents the main results across three benchmarks. We organize the key findings around the three research
+questions.
+Learned proactive retrieval outperforms passive strategies.Among online baselines that maintain experience, AWM,
+MemoryBank, and Mem0 retrieve from accumulated experience without learned retrieval control, failing to achieve
+significant improvements over the base model. Reflexion adds episodic reflections but similarly lacks learned control
+over retrieval timing and content, even when combined with reinforcement learning (GRPO+Reflexion: 55.50%),
+passive retrieval leaves substantial room for improvement. PROACTAGENTcloses this gap by learning retrieval as an
+explicit policy action through paired-branch process rewards, achieving an 18.0-point gain over GRPO+Reflexion on
+SciWorld with consistent improvements across all three benchmarks.
+Joint evolution of experience and policy outperforms isolated approaches.Evolving parameters in isolation proves
+insufficient. GRPO (online) underperforms offline GRPO on SciWorld (46.50% vs. 52.00%) and yields only marginal
+gains on AlfWorld (68.71% vs. 67.69%), confirming that online updates without structured experience overfit to
+noisy trajectories. Conversely, memory-only online baselines (AWM, Reflexion, MemoryBank, Mem0) accumulate
+experience without policy adaptation, achieving at most 7.34% SR on StuLife. By unifying experience refinement with
+policy optimization, PROACTAGENTsurpassing the strongest combined baseline (GRPO+Reflexion) and approaching
+proprietary model performance on StuLife [4].
+Proactive control yields efficiency gains alongside accuracy.PROACTAGENTreduces interaction rounds by 33.2%
+on SciWorld (27.52 → 18.38) and 22.5% on AlfWorld (16.42 → 12.73) relative to GRPO+Reflexion. By learning when
+current knowledge suffices and when retrieval is needed, proactive control avoids both unnecessary queries that flood
+the context and missed retrieval opportunities that force the agent to rediscover known solutions.
+7

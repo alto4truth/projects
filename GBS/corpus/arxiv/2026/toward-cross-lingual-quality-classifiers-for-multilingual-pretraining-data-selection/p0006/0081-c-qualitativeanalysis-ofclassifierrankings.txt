@@ -1,0 +1,58 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 6
+section: c-qualitativeanalysis-ofclassifierrankings
+chunk: 81
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+LANGUAGEFAMILYCLASSIFIERSCOMPARISON ONFRENCHFILTERING
+We provide here the full table for all the language families classifiers filtering on French.
+19
+
+Published as a paper at 3rd DATA-FM workshop @ ICLR 2026, Brazil.
+0.0 0.2 0.4 0.6 0.8 1.0
+Quality Score
+10 2
+10 1
+100
+101
+102
+Density
+T est Positive
+T est Negative
+FineWeb2
+Cutoff (retention 0.10)
+0.0 0.2 0.4 0.6 0.8 1.0
+Quality Score
+10 2
+10 1
+100
+101
+102
+Density
+T est Positive
+T est Negative
+FineWeb2
+Cutoff (retention 0.10)
+Figure 2: Distribution of quality scores for French baseline (top) and Romance languages classifier
+including French (bottom) on French FineWeb2 samples
+0.0 0.2 0.4 0.6 0.8 1.0
+Quality Score
+10 2
+10 1
+100
+101
+102
+Density
+T est Positive
+T est Negative
+FineWeb2
+Cutoff (retention 0.10)
+Figure 3: Distribution of quality scores for Romance languages classifier without French
+C.2 MONOLINGUAL(HQ)VS. MULTILINGUAL(ML)INFRENCH
+Sample 1: Structured Educational Essay (Poetry)
+Text:la poésie- réalité/ poésie: forme d’évasion du réel :Introduction La poésie est un
+genre littéraire qui permet d’exprimer des sentiments... : Thèse La poésie peut être consid20

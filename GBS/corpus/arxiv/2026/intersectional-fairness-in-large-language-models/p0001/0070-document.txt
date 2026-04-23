@@ -1,0 +1,27 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 70
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+rent evaluation metrics we used in assessing intersectional
+fairness of the six LLMs, along with the corresponding key practical implications derived from our findings. The
+table shows that different metrics reveal complementary aspects of LLM behavior, including stereotype alignment,
+subgroup-level disparities, and variation across repeated runs.
+Overall, our findings highlight practical considerations for evaluating and deploying LLMs in fairness-critical settings,
+particularly the need to assess stereotype alignment, consistency, and subgroup-level disparities across contexts and
+intersectional dimensions. In particular, the observed patterns indicate that fairness assessment should account for
+context type, question polarity, and intersectional subgroup structure rather than relying on aggregate performance
+alone.
+Table 8. Practical implications of observed LLM behavior across contexts and metrics
+Aspect Observed Behavior Practical Implication
+Overall Accuracy High accuracy can coexist with
+stereotype-aligned performance gaps.
+Model selection in sensitive applications should not
+rely solely on aggregate accuracy.
+Ambiguous Context Most LLMs predominantly select
+unknown option i

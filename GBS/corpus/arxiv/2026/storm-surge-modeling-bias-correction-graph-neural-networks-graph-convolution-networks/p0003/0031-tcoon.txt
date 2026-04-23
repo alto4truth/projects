@@ -1,0 +1,258 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 3
+section: tcoon
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+is in line with the NOAA
+requirements for issuing an advisory/warning/watch, which requires lead time of at
+least 12 h ahead of the expected event.
+27
+
+40 60 80 100 120 140 160
+Time (min.)
+1.0
+0.5
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+Water level (m)
+Minor flooding
+Moderate flooding
+Major flooding
+Without StormNet:
+RMSE = 0.332
+MSE = 0.111
+MAE = 0.304
+With StormNet:
+RMSE = 0.113
+MSE = 0.013
+MAE = 0.090
+Cedar Key (8727520, NOAA-NOS)
+Observed
+Forecast
+Forecast+StormNet
+(a)
+Prediction window: 12h
+40 60 80 100 120 140 160
+Time (min.)
+0.50
+0.25
+0.00
+0.25
+0.50
+0.75
+1.00
+1.25
+1.50
+Water level (m)
+Minor flooding
+Moderate flooding
+Without StormNet:
+RMSE = 0.332
+MSE = 0.110
+MAE = 0.320
+With StormNet:
+RMSE = 0.085
+MSE = 0.007
+MAE = 0.069
+Apalachicola (8728690, NOAA-NOS)
+Observed
+Forecast
+Forecast+StormNet
+(b)
+40 60 80 100 120 140 160
+Time (min.)
+0.75
+0.50
+0.25
+0.00
+0.25
+0.50
+0.75
+Water level (m)
+Minor flooding
+Moderate flooding
+Major flooding
+Without StormNet:
+RMSE = 0.260
+MSE = 0.067
+MAE = 0.252
+With StormNet:
+RMSE = 0.060
+MSE = 0.004
+MAE = 0.046
+Galveston Bay Entrance North Jetty (8771341, TCOON)
+Observed
+Forecast
+Forecast+StormNet (c)
+60 80 100 120 140
+Time (min.)
+1.0
+0.5
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+Water level (m)
+Minor flooding
+Moderate flooding
+Major flooding
+Without StormNet:
+RMSE = 0.354
+MSE = 0.126
+MAE = 0.332
+With StormNet:
+RMSE = 0.139
+MSE = 0.019
+MAE = 0.117
+Cedar Key (8727520, NOAA-NOS)
+Observed
+Forecast
+Forecast+StormNet
+(d)
+Prediction window: 48h
+60 80 100 120 140
+Time (min.)
+0.50
+0.25
+0.00
+0.25
+0.50
+0.75
+1.00
+1.25
+Water level (m)
+Minor flooding
+Moderate flooding
+Without StormNet:
+RMSE = 0.345
+MSE = 0.119
+MAE = 0.334
+With StormNet:
+RMSE = 0.120
+MSE = 0.014
+MAE = 0.098
+Apalachicola (8728690, NOAA-NOS)
+Observed
+Forecast
+Forecast+StormNet
+(e)
+60 80 100 120 140
+Time (min.)
+0.75
+0.50
+0.25
+0.00
+0.25
+0.50
+0.75
+1.00
+Water level (m)
+Minor flooding
+Moderate flooding
+Without StormNet:
+RMSE = 0.258
+MSE = 0.066
+MAE = 0.250
+With StormNet:
+RMSE = 0.074
+MSE = 0.005
+MAE = 0.060
+Galveston Bay Entrance North Jetty (8771341, TCOON)
+Observed
+Forecast
+Forecast+StormNet (f)
+40 60 80 100 120
+Time (min.)
+1.0
+0.5
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+Water level (m)
+Minor flooding
+Moderate flooding
+Major flooding
+Without StormNet:
+RMSE = 0.373
+MSE = 0.139
+MAE = 0.355
+With StormNet:
+RMSE = 0.146
+MSE = 0.021
+MAE = 0.117
+Cedar Key (8727520, NOAA-NOS)
+Observed
+Forecast
+Forecast+StormNet
+(g)
+Prediction window: 72h
+40 60 80 100 120
+Time (min.)
+0.50
+0.25
+0.00
+0.25
+0.50
+0.75
+1.00
+1.25
+Water level (m)
+Minor flooding
+Moderate flooding
+Without StormNet:
+RMSE = 0.346
+MSE = 0.120
+MAE = 0.334
+With StormNet:
+RMSE = 0.119
+MSE = 0.014
+MAE = 0.096
+Apalachicola (8728690, NOAA-NOS)
+Observed
+Forecast
+Forecast+StormNet
+(h)
+40 60 80 100 120
+Time (min.)
+0.75
+0.50
+0.25
+0.00
+0.25
+0.50
+0.75
+Water level (m)
+Minor flooding
+Moderate flooding
+Without StormNet:
+RMSE = 0.223
+MSE = 0.050
+MAE = 0.208
+With StormNet:
+RMSE = 0.078
+MSE = 0.006
+MAE = 0.064
+Galveston Bay Entrance North Jetty (8771341, TCOON)
+Observed
+Forecast
+Forecast+StormNet (i)
+Fig. 7 : Observed (blue), forecast (orange), and StormNet-corrected forecast (green,
+full lines) water levels for selected gauge stations for 12h-, 48h- and 72h-ahead predictions ((a-c), (d-f), and (g-i), respectively) and the corresponding evaluation metrics
+for each case. Minor, moderate and major flooding thresholds (shown in yellow, red
+and purple) are obtained by the National Oceanic and Atmospheric Administration [ 100], and established by the National Weather Service local Weather Forecast
+Oﬀices (see [ 50])
+28

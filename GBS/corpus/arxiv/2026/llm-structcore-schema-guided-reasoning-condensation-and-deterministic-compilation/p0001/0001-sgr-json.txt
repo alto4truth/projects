@@ -1,0 +1,38 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 1
+section: sgr-json
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+(9 keys)
+Stage 2 (0-LLM)
+Deterministic
+Compiler
+Submission
+(134 items)
+SGR Contract
+– Cascade: 9 domain sequence
+– Cycle: checklists per domain
+– Evidence-only facts
+– JSON parse: 100% stable
+4-Step Algorithm
+1. KV extraction
+2. Canonicalization + UMLS
+3. FP-gates & derivation
+4. Vocab norm (13 cat.)
+Figure 1: The LLM StructCore two-stage pipeline architecture. Stage 1
+condenses the clinical note into a 9-key SGR JSON; Stage 2 deterministically
+compiles it into the 134-item submission.
+values. The official scorer [6] uses macro-F1 over items, which heavily
+penalizes both false positives (FP: predicting a value for anunknown item)
+and false negatives (FN: predictingunknownfor a present item).
+2.2 Contract-Driven Dataset Parsing
+We align our pipeline contracts directly to the dataset schema: (i) the ordered
+list of 134 items is inferred fromannotations[*].item and reused end-toend; (ii) document identifiers are normalized to a plain ID (prefix before the
+first underscore) for internal alignment, and suffixed with the language tag
+(_en/_it) only for final submissions; (iii) intermediate representations are
+sparse, but the final builder always expands to all 134 items, filling missing

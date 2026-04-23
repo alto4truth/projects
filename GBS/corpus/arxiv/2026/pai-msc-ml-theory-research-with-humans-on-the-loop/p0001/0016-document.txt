@@ -1,0 +1,23 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+ather than a single agent trying to ideate,
+justify, and plan everything at once. This was also oserved, but implemented differently by Du et al. [52].
+2. Give agents explicit, competing objectives.A second related observation was that debate alone
+was not enough: each agent needed an explicit goal. In practice, the quality of the resulting research plans
+increased when we assigned different roles and incentives to different ideation agents. In the current design,
+these roles include one agent pushing for timely and practitioner-relevant questions, one pushing for rigorous
+and potentially novel mathematical theory, and one pushing for the strongest narrative arc together with
+the right alignment or disalignment with existing folklore. This does not solve ideation in general, but it
+consistently produced better decompositions and more informative disagreements than a single planner.
+3. Theory and experiments should be coordinated, but not fully entangled.A natural design
+instinctistomaximizecontextsharingbetweenthemathematicalandexperimentaltracks. Inourexperience,
+that improved local alignment but weakened both tracks. When theory and experiments shared too much
+context too early,

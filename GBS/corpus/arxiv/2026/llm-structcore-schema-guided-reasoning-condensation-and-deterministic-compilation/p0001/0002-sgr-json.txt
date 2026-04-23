@@ -1,0 +1,18 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 1
+section: sgr-json
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+it) only for final submissions; (iii) intermediate representations are
+sparse, but the final builder always expands to all 134 items, filling missing
+values asunknown.
+3 System Overview
+Our pipeline follows a strict two-stage decomposition:
+Clinical Note→Stage 1 (LLM, SGR JSON)
+→Stage 2 (0-LLM compiler)→Submission.jsonl
+3

@@ -1,0 +1,38 @@
+title: Trust, Lies, and Long Memories: Emergent Social Dynamics and Reputation in Multi-Round Avalon with LLM Agents
+source: arxiv
+year: 2026
+document_id: trust-lies-and-long-memories-emergent-social-dynamics-and-reputation-in-multi-round-avalon-with-llm-agents
+authors: Suveen Ellawela
+page: 1
+section: document
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20582v1
+
+A.2 Discussion Phase Prompt
+It’s your turn to speak. Provide a strategic comment
+about who to trust or who should be on the mission team.
+Be natural and conversational. Keep it to 1-2 sentences.
+For evil players, an additional instruction is appended:
+“Remember to deceive and create confusion while appearing
+trustworthy. ”For Merlin:“Subtly guide the team without
+revealing you know who the evil players are. ”
+A.3 Team Proposal Prompt
+You are the mission leader. Propose a team of {size}
+players for this mission.
+Available players: {player_list}
+Respond ONLY with a JSON object:
+{"team": ["Name1", "Name2", ...],
+"reasoning": "why you chose this team"}
+A.4 Vote Prompt
+Vote on this team proposal. Respond ONLY with JSON:
+{"vote": "approve" or "reject",
+"comment": "brief reason"}
+A.5 Mission Execution Prompt (Evil Only)
+Good players automatically play Success. Evil players receive:
+You’re on the mission. As an evil player, choose
+’success’ or ’fail’ strategically. Respond with JSON:
+{"action": "success" or "fail",
+"reasoning": "why"}
+A.6 Evil Team Discussion Prompt
+When good wins 3 missions, evil players discuss before assassination:
+Discuss who you think Merlin is among the good players.

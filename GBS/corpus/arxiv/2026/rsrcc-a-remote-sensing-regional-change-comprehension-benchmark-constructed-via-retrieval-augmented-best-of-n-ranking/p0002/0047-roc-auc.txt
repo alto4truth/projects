@@ -1,0 +1,37 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 2
+section: roc-auc
+chunk: 47
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+Figure 6:IoU vs. ROC AUC.ROC-AUC analysis over the IoU range[0,1] using human-annotated
+subtest images. The peak AUC is achieved near𝜏iou =0.18 , indicating this value yields the best
+trade-off between sensitivity and specificity in detecting true structural changes.
+0.0 0.2 0.4 0.6 0.8 1.0
+False Positive Rate
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0True Positive Rate
+(0.39, 0.89)
+IoU* = 0.18
+ROC Curve ( = 0.18)
+AUC = 0.79
+Random
+Figure 7:ROC Curve for IoU Threshold Optimization.The optimal intersection-over-union
+threshold 𝜏iou =0.18 achieves the best trade-off between true and false detections, as determined
+from 100 human-annotated image pairs. High TPR and low FPR values confirm that this threshold
+reliably distinguishes meaningful structural changes from spurious differences.
+F.2 Top-𝑘Similarity Evaluation
+To assess the reliability of the retrieval stage, we conducted a human evaluation experiment using a
+subset of 100 test images. For each query patch𝑥, the SigLIP model retrieved the top-𝑘 candidates
+{𝑥1, 𝑥2, . . . , 𝑥𝑘 }ranked by cosine similarity:
+𝑠𝑖 = 𝑓 𝜃 (𝑥) ·𝑓 𝜃 (𝑥𝑖)
+∥𝑓 𝜃 (𝑥) ∥ ∥𝑓 𝜃 (𝑥𝑖) ∥, 𝑠 𝑖 ∈ [0,1].(36)
+A human annotator was then asked to decide whether the retrieved patch𝑥𝑖 correspo

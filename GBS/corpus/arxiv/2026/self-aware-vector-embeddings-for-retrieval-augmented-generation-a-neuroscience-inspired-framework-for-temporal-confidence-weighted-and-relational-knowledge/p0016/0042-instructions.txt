@@ -1,0 +1,39 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 16
+section: instructions
+chunk: 42
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+created_at: datetime
+depended_by: list = field(default_factory=list)
+access_count: int = 0
+pos: int = 0
+neg: int = 0
+status: str = "ACTIVE"
+H, ALPHA_POS, ALPHA_NEG, BETA, GAMMA, D_MAX = 30, 0.03, 0.08, 0.01, 0.15, 2
+def confidence(v, now):
+age = max(0, (now - v.created_at).days)
+decayed = v.base_confidence * 2 ** (-age / H)
+adj = max(0.01, min(1.0, decayed + ALPHA_POS * v.pos - ALPHA_NEG * v.neg))
+return min(1.0, adj + BETA * math.log(1 + v.access_count))
+def temporal(v, now):
+age = max(0, (now - v.created_at).days)
+return 2 ** (-age / H)
+def score(v, sim, rel_edges, now):
+return (0.35*sim + 0.25*temporal(v, now) +
+0.25*confidence(v, now) + 0.15*min(0.3, math.log(1+rel_edges)*0.1))
+def propagate(changed, store, gamma=GAMMA, d_max=D_MAX):
+q = [(x, 0) for x in changed.depended_by]; seen = set()
+while q:
+vid, d = q.pop(0)
+if vid in seen or d >= d_max: continue
+seen.add(vid)
+v = store[vid]
+v.base_confidence = max(0.01, v.base_confidence - gamma/(d+1))
+q.extend((x, d+1) for x in v.depended_by)
+return seen
+17

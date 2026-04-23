@@ -1,0 +1,56 @@
+title: Participatory provenance as representational auditing for AI-mediated public consultation
+source: arxiv
+year: 2026
+document_id: participatory-provenance-as-representational-auditing-for-ai-mediated-public-consultation
+authors: Sachit Mahajan
+page: 1
+section: 4
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20711v1
+
+19
+
+whereˆπ(Xi) =P(T i = 1|X i)is the estimated propensity score andˆµt(Xi) =E[Y|T=t, X i]the
+estimated potential outcome under treatmentt. The estimator is consistent if either the propensity score model or the outcome model is correctly specified [Scharfstein et al., 1999]. The propensity
+scorewasestimatedbylogisticregressiononcovariatesX i = (logword count,sentence count,semantic isolation,hedge rate,assertiveness rate).
+The outcome model was estimated by OLS on the same covariates. Standard errors were derived
+from the AIPW influence function; covariate balance was assessed via standardised mean differences
+(SMD), which were below 0.10 after weighting for all covariates and both topics.
+Four binary treatment variables were constructed from participant text features.Short response
+(is_short): indicator for the bottom word-count quintile (≤Q 20 of the marginal distribution),
+capturingtheeffectofresponsebrevity.Semantically isolated(is_isolated): indicatorforsemantic
+distance to the nearest cluster centroid in the top two quintiles (≥Q60), capturing the degree
+to which a participant occupies a minority position within the opinion space.Assertive register
+(is_assertive): indicator for assertiveness rate above the corpus median, where assertiveness rate
+is the proportion of tokens matching a compiled lexical pattern for imperative constructions, modal
+certainty phrases (must, shall, requires, essential, critical, imperative, absolutely) and declarative
+demand forms.Hedged register(is_hedged): indicator for hedge rate above corpus median, where
+hedge rate is the proportion of tokens matching epistemic-uncertainty markers (perhaps, maybe,
+might, could, possibly, I think, I believe, in my opinion, arguably, conceivably).
+As a complementary analysis, OLS regression was fitted with the four binary treatments plus
+all pairwise interaction terms as predictors ofc(i). All continuous predictors were standardised
+(zero mean, unit variance) before fitting, so that coefficients are directly interpretable as effect
+sizes in coverage-score units. Heteroskedasticity-consistent HC3 standard errors [MacKinnon and
+White, 1985] were used throughout. Intersectional effects were tested via the pairwise interaction
+coefficients; full results for both topics are reported in Supplementary Tables 10 and 11.
+4.6 Concept fidelity and epistemic grounding
+To characterise what conceptual content survives into the summary, keyphrases were extracted
+from each participant text and from each summary sentence using KeyBERT [Grootendorst, 2020]
+(Maximal Marginal Relevance, diversity penaltyλ= 0.5), targeting ten keyphrases per text unit.
+A keyphrase was considered a match if its stemmed token representation appeared in the other
+keyphrase set (exact token match on Porter-stemmed forms). Forward recall was computed as
+the fraction of participant corpus keyphrases appearing in the summary keyphrase set; backward
+precision as the fraction of summary keyphrases traceable to at least one participant text.
+Concept transformation was classified for each matched keyphrase pair using GPT-4o-mini (5
+independent API calls per pair, majority vote across runs). The classification distinguished:preserved(same propositional content and valence),softened(attenuated strength or urgency relative
+to the participant text), andabstracted(raised to a higher level of generality without preserving
+the participant’s specificity). Fleiss’κ[Fleiss, 1971] was computed across the five annotation runs
+as the primary measure of inter-run reliability; results withκ <0.60were excluded from the main
+analysis (Trust:κ= 0.682, reliable; Education:κ= 0.768, reliable).
+Epistemic grounding classified each summary sentence asexplicitif its mean cosine similarity
+to its top-k= 10nearest participant texts exceeded 0.55, andinferredotherwise; the 0.55 threshold
+was calibrated by inspection of the bimodal similarity distribution across all summary sentences,
+lying below the dense cluster of high-similarity explicit sentences (≥0.65) and above the lowsimilarity inferred cluster (≤0.49) (Education: 3 explicit, 3 inferred; Trust: 5 explicit, 1 inferred).
+Stance alignment compared the directional framing of each summary sentence against the dominant
+directional stance of its top-10 nearest participant texts, classifying the relationship asaligned,
+20

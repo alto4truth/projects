@@ -1,0 +1,16 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 5
+section: a-proofs
+chunk: 48
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+nach Fixed-Point Theorem. This is
+because the operatorT πD is acontraction mappingdue to the discount factorγ <1.
+To show this, we take any two functionsM a, Mb and measure the distance between their outputs
+under the supremum norm∥M a −M b∥∞ = maxs |Ma(s)−M b(s)|:
+∥T πD Ma −T πD Mb∥∞ = max
+s

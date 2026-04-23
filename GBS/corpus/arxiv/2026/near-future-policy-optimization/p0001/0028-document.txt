@@ -1,0 +1,24 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+] framework. The maximum
+context length is 8192 tokens, split into a prompt budget of 4096 and a response budget of 4096, applied
+consistently at training and evaluation time. We train with a learning rate of1× 10−6 and a batch size of
+256, and for each prompt samplen = 8rollouts at temperature1 .0. Clipping thresholds are set toϵlow = 0.2
+and ϵhigh = 0.28, and we omit both the KL penalty and entropy regularization from the objective. For all
+NPO variants, a future-self trajectory is injected only when the on-policy group accuracy on that prompt falls
+at or belowmix_policy_accuracy_threshold = 0.6, leaving confident groups untouched. All experiments are
+run on 4 compute nodes, each with 8 NVIDIA H200 140GB GPUs.
+4.2 Main Results
+Table 1 presents the evaluation results across eight multimodal reasoning benchmarks.
+The quality-variance trade-off (in Sec. 2) are empirically validated.LUFFY, despite pulling from the
+strongest trajectory source, is the weakest RL-trained model and even regresses below the base on WeMath, a
+concrete instance of variance cost overwhelming signal quality. Replay-based methods (ExGRPO, RLEP)
+recover some of that gap but plateau clearly below NPO, consistent

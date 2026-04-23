@@ -1,0 +1,17 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+logical derivation.
+Dominance on Complex Question Answering (TQA).The TQA benchmarks
+(FinQA, HiTab, TAT-QA, TabMWP, WTQ) represent the most stringent test
+of tabular reasoning, requiring models to locate specific cells, perform multi-hop
+aggregations, and execute arithmetic operations. On these tasks, V-tableR1 establishes a new state-of-the-art among open-source models, despite its relatively
+compact parameter count. Notably, V-tableR1 (4B) achieves 28.98% on FinQA
+and 83.38% on TabMWP, outperforming larger models like InternVL-2.5-14B

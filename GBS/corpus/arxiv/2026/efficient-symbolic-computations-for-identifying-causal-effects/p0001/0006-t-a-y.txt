@@ -1,0 +1,29 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+ow formulas that identify a new
+parameter to depend on the already identified parameters. Abbott et al. (2017) considered a similar
+approach for efficiently computing implicit descriptions of hypersurfaces, a well-known challenge in
+the computational algebra community.
+If a graphGis rationally identifiable, then we denote by IDG the maximal degree of the polynomials
+appearing in the identifying formulas, when choosing each identifying formula with the lowest degree
+possible. Our main algorithm takes as input a mixed graph and a maximal degreed. A shortened
+version of our main result then reads as follows.
+Theorem 1.2.LetG= (V, D, B)be an acyclic mixed graph. IfGis rationally identifiable and
+d≥ID G, then Algorithm 1 returns “yes”. IfGis not rationally identifiable, then Algorithm 1 returns
+“no” for all input degreesd∈N. The computational complexity of Algorithm 1 is of order
+O
+
+d|V| 5{3d|V|} 4αd2 log(3d|V|)
+
+,
+whereαis a constant such that row reduction of an×nmatrix can be performed inO(nα)operations.
+Said differently, if there exists an identification formula up to a pre-specified degreed, our algorithm
+finds it in quasi-polynomial time. Note that our algorithm also returns the

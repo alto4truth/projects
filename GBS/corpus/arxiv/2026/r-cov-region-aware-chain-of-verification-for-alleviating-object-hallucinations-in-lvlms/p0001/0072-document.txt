@@ -1,0 +1,22 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 72
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+handbag: 0.67 truck: 0.00
+Input Image
+Region-Aware Chain-of-Verification
+Vanilla: Yes, there is a handbag in the image, and it is being carried by one of the women walking across the street.
+R-CoV: Yes, there is a handbag in the image. It is being carried by one of the women walking across the street.
+Question: Is there a truck in the image?
+Vanilla: Yes, there is a truck in the image, and the two women are walking across the street in front of it.
+R-CoV: No, there is no truck in the image. The two women are walking across the street.
+Figure 5.Example results of R-CoV for yes-or-no questions.The vanilla LVLM is LLaV A-v1.5-7B. The existent objects are highlighted
+in blue, while the hallucinated objects are highlighted in red. We sample three region descriptions per examinee to produce a set of diverse
+answers for verification.
+16

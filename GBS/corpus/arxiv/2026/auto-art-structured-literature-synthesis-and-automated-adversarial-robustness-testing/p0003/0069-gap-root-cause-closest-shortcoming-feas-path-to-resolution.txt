@@ -1,0 +1,28 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 3
+section: gap-root-cause-closest-shortcoming-feas-path-to-resolution
+chunk: 69
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+G RobustBench Leaderboard Reference Data
+Table 16 lists the ten CIFAR-10ℓ∞ leaderboard entries from RobustBench [14] used as our evaluation corpus. All entries are
+evaluated at ε= 8/255 with AutoAttack. Clean accuracy and robust accuracy are taken from the living leaderboard snapshot
+used in our experiments (March 2026).
+Table 16:RobustBench CIFAR-10ℓ ∞ (ε= 8/255) top-10 leaderboard entries used in our evaluation.
+Model Architecture Clean Acc. Robust Acc. Reference
+Wang2023Better WRN-70-16 93.25% 70.69% arXiv:2302.04638
+Pang2022Robustness WRN-70-16 93.27% 71.07% arXiv:2210.06284
+Rebuffi2021Fixing_70 WRN-70-16 92.23% 66.56% arXiv:2103.01946
+Gowal2021Improving_70 WRN-70-16 88.74% 66.10% arXiv:2103.01946
+Gowal2020Uncovering_70 WRN-70-16 91.10% 65.87% arXiv:2010.03593
+Rebuffi2021Fixing_28 WRN-28-10 87.33% 64.58% arXiv:2103.01946
+Gowal2021Improving_28 WRN-28-10 87.50% 63.38% arXiv:2103.01946
+Xu2023Exploring WRN-28-10 93.69% 63.89% arXiv:2302.14862
+Sehwag2021Proxy ResNest-152 87.30% 60.27% arXiv:2104.09425
+Wong2020Fast ResNet-18 83.34% 43.21% arXiv:2001.03994
+H Direction 1: Architecture Diagram Starter (TikZ)
+The following TikZ code provides a starter template for the multi-norm adversar

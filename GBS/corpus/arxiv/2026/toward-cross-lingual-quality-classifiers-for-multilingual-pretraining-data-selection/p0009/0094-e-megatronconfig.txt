@@ -1,0 +1,33 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 9
+section: e-megatronconfig
+chunk: 94
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+x
+Learning Rate 0.00015
+Minimum Learning Rate 0.0
+LR Schedule WSD (1-sqrt decay)
+Warmup Steps 2,000
+WSD Decay Steps 10,000
+Weight Decay 0.1
+Gradient Clipping 0.1
+Adamβ 1 0.9
+Adamβ 2 0.999
+AdEMAMixα8
+AdEMAMixβ 3 0.9999
+AdEMAMixβ 3 Warmup 100,000
+AdEMAMixαWarmup 100,000
+Regularization
+Attention Dropout 0.0
+Hidden Dropout 0.0
+Infrastructure
+Number of Nodes 21
+GPUs per Node 4
+Total GPUs 84
+Continued on next page
+24

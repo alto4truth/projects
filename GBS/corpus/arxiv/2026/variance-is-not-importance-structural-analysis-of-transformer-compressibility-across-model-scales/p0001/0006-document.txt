@@ -1,0 +1,23 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+can
+be removed from large models with minimal quality loss. ShortGPT [9] introduces a Block
+Influence metric for identifying removable layers.
+2.4 KV-Cache Compression
+KIVI [17] quantizes the KV cache at INT2/INT4. MatryoshkaKV [18] and KQ-SVD [19] use
+rank reduction via learned or closed-form projections. Our companion paper [16] provides the
+first matched-budget comparison, showing quantization dominates rank reduction by 4–364 PPL
+across five models. The present paper provides the structural analysis underlying that result.
+2.5 Adaptive Computation
+CALM [11] introduces confidence-based early exit for language models. Speculative decoding
+[12] uses a small draft model to propose tokens that a larger model verifies. Dynamic depth
+approaches [13] allocate computation per token based on difficulty.
+2

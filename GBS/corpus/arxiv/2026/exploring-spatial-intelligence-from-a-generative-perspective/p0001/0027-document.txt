@@ -1,0 +1,27 @@
+title: Exploring Spatial Intelligence from a Generative Perspective
+source: arxiv
+year: 2026
+document_id: exploring-spatial-intelligence-from-a-generative-perspective
+authors: Muzhi Zhu; Shunyao Jiang; Huanyi Zheng; Zekai Luo; Hao Zhong; Anzhou Li; Kaijun Wang; Jintao Rong; Yang Liu; Hao Chen; Tao Lin; Chunhua Shen
+page: 1
+section: document
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20570v1
+
+ire GSI-Real dataset to identify and correct residual annotation inaccuracies or ambiguous instructions, ensuring
+high annotation quality and a genuinely challenging testbed
+for real-world spatial reasoning.
+4.3. Evaluation Protocol
+To comprehensively assess generative spatial intelligence,
+we design a multi-faceted evaluation protocol with four core
+metrics.
+Instruction Compliance (IC).This binary metric evaluates
+whether the edited scene satisfies the spatial semantics specified in the instruction (e.g., directional relations, containment). We allow reasonable tolerance rather than strict numerical precision: an operation succeeds if the final object
+pose falls within a plausible range of the ideal target.
+Spatial Accuracy (SA).For edits passing compliance, we
+measure fine-grained geometric precision by computing
+normalized translation error, relative pose error for multiobject operations, and geodesic rotation error on SO(3). Errors are aggregated into a single continuous accuracy score
+per sample.
+Edit Locality (EL).We assess localized editing by computing LPIPS [45] on non-target regions between original
+and edited images, using the projected 3D bounding box as
+a mask to exclu

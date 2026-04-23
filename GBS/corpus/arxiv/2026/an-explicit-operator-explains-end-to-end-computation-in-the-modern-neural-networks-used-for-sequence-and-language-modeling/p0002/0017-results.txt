@@ -1,0 +1,46 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 2
+section: results
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+6
+the linear transformations inx k to accurately process
+real-world sequences. In this section, however, we will
+utilize a technique called Carleman embedding for nonlinear systems [31] to understand precisely how these linear transformations interact with nonlinear activations in
+these SSMs.
+To do this, the recurrence of the SSM layer
+xk+1 =D τ xk + ¯Buk (14)
+can be expressed at any future timeT, in terms of the
+initial conditions and input, as
+xT =D T
+τ x0 + ¯B
+TX
+j=1
+D T−j
+τ uj,(15)
+which expresses the final state as a linear superposition
+of the propagated initial condition and a weighted input
+history. Diagonalizing the propagatorD τ with the basis
+Fleads to the modal dynamics
+µi(k) =λ k
+D,iµi(0) +˜bT
+i
+kX
+j=1
+λ k−j
+D,i uj (16)
+as before (cf. Eq. 12). Here, each eigenmode evolves independently and accumulates its own filtered input history.
+Because real-world data possess much broader spectral content than the sinusoid example presented above
+(Fig. 2), real-world sequence inputs do not map onto single eigenmodes in a simple way, in general. The transformationCon the output of the dynamics operator mixes
+the wave modes,
+sk :=Cx k =
+NX
+i=1
+µi(k)c i, c i :=Cf i ∈C dmodel ,
+(17)
+i

@@ -1,0 +1,34 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 3
+section: f2lp-ap-7
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+
+
+
+αi =σ(f α(LCC i))
+Ki = round(gK(LCC i))
+(6)
+wheref α andg K are predefined heuristic functions that require no parametric
+training.
+Based on the generated node-wise parameter set{α i, Ki}n
+i=1, the initial feature matrixXis transformed into the final predictive representation ˆX. In this
+phase, the state evolution of each node follows a personalized iterative path:
+h(k+1)
+i = (1−α i)· ˜Ai,:H(k) +α i ·x i (7)
+where ˜Adenotes the normalized adjacency matrix, and the iteration terminates
+upon reaching the node-specific depthK i. This mechanism ensures that each
+node can adapt its degree of feature smoothing ”according to local conditions”
+based on its structural role in the graph. By significantly enhancing the model’s
+adaptability to complex graph structures without adding any training overhead.
+3.4 Analytical Inference and Label Assignment
+Following the topology-aware adaptive feature propagation, each nodevi obtains
+an evolved representation ˆxi that encapsulates local structural characteristics.
+To achieve the final label assignment, these evolved features must be mapped
+back to the discrete label space. Unlike conventional deep learning models that
+rely on linear layers o

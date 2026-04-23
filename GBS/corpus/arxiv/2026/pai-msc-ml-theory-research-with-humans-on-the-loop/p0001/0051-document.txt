@@ -1,0 +1,46 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 51
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+. The mathematical path is treated as a workspace with claims, dependencies, and verification traces rather than as one long free-form proof draft.
+25
+
+These agents provide structure for theorem-oriented work and for integrating accepted claims into the paper,
+but they do not establish mathematical truth by oracle. The rigorous and empirical verifiers are supportive
+checks, not substitutes for expert proof review.
+A.4 Experiment track details
+When empirical work is selected, the graph runsexperiment_literature_agent,experiment_
+design_agent,experimentation_agent,experiment_verification_agent, andexperiment_
+transcription_agent.
+This path writes its own workspace:experiment_literature.md,experiment_baselines.json,
+experiment_design.json,experiment_rationale.md,execution_log.json,verification_report.md,
+andverification_results.json. When experiment transcription runs, the paper workspace additionally
+receivesexperiment_report.texandexperiment_report.pdf.
+Experiment execution is delegated to an external execution layer. In the current release this includes AIScientist-v2 integration and optional SLURM submission. Verification occursafterexecution and serves as
+a post-hoc assessment, not a pre-execution code safety guarantee.
+A.5 Counsel protocol specification
+When–enable-counselis active, selected specialist stages become a multi-model protocol with sandboxing,
+debate, synthesis, and artifact promotion.
+Model pool.In the default configuration, the debate pool includes Anthropic Claude Opus 4.6, OpenAI
+GPT-5.4, and Google Gemini 3 Pro Preview, with Claude Sonnet 4.6 as the synthesis model. These choices
+are configurable through the model configuration file.
+Protocol.Each model first works in an isolated sandbox copy of the workspace, producing an independent
+candidateoutput. Modelsthencritiquethecandidatesolutionsoverseveraldebaterounds. Asynthesismodel
+selects and promotes a single authoritative output back to the main workspace.
+Target stages.Counsel targets stages where disagreement is informative: literature review, experiment
+design, and manuscript writing.
+Cost profile.Counsel increases per-stage cost substantially but changes the failure mode from “one
+model silently committed to one line of reasoning” to “multiple models exposed and critiqued alternative
+drafts before promotion.”
+A.6 Tree search algorithm
+When–enable-tree-searchis active, thelinear proof stagein thetheory trackis replacedbyaDAG-layered
+best-first controller that explores multiple proof strategies in parallel.
+Algorithm.
+1. Frontier claims are selected from the claim graph.
+26

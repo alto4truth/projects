@@ -1,0 +1,19 @@
+title: Aligning Stuttered-Speech Research with End-User Needs: Scoping Review, Survey, and Guidelines
+source: arxiv
+year: 2026
+document_id: aligning-stuttered-speech-research-with-end-user-needs-scoping-review-survey-and-guidelines
+authors: Hawau Olamide Toyin; Mutiah Apampa; Toluwani Aremu; Humaid Alblooshi; Ana Rita Valente; Gonçalo Leal; Zhengjun Yue; Zeerak Talat; Hanan Aldarmaki
+page: 1
+section: document
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20535v1
+
+rdized terminology creates additional barriers, and paper titles and abstracts rarely make the underlying
+task formulation explicit. For example, we found that72 papersinclude“detection”in their title, butonly 6actually perform temporal detection under our definition. Thisnaming mismatchmakes it harder to build shared benchmarks and for users
+to identify systems that match their needs.
+Speech Recognition Gaps.Our taxonomy differentiatesintendedandverbatimASR, and the stakeholder surveys indicate
+that these two forms serve distinct use-cases:PWSprefer intended transcripts for communication, whileSLPsrely on verbatim transcripts for clinical work. Yet very few ASR papers
+for atypical speech clearly state which transcription objective
+they optimise, or which reference transcript is treated as ground
+truth. This ambiguity arises becauserealstuttered-speech resources often provide only a single reference transcript (typically intended), especially for reading scenarios, whereas synthetic sources often include both verbatim and intended references. Some work also performs data preparation that implicitly involves the removal of fillers or repetitions. As a result,
+it is often unclear whi

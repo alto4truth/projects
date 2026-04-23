@@ -1,0 +1,66 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+Bundle Concrete artifacts Role Gate / mode
+Paper
+workspace core
+final_paper.tex,paper_workspace/
+literature_review.pdf,
+research_plan.pdf,
+results_assessment.pdf,
+followup_decision.json,
+track_decomposition.json
+Minimal paper-facing
+workspace linking discovery,
+planning, synthesis, and
+manuscript generation
+–enforce-paperartifacts
+Optional
+outputs
+final_paper.pdf,
+experiments_to_run_later.md
+Tighten success definition
+for PDF or deferred
+experiment planning
+–require-pdf;
+–require-experimentplan
+Editorial
+strictness
+author_style_guide.md,
+intro_skeleton.tex,style_macros.tex,
+reader_contract.json,
+editorial_contract.md,
+theorem_map.json,revision_log.md,
+copyedit_report.tex,
+review_report.tex,
+review_verdict.json, opt.
+claim_traceability.json
+Manuscript governance and
+revision history for stricter
+runs
+–enforce-editorialartifacts
+Operational
+bookkeeping
+checkpoints.db,run_token_usage.json,
+budget_state.json,
+budget_ledger.jsonl,
+inter_agent_messages/
+Resume, budget tracking,
+post-hoc inspection
+Operational trace
+Mode-specific
+artifacts
+experiment_workspace/*,
+experiment_runs/*,math_workspace/*,
+counsel_sandboxes/*,
+tree_search_state.json,
+tree_branches/*
+Evidence from empirical,
+mathe

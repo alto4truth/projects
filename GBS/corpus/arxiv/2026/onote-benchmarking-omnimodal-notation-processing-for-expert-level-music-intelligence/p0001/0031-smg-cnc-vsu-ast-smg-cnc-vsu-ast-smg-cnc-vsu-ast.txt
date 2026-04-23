@@ -1,0 +1,26 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music IntelligenceConference’17, July 2017, Washington, DC, USA
+Global Constraints: Music Notation Formatting Standards
+System Instruction:When generating or transcribing music, you must strictly adhere to one of the following three designated
+notation formats as requested in your specific task. Do not mix formats.
+Format A: ABC Notation
+1.Metadata:Must include standard headers (e.g.,X:1,T:Title,M:4/4,K:C).
+2.Syntax:Use standard ASCII characters for pitches, accidentals, and rhythms.
+3.Structure:Group notes strictly according to the time signature. Use|to separate measures.
+Format B: Numbered Musical Notation (Jianpu)
+1.Pitch:Use numbers 1-7 for scale degrees, and 0 for rests.
+2.Octave Modifiers:Prefix with for one octave lower (e.g., 5) and ˆ for one octave higher (e.g., ˆ1).
+3.Duration:Append duration fractions in parentheses immediately after the pitch. Example: 3(1/4).
+4.Separation:Use a single space to separate individual notes and|for bar lines.
+Format C: Structured Pitch-Duration Sequence
+1.Syntax Form:<Pitch><Octave>(<Duration>). Example: C4(1/4) or F#5(1/8).
+2.Separation:Output must be a strictly space-sepa

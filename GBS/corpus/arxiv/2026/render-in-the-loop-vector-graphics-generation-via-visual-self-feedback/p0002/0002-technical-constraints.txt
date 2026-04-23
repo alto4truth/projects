@@ -1,0 +1,26 @@
+title: Render-in-the-Loop: Vector Graphics Generation via Visual Self-Feedback
+source: arxiv
+year: 2026
+document_id: render-in-the-loop-vector-graphics-generation-via-visual-self-feedback
+authors: Guotao Liang; Zhangcheng Wang; Juncheng Hu; Haitao Zhou; Ziteng Xue; Jing Zhang; Dong Xu; Qian Yu
+page: 2
+section: technical-constraints
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20730v1
+
+- Canvas Size: 224x224.
+- Coordinate System: Maintain strict spatial awareness within the 0-224 range.
+- Style: Concise, geometric, and aesthetically pleasing vector art.
+Fig.S1:System Prompt for Text-to-SVG Task.
+(SDS) together with a differentiable vector graphics renderer. While the method
+can produce diverse vector graphics without large SVG training datasets, the optimization process is computationally expensive and often requires long inference
+time.
+SVGDreamer[53] proposes a semantic-driven image vectorization (SIVE)
+framework for text-to-SVG generation. It separates foreground objects from
+background regions and optimizes vector primitives using a vectorized particlebasedscoredistillationstrategy.Althoughthisapproachimproveseditabilityand
+semantic structure, the iterative optimization pipeline remains computationally
+intensive.
+LIVE[24] (Layer-wise Image Vectorization) reconstructs SVG graphics by
+progressively adding and optimizing vector paths to match a raster target image.
+The method employs a differentiable renderer to optimize path parameters and
+introduces component-wise path initialization to improve topology extraction.

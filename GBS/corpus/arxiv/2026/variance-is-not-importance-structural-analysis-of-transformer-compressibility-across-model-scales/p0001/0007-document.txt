@@ -1,0 +1,39 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+3 Methodology
+3.1 Models and Data
+We experiment on two models:
+•GPT-2(124M parameters, 12 transformer blocks, hidden dimension 768)
+•Mistral 7B(7.24B parameters, 32 transformer blocks, hidden dimension 4096)
+Calibration and evaluation data are drawn from WikiText-2 [14]. We use a strict train/evaluation
+split: calibration data for fitting (32 samples×256 tokens = 8,192 tokens) and held-out data
+for perplexity evaluation (16 samples).
+3.2 Block Linearity Measurement
+For each transformer blockb, we collect input-output pairs on calibration data:
+∆b =X out −X in (1)
+where ∆b represents the block’s functional contribution (residual). We fit a linear map via
+ridge regression:
+A∗ = arg min
+A
+∥∆b −X inAV ⊤
+k ∥2
+F +λ∥A∥ 2
+F (2)
+whereV k contains the top-kright singular vectors of ∆ b (capturing 95% of output variance),
+and reportR 2 = 1− ∥∆ b − ˆ∆b∥2
+F /∥∆b∥2
+F .
+3.3 Activation Dimensionality
+For each block input, we compute PCA of the activation matrixX∈R N×d and report the
+number of components needed to capture 90%, 95%, and 99% of variance.
+3.4 Sensitivity Analysis
+We measure directional sensitivity via two methods:
+1.Perturbation-based: Add Gaussian noise along each PCA direction with

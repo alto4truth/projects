@@ -1,0 +1,77 @@
+title: On Bayesian Softmax-Gated Mixture-of-Experts Models
+source: arxiv
+year: 2026
+document_id: on-bayesian-softmax-gated-mixture-of-experts-models
+authors: Nicola Bariletto; Huy Nguyen; Nhat Ho; Alessandro Rinaldo
+page: 3
+section: exp-x
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20551v1
+
+tion of Lemma 5.2 of Miller (2018).
+8We denote byP the joint probability measure over infinite data sequences and parameters implied by this model.
+41
+
+Proof of measurability.Let C⊆X×R be measurable and letCX denote its section atX∈X .
+Then for anyk∈Nandθ∈Θ k, by Fubini’s theorem we can write
+θ7→g G(θ)(C) =
+Z
+X
+Z
+CX
+fG(θ)(Y|X)dY p(X)dX.(31)
+By the compactness ofX and the Gaussianity of the expert densities,fG(θ)(Y|X )can be bounded
+above by a function ofY (constant across X) that is integrable onR (e.g., a large enough multiple
+of a Gaussian density with high enough variance). So the dominated convergence theorem and the
+continuity ofθ7→f G(θ)(Y|X )for all( X, Y ) ∈X×R imply the continuity (hence measurability) of
+θ7→g G(θ)(C)as a function onΘ k. Therefore, this mapping is also measurable as a function onΘk
+and, as a consequence, it is measurable as a function on˜Θ∞ (since the pre-image of a measurable
+subset of R is a union of measurable subsets ofΘ1, Θ2, . . ., and is thus measurable by Proposition
+A.2 of Miller (2023)).
+Proof of parameter identifiability.Choose θ∈ Θk ⊂ ˜Θ∞, θ′ ∈ Θk′ ⊂ ˜Θ∞ such that gG(θ) =
+gG(θ′), where
+θ= (α 1j, βj, σ2
+j , α0j)k
+j=1 ≡(ω j, α0j)k
+j=1
+θ′ = (α′
+1j, β′
+j, σ′2
+j , α′
+0j)k′
+j=1 ≡(ω ′
+j, α′
+0j)k′
+j=1
+By the identifiabilty assumption in the statement of the Theorem, this impliesG(θ) = G(θ′). By
+the definition of˜Θ∞, we haveωj ̸= ωℓ and ωj′ ̸= ωℓ′ for all j̸ = ℓ and j′ ̸= ℓ′ (with j, ℓ∈ { 1, . . . , k}
+and j′, ℓ′ ∈ {1, . . . , k′}). Moreover, the boundedness ofA implies that all weights ofG(θ)and G(θ′)
+are strictly positive and finite. This implies thatk = k′,( α01, . . . , α0k) = (α′
+0ρ(1), . . . , α′
+0ρ(k)), and
+(ω1, . . . , ωk) = (ω′
+ρ(1), . . . , ω′
+ρ(k′))for some ρ∈R k. Further, becauseω1 ≺ · · · ≺ω k and ω′
+1 ≺ · · · ≺ω ′
+k
+by the definition of˜Θ∞, it must be the case thatρ is the identity function, implyingθ = θ′. Therefore,
+parameter identifiability holds on the restricted space˜Θ∞.
+Application of Doob’s theorem on the restricted model.We have shown that the restricted
+model in Equation (30) satisfies the conditions of Doob’s theorem. Therefore, there exists˜Θ⋆ ⊆ ˜Θ∞
+such that P(T (θ) ∈ ˜Θ⋆) = 1and the restricted model is consistent at allT (θ⋆) ∈ ˜Θ⋆. Equivalently,
+for any neighborhoodB⊆ ˜Θ∞ of T (θ⋆), we haveP(T (θ) ∈B| (Xi, Yi)n
+i=1) → 1a.s.- g∞
+G(T(θ 0)). Now
+defineΘ ⋆ :=S
+k∈N
+S
+ρ∈Rk( ˜Θ⋆ ∩Θ k)[ρ]. Then, by Equation (29),
+Π(Θ⋆)≡P(θ∈Θ ⋆) =P(T(θ)∈ ˜Θ⋆) = 1.
+Implications for the unrestricted model.Let θ⋆ ∈ Θ⋆ and define K⋆ = K(θ⋆). Let( Xi, Yi) iid∼
+gG(θ⋆) for i∈N , and defineB := {θ∈ ˜Θ∞ : dΘ∞(θ, T(θ⋆)) < ε} ⊆ ΘK⋆ for ε∈ (0, 1). Observe thatS
+ρ∈RK⋆ B[ρ]⊆ ˜B(θ⋆, ε), where
+˜B(θ⋆, ε) :=
+[
+ρ∈RK⋆
+{θ∈Θ ∞ :d Θ∞(θ, θ⋆[ρ])< ε}.
+42

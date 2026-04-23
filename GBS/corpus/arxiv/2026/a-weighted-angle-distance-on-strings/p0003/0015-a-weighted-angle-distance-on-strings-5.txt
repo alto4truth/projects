@@ -1,0 +1,21 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 3
+section: a-weighted-angle-distance-on-strings-5
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+rve as robust fingerprints when
+explicit alignment is infeasible or undesirable.
+Our metric shares with alignment-free methods the use of substring statistics as primary
+features, but differs in several respects: it aggregates all scalesnwith a principled weighting,
+is explicitly cosine-derived at each scale, and is provably a metric on the space of finite
+strings. The suffix-tree-based algorithm we describe in Section 4 ensures that this multiscale construction remains computationally tractable in practice.
+3.4.Compression-based distances.Another strand of work compares strings via compression, using compressor behavior as a proxy for shared structure. The normalized compression distance (NCD) of Cilibrasi and Vit´ anyi [2] is a prominent example: it defines a
+universal, task-agnostic similarity measure derived from the Kolmogorov complexity framework, instantiated with real-world compressors. NCD and related methods can capture
+very rich regularities without hand-crafted features, but are often sensitive to the choice of
+compressor and can be less transparent analytically.
+By contrast, our approach affords explicit combinatorial and geometric control over substring statistics: th

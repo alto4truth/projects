@@ -1,0 +1,50 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 2
+section: abstract
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+Published as a conference paper at ICLR 2026
+냉namese הקיהק
+擀 Step One
+We can express this as $\dbinom{11}{2}$.
+Query
+Correct Answer
+Confidence( ) =
+
+Confidence( ) =
+
+Progress = Confidence - Confidence
+Note that $\dbinom{11}{9}=\dbinom{11}{11-9}=\dbinom{11}{2}$
+$\boxed{55}$
+0.65
+0.01
+0.96
+The macro level The micro level
+Confidence
+A
+0 1 2 3
+0.0
+0.8
+0.4
+1.0
+0.6
+0.2
+Trajectory segment ID
+outcome reward=0
+Confidence
+Compute $\\dbiom{11}{9}$.
+Step Two
+We know that $\dbinom{n}{r} = \dfrac{n!}{r!(n-r)!}$
+Step Three
+Substituting the values we get the following expression
+which simplifies to
+bad & redundant tokens
+1
+Response tokens
+segment 1 segment 2 segment 3
+B C

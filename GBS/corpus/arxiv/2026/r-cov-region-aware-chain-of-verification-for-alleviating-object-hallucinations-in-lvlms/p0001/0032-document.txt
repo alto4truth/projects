@@ -1,0 +1,41 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+pe Acc F1
+- 87.00 87.92
+rectangle 91.56 91.25
+incircle 90.11 89.87
+circumcircle 89.56 89.39
+(e)Bounding box color.A red color yields
+better performance.
+Color Acc F1
+- 87.00 87.92
+red 91.56 91.25
+green 90.22 89.89
+blue 90.11 89.68
+white 90.67 90.40
+(f)Bounding box size.Using a 1-pixel boundary size is enough.
+Size Acc F1
+- 87.00 87.92
+1 91.56 91.25
+2 90.00 89.62
+3 89.55 89.15
+4 89.34 88.90
+description stage. As shown in Table 5a, sampling three
+answers per region has already yielded +1.34% accuracy
+gains. Increasing the number of sampled answers further
+improves the performance. It makes sense as generating
+more answers tends to increase the diversity of region descriptions, which is helpful for the subsequent verification
+stage. The best performance is achieved by settingL= 7.
+The performance tends to saturate whenLis increased further.
+Hallucination threshold.We then study the effect of the
+hallucination thresholdτin the verification execution stage.
+The results are shown in Table 5b. The model already
+reaches its performance peak by settingτ= 0.1. We observe a noticeable performance drop when continuing to increase the threshold. A higher threshold tends to misclassify a large n

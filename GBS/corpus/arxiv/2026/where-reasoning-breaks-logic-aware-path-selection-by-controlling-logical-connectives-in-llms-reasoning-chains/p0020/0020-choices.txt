@@ -1,0 +1,30 @@
+title: Where Reasoning Breaks: Logic-Aware Path Selection by Controlling Logical Connectives in LLMs Reasoning Chains
+source: arxiv
+year: 2026
+document_id: where-reasoning-breaks-logic-aware-path-selection-by-controlling-logical-connectives-in-llms-reasoning-chains
+authors: Seunghyun Park; Yuanyuan Lei
+page: 20
+section: choices
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20564v1
+
+[choices]
+Think step by step.
+Figure 11: Big Bench Hard (deductive subset) prompt
+template
+E Efficiency Comparison
+We report an efficiency comparison between decoding baselines and our connective centric methods.
+All efficiency numbers are measured on theZebraLogic test splitwith Gemma-3-4b-it model and
+arenormalized by greedy decodingfor each model
+(Greedy = 1.00), so values >1 indicate additional
+compute/latency relative to greedy.
+Token cost (× Greedy).Token cost counts the
+total number of next token forward steps required
+by each method, aggregated over the test set and
+normalized by greedy. This includes any extra
+forward passes introduced by the decoding algorithm, e.g., multiple sampled trajectories forSelfConsistency( n= 5 ), multiple hypotheses maintained forBeam Search(beam size as in Table 4),
+and additional lookahead generation forBranching
+(triggered at connective pivots with hyperparameters K and lookahead length L). In contrast, Steering and TTPO preserve single trajectory greedy decoding at inference time; their token cost deviations
+from 1.0 mainly reflect changes in the generated
+length, not additional search.
+Time ( × Greedy).Time is measured aswallclock latencyf

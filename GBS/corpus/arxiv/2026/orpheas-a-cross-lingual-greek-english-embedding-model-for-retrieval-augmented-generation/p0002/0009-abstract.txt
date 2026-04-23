@@ -1,0 +1,20 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+tal and statistical analysis demonstrate that ORPHEAS outperforms state-of-the-art
+multilingual embedding models across monolingual and cross-lingual benchmarks.
+The remainder of this paper is organized as follows. Section 2 reviews the related work on text embeddings. Section 3
+presents the development of ORPHEAS, including the datasets, the fine-tuning methodology as well as the model
+architecture and training procedure. Section 4 presents the experimental analysis and discusses the comparative performance of ORPHEASagainst state-of-the-art embedding models. Finally, Section 5 concludes the paper and outlines
+directions for future research.
+2 Related work
+Text embedding models constitute of primary importance in many industrial and scientific applications, enabling
+advances in semantic search [Reimers and Gurevych, 2019], information retrieval [Bajaj et al., 2018] and RetrievalAugmented Generation [Lewis et al., 2021]. The recent development of transformer-based architectures and specialized fine-tuning strategies has further extended these capabilities to low-resource and morphologically complex
+1The model’s name,ORPHEAS, stands for Optimized Representations for Parallel Helleni

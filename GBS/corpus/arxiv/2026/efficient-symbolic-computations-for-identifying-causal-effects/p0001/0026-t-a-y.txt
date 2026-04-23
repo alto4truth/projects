@@ -1,0 +1,35 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+, . . . , xm]is given by a weight vectorw= (w 1, . . . , wm)∈N m.
+The weightingwdefines aw-grading of the ring by setting the degree of the variables to its weight.
+That is, the weighted degree of a monomial is given bydegw(xu1
+1 xu2
+2 · · ·x um
+m ) =Pm
+i=1 wiui. Moreover, a polynomialfis said to be homogeneous with respect to the weightingw, orw-homogeneous,
+if the weighted degree of all the monomials infcoincide. In this setting, we have the following
+complexity bound for computing Gröbner bases up to the weighted degreedw.
+Proposition 3.5(Faugère et al., 2016, Section 5.1).Suppose thatw= (w 1, . . . , wm)∈N m is a
+weighting. LetI=⟨f 1, . . . , fp⟩ ⊆R[x 1, . . . , xm]be aw-homogeneous ideal and let≺be aw-graded
+monomial ordering. The complexity (in terms of arithmetic operations inR) to computeG≺,dw is
+bounded by
+O
+ 1
+(Qm
+i=1 wi)α
+m+d w −1
+dw
+α
+,
+whereαis a constant such that row reduction of an×nmatrix can be performed inO(nα)operations.
+This complexity result follows naturally from the standard encoding of Gröbner basis computation
+into linear algebra which state-of-the-art algorithms such as F4 and F5 leverage. These algorithms
+are typically implemented in such a way that

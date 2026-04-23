@@ -1,0 +1,39 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+rstand how dead features are
+inferred…
+Step 2: Reasoning:
+For each feature:
+- Attempt to construct a valid configuration where:
+- That feature is selected.
+- Satisfies all relationships and constraints
+- Avoids triggering any exclusion or logical conflict
+- If no valid configuration exists due to unsatisfiable
+relationship/constraint interactions, classify the feature as
+dead.
+- Explain your reasoning using structural and logical
+justifications.
+Wrap your detailed reasoning inside:…
+*Output Format* At the end, wrap your final reasoning in:
+…
+Step 3: Analysis this feature model: Now, analyze the
+following model to identify any dead features.
+<feature_model_blueprint_to_analyze>
+{{feature_model_blueprint}}
+</feature_model_blueprint_to_analyze>
+User Prompt
+Figure 1: Promptingpipelinefordead feature detection, showing how the system and user prompts guide reasoning and how
+the LLM outputs XML results for solver comparison.
+4.6 Baseline Oracle and Implementation
+We use FLAMA 2.0.1 [12] as the solver-based oracle, executing
+AOs on UVL inputs through the Glucose3 SAT solver and the DD
+library to obtain exact and reproducible ground-truth results for
+all comparisons. The LLM-based analysis

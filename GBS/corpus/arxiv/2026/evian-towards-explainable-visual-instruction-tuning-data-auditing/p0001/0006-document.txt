@@ -1,0 +1,30 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+ully automated and interpretable framework that decomposes responses into visual descriptions, subjective inferences, and factual claims, and evaluates
+them along three orthogonal dimensions.
+• We conduct extensive experiments showing that
+for LVLMs, the logical integrity of training data
+is a more decisive factor for downstream performance than its informational richness, establishing the critical need to prioritize reasoning and
+factual correctness in data curation.
+2 Related Work
+Vision-language data curation has progressed from
+coarse pre-training filters to instruction-tuning
+strategies, yet scalable and fine-grained evaluation
+remains largely missing. As a result, most existing methods still rely on shallow quality proxies,
+limiting their ability to diagnose subtle semantic,
+logical, or factual defects.
+Data Selection for Vision-Language Pretraining.A central challenge in vision-language
+learning is selecting high-quality subsets from
+noisy web-scale corpora such as LAION (Schuhmann et al., 2021). Early approaches rely on
+similarity-based filtering with pre-trained models,
+including CLIP (Radford et al., 2021), ALBEF
+(Li et al., 2021), and BLIP (Li et al., 2022, 2023),
+using

@@ -1,0 +1,28 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+Figure 2:Overview of the Textual Parameter Graph Optimization (TPGO) framework.The framework
+operates in a closed-loop cycle: (1)Graph Construction, where unstructured agent prompts are disentangled into a
+structuredTextual Parameter Graph (TPG); (2)Gradient-Driven Evolution, which generates semanticTextual
+Gradientsfrom execution trajectories to diagnose faults; and (3)Group Relative Agent Optimization (GRAO), a
+meta-learning module that leverages an optimization experience memory to guide the Optimizer LLM in generating
+effective graph updates (∆G).
+execution traces to guide graph updates; and (3)
+Group Relative Agent Optimization (GRAO), a
+meta-optimization layer that enables the optimizer
+itself to learn and improve from experience. This
+holistic design ensures that both the agent system
+and the optimization process evolve in tandem.
+4.2 Textual Parameter Graph
+Standard multi-agent systems often rely on monolithic, unstructured textual prompts to define agent
+behaviors, an approach that is brittle, difficult to
+debug, and opaque to systematic optimization. To
+overcome these limitations, we introduce a novel
+representation for the system’s textual configuration Θ, which we forma

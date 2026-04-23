@@ -1,0 +1,27 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+re
+image. All VQA questions are rigorously examined, revised, and validated by professional music annotators to ensure clarity, accuracy,
+and alignment with music-theoretic foundations. Each test sample
+in this task is composed of a single music score image in one of
+the three formats—standard staff notation, Jianpu, or guitar tablature—paired with its corresponding professionally designed VQA
+question. During evaluation, the model’s predicted answer is automatically compared with the authoritative ground-truth answer,
+and classification accuracy is computed to quantify performance.
+Through this process, we objectively assess the model’s ability of visual perception, symbol recognition, and high-level music-theoretic
+understanding directly from music score images without additional
+textual guidance.
+A.2 Cross-Format Notation Conversion (CNC)
+Data
+The Cross-Format Notation Conversion task focuses on assessing the model’s ability to translate music content across different
+representation systems while preserving musical semantics. For
+every input music score image in one notation format, we prepare
+a complete, semantically equivalent symbolic text in another target
+notation as the st

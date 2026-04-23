@@ -1,0 +1,26 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+Effects of Cross-lingual Evidence in Multilingual Medical Question
+Answering
+Anar Yeginbergen and Maite Oronoz and Rodrigo Agerri
+HiTZ Center - Ixa, University of the Basque Country UPV/EHU
+{anar.yeginbergen,maite.oronoz,rodrigo.agerri}@ehu.eus
+Abstract
+This paper investigates Multilingual Medical Question Answering across high-resource
+(English, Spanish, French, Italian) and lowresource (Basque, Kazakh) languages. We
+evaluate three types of external evidence
+sources across models of varying size: curated repositories of specialized medical knowledge, web-retrieved content, and explanations
+from LLM’s parametric knowledge. Moreover, we conduct experiments with multilingual, monolingual and cross-lingual retrieval.
+Our results demonstrate that larger models consistently achieve superior performance in English across baseline evaluations. When incorporating external knowledge, web-retrieved
+data in English proves most beneficial for
+high-resource languages. Conversely, for lowresource languages, the most effective strategy combines retrieval in both English and the
+target language, achieving comparable accuracy to high-resource language results. These
+findings challenge the assumptio

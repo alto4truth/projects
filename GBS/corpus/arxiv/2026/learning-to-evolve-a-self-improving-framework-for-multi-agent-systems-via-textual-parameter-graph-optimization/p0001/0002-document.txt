@@ -1,0 +1,26 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+pinpoint failures and suggest granular modifications. The core of our framework isGroup Relative Agent Optimization (GRAO), a novel
+meta-learning strategythat learns from historical optimization experiences. By analyzing
+past successes and failures, GRAO becomes
+progressively better at proposing effective updates, allowing the system tolearn how to optimize itself. Extensive experiments on complex
+benchmarks like GAIA and MCP-Universe
+show that TPGO significantly enhances the performance of state-of-the-art agent frameworks,
+achieving higher success rates through automated,self-improving optimization.
+1 Introduction
+The rapid advancement of Large Language Models
+(LLMs) has catalyzed a paradigm shift in artificial intelligence, moving from passive questionanswering interfaces to autonomous agents capable of tool use and decision-making. This evolution has recently culminated in the development
+ofMulti-Agent Systems (MAS), where diverse
+∗Equal contribution.
+†Corresponding author.
+Figure 1: The pipelines of Traditional Agent Engineering and the proposed TPGO in multi-agent system optimization.
+agents collaborate to solve complex, multi-step
+problems ranging from software engineering

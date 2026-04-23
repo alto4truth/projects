@@ -1,0 +1,24 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+Published as a paper at 3rd DATA-FM workshop @ ICLR 2026, Brazil.
+3 METHODS
+3.1 CLASSIFIERDATASETS
+To train a robust multilingual quality classifier, we curate a diverse set of high-quality “positive” samples and contrast them against a baseline of general web data. Our strategy extends
+the FineWeb2-HQ framework by expanding their high-quality anchors (MKC+) with additional
+instruction-based and synthetic sources to form theMKC-e(Extended) dataset.
+Positive Anchors (MKC+).We incorporate the original FineWeb2-HQ anchors, which prioritize
+structured, knowledge-dense content. These datasets are Multilingual MMLU (OpenAI, 2024), Aya
+Dataset and Collection (Singh et al., 2024), OpenAssistant-2 (Köpf et al., 2023) and Include-Base44 (Romanou et al., 2024).
+Extended Positives (MKC-e).To generalize the classifier’s ability to recognize natural queries
+and encyclopedic prose, we expand the MKC+ pool with:
+•Tagengo (Devine, 2024):A multilingual chat dataset containing approximately 75,000
+conversations in 74 languages between humans and GPT4 (OpenAI et al., 2024).
+•MURI-IT (Wikipedia Subset) (Köksal et al., 2024):A dataset containing instructionoutput pairs across 200 languages. We specifica

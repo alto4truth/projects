@@ -1,0 +1,36 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+o systematic optimization. To
+overcome these limitations, we introduce a novel
+representation for the system’s textual configuration Θ, which we formalize as a directedTextual
+Parameter Graph(TPG), denoted by G= (V,E) .
+This graph structure disassembles the system’s
+logic into modular, inspectable, and individually
+optimizable components.
+Node Representation ( V).Each node vi ∈ V
+represents a discretesemantic unitof the system.
+We generate these nodes by hierarchically decomposing the initial system prompts using a dedicated
+Parser LLM. This process supports a nested graph
+structure, where high-level agents can form a main
+graph, while their specific components are modeled as interconnected subgraphs. The set of nodes
+encompasses three primary types:
+• Role Nodes:Define an agent’s core persona,
+high-level objectives, and strategic directives.
+• Logic Nodes:Encapsulate specific reasoning
+protocols, operational constraints, or chained
+thought processes.
+•Tool Nodes:Contain functional descriptions,
+API specifications, and usage examples for
+external tools.
+The complete textual configurationΘ is constituted
+by the aggregation of content from all nodes, such
+thatΘ = S
+vi∈V Content(vi).

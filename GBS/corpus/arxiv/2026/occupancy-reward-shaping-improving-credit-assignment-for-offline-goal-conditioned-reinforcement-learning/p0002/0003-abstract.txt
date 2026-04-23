@@ -1,0 +1,29 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 2
+section: abstract
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+n 3 Tokamak control tasks.
+Code:https://github.com/aravindvenu7/occupancy reward shaping
+Website:https://github.com/aravindvenu7.github.io/website/ors/
+1 INTRODUCTION
+Figure 1: Average relative success rate
+(task-normalized) on 7 challenging
+OGBench tasks (Park et al., 2024a).
+Higher is better; 100.% matches the
+best algorithm per task. Our method,
+ORS, performs best, improving over
+the best baseline by 31%.
+Reinforcement learning (RL) is fundamentally tied to credit
+assignment because effectively reasoning about the long-term
+consequences of actions is crucial to learn diverse goalreaching behaviors from data. Although goal-conditioned
+reinforcement learning (GCRL) offers a simple, domainagnostic and scalable framework for RL from large offline datasets (Liu et al., 2022a; Yang et al., 2023), GCRL
+agents trained with sparse rewards struggle with credit assignment (Eysenbach et al., 2022; Ding et al., 2019; Wang et al.,
+2023a; Park et al., 2024a). Therefore, the design of welldefined and meaningful reward functions, called reward shaping (Ng et al., 1999) is a promising solution to address the
+credit assignment challenge (Yu et al., 2025).
+While manual reward design for each goal i

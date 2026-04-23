@@ -1,0 +1,34 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 51
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+, Feng Jiang, Fei Yu,
+Zhihong Chen, Jianquan Li, Guiming Chen, Xiangbo Wu, Zhiyi Zhang, Qingying Xiao, Xiang Wan,
+Benyou Wang, and Haizhou Li. 2023. HuatuoGPT,
+Towards Taming Language Models To Be a Doctor.
+arXiv preprint arXiv:2305.15075.
+Tianyi Zhang, Varsha Kishore, Felix Wu, Kilian Q Weinberger, and Yoav Artzi. 2019. BERTScore: Evaluating text generation with BERT.arXiv preprint
+arXiv:1904.09675.
+A Search Query Generation
+To obtain relevant evidence via web search and
+LLM generation, we first generate 10 queries per
+question describing the clinical case usingLlama3.3-70B-Instruct, ensuring no overlap with the models used in the main evaluation (Panickssery et al.,
+2024). These queries describe the clinical case in
+a way that helps locate useful information for answering the question, without directly pointing to
+the correct answer. Consequently, the generated
+queries are used for the web search engine to retrieve candidate evidence passages.
+B Information availability on the web per
+language
+Language Avg. docs / query Empty sources (%)
+Google Cohere Google Cohere
+English 9.24 4.12 0.00 1.36
+Spanish 9.29 3.96 0.00 1.20
+Italian 9.32 3.90 0.08 2.32
+French 9.32 3.88 0.00 1.92
+Basqu

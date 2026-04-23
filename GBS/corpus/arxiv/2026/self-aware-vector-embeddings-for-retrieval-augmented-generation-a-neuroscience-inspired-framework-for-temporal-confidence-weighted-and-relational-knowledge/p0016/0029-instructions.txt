@@ -1,0 +1,28 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 16
+section: instructions
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+Configuration Overall Current Stale % ECE
+SmartVector (full, default) 61.7% 53.3% 13.3% 0.244
+−similarity 22.7% — 16.7% 0.462
+−temporal 36.2% 58.3% 13.3% 0.579
+−confidence 66.7% 58.3% 1.7% 0.254
+−relational 61.7% 53.3% 13.3% 0.244
+Table 3:Ablation over the four SmartVector signals. Temporal contributes the largest share of the gain on
+this corpus; the relational signal’s contribution is limited by graph sparsity (11 edges across 258 vectors) and
+is expected to grow in denser deployments.
+and 31.0% for plain RAG, confirming that tuning adds a modest but positive gain and is unlikely
+to overfit with a grid this coarse. We recommend per-corpus tuning in production.
+10.4 Robustness to contradiction rate
+We re-ran the main comparison while sweeping the Slack-contradiction injection rate from 0% to
+75%. Plain RAG’s overall accuracy is essentially flat at∼31% across noise rates (contradictions
+affect only the 18 conflict queries), but its stale rate on current queries climbs from 25% at 0%
+noise to 47% at 75% noise—fresh Slack rumors increasingly dominate the top-1 result. SmartVector
+maintains 55–65% overall accuracy throughout and keeps its stale rate in the 5–25% band. The gap
+is wides

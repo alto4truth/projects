@@ -1,0 +1,35 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+Refinement(blocks 5–9): Both components light. Gentle polishing.
+4.Prediction assembly(block 11): Attention-dominated. Assembles final predictions.
+10
+
+Figure 7: DCT spectral energy concentration (Gini coefficient) across layer types. Embeddings
+show high concentration (0.79–0.81), transformer layers are moderate (0.63–0.65), and random
+matrices are flat (0.30). Transformer weights lack the spectral structure needed for effective
+frequency-domain compression.
+Notably, block 11’s MLP contributes KL=0.18 (low importance) while its attention contributes KL=0.80. However, skipping block 11’s MLP entirely still costs +3.05 perplexity on
+Mistral (block 31), and replacing it with its cached mean output performs even worse (+4.51),
+indicating that the MLP’s value lies in its per-token variation, not its average output.
+5.4 Early Exit: From Observation to Routing
+We train dedicated prediction heads (RMSNorm + Linear, initialized from the final model head)
+at blocks 15, 23, and 27 of Mistral 7B. Each head is trained for 500 steps on 8K calibration
+tokens.
+Table 8: Early exit head agreement with full model (Mistral 7B)
+Exit point Naive head Trained head Blocks saved
+Block 15 5.5% 30.2% 53% of compute
+Block 23 19.6% 40.4% 28% of compute
+Block 27 33.7% 49.4% 16% of compute
+The naive-to-trained improvement (5.5%→30.2% at block 15) demonstrates that predictionrelevant informationis presentat intermediate depths but encoded differently than the final
+head expects.
+Multi-exit confidence-based routing (exit at the earliest block where softmax confidence
+exceeds a threshold) yields compute savings of 6.4–26.9%, but at significant perplexity cost
+11

@@ -1,0 +1,26 @@
+title: Improving clinical interpretability of linear neuroimaging models through feature whitening
+source: arxiv
+year: 2026
+document_id: improving-clinical-interpretability-of-linear-neuroimaging-models-through-feature-whitening
+authors: Sara Petiton; Antoine Grigis; Raphaël Vock; Edouard Duchesnay
+page: 2
+section: abstract
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20675v1
+
+singular vectors ofR p andΛ p is the corresponding diagonal matrix of singular values. We opt for SVD over eigenvalue decomposition for numerical stability. We then define
+the whitening matrixW p by
+Wp =U pΛ−1/2
+p U ⊤
+p ,(1)
+and the whitened features by
+Zp =X pWp,withCorr(Z p) =I 2,(2)
+A linear classifier is then trained on the whitened data:ˆy=
+Zβ+b, whereZrepresents the whitened input features (i.e.,
+the stacked matricesZ p),βdenotes the classifier’s weights
+in the whitened space,bthe bias term, andˆythe predicted
+scores.
+LetW ZCA-cor denote the block-diagonal whitening matrix
+formed by combining the pairwise whitening matricesW p.
+An interpretable classifierˆy=Xθ+b(whose inputs are
+the original features) is obtained by projecting the coefficients

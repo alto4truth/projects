@@ -1,0 +1,31 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+ratory optimization, where improvement must be driven
+by execution feedback without a gold trajectory,
+andimitative optimization, where the system is
+optimized toward a known correct outcome. Our
+experiments are designed to answer three questions:
+(1) whether TPGO consistently improves agent performance in both settings; (2) which components
+of TPGO are most responsible for these gains; and
+(3) whether GRAO improves the stability and generalization of iterative optimization. We conduct
+experiments on MCP-Universe and GAIA, using
+ReAct and MiroFlow as representative agent frameworks with different backbone models.
+5.1 Experimental Setup
+Benchmarks.We evaluate our framework on
+two challenging benchmarks, each representing
+one of the core optimization scenarios.MCPUniverse(Luo et al., 2025b) serves as our testbed
+forexploratory optimization. It is a comprehensive
+benchmark evaluating LLMs on tasks that require
+interacting with real-world servers and using large
+tool spaces. Success is determined by task completion, forcing the agent to rely on self-correction
+from execution feedback as there is no "golden"
+path.GAIA(Mialon et al., 2023) is chosen for
+imitative optimization. As a widel

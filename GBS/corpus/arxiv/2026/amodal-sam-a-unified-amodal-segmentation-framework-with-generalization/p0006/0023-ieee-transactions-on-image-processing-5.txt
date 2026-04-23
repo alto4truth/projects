@@ -1,0 +1,37 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 6
+section: ieee-transactions-on-image-processing-5
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+loss to optimize the segmentation prediction:
+Lseg =L Dice +αL BCE,(8)
+Whereαis a balancing factor that is set to 10, following [14],
+[16], [27].
+Regional consistency.Then, based on the rationale that
+visible and occluded regions of the same objects are expected
+to exhibit similar characteristics, such as appearance and texture patterns, we incorporate intra-object regional consistency
+during training. This is achieved by minimizing the difference
+between the representations of visible and occluded regions:
+Evis =
+P E⊙M visP Mvis
+,E occ =
+P E⊙M occP Mocc
+,
+Lreg = 1−cos(E vis,E occ).
+(9)
+Here,E∈R W×H×C denotes the feature map extracted by
+the adapted encoderF ′
+a-enc(I, Mspec). With the visible mask
+Mvis = 1−M occ and the occlusion maskM occ, we can obtain
+Evis ∈R C andE occ ∈R C, indicating the representations of
+the visible and occluded regions, respectively. The function
+cos()calculates the cosine similarity between the inputs.
+Therefore, by minimizing the regional consistency lossL reg,
+the visible and occluded regions are encouraged to have more
+similar representations.
+Holistic topological regularization.Furthermore, we introduce a topological regularization that preserves th

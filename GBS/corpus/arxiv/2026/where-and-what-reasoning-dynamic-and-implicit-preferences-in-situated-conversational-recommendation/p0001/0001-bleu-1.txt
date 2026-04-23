@@ -1,0 +1,39 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 1
+section: bleu-1
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+GPT-Score
+58.61
+46.83
+33.77
+8.92
+50.22
+40.19
+31.62
+8.55
+47.51
+39.13
+31.32
+8.62
+Ours w/ Vanilla Prompting w/o BI-INF
+Figure 4: Comparison of different preference inference
+variants in our SiPeR on the SIMMC 2.1 dataset.
+conditioning on STE correctness, downstream recommendation quality drops from 40.0 to 29.8 R@1
+once the predicted scene is wrong, directly confirming the error-propagation effect from scene grounding to BI-INF (Table 10).
+5.5 Impact of Bayesian Inverse Inference
+We further isolate the contribution of the BI-INF
+module by comparing it against two variants: (a)
+w/o BI-INF, and (b)w/ Vanilla Prompting, which replaces the Bayesian framework with direct MLLM
+instructions. As illustrated in Figure 4, SiPeR consistently outperforms the vanilla prompting baseline across metrics (e.g., significant gains in R@5
+and MRR@5). This shows that rigorous probabilistic reasoning offers a more robust mechanism for
+disentangling user intent than heuristic single-pass
+generation, while the gap between vanilla prompting and w/o BI-INF validates that explicit preference modeling is essential for SCR.
+5.6 Human Evaluation and Case Study
+We conducted a human evaluation on 30 randomly
+sampled

@@ -1,0 +1,24 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 3
+section: a-weighted-angle-distance-on-strings-5
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+caying weightρ n and uses the angle between
+raw count vectors at each scale. This produces a bona fide metric on Σ ∗ (for anyρ >0, and
+uniformly bounded whenρ∈(0,1)), while retaining the interpretability and conditioning
+benefits associated with cosine geometry.
+3.3.Alignment-free sequence comparison and sketching.In genomics and metagenomics, alignment-free methods compare biological sequences usingk-mer count or frequency
+vectors, together with various geometric or information-theoretic dissimilarities [13, 21]. Such
+methods are particularly attractive when alignment is computationally expensive or conceptually inappropriate, and they often rely onk-mer statistics that are closely analogous to
+ourn-gram counts.
+Scaling these ideas to very large datasets has led to sketch-based techniques. For example,
+Mash uses MinHash sketches ofk-mer sets to approximate distances between genomes and
+metagenomes extremely quickly, while still maintaining good empirical accuracy [12]. These
+approaches demonstrate that compositional statistics can serve as robust fingerprints when
+explicit alignment is infeasible or undesirable.
+Our metric shares with alignment-free methods the use of substring st

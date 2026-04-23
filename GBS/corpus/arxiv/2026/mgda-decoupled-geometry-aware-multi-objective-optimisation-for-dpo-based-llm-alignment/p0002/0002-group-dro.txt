@@ -1,0 +1,23 @@
+title: MGDA-Decoupled: Geometry-Aware Multi-Objective Optimisation for DPO-based LLM Alignment
+source: arxiv
+year: 2026
+document_id: mgda-decoupled-geometry-aware-multi-objective-optimisation-for-dpo-based-llm-alignment
+authors: Andor Vári-Kakas; Ji Won Park; Natasa Tagasovska
+page: 2
+section: group-dro
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20685v1
+
+Figure 3: Optimisation trajectories for a 2D multi-objective problem with inputs θ∈R 2 and objectives L1(θ) =
+θ2
+1 + (θ2 −1) 2 and L2(θ) = 20[exp((∥θ∥ 2
+2 −1) 2)−1] , sharing a global optimum at θ∗ = (0,1) . All algorithms are
+initialised at θ(0) = (0.8,−0.2) with comparable initial losses: L1 ≈2.08 and L2 ≈2.16 . Optimisation is performed
+using Adam (lr= 5×10 −3), with an exponential update rate of η= 0.01 for GROUPDRO. MGDA-DECOUPLED
+converges to ∥θ−θ ∗∥2 <0.01 in 265 steps. The steps required for the baselines are: MGDA-NORMALISED(319),
+GROUPDRO (823), and UNIFORM(1201). Standard MGDA stalls near theL 2 boundary and fails to converge.
+(the unit circle), ∥∇L2∥ vanishes while ∥∇L1∥ remains large. To minimise the combined gradient norm, MGDA
+overwhelmingly weights the satisfied objective (L2), effectively stalling the optimisation. While MGDA-NORMALISED
+removes the gradient magnitude bias, it discards scale information, treating the nearly-solved L2 as equally urgent to
+the high-loss L1. This forces an initial detour to the boundary, where the normalised ∇L2 necessitates wasteful zig-zag
+corrections, slowing down the tangential momentum towards the optimum. In contrast, MGDA-DECOUP

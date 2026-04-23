@@ -1,0 +1,64 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 6
+section: phi-llama-qwen
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+go Low▲♦ ▲♦
+Legend:▲= human translated,♦= machine translated,■= templated
+C Per-Language Performance on Global MMLU & MMLU-ProX
+See tables 5 to 10.
+40
+
+Published in Transactions on Machine Learning Research (11/2025)
+Language ZS T + COMPASS T F A T + R T + LR T + LS
+Amharic (am)0.29 0.39 0.30 0.35 0.25 0.31 0.34 0.34
+Arabic (ar)0.44 0.54 0.45 0.51 0.39 0.46 0.49 0.48
+Bengali (bn)0.36 0.46 0.37 0.43 0.31 0.38 0.41 0.41
+Czech (cs)0.49 0.58 0.50 0.56 0.44 0.51 0.53 0.53
+German (de)0.56 0.64 0.57 0.63 0.51 0.57 0.59 0.59
+Greek (el)0.40 0.45 0.43 0.42 0.35 0.37 0.40 0.39
+English (en)0.69 0.75 0.69 0.74 0.64 0.69 0.70 0.70
+Spanish (es)0.57 0.65 0.58 0.64 0.52 0.58 0.60 0.60
+Persian (fa)0.40 0.50 0.41 0.47 0.35 0.42 0.45 0.44
+Filipino (fil)0.45 0.54 0.46 0.52 0.40 0.47 0.49 0.49
+French (fr)0.57 0.65 0.58 0.64 0.52 0.58 0.60 0.60
+Hausa (ha)0.32 0.42 0.33 0.38 0.28 0.34 0.37 0.37
+Hebrew (he)0.40 0.50 0.41 0.47 0.35 0.42 0.45 0.44
+Hindi (hi)0.41 0.51 0.42 0.48 0.36 0.43 0.46 0.46
+Indonesian (id)0.50 0.59 0.51 0.57 0.45 0.52 0.54 0.54
+Igbo (ig)0.33 0.43 0.34 0.39 0.29 0.35 0.38 0.38
+Italian (it)0.55 0.63 0.56 0.62 0.50 0.56 0.58 0.58
+Japanese (ja)0.49 0.53 0.52 0.51 0.44 0.46 0.48 0.48
+Korean (ko)0.44 0.49 0.47 0.51 0.39 0.41 0.41 0.43
+Kyrgyz (ky)0.37 0.47 0.38 0.44 0.32 0.39 0.42 0.42
+Lithuanian (lt)0.38 0.48 0.39 0.45 0.33 0.40 0.43 0.42
+Malagasy (mg)0.35 0.45 0.36 0.41 0.31 0.37 0.40 0.40
+Malay (ms)0.46 0.55 0.47 0.53 0.41 0.48 0.50 0.50
+Nepali (ne)0.37 0.47 0.38 0.44 0.32 0.39 0.42 0.42
+Dutch (nl)0.52 0.60 0.53 0.59 0.47 0.53 0.55 0.55
+Nyanja (ny)0.33 0.43 0.34 0.39 0.29 0.35 0.38 0.38
+Polish (pl)0.48 0.57 0.49 0.55 0.43 0.50 0.52 0.52
+Portuguese (pt)0.56 0.64 0.57 0.63 0.51 0.57 0.59 0.59
+Romanian (ro)0.49 0.58 0.50 0.56 0.44 0.51 0.53 0.53
+Russian (ru)0.51 0.60 0.52 0.58 0.46 0.53 0.55 0.55
+Sinhala (si)0.31 0.41 0.32 0.37 0.27 0.33 0.36 0.36
+Shona (sn)0.33 0.43 0.34 0.39 0.29 0.35 0.38 0.38
+Somali (so)0.31 0.41 0.32 0.37 0.27 0.33 0.36 0.36
+Serbian (sr)0.43 0.53 0.44 0.50 0.38 0.45 0.48 0.47
+Swedish (sv)0.51 0.60 0.52 0.58 0.46 0.53 0.55 0.55
+Swahili (sw)0.38 0.48 0.39 0.45 0.33 0.40 0.43 0.43
+Telugu (te)0.34 0.44 0.35 0.40 0.30 0.36 0.39 0.39
+Turkish (tr)0.46 0.55 0.47 0.53 0.41 0.48 0.50 0.50
+Ukrainian (uk)0.47 0.56 0.48 0.54 0.42 0.49 0.51 0.51
+Vietnamese (vi)0.45 0.49 0.48 0.46 0.40 0.43 0.45 0.46
+Yoruba (yo)0.31 0.41 0.32 0.37 0.27 0.33 0.36 0.36
+Chinese (zh)0.51 0.60 0.52 0.58 0.46 0.53 0.55 0.55
+Average0.435 0.524 0.447 0.499 0.388 0.449 0.473 0.473
+St. Dev. 0.090 0.083 0.090 0.093 0.087 0.088 0.083 0.084
+Table 5: Per-language performance on Global-MMLU (Phi-4-Mini-Instruct-3.8B)
+41

@@ -1,0 +1,23 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+e treatment actually received; see Hernán and Robins (2025, Section
+16) for background on adherence. The primary interest then is in the direct causal effect of the
+treatment actually takenAon the outcomeY. In practice, an investigator may wish to account
+for latent confounding that partially explains the association betweenAandY. The corresponding
+data-generating process of this study can be represented by the mixed graph in Figure 1.
+It was noted by Garcia-Puente et al. (2010) that rational identifiability of a given graph is always
+decidable by computational algebraic geometry involving Gröbner basis computations. Indeed, if
+the graph is acyclic, each entry of the covariance matrixΣis a polynomial in theλ vw andω ij
+variables and thus deciding rational identifiability is identical to solving the polynomial system
+given in (2). However, the complexity of standard Gröbner basis methods can in the worst case
+be double exponential in the size of the graph (Mayr, 1997; Cox et al., 2015). Hence, they become
+infeasible even for small graphs on5nodes. Recently, Dörfler et al. (2024) showed that rational
+identifiability can be decided in exponential running time. However, their algorithm

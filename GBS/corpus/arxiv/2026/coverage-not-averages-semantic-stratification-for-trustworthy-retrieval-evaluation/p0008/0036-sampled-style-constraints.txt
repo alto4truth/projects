@@ -1,0 +1,27 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 8
+section: sampled-style-constraints
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+=========================
+The selected (Length, Specificity) pair injects instructions:
+SHORT + PROPER NOUNS:
+LENGTH: Your query MUST be exactly 1-2 words only.
+ENTITY STYLE: Use SPECIFIC proper nouns and named entities.
+-> "BERT embeddings", "COVID-19 transmission"
+SHORT + GENERIC TERMS:
+LENGTH: Your query MUST be exactly 1-2 words only.
+ENTITY STYLE: Use GENERIC category terms, NOT specific names.
+-> "language models", "cancer treatment"
+MEDIUM + PROPER NOUNS:
+LENGTH: Your query MUST be exactly 3-4 words only.
+ENTITY STYLE: Use SPECIFIC proper nouns and named entities.
+-> "GPT-4 reasoning capabilities", "CRISPR Cas9 delivery"
+MEDIUM + GENERIC TERMS:
+LENGTH: Your query MUST be exactly 3-4 words only.
+15

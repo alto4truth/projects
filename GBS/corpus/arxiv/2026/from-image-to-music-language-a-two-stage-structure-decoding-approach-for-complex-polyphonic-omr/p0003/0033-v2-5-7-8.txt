@@ -1,0 +1,22 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 3
+section: v2-5-7-8
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+240 and event 7 at tick
+480 seem to disrupt voice 3’s flow, causing the beam broken error.
+I’ll consolidate the voices into a single sequence for staff 1, prioritizing tick order and ensuring the beamed
+group remains uninterrupted. The proposed single voice for staff 1 will run from tick 0 to 1440, capturing all
+events in their natural progression: starting with event 4, then event 5, event 6, event 7, and finally the beamed
+group (events 8, 9, 10).
+[Assistant]Let me analyze the measure image and event data.
+Agent Turn 2: Firstevaluate_fixCall
+The agent proposes consolidating all staff-1 events into a single voice:
+voices: [[1, 2, 3], [4, 5, 6, 7, 8, 9, 10]]
+[Tool result]
+45

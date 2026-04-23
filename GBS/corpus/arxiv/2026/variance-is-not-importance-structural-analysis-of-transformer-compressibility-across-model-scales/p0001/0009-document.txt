@@ -1,0 +1,33 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+4 Results
+4.1 Finding 1: Variance̸=Importance
+Finding 1.High-variance activation directions are almost completely uncorrelated with directions that predict model output. Projecting activations onto the high-variance subspace destroys
+perplexity despite capturing the majority of variance.
+We measure activation dimensionality via PCA on the residual stream between blocks. On
+GPT-2, 90% of residual stream variance after block 3 is captured by just 2 of 768 dimensions.
+However, projecting to these dimensions is catastrophic:
+Table 1: Effect of PCA projection on GPT-2 perplexity (blocks 3-8)
+Dimensions kept % Variance Perplexity
+8∼95% 3,441
+64∼99% 524
+256∼99.9% 145
+768 (none) 100% 47 (baseline)
+We verify this through CCA: the top-128 PCA directions and top-128 CCA directions (which
+maximize correlation between block 15 and block 31 outputs on Mistral) have only 4% overlap.
+CCA directions achieve 23% higher predictionR 2 than PCA directions at every dimensionality
+tested.
+importance(d) = variance(d)| {z }
+PCA captures
+×sensitivity(d)| {z }
+PCA ignores
+(3)
+Perturbation analysis confirms that sensitivity is approximately uniform across all 768 dimensions when averaged across tokens, while

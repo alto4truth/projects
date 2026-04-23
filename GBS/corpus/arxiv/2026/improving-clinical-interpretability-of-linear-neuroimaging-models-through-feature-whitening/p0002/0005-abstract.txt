@@ -1,0 +1,29 @@
+title: Improving clinical interpretability of linear neuroimaging models through feature whitening
+source: arxiv
+year: 2026
+document_id: improving-clinical-interpretability-of-linear-neuroimaging-models-through-feature-whitening
+authors: Sara Petiton; Antoine Grigis; Raphaël Vock; Edouard Duchesnay
+page: 2
+section: abstract
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20675v1
+
+self-supervised learning (SSL), as
+a strategy to prevent feature collapse and enhance latent representations [5]. Emerging studies also suggest its potential
+to enhance interpretability of convolutional neural networks
+[6]. In neuroimaging, whitening has primarily been applied
+to EEG or fMRI data for noise reduction [7, 8]. Recent work
+has begun evaluating whitening as a preprocessing step to
+improve the performance of post-hoc XAI methods in general image classification settings [9], finding benefits that
+vary by method and architecture, but has no applications in
+neuroimaging contexts yet. Overall, whitening’s potential for
+enhancing the interpretability of brain MRI models remains
+largely unexplored.
+In this work, we leverage correlation-based zero-phase
+component analysis (ZCA-cor) whitening to enhance the interpretability of linear models trained on region-of-interest
+(ROI)-based brain features. ZCA-cor whitening has been
+identified as an optimal procedure for generating sphered
+variables that closely preserve the structure of the original
+data [10]. We implemented both ZCA-cor, and an original
+regularized ZCA-cor as custom transformers compatible with
+the scikit-learn API. W

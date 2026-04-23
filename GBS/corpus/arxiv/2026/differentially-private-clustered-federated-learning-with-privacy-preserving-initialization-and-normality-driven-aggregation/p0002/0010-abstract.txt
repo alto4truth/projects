@@ -1,0 +1,39 @@
+title: Differentially Private Clustered Federated Learning with Privacy-Preserving Initialization and Normality-Driven Aggregation
+source: arxiv
+year: 2026
+document_id: differentially-private-clustered-federated-learning-with-privacy-preserving-initialization-and-normality-driven-aggregation
+authors: Jie Xu; Haaris Mehmood; Rogier Van Dalen; Karthikeyan Saravanan; Mete Ozay
+page: 2
+section: abstract
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20596v1
+
+y combine Gaussian
+mechanism with privacy amplification via sampling [17] byσ=
+zS
+|Kt| , achieving a significantly reduced noise level compared to LDP.
+2.3. LoRA
+Low-Rank Adaptation (LoRA) [18] is a parameter-efficient finetuning (PEFT) method for transformer-based pre-trained models.
+Instead of training the entire weight matrix, it freezes the pre-trained
+server client
+clustering
+filter
+initialize
+clientsinitial model train model updates
+noisy updates
+cluster models
+cluster centers LDP filtered updates
+...
+Fig. 1. Stage 1 ofPINA. Global cluster models are initialized in a
+privacy-preserving manner.
+weightsW 0 ∈R d×d′
+and introduces new trainable low-rank decomposition matricesBandAas follows:
+W0 + ∆W=W 0 +BA,(4)
+whereB∈R d×r is initialized to zeros,A∈R r×d′
+follows random
+Gaussian initialization andr≪min(d, d ′). This effectively reduces
+the number of trainable parameters by an order ofO(r/min(d, d ′)).
+2.4. Clustered Federated Learning
+Clustered FL algorithms group clients with similar distributions together. Thereby, clients within the same cluster suffer less from
+data heterogeneity and train via FL more effectively. Several works
+propose clustered FL methods, including CFL [12

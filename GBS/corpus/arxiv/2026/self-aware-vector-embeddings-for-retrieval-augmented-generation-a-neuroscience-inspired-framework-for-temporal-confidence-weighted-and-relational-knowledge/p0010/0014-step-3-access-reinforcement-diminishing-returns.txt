@@ -1,0 +1,26 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 10
+section: step-3-access-reinforcement-diminishing-returns
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+le queue:
+vid, d = queue.pop(0)
+if vid in visited or d >= D_max: continue
+visited.add(vid)
+u = all_vectors[vid]
+u.base_confidence -= gamma / (d + 1)
+8
+
+u.contradictions.append(v.vector_id)
+queue.extend((x, d + 1) for x in u.depended_by)
+This is equivalent to a single round of scalar message passing with a distance-decay kernelκ(d) =
+γ/(d+1), aggregated by summation with a hard cutoff. A trained GNN would replaceκby a learned
+edge function and, optionally, update semantic embeddings as well; we leave the untrained version
+as the lowest-risk baseline.
+6.4 Full Cycle
+def run_consolidation(vectors, recent_changes):

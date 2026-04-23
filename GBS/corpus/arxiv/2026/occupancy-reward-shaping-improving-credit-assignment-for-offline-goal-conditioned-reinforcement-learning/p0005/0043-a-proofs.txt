@@ -1,0 +1,26 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 5
+section: a-proofs
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+Published as a conference paper at ICLR 2026
+Using the linearity of the integral, we decompose the above expression into two terms:
+M πD(s, a, g) = (1−γ)Φ(s ′, g) + +γ
+Z
+Φ(s+, g)dπD(s+ |s ′, a′)ds +
+= (1−γ)Φ(s ′, g) +γM πD(s′, a′, g).
+It is notable thatM πD(s, a, g)resembles a squared goal-conditioned Wasserstein-2 distance analogue of the successor representation (Machado et al., 2023).
+We also define the state-only versionM πD(s, g) =E a∼πD(.|s)M πD(s, a, g)
+A.3 ASSUMPTIONS
+This section lists the assumptions we use to develop our proofs:
+Assumption A.1(Deterministic dynamics).We assume that the environment dynamics are deterministic: For any states∈ Sand actiona∈ A, the state transition probabilityp(s ′ |s, a)is a point
+mass distribution, concentrated on the unique successor statef(s, a). That is,
+p(· |s, a) =δ f(s,a)(·).
+Remark A.1.This is a common assumption made for the sake of analytical tractability in foundational reinforcement learning theory. It allows for a clear analysis of the core properties of value
+functions and policies without the complexities introduced by stochasticity. This assumption serves
+as a standard basis for theoretical analysis in related work, for inst

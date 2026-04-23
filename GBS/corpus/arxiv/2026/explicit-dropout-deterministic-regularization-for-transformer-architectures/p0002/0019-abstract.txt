@@ -1,0 +1,65 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+erms are:
+𝐽f f,𝑚 = 1
+2 Tr [((𝐗𝑇 𝐗)⊙ 𝑝 2)Λf f,m
+],(19)
+Λf f,m =𝐖 𝑇
+f f,𝑚𝐖f f,𝑚
+where𝑚∈ {1,2}denotes the corresponding feed-forward
+network layer. Thus, dropout in the feed-forward network
+leads to a quadratic, data-dependent regularization term on
+each of the two linear transformations. The detailed derivation is provided in Section A of the Appendix.
+3.4. Final Training Objective
+The final training objective combines the task-specific
+loss with the dropout-induced regularizers from all Transformer components. Let𝐿denote the number of encoder
+blocks. The overall objective is defined as
+𝐽f inal =𝐽 task +𝐽 𝑞 +𝐽 𝑘 +𝐽 𝑣 +𝐽 f f.(20)
+Each term aggregates the corresponding regularizers across
+layers. For example, the query regularizer is given by
+𝐽𝑞 =
+𝐿∑
+𝑙=1
+𝜆(𝑙)
+𝑞 𝐽 (𝑙)
+𝑞 , 𝜆 (𝑙)
+𝑞 ≥0,(21)
+where𝐽 (𝑙)
+𝑞 denotes the query regularizer at layer𝑙, and𝜆(𝑙)
+𝑞
+controls itsstrength. Setting𝜆(𝑙)
+𝑞 = 0effectively disablesthe
+regularizerforthatlayer.Analogousexpressionsholdforthe
+key, value, and feed-forward network regularizers:
+𝐽𝑘 =
+𝐿∑
+𝑙=1
+𝜆(𝑙)
+𝑘 𝐽 (𝑙)
+𝑘 ,(22)
+𝐽𝑣 =
+𝐿∑
+𝑙=1
+𝜆(𝑙)
+𝑣 𝐽 (𝑙)
+𝑣 ,
+𝐽f f =
+𝐿∑
+𝑙=1
+2∑
+𝑚=1
+𝜆(𝑙)
+f f 𝐽 (𝑙)
+f f,𝑚,
+with layer-wise regularization coefficients𝜆(𝑙)
+𝑘 , 𝜆(𝑙)
+𝑣 , 𝜆(𝑙)
+f

@@ -1,0 +1,29 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 70
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+c: wV = 0.6, wL = 0.2, wK =
+0.2. Prioritizes visual fidelity.
+• Reason-Centric: wL = 0.6, w V =
+0.2, wK = 0.2. Prioritizes logical soundness.
+• Knowledge-Centric: wK = 0.6, w V =
+0.2, wL = 0.2. Prioritizes factual correctness.
+We selected the top-10k samples using each
+scheme and fine-tuned the model under the same
+protocol as our main experiments. The results are
+reported in Table 6.
+The results suggest that emphasizing logical coherence is particularly beneficial under the evaluated setting, as theReason-Centricconfiguration attains the highest average score (68.28)
+and shows consistent advantages on reasoningintensive benchmarks. In contrast, theVisionCentricscheme demonstrates strong effectiveness
+in reducing hallucinations, as reflected by its POPE
+performance, but does not consistently match the
+balanced EVIAN setting, indicating that visual accuracy alone is insufficient for broader capability
+gains. TheKnow-Centricconfiguration yields comparatively lower performance (65.99), suggesting
+potential trade-offs between strict factual filtering
+and the retention of samples that support multistep reasoning. Overall, these findings indicate
+that while balanced weighting provides a

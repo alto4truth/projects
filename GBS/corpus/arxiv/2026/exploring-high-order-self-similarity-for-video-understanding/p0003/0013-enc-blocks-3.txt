@@ -1,0 +1,40 @@
+title: Exploring High-Order Self-Similarity for Video Understanding
+source: arxiv
+year: 2026
+document_id: exploring-high-order-self-similarity-for-video-understanding
+authors: Manjin Kim; Heeseung Kwon; Karteek Alahari; Minsu Cho
+page: 3
+section: enc-blocks-3
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20760v1
+
+ATM [87] 153.2 6.0 12.159.6 87.2
+MOSS (ours)151.5 5.6 9.9 60.087.7
+(d)Different image encoders
+ViT-B FLOPsTPMemSSV1 D48
+MAE [22] 148.4 4.5 8.0 53.1 83.6
++1st STSS 150.0 5.1 9.0 54.9 86.3
++MOSS (ours)151.5 5.6 9.956.0 87.2
+DINO [9] 148.4 4.5 8.0 53.5 84.1
++1st STSS 150.0 5.1 9.0 55.3 85.0
++MOSS (ours)151.5 5.6 9.956.6 86.3
+CLIP [87] 148.4 4.5 8.0 56.9 85.0
++1st STSS 150.0 5.1 9.0 59.0 86.3
++MOSS (ours)151.5 5.6 9.9 60.087.7
+(e)Finetuning Methods.
+FT method FLOPs TP Mem SSV1 D48
+full ViT-B [62] 140.7 86.4 28.3 51.9 84.2
+FT +MOSS 144.1 87.6 30.3 59.6 87.8
+PEFT AIM ViT-B [92]207.9 14.3 38.6 54.8 87.3
++MOSS 211.3 15.6 40.9 57.4 89.4
+LST
+Side4Video [93] 148.4 4.5 8.0 56.9 85.0
++MOSS 151.5 5.6 9.9 60.0 87.7
+DiST [61] 163.1 19.0 11.1 55.6 86.3
++MOSS 165.5 20.3 12.8 58.5 88.9
+capacity for temporal modeling because fewer temporal blocks remain to process
+the enriched features. Given marginal gain of using multiple modules, we add a
+single module after 4th block by default considering the efficiency.
+Comparison to Existing Temporal Modules.We compare our method to
+other temporal modeling modules [1,35,80,81,87] with similar computational costs.
+we replace the MOSS module with different module

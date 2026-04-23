@@ -1,0 +1,28 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+s points to a clear direction for LVLM development: progress hinges less on scaling data volume
+and more on fine-grained, interpretable auditing
+that enforces visual fidelity, factual accuracy, and
+logical coherence. To further verify that these gains
+arise from intrinsic data quality rather than a potential inductive-bias alignment between the Qwenbased auditor and target model, we conduct a crossarchitecture evaluation with InternVL2-2B (Chen
+et al., 2024f). As shown in Appendix D, EVIAN’s
+advantages extend to a model family with a distinct
+architectural lineage, reinforcing the generality of
+our conclusions. Finally, we validate EVIAN on
+the original, unmodified data distribution in Appendix E, where a 10K curated subset rivals the
+full 300K baseline, confirming its capability to capture intrinsic data quality signals beyond artificial
+defects.
+5.4 Ablation Experiment
+To validate the necessity of each component in
+EVIAN, we conducted an ablation study by selectively excluding the Logical Coherence (SL), Factual Accuracy (SK), and Image-Text Consistency
+(SV ) scores from the selection criteria. The results,
+summarized in Table 4, demonstrate that the full
+framework consistently a

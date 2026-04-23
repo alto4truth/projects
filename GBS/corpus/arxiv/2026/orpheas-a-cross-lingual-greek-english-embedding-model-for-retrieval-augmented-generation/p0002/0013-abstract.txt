@@ -1,0 +1,18 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+iting its optimization for specific language pairs.
+Koursaris et al. [2026] proposed Themida, a specialized embedding model for the Greek legal domain, which leverages
+a knowledge graph to generate high-quality fine-tuning training data. Specifically, a LLM is used to extract atomic
+facts, entities and grounded questions from legal corpora and the generated knowledge is structured through a domainspecific ontology. Next, the KG is traversed to generate a set of semantically coherent anchor-positive pairs for
+contrastive learning, demonstrating exceptional performance on administrative and legislative Greek text.
+Despite the advances of the presented models, their applicability to specialized Greek–English retrieval remains limited. General-purpose multilingual models distribute their representational capacity across numerous languages, limiting their optimization for Greek morphological structures and domain-specific semantics, while Themida is restricted
+to the narrow scope of Greek legal text. ORPHEAS levarages a KG-based fine-tuning methodology with a crosslingual augmentation strategy across diverse domains, enabling robust monolingual and cross-lingual retrieval within
+a unifi

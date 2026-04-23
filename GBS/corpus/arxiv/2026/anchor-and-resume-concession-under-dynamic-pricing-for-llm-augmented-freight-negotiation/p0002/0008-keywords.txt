@@ -1,0 +1,28 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+hat classifies the opponent’s concession rate as accelerating, decelerating, or steady, and adjusts the agent’s
+concession curve accordingly. Hindriks and Tykhonov [12] applied Bayesian learning to estimate the opponent’s preference
+profile (issue weights and evaluation functions) from observed
+bids, then used the learned model to select Pareto-efficient
+offers at the agent’s own target utility level. The ANAC
+competition [3] produced agents such as HardHeaded and
+Gahboninho that model opponent preferences from observed
+bids and dynamically adjust their concession schedules. More
+recently, reinforcement learning approaches [ 13] treat the
+concession parameter as a learnable variable optimized over
+thousands of simulated negotiations. Fatima et al. [2] provide
+a comprehensive treatment of the game-theoretic foundations
+underlying these approaches.
+These methods adapt negotiation behavior based onopponentactions and generally assume static reservation values.
+Our framework instead derives 𝛽 from thepricing model’s
+assessment of market conditions, which can change midnegotiation when an external system updates parameters.
+When 𝛽 is derived from the live spread, such shifts can cause
+t

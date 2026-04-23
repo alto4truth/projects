@@ -1,0 +1,21 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+tter
+questions have a clearly correct answer, based on a concrete context, allowing for more direct fairness evaluation. These
+two categories can be broadly mapped to reasoning-based and factual questions, respectively, as described in [Simpson
+et al. 2024]. Each question compares individuals differing in at least one sensitive attribute (e.g., Hispanic truck driver
+vs Hispanic dentist from the Race_SES dataset, and Asian man vs Arabic woman in the Race_Gender dataset dataset). A
+summary of all demographic values in both datasets is presented in Table 2. Further, each context is labeled as negative
+or non-negative, using tagsnegandnonnegin the data metamodel, respectively (seePolarityin Table 3). More in
+9https://raw.githubusercontent.com/nyu-mll/BBQ/refs/heads/main/data/Race_x_SES.jsonl
+10https://raw.githubusercontent.com/nyu-mll/BBQ/refs/heads/main/data/Race_x_gender.jsonl
+11‘Unknown’ keyword is used in both datasets, along with the following synonyms: ‘not known’, ‘undetermined’, ‘cannot answer’, ‘not answerable’, ‘can’t
+answer’, ‘can’t be determined’, ‘cannot be determined’, and ‘not enough information’.

@@ -1,0 +1,25 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+tate of the art,i.e., LogicCheckGPT [49].
+We will show in the experimental section that our R-CoV
+can still achieve promising results without relying on any
+external models, which cannot be simply achieved by previous methods.It is also worth mentioning that using the
+same hyperparameters across different LVLMs can be suboptimal. Nevertheless, as shown subsequently in the experimental section, R-CoV outperforms each baseline regardless of models, tasks, and settings.
+4.2. Main Results
+Results on POPE.Table 1 presents our results on the POPE
+benchmark. R-CoV consistently outperforms each LVLM
+by significant margins regardless of settings. For example,
+mPLUG-Owl only achieves an average of 52.56% accuracy
+Figure 3.Trade-off between performance and test-time compute. The vanilla model is LLaV A-v1.5-7B. We report both accuracy and F1 score averaged across the three splits of POPE. The
+computational cost is represented as the time (seconds) per query,
+measured on a single 48GB NVIDIA L40S GPU. R-CoV is more
+efficient than LogicCheckGPT, always achieving the same performance with less computational cost.
+and 67.68% F1 score across the three splits. By incorporating R-CoV , mPLUG-Owl can

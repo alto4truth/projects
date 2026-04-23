@@ -1,0 +1,77 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 53
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+cribed, failed)
+and inter-claim dependencies. The lemma library (lemma_library.md) accumulates reusable intermediate
+results across proof attempts.
+27
+
+A.9 Project structure and module map
+The repository is organized around a thin launcher and a core package. The top-level entry point
+launch_multiagent.pyis lightweight; most workflow logic lives inside theconsortiumpackage.
+Component Location Role
+Launcher and run
+lifecycle
+launch_multiagent.py,
+consortium/runner.py
+CLI entry point, config loading,
+workspace creation, checkpoint setup,
+execution lifecycle
+Workflow topology
+and state
+consortium/graph.py,
+consortium/state.py,
+consortium/
+workflow_utils.py
+LangGraph definition, track routing,
+gates, shared validation helpers, state
+schema
+Model and counsel
+layer
+consortium/models.py,
+consortium/utils.py,
+consortium/counsel.py
+Model registry, provider mappings,
+multi-model sandbox/debate/synthesis
+Specialist agents consortium/agents/ Discovery agents, theory agents,
+experiment agents, merge, writeup,
+proofreading, reviewer
+Domain toolkits consortium/toolkits/* Search, experimentation, writeup, math,
+filesystem, ideation, communication
+Validation and
+supervision
+consortium/supervision/ Artifact validation, review checks,
+traceability checks
+Optional advanced
+modules
+consortium/tree_search/,
+consortium/campaign/,
+consortium/interaction/,
+consortium/external_tools/
+Tree search, campaign engine, steering
+APIs, experiment execution integrations
+Table 5: Implementation boundary.pAI/MScis the project-level system;consortiumis the package that implements
+the workflow.
+A.10 Run directory layout
+Each run writes to a timestamped directory underresults/consortium_<timestamp>/. The run directory
+is the main interface through which the system exposes its internal state.
+•Run root.Top-level deliverables:final_paper.tex, optionallyfinal_paper.pdf, plus
+run_token_usage.json, budget files,checkpoints.db, inter-agent messages, and memory backup.
+•Paper workspace(paper_workspace/). Literature review, research plan, risk register, track decomposition, results assessment, follow-up decision, follow-up literature notes, experiment report transcription, resource inventory, and bibliography.
+•Experiment workspace(experiment_workspace/). Baselines, design specification, rationale, execution log, and verification reports.
+•Experiment runs(experiment_runs/<uuid>/). Concrete experiment executions launched by the
+external execution layer.
+•Math workspace(math_workspace/). Claim graph, proof drafts, checks, and lemma library (when
+theorem-oriented agents are enabled).
+•Counsel sandboxes(counsel_sandboxes/). Per-agent, per-model sandbox outputs before synthesis
+(when counsel is enabled).
+•Tree-search state(tree_search_state.jsonandtree_branches/). Branch-level search state and
+forked workspaces (when tree search is enabled).
+28

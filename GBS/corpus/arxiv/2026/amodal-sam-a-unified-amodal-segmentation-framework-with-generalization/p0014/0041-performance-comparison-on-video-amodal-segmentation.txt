@@ -1,0 +1,21 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 14
+section: performance-comparison-on-video-amodal-segmentation
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+e gated convolution. By comparing the
+results of “EA+SCA” and “EA” of Table IV, we can observe
+that SCA yields much better results than the standard adapter.
+Ablation study on the optimization adaptationIn our
+optimization adaptation, we formulate a composite learning
+objectiveL, encompassing not only the conventionalL seg but
+also regional consistency (L reg) and holistic topological regularization (L hol). The effectiveness of these newly introduced
+learning objectives,i.e.,L reg andL hol, can be validated through
+the results presented in Table V.
+Ablation study on the number of adapters. As detailed
+in Section III-B, we integrated three SCAs into the image

@@ -1,0 +1,45 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+Table 5.Ablations for R-CoV on POPE.The baseline LVLM is LLaV A-v1.5-7B. We report both accuracy and F1 score averaged across
+the three splits. Unless otherwise specified, the default settings are: (a) the number of sampled answers is 7, (b) the hallucination threshold
+is 0.1, (c) the image prompt is the image overlaid with the bounding box, (d) the shape of the bounding box is rectangle, (e) the color of
+the bounding box is red, and (f) the size of the bounding box is 1 pixel. The default entry is marked in gray .
+(a)Number of answers.A moderate increase
+in sampled answers works better.
+LAcc F1
+- 87.00 87.92
+3 88.34 87.41
+5 89.56 89.06
+7 91.56 91.25
+9 90.67 90.49
+(b)Hallucination threshold.A lower threshold performs the best.
+τAcc F1
+- 87.00 87.92
+0.1 91.56 91.25
+0.2 88.78 87.79
+0.3 87.00 85.51
+0.4 87.67 86.44
+(c)Image prompt.Drawing the bounding box
+on the image leads to more gains.
+Type Acc F1
+- 87.00 87.92
+original 89.67 89.36
+overlaid 91.56 91.25
+cropped 83.89 81.53
+(d)Bounding box shape.A rectangular shape
+is more effective.
+Shape Acc F1
+- 87.00 87.92
+rectangle 91.56 91.25
+incircle 90.11 89.87
+circumcircle 89.56 89.39
+(e)Bounding box color.A red color yields
+better performanc

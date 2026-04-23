@@ -1,0 +1,87 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+e, and in-the-wild data, applying the
+strategic tasks outlined in our main paper’s Table 1. The
+batch is composed by sampling from our datasets with
+9
+
+the following probabilities: 33%Synth, 35%Dome,
+32%ITW.
+6.4. Inference Runtime
+We report our method’s inference speed on a single
+NVIDIA A100 80GB GPU. For a single input image at our
+test resolution of832×1280, the full joint-generation process takes approximately 35 seconds. This time include 35
+diffusion sampling steps, V AE decoding time, and I/O time
+for saving the results.
+6.5. Ablation Details
+We provide more details about implementation of ablation
+study in main paper section 4.2. The quantitative ablation
+study was reported on full-body subset of our synthetic evaluation dataset because full-body images contain more wrinkles compared to face-only subset.
+Geometry is essential for RelightingWe compare three
+distinct modes to validate this claim:
+• Joint Modeling: The model generates all five modalities
+(relit image, albedo, normal, segmentation, and geometry) simultaneously from noise.
+• w/ GT Geometry: We replace the initial noise of the
+geometry modalities (iNOD, normal, segmentation) with
+the ground-truth latent representations. We set their corresponding switch masks toc switch = 1(condition) and
+keep them fixed (clear) during the reverse sampling process, forcing the model to generate the relit image conditioned on perfect geometry.
+• w/o Geometry: We disable the generation of geometry
+modalities. To keep the input tensor dimensions consistent with our architecture, we replace the geometry latents with zero-tensors. This formulation is analogous
+to the dropped-condition scenario in classifier-free guidance [10], effectively removing geometric guidance from
+the generation process.
+Relighting helps Shape-from-Shading.To validate the
+synergistic effect of appearance on geometry, we compare
+the following modes:
+•w/o Appearance:We isolate the geometry generation by
+suppressing the relighting modality. Similar to the “w/o
+Geometry” setting, we replace the relit image latentz IE
+and the illumination conditionz E with zero-tensors, effectively forcing the model to hallucinate geometry from
+the input imageIalone, without any shading cues from
+the new lighting context.
+•w/ GT Appearance:We provide the ground-truth relit
+image as a strong conditioning signal. We encode the GT
+relit image into latent space and set its switch mask to
+cswitch = 1. This allows the model to explicitly use the
+LED Positions
+Processed Environment Map
+Figure 11.Processed Environment Illumination from LightStage.From the 3-dimensional LED positions, we project it to a
+latlong image to model the environement map.
+shading and shadows present in the target relit image to
+refine the surface normals and iNOD geometry.
+7. Detailed Data Creation and Sources
+In this section, we provide a detailed breakdown of the three
+data sources used in our hybrid dataset, as first introduced
+in Sec. 3.4 of the main paper and visually summarized in
+our main paper’s Figure 4.
+7.1. Synthetic Data
+The synthetic dataset forms the foundation of our method.
+Its primary purpose is to provide a large corpus of
+physically-accurate, fully-labeled data to train our Stage
+1 model. We create 1000 high-quality, artist-created 3D
+human meshes, which contain detailed facial components
+(eyes, teeth, hair). We augment it to 8000 identities by rigging for pose variation. We pair these with a library of
+high-quality PBR texture maps for clothing (albedo, normal, roughness).
+Our system is built with Blender, and images are rendered with the Cycles renderer. For each of the 8000 appearance samples, we render it under 400 random HDR
+environment maps, creating a large-scale training set. For
+each rendered scene, we save all five of our target modalities: the relit image (I E), albedo (a), segmentation mask
+(s), surface normals (n), and our novel iNOD geometry (g),
+which is computed from the ground-truth metric depth and
+camera intrinsics.
+As noted in our main paper, this synthetic-only model
+yields satisfactory intrinsics but lacks photorealism in the
+final relit image, which motivates our hybrid-data approach.
+7.2. Light Stage Data
+The Dome dataset is our high-quality, real-world dataset
+that acts as a bridge between synthetic data and in-the-wild
+images. It is sourced from the Codec Avatar Studio [25]
+and Relightable Full-Body Gaussian Codec Avatars [37]
+datasets.
+10

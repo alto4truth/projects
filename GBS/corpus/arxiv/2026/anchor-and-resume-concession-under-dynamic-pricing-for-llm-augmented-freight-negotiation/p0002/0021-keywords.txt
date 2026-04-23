@@ -1,0 +1,30 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+he specific thresholds
+(5%, 15%, 30%) are design choices, not derived from
+the original work. No principled pacing mechanism and
+no formal monotonicity guarantee.
+AI-driven strategy.
+∙ Unconstrained LLM(GPT-OSS 20B, a mixtureof-experts model with approximately 3.6B active parameters per forward pass, temperature 0.7): An unconstrained language model that negotiates without
+any mathematical framework. The LLM receives load
+parameters ( 𝑟min, 𝑟max, 𝑟target), round number, and
+a deadline-aware instruction. When 𝑟target shifts, the
+updated target is provided in the prompt context. The
+LLM has no monotonicity guarantee, no anchor mechanism, and no structured concession curve. Each (load,
+carrier, shift) triple is run 10 times to capture stochastic variance. In this experiment, the carriers remain
+the same five algorithmic archetypes; LLM-powered
+carriers are evaluated separately in Section 6.
+4.3 Carrier Archetypes
+Five carrier archetypes span the range of negotiation styles
+a broker encounters in practice. (1) TheCooperativecarrier
+concedes steadily toward cost via a linear descent. (2) The
+Hardlinerbarely moves from its opening position and walks
+away if the broker has not reached 60%

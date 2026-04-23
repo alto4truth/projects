@@ -1,0 +1,27 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 6
+section: a-weighted-angle-distance-on-strings-11
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+12 GRANT MOLNAR
+n-gram scales, or learn such weights from unlabeled data. Finally, the completion theorem
+hints at a broader viewpoint in whichd ρ is a metric on objects closer to symbolic dynamical
+systems than to isolated strings; exploiting this structure for tasks such as classification,
+anomaly detection, or retrieval is an appealing target for future work.
+7.Appendix: Geometry
+In this appendix, we conduct a more careful analysis of the mathematical properties ofd ρ.
+We begin with a proof of Proposition 2.8, which we restate here for convenience.
+Proposition 7.1(Proposition 2.8).For anyρ >0, the mapd ρ : Σ∗ ×Σ ∗ →R ≥0 is a metric.
+Proof.Symmetry and the triangle inequality both inherit from the pseudometricity ofθ, as
+does the trivialityd ρ(S, S) = 0 for eachS∈Σ ∗. It suffices to show that ifd ρ(S, T) = 0 then
+S=T.
+LetS, T∈Σ ∗ be arbitrary. Note thatd ρ(S, T) = 0 if and only ifθ([S] n,[T] n) = 0 for all
+n. If|S|>|T|then lettingm=|S|we haveθ([S] m,[T] m) =π/2 sod ρ(S, T)̸= 0. Suppose
+now thatd ρ(S, T) = 0. We must have|S|=|T|=mfor somem. Thenθ([S] m,[T] m) = 0,
+but [S] m ={S: 1}and [T] m ={T: 1}, soS=Tas desired.□
+Remark7.2.The proof of Proposition 7.1 in fact shows thatd ρ is

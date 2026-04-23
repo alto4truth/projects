@@ -1,0 +1,29 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+Closest paper:Carliniet al.[C3] quantified the gap but did
+not propose methods to close it.
+Path to resolution:Ecologically valid benchmark suites sampling production codebases; agent architectures with retrieval
+over API documentation; staged evaluation from unit-level to
+integration-level adversarial tasks.
+G3: Stochastic defence collapse(S4×D4×E5).
+Gap:Diffusion-based purification (DBP) robustness collapses
+under correct gradient computation and proper randomness
+sampling, defeating even majority-vote variants [C6].
+Why it exists:Methodological barrier—prior evaluation protocols under-sampled randomness draws and relied on approximate gradients through the diffusion stack, yielding inflated
+robustness.
+Closest paper:Kassiset al.[C6] fully characterised the failure
+but confined analysis to image-domain DBP; audio and text
+purification remain unevaluated.
+Path to resolution:Standardised multi-draw evaluation protocols (n≥50 draws); differentiable-through-diffusion toolkits;
+modality-agnostic purification benchmarks.
+G4: Proxy metric generalisation(S3×D4×E3).
+Gap:RDI [C5] achieves ∼30×screening speedup but is validated only on CNN feature geometries; generalisation to
+Vision Transf

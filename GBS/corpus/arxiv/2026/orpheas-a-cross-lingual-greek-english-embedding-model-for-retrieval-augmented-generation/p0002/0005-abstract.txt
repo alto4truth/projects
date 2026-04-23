@@ -1,0 +1,19 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+ORPHEAS: A Cross-Lingual Greek–English Embedding Model for Retrieval-Augmented GenerationA PREPRINT
+Retrieval-Augmented Generation (RAG) [Lewis et al., 2020] has emerged as a prominent architecture for knowledgeintensive Natural language processing (NLP) tasks, integrating Large Language Models (LLM) generative capabilities
+with retrieval mechanisms to mitigate hallucination and improve factual accuracy. Nevertheless, its effectiveness is
+fundamentally constrained by the quality of the underlying embedding model. This challenge is especially pronounced
+in Greek–English systems, where the model must simultaneously handle Greek morphological variation while maintaining robust semantic alignment across language boundaries. For the Greek academic and industrial community,
+which operates in a predominantly bilingual Greek–English environment, the availability of high-quality bilingual
+embeddings is of major importance. Despite this need, Greek remains an undeserved language in the NLP literature
+since existing multilingual models distribute their representational capacity across numerous languages [Wang et al.,
+2024, Zhang et al., 2024], limiting their optimization for Greek-specific mo

@@ -1,0 +1,64 @@
+title: AAC: Admissible-by-Architecture Differentiable Landmark Compression for ALT
+source: arxiv
+year: 2026
+document_id: aac-admissible-by-architecture-differentiable-landmark-compression-for-alt
+authors: An T. Le; Vien Ngo
+page: 1
+section: aac-fps-alt
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20744v1
+
+that the end-to-end
+differentiable pipeline trains to completion, not to argue AAC is preferable to blackbox differentiation on
+grid-map planning.
+48
+
+Table 23: ABLATIONCompatibility study on Warcraft12×12grids: AAC integrates into a differentiable
+planning pipeline and retains deployment-time architectural admissibility on the predicted-cost graph. The
+table reports (a) whether the pipeline trains end-to-end and (b) the resulting path-match accuracy. The
+cost-regret column is omitted because the metric is not commensurable across methods with very different
+path-matching propensities (on12×12grids many paths have near-identical cost, so a method that produces
+entirely differentpaths can still hit a near-zero cost regret while having a near-zero path match); costregret numbers remain in the released artifact. AAC entries are mean±std over 3 seeds; Warcraft 12×12
+(10,000 train / 1,000 test). At deployment, AAC requires per-instance anchor SSSP on the predicted-cost
+graph followed byO(m)per-query heuristic evaluation; BB uses Dijkstra-based combinatorial differentiation;
+DataSP usesO(V 3)Floyd-Warshall. Admissibility column reports the empirical violation rate over the 1,000
+test instances. The comparison is not parity-style and is included for context only — the baselines do not
+provide admissibility guarantees.
+Method Configuration Path Match↑Jaccard↑Adm. violations↓
+AAC (admissible on predicted-cost graph;O(m)query after per-instance label construction)
+ResNet,αc=10 encoder only (frozen comp.) 20.3%±2.4∗∗59.3%±3.9∗∗ 0/1000
+CNN,αc=1 encoder only (frozen comp.) 0.4%±0.1 20.9%±0.8 0/1000
+Baselines (no admissibility guarantee; cited for context only — comparison is heterogeneous)
+BB† blackbox diff. solver54.7%— —
+DataSP‡ diff. Floyd-Warshall10.8% 40.8%—
+Neural A*§ diff. A* with learned guide∼98% ∗ — —
+iA*∥ improved Neural A* — — —
+†Published results from Vlastelica et al. (ICLR 2020), Table 1.
+‡Reproduced from released code (Lahoud et al., 2024), seed=0, 100 epochs.
+§Yonetani et al. (ICML 2021).
+∗Reported as cost-optimality (cost-optimal paths), not exact path match; not directly comparable with the AAC path-match column.
+∥Chen et al. (2025). Metrics not directly comparable; included for completeness.
+∗∗ResNet numbers correspond to the released encoder configuration (5×5 stem, 3 BasicBlocks at 64 channels, AdaptiveAvgPool, 1×1 convolutions; full spec in Appendix B); the released unit tests reproduce these numbers from
+results/warcraft/ablation_results_resnet_a10_multiseed.csv.
+Ablation: encoder capacity (admissibility-preserving).Upgrading from the 3-layer CNN to ResNet
+with10×cost supervision raises Jaccard from20.9%±0.8to59.3%±3.9and improves path match from
+0.4%±0.1to20.3%±2.4(3 seeds, 10,000 train maps), with admissibility preserved at0/1000violations
+across both configurations. Encoder capacity and cost supervision are the primary drivers; the compressor’s
+role is providing structurally guaranteed admissibility at deployment rather than contributing to the learning
+signal (across an instrumented 30-epoch CNN training run, the per-epoch ratio of encoder to compressor
+gradient norms ranged from∼102 at training start to∼104 during the bulk of training, i.e. the compressor
+receives between2and4orders of magnitude less gradient signal than the encoder; the CNN configuration
+typically reaches its early-stopping point well before the100-epoch cap under patience15). Freezing the
+compressor leaves the per-mode metrics within standard error of the full-end-to-end run on both encoders,
+while freezing the encoder is catastrophic (cost regret1.16on ResNet versus0.017for the trained encoder).
+For the CNN configuration, Table 24 below repeats the encoder-vs-compressor decomposition on cost regret
+to make the contribution split visible on a single shared scalar: freezing the compressor has negligible
+effect (Full E2E≈Frozen Compressor), while freezing the encoder is catastrophic (cost regret>1). The
+decomposition is qualitative; the absolute cost-regret values are not commensurable with the baselines for
+the reasons given in Table 23’s caption.
+Comparison with DataSP.We reproduce DataSP (Lahoud et al., 2024) from released code, obtaining
+0.384cost regret and10.8%path match on the test set (seed=0, 100 epochs). The value of AAC lies in
+the combination of deployment-time architectural admissibility,O(m)-per-lookup heuristic evaluation after
+label construction, and a cost regret in the same order of magnitude as the blackbox baseline; among the
+baselines compared here, no other method offers all three simultaneously.
+49

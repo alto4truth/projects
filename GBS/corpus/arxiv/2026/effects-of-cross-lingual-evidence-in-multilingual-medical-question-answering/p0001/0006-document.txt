@@ -1,0 +1,29 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+h automatically retrieved external information
+to achieve optimal performance in Medical QA.
+Taking this into consideration, we formulate the
+following research questions:
+• Is there a universally effective knowledgeaugmentation method for multilingual clinical
+QA?
+• Does retrieval method performance vary systematically across languages, or does one approach consistently outperform others regardless of the target language?
+• Do we obtain better results in medical QA by
+retrieving the external knowledge from recognized authoritative medical sources, such as
+PubMed, or by directly querying the Web?
+• How does answer accuracy differ when retrieval and generation are performed monolingually in English, multilingually in the language of the question, and cross-lingually to
+compensate for the lack of resources in some
+languages?
+• Can current LLMs perform well without external retrieval, or is domain-specific knowledge augmentation essential for reliable performance across languages?
+Our experimental results reveal the following
+insights. First, retrieving evidence from English
+web search and providing it to LLMs yields the
+best performance for MMQA across high-resource
+languages, and co

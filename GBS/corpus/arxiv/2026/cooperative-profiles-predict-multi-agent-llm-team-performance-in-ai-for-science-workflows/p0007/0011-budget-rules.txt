@@ -1,0 +1,18 @@
+title: Cooperative Profiles Predict Multi-Agent LLM Team Performance in AI for Science Workflows
+source: arxiv
+year: 2026
+document_id: cooperative-profiles-predict-multi-agent-llm-team-performance-in-ai-for-science-workflows
+authors: Shivani Kumar; Adarsh Bharathwaj; David Jurgens
+page: 7
+section: budget-rules
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20658v1
+
+- Every tool call and LLM response costs credits from the shared budget.
+- The project FAILS if budget runs out before the final report is complete.
+- If remaining budget is below 30%: finish your current task concisely and
+call mark complete. Skip exploratory or speculative work.
+- If remaining budget is below 15%: call mark complete immediately with
+whatever you have. Do NOT start new analyses.
+- Keep code short and targeted. Avoid redundant runs or printing excessive
+output.

@@ -1,0 +1,36 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 52
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+gather_resour ce(resour ce_typ e = w o o d)
+gather_resour ce(resour ce_typ e = w o o d)
+creat e_it em(it em_typ e = table)
+creat e_it em(it em_typ e = w o o d_sw or d)
+gather_resour ce(resour ce_typ e = ir on) ← Curren t Sub task
+Instruction: V anq uish a zombie while avoiding any conflict with skelet ons.
+Plan:
+gather_resour ce(resour ce_typ e = w o o d)
+gather_resour ce(resour ce_typ e = w o o d)
+creat e_it em(it em_typ e = table)
+gather_resour ce(resour ce_typ e = w o o d)
+creat e_it em(it em_typ e = w o o d en_pickaxe)
+gather_resour ce(resour ce_typ e = coal)
+gather_resour ce(resour ce_typ e = sapling)
+place_it em(it em = plan t, x = even t.x, y = even t.y)
+gather_resour ce(resour ce_typ e = wat er) ← Curren t Sub task
+Instruction: Assemble a q uan tity of carb on, install flor a and collect hy dr ation.
+Figure 8: Example of instructions and corresponding
+plans
+larger than when instructions are provided directly,
+rendering it impractical to run the full pipeline with
+these models.
+B.5 DPO vs. GRPO for Planner Fine-Tuning
+We additionally compare DPO and GRPO as alternative methods for planner fine-tuning. While
+GRPO and PPO are in principle applicable to this
+setting, recent wor

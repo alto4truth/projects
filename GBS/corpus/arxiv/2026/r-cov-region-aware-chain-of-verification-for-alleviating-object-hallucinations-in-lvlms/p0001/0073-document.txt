@@ -1,0 +1,131 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 73
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+hallucinated objects are highlighted in red. We sample three region descriptions per examinee to produce a set of diverse
+answers for verification.
+16
+
+Question: Please describe the image in detail.
+Vanilla: The image features a unique art installation in a museum setting. The centerpiece of the display is a toilet, which is painted with a floral design and has a wooden seat. The toilet is placed
+on a wooden stand, and it appears to be the main focus of the exhibit.
+In addition to the toilet, there are several other objects in the scene. A bench is located on the right side of the toilet, and a chair can be seen in the background. There are also two potted plants,
+one on the left side and the other on the right side of the toilet. A clock is mounted on the wall above the toilet, and a vase is placed on the left side of the scene.
+R-CoV: The image features a unique art installation in a museum setting. The centerpiece of the display is a toilet, which is painted with a floral design and has a wooden seat. The toilet is placed
+on a wooden stand, and it appears to be the main focus of the exhibit. In addition to the toilet, there are several other objects in the scene. A bench is located on the right side of the toilet.
+Q: Assume the image width and height are normalized to
+[0, 1]. Locate the chair and return its bounding box in the
+format [x_min, y_min, x_max, y_max], where [x_min,
+y_min] is the top-left corner and [x_max, y_max] is the
+bottom-right corner of the bounding box. Output only the
+four numbers in a single list. Do not include any
+explanation or extra text.
+Q: Describe [0.54, 0.24, 0.87, 0.48] in the image in detail.
+A: [0.54, 0.24, 0.87, 0.48]
+A: (1) The wooden bench in the image is located in the
+middle of the room, surrounded by paintings. It is
+positioned between two green poles, which are likely part
+of the display. The bench appears to be a part of the art
+exhibit, possibly serving as a seating area for visitors to
+rest and appreciate the artwork. The bench is situated in
+front of a toilet, which is an unusual and unexpected
+element in the scene.
+(2) The bench in the image is made of wood and is placed
+in a museum setting. It looks like a long and narrow pew,
+with a seat of the bench that is placed towards the right
+side of the scene. The bench is located on a carpeted floor,
+emphasizing its placement within a well-maintained and
+controlled environment such as a museum. The bench
+seems to be a common seating element found in
+museums, making it easy for visitors to rest or move
+between exhibits.
+(3) To the right side of the image, a bench can be seen
+near the back wall. This bench is situated beneath a small
+window with wood siding, adding warmth and detail to
+the room. The bench occupies most of the available space
+under the window and runs horizontally around the entire
+length of the wood slat window, providing a comfortable
+seating area perfect for relaxation.
+Q: Assume the image width and height are normalized to
+[0, 1]. Locate the potted plant and return its bounding box
+in the format [x_min, y_min, x_max, y_max], where
+[x_min, y_min] is the top-left corner and [x_max, y_max]
+is the bottom-right corner of the bounding box. Output
+only the four numbers in a single list. Do not include any
+explanation or extra text.
+A: [0.17, 0.0, 0.26, 0.12]
+Q: Describe [0.17, 0.0, 0.26, 0.12] in the image in detail.
+A: (1) The image features a painting on the wall, which is
+located above the toilet. The painting is a part of the art
+display in the room.
+(2) The rectangular picture with blue frame is displayed in
+the background.
+(3) This is a picture on wood.
+Q: Assume the image width and height are normalized to
+[0, 1]. Locate the clock and return its bounding box in the
+format [x_min, y_min, x_max, y_max], where [x_min,
+y_min] is the top-left corner and [x_max, y_max] is the
+bottom-right corner of the bounding box. Output only the
+four numbers in a single list. Do not include any
+explanation or extra text.
+A: [0.36, 0.13, 0.55, 0.48]
+Q: Describe [0.36, 0.13, 0.55, 0.48] in the image in detail.
+A: (1) The image features a large toilet with a wooden
+seat and a wooden lid. The toilet is placed on a wooden
+stand, and it is surrounded by a few other wooden items.
+The toilet is positioned in the center of the scene, and it
+appears to be the main focus of the image. The wooden
+stand and the toilet's design give it a unique and artistic
+appearance, making it stand out in the room.
+(2) In the image, there is a long pipe with a circular end
+that is attached to the green posts. The green posts have a
+metal-like appearance and a curved shape. These posts
+surround not only the toilet at the center of the image, but
+also extend around the frame, creating a visually
+interesting and unique display. The curved structure
+surrounding the toilet gives it the appearance of being
+contained securely within the space.
+(3) The art piece features an old toilet as the object of
+display. To create a unique, artistic statement, an organ
+pipe is attached to the toilet bowl, adding an unexpected
+and intriguing element to the composition. The setup is a
+black box that includes a green wall, creating a
+captivating contrast between the toilet and the
+surrounding environment. This creative arrangement of
+items is displayed in a museum, serving as a thoughtprovoking exhibit for visitors.
+Q: Assume the image width and height are normalized to
+[0, 1]. Locate the vase and return its bounding box in the
+format [x_min, y_min, x_max, y_max], where [x_min,
+y_min] is the top-left corner and [x_max, y_max] is the
+bottom-right corner of the bounding box. Output only the
+four numbers in a single list. Do not include any
+explanation or extra text.
+A: [0.36, 0.13, 0.54, 0.49]
+Q: Describe [0.36, 0.13, 0.54, 0.49] in the image in detail.
+A: (1) The image features a large toilet with a wooden
+seat and a wooden lid. The toilet is placed on a wooden
+stand, and it is surrounded by a few other items. There is
+a saxophone leaning against the toilet, and a bench is
+located nearby. The scene appears to be a display or an art
+installation, as the toilet is placed in a room with a few
+other objects.
+(2) The wooden pipe, which is a stand for the odd toiletshaped urinal, is made of wood and features a handle on
+the top. It provides support and security for placing the
+toilet-shaped urinal and makes it convenient for use. Its
+design enhances the overall aesthetic and functionality of
+the display in this unique setting.
+(3) The object standing next to the toilet is a cello or a
+large trombone made of wood. It appears to be a display
+or even a prop for staging artworks, such as portraying the
+creative interpretation of a toilet with a musical
+instrument as a form of expression. The cello, which is an
+instrument belonging to the string family, is connected to
+the toilet seat by a wire or chord, further emphasizing the
+relationship between music and everyday objects.
+Verification Score

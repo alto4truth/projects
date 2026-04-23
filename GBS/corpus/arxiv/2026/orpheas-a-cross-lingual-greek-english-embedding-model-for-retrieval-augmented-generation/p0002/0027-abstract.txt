@@ -1,0 +1,20 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+e-tuning dataset as ORPHEAS but relies on a less advanced backbone, its competitive performance relative to general-purpose baselines validates the quality of the proposed dataset independently of the underlying architecture. Notably, GEM-XLM-RoBERTa outperforms MPnet and
+MiniLM across most metrics, further confirming that the knowledge graph-based fine-tuning methodology contributes
+meaningfully to retrieval quality. Furthermore, the performance gap between GEM-XLM-RoBERTa and ORPHEAS,
+especially on cross-lingual retrieval, can be attributed to architectural limitations rather than the fine-tuning methodology itself.
+Table 2 presents the statistical analysis based on FAR and Post-hoc Li tests for Acc@3 and NDCG@3 metrics, as
+shallow retrieval depth is considered the most stringent indicator of model precision. ORPHEAS exhibits the lowest
+FAR score across both metrics, confirming its superior retrieval performance. In addition, the Li post-hoc test reveals
+that for Acc@3, ORPHEAS significantly outperforms all competing models, while for NDCG@3 the performance
+differences between ORPHEAS, Multilingual E5 and mGTE are not statistically significant, suggesting comparable
+ranking quali

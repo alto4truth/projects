@@ -1,0 +1,24 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 2
+section: results
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+ing waves bends at different times due to time-varying
+phase offsets in the two waves. The time of peak wave interaction is denoted with an arrow at top.(d)The distributions of the
+interaction termZ 4,8 =⟨Re(µ 4µ8)⟩k separate two input classes (blue and red, respectively) for the SCP1 dataset. This indicates
+that wave-wave interactions distinguish input classes beyond the contribution of individual wave modes.(e)The linear SSM
+contribution explains 83% of the network’s classification performance, quantified in terms of the output marginO 2 −O 1.(f)
+A second-order Carleman approximation (R= 2), implemented via a weighted Chebyshev fit to the GELU nonlinearity (see
+Appendix I C for details), captures quadratic modal interactions and explains 94% of the network’s performance.(g)The
+complete GELU activation function explains 100% of the classification performance in this network, illustrating the level to
+which the Carleman embedding converges.
+including energy-like (m=r−m) and phase-sensitive
+terms. Thus, while Fig. 3 shows that the energy of the
+traveling wave modes in the recurrent layer is already
+enough to distinguish simple sinusoidal inputs embedded
+in noise, classification of r

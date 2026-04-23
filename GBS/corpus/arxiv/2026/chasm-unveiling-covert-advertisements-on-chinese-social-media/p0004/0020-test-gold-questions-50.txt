@@ -1,0 +1,26 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+) 12 (35.3%)
+- Missed image clue 2 (4.3%) 1 (2.3%) 6 (6.1%) 2 (5.9%)
+Language Style 8 (17.4%) 9 (20.5%) 16 (16.3%) 5 (14.7%)
+Post Structure 3 (6.5%) 2 (4.5%) 6 (6.1%) 6 (17.6%)
+Other Errors 3 (6.5%) 2 (4.5%) 6 (6.1%) 3 (8.8%)
+5.2 Research Directions For Further Investigation
+Due to limitations in data availability, we were unable to incorporate certain features into our study,
+which made it difficult to identify covert advertisements in some cases. We advocate that social media
+moderators consider the following strategies to improve detection accuracy:
+Dynamics Detection: We argue that the labeling of covert advertisements is not static, but evolves
+along with the post’s dynamics in the comment section. Therefore, unlike other social media
+moderation tasks, our task should be designed with a greater emphasis on temporal sensitivity, rather
+than relying solely on labeling at the time of posting. We thus encourage future work to consider the
+dynamic nature of covert advertisements in detection frameworks.
+User Behavior Data: User feedback data is crucial for detecting covert advertisements, as it reflects
+users’ satisfaction and reactions to the content. Due to limitations in data ac

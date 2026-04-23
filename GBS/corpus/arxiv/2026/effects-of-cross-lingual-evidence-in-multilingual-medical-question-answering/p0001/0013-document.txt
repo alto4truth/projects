@@ -1,0 +1,28 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+tion answering,
+including datasets, systems, and techniques for retrieving and applying external knowledge sources
+and reasoning mechanisms.
+Medical QA. Several datasets have been constructed with the explicit aim of evaluating these
+limitations. Jin et al. (2019) introduced PubMedQA, a biomedical question-answering dataset.
+Jin et al. (2021) introduced MedQA a multiplechoice question benchmark derived from real medical licensing exams. Pal et al. (2022) designed
+MedMCQA, a medical multiple-choice question
+answering dataset written in English and specifically focused on real medical entrance exam questions in India.
+Originally in Spanish, Agerri et al. (2023) created a parallel multilingual dataset from Spanish
+Resident Medical Intern exams. The dataset was
+used to create the first multilingual benchmark for
+medical QA enriched with RAG techniques.
+RAG in the medical domain.To address the
+issues of knowledge scarcity in some medical areas and questions, methods such as Retrieval Augmented Generation (RAG) have been explored
+(Lewis et al., 2020; Gargari and Habibi, 2025). For
+instance, the retrieval strategy MedRAG (Xiong
+et al., 2024a) comes as a part of a framework for
+medical RAG

@@ -1,0 +1,32 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 6
+section: b-additionalinformation
+chunk: 69
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+ube-triple-play 0.3 0.9 0.99 (0, 0.5, 0.5) 0.25
+scene-play 0.3 0.75 0.99 (0, 0.5, 0.5) 0.75
+antmaze-large-navigate 0.15 0.6 0.995 (0, 1, 0) 2.0
+antmaze-giant-navigate 0.1 0.6 0.995 (0, 1, 0) 2.0
+puzzle-4x4-noisy 0.05 0.6 0.99 (0, 1, 0) 0.25
+puzzle-4x6-noisy 0.05 0.75 0.99 (0, 1, 0) 0.25
+cube-triple-noisy 0.03 0.75 0.99 (0, 0.5, 0.5) 1.0
+scene-noisy 0.1 0.75 0.99 (0, 1, 0) 0.25
+antmaze-large-explore 0.015 0.9 0.99 (0, 0.5, 0.5) 3.0
+B.8 WALL-CLOCK TIME
+The average wall-clock time per iteration is as follows:
+Method Component Time per iteration (ms)
+ORS
+Occupancy model 14
+Reward function 8
+Policy training 6.5
+GO-FRESH R-NET training 9.5
+Policy training 7.2
+GO-FRESH also has a graph computation time that ranges between 1.5-10 mins depending on the
+task and dataset. For default GCIQL, policy training takes 7.2 ms per iteration. All times were reported on a single NVIDIA RTX A6000 GPU. We typically see that reward function and occupancy
+model losses converge in around 500k iterations. R-Net training typically runs for 500k iterations.
+26

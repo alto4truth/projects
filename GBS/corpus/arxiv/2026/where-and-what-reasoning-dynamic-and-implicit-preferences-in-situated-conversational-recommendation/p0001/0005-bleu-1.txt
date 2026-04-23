@@ -1,0 +1,26 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 1
+section: bleu-1
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+within a scene increases, the computational cost
+of preference scoring correspondingly grows, and
+the retrieval overhead also increases. In practice, lightweight coarse filtering may help reduce
+this cost before applying the full BI-INF procedure. Second, both STE and BI-INF inherit calibration and hallucination risks from the underlying
+MLLMs. Although STE grounds the final transition target in a real candidate pool through coarseto-fine retrieval, noisy target-profile generation can
+still propagate downstream when an incorrect scene
+is selected. Possible mitigation strategies include
+inventory-constrained decoding, self-consistency
+checks, and stronger uncertainty estimation. We
+leave these directions to future work.
+Ethics Statement
+The MLLMs utilized in this work include both
+open-source models and closed-source APIs, and
+our use strictly follows established academic protocols. In particular, GPT-4o is only used for onetime offline preprocessing, while all online components rely on publicly available open-source models. To mitigate potential biases in the recommendation generation process, we have prioritized the
+diversity and fairness of the datasets used for both
+training and

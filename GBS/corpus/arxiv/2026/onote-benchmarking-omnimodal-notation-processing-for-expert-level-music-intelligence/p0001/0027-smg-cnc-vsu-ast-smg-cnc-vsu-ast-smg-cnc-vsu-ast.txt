@@ -1,0 +1,30 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+Conference’17, July 2017, Washington, DC, USA Menghe Ma *, Siqing Wei*, Yuecheng Xing*, Yaheng Wang, Fanhong Meng, Peijun Han, Luu Anh Tuan, and Haoran Luo †
+ONOTE Task Execution Prompts
+Task 1: Symbolic Music Generation
+Role:You are a top-tier composer.
+Task:Please compose an original classical-style melody for me.
+Key Signature: C Major. Time Signature: 4/4. Length: Strictly 8 measures.
+Task 2: Cross-Format Notation Conversion
+Role:You are taking a<notation>exam.
+Task:Please answer by outputting ONLY the single letter of the correct option (A, B, C, or D).
+Task 3: Visual Score Understanding
+Role:You are a highly precise Music OCR and Transcription AI.
+Task:Convert the provided sheet music image into Numbered Musical Notation (Jianpu).
+Task 4: Audio-to-Symbolic Transcription
+Role:You are an extremely precise AI music transcription expert.
+Task:Please transcribe the first 10 seconds of this audio.
+Transcribe the sequence exactly as you hear it.
+Do not repeat the same note indefinitely. If you are unsure, stop transcribing.
+Transcribe no more than 60 notes for these 10 seconds.
+Figure 6: Core semantic execution prompts for the four primary tasks in the ONOTE benchmark
+Notation (Jian

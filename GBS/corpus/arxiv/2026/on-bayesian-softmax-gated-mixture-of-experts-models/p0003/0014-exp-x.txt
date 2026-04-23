@@ -1,0 +1,36 @@
+title: On Bayesian Softmax-Gated Mixture-of-Experts Models
+source: arxiv
+year: 2026
+document_id: on-bayesian-softmax-gated-mixture-of-experts-models
+authors: Nicola Bariletto; Huy Nguyen; Nhat Ho; Alessandro Rinaldo
+page: 3
+section: exp-x
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20551v1
+
+ger sample sizesn∈ { 100, 500, 1000, 2000}, running
+50 independent replications per size. Candidate models are extended toK∈ { 1, . . . ,6}. Due to
+45
+
+the increased complexity and larger sample sizes, the Adam optimizer is run for 10,000 iterations
+per model, and the base learning rates are scaled linearly with the sample size to ensure stable
+convergence.
+B.4 Table 1 experiment
+We simulaten = 500covariate vectors uniformly, Xi ∼ U (−1, 1)d, and evaluate three combinations
+of dimensionality and true expert counts:(d = 2, K⋆ = 1),( d = 2, K⋆ = 2), and( d = 4, K⋆ = 3).
+The gating assignments are determined by evaluating a set of linear logits,XiW ⊤ + b. The weight
+matrix W is strictly diagonal for the firstK⋆ dimensions, with Wk,k set to a predefined ‘separation‘
+constant. The biases are set tobk = −0.2 ×separation×k . The final expert assignment relies on
+a hard-max over these logits:Zi = argmaxk(XiW ⊤ + b)k. We test two separation scales: 5.0 (low
+sharpness, Table 1a) and 10.0 (high sharpness, Table 1b).
+Conditional on the assignment Zi = k, the responses Yi are drawn from a Gaussian linear
+regression model. The true intercepts are linearly spaced in[−2.0, 2.0]. The slopes β1,k are given by
+a base diagonal value of2(−1)k−1, corrupted by independent Gaussian noiseN (0, 0.32)across all
+dimensions. The true variances are fixed atσ2
+k = 0.8for all experts.
+Candidate models evaluated range fromK = 1to K = 7. BBVI is run for 4,000 iterations per
+model (10,000 for models evaluated against theK⋆ = 1baseline to ensure adequate convergence).
+The Adam learning rate is set to an adaptive schedule,0.1 + 0.000015n + 0.001K, with the exception
+of the K⋆ = 1baseline models, which are fixed at a rate of 0.06. Each configuration is run over 100
+independent replications.
+46

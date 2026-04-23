@@ -1,0 +1,20 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+hite-box/black-box discrepancy threshold 0.15; noise σ=
+0.01with 10 samples; RDI computed on 500 samples.
+12.2 Experiment 1: Pre-Screening Gate Validation
+Table 7 shows pre-screening results. The FOSC detector flags
+two models (FOSC >0.1 ), both with lower robust accuracy
+and RDI scores consistent with unreliable gradients. RDI rankings agree with full AutoAttack rankings: Kendall τ= 0.82
+(95% CI: 0.71–0.93), confirming that RDI provides a reliable
+∼30×faster proxy for model triage. Screening compute: ∼12
+GPU-seconds per model (RDI) vs. ∼360 GPU-seconds (full
+AutoAttack). Figure 7 visualises the near-monotonic relation9

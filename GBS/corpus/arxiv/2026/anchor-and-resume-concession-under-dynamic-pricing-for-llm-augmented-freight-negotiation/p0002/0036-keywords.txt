@@ -1,0 +1,28 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+icantly higher
+(0.690 ± 0.023 vs. 0.642 ± 0.012, 𝑝 < 0.001). The LLM produces 2.64 retraction events per negotiation compared to zero
+for the two-index strategy. The system prompt deliberately
+omits a monotonicity constraint to evaluate the LLM as an
+unconstrained decision-maker.
+These results show that the two-index framework achieves
+performance comparable to a 20-billion-parameter language
+model while confining the LLM to message translation rather
+than pricing decisions. This separation yields four practical
+advantages: (1) the translation task allows a smaller model,
+reducing per-round inference cost; (2) pricing output is deterministic and reproducible; (3) operators can switch LLMs
+without affecting negotiation quality; and (4) the strategy
+engine never processes carrier messages, providing structural
+defense against prompt injection.
+In the second experiment, we test robustness against stochastic counterparties by replacing the five algorithmic carriers with LLM-powered agents (GPT-OSS 20B, temperature 0.7) that generate their own responses and concession
+amounts. The broker remains the two-index strategy ( 𝑐 = 3)
+with template-based messages and no broker LLM. Against
+7

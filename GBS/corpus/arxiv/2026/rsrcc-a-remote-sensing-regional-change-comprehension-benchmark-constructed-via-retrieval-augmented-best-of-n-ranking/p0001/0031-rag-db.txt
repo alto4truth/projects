@@ -1,0 +1,34 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 1
+section: rag-db
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+A Group-Restricted Retrieval and Boundary Preservation
+We formalize the intuition that conditioning on retrieved examples drawn from the model’sown
+knowledge groups reduces bias by avoiding out-of-distribution (OOD) exemplars. Intuitively, the
+encoder partitions the data manifold into representation groups (clusters) that share semantics and
+appearance. Retrieval constrained to the query’s group preserves local decision geometry, whereas
+conditioning on examples from other groups can shift the effective decision boundary.
+Setup.Let X be the input space of image pairs and letℎ:X →R 𝑑 be the fixed vision encoder. Let
+D denote the in-distribution data manifold. AssumeD admits a (possibly unknown) partition into𝐺
+groups
+D=
+𝐺Ø
+𝑔=1
+D𝑔 ,D 𝑔 ∩ D𝑔′ =∅for𝑔≠𝑔 ′,(7)
+where eachD𝑔 corresponds to a coherent semantic/visual mode (a “knowledge group”). For a query
+𝑥∈ D, let𝑔(𝑥)be its (latent) group index, i.e.,𝑥∈ D 𝑔(𝑥) .
+We consider a downstream predictor𝐹(·;S) (e.g., the multimodal reasoning module) that produces
+an output for𝑥 conditioned on a setS of retrieved exemplars. Letℓ(·,·) be a bounded loss, and define
+the conditional risk
+R (𝑥;S)=E
+
+ℓ(𝐹(𝑥;S), 𝑦) |𝑥
+
+.(8)
+Group-restricted retrieval.Gi

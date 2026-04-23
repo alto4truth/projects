@@ -1,0 +1,25 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 6
+section: b-additionalinformation
+chunk: 62
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+onds to a randomly sampled(s, g)pair from the dataset.
+We noticed in initial experiments that even when Go-Fresh is trained using the same GCRL
+algorithm as ORS (GCIQL), overall success-rate was close to 0 across tasks. To ensure a
+fair and unbiased comparison, we modified the Go-Fresh codebase to have the same goal
+sampling strategy from OGBench (detailed in Appendix D of (Park et al., 2024a) and in
+the last item of this sub-section) used for all other baselines. This substantially improved
+performance and is required to produce non-negligible performance, as reported in Tables 1
+and 2.
+Furthermore, noticing that Go-Fresh is tested on relatively simpler tasks compared to ours
+in their paper (Mezghani et al., 2023), we modify the following hyperparameters to account
+for the increased task difficulty, in addition to using best values for other hyperparameters:
+We used a memory capacity of 5000 on all tasks which we found to be sufficient (the graph
+building stage consistently produced a graph with less than 5000 nodes). We increased the
+R-Net size to an MLP of 64 units (we did not see an improvement in classification accuracy
+for large sizes) and used a local distance thresholdτ= 10

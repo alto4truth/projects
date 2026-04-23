@@ -1,0 +1,53 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 9
+section: a-weighted-angle-distance-on-strings-17
+chunk: 48
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+ntity is just disjoint union of cylinders, and the second follows from
+µ(Cyl(W)) =µ(τ −1Cyl(W)) together withτ −1Cyl(W) = F
+a∈Σ Cyl(aW) (see [17,§1.1]).
+We now describe a common extension ofd ρ to both finite strings and shift-invariant measures.
+Definition 7.12.Fixρ∈(0,1). For any finite stringSof lengthLand anyn≥1, define
+its empirical length-nblock distribution by
+pS
+n(W) :=
+
+
+
+c(S, W)
+L−n+ 1 , L≥n,
+0, L < n,
+(W∈Σ n),
+and letu n(S) be theL 2-normalization of the vectorp S
+n ∈R Σn
+≥0 when it is nonzero, with the
+conventionu n(S) = 0 otherwise.
+Forµ∈ M τ(ΣN), define
+pµ
+n(W) :=µ(Cyl(W)), u n(µ) := pµ
+n
+∥pµ
+n∥2
+.
+(Note thatp µ
+n is a probability vector, hence nonzero for everyn≥1.)
+ForX, Y∈Σ ∗ ⊔ Mτ(ΣN) andn≥1, define
+θn(X, Y) :=
+
+
+
+arccos(⟨un(X), un(Y)⟩), u n(X), un(Y)̸= 0,
+0, u n(X) =u n(Y) = 0,
+π
+2 ,exactly one ofu n(X), un(Y) is 0,
+and set
+bdρ(X, Y) :=
+∞X
+n=1
+ρnθn(X, Y).
+The next lemma explains why this really extends the finite-string construction.

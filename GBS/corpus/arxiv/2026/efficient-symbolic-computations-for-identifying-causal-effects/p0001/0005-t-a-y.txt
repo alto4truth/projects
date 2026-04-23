@@ -1,0 +1,22 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+sufficient condition for rational identifiability is the auxiliary cutset criterion by Kumor et al. (2020).
+In this paper, we take a different approach and remind ourselves that deciding rational identifiability
+corresponds to solving polynomial systems. Building on Garcia-Puente et al. (2010), we study how
+symbolic computations based on Gröbner bases can be made practical for deciding rational identifiability. Roughly speaking, we apply two key ideas: First, we work with homogenized equations:
+A polynomial is homogeneous if all of its components are of the same degree. Second, we work
+degree by degree. That is, we always search for formulas with the lowest degree possible to identify
+a parameter. If no identifying formula is found up to the current degree bound, we increase the
+bound by one and repeat our computations. These two key ideas allow us to exploit the fact that
+degree-bounded Gröbner basis computations of homogeneous ideals are polynomial time. Moreover,
+to keep the degree during the computations as low as possible, we allow formulas that identify a new
+parameter to depend on the already identified parameters. Abbott et al. (2017) considered a similar
+approach for effic

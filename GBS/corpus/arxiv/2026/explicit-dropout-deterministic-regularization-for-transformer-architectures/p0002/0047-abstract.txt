@@ -1,0 +1,56 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 47
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+er
+explicit dropout formulations.
+B.1. Preliminaries
+For completeness and clarity, we rewrite the explicit
+dropout regularizer of [1] for the special case of a single
+linear layer. Consider a supervised learning problem with a
+batch of inputs𝐗= [𝐱 1,𝐱 2,…,𝐱 𝑁 ]where each𝐱 𝑖 ∈ℝ 1×𝑑,
+targets𝑦 𝑖, and a linear layer𝑓(𝐗;𝐖) =𝐗𝐖𝑇 with weights
+𝐖∈ℝ 𝑑1×𝑑.Foramini-batch𝐗∈ℝ 𝑁×𝑑,theempiricaltask
+loss is
+𝐽task (𝐗,𝐖) = 1
+𝑛
+𝑁∑
+𝑟=1
+𝓁(𝑓(𝐱 𝑖;𝑊), 𝑦 𝑖),(101)
+where𝐱 𝑟 is the𝑖-th input of a mini-batch.
+Feature-wise dropout with probability𝑝multiplies each
+feature by a Bernoulli mask. Prior work [1] shows that the
+expected dropout objective can be written as
+𝐽(𝐗,𝐖) =𝐽 task (𝐗,𝐖) + ̂𝑅(𝐗,𝐖),(102)
+where the explicit regularizer for a single linear layer is
+̂𝑅(𝐗,𝐖) = 𝑝
+1 −𝑝
+𝑑∑
+𝑗=1
+‖𝐖𝑗‖2
+2
+(
+1
+𝑛
+𝑁∑
+𝑟=1
+𝑋2
+𝑟𝑗
+)
+(103)
+= 𝑝
+1 −𝑝
+𝑑∑
+𝑗=1
+̂ 𝜎2
+𝑗 ‖𝐖𝑗‖2
+2,(104)
+witĥ 𝜎2
+𝑗 being the empirical second moment of feature𝑗.
+:Preprint submitted to Elsevier Page 11 of 13

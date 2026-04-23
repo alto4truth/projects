@@ -1,0 +1,23 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+yed to those source artifacts rather than
+only to rendered PDFs. This keeps the workflow aligned with a manuscript-development process rather than
+a screenshot-like end product.
+In summary, the artifact contract serves three purposes. It makes the pipeline legible to a human researcher,
+it provides a stable external interface for resume and post-hoc debugging, and it lets this report state a
+narrow but defensible notion of success:pAI/MSccan reliably produce and validate a structured research
+workspace, even though the scientific content of that workspace still requires human scrutiny.
+These observations shaped every architectural decision described in the following sections.
+3 Mechanisms for Quality and Rigor
+Every multi-agent system has stages. What distinguishespAI/MScis thecarebaked into pushing quality at
+each stage. This section describes six concrete mechanisms—each a direct response to the engineering lessons
+in Section 2—that together bias the system toward rigorous establishment rather than fluent generation.
+8

@@ -1,0 +1,45 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 6
+section: b-additionalinformation
+chunk: 66
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+Published as a conference paper at ICLR 2026
+B.4 TRAJECTORYVISUALIZATIONS: ANALYSED TRAJECTORIES
+0 1 2 3 4
+Figure 9: Expert trajectories of varying lengths onantmaze-giant-navigateused for analysis in Sec. 3.2 and
+Sec. 5.1. The green dot represents the starting position and the star represents the goal.
+B.5 TRAININGITERATIONS
+Table 7: Training iterations per task. All algorithms are trained for the same number of iterations.
+Dataset Training Iterations
+cube-double-play 1M
+puzzle-4x4-play 1M
+scene-play 1M
+puzzle-4x5-play 1M
+puzzle-4x6-play 1M
+cube-triple-play 2M
+antmaze-large-navigate 3M
+antmaze-giant-navigate 6M
+puzzle-4x4-noisy 1M
+scene-noisy 1M
+puzzle-4x6-noisy 1M
+cube-triple-noisy 1M
+antmaze-large-explore 6M
+B.6 OCCUPANCY ANDREWARDMODELHYPERPARAMETERS
+Table 8: Occupancy and reward-model hyperparameters.
+Hyperparameter Value
+Gradient steps 2M
+Optimizer Adam (Kingma & Ba, 2014)
+Learning rate 0.0003
+Batch size 256
+Architecture MLP
+MLP size{512, 512, 512, 512}
+Nonlinearity GELU (Hendrycks & Gimpel, 2016)
+Layer normalization True
+Target net update rate (occupancy model) 0.005
+Discount factorγ(occupancy model) 0.99
+Flow steps 22 (antmaze-giant-navigate), 55 (antmaze-large-navigate), 4

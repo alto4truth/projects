@@ -1,0 +1,27 @@
+title: Evaluating Assurance Cases as Text-Attributed Graphs for Structure and Provenance Analysis
+source: arxiv
+year: 2026
+document_id: evaluating-assurance-cases-as-text-attributed-graphs-for-structure-and-provenance-analysis
+authors: Fariz Ikhwantri; Dusica Marijan
+page: 1
+section: roc-auc-f1-roc-auc-f1-roc-auc-f1
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20577v1
+
+Evaluating Assurance Cases as Text-Attributed Graphs for Structure and Provenance Analysis EASE 2026, 9–12 June, 2026, Glasgow, Scotland, United Kingdom
+gradient-based interpretations, which highlighted significant tokens but failed to clarify reasoning alignment with true causal
+relations. Our graph evaluation analyses a fidelity-based evaluation
+for bias detection of assurance case structure.
+In summary, our findings show that while GNNs can detect structural differences between human-authored and LLM-generated assurance cases, existing explanation methods show reliance on node
+features. Addressing this gap is an important avenue for future
+research.
+9 Threats to Validity
+9.1 Construct Validity
+Using link prediction and classification as proxies for argument
+quality may capture structural patterns without ensuring logical
+soundness. Additionally, the GNN might detect artefacts from the
+synthetic edge-generation prompt rather than intrinsic LLM reasoning styles. Finally, our findings are currently tied to GPT-4o-specific
+structural signatures and the limited faithfulness of existing GNN
+explanation tools.
+9.2 Internal Validity
+The dataset used in this study, although carefully ver

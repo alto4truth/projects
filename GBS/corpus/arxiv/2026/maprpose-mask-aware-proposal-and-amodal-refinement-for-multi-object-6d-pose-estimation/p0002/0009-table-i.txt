@@ -1,0 +1,33 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 2
+section: table-i
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+multi-metric approach
+ensures a comprehensive evaluation of 3D geometry alignment
+and 2D projection accuracy.
+B. Experimental Setup
+We conducted three sets of experiments to evaluate the
+accuracy and efficiency of our method across various scenarios.
+On the LINEMOD dataset, we utilize ground-truth masks to
+assess the performance of our refinement module under the
+ADD-0.1d metric, reporting both accuracy and single-object
+runtime latency on an NVIDIA GeForce RTX 4090 GPU. For
+the more challenging BOP Challenge benchmarks, including
+LM-O, YCB-V , and T-LESS, evaluations are performed on
+an NVIDIA A100 GPU using object masks pre-estimated by
+SAM-6D [38]. To maintain a consistent computational flow as
+described in Section III, we adopt a tensorized batching strategy
+for all refinement experiments. By setting N = 5 and B = 7, our
+framework processes N × B = 35 hypothesis-reference pairs
+in a single unified forward pass. This parallel configuration,
+executed over i = 4 iterations, allows MAPRPose to achieve
+over 90% GPU utilization on an NVIDIA A100 GPU. In
+contrast, FoundationPose processes only one hypothesis at a
+time and under-utilizes the GPU.
+Our evaluation protocols focus on both

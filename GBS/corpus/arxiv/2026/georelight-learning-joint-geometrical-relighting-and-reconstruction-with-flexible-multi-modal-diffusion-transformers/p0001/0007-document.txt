@@ -1,0 +1,29 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+-data training methodology that combines synthetic data with auto-labeled real-world images
+to achieve both geometric accuracy and photorealism.
+2. Related Works
+Image relighting and its related problems (e.g. intrinsic
+decomposition) have a long tradition in computer vision,
+going back to the work on intrinsic images by Barrow [3]
+and the Retinex algorithm by Land [20]. We encourage the
+reader to read recent surveys [8, 48] for a wide viewpoint
+on intrinsic decomposition and human relighting, while we
+focus on the latest work on relighting in the remainder.
+2.1. Neural Rendering and Relighting
+Recent generative models have approached monocular image relighting in several ways. NeuralGaffer [12] treats
+relighting as an end-to-end 2D diffusion process, finetuning a model on a large synthetic dataset to relight any object without explicit intrinsic decomposition. IC-Light [47]
+focuses on illumination harmonization, using diffusion to
+relight a foreground object to match a new background.
+LightLab [24] enables direct manipulation of existing light
+sources in an image through diffusion models.
+To overcome limitations from above methods, two-stage
+pipelines like Total Relighting [28] fi

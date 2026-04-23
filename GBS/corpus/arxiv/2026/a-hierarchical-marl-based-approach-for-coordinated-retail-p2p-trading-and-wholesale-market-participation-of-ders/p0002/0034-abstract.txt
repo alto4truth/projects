@@ -1,0 +1,43 @@
+title: A Hierarchical MARL-Based Approach for Coordinated Retail P2P Trading and Wholesale Market Participation of DERs
+source: arxiv
+year: 2026
+document_id: a-hierarchical-marl-based-approach-for-coordinated-retail-p2p-trading-and-wholesale-market-participation-of-ders
+authors: Patrick Wilk; Ethan Cantor; Yikui Liu; Jie Li
+page: 2
+section: abstract
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20586v1
+
+il market conditions and sets a
+wholesale market bid/offer price𝑎𝑤
+𝑎𝑔 and P2P retail market
+incentive signals[𝑎 𝑏
+𝑎𝑔, 𝑎𝑜
+𝑎𝑔]. These signals are broadcasted
+to all the prosumers in the P2P market, which run LSDMADDPG follower policies. Each LSD-MADDPG agent
+receivesitslocalobservation𝑠 𝑛andtheaggregator’supdated
+state𝑠 𝑎𝑔, enabling it to determine actions𝑎 𝑛 that adjust
+its P2P trading profile. Any residual energy not settled in
+the P2P market is managed by the aggregator. A dynamic
+feedback loop emerges as the wholesale transaction success
+of the aggregator is dependent on the responsiveness of
+all the LSD-MADDPG agents. This closed-loop interaction
+fosters a self-regulating market where agents learn to trade
+optimally under evolving incentives.
+4. Case Study
+The effectiveness of the proposed SEAM-LESS for coordinated wholesale and P2P retail market participation of
+DERs is evaluated against two rule-based (RB) and one
+conventional MARL market strategies:
+Algorithm 1Training of SEAM-LESS
+1:Initialize each LSD-MADDPG agent𝑛and PPO agent:
+•Initializeactornetwork𝜇 𝑛 with𝜃 𝜇𝑛
+𝑛 andcriticnetwork𝑄 𝑛 with𝜃 𝑄𝑛
+𝑛 ;
+•Initialize target networks𝜇 ′
+𝑛 and𝑄 ′
+𝑛 with weights𝜃
+𝜇′
+𝑛
+𝑛 ←𝜃 𝜇𝑛
+𝑛 and
+𝜃

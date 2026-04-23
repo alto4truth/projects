@@ -1,0 +1,32 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: a-r-a-r
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+for an additional critic model by comparing groups of candidate responses directly. Formally, givenLsampled responses{y 1, y2, ..., yL}for a promptxfrom the current
+policy, GRPO takes actions based on these responses and
+obtains rewards{r 1, r2, ..., rL}. The advantage of each response is then defined as:
+Ai = ri −mean({r 1, r2, ..., rL})
+std({r1, r2, ..., rL}) ,(3)
+whereA i denotes the relative quality of thei-th response.
+GRPO measures relative performance within the sampled
+group and encourages the model to favor better answers
+with a high reward value.
+3.2. SSL-R1
+3.2.1. Task Design
+We re-purpose five different self-supervised tasks widely
+used in the vision literature as examples amenable to being used within an RLVR framework. We detail each task
+below.
+Rotation Prediction.Given an input imageI∈R H×W×3 ,
+we apply a random rotation clockwise by an angleyto obtain the rotated imageI rot, whereyis from a predefined set
+of angles that are evenly distributed within a 360 ◦ range,
+controlled by a size parameterS. GivenIandI rot, the
+model is prompted to predict the specific rotation angle.
+The detailed prompt template for this task is provided in
+the supplementary material.
+Visual

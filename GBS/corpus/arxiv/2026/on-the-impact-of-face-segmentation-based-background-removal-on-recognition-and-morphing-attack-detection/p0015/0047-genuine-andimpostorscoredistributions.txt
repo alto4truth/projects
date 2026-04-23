@@ -1,0 +1,31 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 15
+section: genuine-andimpostorscoredistributions
+chunk: 47
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+Fig. 5. Landscape pictures of FRGCv2 before and after background
+removal by SAM using the five facial landmarks, and a bounding box
+with 150% bidirectional horizontal extension and different upwards vertical
+extensions (the bottom limit of the box is the last row of the image).
+The margins were added to highlight the images’ borders after background
+removal. Notice that a vertical upwards extension of 15% allows to segment
+the face, body, and accessories of the three examples while resulting in
+minimal background artifacts.
+larger overlap between genuine and impostor distributions.
+These results directly align with those of the main paper,
+since segmenting with these networks resulted in extremely
+poor FR performance, accompanied by a significant drop in
+average face image quality and in the difference between the
+average of genuine and impostor scores,∆.
+JOINTMETRICS’ VISUALIZATION
+To further emphasize the correlation between the different
+extracted metrics and to more easily visualize whether their
+variation tendency matches, we show all of them together
+in the same plot. In particular, we plot a graph showing
+the values TAR@FAR=1e-4,∆and the FIQA metric for
+IJB-C and its segment

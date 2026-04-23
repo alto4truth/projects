@@ -1,0 +1,24 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+raining Convergence
+Beyond the final precision, we observe substantial differences in the convergence
+speed across discretization methods, represented as the training time in Table 1.
+These differences arise from both the order of the numerical approximation and
+the causality structure of each method.
+POL exhibits slower convergence despite using a relatively low approximation order because it is non-causal. The bidirectional formulation introduces
+dependencies on both past and future states, causing gradients to propagate in
+multiple directions. This requires additional training iterations for the model
+to reconcile competing gradient signals and achieve stable performance. HOH,
+while fully causal, relies on higher-order approximations, introducing a stronger
+coupling between model parameters. As a result, gradients become more sensitive to small parameter changes, and optimization proceeds more cautiously.
+This results in slower convergence, even though these methods provide greater
+final accuracy. RK4 presents the most challenging optimization dynamics. Its
+multi-stage weighted average algorithm produces deep gradient paths and strong

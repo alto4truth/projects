@@ -1,0 +1,22 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 7
+section: task
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+Review the provided [Execution Process] and [Result]. You must extract two distinct types
+of memories to assist in future tasks.
+**Constraint: You must extract at least ONE memory in total across the two categories.**
+1. **Factual Memory (Objective Truths):**
+* *Definition:* Verifiable facts learned during execution.
+* *Examples:* Info/Preferences, Domain Knowledge, Tool/System Facts.
+2. **Episodic Memory (Experience, Reflection & Temporal Events):**
+* *Definition:* Insights derived from the flow of events, strategies, errors, OR **
+specific real-world time constraints/schedules**.
+* *Logic Examples:* "If I take step A, error B occurs," "Method X is faster than Y."
+* *Temporal Examples:* "User has a class at 8 AM on Mondays," "The deadline is this
+Friday."

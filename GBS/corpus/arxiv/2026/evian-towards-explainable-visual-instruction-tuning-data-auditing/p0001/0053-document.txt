@@ -1,0 +1,34 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 53
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+e, or reason for a visual element.
+3. Strictly Visual is NOT Tagged:DO
+NOT tag objective, verifiable descriptions of visual facts.
+4. Do Not Change Words:Do not add,
+delete, or rephrase any original words,
+like Visible Text or Numbers.
+5. Output Format:Your response must
+start with the prefix “Marked Response:”.
+Examples:
+Input:The lighting in the room is soft, creating a cozy atmosphere. The design suggests
+it is from the Victorian era.
+Output:Marked Response: The lighting
+in the room is soft, <INFER>creating a
+cozy atmosphere</INFER>. <INFER>The
+design suggests it is from the Victorian
+era</INFER>.
+Input:This is a 1976 postage stamp from
+Hungary, a country in Central Europe.
+Output:Marked Response: This is a 1976
+postage stamp from Hungary, <KNOW>a
+country in Central Europe</KNOW>.
+Input:The image shows a can of Coca-Cola.
+Output:Marked Response: The image shows
+a can of Coca-Cola.

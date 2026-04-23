@@ -1,0 +1,31 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 3
+section: ieee-transactions-on-image-processing-2
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+2]–
+[8]addresses the challenge of inferring the integral geometry
+of an object, encompassing both its visible regions and the
+regions obscured behind occluders.Formally, according to [5]–
+[7], a rough bounding boxBthat covers the region-of-interest
+(ROI) in a specific imageIwill be provided, to identify both
+the visible and occluded regions of the target object through
+the prediction maskM. With the amodal segmentation model
+F, this procedure can be formulated as:
+M=F(B, I).(1)
+Certain approaches [3], [7], [9], [10] may use conventional
+segmentation algorithms, such as [11]–[13], to explicitly derive the visible region mask from the region-of-interest (ROI)
+boxBcorresponding to the target object as an input component. In this case, the formulation becomes:
+M=F(s(B), I),(2)
+wheres()denotes the conventional segmentation algorithm
+that transforms the visible part within the ROI boxBinto a
+mask. For both Eqs. 1 and 2, the ground truth mask of the
+target object is provided to supervise the predicted maskM
+during training.
+Challenges in Open-World Scenarios.Despite significant
+advancements, conventional amodal segmentation methodologies predominantly operate under a closed-world assumpti

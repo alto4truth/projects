@@ -1,0 +1,24 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 16
+section: instructions
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+nough to identify the correct topic, but it has no principled
+way to disambiguate among the topic’s versions, which is precisely why its stale rate is 35%. Second,
+time-point queries expose the gap most dramatically: plain RAG scores 1.7% because it retrieves
+at present-day similarity regardless of the query’s temporal frame, whereas methods that consult
+temporal_score with a query-conditional reference time reach 70–72%. This is the “when was this
+valid” behavior that motivates treating time as a first-class scoring signal rather than a post-hoc
+filter.
+10.2 Ablation
+Table 3 removes each signal from the full SmartVector scorer (with the remaining weights renormalized). The temporal signal is the single largest contributor on this benchmark: removing it
+collapses overall accuracy from 61.7% to 36.2%. Removing the confidence signal unexpectedly
+improves accuracy on this dataset (61.7%→66.7%), a result we attribute to the interaction between
+confidence (which rewards high-authority, often older documents) and the current-query ground
+truth (which rewards newest documents); with a corpus whose authority distribution correlates
+differently with recency, the sign would flip. Removing th

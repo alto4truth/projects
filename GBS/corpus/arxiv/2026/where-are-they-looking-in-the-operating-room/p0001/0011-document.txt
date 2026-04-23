@@ -1,0 +1,25 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+3
+Fig. 2: Examples of the “anesthesiologists being attentive” moments from easy to difficult: (a) two anesthesiologists are looking at the operating table; (b) one is
+looking at the monitor screen, which is close to the anesthesia equipment; (c) one is observing the surgery but heavily occluded.
+works [28, 8]. Specifically, we first annotate the head bounding boxes for each person in each image. Then, we label the
+gaze target of each annotated person as a single gaze point
+based on where we believe the person is looking. We also
+mark if the person is looking outside the image. To ensure the
+quality, we have two reviewers who double-check the annotations. In the end, we have gaze annotations of 18,743 and
+5,870 persons in the 4D-OR and Team-OR datasets, respectively. Examples of the gaze annotations are shown in Fig. 1.
+2.2. Extended Team-OR dataset
+In addition to gaze annotations, we extend the Team-OR
+dataset [6] with a new activity class named “anesthesiologists
+being attentive (A.B.A.)” using MOSaiC platform [20]. Unlike the existing “StOP?” activity that concerns all OR team
+members, “A.B.A.” is a more fine-grained activity that centers
+on the anesthesiologists. Specifically, i

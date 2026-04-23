@@ -1,0 +1,95 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 6
+section: phi-llama-qwen
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+e Table 3. Note that Qwen2.5 advertises explicit support for 29 languages but not all of the supported
+languages are listed in their documentation.
+38
+
+Published in Transactions on Machine Learning Research (11/2025)
+Table 3: Language Support in Models (▲= Supported)
+Code Language Script F amily Subgrouping
+Phi4-Mini-Instruct-3.8BLLaMA-3.1-Instruct-8B
+Qwen2.5-7B-Instruct
+Jina-Embeddings-v3-570M
+GlotLID-v3
+ara Arabic Arabic Afro-Asiatic Semitic▲ ▲ ▲ ▲
+ces Czech Latin Indo-European Balto-Slavic▲ ▲ ▲
+deu German Latin Indo-European Germanic▲ ▲ ▲ ▲ ▲
+eng English Latin Indo-European Germanic▲ ▲ ▲ ▲ ▲
+eus Basque Latin Basque - ▲ ▲
+fra French Latin Indo-European Italic ▲ ▲ ▲ ▲ ▲
+hin Hindi Devanagari Indo-European Indo-Aryan ▲ ▲ ▲
+hun Hungarian Latin Uralic - ▲ ▲ ▲
+ita Italian Latin Indo-European Italic ▲ ▲ ▲ ▲ ▲
+jpn Japanese Japanese Japonic Japonic▲ ▲ ▲ ▲
+nld Dutch Latin Indo-European Germanic▲ ▲ ▲
+pes Persian Arabic Indo-European Iranian ▲ ▲ ▲
+pol Polish Latin Indo-European Balto-Slavic▲ ▲ ▲
+por Portuguese Latin Indo-European Italic ▲ ▲ ▲ ▲ ▲
+rus Russian Cyrillic Indo-European Balto-Slavic▲ ▲ ▲ ▲
+spa Spanish Latin Indo-European Italic ▲ ▲ ▲ ▲ ▲
+srp Serbian Cyrillic Indo-European Balto-Slavic ▲ ▲
+tur Turkish Latin Turkic Common Turkic▲ ▲ ▲ ▲
+vie Vietnamese Latin Austroasiatic Vietic ▲ ▲ ▲
+zho Chinese Han Sino-Tibetan Sinitic ▲ ▲ ▲ ▲
+ben Bengali Bengali Indo-European Indo-Aryan ▲ ▲ ▲
+bul Bulgarian Cyrillic Indo-European Balto-Slavic ▲ ▲
+ceb Cebuano Latin Austronesian Malayo-Polynesian ▲
+dan Danish Latin Indo-European Germanic▲ ▲ ▲
+ell Greek Greek Indo-European Graeco-Phrygian ▲ ▲ ▲
+fil Filipino Latin Austronesian Malayo-Polynesian ▲ ▲
+fin Finnish Latin Uralic Finnic ▲ ▲ ▲
+heb Hebrew Hebrew Afro-Asiatic Semitic▲ ▲ ▲
+ind Indonesian Latin Austronesian Malayo-Polynesian ▲ ▲ ▲
+kor Korean Hangul Koreanic Korean▲ ▲ ▲ ▲
+lit Lithuanian Latin Indo-European Balto-Slavic ▲ ▲
+msa Malay Latin Austronesian Malayo-Polynesian ▲ ▲
+ron Romanian Latin Indo-European Italic ▲ ▲
+swe Swedish Latin Indo-European Germanic▲ ▲ ▲
+tam Tamil Tamil Dravidian South Dravidian ▲ ▲
+tha Thai Thai Tai-Kadai Kam-Tai▲ ▲ ▲ ▲ ▲
+ukr Ukrainian Cyrillic Indo-European Balto-Slavic▲ ▲ ▲
+urd Urdu Arabic Indo-European Indo-Aryan ▲ ▲
+amh Amharic Ge’ez Afro-Asiatic Semitic ▲ ▲ ▲
+gle Irish Latin Indo-European Celtic ▲ ▲
+guj Gujarati Gujarati Indo-European Indo-Aryan ▲ ▲
+hat Haitian Creole Latin Indo-European Italic ▲
+hau Hausa Latin Afro-Asiatic Chadic ▲ ▲ ▲
+ibo Igbo Latin Atlantic-Congo Benue-Congo ▲
+jav Javanese Latin Austronesian Malayo-Polynesian ▲ ▲
+kan Kannada Kannada Dravidian South Dravidian ▲ ▲
+kir Kyrgyz Cyrillic Turkic Common Turkic ▲ ▲
+kur Kurdish Latin Indo-European Iranian ▲ ▲
+mal Malayalam Malayalam Dravidian South Dravidian ▲ ▲
+mar Marathi Devanagari Indo-European Indo-Aryan ▲ ▲
+mlg Malagasy Latin Austronesian Malayo-Polynesian ▲ ▲
+mya Burmese Myanmar Sino-Tibetan Burmo-Qiangic ▲ ▲
+nep Nepali Devanagari Indo-European Indo-Aryan ▲ ▲
+nor Norwegian Latin Indo-European Germanic▲ ▲ ▲
+nso Northern Sotho Latin Atlantic-Congo Benue-Congo ▲
+ny Nyanja Latin Atlantic-Congo Benue-Congo ▲
+pan Punjabi Gurmukhi Indo-European Indo-Aryan ▲ ▲
+pus Pashto Arabic Indo-European Iranian ▲ ▲
+sin Sinhala Sinhala Indo-European Indo-Aryan ▲ ▲
+sna Shona Latin Indo-European Indo-Aryan ▲
+snd Sindhi Arabic Indo-European Indo-Aryan ▲ ▲
+som Somali Latin Afro-Asiatic Cushitic ▲ ▲
+sot Southern Sotho Latin Atlantic-Congo Benue-Congo ▲
+sqi Albanian Latin Indo-European Albanian ▲ ▲
+sun Sundanese Latin Austronesian Malayo-Polynesian ▲ ▲ ▲
+swa Swahili Latin Atlantic-Congo Benue-Congo ▲ ▲ ▲
+tel Telugu Telugu Dravidian South Dravidian ▲ ▲ ▲
+wol Wolof Latin Atlantic-Congo North-Central Atlantic ▲
+xho Xhosa Latin Atlantic-Congo Benue-Congo ▲ ▲
+yor Yoruba Latin Atlantic-Congo Benue-Congo ▲
+zul Zulu Latin Atlantic-Congo Benue-Congo ▲
+B Dataset Language Coverage
+See Table 4.
+39

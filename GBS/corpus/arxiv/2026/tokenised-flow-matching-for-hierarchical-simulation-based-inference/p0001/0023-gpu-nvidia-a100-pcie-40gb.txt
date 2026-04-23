@@ -1,0 +1,33 @@
+title: Tokenised Flow Matching for Hierarchical Simulation Based Inference
+source: arxiv
+year: 2026
+document_id: tokenised-flow-matching-for-hierarchical-simulation-based-inference
+authors: Giovanni Charles; Cosmo Santoni; Seth Flaxman; Elizaveta Semenova
+page: 1
+section: gpu-nvidia-a100-pcie-40gb
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20723v1
+
+A
+
++ A
+ρ
+∂p
+∂x =− KRQ
+A ,(9)
+with momentum-flux coefficientα= 1in our solver. Pressure is related to area by
+p(A)−p ext = β
+A0
+√
+A−
+p
+A0
+
+,(10)
+23
+
+Figure 7: Posterior consistency measured byℓ-C2ST (lower is better) across the hierarchical SBI
+benchmark for TFMPE ablations. Each experiment is described in Section A.5. All results are
+averaged over 10 independently drawn observations per task. Posterior consistency was measured as
+the simulation budgetNincreased, with sites fixed atns = 50.
+24

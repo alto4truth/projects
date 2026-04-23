@@ -1,0 +1,30 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 11
+section: calibra-tion
+chunk: 51
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+ibrated persona parameters. Opening and
+floor are percentages of the range above cost. Dual
+concession values indicate early/late round budgets.
+Calibration V alidation
+Table 3 compares the observed behavior of LLM carriers
+(𝑛=6,750) against algorithmic carriers ( 𝑛=225, Two-Index
+broker only) to verify that the personas produce behaviorally
+distinct negotiation patterns.
+Agree. (%) Savings Rounds
+Persona Algo LLM Algo LLM Algo LLM
+Cooperative 100.0 99.7 .811 .858 4.3 3.2
+Tit-for-Tat 93.3 91.7 .687 .764 7.4 5.9
+Deadline 100.0 71.6 .659 .589 8.6 8.8
+Anchoring 24.4 63.0 .383 .557 9.4 8.2
+Hardliner 4.4 52.9 .409 .658 8.0 8.0
+Table 3: Algorithmic vs. LLM carrier behavior against
+the Two-Index broker. Savings = fraction of spread
+captured by broker.
+The opening positions closely match their targets: Cooperative at 0.300 of the range, Tit-for-Tat at 0.557 (target
+10

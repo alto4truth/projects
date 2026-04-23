@@ -1,0 +1,27 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+achieves consistent
+and significant performance improvements, demonstrating
+its strong potential to alleviate hallucinations. We also
+show that R-CoV achieves the best trade-off between performance and test-time compute compared to prior state-ofthe-art post-hoc correction work.
+2. Related Work
+Large vision-language models.Large language models
+(LLMs) [4] have transformed the field of natural language
+processing, de-facto replacing other solutions for many
+tasks. Recent commercial models [35, 42] have achieved
+remarkable performance across most text benchmarks, with
+open-weight solutions closely tracking their performance
+with a delay of only few months [12, 31, 33, 43]. Building on the success of these purely textual models, the
+community came up with ways of interfacing them with
+visual encoders to allow the model to operate on multimodal inputs (e.g., image and text). Early examples of
+this category of models, called large vision-language models (LVLMs) [1, 24], were highly successful in paving the
+way to train truly multimodal language models like recent
+commercial models [17, 42]. Building on top of openweight models, open-source LVLMs have also been developed [2, 7, 10, 23, 2

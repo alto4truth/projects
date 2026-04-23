@@ -1,0 +1,27 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+uate
+our method on the MME existence subset, focusing on
+the object existence hallucination. The results are shown
+in Table 2. Again, our R-CoV consistently outperforms
+each LVLM by clear margins. Specifically, we achieve
++31.67% accuracy, +58.33% accuracy+ gains for mPLUGOwl, +10.00% accuracy, +20.00% accuracy+ gains for
+MiniGPT-4, +1.66% accuracy, +3.34% accuracy+ gains for
+LLaV A-1.5, and +3.33% accuracy, +6.67% accuracy+ gains
+for Qwen2.5-VL, respectively. Note that LLaV A-1.5 and
+Qwen2.5-VL already achieve very strong performances under this benchmark. Nevertheless, our R-CoV can still improve upon them.
+Results on CHAIR.Apart from binary “Yes-or-No” questions in POPE and MME, we further evaluate our method on
+CHAIR, which is a more challenging hallucination benchmark as it involves multiple objects in the captions. As
+shown in Table 3, our R-CoV significantly reduces the
+CHAIR hallucination scores for all LVLMs, while also improving their F1 scores. In addition, our R-CoV also surpasses LogicCheckGPT, setting a new state of the art in this
+more challenging benchmark.
+Results on GPT-4o assisted evaluation.Going beyond
+CHAIR, we employ GPT-4o for more comprehensive openended ev

@@ -1,0 +1,31 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+ing conditions
+per (regime, load) pair. The robustness experiment (Section 6) adds 1 × 5 × 3 × 15 × 30 = 6,750 negotiations with
+the two-index broker against LLM-powered carrier agents,
+bringing the total to 115,125 negotiations.
+The primary metrics are:agreement rate(fraction reaching
+agreement within 𝑇 = 10 rounds),broker savings( 𝑟max −
+𝑟agreed)/(𝑟max −𝑟 min) where 1 .0 is best (computed only for
+agreed negotiations),rounds to agreement, andretraction
+rate(retraction events per negotiation, where a retraction
+is a round with offer(𝑡) <offer (𝑡−1) −𝜖 , 𝜖 = 0.005 to filter
+floating-point noise).
+5 RULE-BASED EV ALUA TION
+We evaluate the five rule-based strategies across 105,000 negotiations at 12 spread values from 𝑆 = 1% to 𝑆 = 20%, with
+350 loads per value (21,000 per strategy; 95% CI ±0.7pp on
+agreement rate). All negotiations include dynamic pricing
+shifts of ±5–40%. Under these conditions, the two-index strategy and Generous TFT both produce zero retractions, while
+Table 1: Aggregate results (21,000 negotiations per
+strategy). ± values are 95% CIs. Retr. = retraction
+events per negotiation.
+Strategy Agree (%) Savings Rounds Retr.
+Boulware (𝛽=0.6) 66.0±0.6 0.722±0.002 7.47±0.0

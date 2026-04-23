@@ -1,0 +1,21 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+extend the work of [Simpson et al. 2024] by evaluating the same LLMs (or their updated counterparts
+for deprecated models) for fairness but placing particular emphasis on intersectional sensitive attributes and adopting
+more informative and nuanced bias scores and fairness metrics [Meinson et al . 2025], rather than relying on the
+preliminary accuracy measure based on differences between ground truth values and LLM outputs used in the paper.
+To achieve this, we leverage two public BBQ-based datasets comprising Multiple-Choice Questions (MCQs) designed
+for intersectional fairness, introduced in [Parrish et al. 2022], and apply their bias scores while incorporating the more
+comprehensive fairness metrics proposed by Meinson et al. [2025], enabling a deeper and more precise assessment
+of LLM fairness. We further analyze LLM consistency across repeated runs across contexts, under negative and nonnegative question polarities. This allows us to study not only whether LLMs answer MCQs correctly, but also whether
+their wrong answers, subgroup-level output patterns, and repeated responses reveal systematic disparities across
+contexts and intersectional groups.
+Main Findings Summary.Our resu

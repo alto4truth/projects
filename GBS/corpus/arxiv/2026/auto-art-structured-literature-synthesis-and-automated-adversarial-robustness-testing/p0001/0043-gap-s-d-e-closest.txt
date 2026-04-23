@@ -1,0 +1,29 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+egration maps findings to
+remediation actions rather than exploit chains, and the framework’s open-source licence encourages transparent auditing.
+We note that withholding evaluation tools does not prevent
+attacks—the offensive techniques already exist in published
+literature—but it does prevent defenders from assessing their
+exposure.
+15 Conclusion
+This work presents a structured literature synthesis and the
+AUTO-ART framework. The analysis identifies three intellectual threads (reliable evaluation, gradient masking, multiattack threats), five ranked gaps with explicit resolution paths,
+eight untested assumptions ranked by consequence severity,
+and a unifying open question:what evaluation stack should be
+mandatory before certifying a model as safe against adaptive,
+multi-channel adversaries?
+On the empirical side, AUTO-ART’s pre-screening gate detects gradient masking in 92% of flagged configurations, RDI
+rankings agree with full AutoAttack at Kendallτ= 0.82±0.03 ,
+and multi-norm evaluation exposes a 23.5 pp worst-case gap
+hidden by single-norm reporting. Ablation confirms that the
+three-signal ensemble (FOSC + RDI + WB/BB discrepancy)
+outperforms any single signal on both ranking

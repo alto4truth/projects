@@ -1,0 +1,33 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 8
+section: a-b-c
+chunk: 40
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+A 𝑇 𝑃𝐴𝐴 𝐹𝐴𝐵 𝐹𝐴𝐶
+B 𝐹𝐵𝐴 𝑇 𝑃𝐵𝐵 𝐹𝐵𝐶
+C 𝐹𝐶𝐴 𝐹𝐶𝐵 𝑇 𝑃𝐶𝐶
+highest potential. An example of a confusion matrix of three classes
+A, B, and C is shown in Table 5.
+The rows of a confusion matrix represent the actual class of samples, while the columns represent the predicted class. All the correct
+predictions are on the diagonal of the confusion matrix (highlighted in
+green).
+For class 𝐴 we compute:
+• True positives (TP) ⇒ 𝑇 𝑃𝐴𝐴, i.e., samples labeled as class 𝐴 correctly classified as 𝐴.
+• True Negatives (TN) ⇒ 𝑇 𝑁𝐴 = 𝑇 𝑃𝐵𝐵 + 𝑇 𝑃𝐶𝐶 + 𝐹𝐵𝐶 + 𝐹𝐶𝐵 ,
+i.e., samples labeled as other classes, in this case classes 𝐵 and
+𝐶 are predicted as either 𝐵 or 𝐶.
+• False Positives (FP) ⇒ 𝐹 𝑃𝐴 = 𝐹𝐵𝐴 + 𝐹𝐶𝐴 , i.e., samples labeled as
+other classes, in this case classes 𝐵 and 𝐶, are predicted as class
+𝐴.
+• False Negatives (FN) ⇒ 𝐹 𝑁𝐴 = 𝐹𝐴𝐵 + 𝐹𝐴𝐶 , i.e., samples labeled as
+class 𝐴 predicted as other classes, in this case classes 𝐵 and 𝐶.
+Similarly, we can compute TP, TN, FP, and FN for other classes.
+Using these notations from the confusion matrix, we compute the
+following metrics to evaluate the performance of DAIRE.
+The Detection Rate (DR), also known as Recall or True Positive
+Rate, measures the number of true samp

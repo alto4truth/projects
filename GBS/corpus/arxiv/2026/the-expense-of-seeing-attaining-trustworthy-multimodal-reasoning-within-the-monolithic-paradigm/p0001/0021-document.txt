@@ -1,0 +1,27 @@
+title: The Expense of Seeing: Attaining Trustworthy Multimodal Reasoning Within the Monolithic Paradigm
+source: arxiv
+year: 2026
+document_id: the-expense-of-seeing-attaining-trustworthy-multimodal-reasoning-within-the-monolithic-paradigm
+authors: Karan Goyal; Dikshant Kukreja
+page: 1
+section: document
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20665v1
+
+ed into text-like embeddings. As the LLM
+backbone scales, its capacity to execute complex symbolic logic
+and leverage statistical priors drastically outpaces the projection
+head’s ability to faithfully translate the visual manifold. We term
+this structural choke point theInformation Compression Penalty. No
+matter how elite the reasoning engine becomes, its visual pipeline
+remains a low-bandwidth, lossy conduit.
+6.2 Formulating the Divergence Law
+We hypothesise the Divergence Law of Multimodal Scaling to analyse how this penalty manifests as the models grow. As model parameters scale by orders of magnitude, macroscopic benchmark
+accuracy (𝑆𝐹𝑢𝑙𝑙 ) will predictably and reliably increase. For the research community, this rising metric historically signals success.
+However, under the lens of the Modality Translation Protocol, this
+increase is an illusion.
+Because the visual projection bottleneck cannot scale its representational bandwidth proportionally to the LLM’s cognitive leap,
+the model’s true symbolic reasoning ceiling (𝑆𝑆 𝑦𝑚𝑇) rises at a vastly
+accelerated, asymptotic rate compared to 𝑆𝐹𝑢𝑙𝑙 . Consequently, we
+project that the Toll of Seeing will increase proportionally with the
+m

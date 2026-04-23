@@ -1,0 +1,36 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 2
+section: r-e-s-u-lt-s
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+Study Area
+-- Hurricane Idalia (2023)
+• Training: 13 historical U.S. hurricanes
+• Gauge stations: NOAA, USGS, TCOON, ..
+• ADCIRC model output
+Graph Construction
+• Nodes = gauge stations
+• Edges = high water-level
+correlation + proximity
+Forecast Correction
+>70%
+RMSE reduction
+48-hr forecasts
+StormNet enables accurate, computationally
+efficient storm surge bias correction for realtime operational use in systems like CERA.
+>50%
+RMSE reduction
+72-hr forecasts
+Graphical Abstract Description: Based on the graphical abstract, this study
+develops and evaluates StormNet, a spatio-temporal graph neural network framework designed for bias correction of storm surge forecasts along the U.S. Gulf Coast.
+This work captures the complex spatial and temporal dependencies among coastal
+water-level gauge stations and leverages them to systematically reduce forecast errors
+produced by the high-fidelity ADCIRC physics-based model. Observed water level
+data were collected from multiple gauge stations, and forecast water levels were
+obtained from ADCIRC. Forecast errors were estimated and subsequently used as
+training data. Data from 13 historical hurricane events were utilized for model training, while

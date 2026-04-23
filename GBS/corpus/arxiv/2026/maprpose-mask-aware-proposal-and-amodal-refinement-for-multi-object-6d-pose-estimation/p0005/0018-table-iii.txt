@@ -1,0 +1,25 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 5
+section: table-iii
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+Ablation Studies on MAPP Module. Accuracy is reported as ADD-0.1d (%) across LINEMOD objects. MAPP + FP refers to the
+configuration using MAPP for initial pose proposals followed by FoundationPose refinement. MAPRPose (w/o MAPP) represents our full
+framework without the MAPP module.
+Method N LINEMOD Objects (ADD-0.1d %) Mean Time (s)
+ape bench camera can cat driller duck eggbox glue holepuncher iron lamp phone
+Part A: MAPP Module
+FP [24] 252 99.0 100.0 100.0 100.0 100.0 100.0 99.4 100.0 100.0 99.9 100.0 100.0 100.0 99.9 1.20
+MAPP + FP 12 98.3 100.0 100.0 99.9 99.5 100.0 99.0 99.5 99.9 96.6 100.0 99.6 99.6 99.4 0.18
+MAPRPose (w/o MAPP) 252 99.0 100.0 100.0 99.9 99.8 100.0 99.9 100.0 100.0 100.0 100.0 100.0 99.9 99.9 0.80
+Part B: Proposal Number (N)
+MAPRPose (Ours) 3 94.8 98.2 97.0 97.5 97.2 99.2 94.5 96.0 96.5 95.8 98.9 99.0 94.1 97.2 0.04
+MAPRPose (Ours) 5 96.5 99.4 98.8 99.0 98.6 100.0 96.8 98.8 99.2 98.5 99.8 100.0 97.2 98.5 0.05
+MAPRPose (Ours) 7 98.6 100.0 100.0 99.9 99.8 100.0 99.7 100.0 100.0 100.0 100.0 100.0 99.8 99.8 0.05
+MAPRPose (Ours) 9 98.7 100.0 100.0 99.9 99.8 100.0 99.0 100.0 100.0 100.0 100.0 100.0 99.8 99.8 0.07
+MAPRPose (Ours) 11 98.8 100.0 100.0 99.9 99.8 100.0

@@ -1,0 +1,38 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 46
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+Inputs were truncated to 4096 tokens using the delete strategy, and bfloat16
+mixed precision was enabled to improve speed and reduce memory usage.
+21
+
+The image has the name of the online shop and the name of the productThe comments has the name of the online shop
+Brandname
+Comments lead to a private message with a link to the product
+Brandname
+Isendyouthe link of product in private message
+Comments convey product names and shop names in a complex formImage Flip
+Thebrandandshopnameisinimagebuttheimageisflipped
+shopname
+Productdescriptioninimageandcommentshowswheretogetlink
+Jointhegrouptogetlink
+Add special characters to comments
+shopname
+Aclear reference to the product in the text
+Brandandproductname
+Products’ links areinflipped imageProducts name in imageBrand name
+Special symbols
+🔗meanslink
+🍑meansTaobao(online shop platform)
+Figure 4: Typical Examples of Covert Advertisements
+C Supplementary experimental results
+We trained and evaluated several lightweight models on the CHASM dataset. The results are shown
+in Table 7. These baselines underperform compared to fine-tuned MLLMs, further highlighting the
+difficulty and subtlety of the task.
+22

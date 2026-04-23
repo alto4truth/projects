@@ -1,0 +1,30 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 1
+section: mnist
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+is bounded by1 −𝛿 , producing2 𝑞exp(− 2𝑠𝜖 2) ≤ 1 −𝛿 . Finally, we obtain𝑠≥ 1
+2𝜖2 log( 2𝑞
+1−𝛿 ), indicating
+that measurement times scale logarithmically with the number of output qubits, and a similar cost
+for QNNs with the same output qubits. Given that 𝑞 is 2 and 3 for binary and ternary classification,
+respectively, we set𝑠=1000for a prediction to achieve a𝜖of 0.05 and a𝛿of 0.95.
+4.2 Metrics
+To provide a quantitative measure of the dataset’s ability to detect injected faults, we adoptmutation
+scorebased on statistical killing. To enable a more fine-grained evaluation of test suites, the killing
+criterion is further refined at the class level [38]. Better-quality test suites are expected to achieve
+higher mutation scores as they are more sensitive to the mutated decision boundary of mutants.
+The mutation score is calculated as follows:
+𝑀𝑢𝑡𝑎𝑡𝑖𝑜𝑛𝑆𝑐𝑜𝑟𝑒=
+Í
+𝑚𝑖 ∈𝑀𝑒 |𝑘𝑖𝑙𝑙𝑒𝑑𝐶𝑙𝑎𝑠𝑠𝑒𝑠(𝑇 , 𝑚 𝑖 )|
+|𝑀𝑒 | ×𝑐 (4)
+where𝑇={𝑇 1, ..., 𝑇𝑐 } denotes the𝑐 subsets of test data corresponding to the𝑐 classes, 𝑘𝑖𝑙𝑙𝑒𝑑𝐶𝑙𝑎𝑠𝑠𝑒𝑠
+is the set of killed classes of mutant𝑚 𝑖 by𝑇, and𝑀 𝑒 is the set of effective mutants.
+To evaluate the impact of mutating different circuit regions and operator strategies on model
+perf

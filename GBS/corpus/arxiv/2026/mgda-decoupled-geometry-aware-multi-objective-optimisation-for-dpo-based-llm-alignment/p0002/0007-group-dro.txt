@@ -1,0 +1,24 @@
+title: MGDA-Decoupled: Geometry-Aware Multi-Objective Optimisation for DPO-based LLM Alignment
+source: arxiv
+year: 2026
+document_id: mgda-decoupled-geometry-aware-multi-objective-optimisation-for-dpo-based-llm-alignment
+authors: Andor Vári-Kakas; Ji Won Park; Natasa Tagasovska
+page: 2
+section: group-dro
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20685v1
+
+red bootstrap resampling [Koehn, 2004] with α= 0.05 to test for significant
+improvements over the REFERENCEbaseline. Evaluation prompts and further details are provided in Section A.2.
+Our implementation builds on the open-source repository of Yang et al. [2024a]3.
+4 Results and Discussion
+We present the experimental results for the Gemma-2-2b-it and Qwen2.5-0.5B-Instruct models. We focus on two key
+dimensions:per-objective performance, measured by the win/tie/loss rate against the golden responses, andoverall
+quality, measured by the improvement in net win rate over the starting REFERENCEmodel.
+Detailed tabular results are provided in Section A.3, and sample responses from the resulting models can be found
+in Section A.4.
+Gemma-2-2b-it
+Table 1 details the per-objective performance. MGDA-DECOUPLEDachieves the highest net win rate against the
+golden responses in three out of four objectives (Instruction Following,Helpfulness, andTruthfulness). InHonesty,
+where GROUPDRO performs the best, we observe a high tie rate (≈47% ). We attribute this toHonestybeing effectively
+binary and many creative prompts lacking factual claims to verify. Figure 4 demonstrates that when evaluated on overa

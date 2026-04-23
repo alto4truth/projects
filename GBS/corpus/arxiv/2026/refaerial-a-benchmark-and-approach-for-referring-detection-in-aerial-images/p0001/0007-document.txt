@@ -1,0 +1,84 @@
+title: RefAerial: A Benchmark and Approach for Referring Detection in Aerial Images
+source: arxiv
+year: 2026
+document_id: refaerial-a-benchmark-and-approach-for-referring-detection-in-aerial-images
+authors: Guyue Hu; Hao Song; Yuxing Tong; Duzhi Yuan; Dengdi Sun; Aihua Zheng; Chenglong Li; Jin Tang
+page: 1
+section: document
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20543v1
+
+formance degradation on
+our aerial referring detection dataset since the intrinsic scale
+variety issue within or across aerial images (as shown in Ta-
+
+ble 1). To address such issue, we further propose a novel
+scale-comprehensive and sensitive (SCS) framework characterized with a mixture-of-granularity (MoG) attention
+and a two-stage comprehensive-to-sensitive (CtS) decoding
+strategy. Specifically, the mixture-of-granularity (MoG) attention is developed to scale-comprehensively understand
+potential targets in each aerial image. The comprehensiveto-sensitive decoding (CtS) strategy is designed to decode
+referring targets in a progressive coarse-to-fine manner.
+Overall, the main contributions of this work are 4 folds:
+• Responding to low-altitude economy, we extend referring
+detection from conventional ground images to emerging
+aerial images and build a large-scale dataset RefAerial for
+referring aerial image detection.
+• We develop a human-in-the-loop referring expansion and
+annotation engine (REA-Engine), which realizes efficient
+and semi-automated referring pair annotation.
+• We propose a novel scale-comprehensive and sensitive
+framework (SCS) for referring aerial image detection,
+which effectively tackles the remarkable scale variety issue of referring objects within and across aerial images.
+• The proposed SCS framework realizes remarkable performance on our aerial dataset and even promising performance boost on ground datasets, demonstrating the effectiveness and superiority of our approach.
+2. Related Work
+2.1. Referring Detection Datasets
+With the rapid advancement of visual technologies, an increasing number of referring detection (a.k.a visual grounding) datasets have been proposed, such as RefCOCO
+[35], RefCOCO+ [35], RefCOCOg [21], and Flickr30k
+[23]. Specifically, RefCOCO emphasizes interactive short
+phrases, RefCOCO+ restricts the use of spatial terms to
+increase semantic reasoning difficulty, and RefCOCOg focuses on long and context-rich expressions. These datasets
+have collectively driven significant technical advances of
+referring detection, such as multimodal modeling, crossmodal alignment, and language-guided localization. Despite serving as a standard evaluation benchmark, the RefCOCO series of datasets are inherently expanded from
+COCO dataset, in which the referring targets usually are
+centered in small ground scenes and also relatively large. In
+contrast, the benchmark and approach for referring detection in broad aerial-view scenes remains underdeveloped.
+2.2. Referring Detection Methods
+Referring expression comprehension methods are typically
+categorized into two paradigms: two-stage methods and
+one-stage methods. Two-stage approaches [4, 11, 36, 37]
+first generate region proposals with an object detector and
+then match these candidates with the given expression.
+These methods often yield high localization accuracy but
+suffer from limited inference efficiency, which hinders their
+applicability in real-time scenarios. In contrast, one-stage
+methods [16, 32, 33] jointly encode visual and linguistic inputs in an end-to-end manner to directly predict the referred
+object, offering superior efficiency and broader potential
+for real-world deployment. Recently, Transformer-based
+architectures [18, 26, 31, 34] have been widely adopted
+for multimodal fusion for referring detection, yielding significant performance improvement. Additionally, several
+works fine-tuned large-scale pre-trained Vision-Language
+Models (VLMs) [2, 28–30], leveraging their strong semantic priors to further enhance grounding performance. Although these high success of referring detection approaches
+in ground images, these face serious performance degradation on our aerial referring detection dataset, thus encouraging the exploring of more robust and adaptable methods for
+referring detection in aerial images.
+3. RefAerial Dataset
+In this section, we introduce how to collect, and then expand
+and annotate the aerial RefAerial dataset via the proposed
+semi-automated human-in-the-loop referring expansion and
+annotation engine (REA-Engine) in detail. Then, we highlight its statistics and characteristics compared to existing
+ground referring detection datasets.
+3.1. Aerial Image Collection
+We first collect abundant aerial images with high-resolution
+(1920×1080) drone devices under diverse real-world conditions. The data are collected in diverse outdoor environments to cover various scene complexities, viewpoints, and
+object types. As shown in Table 2, RefAerial dataset contains more than 30 categories of aerial-view targets (such as
+people, cars, trees, buildings, etc.), covering multiple types
+of environments and geographical contexts. It include different area types (urban and suburban), representative locations (university, park, crossroad, lake, residential block,
+etc.), and multiple flight altitudes (30m, 90m, 150 m). The
+view angles ranging from 0◦ to 90◦, covering steep-oblique
+to near-nadir perspectives, which introduces large appearance and scale variations. Moreover, the dataset encompasses diverse illumination (daytime, overcast, nighttime)
+and weather conditions (clear, cloudy, light rain). Thus, the
+aerial images in RefAerial contain enough representativeness and diversity for real-world aerial referring detection.
+3.2. Referring Expansion and Annotation Engine
+Annotating the visual bounding-box and textual description
+pair of referring targets is much complicated and expensive. Beyond manual annotation, we develop an advanced
+referring expansion and annotation engine (REA-Engine)
+that leverages the capabilities of powerful large multimodal

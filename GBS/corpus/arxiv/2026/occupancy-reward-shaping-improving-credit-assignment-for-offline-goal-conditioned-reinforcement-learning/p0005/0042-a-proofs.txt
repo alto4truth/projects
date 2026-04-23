@@ -1,0 +1,48 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 5
+section: a-proofs
+chunk: 42
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+duct measureΛ(x, y) =
+δg(x)ν(y).
+Substituting this unique plan into the definition yields:
+W 2
+2 (δg, ν) =
+Z Z
+∥y−x∥ 2δg(x)ν(y)dxdy
+=
+Z
+∥y−g∥ 2ν(y)dy(by the sifting property ofδ g(x))
+The result is the expected squared Euclidean distance from the pointgto the distributionν.
+By replacing the general measureνwith the specific transition probabilityd πD(s+ |s, a)and
+renaming the integration variable, we obtain the final form:
+W 2
+2 (δg, dπD(s+ |s, a)) =
+Z
+∥s+ −g∥ 2dπD(ds+ |s, a) =M πD(s, a, g)
+With this setup, we now define
+Φ(s, g) :=∥s−g∥ 2, M πD(s, a, g) :=
+Z
+Φ(s+, g)d πD(ds+ |s, a).
+Then
+rW (s, a, g) =−M πD(s, a, g).
+Recall the expanded form ofd π:
+dπD(s+ |s, a) = (1−γ)p(s ′ |s, a) +γ d πD(s+ |s ′, a′),∀(s, a, s ′, a′)∈ D
+Now, substitute into the definition ofM π as an integral, and under the assumption of deterministic
+dynamics:
+M πD(s, a, g) =
+Z
+Φ(s+, g)d πD(ds+ |s, a)
+=
+Z
+Φ(s+, g)
+
+(1−γ)δ s′(s+ =s ′) +γd πD(s+ |s ′, a′)
+
+ds+
+15

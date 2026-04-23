@@ -1,0 +1,59 @@
+title: Efficient Test-Time Inference via Deterministic Exploration of Truncated Decoding Trees
+source: arxiv
+year: 2026
+document_id: efficient-test-time-inference-via-deterministic-exploration-of-truncated-decoding-trees
+authors: Xueyan Li; Johannes Zenn; Ekaterina Fadeeva; Guinan Su; Mrinmaya Sachan; Jonas Geiping
+page: 2
+section: 6
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20500v1
+
+0: Results for DeepConf (Fu et al., 2025) on MMLU-Pro (Wang et al., 2024c) with
+Qwen2.5-0.5B-Instruct. See Appendix D.4 for additional information.
+26
+
+D.5 Self-Certainty (Kang et al., 2025)
+Self-certainty (Kang et al., 2025) is a method for response evaluation and selection. More
+specifically, it is a metric that takes the probability distribution of the LLM into account to
+estimate response quality without additional compute. The general idea is that a larger
+self-certainty also corresponds to an improved response accuracy. Self-certainty is defined
+as the point-wise Kullback-Leibler (Kullback & Leibler, 1951) divergence between a uniform
+distribution and the next-token distribution, averaged over the sequence length,
+Self-Certainty(x1:T ) :=− 1
+VT
+T
+∑
+t=1
+V
+∑
+v=1
+log(V·p(v|x <t)), (15)
+whereV=|V |is the size of the vocabulary.
+Kang et al. (2025) also identifies that score-based voting methods suffer from sensitivity to
+score scaling. Therefore, they propose an approach inspired by Borda-counts. First, they
+rank N outputs of models by confidence, obtaining a ranking (r1, r2, . . ., rN). Then, they
+assign votes to these ranked outputs using the formula
+v(r) = (N−r+1) p, (16)
+whereris the rank of the output andpis the voting power.
+Table 11 shows results for all self-certainty experiments on GSM8K (Cobbe et al., 2021)
+with Qwen2.5-0.5B-Instruct. Table 12 shows results for all self-certainty experiments on
+MMLU-Pro (Wang et al., 2024c) with Qwen2.5-0.5B-Instruct.
+Voting powerparg max , p=
+0.0
+p=0.1p=0.3p=0.5p=0.7p=0.9
+Votingk=220.0919.94 19.94 20.02 19.94 19.94
+Votingk=4 23.81 25.09 24.87 24.41 24.6425.32
+Votingk=8 28.73 29.8032.2231.01 30.17 31.54
+Table 11: Results for self-certainty (Kang et al., 2025) on GSM8K (Cobbe et al., 2021) with
+Qwen2.5-0.5B-Instruct. arg max, p= 0.0 denotes the casewithout votingand choosing the
+arg max sequence for self-certainty.
+Voting powerparg max , p=
+0.0
+p=0.1p=0.3p=0.5p=0.7p=0.9
+Votingk=2 14.42 14.26 14.21 14.11 14.4514.51
+Votingk=4 15.13 15.4015.9215.90 15.10 15.91
+Votingk=8 13.48 14.25 14.6614.6814.28 14.14
+Table 12: Results for self-certainty (Kang et al., 2025) on MMLU-Pro (Wang et al., 2024c)
+with Qwen2.5-0.5B-Instruct. arg max, p= 0.0 denotes the casewithout votingand choosing
+the arg max sequence for self-certainty.
+27

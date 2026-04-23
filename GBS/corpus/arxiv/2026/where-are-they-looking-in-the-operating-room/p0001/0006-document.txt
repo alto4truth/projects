@@ -1,0 +1,26 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+2
+Fig. 1: Examples of the gaze-following annotations on the 4D-OR [26] and Team-OR [6] datasets, where bounding boxes represent heads and arrows denote the
+corresponding gaze points.
+several team members substantially increases technical difficulty, as it often requires using visual markers [21], physical
+actions [4], hardware triggers [1], or specialized software protocols [33, 25]. These challenges make large-scale deployment difficult to achieve.
+To overcome these limitations, an alternative approach is to
+predict where clinicians are looking by following their gaze
+directions in a holistic view (e.g. ceiling-mounted cameras),
+which is often referred to as gaze-following [28]. Unlike
+traditional eye-tracking systems, gaze-following does not require additional devices, and has been extensively studied in
+the general computer vision field [28, 29, 7, 8, 37, 36, 31],
+along with several downstream applications such as intention
+prediction [39], human-object interaction detection [40], gaze
+communication detection [13, 14], and human-robot interaction [32, 18]. However, gaze-following and its applications in
+the OR still remain unexplored.
+In this work, we aim to introduce gaze-follo

@@ -1,0 +1,21 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 40
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+us, if hallucination alleviation and description faithfulness are both
+critical in certain application scenarios, we recommend that
+practitioners adopt our visual chain-of-verification method
+to achieve the best performance.
+Qualitative examples.We present two representative examples covering two types of questions: (a) yes-or-no,
+and (b) open-ended, using LLaV A-v1.5-7B as an exemplar
+LVLM. As shown in Figure 4, R-CoV successfully detects
+the hallucinated objects “handbag” and “backpack”—both
+assigned a verification score of 0.00—and corrects the initial responses accordingly. By applying region-aware chainof-verification, we make the hallucination alleviation process more interpretable—the self-generated bounding boxes
+help explain how hallucinations occur. For instance, when
+asked to localize “handbag” and “backpack”, the LVLM in8

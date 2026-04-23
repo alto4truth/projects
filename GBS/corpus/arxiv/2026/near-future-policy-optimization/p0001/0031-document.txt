@@ -1,0 +1,23 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+ry baseline on average
+and leads on ZeroBench, where correct trajectories are scarce and a warm guide matters most; adding the
+late-stage intervention on top yields the largest further gains on WeMath and MathVerse, where reasoning
+depth dominates and breaking through the on-policy plateau is most valuable. Building on this, AutoNPO
+reaches the best overall score, improving by +2.90 over GRPO and +1.67 over RLEP, and holds the top score
+on five of the eight tasks while staying competitive on the rest, indicating that online plateau detection and
+ˆS(∆)-driven rollback can identify intervention moments at least as informative as those chosen by hand.
+4.3 Training Dynamics
+Figure 4 shows that AutoNPO changes training dynamics in a targeted rather than uniformly aggressive way.
+The three panels tell a coherent story across optimization speed, exploration, and late-stage performance
+ceiling. Panel (a) compares training reward directly. AutoNPO rises more quickly at the beginning of training
+and then stays above GRPO through the rest of optimization. The first highlighted window corresponds to
+the early-stage guidance phase, which lifts the run onto a stronger trajectory, while the later

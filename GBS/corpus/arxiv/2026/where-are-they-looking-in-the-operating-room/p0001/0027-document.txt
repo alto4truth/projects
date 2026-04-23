@@ -1,0 +1,25 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+ing models surpasses all the existing methods. As
+the training of the gaze encoder is self-supervised, we can improve the performance with gaze features in any unseen OR
+scenes without additional labels.
+3.5. Ablation study
+To evaluate the effect of encoding gazes locally by heuristically only encoding the gazes of the rightmost three persons that are near the anesthesia equipment when detecting
+“A.B.A.”, we conduct an ablation study with three settings:
+(1) encoding all gazes during training and testing; (2) encoding gazes locally during training and testing; (3) encoding all
+gazes during training, and encoding gazes locally during testing. As shown in Table 5, the last setting achieves the best
+performance.
+3.6. Limitations and future work
+In this work, we have studied gaze-following in the OR
+for the first time, and have proved its clinical value through
+gaze-based surgical workflow analysis, including role prediction, phase recognition, and team communication detection.
+However, there are some limitations: (1) the proposed gazefollowing datasets in the OR only consist of two clinical sites,
+which lack the diversity for broad generalization; (2) the gazefollowing research is lim

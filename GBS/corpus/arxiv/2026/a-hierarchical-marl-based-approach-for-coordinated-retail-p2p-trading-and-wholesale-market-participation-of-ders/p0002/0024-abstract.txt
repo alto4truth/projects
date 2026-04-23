@@ -1,0 +1,47 @@
+title: A Hierarchical MARL-Based Approach for Coordinated Retail P2P Trading and Wholesale Market Participation of DERs
+source: arxiv
+year: 2026
+document_id: a-hierarchical-marl-based-approach-for-coordinated-retail-p2p-trading-and-wholesale-market-participation-of-ders
+authors: Patrick Wilk; Ethan Cantor; Yikui Liu; Jie Li
+page: 2
+section: abstract
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20586v1
+
+and penalties incurred if the wholesale market attempt
+fails.
+𝑇 𝐴= −
+∑
+𝑛∈𝑁𝐵
+𝑃 𝐴𝑎
+𝑛−
+∑
+𝑛∈𝑁𝑂
+𝑅𝑉 𝑎
+𝑛 +(𝑃𝑤 ⋅𝑞 𝑤
+𝑎
+)−
+∑
+𝑛 𝑃 𝑁𝑛
+(30)
+Final payouts of P2P buyer (31) and seller (32) incorporate P2P transactions and settlements with the aggregator.
+𝑇 𝐵𝑛 =𝑃 𝐴 𝑛 +𝑃 𝐴 𝑎
+𝑛 +𝑃 𝑁 𝑛, 𝑛∈𝑁 𝐵 (31)
+𝑇 𝑆𝑛 =𝑅𝑉 𝑛 +𝑅𝑉 𝑎
+𝑛 +𝑃 𝑁 𝑛, 𝑛∈𝑁 𝑂 (32)
+The proposed hierarchical market framework spans a
+24-hour horizon. For each hour𝑡, the aggregator posts its
+purchase and sell prices,𝑝𝑏
+𝑎(𝑡)and𝑝 𝑠
+𝑎(𝑡), to the P2P market
+before participants submit bids and offers for that hour.
+After the P2P market clears, settled prices and quantities
+are allocated among participants, with any unmatched bids
+and/or offers tracked as residuals. Once all 24 hours’ P2P
+transactions are processed, the aggregator compiles hourly
+residuals and transacts with the wholesale market or utility
+on behalf of prosumers, aiming to optimize its profit (30).
+Following wholesale settlements, the aggregator distributes
+net profits or costs back to the P2P participants. This approach accommodates the single round 24-hour day-ahead
+wholesale market while allowing hourly price-setting between the aggregator and local P2P participants.
+3. DRL-Based Stack

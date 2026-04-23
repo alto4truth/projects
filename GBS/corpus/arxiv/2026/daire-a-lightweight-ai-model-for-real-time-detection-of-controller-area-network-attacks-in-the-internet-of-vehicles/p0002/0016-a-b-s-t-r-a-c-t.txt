@@ -1,0 +1,28 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 2
+section: a-b-s-t-r-a-c-t
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+oller Area Network (CAN)
+CAN protocol is a widely adopted communication standard used in
+vehicles to enable message exchange between ECUs (Song et al., 2020).
+CAN supports real-time, high-speed, and reliable in-vehicle communication across components such as the engine control module, brake
+system, and steering mechanisms. Despite its widespread adoption, the
+CAN protocol lacks fundamental security features such as encryption,
+authentication, and access control. This makes it inherently vulnerable
+to several types of cyberattacks (Yang et al., 2023), including:
+• Denial-of-Service (DoS) attacks involve an attacker overwhelming
+the CAN bus with high-priority messages, effectively preventing
+critical commands from being transmitted. This can disrupt or
+completely disable communication between legitimate ECUs, potentially leading to partial or total failure of vehicle systems,
+including vital safety features.
+• Spoofing attacks occur when an attacker sends counterfeit or
+modified CAN messages, mimicking legitimate ECUs. The intent
+is to trick other ECUs into accepting these messages as authentic,
+which can result in unsafe or unintended vehicle behavior. There
+are several different ki

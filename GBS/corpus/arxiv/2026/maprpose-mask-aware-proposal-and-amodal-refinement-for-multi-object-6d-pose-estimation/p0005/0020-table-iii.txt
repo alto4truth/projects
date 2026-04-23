@@ -1,0 +1,33 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 5
+section: table-iii
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+hypotheses required for downstream
+refinement, while significantly improving sampling efficiency.
+Furthermore, MAPRPose (w/o MAPP) reduces the number
+of candidate poses from 252 to 7 without any loss in accuracy
+(99.9%), demonstrating the effectiveness of our constrained
+pose sampling strategy in eliminating physically implausible
+viewpoints.
+The choice of Top- K= 7 is motivated by the geometric
+redundancy of the SO(3) search space. Dense sampling
+strategies, such as those used in FoundationPose, often generate
+redundant candidates corresponding to equivalent viewpoints,
+particularly for symmetric objects. As shown in Table III (Part
+B), increasing Top- K from 3 to 7 improves accuracy from
+97.2% to 99.7%, with notable gains on ambiguous objects
+such ascatandcan. However, further increasing Top- K yields
+diminishing returns, with only a marginal improvement to
+99.8% atK= 11.
+These results suggest that K= 7 is sufficient to capture
+the multi-modal pose distribution, including symmetry-induced
+ambiguities. Compared to the 252-hypothesis baseline, our
+method reduces the computational cost by approximately
+97%, while achieving stable recall across both symmetric and
+asymmetric objects w

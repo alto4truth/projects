@@ -1,0 +1,23 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+ting alone.
+Reasoning MLLMs, such as Step-R1-V-Mini and Gemini 2.5 Pro, achieve relatively good performance
+in both zero-shot and in-context learning settings. However, their performance does not significantly
+surpass that of non-reasoning models, particularly in terms of F1-score, where both fall slightly below
+GPT-4o’s zero-shot result. Given their currently higher cost, we argue that reasoning MLLMs do not
+offer a clear advantage for the covert advertisement detection task at this stage.
+Our further analysis shows that in-context learning remains insufficient for our task. Only a few
+models achieved better performance compared to their zero-shot setting version, which highlights the
+limitations of in-context learning for this task. We also attempted to include more detailed evaluation
+criteria in the prompt, as shown in Appendix E, but it did not improve performance.
+Table 3 shows the results of fine-tuning the two best-performing open-source models, InternVL and
+Qwen2.5. The results show that both models improved significantly over their zero-shot performance,
+with Qwen2.5 achieving superior results. After fine-tuning, Qwen2.5 surpassed the previously bestperforming MLLM, GPT-4

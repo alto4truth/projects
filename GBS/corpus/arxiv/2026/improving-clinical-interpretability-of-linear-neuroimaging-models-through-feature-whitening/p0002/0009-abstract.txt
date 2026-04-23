@@ -1,0 +1,29 @@
+title: Improving clinical interpretability of linear neuroimaging models through feature whitening
+source: arxiv
+year: 2026
+document_id: improving-clinical-interpretability-of-linear-neuroimaging-models-through-feature-whitening
+authors: Sara Petiton; Antoine Grigis; Raphaël Vock; Edouard Duchesnay
+page: 2
+section: abstract
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20675v1
+
+s performed with scikit-learn (v. 1.3.2)
+[17], with hyperparameter tuning via a grid search, to identify the bestL 2 regularization parameterC, evaluated over
+the set{0.001,0.01,0,1,10}.
+2.3. Identification of highly covarying features
+We whitened features pairwise to corresponding left and right
+hemispheric regions (e.g., left amygdala, right amygdala),
+and to GM and CSF volumes of the same brain region (e.g.,
+left amygdala GM, left amygdala CSF). We selected such
+pairs based on prior evidence that corresponding regions in
+the left and right hemispheres exhibit strong correlations, and
+on the inverse relationship between GM and CSF volumes,
+such that higher GM volume corresponds to lower CSF volume within the same brain region. Although we demonstrate
+the approach on ROI-level features for simplicity, the framework naturally extends to voxel-wise data by whitening pairs
+of spatially symmetric voxels across hemispheres, or pairs of
+GM and CSF voxel intensities within the same region.
+2.4. Choice of whitening method
+Several whitening formulations exist, including principal
+component analysis (PCA) whitening, zero-phase component
+analysis (ZCA) whitening, and Cholesky whitening. Thes

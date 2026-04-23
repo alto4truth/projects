@@ -1,0 +1,26 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 6
+section: b-additionalinformation
+chunk: 58
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+Published as a conference paper at ICLR 2026
+achieve success.scene-noisyinvolves the same tasks but the dataset is of substantially
+lower quality.
+Figure 7: OGBench tasks.
+B.2 TOKAMAK TASKS
+A tokamak (Figure 8) is a scientific device that uses electro-magnetic fields to confine extremely hot
+ionized gas called plasma in a toroidal chamber, with the aim of achieving controlled nuclear fusion
+It is considered the most promising experimental design for achieving commercial nuclear fusion at
+scale, opening up avenues for nearly unlimited clean energy.
+We use a dataset of raw sensor and actuator data collected from the DIII-D tokamak located in San
+Diego, CA, USA. Each trajectory corresponds to one plasma discharge, with a control frequency
+of 25 ms. A control task corresponds to tracking certain state variables of the plasma through the
+duration of a discharge. While we were not able to get experiment time on the reactor on short
+notice, we evaluated each RL algorithm using rollouts from a thoroughly tested and accurately
+learned model of plasma dynamics (Char et al., 2023; 2024) as a proxy. Each RL algorithm was
+evaluated based on how closely it tracks a given goal state of the plasma

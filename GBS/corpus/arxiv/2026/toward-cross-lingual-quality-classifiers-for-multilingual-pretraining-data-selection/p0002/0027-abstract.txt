@@ -1,0 +1,24 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+27 0.4783
+XWinograd 0.6386 0.6506 0.60240.6627
+Aggregate acc_norm0.3954 0.4089 0.40590.4151
+Average rank3.502.12 2.122.25
+ting regularities in the embedding space remains to be characterized. However, we note that these
+high rank correlations may partially reflect the classifier learning shared dataset artifacts such as
+Wikipedia formatting or instruction-tuning templates rather than a purely abstract representation of
+quality. Nonetheless, capturing these cross-lingual artifacts serves as a highly effective and robust
+proxy for pretraining data selection. Conversely, the underperformance of Romance-without-French
+suggests that syntactic similarity can be a double-edged sword: the classifier may overfit to Spanish/Italian grammatical structures that don’t perfectly align with French, creating systematic biases
+that distant language families avoid.
+Refining the Decision Boundary.We have observed that training on multiple languages provides
+strong performance boosts, and also can generalize to unseen samples. Nevertheless, upon examining the training pipeline, one could argue that using random samples from FineWeb2 might not be
+the best strategy for selecting negative samples. Standa

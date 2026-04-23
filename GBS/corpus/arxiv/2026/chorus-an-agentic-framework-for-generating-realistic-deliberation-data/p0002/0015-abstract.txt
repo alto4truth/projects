@@ -1,0 +1,25 @@
+title: CHORUS: An Agentic Framework for Generating Realistic Deliberation Data
+source: arxiv
+year: 2026
+document_id: chorus-an-agentic-framework-for-generating-realistic-deliberation-data
+authors: A. Koursaris; G. Domalis; A. Apostolopoulou; K. Kanaris; D. Tsakalidis; I. E. Livieris
+page: 2
+section: abstract
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20651v1
+
+tains awareness of the evolving discussion by continuously accessing
+its own personal posting and actions history,H post
+i andH action
+i , respectively, producing actions and posts that reflect
+both its persona-driven identity and the current state of the deliberation as well as the shared historyH. Specifically,
+Hpost
+i records all content previously submitted by actorai, whileH action
+i tracks all voting actions performed, preventing
+redundant engagement with already-acted-upon content.
+Algorithm 1 presents the main simulation cycle governing the execution of the agentic deliberation framework. A key
+design decision concerns the mechanism governing when each actor participates in the discussion. A persona-driven
+approach, wherein the agent itself decides whether to post or act based on its persona and the current discussion state,
+was deliberately avoided, as it introduces systematic bias: the LLM’s intrinsic tendencies would disproportionately
+shape participation timing, resulting in engagement patterns that reflect model priors rather than realistic user behavior
+[Casoria et al., 2025, Li et al., 2024]. Instead, the temporal dynamics of each actor’s participation are governed b

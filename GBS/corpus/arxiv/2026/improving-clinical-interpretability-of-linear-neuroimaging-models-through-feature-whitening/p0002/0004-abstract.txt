@@ -1,0 +1,27 @@
+title: Improving clinical interpretability of linear neuroimaging models through feature whitening
+source: arxiv
+year: 2026
+document_id: improving-clinical-interpretability-of-linear-neuroimaging-models-through-feature-whitening
+authors: Sara Petiton; Antoine Grigis; Raphaël Vock; Edouard Duchesnay
+page: 2
+section: abstract
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20675v1
+
+on of biomarkers from
+brain imaging [1, 2]. However, interpreting linear weights
+can be challenging when features are correlated, a common
+scenario in neuroimaging, where brain regions or imagingderived measures often covary [3]. For example, model
+weights assigned to left and right hemispheric measurements
+of symmetrical regions, or to gray matter (GM) and cerebrospinal fluid (CSF) volumes within the same region, often
+capture shared variance rather than individual contributions,
+thereby limiting clinical interpretability. While “forward
+models” [3] address collinearitypost hoc, they ignore known
+brain structure, such as inter-hemispheric correlations, which
+we explicitly incorporate during model fitting in the present
+work.
+Whitening, or sphering, is an orthogonalization technique originally introduced in signal processing to remove
+linear dependencies between features [4]. It has since been
+adopted across various domains to improve model stability
+and interpretability. In machine learning, whitening has recently gained attention in self-supervised learning (SSL), as
+a strategy to prevent feature collapse and enhance latent representations [5]. Emerging studies also suggest its p

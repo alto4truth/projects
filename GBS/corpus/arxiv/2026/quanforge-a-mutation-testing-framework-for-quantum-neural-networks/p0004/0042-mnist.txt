@@ -1,0 +1,25 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 4
+section: mnist
+chunk: 42
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+by applying the same operator to different gate positions, thereby increasing
+structural diversity. Randomness in gate selection, input sampling, noise injection, and model
+training may introduce variability, which we mitigate by running repeated experiments and using
+fixed random seeds.
+5 Conclusion
+In this paper, we proposed QuanForge, a post-training mutation testing technique tailored for QNNs,
+to support the evaluation of both test data quality and model structural sensitivity. By introducing
+multi-granularity mutation operators, diverse faults are injected into parameterized quantum
+circuits, simulating both logical and physically realistic errors. Combined with statistical mutation
+killing, QuanForge utilizes stability checking and effectiveness analysis to ensure the mutant quality.
+It addresses the challenges posed by randomness in operator application and quantum measurement.
+Extensive experiments demonstrated the effectiveness of QuanForge in assessing the test data
+quality and revealing fragile regions in QNNs. We further analyzed the sensitivity to various gate
+types and the generation capability of different operators, which guide future mutation design. To
+approach m

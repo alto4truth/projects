@@ -1,0 +1,31 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+Params 8B 12B-14B 27-32B >=70B Avg (Std.)
+Models LLaMA Qwen Gemma Qwen Gemma MedGemma Qwen LlaMA Qwen
+8B 8B 12B 14B 27B 27B 32B 70B 72B
+Baseline: no-retrieval
+EN 61.6 69.6 63.2 72.0 70.4 76.8 80.8 76.084.0 72.7 (7.07)
+ES 50.4 65.6 60.8 64.8 72.8 75.2 76.0 80.0 79.2 69.4 (9.24)
+FR 53.6 58.4 62.4 67.2 73.6 75.2 74.4 83.2 81.6 69.9 (9.65)
+IT 48.8 62.4 68.8 67.2 68.0 72.0 75.2 79.2 81.6 69.2 (9.22)
+EU 36.8 45.6 48.0 57.6 62.4 67.2 57.6 71.2 53.6 55.6 (10.26)
+KK 36.8 44.0 54.4 42.4 53.6 63.2 64.8 72.8 57.6 54.4 (11.04)
+Avg. (Std.) 48.0 (8.88) 57.6 (9.67) 59.6 (6.69) 61.87 (9.71) 66.8 (6.96) 71.6 (4.88) 71.47 (7.82) 77.07 (4.17) 72.93 (12.39)
+MedExpQA
+EN 72.8 77.6 67.2 76.8 74.4 70.4↓80.0↓ 79.2 81.6 ↓ 75.56 (4.48)
+ES 62.6 68.8 70.4 72.0 79.2 76.8 76.8 80.0= 80.8 75.16 (5.76)
+FR 67.2 68.8 68.0 75.2 78.4 76.8 78.4 79.2↓80.0 ↓ 74.58 (4.87)
+IT 64.0 70.4 63.2↓73.6 75.2 77.6 79.2 81.6 80.8↓ 73.96 (6.46)
+EU 44.8 59.2 63.2 58.4 67.2 73.6 67.2 73.6 67.2 63.82 (8.42)
+KK 45.6 56.0 56.0 61.6 70.4 70.4 69.6 71.2↓ 61.6 62.49 (8.32)
+Avg. 59.5 (10.61) 66.8 (7.21) 64.67 (4.65) 69.6 (7.01) 74.13 (4.22) 74.13 (2.91) 75.2 (4.95) 77.47 (3.74) 75.33 (7.91)
+LLM’s parametric knowledge
+EN 67.2 73.6 69.6 75.2 67.

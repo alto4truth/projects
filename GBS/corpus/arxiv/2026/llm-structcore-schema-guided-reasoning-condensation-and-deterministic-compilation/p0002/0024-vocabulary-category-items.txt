@@ -1,0 +1,16 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 2
+section: vocabulary-category-items
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+engine for grammar-constrained generation. Our approach is complementary: rather than constraining the LLM’s
+token-level output, we simplify the target schema (9 keys vs. 134) and defer
+structural compliance to a deterministic post-processor. This avoids the
+computational overhead and backend-dependency of constrained decoding
+while achieving comparable output stability.
+12

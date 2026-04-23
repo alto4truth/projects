@@ -1,0 +1,28 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+ion, region description, verification execution, and final response generation.
+we wish to improve in our experiments,i.e., we will directly compare this baseline response with our final verified
+response. Typically, such initial generations are prone to
+hallucinations. Our R-CoV attempts to identify and correct
+these hallucinations, as described in the following stages.
+Stage 2: Entity extraction.Based on the initial response
+generated from the LVLM, we extract candidate entities in
+this stage for subsequent querying and checking, which are
+typically the objects mentioned in the response. Specifically, following [49], we adopt an LLM (i.e., GPT-3.5 1) to
+complete this task for simplicity and versatility. 2 We denote the set of extracted entities asE={e i}, i= 1, ..., N,
+whereNis the number of candidate entities. We provide
+the detailed prompt we use in the supplementary material.
+Stage 3: Coordinate generation.The primary stage in our
+R-CoV pipeline involves eliciting region-level knowledge
+from LVLMs for verification. To achieve this, we prompt
+the LVLM to provide the position of each extracted entity
+in the image, using the form of bounding box coordinates.
+Specifically, given t

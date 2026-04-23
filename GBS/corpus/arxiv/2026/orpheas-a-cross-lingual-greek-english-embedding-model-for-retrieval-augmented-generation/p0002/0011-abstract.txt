@@ -1,0 +1,19 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+ORPHEAS: A Cross-Lingual Greek–English Embedding Model for Retrieval-Augmented GenerationA PREPRINT
+languages [Koursaris et al., 2026]. In the rest of this section, we provide a comprehensive review of the foundational
+models and specialized approaches proposed in the literature with Greek language support.
+Wang et al. [2020], proposed MiniLM, a compact multilingual embedding model supporting 50 languages including
+Greek, which transfers self-attention knowledge from larger teacher models through knowledge distillation. The model
+achieves 99% performance retention with 50% parameter reduction, making it particularly suitable for production
+environments where computational efficiency is critical.
+citesong2020mpnet proposed MPNet, a multilingual embedding model supporting 50 most frequently utilized languages including Greek, addressing the position discrepancy problem Siino [2024] through a novel two-stream selfattention mechanism with position compensation. Fine-tuned on one billion sentence pairs, MPNet produces 768dimensional embeddings with strong performance across semantic textual similarity tasks, establishing it as a competitive benchmark for multilingual retrieval.
+Zhang et

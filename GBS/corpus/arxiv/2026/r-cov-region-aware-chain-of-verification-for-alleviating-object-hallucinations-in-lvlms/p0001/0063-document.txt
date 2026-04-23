@@ -1,0 +1,33 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 63
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+Table 9.Prompt template for entity extraction.{In-context examples}are in-context examples for better instruction.{Input sentence}
+is the output from the initial response generation stage.
+System prompt
+You are a language assistant that helps to extract information from given sentences.
+Prompt
+You are given a sentence, extract the entities within the sentence for me.
+[Task]
+Your task is to extract the common objects and summarize them as general categories without repetition,
+merging essentially similar objects. Avoid extracting abstract or non-specific entities. Extract entity in the
+singular form. Output all the extracted types of items in one line and separate each object type with a period.
+If there is nothing to output, then output a single “None”. DO NOT RESPOND WITH ANYTHING ELSE.
+Here are examples:
+{In-context examples}
+Now complete the following:
+[Sentence]
+{Input sentence}
+[Response]
+Table 10.Prompt template for verification execution.{Input statement}is the output from the region description stage.{object}is the
+entity to be verified based on the statement.
+System prompt
+You are a language assistant that helps to answer the question according to instructions.
+Prompt
+You

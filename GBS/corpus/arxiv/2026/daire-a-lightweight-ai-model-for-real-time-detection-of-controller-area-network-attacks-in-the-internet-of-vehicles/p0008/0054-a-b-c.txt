@@ -1,0 +1,28 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 8
+section: a-b-c
+chunk: 54
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+sage formats and permissible value ranges, may limit the
+feasibility of adversarial attacks, attackers familiar with CAN could still
+craft convincing injections or alter message sequences. Thus, DAIRE’s
+robustness against adversarial scenarios cannot be taken for granted.
+In future work, we plan to experimentally assess DAIRE’s resilience
+under diverse attacker models and present both success and failure
+rates across different perturbation strategies.
+5.3.5. Evaluating the allocation scheme for neurons (equ (1))
+We conducted a performance evaluation of our allocation scheme
+for neurons given in Eq. (1). For this, we ran a series of similar experiments as described in Section 5.3.2, comparing the allocation scheme
+against standard configurations with varying fixed neuron counts (each
+layer with a fixed number of neurons). The results are shown in Table
+8.
+The experiments were conducted using the CICIoV2024 dataset,
+with the reported time representing the total training and testing
+duration. The first row in the table presents the performance of our
+allocation scheme. The FPR values are nearly zero but are included for
+comparison since they differ slightly. Although increasing the nu

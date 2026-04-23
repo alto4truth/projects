@@ -1,0 +1,38 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+Cy cle 1
+O r acle
+(b) P er formanc e on Comb o Cr afT e xt T asks
+Cy cle 2Cy cle 1
+(d) P er formanc e on P ar aphr ases Cr afT e xt T asks
+Cy cle 1
+Soft PP O- T+
+F iLM
+Soft F iLM
+Cy cle 2
+Figure 3: Comparison of SuperIgor and baseline performance on CrafText tasks (Atomic / Combo / New Objects
+/ Paraphrases). All agents were evaluated at 2.5 billion steps (corresponding to the first cycle in the SuperIgor
+approach) and 5 billion steps (corresponding to the second cycle).
+baselines at 0.08, while Oracle reaches 0.43. The
+wider gap to Oracle here can be explained by the
+fact that SI agents must simultaneously learn up
+to 20 alternative plans, whereas Oracle is trained
+on a single expert-aligned plan, which simplifies
+optimization.
+We further compare against standalone LLMbased agents (Appendix B.1) and observe that
+they fail to handle compositional instructions, with
+performance dropping sharply on Combo tasks.
+This highlights the importance of environmentgrounded learning for effective long-horizon instruction following.
+b) Agents trained with auto-generated plans
+generalize on unseen goals better than those
+trained with Oracle plans.
+On Combo tasks, Oracle achieves 0.43, while
+Supe

@@ -1,0 +1,45 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 7
+section: fw2-hq
+chunk: 84
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+FW2: 13.6%
+Syn: 87.8%
+Density
+T=0.007 FW2: 10.6%
+Syn: 99.9%
+T=0.012 FW2: 14.7%
+Syn: 99.9%
+T=0.003
+ChineseFW2: 14.0%
+Syn: 99.9%
+0.0 0.2 0.4 0.6 0.8 1.0
+Score
+Density
+T=0.057 FW2: 13.5%
+Syn: 98.0%
+0.0 0.2 0.4 0.6 0.8 1.0
+Score
+T=0.120 FW2: 18.1%
+Syn: 99.7%
+0.0 0.2 0.4 0.6 0.8 1.0
+Score
+T=0.116
+SpanishFW2: 17.7%
+Syn: 99.9%
+Figure 4: Comparison of score distributions for 10K synthetically generated grammatically correct nonsense samples across multilingual (ML), monolingual (HQ), and FineWeb2-HQ (FW2-HQ)
+classifiers for French, Chinese, and Spanish, compared to 10K random samples from FineWeb2.
+Synthetic samples were generated using Qwen3-32B (Team, 2025), with grammatically correct
+nonsense text concatenated to match the document length distribution of FineWeb2.Tdenotes
+the threshold used to retain the top 10% of data in our experiments. The colored area represents the
+proportion of retained documents.
+Text:|1||2||3|... 1De David. Éternel, je me tourne vers toi, 2mon Dieu, en toi je me confie.
+Que je ne sois pas couvert de honte! Que mes ennemis ne se réjouissent pas à mon sujet!...
+4Éternel, fais-moi connaître tes voies, enseigne-moi tes sentiers! 5Conduis-moi dans ta
+vérité...
+Trans

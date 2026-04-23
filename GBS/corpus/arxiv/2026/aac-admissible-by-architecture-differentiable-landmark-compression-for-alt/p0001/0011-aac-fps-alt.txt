@@ -1,0 +1,63 @@
+title: AAC: Admissible-by-Architecture Differentiable Landmark Compression for ALT
+source: arxiv
+year: 2026
+document_id: aac-admissible-by-architecture-differentiable-landmark-compression-for-alt
+authors: An T. Le; Vien Ngo
+page: 1
+section: aac-fps-alt
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20744v1
+
+1/β(flipping the inequality):−1
+βlog∑
+i exp(−βxi)≤minixi. For convergence:log ∑
+i exp(−βxi)≤−βminixi + logn, so
+smoothminβ(x)≥min(x)−logn
+β→min(x).
+47
+
+Admissibility at deployment vs. during training.Smooth-min underestimates the hard min at every Bellman–Ford iteration, so the soft per-vertex distances satisfy˜d(lk,v)≤d(lk,v). However, the ALT
+heuristic usesdifferencesof the formd(l k,t)−d(lk,u), and underestimating both terms individually does
+not preserve a lower bound on their difference. Therefore, the smooth teacher heuristic used during training
+isnotguaranteed to be admissible with respect to true distances. Atdeployment, this issue does not arise:
+exact distances are computed on the predicted-cost graph via standard Dijkstra, and the row-stochastic
+compression of these exact distances is admissible by Proposition 2. The smooth pipeline serves only as a
+differentiable training proxy; admissibility is guaranteed architecturally at inference, not through the training dynamics. Temperatureβis annealed from 1.0 to 30.0 during training, implementing a smooth-to-hard
+curriculum that improves gradient flow in early training while approaching the exact solution at convergence.
+Combined loss.
+Lctx = (dtrue−˜hA)+  
+gap-closing
++αcost· ∥ˆc−cgt∥2
+  
+cost supervision
++λcond·Rent,(13)
+whered true denotes the ground-truth shortest-path distance on the true-cost graph (computed offline via
+Dijkstra), and˜hA is the smooth compressed heuristic from the predicted-cost graph. The gap-closing term is
+across-graph path-quality surrogate:d true and ˜hA live on different graphs, so the gap is not an admissibility
+bound in the classical sense. Admissibility at deployment is guaranteed only with respect to the predictedcost graph (Proposition 2). Cost supervision provides direct signal for the encoder; the gap-closing term
+provides signal for both encoder and compressor.
+Encoder architectures.We evaluate two encoders on 96×96 RGB terrain images:
+•CNN: 3 convolutional layers (3→32→64→128 channels), AdaptiveAvgPool to grid size, 1×1 conv
+to scalar costs,softplus(·) + 0.01for strict positivity.
+•ResNet: 5×5 stem with batch normalization, 3 residual blocks (64 channels each), AdaptiveAvgPool, two 1×1 convolutions,softplus(·) + 0.01.
+Warcraft Compatibility Study
+We report acompatibilitycase study (demonstrating that AAC integrates into a differentiable planning
+pipeline with admissibility guaranteed at deployment) rather than claiming synergy or competitive advantage
+over specialized differentiable planners.
+Setup.We evaluate on Warcraft12×12grid maps (Vlastelica et al., 2020): 10,000 train / 1,000 test
+instances, 144 nodes, 8-connected. RGB terrain images (96×96) serve as context; a CNN or ResNet encoder predicts edge costs, then the AAC compressor constructs admissible landmarks for A* search on the
+predicted-cost graph.
+Table 23 compares AAC contextual variants against two differentiable baselines. The comparison regime
+is heterogeneous: AAC results are 3-seed means, BB uses published numbers from Vlastelica et al. (2020),
+and DataSP is our reproduction with a single seed. We do not claim competitive performance and we
+omit the cost-regret column from Table 23 because cost regret on dense12×12grids is not commensurable
+across methods with such different path-matching propensities. The numerical observation is narrowly
+that AAC with a ResNet encoder and cost supervision (αcost=10) trains end-to-end to completion: the
+compressor stays frozen, yields zero admissibility violations on all1000test instances, and the surrounding
+encoder learns. The blackbox method of Vlastelica et al. (2020) remains substantially better on path-match
+accuracy (54.7%vs.20.3±2.4%), likely because it differentiates through a full combinatorial shortest-path
+solution (Dijkstra in the forward pass), whereas AAC trains through a smooth label-construction surrogate
+built from soft shortest-path distances. We report these numbers solely to establish that the end-to-end
+differentiable pipeline trains to completion, not to argue AAC is preferable to blackbox differentiation on
+grid-map planning.
+48

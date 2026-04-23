@@ -1,0 +1,23 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+lts confirm that the discretization strategy has a substantial impact on downstream
+detection accuracy.
+4.4 Statistical Significance
+Further experiments shown in Fig.6 evaluate the six discretization methods
+across 10 random seeds to determine whether the accuracy improvements were
+statistically significant. A one-sided paired permutation test was used to assess
+whether each method improved accuracy relative to the baseline ZOH [30]. A
+significance level ofα= 0.05%was selected and the accuracy gains were considered significant only if they exceeded0.70%, which corresponds to the upper
+limit of the typical seed-induced variation on CIFAR-100 [15]. Throughput was
+observed to have minor variations relative to the complexity of each method,
+and accuracy gain did not degrade computational efficiency.
+BILdemonstratedastatisticallysignificantimprovementinaccuracyof1.09%
+(≥0.70%threshold, p<0.001) with an observed downtime of only2.77%. HOH

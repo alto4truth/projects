@@ -1,0 +1,23 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 114
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+tive Sanctions (COMPAS) was used by courts to predict the likelihood that a prisoner would reoffend. A 2016 ProPublica investigation revealed that the
+
+Chapter 3: The Model is Not the Market 102
+model was systematically biased against Black defendants, rating them as high-risk for future crimes twice as often as white defendants with similar profiles [13, 14]. The model used a variety of inputs including postcode, family background, educational history, and responses to statements such as: “A hungry person has the right to steal,” or “How often did you get in fights at school?” These datapoints acted as proxies for the abstract concept of "likelihood of reoffending." The model then calculated a risk score, which was provided to judges making parole decisions. A primary flaw in this design was the use of proxies that encoded historical inequalities and systemic discrimination. Clearly, the model reflected embedded prejudices, treating people from certain postcodes or family circumstances as though they shared the same risk profile. This resulted in disparate impacts and raised serious concerns about fairness, transparency, and accountability in criminal justice. By extracting the key concepts from this case into a structured format (Table 15), students can better understand how bias arises and how model assumptions should be audited. Real estate educators can use this example as a stepping stone, encouraging students to identify and critique similar issues in housing, valuation, or lending models. Table 15: Drawing out RAI concepts from the COMPAS example. Concept COMPAS example Goal Predict how likely a prisoner is to re-offend if released on parole.
+Abstract concept being modelled
+Likelihood of future criminal behaviour.
+Data proxies used
+Postcode, family background, friends' criminal history, school behaviour, etc.
+Data issues
+Privacy concerns, reliability of self-reported data, embedded historical biases.
+Stakeholders Judges (may over-rely on score), prisoners (may be unfairly denied parole), society (balancing safety and equity).
+Trustworthiness Does the model reflect the values and needs of those affected by its outcomes?
+What can the COMPAS case teach us about AI-Real Estate? Just as the COMPAS tool relied on questionable proxies, property algorithms may use certain datapoints to approximate creditworthiness or leasing risk. If these proxies reflect historical inequities, such as redlining or racially skewed lending patterns, they can result in discriminatory outcomes for tenants or buyers. Educators can use this case to help students identify how supposedly “neutral” data or algorithmic decisions can perpetuate bias, unless explicitly critiqued and corrected.

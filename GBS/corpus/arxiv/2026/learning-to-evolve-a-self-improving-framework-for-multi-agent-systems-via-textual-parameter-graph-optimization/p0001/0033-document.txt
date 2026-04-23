@@ -1,0 +1,41 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+nent-level ablation study on theBrowser Automationsubset
+of MCP-Universe. Starting from the same ReAct
+0 1 2 3 4 5
+Optimization Iteration
+10
+15
+20
+25
+30
+35
+40
+Success Rate (%)
+Stable Convergence
+Catastrophic Forgetting
+TPGO (with GRAO)
+TPGO (w/o GRAO)
+Figure 3:Optimization stability with and without
+GRAO.Success rate on MCP-Universe Browser Automation over five optimization iterations. TPGO with
+GRAO improves steadily, while the variant without
+GRAO suffers from catastrophic forgetting.
+baseline, we selectively disable one design component at a time and report the resulting success rate
+in Table 3.
+The results show that all three components make
+meaningful contributions. First, removing theTextual Parameter Graphand reverting to monolithic prompt rewriting lowers performance by 2.90
+points, confirming that structured modularization
+is important for effective optimization. Second, disablingstructural graph editscauses a 3.13-point
+drop, indicating that TPGO’s gains do not come
+solely from local text rewriting, but also from the
+ability to modify agent structure and dependencies. Third,clusteringimproves the quality of
+optimization signals: removing clustering reduces
+performance to

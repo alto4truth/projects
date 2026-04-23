@@ -1,0 +1,22 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+Published as a conference paper at ICLR 2026
+courage earlier, more efficient reasoning. MRT (Qu et al., 2025) frames the problem as meta reinforcement
+learning and computes a dense “progress” reward based on the change in the likelihood of eventual success.
+Their reward estimation can require complex, rollout-based procedures or multiple generation branches from
+intermediate states, which compromises training efficiency. In contrast, our method simplifies the process
+supervision workflow by deriving a high-quality signal from the known ground-truth answer, requiring only
+a single forward pass per generated trajectory. This makes our approach more efficient while still providing
+the benefits of fine-grained, verifiable process feedback.
+3 METHODOLOGY: PROCESSSUPERVISIONS FROMVERIFIABLEOUTCOMES
+LLMs trained under GRPO still suffer from indiscriminate credit assignment, where sparse outcome-based
+rewards fail to guide intermediate reasoning steps. To address this, we present a verifiable process supervision framework for enhancing GRPO with fine-grained credit assignment. We first introduce a segmentation
+strategy that uses token-level entropy to identify high-uncertainty transitions

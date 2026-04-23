@@ -1,0 +1,28 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+onditions, which can change midnegotiation when an external system updates parameters.
+When 𝛽 is derived from the live spread, such shifts can cause
+the concession formula to produce an offer lower than the
+previous one, violating the monotonic concession protocol.
+Endriss [17] formalized monotonic concession as a protocol
+requirement for bilateral bargaining. Winoto [ 16] introduced
+a non-monotonic-offers protocol and showed it generates
+higher surplus under full rationality, but the gains diminish
+as agent rationality decreases. In freight brokerage, where
+neither party observes the other’s reservation value, retractions are interpreted as bad faith. Gear et al. [ 14] addressed
+this problem directly with PredictRV, which uses statistical
+prediction models (Bayesian regression, LSTM) to smooth
+offers when the agent’s reservation value changes during negotiation. Their approach reduces erratic offer behavior but
+provides no formal monotonicity guarantee, and it handles
+changes to the reservation value only while the concession
+shape parameter remains fixed. Our two-index framework
+guarantees monotonicity under arbitrary shift sequences that
+change both the concession range and the

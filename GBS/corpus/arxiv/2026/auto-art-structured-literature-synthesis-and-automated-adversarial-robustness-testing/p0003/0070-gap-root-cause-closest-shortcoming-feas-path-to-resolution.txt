@@ -1,0 +1,26 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 3
+section: gap-root-cause-closest-shortcoming-feas-path-to-resolution
+chunk: 70
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+1% arXiv:2001.03994
+H Direction 1: Architecture Diagram Starter (TikZ)
+The following TikZ code provides a starter template for the multi-norm adversarial training curriculum architecture (Section 13.1).
+Input Batch
+x∈
+RB×3×32×32
+Multi-Norm
+Perturbation
+δ∗
+p =
+arg max∥δ∥p ≤εp L
+Curriculum
+Scheduler
+p∼ P t
++
+Model fθ

@@ -1,0 +1,26 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+Ranked Probability Score (CRPS)
+distributions comparing the sharpness and accuracy of
+MCMC and SBI posterior predictions for each
+parameter.
+its of the stochastic degradation model rather than a
+method-specific failure. Consistent with Fig. 5, SBI posteriors forλare often narrower than MCMC in weakly
+identifiable regimes, whereas MCMC preserves broader
+uncertainty by exploring near-flat likelihood regions. Importantly, despite these limits in continuous-parameter
+recovery, failure-mode classification remains correct in
+virtually all2,500failure cases. Similar qualitative conclusions are obtained when using posterior maximumlikelihood point summaries.
+To assess similarity of full posterior shapes, we evaluate the 1D Wasserstein distance between MCMC and
+SBI posteriors for each parameter (Fig. 7). The distributions are generally concentrated at low values, indicating
+that the amortized SBI posterior remains close to the
+MCMC reference over most inference tasks. Larger distances appear primarily in weakly identifiable regimes,
+where multiple parameter combinations explain the observations nearly equally well. This pattern is consistent
+with the scenario-level analysis above: discrepa

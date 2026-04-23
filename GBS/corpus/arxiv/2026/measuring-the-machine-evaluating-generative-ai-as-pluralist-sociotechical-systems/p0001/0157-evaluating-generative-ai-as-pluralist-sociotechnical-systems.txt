@@ -1,0 +1,18 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 157
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+he remarkable convergence in method: single-response prompting, absence of likelihood-based evaluation, and limited attention to measurement validity.
+
+Table 20: Published studies using the World Values Survey (WVS) to evaluate large language models (LLMs), 2022–2024. The table highlights methods, findings, and the absence of distributional approaches such as likelihood scoring or prompt sets. Study Year Models Use of WVS Distributional Likelihoods Prompt Sets Bayesian Adjustment Key Findings Johnson et al., The Ghost in the Machine arXiv preprint. Chapter 2 of this thesis. [192]
+2021 GPT-3 Used WVS data post hoc as a comparative baseline for interpreting qualitative value drift No No No Model alters embedded values in texts that are orthogonal to mainstream US values. Note research conducted 2021; preprint 2022 Johnson, Google research internship. Chapter 4 of this thesis. 2022 LaMDA, PaLM-1 Adapted WVS questions; extracted conditional log-likelihoods for each anchor; Bayesian correction; sociotechnical validity mapping Yes Yes Yes
+Found strong US alignment; introduced Responsible Prompt Design and Bayesian debiasing
+Atari et al. Which Humans preprint on PsyArXiv [19] 2023 GPT-3.5 Used WVS-7 items; generated 1,000 sampled responses per question from GPT-3.5 and compared distributions to human survey data across 65 nations. No No No
+GPT-3.5 outputs clustered most closely with the US and Uruguay, and more broadly with WEIRD populations (Northern Europe, Canada, Australia); showed strong divergence from non-WEIRD societies. Lindahl & Saeid Unveiling the values of ChatGPT Bachelor’s thesis [234]
+2023 ChatGPT Tested 251 WVS-7 questions (excluding demographics) with ChatGPT; responses coded to WVS variables and compared across 64 countries. No No No Clustered with developed democracies (Australia, UK, US); progressive on social issues, neutral on institutional trust; reflected affluent liberal democracies.

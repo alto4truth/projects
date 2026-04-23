@@ -1,0 +1,29 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+unded Identification via Adaptive Orderings
+A mixed graph is rationally identifiable if and only if all parameters are rationally identifiably. We
+now propose an algorithm that recursively certifies parameters to be rationally identifiable. At the
+beginning we letθ id =∅and we compute all elements up to a small total degree in the reduced
+Gröbner basisFof the idealI wh with respect to aw-graded lex-elimination order. IfFcontains
+a homogenized identifying polynomial for someq∈θ rem, we addqto the setθ id and remove it
+from the setθ rem. We then refine ourw-graded lex-elimination order accordingly, and repeat the
+procedure until we find the next variable that is certified to be rationally identifiable. This procedure
+is formalized in Algorithm 1.
+Theorem 5.1.LetG= (V, D, B)be an acyclic mixed graph. IfGis rationally identifiable and
+d≥ID G, then Algorithm 1 returns “yes”. IfGis not rationally identifiable, then Algorithm 1 returns
+“no” for alld∈N. The computational complexity of Algorithm 1 is of order
+O
+
+d|V| 5{3d|V|} 4αd2 log(3d|V|)
+
+,
+whereαis a constant such that row reduction of an×nmatrix can be performed inO(nα)operations.
+Moreover, ifwtrek ≥2dlog(3d|V|), then the complexity

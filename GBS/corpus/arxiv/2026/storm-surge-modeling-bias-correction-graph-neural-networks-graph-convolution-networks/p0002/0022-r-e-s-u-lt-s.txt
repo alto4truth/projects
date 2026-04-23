@@ -1,0 +1,49 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 2
+section: r-e-s-u-lt-s
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+in water level forecasts for Hurricane Idalia (2023). Hurricane
+Idalia (2023) formed as a Tropical Depression (TD) on August 26 from a disturbance
+21
+
+T able 3: List of stations considered for constructing the graph model of
+StormNet in its schematic representation in Figure 4.
+Node number Station Information
+0: Port Manatee, FL (8726384, NOAA-NOS)
+1: St. Petersburg Tampa Bay, FL (8726520, NOAA-NOS)
+2: Clearwater Beach, FL (8726724, NOAA-NOS)
+3: Cedar Key, FL (8727520, NOAA-NOS)
+4: Apalachicola, FL (8728690, NOAA-NOS)
+5: Panama City, FL (8729108, NOAA-NOS)
+6: Pensacola, FL (8729840, NOAA-NOS)
+7: Dauphin Island, AL (8735180, NOAA-NOS)
+8: Grand Isle, LA (8761724, NOAA-NOS)
+9: Calcasieu Pass, LA (8768094, NOAA-NOS)
+10: Morgans Point Barbours Cut, TX (8770613, NOAA-NOS)
+11: Eagle Point Galveston Bay, TX (8771013, NOAA-NOS)
+12: Galveston Bay Entrance North Jetty, TX (8771341, TCOON)
+13: Galveston Pier 21, TX (8771450, NOAA-NOS)
+14: Port Aransas, TX (8775237, TCOON)
+15: USS Lexington Corpus Christi Bay, TX (8775296, TCOON)
+over the eastern Pacific, evolving into a Tropical Storm (TS) the next day. By 29
+August, it had developed a partial eyewall and reached Category 1 intensity near
+western Cuba, showing a well-organized central dense overcast and strong convective
+bands. Later that day, a closed eye formed and became increasingly defined [ 98]. Idalia
+underwent RI over the West Florida Shelf, west of Tampa Bay, as it moved toward
+Florida’s Big Bend region. It peaked as a Category 4 hurricane with 115-knot (213
+km/h) winds and a central pressure of 942 mbar just hours before landfall near Keaton
+Beach, Florida, on August 30, marking the first major hurricane to hit Florida’s Big
+Bend region in over 70 years [ 98]. After landfall, Idalia weakened over Georgia and the
+Carolinas, spawning tornadoes and heavy rainfall before dissipating over the Atlantic
+by September 8 (Figure 5). Storm surge due to Hurricane Idalia (2023) reached 7–12
+feet ( ∼ 2 − 3.7 m) in coastal areas, leading to catastrophic flooding in Taylor, Dixie,
+and Levy counties [ 98]. The storm caused $3.5–3.6 billion in damages, devastating
+agriculture, infrastructure, and homes, and resulted in 12 fatalities [ 98]. Therefore,
+given Hurricane Idalia’s rapid intensification — a process that recent studies suggest
+22

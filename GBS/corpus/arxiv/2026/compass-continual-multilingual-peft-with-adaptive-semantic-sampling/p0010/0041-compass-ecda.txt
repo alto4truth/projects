@@ -1,0 +1,28 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 10
+section: compass-ecda
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+Figure 11: Temporal performance evolution for LLaMA-3.1-Instruct-8B.
+Buffer Size (%) Global MMLU∆MMLU ProX∆
+0 -10.9 +6.9
+1 -5.0 +6.3
+5 -1.6 +5.2
+10 -1.0 +2.4
+20 -0.7 +1.6
+Table 15: Memory-performance trade-offs for distributional anchor buffers on Qwen2.5-7B.∆shows change
+from initial performance.
+λwas set to [0.1, 1, 2, 10, 100, 1000] to explore different orders of magnitude for the regularization penalty.
+The search space forβwas set to [0.001, 0.01, 0.1, 0.5] to evaluate different weights for the rehearsal loss.
+For each pair of(λ,β), we trained the adapter on the distribution shift task, adapting from the initial Global
+MMLU subjects to the new MMLU-ProX subjects. The optimal pair was selected based on its ability to
+achieve the best Pareto-optimal trade-off on a held-out validation set, i.e., maximized performance on the
+new MMLU-ProX subjects while ensuring performance degradation on the original Global MMLU subjects
+remained minimal. This process identifiedλ= 2andβ= 0.1as the most effective combination. These
+values were subsequently used for all COMPASS-ECDA experiments presented in the main paper.
+50

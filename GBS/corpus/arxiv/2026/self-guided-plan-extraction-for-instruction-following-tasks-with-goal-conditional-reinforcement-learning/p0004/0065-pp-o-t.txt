@@ -1,0 +1,45 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 65
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+Figure 10: Example of how the agent follows the plan and chooses actions.
+Table 8: Hyperparameters used for training the lowlevel agent and fine-tuning the high-level planner.
+Hyperparameter Value
+PPO Agent Training
+Learning rate 0.0002
+Discount factor (γ) 0.99
+GAE lambda (λ) 0.95
+Clipping epsilon (ϵ) 0.2
+PPO epochs 4
+Number of minibatches 8
+Entropy coefficient 0.01
+Value function coef. 0.5
+Activation function Tanh
+Hidden layer size 512
+LLM Planner Fine-Tuning
+Base model Qwen2.5-14B-Instruct
+Training epochs 1
+Learning rate (SFT) 2e-4
+Learning rate (DPO) 1e-5
+Beta (DPO) 0.5
+Optimizer Paged AdamW (32-bit)
+LR scheduler Cosine
+Warmup ratio 0.03
+Batch size (per device) 16
+Gradient accumulation 1
+Gradient clipping norm 0.3
+Weight decay 0.001
+Mixed precision bf16
+LoRA Configuration
+LoRA rank (r) 64
+LoRA alpha (α) 16
+LoRA dropout 0.1
+Quantization (4-bit)
+Quantization type nf4
+Compute dtype float16

@@ -1,0 +1,18 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 57
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+istency does not imply that LLMs are always consistent for all questions. Thus, MFAA helps us assess the response
+consistency of LLMs, which is not complete for any of the compared models.
+For the Ground Truth Correctness (GTC), the minimum value is 0% and the maximum is 100% for all models, revealing
+a shared pattern of both complete failure and perfect correctness for each of the questions from both ambiguous and
+disambiguated contexts. The averages, however, reveal meaningful separation: Llama 3 performs worst with an average
+GTC of 55.30%, while Claude-Sonnet-4 achieves the highest correctness of 96.99%, followed closely by Gemini 2.5
+(96.70%) and GPT-4o (95.48%). Standard deviation highlights variability differences, with LLama-3 showing the largest
+dispersion, followed by Gemma-3 (with std of 34.76% and 32.40%, respectively). The remaining models exhibit higher

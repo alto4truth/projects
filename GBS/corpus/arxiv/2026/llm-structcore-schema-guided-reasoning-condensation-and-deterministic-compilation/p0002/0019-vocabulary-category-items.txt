@@ -1,0 +1,29 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 2
+section: vocabulary-category-items
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+>85% of errors are Stage 1 FN, confirming that the deterministic compiler
+is not the bottleneck.
+5.2 Deterministic vs. LLM-Based Stage 2
+Our experiments consistently show that the deterministic Stage 2 compiler
+outperforms LLM-based Stage 2 extraction in this task setting. We tested
+an LLM-based Stage 2 variant (using Anthropic Claude to directly extract
+134 items from Stage 1 summaries) and found that it:
+• introduces vocabulary drift (e.g., emittingpresent instead of y, yes
+instead ofcertainly chronic);
+•produces inconsistent FP patterns across runs (non-deterministic);
+•requires additional post-processing to fix format compliance;
+•incurs non-trivial inference cost ($0.01–0.03 per document via API).
+The deterministic compiler, by contrast, achieves perfect vocabulary compliance, is fully explainable (every fill traces back to a Stage 1 line plus a specific
+rule), has zero inference cost, and guarantees bit-for-bit reproducibility.
+5.3 SGR for Edge AI
+This methodology is particularly enabling foredge (local) deployments.
+Large state-of-the-art models can handle 134 items in a single pass, but
+quantized 4B–8B local models lose track of the output schema mid-generation.
+OurSGR-cons

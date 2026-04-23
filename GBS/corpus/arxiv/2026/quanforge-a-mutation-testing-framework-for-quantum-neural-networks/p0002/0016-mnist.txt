@@ -1,0 +1,23 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 2
+section: mnist
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+by filtering for highly confident predictions, which are less sensitive to decision boundaries.(3)
+Among the strong suites, LConf suites yield slightly lower scores than the other three suites in
+many cases. This is intuitive since LConf samples are naturally located far from the boundary,
+while the other suites are artificially strengthened by injected noise or crafted perturbations.
+Overall, results indicate a positive correlation between test suite quality and mutation score
+across all operators and models, demonstrating the effectiveness of QuanForge in distinguishing
+the quality of test data. To improve the quality of test suites and expose more model misbehaviors,
+developers can include more inputs near the decision boundary. In practice, these samples could be
+collected either naturally, e.g., ambiguous samples with low-confidence predictions, or artificially,
+e.g., by injecting lightweight noise or adversarial perturbations. Moreover, since the strong suite
+that achieves the highest score can vary across different QNNs, it may be beneficial to prioritize
+suites with higher scores. Also, for model security, the mutation-based approach shows promise
+for detecting adversarial

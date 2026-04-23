@@ -1,0 +1,27 @@
+title: Aligning Stuttered-Speech Research with End-User Needs: Scoping Review, Survey, and Guidelines
+source: arxiv
+year: 2026
+document_id: aligning-stuttered-speech-research-with-end-user-needs-scoping-review-survey-and-guidelines
+authors: Hawau Olamide Toyin; Mutiah Apampa; Toluwani Aremu; Humaid Alblooshi; Ana Rita Valente; Gonçalo Leal; Zhengjun Yue; Zeerak Talat; Hanan Aldarmaki
+page: 1
+section: document
+chunk: 42
+source_ref: https://arxiv.org/pdf/2604.20535v1
+
+hmarking, verification, and adaptation. This ensures that research findings
+can be replicated and interpreted accurately while enabling
+faster iterations that can accelerate research and development
+of real-world applications.
+6.2. Evaluation Practices
+Task-aware Benchmarks.Benchmarks and shared tasks
+should be structured around clear distinctions. These include:
+Classificationvs.Detection,Intendedvs.Verbatimrecognition,
+etc. This will make it easier to compare systems, match them
+with stakeholder needs, and perform appropriate evaluations.
+Explainability and Evaluation.For stutter identification tools,
+evaluation should consider how interpretable outputs are to end
+users. This can involve user studies of visualisations, segmentlevel explanations, and their impact on trust and decisionmaking. Evaluations should go beyond overall accuracy or F1scores to include performance across different contexts (situations, interlocutors, languages). For ASR, evaluation should
+look beyond word error rates and analyse how prediction errors
+affect intelligibility and communication.
+6.3. Interdisciplinary Collaboration
+Based on the finding that 67% ofSLPsview clinical collaboration as essential, re

@@ -1,0 +1,32 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+l’s constraints" or "inefficient
+inter-agent communication." This step allows the
+system to target underlying root causes rather than
+fixing isolated faults.
+Step 3: Generating and Applying Optimization
+Proposals.For each error cluster, anOptimizer
+LLMgenerates a concreteOptimization Proposal,
+∆G. This proposal is a machine-readable plan to
+modify the TPG, taking the representative error
+description from the cluster and the current graph
+G as input. It outputs a set of specific graph edit
+operations, such as:
+•REWRITE_NODE(v, new_content) : Modifies
+the text of a node.
+•PRUNE_EDGE(u, v) : Removes a connection
+to disable a faulty pathway.
+•ADD_NODE(v_new, content) : Introduces a
+new skill or constraint.
+•ADD_EDGE(u, v) : Establishes a new dependency or logical flow.
+Finally, the proposal is applied to the graph to produce the evolved version G′ ← G ⊕∆G , where ⊕
+denotes the application of the modifications. This
+iterative cycle drives the evolution of the agent system.

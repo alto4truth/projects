@@ -1,0 +1,22 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 16
+section: instructions
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+uth (which rewards newest documents); with a corpus whose authority distribution correlates
+differently with recency, the sign would flip. Removing the relational bonus has no detectable effect
+in this benchmark because the dependency graph is deliberately sparse (11 edges); its contribution
+is expected to grow with graph density. Removing similarity collapses to 22.7%—confirming that
+SmartVector is an augmentation layer on top of a retriever, not a replacement for one.
+10.3 Weight tuning on a held-out split
+The ablation above suggests that the default weight vector(0.35, 0.25, 0.25, 0.15)is not Paretooptimal on every corpus. To quantify the headroom from tuning, we split the query set 50/50 into
+dev and test partitions and performed an exhaustive grid search over weight vectors (0.1 granularity,∑w = 1) on dev, then evaluated the best dev configuration on test. The selected weights are
+(sim,time,conf,rel ) = (0.5, 0.2, 0.0, 0.3)—consistent with the ablation’s finding that confidence is
+uninformative on this benchmark while the relational bonus is underweighted by default. On the
+test split the tuned configuration reaches 64.8% versus 62.0% for the default SmartVector weights
+12

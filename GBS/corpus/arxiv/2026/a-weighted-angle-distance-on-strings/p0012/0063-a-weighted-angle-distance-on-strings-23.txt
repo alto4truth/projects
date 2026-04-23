@@ -1,0 +1,37 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 12
+section: a-weighted-angle-distance-on-strings-23
+chunk: 63
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+DatasetNEditk-gram angle JSk-gram Weighted angle
+splice3190 0.0003/0.0009 0.0003/0.0009 0.0003/0.0009 0.0003/0.0009
+strseq1624 0.8825/0.8970 0.3293/0.6725 0.5394/0.7714 0.5060/0.7527
+ucsc trf8905 0.0003/0.0210 0.4390/0.8421 0.4309/0.8378 0.4596/0.8632
+Table 1.BestARI/NMIachieved by each distance family on each dataset
+(max over the family parameter:ρfor weighted angle,kfork-gram methods).
+Dataset Metric BestρBest value Std./Range
+splice ari0.6 0.0003 0.0003/0.0008
+splice nmi0.6 0.0009 0.0002/0.0004
+splice silhouette0.1 -1.0000 0.0000/0.0000
+strseq ari0.6 0.5060 0.1348/0.4105
+strseq nmi0.6 0.7527 0.1066/0.3083
+strseq silhouette0.1 0.8387 0.0722/0.2579
+ucsc trf ari0.6 0.4596 0.0817/0.2543
+ucsc trf nmi1.0 0.8643 0.0442/0.1463
+ucsc trf silhouette0.9 0.9527 0.0819/0.2611
+Table 2.Sensitivity of the weighted angle distance toρ: for each dataset
+and metric we report the bestρ(maximizing the metric) and the variability
+across the sweepρ∈ {0.1,0.2, . . . ,1.0}.
+Datasetρ s(ARI,NMI)ρ s(ARI,sil)ρ s(NMI,sil)
+splice0.937 – –
+strseq0.998 -0.439 -0.458
+ucsc trf0.974 0.136 0.097
+Table 3.Spearman rank correlationρ s between evaluation metrics across the
+19 distances tested (per dataset).
+References
+[

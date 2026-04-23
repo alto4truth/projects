@@ -1,0 +1,29 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+on, dropout has been successfully applied across
+a wide range of architectures and tasks, including convolutional networks, recurrent models, and Transformers [21].
+Subsequent work has revealed that dropout does not simply
+“turn off” neurons at random. It rather implicitly reshapes
+the loss landscape, modifies the effective hypothesis class,
+and induces noise to the network for more effective generalization [33, 10]. Over the past decade, a rich variety
+of dropout variants has been proposed, targeting different
+stages of the training pipeline and different structural aspects of deep models. A recent survey [21] reviews dropout
+∗Corresponding author
+vidhi.agrawal@tuni.fi(V. Agrawal);io@ece.au.dk(I.
+Oleksiienko);io@ece.au.dk(A. Iosifidis)
+ORCID(s):0009-0004-7594-8741(V. Agrawal);0000-0001-7592-365X(I.
+Oleksiienko);0000-0003-4807-1345(A. Iosifidis)
+variants across architectural design, embedding spaces, and
+input-level transformations.
+Despite its empirical success, dropout is fundamentally
+implemented as a stochastic operation whose regularization
+effect is implicit, indirect, and controlled primarily through
+architectural choices and dropout probabilities. As a consequence, it is di

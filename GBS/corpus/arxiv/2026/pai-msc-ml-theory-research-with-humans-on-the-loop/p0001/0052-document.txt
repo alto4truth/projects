@@ -1,0 +1,50 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 52
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+layered
+best-first controller that explores multiple proof strategies in parallel.
+Algorithm.
+1. Frontier claims are selected from the claim graph.
+26
+
+2. Alternative proof strategies are generated for each frontier claim.
+3. Branches are scored using promise, graph impact, cost efficiency, depth, and diversity.
+4. Top candidates are executed in forked workspaces.
+5. Failed branches can spawn debugging children up to a configurable depth.
+6. Low-scoring branches are pruned.
+Artifacts.The search state is persisted intree_search_state.jsonand branch-level workspaces are
+stored undertree_branches/, making the search process inspectable rather than hidden inside one monolithic prover call.
+A.7 Campaign orchestration
+The single-run graph is the primary execution unit. On top of it, the project provides an optional campaign
+layer driven by heartbeat scripts, cron, or OpenClaw.
+Campaigns repeatedly launch or resume runs, validate stage artifacts, distill stage memory, track budget,
+attempt autonomous repair when artifacts are missing, and notify the user. Campaign state is recorded
+explicitly, and circuit breakers prevent runaway budget consumption.
+The launcher supports full-workspace resume, resume from a named stage, and addition of context files
+underinputs/. During execution, the interaction layer exposes both a TCP control socket and an HTTP
+steering API, allowing pause, instruction injection, and status inspection without manually reconstructing
+context.
+A.8 Mathematical reasoning pipeline
+The theory track implements a structured mathematical reasoning pipeline rather than a single free-form
+proof attempt:
+1.Mathematical literature review(math_literature_agent): surveys existing results relevant to
+the theory claims.
+2.Claim proposal(math_proposer_agent): proposes claims, lemmas, and theorem statements, populating the claim graph.
+3.Proof construction(math_prover_agent): builds proof drafts for claims in the graph. When tree
+search is enabled, this stage expands into parallel branch exploration.
+4.Rigorous verification(math_rigorous_verifier_agent): checks proof drafts for logical gaps, missing cases, and dependency errors.
+5.Empirical verification(math_empirical_verifier_agent): runs numerical or constructive checks
+against mathematical claims.
+6.Transcription(proof_transcription_agent): promotes accepted proofs into the paper workspace
+as LaTeX-ready theorem environments.
+The claim graph (claim_graph.json) tracks claim status (proposed, proved, verified, transcribed, failed)
+and inter-claim dependencies. The lemma library (lemma_library.md) accumulates reusable intermediate
+results across proof attempts.
+27

@@ -1,0 +1,31 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+h question, while
+the latter is calculated based on each image, requiring both
+questions to be answered correctly.
+CHAIR.Apart from binary “Yes-or-No” questions, we
+adopt CHAIR [38] to evaluate hallucinations in the image captioning task. Specifically, CHAIR operates by
+computing the proportion of all objects mentioned in the
+caption that do not exist in the ground-truth annotations.
+CHAIR comprises two main metrics, including CHAIR I
+and CHAIR S that assess instance-level and sentence-level
+hallucinations, respectively. They are formulated as follows:
+CHAIRI = |{hallucinated objects}|
+|{all mentioned objects}| ,
+CHAIRS = |{captions w/ hallucinated objects}|
+|{all captions}| ,
+(2)
+where lower values indicate fewer hallucinations. Besides,
+we also consider the F1 score to assess the richness and the
+accuracy of the generated captions.
+GPT-4o assisted evaluation.To further evaluate the effectiveness of our method in image description tasks, we
+go beyond CHAIR metrics and adopt GPT-4o for openended evaluation. Specifically, following the common protocol [27, 49, 54], we randomly sample 500 images from
+the COCO 2014 validation set and ask the model to generate detailed descriptions. Af

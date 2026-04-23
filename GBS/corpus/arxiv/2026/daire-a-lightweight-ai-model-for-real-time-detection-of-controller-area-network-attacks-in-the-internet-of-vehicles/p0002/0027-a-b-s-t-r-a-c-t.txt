@@ -1,0 +1,26 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 2
+section: a-b-s-t-r-a-c-t
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+n patterns.
+To address the limitations of single-model approaches, researchers
+have turned to ensemble and hybrid methods. Alladi et al. (2021)
+suggested a DL-based IDS that uses LSTM and CNN models on edge
+devices to overcome the delay in IoV intrusion detection. Fu et al.
+(2025) introduced IoV-BERT-IDS, a hybrid intrusion detection framework that uses BERT to process both in-vehicle and extra-vehicle
+network traffic. The authors proposed a novel semantic extractor to
+convert raw traffic into contextual byte sentences and employ masked
+and next-sentence prediction tasks to enhance feature learning. The
+model was trained on data sets such as CICIDS, Car Hacking, and IVNIDS and achieved an average accuracy of 99.98% and an 𝐹1 score of
+0.9998. Despite its effectiveness and strong generalization, especially
+across vehicle types, the framework faced challenges in lightweight
+deployment and detecting rare attack classes. Ullah et al. (2025) developed a hybrid ensemble model for IoV intrusion detection. The
+model combined XGBoost, Random Forest, and other classifiers with
+SMOTE-based imbalance handling and Information Gain-driven feature
+selection. The approach achieved 99.74% accuracy o

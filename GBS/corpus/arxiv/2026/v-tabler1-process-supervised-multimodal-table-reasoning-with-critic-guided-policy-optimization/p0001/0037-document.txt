@@ -1,0 +1,27 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+3.8. This 65% relative increase validates that process-supervised reinforcement
+learning with critic feedback directs the model to anchor internal reasoning in
+correct visual regions. While the baseline has strong logical capabilities at 4.0,
+its Visual Grounding score of 2.3 highlights a failure to ground logic in pixel
+space. By penalizing hallucinations and shortcut guessing, V-tableR1 bridges
+the gap between abstract inference and visual evidence, leading to more reliable
+reasoning as intermediate accuracy improves from 2.8 to 3.4.
+T able 4:ReasoningqualityassessmentbyGPT-5(LLM-as-a-judge)on1,000randomly
+sampled test instances. Scores are on a 1–5 scale.
+Model Accuracy Logic Visual Grounding
+Qwen3-VL-2B (Baseline) 2.8 4.0 2.3
+V-tableR1-2B3.4 4.2 3.8
+4.5 Qualitative Analysis
+Illustrating process supervision impact, Figure 3 contrasts reasoning trajectories of the outcome-supervised pre-trained baseline and our PGPO-trained VtableR1 on a multi-hop structural grounding query.
+Baseline Failure.Querying Craig eleven-season total rushing yards, the
+standard Qwen3-VL-2B baseline correctly parses semantic intent but executes
+ungrounded reasoning (Figure 3, top right). It outputs 4911.0

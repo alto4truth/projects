@@ -1,0 +1,24 @@
+title: Exploring Spatial Intelligence from a Generative Perspective
+source: arxiv
+year: 2026
+document_id: exploring-spatial-intelligence-from-a-generative-perspective
+authors: Muzhi Zhu; Shunyao Jiang; Huanyi Zheng; Zekai Luo; Hao Zhong; Anzhou Li; Kaijun Wang; Jintao Rong; Yang Liu; Hao Chen; Tao Lin; Chunhua Shen
+page: 1
+section: document
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20570v1
+
+mark with controllable
+spatial operations and fully automated labeling. Together
+with a unified evaluation protocol, GSI-Bench enables scalable, model-agnostic assessment of spatial compliance and
+editing fidelity. Experiments show that fine-tuning unified multimodal models on GSI-Syn yields substantial gains
+on both synthetic and real tasks and, strikingly, also improves downstream spatialunderstanding. This provides
+the first clear evidence that generative training can tangibly
+strengthen spatial reasoning—establishing a new pathway
+for advancing spatial intelligence in multimodal models.
+1. Introduction
+Spatial intelligence [2, 4, 16, 38, 41]—the capacity to reason about objects, scenes, and their geometric relationships in the real 3D physical world—is foundational for
+multimodal large language models (MLLMs) [1, 4, 5, 7,
+14, 28, 31, 34, 37]. It governs how models ground language in space and interact with the physical world, and
+is indispensable for embodied navigation [44, 47, 49],
+robotic manipulation [13, 15, 42], and 3D scene understanding [8, 9, 25, 41] under partial observability and domain shift. Despite this centrality, the prevailing ecosystem of datasets [16, 40], be

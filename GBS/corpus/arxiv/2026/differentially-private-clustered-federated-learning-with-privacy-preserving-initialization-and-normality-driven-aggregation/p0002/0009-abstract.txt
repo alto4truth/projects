@@ -1,0 +1,41 @@
+title: Differentially Private Clustered Federated Learning with Privacy-Preserving Initialization and Normality-Driven Aggregation
+source: arxiv
+year: 2026
+document_id: differentially-private-clustered-federated-learning-with-privacy-preserving-initialization-and-normality-driven-aggregation
+authors: Jie Xu; Haaris Mehmood; Rogier Van Dalen; Karthikeyan Saravanan; Mete Ozay
+page: 2
+section: abstract
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20596v1
+
+R, we have
+Pr[M(D)∈ S]≤exp(ϵ)·Pr[M(D ′)∈ S] +δ,(1)
+where (ϵ,δ) is known as the privacy budget.
+Following [2], we use Gaussian mechanism [13] with noise
+N(0, Iσ 2)to achieve DP whereσ=zS. Here,Sdenotes a
+predefined threshold for clipping client updates andzdenotes the
+noise multiplier. We computezusing moments accountant [14]
+with R´enyi Differential Privacy (RDP) [15] for a tight composition
+bound. For anyα∈(1,∞)andϵ >0, a randomized mechanism
+Msatisfies(α, ϵ ′)-RDP if for all neighboring datasetsDandD ′,
+we have:
+Definition (R´enyi Differential Privacy [15])For anyα∈(1,∞)
+andϵ >0, a randomized mechanismMsatisfies(α, ϵ ′)-RDP if for
+all neighboring datasetsDandD ′, we have
+Dα(M(D)||M(D′))≜ 1
+α−1 logE
+ D(x)
+D′(x)
+α
+≤ϵ ′.(2)
+To convert(α, ϵ ′)-RDP back to the standard(ϵ, δ)-DP framework, we adopt the established conversion method outlined in [16].
+Specifically, a randomised mechanismMthat satisfies(α, ϵ ′)-RDP
+also satisfies(ϵ, δ)-DP with
+ϵ=ϵ ′ + log(α−1
+α )− logα+ logδ
+α−1 ,(3)
+for any0< δ <1.
+For CDP with secure sum, we additionally combine Gaussian
+mechanism with privacy amplification via sampling [17] byσ=
+zS
+|Kt| , achieving a significantly reduced noise level compared to LDP

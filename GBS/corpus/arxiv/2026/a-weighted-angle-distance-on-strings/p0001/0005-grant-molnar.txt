@@ -1,0 +1,22 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 1
+section: grant-molnar
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+of local edits and repetition.We prove explicit Lipschitztype bounds for elementary edits (Theorem 7.3) and for stutter operations (Theorem 7.4), formalizing the idea that repeating a block in place produces only a controlled perturbation ind ρ.
+•Topological and geometric structure.We show thatd ρ induces the discrete
+topology on Σ ∗, but that when 0< ρ <1 the metric completion is nontrivial. We
+identify this completion with the disjoint union of finite strings and shift-invariant
+Borel probability measures on one-sided infinite strings, equipped with a natural
+extension ofd ρ (Theorem 7.18). This connectsd ρ to the geometry of empirical and
+limitingn-gram distributions.
+•Rigidity of symmetries.We completely characterize the isometry group of (Σ ∗, dρ):
+every isometry is either a symbol permutation or the composition of a symbol permutation with string reversal (Theorem 7.24).
+Organization.In Section 2 we fix notation and introducen-gram count vectors and the
+angle distance on nonnegative vectors. Section 3 places the construction in context with
+standard edit andn-gram distances. Section 4 gives the linear-time computation via generalized suffix trees. Section 5 reports clustering

@@ -1,0 +1,27 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+nce
+mapping, and orchestration. Counterfit [20] targets ML security assessments but is limited to evasion attacks. Garak [21]
+and PyRIT [ 22] focus on LLM vulnerability scanning and
+multi-turn red teaming respectively, but neither addresses classical adversarial robustness evaluation. AUTO-ART is the
+only framework that bridges all four quadrants: classical adversarial ML, LLM/agent security, pre-screening diagnostics,
+and regulatory compliance—a direct consequence of the gapdriven architecture (Table 6).
+13 Novel Technical Directions
+The gaps identified in Sections 5–8 suggest three technical
+directions that, if pursued rigorously, could each serve as a
+standalone contribution at a top venue. We assess feasibility
+and enumerate edge cases for each.
+13.1 Direction 1: Worst-Case Multi-Norm Adversarial Training with Attack-Union Curricula
+Core idea.Current adversarial training optimises against a
+single perturbation model (ℓ∞ at ε= 8/255 ), yielding models
+that are catastrophically vulnerable to other norms (Section 12,
+Table 9:Ablation of pre-screening components. Kendall τ measures rank agreement with full AutoAttack; detection rate measures
+correctly flagged masking configurations

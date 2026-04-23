@@ -1,0 +1,20 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+the need for costly and potentially biased reward models (Shao et al., 2024; Yu et al., 2025a).
+Within this paradigm, GRPO (Shao et al., 2024) offers a lightweight and efficient alternative to critic-based
+algorithms like PPO (Schulman et al., 2017). By comparing final outcomes across a group of sampled
+trajectories, GRPO eliminates the need for a separate value network. However, this simplification comes at
+the cost of indiscriminate credit assignment: a single, trajectory-level reward is uniformly propagated to all
+intermediate tokens. This can inadvertently reinforce spurious reasoning steps in a successful trajectory or
+penalize promising partial logic in a failed one. Our work addresses this limitation by introducing a finegrained process supervision mechanism, enhancing its credit assignment capabilities without sacrificing its
+lightweight nature.
+Process supervision for reasoning. Recent work has explored injecting fine-grained supervision into the
+reasoning process to better guide long-form generation. These efforts can be broadly categorized into modelbased and model-free approaches. Model-based supervision utilizes an auxiliary model to provide finegrained feedback. Crit

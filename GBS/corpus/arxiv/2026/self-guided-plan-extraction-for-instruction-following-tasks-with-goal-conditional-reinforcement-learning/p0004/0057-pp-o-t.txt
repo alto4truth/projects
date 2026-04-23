@@ -1,0 +1,19 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 57
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+d together in a single instruction
+in the training set. This directly tests compositional generalization. These instructions also
+come with their own paraphrases.
+• Training contained: "Consume beef" and
+"Forge a stone pickaxe" and "Forge a stone
+blade" as separate atomic or part of other combos.
+• Test New Object: "Consume beef and forge
+a stone blade." or "Eat cow meat and create a
+sword from stone."

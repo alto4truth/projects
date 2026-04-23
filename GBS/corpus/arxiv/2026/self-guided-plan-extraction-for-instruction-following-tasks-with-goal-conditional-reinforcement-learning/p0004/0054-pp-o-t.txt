@@ -1,0 +1,34 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 54
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+Table 5: Ablation on the choice of LLM used for generating both ontology and training plans. We report success
+rate on the training set.
+LLMQwen1.5-32B NextCoder-32B Qwen1.5-14B Gemma-12B Qwen-7B
+SR (Train)0.43 0.26 0.35 0.14 0.22
+planner is not required to optimize absolute reward
+values directly, but rather to rank alternative plans
+for the same instruction. Since reward magnitudes
+may vary substantially across instructions, direct reward optimization is less well aligned with this goal.
+In contrast, DPO explicitly optimizes pairwise preferences, which better matches the plan-selection
+problem considered in our framework.
+Table 6: Comparison of planner fine-tuning methods on
+the validation split. Higher SR is better; lower unsolved
+count is better.
+Model SR↑Unsolved↓
+Original (pretrained) 0.11 234
+DPO 0.21 166
+GRPO 0.18 175
+C CrafText
+To provide a concrete example of our method, Figure 8 visualizes the agent’s state at a single timestep.
+The CrafText environment, shown on the left, is a
+dynamic grid-world where the agent must gather
+resources, craft items, and navigate diverse terrains
+to survive and complete tasks.
+The core of our approach lies in the hierarchical decomposition

@@ -1,0 +1,51 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 4
+section: a-weighted-angle-distance-on-strings-7
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+Proposition 4.1.LetS, T∈Σ ∗, letU=S#T$, and letTbe the generalized suffix tree of
+U. For each non-root nodevofT, letℓ −
+v := depth(parent(v)) + 1.
+Letℓ +
+v denote the largest integerd≤depth(v)such that the length-dprefix of the path label
+tovlies inΣ d (i.e. contains neither#nor$). (If the path label tovcontains a sentinel,
+thenℓ +
+v <depth(v).)
+Then for every integern≥1,
+An(S) =
+X
+v̸=root
+1ℓ−
+v ≤n≤ℓ+
+v occS(v)2,
+An(T) =
+X
+v̸=root
+1ℓ−
+v ≤n≤ℓ+
+v occT (v)2,
+Bn(S, T) =
+X
+v̸=root
+1ℓ−
+v ≤n≤ℓ+
+v occS(v)occT (v).
+Nodes withℓ +
+v < ℓ −
+v contribute nothing.
+Proof.The distinct substrings ofUare in bijection with the integer depths of the non-root
+points on edges of the suffix tree. For a fixed non-root nodev, the edge from parent(v) tov
+contributes exactly one distinct substring of lengthnfor each integernwithℓ −
+v ≤n≤ℓ +
+v ,
+namely the prefix of the edge label of lengthn−depth(parent(v)) appended to the path
+label of parent(v). Every such substring has multiplicity occ S(v) inSand occ T (v) inT.
+Summingc(S, W) 2,c(T, W) 2, andc(S, W)c(T, W) over all distinctW∈Σ n gives the stated
+formulas. □
+4.3.A linear-time algorithm.Proposition 4.1 suggests a simple range-add implementation.
+We are ulti

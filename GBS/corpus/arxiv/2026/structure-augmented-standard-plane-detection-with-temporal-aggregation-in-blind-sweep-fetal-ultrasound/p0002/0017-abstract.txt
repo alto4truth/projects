@@ -1,0 +1,27 @@
+title: Structure-Augmented Standard Plane Detection with Temporal Aggregation in Blind-Sweep Fetal Ultrasound
+source: arxiv
+year: 2026
+document_id: structure-augmented-standard-plane-detection-with-temporal-aggregation-in-blind-sweep-fetal-ultrasound
+authors: Keli Niu; He Zhao; Qianhui Men
+page: 2
+section: abstract
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20591v1
+
+roves with the structural and temporal modules.MSalone results in unstable
+temporal localisation, indicating that the model lacks boundary cues without temporal context.MTalone achieves better
+absolute-time alignment, but the lower recall rate indicates
+that insufficient spatial discrimination allows some structurally ambiguous frames to pass.MS+MTbalances precision and recall for a boost in F1, and adding the structural
+prior (SA+MS+MT) greatly improves the score by foreseeing
+abdominal landmarks, which also resolves boundary ambiguity with a much lower time error obtained. Absolute-time
+error drops sharply because it penalises temporally distant
+false peaks (e.g., isolated off-plane activations), whereas
+keyframe-number error mainly reflects segment length mismatch and is less sensitive to such outliers. WithPRS, isolated
+spikes are removed and short gaps are bridged, which further
+refines the temporal alignment. Finally, the system with the
+full objective (+L) further increases precision, yielding the
+best F1 and the lowest timing error.
+3.3. Qualitative Evaluation
+Sequential detection.Fig. 2 compares per-frame labelling
+results on an example blind-sweep scanning sequence. For
+t

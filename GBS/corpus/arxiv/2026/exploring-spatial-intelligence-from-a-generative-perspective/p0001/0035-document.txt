@@ -1,0 +1,16 @@
+title: Exploring Spatial Intelligence from a Generative Perspective
+source: arxiv
+year: 2026
+document_id: exploring-spatial-intelligence-from-a-generative-perspective
+authors: Muzhi Zhu; Shunyao Jiang; Huanyi Zheng; Zekai Luo; Hao Zhong; Anzhou Li; Kaijun Wang; Jintao Rong; Yang Liu; Hao Chen; Tao Lin; Chunhua Shen
+page: 1
+section: document
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20570v1
+
+wen-VL-2.5 [28] 56.33 43.94 67.65 56.76 56.52 56.52
+BAGEL [10] 65.33 46.97 75.0075.6865.22 60.87
+BAGEL + GSI-Syn 69.33 48.48 85.2972.9765.22 73.91
+struction Compliance (+8.16), indicating better preservation of object identity and more precise, spatially constrained edits despite training exclusively on synthetic images; Spatial Accuracy also improves (+5.68). On synthetic
+benchmarks, improvements are even larger: +22.15 on GSISyn-Table and +7.05 on GSI-Syn-Room. The model benefits particularly from the structured geometric variations
+in GSI-Syn-Table targeting localized edits. Gains on GSISyn-Room are more modest due to increased scene complexity and spatial ambiguities, highlighting remaining limitations in global spatial reasoning. These results demonstrate that geometrically grounded synthetic supervision

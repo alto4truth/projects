@@ -1,0 +1,26 @@
+title: Structure-Augmented Standard Plane Detection with Temporal Aggregation in Blind-Sweep Fetal Ultrasound
+source: arxiv
+year: 2026
+document_id: structure-augmented-standard-plane-detection-with-temporal-aggregation-in-blind-sweep-fetal-ultrasound
+authors: Keli Niu; He Zhao; Qianhui Men
+page: 2
+section: abstract
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20591v1
+
+anning videos.
+However, performance of these models downgrades on blindsweep videos, where low-quality, non-standard planes or partially visible standard planes are common. This is because
+keyframe detection in blind-sweep US requires not only semantic understanding but also the ability to recognise and localise fine-grained anatomical structures, which is typically
+conducted by experienced sonographers in freehand US.
+In this work, we propose a structure-augmented keyframe
+detector to solve the challenges of standard plane detection
+in blind-sweep scan. The main architecture first consists of a
+structural prior to detect and preserve the visual saliency from
+the video frames. The structural prior augments each video
+frame with anatomical saliency derived from a separately
+trained nnU-Net–based [11] segmentation backbone. Given
+that standard planes in blind-sweep US often appear gradually, directly detection of temporal boundary near the standard
+planes usually provides unstable results. We therefore adopt a
+multi-frame local aggregation strategy with a sliding window
+across the video frames, where the current frame is integrated
+with its preceding frames to enhance the representat

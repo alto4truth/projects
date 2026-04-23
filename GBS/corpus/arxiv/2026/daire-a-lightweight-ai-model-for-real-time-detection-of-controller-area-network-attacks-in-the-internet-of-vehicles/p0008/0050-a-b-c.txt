@@ -1,0 +1,29 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 8
+section: a-b-c
+chunk: 50
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+Gear Spoofing 100% 0% 99.98% 99.96% 99.91%
+RPM Spoofing 100% 0% 99.99% 99.99% 99.99%
+Average 99.78% 0.04% 99.93% 99.83% 99.87%
+across both the datasets (CICIoV2024 and Car-Hacking). The CV reflects the degree of variability or instability in a model’s performance
+over different random data partitions and is computed as (Standard
+Deviation of Scores/Mean Score) × 100%. The observed CV values
+(Fig. 8) range between 0% and 3.78%, indicating minimal variance
+and demonstrating that DAIRE maintains highly consistent performance
+across varying data subsets.
+The results presented in Table 7 show that DAIRE performs slightly
+better on the CICIoV2024 dataset compared to the Car-Hacking dataset.
+This difference in performance can be attributed to the hyperparameters of DAIRE being specifically tuned for the CICIoV2024 dataset.
+Fig. 8. Coefficient of Variation values (in percentage) obtained from 10-fold
+cross-validation for each attack type across both the datasets, CICIoV2024 and
+Car-Hacking.
+When tested on the larger (with a total number of 3,259,649 CAN
+messages) dataset Car-Hacking, DAIRE achieved an average DR of
+99.78% and a FPR of 0.04% with an accuracy of 99.93%. On average
+for the tw

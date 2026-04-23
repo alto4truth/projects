@@ -1,0 +1,37 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+lly validated thresholds from LSPO (specifically,
+retaining the bottom 30% and those between the 60% and 90% percentiles).
+JPGPO(θ) = 1
+|Gactive|
+X
+i∈Gactive
+1
+|yi|
+|yi|X
+t=1
+min
+
+ρi,t(θ) ˆAi,clip(ρ i,t(θ),1−ϵ low,1 +ϵ high) ˆAi
+
+.
+(5)
+This dynamic sampling dramatically improves RL efficiency by filtering out
+low-information, mid-length trajectories. Furthermore, by focusing optimization updates on the longest (most exploratory) and shortest (most decisive)
+chains, PGPO effectively widens the policy’s search distribution, enhancing outof-domain generalization while avoiding the computational overhead of optimizing redundant reasoning patterns [32].
+By unifying rigorous visual anchoring, critic-gated process rewards, decoupled clipping, and length-aware sampling, PGPO establishes a mathematically
+principled and highly efficient framework for scaling multimodal inference.
+4 Experiments
+To evaluate the effectiveness of V-tableR1, we construct a comprehensive training and evaluation pipeline across multiple tabular reasoning benchmarks. Our
+evaluation encompasses two primary tasks: Table Fact Verification (TFV) and
+Table Question Answering (TQA).
+4.1 Datasets
+Wecarefullyselectadivers

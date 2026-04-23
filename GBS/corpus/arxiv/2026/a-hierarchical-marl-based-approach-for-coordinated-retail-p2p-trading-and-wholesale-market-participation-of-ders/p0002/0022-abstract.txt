@@ -1,0 +1,56 @@
+title: A Hierarchical MARL-Based Approach for Coordinated Retail P2P Trading and Wholesale Market Participation of DERs
+source: arxiv
+year: 2026
+document_id: a-hierarchical-marl-based-approach-for-coordinated-retail-p2p-trading-and-wholesale-market-participation-of-ders
+authors: Patrick Wilk; Ethan Cantor; Yikui Liu; Jie Li
+page: 2
+section: abstract
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20586v1
+
+MARL-Based Coordinated P2P Electricity Trading
+After adjusting the lists, set𝑘=𝑘+ 1and repeat this
+matching process until𝑝𝑏∗
+𝑘
+< 𝑝 𝑜∗
+𝑘
+, or one list is empty.
+Step 3: Unmatched Quantities.After all P2P transactions are cleared, some bids and/or offers may not be fully
+matched, and will proceed to the aggregator for further
+settlement.
+2.2. Aggregator’s Wholesale Market Participation
+During a time interval, each participant’s unmatched
+quantity𝑞 𝑎
+𝑏𝑛
+or𝑞 𝑎
+𝑜𝑛
+ishandledbytheaggregator,whichsums
+them as in (23) for wholesale trading.
+𝑞𝑤
+𝑎 =
+∑
+𝑛∈𝑁𝐵
+𝑞𝑎
+𝑏𝑛
++
+∑
+𝑛∈𝑁𝑂
+𝑞𝑎
+𝑜𝑛
+(23)
+If𝑞 𝑤
+𝑎 >0, the aggregator is a net seller during that time
+interval in the wholesale market and otherwise, a net buyer.
+The aggregator chooses a price𝑝𝑤
+𝑎 at which it attempts to
+transact in the wholesale market. To be a successful wholesale seller, the aggregator must offer a price no higher than
+the wholesale clearing price; and for a successful purchase,
+it must bid no lower than the wholesale clearing price. If
+the aggregator fails to clear in the wholesale market, it
+incurs a penalty paid to the P2P participants, proportional
+to their unfulfilled quantities𝑞 𝑎
+𝑜𝑛
+and𝑞 𝑎
+𝑏𝑛
+. The aggregator
+must then buy from

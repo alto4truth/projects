@@ -1,0 +1,18 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+in architectural design, directly influence the performance
+and stability of modern state space visual models. This work establishes discretization as a first-class design decision in ViM and provides the first hardwareconsistent benchmark of numerical integration methods for state-space vision
+models. Although the work in this paper is based on ViM, the proposed discretization methods can be directly applied to other SSMs as well. The contributions of this paper are threefold:
+1. Identifying the limitations introduced by ZOH in current ViM and formally
+characterizing its impact on visual modeling.
+2. Implementing and evaluating five advanced discretization strategies (six including ZOH) within the ViM framework across large-scale classification,
+segmentation, and detection benchmarks.
+3. Demonstrating that while POL and HOH methods yield the highest accuracy, BIL provides a balanced improvement in precision and efficiency.

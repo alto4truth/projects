@@ -1,0 +1,33 @@
+title: RespondeoQA: a Benchmark for Bilingual Latin-English Question Answering
+source: arxiv
+year: 2026
+document_id: respondeoqa-a-benchmark-for-bilingual-latin-english-question-answering
+authors: Marisa Hudspeth; Patrick J. Burns; Brendan O'Connor
+page: 1
+section: nle-855-0-0-855
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20738v1
+
+uch
+as vocabulary, grammar, and especially scansion.
+All models lag behind when translating into Latin
+versus English. More work should investigate this
+gap,aswellastheeffectoftheinstructionlanguage
+and the type of constraint present in the instruction.
+Future work to flesh out sparser content types
+and language pairs in the dataset would be especially valuable. Additionally, questions with
+long, phrase- or sentence-length answers could
+be added, and automatic evaluation methods could
+be tested for these questions.
+Although we use this dataset for evaluation only,
+it could also be used for training of MT systems or
+instruction tuning of larger generative models.
+8. Conclusion
+We present the first benchmark for QA and translation in mixed Latin–English settings, built from over
+7000 questions spanning two centuries of pedagogical materials and capturing a wide spectrum of
+linguisticandreasoningchallenges. Ourevaluation
+of three large language models reveals that even
+strong general-purpose models struggle with skillbasedandlinguisticallyprecisetasks. Wehopethis
+resourcewillsupportfutureresearchonmultilingual
+and historical language understanding, and serve
+as a blueprint for buildin

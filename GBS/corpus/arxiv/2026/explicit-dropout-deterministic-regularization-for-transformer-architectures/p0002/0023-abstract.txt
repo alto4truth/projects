@@ -1,0 +1,28 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+ndevaluationisperformedontheofficialtestset.Following
+prior work [36], we employ a Temporal Segment Network
+(TSN) [35] pretrained on ActivityNet [14] or Kinetics-400
+[3]forfeatureextraction,producingsequencesof64tokens.
+Foraudioclassification,weutilizetheGTZANMusicGenre
+Classification dataset [31]. Consistent with previous studies
+[13, 37], Mel spectrograms are extracted and converted into
+sequences of 120 tokens using a VGGish network, after
+whichthedataaresplitintotraining,validation,andtestsets.
+Our primary baseline consists of Transformer encoder
+layers [32] trained with conventional dropout applied to
+attention modules or feed-forward network layers. We compareagainstrelatedstochasticattentionstrategies,including
+DropKey [20] and DropAttention [23], as well as variants
+with dropout disabled in certain modules or applied explicitly through formulations from [1].
+4.1.2. Models Used:
+For CIFAR-10 and CIFAR-100, we use a Vision Transformer (ViT) [6, 25] with seven Transformer encoder layers and a patch-based embedding and classification token (CLS). For THUMOS14 and GTZAN, we employ
+a lightweight Transformer encoder with two layers [12]
+operating on pre-extracted video and audio f

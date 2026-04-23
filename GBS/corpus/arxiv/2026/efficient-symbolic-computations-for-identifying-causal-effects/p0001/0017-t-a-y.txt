@@ -1,0 +1,28 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+1
+2 3 4
+Figure 3: Another mixed graph.
+Definition 2.8.Let≺be a total order onθ. We say thatg q ∈ Iis anidentifying polynomialfor
+q∈θwith respect to the order≺if there is a subsetθ id ⊆θwiths≺qfor alls∈θ id such thatg q
+is of the formgq =qa(θ id, σ)−b(θ id, σ)witha, b∈R[θ id, σ]anda̸∈ I ∩R[θ id, σ].
+If an identifying polynomialgq exists for allq∈θwith respect to the order≺, then we say that≺
+is anidentifying order, and we denoteP≺ ={g q :q∈θ}.
+Note that, for a given identifying order, there might exist multiple sets of identifying polynomials
+P≺. For any such set of of identifying polynomials it holds that|P≺|=|θ|.
+Example 2.9.For the graph in Figure 3, we verified with Algorithm 1 that the idealIcontains
+the three polynomials
+λ12σ11 −σ 12, λ 14σ11 −σ 14, λ 34σ23 +λ 12σ14 −σ 24.(4)
+Hence, any order on the parameters for whichλ12 is smaller thanλ34 and all parameters inωare
+larger than the parameters inλis an identifying order. For such an order, identifying polynomials
+for the parameters inλare given in (4), and identifying polynomials for the parameters inωare
+then given via the formula in Remark 2.5.
+Clearly, a mixed graphGis rationally identifiable if and only if there exists an

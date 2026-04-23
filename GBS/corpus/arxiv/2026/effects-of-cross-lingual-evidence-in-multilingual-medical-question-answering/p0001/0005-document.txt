@@ -1,0 +1,30 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+(RAG) has become especially prominent, as it helps
+compensate for the gaps in LLMs’ internal knowledge.
+In any case, most of this work is concentrated
+on English, making it difficult to generalize previous research findings across other languages. For
+instance, Alonso et al. (2024) highlight a stark
+performance drop for French, Italian, and Spanish compared to English, even when using RAG
+(Xiong et al., 2024a), indicating that non-English
+medical Question Answering (QA) remains underresearched. Additionally, almost all the curated
+databases with medical expert knowledge are in
+English (Xiong et al., 2024a; Amugongo et al.,
+2025), which makes it more challenging to deal
+with medical exams in other languages.
+At the same time, research has demonstrated
+that scaling up LLMs enables them to encode substantial amounts of domain-specific information in
+their parametric knowledge (Brown et al., 2020;
+Ren et al., 2023). This highlights the need to better understand how to combine LLMs’ parametric knowledge pertaining to the medical domain
+with automatically retrieved external information
+to achieve optimal performance in Medical QA.
+Taking this into consideration, we formulate the
+followin

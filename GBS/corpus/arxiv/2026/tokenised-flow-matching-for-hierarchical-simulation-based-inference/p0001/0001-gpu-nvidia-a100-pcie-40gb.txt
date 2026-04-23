@@ -1,0 +1,25 @@
+title: Tokenised Flow Matching for Hierarchical Simulation Based Inference
+source: arxiv
+year: 2026
+document_id: tokenised-flow-matching-for-hierarchical-simulation-based-inference
+authors: Giovanni Charles; Cosmo Santoni; Seth Flaxman; Elizaveta Semenova
+page: 1
+section: gpu-nvidia-a100-pcie-40gb
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20723v1
+
+Stack JAX 0.8.1, Flax 0.10.6, diffrax 0.7.0 (Dopri5)
+Precision CFD float64; TFMPE float32
+Table 2: Compute telemetry for haemodynamics experiments. TFMPE’s two-stage training uses
+CFD only in Stage 1 (ns=1), then replaces CFD with the learned per-site neural surrogateqϕl(y|θ)
+in Stage 2, yielding1852×faster per-patient sampling.
+ODE solve). From these we report derived end-to-end costs for generatingN amortised training
+samples across ns patients: standard NPE requires≈N n s tsim simulator time per dataset, posterior
+factorisation-style subset training requires≈N (ns/2) tsim, while TFMPE with LF sampling requires
+≈N 1tsim + N2ns tlike (where N1 and N2 are the numbers of single-site and synthesised multi-site
+samples, respectively). For transparency, we also report the cost of drawing posterior samples from
+a continuous flow. In our experiments,tlike ≈ 6.4ms compared to tsim ≈ 11.9s, yielding a∼1850×
+reduction in cost per synthetic patient observation.
+Compute setup and telemetry.We report the hardware/software setup and telemetry used to
+compute wall-clock and illustrative energy costs for both direct calibration and TFMPE in Table 2.
+Parameters and observations.We use global param

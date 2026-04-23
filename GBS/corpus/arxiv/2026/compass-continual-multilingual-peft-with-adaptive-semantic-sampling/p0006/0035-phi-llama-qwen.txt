@@ -1,0 +1,32 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 6
+section: phi-llama-qwen
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+buffer sizes ranging from 0%
+representing pure regularization without rehearsal to 100% representing full rehearsal of all original training
+data.
+48
+
+Published in Transactions on Machine Learning Research (11/2025)
+0.0 2.5 5.0 7.5 10.0 12.5 15.0 17.5
+Time Steps (×500 samples)
+0.22
+0.24
+0.26
+0.28
+0.30
+0.32
+0.34MMLU-ProX Accuracy
+Initial STEM Humanities Professional Cyclical
+Phi-4-Mini-Instruct-3.8B: Temporal Performance on New Tasks
+Static Deployment
+Naive Fine-tuning
+Full Retraining
+EWC
+Random Rehearsal

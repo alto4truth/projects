@@ -1,0 +1,22 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+ineReason-1.8M corpus via difficulty-based filtering: each training sample is rolled out four
+times with Qwen3-VL-4B-Thinking [2], and only those on which the model fails every attempt are kept.
+This conservative criterion discards trivial examples and concentrates the training signal on problems where
+improvement is still possible, which also aligns with the regime where NPO is designed to help. For evaluation,
+we use eight multimodal reasoning benchmarks that together cover visually grounded mathematics, broad
+subject knowledge, and fine-grained visual understanding. MathVista [15], MathVision [24], WeMath [17],
+and MathVerse [37] target mathematical reasoning in visual contexts, ranging from general problem solving to
+competition-level diagrams and structured difficulty tiers. MMMU-Pro [32] and MMBench [13] probe broad
+multi-discipline knowledge and general multimodal competence. MM-Star [3] stresses fine-grained visual
+discrimination, and ZeroBench [19] serves as a particularly hard stress test, designed to remain unsolvable
+for current frontier models and therefore useful for probing the tail of the reasoning distribution. We report
+accuracy (%) on each benchmark and use the u

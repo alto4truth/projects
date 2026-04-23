@@ -1,0 +1,17 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 1
+section: sgr-json
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+1, and the resulting
+JSON objects are merged with a last-writer-wins policy per key. For the
+PROBLEMS, MEDICATIONS, and LABS keys (which accumulate multiple facts),
+we concatenate the strings from all windows rather than overwriting. This
+preserves recall for facts spread across the note while keeping each individual
+inference within context bounds.
+4

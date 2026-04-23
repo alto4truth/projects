@@ -1,0 +1,30 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 11
+section: ijb-c
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+– 86.98 81.83 78.73 100.00 74.29 63.03 7.82 0.53 0.17
+FPN + ResNet50 [30] 24.62 17.07 14.13 100.00 14.39 5.97 50.34 14.05 7.13
+SegFormer-B0 [53] 33.83 23.93 19.96 100.00 21.71 12.93 42.23 8.02 3.50
+BiSeNetv2 [55] 30.10 21.72 18.25 100.00 21.49 12.90 46.26 11.70 5.91
+DANet [19] 21.72 18.96 17.89 100.00 10.56 0.58 60.00 25.91 14.98
+Fast SCNN [42] 26.60 18.36 15.03 100.00 17.48 9.79 51.15 12.42 5.94
+FCN + MobileNetv2 [32] 13.02 9.01 7.58 100.00 5.31 1.28 54.59 8.01 2.79
+SAM [27] 21.01 14.01 11.44 100.00 14.09 8.39 53.03 10.23 4.15
+evaluating the same segmented data, and the background
+removal can prove beneficial or impairing depending on the
+evaluated system. On the other side, the benefit brought by
+the background removal step to SPL and MixFaceNet-MAD
+is far from bringing these methods to the same performance
+level as MADPromptS on the original data. In fact, FERET
+and FRGCv2 segmented with SAM and evaluated by SPL
+or MixFaceNet-MAD only outperform the MADPromptS
+evaluation of the original data in one out of six metrics. For
+IJB-C, MADPromptS applied to the original data is never
+surpassed by SPL or MixFaceNet-MAD, regardless of the
+chosen segmentation technique. The combination of

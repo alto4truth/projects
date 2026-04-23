@@ -1,0 +1,30 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 11
+section: ijb-c
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+nition
+performance and the robustness of security mechanisms,
+particularly against attacks such as face morphing?
+We addressed this question through a comprehensive evaluation of multiple segmentation techniques across diverse
+datasets and biometric tasks. Our results demonstrate that
+background removal is not a neutral operation. While its
+impact is minimal under controlled conditions, it leads to
+measurable FR performance and image quality degradation
+in unconstrained scenarios, with strong dependence on the
+segmentation method. At the same time, its effect on MAD
+is highly method-dependent: some approaches benefit from
+reduced false triggering due to the removal of misleading
+background cues, while others, especially foundation-modelbased methods, show significant performance degradation.
+These findings highlight a fundamental trade-off between
+enforcing image appearance and preserving the reliability
+and security of biometric systems. Consequently, background
+removal should not be treated as a standalone preprocessing
+step, but rather as an integral component of the biometric
+pipeline that must be jointly evaluated with both recognition
+and attack detection systems. From an ope

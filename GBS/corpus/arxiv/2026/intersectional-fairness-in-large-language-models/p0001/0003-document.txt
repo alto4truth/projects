@@ -1,0 +1,24 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+of combining these metrics, accounting for intersectional groups, and assessing
+model behavior across contexts and repeated runs.
+CCS Concepts:•Computing methodologies→Natural language processing.
+Additional Key Words and Phrases: software fairness testing, intersectional fairness, LLM fairness, LLM consistency
+1 Introduction
+Nowadays, the prevalence of Machine Learning (ML), and in particular the rapid adoption of Large Language Models
+(LLMs) across nearly every facet of society without sufficient oversight, has led to harmful stereotype enforcement and
+discriminatory behaviors [Dehal et al. 2024; O’Neil 2017] that can be propagated, often without users being aware of
+the underlying bias in ML, and even more so in LLM-powered software [Santos et al. 2023]. This is of particular concern
+given the unprecedented scale at which these models operate, with LLM-powered tools now embedded in various
+application domains, where biased outputs have already been documented to disproportionately affect marginalized
+demographic groups [Boufaied et al. 2025; Chen et al. 2024a].
+Prominent LLMs such as GPT, Claude, and LLaMA, now widely used in high-stakes domains including hiring and
+criminal ju

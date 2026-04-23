@@ -1,0 +1,22 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+e model analysis.
+It introduces the blueprint format, explains the elements
+of feature models (features, hierarchy, and cross-tree constraints), and specifies the semantics and expected outcome
+of the target AO using precise definitions and result formats.
+• User prompt.Combines task instructions, illustrative examples, and the target input. It begins with aLearn from Examplessection containing 2–4 exemplars that pair blueprints
+with their corresponding AO results. A subsequentstep-bystep proceduredescribes the reasoning strategy (e.g., feature
+enumeration, constraint propagation, contradiction checking), followed by the blueprint to be analyzed. This design
+grounds the task in concrete examples and guides the model
+through a consistent, reproducible reasoning process.
+• Output contract.Each AO uses an XML-based output
+schema to ensure machine-checkable results. The contract enforces standardized tags (e.g., <dead_features>,
+<core_features>, <feature_model_analysis>) with

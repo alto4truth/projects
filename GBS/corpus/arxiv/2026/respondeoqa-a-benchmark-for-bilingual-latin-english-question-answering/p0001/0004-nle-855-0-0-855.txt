@@ -1,0 +1,33 @@
+title: RespondeoQA: a Benchmark for Bilingual Latin-English Question Answering
+source: arxiv
+year: 2026
+document_id: respondeoqa-a-benchmark-for-bilingual-latin-english-question-answering
+authors: Marisa Hudspeth; Patrick J. Burns; Brendan O'Connor
+page: 1
+section: nle-855-0-0-855
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20738v1
+
+Ms, we propose with a set of prompts and evaluation metrics, applied to three current LLMs.
+6.1. Experimental Setup
+ModelsWe evaluate two open-source LLMs—
+LLaMa 3.3 (Grattafiori et al., 2024) and Qwen QwQ
+(Qwen Team et al., 2025; Qwen Team, 2025)—
+and one commercial model, OpenAI’s o3-mini.78
+LLaMa3 is a 70 billion parameter instruction tuned
+model with strong multilingual performance. Qwen
+7https://openai.com/index/
+introducing-o3-and-o4-mini/
+8Version identifiers: meta-llama/Llama-3.370B-Instruct-Turbo, Qwen/QwQ-32B, and o3mini-2025-01-31. Open models were accessed with
+the Together AI API.
+QwQ is a smaller, 32 billion parameter model
+trainedfromQwen2.5usingreinforcementlearning
+(RL) with verifiable outcome-based rewards and a
+standard reward model. In theory, good reasoning ability could be applicable to our skill-based
+questions that involve more problem-solving.
+PromptsWe always provide the system prompt
+YouareaClassicistwithexpertknowledgeinGreek
+and Roman history, language, and culture.
+For MC questions, we instruct the model to end
+their response with the letter of the correct answer.
+Similarly, for 1-word SA, we ask it to end its response with a single word as its answer.

@@ -1,0 +1,25 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+initial window.
+Because the scout is only slightly ahead, its trajectories remain close to the restarting policy while still solving
+prompts the fresh run cannot yet solve on its own, accelerating convergence past the sparse-reward regime, as
+shown in Figure 1(a).
+Late-Stage Plateau Breakthrough.Later in training the learning curve flattens and group accuracy stops
+improving on a stable set of prompts. The late intervention targets this plateau: we continue the run past the
+plateau, take a stronger checkpoint observed shortly after asπ(t+∆), and replay the plateaued segment with
+guidance from that checkpoint on the same prompts. The stronger guide produces verified-correct trajectories
+on prompts that the plateaued policy cannot solve, breaking through the on-policy ceiling and lifting the run
+to a higher final performance.
+Takeaway.As shown in Section 4.2, both interventions produce clear gains over pure on-policy RLVR without
+changing the reward, the verifier, or the underlying optimizer. Together they demonstrate that near-future
+guidance is useful across training stages rather than confined to a single regime, motivating the adaptive
+controller described next.
+3.3 AutoNPO: Ada

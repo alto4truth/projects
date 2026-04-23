@@ -1,0 +1,86 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+ction 3.3 and is provided in Section 1 of the
+supplementary material.
+6. Declaration of generative AI and
+AI-assisted technologies in the manuscript
+preparation process
+During the preparation of this work, the author used
+ChatGPT and Perplexity AI to assist with formatting the
+manuscript. All generated content was critically evaluated,
+verified, and edited by the author, who takes full responsibility for the final content of the published article.
+A. Full Derivation of Dropout-Induced
+Regularizers
+A.1. Derivation of Query Regularizer
+Weconsider𝑁 𝑇 stochastictrainingepochswithdropout
+masks applied to the input matrix𝐗. The query regularizer
+is
+𝐽𝑞 = 1
+2𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+‖ ̃𝐗𝑡𝐖𝑇
+𝑞 𝐖𝑘𝐗𝑇 ‖2
+𝐹 .(23)
+Using‖𝐀‖ 2
+𝐹 = Tr(𝐀 𝑇 𝐀)it becomes
+𝐽𝑞 = 1
+2𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+Tr
+[
+𝐗𝐖𝑇
+𝑘 𝐖𝑞 ̃𝐗𝑇
+𝑡 ̃𝐗𝑡𝐖𝑇
+𝑞 𝐖𝑘𝐗𝑇
+]
+.(24)
+Rearranging the terms:
+𝐽𝑞 = 1
+2 Tr
+[(
+1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+̃𝐗𝑇
+𝑡 ̃𝐗𝑡
+)
+𝐖𝑇
+𝑞 𝐖𝑘𝐗𝑇 𝐗𝐖𝑇
+𝑘 𝐖𝑞
+]
+.
+(25)
+We define
+𝐁= 1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+̃𝐗𝑇
+𝑡 ̃𝐗𝑡.(26)
+A.2. Expansion of𝐵
+Let dropout masks for epoch𝑡be𝐌 𝑡 ∈ {0,1} 𝑛×𝑑.
+Each element of the mask is sampled independently from
+aBernoullidistributionwithkeepprobability(1 −𝑝).Then,
+at epoch𝑡:
+̃𝐗𝑡 =𝐗− (𝐌 𝑡 ⊙𝐗).(27)
+Expanding Eq 26,
+𝐁= 1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+[(𝐗−𝐗 𝑡)𝑇 (𝐗−𝐗 𝑡)](28)
+= 1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=

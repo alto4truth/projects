@@ -1,0 +1,27 @@
+title: Where are they looking in the operating room?
+source: arxiv
+year: 2026
+document_id: where-are-they-looking-in-the-operating-room
+authors: Keqi Chen; Séraphin Baributsa; Lilien Schewski; Vinkle Srivastav; Didier Mutter; Guido Beldi; Sandra Keller; Nicolas Padoy
+page: 1
+section: document
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20574v1
+
+y concentrated at the
+phase boundaries, which is understandable because we only
+use the ambiguous gaze predictions to recognize the phases
+without any other visual or semantic information. Nevertheless, our approach still achieves comparable performance
+compared with those that use complex SSG, which proves the
+significance of gaze analysis. Finally, since our approach directly uses gaze predictions as input, using a fine-tuned gazefollowing model achieves much better performance than using
+the pretrained one.
+Team communication detection:We compare our approach
+with the state-of-the-art TAD approaches. As shown in TaTable 3: Comparison with the clinical role prediction approaches.
+Method4D-OR[24] LABRAD[23] S2Former[?] ORacle[27] Ours(off-the-shelf)Ours(fine-tuned)
+Macro F10.87 0.89 0.89 0.85 0.620.92
+Table 4: Comparison with the surgical phase recognition approaches.
+Method4D-OR [24] ORacle [27] Ours (off-the-shelf) Ours (Fine-tuned)
+Macro F1 0.970.990.81 0.95
+ble 1, our method using both the off-the-shelf and fine-tuned
+gaze-following models surpasses all the existing methods. As
+the training of the gaze encoder is self-supervised, we can improve the performance with gaze featur

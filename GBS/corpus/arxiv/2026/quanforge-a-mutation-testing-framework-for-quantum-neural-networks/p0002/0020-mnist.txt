@@ -1,0 +1,24 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 2
+section: mnist
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+6 61.78 81.27 62.16 97.50 69.18
+results of all gate-level modification operators (i.e., GPM, GSM, and GRT) and Modify (param)
+denotes the average results of all parameter-level operators.
+4.5.1 RQ2.1. Mutation at Different Circuit Depths.The mean accuracies on MNIST are shown in
+Figure 3(a). By varying the depth range on the same QNN, we observe that mutations introduced
+at shallow depths (0–50%) tend to produce greater performance degradation compared to deeper
+ones (75–100%), as indicated by the lower accuracies at shallow depths in general. For example, on
+QCL with RGA operator, shallow mutation at 0–25% reduces accuracy to 90.25% (a 9.75% drop),
+whereas deep mutation at 75–100% causes only a 3.18% drop. As shown in Table 4, shallow-depth
+mutations achieve higher KRs and lower NRs, meaning that more killable or trivial mutants are
+generated and thus have a greater impact on the model performance.
+This observation is consistent with previous findings in DNNs [48], where shallow layers are
+crucial for early feature extraction. In QNNs, shallow-depth gates similarly extract coarse-grained
+features and establish early quantum correlations. As the circuit deepens, additional transfor

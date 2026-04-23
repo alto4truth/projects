@@ -1,0 +1,41 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 2
+section: abstract
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+ng an ODE solver for multiple time-steps:
+Lrew(ψ) =E s,a,g∼D
+
+
+ˆrW ψ(s, a, g)−
+
+−E x1=g
+x0∼N(0, I d)
+t∼Unif([0,1])
+∥vθ(t, s, a, xt)−(x 1 −x 0)∥2
+2
+
+
+2
+2
+
+(5)
+4.3 ORSPRESERVES THE OPTIMAL POLICY
+It remains unclear whether usingr W from Sec.4.2, one can learn the same optimal policy as with
+sparse rewards, as it is estimated using thedataset occupancy measured πD.
+Theorem 1.Under suitable assumptions on goal reachability, dynamics, and dataset coverage, the
+greedy goal-conditioned policy:
+πgreedy(a|s, g) = arg max
+a∈A
+Q∗(s, a, g),
+whereQ ∗(s, a, g)denotes the optimal action-value function induced by the rewardr W (s, a, g),
+coincides with the optimal shortest-path policyπ ∗(a|s, g).
+Please refer to Appendix A.6 for the proof. ORS thus enables efficient use of the rich goal-reaching
+information present in the dataset occupancy measure without having to estimate the new occupancy
+measure at each intermediate policy improvement step.
+6

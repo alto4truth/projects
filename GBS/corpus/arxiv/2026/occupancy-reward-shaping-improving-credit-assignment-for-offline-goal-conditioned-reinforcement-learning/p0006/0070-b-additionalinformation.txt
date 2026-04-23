@@ -1,0 +1,20 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 6
+section: b-additionalinformation
+chunk: 70
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+Published as a conference paper at ICLR 2026
+While ORS does lead to a slightly higher computational overhead, it also leads to a 2.3×increase in
+performance over GCIQL, its base algorithm, and exhibits stronger performance than GO-FRESH
+on a variety of tasks. GO-FRESH requires training a distance classifier, training a graph memory and
+building a graph, each of which involves hyperparameter tuning for the size of the R-Net, number
+of edges in the graph, number of negative pairs for training the R-Net, distance threshold for the
+R-Net and careful weighing of local and global rewards during policy training. In contrast, ORS is
+simple to train, does not require storing a large graph in memory and is easy to tune. We agree that
+increasing the efficiency of ORS is an important direction for future work.
+27

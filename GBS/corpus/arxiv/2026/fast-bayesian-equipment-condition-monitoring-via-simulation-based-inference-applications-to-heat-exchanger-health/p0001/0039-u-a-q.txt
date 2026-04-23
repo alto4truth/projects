@@ -1,0 +1,25 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+ational cost of inferenceinthetwocases. MCMCwasrunon4chainswith
+150 burn-in and 75 samples (900 transitions/call) while
+SBI was trained on 5,000 simulations. As illustrated in
+Fig. 10, the two methods reach cost parity after fewer
+than six inference calls, beyond which SBI is 82 times
+faster per diagnosis while maintaining identical classification accuracy andτconvergence.
+In this study, the simulator is a lightweight JAX-JITcompiled effectiveness-NTU model of a single heat exchanger, chosen as a toy model for testing. Each simulator call is estimated to require 0.03sof computing on
+a 4-core CPU Apple M4 Pro with JAX-JIT pre-warmed.
+Therefore, the absolute time saved per call is modest.
+However, the 82×acceleration is a property of the inference algorithms rather than of the particular simulator,
+and it scales with simulator cost. For networks of interacting heat exchangers or plant-wide process simulations
+where a single forward evaluation can take minutes to
+hours, the same factor translates to savings of tens of
+minutes to many hoursper diagnosis. Across a modern
+process plant where condition monitoring must be performed simultaneously on dozens of assets at high frequency, the

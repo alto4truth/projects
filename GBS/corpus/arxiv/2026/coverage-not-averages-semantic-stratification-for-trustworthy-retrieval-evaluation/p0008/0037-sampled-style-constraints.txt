@@ -1,0 +1,28 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 8
+section: sampled-style-constraints
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+amed entities.
+-> "GPT-4 reasoning capabilities", "CRISPR Cas9 delivery"
+MEDIUM + GENERIC TERMS:
+LENGTH: Your query MUST be exactly 3-4 words only.
+15
+
+Coverage, Not Averages Semantic Stratification for Trustworthy Retrieval Evaluation
+ENTITY STYLE: Use GENERIC category terms, NOT specific names.
+-> "deep learning applications", "gene therapy risks"
+UNRESTRICTED + PROPER NOUNS:
+ENTITY STYLE: Use SPECIFIC proper nouns and named entities.
+-> "How does BERT handle contextual word representations?"
+UNRESTRICTED + GENERIC TERMS:
+ENTITY STYLE: Use GENERIC category terms, NOT specific names.
+-> "How do transformer models improve understanding?"
+This 3x2 sampling ensures diverse query formulations matching
+real-world search patterns.
+Entity assignment.The following prompt identifies which semantic entities are relevant to a generated query.

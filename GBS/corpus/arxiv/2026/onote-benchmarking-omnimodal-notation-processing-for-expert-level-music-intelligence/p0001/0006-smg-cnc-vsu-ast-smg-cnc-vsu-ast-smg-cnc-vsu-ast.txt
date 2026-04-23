@@ -1,0 +1,23 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+-3.1-flash demonstrates higher compliance with the specific localized notation rules.
+Physical and spatial constraints.Generating Guitar Tablature
+introduces additional constraints, including ergonomic feasibility
+(Fingering) and strict ASCII spatial layout (Technical). Gemini-2.5pro manages these multi-objective constraints relatively well, scoring 4.125 in both Fingering and Technical formatting. In contrast,
+while Qwen-Omni-turbo achieves high scores in fingering rationality (4.27) and musicality (3.08), its technical formatting score remains limited (1.04). These results indicate that maintaining specific
+text-matrix spatial configurations alongside aesthetic and physical
+parameters is an area requiring further development.
+6 Conclusion
+In this paper, we introduced ONOTE, a comprehensive benchmark
+for evaluating Omnimodal Notation Processing (ONP) across standard staff, Jianpu, and Guitar Tablature through four complementary tasks. To overcome the biases of subjective and model-based
+judging, we proposed a deterministic evaluation pipeline utilizing
+canonical pitch projection and sequence alignment for reproducible
+assessment. Our extensive experiments on state-of-the-art model

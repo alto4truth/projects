@@ -1,0 +1,66 @@
+title: AAC: Admissible-by-Architecture Differentiable Landmark Compression for ALT
+source: arxiv
+year: 2026
+document_id: aac-admissible-by-architecture-differentiable-landmark-compression-for-alt
+authors: An T. Le; Vien Ngo
+page: 1
+section: aac-fps-alt
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20744v1
+
+esmax(hAAC,h ALT)on OGB-arXiv, BA, and SBM under a half/half budget split (each
+arm atB/2B/v). Reference oracle: Dijkstra (mean 78,616 expansions).
+45
+
+Table 20: ABLATIONHyperparameter and initialization sweep on the SBMB=32training-drift
+cell.Each row aggregates 3 seeds (mean±std) at one (learning rate, batch size,K0, init) cell,200training
+epochs throughout. “Trained gap” is AAC (trained)−forced-first-mbaseline (architectural ceiling89.95%
+atK 0=32,m=8) in percentage points.block_sparseis the default block-sparse initialization used throughout
+the paper;identity_first_mis a soft one-hot init on the first-mpool indices that starts at the ceiling. Across
+the entire (lr, batch) grid the default-init drift is−0.5to−1.5%; under the identity init the trained selector
+stays at the architectural ceiling(+0.00% std0.00) at every cell. The table below shows theK0=32subset
+of a36-cell sweep (3learning rates×3batch sizes×2K0s×2inits); theK 0=64subset reproduces the
+same qualitative pattern.
+lr batch init trained red. (%) trained gap (%)
+3×10−4 128 block_sparse88.93±0.59−1.02
+3×10−4 128 identity_first_m 89.95 0.00
+3×10−4 256 block_sparse89.24±1.02−0.71
+3×10−4 256 identity_first_m 89.95 0.00
+3×10−4 512 block_sparse88.93±0.59−1.02
+3×10−4 512 identity_first_m 89.95 0.00
+1×10−3 128 block_sparse89.11±0.28−0.84
+1×10−3 128 identity_first_m 89.95 0.00
+1×10−3 256 block_sparse89.46±0.71−0.49
+1×10−3 256 identity_first_m 89.95 0.00
+1×10−3 512 block_sparse89.45±0.41−0.50
+1×10−3 512 identity_first_m 89.95 0.00
+Table 21: ABLATIONSelection strategy ablation (K 0=64,m=16, 64 B/v; see Section 5.1). AAC (default):
+trained row-stochastic selection. Random-Subset: randommlandmarks from theK 0 teacher pool. FPSSubset: standard ALT withK=m/2=8FPS-selected landmarks (no teacher pool, deterministic seed vertex
+from the largest SCC). FPS-RR10: random-restart FPS,R=10random seed vertices, best on a held-out
+100-query validation split (test on disjoint 100-query split). Greedy-Max: greedily selects landmarks from
+theK 0 pool maximizing average ALT heuristic over the evaluation queries (query-adaptive oracle; see text).
+Mean±std over 5 seeds, 100 queries.Cross-table note:this ablation uses an independent retraining protocol;
+values for the same nominal(K0,m)may differ from Tables 22 and 7 by training stochasticity within the
+reported standard deviation.
+Graph Method Exp. Red. (%)↑Std
+Modena
+AAC (default) 88.2 1.4
+FPS-Subset (ALTK=8, canonical seed)91.2 0.0
+FPS-RR10 (val-selected best of 10 restarts)89.2 0.2
+Greedy-Max† 91.50.0
+Random-Subset86.7 0.7
+Manhattan
+AAC (default) 87.6 0.9
+FPS-Subset (ALTK=8, canonical seed)90.4 0.0
+FPS-RR10 (val-selected best of 10 restarts)89.2 0.5
+Greedy-Max† 91.50.0
+Random-Subset86.7 2.1
+†Query-adaptive oracle: selects fromK0 pool using evaluation queries.
+E.2 Directionality-Aware Accounting Convention
+Convention.Matched memory atBbytes per vertex matches the per-vertex deployed-label storage of the
+two arms. On directed graphs ALT stores both forward and backward landmark distances (2Kfloats per
+vertex), so matched memory atBB/v is AACm=B/4vs. ALTK=B/8. On undirected graphs ALT stores
+a single direction (Kfloats per vertex), so matched memory atBB/v is AACm=B/4vs. ALTK=B/4.
+This is the convention used everywhere in the paper; the OGB-arXiv outcome reported in E.1 above and
+summarised in Table 9 uses the undirected rule (5 seeds, 100 queries per seed). One methodological lesson
+46

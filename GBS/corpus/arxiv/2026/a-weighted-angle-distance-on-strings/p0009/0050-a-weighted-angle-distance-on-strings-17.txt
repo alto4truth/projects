@@ -1,0 +1,42 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 9
+section: a-weighted-angle-distance-on-strings-17
+chunk: 50
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+ric on the
+disjoint union Σ∗ ⊔ Mτ(ΣN) when composed withu n(·). The weighted sum bdρ =P
+n≥1 ρnθn
+is therefore a metric provided it separates points.
+Separation for finite–finite follows from Lemma 7.13 and Proposition 7.1.
+Separation for measure–measure: if bdρ(µ, ν) = 0, thenθ n(µ, ν) = 0 for alln, hence
+un(µ) =u n(ν) for alln. Sincep µ
+n andp ν
+n are probability vectors,u n(µ) =u n(ν) implies
+pµ
+n =p ν
+n for alln(becausep=u/∥u∥ 1 on the nonnegative orthant). Cylinder sets generate
+the Borelσ-algebra, soµ=ν(see [17,§1.1]).
+Separation for mixed pairs: ifShas lengthLandµ∈ M τ(ΣN), thenu n(S) = 0 for all
+n > Lwhileu n(µ)̸= 0 for alln, soθ n(S, µ) =π/2 for everyn > Land
+bdρ(S, µ)≥ π
+2
+X
+n>L
+ρn >0.
+□
+Lemma 7.15.Let(X j)j≥1 be a bdρ-Cauchy sequence inΣ ∗ ⊔ Mτ(ΣN). Then for each fixed
+nthe sequence(X j)isθ n-Cauchy, and the vectorsu n(Xj)form a Cauchy sequence in{0} ∪
+S(RΣn
+).
+Proof.For anyi, jand anynwe have
+ρnθn(Xi, Xj)≤ bdρ(Xi, Xj).
+Since the right-hand side tends to 0 asi, j→ ∞, we haveθ n(Xi, Xj)→0 for eachn, i.e.
+(un(Xj)) is Cauchy in the metric space{0} ∪S(R Σn
+).□
+Lemma 7.16.Let(X j)be bdρ-Cauchy.
+(1)If infinitely manyX j are finite strings and their lengths are bounded, then(X j

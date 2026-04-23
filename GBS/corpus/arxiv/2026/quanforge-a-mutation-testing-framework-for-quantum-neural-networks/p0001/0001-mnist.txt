@@ -1,0 +1,32 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 1
+section: mnist
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+Binary classification digits 0 and 1
+QCL RX, RZ, CNOT 0, 1 150 100
+QCNN PauliX, RX, RY, RZ, U3, CRX, CRZ, CNOT 0, 2 134 100
+HCQC RY, CNOT 7 64 100
+DRNN RX, RZ, CRZ 0, 1 120 99.29
+Ternary classification digits 0, 1 and 2 QCL - 0, 1, 2 150 91.86
+digits 4, 5 and 7 QCNN - 0, 2, 4 134 90.16
+FashionMNIST
+Binary classification T-shirt and Trouser
+QCL - 0, 1 150 92.50
+QCNN - 0, 2 134 93.00
+HCQC - 7 64 94.25
+DRNN - 0, 1 120 92.21
+Ternary classification T-shirt, Trouser and Pullover QCL - 0, 1, 2 150 89.67
+Trouser, Pullover and Dress QCNN - 0, 2, 4 134 91.50
+analyzer, the bounds are reduced if current mutants are killable, promoting a smaller configuration
+for harder-to-kill mutants; otherwise, they are set to larger values to find a more likely killable
+configuration. Finally, after updating, the checker determines whether new bounds allow for further
+generation. If not, the algorithm terminates and returns all effective mutants generated so far.
+Algorithm 1 presents the recursive mutant generation process. The inputs include the original
+model 𝑂, reference data 𝐷, and a mutation operator 𝑀𝑂. The search space for the gate percentage
+is restricted by a lower bound 𝑙𝑏 and an upper bound 𝑢𝑏. 𝑘

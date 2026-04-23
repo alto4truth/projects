@@ -1,0 +1,86 @@
+title: Amortized Vine Copulas for High-Dimensional Density and Information Estimation
+source: arxiv
+year: 2026
+document_id: amortized-vine-copulas-for-high-dimensional-density-and-information-estimation
+authors: Houman Safaai
+page: 1
+section: duk-so
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20568v1
+
+7 0.73
+15⋆ 9.29×10−4 7.7×10−7 1.01
+20 2.66×10 −4 7.2×10−7 1.30
+30 5.40×10 −5 7.2×10−7 1.88
+50 3.10×10 −6 7.2×10−7 3.08
+100 7.15×10 −7 7.2×10−7 6.02
+27
+
+0.0
+0.5
+1.0v
+True (Complex-Ring)
+Density
+pyvine (TLL)
+ISE=9.28e-05
+VDC (one-shot)
+ISE=3.14e-07
+0.0 0.5 1.0
+u
+0.0
+0.5
+1.0v
+Samples
+0.0 0.5 1.0
+u
+0.0 0.5 1.0
+u
+5
+4
+3
+2
+1
+0
+log10 density
+(a)Complex-Ring (O): densities (top) and generated samples (bottom).
+0.0
+0.5
+1.0v
+True (Complex-DoubleBanana)
+Density
+pyvine (TLL)
+ISE=1.91e-04
+VDC (one-shot)
+ISE=1.04e-06
+0.0 0.5 1.0
+u
+0.0
+0.5
+1.0v
+Samples
+0.0 0.5 1.0
+u
+0.0 0.5 1.0
+u
+6
+5
+4
+3
+2
+1
+0
+log10 density
+(b)Complex-DoubleBanana with the same protocol (densities top, samples bottom).
+Figure A6: Additional complex-copula fits.Ring and double-banana families under the same settings
+as Figure 1 (panel e). Density-panel annotations report ISE vs ground truth.
+28
+
+Table A14: Imputation sensitivity sweep(MCAR 20%, neval = 800). Less-negative relative gap is
+better.
+Config (h, pool) Mean rel. gap vs best baseline (%) Mean abs. RMSE gap
+0.01, 50k -44.54 0.967
+0.02, 50k -37.47 0.740
+0.05, 50k -26.32 0.597
+0.10,50k -18.42 0.592
+0.02, 100k -35.87 0.687
+29

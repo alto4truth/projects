@@ -1,0 +1,30 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+scenario identification, each discrete failure mode is handled by predicting logits, which are transformed via a softmax function to obtain mode probabilities. At inference time,
+we draw posterior samples, assign each draw the label
+with the highest softmax probability, and thus obtain
+discrete samples of the latent realized trajectory,z, analogous to the MCMC output. A scenario is considered
+correctly identified if the most frequent posterior label
+matches the true simulated label. In addition to the failuremodestatuslabel, wealsoinferthefailureparameters
+{τ, λ, βf , βl}directly from the data and independently of
+the failure category.
+B. Priors
+For the operational scenario detection, a categorical
+prior is required. As heat exchangers operate normally
+moreoftenthantheyexperiencefailures, weassignhigher
+prior probability to the no-failure mode:p(failure mode)
+= [0.4; 0.2; 0.2; 0.2] (none, fouling, leakage, both). We
+note that the scenario where both failure mechanisms are
+active, is a very unlikely situation: albeit we still consider
+it in defining the categorical prior, we do not generate
+data with both leakage and fouling and consider it only
+as a confounding scenario.
+For the ch

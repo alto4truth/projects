@@ -1,0 +1,31 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 9
+section: table-vi
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+putational efficiency of MAPRPose
+from two perspectives: single-object latency and system-level
+throughput.
+As shown in Table III, our method achieves a single-object
+inference latency of 0.05 s on an NVIDIA RTX 4090, representing a24 × speedupover the 1.2 s required by FoundationPose.
+This significant latency reduction is primarily attributed to
+two key architectural optimizations: the MAPP module prunes
+the initial sampling space down to only B= 7 high-quality
+hypotheses, and the amodal mask prediction in AMPR provides
+geometrically consistent initialization that substantially reduces
+the number of refinement iterations i required for convergence.
+As shown in Table VI, our design exhibits superior scalability
+in multi-object scenarios. By replacing sequential rendering
+with a tensorized execution model, MAPRPose achieves 1.47
+FPS for full-scene inference ( N= 5 ), a 43 × throughput
+improvement over FoundationPose (1.47 FPS vs. 0.034 FPS
+per frame). Notably, as N increases, our framework can
+saturate the GPU, elevating utilization from 70% to over 90%
+and further boosting the inference steady-state to 1.50 FPS.
+These results demonstrate that the N×B batching strategy
+successfully

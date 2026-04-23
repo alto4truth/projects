@@ -1,0 +1,26 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+umps can produce near-identical cumulative fouling trajectories, making it difficult to distinguish the true regime from the dominant prior. MCMC
+is particularly susceptible because it must simultaneously
+inferλalongside 100 hidden per-timestep jump indicators, entangling the global arrival rate with local decisions about whether each individual timestep carried
+a jump. SBI avoids this by absorbing the individual
+timestep variables into the simulation process and instead relies on summary statistics. This compresses what
+little signal exists about the rate of fouling accumulation
+into a lower-dimensional representation. Even so, neither
+method can fully overcome the prior dominance when
+the observation window contains so few events. This
+highlights a fundamental limit of structural identifiability
+in sparse-event regimes, rather than a systematic failure
+of the inference algorithms. Detailed model calibration
+analyses are provided in the Supplementary Material.
+Scenario 2 (Batch Process Shutdown) provides therefore
+a representative stress test for probabilistic diagnosis under weak observability. In this regime, fouling evolves
+through sparse but potentially large stochastic jumps

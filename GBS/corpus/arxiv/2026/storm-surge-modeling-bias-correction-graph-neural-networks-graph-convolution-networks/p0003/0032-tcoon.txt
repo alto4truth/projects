@@ -1,0 +1,41 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 3
+section: tcoon
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+e National Oceanic and Atmospheric Administration [ 100], and established by the National Weather Service local Weather Forecast
+Oﬀices (see [ 50])
+28
+
+3.2 Comparison with Sequential LSTM-based Model
+Predictions
+The novelty of StormNet lies in its use of a GNN, with a graph representation of nodes
+constructed based on the correlation of their water level observations (see Section 2.3),
+in conjunction with LSTM layers, forming a spatiotemporal predictive framework. In
+this section, the performance of this approach is compared with the results of the
+LSTM-based model of [ 77], in which interactions between data from different stations
+were not explicitly modeled in the architecture.
+In Figure 8 and Table 4, we compare the results of StormNet and the LSTMbased model of [ 77] in bias-correcting water level forecasts in the gauge stations we
+have considered (Figures 7 and Table 3). We also examined the accuracy of both
+models for both the full duration of the water level time series and a shorter span
+of two days around landfall, to further assess their performance specifically during
+the most intense storm conditions. In Figure 8, the results of the model with the
+lowest RMSE are presented for each station (with purple denoting StormNet and
+orange the LSTM model of [ 77]). Each station is represented only by the model that
+yields the lowest RMSE among the two. For applying 24 h-ahead corrections, both
+models yield quite similar accuracy. For corrections throughout the full timeseries,
+each model outperforms the other in 8 of the stations, with the LSTM-based model
+of [ 77] even yielding slightly lower average RMSE across all stations, compared to
+StormNet. StormNet corrections show slightly better accuracy for the two-day period
+around landfall, as applying StormNet leads to a lower RMSE for 9 of the 16 stations,
+with only a small improvement to the average RMSE. The picture is clearer for the
+36 h-ahead corrections, as StormNet outperforms the LSTM-based model of [ 77] in
+11 of 16 stations in the full time series case, and in 13 of 16 stations in the case of the
+two-day period around landfall, showing approximately 11% and 12% lower average
+RMSE throughout all stations in each case, respectively.
+29

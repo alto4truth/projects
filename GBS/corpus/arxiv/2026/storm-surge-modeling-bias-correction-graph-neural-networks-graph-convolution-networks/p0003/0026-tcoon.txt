@@ -1,0 +1,24 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 3
+section: tcoon
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+Fig. 6 : Distribution of the RMSE of StormNet bias correction predictions across all
+stations for different values of the prediction window. The median is denoted with
+an orange line segment. Blue (red) data points represent the RMSE values for each
+individual NOAA-NOS (TCOON) station (Table 3) in each case.
+Figure 7 demonstrates the performance of StormNet in three representative stations for the largest considered prediction windows (i.e., 48 h and 72 h) used for
+StormNet. Cedar Key, FL (8727520, NOAA-NOS, node number 3, see Figure 4) was
+directly impacted by severe storm surge during landfall, as indicated by the maximum
+observed water levels of ∼ 2.5 m. On the other hand, Apalachicola, FL (8728690,
+NOAA-NOS, node number 4, Figure 4), although in proximity to landfall, was not as
+severely impacted by Idalia, with a maximum water height of approximately 1.0 m.
+Finally, Galveston Bay Entrance North Jetty, TX (8771341, TCOON, node number
+12, Figure 4) is located in a region further from landfall and thus did not record any
+noticeable storm-surge-related events. This choice of stations was made to examine the
+performance of StormNet in regions in relative geographic proximity but in

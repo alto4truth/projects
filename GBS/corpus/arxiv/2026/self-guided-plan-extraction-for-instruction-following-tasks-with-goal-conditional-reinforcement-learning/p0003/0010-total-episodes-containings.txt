@@ -1,0 +1,33 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 3
+section: total-episodes-containings
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+environment is highly stochastic, a single
+rollout is insufficient; instead, we aggregate metrics such as average success rate to obtain a reliable
+estimate of plan effectiveness.
+4.4 LLM Fine-Tuning
+In the first cycle, we warm-start the language model
+with supervised fine-tuning (SFT) to reproduce the
+plans generated in the zero-shot stage (Section 4.1),
+aligning it with the plan distribution of the target
+environment.
+In subsequent cycles, we incorporate plan-level
+quality signals obtained from execution and validation. These signals are used to construct preference
+pairs of higher- and lower-scoring plans, which
+are then used for DPO fine-tuning. This allows
+the model to internalize the agent’s feedback and
+gradually improve plan generation.
+In our framework, DPO acts as a lightweight
+plan-selection bias rather than a precise credit assignment mechanism. It increases the probability
+of plan structures that the RL agent can learn from
+early, implicitly forming an automated curriculum,
+while deprioritizing plans that yield little initial
+progress without explicitly labeling them as incorrect.
+5 Experiments
+In this section, we describe the experiments conducted to answer the follo

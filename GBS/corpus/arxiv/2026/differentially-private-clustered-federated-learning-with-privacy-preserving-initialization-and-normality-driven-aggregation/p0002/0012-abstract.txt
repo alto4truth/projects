@@ -1,0 +1,24 @@
+title: Differentially Private Clustered Federated Learning with Privacy-Preserving Initialization and Normality-Driven Aggregation
+source: arxiv
+year: 2026
+document_id: differentially-private-clustered-federated-learning-with-privacy-preserving-initialization-and-normality-driven-aggregation
+authors: Jie Xu; Haaris Mehmood; Rogier Van Dalen; Karthikeyan Saravanan; Mete Ozay
+page: 2
+section: abstract
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20596v1
+
+ating DP constraints, relying on a fully trusted server.
+3. OUR METHOD: PINA
+3.1. Overview
+Our proposed method PINA consists of two stages: (1) Cluster
+Model Initialization and (2) Clustered Model Training. In (1), we
+privately initialize cluster models from user updates; and in (2)
+we perform cluster identification and model training in a federated
+setting, privately updating global cluster models. The workflow of
+PINA is outlined in Algorithm 1.
+In this work, we use pre-trained transformer-based models, wellsuited for cross-device FL due to their ability to leverage large-scale
+server data for pre-training and efficient client-side fine-tuning, enabling robust performance on heterogeneous data [25, 22, 26, 27].
+3.2. Cluster model initialization
+For a number of initial FL roundsT in, clientsK t ⊆ Ksampled at
+roundt≤T in apply LoRA withr= 1to the same pre-trained

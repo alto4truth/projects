@@ -1,0 +1,32 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 52
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+and avoid ineffective ones.
+• Keep the proposal internally consistent with the current
+graph.
+Key output schema.
+{
+"problem_context": "<abstract failure
+pattern>",
+"modifications": [
+{
+"operation": "REWRITE_NODE | PRUNE_EDGE
+| ADD_NODE | ADD_EDGE",
+"target": { ... },
+"new_node": { ... },
+"new_content": "<replacement content if
+applicable>",
+"addresses_errors": [<error indices>],
+"rationale": "<why this edit helps>"
+}
+]
+}
+User input.The model receives the current TPG, the error
+cluster, and optional historical optimization experiences.

@@ -1,0 +1,19 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+al setup. In Section 4.2, we discuss the performance of
+different MLLMs on the CHASM. Finally, we conduct comparative experiments to investigate which
+parts of the posts are most helpful for detecting covert advertisements.
+4.1 Experimental Settings and Metrics
+To establish the baseline performance in CHASM, we experiment with 15 different mainstream MLLMs with Chinese language capabilities. We categorize these MLLMs into two
+groups: open-source MLLMs (containing small- and large-scale models and proprietary MLLMs.
+Small-scale open-source MLLMs include Deepseek-vl2-small [32], InternVL2.5-8B [33],
+LLaVA-NeXT-8B-hf [22], Qwen2.5-VL-7B-Instruct [23]. Large-scale open-source MLLMs include Llama-4-Maverick [34] andDeepseek-V3 [21]. Proprietary MLLMs include Qwen2.5-Max
+6

@@ -1,0 +1,22 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+irness.To prepare the BBQ datasets for evaluating the intersectional
+fairness of LLM models, we applied a two-step preprocessing procedure:
+(1) Intersectional Filtering:As the original datasets contain many questions where answer options differ along
+only one sensitive attribute (e.g., both options describe women of different races, or both options describe
+Hispanic individuals with different occupations), we retained only questions where the answer options cover
+multiple sensitive attribute values, such as both race and job (e.g., White dentist vs Latino sales clerk), or both
+race and gender (e.g., Asian man vs Arabic woman). This ensures the retained samples are suitable for evaluating
+fairness across intersecting identities. This step resulted in 3,720 retained questions from the Race_SES dataset
+and 5,232 from the Race_Gender dataset, each evenly split between ambiguous and disambiguated contexts (see
+illustrative examples in Table 3). Additionally, we identified 840 questions (420 in each context: ambiguous and
+disambiguated) in the Race_SES dataset that lack information about the individuals’ occupations. Since job
+information is a key cue for interpreting socioeconomic statu

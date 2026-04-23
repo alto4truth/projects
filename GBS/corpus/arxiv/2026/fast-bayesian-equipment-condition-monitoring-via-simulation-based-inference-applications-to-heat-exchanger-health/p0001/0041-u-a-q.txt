@@ -1,0 +1,26 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+native
+to classical Bayesian sampling for condition monitoring
+of heat exchangers. Across all evaluated scenarios, SBI
+achieves diagnostic performance comparable to MCMC
+in both failure-mode classification and parameter estimation, while reducing inference time by several orders
+of magnitude. The close agreement in posterior summaries and distributional metrics indicates that SBI with
+amortized neural posterior estimation can efficiently approximate high-fidelity MCMC baselines, even in nonlinear thermo-fluid systems with stochastic degradation
+dynamics.
+A key implication is the shift in computational burden
+enabled by SBI. By front-loading simulation cost into
+an offline training phase, the framework enables nearinstantaneous inference during deployment. This is particularly relevant for industrial settings where continuous
+monitoring must be performed across multiple assets under strict latency constraints. The results suggest that,
+beyond a small number of inference queries, SBI becomes
+more computationally efficient than MCMC, making it
+suitable for real-time diagnostics and large-scale deployment.
+From a reliability engineering perspective, the framework supports probabilistic

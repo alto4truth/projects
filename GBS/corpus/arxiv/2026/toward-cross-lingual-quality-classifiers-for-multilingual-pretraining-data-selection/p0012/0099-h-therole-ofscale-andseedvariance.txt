@@ -1,0 +1,22 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 12
+section: h-therole-ofscale-andseedvariance
+chunk: 99
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+We have investigated the addition of languages and the curation of negative samples. However, we
+have to ask ourselves about their stability. If we were to supply different positive/negative samples,
+we would expect to get very similar results. To test this hypothesis, we vary the sampling seed of the
+classifier. This would result in selecting different samples from our positive anchors, but also from
+FineWeb2. This experiment is labeled asHQ seed.
+Tables 14 and 15 analyze the stability of quality filtering with respect to sampling variance and
+training scale. While multilingual pooling improves overall rank stability, our ablations show that
+downstream LLM performance remains sensitive to the classifier’s initial sampling seed. Changing
+the seed shifts aggregate accuracy by 0.3% in Arabic and 0.8% in French (Tables 14 and 15). This
+variance suggests that the specific subset of examples used to define the quality boundary heavily
+influences which knowledge domains are selected.
+26

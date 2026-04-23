@@ -1,0 +1,25 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 3
+section: da-2k
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+Table 4.Evaluation on self-supervised tasks.Each task has two difficulty levels. We also report the average accuracy across all tasks in
+the last column. The best results are inbold, and the second-best results are underlined .∆denotes the gains relative to Qwen2.5-VL-3B.
+Type Model Correspondence Ordering Rotation Similarity Inpainting Avg.
+4 points 6 points 2×2 3×3 4×90 ◦ 8×45◦ weak aug. strong aug. 25% 50%
+Baseline Random 4.17 0.14 4.17 0.00 25.00 12.50 25.00 25.00 25.00 25.00 14.60
+Qwen2.5-VL-3B [4] 0.28 0.02 3.16 0.00 18.64 7.64 50.18 47.32 20.96 17.66 16.59
+Correspondence93.50 92.186.66 0.00 26.06 12.30 96.38 93.38 25.08 23.12 46.87
+∆ +93.22 +92.16 +3.50 +0.00 +7.42 +4.66 +46.20 +46.06 +4.12 +5.46 +30.28
+Ordering 4.92 0.1456.72 31.1627.74 14.82 96.04 92.56 30.28 25.84 38.02
+∆ +4.64 +0.12 +53.56 +31.16 +9.10 +7.18 +45.86 +45.24 +9.32 +8.18 +21.43
+Rotation 2.56 0.12 6.72 0.00 99.70 49.82 93.18 88.72 32.56 25.22 39.86
+∆ +2.28 +0.10 +3.56 +0.00 +81.06 +42.18 +43.00 +41.40 +11.60 +7.56 +23.27
+Similarity 5.00 0.30 6.54 0.00 29.36 14.92 98.82 98.0610.82 13.60 27.74
+∆ +4.72 +0.28 +3.38 +0.00 +10.72 +7.28 +48.64 +50.74 -10.14 -4.06 +11.15
+Inpainting 4.80 0.14 7.82 0.00 32.18 12.24 88.

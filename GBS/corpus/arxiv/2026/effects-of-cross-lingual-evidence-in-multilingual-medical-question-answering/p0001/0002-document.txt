@@ -1,0 +1,27 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+ieval in both English and the
+target language, achieving comparable accuracy to high-resource language results. These
+findings challenge the assumption that external knowledge systematically improves performance and reveal that effective strategies depend on both the source of language resources
+and on model scale. Furthermore, specialized
+medical knowledge sources such as PubMed
+are limited: while they provide authoritative
+expert knowledge, they lack adequate multilingual coverage. Code and resources publicly
+available: https://github.com/anaryegen/
+multilingual-medical-qa/
+1 Introduction
+The rapid advancements in Large Language Models (LLM) research have yielded impressive results across various domains, including healthcare
+(Brown et al., 2020; Achiam et al., 2023; Liévin
+et al., 2024). LLMs demonstrate strong capabilities
+in clinical reasoning and decision-making across
+tasks of varying complexity, opening the door to
+potential applications in real-world medical contexts (Chen et al., 2024; Sellergren et al., 2025;
+Figure 1: Illustration of the Multilingual (English, Spanish, Italian, French, Kazakh, and Basque) Medical Question Answering pipeline. We obtain external knowledge

@@ -1,0 +1,32 @@
+title: Exploring High-Order Self-Similarity for Video Understanding
+source: arxiv
+year: 2026
+document_id: exploring-high-order-self-similarity-for-video-understanding
+authors: Manjin Kim; Heeseung Kwon; Karteek Alahari; Minsu Cho
+page: 3
+section: enc-blocks-3
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20760v1
+
+10 Manjin Kim 1∗, Heeseung Kwon2∗, Karteek Alahari3, and Minsu Cho1
+Fig.10: Effects of 2nd-order STSS on Something-Something V1.The figure
+shows the accuracy difference for each action group when incorporating the 2nd-order
+STSS on top of the 1st-order.
+
+Exploring High-Order Self-Similarity for Video Understanding 11
+40
+(a)“Moving something down"
+41
+(b)Moving something up
+Fig.11: STSS visualization. RGB frames at the top show query locations and their
+spatio-temporal matching regions marked in red and green, respectively. The subsequent
+rows show STSS maps for the two queries and the L2-norm of feature maps from 1stto 3rd-order STSSs. Best viewed in PDF.
+
+12 Manjin Kim 1∗, Heeseung Kwon2∗, Karteek Alahari3, and Minsu Cho1
+39
+(a)‘Moving something away from something"
+43
+(b)“Moving something closer to something"
+Fig.12: STSS visualization. RGB frames at the top show query locations and their
+spatio-temporal matching regions marked in red and green, respectively. The subsequent
+rows show STSS maps for the two queries and the L2-norm of feature maps from 1stto 3rd-order STSSs. Best viewed in PDF.

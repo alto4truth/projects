@@ -1,0 +1,29 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+, C5.Risk: High. Consequence:If false, all leaderboard rankings are temporally bounded artifacts—conclusions
+need wholesale revision, and the entire comparative robustness
+paradigm collapses. New attacks routinely bypass previously
+“sufficient” suites; no temporal validity guarantee exists.
+A2.Average robustness approximates worst-case safety.
+Shared by:C1, C2, C4 (implicitly, through reporting conventions).Risk: High. Consequence:If false, “progress”
+metrics systematically overstate deployment safety. Daiet
+al.[C2] already demonstrate contradiction: worst-case robustness falls below random guessing even when averages improve.
+Key findings across five years of benchmarking would require
+reinterpretation.
+A3.RDIgeneralises beyond CNN feature geometry.Shared
+by:C5, C9.Risk: Medium–High. Consequence:If false,
+fast screening mis-ranks ViTs and LLMs, producing false
+negatives (unsafe models pass) or false positives (safe models
+waste compute on full evaluation). The 30×efficiency claim
+becomes architecture-conditional.
+A4.CTF performance predicts production adversarial capability.Shared by:C3, agent-benchmarking community.Risk:
+Medium. Consequence:If false, investment in agent-based
+red

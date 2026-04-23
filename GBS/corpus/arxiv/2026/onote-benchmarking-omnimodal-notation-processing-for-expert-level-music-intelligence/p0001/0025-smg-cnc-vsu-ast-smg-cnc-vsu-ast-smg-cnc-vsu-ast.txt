@@ -1,0 +1,28 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+tive music expression. This
+task does not use existing score images as input; instead, it examines whether the model can independently produce coherent,
+standardized, and aesthetically reasonable symbolic music under
+given constraints. During evaluation, we focus on three core aspects: the overall quality of generated music, the rationality of
+music structure, and the continuity of musical aesthetics. By assessing formal correctness, structural logic, and artistic expression of
+the generated notation, we comprehensively evaluate the model’s
+higher-level music creation ability beyond understanding and transcription.
+B Prompt used in ONOTE
+B.1 Task Execution Prompts
+In this section, we detail the exact execution prompts employed to
+evaluate the capabilities of Omni-models across the four primary
+tasks of the ONOTE benchmark.
+To ensure a fair evaluation, we adopted a standardized prompting
+paradigm. Each prompt is structured with a specific systemRole
+(to activate the relevant domain expertise of the LLM) and a precise
+Taskinstruction.
+Furthermore, to systematically prevent model hallucination and
+ensure standardized output parsing during the automated evaluation, we applied a strict

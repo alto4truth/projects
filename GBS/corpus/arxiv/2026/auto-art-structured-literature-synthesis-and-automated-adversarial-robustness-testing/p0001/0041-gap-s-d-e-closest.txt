@@ -1,0 +1,31 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+evaluation;
+OWASP LLM01 (Prompt Injection) maps to agentic attack
+modules; EU AI Act Article 15 maps to the pre-screening gate
+and worst-case reporting.
+Threats to validity.Internal validity.Pre-screening gate
+thresholds ( τmask = 0.1 , WB/BB gap 0.15) were tuned on
+the RobustBench CIFAR-10 leaderboard; these may require
+recalibration for different data distributions, model families, or
+perturbation budgets. The ablation study (Table 9) mitigates
+this by showing robustness across five random seeds, but crossdataset validation remains future work.
+External validity.Our empirical evaluation uses CIFAR-10
+models exclusively. While CIFAR-10 is the standard RobustBench benchmark, generalisability to ImageNet-scale models,
+multimodal architectures, and production LLMs is not yet
+demonstrated. The structured synthesis is bounded by nine
+corpus sources; future systematic reviews with larger corpora
+may reveal additional patterns or contradict our gap rankings.
+Construct validity.Kendall τ between RDI and AutoAttack
+rankings measures ordinal agreement but not calibration—
+a high τ does not guarantee that RDI absolute values are
+meaningful thresholds for deployment decisions.
+Limitations.(i

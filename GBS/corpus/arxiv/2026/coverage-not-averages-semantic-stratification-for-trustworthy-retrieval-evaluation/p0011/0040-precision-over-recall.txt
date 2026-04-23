@@ -1,0 +1,35 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 11
+section: precision-over-recall
+chunk: 40
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+- It’s better to miss a marginally relevant entity than to include
+an irrelevant one
+- Only include entities you are confident help characterize the
+query’s information need
+- When uncertain, lean toward exclusion
+OUTPUT: Return only the indices of relevant entities.
+--USER:
+Identify which entities from the candidate list are relevant to
+the search query.
+An entity is RELEVANT if:
+1. It appears in or is directly referenced by the query
+2. It represents a key concept the query is asking about
+3. Understanding this entity is necessary to answer the query
+4. It’s a person, organization, place, or technical term central
+to the query
+An entity is NOT RELEVANT if:
+- It’s from the same general field but addresses a different aspect
+- It might co-occur with query terms but isn’t about the query topic
+- It’s too broad or too specific relative to the query’s need
+Search Query: "{query_text}"
+Candidate Entities:
+{entity_list}
+For each candidate, ask: Would a user asking this query want/need
+information about this entity? Is it central to answering the query?
+16

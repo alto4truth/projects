@@ -1,0 +1,22 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 2
+section: abstract
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+n introduces PROACTRL, which addresses this through
+paired-branch process rewards.
+3.3 Proactive Reinforcement Learning-based Retrieval
+Within the online evolution framework, the agent must learn when retrieval actively improves outcomes versus when
+current knowledge suffices. Let zt =1[a t =RETRIEVE(q t)] denote whether a retrieval action is executed at stept. The
+core difficulty is that outcome-level rewards signal task success or failure but cannot isolate whether a specific retrieval
+decision at a particular step was necessary or beneficial. When an episode fails, the agent cannot determine whether
+retrieval was unnecessary, mistimed, or too vague. To learn proactive retrieval control, we require step-level supervision
+that directly answers: did this retrieval actively improve the trajectory, or would the agent have succeeded without it?
+To address this challenge, we introduce an adaptive rollout mechanism that generates comparative evidence (Figure 2
+(c)). Whenever an initial rollout triggers a retrieval action at step tb, we adaptively sample alternative continuations
+5

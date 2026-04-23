@@ -1,0 +1,64 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+reverse. According to importance sampling Monte Carlo,
+∫ 𝑓(𝑥)𝑝(𝑥)𝑑𝑥≈ 1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+𝑓(𝑥 𝑡), 𝑥 𝑡 ∼𝑝(𝑥).(81)
+Applying this to our case,
+1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+(1 +𝑚 1
+𝑡 𝑚2
+𝑡 −𝑚 1
+𝑡 −𝑚 2
+𝑡 )(82)
+≈ ∬ (1 +𝑚 1𝑚2 −𝑚 1 −𝑚 2)𝑃(𝑚 1)𝑃(𝑚 2)𝑑𝑚 1𝑑𝑚2.
+(83)
+Since both𝑚1 and𝑚 2 are binary, the integral has only four
+possible values:
+∬
+(1+𝑚1𝑚2 −𝑚 1 −𝑚 2)×𝑃(𝑚 1)𝑃(𝑚 2)𝑑𝑚 1 𝑑𝑚2
+(84)
+=𝑆 1 +𝑆 2 +𝑆 3 +𝑆 4 =𝑝 2,(85)
+𝑃(𝑚 1) = (1 −𝑝) 𝑚1
+𝑝(1−𝑚1),(86)
+𝑃(𝑚 2) = (1 −𝑝) 𝑚2
+𝑝(1−𝑚2),(87)
+𝑆1 = (1 + 1 − 1 − 1)(1 −𝑝) 2,(88)
+𝑆2 = (1 + 0 − 1 − 0)𝑝(1 −𝑝),(89)
+𝑆3 = (1 + 0 − 0 − 1)(1 −𝑝)𝑝,(90)
+𝑆4 = (1 + 0 − 0 − 0)𝑝 2.(91)
+Therefore,
+𝜓≈ (𝐗 𝑇 𝐘𝐗)𝑝2.(92)
+A.6. Derivation of the Feedforward Network
+Dropout Regularizer
+We derive the regularizer for a single linear transformation;theextensiontomulti-layerFFNsfollowsanalogously.
+Consider the position-wise feedforward layer
+𝐇=𝐗𝐖 𝑇
+ff,(93)
+where𝐖 ff denotes the feedforward weight matrix.
+For a token𝐱𝑖, the corresponding output is
+𝐇𝑖 =𝐱 𝑖𝐖𝑇
+ff.(94)
+When a dropout mask𝐦𝑖𝑡 is applied at training epoch𝑡, the
+perturbed output becomes
+𝐇𝑖𝑡 = (𝐦 𝑖𝑡 ⊙𝐱 𝑖)𝐖𝑇
+ff.(95)
+Thediscrepancybetweentheoriginalandperturbedoutputs
+is therefore
+𝐇𝑖 −𝐇 𝑖𝑡 = ̃𝐱𝑖𝑡𝐖𝑇
+ff,(96)
+where, ̃𝐱𝑖𝑡 =𝐱 𝑖 − (𝐦𝑖𝑡 ⊙𝐱 𝑖).
+Assuming𝑁 𝑇 stocha

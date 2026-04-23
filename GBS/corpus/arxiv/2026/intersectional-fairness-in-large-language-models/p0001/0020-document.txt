@@ -1,0 +1,50 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+n-instruct, Gemini-1.5-flash
+SB-bench (using
+BBQ benchmark
+dataset, along with
+real images)
+Y Y N accuracy, bias score N‡
+[Wu et al .
+2025]
+DeepSeek-R1-Distill-Llama-8B, DeepSeek-R1-DistillQwen-32B, Marco-o1, Llama-3.1-8B-Instruct, Qwen2.532B-Instruct
+BBQ benchmark Y Y Y Bias Score, Bias Severity Score N
+[Yang et al .
+2025]
+Llama2-7B-Chat, Mistral-7B-Instruct, Llama-3-8BInstruct, Llama-3.1-8B-Instruct, Mistral-Small-24B,
+GPT-3.5-Turbo
+BBQ, StereoSet,
+CrowS-Pairs
+Y Y N Bias Score⁄pilcrow, Stereotype Score, Idealized
+CAT Score (iCat)
+Y‡
+[Chataigner
+et al. 2025]
+LLaMA 3 (8B, 8B-Instruct), MPT (7B, 7B-Instruct), Falcon
+(7B, 7B-Instruct), Gemma 3 (1B-Instruct, 4B-Instruct, 12BInstruct)
+BBQ benchmark Y Y N Accuracy, Bias score⁄pilcrow N
+[Haider et al .
+2025]
+Claude-3.5-Sonnet, Jamba 1.6, Gemma-3, Llama-4 IMHI dataset, Prelabeled few-shot
+BBQ examples
+N Y Y bias score N
+[Xu et al .
+2025]
+GPT-3.5-Turbo-0125, Llama-3-8B-Instruct BBQ, StereoSet Y Y N bias score (for BBQ benchmark), Stereotype Score, iCat for StereoSet
+Y‡
+[Tomar et al .
+2025]
+Llama-3.1-8B-instruct, Gemma-2-9b-it, Phi-3.5-miniinstruct, bloomz-7b1, sarvam-2b-v0.5
+BharatBBQ (new
+intersectional
+groups)
+Y Y Y accuracy, Bias score,

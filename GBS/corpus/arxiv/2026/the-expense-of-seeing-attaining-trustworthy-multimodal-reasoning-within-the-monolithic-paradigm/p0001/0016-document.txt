@@ -1,0 +1,31 @@
+title: The Expense of Seeing: Attaining Trustworthy Multimodal Reasoning Within the Monolithic Paradigm
+source: arxiv
+year: 2026
+document_id: the-expense-of-seeing-attaining-trustworthy-multimodal-reasoning-within-the-monolithic-paradigm
+authors: Karan Goyal; Dikshant Kukreja
+page: 1
+section: document
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20665v1
+
+ingrather thanreading
+equivalent information (and potentially even lossy). A trustworthy
+world model must treat information symmetrically;𝐶𝑜𝑆> 0proves
+the model is fundamentally biased against non-textual knowledge
+extraction.
+4.3𝐹𝑜𝑆: Fallacy of Seeing
+The centerpiece of our diagnostic resolution, distinguishing the
+exact origin of the architectural bottleneck:
+𝐹𝑜𝑆=𝑆 𝐹𝑢𝑙𝑙 −𝑆 𝑆 𝑦𝑚𝑉 (6)
+Diagnostic Interpretation [RQ2]:Mathematically, 𝐹𝑜𝑆≡𝐶𝑜𝑆−
+𝑇 𝑜𝑆. However, we must explicitly define and evaluate 𝐹𝑜𝑆 separately because it diagnoses an entirely distinct cognitive failure.
+Ideally, 𝐹𝑜𝑆= 0. Humans process 𝑆𝐹𝑢𝑙𝑙 and 𝑆𝑆 𝑦𝑚𝑉 equally well
+without loss of fidelity. If 𝐹𝑜𝑆≠ 0, it is a fallacy that this exists
+and confirms the architecture’s inability to process the exact same
+lossless semantic payload. Crucially, the sign of 𝐹𝑜𝑆 reveals two
+distinct, mutually exclusive collapse modes:
+• The Positive Collapse Mode ( 𝐹𝑜𝑆> 0):Indicates an inefficiency in visual encoding. The model struggles to read and
+extract text when it is rendered purely as an image, proving
+the vision encoder (e.g., the ViT) lacks the granular spatial
+resolution to extract symbolic features.
+• The Negative Collapse Mode ( 𝐹𝑜

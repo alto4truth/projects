@@ -1,0 +1,19 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 29
+section: 2-experience
+chunk: 69
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+- This string must be dense and instructional.
+- This string must be a **Direct Actionable Command** only.
+- **NEGATIVE CONSTRAINT:**
+- DO NOT explain "Agent A succeeded because..."
+- DO NOT mention "The failed agent did X..."
+- DO NOT include retrospective analysis or justification.
+- **TONE:** Imperative, authoritative, and concise.
+- **Format:** A concrete rule for future tasks like "Always [Action] to [ensure Result/
+avoid Error]." or "If [Condition], then [Action]."

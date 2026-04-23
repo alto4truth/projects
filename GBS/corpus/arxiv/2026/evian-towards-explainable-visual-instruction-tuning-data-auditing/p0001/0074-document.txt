@@ -1,0 +1,27 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 74
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+he largest gains again appear on reasoning-centric
+tasks such asScienceQA(92.46 vs. 91.32) andAOKVQA(76.24 vs. 74.67), demonstrating that the
+logical flaws identified by the Qwen-based auditor
+are also detrimental for a model with a completely
+different architecture. This shows thatlogical coherence is a genuinely universal data-quality
+factor, and that enforcing it yields robust improvements regardless of the model family used for finetuning.
+E Effectiveness on Real-World Data
+To definitively address potential concerns regarding the generalizability of our method beyond the
+defect-injected benchmark, we conducted an additional evaluation on the original, unmodified 300K
+source dataset. This experiment aims to verify
+whether the data quality improvements observed
+with EVIAN stem solely from filtering out artificial noise or if the framework captures intrinsic
+data quality signals applicable to real-world scenarios. Our findings confirm the latter: the model
+fine-tuned on the small, EVIAN-curated subset outperforms the model trained on the entire original
+dataset, validating the efficacy of our pipeline in
+extracting high-value samples from standard distribution data.
+Experimental S

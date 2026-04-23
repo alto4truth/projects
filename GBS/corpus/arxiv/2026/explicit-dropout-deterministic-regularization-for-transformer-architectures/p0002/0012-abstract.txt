@@ -1,0 +1,29 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+empiricalriskplusanadditivepenaltyterm.Forgeneralized
+linearmodels,Wageretal.[33]showthatdropouttrainingis
+equivalent to solving a deterministic problem with an adaptive𝓁 2–type regularizer that scales features by an estimate
+of the inverse Fisher information. They further disentangle
+explicitandimpliciteffects,definingtheexplicitregularizer
+asthedifferencebetweentheexpecteddropoutobjectiveand
+the standard loss. Iosifidis et al. [17] incorporate dropout
+intothelinearregressionstepofsingle-hiddenlayerrandomized networks and provide a closed-form formulation. They
+show that dropout can be interpreted as inducing an explicit
+weight-dependent regularizer by minimizing the discrepancy between original and noise-perturbed representations.
+Arora et al. [1] extend this line of work and provide explicit
+forms and capacity-control guarantees for dropout in matrix
+completion and two-layer ReLU networks, showing that
+dropout induces a data-dependent regularizer whose value
+directlycontrolsRademachercomplexityandgeneralization
+bounds.
+We focus on the explicit regularizer induced by dropout
+in atwo-layer feed-forward network,following theformulation of Arora et al. [1]. Consider a network
+𝑓(𝐱;𝐖

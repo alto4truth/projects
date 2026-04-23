@@ -1,0 +1,51 @@
+title: CHORUS: An Agentic Framework for Generating Realistic Deliberation Data
+source: arxiv
+year: 2026
+document_id: chorus-an-agentic-framework-for-generating-realistic-deliberation-data
+authors: A. Koursaris; G. Domalis; A. Apostolopoulou; K. Kanaris; D. Tsakalidis; I. E. Livieris
+page: 2
+section: abstract
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20651v1
+
+s: (a) posts and actions per minute across all actors, (b) aggregate
+post and action counts per actor and (c) new comments versus replies per actor.
+7
+
+CHORUS: An Agentic Framework for Generating Realistic Deliberation DataA PREPRINT
+confirming that CHORUS-generated data constitutes a suitable input for downstream NLP pipelines, yielding thematic
+outputs consistent with genuine climate adaptation discourse.
+Dimension Mean Score Description
+Content Realism 4.6 Linguistic quality and behavioral diversity
+Discussion Coherence 4.1 Argumentation coherence and interaction patterns
+Analytical Utility 4.3 Suitability for downstream NLP pipeline processing
+Table 2: Expert evaluation results across the three assessed dimensions (5-point Likert scale).
+5 Conclusions and Future Research
+In this work, we presented an agentic-based framework named CHORUS, which orchestrates LLM-powered actors with
+behaviorally consistent personas to generate realistic deliberation data on interactive web platforms. The framework
+addresses a critical bottleneck in online discourse analysis: the scarcity of large-scale deliberation data imposed by
+restrictive platform access policies, ethical constraints surrounding user privacy and inconsistent dataset quality. By
+grounding synthetic user behavior in structured personas, a principled Poisson process-based temporal model and
+structured tool usage, CHORUSprovides researchers and platform operators with a controlled yet richly diverse source
+of deliberation data suitable for discourse analysis, platform demonstration and NLP pipeline evaluation.
+CHORUSwas deployed on the DELIBERATEplatform within a climate adaptation pilot scenario, instantiating 10 actors across four persona archetypes over a 20-minute simulation horizon. The framework successfully produced a
+heterogeneous discussion exhibiting the engagement asymmetry, topical diversity and interaction patterns characteristic of authentic participatory discourse. Preliminary expert evaluation across 30 participants yielded encouraging
+results relative to content realism, analytical utility and discussion coherence, confirming that CHORUS-generated data
+constitutes a credible substitute for real user participation in platform demonstration and analytical pipeline validation.
+A key limitation of the current evaluation concerns the absence of ablation studies isolating the contribution of individual framework components. Comparisons against simpler baselines, such as a single LLM generating the complete
+discussion monolithically, or configurations omitting persona-driven behavioral grounding or Poisson process-based
+temporal modeling, would provide direct quantitative evidence for the necessity of each design decision. Addressing
+this gap constitutes an important direction for future work. Moreover, the current evaluation does not quantify tool
+invocation frequency or its effect on content quality and relies exclusively on Claude Sonnet 4.5, leaving the empirical contribution of tool usage and the sensitivity to model substitution unexamined. A systematic analysis of tool
+utilization patterns and cross-model evaluation are planned as part of the framework’s forthcoming extension.
+In our future work, we intend to extend the current capabilities of CHORUSby involving adversarial simulation,
+where specialized archetypes introduce disruptive behaviors such as polarizing rhetoric and deliberate misinformation,
+enabling the study of platform resilience under controlled conditions. A second direction concerns adaptive actor
+archetypes, wherein behavioral strategies are iteratively refined in response to the evolving discussion state, moving
+beyond static persona parameterization toward dynamic agent adaptation. Finally, we intend to conduct larger-scale
+validation studies involving comparative evaluation against real deliberation data and deployment across diverse policy
+domains, with the long-term goal of establishing CHORUSas a robust benchmarking tool for participatory platform
+research.
+AcknowledgementsThis work received funding from the Horizon Europe research and innovation programme under
+Grant Agreement No. 101137711, project NEUROCLIMA (Developing and assessing novel educational and usercentred actions towards scaling up behavioural change and climate resilience through an AI-enhanced solution).
+8

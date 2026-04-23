@@ -1,0 +1,45 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+P , cF ]are projected through two dense
+layers with2u e andu d neurons and a dropout (r= 0.25) for regularization, yielding state vectorshD andc D.
+12
+
+4)Recursive Decoder:A unidirectional LSTM (u d = 64units) initialized with statesh D andc D and the first cell fed withhD as input
+generates sequences autoregressively. The output sequence feeds into
+a BiLSTM layer (ud = 64units) followed by a time-distributed dense
+layer producing the sequence of future vehicle state predictions,ˆY vF.
+Input sequences uses P = 50past steps ands F = 100future prediction steps. Input features include the vehicle states longitudinal velocity
+and acceleration and road features elevation, heading, speed limit, average
+edge speed, curvature, traffic signals, stop/yield signs, roundabouts, edge
+classification, link flags, and engineered start-stop indicators. Vehicle speed
+is the predicted future variable. Continuous features are scaled via SciPy’s
+StandardScalerwhile categorical features are unscaled.
+Training..TheIEEEVehicleSpeedDataset[21]containing5973rides(9049.3
+km) at 1-meter spatial resolution from Czech Republic driving data was used
+fortrainingtheDriverLSTMmodel. Duetoinconsistenciesinthecategorical
+road features of the original dataset, additional road features were generated
+using the Route Processor module and were appended to the original dataset.
+This amended dataset was used in training. Training employed Adam optimizer with learning rate 0.0001, mean-squared error loss function, 70:15:15
+train/validation/test split, 30 epochs with early stopping, and sequence generation using stride length of 10 steps with padding. Multiple retraining
+iterations with data randomization were done to minimize mean absolute
+error.
+Inference..The selected route from the Map Display Handler is discretized
+to 1-meter intervals and the road features are retrieved for these discretized
+coordinates using Route Processor. The PID Controller generated velocity
+and acceleration profiles are then interpolated onto these discretized coordinates, forming the past vehicle states. These data points are subsequently
+processed, using a stride of 10 steps, into batches of sequences containing past
+vehicle statesX vP, past road-context featuresXrP, and future road-context
+featuresX rF. These batches of past and future feature matrices are fed into
+the loaded best LSTM model to predict the future velocity profileˆY vF, from
+which only the first 10 predicted steps are retained for each inference window.
+The predicted velocity segments are then post-processed using a first-order
+Butterworth low-pass filter followed by a zero-phase forward-backward filter to remove high-frequency noise without phase distortion. The resulting
+13

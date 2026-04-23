@@ -1,0 +1,31 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+established by connecting nodes across different
+agent subgraphs.
+Graph-based Optimization.This graph-based
+representation transforms the challenge of prompt
+engineering into a structured graph optimization
+problem. It enables fine-grained manipulation of
+the agent system’s behavior through two primary
+mechanisms. First, throughnode content refinement, the text within a specific node can be modified for targeted updates, analogous to parameter
+tuning in traditional models. For example, editing a Tool Node’s content can improve an agent’s
+ability to use it correctly. Second, viastructural
+modification, the graph’s topology can be altered
+to dynamically change system capabilities. Pruning an edge to a Tool Node can revoke an agent’s
+access to that tool, while adding new nodes and
+edges can introduce new skills or agents into the
+system. This structured approach facilitates not
+only manual debugging but also automated system
+evolution.
+4.3 Gradient-Driven Evolution
+Given the system’s representation as a Textual Parameter Graph (TPG) G, our objective is to iteratively refine G to maximize task performance.
+Since traditional gradient-based optimization is not
+applicable to discrete text

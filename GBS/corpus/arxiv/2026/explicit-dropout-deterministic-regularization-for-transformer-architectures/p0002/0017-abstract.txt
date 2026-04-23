@@ -1,0 +1,78 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+Consider𝑁 𝑇 stochastic training epochs with dropout
+applied to the input𝐗, leading tõ𝐗𝑡 = [̃𝐱1𝑡, ̃𝐱2𝑡,…, ̃𝐱𝑁𝑡
+]∈
+ℝ𝑁×𝑑 representing the deviations between the original and
+the dropout-perturbed representations at epoch𝑡. The proposed regularizer is defined as:
+𝐽𝑞 = 1
+2𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+‖‖‖
+̃𝐗𝑡𝐖𝑇
+𝑞 𝐖𝑘𝐗𝑇 ‖‖‖
+2
+𝐹
+.(10)
+Using‖𝐀‖ 2
+𝐹 = Tr(𝐀 𝑇 𝐀)and rearranging terms
+𝐽𝑞 = 1
+2 Tr
+[(
+1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+̃𝐗𝑇
+𝑡 ̃𝐗𝑡
+)
+𝐖𝑇
+𝑞 𝐖𝑘𝐗𝑇 𝐗𝐖𝑇
+𝑘 𝐖𝑞
+]
+.
+(11)
+Let
+𝐁= 1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+̃𝐗𝑇
+𝑡 ̃𝐗𝑡,Λ 𝑞 =𝐖 𝑇
+𝑞 𝐖𝑘𝐗𝑇 𝐗𝐖𝑇
+𝑘 𝐖𝑞.
+(12)
+Assuming independent Bernoulli dropout with drop probability𝑝, the expectation over masks yields
+𝐁≈ (𝐗 𝑇 𝐗)⊙ 𝑝 2.(13)
+The resulting query regularizer becomes
+𝐽𝑞 = 1
+2 Tr[((𝐗𝑇 𝐗)⊙ 𝑝 2)Λ𝑞
+].(14)
+Full derivation of𝐁is provided in Section A of the Appendix.
+3.2. Key and Value Regularizers
+Key Regularization.We follow a similar analysis for the
+attention keys, yielding the following regularizer:
+𝐽𝑘 = 1
+2 Tr[((𝐗𝑇 𝐗)⊙ 𝑝 2)Λ𝑘
+],(15)
+Λ𝑘 =𝐖 𝑇
+𝑘 𝐖𝑞𝐗𝑇 𝐗𝐖𝑇
+𝑞 𝐖𝑘.
+Value Regularization (Token-level Dropout).When
+dropout is applied directly to the input tokens before value
+projection, the induced regularizer takes the form:
+𝐽𝑣 = 1
+2 Tr [((𝐗𝑇 𝐗)⊙ 𝑝 2)Λ𝑣
+],(16)
+Λ𝑣 =𝐖 𝑇
+𝑣 𝐖𝑣.
+This formulation reflects the effect of feature-l

@@ -1,0 +1,24 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 2
+section: mnist
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+, we consider
+two settings for qubit range, i.e., qubits used as QNN outputs (e.g., qubits 0 and 1 for a binary task)
+and an equally sized random subset selected from the remaining qubits (e.g., qubits 2 and 5). The
+depth range is fixed to [0%, 100%] here. Results of mean accuracies and two rates are shown in
+Figure 3(b) and Table 5, respectively.
+The experimental results indicate that the sensitivity to output-qubit mutations depends on
+specific circuit structures. For QCL and QCNN, the effect of such mutations varies across operators
+without a consistent pattern. In some cases, mutations on non-output qubits cause even greater
+degradation (e.g., QCL with RGD). In contrast, HCQC and DRNN are more sensitive to output-qubit
+mutations, resulting in lower mutant accuracy for most operators. This trend is also reflected in NRs.
+For instance, on DRNN with Delete, output-qubit mutations yield a NR of 43.68% compared to that of
+100% for non-output mutations, indicating that output-qubit changes disturb the decision boundary
+more easily and generate more trivial mutants. The difference arises mainly from the circuit scale
+and encoding methods. HCQC adopts a small-scale circuit with a singl

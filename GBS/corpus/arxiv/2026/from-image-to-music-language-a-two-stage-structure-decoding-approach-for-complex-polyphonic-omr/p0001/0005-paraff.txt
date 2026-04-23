@@ -1,0 +1,65 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 1
+section: paraff
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+It reaches 86.80% perfect measures and lowers tick
+RMSE from 202.4 to 41.2. One detail is worth noting: the internal evaluator terms do not always
+21
+
+Greedy Equations BeadSolver BeadSolver-Multipass
+Event-level error vs ground truth (lower is better)
+Any-field error (%) 30.61 15.84 5.573.18
+Tick RMSE 472.5 236.6 201.942.9
+Tick error (%) 27.92 13.17 4.271.64
+Division error (%) 1.61 1.600.530.54
+Dots error (%) 0.27 0.260.120.13
+Beam error (%) 2.51 2.511.031.09
+Time-warp error (%) 13.20 7.00 1.311.26
+Measure-level exactness and internal quality
+Perfect (%) 50.54 65.94 83.0486.83
+V oice match (%) 55.09 70.96 88.0892.42
+Tick exact (%) 66.75 75.55 91.1895.69
+Avg quality score 0.634 0.817 0.9050.957
+Avg tick-twist 0.110 0.1960.0490.106
+Broken beam (%) 19.62 6.96 2.132.07
+Wall time (107 scores)∼18s∼84min∼24min∼33min
+Table 7: Main Results on the LilyPond Test Set. Comparison on lilypond-topology. BeadSolver
+uses probability-guided tree search with BeadPicker; Multipass runs three passes with escalating
+budgets. Event-level values are computed by direct comparison against the ground-truth spartito over
+all 88,754 scored events; measure-level tiers are computed over all 5,317 measures. In this evaluation,
+BeadPicker is executed as an ONNX model on a CPU backend (Intel Xeon E5-2680 v4, 14 cores / 28
+threads).
+Greedy Rule-based BeadSolver
+Event-level error vs ground truth
+Any-field error (%) 30.61 29.565.57
+Tick RMSE 472.5 457.9201.9
+Measure-level exactness and diagnostics
+Perfect (%) 50.54 56.7283.04
+V oice match (%) 55.09 58.7088.08
+Tick exact (%) 66.75 63.3491.18
+Avg quality score 0.634 0.6370.905
+Avg tick-twist 0.110 0.0720.049
+Avg surplus time0.188.9 4.4
+Broken beam (%) 19.62 15.652.13
+Table 8: Learned picker vs rule-based picker. Greedy is the no-search baseline, Rule-based uses the
+same tree-search framework with a heuristic picker, and BeadSolver uses the learned BeadPicker. The
+learned picker is essential: search alone improves beam continuity and coarse quality only slightly,
+but it does not recover the large gains in tick placement and voice structure.
+move in the same direction as the ground-truth comparison, because on difficult cases the extra
+exploration pushes the solver more strongly toward structural correctness, which can in turn cause
+slight rebounds in tick-twist and some event-duration-related attributes. This may reflect a small
+trade-off for structural improvement, and it also highlights the gap between the current evaluator and
+a perfect ground-truth judge.
+5.6 Ablations and Qualitative Examples
+We report three ablations that remove one component at a time.
+Replace learned picker by rule-based picker.We replace BeadPicker with a purely rule-based
+picker and keep the same search procedure. This isolates the effect of learned guidance in the solver.
+Without the learned picker, search alone provides only limited gains over greedy and leaves many
+measures unusable (see Table 8).
+22

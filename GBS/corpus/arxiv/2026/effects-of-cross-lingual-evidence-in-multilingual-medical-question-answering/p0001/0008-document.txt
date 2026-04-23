@@ -1,0 +1,30 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+ps smaller models
+to improve their accuracy, it still underperforms
+compared to the baselines, with the largest LLMs
+remaining much better in the task. Lastly, curated
+and traditionally reliable repositories of medical
+information exhibit less information in the medical domain compared to the Web. In English
+web-retrieved data, fewer than 20% of documents
+came from well-known sources such as PubMed
+and Wikipedia, with the remainder from other medical websites. For other languages, this number
+drops below 0.03%, this highlights a severe lack of
+expert-curated medical content in non-English data
+storage.
+Our results challenge a common assumption in
+knowledge-augmented medical Question Answering: that adding external evidence systematically
+improves performance (Xiong et al., 2024a; Shi
+et al., 2025; Sohn et al., 2025). Instead, our multilingual experiments highlight complex dynamics
+that vary across languages and model sizes, showing that retrieval strategies cannot be one-size-fitsall. To investigate these dynamics, we examine
+three types of external evidence: (1) medical local knowledge repositories such as PubMed and
+Wikipedia, (2) web-retrieved documents, and (3)
+LLM-generated ev

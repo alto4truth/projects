@@ -1,0 +1,32 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+m operative, increasing Cycle-1performance from0.06to0.35.
+(2) DPO improves the RL agent by learning
+to prioritize plans that lead to higher-quality behavior.Unlike SFT, which is trained to reproduce
+the ontology-induced distribution of plans, DPO
+directly leverages RL performance as a preference
+signal: it learns to rank plans higher when they
+empirically yield better agent behavior. Removing
+DPO results in weaker prioritization: the RL agent
+reaches only 0.39 in Cycle-2 without DPO, compared to 0.45 when DPO is included. Thus, DPO
+systematically shifts the plan distribution toward
+behaviorally effective plans, accelerating and amplifying the RL agent’s improvement across cycles.
+6.2 Compute-Matched Ablations
+To isolate the effect of planner adaptation from pure
+policy optimization, we conduct compute-matched
+ablations where PPO training is extended up to
+15B environment steps while keeping the planner
+fixed (no DPO). We observe that the Success Rate
+improves during early training (0.26 → 0.32 at 5B
+steps) but saturates thereafter, stabilizing around
+0.30–0.31 despite a 3× increase in compute. This
+indicates that scaling the policy alone is insufficient
+to overcome the limitations

@@ -1,0 +1,28 @@
+title: Improving clinical interpretability of linear neuroimaging models through feature whitening
+source: arxiv
+year: 2026
+document_id: improving-clinical-interpretability-of-linear-neuroimaging-models-through-feature-whitening
+authors: Sara Petiton; Antoine Grigis; Raphaël Vock; Edouard Duchesnay
+page: 2
+section: abstract
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20675v1
+
+ormulations exist, including principal
+component analysis (PCA) whitening, zero-phase component
+analysis (ZCA) whitening, and Cholesky whitening. These
+methods are reviewed in [10], where ZCA-cor whitening is
+recommended as the ideal whitening procedure to generate
+sphered variables that remain as close as possible to the original features. ZCA-cor whitening differs from standard ZCA
+in that it uses the correlation matrix instead of the covariance matrix, operating on standardized features to produce
+decorrelated variables that remain maximally aligned with
+the original data and improving numerical stability.
+2.5. ZCA-cor whitening
+Givenpa pair of correlated features (e.g., left/right amygdala GM volume, or GM/CSF of left hippocampus), letX p ∈
+Rn×2 denote the sequence of observations of those features
+overnsubjects. Each feature is standardized to have zero
+mean and unit variance. We then compute the singular value
+decomposition (SVD) of the2×2correlation matrixR p of the
+(standardized)X p:R p =U pΛpU ⊤
+p , whereU p is the matrix
+of singular vectors ofR p andΛ p is the corresponding diagonal matrix of singular values. We opt for SVD over eigenvalue decomposition for numerical stab

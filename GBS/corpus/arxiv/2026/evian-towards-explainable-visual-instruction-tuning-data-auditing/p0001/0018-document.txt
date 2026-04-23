@@ -1,0 +1,31 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+” set obtained via random down-sampling followed by our defect injection pipeline. Together, these components yield a
+reproducible benchmark of 300,000 samples, designed to evaluate whether data auditing methods
+can distinguish clean data from semantically corrupted examples.
+Table 1: Overview of the source datasets, comprising
+300K samples from eight foundational datasets grouped
+into General Vision-Language tasks and DomainSpecific Reasoning tasks.
+Dataset Task Category
+General Visual-Language Capabilities
+ShareGPT-4V (Chen et al., 2024b) Instruction Following
+LLaV A-1.5-Mix (Liu et al., 2024b) General QA
+AllSeeing-V2 (Wang et al., 2024b) Grounding
+Domain-Specific Reasoning Capabilities
+DocVQA (Mathew et al., 2021) Document
+ChartQA (Masry et al., 2022) Chart
+InfoVQA (Mathew et al., 2022) OCR
+A-OKVQA (Schwenk et al., 2022) Knowledge
+Geometry3K (Lu et al., 2021) Mathematics
+Defect Injection Pipeline.The challenge set is
+generated through a three-stage pipeline that leverages the Qwen3-235B-A22B-Instruct-2507-FP8
+model (Team, 2025) to embed subtle, contextaware flaws. The process is guided by a principled
+taxonomy (Table 2) spanning three critical dimensions for auditing:perceptual

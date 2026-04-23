@@ -1,0 +1,26 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+eeding the effective segmentation budget of
+our adaptive method. As shown in Figure 2(b), the adaptive strategy converges faster, achieves higher accuracy, and maintains shorter responses throughout training. These results demonstrate that placing segment
+boundaries based on informative decision points is more effective than uniform partitioning, validating the
+design of our adaptive segmentation strategy.
+Table 2: Effect of different reward signals on
+accuracy.
+Reward signal Both Outcome
+only
+VPS
+only
+Accuracy (%) 72.0 68.8 50.1
+Effect of outcome supervision signal.As shown in Table 2, removing the outcome reward and relying solely
+on segment-level verifiable supervision results in degradation compared to the full method, confirming its essential
+role in guiding the model toward globally correct reasoning. While segment-level supervision alone provides finegrained feedback, it lacks a reliable global anchor. Combining both signals yields the best performance, indicating their complementarity in stabilizing training and
+improving reasoning coherence.
+8

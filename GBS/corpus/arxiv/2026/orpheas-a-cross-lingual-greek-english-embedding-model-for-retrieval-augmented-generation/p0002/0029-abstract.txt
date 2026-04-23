@@ -1,0 +1,35 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+ORPHEAS: A Cross-Lingual Greek–English Embedding Model for Retrieval-Augmented GenerationA PREPRINT
+Table 1: Retrieval performance comparison of embedding models across public monolingual and cross-lingual benchmarks
+Dataset Model Acc@3 Acc@10 NDCG@3 NDCG@10
+Greek Civics
+QA
+Multilingual E5 92.62 97.54 87.25 89.25
+MPnet 85.51 95.33 78.47 82.05
+MiniLM 81.57 92.13 73.32 77.33
+mGTE 93.36 98.03 88.08 89.80
+GEM-XLM-RoBERTa 85.74 97.05 76.83 80.93
+ORPHEAS 94.34 99.75 86.62 88.70
+TruthfulQA
+Multilingual E5 82.12 84.94 80.49 81.54
+MPnet 79.31 82.61 76.75 77.92
+MiniLM 78.33 82.86 75.95 77.63
+mGTE 81.39 84.57 79.86 81.05
+GEM-XLM-RoBERTa 80.78 84.33 78.90 80.20
+ORPHEAS 86.16 90.20 83.36 84.83
+TruthfulQA*
+Multilingual E5 78.82 82.80 75.62 77.09
+MPnet 78.21 83.23 75.11 76.55
+MiniLM 78.09 82.68 74.92 76.58
+mGTE 78.21 83.90 74.71 76.36
+GEM-XLM-RoBERTa 77.89 83.31 74.13 75.49
+ORPHEAS 84.76 90.21 81.46 83.43

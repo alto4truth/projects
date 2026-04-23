@@ -1,0 +1,26 @@
+title: The Expense of Seeing: Attaining Trustworthy Multimodal Reasoning Within the Monolithic Paradigm
+source: arxiv
+year: 2026
+document_id: the-expense-of-seeing-attaining-trustworthy-multimodal-reasoning-within-the-monolithic-paradigm
+authors: Karan Goyal; Dikshant Kukreja
+page: 1
+section: document
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20665v1
+
+reasoning, but the visual encoder actively bottlenecks knowledge extraction.
+• Case Study 2: Trustworthy Medical Diagnostics:A VLM
+evaluates a chest X-Ray, prompted with clinical notes:“Patient has a 30-year history of smoking. ”Driven by text priors,
+𝑆𝐹𝑢𝑙𝑙 predicts cancer. 𝑆𝑆 𝑦𝑚𝑇 replaces the image with groundtruth symbolic findings:“Clear lungs. ”If 𝑆𝑆 𝑦𝑚𝑇 correctly
+predicts “Healthy” but𝑆𝐹𝑢𝑙𝑙 hallucinates cancer, we expose
+a catastrophic cross-modal override.
+• Case Study 3: Molecular Graph Mining for Drug Discovery:A VLM screens a 2D molecular structure for toxicity
+based on visual topology and textual properties. 𝑆𝑆 𝑦𝑚𝑉 removes the text prompt, rendering the text directly into the
+2D molecule image. If𝑆𝐹𝑢𝑙𝑙 underperforms 𝑆𝑆 𝑦𝑚𝑉, the projection head cannot align continuous visual coordinate spaces
+with discrete token spaces. And if it outperforms, then it
+indicates inefficiency in visual encoding.
+4 True Quantifiers of Visual Reception
+Utilising the Modality Translation Protocol, we define three novel
+metrics that act as absolute, quantifiable indicators of multimodal
+knowledge bottlenecks. These metrics move the community beyond
+askingwhethera model works, to diagnosingwhy, h

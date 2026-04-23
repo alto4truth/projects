@@ -1,0 +1,74 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 49
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+xplicit dropout regularizer structure:
+𝑅diag(𝐗,𝐖) = 𝑝2
+2𝑛
+𝑁∑
+𝑟=1
+𝑑1∑
+𝑘=1
+𝑑∑
+𝑗=1
+𝑋2
+𝑟𝑗𝑊 2
+𝑘𝑗.(109)
+Rearranging the sums gives
+𝑅diag(𝐗,𝐖) = 𝑝2
+2
+𝑑∑
+𝑗=1
+𝑑1∑
+𝑘=1
+𝑊 2
+𝑘𝑗
+(
+1
+𝑁
+𝑁∑
+𝑟=1
+𝑋2
+𝑟𝑗
+)
+(110)
+= 𝑝2
+2
+𝑑∑
+𝑗=1
+‖𝐖𝑗‖2
+2 ̂ 𝜎2
+𝑗 .
+Hence, the diagonal term is proportional to the prior
+explicit dropout regularizer:
+𝑅diag(𝐗,𝐖) = 𝑝(1 −𝑝)
+2⏟ ⏞ ⏟ ⏞ ⏟
+𝛼
+̂𝑅(𝐗,𝐖),(111)
+where𝛼is a scaling factor determined by the constants in
+the two formulations.
+Off-Diagonal Term (𝑖≠𝑗).The remaining component
+captures cross-feature interactions:
+𝑅cross(𝐗,𝐖) = 𝑝2
+2𝑛
+𝑁∑
+𝑟=1
+𝑑1∑
+𝑘=1
+∑
+𝑖≠𝑗
+𝑋𝑟𝑖𝑋𝑟𝑗𝑊𝑘𝑖𝑊𝑘𝑗.(112)
+Final Decomposition.Combining both terms yields
+𝑅(𝐗,𝐖) =𝛼 ̂𝑅(𝐗,𝐖) +𝑅 cross(𝐗,𝐖).(113)
+This shows that the proposed regularizer extends the
+classicalexplicitdropoutregularizerbyincorporatingcrossfeature covariance terms, which capture interactions between different input dimensions rather than only featurewise magnitudes. These additional terms provide a finer
+controlovergeneralizationbyaccountingforcorrelationsin
+the input data.
+CRediT authorship contribution statement
+VidhiAgrawal:Formalanalysis,Investigation,Methodology, Software, Validation, Visulaization, Writing – original draft.Illia Oleksiienko:Formal analy

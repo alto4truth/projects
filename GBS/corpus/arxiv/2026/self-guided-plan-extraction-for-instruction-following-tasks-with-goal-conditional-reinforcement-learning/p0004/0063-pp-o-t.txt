@@ -1,0 +1,31 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 63
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+e
+action that completes the subtask, along with the
+action distribution at that time; the second shows a
+few timesteps later, when the agent decides to skip
+the subtask in order to solve a new one.
+I Compute Resources
+All experiments were conducted on a highperformance computing cluster equipped with
+nodes containing 1 NVIDIA A100 GPU with 80
+GB of VRAM. Each node was powered by an 12
+CPU Cores CPU with 96 GB of system RAM.
+The total computational budget can be broken
+down into two primary stages:
+Policy Training and Evaluation.The primary
+computational cost stems from training the PPO
+agent. Each full training run for a single configuration up to 5 billion environment steps took approximately 120 GPU-hours for all baselines including
+PPO-T, PPO-T+, FiLM and SI executor training.
+Reproducing all presented experiments, including
+the baseline comparisons and ablation studies, required a total of 10 such training runs.
+LLM Training and Generation.The initial generation of plans using the Qwen2.5-14BInstruct model for the entire dataset required approximately 1-2 GPU-hours on a single NVIDIA
+A100 GPU. Epoch of finetuning LLM with DPO
+on evaluated plans takes approximately 15 GPUhours.

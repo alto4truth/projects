@@ -1,0 +1,30 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+ile weaker plans with SR ≈0.68 remain consistently at the bottom. These changes are gradual
+rather than abrupt, suggesting that DPO provides
+a soft grounding signal that progressively aligns
+plan priorities with the agent’s execution success.
+This interpretation is further supported by the ablation study (Section 6), which shows that integrating
+DPO accelerates agent learning in the second cycle,
+indicating that gradual plan re-prioritization translates into more effective behavioral grounding. We
+also compare DPO with GRPO (Appendix B.5) and
+observe that reward-based optimization is less effective in this setting, likely due to its sensitivity to
+reward scale variability across instructions, making
+it less aligned with the plan ranking objective.
+6 Ablation Study
+6.1 Component Interaction Ablation
+To quantify the contribution of each module of
+the SuperIgor framework, we conduct an ablation
+study in which individual components are removed
+from the training pipeline. We evaluate the influence of four factors: (1) Ontology-Based Training
+Plan Generation, (2) Curriculum design in the RL
+stage, (3) LLM plan-model pretraining (SFT), and
+(4) DPO finetuning based on RL agent performance

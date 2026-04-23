@@ -1,0 +1,23 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+earlierπ(t−∆) failed, it is qualified to serve
+as an NPO guide for the segment starting att− ∆. This observation turns the two manual choices into
+two automatable questions:(i) when should we intervene?and(ii) how far back should we roll?AutoNPO
+answers the first by monitoring exploration-collapse signals from existing training logs, and the second by
+picking the∆that maximizes an empirical estimate of the effective learning signalˆS(∆) = ˆQ(∆)/ ˆV (∆)from
+Section 2. Both decisions reuse quantities the controller already has at hand, so the adaptation adds no
+substantial overhead.
+Mistake pool.AutoNPO maintains a lightweightmistake pool B: each prompt whose group accuracy in the
+latest batch falls below a small threshold is added toB together with the steptfail at which it was failed. Only
+two identifiers per entry are stored, so the overhead is negligible. The pool serves three roles, one for each
+stage of the controller pipeline. For theTriggerstage,B supplies the subset on whichπ(t) is probed. For the
+Rollbackstage, B provides the evaluation set on whichˆS(∆)is estimated. For theExecutionstage, the slice
+B∆⋆ directly defines the prompt set on which guidance trajectories are pre

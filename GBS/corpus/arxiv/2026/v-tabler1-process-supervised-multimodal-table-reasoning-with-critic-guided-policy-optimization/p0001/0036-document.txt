@@ -1,0 +1,24 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+V-tableR1: Process-Supervised Multimodal Table Reasoning 13
+method breaks through this ceiling. The critic’s dense feedback actively steers
+the policy away from local optima (Shortcut Guessing) and forces it to discover
+the globally optimal strategy.
+4.4 Reasoning Quality Assessment
+To qualitatively analyze reasoning depth and grounding precision beyond terminal accuracy, we perform an LLM-as-a-judge evaluation using GPT-5. We randomly select 1,000 instances from the combined test sets and task GPT-5 with
+scoring the generated Chain-of-Thought trajectories of both the Qwen3-VL-2B
+and V-tableR1-2B. In accordance with established protocols, the judge assigns
+scores on a scale of 1 to 5 across three critical dimensions: Accuracy, representing the correctness of intermediate factual and numerical steps; Logic, denoting
+structural soundness and the absence of contradictions; and Visual Grounding,
+indicating the precision of cell localization and coordinate anchoring.
+As indicated in Table 4, V-tableR1 improves Visual Grounding from 2.3 to
+3.8. This 65% relative increase validates that process-supervised reinforcement
+learning with critic feedback directs the model to anchor internal rea

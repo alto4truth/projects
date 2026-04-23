@@ -1,0 +1,27 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 2
+section: a-b-s-t-r-a-c-t
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+Sprop, ANNs can be trained to distinguish between normal and malicious communication patterns with
+high accuracy and low latency. The lightweight and efficient nature of
+ANNs makes them particularly suitable for processing structured data
+like CAN messages. This aligns with the need for real-time intrusion
+detection in resource-constrained vehicular environments.
+In addition to basic ANNs, advanced architectures such as CNNs,
+Recurrent Neural Networks (RNNs), and Long Short-Term Memory
+(LSTM) networks have also been developed to address complex data
+types and temporal patterns. CNNs are particularly effective for spatial
+data like images and are widely used in computer vision, but they
+are computationally intensive due to their deep hierarchical structure.
+While they could theoretically process CAN traffic as a 1D sequence,
+their overhead is often unjustified for the relatively simpler patterns
+in CAN attack detection. RNNs and LSTMs are tailored for sequential
+data, capturing temporal dependencies in time-series applications such
+as speech recognition or CAN bus traffic analysis. These models capture long-range dependencies but suffer from high memory usage and
+latency due to thei

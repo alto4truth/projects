@@ -1,0 +1,27 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 5
+section: a-proofs
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+es without the complexities introduced by stochasticity. This assumption serves
+as a standard basis for theoretical analysis in related work, for instance, in Hartikainen et al. (2020).
+Assumption A.2(One-step reachability).
+∀k≥1,∀s∈S k,∃a ∗(s)such thats ′|s, a∗ ∈S k−1.
+Remark A.2.This assumption is inherent to the definition of a well-posed shortest-path problem.
+It simply formalizes that the goal is reachable and a shortest path exists from all relevant states.
+Assumption A.3.The potential functionΦ(s, g)is strongly monotonic with respect to the shortestpath distance step∗(s, g). For any two statess a, sb, if step∗(sa, g)≤step ∗(sb, g), then
+Φ(sa, g)≤Φ(s b, g).
+Furthermore, for anyk≥1, ifs 1 ∈S k−1 ands 2 ∈S k, there exists a constant∆ Φ >0such that
+Φ(s2, g)≥Φ(s 1, g) + ∆Φ.
+Remark A.3.This assumption ensures that the signal provided by the Wasserstein distance is strong
+and informative, providing a non-trivial cost increase when moving away from the goal.
+Assumption A.4(Layer monotonicity ofπ D).We assume the offline policyπ D is consistent with
+the shortest-path layer structure. For anyk≥1, ifs 1 ∈S k−1 ands 2 ∈S k, their successors under
+πD,s ′
+1 =f(s 1, πD(s1))ands ′
+2 =f(s 2,

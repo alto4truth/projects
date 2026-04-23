@@ -1,0 +1,41 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 15
+section: when-in-doubt
+chunk: 46
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+is specific query?
+3. Is the relevance substantive or merely superficial keyword overlap?
+Respond with ONLY the document numbers that are RELEVANT,
+17
+
+Coverage, Not Averages Semantic Stratification for Trustworthy Retrieval Evaluation
+comma-separated (e.g., "0, 2, 5"). If none are relevant,
+respond with "NONE".
+D. Examples and Coverage Analysis
+D.1. Example Semantic Cluster
+Table 8 shows an example cluster capturing the semantic region of “fruit juices and their health effects,” with entities
+spanning beverage types, specific juice varieties, and associated medical conditions.
+D.2. Cluster Visualization
+Figure 6 visualizes the semantic clusters across the NFCorpus dataset.
+Figure 6.NFCorpus semantic cluster graph. Nodes represent entity clusters, node size indicates document count, and edges represent
+semantic similarity between clusters. Colors indicate avg in-cluster nDCG score.
+D.3. Example Generated Queries
+Sample generated NFCorpus queries with strata values and relevant documents. Example queries show increase in
+Zero-Query Cluster coverage.
+[Q1] "renal function differences vegans non-vegans"
+Docs (7): MED-5340, MED-3230, MED-3236, MED-5338, MED-934, MED-1458, MED-1456
+Delta: 0.530 | J: 0.159 | Clusters: 7 (6 new)
+[Q2] "How do different vegetarian diets affect cholesterol and triglyceride levels compared to omnivorous diets in
+adults?"
+Docs (18): MED-1430, MED-4632, MED-4831, MED-5329, MED-1551, MED-2945, MED-4088, MED-4515, MED-1253, MED-1250,
+MED-5118, MED-4353, MED-4509, MED-5113, MED-2008, MED-1249, MED-4510, MED-1258
+Delta: 0.384 | J: 0.227 | Clusters: 15 (7 new)
+[Q3] "glycemic response of different date varieties in healthy versus type 2 diabetic adults"
+Docs (2): MED-3897, MED-3907
+Delta: 0.429 | J: 0.444 | Clusters: 4 (4 new)
+18

@@ -1,0 +1,57 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 6
+section: phi-llama-qwen
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+ecific calibration is desired, as low resource languages may benefit from higher
+thresholds to avoid unstable updates with limited validation data.
+47
+
+Published in Transactions on Machine Learning Research (11/2025)
+JS Threshold Updates A vg Delay False Pos
+θJ S Triggered (samples) Rate (%)
+0.05 12 0 66.7
+0.10 7 100 42.9
+0.15 44000.0
+0.20 3 900 0.0
+0.25 2 1,500 0.0
+0.30 1 1,800 0.0
+Fixed 4 0 0.0
+Table 11: Divergence threshold analysis on Qwen2.5-7B across temporal shifts T1-T5 added in 100 sample
+increments. Updates Triggered counts adaptation events, Avg Delay measures samples between distribution
+change and update trigger, rounded to nearest 100, False Positive Rate indicates updates without meaningful
+distribution shift.
+D.3 Multi-Step Continual Learning Results
+This section provides comprehensive results from the multi-step continual learning experiments across all
+three evaluated models. The temporal evolution spans five distinct periods (T1-T5) with each transition
+representing a significant distribution shift in subject composition.
+Figures 10 and 11 complement the Qwen2.5-7B results presented in the main text, illustrating performance
+evolution for Phi-4-Mini and LLaMA-3.1 models respectively. The consistent pattern across architectures
+validates the generalizability of COMPASS-ECDA’s approach.
+Tables12,13, and14reportmeanaccuracywithstandarddeviationacross3randomseedsforkeycheckpoints
+(T1 and T5) and overall performance across the entire temporal span.
+Method PROX T1 PROX T5 PROX Overall MMLU T1 MMLU T5 MMLU Overall
+Naive Fine-tuning 0.264±0.001 0.270±0.024 0.277±0.016 0.479±0.001 0.319±0.058 0.363±0.085
+Full Retraining 0.261±0.004 0.276±0.008 0.275±0.009 0.475±0.002 0.471±0.003 0.470±0.004
+EWC 0.259±0.006 0.265±0.012 0.272±0.011 0.477±0.001 0.440±0.017 0.448±0.021
+Random Rehearsal 0.257±0.009 0.274±0.021 0.270±0.018 0.481±0.002 0.438±0.012 0.448±0.023
+COMPASS-ECDA 0.258±0.008 0.281±0.014 0.276±0.013 0.477±0.002 0.470±0.006 0.469±0.007
+Table 12: Aggregate performance metrics for Phi-4-Mini-Instruct-3.8B.
+Method PROX T1 PROX T5 PROX Overall MMLU T1 MMLU T5 MMLU Overall
+Naive Fine-tuning 0.233±0.001 0.246±0.028 0.253±0.020 0.519±0.002 0.391±0.044 0.428±0.067
+Full Retraining 0.234±0.002 0.251±0.011 0.246±0.010 0.517±0.002 0.508±0.005 0.511±0.006
+EWC 0.235±0.003 0.241±0.014 0.245±0.010 0.520±0.002 0.484±0.013 0.494±0.018
+Random Rehearsal 0.230±0.002 0.236±0.010 0.239±0.009 0.523±0.002 0.485±0.013 0.493±0.020
+COMPASS-ECDA 0.232±0.001 0.252±0.012 0.252±0.015 0.519±0.001 0.506±0.008 0.509±0.007
+Table 13: Aggregate performance metrics for LLaMA-3.1-Instruct-8B.
+D.4 Memory-Performance Analysis
+We investigate the relationship between distributional anchor buffer size and performance retention using
+the Global MMLU to MMLU-ProX shift scenario. The analysis explores buffer sizes ranging from 0%
+representing pure regularization without rehearsal to 100% representing full rehearsal of all original training
+data.
+48

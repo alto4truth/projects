@@ -1,0 +1,27 @@
+title: Structure-Augmented Standard Plane Detection with Temporal Aggregation in Blind-Sweep Fetal Ultrasound
+source: arxiv
+year: 2026
+document_id: structure-augmented-standard-plane-detection-with-temporal-aggregation-in-blind-sweep-fetal-ultrasound
+authors: Keli Niu; He Zhao; Qianhui Men
+page: 2
+section: abstract
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20591v1
+
+We
+learn and merge the feature at depthlfrom deep to shallow at
+layers 5, 7, 9, and 11.
+2.2.2. Local and Global Temporal Conditioning
+Local sliding window.Given that US standard planes appear
+progressively, single-frame decisions near the boundaries of
+standard-plane segments are often unstable. Prior work stabilises detections by reading from an external space–time
+memory [14]. However, these approaches introduce extra
+signals and latency, which are ill-suited for blind-sweep scenarios that require lightweight architectures. Here, we adopt
+a parameter-saving approach by aggregating temporal history
+with a short sliding window, i.e.,f t =Pk−1
+i=0 wift−i, wi ≥0
+andPk−1
+i=0 wi = 1. The frame weights{w i}are initialised
+with a monotonically decaying profile such that the current
+frame dominates. This is implemented as a depthwise 1D
+convolution along time, with the window sizekaskerneland

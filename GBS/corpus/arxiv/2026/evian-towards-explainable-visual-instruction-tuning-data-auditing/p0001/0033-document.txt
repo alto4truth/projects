@@ -1,0 +1,29 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+7 Acknowledgments
+Zimu Jia, Mingjie Xu, and Jiaheng Wei are partially supported by the CNPC Technology Project
+“Research on Key Technologies of Artificial Intelligence for Oil and Gas Exploration and Development” (No. 2023DJ84), and the Guangdong Provincial Key Laboratory of Integrated Communication,
+Sensing and Computation for Ubiquitous Internet
+of Things (No. 2023B1212010007).
+8 Limitations
+While EVIAN demonstrates strong effectiveness
+for fine-grained auditing of visual instruction data,
+several limitations remain. First, the framework
+relies on large pre-trained multimodal language
+models for both response decomposition and quality evaluation. Despite strong alignment between
+automated scores and human judgments, the auditing process may still inherit biases, blind spots, or
+reasoning tendencies from the underlying models,
+particularly in ambiguous or culturally sensitive
+scenarios.
+Second, EVIAN assumes that model responses
+can be reliably decomposed into visual descriptions, subjective inferences, and factual claims. Errors introduced during this decomposition stage
+may propagate to subsequent evaluations and affect the final quality scores. Although our ablation
+results sug

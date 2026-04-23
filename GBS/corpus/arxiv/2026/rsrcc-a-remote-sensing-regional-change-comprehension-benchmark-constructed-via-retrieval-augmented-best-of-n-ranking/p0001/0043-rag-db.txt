@@ -1,0 +1,22 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 1
+section: rag-db
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+< 𝐵𝑒𝑓𝑜𝑟𝑒 >< 𝐴𝑓𝑡𝑒𝑟 > < 𝑂𝑢𝑟𝑠 > < 𝐿𝐸𝑉𝐼𝑅 >
+Figure 5: Qualitative comparison between our method and theLEVIR-CCground truth. Our model
+detects subtle structural or environmental changes that are annotated as “no change” in the public
+dataset.
+Under standard learning assumptions, training on sufficiently many retained pseudo-labels yields a
+consistent estimator, despite occasional labeling noise.
+Informal Interpretation.Preference-based filtering ensures that retained pseudo-labels are biased
+towardcorrectsemanticinterpretations. Whenlearningfromalargecollectionofsuchhigh-confidence
+but imperfect samples, the aggregated supervision remains aligned with the true decision boundary.
+Consequently, the model learns dominant visual patterns of semantic change rather than overfitting
+spurious artifacts.
+17

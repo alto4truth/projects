@@ -1,0 +1,31 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+es
+In the MedExpQA benchmark (Alonso et al., 2024),
+a collection of 32 related documents was retrieved
+using MedRAG method Xiong et al. (2024a) from
+multiple knowledge sources for each question, including PubMed, Wikipedia, StatPearls, and medical textbooks. As the text stored in these repositories is predominantly in English1 (Hamad et al.,
+2024). After manual examination, were determined
+that the most relevant and informative documents
+are in this language. Hence, in our experiments, we
+used the English subset of the retrieved documents.
+The retrieved 32 documents are the result of a combination of using BM25 (Robertson et al., 2009)
+and MedCPT (Jin et al., 2023) ranked by relevance,
+where the highest-ranked document corresponds
+to the highest similarity score with respect to the
+clinical case question.
+Xiong et al. (2024a) outlined that 32 documents
+is the optimal number of documents for RAG settings for the medical domain. We repeated the
+experiments by including top{1, 3, 5, 10, 20, 32}
+documents to the model. The results in Figure 3
+show that for the majority of the latest models, 10
+documents is the most beneficial strategy, while
+adding more documents results in marginal ga

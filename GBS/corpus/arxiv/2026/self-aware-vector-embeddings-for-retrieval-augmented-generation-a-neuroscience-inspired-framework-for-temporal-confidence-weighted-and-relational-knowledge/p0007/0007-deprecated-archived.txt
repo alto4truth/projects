@@ -1,0 +1,18 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 7
+section: deprecated-archived
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+source_offset_start: int; source_offset_end: int
+3.2 Source Authority Prior
+The initial value ofbase_confidence is set from a source-authority enum, inspired by informationquality research and by how humans discount information from different channels. This is the prior
+that decay and feedback later update.
+3.3 The Five-Stage Lifecycle
+Each SmartVector passes through stages that mirror episodic memory formation in the brain. Stage
+names are chosen to expose the analogy rather than to hide it.
+5

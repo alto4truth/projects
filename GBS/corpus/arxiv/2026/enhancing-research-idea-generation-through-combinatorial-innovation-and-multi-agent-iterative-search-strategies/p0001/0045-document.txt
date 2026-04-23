@@ -1,0 +1,12 @@
+title: Enhancing Research Idea Generation through Combinatorial Innovation and Multi-Agent Iterative Search Strategies
+source: arxiv
+year: 2026
+document_id: enhancing-research-idea-generation-through-combinatorial-innovation-and-multi-agent-iterative-search-strategies
+authors: Shuai Chen; Chengzhi Zhang
+page: 1
+section: document
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20548v1
+
+-4o (2024-11-20), and qwen3-8b. All models are evaluated under the same experimental setup, and the results are re-ported in Figure 4. As shown in Figure 4, the proposed framework remains effective across different backbone models, suggesting that its utility does not rely solely on the capability of a single LLM. Among the three models, DeepSeek-3.1 achieves the highest Diversity score (0.898) and the highest HighScoreRatio (0.184), indicating a stronger ability to explore a broader range of research directions while also generating a larger proportion of high-quality ideas. In contrast, GPT-4o and qwen3-8b obtain higher Novelty scores, reaching 0.151 and 0.183, respectively, which suggests that different backbone models may exhibit different strengths when instantiated within the same iterative framework.
+Figure 4. Performance of the proposed multi-agent iterative planning framework with different backbone models on three evaluation metrics: Diversity, Novelty, and HighScoreRatio. Overall, these results provide preliminary evidence that the proposed framework generalizes across heterogeneous LLM backbones, including both a strong proprietary model and a smaller open-source model.

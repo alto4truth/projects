@@ -1,0 +1,61 @@
+title: Centering Ecological Goals in Automated Identification of Individual Animals
+source: arxiv
+year: 2026
+document_id: centering-ecological-goals-in-automated-identification-of-individual-animals
+authors: Lukas Picek; Timm Haucke; Lukáš Adam; Ekaterina Nepovinnykh; Lasha Otarashvili; Kostas Papafitsoros; Tanya Berger-Wolf; Michael B. Brown; Tilo Burghardt; Vojtech Cermak; Daniela Hedwig; Justin Kitzes; Sam Lapp; Subhransu Maji; Daniel Rubenstein; Arjun Subramonian; Charles Stewart; Silvia Zuffi; Sara Beery
+page: 1
+section: dslr-7
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20626v1
+
+wildlife photography)?
+2.Are signatures stable over time, or do they potentially change due to, e.g., aging, molting,
+injury, or seasonal variation?
+8
+
+3.If needed for the intended ecological analysis, are signatures captured sufficiently frequently
+and clearly to produce repeated encounter histories, rather than just occasional successes?
+If the answer to these questions is mostly “no”, then the main bottleneck is
+likely biological or sampling-related, not algorithmic.However, even if the answer is
+mostly “yes”, this establishes only that individual identification may be possible in principle.
+It does not imply that any kind of automation will be feasible, accurate, or cost-effective in
+practice. Modern automated systems often require substantial labeled data, representative
+variation in training, and evidence of reliable performance for the intended ecological use.
+Last but not least, feasibility is often partial and study- and species-specific rather than
+all-or-nothing. A species may be identifiable only as adults, from one body side, during some
+seasons, or under certain viewing conditions. That does not rule out individual identification,
+but it should inform data collection protocols and/or constrain which ecological questions
+can be answered reliably. In such cases, the goal should be to define clearly which encounters
+are informative, which are not, and how those limits affect downstream inference.
+3.2 Where Automation Helps, and Where Humans Should Make
+the Final Decisions
+If individual identification is possible, the next question should be where automation might
+help and where expert judgment should remain central. In most ecological studies, automation might not be able to replace expertise completely, but it may reduce routine work:
+removing unidentifiable data, retrieving likely identities, and flagging cases that appear
+inconsistent over time, across space, or in prior encounter history.In any case, expert
+review should remain central wherever identification decisions could change the
+ecological result, particularly for sensitive or threatened species. This could include deciding whether a sighting belongs to a known individual or represents a new one, resolving
+ambiguous or low-quality cases, and reviewing matches that would strongly affect estimates
+of abundance, survival, movement, dispersal, or social structure. These are not just technical edge cases; they are the points where identification uncertainty is most likely to become
+ecological bias. In practice, this means expert effort should not be evenly distributed across
+recordings.Ideally, automation should handle volume, while expert effort should
+focus on the decisions that matter most for the ecological goal.
+3.3 Which Mistakes Matter Most for the Ecological Question
+If individual identification is feasible and the role of automation is clear, the next question
+is which identification mistakes would do the most damage to the ecological analysis. In
+some studies, avoiding false matches should be the priority (precision–sensitive); in others,
+avoiding missed links could matter more (recall–sensitive). Merging multiple individuals
+into a single identity and splitting a single individual into multiple identities create distinct,
+often opposing, biases (Table 1). A system that appears accurate overall may still be poorly
+suited to a study if it makes the wrong kind of mistakes. In population estimation, false
+matches can bias abundance downward, whereas missed links can inflate apparent abundance
+or recruitment [77]. For movement, dispersal, or site fidelity, missed links can be especially
+damaging because they break encounter histories across time or space, while false matches
+can create movement events that never occurred. For behavior or social structure, both error
+types can distort association patterns by either inventing links or erasing ones.
+Studies should therefore define error priorities before choosing metrics, thresholds, or
+review rules. The key question is not whether a method has high average performance, but
+whether its performance is well-aligned with the intended ecological use.Fit-for-purpose
+evaluation is therefore not optional. It is the only way to judge whether automated identification models can be safely and reliably deployed in a particular
+ecological study.
+9

@@ -1,0 +1,26 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+AO2 (leaf count),
+AO4 (mandatory count), and AO12 (#valid configurations), all averaging below 50% accuracy, reflecting persistent semantic errors
+and limited reasoning capacity. In contrast, reasoning-optimized
+LLMs achieve high performance ( ≥85%) on most tasks but still
+struggle with AO4 (58.6%) due to semantic misunderstandings, and
+moderately onAO12andAO15, which demand constraint propagation or enumeration. Across both families, the easiest AOs areAO6,
+AO9,AO10,AO11, andAO16 (all above 85%), which involve simpler
+verification steps rather than complex structural reasoning.
+Accuracy Across Blueprints. Figures 4 & 5show accuracies aggregated by blueprint. Across both model families, accuracy decreases
+steadily with increasing blueprint complexity. All models achieve
+near-perfect performance on small and shallow blueprints (SW,SMW),
+moderate accuracy on medium-sized ones (IDE, SMG, COM), and substantial drops on complex models such asSEA,BDB,CNNl, andCNNf.
+These challenging cases combine large feature counts (up to 7,000),
+deep hierarchies (depth ≥10), and numerous cross-tree constraints
+(>300), which amplify semantic misunderstandings and reasoning
+limitations. Importantly, no

@@ -1,0 +1,26 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+ed U-shape with a clear interior maximum, confirming that the best guide is neither too close (small
+Q) nor too far (explosiveV). These observations directly motivate Near-future Policy Optimization, which
+realizes the high-Sregion through trajectories from a near-future checkpoint.
+3 Near-Future Policy Optimization
+NPO follows a simple idea: for a prompt that the current policy struggles with, the most useful auxiliary
+trajectory may come from a near-future checkpoint of the same training run. Rather than designing intricate
+rewards, NPO modifies only the source of one trajectory inside each rollout group.
+3.1 Core Operation
+Let {π(t)}T
+t=0 denote the checkpoints produced over the course of a single RLVR run, and consider training
+step t with current policyπ(t). NPO continues training∆steps to obtain a near-future checkpointπ(t+∆)
+from the same run, then rolls back to stept and uses π(t+∆) to guide the current policy’s update. The rest of
+the training loop is left unchanged compared to vanilla RLVR, and NPO modifies only how the rollout group
+at steptis formed.
+Before the NPO segment begins, we useπ(t+∆) to roll out each promptx offline, run the verifier, and keep
+one correct traj

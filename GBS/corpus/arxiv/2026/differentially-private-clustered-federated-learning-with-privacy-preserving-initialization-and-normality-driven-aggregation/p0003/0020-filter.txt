@@ -1,0 +1,26 @@
+title: Differentially Private Clustered Federated Learning with Privacy-Preserving Initialization and Normality-Driven Aggregation
+source: arxiv
+year: 2026
+document_id: differentially-private-clustered-federated-learning-with-privacy-preserving-initialization-and-normality-driven-aggregation
+authors: Jie Xu; Haaris Mehmood; Rogier Van Dalen; Karthikeyan Saravanan; Mete Ozay
+page: 3
+section: filter
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20596v1
+
+otal number of clients to 5,000 for CIFAR-10/FMNIST and 2,840 for
+FEMNIST. We use standard data augmentation (e.g. random cropping and horizontal flipping) to increase the size of the training set
+by 5x for CIFAR-10 and FMNIST. For all experiments, clients train
+forE= 10local epochs with a batch size ofβ= 50and learning
+rate ofη= 0.01.
+We compare PINA with state-of-the-art (SOTA) methods including FedAvg [1], FedProx [32], FedNova [33] and IFCA [11]. For
+IFCA, we set the clipping threshold to the same value as our method
+and apply LDP forϵ∈ {2,8}. It was shown in [11] that IFCA could
+be combined with personalized FL to improve performance even further. In this paper, we do not consider personalized FL. We exclude
+SCAFFOLD [34] from our experiments since it is designed for the
+cross-silo setting [35] and we only focus on the more challenging
+cross-device setting in this work. Client dropouts are not considered
+in our experiments. We use a 22M-parameter ViT-Small model pretrained on ImageNet-21k and publicly available via Hugging Face.
+We assume all clients are provided with this pre-trained model at the
+start of training, consistent with standard FL practices.
+Comparing with existin

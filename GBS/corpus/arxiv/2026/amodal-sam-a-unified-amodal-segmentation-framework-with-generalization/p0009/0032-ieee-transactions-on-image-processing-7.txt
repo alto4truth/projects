@@ -1,0 +1,31 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 9
+section: ieee-transactions-on-image-processing-7
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+es 14,991 images across 7 categories, with
+7,474 images for training and the rest for testing.
+•COCOA, a subset of the COCO dataset [33], consists of
+2,476 training images and 1,223 testing images.
+•COCOA-clsis a dataset of objects selected from COCOA, containing 80 categories.
+•D2SAis a supermarket product dataset based on D2S,
+designed to capture the environments and requirements
+of industrial applications.
+•FISHBOWLis a video benchmark, captured from a
+publicly available WebGL demo of an aquarium.
+•MOViD-Ais a video-based synthesized dataset created
+from the MOViD dataset.
+Evaluation protocols.For evaluation, we employ the mean
+Intersection over Union (mIoU) as the primary metric, following [8], [32]. We compute both the ground-truth amodal
+mask (mIoUf ) and the occluded region (mIoUo). The occluded
+mIoU evaluates the overall quality of the occluded section of
+the target object. mIoU f ull calculates the average Intersection
+over Union (IoU) between the predicted amodal masks (representing the entire object) and the ground-truth amodal masks.
+In contrast, mIoU occ measures the average IoU between the
+predicted occlusion masks (representing the occluded regions)
+and the ground-tr

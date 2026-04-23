@@ -1,0 +1,22 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 2
+section: edges-total-gp-id-time-gp-degbd-id-time-degbd
+chunk: 56
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+a, Appendix, Section 8), also see Garcia-Puente et al. (2010, Proposition 4). We also
+refer to the proof of our Theorem 4.4, which implies the statement.
+Proof of Proposition 4.1.By the definition of the trek weighting, each polynomialσ w(σuv)
+uv −
+τG(σuv)wh isw-homogeneous. Hence, the ideal ¯Iisw-homogeneous with respect to the trek weightingw. For Claim (i), note that the generatorsσ uv −τ G(σuv)form a Groebner basisFofIwith
+respect to anyw-graded elimination order forσinR[θ, σ]. This is true since the leading monomial ofσ uv −τ G(σuv)is given byσ uv and therefore any pair of leading monomials of the generators are relatively prime, which means that all S-polynomials of the generators reduce to zero
+moduloF, see Cox et al. (2015, Chapter 2). We conclude that thew-homogenized polynomials
+(σuv −τ G(σuv))wh =σ uv −τ G(σuv)wh are a basis ofIwh, see Theorem 4 in Cox et al. (2015, Section
+8.4).
+To show Claim (ii), consider a polynomialf∈ I ∩R[θid, σ]. It follows thatfwh ∈ I wh ∩R[θ id, σ, h],
+and thus we have shown the inclusion “⊇”. On the other hand, iff∈ Iwh ∩R[θ id, σ, h], thenf deh ∈
+(I wh ∩R[θ id, σ, h])deh and hencef deh ∈(I wh)deh ∩R[θ id, σ] =I ∩R[θ id, σ]. But iffdeh ∈ I ∩R[θ

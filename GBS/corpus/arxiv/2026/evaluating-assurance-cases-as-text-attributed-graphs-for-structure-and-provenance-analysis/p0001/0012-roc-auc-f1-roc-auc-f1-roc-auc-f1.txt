@@ -1,0 +1,27 @@
+title: Evaluating Assurance Cases as Text-Attributed Graphs for Structure and Provenance Analysis
+source: arxiv
+year: 2026
+document_id: evaluating-assurance-cases-as-text-attributed-graphs-for-structure-and-provenance-analysis
+authors: Fariz Ikhwantri; Dusica Marijan
+page: 1
+section: roc-auc-f1-roc-auc-f1-roc-auc-f1
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20577v1
+
+nerated assurance cases offer useful auxiliary supervision that aids GNNs
+in generalising reasoning link patterns in data-scarce situations.
+Specifically, GraphSAGE and UniGraph indicate that diverse linking
+distributions can enhance structural learning.
+Previous studies, including the structured argument in a natural
+language inference model by Ikhwantri and Marijan [17] and the
+traceability framework by Etezadi et al. [8], mainly focused on predicting links between individual text elements. These approaches
+framed reasoning as a task of pairwise semantic similarity, aiming to
+identify whether a requirement should connect to a claim based on
+their textual embeddings. In contrast, this study focuses on global
+structural dependencies of a graph instance. We emphasise how
+argument structure arises from interactions within the assurance
+graph. This perspective allows for a deeper understanding of bias
+in reasoning arguments.
+The explainability analysis reveals that, although Graph Neural
+Networks (GNNs) achieve high accuracy, their internal explanations often lack reliability. Many models prioritise node features
+from language embeddings over the edge between nodes, indicating relianc

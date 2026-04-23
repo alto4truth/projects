@@ -1,0 +1,28 @@
+title: The Expense of Seeing: Attaining Trustworthy Multimodal Reasoning Within the Monolithic Paradigm
+source: arxiv
+year: 2026
+document_id: the-expense-of-seeing-attaining-trustworthy-multimodal-reasoning-within-the-monolithic-paradigm
+authors: Karan Goyal; Dikshant Kukreja
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20665v1
+
+mage, proving
+the vision encoder (e.g., the ViT) lacks the granular spatial
+resolution to extract symbolic features.
+• The Negative Collapse Mode ( 𝐹𝑜𝑆< 0):Indicates an inefficiency in visual integration. The model performs paradoxically better when forced into a single visual modality (𝑆𝑆 𝑦𝑚𝑉)
+than when handling separate visual and textual streams
+(𝑆𝐹𝑢𝑙𝑙 ). This isolates the failure to the cross-modal projection
+head, proving it cannot meaningfully fuse separate modalities in the latent space.
+5 The Semantic Sufficiency Criterion (SSC)
+Together, these metrics establish a mandatory mathematical condition for semantically grounded, faithful multimodal data science.
+We define the Semantic Sufficiency Criterion (SSC):
+𝑆𝑆𝐶: max(𝑇 𝑜𝑆, 𝐶𝑜𝑆,|𝐹𝑜𝑆|)=0(7)
+5.1 A Diagnostic Constraint, Not an Immediate
+Goal
+Crucially, the SSC is not treated as an immediately achievable performance target for current models, but as a rigorous diagnostic
+constraint[RQ5]. Violations of the SSC (where 𝑆𝑆𝐶> 0) quantify
+the exact magnitude and location of a VLM’s failure. The application of the absolute value |𝐹𝑜𝑆| is mathematically imperative to
+ensure that both the positive (encoding) and negative (integration)
+co

@@ -1,0 +1,21 @@
+title: Generative Flow Networks for Model Adaptation in Digital Twins of Natural Systems
+source: arxiv
+year: 2026
+document_id: generative-flow-networks-for-model-adaptation-in-digital-twins-of-natural-systems
+authors: Pascal Archambault; Houari Sahraoui; Eugene Syriani
+page: 1
+section: document
+chunk: 48
+source_ref: https://arxiv.org/pdf/2604.20707v1
+
+T able 1Grouped model parameters used to construct the discrete adaptation space. Each group
+is associated with a finite set of canonical perturbations that define coordinated updates over the
+parameters in that group. The grouping follows the ordered decomposition implemented in the
+perturbation scheme, from canopy-level traits to biomass growth and maintenance.
+ultimately determine growth and yield. The groups are defined so that each one corresponds to a coherent component of this progression rather than to an arbitrary subset
+of coordinates. As a result, perturbations correspond to coherent model modifications
+rather than arbitrary coordinate changes. Table 1 summarizes this grouping.
+This grouping serves two purposes in the experiments. First, it preserves interpretability by ensuring that each decision can be related to a meaningful component of
+the mechanistic model. Second, it induces a structured discrete search process in which
+complete parameterizations are built progressively through a sequence of group-level
+perturbations. Each state in the search process represents a partially specified simulator parameterization. Starting from a reference configuration, an action app

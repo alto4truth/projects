@@ -1,0 +1,64 @@
+title: A Hierarchical MARL-Based Approach for Coordinated Retail P2P Trading and Wholesale Market Participation of DERs
+source: arxiv
+year: 2026
+document_id: a-hierarchical-marl-based-approach-for-coordinated-retail-p2p-trading-and-wholesale-market-participation-of-ders
+authors: Patrick Wilk; Ethan Cantor; Yikui Liu; Jie Li
+page: 2
+section: abstract
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20586v1
+
+:
+–Batch of𝜌transitions(𝑠 𝑗
+𝑛, 𝑎𝑗
+𝑛, 𝑟𝑗
+𝑛, 𝑠𝑗′
+𝑛 , 𝑠𝑗
+𝑎𝑔, 𝑠𝑗′
+𝑎𝑔)from;
+–Compute critic loss:𝐿(𝜃 𝑄𝑛
+𝑛 ) = 1
+𝜌
+∑𝜌
+𝑗=1 (𝑦𝑗
+𝑛 −
+𝑄𝑛(𝑠𝑗
+𝑛, 𝑎𝑗
+𝑛, 𝑠𝑗
+𝑎𝑔))2;
+–Perform gradient descent on𝐿(𝜃𝑄𝑛
+𝑛 )to update𝜃 𝑄𝑛
+𝑛 ;
+–Compute policy gradient:∇ 𝜃𝜇𝑛 𝐽(𝜃 𝜇𝑛
+𝑛 ) =
+𝔼[∇𝜃𝜇𝑛 𝜇𝑛(𝑠𝑗
+𝑛)∇𝑎𝑗
+𝑛
+𝑄𝑛(𝑠𝑗
+𝑛, 𝑎𝑗
+𝑛, 𝑠𝑗
+𝑎𝑔)];
+–Perform gradient ascent on∇𝜃𝜇𝑛 𝐽(𝜃 𝜇𝑛
+𝑛 )to update𝜃 𝜇𝑛
+𝑛 ;
+–Update Target Networks.
+i. After collecting𝑇ℎ𝑜𝑟𝑖𝑧𝑜𝑛:
+–Compute advantages𝐴𝑡 and targets for value function;
+–PPO Clipped Objective:𝐿 𝐶𝐿𝐼𝑃 (𝜃) =
+̂𝔼𝑡
+[min (𝑟𝑎𝑔,𝑡(𝜃)𝐴𝑡, 𝑐𝑙𝑖𝑝 (𝑟𝑎𝑔,𝑡(𝜃),1 −𝜖,1 +𝜖 )𝐴𝑡
+)]
+–Update Target Networks𝜋𝜃, 𝑉𝜙 by gradient steps.
+3: Termination and Finalization
+•𝑒←𝑒+ 1and go to 2, until𝑒=𝑒 𝑓 𝑖𝑛𝑎𝑙
+•RB Agg:All retail energy trades are handled by the
+aggregator, with no P2P transactions among prosumers.
+Theaggregatorisassumedtoalwaysclearitstradesinthe
+wholesalemarketandsellsto/buysfromtheprosumersat
+the maximum markup𝜌𝑚𝑎𝑥.
+•RB P2P:All retail P2P participants settle at a uniform
+clearingprice,providingconsistenttradingconditionsfor
+buyers and sellers. Any surplus or deficit after P2P trades
+is handled by the aggregator, who always clears in the
+wholesale market and sells to/buys from the prosumers
+at the maximum markup𝜌𝑚

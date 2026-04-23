@@ -1,0 +1,29 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 5
+section: table-iii
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+RPose (Ours) 9 98.7 100.0 100.0 99.9 99.8 100.0 99.0 100.0 100.0 100.0 100.0 100.0 99.8 99.8 0.07
+MAPRPose (Ours) 11 98.8 100.0 100.0 99.9 99.8 100.0 99.2 100.0 100.0 100.0 100.0 100.0 99.8 99.8 0.09
+D. Ablation Studies
+While our method achieves a balance between precision and
+efficiency across multiple benchmarks, this section dissects the
+specific contributions of our key components. We evaluate the
+mask-aware proposal module on LINEMOD and the amodal
+mask prediction module on the LM-O and YCB-V datasets to
+analyze their robustness against occlusion and clutter.
+(1) Analysis of the MAPP Module:To evaluate the effectiveness of the proposed MAPP module, we compare a hybrid
+variant,MAPP+FP(where MAPP generates coarse proposals
+for FoundationPose [24]), with the original FoundationPose
+pipeline. As shown in Table III, MAPP+FP achieves an
+ADD-0.1d accuracy of 99.4%, only 0.5% lower than the
+full FoundationPose (99.9%) that relies on 252 hypotheses.
+This marginal drop indicates that the constrained search space
+preserves the high-quality hypotheses required for downstream
+refinement, while significantly improving sampling efficiency.
+Furthermore, MAPRPose (w/o MAPP) reduces the number

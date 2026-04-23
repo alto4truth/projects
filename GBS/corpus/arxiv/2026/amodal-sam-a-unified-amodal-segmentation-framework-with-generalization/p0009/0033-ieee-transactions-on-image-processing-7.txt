@@ -1,0 +1,25 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 9
+section: ieee-transactions-on-image-processing-7
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+odal masks.
+In contrast, mIoU occ measures the average IoU between the
+predicted occlusion masks (representing the occluded regions)
+and the ground-truth occlusion masks. It can be expressed as:
+Iocc = (Mpred −M visible) & (M gt −M visible)
+Uocc = (Mpred −M visible)|(M gt −M visible)
+mIoU occ = 1
+n
+nX
+i=1
+Iocc/Uocc
+(11)
+WhereM pred denotes the predicted mask,M gt represents
+the ground truth mask, andM visible is the mask of the visible
+region. Fig. 9 demonstrates the difference between amodal

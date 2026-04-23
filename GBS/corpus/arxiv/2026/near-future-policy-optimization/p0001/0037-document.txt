@@ -1,0 +1,23 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+om a stronger self, but the source of that strength
+is different: rather than conditioning the same-step model on extra context or demonstrations, NPO uses
+optimization timeas privileged information, guiding the current policy with verifier-filtered, prompt-aligned
+trajectories from a later checkpoint. It therefore operates at the sequence level inside standard RLVR
+rather than through an additional token-level distillation loss, bridging mixed-policy RLVR and self-taught
+approaches.
+6 Conclusion and Future Work
+This paper explores a central question: what kind of auxiliary learning signal yields the greatest benefit when
+introduced into RLVR? We propose a core idea—Near-future Policy Optimization (NPO)—where the model’s
+temporal future self guides its present self, thereby obtaining signals that are sufficiently strong (highQ )
+and readily learnable (lowV). We demonstrate the superiority and generality of NPO both theoretically
+and empirically. We instantiate this idea by mixing near-future policy trajectories into the current rollout
+9

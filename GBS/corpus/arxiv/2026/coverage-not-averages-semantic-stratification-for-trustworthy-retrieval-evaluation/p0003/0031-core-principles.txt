@@ -1,0 +1,19 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 3
+section: core-principles
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+1. AUTHENTICITY: Generate queries that real users would actually
+type, not artificial constructs
+2. SPECIFICITY CONTROL: Match the requested query type precisely
+(short/long, ambiguous/specific)
+3. ANSWERABILITY: The query MUST be answerable by the provided
+document
+4. NO LEAKAGE: Do not copy exact phrases from the document title
+5. INFORMATION NEED: Express a genuine information need, not just
+keywords

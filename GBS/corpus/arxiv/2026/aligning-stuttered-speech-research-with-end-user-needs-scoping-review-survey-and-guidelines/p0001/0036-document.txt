@@ -1,0 +1,20 @@
+title: Aligning Stuttered-Speech Research with End-User Needs: Scoping Review, Survey, and Guidelines
+source: arxiv
+year: 2026
+document_id: aligning-stuttered-speech-research-with-end-user-needs-scoping-review-survey-and-guidelines
+authors: Hawau Olamide Toyin; Mutiah Apampa; Toluwani Aremu; Humaid Alblooshi; Ana Rita Valente; Gonçalo Leal; Zhengjun Yue; Zeerak Talat; Hanan Aldarmaki
+page: 1
+section: document
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20535v1
+
+erences. Some work also performs data preparation that implicitly involves the removal of fillers or repetitions. As a result,
+it is often unclear which stakeholder transcription need a system is optimising for, and the results become difficult to compare or reproduce results across datasets and studies. These implicit choices can optimize models into one objective, limiting
+their applicability and sometimes erasingclinically relevantbehaviour.
+Research-Focused Gaps.Within the research-focused portion
+of the literature, we found only a handful of papers on explainable methods, ethics or deployment, compared to a larger body
+of work on building stutter identification or ASR models. Most
+systems report only global metrics, with little support for clinicians to inspect or interrogate individual predictions. From
+theSLPsperspective, explainability is non-negotiable. Understanding how reliable the model is in specific contexts, and how
+outputs should inform clinical reasoning is essential and considered non-trivial.
+Data-Centric Gaps.Recent work [30, 37] has invested heavily in large-scale synthetic stuttering corpora, while comparatively little effort goes into curating real stuttered

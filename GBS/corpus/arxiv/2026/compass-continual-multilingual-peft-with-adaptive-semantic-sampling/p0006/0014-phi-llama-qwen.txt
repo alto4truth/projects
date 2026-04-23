@@ -1,0 +1,103 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 6
+section: phi-llama-qwen
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+icissecondary, andlikelycontributes
+to performance if sufficient to filter out hard-to-learn or noisy examples existing along the cluster boundary.
+27
+
+Published in Transactions on Machine Learning Research (11/2025)
+Clustering Method.HDBScan was effective at handling variable cluster shapes and densities and in filtering noise points that were often dissimilar to others (for instance, some code-switched or garbage text
+examples introduced by MLQA-en). KMeans and Taylor-Butina clustering both underperform relative to
+HDBScan, with the latter regressing substantially. MMLU tasks are diverse and, when modified to reflect
+cultural nuances, diverge further from neat, spherical clusters with consistent density. With KMeans, forcing
+data into ill-fitting shapes across task/language boundaries with greater sensitive to outliers worsens performance. Taylor-Butina clustering, while also a density-based method, is better suited for high-dimensional
+binary representations with well-defined, often empirically-derived, pairwise similarity thresholds. Agglomerative clustering is most competitive with HDBScan, but is less robust to noise introduced by out-ofdistribution training data (MLQA-en).
+DoRA vs. LoRA.Across both Global MMLU and MMLU-ProX, DoRA achieves 1.2% and 0.9% higher
+average accuracy than LoRA (r=16), respectively. While this performance gain is marginal and not statistically significant relative to using LoRA, we chose DoRA for greater demonstrated robustness both across
+languages and hyperparameter configurations. The cross-lingual standard deviation for DoRA is 8.4% and
+10.6% compared to LoRA’s 10.2% and 12.1% for Global MMLU and MMLU-ProX respectively, indicating
+more consistent performance across diverse language families. To quantify hyperparameter sensitivity, we
+evaluated both methods across a grid of learning rates (1e-6 to 2e-4) and rank values (8, 16, 32, 64), as shown
+in Figure 9. DoRA exhibited a broader optimal learning rate plateau (spanning 1e-5 to 5e-5), whereas LoRA
+demonstrated sharper performance peaks requiring precise learning rate tuning.
+While DoRA offers improved robustness, additional computations to perform weight decomposition into
+magnitude and direction result in increased training time. In terms of parameter and inference efficiency,
+DoRA adds a negligible number of parameters for the magnitude vector and does not increase inference
+overhead relative to LoRA, as both magnitude and direction components can be merged into the pre-trained
+weight after training (Liu et al., 2024). For COMPASS’s use case, the broader optimal hyperparameter
+range of DoRA reduces the risk of failures when adapting to new languages. Moreover, DoRA’s stability,
+compared to LoRA’s rank and learning rate sensitivity, obviates the need for as extensive hyperparameter
+sweeps to offset the increased cost of an individual training run.
+10
+6
+5×10
+6
+10
+5
+2×10
+5
+5×10
+5
+10
+4
+2×10
+4
+Learning Rate
+35
+40
+45
+50
+55Mean Accuracy (%)
+Phi4-Mini-3.8B, Global MMLU
+DoRA r=8
+LoRA r=8
+DoRA r=16
+LoRA r=16
+DoRA r=32
+LoRA r=32
+10
+6
+5×10
+6
+10
+5
+2×10
+5
+5×10
+5
+10
+4
+2×10
+4
+Learning Rate
+20
+22
+24
+26
+28
+30
+32
+34
+36Mean Accuracy (%)
+Phi4-Mini-3.8B, MMLU-ProX
+DoRA r=8
+LoRA r=8
+DoRA r=16
+LoRA r=16
+DoRA r=32
+LoRA r=32
+Figure 9: Learning rate sensitivity comparison between DoRA and LoRA across different ranks on (left)
+Global MMLU and (right) MMLU-ProX. Solid lines with circles represent DoRA, dashed lines with squares
+represent LoRA. DoRA exhibits a broader optimal plateau and maintains stable performance across learning
+rates, while LoRA shows sharper peaks requiring precise tuning.
+6 Discussion
+COMPASS is effective for multilingual adaptation, outperforming baselines across diverse model architectures and evaluation benchmarks. By proactively identifying and sampling from under-represented semantic
+clusters in an auxiliary data pool, COMPASS minimizes the distributional mismatch between the training
+28

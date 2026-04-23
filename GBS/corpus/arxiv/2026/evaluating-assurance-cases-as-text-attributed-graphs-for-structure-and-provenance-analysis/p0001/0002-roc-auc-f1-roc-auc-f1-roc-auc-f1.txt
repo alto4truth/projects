@@ -1,0 +1,28 @@
+title: Evaluating Assurance Cases as Text-Attributed Graphs for Structure and Provenance Analysis
+source: arxiv
+year: 2026
+document_id: evaluating-assurance-cases-as-text-attributed-graphs-for-structure-and-provenance-analysis
+authors: Fariz Ikhwantri; Dusica Marijan
+page: 1
+section: roc-auc-f1-roc-auc-f1-roc-auc-f1
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20577v1
+
+human-authored (gold)
+data. This setting assesses the model’s ability to transfer structural
+reasoning learned from LLM-generated data, potentially biased data,
+to authentic human reasoning structures.When trained solely
+on LLM-generated assurance cases, GNN models transfer
+poorly to human-authored cases, showing significant drops
+in both AUC and F1. All GNN variants’ performance degraded
+in the LLM → Human scenario—for example, SAGE drops from
+(.796/.816) to (.636/.525), and GCN falls to (.490/.037). This indicates
+that distributional mismatch between LLM-generated and humanauthored arguments hinders cross-provenance generalisation. In
+contrast, Decoder LLMs are not affected by LLM-generated data
+only and achieved better performance than GCN and GAT.
+These results answer RQ2 by showing that LLM-generated data
+to human data on the link prediction task remains challenging, and
+models must explicitly address the reasoning bias introduced by
+LLM-generated data to achieve reliable human-level generalisation.
+RQ1c: Semi-Supervised Link Prediction .Table 4 presents the results of the semi-supervised scenario, where models are trained
+jointly on both human-authored and LLM-generated assur

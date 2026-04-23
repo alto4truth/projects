@@ -1,0 +1,39 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 5
+section: f2lp-ap-11
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+12 Yutong Shen*, Ruizhe Xia, Jingyi Liu, Yinqi Liu
+T able 2.Performance and stability analysis ofF 2LP-AP.Hdenotes the homophily
+ratio.
+Category Dataset Hom. (H) Accuracy (µ±σ)
+High-H.
+Cora 0.85 0.835±0.004
+CiteSeer 0.81 0.708±0.006
+PubMed 0.84 0.782±0.002
+Low-H.
+Texas 0.31 0.842±0.012
+Wisconsin 0.37 0.825±0.011
+Chameleon 0.26 0.395±0.015
+Cornell 0.34 0.763±0.013
+Squirrel 0.23 0.288±0.018
+The standard deviation, serving as the core metric for dispersion, is defined as:
+σ=
+vuut 1
+n
+nX
+i=1
+(xi −µ) 2 (10)
+wherex i denotes the accuracy of each individual run,µrepresents the mean
+accuracy, andnis the total number of experimental trials.
+Result.The experimental results, summarized in Table 2, demonstrate that
+F2LP-APmaintains exceptional performance and stability across the entire
+homophily spectrum. In high-homophily scenarios (e.g.,Cora), the framework
+exhibits minimal variance (σ= 0.004), confirming the consistency of our adaptive propagation in smooth topologies. In extreme low-homophily settings (e.g.,
+Texas), despite a slight increase in dispersion (σ= 0.012) due to structural complexity, the mean accuracy remains remarkably high at0.842. The combination
+of low volatility and high

@@ -1,0 +1,19 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 8
+section: segformer-b0andsamachieve-the-closest-performance-to
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+THE UNSEGMENTED DATA,WHILEFPN + RESNET50, DANET,AND
+FCN + MOBILENETV2RESULT IN EXTREME PERFORMANCE DROPS.
+Segmentation Method FR Performance (%)ElasticFace ArcFace SwinFace TransFace FIQA10−5 10−4 10−5 10−4 10−5 10−4 10−5 10−4 avg std– 94.67 96.4795.25 96.7194.86 96.7196.38 97.612.025 0.395FPN + ResNet50 [30]3.94 66.89 0.09 50.47 44.48 85.211.08 45.98 1.903 0.557SegFormer-B0 [53]93.04 95.8294.02 96.1094.16 96.1194.99 97.042.003 0.418BiSeNetv2 [55]82.97 93.4478.99 94.1190.99 94.6775.91 94.001.953 0.468DANet [19] 0.01 0.08 0.01 0.05 0.20 3.37 0.01 0.08 1.399 0.712Fast SCNN [42]88.66 94.6990.16 95.3792.84 95.4091.29 96.371.967 0.441FCN + MobileNetv2 [32]0.03 7.64 0.01 0.37 11.85 45.460.03 1.41 1.731 0.601SAM [27] 93.90 96.2394.64 96.4994.55 96.5095.74 97.272.014 0.397
+presented in the last column, are very poorly segmented by
+FPN + Resnet50, DANet, and FCN + MobileNetv2, resulting
+in significant facial occlusions.
+These results show that when faced with more challenging images, such as those contained in IJB-C, background removal techniques exhibit a visible negative impact
+on FR performance and image quality. The differences in
+the results between the analyzed segmentation techniques

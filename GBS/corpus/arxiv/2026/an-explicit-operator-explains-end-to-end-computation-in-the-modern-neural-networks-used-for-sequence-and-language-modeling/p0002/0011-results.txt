@@ -1,0 +1,30 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 2
+section: results
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+information
+about the recent past [25–27]. This property has been
+observed with physical experiments in fluid mechanics
+[28] and in trained recurrent neural networks [29]. It has
+previously been recognized that this property can be a
+useful way to store long-term dependencies directly in a
+network’s activity structure [3, 30], but has not previously been expressed in a direct mathematical form.
+We can now show that, when driven by input, S4D
+indeed stores information about the recent past through
+traveling waves in its recurrent layer. SinceD τ acts diagonally in theF−basis, each amplitude evolves independently, yielding the simple update rule
+µi(k) =λ D,i µi(k−1) + ˜bT
+i uk,(12)
+whereλ D,i is thei-th eigenvalue ofD τ and ˜bi =
+[(F †B)i]T describes how strongly the input at timek
+excites wavei.
+Equation (12) shows that the input signal is encoded
+by waves traveling across the recurrent layer, with temporal frequency determined by Im(λ D,j) and decay controlled by Re(λ D,j). To demonstrate how different signals are encoded by these waves, we trained S4D to
+classify a synthetic dataset composed of three different
+signal classes embedded in high noise (Fig. 3a). The
+first class contai

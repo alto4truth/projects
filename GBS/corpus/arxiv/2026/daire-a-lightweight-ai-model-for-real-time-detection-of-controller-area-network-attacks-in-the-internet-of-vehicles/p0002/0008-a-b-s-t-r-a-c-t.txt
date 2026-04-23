@@ -1,0 +1,29 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 2
+section: a-b-s-t-r-a-c-t
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+onvolutional and recurrent
+architectures, to model temporal dependencies and classify anomalous
+CAN messages. However, challenges remain in achieving low-latency,
+high-accuracy detection that is practical for real-world deployment in
+resource-constrained vehicular environments (Yang et al., 2022a).
+This paper presents a lightweight ML-based detection model aimed
+at identifying CAN bus attacks in IoV environments in real-time. The
+proposed approach uses the power of neural networks to provide
+robust, scalable, and adaptive protection against cyber threats targeting
+vehicular communication systems.
+The key contributions of this work are as follows:
+• DAIRE Model: A lightweight ML model for real-time classification of CAN bus attacks in IoV environments. The model employs
+a lightweight Artificial Neural Network (ANN) architecture.
+• Lightweight Design: Introduces a lightweight ANN structure
+where the number of neurons in each layer is computed as 𝑁𝑖 =
+𝑖 × 𝑐 (where 𝑁𝑖 is neurons in the 𝑖th layer and 𝑐 is the number
+of classes). This design ensures computational efficiency while
+maintaining high accuracy.
+• Efficient Loss Function and Optimizer: The use of Sparse Categorical Cross-Entro

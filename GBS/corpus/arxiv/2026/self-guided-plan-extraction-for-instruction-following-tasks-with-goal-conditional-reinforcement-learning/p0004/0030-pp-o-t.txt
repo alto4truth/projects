@@ -1,0 +1,28 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+Limitations
+While SuperIgor demonstrates a scalable approach
+to integrating language-model-based planning with
+reinforcement learning, it has several limitations.
+First, the method depends on the quality of the initial plan structure induced by the language model.
+The ontology graph is generated fully automatically, without human supervision, which may lead
+to redundant, inconsistent, or cyclic dependencies
+between subtasks. In practice, we mitigate this issue empirically by evaluating different language
+models and selecting those that produce stable and
+coherent plan graphs (Appendix B.4); our experiments show that several mid-sized models already
+perform well in this setting.Nevertheless, robustness to poorly structured plan spaces remains a
+limitation of the current approach.
+In addition, the interaction between plan quality and policy learning is not always interpretable.
+While our validation protocol provides a clear relative preference signal between candidate plans
+for the same instruction (via repeated evaluation
+across seeds), it can still be difficult to diagnose
+training failures at the system level. In particular, when learning stalls, it is unclear whether the
+bottlene

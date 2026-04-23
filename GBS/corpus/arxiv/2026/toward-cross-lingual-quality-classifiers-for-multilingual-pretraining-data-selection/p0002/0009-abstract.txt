@@ -1,0 +1,20 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+ifiers based on FastText (Joulin et al., 2016) or MLPs
+trained on embeddings of an XLM-RoBERTa model. Our work builds directly upon the FineWeb2HQ pipeline by Messmer et al. (2025).
+Multilingual Scaling.While English-centric curation is well-established, multilingual curation
+presents unique challenges. Nguyen et al. (2023), Kudugunta et al. (2023) and Penedo et al.
+(2025) expanded web-scale cleaning to hundreds of languages using perplexity and basic heuristics.
+FineWeb2-HQ (Messmer et al., 2025) advanced this by applying model-based filtering to 20+ languages. Despite these advances, two areas remain underexplored. First, while multilingual encoders
+are widely used, the degree to which one classifier can generalize across language families (e.g.,
+from Nordic to Romance) has not been systematically characterized. Second, prior work primarily uses random negative sampling; the potential of smarter sampling techniques to refine decision
+boundaries remains largely uninvestigated. Our work addresses both gaps.
+2

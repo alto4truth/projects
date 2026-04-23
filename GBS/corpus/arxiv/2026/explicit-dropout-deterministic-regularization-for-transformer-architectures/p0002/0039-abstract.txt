@@ -1,0 +1,82 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+𝑛∑
+𝑖=1
+𝑋𝑖𝑗𝑋𝑖𝑘(𝑚𝑡,𝑖𝑗𝑚𝑡,𝑖𝑘 −𝑚 𝑡,𝑖𝑘 −𝑚 𝑡,𝑖𝑗)
+]
+𝐵𝑗𝑘 = 1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+[ 𝑛∑
+𝑖=1
+(𝑋𝑖𝑗𝑋𝑖𝑘)(1(33)
++𝑚 𝑡,𝑖𝑗𝑚𝑡,𝑖𝑘 −𝑚 𝑡,𝑖𝑘 −𝑚 𝑡,𝑖𝑗)
+]
+𝐵𝑗𝑘 =
+𝑛∑
+𝑖=1
+𝑋𝑖𝑗𝑋𝑖𝑘
+[ 1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+(1(34)
++𝑚 𝑡,𝑖𝑗𝑚𝑡,𝑖𝑘 −𝑚 𝑡,𝑖𝑘 −𝑚 𝑡,𝑖𝑗)
+]
+.
+To compute the inner summation, we can apply an
+importance sampling Monte Carlo integration method in
+reverse. According to importance sampling Monte Carlo,
+∫ 𝑓(𝑥)𝑝(𝑥)𝑑𝑥≈ 1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+𝑓(𝑥 𝑡), 𝑥 𝑡 ∼𝑝(𝑥).(35)
+Applying this to our case,
+1
+𝑁𝑇
+𝑁𝑇∑
+𝑡=1
+(1 +𝑚 1
+𝑡 𝑚2
+𝑡 −𝑚 1
+𝑡 −𝑚 2
+𝑡 )(36)
+≈ ∬ (1 +𝑚 1𝑚2 −𝑚 1 −𝑚 2)𝑃(𝑚 1)𝑃(𝑚 2)𝑑𝑚 1𝑑𝑚2.
+(37)
+Since both𝑚1 and𝑚 2 are binary, the integral has only four
+possible values:
+∬
+(1+𝑚1𝑚2 −𝑚 1 −𝑚 2)×𝑃(𝑚 1)𝑃(𝑚 2)𝑑𝑚 1 𝑑𝑚2
+(38)
+=𝑆 1 +𝑆 2 +𝑆 3 +𝑆 4 =𝑝 2,(39)
+𝑃(𝑚 1) = (1 −𝑝) 𝑚1
+𝑝(1−𝑚1),(40)
+𝑃(𝑚 2) = (1 −𝑝) 𝑚2
+𝑝(1−𝑚2),(41)
+𝑆1 = (1 + 1 − 1 − 1)(1 −𝑝) 2,(42)
+𝑆2 = (1 + 0 − 1 − 0)𝑝(1 −𝑝),(43)
+𝑆3 = (1 + 0 − 0 − 1)(1 −𝑝)𝑝,(44)
+𝑆4 = (1 + 0 − 0 − 0)𝑝 2.(45)
+Therefore,
+𝐁≈ (𝐗 𝑇 𝐗)𝑝2.(46)
+A.3. Derivation of the Key Dropout Regularizer
+Forthekeycorrespondingtotoken𝐱 𝑖,theattentionscore
+is defined as
+𝐒𝑖 =𝐗𝐖 𝑇
+𝑞 𝐖𝑘𝐱𝑇
+𝑖 .(47)
+Whenadropoutmaskisapplied,theattentionscorebecomes
+𝐒𝑖𝑡 =𝐗𝐖 𝑇
+𝑞 𝐖𝑘(𝐦𝑖𝑡 ⊙𝐱 𝑖)𝑇 ,(48)
+where𝐦 𝑖𝑡 denotes the dropout mask at training epoch𝑡.
+Assumetrainingproceedsfo

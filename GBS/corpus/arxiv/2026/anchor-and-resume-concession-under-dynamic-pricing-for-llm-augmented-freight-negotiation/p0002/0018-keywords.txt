@@ -1,0 +1,27 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+ies through for all𝑛shifts.
+4 EXPERIMENT AL DESIGN
+We evaluate the two-index framework in three stages. First, a
+rule-based evaluation (Section 5) compares five deterministic
+strategies across 12 𝑆 values spanning the full spread range,
+providing statistical coverage at scale. Second, a comparison
+with an unconstrained LLM broker at three representative 𝑆
+values benchmarks the two-index strategy against a 20-billionparameter language model under identical conditions. Third,
+a robustness experiment replaces the algorithmic carriers
+with LLM-powered agents to test whether the framework’s
+performance holds against stochastic, language-capable counterparties. The second and third experiments are presented
+together in Section 6. All loads are synthetically generated; no
+proprietary operational data was used. The synthetic design
+is informed by domain expertise from a production freight
+brokerage, and the calibration constant 𝑐 is the sole parameter intended for tuning against real operational data (e.g., by
+training a settlement classifier on historical outcomes and using SHAP analysis to identify the spread threshold at which
+concession posture should shift). Synthetic loads set 𝑟targe

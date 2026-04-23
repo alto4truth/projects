@@ -1,0 +1,54 @@
+title: Centering Ecological Goals in Automated Identification of Individual Animals
+source: arxiv
+year: 2026
+document_id: centering-ecological-goals-in-automated-identification-of-individual-animals
+authors: Lukas Picek; Timm Haucke; Lukáš Adam; Ekaterina Nepovinnykh; Lasha Otarashvili; Kostas Papafitsoros; Tanya Berger-Wolf; Michael B. Brown; Tilo Burghardt; Vojtech Cermak; Daniela Hedwig; Justin Kitzes; Sam Lapp; Subhransu Maji; Daniel Rubenstein; Arjun Subramonian; Charles Stewart; Silvia Zuffi; Sara Beery
+page: 1
+section: dslr-7
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20626v1
+
+uld most affect our ecological question?D:
+What needs to be recorded so identity assignments stay transparent, revisable, and trustworthy over time?
+3
+
+The Missing Links: Why Automated Individual Identification Has
+Not Translated Well to Ecological Practice
+What is driving the gap between methods development and practical deployment? We argue
+that it is primarily related to misaligned objectives. Below, we highlight three main gaps
+that limit broader adoption.
+1.Mismatch between ecological reality and how methods for automation are
+developed and evaluated.In ecological studies, populations are rarely closed. Individuals are born, die, immigrate, and emigrate, and observations are collected over long
+periods of time, across sites, seasons, sensors, and changing field conditions. Encounters
+are often sparse, unevenly distributed across individuals, and difficult to compare directly
+across years or locations. In this setting, the same identification error can have very different consequences depending on the ecological question, such as abundance estimation,
+survival, movement, or social structure. Yet many automated methods are still developed and evaluated under much simpler conditions: a fixed list of known individuals,
+relatively homogeneous data, and test settings that do not reflect temporal, spatial, or
+sensor-related change [2, 19]. These assumptions can make performance appear stronger
+than it will be in practice and can obscure whether a method is actually suitable for
+ecological use. To be useful in the field, automated identification systems should therefore be developed and evaluated with ecological deployment in mind: whether they can
+handle previously unseen individuals, remain robust to change over time and across conditions, and are assessed in terms of the kinds of errors that matter most for the intended
+ecological application.
+2.Mismatch between ecological workflows and the push for full automation.In
+ecological practice, identification is rarely a fully automated decision based on a single
+image or recording. Instead, experts often review encounters that contain multiple observations of the same animal and interpret them in light of contextual knowledge, such
+as group composition, site familiarity, expected movements, home ranges, or previous
+encounter history. Identification is therefore often a process of weighing evidence rather
+than assigning a label in isolation. By contrast, automated methods are often framed and
+evaluated as if their main value lies in replacing expert judgment with a single automatic
+output. This overlooks the fact that current systems usually do not make use of much of
+the context that experts rely on. As a result, small changes in pose, occlusion, or lighting may cause automated systems to fail even when an experienced observer would still
+make a reliable decision [27]. At the same time, automated systems may detect subtle
+visual differences that are difficult for humans to notice [3, 73]. Their greatest value may
+therefore lie not in replacing experts, but in supporting them: for example, by retrieving
+a short list of candidate individuals, flagging uncertain cases, or highlighting inconsistencies across time and space [36]. Designing methods, interfaces, and evaluation frameworks
+around thisexpert-in-the-loopreality is essential for linking automated identification to
+ecological practice [52].
+3.Limited attention to resource constraints and practical costs.Ecological
+studies operate under broad resource constraints, including limited time, funding,
+personnel, expertise, annotation capacity, computing infrastructure, and long-term datamanagement support [67]. In this setting, the key question is often not whether one
+method performs slightly better than another, but whether a method is practical,
+affordable, and sustainable for a particular study. This makes adoption of automated identification a practical as well as a technical question. Before choosing a method, researchers
+need to understand what it will require from their own data, team, and workflow. Specifically, they need to know how much expert review will still be needed, how much labeled
+data must be assembled, what hardware or cloud resources are necessary, what software
+4

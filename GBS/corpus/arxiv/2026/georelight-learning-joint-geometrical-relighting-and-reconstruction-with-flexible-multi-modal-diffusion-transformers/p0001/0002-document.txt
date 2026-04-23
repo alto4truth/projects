@@ -1,0 +1,19 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+ly leverage
+3D geometry during relighting, which limits physical consistency. Since relighting and estimation of 3D geometry
+are mutually beneficial tasks, we propose a unified MultiModal Diffusion Transformer (DiT) that jointly solves for
+both:GeoRelight. We make this possible through two
+key technical contributions: isotropic NDC-Orthographic
+Depth (iNOD), a distortion-free 3D representation compatible with latent diffusion models; and a strategic mixed-data
+training method that combines synthetic and auto-labeled
+1
+arXiv:2604.20715v1 [cs.CV] 22 Apr 2026

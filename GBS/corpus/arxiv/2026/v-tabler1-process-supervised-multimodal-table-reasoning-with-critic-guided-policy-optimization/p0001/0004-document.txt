@@ -1,0 +1,19 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+2 Authors Suppressed Due to Excessive Length
+Fig. 1:Comparison between outcome-supervised and process-supervised VLMs for table reasoning. Process supervision enables the model to accurately locate relevant cells
+and follow logical steps, leading to correct answers where black-box inference fails.
+aggregation, state-of-the-art VLMs frequently produce confident yet incorrect
+answers [11,16,23,39,43,46,47]. The failure is not perceptual—these models
+can read individual cell values correctly [26,42]. Rather, the failure isinferential: models shortcut multi-step reasoning by exploiting statistical surface patterns, bypassing the precise cell-lookup and logical chaining that a correct answer demands. We trace this failure to a shared limitation of dominant training
+paradigms: they supervise only the final answer, leaving the intermediate reasoning trajectory entirely unconstrained [12,24,27,34,35].
+Even when augmented with explicit Chain-of-Thought trajectories, Supervised Fine-Tuning (SFT) relies on teacher forcing, which evaluates reasoning as
+a static sequence of tokens rather than a verifiable cognitive process [40]. Under this paradigm, the model learns the syntax of reasoning but

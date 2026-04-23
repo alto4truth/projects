@@ -1,0 +1,32 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+e how the accuracy of the correct answer drops more frequently
+in the large models, indicating that either no external knowledge is beneficial or that the larger the
+models, the more confident they become in their
+internal parametric knowledge.
+When it comes to answering the question of
+whether the information in the trusted expert
+data repositories, such as PubMed and Wikipedia,
+and the documents provided in MedExpQA, are
+enough, we additionally look into the retrieved
+sources from the web search. In our analysis, we
+can see that web-search sources cover the data
+stores from the sources of MedExpQA. On average, 11.2% of the information was retrieved from
+Wikipedia and 18.8% of the information was retrieved from PubMed, when retrieved in English.
+Whereas these numbers are less than 0.03% for the
+rest of the languages.
+6.2 Comparison With Other Medical
+Benchmarks
+To strengthen the conclusion made from our experiments, we additionally performed the same set of
+experiments across three other prominent medical
+benchmark English datasets: MedQA, PubMedQA,
+and MedMCQA, using web search (WS) as the external knowledge source based on the performance
+gain it provides in our previous experim

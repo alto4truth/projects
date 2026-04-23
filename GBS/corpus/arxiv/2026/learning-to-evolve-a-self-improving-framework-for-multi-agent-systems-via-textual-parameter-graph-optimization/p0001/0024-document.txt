@@ -1,0 +1,29 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+on
+Cnew is identified, the GRAO mechanism initiates
+a retrieval-augmented generation process. First, it
+retrieves historical problem contexts {Ck} from
+memory that are semantically similar to the current problem Cnew, forming a "group" of related
+issues. Second, these retrieved experiences are
+ranked by their effectiveness scores{Ek}, a "group
+relative" ranking that identifies which past optimization strategies have been most successful for
+this class of error. Finally, the highest-ranked exemplars are formatted as few-shot examples and
+prepended to the context of the Optimizer LLM .
+By being presented with concrete examples of successful fixes for similar problems, the optimizer
+is primed to generate a more targeted and higherquality proposal ∆Gnew. This meta-learning cycle
+transforms the optimizer from a static component
+into a dynamic, learning entity, enabling the entire
+system to learnhowto improve itself more effectively over time.
+5 Experiments
+We evaluate TPGO in two representative optimization settings for agent systems:exploratory optimization, where improvement must be driven
+by execution feedback without a gold trajectory,
+andimitative optimization, where the system is

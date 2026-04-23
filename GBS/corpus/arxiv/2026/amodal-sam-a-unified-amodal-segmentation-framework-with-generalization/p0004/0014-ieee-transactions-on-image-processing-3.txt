@@ -1,0 +1,31 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 4
+section: ieee-transactions-on-image-processing-3
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+n foundation model to a specialized amodal
+segmentation model by incorporating specific learning
+objectives.
+In the following Sections, Section III-B, Section III-C
+and Section III-D will detail our adaptation strategies for
+model architecture, training data, and optimization processes,
+respectively. Subsequently, Section III-E demonstrates how our
+designs can be easily extended to video amodal segmentation
+with SAM-2 [21], highlighting the generalization capabilities.
+B. Model Adaptation
+In this study, we investigate adapters for the model adaptation to enhance the capacity in occluded region perception.
+Encoder-focused adaptation.Instead of inserting the
+adapters into both the encoder and decoder of SAM, we adopt
+an encoder-focused adaptation strategy.
+Specifically, the SAM encoder handles feature extraction,
+while the decoder primarily converts features into masks.
+Consequently, the encoder may encounter a more substantial
+domain disparity when facing different tasks. If decoder tuning
+were implemented, it might jeopardize SAM’s inherent mask
+generation abilities, as later demonstrated in IV-D. Therefore, an encoder-focused adaptation can bridge the domain
+gap across diverse tas

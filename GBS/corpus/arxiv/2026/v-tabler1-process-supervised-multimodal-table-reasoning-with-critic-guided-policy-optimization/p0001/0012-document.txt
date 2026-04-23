@@ -1,0 +1,20 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+ep to a continuous pixel space introduces ambiguity
+that resists strict reward verification and invites reward hacking [7]. We identify
+table reasoning as the ideal multimodal testbed for RLVR because tables possess the deterministic structure necessary for rigorous verification. Furthermore,
+relying solely on sparse outcome rewards in visual tasks exacerbates shortcut
+learning [4]. Our PGPO algorithm directly addresses this limitation by building
+upon the stable foundations of GRPO variants, injecting dense, process-level
+feedback into the optimization objective to guide the model away from spurious
+correlations.
+2.3 Process Supervision and Step-Level Feedback
+To mitigate the limitations of sparse outcome rewards, process-supervised learning assigns credit directly to intermediate reasoning steps. In text domains like

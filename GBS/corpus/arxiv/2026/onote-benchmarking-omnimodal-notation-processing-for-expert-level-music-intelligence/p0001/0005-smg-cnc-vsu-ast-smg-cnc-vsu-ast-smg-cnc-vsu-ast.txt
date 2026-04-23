@@ -1,0 +1,27 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+rate levels, Pitch accuracy is notably lower across
+all models (e.g., Gemini-2.5-flash at 11.05%, Qwen3-Omni-flash at
+19.64%). Consequently, Full accuracy scores remain below 10%, suggesting that current architectures face challenges in disentangling
+overlapping acoustic spectra and mapping them accurately to a
+two-dimensional coordinate system.
+5.4 Constraint Satisfaction in Symbolic Music
+Generation
+Analyzing the generative sub-attributes indicates a divergence in
+how models handle structural compliance, physical constraints, and
+artistic output.
+Syntax and aesthetics trade-offs.In Standard Staff generation, models exhibit varying approaches to structural compliance.
+Qwen3-Omni-flash achieves a maximum Technical score (5.0) for
+adhering to measure constraints but yields a lower Aesthetic score
+(2.69). Conversely, Gemini-3.1-flash maintains a more balanced distribution between Technical (4.99) and Aesthetic (3.92) scores. In
+Jianpu generation, the Qwen series shows limited syntactic alignment (Technical scores ≤ 2.21), whereas Gemini-3.1-flash demonstrates higher compliance with the specific localized notation rules.
+Physical and spatial constraints.Generating Guitar Tablature
+int

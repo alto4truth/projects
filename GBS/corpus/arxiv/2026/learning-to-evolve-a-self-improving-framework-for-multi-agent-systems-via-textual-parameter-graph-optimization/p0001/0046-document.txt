@@ -1,0 +1,30 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 46
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+ks(Level 1: 49, Level 2: 71, Level 3:
+22), matching our focus on textual reasoning and
+tool use. GAIA is used in animitative optimization
+setting, where the Gradient Generator additionally
+receives the ground-truth final answer. To reduce
+answer leakage, the reflection prompt is instructed
+to generate generalized behavioral feedback rather
+than task-specific factual hints.
+Graph representation and updates.Each agent
+configuration is represented as a hierarchical JSONserialized PromptNode structure corresponding to
+the Textual Parameter Graph (TPG). Nodes are
+typed as role, logic, or tool; a legacy generic
+type is retained for compatibility with existing
+prompts. Graph updates are applied atomically
+at each iteration by a prompt manager that supports
+node rewriting, insertion, and deletion.
+Textual gradients and clustering.For each trajectory τk, the Reflector generates negative textual gradients δ− that capture failure patterns and
+positive textual gradients δ+ that summarize effective behaviors. Negative gradients are embedded
+and stored in a persistent vector database. We remove near-duplicate entries by cosine-similarity
+filtering, then cluster the remaining gradients using DBSC

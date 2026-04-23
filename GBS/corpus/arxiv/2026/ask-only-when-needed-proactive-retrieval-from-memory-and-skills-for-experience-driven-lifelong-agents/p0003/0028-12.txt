@@ -1,0 +1,19 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 3
+section: 12
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+whereρ i = πθ(τ (i)|x)
+πθold(τ (i)|x) denotes the importance sampling ratio.
+Together, the EXPONEVOand PROACTRL form a self-reinforcing cycle: as training progresses, improved trajectories
+yield higher-quality experience entries, and richer experience enables more precise retrieval control through increasingly
+informative paired-branch comparisons. This mutual reinforcement between experience accumulation and policy
+optimization distinguishes PROACTAGENTfrom approaches that evolve either resource in isolation, empowering it to
+proactively identify gaps in current knowledge and initiate searches on its own, thereby achieving higher task success
+rates and greater efficiency.
+6

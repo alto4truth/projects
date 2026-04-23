@@ -1,0 +1,45 @@
+title: Efficient Test-Time Inference via Deterministic Exploration of Truncated Decoding Trees
+source: arxiv
+year: 2026
+document_id: efficient-test-time-inference-via-deterministic-exploration-of-truncated-decoding-trees
+authors: Xueyan Li; Johannes Zenn; Ekaterina Fadeeva; Guinan Su; Mrinmaya Sachan; Jonas Geiping
+page: 2
+section: 6
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20500v1
+
+v=g( x<t)
+chooses, by definition, the maximum next-token probability p(v| x<t)≥p(v ′ | x<t)∀v′ ∈ V , and
+it generates a sample in T forward passes.
+20
+
+D Additional Results
+D.1 Results for Other Models
+Section D.1 shows results for Qwen2.5-7B-Instruct, Qwen2.5-14B-Instruct, Llama3.2-1BInstruct, and Llama3.2-3B-Instruct with various samplers and branching algorithms.
+Method GSM8K Humaneval MMLU-Pro
+maj@2 maj@4 maj@8 pass@2pass@4pass@8maj@2 maj@4 maj@8
+Self-consistency 78.77 86.05 89.16 64.02 77.44 85.98 45.79 48.43 51.75
+Self-consistency (top-p+top-k) 81.12 87.79 89.23 68.90 78.05 87.20 45.89 47.11 50.13
+DLE (top-p+top-k) 84.23 87.79 89.69 81.10 85.37 87.20 46.78 48.61 50.52
+Self-consistency (min-p) 81.58 87.49 89.84 70.43 80.38 83.40 46.14 48.09 49.88
+DLE (min-p) 84.61 88.48 89.16 79.88 84.15 86.59 46.84 48.55 50.40
+Self-consistency (ε-sampling) 81.43 87.87 89.92 72.56 81.10 88.41 46.19 48.31 51.89
+DLE (ε-sampling)-DIVFIRST84.91 88.48 89.92 81.10 86.59 87.80 46.89 48.90 50.71
+DLE (ε-sampling)-PROBFIRST84.15 87.95 88.86 79.88 84.76 87.20 46.88 48.72 50.62
+DLE (ε-sampling)-RANDBRANCH83.78 87.11 88.78 76.83 83.54 88.41 46.70 48.72 50.69
+Table 5: Performance (maj@k and pass@k) of various methods on GSM8K, Humaneval and
+MMLU-Pro with the Qwen2.5-7B-Instruct model.
+Method GSM8K Humaneval MMLU-Pro
+maj@2 maj@4 maj@8 pass@2pass@4pass@8maj@2 maj@4 maj@8
+Self-consistency 88.48 91.51 92.49 67.68 78.05 88.41 52.01 55.50 58.39
+Self-consistency (top-p+top-k) 89.61 91.21 92.80 72.56 84.76 89.02 52.68 55.31 57.74
+DLE (top-p+top-k) 89.92 91.81 91.74 76.83 84.15 88.41 54.50 56.27 58.06
+Self-consistency (min-p) 89.99 91.21 92.34 76.22 81.10 85.37 52.68 55.31 57.74
+DLE (min-p) 90.52 91.43 91.74 76.83 84.76 89.02 54.34 56.13 58.23
+Self-consistency (ε-sampling) 89.23 91.36 92.72 73.17 83.54 88.41 52.94 56.48 58.56
+DLE (ε-sampling)-DIVFIRST90.60 91.51 92.34 76.22 85.98 88.41 54.66 56.40 58.18
+DLE (ε-sampling)-PROBFIRST90.07 91.43 92.19 76.83 85.98 89.02 54.33 56.38 58.30
+DLE (ε-sampling)-RANDBRANCH89.92 91.51 92.42 78.66 84.76 88.41 54.88 56.52 58.29
+Table 6: Performance (maj@k and pass@k) of various methods on GSM8K, Humaneval and
+MMLU-Pro with the Qwen2.5-14B-Instruct model.
+21

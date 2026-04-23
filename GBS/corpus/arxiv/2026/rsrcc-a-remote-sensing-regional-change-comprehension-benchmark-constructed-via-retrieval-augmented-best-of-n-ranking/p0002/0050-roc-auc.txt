@@ -1,0 +1,36 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 2
+section: roc-auc
+chunk: 50
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+rmed the retrieval as correct.
+Distance Metrics.We compared four commonly used distance metrics for feature-space similarity
+evaluation:
+•Cosine Similarity:
+𝑆cos (𝐸 1, 𝐸2)= 𝐸1 ·𝐸 2
+∥𝐸 1∥ ∥𝐸 2 ∥ ,(39)
+which measures angular similarity between two embedding vectors.
+•L1 Distance:
+𝑑𝐿1 (𝐸 1, 𝐸2)=
+𝐷∑︁
+𝑗=1
+|𝐸 1𝑗 −𝐸 2𝑗 |,(40)
+providing a robust measure of absolute deviation across dimensions.
+•L2 Distance:
+𝑑𝐿2 (𝐸 1, 𝐸2)=
+vut 𝐷∑︁
+𝑗=1
+(𝐸 1𝑗 −𝐸 2𝑗 )2,(41)
+which emphasizes larger differences by squaring deviations.
+•Wasserstein Distance:
+𝑊(𝐸 1, 𝐸2)=inf
+𝛾∈Γ(𝐸 1,𝐸2 )
+E(𝑥, 𝑦)∼𝛾 [∥𝑥−𝑦∥],(42)
+representing the minimal transport cost required to align the distributions of two embedding
+sets.
+21

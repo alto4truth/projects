@@ -1,0 +1,21 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+t learning framework designed to elicit rigorous, verifiable reasoning from multimodal large language models (MLLMs) on tabular tasks. Our approach addresses the critical
+vulnerability of outcome-only supervision in visual domains: the propensity for
+models to hallucinate intermediate steps while stumbling upon correct final answers. Unlike natural images where objects lack definitive structural boundaries,
+tables impose a rigid, grid-based logic. This intrinsic determinism makes table
+reasoning an ideal testbed for Reinforcement Learning with Verifiable Rewards
+(RLVR)—every intermediate cell reference and aggregation step can be rigorously verified [34,42].
+To operationalize this, V-tableR1 decomposes inference into two distinct interacting models (illustrated in Figure 2): a policy VLM (πθ) that generates
+an explicit Visual Chain-of-Thought (V-CoT) and a critic VLM that evaluates
+the logical and visual fidelity of each intermediate step. We optimizeπθ using a novel algorithm, Process-Guided Direct Alignment Policy Optimization
+(PGPO), which unifies the gradient stability of Direct Alignment Policy Optimization (DAPO) and the sampling efficiency of Length-aware Sampling for
+Policy

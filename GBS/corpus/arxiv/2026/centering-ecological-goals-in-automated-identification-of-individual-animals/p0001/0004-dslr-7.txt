@@ -1,0 +1,55 @@
+title: Centering Ecological Goals in Automated Identification of Individual Animals
+source: arxiv
+year: 2026
+document_id: centering-ecological-goals-in-automated-identification-of-individual-animals
+authors: Lukas Picek; Timm Haucke; Lukáš Adam; Ekaterina Nepovinnykh; Lasha Otarashvili; Kostas Papafitsoros; Tanya Berger-Wolf; Michael B. Brown; Tilo Burghardt; Vojtech Cermak; Daniela Hedwig; Justin Kitzes; Sam Lapp; Subhransu Maji; Daniel Rubenstein; Arjun Subramonian; Charles Stewart; Silvia Zuffi; Sara Beery
+page: 1
+section: dslr-7
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20626v1
+
+aggression) and social organization, including dominance hierarchies, kinship, group
+membership, and how social networks change over time [12, 64].
+5
+
+• Health, disease, and disturbance.Repeated observations of the same individual, especially when physical condition or symptoms are visible, allow tracking disease progression,
+injury histories, recoveries, and the effects of human disturbance or tourism [28, 32, 51].
+• Variability in habitat use and preferences.While habitat preferences are often estimated at the population level, linking locations to individuals reveals within-population
+variation in habitat use, plasticity, competition, and behavior [24].
+• Human–wildlife conflict and management.In systems where specific individuals
+cause conflicts with people (e.g., crop raiding, livestock predation, or property damage),
+being able to identify the responsible animals enables targeted management rather than
+broad population-level control [69].
+• Public awareness.Long-term identification of focal individuals allows individual stories to be used in outreach and public awareness campaigns, where sharing the lives of
+recognizable animals helps engage the public and build support for conservation [38].
+Despite these applications sharing the same basic requirement (e.g., recognizing individuals), they differ in how identification errors propagate into ecological inference. At a high
+level, two types of identification error are especially important. First, merging encounters
+from different animals into a single identity (afalse match) can negatively bias abundance
+at the population level, while inflating survival estimates and exaggerating movement distances for that specific single identity. Second, assigning encounters from the same animal
+to multiple identities (amissed link) can positively bias population abundance and recruitment, deflate survival, and make its home range and dispersal distances appear smaller. This
+asymmetric impact of errors is not well-quantified across populations and ecological tasks,
+but it dictates which methods might be suitable for a particular ecological goal.In this
+work, we therefore center the discussion on ecological implications when framing how tools and methods for automation of individual identification should be
+designed and evaluated for ecological use.
+2.2 How Individual Identification Has Been Framed Over the Years
+Building on decades of manual photo-id in field studies and on early computer-vision-assisted
+matching systems developed in the 1990s [33], a later wave of descriptor-based tools such as
+Wild-ID [11], I3S [66], and HotSpotter [23] provided tools for automated matching of individuals with distinctive marks, like stripes, spots, and contours, using hand-crafted image
+features. These systems popularized the idea of rankedretrievalas the goal of individual
+identification systems (i.e., returning a short list of candidate matches for human confirmation) and proved effective for strongly marked taxa with relatively stable views [5, 27, 71].
+These early methods had well-documented limitations, including sensitivity to viewpoint,
+illumination, occlusion, and changes in markings over time [17, 31].
+Over time, these studies, tools, and platforms have been producing large archives of raw
+data (particularly images), encounter histories, and match decisions. Much of this information was originally stored in project-specific databases, spreadsheets, or software, with
+different formats, naming schemes, and levels of metadata. Parts of these archives have been
+shared through public datasets and community platforms that now cover many species and
+sensing conditions and support uploading, curating, and matching images and recordings at
+scale [9, 19, 20]. Some datasets follow individuals over decades and include timestamps and
+site or camera metadata [1, 55], whereas others require substantial curation [19].
+With the growth of labeled data, research on automated animal identification has shifted
+from hand-crafted matching toward deep learning. These methods are usually trained in
+one of two ways. Some are trained to assign each sighting one of a fixed set of known
+individuals (i.e.,classification), whereas others learn a feature space in which sightings of
+the same individual are closer together, and sightings of different individuals are farther
+apart (i.e.,metric learning) [19, 48]. In practice, however, both are often used in a similar
+6

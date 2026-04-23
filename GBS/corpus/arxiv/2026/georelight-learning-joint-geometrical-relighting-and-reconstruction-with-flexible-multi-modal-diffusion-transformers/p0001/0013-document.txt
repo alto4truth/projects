@@ -1,0 +1,26 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+goal of jointly modeling geometry and relighting requires an architecture that can process multiple distinct
+modalities at once (e.g., images, albedo, surface normal,
+and geometry). A Diffusion Transformer (DiT) is a natural choice, as its dense self-attention mechanism allows for
+intensive information exchange between all modalities simultaneously. Furthermore, operating in the latent space of
+a pretrained V AE enables high-resolution generation while
+preserving fine-grained details.
+We adapt pre-trained video DiT that denoises latent
+z∈RT×H×W×C , whereTis temporal length,HandWare
+spatial resolution,Cis latent channel dimension. Inspired
+by [9], we adapt it with a simple but effective modification:
+we repurpose the temporal dimensionTas a modality dimensionM. This allows us to stack all our target modalities
+(albedo, normal, geometry, segmentation, relit image) and
+process them in parallel as if they were frames in a video.
+This “modality-as-time” design requires specific conditioning. We use alearnable modality type embedding
+cmodal∈RM×C type to distinguish which “frame” (modality) is
+3

@@ -1,0 +1,25 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+ated due to the extreme
+sparsity of the fouling jumps. In this regime, the underlying degradation is driven by a very low event arrival rate (λ= 0.5) combined with a large jump scale
+(βf = 0.03). Because these stochastic shocks are exceedingly rare, a given finite observation window may capture
+very few—or even zero—fouling events. Consequently,
+theobservedthermal-fluidsignalscarryminimalinformation regarding the true arrival rate, resulting in a nearly
+flat likelihood surface forλ. In the absence of informative
+data, the posterior distribution naturally shrinks toward
+theprior. Sincetheassignedlog-normalpriorforλiscentered at a median of2.0—significantly higher than the
+true scenario value—both MCMC and SBI predictably
+overestimate this parameter. This behavior highlights a
+fundamental limit of structural identifiability in sparseevent regimes, rather than a systematic failure of the
+inference algorithms.
+The challenge is compounded by a fundamental identifiability trade-off betweenλandβ f. Infrequent large jumps
+and frequent small jumps can produce near-identical cumulative fouling trajectories, making it difficult to distinguish the true regime from the dominant prior. MCMC
+is p

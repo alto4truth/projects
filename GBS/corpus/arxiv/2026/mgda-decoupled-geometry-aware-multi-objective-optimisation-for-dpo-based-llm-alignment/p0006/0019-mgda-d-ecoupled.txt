@@ -1,0 +1,22 @@
+title: MGDA-Decoupled: Geometry-Aware Multi-Objective Optimisation for DPO-based LLM Alignment
+source: arxiv
+year: 2026
+document_id: mgda-decoupled-geometry-aware-multi-objective-optimisation-for-dpo-based-llm-alignment
+authors: Andor Vári-Kakas; Ji Won Park; Natasa Tagasovska
+page: 6
+section: mgda-d-ecoupled
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20685v1
+
+5 Related Work
+In the context of RLHF, balancing conflicting objectives has traditionally relied on training separate reward models for
+each objective, which are then combined via fixed linear scalarisation [Wu et al., 2023, Bai et al., 2022]. Recognising
+the limitations of static weighting, recent works have proposed dynamic scalarisation strategies; for instance, Li et al.
+[2024] employ GroupDRO [Sagawa et al., 2019] to prioritise the worst-performing objective. The algorithm most
+relevant to our work is GAPO [Li et al., 2025], which is based on the same idea as MGDA-NORMALISED. However,
+these methods operate within the reinforcement learning framework, inheriting the instability of Proximal Policy
+Optimisation (PPO) and high computational overhead—limitations we aim to circumvent by adapting these geometric
+insights to the lightweight DPO setting.
+The efficiency of DPO has spurred a surge of variants aiming to improve preference learning stability [Zhao et al.,
+2025]. In the multi-objective domain, MODPO [Zhou et al., 2024] offers a natural generalisation by scalarising
+objectives; however, it compromises DPO’s efficiency by requiring the training of explicit reward models. Othe

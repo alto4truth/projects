@@ -1,0 +1,35 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 60
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+)
+30: Construct preference datasetD pref
+31:
+32:LLM Fine-tuning:
+33: Fine-tunef LLM onD pref using DPO
+34:
+35:Plan Generation:
+36: Select plans for new training epoch:
+37:P ←SelectPlans(f LLM,D train,P)
+38:end for
+39:
+40:returnf LLM, πθ
+F Training Details: Policy Optimization
+Our low-level policy, which is responsible for executing individual subtasks, is trained using Proximal Policy Optimization (PPO). The agent’s goal at
+this stage is to learn an optimal strategy for completing a given subtask based on its visual observations.
+The standard clipped surrogate objective for PPO
+is defined as:
+LPPO(θ) =E t
+h
+min(ρt(θ) ˆAt,clip(ρ t(θ),1−ϵ,1 +ϵ) ˆAt)
+i
+,
+where ρt(θ) = πθ(at|ot)
+πθold (at|ot) is the probability ratio
+and ˆAt is the estimated advantage at timestept.

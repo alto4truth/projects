@@ -1,0 +1,28 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 14
+section: k-limitations
+chunk: 106
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+a genuinely abstract quality structure in the embedding space or shared formatting across our positive anchor datasets, such as Wikipedia markup or
+30
+
+Published as a paper at 3rd DATA-FM workshop @ ICLR 2026, Brazil.
+Table 22: French comprehensive benchmark results. Detailed comparison of 12 distinct filtering
+strategies. While ML (15%) achieves the highest absolute accuracy, the Q3 negatives and Nordic
+transfer models remain highly competitive, proving that quality can be captured through multiple
+distinct curation pathways.
+Benchmark NoFilteringHQ HQseed
+HQ seed(LLMTraining)
+HQall Q3negatives
+HQRomance(No Fra)MKC-e Nordic MLML(15%) ML(Q3)
+ARC-Challenge 0.2891 0.3071 0.3216 0.2985 0.3080 0.3105 0.30540.32590.3157 0.3165 0.3139 0.3054Belebele_c 0.3444 0.3511 0.3500 0.3389 0.35440.37110.3689 0.3533 0.3422 0.3511 0.3611 0.3633GMMLU_c 0.2625 0.2925 0.29000.30750.2875 0.3025 0.2750 0.2650 0.3075 0.2900 0.2875 0.3075HellaSwag 0.4883 0.4748 0.4761 0.4774 0.4773 0.4727 0.4908 0.4647 0.4673 0.49560.51350.4911Include_c 0.3866 0.4153 0.4057 0.4129 0.4105 0.4272 0.4272 0.4296 0.4535 0.42240.47260.4582M_MMLU_c 0.2831 0.2945 0.2944 0.2946 0.2949 0.2992 0.2950 0.2929 0.2936 0.2927 0.29910.3007XNLI 0.4707 0.4855 0.48230.49040.4695 0.4876 0.4827 0.4735 0.4783 0.4807 0.4807 0.4767XWinograd 0.6386 0.6506 0.5904 0.6265 0.6386 0.6627 0.60240.67470.6627 0.6024 0.6386 0.6145Aggregate acc_norm0.3954 0.4089 0.4013 0.4058 0.4051 0.4167 0.4059 0.4099 0.4151 0.40640.42090.4147Average rank9.88 6.38 7.62 6.75 7.384.006.00 6.88 6.12 6.50 4.12 4.62
+instruction-tuning templates. Disentangling these mechanisms, for example through probing classifiers or controlled anchor set ablations, remains to be addressed in future work.
+Limited Language Coverage.Our evaluation focuses on four languages, all of which have substantial representation in XLM-RoBERTa’s pretraining corpus. Results may not generalize to extremely low-resource languages or underrepresented language families (e.g., Niger-Congo, Austronesian)
+Embedding Model Dependence.All results rely on XLM-RoBERTa embeddings. The existence
+and accessibility of quality manifolds may vary with a different architecture or embedding model, a
+different embedding dimension, etc.

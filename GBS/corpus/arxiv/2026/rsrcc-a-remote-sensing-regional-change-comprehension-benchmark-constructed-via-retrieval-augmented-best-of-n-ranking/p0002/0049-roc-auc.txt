@@ -1,0 +1,39 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 2
+section: roc-auc
+chunk: 49
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+𝑘=5 as the retrieval depth for all subsequent experiments, balancing recall, semantic diversity, and
+computational efficiency.
+1 2 3 4 5 6 7 8 9 10
+Number of Retrieved Samples (T op-k)
+50
+60
+70
+80
+90
+100Retrieval Accuracy (%)
+Plateau at T op-5
+Retrieval Accuracy
+Figure8:Top- 𝑘 RetrievalConsistency.Human-annotatedretrievalaccuracyforSigLIPembeddings
+over100testimages. Accuracyincreasesrapidlyupto 𝑘=5 ,afterwhichaplateauat100%agreement
+is observed, confirming that Top-5 retrieval captures all semantically correct matches.
+F.3 Evaluation of Distance Metrics for Human-Annotated Similarity
+To assess the effectiveness of different distance metrics for similarity-based retrieval, we conducted a
+human evaluation on a subset of𝑁=100 test images. For each image𝑥𝑖, annotators were asked to
+confirm whether the true class appeared within the Top-5 retrieved results under each metric. The
+final accuracy for each metric𝑚was computed as:
+𝐴(𝑚)= 1
+𝑁
+𝑁∑︁
+𝑖=1
+1[HumanAgree(𝑥 𝑖, 𝑚)],(38)
+where1[·]is an indicator function equal to 1 when the annotator confirmed the retrieval as correct.
+Distance Metrics.We compared four commonly used distance metrics for feature-space similarity
+evaluation:
+•Cosine Simil

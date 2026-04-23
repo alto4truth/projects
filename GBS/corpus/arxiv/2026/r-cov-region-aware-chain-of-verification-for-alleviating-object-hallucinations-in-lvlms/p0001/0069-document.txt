@@ -1,0 +1,25 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 69
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+Question: Is there a handbag in the image?
+Q: Assume the image width and height are normalized to [0, 1]. Locate the handbag and return its bounding box in
+the format [x_min, y_min, x_max, y_max], where [x_min, y_min] is the top-left corner and [x_max, y_max] is the
+bottom-right corner of the bounding box. Output only the four numbers in a single list. Do not include any
+explanation or extra text.
+Q: Describe [0.38, 0.4, 0.52, 0.7] in the image in detail.
+A: [0.38, 0.4, 0.52, 0.7]
+A: (1) The woman in the image is wearing a white shirt and carrying a black umbrella. She is walking down the
+street, possibly with another person. The umbrella is open, providing protection from the elements. The woman is
+also carrying a handbag, which is visible as she walks. The scene captures a typical day in an urban environment,
+with people going about their daily activities.
+(2) The woman in the image is walking on a city street holding an umbrella. She is carrying a white purse while
+walking down the busy city street. She appears to be navigating her way along the street, possibly engaging in a
+conversation with another person or simply enjoying her surroundings.
+(3) In the image, two women are cr

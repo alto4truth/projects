@@ -1,0 +1,26 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+6 Authors Suppressed Due to Excessive Length
+Fig. 2:Overview of the V-tableR1 framework. The policy VLM generates an explicit
+Visual Chain-of-Thought (V-CoT) over the table image. The critic VLM verifies the
+visual anchors to distinguish between rigorous inference (Path 1), visual hallucination
+(Path 2),and shortcutguessing (Path 3).This denseprocessfeedback isthen integrated
+into the PGPO algorithm to optimize the policy.
+As depicted in Figure 2, this explicit generation exposes three distinct behavioral paths:
+–Path 1 (Rigorous Inference): The model correctly locates the visual anchor,
+extracts the correct value, and computes the correct answer.
+–Path 2 (Visual Hallucination): The model hallucinates an incorrect grid coordinate but proceeds to calculate a wrong answer based on the faulty extraction.
+–Path 3 (Shortcut Guessing): The model bypasses grid localization entirely
+or extracts incorrect cells, yet exploits language biases to guess the correct
+final answer.
+Traditional outcome-supervised RLVR rewards Path 1 and Path 3 equally. Our
+framework explicitly penalizes Path 3 by isolating the verification of visual anchors from the final answer [10].
+Process Evaluation via Critic

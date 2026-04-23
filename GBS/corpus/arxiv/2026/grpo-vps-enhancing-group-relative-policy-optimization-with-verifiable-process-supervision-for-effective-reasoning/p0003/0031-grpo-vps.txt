@@ -1,0 +1,23 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+DS-R1-1.5B 0.735 0.848 0.787
+Qwen2.5-Math-1.5B 0.741 0.774 0.757
+Qwen2.5-Math-7B 0.741 0.771 0.756
+Qwen2.5-32B 0.765 0.844 0.803
+Table 3 reports the precision, recall,
+and F1-score across model scales from
+0.5B to 32B parameters (Team, 2024b).
+We observe that even small models produce progress signals that meaningfully
+discriminate good from bad reasoning
+steps, with F1-scores exceeding 0.75
+across the board. Larger models further improve both precision and recall,
+demonstrating that∆C k scales naturally
+with model quality. These results confirm that our segment-wise progress sig9

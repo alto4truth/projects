@@ -1,0 +1,18 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+ting light
+sources in an image through diffusion models.
+To overcome limitations from above methods, two-stage
+pipelines like Total Relighting [28] first estimates intrinsics (e.g., albedo, normals) and then render the image with
+a neural shading module. This concept has been adapted
+in RGB-X [46] and DiffusionRenderer [22], by using separate diffusion models for forward and inverse rendering.
+Other methods like DiLightNet [45] use coarse geometry
+2

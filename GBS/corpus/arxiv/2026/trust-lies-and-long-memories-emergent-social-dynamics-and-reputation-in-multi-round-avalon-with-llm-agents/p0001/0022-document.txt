@@ -1,0 +1,33 @@
+title: Trust, Lies, and Long Memories: Emergent Social Dynamics and Reputation in Multi-Round Avalon with LLM Agents
+source: arxiv
+year: 2026
+document_id: trust-lies-and-long-memories-emergent-social-dynamics-and-reputation-in-multi-round-avalon-with-llm-agents
+authors: Suveen Ellawela
+page: 1
+section: document
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20582v1
+
+effect holds when excluding self-inclusions: high-reputation
+players still received 38% more inclusions from others.
+5.3 Reasoning Depth and Strategic Behavior
+Dataset D varies reasoning effort across 18 five-player games
+to explore how computational budget affects agent behavior.
+We discovered that higher reasoning correlates with more
+sophisticated evil team strategies.
+5.3.1 Trust-Building Through Early Cooperation
+A sophisticated deception strategy in Avalon is for evil players to pass early missions, building trust and credibility before
+sabotaging later when the stakes are higher. We found this
+behavior emerges more frequently at higher reasoning levels
+(Table 6).
+Table 6: Evil players passing early missions by reasoning
+level (5-player games).
+Level Games Pass Early %
+Low 6 0 0%
+Medium 6 5 83%
+High 6 4 67%
+For comparison, across all other 5-player games with Low
+reasoning (Datasets A, B, C), this strategy appeared in 36%
+of games (27/76). The increase at Medium/High reasoning
+(75%, 9/12 games) suggests that additional computation enables more sophisticated deception timing.
+Notable example (Medium, Game 3):Eve passed both Mission 1 and Mission 3 before finally sabotaging, a

@@ -1,0 +1,28 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 2
+section: r-e-s-u-lt-s
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+, and homes, and resulted in 12 fatalities [ 98]. Therefore,
+given Hurricane Idalia’s rapid intensification — a process that recent studies suggest
+22
+
+may have been influenced by river plumes [ 9], which are typically not described explicitly in physics-based storm surge models — and its impact on a region historically
+unaffected by major hurricanes, Idalia serves as a suitable case study for assessing the
+performance of a predictive bias correction model when applied to a real hurricane
+with unseen characteristics, to some extent.
+Fig. 5 : Oﬀicial best track for Hurricane Idalia (2023) as provided by the National
+Hurricane Center [ 99] and visualized via the CERA online interactive visualization
+framework [ 30]. Wind speed categories are based on the Saﬀier-Simpson hurricane
+scale [ 95] (H1-H5: Hurricane Category 1-5, TD: Tropical Depression, TS: Tropical
+Storm).
+The overall performance of StormNet to predict water level biases for different
+prediction window values in the range of 6-72 h, is presented in Figure 6. Individual
+points represent the RMSE between real and predicted offsets for the bias predictions
+in each station, overlaid on a boxplot representing their distribution, for each value
+23

@@ -1,0 +1,23 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+mentaltracks. Inourexperience,
+that improved local alignment but weakened both tracks. When theory and experiments shared too much
+context too early, they tended to collapse toward the same framing, inherit each other’s blind spots, and
+produce intermediate outputs that were better matched but less strong. Better final papers came from a
+weaker form of coordination: both tracks share an explicit decomposition and common contribution claims,
+but do not continuously share unrestricted working context. Instead, they exchange information at controlled
+synchronization points, especially before synthesis and at the beginning of a new cycle. This design tries to
+preserve independence of reasoning while still forcing the two tracks to remain on a single paper trajectory.
+4. Long-horizon runs need explicit stopping criteria.Earlier versions of the system often kept
+iterating long after the core artifacts were already sufficiently established. This led to wasted computation,
+wasted budget, and occasionally worse outputs due to late over-editing or scope drift. The underlying
+difficulty is that the relevant notion of diminishing returns is conceptual rather than merely token-based:
+a run can

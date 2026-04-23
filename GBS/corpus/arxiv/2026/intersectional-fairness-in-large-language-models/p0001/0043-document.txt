@@ -1,0 +1,23 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+ntity attributes?
+To answer RQ1, we gave to each of the baseline LLMs (i.e., GPT-4o, Llama 3, Gemma-1.1, Gemini-2.0 Flash, Gemini-2.5
+Flash, and Claude-Sonnet-4) the questions and the alternative answers from each of the Race_SES and Race_Gender
+datasets (without the ground truth label), we then collected each LLM predicted answer and consolidated the ground
+truth label and the predicted label for each question from each file, representing ambiguous and disambiguated contexts.
+We then computed each of the accuracy, bias scores, and fairness metrics for each LLM on the dedicated file based on
+the metrics suitable for each file (see Table 4).
+4.7 RQ2: How consistent are LLM responses across repeated prompts in ambiguous and disambiguated
+contexts involving intersectional identity attributes?
+Our two datasets consist of 3,720 questions from the Race_SES dataset and 5,232 questions from the Race_Gender
+dataset, leading to a total of 8,952 questions. Prompting each question 20 times on a single LLM results in 179,040
+questions, and a total of 179,040 × 6 = 1,074,240 questions for the 6 LLMs (GTP-4o, Llama-3, Gemma-3, Gemini-2.0-Flash,
+Gemini-2.5-Flash, and Claude-Sonnet-4) to be prompte

@@ -1,0 +1,51 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 3
+section: 12
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+ng that proactive retrieval tool-calling requires supervised
+initialization before reinforcement learning can effectively shape retrieval decisions.
+8
+
+ICALK@ECNU
+Table 3: Memory vs. skill ablation within the EXPERIENCEBASE. Removing either component degrades performance,
+confirming complementary roles.
+Variant SciWorld SR↑AlfWorld SR↑StuLife SR↑
+Full EXPERIENCEBASE71.50 71.28 12.35
+Skill only 69.00 67.69 10.74
+Memory only 67.50 66.15 11.68
+Figure 3:Inference efficiency and training dynamics on SciWorld. Left:PROACTAGENTachieves higher success
+rates with fewer interaction rounds and lower token consumption than all baselines, where bubble area indicates average
+prompt tokens per episode.Right:PROACTAGENTconsistently outperforms GRPO throughout training, converging to
+a substantially higher final accuracy.
+Experience ablation.As shown in table 3, ablating either degrades performance across all benchmarks, confirming
+complementary roles. Skill-only performs slightly better on SciWorld and AlfWorld, suggesting action abstractions
+contribute more in task-oriented environments. Memory-only shows relative strength on StuLife, where long-horizon
+tasks with cross-task dependencies depend more on factual persistence.
+4.4 Additional Analysis
+Efficiency analysis.The left panel of Figure 3 shows that performance gains stem from proactive control rather than
+extended contexts. PROACTAGENTachieves the highest success rate with the fewest interaction rounds and lowest token
+consumption among all methods, which achieves 73.50% SR with only 0.43k tokens per task, whereas GRPO+Reflexion
+consumes 0.95k tokens for 55.50% SR. The right panel shows training dynamics: PROACTRL maintains a consistent
+advantage over vanilla GRPO from mid-training onward. These result confirms that proactive retrieval outperforms
+passive retrieval.
+Model scaling.Table 4 shows that proactive retrieval remains effective at smaller scales. The 3B model achieves
+53.50% SR (+24.0 points over 3B GRPO+Reflexion), nearly matching 7B GRPO+Reflexion (55.00%) while requiring
+48% fewer interaction rounds (14.35 vs. 27.52). These results suggest that proactive retrieval can partially offset
+capacity gaps through more selective decision-making.
+Benchmark-specific behavior.Different benchmarks reveal distinct aspects of proactive retrieval. SciWorld shows
+the largest gains in both SR and efficiency, suggesting that retrieval timing is the dominant bottleneck in longhorizon scientific tasks. AlfWorld exhibits smaller SR gains but substantial efficiency improvements, indicating
+that proactive retrieval primarily eliminates wasted exploration. StuLife shows the strongest response to online
+adaptation: PROACTAGENTachieves performance comparable to leading proprietary systems [ 4], demonstrating that
+proactive retrieval can bridge the capability gap between open-weight and closed-source models in tasks with long-term
+dependencies.
+Case study.Figure 4 contrasts query and no-query branches across all three benchmarks. In SciWorld, a single factual
+retrieval (aluminum foil is inherently conductive) bypasses an entire invalid wiring procedure that traps the no-query
+branch. In ALFWorld, retrieving a procedural completion rule eliminates redundant room scanning and wrong-object
+selection, finishing the task in three steps. In StuLife, retrieving course misconduct criteria provides knowledge absent
+9

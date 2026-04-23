@@ -1,0 +1,14 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 2
+section: auto-art-config-yaml
+chunk: 64
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+0.1 # RDI drift > 10%
+accuracy_threshold: 0.05 # Accuracy drop > 5%
+Listing 1:AUTO-ART Y AML configuration for multi-norm evaluation with pre-screening.
+18

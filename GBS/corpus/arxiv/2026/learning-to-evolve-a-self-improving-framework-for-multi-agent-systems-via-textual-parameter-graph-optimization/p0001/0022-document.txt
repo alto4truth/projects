@@ -1,0 +1,33 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+4.4 Self-Evolving Optimization via GRAO
+The gradient-driven evolution process relies on an
+Optimizer LLM to generate optimization proposals
+(∆G). However, a static optimizer may repeatedly
+suggest ineffective modifications. We introduce
+Group Relative Agent Optimization (GRAO),
+a meta-optimization framework designed to make
+the optimization process itself self-improving. The
+core principle of GRAO is to create a feedback
+loop where the system learns from the efficacy of
+its past optimizations to generate better proposals
+in the future. This is achieved through a cycle of
+validation, memorization, and adaptive in-context
+learning.
+Optimization Validation and Effectiveness Scoring.After an optimization proposal ∆G is applied to create an evolved graph G′, its impact is
+empirically validated. To avoid the high cost of a
+full re-evaluation, we perform targeted validation:
+the new agent configuration A(G′) is run specifically on the subset of tasks that contributed to the
+error cluster being addressed. By comparing the
+new outcomes to the previous failures, we compute
+aneffectiveness score, E(∆G)∈[0,1] , which
+quantifies the proposal’s success rate on the problematic task subset.
+Buildi

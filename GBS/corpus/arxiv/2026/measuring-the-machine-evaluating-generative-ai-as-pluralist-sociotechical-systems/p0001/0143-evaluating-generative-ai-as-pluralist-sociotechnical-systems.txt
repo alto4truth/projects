@@ -1,0 +1,16 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 143
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+than asking what models should do, the WVB asks what values models reflect when prompted, and how these patterns compare with human populations. This
+
+Chapter 4: The World Values Benchmark 133
+approach acknowledges that LLMs have no intrinsic agency or values of their own; instead, they are “moral zombies” whose outputs reflect training data, prompt design, and human loan of agency. In this sense, descriptive benchmarking provides a transparency tool: a moral compass for models that can empower diverse stakeholders to decide how tuning, and governance ought to proceed.
+4.2 Background This section lays the conceptual and methodological groundwork for a descriptive evaluation of AI models against recorded human value distributions. The aim here is not to prescribe what models ought to say, but to measure what values that do reflect in their outputs. In a pluralist world, evaluation should surface where model tendencies coincide with, diverge from, or overwrite plural human value patterns across MaSH Loop interactions. I proceed in six steps. First, I locate a gap in prevalent AI benchmarks (roughly 2018–2023), showing how many implicitly embed prescriptive norms while presenting themselves as neutral measures. Second, I distinguish normative from descriptive evaluation designs and argue that the latter are essential if we are to surface (rather than overwrite) plural value patterns. Third, I adopt Moral Value Pluralism (MVP) as the philosophical stance best suited to global, non-monolithic evaluation. Next, I draw on measurement theory from the social sciences to treat values as latent constructs that require careful operationalisation and validity checking. Then, I introduce sociotechnical mapping to make the evaluation’s assumptions explicit and the nature of interdependent relationships between humans, the evaluation process and the machine. Finally, I explain the selection of the World Values Survey (WVS) as the empirical baseline: what the dataset is, why it is appropriate here, who uses it, and why specific items were chosen. This background makes transparent the behind-the-scenes design work for the WVB: including how constructs are defined, how prompts and answer anchors are built, and how validity is checked. The background is essential so readers can trace where normative assumptions might enter the process, and how the methods I introduce mitigate them. Ethical and transparent AI evaluations require this level of transparency.
+4.2.1 The State of Evaluations (2018–2023) From 2018–2023, evaluation proliferated—yet much of it rested on unstable constructs and leaked datasets. Recent interdisciplinary reviews reinforce this diagnosis, identifying construct-validity problems, benchmark gaming, documentation failures, and cultural and competitive pressures that distort what benchmark scores are taken to mean [119]. Leaderboards compressed heterogeneous behaviours into one number, while

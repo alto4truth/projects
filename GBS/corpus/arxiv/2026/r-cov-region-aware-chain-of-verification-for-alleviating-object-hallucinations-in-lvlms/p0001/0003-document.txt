@@ -1,0 +1,33 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+ealworld scenarios.
+To alleviate object hallucinations in LVLMs, existing
+works have primarily focused on three strategies: (i) inThe image depicts a man standing on the
+back of a yellow taxi, holding a clothesline
+with clothes hanging on it. The taxi is
+driving down a busy street, surrounded by
+other vehicles such a car and a truck.
+Provide the bounding box coordinates for the truck.
+Please describe the image in detail.
+[0.0, 0.41, 0.34, 0.76]
+The yellow taxi cab is driving down the street.
+It is located on the left side of the image,
+occupying a significant portion of the frame.
+Describe [0.0, 0.41, 0.34, 0.76] in the image in detail.
+Hallucination!
+There is no truck in the description...
+(a) (b)
+Figure 1.(a)An example of object hallucinations in LVLMs with
+the hallucinated object highlighted in red.(b)By eliciting regionlevel processing from LVLMs and using it as a chaining cue, we
+can detect and alleviate their own object hallucinations.
+struction fine-tuning [15, 21, 27, 36, 45], (ii) decoding process optimization [16, 22, 29], and (iii) integration of external expert models [19, 32, 40, 49, 50, 54, 58]. These
+approaches have achieved substantial progress in reducing
+hallucina

@@ -1,0 +1,26 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 1
+section: grant-molnar
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+context with
+standard edit andn-gram distances. Section 4 gives the linear-time computation via generalized suffix trees. Section 5 reports clustering experiments and discusses the dependence
+onρ. Finally, Section 6 summarizes takeaways and directions for future work.
+2.Preliminaries and Definitions
+We begin by recalling some standard notation from formal language theory.
+Throughout, we let Σ denote a fixed alphabet with finitely many characters, we write Σ n
+for the lengthnstrings over the alphabet Σ, we write Σ ≤N :=F
+n≤N Σn for the set of strings
+of length at mostNover Σ, and we write Σ ∗ :=F
+n≥0 Σn for the set of all strings over Σ. If
+S∈Σ m, we write|S|=m. ForS 1, S2 ∈Σ ∗, we writeS 1S2 for the concatenation ofS 1 and
+S2. The map|·|: Σ ∗ →Z ≥0 is a morphism of monoids, so|S 1S2|=|S 1|+|S 2|. We writeϵ
+for the empty string, so for anyS∈Σ ∗ we haveϵS=Sϵ=S.
+Definition 2.1.We sayQis asubstringofSifS=P 1QP2 for someP 1, P2 ∈Σ ∗. We sayQ
+hasmultiplicityc(S, Q)inSif there are exactlyc(S, Q) pairs (P 1, P2) such thatS=P 1QP2.
+IfQis a substring ofSand|Q|=n, we say thatQis ann-gramofS.

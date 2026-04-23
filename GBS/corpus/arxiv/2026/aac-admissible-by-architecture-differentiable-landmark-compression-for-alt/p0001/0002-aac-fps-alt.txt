@@ -1,0 +1,66 @@
+title: AAC: Admissible-by-Architecture Differentiable Landmark Compression for ALT
+source: arxiv
+year: 2026
+document_id: aac-admissible-by-architecture-differentiable-landmark-compression-for-alt
+authors: An T. Le; Vien Ngo
+page: 1
+section: aac-fps-alt
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20744v1
+
+ullK0×mPareto sweep on NY and FLA, exposing
+the trade-off curve at finer granularity. Table 16 reports per-cell combined Wilcoxon p-values across 5
+38
+
+Table 10: ABLATIONHybridmax(h AAC,h ALT)evaluation: expansion reduction (%) on directed road networks. AAC is trained from aK 0 teacher pool (K0=16form=8,K 0=32form=16,K 0=64form=32).
+The hybrid is admissible by construction (pointwise max of two admissible heuristics). Budget is the sum
+of AAC and ALT storage. Rows within each graph are sorted by total budget (B/v) to expose matchedbudget comparisons.Bold marks the best Exp. Red. per matched-budget group(Std is reported
+for variance context only and is never bolded). At every matched budget, pure ALT outperforms the hybrid
+AAC+ALT combination: a clean negative result, where adding AAC to ALT at matched budget doesnot
+beat spending the same bytes on more ALT landmarks. Mean±std over 5 seeds.
+Graph Method B/v Exp. Red. (%) Std
+Modena
+AAC (m=8) 32 80.7 2.9
+ALT (K=4) 3283.40.0
+AAC (m=16) 64 86.8 1.9
+AAC+ALT (m=8,K=4) 6487.6 1.0
+ALT (K=8) 6491.20.0
+AAC+ALT (m=16,K=4) 9689.0 1.3
+ALT (K=12) 9692.50.0
+AAC (m=32) 128 91.4 1.0
+ALT (K=16) 12892.80.0
+Manhattan
+AAC (m=8) 32 79.2 4.7
+ALT (K=4) 3283.90.0
+AAC (m=16) 64 86.8 1.7
+AAC+ALT (m=8,K=4) 6487.8 1.4
+ALT (K=8) 6490.40.0
+AAC+ALT (m=16,K=4) 9690.7 0.8
+ALT (K=12) 9691.60.0
+AAC (m=32) 128 91.6 1.2
+ALT (K=16) 12892.10.0
+NY
+AAC (m=8) 32 78.4 5.5
+ALT (K=4) 3285.10.0
+AAC (m=16) 64 89.2 0.6
+AAC+ALT (m=8,K=4) 6489.2 1.0
+ALT (K=8) 6491.20.0
+AAC+ALT (m=16,K=4) 9691.3 0.6
+ALT (K=12) 9693.10.0
+AAC (m=32) 128 92.8 0.5
+ALT (K=16) 12893.70.0
+Table 11: ABLATIONAdmissibility under early stopping(Modena,K 0=64,m=16). AAC is trained
+to epoch checkpoints{1,5,10,50,200}and evaluated on 100 queries (5 seeds). Admissibility violations
+are counted by comparingh(u,t)against Dijkstra-computedd(u,t)for all query pairs. Zero violations are
+observed ateverycheckpoint, confirming the architectural guarantee empirically: even a 1-epoch model
+is provably safe. Performance is strong from epoch 1 (87.2%reduction), peaks at epoch 10 (88.0%), and
+remains stable through epoch 200 (86.2%).
+Epochs Exp. Red. (%)↑Violations Status
+1 87.2±1.8 0 ✓
+5 84.8±3.0 0 ✓
+10 88.0±1.2 0 ✓
+50 85.5±3.1 0 ✓
+200 86.2±2.4 0 ✓
+seeds for the AAC vs. ALT matched-budget comparison on all four DIMACS road graphs, referenced from
+Section 5.3.
+39

@@ -1,0 +1,26 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+archers have developed a broad catalogue of automatedanalysis operations(AOs) for
+feature models (FMs) [5, 13]. These operations extract information
+from FMs and verify properties that are difficult or infeasible to assess manually, especially as models scale to hundreds or thousands
+of features [5]. Typical examples include detecting dead or false
+optional features, validating satisfiability, computing valid configurations, and estimating configuration-space size. Such analyses
+are vital for maintaining FM correctness and scalability [13]. They
+are typically applied onlyafteran FM has been constructed during
+domain requirements engineering, delaying feedback until late in
+the process when corrections are costly and disruptive [14, 20].
+This paper investigates the potential of applying automated analysis already during thescopingphase, where assumptions about
+variability are first articulated. We introduce anearly validation
+workflowin which these assumptions are expressed in semi-formal
+textualblueprints[26] and analyzed directly with Large Language
+Models (LLMs). The workflow provides immediate feedback on
+feasibility, consistency, and potential defects before formal feature
+mode

@@ -1,0 +1,31 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 2
+section: feret
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+n the evaluation of labeled datasets and
+subsequently applied in the field. Then, each MAD method
+is used to determine the BPCER achieved by the original and
+segmented datasets by applying each of the extracted thresholds as a decision boundary between bona fide and morphing
+samples, following normalization with the extracted mean
+and standard deviation values, for MixFaceNet-MAD and
+MADPromptS. These metrics are referred to as BPCER at a
+fixed threshold (BPCER@t1%, for example), from now on.
+IV. RESULTS
+A. Face Recognition
+Controlled Scenario:The FR performance and FIQA
+results of each analyzed network when evaluating FERET
+and its segmented versions are presented in Table I. It can
+be seen that no error is detected when evaluating the FERET
+dataset’s pairs with the considered FR approaches, regardless
+of the segmentation technique used for background removal.
+These results are aligned with the FIQA statistics of FERET’s
+segmented versions, which present marginal variations in
+comparison with the original dataset. While revealing the
+low impact that background removal has on the FR system’s capacity to correctly evaluate FERET, these results
+are consistent with the controlled cond

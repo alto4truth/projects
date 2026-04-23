@@ -1,0 +1,23 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 2
+section: edges-total-gp-id-time-gp-degbd-id-time-degbd
+chunk: 47
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+relative to the size of the graph that specifies the model. In graphs that are either highly connected
+or very sparse, that is, when the maximal trek length grows rapidly or is bounded by a constant, our
+algorithm runs in polynomial time. Importantly, even when not all causal effects are identifiable
+within the chosen degree bound, the algorithm still returns all available identification formulas
+for a subset of the parameters. A key advantage is that these formulas can be applied directly
+to downstream tasks such as estimation. Moreover, we expect the underlying algebraic theory to
+extend naturally to settings that allow for feedback loops, in which the graph may contain cycles.
+We also note that while we focused on the application of Algorithm 1 to linear structural equation
+models, it can actually be applied to any algebraic statistical model for which there exists a positive
+weight vectorwsuch that the elimination ideal of the parametrization is homogeneous with respect
+to the grading. Examples include sparse factor analysis models (Sturma et al., 2026), Lyapunov
+models (Dettling et al., 2023), and phylogenetic models (Sullivant, 2018, Chapter 15).
+The most important problem th

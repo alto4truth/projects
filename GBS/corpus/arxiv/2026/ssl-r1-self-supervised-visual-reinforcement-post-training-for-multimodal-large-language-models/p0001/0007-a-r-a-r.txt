@@ -1,0 +1,30 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: a-r-a-r
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+Geometric Correspondence.Given an input imageI∈
+RH×W×3 , we first randomly selectKpoints 2 on the image.
+We denote the point sequence asP= [p 1, p2, ..., pK], and
+each point is annotated with its index inP. We then apply
+a random geometric transformation (e.g., affine transformation) to the image and the points to create ground truth for
+geometric correspondence. After that, we apply a random
+permutationπ:{1,2, ..., K} 7→ {1,2, ..., K}to obtain
+a shuffled point sequenceP π = [p π(1), pπ(2), ..., pπ(K)].
+Each point is annotated with its index inP π on the transformed image. For each point on the original image, the
+model is prompted to find its corresponding point on the
+transformed image, predicting the correct point ordering
+π−1 = [π −1(1), π−1(2), ..., π−1(K)]that recoversP. The
+detailed prompt template for this task is provided in the supplementary material.
+3.2.2. Reward Design
+The reward function serves as the primary training signal in
+RLVR. Our total reward is the sum of an accuracy reward
+and a format reward, introduced next.
+Accuracy Reward.The accuracy rewardR acc assesses the
+response correctness. Specifically, for tasks whose answers
+are a single value (e.g., rotation p

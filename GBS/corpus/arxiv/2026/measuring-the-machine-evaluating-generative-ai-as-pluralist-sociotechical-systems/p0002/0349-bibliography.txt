@@ -1,0 +1,19 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 2
+section: bibliography
+chunk: 349
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+sh and wildlife populations. That said, it's very important to address the high energy consumption of AI and the consequent impact on carbon emission.
+
+Appendix C: Chapter 2, Model Settings used for GPT-3.0
+The below table shows presets used in GPT-3. The API also allows selection of different “engines” which reflect the size of parameters of the model to be employed in the task. In all cases we used the Davinci engine which utilises all 175 billion parameters. We also made minor changes to the settings after some trial and error to achieve more consistent outputs. The settings relate to output length (max_tokens), randomness (temperature and top_p), repeated token use (frequency_penalty), and topic repetition (presence_penalty). We adjusted these settings only as necessary to avoid repetitive or nonsensical outputs and to allow longer outputs for analysis. The final column reports the approximate average settings, and where relevant ranges, used across our adjusted runs; these values should be read as a summary of typical settings rather than as fixed parameters applied identically to every prompt. Preset template OpenAI description Template Settings Typical adjusted settings
+TL;DR summarization Summarize text by adding a 'tl;dr:' to the end of a text passage. It shows that the API understands how to perform a number of tasks with no instructions.
+Max tokens 60 Temperature 0 Top p1.0 Frequency penalty0.0 Presence penalty0.0
+Max tokens 150-250 Temperature ~0.5 Top p 1.0 Frequency penalty ~0.7 Presence penalty ~0.5
+Summarize for a 2nd grader Translates difficult text into simpler concepts. Max tokens 60 Temperature 0.3 Top p1.0 Frequency penalty0.0 Presence penalty0.0
+Max tokens 150-250 Temperature ~0.5 Top p 1.0 Frequency penalty ~0.7 Presence penalty ~0.5

@@ -1,0 +1,24 @@
+title: A Hierarchical MARL-Based Approach for Coordinated Retail P2P Trading and Wholesale Market Participation of DERs
+source: arxiv
+year: 2026
+document_id: a-hierarchical-marl-based-approach-for-coordinated-retail-p2p-trading-and-wholesale-market-participation-of-ders
+authors: Patrick Wilk; Ethan Cantor; Yikui Liu; Jie Li
+page: 2
+section: abstract
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20586v1
+
+osumers and aggregators.
+1.2. The Proposed Solution
+The next-generation electricity market scheme, spanning both wholesale and retail layers, holds the potential
+to create a level playing field where all customers have
+equalparticipationopportunities.Wearguethatthisrequires
+intelligent, easy-to-deploy decision-making tools and involvesthegamificationoftheenergyecosystemtostimulate
+adoption. This work aims to explore a market solution to
+streamline DER aggregator operations and enhance prosumer engagement while reducing dependence on detailed
+system modeling and high-bandwidth communication, the
+two hurdles to effective DERs’ market participation. To
+this end, a new market design that explicitly bridges retail P2P trading and wholesale market participation is proposed.Onthisbasis,ahierarchicalDRLframework,i.e.,the
+Strategic distributed Energy resource Aggregation Model
+for Localized Efficient System Synchronization (SEAMLESS), combining aggregator-level Proximal Policy Optimization(PPO)policieswithprosumer-levelLocalStrategyDriven Multi-Agent Deep Deterministic Policy Gradient
+(LSD-MADDPG) coordination is proposed, enabling noniterative coordination under limited-information sharing

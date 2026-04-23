@@ -1,0 +1,23 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+Under Review
+2 Chaima Boufaied, Ronnie de Souza Santos, and Ann Barcomb
+gender, and religion intersect within the same context, a setting known as intersectional fairness [Li et al. 2023; Parrish
+et al. 2021], potentially compounding discriminatory effects.
+While some prior studies assessed the fairness of different LLMs on social bias benchmarks such as the Bias
+Benchmark Question (BBQ) dataset [Parrish et al. 2021], most focus on a single sensitive attribute at a time, overlooking
+intersectional settings, and little attention has been paid to whether LLM outputs are consistent across repeated runs
+on the same inputs, a critical property in high stakes decisions where unstable or unpredictable model behavior can be
+just as harmful as biased behavior [Jin et al. 2025; Parrish et al. 2021; Saralegi and Zulaika 2025; Simpson et al. 2024].
+Therefore, assessing the intersectional fairness and output consistency of LLMs deserves the same level of attention
+given to the assessment of their effectiveness and/or efficiency.
+In this study, we extend the work of [Simpson et al. 2024] by evaluating the same LLMs (or their updated counterparts
+for deprecated models) for fairness but placing pa

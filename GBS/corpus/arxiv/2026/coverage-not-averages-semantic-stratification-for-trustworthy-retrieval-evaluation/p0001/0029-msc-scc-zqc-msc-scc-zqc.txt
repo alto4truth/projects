@@ -1,0 +1,43 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 1
+section: msc-scc-zqc-msc-scc-zqc
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+query generation procedure.
+Algorithm 1Coverage-Aware Query Generation
+Require:Entity graphGwith clustersC, corpusDwith entity mappings
+Require:Target query countN, candidates per iterationB
+Q← ∅ {generated queries}
+nσ,n J ←0{bucket counts for dispersion/jaccard (low, mid, high)}
+Ccovered ← ∅ {clusters with at least one query}
+while|Q|< Ndo
+// Step 1: Adaptive Strategy Selection
+(s, m)←ChooseStrategy(n σ,n J){sampling strategy, entity mode}
+// Step 2: Generate Candidate Queries
+candidates← ∅
+fori= 1TOBdo
+dq ←SampleDoc(s)
+qtext ←GenerateQuery(d q)
+Dcand ←RetrieveRelevantDocs(q text, D, s)
+Dq ← {d q} ∪LLMVerifyRelevance(qtext, Dcand)
+Eq ←AssignEntities(q text, m, Dq)
+σq ←ComputeDispersion(E q)
+Jq ←ComputeJaccard(E q, Dq)
+candidates←candidates∪ {(q text, Dq, σq, Jq)}
+end for
+// Step 3: Select Best Candidate
+(q∗, D∗, σ∗, J∗)←arg max candidates Score(σ, J,n σ,n J , Ccovered)
+// Step 4: Update Coverage State
+Q←Q∪ {(q ∗, D∗)}
+nσ[bucket(σ∗)] += 1
+nJ[bucket(J∗)] += 1
+Ccovered ←C covered ∪clusters(D ∗)
+end while
+returnQ
+C.1. Prompt Specifications
+Query generation.The following prompt is used to synthesize search queries from source documents.

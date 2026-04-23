@@ -1,0 +1,48 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 49
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+entific research tasks. OpenAI research publication, 2025.
+URLhttps://openai.com/index/frontierscience/. Published 2025-12-16; accessed 2026-03-21.
+23
+
+A Full Architecture Reference
+This appendix provides a self-contained technical reference for thepAI/MScarchitecture: the execution
+graph, agent inventory, track-level details, optional rigor modules, campaign orchestration, and the projectlevel code layout. It consolidates material that was spread across the system-overview, design-choices, and
+implementation sections of an earlier draft.
+A.1 Full pipeline graph description
+At the core of the release is a fixed single-run LangGraph workflow. “Fixed” refers to the execution topology:
+the graph always traverses the same high-level stages and routing logic, even though the generated content
+is stochastic.
+The graph is organized into six phases.
+Phase 1: Discovery and feasibility screening.The run begins withpersona_council, followed
+byliterature_review_agent, a literature-review gate,brainstorm_agent, andformalize_goals_agent.
+This phase grounds the task in prior work, checks feasibility, and converts a high-level objective into a
+concrete technical plan.
+Phase 2: Track planning and routing.Planning writes a decomposition into theory, experiment,
+or mixed tracks, recorded inpaper_workspace/track_decomposition.json. The track router uses this
+contract to decide which execution branches to launch.
+Phase 3: Parallel technical execution.When theory work is selected and theorem-oriented modules
+are enabled, the graph runs the theory path through mathematical literature review, proposal, proving,
+rigorous verification, empirical verification, and proof transcription. When empirical work is selected, it
+runs experiment literature review, design, execution, verification, and transcription. Both tracks can run
+independently or in parallel.
+Phase 4: Completion verification and results formalization.Track outputs are merged via
+track_mergeand passed toverify_completion, which routes in three directions:complete(proceed to
+results synthesis),incomplete(return to goal formalization), orrethink(return to brainstorming). If the run
+proceeds,formalize_results_agentproduces a structured assessment inresults_assessment.pdf.
+Phase 5: Internal consistency and follow-up.A duality check is applied after results formalization.
+Failure triggers follow-up literature work and renewed planning; success advances to paper production. The
+filefollowup_decision.jsoncaptures the routing outcome.
+Phase 6: Paper production and editorial quality assurance.The pipeline runsresource_
+preparation_agent,writeup_agent,proofreading_agent,reviewer_agent, andvalidation_gate. Validation failure routes back to writeup for revision before a final success state.
+Loopbacks.A failed literature-feasibility screen routes back topersona_council;verify_completion
+can send the run back toformalize_goals_agentor tobrainstorm_agent; a failed duality gate triggers
+follow-up literature work; and a failed validation gate returns control to writeup.
+24

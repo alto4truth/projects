@@ -1,0 +1,30 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 2
+section: a-b-s-t-r-a-c-t
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+trick other ECUs into accepting these messages as authentic,
+which can result in unsafe or unintended vehicle behavior. There
+are several different kinds of spoofing attacks:
+– Speed Spoofing : Inserting fake CAN messages or modifying genuine ones to display an incorrect vehicle speed.
+This misleads the driver and creates a false perception of
+velocity.
+– Steering Wheel Spoofing : Tampering with, falsifying, or overriding steering-related CAN signals. This disrupts functions
+such as lane keeping, lane changing, and trajectory control.
+– Gas Spoofing : Generating forged CAN frames that misrepresent pedal position, e.g., showing full throttle when the
+driver is not pressing the pedal. This may result in sudden
+acceleration or a lack of expected acceleration.
+– RPM Spoofing : Injecting fabricated engine speed (RPM) data
+into the CAN network, causing the dashboard to display
+incorrect values. This may interfere with safety mechanisms
+like automatic transmission control.
+– Gear Spoofing : Sending counterfeit CAN messages about gear
+position, e.g., reporting Reverse while the car is actually in
+Drive. This can lead to autonomous functions operating in
+the wrong direction.
+• Fuzzy attacks

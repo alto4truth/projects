@@ -1,0 +1,14 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 78
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+h stress-tested the model using culturally and linguistically diverse inputs that contained embedded values orthogonal to statistically dominant norms
+
+Chapter 2: The Ghost in the Machine Has an American Accent 65
+within the United States, as reported in the WVS. We then prompted GPT-3 to summarise these texts and analysed whether and how the outputs altered or reweighted the value orientation of the original material. Our research team comprised members with citizenship or residency across ten countries and fluency in six languages. Each researcher selected source texts drawn from their lived cultural and linguistic experience. These texts were publicly available, often widely known, and frequently analysed in prior political, ideological, or philosophical scholarship. The common criterion was that each input text carried a discernible moral or cultural value orientation, making it suitable for analysis within a moral value pluralist (MVP) framework. We purposively sampled texts that might be seen to hold embedded values orthogonal to reported dominant US social values, often taking guidance from datasets like the WVS. We accessed GPT-3 via OpenAI’s Application Programming Interface (API) and used two of its preset templates: “TL;DR summarization” and “Summarize for a 2nd grader” (using the original US spelling), with minor adjustments to generation settings including temperature, top_p, frequency_penalty, presence_penalty, and max_tokens. These templates instruct the model to preserve the intent of the input while rendering it more accessible. Our interest was in whether this re-rendering preserved or distorted the original value framework, particularly whether outputs shifted toward normative US value patterns. The Davinci engine (GPT-3’s most powerful model at the time) was used consistently. The study proceeded through a structured but interpretive testing process designed to foreground value mutation rather than benchmark performance. We were not seeking statistical generalisation or a universal score, but patterned indications of whether culturally situated inputs were preserved, softened, or redirected during summarisation. The testing sequence therefore combined purposive text selection, repeated prompting under bounded template conditions, and team-based qualitative analysis of value shifts across outputs. Table 8 summarises these method testing steps.

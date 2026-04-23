@@ -1,0 +1,42 @@
+title: Efficient Test-Time Inference via Deterministic Exploration of Truncated Decoding Trees
+source: arxiv
+year: 2026
+document_id: efficient-test-time-inference-via-deterministic-exploration-of-truncated-decoding-trees
+authors: Xueyan Li; Johannes Zenn; Ekaterina Fadeeva; Guinan Su; Mrinmaya Sachan; Jonas Geiping
+page: 2
+section: 6
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20500v1
+
+54.88 56.52 58.29
+Table 6: Performance (maj@k and pass@k) of various methods on GSM8K, Humaneval and
+MMLU-Pro with the Qwen2.5-14B-Instruct model.
+21
+
+Method GSM8K Humaneval MMLU-Pro
+maj@2 maj@4 maj@8 pass@2pass@4pass@8maj@2 maj@4 maj@8
+Self-consistency 18.50 24.64 32.60 25.00 37.20 46.95 13.73 16.71 19.02
+Self-consistency (top-p+top-k) 27.60 33.21 39.65 31.71 44.51 54.88 17.30 19.30 20.78
+DLE (top-p+top-k) 33.06 36.01 38.06 42.07 53.66 59.15 20.62 22.17 22.86
+Self-consistency (min-p) 30.10 35.25 40.25 37.20 46.34 54.88 17.73 20.09 21.29
+DLE (min-p) 33.21 36.01 38.44 42.07 53.05 59.76 20.71 22.17 22.85
+Self-consistency (ε-sampling) 27.75 33.89 39.95 37.80 48.78 54.88 18.87 20.69 21.82
+DLE (ε-sampling)-DIVFIRST31.39 34.65 36.85 31.71 39.63 46.95 19.76 21.23 22.15
+DLE (ε-sampling)-PROBFIRST33.21 36.01 38.06 41.46 52.44 59.76 19.61 21.13 22.95
+DLE (ε-sampling)-RANDBRANCH33.13 34.80 38.44 43.29 48.17 57.32 19.75 20.90 21.97
+Table 7: Performance (maj@k and pass@k) of various methods on GSM8K, Humaneval and
+MMLU-Pro with the Llama3.2-1B-Instruct.
+Method GSM8K Humaneval MMLU-Pro
+maj@2 maj@4 maj@8 pass@2pass@4pass@8maj@2 maj@4 maj@8
+Self-consistency 43.29 54.36 65.58 46.34 57.93 70.12 24.88 29.31 33.04
+Self-consistency (top-p+top-k) 56.25 65.81 72.48 49.39 64.02 73.78 29.74 33.64 36.17
+DLE (top-p+top-k) 64.52 69.45 71.49 59.15 67.07 76.83 33.22 35.73 37.28
+Self-consistency (min-p) 59.89 68.39 73.69 51.83 65.85 76.83 30.68 34.73 36.08
+DLE (min-p) 64.44 68.84 71.57 59.15 68.29 76.83 33.23 35.71 36.91
+Self-consistency (ε-sampling) 58.38 62.33 69.14 55.49 64.46 75.61 30.98 35.37 37.36
+DLE (ε-sampling)-DIVFIRST62.62 67.40 69.52 55.49 65.24 71.95 33.19 35.65 37.23
+DLE (ε-sampling)-PROBFIRST64.44 68.92 71.65 59.15 69.51 78.66 33.18 35.88 37.53
+DLE (ε-sampling)-RANDBRANCH64.52 68.31 72.33 57.93 65.24 73.17 33.22 35.60 37.49
+Table 8: Performance (maj@k and pass@k) of various methods on GSM8K, Humaneval and
+MMLU-Pro with the Llama3.2-3B-Instruct model.
+22

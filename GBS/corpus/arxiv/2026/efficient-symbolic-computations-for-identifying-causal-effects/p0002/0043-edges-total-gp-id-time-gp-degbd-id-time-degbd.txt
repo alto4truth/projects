@@ -1,0 +1,23 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 2
+section: edges-total-gp-id-time-gp-degbd-id-time-degbd
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+larger graphs, we consider a second experimental
+setup. We randomly generate1000acyclic mixed graphs onm= 10nodes. Both directed and
+bidirected edges are sampled from an Erdős–Rényi model with edge probability0.2. Again, we
+set the maximal degree in Algorithm 1 tod= 5. Since the Garcia-Puente algorithm does not
+finish on a large fraction of the sampled graphs within reasonable time, we set a maximal time
+limit for both algorithms to10seconds. Said differently, we compare how many graphs each of the
+methods is able to identify if we allow a maximal computing time of10seconds. Note that in our
+experience, either the Gröbner basis computations in the Garcia-Puente method finish immediately
+or almost “never”. Table 1 reports the number of identified graphs and the average computational
+time needed to certify identifiability among the graphs that are rationally identifiable. While the
+GP-algorithm only certifies identifiability of132graphs in total, Algorithm 1 certifies697graphs
+to be identifiable. Remarkably, for graphs with20or more edges, the Garcia-Puente algorithm did
+15

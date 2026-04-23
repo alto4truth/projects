@@ -1,0 +1,28 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 15
+section: genuine-andimpostorscoredistributions
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+ectional
+horizontal extensions of the bounding box extracted by RetinaFace as
+segmentation prompts (the vertical limits of the box are the image up and
+bottom pixels). The margins were added to highlight the images’ borders
+after background removal. Notice that a bidirectional extension of 150%
+allows to segment the face, body, and accessories of the three examples.
+hard to notice visually in the histograms, it should be kept
+in mind that these differences exist due to a slight approximation between the who score distributions for segmented
+datasets, as discussed in the main document. However, due
+to the small magnitude of these approximations, the clear
+separation between the genuine and impostor distributions
+is maintained regardless of the selected segmentation techniques, which justifies the absence of FR performance drops
+after segmentation, as reported in the main document. Similar
+conclusions can also be drawn regarding FRGCv2 (Figure
+7). For IJB-C and its segmented variants (Figure 8), the differences between the distributions are significant. While the
+histograms of SegFormer-B0 [53] and SAM [27] are similar
+to the original distribution, segmentation techniques such as
+DAN

@@ -1,0 +1,38 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 2
+section: abstract
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+nt exactly when a query is necessary and
+what information is most effective to retrieve. By learning from these paired comparisons, the agent develops genuine
+proactivity, i.e., the ability to recognize when current knowledge suffices versus when retrieval is needed.
+To further penalize wasteful retrieval actions, we introduce the following efficiency penalty term:
+reff
+i =−w q 1[repeati] + clip
+
+wt
+¯Tg(i) −T i
+max( ¯Tg(i),1) ,−|w t|,|w t|
+
+,(10)
+where repeati equals 1 if rollout i repeats a query string that already appeared earlier in the same trajectory and
+0 otherwise, g(i) denotes the goal associated with rollout i, and ¯Tg(i) is the empirical average length of successful
+trajectories for goal g(i). This term discourages repeating identical queries and provides rewards for shorter, successful
+trajectories. The formal proof showing that this process reward provides direct supervision for proactive retrieval is
+provided in the appendix. Given a task instance x, we sample a group of G rollouts {τ (1), . . . , τ(G)} and compute the
+standard normalized advantage for GRPO as follows:
+Ai =
+Rtraj
+i −mean({R traj
+j }G
+j=1)
+std({Rtraj
+j }G
+j=1) +ϵ
+.(11)
+The optimization of the policy

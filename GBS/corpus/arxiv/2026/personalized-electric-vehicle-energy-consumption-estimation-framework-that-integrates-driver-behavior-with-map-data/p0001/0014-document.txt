@@ -1,0 +1,27 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+then calculates wheel tractive force by summing aerodynamic drag,
+rolling resistance, grade forces, and inertial forces. Mechanical power
+demand is determined from the tractive force and vehicle velocity,
+which is then used to obtain motor power and battery power consumption. Integrating these power profiles over time and distance yields
+total energy consumption and state-of-charge (SOC) depletion for the
+complete route.
+7)VisualizationModule:TheVisualizationModulecompletesthepipeline
+by generating multi-panel graphical plots displaying predicted versus
+reference velocity profiles aligned with route distance, annotated with
+map features such as intersections, grade changes, and speed-limit
+zones. Additional visualizations show instantaneous power consumption at the wheels, motor, and battery subsystems, along with cumulative energy usage and SOC trajectories. These comparative plots
+enable rapid validation of prediction accuracy and facilitate interpretation of how map features and driving behavior jointly influence energy
+consumption.
+3.3. Integrated Data Flow and Architecture Benefits
+The seven modules operate in sequence, with each stage editing or adding
+to the data stream:
+1)

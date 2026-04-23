@@ -1,0 +1,20 @@
+title: Interval POMDP Shielding for Imperfect-Perception Agents
+source: arxiv
+year: 2026
+document_id: interval-pomdp-shielding-for-imperfect-perception-agents
+authors: William Scarbro; Ravi Mangal
+page: 2
+section: additionalempiricalresults
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20728v1
+
+40with
+median0.025. The main takeaway is simply that the envelope’s
+conservatism is measurable rather than hidden: some histories
+remain tight, while others incur a noticeably looser overapproximation.
+This gives a concrete diagnostic for judging when the
+envelope is likely to be responsible for blocked actions and
+when the underlying perception ambiguity is the real bottleneck. For this diagnostic we use the same forward-sampling
+configuration as in the shield comparison, namely a budget
+ofN= 500sampled belief points withK= 100sampled
+emission-probability vectors per propagation step.

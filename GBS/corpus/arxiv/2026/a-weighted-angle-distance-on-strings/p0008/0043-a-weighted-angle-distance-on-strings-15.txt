@@ -1,0 +1,71 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 8
+section: a-weighted-angle-distance-on-strings-15
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+Hence
+(20)d ρ(U, V)≤
+X
+1≤k≤Lstut
+ρk ·π ck +d k
+2√Lstut −k+ 1 + π
+2
+Lstut+rX
+k=Lstut+1
+ρk.
+LetK stut =⌊L stut/2⌋. Fork≤K stut we haveL stut −k+ 1≥L stut/2, so
+π ck +d k
+2√Lstut −k+ 1 ≤ π√2Lstut
+(ck +d k).
+Moreover,
+ck ≤min(k, M stut), d k ≤r+ 2 min(k, M stut),
+so
+(21)c k +d k ≤r+ 3 min(k, M stut) (k≤K stut).
+Therefore
+X
+1≤k≤Kstut
+ρk(ck +d k)≤r
+KstutX
+k=1
+ρk + 3
+KstutX
+k=1
+ρk min(k, Mstut)≤r ρ
+1−ρ + 3AMstut(ρ).
+Bounding the remainingk > K stut part of the first sum in (20) by π
+2
+P∞
+k=Kstut+1 ρk and
+evaluating the geometric tails yields (16).□
+7.2.Topology.In this subsection, we describe the topology induced on Σ ∗ byd ρ.
+We first note that we can recover|S|fromd ρ.
+Lemma 7.5.Letρ >0. For anyS∈Σ ∗, we have
+|S|=
+
+
+
+log
+
+1− 2(1−ρ)dρ(S,ϵ)
+πρ
+
+logρ ifρ̸= 1,
+2
+π dρ(S, ϵ)ifρ= 1.
+Proof.LetS∈Σ ∗, and writen=|S|. We have
+dρ(S, ϵ) = π
+2
+nX
+k=1
+ρk,
+which sums as a geometric series ifρ̸= 1. Rearranging, we obtain the desired result.□
+We can also recover the local angular distances fromd ρ.
+Proposition 7.6.Letρ >0, and letn≥1. For anyS, T∈Σ ∗, there is an explicit recursive
+formula expressingθ n(S, T)in terms of the finite set of distances
+{dρ(S, W), d ρ(T, W) :W∈Σ ≤n.}
+Consequently, the col

@@ -1,0 +1,32 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 2
+section: vocabulary-category-items
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+Gated Item FP Before FP After
+active neoplasia 18 4
+arrhythmia 12 5
+acute coronary syndrome 9 2
+presence of dyspnea 7 3
+Total (gated items) 46 14
+Table 5: FP-gate effectiveness on dev80 EN (Mistral Large 3 teacher). The
+gates reduce FP for high-risk items by∼70% while preserving TP.
+chest painFP problem is more severe in IT (13 FP vs. EN), likely because
+Italian notes use the termdolore toracicoin broader clinical contexts.
+Remaining FN errors.The dominant error mode isStage 1 FN: items
+not mentioned in the Stage 1 summary cannot be recovered by the deterministic Stage 2. High-FN items fall into three categories:
+• Rare conditions:foreign body in the airways(11 FN in IT),cardiac
+tamponade,aortic dissection— these appear in <5% of notes and are
+almost never surfaced by Stage 1.
+• Implicit mentions:ab ingestis pneumonia,thoracic ultrasound(6 FN
+in IT),compression ultrasound (CUS)— require domain-specific recognition that the SGR cascade may miss during condensation.
+• Context-dependent items:presence of dyspnea(7 FN + 8 FP in
+IT),level of consciousness(6 FN + 9 FP in IT) — require nuanced
+temporal or categorical reasoning that is difficult to encode in a flat
+Key:Value format.
+5 Disc

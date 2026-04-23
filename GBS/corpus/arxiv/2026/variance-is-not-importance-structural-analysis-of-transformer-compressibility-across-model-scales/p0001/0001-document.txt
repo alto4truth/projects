@@ -1,0 +1,25 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+Variance Is Not Importance:
+Structural Analysis of Transformer Compressibility
+Across Model Scales
+Samuel Salfati
+fraQtl AI Research
+samuel@fraqtl.ai
+April 2026
+Abstract
+We present a systematic empirical study of transformer compression through over 40
+experiments on GPT-2 (124M parameters) and Mistral 7B (7.24B parameters). Our investigation spans spectral compression, block-level function replacement, rotation-based quantization, activation analysis, and adaptive early exit.
+We identify five structural properties of transformers relevant to compression: (1)Variance̸=importance: high-variance activation directions are 96% uncorrelated with predictive directions (measured via CCA), and projecting to high-variance subspaces destroys
+perplexity despite capturing 90%+ of variance; (2)Block linearity is conditional: transformer blocks are approximately linear (R 2 ≈0.95 on GPT-2,R 2 = 0.93 on Mistral block
+31) but only given the correct upstream distribution—modifying earlier blocks shifts the
+distribution and degrades subsequent approximations; (3)The reconstruction wall: any
+approach that factors weights into quantized components amplifies errors through crossterms, making direct qua

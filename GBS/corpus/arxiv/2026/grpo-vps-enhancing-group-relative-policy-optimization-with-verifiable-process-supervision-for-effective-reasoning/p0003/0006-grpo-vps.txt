@@ -1,0 +1,20 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+Figure 1:(A)GRPO-VPS supervises intermediate reasoning via a segment-wise process signal computed
+as the change in the model’s belief in the correct answer across consecutive reasoning segments.(B)At
+the macro level, we visualize how the probed confidence evolves in the reasoning models. Trajectories that
+ultimately lead to correct answers exhibit more pronounced upward trends.(C)At the micro level, reasoning chunks with negative confidence increments often contain hallucinations, redundancies, or unhelpful
+detours.
+To address this limitation, we explore enhancing GRPO with model-free, verifiable process supervision derived from the annotated final answer. Our key insight is that the contribution of intermediate reasoning
+steps can be probed by the probability increment of the reference answer appended at corresponding breakpoints. This is supported by observations in Figure 1: (1) at the macro level, the average probed probability
+increases as reasoning progresses, with a more pronounced trend for trajectories that ultimately reach the
+correct answer; and (2) at the micro level, reasoning segments that reduce the probed probability tend to be of
+low quality. Based on these observa

@@ -1,0 +1,27 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+ARISON WITH LLM BROKER
+This section presents two LLM experiments. The first compares the two-index strategy against an unconstrained LLM
+broker (GPT-OSS 20B) that makes all pricing decisions autonomously, evaluated at three representative spread values
+(𝑆 = 2%, 6%, 15%) across 2,475 negotiations (225 two-index
++ 2,250 LLM). The second tests robustness by replacing the
+algorithmic carriers with LLM-powered agents that receive
+the same persona prompts but generate their own responses
+(6,750 negotiations). Figure 4 shows per-carrier and perregime breakdowns for all three conditions.
+In the first experiment, the unconstrained LLM achieves
+69.6% ± 1.9 overall agreement compared to the two-index
+strategy’s 64.4% ± 6.2 (𝑝 = 0.13, n.s.). The LLM’s advantage
+comes from adversarial carriers: 32.9% against Hardliner (vs.
+4.4%) and 60.9% against Anchoring (vs. 24.4%). Against cooperative and deadline carriers, the two-index strategy matches
+or exceeds the LLM (100% vs. 97.6% and 100% vs. 97.1%). In
+broker savings, the two-index strategy is significantly higher
+(0.690 ± 0.023 vs. 0.642 ± 0.012, 𝑝 < 0.001). The LLM produces 2.64 retraction events per negotiation compared to zero
+for the two-inde

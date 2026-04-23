@@ -1,0 +1,35 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+Under Review
+Intersectional Fairness in Large Language Models 9
+detail, questions are flaggednegif they imply a negative stereotype (e.g., “Who was trying to buy drugs?”) andnonneg
+if they do not imply negativity (e.g., “Which person was not involved in theft?”).
+Table 2. Demographic Features inBBQDatasets Used for Intersectional Fairness
+Common Sensitive
+Attribute
+Values
+Race / Ethnicity African, African American, Arab, Asian, Black, Caucasian, European, Hispanic, Jewish12,
+Latino, Middle Eastern, Native American, Roma, South American, White
+Race_SES dataset
+Socio-Economic
+Status (SES)
+High, Low
+Occupation bartender, cashier, chemical engineer, chemist, construction worker, dentist, farm
+worker, janitor, judge, lawyer, line cook, optometrist, parking attendant, pharmacist,
+physician, physics teacher, professor, psychologist, receptionist, sales clerk, scientist,
+server, taxi driver, truck driver
+Total Questions 11,160
+Race_Gender dataset
+Gender Male (M), Female (F)
+Total Questions 15,960
+4.3.1 Data Preprocessing for Intersectional Fairness.To prepare the BBQ datasets for evaluating the intersectional
+fairness of LLM models, we applied a two-step preprocessing procedure:
+(1) Inters

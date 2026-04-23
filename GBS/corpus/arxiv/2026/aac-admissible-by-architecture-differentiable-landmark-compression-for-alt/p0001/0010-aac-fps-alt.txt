@@ -1,0 +1,76 @@
+title: AAC: Admissible-by-Architecture Differentiable Landmark Compression for ALT
+source: arxiv
+year: 2026
+document_id: aac-admissible-by-architecture-differentiable-landmark-compression-for-alt
+authors: An T. Le; Vien Ngo
+page: 1
+section: aac-fps-alt
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20744v1
+
+B-arXiv outcome reported in E.1 above and
+summarised in Table 9 uses the undirected rule (5 seeds, 100 queries per seed). One methodological lesson
+46
+
+Table 22: ABLATIONCompression efficiency curve(K 0=64,m∈{4,8,16,32,64}). AAC (compression
+fromK 0=64teachers tomdimensions) vs. ALT (K=m/2FPS landmarks) at matched memory budgets.
+Mean±stdover5seeds, 100queries. ALToutperformsAACathighcompression(m=4–16); thegapnarrows
+asmapproachesK 0 and reverses slightly on Manhattan atm=32andm=64. Note: atm=64(m=K 0),
+this is the non-compression regime where AAC effectively recovers the full teacher (Proposition 4).Crosstable note:this ablation uses an independent retraining protocol; values for the same nominal(K0,m)may
+differ from Tables 21 and 7 by training stochasticity within the reported standard deviation (see Section 5.2,
+“Cross-table protocol”).
+(a) Modena (30K nodes)
+mB/v AAC (%) ALT (%)
+4 16 59.1±12.6 71.8
+8 32 76.3±5.3 83.4
+16 64 84.9±1.8 91.2
+32 128 91.9±0.7 92.8
+64 256 94.2±0.3 94.4
+(b) Manhattan (4.6K nodes)
+mB/v AAC (%) ALT (%)
+4 16 64.4±9.7 72.8
+8 32 75.0±8.8 83.9
+16 64 87.4±1.3 90.4
+32 128 92.2±0.2 92.1
+64 256 93.7±0.2 93.5
+generalizes: pre-registration is necessary but not sufficient for matched-memory comparisons, because the
+accounting convention itself can swing the headline magnitudes; both the prediction and the convention
+must be fixed together before evaluation. The pre-registered protocol and bands are included in the released
+codebase (Appendix G).
+F Contextual Variant: Pipeline Specification and Warcraft Compatibility Study
+This appendix collects (i) the formal differentiable training-proxy specification that Section 3.4 points to
+and (ii) the Warcraft12×12compatibility case study referenced from Section 5.10. None of these details are
+needed to read or reproduce the static experiments (Sections 5.3–5.9).
+Pipeline Specification
+Pipeline.The pipeline composes as follows:
+1. An encoderfϕ(CNN or ResNet) predicts cell costsˆc=fϕ(context)from input features.
+2. Cell costs are converted to edge weights:w(u,v) = 1
+2(ˆcu + ˆcv)·γuv, whereγuv is the Euclidean
+distance factor (1for cardinal,
+√
+2for diagonal neighbors).
+3. A differentiable Bellman–Ford solver computes soft SSSP distances fromKanchors.
+4. During training, the row-stochastic compressor operates on soft anchor distances as a differentiable
+proxy. At deployment, exact anchor distances are recomputed on the predicted-cost graph, and the
+resulting compressed heuristic is admissible for A* on that graph by Proposition 2.
+Smooth Bellman–Ford.Standard Bellman–Ford iteratesd(v)←min
+(
+d(v),min (u,v)∈Ed(u) +w(u,v)
+)
+.
+We replace the hardminwith a differentiable smooth-min:
+smoothminβ(x1,...,xn) =−1
+βlog
+n∑
+i=1
+exp(−βxi).(12)
+Proposition 10(Smooth-min is a lower bound on hard min).smoothminβ(x)≤min(x)for allx∈Rn
+andβ >0, with equality asβ→∞.
+Proof.log ∑
+i exp(−βxi)≥log exp(−βminixi) =−βminixi. Multiplying by−1/β(flipping the inequality):−1
+βlog∑
+i exp(−βxi)≤minixi. For convergence:log ∑
+i exp(−βxi)≤−βminixi + logn, so
+smoothminβ(x)≥min(x)−logn
+β→min(x).
+47

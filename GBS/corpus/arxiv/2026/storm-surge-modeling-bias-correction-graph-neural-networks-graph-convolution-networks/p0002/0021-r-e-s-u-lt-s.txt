@@ -1,0 +1,44 @@
+title: Storm Surge Modeling, Bias Correction, Graph Neural Networks, Graph Convolution Networks
+source: arxiv
+year: 2026
+document_id: storm-surge-modeling-bias-correction-graph-neural-networks-graph-convolution-networks
+authors: Noujoud Nader; Stefanos Giaremis; Clint Dawson; Carola Kaiser; Karame Mohammadiporshokooh; Hartmut Kaiser
+page: 2
+section: r-e-s-u-lt-s
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20688v1
+
+A-NOS) has the highest number of connections (i.e., 9). On the
+other hand, even the least connected nodes have no fewer than four connections. This
+20
+
+ensures that effective message passing can occur throughout the graph. This graph
+was used without modification for predicting water level bias values for the specific
+set of stations for Hurricane Idalia (2023) comprising the test set. No data from the
+test set were used for the construction of the graph in Figure 4.
+(a)
+0
+1
+2
+345
+6
+7
+8
+9
+10
+11 12 13
+14
+15
+(b)
+4 5 6 7 8 9
+No. of connections
+Fig. 4 : (a): Geospatial representation of the StormNet graph used for this study.
+(b): Circular representation of the StormNet graph. Node indices in both schematics
+indicate gauge stations as listed in Table 3. Color scale in both schematics indicates
+the degree of each node (i.e., the total number of nodes each node is connected to via
+edges).
+3.1 Case study: Hurricane Idalia (2023)
+The StormNet model, based on the geospatial graph representation of Figure 4 is
+applied to predict biases in water level forecasts for Hurricane Idalia (2023). Hurricane
+Idalia (2023) formed as a Tropical Depression (TD) on August 26 from a disturbance
+21

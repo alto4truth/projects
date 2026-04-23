@@ -1,0 +1,20 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+s, atomic facts and grounded questions, which are then mapped to the ontology and integrated into the graph.
+In Stage II, the algorithm generates training pairs by randomly sampling anchors (atomic facts, questions and entitybased sentences) fromGfor each chunk and pairing them with their corresponding chunks as positives. In Stage III,
+cross-lingual augmentation is applied by translating each Greek anchor to English and vice versa, producing additional anchor-positive pairs where the anchor and chunk reside in different languages; thereby, enabling ORPHEAS
+to learn language-agnostic semantic representations and effectively handle monolingual Greek, monolingual English
+and cross-lingual retrieval within a unified model.
+3.3 Model Architecture and Training
+ORPHEAS is built upon Multilingual-E5-base 8 [Wang et al., 2024], a state-of-the-art multilingual text embedding
+model with a transformer architecture of 278M parameters. Specifically, this model is fine-tuned using the high
+quality dataset generated through the knowledge graph-based methodology described in Algorithm 1. The fine-tuning
+process employed Multiple Negatives Ranking Loss [Henderson et al., 2017], a contrastive learni

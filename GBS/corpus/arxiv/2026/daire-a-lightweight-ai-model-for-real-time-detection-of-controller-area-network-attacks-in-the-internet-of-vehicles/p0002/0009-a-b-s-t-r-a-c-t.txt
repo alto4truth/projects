@@ -1,0 +1,30 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 2
+section: a-b-s-t-r-a-c-t
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+n ensures computational efficiency while
+maintaining high accuracy.
+• Efficient Loss Function and Optimizer: The use of Sparse Categorical Cross-Entropy (SCCE) for multinomial classification
+(memory-efficient compared to CCE) and RMSprop for adaptive
+learning rate optimization, enhancing convergence speed.
+• Performance: The model achieves an average detection rate (DR)
+of 99.88%, false positive rate (FPR) of 0.02%, and accuracy of
+99.96% on benchmark datasets CICIoV2024 and Car-Hacking.
+It outperforms existing methods with a classification time of
+0.03 ms per sample.
+• Comprehensive Evaluation: The model is validated on diverse
+attack types using real-world datasets, demonstrating robustness
+and generalizability.
+The remainder of this paper is organized as follows. Section 2
+provides background on ANN architecture, and it also explains CAN
+Fig. 1. A basic ANN architecture.
+bus vulnerabilities. Section 3 reviews related works in learning based
+intrusion detection for IoV. Section 4 explains the design and implementation of the proposed DAIRE model. Section 5 presents the
+experimental evaluation and results. Section 6 discusses comparative
+analysis and future directions. Finally, Se

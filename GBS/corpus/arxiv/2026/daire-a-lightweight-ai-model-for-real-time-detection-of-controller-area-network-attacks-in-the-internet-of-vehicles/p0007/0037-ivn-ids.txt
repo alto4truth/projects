@@ -1,0 +1,95 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 7
+section: ivn-ids
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+ped and computed the number of neurons in each
+layer using the following formula:
+𝑁𝑖 = 𝑖 × 𝑐 (1)
+Machine Learning with Applications 23 (2026) 100859
+6
+
+S. Alam et al.
+Table 2
+Five samples of CAN messages belonging to five different classes.
+125,000,000,247,128,000,063,255,255,0 => ID=125, Class=0 - Normal
+291,001,005,009,007,000,011,015,004,1 => ID=291, Class=1 - DoS
+643,218,183,114,074,036,000,112,006,2 => ID=643, Class=2 - Fuzzy
+513,160,015,003,037,168,053,148,034,3 => ID=513, Class=3 - RPM Spoofing
+344,006,028,006,063,006,042,002,041,4 => ID=344, Class=4 - SPEED Spoofing
+Table 3
+Two samples of raw CAN messages and their corresponding feature vectors. DLC (Data Length Code) is the 4 bits of data in the Control Field indicating the
+length (in these samples, 8 bytes) of each data byte. DB = Data Byte.
+CAN raw data in hexadecimal Extracted feature vector in decimal
+ID DLC Data Bytes ID DB1 DB2 DB3 DB4 DB5 DB6 DB7 DB8
+217 8 7F FF 7F FF 7F FF 7F FF 535 127 255 127 255 127 255 127 255
+123 8 09 0D 08 06 04 03 05 0E 291 009 013 008 006 004 003 005 014
+where 𝑁𝑖 is the number of neurons in the 𝑖th layer; 𝑐 is the total number
+of classes.
+Here we outline the rationale behind the design and formulation of
+the equation presented in Eq. (1).
+ANNs mimic the functioning of the human brain, where the initial
+layer requires a greater number of neurons or connections to effectively
+process and learn information. This pattern is similarly observed in
+ANNs, as task complexity typically diminishes from the input layer
+toward the output layer. The design of Eq. (1) was guided by several
+key considerations:
+1. Based on this understanding, we aimed to allocate a higher
+number of neurons to the layers closer to the input.
+2. To enhance the performance of multinomial classification, we
+sought to scale the number of neurons in each layer according
+to the number of classes in the dataset.
+3. We also prioritized minimizing the total number of neurons due
+to the following factors:
+(a) The dimensionality of data and the complexity of the
+task, specifically, the number of input features. In the
+case of CAN-based attacks on IoVs, the feature count is
+significantly lower compared to other applications.
+(b) A larger number of neurons increases the likelihood of
+overfitting.
+(c) Computational constraints, including the need for realtime processing and lightweight deployment. More neurons result in greater computational demand.
+Fig. 4 shows the overall architecture of the ANN described above,
+which forms the core of our proposed lightweight ML model. The layers
+are counted starting from the right, meaning from the output layer. For
+instance, if there are 5 classes in total, the output layer will consist of
+5 neurons; the adjacent hidden layer to its left will contain 10 neurons;
+and this pattern continues. As a result, the input layer ends up having
+the highest number of neurons. The number of neurons in each layer
+is determined by the number of classes in the dataset and the layer’s
+position in the count, which begins at the output layer and progresses
+leftward.
+One of the key performance optimizations in neural networks is
+tuning hyperparameters such as batch size, number of hidden layers,
+and epochs. The optimal values depend on the dataset’s type and
+complexity.
+• Batch size refers to the number of samples processed per iteration.
+It can be the entire dataset or a subset, with the dataset divided
+into smaller batches that are propagated sequentially.
+• Hidden layers consist of neurons that deepen the network, enabling it to learn complex data representations.
+Fig. 4. A high-level architecture of the ANN designed and developed in the
+paper. 𝑁𝑖 = 𝑖 × 𝑐, where 𝑁𝑖 = the number of neurons in the 𝑖th layer and 𝑐 =
+the total number of classes.
+• Epochs represent the number of times the entire dataset is passed
+through the network during training, with values ranging from 1
+– ∞.
+We developed the ANN architecture by empirically determining key
+hyperparameters, as detailed in Section 5.3. The hyperparameters of
+the DAIRE model, including the number of hidden layers, batch size,
+and number of epochs, were determined through a structured empirical
+process involving random search over predefined ranges. This approach
+was chosen for its efficiency in exploring a broad hyperparameter
+space without the computational overhead of exhaustive methods like
+grid search. A randomly selected subset of the dataset was used for
+hyperparameter tuning. Various epoch values were tested, and the
+optimal count was selected when the model achieved an accuracy of
+over 99% on the subset. The following ranges were explored: number
+of hidden layers from 1 to 5, batch size from 100 to 500, and number
+of epochs from 100 to 500. A randomly selected 50% subset of the
+CICIoV2024 dataset was used for this tuning phase. For each combination, we performed 10-fold cross-validation to ensure robustness and
+Machine Learning with Applications 23 (2026) 100859
+7

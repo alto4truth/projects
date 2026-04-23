@@ -1,0 +1,21 @@
+title: Structure-Augmented Standard Plane Detection with Temporal Aggregation in Blind-Sweep Fetal Ultrasound
+source: arxiv
+year: 2026
+document_id: structure-augmented-standard-plane-detection-with-temporal-aggregation-in-blind-sweep-fetal-ultrasound
+authors: Keli Niu; He Zhao; Qianhui Men
+page: 2
+section: abstract
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20591v1
+
+andard abdominal planes in the blind-sweep obstetric US.
+The abdominal structures are highlighted in the image frames
+using a segmentation prior, which allows the model to focus
+on anatomically meaningful regions during the detection and
+greatly reducing the false positive rates. Since the gradual
+emergence of the standard plane usually leads to uncertainty
+in the temporal detection, we introduce a local sliding window to stabilise the standard-plane decision boundaries, together with a posterior smoothing strategy to reduce temporal
+jitter in the predictions. Quantitative and qualitative results on
+a real-world blind-sweep dataset indicate accurate boundary
+localisation and fewer off-plane activations, supporting more
+reliable downstream fetal biometry.

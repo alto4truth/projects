@@ -1,0 +1,36 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 65
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+Stage 3: Defect GenerationFinally, with a
+specific error subtype selected, a third LLM call
+rewrites the original text according to the corresponding instruction. The final prompt is constructed from a template, and a strict system prompt
+is used to ensure clean output.
+Prompts for Defect Generation
+Instruction:{prompt_instruction}
+Original Text to Corrupt:“{original_text}”
+- - You MUST provide ONLY the corrupted/rewritten text as the output. Do
+not include any preambles, explanations,
+or wrappers like ‘Rewritten Text:’ or the
+original response in your final output.
+B.2 Catalog of Defect Injection Instructions
+The complete set of instructions used in the defect
+generation stage is detailed below.
+A. Consistency Errors
+• consistency_attribute: Rewrite the response
+by changing an attribute (like color, count, or
+size) of one key object.
+• consistency_spatial: Rewrite the response by
+incorrectly describing the spatial relationship
+between two objects (e.g., change ‘on the table’ to ‘under the table’).
+• consistency_action: Rewrite the response by
+describing an incorrect action or state for a
+subject (e.g., change ‘a man is sitting’ to ‘a
+man is running’).
+• consistency_fake: Rewrite

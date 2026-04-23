@@ -1,0 +1,20 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 6
+section: ieee-transactions-on-image-processing-5
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+ged to have more
+similar representations.
+Holistic topological regularization.Furthermore, we introduce a topological regularization that preserves the high-order
+structural relationships between the predicted mask and ground
+truth, enabling the explicit learning of shape priors through
+adversarial training. Specifically, we implement a discriminatorDthat evaluates the topological and morphological
+consistency between the predicted mask and ground truth. The
+optimization objective for the discriminatorDis formulated
+as:
+Lhol = min

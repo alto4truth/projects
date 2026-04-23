@@ -1,0 +1,31 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 2
+section: keywords
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+AAMAS’27, 2027, Hoang Nguyen, Lu Wang, and Marta Gaia Bras
+exceed 𝑟new
+target, but the clamp holds it there. Case 1 ensures
+the broker never retracts when 𝑟target drops below the current
+offer.
+Reduction to Faratin.When no shift occurs, 𝜏 = 𝑡 and the
+framework reduces to standard Faratin (Equation 1). When
+𝛽 and 𝑟target are constant across all rounds, the two-index
+framework is equivalent to the classical time-dependent concession model.
+Composability.For an arbitrary sequence of shifts at rounds
+𝑘1 < 𝑘 2 <· · ·< 𝑘 𝑛, monotonicity holds by induction.Base
+case:Proposition 3.1 guarantees offer(𝑘1) ≥offer (𝑘1−1); between shifts, the Faratin curve is non-decreasing, sooffer(𝑡) ≥
+offer(𝑡−1) for 𝑡∈ (𝑘1, 𝑘2).Inductive step:suppose all offers up to round 𝑘𝑖−1 are non-decreasing. At round 𝑘𝑖, the
+anchor-and-resume mechanism takes offer(𝑘𝑖−1) as input and
+produces offer(𝑘𝑖) ≥offer (𝑘𝑖−1) by Proposition 3.1. Since
+the proof depends only on the most recent offer and the new
+curve parameters, not on how offer(𝑘𝑖−1) was produced, the
+induction carries through for all𝑛shifts.
+4 EXPERIMENT AL DESIGN
+We evaluate the two-index framework in three stages. First, a
+rule-based evaluation (Section 5) com

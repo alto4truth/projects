@@ -1,0 +1,22 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 2
+section: abstract
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+ICALK@ECNU
+Figure 2:Overview of PROACTAGENT.(a)Experience-Enhanced Online Evolution (EXPONEVO)closes the loop
+between acting, experience accumulation, and policy optimization. (b)EXPERIENCEBASEpartitions experience into
+five typed stores (Mf, Me, S+, S −, S∆), so a single query returns complementary evidence and behavioral guidance.
+(c)Proactive Reinforcement Learning-based Retrieval (PROACTRL)replays the shared prefix to produce a retrieval
+branch τ ret and a matched no-retrieval branch τ no-ret; the outcome gap yields a process reward that is positive only
+when retrieval strictly improves the trajectory, providing step-level supervision for when and what to retrieve.
+parameter updates in existing methods. To this end, PROACTAGENTconsists of two tightly coupled components.
+First,Experience-Enhanced Online Evolution(EXPONEVO) maintains a closed loop between acting, experience
+accumulation, and policy improvement, allowing the agent to update both its externalized memory and internal decision
+policy over time. Second,Proactive Reinforcement Learning-based Retrieval(PROACTRL) formulates retrieval as
+an explicit policy action and learns both when and what to retrieve through step-leve

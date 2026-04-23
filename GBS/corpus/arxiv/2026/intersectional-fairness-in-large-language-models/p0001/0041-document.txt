@@ -1,0 +1,16 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+under such settings in a
+recent study [Kojima et al. 2022]. Further, although prior work recommends a sampling temperature of 1.3 for medium
+and large models to promote output diversity [Li et al. 2025], we adopt a temperature of 1.0 across all LLMs to ensure
+consistent generation settings and maintain sufficient stochasticity for evaluating response consistency across repeated
+runs in RQ2. Each question from our dataset is provided to the model along with its context and answer options, but
+13Questions are directly asked to LLMs without providing the model with any prior context.

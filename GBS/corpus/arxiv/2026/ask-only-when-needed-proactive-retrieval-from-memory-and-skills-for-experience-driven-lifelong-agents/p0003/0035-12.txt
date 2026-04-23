@@ -1,0 +1,89 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 3
+section: 12
+chunk: 35
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+Li, Y . Wu, and Daya Guo. DeepSeekMath: Pushing the limits of mathematical reasoning in open language
+models.arXiv preprint arXiv:2402.03300, 2024.
+12
+
+ICALK@ECNU
+A Theoretical Analysis and Proofs
+In this section, we provide a formal analysis of how the adaptive rollout and process reward mechanism in PROACTRL
+aids credit assignment. Rather than claiming strict variance reduction or strict isolation of causal factors, we show that
+constructing a matched trajectory pair from a shared interaction prefix yields a localized, counterfactual-correlated
+empirical signal at the branching step.
+To formalize this, we define the expected environment-level marginal utility of a specific retrieval actionRETRIEVE(q)
+at historyh tb relative to the expected outcome of continuing without retrieval under the current behavior policy:
+m(htb , q)≜E τ∼π [Renv |h tb , atb =RETRIEVE(q)]−E τ∼π [Renv |h tb , atb ∼π(· |h tb ,A env)].(13)
+The paired-branch mechanism does not provide an unbiased estimator of this quantity, but it aims to construct a
+single-sample empirical proxy that is locally aligned with it. To interpret the pairwise comparison, we require the
+following assumption regarding the underlying environment and the retrieval system.
+Assumption 1(Prefix Replayability and Consistency).For any branching step tb, the environment state and the agent’s
+internal history htb can be exactly restored to explore alternative continuations. The transition dynamics P(s ′ |s, a)
+and observation model O(o|s ′, a) remain consistent across branched rollouts. Furthermore, the memory repositoryD
+and the retrieval function outputs are deterministic and fixed during these rollouts. For the matched no-retrieval branch,
+the branching action is sampled from π(· |h tb ,A env), and the subsequent suffix is generated from the same behavior
+policy under the replayed state.
+Proposition 1(Local Credit Assignment via Counterfactual Rollouts).Let htb be the shared interaction history up to
+the branching step tb. Consider a matched rollout pair sampled under thePROACTRLobjective: τ ret (indexed by i)
+with retrieval action a(i)
+tb =RETRIEVE(q tb), and its counterfactual τ no-ret (indexed by j) with an environment action
+a(j)
+tb ∈ Aenv. Under Assumption 1, and under the local GRPO approximation in which ρ≈1 while clipping and the KL
+term are omitted, the branching-step contribution to the pairwise policy gradient admits the decomposition
+gtb ≜A i∇θ logπ θ(a(i)
+tb |h tb) +A j∇θ logπ θ(a(j)
+tb |h tb)
+= Ai +A j
+2 ∇θ log
+
+πθ(a(i)
+tb |h tb)πθ(a(j)
+tb |h tb)
+
++ Ai −A j
+2 ∇θ log πθ(a(i)
+tb |h tb)
+πθ(a(j)
+tb |h tb)
+.
+(14)
+Hence the local update of the log-odds between the sampled retrieval action and the sampled environment action is
+governed by the empirical advantage gapA i −A j. Moreover, for the matched no-retrieval branch, whererproc
+j = 0,
+Ai −A j = (Renv
+i −R env
+j ) +r proc
+i + (reff
+i −r eff
+j )
+std({Rtraj
+k }G
+k=1) +ϵ
+,(15)
+and therefore
+Ai −A j =
+∆i −λ T
+Tj −Ti
+max(Tj ,1) +r proc
+i + (reff
+i −r eff
+j )
+std({Rtraj
+k }G
+k=1) +ϵ
+.(16)
+Thus, the branch comparison provides a shaped, noisy empirical proxy that combines the sampled environment margin,
+the explicit process reward, and the efficiency terms.
+Proof. We analyze the unclipped surrogate gradient of the GRPO objective for a specific matched pair(i, j) sampled
+from a group of G rollouts for a task instance x. Assuming the policy remains close to the old behavior policy (ρ≈1 )
+and temporarily omitting the KL divergence penalty for algebraic clarity, the empirical gradient contribution of this pair
+is:
+∇θJpair(θ)≈A i∇θ logπ θ(τ (i) |x) +A j∇θ logπ θ(τ (j) |x).(17)
+13

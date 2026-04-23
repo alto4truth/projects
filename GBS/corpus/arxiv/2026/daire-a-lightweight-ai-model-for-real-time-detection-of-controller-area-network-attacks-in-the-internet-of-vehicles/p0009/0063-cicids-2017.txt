@@ -1,0 +1,142 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 9
+section: cicids-2017
+chunk: 63
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+With an inference time
+of just 0.03 ms, DAIRE offers deterministic latency, making it suitable
+Machine Learning with Applications 23 (2026) 100859
+13
+
+S. Alam et al.
+for real-time operation on modern embedded systems. Two well-known
+vendors of AI for embedded systems, Raspberry Pi1 and Nvidia Jetson,2
+utilize ARM CPUs, specifically the Armv8 (e.g., Cortex-A78) and Armv9
+(e.g., Cortex-X925). These CPUs can achieve clock speeds of up to
+3.0 GHz to 3.8 GHz and can be integrated with sufficient RAM to support lightweight AI models like DAIRE. With moderate updates, DAIRE
+can be effectively deployed on modern embedded systems designed for
+lightweight AI applications. To validate this belief, we plan to conduct
+tests for deploying DAIRE on platforms such as Raspberry Pi and Nvidia
+Jetson in the future.
+7. Conclusion
+The rapid advancement of the Internet of Vehicles (IoV) opens
+up significant opportunities while simultaneously introducing critical
+security challenges. A primary concern lies in the dependence on the
+CAN protocol, which renders vehicular systems susceptible to serious
+cyber threats due to its lack of built-in security mechanisms. In response
+to this pressing issue, we proposed DAIRE, a lightweight machine
+learning-based IDS specifically designed for real-time attack detection
+and classification within CAN-enabled IoV environments. DAIRE employs a lightweight ANN architecture, thereby making it well-suited
+for deployment in resource-constrained vehicular systems. By integrating SCCE and RMSprop optimization techniques, the model not only
+achieves high detection performance but also maintains low computational overhead. Comprehensive evaluations conducted on benchmark
+datasets, including CICIoV2024 and Car-Hacking, substantiate DAIRE’s
+robust performance and generalizability across a diverse array of attack
+types. The findings further demonstrate its superior real-time responsiveness compared to existing state-of-the-art methods, underscoring its
+practicality for enhancing the security of modern IoV systems.
+Funding
+This research is funded by the Scientific Research Deanship at the
+University of Ha’il, Saudi Arabia, under Grant RG-25 030.
+Declaration of competing interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to
+influence the work reported in this paper.
+Data availability
+The data utilized in this paper is publicly available from Neto et al.
+(2024), Song et al. (2020). The code developed in this paper is available
+on request.
+References
+Al-Jarrah, O. Y., Maple, C., Dianati, M., Oxtoby, D., & Mouzakitis, A. (2019).
+Intrusion detection systems for intra-vehicle networks: A review. IEEE Access, 7,
+21266–21289. http://dx.doi.org/10.1109/ACCESS.2019.2897013.
+Alam, S., & Demir, A. K. (2024). SIFT: Sifting file types—application of explainable
+artificial intelligence in cyber forensics. Cybersecurity, 7(1), 52.
+Aliwa, E., Rana, O., Perera, C., & Burnap, P. (2021). Cyberattacks and countermeasures
+for in-vehicle networks. ACM Computing Surveys, 54(1), 1–37.
+Aljabri, W., Hamid, M. A., & Mosli, R. (2025a). Lightweight and adaptive data-driven
+intrusion detection system for autonomous vehicles. IEEE Transactions on Intelligent
+Transportation Systems, 26(2), 2282–2292.
+1 https://www.raspberrypi.com/
+2 https://www.nvidia.com/en-us/autonomous-machines/embeddedsystems/
+Aljabri, W., Hamid, M. A., & Mosli, R. (2025b). Lightweight and adaptive data-driven
+intrusion detection system for autonomous vehicles. IEEE Transactions on Intelligent
+Transportation Systems, 26(2), 2282–2292. http://dx.doi.org/10.1109/TITS.2024.
+3509459.
+Alkhatib, N., Mushtaq, M., Ghauch, H., & Danger, J.-L. (2022). CAN-BERT do it?
+Controller area network intrusion detection system based on BERT language model.
+arXiv preprint arXiv:2210.09439.
+Alladi, T., Kohli, V., Chamola, V., Yu, F. R., & Guizani, M. (2021). Artificial intelligence (AI)-empowered intrusion detection architecture for the internet of vehicles.
+IEEE Wireless Communications, 28(3), 144–149. http://dx.doi.org/10.1109/MWC.
+001.2000428.
+Althunayyan, M., Javed, A., Rana, O., & Baker, T. (2024). Hierarchical federated
+learning-based intrusion detection for in-vehicle networks. Future Internet, 16(12).
+Aswal, K., & Pathak, H. (2024). Advancing vehicle security: Deep learning based
+solution for defending CAN networks in the internet of vehicles.. EAI Endorsed
+Transactions on Internet of Things, 10.
+Brown, C. E. (1998). Coefficient of variation. In Applied multivariate statistics in
+geohydrology and related sciences (pp. 155–157). Springer.
+Chen, R., Chen, X., & Zhao, J. (2024). Private and utility enhanced intrusion detection
+based on attack behavior analysis with local differential privacy on IoV. Computer
+Networks, 250, Article 110560.
+Cheng, P., Hua, L., Jiang, H., & Liu, G. (2023). LSF-idm: Automotive intrusion
+detection model with lightweight attribution and semantic fusion. arXiv preprint
+arXiv:2308.01237.
+Derhab, A., Belaoued, M., Mohiuddin, I., Kurniawan, F., & Khan, M. K. (2021).
+Histogram-based intrusion detection and filtering framework for secure and safe
+in-vehicle networks. IEEE Transactions on Intelligent Transportation Systems, 23(3),
+2366–2379.
+Devnath, M. K. H. (2023). GCNIDS: A graph convolutional network-based intrusion
+detection system for CAN bus. arXiv preprint arXiv:2309.10173.
+Fawcett, T. (2006). An Introduction to ROC Analysis. Pattern Recogn. Lett., 27(8),
+861–874.
+Fu, M., Wang, P., Liu, M., Zhang, Z., & Zhou, X. (2025). IoV-BERT-IDS: Hybrid network
+intrusion detection system in IoV using large language models. IEEE Transactions
+on Vehicular Technology, 74(2), 1909–1921. http://dx.doi.org/10.1109/TVT.2024.
+3402366.
+Gordon-Rodriguez, E., Loaiza-Ganem, G., Pleiss, G., & Cunningham, J. P. (2020).
+Uses and abuses of the cross-entropy loss: Case studies in modern deep learning.
+In J. Zosa Forde, F. Ruiz, M. F. Pradier, & A. Schein (Eds.), Proceedings of
+machine learning research: vol. 137, Proceedings on "i can’t believe it’s not better!"
+at neurIPS workshops (pp. 1–10). PMLR, URL https://proceedings.mlr.press/v137/
+gordon-rodriguez20a.html.
+Hanselmann, M., Strauss, T., Dormann, K., & Ulmer, H. (2020). CANet: An unsupervised
+intrusion detection system for high dimensional CAN bus data. Ieee Access, 8,
+58194–58205.
+Hinton, G., Srivastava, N., & Swersky, K. (2012). Neural networks for machine learning
+lecture 6a overview of mini-batch gradient descent. (p. 2).
+Huang, K., Xian, R., Xian, M., Wang, H., & Ni, L. (2024). A comprehensive intrusion detection method for the internet of vehicles based on federated learning architecture.
+Computers & Security, 147, Article 104067.
+Karthikeyan, H., & Usha, G. (2022). Real-time ddos flooding attack detection in
+intelligent transportation systems. Computers & Electrical Engineering, 101, Article
+107995. http://dx.doi.org/10.1016/j.compeleceng.2022.107995.
+Korium, s. (2024). A secure and efficient deep learning-based intrusion detection
+framework for the internet of vehicles. Scientific Reports, 14(1).
+LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. Nature, 521(7553), 436–444.
+Lee, J., Kim, W., Cho, J.-H., Kim, D. S., Moore, T. J., Nelson, F. F., & Lim, H. (2021).
+Deep learning approach for attack detection in controller area networks. vol. 11746,
+In Artificial intelligence and machine learning for multi-domain operations applications
+III (pp. 195–200). SPIE.
+Li, Q., Li, X., Yao, H., Liang, Z., & Xie, W. (2023). Automated vehicle identification
+based on car-following data with machine learning. IEEE Transactions on Intelligent Transportation Systems, 24(12), 13893–13902. http://dx.doi.org/10.1109/TITS.
+2023.3271354.
+Luo, F., Wang, J., Li, Z., & Luo, C. (2025). An anomaly detection model for in-vehicle
+networks based on lightweight convolution with spectral residuals. Computers &
+Security, 151, Article 104304.
+Lydia, E. L., Jovith, A. A., Devaraj, A. F. S., Seo, C., & Joshi, G. P. (2021). Green
+energy efficient routing with deep learning based anomaly detection for internet
+of things (IoT) communications. Mathematics, 9(5), 500. http://dx.doi.org/10.3390/
+math9050500.
+Malik, J., Muthalagu, R., & Pawar, P. M. (2024). A systematic review of adversarial
+machine learning attacks, defensive controls and technologies. IEEE Access.
+Mehedi, S. T., Anwar, A., Rahman, Z., & Ahmed, K. (2021). Deep transfer learning
+based intrusion detection system for electric vehicular networks. Sensors, 21(14),
+4736. http://dx.doi.org/10.3390/s21144736.
+Mishra, P., Varadharajan, V., Tupakula, U., & Pilli, E. S. (2018). A detailed investigation
+and analysis of using machine learning techniques for intrusion detection. IEEE
+Communications Surveys & Tutorials, 21(1), 686–728. http://dx.doi.org/10.1109/
+COMST.2018.2866757.
+Machine Learning with Applications 23 (2026) 100859
+14

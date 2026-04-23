@@ -1,0 +1,26 @@
+title: The Expense of Seeing: Attaining Trustworthy Multimodal Reasoning Within the Monolithic Paradigm
+source: arxiv
+year: 2026
+document_id: the-expense-of-seeing-attaining-trustworthy-multimodal-reasoning-within-the-monolithic-paradigm
+authors: Karan Goyal; Dikshant Kukreja
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20665v1
+
+ormers (ViTs) to
+progressively larger Large Language Models (LLMs) will organically yield faithful multimodal synthesis.We boldly challenge
+this principle.
+By operationalising our diagnostic agenda, specifically addressing[RQ4], we posit that the current architectural paradigm is
+fundamentally incapable of achieving true multimodal knowledge
+discovery. The assumption of scale-driven alignment is a mirage,
+masking a compounding structural failure.
+6.1 The Mechanics of the Representation
+Bottleneck
+To understand why scaling fails, we must examine the informationtheoretic capacity mismatch inherent in the Vision Encoder-ProjectorLLM paradigm. Visual data manifolds (e.g., the topology of a molecular graph or the high-frequency pixel variations in a medical scan)
+are continuous, high-dimensional, and dense. Conversely, textual
+token spaces are discrete, sequential, and highly compressed.
+Current architectures force the entirety of the visual manifold
+to pass through a narrow, fixed-capacity cross-attention or projection head to be translated into text-like embeddings. As the LLM
+backbone scales, its capacity to execute complex symbolic logic
+and leverage statistical priors drastically o

@@ -1,0 +1,34 @@
+title: Interval POMDP Shielding for Imperfect-Perception Agents
+source: arxiv
+year: 2026
+document_id: interval-pomdp-shielding-for-imperfect-perception-agents
+authors: William Scarbro; Ravi Mangal
+page: 2
+section: additionalempiricalresults
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20728v1
+
+der-approximation of reachable
+beliefs. For each action under evaluationaand beliefb, let
+P(b,allowed(a))denote the belief-weighted mass on true
+states for which that action is permitted by the perfectperception shield. LabelB F wd the belief set constructed
+through forward sampling and recall ˆBis constructed through
+LFP. For each trajectory we compute
+gap = min
+b∈BF wd
+P(b,allowed(a))−min
+b∈ ˆB
+P(b,allowed(a))≥0,
+where the sampled set under-approximates the true reachable
+beliefs and the LFP polytope over-approximates them. Consequently, this measured gap should be read as a sampling-based
+diagnostic rather than an exact coarseness measure: because
+the sampled set may miss additional low-score beliefs, it need
+not coincide with the gap to the exact reachable set.
+Figure 7 shows that the average gap is moderate but not
+negligible. Over time, the per-step mean max-gap remains
+roughly in the0.04–0.14range. Aggregated by trajectory, the
+overall max-gap has mean0.287, median0.189, and90th
+percentile0.746, while the overall mean-gap is0.040with
+median0.025. The main takeaway is simply that the envelope’s
+conservatism is measurable rather than hidden: some histories
+remain tight, while

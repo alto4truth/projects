@@ -1,0 +1,29 @@
+title: Tokenised Flow Matching for Hierarchical Simulation Based Inference
+source: arxiv
+year: 2026
+document_id: tokenised-flow-matching-for-hierarchical-simulation-based-inference
+authors: Giovanni Charles; Cosmo Santoni; Seth Flaxman; Elizaveta Semenova
+page: 1
+section: gpu-nvidia-a100-pcie-40gb
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20723v1
+
+rarchical SBI benchmark tasks
+summarised in Table 1. Parameters with subscripts are local parameters replicated independently
+for each sites∈[n s]. 30
+
+Parameter Value
+Sampler NUTS (TensorFlow Probability)
+Number of chains 4
+Warmup/burn-in 100
+Post-warmup samples 100
+Step size 0.1
+Initialisation Ground-truth
+Target parametersβ 0,A
+Table 8: NUTS hyperparameters for SEIR reference posteriors.
+Parameter Mean SD HDI 3% HDI 97% ESS (bulk) ˆR
+A1 0.328 0.086 0.206 0.480 39 1.10
+A2 0.287 0.062 0.200 0.403 77 1.04
+β0 1.804 0.162 1.411 1.998 9 1.46
+Table 9: MCMC convergence diagnostics for SEIR model.
+31

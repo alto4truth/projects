@@ -1,0 +1,26 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+for the parameters inωare
+then given via the formula in Remark 2.5.
+Clearly, a mixed graphGis rationally identifiable if and only if there exists an identifying order.
+In general, there might be multiple identifying orders onθ. We will later derive an algorithm that
+finds the one such that the total degree of any identifying polynomial that appears is minimal.
+Definition 2.10.LetGbe rationally identifiable and suppose thatP ≺ is a set of identifying
+polynomialswithrespecttotheidentifyingorder≺. Wedenotebydeg(P ≺)themaximaltotaldegree
+of the polynomials inP ≺. Moreover, we say that IDG := min ≺ minP≺ deg(P≺)is theidentifying
+degree, where the first minimum is taken over all identifying orders and the second minimum is
+taken over all sets of identifying polynomials for a given order.
+3 Complexity of Efficient Gröbner Basis Algorithms
+Gröbner bases are at the core of most algorithms in computational algebra. We now discuss how
+they can be used to determine if identifying polynomials exist inIand how to compute them.
+3.1 Gröbner Bases
+An accessible introduction to Gröbner bases is provided in Cox et al. (2015). We briefly outline the
+key properties, orienting ourselves to the expositi

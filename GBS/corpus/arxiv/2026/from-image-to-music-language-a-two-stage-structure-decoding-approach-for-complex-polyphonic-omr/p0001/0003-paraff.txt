@@ -1,0 +1,80 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 1
+section: paraff
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+we use 9,697 groups (356,431 samples) for training and 198 groups (6,392 samples) for
+validation; 100 groups are left unused by this split scheme.
+19
+
+Percentile P1 P5 P50 P75 P95 P99
+Samples per group 11 24 31 35 39 188
+Table 4: Group Size Distribution. Distribution of sample counts per score group.
+Property Value
+Groups (scores) 107
+Measure samples 5,317
+Scored events 88,754
+Multi-voice scores 96.3%
+Cross-staff scores 48.6%
+Grace-note scores 37.4%
+Tuplet scores 29.0%
+(a) Overview statistics.
+Composer Scores Measures %
+Bach 39 1,321 24.8
+Chopin 24 1,504 28.3
+Czerny 33 1,388 26.1
+Beethoven 2 172 3.2
+Liszt 2 401 7.5
+Mozart 2 219 4.1
+Others 2 129 2.4
+Debussy 1 72 1.4
+Rachmaninoff 1 62 1.2
+Kuhlau 1 49 0.9
+(b) Composer distribution.
+Time sig. Scores %
+4/4 34 31.8
+3/4 33 30.8
+2/4 17 15.9
+3/8 9 8.4
+2/2 8 7.5
+6/8 4 3.7
+12/8 2 1.9
+9/8 2 1.9
+Other 2 1.9
+(c) Meter distribution; 4
+scores contain changes.
+Table 5: Test set overview (lilypond-topology). (a) Key statistics of the 107-score test set. (b)
+Composer breakdown; Bach, Chopin, and Czerny account for ∼79% of measures. (c) Time-signature
+distribution.
+Group size distribution.Most groups have a similar number of measures, but anthologies and
+collections create a long tail. Table 4 provides a compact summary.
+Independent test set: lilypond-topology.For evaluation, we use an independent LilyPondbased test set summarized in data/test-overview.tex. It contains 107 scores and 5,317 measurelevel samples. For the direct spartito-versus-ground-truth comparison reported below, this corresponds
+to 88,754 scored events after excluding boundary tokens and unmatched extras from the denominator.
+The collection contains a large fraction of genuinely polyphonic writing: 96.3% of scores contain at
+least two voices, 48.6% include cross-staff writing, 37.4% include grace notes, and 29.0% include
+tuplets.
+The composer distribution is intentionally diverse but not uniform: Bach, Chopin, and Czerny account
+for about 79% of measures, while the remaining composers contribute smaller but stylistically distinct
+subsets (see Table 5b). The set spans common meters, dominated by 4/4 and 3/4, with a meaningful
+share of 2/4 and compound meters (see Table 5c). It is also mostly in major keys. The five most
+common key signatures are C major (23), G major (17), F major (13), E major (11), and B-flat major
+(10); 6 scores contain modulations. Complexity also varies by composer: Chopin contributes a higher
+share of tuplets and grace notes, while Bach exhibits more cross-staff writing.
+The original LilyPond sources of this dataset mainly come from MutopiaProject. Its structured
+measure-level annotations are produced through LilyPond score rendering, SVG geometry analysis,
+and cross-checking by multiple structure-solving algorithms. The final correctness of every measure
+in the test set was verified manually.
+Train-test independence.The rendered-source portion of training provides large-scale coverage
+with realistic spatial layouts, while recognition-feedback samples reflect production error patterns.
+The test set is independent from both sources and is drawn from a separate LilyPond corpus, which
+makes it a meaningful generalization check (summarized in Table 6).
+5.3 Metrics
+We evaluate regulation at the measure level. Each method receives the same candidate event set from
+the visual stage and must output a structured result: voice chains, tick positions, and duration-related
+attributes.
+20

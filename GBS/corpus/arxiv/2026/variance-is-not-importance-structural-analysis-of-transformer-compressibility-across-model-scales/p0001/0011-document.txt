@@ -1,0 +1,30 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+Figure 1: Variance does not predict importance. Keeping 95% of variance (8 PCA dimensions)
+yields catastrophic perplexity (3,441), while the baseline (all 768 dimensions) achieves 47. The
+gap demonstrates that high-variance directions are not the computationally important ones.
+The degradation mechanism is twofold: (1) errors accumulate additively through residual
+connections (x n+1 =x n +f n(xn) +ϵ n), and (2) the activation distribution shifts after each
+replacement, making subsequent linear fits less accurate.
+4.3 Finding 3: The Reconstruction Wall
+Finding 3.Any approach that decomposes weights into quantized factors amplifies errors
+through cross-terms, making direct quantization strictly superior to factored approaches at the
+same bit budget.
+When weights are factored asW=A·Band each factor is independently quantized:
+ˆW= (A+ϵ A)(B+ϵ B) =AB+ϵ AB+Aϵ B +ϵ AϵB (4)
+The cross-termsϵ ABandAϵ B typically exceed the error from directly quantizingW. We
+verify this empirically:
+Table 3: Factored vs direct quantization on GPT-2 (same 4-bit budget)
+Method Output MSE vs INT4
+INT4 (direct) 0.000679 baseline
+DCT + INT4 0.001935 2.8×worse
+SVD rank-384 + INT4 0.001359 2.0×worse
+Rotated INT8/IN

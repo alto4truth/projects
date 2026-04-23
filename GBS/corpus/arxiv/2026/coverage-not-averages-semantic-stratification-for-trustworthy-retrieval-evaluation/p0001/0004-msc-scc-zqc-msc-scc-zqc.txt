@@ -1,0 +1,26 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 1
+section: msc-scc-zqc-msc-scc-zqc
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+Coverage, Not Averages Semantic Stratification for Trustworthy Retrieval Evaluation
+Figure 4.Comparing text-embedding-3-small (x-axis) and embedenglish-v3.0 (y-axis). Each point represents one semantic cluster,
+sized by query count. Points above the diagonal indicate Cohere
+wins; below OpenAI wins.
+tive semantic matching.
+5.5. Implications on Retrieval System Decisions
+In practice, retrieval evaluation guides system selection
+by comparing aggregate statistics. Stratified evaluation offers more intentional approaches for such decisions. We
+demonstrate this by comparing OpenAI’s text-embedding3-small (OpenAI, 2024) and Cohere’s embed-englishv3.0 (Cohere, 2023) on NFCorpus (Figure 4).
+When neither model dominates across all clusters, practitioners must still choose one. The conventional approach
+of comparing overall mean implicitly weights clusters by
+query count, allowing large clusters to dominate. However,
+this may not reflect the practitioner’s actual priorities.
+Figure 5 demonstrates this sensitivity through 1,000 bootstrapped evaluation sets. Using overall mean, textembedding-3-small wins only 32.2% of samples; using
+macro-average (equal weight per cluster), the same model
+wins

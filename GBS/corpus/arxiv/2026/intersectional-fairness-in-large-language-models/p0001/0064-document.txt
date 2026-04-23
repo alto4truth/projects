@@ -1,0 +1,25 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 64
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+5), LLaMA-3 continued to produce the highest number of stereotyped wrong
+answers (58). In contrast, Claude-Sonnet-4 and GPT-4o showed moderate levels (seven and six, respectively), while
+Gemma-3 and Gemini-2.0-Flash exhibited relatively low incidence (four and one, respectively). Notably, Gemini-2.5-Flash
+produced no stereotyped responses in this setting. Overall, while some models demonstrated minimal or no stereotyped
+errors, others continued to exhibit clear biases, underscoring variability in model behavior across disambiguated
+contexts under non-negative settings.
+Model MFAA % GTC %
+Min Max Avg Std Min Max Avg Std
+GPT-4o40 100 96.82 7.59 0 100 95.48 17.19
+Gemini-2.0-Flash50 100 98.50 7.09 0 100 93.84 22.03
+Gemini-2.5-Flash45 100 98.81 5.76 0 100 96.70 15.36
+Llama-335 100 73.38 20.85 0 100 55.30 34.76
+Gemma-355 100 99.65 3.02 0 100 87.78 32.40
+Claude-Sonnet-455 100 99.50 3.82 0 100 96.99 16.25
+Table 7. LLM Consistency Assessment

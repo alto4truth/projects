@@ -1,0 +1,38 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+which includes a
+white jacket and a pair of tights. He is focused on the race and looking
+uphill. In his hand, he has a pair of skis, which he's using to race. The
+scene depicts one of the many skiers in the race near a forest.
+Verification Score
+backpack: 0.00
+Input Image
+Result:
+Hallucination!
+Vanilla: The image captures a group of people
+skiing down a snow-covered slope. The skiers
+are wearing various skiing gear, including
+backpacks and hats. One of the skiers is
+wearing a backpack on the left side of the
+slope, while another skier has a backpack on
+the right side. Additionally, a hat can be seen
+on one of the skiers in the middle of the group.
+R-CoV: The image captures a group of
+people skiing down a snow-covered
+slope. The skiers are wearing various skiing
+gear, including hats. One of the skiers is
+wearing a hat on the left side of the slope,
+while another skier has a hat on the right side.
+Additionally, a hat can be seen on one of the
+skiers in the middle of the group.
+(a) Yes-or-No Question (b) Open-Ended Question
+Figure 4.Example results of R-CoV for LLaV A-1.5.The hallucinated objects are highlighted in red. We sample three region descriptions
+per examinee to produce a s

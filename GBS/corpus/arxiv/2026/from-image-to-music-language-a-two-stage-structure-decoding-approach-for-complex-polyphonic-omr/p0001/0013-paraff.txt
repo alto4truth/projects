@@ -1,0 +1,61 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 1
+section: paraff
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+g drawn into voice
+assignment and substantially reduces irregularTick errors, at the cost of a minor increase in
+average tick-twist (see Table 10).
+29
+
+A.4 Annotation Feedback Interface
+Measures that remain difficult after automated regulation are flagged with a status code: Solved
+(automated solution accepted), Issue (requires review or manual annotation), orFatal (irrecoverable
+structural inconsistency). Corrected measures are written back as patch records with a patched flag.
+Training sample weights reflect annotation provenance: unannotated baseline samples receive
+weight 1; OMR-flow annotation samples (machine-predicted, not patched) receive weight 4; humancorrected (patched) samples receive weight 100. These weights are applied during weighted-sampling
+training (torch.multinomial) so that hard, human-verified cases exert disproportionate influence
+on the loss despite representing under 1% of the dataset by count.
+The quality evaluation function evaluateMeasure checks each regulated measure against a set of
+structural invariants: voice monotonicity, beam consistency, tick integrality, time-warp regularity,
+duration balance, and absence of fake or grace-dominant events. It returns a scalar quality score
+q∈[0,1] and a set of Boolean error flags (beamBroken, tickOverlapped, irregularTick, etc.)
+that serve both as training-data filters and as human-readable diagnostics in the annotation interface.
+For error-free measures:
+q= (1−ℓ space) (1−ℓ dur) (1−ℓ warp) (1−ζ 2),
+where ℓspace = tanh(|∆tspace|) penalises unused voice time, ℓdur = max(0,1−r dur)2 penalises
+duration-rate deviation, ℓwarp = tanh(Nirregular) penalises non-standard warp ratios, and ζ is the
+maximum tick-twist ratio. Any measure with a structural error flag receivesq= 0.
+Table 14 reports these evaluator-side diagnostics for the main experiment results on the test set.
+The structured output of regulation can be exported to MusicXML, LilyPond source, or the systeminternal spartito JSON format, all of which preserve voice identity, tick positions, and corrected
+rhythmic attributes.
+A.5 Output Formats
+The structured results of Starry’s regulation stage are serialised into several downstream formats,
+each serving a different use case.
+MusicXML 4.0.The primary interchange format is MusicXML 4.0 ( .xml). The encoder maps
+Starry’s internal voice and tick representation to MusicXML <part>, <measure>, <note>, and
+<direction> elements. Notes carry voice, staff, beam, tie, and slur attributes; tuplets are expressed
+via <time-modification> and enclosing <tuplet> notations; dynamics are encoded as direction
+words. The internal time-division constant is DIVISIONS= 480 ticks per quarter note, matching
+standard MIDI resolution. This format is the primary path for export to notation editors such as
+MuseScore, Finale, and Sibelius.
+LilyPond source.LilyPond ( .ly) output targets typeset-quality engraving. The encoder produces
+relative-pitch notation and supports the full articulation vocabulary: ornaments, ottava brackets, pedal
+marks, hairpin dynamics, slurs, and tuplets. An optional \midi{} block can be included for playback.
+LilyPond output is also used to round-trip topology training samples from symbolic music back to a
+renderable form.
+MIDI.MIDI export ( .mid) produces a Type 0 file with ticksPerBeat= 480 . Each staff is mapped
+to a separate channel. MIDI is used for quick playback verification and does not preserve engraving
+annotations (beams, slurs, etc.).
+Spartito JSON.Spartito ( .spartito.json) is the primary internal representation. It is a structured JSON object that records all semantic annotations produced by the OMR pipeline: voice
+assignments, tick positions, duration attributes, staff layout, and quality flags. The Spartito class
+includes methods for voice-staff extraction ( makeVoiceStaves), re-regulation ( regulate), and
+quality tracking. Spartito files are the format written back by human and agent annotators when
+correcting measures, and are the canonical input to the annotation feedback loop described in
+Appendix F.
+30

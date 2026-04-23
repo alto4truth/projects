@@ -1,0 +1,29 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+on implies a positive or negative outcome (e.g., who is wealthy vs who stole, respectively), we also adopt
+Statistical Parity Subgroup Fairness (SF) and Differential Fairness (DF) metrics. For a broad picture of LLM fairness
+assessment, we also measure the sDis and sAmb bias scores per subgroup (i.e., demographic intersectional category).
+Subgroups with fewer instances (< 50) are excluded from the analysis, as small sample sizes can produce highly unstable
+and misleading bias estimates.
+Overall, the final set of bias scores and fairness metrics adopted in our study, for the different questions from both
+ambiguous and disambiguated contexts are summarized in Table 4. In the following, we briefly specify and formalize
+Common Metrics
+- Accuracy
+- Statistical Parity (SF)
+- Differential Fairness (DF)
+Non-Ambiguous Context Metrics
+- Bias Score sDIS
+Ambiguous Context Metrics
+- Bias Score sAMB
+Table 4. Metrics used by context type (Answering RQ1).
+the score biases and fairness metrics adopted in this study.
+Common Notation.To assess LLM model fairness, we denote 𝑀(𝑥) as the LLM model prediction for input 𝑥 (𝑥 is
+the question prompted to the LLM), 𝑦𝑖 as the ground truth label of the input 𝑥

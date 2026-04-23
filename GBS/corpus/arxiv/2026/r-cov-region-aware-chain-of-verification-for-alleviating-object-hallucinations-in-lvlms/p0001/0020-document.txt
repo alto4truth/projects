@@ -1,0 +1,26 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+s: random, popular, and adversarial. For
+the “random” split, objects are taken randomly from the entire dataset. For the “popular” split, objects are chosen from
+the most frequent object list. For the “adversarial” split,
+objects that are highly related to the image objects are selected. We conduct our evaluation on the COCO 2014 validation set [26]. Following [49], for each split, we sample
+50 images and 6 questions for each image, resulting in a
+total of 300 questions that are evenly distributed between
+positive and negative samples (50%-50%). We evaluate the
+final performance using both accuracy and F1 score.
+MME.MME [13] is a VQA-based benchmark for evaluating the perceptual and cognitive capabilities of LVLMs
+across a wide range of subtasks. Following [49], we use
+the existence subset for object-level hallucination evaluation. Specifically, similar to POPE, MME consists of two
+binary “Yes-or-No” questions for each image in the subset.
+We adopt accuracy and accuracy+ as the evaluation metrics. The former is calculated based on each question, while
+the latter is calculated based on each image, requiring both
+questions to be answered correctly.
+CHAIR.Apart from binary “Yes-or-No”

@@ -1,0 +1,30 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+ion token (CLS). For THUMOS14 and GTZAN, we employ
+a lightweight Transformer encoder with two layers [12]
+operating on pre-extracted video and audio features, respectively. Across all models, we evaluate explicit dropout
+regularizationappliedtoQuery(Q),Key(K),Value(V),and
+feed-forwardnetworklayers,controlledbytheregularization
+coefficients𝜆. Experiments are conducted across multiple
+values of the regularization coefficient𝜆and learning rates.
+For each experiment, the reported test results correspond to
+the configuration achieving the highest validation accuracy.
+Thisprotocolensuresafaircomparisonbetweenimplicitand
+explicit regularization strategies.
+4.2. Evaluation Results
+Tables 1–4 present a comprehensive comparison between implicit dropout strategies and the proposed explicit
+regularization across multiple modalities and model scales.
+Overall, the results demonstrate that explicit dropout yields
+competitive or superior performance compared to conventional implicit methods while offering more controllable
+regularization behavior. For all experiments, we report the
+mean and standard deviation of the evaluation metrics over
+five independent runs with different random seeds. This
+:P

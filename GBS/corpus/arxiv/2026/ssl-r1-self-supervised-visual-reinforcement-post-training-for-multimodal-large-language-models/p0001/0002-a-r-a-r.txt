@@ -1,0 +1,29 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: a-r-a-r
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+d understanding capabilities of MLLMs.
+3. Methodology
+Our SSL-R1 is a generic self-supervised RL post-training
+framework. As shown in Fig. 2, it includes five selfsupervised tasks that target different aspects of visual information, providing comprehensive coverage of visioncentric reasoning capabilities. In this section, we first introduce related RL preliminaries in Sec. 3.1. We then detail
+our SSL-R1 pipeline including task and reward designs in
+Sec. 3.2.
+3.1. Preliminary
+Reinforcement Learning with Verifiable Rewards.
+Unlike reinforcement learning from human feedback
+(RLHF) [49] that predicts the reward score by a separate reward model trained on preference data, reinforcement learning with verifiable rewards (RLVR) [22] determines the reward score directly by pre-defined rules, enhancing models
+in tasks with objectively verifiable outcomes. Compared
+with RLHF, RLVR simplifies the reward mechanism while
+maintaining strong alignment with the inherent correctness
+criteria of the tasks. Formally, give a reference policyπ 0,
+RLVR optimizes the policyπθ with the following objective:
+max
+πθ
+Ey∼πθ(x)[R(x, y)−βKL(π θ(y|x)||π 0(y|x))],(1)
+wherexis the input prompt,yis the generated resp

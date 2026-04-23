@@ -1,0 +1,90 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+g and reconstruction. Besides, joint
+estimating geometry and appearance for relightable 3D human generation [41–43] can be a downstream application.
+8
+
+Supplementary Material
+In this supplementary document, we provide further details
+about the implementation details, training data, evaluation
+protocol, etc. We also show additional comparison with
+state-of-the-art approaches. Please refer to our supplementary video for additional visualization of our results. Finally, we discuss limitations of our model and potential future works.
+6. Additional Implementation Details
+This section provides further details on our network architecture and training procedure, expanding on Sec. 4.1 of the
+main paper.
+6.1. Model Architecture
+Base ModelOur model’s architecture is a Diffusion
+Transformer (DiT) [29]. We initialize our weights
+from the publicly available inverse rendering model of
+DiffusionRenderer-Cosmos-7B [22], which is built upon
+the Cosmos-Predict-1 7B DiT [27].
+Causal V AE Latent SpaceWe operate in the latent space
+of the pretrained Cosmos causal V AE [27], which can process both image or videos. The V AE remains frozen during
+our training. This V AE has a spatial compression factor
+of 8. Therefore, our input images at a training resolution
+of832×1280pixels are encoded into a latent space of
+104×160. The channel dimension is 16. All five target
+modalities (za,z n,z g,z s,z IE) and the global image condition (z I) and illumination condition (z E) share this latent
+resolution.
+Target Modality Latent
+…
+🔥
+optimizable
+Multi-Modal DiT
+Input Image ConditionIllumination ConditionType Embedding Modality Switch
+Modality 5
+…
+Modality 1
+Target Modality Latent
+Input Image ConditionIllumination ConditionType Embedding Modality Switch
+Figure 10.Conditioning on the modality latent.
+Each modality latent after conditioning have the shape
+RH×W×C(16+16+3∗16+3+1) . Different modalities are concatenated "temporal-wise" to a sampleR M×H×W×C in one
+batch.
+6.2. Detailed DiT Conditioning
+As illustrated in Fig. 10, our architecture adapts a standard
+DiT block to accept our multi-modal conditioning. The total
+input to the DiT for a single modalitymis a channel-wise
+concatenation of several features that are added to the noisy
+latentz m
+τ before the first DiT block.
+• Global Conditionz I: The V AE-encoded latent of the input imageI. This is concatenated to all five target modalities to provide shared identity and shape information.
+• Illumination Condition (z E): The V AE-encoded latent of
+the three LDR light maps (Eldr,E log,E dir). This is concatenated only to the relit image latentz IE and is zeropadded for all other modalities.
+• Modality Type Embedding (c modal): A learnable embedding of shapeR M×C type (whereM=5,C type = 3) that
+is broadcast to the latent spatial resolution and concatenated. This informs the model which modality it is currently processing (e.g., albedo vs. normal).
+• Modality Switch Mask (c switch): A binary mask of shape
+RH×W×1 that is broadcast and concatenated. It signals whether the modality is a "clear" condition (1) or a
+"noisy" target (0).
+These concatenated features∈R H×W×(16+16+3∗16+3+1)
+are then processed by the DiT. We replace the original 3D
+RoPE positional embeddings with a shared 2D RoPE [31]
+that is applied to all modalities. This ensures that spatial position (x,y) is aligned across all modalities, which is critical
+for learning cross-modal correlations.
+6.3. Training Details
+Hardware and OptimizerOur model is trained on 64
+NVIDIA A100 (80GB) GPUs. We use the AdamW [18] optimizer with a constant learning rate of2×10 −5, a weight
+decay of 0.01, and enable bfloat16 mixed-precision training. Our total effective batch size is 128, distributed across
+all GPUs.
+Two Stage TrainingAs described in the main paper (Sec
+4.1), our training is conducted in two distinct stages:
+1. Stage 1 (Synthetic Pre-training): We first train the model
+for 30,000 steps exclusively on our syntheticSynth
+dataset. This stage teaches the model the fundamental disentanglement of intrinsics, geometry, and lighting.
+The resulting model from this stage is then used as our
+"auto-labeler" for the real-world datasets.
+2. Stage 2 (Mixed Post-Training): We then finetune the
+model from Stage 1 for an additional 10,000 steps. In
+this stage, we train on a combined hybrid dataset of
+synthetic, light stage, and in-the-wild data, applying the
+strategic tasks outlined in our main paper’s Table 1. The
+batch is composed by sampling from our datasets with
+9

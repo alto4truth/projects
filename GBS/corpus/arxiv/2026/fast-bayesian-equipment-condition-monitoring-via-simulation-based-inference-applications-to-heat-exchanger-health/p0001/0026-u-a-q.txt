@@ -1,0 +1,38 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+75 0.0015
+MCMC posterior median
+0
+7.5e-04
+1.5e-03SBI posterior median
+βl
+0 1 2 3
+MCMC posterior median
+0
+1
+2
+3
+SBI posterior median
+λ
+FIG. 5: Scatterplot comparing posterior median
+parameter estimates inferred by MCMC and SBI across
+the 2,500 failure-case observations (500 realizations for
+each of Scenarios 1–5). Colors denote scenarios: blue
+(Weak Fouling), orange (Batch Shutdown), green
+(Boiler Feedwater), yellow (Mild Leakage), and lilac
+(Severe Leakage). The dashed identity line indicates
+perfect agreement between the two inference methods.
+gressive flows, NSFs utilize monotonic rational-quadratic
+splines, providing the high representational capacity required to map the 25-dimensional summary statistics
+to the complex, potentially multimodal posterior distributions of the heat exchanger’s latent degradation parameters. The normalizing flow was configured with a
+standard multivariate normal base distribution and comprised5sequential transforms. The underlying conditioner network was implemented as a multi-layer perceptron (MLP) featuring2hidden layers with50hidden units each, utilizing Rectified Linear Unit (ReLU)
+activations. The neural network was trained using the
+Adam optimi

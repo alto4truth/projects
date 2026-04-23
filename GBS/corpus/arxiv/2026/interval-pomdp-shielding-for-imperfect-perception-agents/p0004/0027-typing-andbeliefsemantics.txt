@@ -1,0 +1,30 @@
+title: Interval POMDP Shielding for Imperfect-Perception Agents
+source: arxiv
+year: 2026
+document_id: interval-pomdp-shielding-for-imperfect-perception-agents
+authors: William Scarbro; Ravi Mangal
+page: 4
+section: typing-andbeliefsemantics
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20728v1
+
+olled way to express normalization as linearfractional constraints and reduce extremal posterior queries to
+LP without changing their optimal values.
+E. Abstract Interpretation Guided by Convex Algebra
+Abstract interpretation studies sound finite representations
+of typically infinite-state semantics by relating a concrete
+domain to an abstract domain through abstraction and concretization maps. In our setting, the concrete domain consists
+of reachable convex belief sets, while the abstract domain
+consists of finitely represented envelopes such as template
+polytopes. The abstraction mapabstakes a concrete reachable
+belief set and returns a sound over-approximation in the chosen
+template domain; the concretization mapconcinterprets that
+abstract element back as the set of beliefs satisfying the
+template constraints. The abstract transformerF ♯ is exactly
+our LFP/LP propagation pipeline.
+From this perspective, the soundness condition
+F(B)⊆conc(F ♯(abs(B)))
+says that ifBis a concrete set of beliefs reachable before an
+action-observation update, then the beliefs actually reachable
+after the update are contained in the concretization of the
+abstract envelope produced by our propagation s

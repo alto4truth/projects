@@ -1,0 +1,27 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 5
+section: a-weighted-angle-distance-on-strings-9
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+10 GRANT MOLNAR
+The selected hyperparameters are the Optuna best trial parameters, and the final DBSCAN
+labeling is obtained by rerunning DBSCAN with those parameters.
+After selecting DBSCAN parameters using silhouette alone, we evaluate the resulting
+clustering against the provided dataset labels using:
+•Adjusted Rand Index (ARI)and
+•Normalized Mutual Information (NMI).
+Noise points (DBSCAN label-1) are treated as an additional cluster label for ARI/NMI
+computation so that all sampled points are evaluated under a single partition.
+In addition to ARI/NMI, we record diagnostic quantities including the selected (eps,
+min samples), the achieved silhouette score (on non-noise points), the number of non-noise
+clusters, and the fraction of points labeled as noise. All per-run outputs are written to
+results.csvand corresponding plots are saved for each (dataset, distance) pair. The full
+experimental pipeline—distance implementations, dataset ingestion, DBSCAN/Optuna harness, and figure generation—is available at [11].
+5.5.Analysis.Table 1 reports, for each dataset, the best ARI/NMI achieved by each distance family (maximizing over its parameter sweep).
+The main qualitative patterns are:
+•

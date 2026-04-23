@@ -1,0 +1,29 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+rinciple was first demonstrated in the text
+domain by AlpaGasus (Chen et al., 2023) and later
+extended to multimodal settings by InstructionGPT4 (Wei et al., 2023), which combines CLIP scores
+with GPT-4 judgments to curate compact datasets.
+Other approaches generate synthetic instruction
+data (Liu et al., 2024d; Chen et al., 2024a) or augment supervision with reasoning traces, such as Reflective Instruction Tuning (Zhang et al., 2024a). A
+widely adopted alternative is the LLM-as-a-Judge
+paradigm (Gu et al., 2024; Li et al., 2024; Pu et al.,
+2025), which has been shown to suffer from bias,
+instability, and reasoning shortcuts, particularly
+without ground-truth references (Shi et al., 2024b;
+Hwang et al., 2025; Ye et al., 2024; Guerdan et al.,
+2025; Wei et al., 2024; Zhang et al., 2026). Consequently, scalable and reliable instruction-tuning
+data curation remains an open problem.
+The Gap in Fine-Grained Evaluation.The reliance on coarse filtering reflects a broader absence
+of scalable fine-grained evaluation. While prior
+work has explored alternatives to single holistic
+scores (Adlakha et al., 2024), systematic diagnosis
+of semantic errors remains limited. Early automated methods rel

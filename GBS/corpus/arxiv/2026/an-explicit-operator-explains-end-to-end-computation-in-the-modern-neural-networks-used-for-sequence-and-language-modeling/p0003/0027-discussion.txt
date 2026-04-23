@@ -1,0 +1,30 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 3
+section: discussion
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+recurrent operatorD τ implements a
+bank of input-driven traveling wave modes, each with a
+specific spatial frequency.
+The operatorD τ performs a highly structured spectral
+factorization of individual input sequences. WhenD τ is
+circulant, its eigenvectors are discrete Fourier modes on a
+spatially organized ring topology of the network [23, 24],
+and different input sequences selectively excite different
+subsets of these modes. This selective excitation produces distinct signatures of modes that store information
+about the recent past in a manner useful for sequence
+classification problems. In the relatively simple sinusoid
+dataset, for example, only a small set of modes – those
+whose frequencies resonate with inputs in the 15-20 Hz
+temporal frequency band – serve to distinguish between
+input classes. Although the distribution of energy across
+modes is broadly similar across the different input classes,
+a specific set of resonant modes exhibit consistent shifts
+in amplitude that enable linear separation of the input
+classes. This spectral factorization emerges through the
+linear dynamics of the recurrent layer, prior to any non-

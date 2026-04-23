@@ -1,0 +1,24 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 6
+section: f2lp-ap-13
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+14 Yutong Shen*, Ruizhe Xia, Jingyi Liu, Yinqi Liu
+ing performance and efficiency across homophilous and heterophilous graphs.
+Despite its efficacy, the model has limitations: the adaptive mechanism relies
+on the single metric LCC, which may compromise precision in extremely sparse
+or noisy structures. Furthermore, the heuristic mapping functions are not datadriven, and the performance upper bound remains constrained by the quality of
+raw features and empirical hyper-parameter settings. Future work will explore
+multi-dimensional structural descriptors and lightweight learning mechanisms to
+further enhance generalization.
+References
+1. Webkb datasets (cornell, texas, wisconsin).https://www.cs.cmu.edu/afs/cs.
+cmu.edu/project/theo-20/www/data/
+2. Abbahaddou, Y., Malliaros, F.D., Lutzeyer, J.F., Vazirgiannis, M.: Admp-gnn:
+Adaptive depth message passing gnn. In: Proceedings of the 34th ACM International Conference on Information and Knowledge Management (CIKM) (2025)
+3. Chen, L., Song, Y., Cai, Y., Lu, J., Li, Y., Xie, Y., Wang, C., He, G.: Multiprototype space learning for commonsense-based scene graph generation. In: Proceedings of the AAAI Conference on Artificial Intelligence (AAAI

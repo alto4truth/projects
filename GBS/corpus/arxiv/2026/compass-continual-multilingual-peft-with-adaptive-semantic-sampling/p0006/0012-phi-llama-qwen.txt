@@ -1,0 +1,61 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 6
+section: phi-llama-qwen
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+ent adaptation approaches for each model. The white dot and white
+line of each violin plot represent the mean and median performance, respectively.
+25
+
+Published in Transactions on Machine Learning Research (11/2025)
+XQuAD.XQuAD exhibits the most substantial performance gains among the evaluated benchmarks, underscoring COMPASS’s effectiveness in adapting models for tasks that align closely with the instructionfollowing format of the Aya fine-tuning data. The magnitude of improvement correlates strongly with the
+baseline performance gap between languages. For Qwen2.5-7B, languages with weaker initial performance yet
+some exposure in the model’s pre-training data, such as Arabic, Thai, and Vietnamese, showed exceptional
+gains with COMPASS, while high-resource languages like English and Chinese demonstrated more moderate
+but still substantial improvements. COMPASS consistently outperforms full fine-tuning on XQuAD across
+all models, suggesting that the targeted cross-lingual transfer approach is particularly effective for questionanswering tasks where relevant knowledge may be distributed across languages. The LangRank and LangSim
+baselines achieve only 60-70% of COMPASS’s gains, confirming that distribution-aware selection provides
+superior transfer compared to linguistic similarity alone.
+XNLI.On XNLI, COMPASS demonstrates consistent improvements across all three model architectures,
+with the most salient improvements for languages with limited representation in the pre-training data. Bulgarian, which only had synthetic training data available, was the only language that exhibited a performance
+drop in the target-only setting, highlighting the challenges of fine-tuning only on data with questionable
+machine-translation quality. COMPASS mitigates this issue by leveraging high-quality cross-lingual data,
+maintaining performance even when target language data quality is questionable.
+MGSM.MGSM results reveal differentiated patterns based on initial model capabilities and language
+resources. For high-performing languages, COMPASS provides modest improvements across all models.
+However, for languages with weak baseline performance, the gains are more variable. Performance on
+MGSM highlights an important characteristic of COMPASS: its effectiveness scales with the availability of
+relevant cross-lingual knowledge. Mathematical reasoning, being more language-agnostic than other tasks,
+benefits from cross-lingual transfer when the target language lacks sufficient training examples, but shows
+diminishing returns for well-resourced languages where the base model already performs adequately.
+Cross-Model Analysis.Comparing across the three model architectures reveals consistent patterns. Phi4Mini has high relative improvements particularly on low-resource languages, suggesting that smaller models
+benefit more from targeted cross-lingual transfer. The model’s initial multilingual regression (noted in
+the Phi4 technical report) is mitigated by COMPASS. Llama3.1-8B demonstrates balanced improvements
+across all tasks, with less variance between high- and low-resource languages. Qwen2.5-7B, despite extensive
+multilingual pre-training, shows substantial uplift across the lower performing languages with COMPASS,
+particularly for XQuAD. Even models with significant multilingual exposure benefit from distribution-aware
+fine-tuning, especially when adapting to specific task formats.
+5.7 Ablations
+Embedding Model.COMPASS relies on the embedding model’s semantic representation capabilities,
+and a combination of lower quality embeddings and lack of language coverage in the embedding model
+deteriorates COMPASS’ data selection quality and downstream performance. GTE Multilingual Base is
+competitive with Jina3, with a discrepancy in average performance of 2.8% and 1.2%, respectively, on Global
+MMLU and MMLU-ProX that is in-line with its worse performance on MMTEB. The greater regression of
+GTE Multilingual Base on Global MMLU may be driven by its lack of coverage for low-resource languages
+such as Amharic (ge’ez script) and Hausa (latin script).
+Cluster- and sample-level weights assume distance in the embedding space reflects semantic text similarity.
+We posit that there is an inflection point where differences in embedding quality lead to a degradation in
+cluster- and sample-level weight computation and a subsequent degradation in performance on par with
+having neither cluster or sample level weights. To stress test COMPASS, we evaluate two more settings
+for embedding generation, Paraphrase Mpnet and Distiluse Base, representing greater discrepancy in both
+language coverage (lacking explicit coverage of one-third of Global MMLU languages and of Bengali, Swahili,
+and Chinese in MMLU-ProX) and with>10%performance discrepancy on STS tasks in MMTEB relative
+to Jina3. Both result in performance reductions that mitigate the benefit of having fine-tuned on the target
+language and, in the case of Distiluse Base, worsen performance relative to the pretrained model, which
+is worse than the random sampling baseline. Standard deviations also increase by 3-4% due to associated
+26

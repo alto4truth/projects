@@ -1,0 +1,24 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+Published as a conference paper at ICLR 2026
+efficiency and scalability and adhering to the design principles established by RLVR and GRPO. Through
+this fine-grained supervision mechanism, we aim to enhance the sample efficiency of RL training, paving
+the way for learning more effective and efficient reasoning behaviors.
+Our experiments show substantial gains across four math reasoning benchmarks. Compared to GRPO, our
+method achieves up to +2.6 points Pass@1 on Qwen2.5-Math-1.5B and +1.1 point on Qwen2.5-Math-7B,
+while concurrently reducing reasoning length by 11.0% to 13.7%. It also consistently outperforms the GRPO
+variant (Dai et al., 2025) that relies on costly Monte Carlo rollouts for segment-wise advantage estimation
+and auxiliary models (Cui et al., 2025; He et al., 2024b; Schulman et al., 2017). Furthermore, evaluation
+on four general-domain reasoning benchmarks confirms strong generalization, with gains of 1.8 points on
+MMLUPro and 2.4 points on TheoremQA. These results highlight the effectiveness and scalability of our
+verifiable process supervision in delivering more accurate and concise reasoning.
+In summary, our main contributions are:
+• We identify and empirically va

@@ -1,0 +1,24 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 4
+section: ssl-r1
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+ve a positive transfer effect
+for Visual Similarity, likely because all of them require the
+model to reason visual semantics that are beneficial for appearance similarity. However, we find some hard-transfer
+tasks (e.g., Geometric Correspondence and Patch Ordering), where training with other tasks leads to marginal or no
+performance improvements. Since Geometric Correspondence and Patch Ordering are the two hardest tasks, where
+Qwen2.5-VL achieves near-zero accuracies, post-training
+with other easier SSL tasks cannot substantially benefit.
+Besides, we also notice a negative transfer case: training
+with Visual Similarity degrades the accuracy on Region Inpainting, likely because the intensive augmentation in Visual Similarity could be detrimental for recognizing pixellevel details in Region Inpainting. Nevertheless, combining multiple tasks for post-training consistently improves
+the accuracy on all tasks, sometimes even better than those
+trained with the corresponding tasks,e.g., Rotation Prediction (4×90 ◦, 8×45 ◦), Visual Similarity (weak aug.), and
+Region Inpainting (25%). This further demonstrates the
+synergy of multiple tasks during post-training.
+How Does SSL-R1 Perform on Re

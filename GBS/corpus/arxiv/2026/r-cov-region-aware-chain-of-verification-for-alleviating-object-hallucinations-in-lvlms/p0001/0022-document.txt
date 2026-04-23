@@ -1,0 +1,19 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+common protocol [27, 49, 54], we randomly sample 500 images from
+the COCO 2014 validation set and ask the model to generate detailed descriptions. Afterward, we prompt GPT-4o
+to score the original response and our response based on
+the instruction and the image. GPT-4o evaluation takes into
+account two dimensions: Accuracy and Relevancy. We provide more detailed prompt construction in the supplementary material.
+4.1.3. Implementation Details
+We conduct our experiments using an NVIDIA L40S GPU
+(48GB) and an AMD EPYC 7702 CPU. All implementations are based on the PyTorch framework [37], incorporating components from the HuggingFace Transformers library [48]. Unless otherwise specified, we maintain the default hyperparameter settings for all LVLMs. Specifically,
+4

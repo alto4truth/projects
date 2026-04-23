@@ -1,0 +1,31 @@
+title: SSL-R1: Self-Supervised Visual Reinforcement Post-Training for Multimodal Large Language Models
+source: arxiv
+year: 2026
+document_id: ssl-r1-self-supervised-visual-reinforcement-post-training-for-multimodal-large-language-models
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: a-r-a-r
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20705v1
+
+odel is prompted to predict the specific rotation angle.
+The detailed prompt template for this task is provided in
+the supplementary material.
+Visual Similarity.Given an input imageI∈R H×W×3 , we
+randomly crop two augmented views from the image, which
+serve as a reference imageI ref and a positive imageI pos,
+respectively. We also crop three additional views from other
+randomly-selected images, which serve as negative samples
+{Ineg}. Given the reference imageI ref and four candidate
+images{I pos,{I neg}}in a multiple-choice format, the model
+is prompted to select the most visually similar image to the
+reference image. The detailed prompt template for this task
+is provided in the supplementary material.
+Region Inpainting.Given an input imageI∈R H×W×3 ,
+we randomly mask a region of the image by a certain masking ratioα. The heighthand widthwof the masked region
+are uniformly sampled fromU([28, H]×[28, W]) 1, whose
+area should satisfyh×w=α×H×W. The top-left
+corner(x 0, y0)of the masked region is uniformly sampled
+fromU([0, W−w]×[0, H−h]). We denote the masked
+input image and the cropped region asI mask andI crop, respectively. GivenI mask and four candidate image regions
+(one ground-t

@@ -1,0 +1,22 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+V-tableR1: Process-Supervised Multimodal Table Reasoning 5
+mathematical theorem proving and code generation, Process Reward Models
+(PRMs) successfully guide policies toward robust reasoning paths by penalizing
+early logical errors before they compound [10,32]. Yet, applying process supervision to visual tasks proves remarkably difficult. The primary bottleneck lies in
+grounding abstract logical steps to specific visual anchors, such as pixel coordinates or cell boundaries. Previous multimodal efforts circumvent this alignment
+problem by relying on heuristic rule-checkers restricted to highly constrained
+synthetic environments [15,41]. We bridge this critical gap by training a specialized critic VLM to serve as a continuous process verifier [10]. By dynamically
+gating the outcome reward based on the logical fidelity of the explicit visual
+reasoning chain, our framework provides the first scalable mechanism for dense
+process supervision in multimodal table reasoning [19].
+3 Method
+We introduceV-tableR1, a process-supervised reinforcement learning framework designed to elicit rigorous, verifiable reasoning from multimodal large language models (MLLMs) on tabular tasks. Our approach ad

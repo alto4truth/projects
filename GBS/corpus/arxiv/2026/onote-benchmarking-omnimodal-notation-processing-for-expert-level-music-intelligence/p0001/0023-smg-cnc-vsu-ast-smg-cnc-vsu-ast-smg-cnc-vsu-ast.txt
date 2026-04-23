@@ -1,0 +1,28 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+very input music score image in one notation format, we prepare
+a complete, semantically equivalent symbolic text in another target
+notation as the standardized ground truth. In particular, we provide
+standard staff notation texts as references for both guitar tablature
+and Jianpu inputs, and supply standard Jianpu texts for staff notation inputs to form comprehensive cross-format conversion pairs.
+When the model receives a source score image as input, it generates
+a symbolic sequence in the target notation, which is then automatically compared with the pre-prepared ground-truth text at the level
+of music logic, pitch consistency, rhythm accuracy, and structural
+completeness. This comparison allows us to quantitatively evaluate
+the model’s genuine music-theoretic reasoning and cross-format
+mapping capabilities.
+A.3 Audio-to-Symbolic Transcription (AST)
+Data
+In the Audio-to-Symbolic Transcription task, each music score
+image in the dataset is strictly aligned and synchronized with a
+corresponding high-quality music audio clip to ensure consistent
+musical content across modalities. In addition to aligned audio
+data, we also prepare complete, standardized symbolic groundtruth texts in

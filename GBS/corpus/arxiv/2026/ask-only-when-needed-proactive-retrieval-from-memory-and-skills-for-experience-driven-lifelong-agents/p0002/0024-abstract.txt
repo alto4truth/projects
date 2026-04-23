@@ -1,0 +1,33 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 2
+section: abstract
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+ICALK@ECNU
+from the same interaction prefixh tb:
+τ ret =τ <tb ⊕τ ret
+≥tb , τ no-ret = Replay(τ<tb)⊕τ no-ret
+≥tb .(6)
+Here τ<tb and τ≥tb denote the ordered prefix and suffix subsequences of τ, respectively, and ⊕ denotes sequence
+concatenation. The rollout τ ret preserves the retrieval decision and its subsequent context, whereas τ no-ret explores
+alternative actions from the same prefix by temporarily suppressing the retrieval action at tb. Because both rollouts
+share the same history before the branching point, the divergence between them provides a precise comparative signal:
+if τ ret outperforms τ no-ret, the retrieval was proactive and necessary; if not, the retrieval was passive or redundant.
+This paired-branch comparison directly isolates the utility of the specific retrieval decision, enabling step-level process
+rewards for proactive control.
+For a branched trajectory pair indexed by i, let j(i) denote the matched no-retrieval counterpart of rollout i, and let
+zi ≡z (i)
+tb ∈ {0,1} denote the retrieval indicator at the branching step. PROACTRL defines the trajectory-level reward
+for reinforcement learning as follows:
+Rtraj
+i =R env
+i +r proc
+i +r eff
+i ,(7)
+where Renv
+i =PTi

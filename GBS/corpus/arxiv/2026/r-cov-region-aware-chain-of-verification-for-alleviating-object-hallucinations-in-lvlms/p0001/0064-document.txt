@@ -1,0 +1,32 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 64
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+e verified based on the statement.
+System prompt
+You are a language assistant that helps to answer the question according to instructions.
+Prompt
+You are given a statement and a question.
+[Task]
+Your task is to answer the question based on the statement. The statement is about some objects. The question
+is to ask whether some specific object exists.
+1. Your response should be limited to one of the following two choices: “Yes”/“No”.
+2. Note that instances of a certain category can also belong to its super-categories. For example, a baseball is
+a subclass of the sports ball.
+3. Note that the table is equivalent to the dining table here.
+4. DO NOT RESPOND WITH ANYTHING ELSE.
+[Response Format]
+Yes/No
+Now complete the following:
+[Statement]
+{Input statement}
+[Question]
+Is there a{object}in the statement?
+[Response]
+13

@@ -1,0 +1,90 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 59
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+parateoperational success(Q1–Q4, already measurable from run outputs)
+fromscientific success(Q5, only partially observable in the current release).
+33
+
+D.2 Metrics taxonomy
+Evaluation metrics fall into three families with different evidentiary status.
+Structural metrics.Directly observable from workspace and validator outputs: artifact completion rate,
+strict editorial-gate pass rate, PDF compile rate when required, resume success after interruption, branchand stage-level completion statistics.
+Operational metrics.Already instrumented by run-level files (run_token_usage.json,
+budget_ledger.jsonl, completion summaries): total runtime, per-stage runtime, total spend, token
+counts by model, number of reviewer or rebuttal loops, branch counts in tree-search mode.
+Scientific-audit metrics.Require a separate evaluation protocol beyond the current package: number
+of human steering interventions, citation-faithfulness spot checks, independent reruns of experiments, proof
+review outcomes, external expert judgments of manuscript quality.
+Metrics in the first two families support release characterization today; metrics in the third family are the
+target for a future benchmark paper.
+D.3 Failure modes and ablation axes
+Table 7 catalogs the recurring failure modes, current mitigations, and unresolved boundaries.
+F ailure mode Current mitigation What remains unresolved
+Late-stage churn and
+overlong finishing
+loops
+Validation gate, reviewer loop,
+configurable rebuttal iterations,
+milestone gates, campaign circuit
+breakers
+A run can still spend substantial
+time polishing a weak draft instead
+of improving core content
+Theory/experiment
+drift
+Explicittrack_decomposition
+.json, shared merge stage,
+completion verification, duality
+check, follow-up routing
+Global coherence depends on
+intermediate reasoning quality, not
+only route structure
+Weak manuscript
+quality in fully
+autonomous mode
+Artifact enforcement, proofreading,
+reviewer stage, optional counsel,
+optional math agents
+The system stops short of claiming
+submission-ready quality without
+human verification
+Citation brittleness Literature review stage,
+bibliography generation,
+submission checklist requiring
+manual spot checks
+No internal oracle for citation
+truthfulness or complete
+related-work coverage
+LATEX fragility Writeup reflection loop, fail-fast
+prerequisite checks, optional
+markdown mode
+Complex papers may require manual
+debugging and local compilation
+Budget explosion in
+higher-rigor modes
+Budget caps, token ledgers, cost
+summaries, counsel/tree-search
+controls
+Counsel and tree search remain
+expensive; quality gains need
+empirical justification
+Experiment safety
+and correctness risk
+Subprocess timeout, optional
+Docker, optional SLURM,
+post-hoc verification
+No per-experiment sandbox, no
+network isolation, no pre-execution
+code review gate
+Table 7: Release-stage failure modes, current mitigations, and unresolved boundaries.
+Suggested ablation axes.The most informative future studies would isolate: (i) the effect of counsel on
+editorial quality; (ii) the effect of tree search on theorem-track productivity; (iii) the effect of strict artifact
+enforcement on completion rates; and (iv) the effect of campaign repair on long-horizon task success.
+34

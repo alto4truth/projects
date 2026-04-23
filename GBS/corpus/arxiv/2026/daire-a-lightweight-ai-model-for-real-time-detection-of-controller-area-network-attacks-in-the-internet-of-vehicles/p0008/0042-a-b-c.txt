@@ -1,0 +1,27 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 8
+section: a-b-c
+chunk: 42
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+ecent and widely used
+IoV datasets: CICIoV2024 and Car-Hacking. Our experiments were designed to (i) tune the hyperparameters, (ii) evaluate model performance
+under real-world conditions, and (iii) measure classification accuracy,
+speed, and resource usage.
+Fig. 5. Accuracy and loss plot during one of the training runs of DAIRE for
+tuning of the hyperparameters. DAIRE achieved an accuracy of 99.9% and a
+loss of 0.0045 at 100 count of epochs.
+5.3.1. Hyperparameter tuning on CICIoV2024 subset
+In the first experiment, we focused on determining the optimal hyperparameters for the DAIRE model. For this experiment, we randomly
+chose 50% of the samples of each class from the CICIoV2024 dataset.
+We then partitioned the dataset into 80% training and 20% testing sets.
+We ran the experiment and completed 10 iterations each time using a
+different set of 20% for testing. The results obtained from these experiments are shown in Table 6 and visualized using a confusion matrix in
+Fig. 7 – 7(e). The number of batches of 300 in Eq. (2) and epochs of 100
+were computed empirically, conducting similar experiments each time
+with different values of the number of batches and epochs. Based on our
+previous

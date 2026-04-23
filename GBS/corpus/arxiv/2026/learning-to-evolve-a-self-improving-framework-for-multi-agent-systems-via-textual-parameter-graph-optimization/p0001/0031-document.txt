@@ -1,0 +1,31 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+primary metric for effectiveness.Average Timeis
+the wall-clock time in seconds from task initiation
+to completion, measuring system efficiency.
+5.2 Main Results and Analysis
+This section addresses our first research question
+by comparing the performance of baseline systems
+with and without the TPGO framework across both
+optimization scenarios.
+Performance in Exploratory Optimization
+(MCP-Universe)As shown in Table 1, applying
+TPGO in an exploratory setting leads to substantial performance gains. For the GPT-4.1-based ReAct agent, the overall success rate improves from
+30.96% to 38.82%, a relative increase of 25.4%.
+The improvement is most pronounced in theWeb
+Searchingdomain, where the success rate increases
+from 5.45% to 14.55%. This suggests that by learning from execution failures, TPGO effectively identified and rectified systemic flaws in the agent’s
+tool-use logic. Similar gains with the DeepSeekV3.2 agent, especially inWeb Searching(+14.37
+points), further demonstrate TPGO’s ability to optimize agents for diverse and complex workflows
+based on environmental feedback alone.
+Performance in Imitative Optimization (GAIA)
+The results on the GAIA benchmark, presented in
+Table 2, d

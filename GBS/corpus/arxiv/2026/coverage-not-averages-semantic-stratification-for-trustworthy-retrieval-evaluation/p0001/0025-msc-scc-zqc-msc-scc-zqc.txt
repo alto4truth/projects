@@ -1,0 +1,23 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 1
+section: msc-scc-zqc-msc-scc-zqc
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+Coverage, Not Averages Semantic Stratification for Trustworthy Retrieval Evaluation
+B. Query Stratification Details
+B.1. Structural Validation
+Dispersion explanation power.On NFCorpus, relevance dispersion ( ∆) explains 12.3% of variance in nDCG@10 (VRR
+= 0.123,p <10 −80), with low-∆queries achieving mean nDCG of 0.56 versus 0.30 for high-∆queries.
+Alignment explanation power.On NFCorpus, semantic alignment ( J) explains 23.5% of variance in Recall@100 (VRR
+= 0.235,p <10 −100), with high-Jqueries achieving mean Recall of 0.60 versus 0.25 for low-Jqueries.
+Structural stratum partition.We partition each signal into tertiles (Low, Medium, High), yielding a 3×3 structural
+grid within each semantic stratum. A complete stratum is thus identified by three components: the semantic cluster, the
+dispersion tertile (∆: Low, Medium, or High), and the alignment tertile (J: Low, Medium, or High).
+Structural signal validation.Tables 5 and 6 extend the structural signal analysis from NFCorpus (main paper) to
+FiQA and SciDocs. The same pattern holds: dispersion ( ∆) primarily affects ranking quality (nDCG), while alignment
+(J) primarily affects coverage (Recall). The diagonal from high ∆/low J to l

@@ -1,0 +1,24 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 2
+section: mnist
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+y be beneficial to prioritize
+suites with higher scores. Also, for model security, the mutation-based approach shows promise
+for detecting adversarial and backdoor samples [52] which tend to locate abnormally.
+Answer to RQ1:QuanForge is effective in evaluating the quality of the test data. Test suites
+with higher quality and diversity consistently achieve higher mutation scores.
+4.5 RQ2: Sensitivity of Different Regions in QNNs to Mutation
+In addition to measuring test quality, mutation testing can also probe internal model behaviors
+by targeting specific regions of the network [48]. Inspired by this, here we investigate whether
+QuanForge can serve a similar role in analyzing quantum circuits and assessing structural robustness.
+Specifically, we vary the scope, depth, and qubit ranges of the mutation to systematically scan
+different parts of the circuit. This enables a fine-grained analysis of how mutations at various
+depths or on different qubits affect QNN performance. We report the mean accuracy of all effective
+mutants, KillabilityRate, and NontrivialityRate. As mentioned before, after mutating different parts,
+we adoptthe same test suiteto compute metrics, with focus on differ

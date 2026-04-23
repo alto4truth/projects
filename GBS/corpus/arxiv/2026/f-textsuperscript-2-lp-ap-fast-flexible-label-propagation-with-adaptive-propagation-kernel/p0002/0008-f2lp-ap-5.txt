@@ -1,0 +1,41 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 2
+section: f2lp-ap-5
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+rs. From a statistical perspective, while the arithmetic mean shifts drastically towards outliers, the geometric median possesses
+a breakdown point of up to 50%. This implies that as long as the majority of
+nodes in a class maintain a consistent distribution, the resulting prototypeP c
+will remain anchored at the true manifold center of the class.
+Since Eq. (1) represents a non-differentiable optimization problem, we derive the solution using theWeiszfeld algorithm, an iterative re-weighted least
+squares procedure. In thek-th iteration, the class prototype and its corresponding weights are updated simultaneously as follows:
+
+
+
+P(k+1)
+c =
+X
+vi∈VL,c
+w(k)
+i xi
+w(k)
+i = ∥xi −P (k)
+c ∥−1
+2
+P
+vj ∈VL,c
+∥xj −P (k)
+c ∥−1
+2
+(4)
+As illustrated by the derivation, the contribution of each training node is
+inversely proportional to its distance from the current center. This weighting
+mechanism naturally suppresses the influence of noisy nodes distant from the
+cluster core, thereby ensuring the purity of the prototypeP c. In practice, this
+iterative process typically converges within 3 to 5 iterations. Its computational
+complexity scales linearly with the feature dimension, which is su

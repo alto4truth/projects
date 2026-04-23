@@ -1,0 +1,71 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+quiring code.
+• Please see the NeurIPS code and data submission guidelines ( https://nips.cc/
+public/guides/CodeSubmissionPolicy) for more details.
+16
+
+• While we encourage the release of code and data, we understand that this might not be
+possible, so “No” is an acceptable answer. Papers cannot be rejected simply for not
+including code, unless this is central to the contribution (e.g., for a new open-source
+benchmark).
+• The instructions should contain the exact command and environment needed to run to
+reproduce the results. See the NeurIPS code and data submission guidelines (https:
+//nips.cc/public/guides/CodeSubmissionPolicy) for more details.
+• The authors should provide instructions on data access and preparation, including how
+to access the raw data, preprocessed data, intermediate data, and generated data, etc.
+• The authors should provide scripts to reproduce all experimental results for the new
+proposed method and baselines. If only a subset of experiments are reproducible, they
+should state which ones are omitted from the script and why.
+• At submission time, to preserve anonymity, the authors should release anonymized
+versions (if applicable).
+• Providing as much information as possible in supplemental material (appended to the
+paper) is recommended, but including URLs to data and code is permitted.
+6.Experimental setting/details
+Question: Does the paper specify all the training and test details (e.g., data splits, hyperparameters, how they were chosen, type of optimizer, etc.) necessary to understand the
+results?
+Answer: [Yes]
+Justification: We have listed all the detailed settings of the test details on hyperparameters,
+optimizer in the Appendix B and code.
+Guidelines:
+• The answer NA means that the paper does not include experiments.
+• The experimental setting should be presented in the core of the paper to a level of detail
+that is necessary to appreciate the results and make sense of them.
+• The full details can be provided either with the code, in appendix, or as supplemental
+material.
+7.Experiment statistical significance
+Question: Does the paper report error bars suitably and correctly defined or other appropriate
+information about the statistical significance of the experiments?
+Answer: [Yes]
+Justification: Experiments showed statistical significance tests to support the claims that
+fine-tuning on our dataset could surpass their zero-shot performance.
+Guidelines:
+• The answer NA means that the paper does not include experiments.
+• The authors should answer "Yes" if the results are accompanied by error bars, confidence intervals, or statistical significance tests, at least for the experiments that support
+the main claims of the paper.
+• The factors of variability that the error bars are capturing should be clearly stated (for
+example, train/test split, initialization, random drawing of some parameter, or overall
+run with given experimental conditions).
+• The method for calculating the error bars should be explained (closed form formula,
+call to a library function, bootstrap, etc.)
+• The assumptions made should be given (e.g., Normally distributed errors).
+• It should be clear whether the error bar is the standard deviation or the standard error
+of the mean.
+• It is OK to report 1-sigma error bars, but one should state it. The authors should
+preferably report a 2-sigma error bar than state that they have a 96% CI, if the hypothesis
+of Normality of errors is not verified.
+• For asymmetric distributions, the authors should be careful not to show in tables or
+figures symmetric error bars that would yield results that are out of range (e.g. negative
+error rates).
+• If error bars are reported in tables or plots, The authors should explain in the text how
+they were calculated and reference the corresponding figures or tables in the text.
+8.Experiments compute resources
+17

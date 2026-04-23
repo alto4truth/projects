@@ -1,0 +1,26 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+Engineering
+The primary objective of SPLE is to reduce development cost and
+time-to-market while improving quality by deriving families of
+related products from shared assets rather than engineering each
+product independently [2, 9]. Its lifecycle is commonly organized
+into two complementary processes:domain engineering, which establishes reusable core assets, andapplication engineering, which
+derives concrete products from them [32]. Domain engineering is
+typically structured into four phases: (i)scoping, where productline boundaries, candidate features, and variability assumptions
+are defined; (ii)domain requirements engineering, which captures
+common and variable requirements; (iii)domain design and implementation, which produce reusable architectures and components;
+and (iv)domain testing, which validates the shared assets before
+reuse [2]. Application engineering then configures and assembles
+products from these assets, while evolution and maintenance activities ensure long-term adaptation of the product line [7].
+2.2 Feature Models and Analysis Operations
+A central artifact ofdomain requirements engineeringis thefeature
+model(FM), which represents a product line’s commonaliti

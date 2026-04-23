@@ -1,0 +1,67 @@
+title: AAC: Admissible-by-Architecture Differentiable Landmark Compression for ALT
+source: arxiv
+year: 2026
+document_id: aac-admissible-by-architecture-differentiable-landmark-compression-for-alt
+authors: An T. Le; Vien Ngo
+page: 1
+section: aac-fps-alt
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20744v1
+
+selection strategies at matched memory (64 B/v,
+m=16): (i) AAC (default) (trained row-stochastic selection fromK 0=64teachers), (ii) Random-Subset
+41
+
+Table 15: ABLATIONFull Pareto sweep detail for admissible methods (5-seed means±std, 100 queries per
+graph). Best expansion reduction per (graph, memory budget) in bold. FastMap is excluded (inadmissible;
+see Section 5.3.1 for its 93–97% expansion reduction with 100% suboptimal paths).
+Graph Method Config Bytes/V Reduction (%)
+NY
+AAC K0=32,m=8 32 80.2±3.6
+AAC K0=32,m=16 64 88.3±0.5
+AAC K0=32,m=32 128 92.3±0.3
+AAC K0=64,m=8 32 77.3±4.5
+AAC K0=64,m=16 64 87.8±1.9
+AAC K0=64,m=32 128 91.8±0.5
+AAC K0=64,m=64 256 94.9±0.2
+AAC K0=128,m=8 32 73.9±7.9
+AAC K0=128,m=16 64 87.6±0.7
+AAC K0=128,m=32 128 91.6±0.9
+AAC K0=128,m=64 256 94.4±0.5
+ALTK=43284.2
+ALTK=86491.0
+ALTK=1612893.5
+ALTK=3225695.0
+FLA
+AAC K0=32,m=8 32 74.5±3.9
+AAC K0=32,m=16 64 85.7±2.1
+AAC K0=32,m=32 128 92.1±1.1
+AAC K0=64,m=8 32 73.8±2.0
+AAC K0=64,m=16 64 85.3±2.1
+AAC K0=64,m=32 128 90.7±0.7
+AAC K0=64,m=64 256 93.9±0.9
+AAC K0=128,m=8 32 75.4±2.4
+AAC K0=128,m=16 64 81.9±3.4
+AAC K0=128,m=32 128 90.6±1.0
+AAC K0=128,m=64 256 92.9±0.6
+ALTK=43284.7
+ALTK=86487.7
+ALTK=1612892.8
+ALTK=3225694.6
+(randommlandmarks from the sameK 0 pool), (iii) FPS-Subset (standard ALT withK=8FPS-selected
+landmarks, deterministic seed vertex from the largest SCC), (iv) FPS-RR10 (random-restart FPS: 10 random
+seed vertices, best chosen on a held-out 100-query validation split, reported on a disjoint 100-query test split),
+and (v) Greedy-Max (greedily selects landmarks from theK0 pool maximising average heuristic over the
+evaluation queries; a query-adaptive oracle upper bound). FPS-Subset outperforms both pool-based learning
+methods on both graphs (Modena: 91.2% vs. 88.2% and 86.7%; Manhattan: 90.4% vs. 87.6% and 86.7%).
+Random-restart FPS does not improve on the canonical FPS-Subset: on both graphs, the validation-best
+of 10 random seed vertices scores89.2%on test,1–2%belowthe canonical seed-vertex FPS, ruling out a
+“FPS is just lucky” explanation. Greedy-Max slightly outperforms FPS on both graphs (91.5% vs. 91.2% on
+Modena; 91.5% vs. 90.4% on Manhattan), showing that query-adaptive selection from the teacher poolcan
+beat FPS, but even with oracle access the gain is modest (+0.3–1.1%). Main-text discussion is in Section 5.7.
+Admissibility Under Early Stopping
+See Section 5.6 in the main text (Table 11).
+Compression Efficiency Curve
+Table 22 sweepsm∈{4,8,16,32,64}at fixedK0=64, comparing AAC vs. ALT at matched memory (2m
+floats per direction). ALT outperforms AAC at high compression ratios; the gap narrows and reverses at
+42

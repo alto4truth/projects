@@ -1,0 +1,26 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+rforming
+the vanilla model. We attribute this to LogicCheckGPT’s
+heavy reliance on GPT to construct the logical closed loop
+(e.g., attribute-to-object inquiring). This further demonstrates the promise of our method in reducing hallucinations
+without relying on any other models. We also investigate
+the failure cases of using the model itself and find that most
+errors arise from entity extraction and consistency checking. These errors primarily originate from inherent limitations within the model and prompt design. We expect that
+a better design of prompts may further unlock the potential
+of using the model itself for hallucination alleviation. We
+leave it for future work.
+Effect of using ground truth bounding boxes.Our RCoV relies on the LVLM itself to generate bounding box
+coordinates. It is interesting to ask: what if such bounding
+boxes for objects are already available and perfect? We investigate this on the CHAIR benchmark, considering it is
+more open-ended and contains multiple objects in the images and captions. Specifically, we use ground truth annotations from the COCO 2014 validation set. For each query,
+after extracting candidate objects from the initial response,
+we repl

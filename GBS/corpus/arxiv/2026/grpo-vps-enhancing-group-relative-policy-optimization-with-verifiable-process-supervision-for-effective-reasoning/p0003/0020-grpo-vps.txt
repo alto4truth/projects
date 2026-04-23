@@ -1,0 +1,21 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+), which enhance group-wise comparison or propagate advantages with
+entropy-based mechanisms. We also include the BASE models without RL fine-tuning for reference.
+•With Process Supervision.This group covers methods that incorporate intermediate supervision beyond outcome-level rewards. We evaluate S-GRPO (Dai et al., 2025), which relies on Monte Carlo
+rollouts with forced early stops to construct sub-trajectories, and assigns segment-level rewards based on
+their predicted outcomes. We also compare against PRIME-style reward modeling, represented by the
+public Eurus-2-7B-PRIME (Cui et al., 2025; Yuan et al., 2024), and a controlled variant where we finetune Qwen2.5-Math-1.5B and 7B with Skywork-o1-prm using GRPO. These baselines provide strong
+comparisons for evaluating the effectiveness of verifiable process supervision in our method.
+Training setup.In line with prior work (Liu et al., 2025), we use MATH (Hendrycks et al., 2021), which
+contains 7,500 problems. We train the models using the verl framework (Sheng et al., 2024). We sample 8
+rollouts per prompt, with a temperature of 1.0 and the maximum response length of 3,072 tokens. The batch
+size is set to 512, the mini-batch size

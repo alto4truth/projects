@@ -1,0 +1,24 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 2
+section: edges-total-gp-id-time-gp-degbd-id-time-degbd
+chunk: 58
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+Proof of Theorem 4.4.SinceFis a reduced Gröbner basis of an homogeneous ideal, it consists
+ofw-homogeneous polynomials. Let≺ gr be aw-graded lex-elimination order forθ rem. Consider
+the induced non-graded lex-elimination order≺forθ rem. ThenFis also a reduced Gröbner basis
+with respect to this order since the leading terms and hence the S-polynomials coincide. By the
+elimination theorem, it follows thatH=F∩R[θ id, σ, h]is a reduced Gröbner basis ofI wh ∩
+R[θid, σ, h].
+Now, assume thatqis rationally identifiable, which implies by Lemma 4.2 thatI wh contains a
+polynomialf(q, θ id, σ, h) =qa(θ id, σ, h)−b(θ id, σ, h)witha, b∈R[θ id, σ, h]anda̸∈ I wh ∩R[θ id, σ, h].
+We reduceabyHto get a remainderea. Sincea̸∈ I wh ∩R[θ id, σ, h], the remaindereais nonzero,
+which also implies thatea̸∈ Iwh ∩R[θid, σ, h]. Now, consider the modified polynomialef(q, θ id, σ, h) =
+qea(θid, σ, h)−b(θ id, σ, h). SinceFis a Gröbner basis ofI wh, the leading term ofefis divisible by
+some leading term of some polynomial inF. But sinceeais already reduced byH, the leading term
+of efis not divisible by any leading monomial of any element ofH. Hence, it must be divisible by
+some elementg∈F\Hwhose leading term has a

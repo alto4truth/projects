@@ -1,0 +1,22 @@
+title: ORPHEAS: A Cross-Lingual Greek-English Embedding Model for Retrieval-Augmented Generation
+source: arxiv
+year: 2026
+document_id: orpheas-a-cross-lingual-greek-english-embedding-model-for-retrieval-augmented-generation
+authors: Ioannis E. Livieris; Athanasios Koursaris; Alexandra Apostolopoulou; Konstantinos Kanaris Dimitris Tsakalidis; George Domalis
+page: 2
+section: abstract
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20666v1
+
+ORPHEAS: A Cross-Lingual Greek–English Embedding Model for Retrieval-Augmented GenerationA PREPRINT
+relevance across a broader set of candidates as in [Koursaris et al., 2026]. In addition, to mitigate the influence of
+specific datasets on the evaluation process, we examine the hypothesis whether the observed performance differences
+among models are statistically significant. For this purpose, we employ the non-parametric Friedman Aligned-Ranks
+(FAR) test [Hodges Jr and Lehmann, 2011] to globally rank the models based on their performance and the Li post-hoc
+test [Li, 2008] with a significance level ofα= 5%to identify statistically significant performance differences [Livieris
+et al., 2024, Kiriakidou et al., 2024].
+4.1 Retrieval Evaluation on Public Monolingual and Cross-Lingual Benchmarks
+Next, we evaluate the retrieval performance of all models on four public datasets, covering monolingual Greek retrieval, cross-lingual Greek–English retrieval and established English benchmarks, spanning diverse domains and task
+complexities:
+•Greek Civics QA 9 is a question-answering dataset containing 407 questions related to Greek civics and social
+studies education. The dataset includes ques

@@ -1,0 +1,29 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+lblueprints, providing early validation without relying
+exclusively on solver technology.
+3 Early Validation Workflow for SPL Scoping
+We propose anearly validation workflowthat integrates automated
+analysis directly into the scoping phase. This is achieved by introducing a lightweight, semi-formalblueprint[26] and leveraging
+LLMs to analyze it. The workflow proceeds in three steps:
+(1) Step 1 - Blueprint creation:Domain experts consolidate scope
+boundaries, candidate features, and variability assumptions into
+a semi-formalblueprint. A blueprint is aset of textual semiformal constraintsthat collectively specify the feature hierarchy
+and cross-tree relations. Examples include “Feature A requires
+Feature B”, “Feature C can be Feature D or Feature E”, “Feature B
+excludes Feature D”, or “Feature E can be Feature G, Feature H,
+or both”. This representation is easy to author yet structured
+enough for automated checks, bridging free-text scoping notes
+and formal UVL models.Figure 1(top-left panel) illustrates a
+concreteblueprintfor asmartwatch product line.
+(2) Step 2 - LLM-based analysis.The blueprint is fed to anLLM
+analysis enginethat executes AOs. Each AO is guided by a
+tailored prompt

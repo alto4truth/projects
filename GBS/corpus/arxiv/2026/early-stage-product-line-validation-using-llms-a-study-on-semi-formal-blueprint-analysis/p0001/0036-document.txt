@@ -1,0 +1,27 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 36
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+which require constraint reasoning beyond surface parsing. Third,
+context and output limitson very large blueprints ( CNNl, CNNf),
+causing truncation or early stopping. These problems intensify in
+deep or constraint-dense models (SEA,BDB,CNNl/f) and are most
+pronounced in AO12, AO15, and structural AOs (AO4–AO9). Detailed
+counts per model and AO are in Appendix2.
+Model behaviors reflect these patterns. Grok 4 Fast Reasoning,
+GPT-5 Mini, and Gemini 2.5 Pro make few but systematic propagation errors. Claude Sonnet 4 often overcounts mandatory features
+due to confusion between or/alternative and mandatory relationships. DeepSeek Reasoner shows partial outputs while Gemini 2.5
+Flash and Llama 4 Maverick suffer truncation near context limits. Lightweight models (Llama 4 Scout, DeepSeek Chat) tend to
+produce format-correct but semantically wrong answers. These
+recurring patterns underscore the need for disambiguation rules,
+output chunking, and model ensembles.
+5.4 Overall Synthesis
+Across RQ1–RQ3, reasoning-optimized LLMs approach solver-level
+accuracy on many analyses but remain sensitive to structural ambiguity, scale, and context limits. Most errors stem from incomplete
+constraint re

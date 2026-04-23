@@ -1,0 +1,24 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+Under Review
+Intersectional Fairness in Large Language Models
+CHAIMA BOUFAIED∗,University of Calgary, Canada
+RONNIE DE SOUZA SANTOS† ,University of Calgary, Canada
+ANN BARCOMB‡ ,University of Calgary, Canada
+Large Language Models (LLMs) are increasingly deployed in socially sensitive settings, where their decisions can impact individuals
+and groups, raising concerns about fairness and biases, particularly across intersectional demographic attributes.
+In this paper, we systematically evaluate intersectional fairness in six LLM models using both ambiguous and disambiguated
+contexts derived from two benchmark datasets. We assess differences in LLM behavior in terms of fairness using bias scores and
+subgroup fairness metrics, alongside accuracy. Further, we evaluate LLM consistency through a multi-run analysis across contexts and
+across negative and non-negative question polarities.
+Our results reveal that while modern LLMs generally perform well in ambiguous contexts, this behavior limits the informativeness
+of fairness metrics due to sparse, non-unknown predictions. In disambiguated contexts, however, we observe that LLM accuracy
+is influenced by stereotype alignment, with models bei

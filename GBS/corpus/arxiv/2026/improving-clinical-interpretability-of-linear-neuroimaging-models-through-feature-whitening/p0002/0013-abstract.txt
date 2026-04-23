@@ -1,0 +1,26 @@
+title: Improving clinical interpretability of linear neuroimaging models through feature whitening
+source: arxiv
+year: 2026
+document_id: improving-clinical-interpretability-of-linear-neuroimaging-models-through-feature-whitening
+authors: Sara Petiton; Antoine Grigis; Raphaël Vock; Edouard Duchesnay
+page: 2
+section: abstract
+chunk: 13
+source_ref: https://arxiv.org/pdf/2604.20675v1
+
+e our primary objective is interpretability, we propose a novel whitening procedure to decorrelate features
+while preserving class-relevant correlation structure. Partial whitening applied to pairs allows the classifier to retain
+inter-hemispheric relationships (e.g. some regions may exhibit stronger left-right correlations in patients than controls),
+which may reflect disease-related coupling patterns. LetW α
+be the weighted whitening matrix:
+Wα =αW+ (1−α)I(4)
+whereα∈[0,1]controls the degree of decorrelation. When
+α= 1, the transformation reduces to the previously described
+ZCA-cor whitening.
+3. RESULTS
+3.1. Feature disentanglement via whitening
+First, we applied a regularized ZCA-cor whitening to leftright pairs of homologous ROIs, settingα= 0.3to soften the
+whitening transformation and preserve class-specific covariance patterns. We then applied full (α= 1) pairwise whitening to GM-CSF volumes within each region. These settings
+Fig. 1. Correlation matrices in feature (top) and whitened
+(bottom) space, computed on the BD dataset. Only amygdala,
+hippocampus, putamen, and anterior cingulate gyrus correlations were plotted for clarity and due to their known relationships to BD and S

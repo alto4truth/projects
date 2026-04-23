@@ -1,0 +1,36 @@
+title: On Bayesian Softmax-Gated Mixture-of-Experts Models
+source: arxiv
+year: 2026
+document_id: on-bayesian-softmax-gated-mixture-of-experts-models
+authors: Nicola Bariletto; Huy Nguyen; Nhat Ho; Alessandro Rinaldo
+page: 2
+section: exp-x
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20551v1
+
+1j),
+A(j)
+n,2,2 :=
+X
+i∈Cj
+exp(αn,0i)
+"
+1
+2(∆σ2
+n,ij) +
+d′
+X
+u′,v′=1
+(∆βn,ij)(u′)(∆βn,ij)(v′)
+1 + 1{u′=v′}
+∂E
+∂β (u′) (X, β⋆
+j ) ∂E
+∂β (v′) (X, β⋆
+j )
++
+dX
+u=1
+1
+2(∆αn,1ij)(u)(∆σ2
+n,ij)X(u)

@@ -1,0 +1,29 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 1
+section: sgr-json
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+g for machine-parseable extraction;
+(iv) a sparsity directive: “include only facts explicitly stated in the note; do
+not infer or guess”. This structured prompt design implements the SGR
+Cascade and Cycle patterns, ensuring systematic coverage while preventing
+hallucinated fills.
+Format Stability Without Constrained Decoding.A notable finding
+is that our SGR prompt achieves 100% JSON parse successwithoutrequiring
+grammar-constrained decoding (e.g., XGrammar [3] or Outlines [14]). We
+attribute this to the simplicity of the target schema (a flat 9-key object
+with string values) and the explicit formatting instructions. This makes
+the approach compatible with any inference backend (llama.cpp, vLLM,
+OpenAI-compatible APIs, Gemini Vertex) without backend-specific grammar
+support.
+Multi-Slice Input Strategy.Long clinical notes may exceed the model’s
+effective context window. We implement amulti-slicestrategy: the note is
+split into overlapping windows (e.g.,middle+head_tail, window sizew=4),
+each window is summarized independently via Stage 1, and the resulting
+JSON objects are merged with a last-writer-wins policy per key. For the
+PROBLEMS, MEDICATIONS, and LABS keys (which accumulate m

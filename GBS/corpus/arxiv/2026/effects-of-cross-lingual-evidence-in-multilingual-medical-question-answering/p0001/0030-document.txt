@@ -1,0 +1,34 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+ternal data source, we
+observe the same trend: larger models consistently
+outperform smaller ones, suggesting that LLMs
+with greater parameter counts encode sufficient
+6https://huggingface.co/Qwen/Qwen2.
+5-72B-Instruct
+domain knowledge and that retrieved information
+may introduce noise.
+Nevertheless, the hypothesis that larger models
+encode more domain-specific knowledge in their
+parameters is rejected by the performance of the
+LLM-generated evidence. Although this can be an
+effective strategy, it is not as powerful as external
+retrieval.
+Method-wise Performance.Among all external evidence retrieval strategies evaluated, optimal
+performance was consistently achieved when clinical case questions were augmented with retrieved
+information from web-based sources, with a minor gain in results obtained with the Cohere API.
+Hence, in Table 2 we report the results of external
+evidence retrieved from Cohere API and results
+from Serper API are reported in Table 5.
+Such performance can be attributed to the queryspecific nature of web-based retrieval systems,
+which excel at identifying information that directly
+addresses the posed search query. In contrast to
+the medical document collection da

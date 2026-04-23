@@ -1,0 +1,51 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+Under Review
+6 Chaima Boufaied, Ronnie de Souza Santos, and Ann Barcomb
+Table 1. Comparison of LLM Fairness Evaluation Studies on Social Bias Benchmarks
+Paper Evaluated LLMs Used Datasets MCQs Diff.
+Contexts
+Intersect. LLM Fairness Metrics LLM
+Consist.
+[Parrish et al .
+2022]
+UnifiedQA, RoBERTa, DeBERTaV3 BBQ benchmark Y Y N Accuracy, bias score⁄pilcrow N
+[Wang et al .
+2025]
+Pythia, AmberChat, AmberSafe, Mistral, Mixtral, Falcon GPT-4o-dataset,
+BBQ benchmark
+Y Y N Accuracy, Perplexity, Equalized Odds,
+Uncertainty-Aware Fairness
+N*
+[Liu et al .
+2024]
+GPT-3.5, GPT-4o BBQ benchmark Y Y Y accuracy, Bias score⁄pilcrow N
+[Hida et al .
+2024]
+LLaMA-2 (7B, 13B; base & Chat), MPT (7B & 7B-instruct),
+Falcon (7B & 7B-instruct), OPT (1.3B, 2.7B, 6.7B, 13B)
+BBQ benchmark Y Y N bias score N
+[Saffari et al .
+2025]
+Llama-2-7b-chat-hf, Meta-Llama-3-8B, Mistral-7BInstruct-v0.3
+BBQ benchmark Y Y N accuracy, bias score, HONEST score N‡
+[Narnaware
+et al. 2025]
+InternVL2, LLaVA-OneVision, Qwen2VL, GPT-4o,
+Molmo-7B, Llama-3.2-11B-Vision-Instruct, Phi-3.5vision-instruct, Gemini-1.5-flash
+SB-bench (using
+BBQ benchmark
+dataset, along with
+real images)
+Y Y N accuracy, bias score N‡
+[Wu et al .
+2025]
+DeepSeek-R

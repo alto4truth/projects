@@ -1,0 +1,45 @@
+title: CHORUS: An Agentic Framework for Generating Realistic Deliberation Data
+source: arxiv
+year: 2026
+document_id: chorus-an-agentic-framework-for-generating-realistic-deliberation-data
+authors: A. Koursaris; G. Domalis; A. Apostolopoulou; K. Kanaris; D. Tsakalidis; I. E. Livieris
+page: 2
+section: abstract
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20651v1
+
+do
+7:(t ∗, a i,PROC)← Q.POP()▷Extract earliest event
+8:Ift ∗ > Tbreak
+9:PROC(a i)▷Execute ACTION(a i)or POST(a i)
+10:t next ←t ∗ + Poisson(λPROC
+i );Q.PUSH(t next, a i,PROC)
+11:returnH
+Algorithm 2ACTION(a i)
+Parameters:
+ρi: Persona of thei-th actora i
+θaction
+i ∈[0,1]: action execution threshold of actora i
+Inputs:
+ai: actor
+Output:
+UpdatedH action
+i
+1:C i ←AGENT i(∪N
+j=1Hpost
+j ,H action
+i , ρ i)▷Agent selectsMcandidate posts for action
+2:foreachc∈ C i do
+3:Drawu∼ U(0,1)
+4:ifu > θ action
+i then
+5:VOTE(c)▷Upvote or downvotecviaT
+6:H action
+i ← H action
+i ∪ {(ai, c,VOTE(c))}▷Update action history ofi-th actor
+Algorithm 3 presents the POSTprocedure, which governs the content generation behavior of actora i. At each posting
+event, the actor determines whether to submit a new comment or a reply by drawingv∼ U(0,1)and comparing against
+the reply probabilityp reply
+i . A higherp reply
+i encodes a reactive communication style, wherein the actor predominantly
+4

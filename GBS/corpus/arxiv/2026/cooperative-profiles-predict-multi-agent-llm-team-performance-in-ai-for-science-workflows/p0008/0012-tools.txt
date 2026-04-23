@@ -1,0 +1,23 @@
+title: Cooperative Profiles Predict Multi-Agent LLM Team Performance in AI for Science Workflows
+source: arxiv
+year: 2026
+document_id: cooperative-profiles-predict-multi-agent-llm-team-performance-in-ai-for-science-workflows
+authors: Shivani Kumar; Adarsh Bharathwaj; David Jurgens
+page: 8
+section: tools
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20658v1
+
+- run code(code, description): Execute Python code. The dataset is
+pre-loaded as ‘df’. Available libraries: pandas, numpy, scikit-learn,
+scipy, matplotlib, seaborn. Timeout: 30s. Memory limit: 2GB.
+- read artifact(name): Read a named artifact from the workspace.
+- write artifact(name, content, description): Save an artifact for other
+teams.
+- list artifacts(): List all available artifacts.
+- send message(to team, content): Send a message to another team.
+- request additional work(target team, request): Request another team to
+produce specific NEW output.
+- request team redo(target team, request, justification): Request another
+team to REDO their work from scratch. EXPENSIVE.
+- mark complete(summary): Signal your work is done.

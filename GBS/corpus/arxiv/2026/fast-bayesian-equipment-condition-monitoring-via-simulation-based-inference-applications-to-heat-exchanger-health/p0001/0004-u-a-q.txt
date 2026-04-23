@@ -1,0 +1,30 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+han existing deterministic models, but
+rather as tunable, multi-parameter frameworks for failure evolution. By adjusting the event frequency and the
+severity scales of the failure mechanisms, we can generate a wide spectrum of failure scenarios. This flexibility
+allows for the systematic creation of datasets that vary
+in their level of difficulty for anomaly detection and parameter identification. Consequently, the model serves
+as a rigorous testbed for evaluating the robustness of the
+Bayesian inference framework across scenarios ranging
+from subtle, continuous degradation to sporadic, highimpact failure events. In general, we assume failures initiateatanunknownchangepointτ. Tomaintaindifferentiability for gradient-based inference, we utilize a logistic
+sigmoid transitionS(t)to model the induction period:
+S(t) = 1
+1 + exp(−k(t−τ)) ,(9)
+wherekis the transition sharpness. Two primary failure
+mechanisms are considered:
+1. T ube F ouling.In this work, grounded in recent
+analyses of physical deposition mechanisms [40], fouling
+is modeled as a reduction in the overall conductanceU A
+via a non-negative, dimensionless fouling factorR(t):
+U A(t) = U Aclean
+1 +R(t) .(10)
+FIG. 2: Fouling and

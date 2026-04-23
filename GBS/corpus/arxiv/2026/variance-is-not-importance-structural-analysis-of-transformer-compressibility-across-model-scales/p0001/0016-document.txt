@@ -1,0 +1,19 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+.31 6.4%
+0.80 21.98 +10.66 13.3%
+0.70 27.35 +16.04 17.4%
+0.50 47.07 +35.75 26.9%
+The quality-speed tradeoff is poor with post-hoc trained heads: even the safest threshold
+(0.95) incurs +4.31 PPL for only 6.4% compute savings. The exit heads are confident about
+incorrect predictions. LoRA fine-tuning to push prediction information into early blocks (500
+steps, 32 samples) yielded only +0.2% improvement in this severely data-limited setting. Scaling
+7

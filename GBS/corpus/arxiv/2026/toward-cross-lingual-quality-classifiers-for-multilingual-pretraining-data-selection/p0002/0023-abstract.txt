@@ -1,0 +1,24 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+same
+root and possess a big overlap in vocabulary. What is more interesting is that the classifiers trained
+on unrelated families, for example Nordic (MKC+):ρ s = 0.88, have nearly matching Romance
+correlation despite limited lexical and syntactic overlap. Finally, we can see that removing French
+from Romance hurts more than expected. Romance without French (MKC-e) drops toρ s = 0.71,
+correlating worse than some linguistically distant families like Germanic or Uralic. This suggests
+potential syntactic interference: when the classifier trains on closely related but distinct languages
+(Spanish, Italian, Portuguese), it may learn Romance-specific syntactic patterns that don’t perfectly
+generalize to French, obscuring the underlying quality signal.
+To investigate this further, we plot the score distribution of the Nordic classifier in Figure 1 to give us
+insights on how the classifier behaves. We apply it on a held-out set of French high-quality samples,
+negative samples, and the general FineWeb2. As we can observe, the classifier recognizes almost
+perfectly the negative and positive classes. It applies a very strict threshold (90th percentile: 0.027)
+and assigns generally lower scores

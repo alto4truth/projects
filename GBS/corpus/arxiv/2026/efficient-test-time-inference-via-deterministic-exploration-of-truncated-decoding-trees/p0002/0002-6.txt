@@ -1,0 +1,54 @@
+title: Efficient Test-Time Inference via Deterministic Exploration of Truncated Decoding Trees
+source: arxiv
+year: 2026
+document_id: efficient-test-time-inference-via-deterministic-exploration-of-truncated-decoding-trees
+authors: Xueyan Li; Johannes Zenn; Ekaterina Fadeeva; Guinan Su; Mrinmaya Sachan; Jonas Geiping
+page: 2
+section: 6
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20500v1
+
+= ∑
+y∈L
+Q(y)E [1{y∈S k}] (7)
+= ∑
+y∈L
+Q(y)P(y∈S k)(8)
+= ∑
+y∈L
+Q(y)(1−P(y/∈S k))(9)
+= ∑
+y∈L
+Q(y)
+
+1−P(∀j∈ {1, . . . ,k}:y (j) ̸=y)
+
+(10)
+= ∑
+y∈L
+Q(y)
+
+1−
+k
+∏
+j=1
+P(Yj ̸=y)
+!
+(11)
+= ∑
+y∈L
+Q(y)
+
+1−(1−Q(y)) k
+
+. (12)
+The marginal gain follows by the difference of two of the terms.
+Therefore, while E [m(Sk)] is increasing in k, E [m(Sk+1)−m(S k)] is decreasing. This shows
+diminishing returns for the expected coverage of sampling from a truncated distribution.
+Intuitively, this shows that the “waste” of truncated sampling comes from duplicate leaves
+since truncated sampling samples full leavesi.i.d. with replacement.
+Connection to DLE.In contrast, DLE deterministically expands previously unexplored
+branches of the same pruned tree whichlargely avoids generating duplicate leaves. Thus, for
+the same leaf budget k, DLE can allocate more compute towardsuncovering new probability
+mass.
+19

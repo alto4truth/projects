@@ -1,0 +1,28 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 42
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+SAC ’26, March 23–27, 2026, Thessaloniki, Greece V.M. Le et al.
+variability checks prior to solver-based verification, though human
+oversight remains necessary given their 88–89% accuracy.
+Future work will expand both the analytical scope and the workflow. We plan to include additional AO (e.g., redundancy, atomic
+sets, diagnosis/conflict sets) to better approximate the full AO catalogue, and to conductworkflow evaluations in practicewith domain
+engineers to assess usability and feedback quality. We also aim to
+supportblueprint-to-UVL translationwith round-trip consistency
+checks and to developlearned routersthat select the most reliable
+model. Finally, we envision extending the workflow towardscope
+completeness checks, where LLMs ensure traceability between goals,
+scenarios, and features—detecting orphaned or missing links to
+reduce underscoping and misalignment with business objectives.
+Acknowledgments
+The work presented in this paper has been developed within the
+research projectGenREfunded by the Austrian Research Promotion
+Agency under the project number915086.
+References
+[1] 2025. All models overview - Anthropic — docs.anthropic.com. Retrieved September 29, 2025 from https://

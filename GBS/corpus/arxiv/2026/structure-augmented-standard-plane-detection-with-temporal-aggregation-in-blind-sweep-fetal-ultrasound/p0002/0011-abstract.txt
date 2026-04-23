@@ -1,0 +1,30 @@
+title: Structure-Augmented Standard Plane Detection with Temporal Aggregation in Blind-Sweep Fetal Ultrasound
+source: arxiv
+year: 2026
+document_id: structure-augmented-standard-plane-detection-with-temporal-aggregation-in-blind-sweep-fetal-ultrasound
+authors: Keli Niu; He Zhao; Qianhui Men
+page: 2
+section: abstract
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20591v1
+
+left paddingexclusively, which preserves the chronological
+order of video sequences and maintains causality.
+Global temporal contexts.We adopt a bi-directional
+temporal Transformer (BiTT) to capture global dependencies along the blind-sweep scan and to localise the moments
+when standard planes appear. Unlike the vanilla Transformer
+that fuses past and future information in a single stream,
+our approach enforces directionality with two unidirectional
+streams. Together with bidirectional beam search, this yields
+improved sequence decisions [15]. Explicitly, a forward
+transformer encodesXto produce temporal feature sequence
+H f and a second transformer encodesflip(X)with the output
+flipped back asH b. We concatenateH= [H f;H b]and
+apply a classification head to output per-frame logits. Unlike
+masked autoencoders (MAE), our temporal transformer is
+trained directly for frame-wise detection on image features.
+The bidirectional streams provide long-range context from
+both past and future frames, reducing boundary ambiguity.
+2.2.3. Peak-Preserving Redundancy Suppression (PRS)
+To mitigate temporal jitter and short-lived spurious peaks
+while preserving true peaks, we propose PRS, a post-hoc,

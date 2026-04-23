@@ -1,0 +1,26 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+DataAuditiNg), an automated and interpretable
+framework that systematically evaluates responses
+along three orthogonal axes: Image-Text Consistency, Logical Coherence, and Factual Accuracy.
+Complementing this framework, we construct a
+large-scale, 300K-sample benchmark by injecting
+diverse, subtle defects, providing a challenging
+testbed for fine-grained data auditing. Our empirical findings show that models fine-tuned on
+compact, high-quality subsets curated by EVIAN
+consistently outperform models trained on ordersof-magnitude larger datasets, highlighting that interpretable data curation, rather than sheer scale, is
+the key to advancing LVLMs.
+Our main contributions are as follows:
+• To spur research in LVLM visual instruction tuning data quality and facilitate rigorous evaluation, we introduce a 300K-sample benchmark
+for visual instruction data selection, built by systematically injecting diverse semantic defects to
+support fine-grained auditing.
+• We propose theDecomposition-then-Evaluation
+paradigm and instantiate it inEVIAN, a fully automated and interpretable framework that decomposes responses into visual descriptions, subjective inferences, and factual claims, and evaluate

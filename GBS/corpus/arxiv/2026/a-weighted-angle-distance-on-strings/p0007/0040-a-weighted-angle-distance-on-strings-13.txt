@@ -1,0 +1,40 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 7
+section: a-weighted-angle-distance-on-strings-13
+chunk: 40
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+≤k≤Kedit
+ρk(ck +d k)≤2
+∞X
+k=1
+ρk min(k, Medit) = 2AMedit(ρ).
+Substituting this and evaluating the tail P∞
+k=Kedit+1 ρk yields (5).
+We now turn our attention tod ρ(P aQ, P bQ). Define
+(13)e k := max (0,min(m, L edit −k+ 1)−max(0, m−k+ 1) + 1)
+to be the number of length-kwindows in the stringsP aQandP bQthat containaorb
+respectively. Each such window changes onek-gram into another, so the difference vector is
+a sum ofe k vectors of the formu−v, whereuandvare standard basis vectors. Hence, by
+the triangle inequality,
+(14)∥[P aQ] k −[P bQ] k∥ ≤
+√
+2e k.
+Since [P aQ]k and [P bQ]k have nonnegative integer entries summing toL edit −k+ 2, we have
+min(∥[P aQ]k∥,∥[P bQ] k∥)≥ √Ledit −k+ 2. Thus, by (8),
+θk(P aQ, P bQ)≤π·
+√
+2e k
+2√Ledit −k+ 2 (k≤L edit + 1).
+Therefore
+(15)d ρ(P aQ, P bQ)≤
+X
+1≤k≤Ledit+1
+ρk ·π
+√
+2e k
+2√Ledit −k+ 2 .

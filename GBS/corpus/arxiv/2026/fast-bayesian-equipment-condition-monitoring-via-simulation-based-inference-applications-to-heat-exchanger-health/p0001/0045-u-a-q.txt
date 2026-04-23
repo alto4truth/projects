@@ -1,0 +1,32 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+inference into digital twin frameworks offers a pathway toward scalable,
+probabilistic condition monitoring in complex industrial
+systems.
+VI. CONCLUSIONS
+This work introduces a Bayesian framework for heat
+exchanger condition monitoring using simulation-based
+inference (SBI) powered by amortized neural posterior
+estimation. The results show that SBI matches MCMC
+in diagnostic accuracy while reducing inference time by
+a factor of 82. This massive computational acceleration enables near real-time estimation of failure modes
+and latent degradation parameters. The method remains
+robust across a range of scenarios, including sparseevent cases with weak parameter identifiability. From
+a reliability perspective, the framework provides the
+uncertainty-aware diagnostics essential for risk-informed
+decision-making and predictive maintenance. Crucially,
+its amortized and model-agnostic nature allows for the
+continuous inference of process and health parameters in
+realistic, plant-wide industrial settings where traditional
+MCMC sampling is entirely computationally unfeasible.
+Future work will focus on validation with real operational
+data and improving robustness under model mismatch.
+VII. DA

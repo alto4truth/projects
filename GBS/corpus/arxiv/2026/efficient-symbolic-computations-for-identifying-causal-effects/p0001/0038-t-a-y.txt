@@ -1,0 +1,23 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+all parents of nodes inCi. Finally, letD j =D∩(V j ×C j)be the set of directed edges that point
+from a nodev∈V j to a nodec∈C j. Then, theTian decompositionofGis given by themixed
+componentsG j = (V j, Dj, Bj)forj= 1, . . . , k; see Foygel et al. (2012a, Section 8) for examples.
+Note that the node setsV1, . . . , Vk need not be pairwise disjoint, but the mixed components give
+a partition of the edges ofG. Crucially, an acyclic mixed graphGis rationally identifiable if
+and only if all of its mixed componentsG1, . . . , Gk are rationally identifiable (Tian, 2005; Foygel
+et al., 2012a). Therefore, when checking identifiability via Algorithm 1, we always first compute
+the Tian decomposition, which has low computational complexity. We then apply Algorithm 1 to
+each component separately. Note that if there are many mixed components in large graphs then
+this provides a significant reduction of the worst-case complexity stated in Theorem 5.1.
+We implemented Algorithm 1 in the open-source computer algebra softwareMacaulay2(Grayson
+and Stillman, 2025). Our code is available on GitHub:https://github.com/NilsSturma/
+DegBoundedIdentifiabilityand builds on top of theGraphicalModelspackage (Aménd

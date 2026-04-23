@@ -1,0 +1,23 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+In this work, we take a different approach. Rather than proposing a single compression
+method, we systematically investigatewhat makes transformers compressiblethrough over 40
+experiments across two models of different scales. Our goal is to identify structural properties
+that any compression method must account for. This work is a companion to our quantizationfocused study [16], which demonstrates empirically that quantization dominates rank reduction
+for KV-cache compression; here we ask the deeper question ofwhy, and what other structural
+constraints compression methods face.
+Our investigation reveals that several intuitive assumptions about compression are incorrect:
+•High-variance directions are not the same as computationally important directions
+•Block-level linearity does not imply block-level replaceability
+•Weight factorization consistently amplifies quantization errors
+•Models at different scales have qualitatively different compression profiles
+These findings have practical implications for the design of compression algorithms and suggest that adaptive per-token computation allocation may be more fruitful than static weight
+compression. We conclude with a mapping of eac

@@ -1,0 +1,35 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+5
+Monte Carlo through the No-U-Turn Sampler (NUTS)
+for continuous parameters [45]. For the discrete failuremode formulation we combine NUTS with a Gibbs update over the categorical mode variable. MCMC methods provide a strong posterior benchmark, but becomes
+computationally expensive as it requires a new sampling
+procedure for every observation.
+D. Simulation-Based Inference (SBI)
+Simulation-Based Inference (SBI), also known as
+likelihood-free inference, is a family of techniques for
+Bayesian inference in models for which the likelihood
+functionp(y|θ)is analytically intractable or unavailable, but simulation of synthetic dataysim ∼p(y|θ)is
+feasible [29]. This is particularly relevant for nonlinear
+physical systems with complex failure dynamics such as
+the heat exchanger.
+One classical SBI approach is Approximate Bayesian
+Computation (ABC) [46], which defines an approximate
+posterior as
+pϵ(θ|y)∝p(θ)
+Z
+I(d(y,y sim)< ϵ)p(y sim |θ)dy sim,
+(21)
+whered(·,·)is a distance metric andϵis a user-defined
+tolerance. More recent methods leverage neural density
+estimators to approximate either the posteriorp(θ|y),
+thelikelihoodp(y|θ), orthelikelihood-to-evidenceratio,
+typically via simulated data

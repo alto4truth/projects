@@ -1,0 +1,22 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 32
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+the Race_SES dataset that lack information about the individuals’ occupations. Since job
+information is a key cue for interpreting socioeconomic status (SES) in the dataset, we exclude these questions
+from both contexts. This ensures consistency across the dataset and maintains the integrity of SES-related
+inferences. This therefore led to a total of 3,300 (3,720 intersectional questions - 840 questions with no job
+information from ambiguous and disambiguated contexts) questions retained from the Race_SES dataset for
+our experiments.
+(2) Context-based Categorization:For each dataset, we grouped all the retained questions into two separate files
+based on the type of context: ambiguous and disambiguated. More in detail, negative and non-negative contexts
+in both datasets are split evenly across ambiguous and disambiguated files. In the Gender by race/ethnicity
+dataset, from the total of 5,232 questions, each file for ambiguous and disambiguated contexts contains 2,616
+questions, with 1,308 negative and 1,308 non-negative context-based questions each. Similarly, in the SES
+12While typically a religious identity, ‘Jewish’ is treated as an ethnic or racial group in societal contexts in

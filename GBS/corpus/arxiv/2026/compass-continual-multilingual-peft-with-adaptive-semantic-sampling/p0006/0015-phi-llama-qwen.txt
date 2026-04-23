@@ -1,0 +1,62 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 6
+section: phi-llama-qwen
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+and sampling from under-represented semantic
+clusters in an auxiliary data pool, COMPASS minimizes the distributional mismatch between the training
+28
+
+Published in Transactions on Machine Learning Research (11/2025)
+data and a target usage distribution. This data-centric approach stands in contrast to prior methods that
+rely on reactive, computationally intensive gradient manipulation during training or static heuristics such as
+linguistic similarity, which our experiments show to be less effective. The strategic selection of cross-lingual
+data maximizes positive transfer while mitigating the negative interference that plagues naive multilingual
+fine-tuning, a phenomenon starkly observed in the performance degradation of the "All" baseline.
+COMPASS-ECDA elevates the framework from a static, one-time adaptation technique to a dynamic, sustainable solution for real-world deployment, where data distributions are inherently non-stationary due to
+evolving user needs, emerging topics, or shifting demographics. A key advantage is the decoupling of the
+data selection process from the model training algorithm. The selection strategy, which operates on semantic
+representations in a pre-processing step, is agnostic to the specific PEFT method employed for adaptation
+(e.g., DoRA, LoRA). This modularity endows COMPASS with broad applicability, suggesting its potential
+to enhance not only current but also future adaptation techniques.
+6.1 Limitations
+The performance of any fine-tuning method is ultimately constrained by the properties of the base model and
+thedata ecosystem. First, COMPASS issubjectto a tokenizationceiling, whereperformanceis capped bythe
+base model’s pre-trained tokenizer. For many LRLs, pre-trained vocabularies are dominated by high-resource
+language tokens, leading to inefficient "over-fragmentation" where single LRL words are split into multiple
+sub-word tokens and placing greater strain on the model’s context window (Nag et al., 2025). This not only
+increases sequence lengths and computational costs but can also lead to suboptimal learning (Nicholas &
+Bhatia, 2023). As our fine-tuning process does not alter the tokenizer, this inherent inefficiency persists.
+While COMPASS optimizes the use of existing data, it cannot overcome the primacy of pre-training data
+scarcity. The foundational reason for the performance gap in LRLs is the scarcity of high-quality, representative data during the initial pre-training stage. Fine-tuning, even with a sophisticated method like
+COMPASS, is a powerful but partial intervention when compensating for the imbalance in web-scale data
+that forms the model’s core knowledge.
+Our evaluation relies on benchmarks like Global-MMLU and MMLU-ProX, yet these still represent only a
+fraction of the world’s linguistic and cultural diversity. The lack of quality, human-translated, and genuinely
+localized evaluation suites remains a critical challenge for the field. Reliance on translated or synthetic data
+can obscure a model’s true capabilities and risks, particularly for LRLs. These ecosystem-level constraints
+form a challenging cycle: a lack of pre-training data leads to poor tokenizers, making fine-tuning less effective,
+while a lack of good evaluation data hinders the measurement of progress. Algorithmic interventions like
+COMPASS,whichimprovedataefficiency, areacrucialstep. However, theirfullpotentialcanonlyberealized
+in tandem with community-driven data curation efforts, which address the data scarcity and evaluation
+problems directly.
+Our framework is also built upon several assumptions. The initial adaptation phase relies on the "proxy for
+live data" assumption, using a held-out evaluation set to approximate the true "live" usage distribution. This
+is a pragmatic choice, but the proxy set may not perfectly reflect the topical or stylistic distribution of realworld user queries. This potential mismatch is a primary motivation for the continual learning component
+of our framework. COMPASS-ECDA is designed to be self-correcting; an imperfect initial adaptation can
+be refined over time as the system monitors and adapts to the actual incoming data stream.
+The continual update mechanism in COMPASS-ECDA is triggered by Jensen-Shannon (JS) divergence, a
+measure of distribution shift. This trigger is performance-blind. A significant distribution shift might occur
+that has no material impact on model performance (e.g., a new topic the model already handles well), leading
+to unnecessary updates. Conversely, a subtle but critical shift, such as the emergence of new adversarial
+phrasing, might not exceed the threshold, allowing performance to degrade silently.
+Furthermore, the continual learning phase relies on incremental clustering implementations that threaten
+long-term cluster stability. Over extended periods of significant distribution shift, the initial clusters may
+become "stale," rendering the incremental updates less effective. There likely exists a threshold beyond which
+performance cannot be improved without re-clustering the entire data pool from scratch (i.e., a "reset" of the
+29

@@ -1,0 +1,31 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 58
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+ificant Logical Gaps. The inference is a major leap in logic. While
+loosely related to the image, it is
+highly unlikely or requires many unsupported assumptions. (e.g., “A person is running, <INFER>so this must
+be a professional athlete training for the
+Olympics</INFER>.” )
+Score 3: Plausible but Unprovable. The inference is reasonable and could be true,
+but it is not strongly supported by visual evidence and remains a subjective interpretation. (e.g., “The room
+is dim, <INFER>creating a sad atmosphere</INFER>.” )
+Score 4: Logically Sound. The inference
+is very likely correct and follows directly from strong visual evidence, with
+only very minor room for doubt. (e.g.,
+“The man holds an umbrella, <INFER>suggesting it is raining or about
+to rain</INFER>.” )
+Score 5: Logically Airtight. The inference is an undeniable conclusion based
+on the visual facts and common-sense
+logic; it is virtually irrefutable. (e.g.,
+“The wreck shows a crushed car, <INFER>indicating a high-impact collision
+occurred</INFER>.” )
+Dimension SK: Prompt for Factual Accuracy
+Input Text for Evaluation: {text_to_evaluate}
+Task: You are an expert fact-checking assistant. Your task is to evaluate the factual correctn

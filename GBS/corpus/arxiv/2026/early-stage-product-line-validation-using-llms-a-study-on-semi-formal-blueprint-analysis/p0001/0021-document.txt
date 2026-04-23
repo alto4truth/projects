@@ -1,0 +1,32 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+nal Features
+AO7#Alternative Groups AO16Generalization
+AO8#Requires
+AO9#Excludes
+canonical content: integers for counts, true/false for
+booleans, and newline-separated or tag-enclosed lists for
+feature sets. Any deviation (e.g., unparseable text, missing
+tags, malformed lists) is automatically considered incorrect.
+For set-valued AOs, exact set equality with the solver-based
+oracle is required. Models are also instructed to include
+concise natural language justifications, such as explaining
+why a feature is classified as dead.
+This uniform pipeline ensures consistent results across models
+and AOs by prioritizing fair capability comparison over tailored
+optimization. Full templates for all 16 AOs are provided in the
+replication package1.
+Inference.Each triple (including model, blueprint, and AO) is executed once with deterministic decoding (temperature=0, greedy)
+via the provider’s public API only, i.e., no tool use, no solver calls,
+no post-processing. We record request/response payloads, the raw
+XML, the rationale, and wall-clock runtime. Besides, timeouts and
+truncations are kept (and evaluated) as produced.
+Metrics and error taxonomy.We report the results along the following two

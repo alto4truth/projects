@@ -1,0 +1,62 @@
+title: A Hierarchical MARL-Based Approach for Coordinated Retail P2P Trading and Wholesale Market Participation of DERs
+source: arxiv
+year: 2026
+document_id: a-hierarchical-marl-based-approach-for-coordinated-retail-p2p-trading-and-wholesale-market-participation-of-ders
+authors: Patrick Wilk; Ethan Cantor; Yikui Liu; Jie Li
+page: 2
+section: abstract
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20586v1
+
+participant could declare itself as a buyer or
+a seller based on its assets’ evolving conditions (e.g., generation/storage capacity, demand flexibility) and strategic
+considerations ateach time interval.The P2P market design
+is elaborated via the following three steps, where𝑛indexes
+prosumers(buyersandsellers)intheP2Pmarketparticipant
+set𝑁=𝑁 𝐵 ∪𝑁 𝑂, with𝑁𝐵 being the buyer set,𝑁𝑂 being
+the seller set, and𝑁𝐵 ∩𝑁 𝑂 = ∅.
+Step 1: Bid/Offer Submission and Sorting.Each buyer
+𝑛∈𝑁 𝐵 submits a bid𝑏𝑛 characterized by a maximum price
+𝑝𝑏𝑛,atwhichitiswillingtopayforadesiredquantity𝑞 𝑏𝑛<0
+(negative denotes energy purchasing). Similarly, each seller
+𝑛∈𝑁 𝑂 submitsanoffer𝑜 𝑛withaminimumacceptableprice
+𝑝𝑜𝑛 forquantity𝑞 𝑜𝑛 >0(positivedenotesenergyselling).All
+bids are collected in (3) and all offers in (4).
+𝐵=
+{
+𝑏𝑛
+(
+𝑝𝑏𝑛, 𝑞𝑏𝑛
+)||||
+𝑛∈𝑁 𝐵
+}
+(3)
+𝑂=
+{
+𝑜𝑛
+(
+𝑝𝑜𝑛, 𝑞𝑜𝑛
+)||||
+𝑛∈𝑁 𝑂
+}
+(4)
+Once all bids and offers are submitted, the P2P platform
+sorts all bids in descending price order (5), and all offers in
+ascendingpriceorder(6),enablingefficientmatchingofthe
+highest-paying buyers with the lowest-priced sellers.
+𝐵∗
+𝑘 =
+{
+𝑏∗
+1,𝑘, 𝑏∗
+2,𝑘,…, 𝑏 ∗
+𝑛𝑏,𝑘
+}
+with𝑝 𝑏∗
+1,𝑘
+≥𝑝 𝑏∗
+2,𝑘
+≥⋯≥𝑝 𝑏∗
+𝑛𝑏,𝑘
+(5)
+P. Wilk et al.:Prepri

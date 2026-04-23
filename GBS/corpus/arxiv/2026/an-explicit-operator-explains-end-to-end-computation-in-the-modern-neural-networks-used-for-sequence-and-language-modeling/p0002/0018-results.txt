@@ -1,0 +1,76 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 2
+section: results
+chunk: 18
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+in general. The transformationCon the output of the dynamics operator mixes
+the wave modes,
+sk :=Cx k =
+NX
+i=1
+µi(k)c i, c i :=Cf i ∈C dmodel ,
+(17)
+in a manner that helps to separate features in real-world
+data inputs.
+We can then define the observed featuresyk as the real
+part ofs k
+yk :=ℜ(s k)∈R dmodel .(18)
+Usingℜ(z) = 1
+2(z+ z), this gives
+yk = 1
+2
+NX
+i=1
+
+µi(k)ci + µi(k) ci
+
+.(19)
+Writing theℓ-th coordinate and definingα ℓi := [c i]ℓ =
+[Cf i]ℓ,
+yk,ℓ =ℜ
+NX
+i=1
+αℓi µi(k)
+!
+,(20)
+yk,ℓ = 1
+2
+NX
+i=1
+αℓi µi(k) +
+NX
+i=1
+αℓi µi(k)
+!
+.(21)
+The analysis to this point explains the computation in S4
+up to the nonlinear activation function Λ, and we now
+need to analyze how Λ transforms the linear recursion
+in S4. To do this, let Λ :R→Rdenote the GELU
+activation applied elementwise,
+Λ(x) = GELU(x).
+Since Λ is analytic, it admits an exact Carleman representation in terms of elementwise monomials,
+Λ(y) =
+∞X
+r=0
+ar y⊙r,(22)
+wherey ⊙r denotes elementwise powers and the coefficients{a r}r≥0 are fixed by the nonlinearity.
+Equivalently, defining the (infinite) Carleman lift
+z(y) :=
+
+
+1
+y
+y⊗2
+y⊗3
+...
+
+
+,(23)
+and diagonal-selection operatorsS r ∈R dmodel×dr
+model satisfyingS r(y⊗r) =y

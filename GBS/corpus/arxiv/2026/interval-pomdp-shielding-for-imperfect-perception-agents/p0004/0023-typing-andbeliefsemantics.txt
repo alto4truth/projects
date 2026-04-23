@@ -1,0 +1,33 @@
+title: Interval POMDP Shielding for Imperfect-Perception Agents
+source: arxiv
+year: 2026
+document_id: interval-pomdp-shielding-for-imperfect-perception-agents
+authors: William Scarbro; Ravi Mangal
+page: 4
+section: typing-andbeliefsemantics
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20728v1
+
+); we write this carrier as
+K(X). Thus, in the discussion below, a “credal set” is precisely
+an element ofK(X).
+B. A Coalgebraic Type for anIPOMDP
+For a POMDP it is convenient to bundle transition and
+emission into a one-stepjointdistribution over(s ′, o)∈S×O.
+Under interval uncertainty, the perception uncertainty model
+is no longer a single kernel but a setZ; in the present
+section it is most natural to view this as anondeterministic
+perception uncertainty model. Consequently, from a given
+(s, a)we obtain acredal setof admissible joint distributions.
+The point of this typing is not to replace the LP construction,
+but to isolate the structural reason the LP construction works:
+before normalization, the one-step semantics is a convex set
+of distributions, and shield queries depend only on linear
+functionals of beliefs. That is exactly the regime in which
+convex envelope abstractions and LP extremization are natural.
+Concretely, for eachZ∈ Zdefine the joint kernel
+PZ(s′, o|s, a)≜T(s, a, s ′)Z(o|s ′).
+The family{P Z(· |s, a) :Z∈ Z} ⊆ D(S×O)is
+convex becauseZis a convex polytope (interval constraints
+intersected with simplex constraints) andZ7→P Z(· |s, a)is
+affine. Following the patte

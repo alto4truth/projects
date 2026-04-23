@@ -1,0 +1,24 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+ations; (3)The reconstruction wall: any
+approach that factors weights into quantized components amplifies errors through crossterms, making direct quantization strictly superior; (4)Linearity increases with depth:
+Mistral 7B exhibits a gradient fromR 2 = 0.17 (block 0) toR 2 = 0.93 (block 31), revealing a
+division of labor between nonlinear feature construction (early blocks) and linear refinement
+(late blocks); (5)30% of tokens are computationally easy: independently confirmed
+via trained exit heads (Mistral) and KL divergence sensitivity analysis (GPT-2).
+We demonstrate single-block linear replacement achieving 34×compression at +1.71
+perplexity on Mistral 7B’s final block, and show that multi-block replacement fails due to
+additive error accumulation through residual connections coupled with activation distribution shift. Our findings suggest that static post-training compression faces fundamental
+barriers, and that adaptive per-token computation allocation is a more promising direction.
+We provide a practical mapping from each structural finding to actionable guidance for
+compression practitioners.
+1 Introduction
+Large language models (LLMs) require substantial memory and compu

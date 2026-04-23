@@ -1,0 +1,24 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 66
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+orrectness, as all models demonstrate both perfect and failed responses across
+runs. Analysis of negative polarity questions further shows that stereotyped errors persist in both ambiguous
+and disambiguated contexts, with stronger effects under ambiguity and substantial variation across models.
+Although some models reduce such biases, none achieve complete consistency or reliability in fairness-critical
+settings.
+6 Discussion
+6.1 Interpreting Intersectional Fairness Across Contexts
+In ambiguous contexts, most LLMs correctly abstain by selecting the unknown option, indicating a dominant response
+pattern under uncertainty. However, this pattern limits the ability of outcome-based fairness metrics to provide
+meaningful insights due to the scarcity of substantive predictions. In disambiguated contexts, higher performance on
+stereotype-reinforcing than counter-stereotypical cases suggests that LLMs may rely on stereotype-consistent signals,
+with directional bias further indicating stereotype-aligned outputs, particularly in race–gender intersections. Subgroup
+fairness analysis highlights additional nuances: although some metrics suggest low observable disparity, others reveal
+uneven out

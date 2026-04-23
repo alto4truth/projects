@@ -1,0 +1,50 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+High-Resolution
+Image Generation
+Multi-View
+Generation
+Multi-View
+Mesh Carving
+Textured Mesh
+High Resolution,
+Point map
+Dilated iNOD
+V AE point map
+process_SUBJECT_C006_POSE_02_Cam10/
+V AE
+Dilated iNOD
+V AE Dilated iNOD
+w/ masked crop
+Anisotropically
+normalized depth
+Metric depth w/ known
+camera intrinsics
+iNOD
+✅
+noise-free
+✅
+intrinsics-free
+✅
+Geometry
+✅
+Latent friendly
+Figure 2.iNOD: A Distortion-Free and V AE-Friendly Geometry Representation.Standard Point Maps (top-left) become noisy
+when V AE-encoded, and anisotropically Normalized Depth (topright) severely distorts the 3D shape.
+estimates to create "radiance hints" that guide a ControlNetbased diffusion model. Careaga and Aksoy [5] leverage
+physical intrinsic decomposition for controllable relighting
+of photographs. For video, Lux Post Facto [26] also uses
+a two-stage pipeline, addressing temporal consistency by
+finetuning a video diffusion model on a hybrid of static
+OLAT (One-Light-At-a-Time) data and in-the-wild videos.
+A primary drawback of sequential pipelines is their susceptibility to error accumulation, where inaccuracies from
+the intrinsic estimation stage are amplified by the renderer.
+The advantage of estimating geo

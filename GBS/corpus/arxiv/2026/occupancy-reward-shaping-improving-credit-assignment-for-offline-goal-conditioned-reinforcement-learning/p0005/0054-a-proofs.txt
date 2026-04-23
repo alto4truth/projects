@@ -1,0 +1,49 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 5
+section: a-proofs
+chunk: 54
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+∗(s∗, g)
+i
+−
+h
+−M πD(s, abad, g) +γV ∗(sbad, g)
+i
+=
+h
+M πD(s, abad, g)−M πD(s, a∗, g)
+i
+| {z }
+Term 1
++γ
+h
+V ∗(s∗, g)−V ∗(sbad, g)
+i
+| {z }
+Term 2
+20
+
+Published as a conference paper at ICLR 2026
+We will now analyze the two terms of this expression.
+The first term,M πD(s, abad, g)−M πD(s, a∗, g), by part 2 of the proof in Sec. A.4, this term is
+guaranteed to be positive.
+We now analyze the second term,γ[V ∗(s∗, g)−V ∗(sbad, g)]. By definition, the successor states ∗
+lies in a layer closer to the goal thansbad (i.e.,d ∗(s∗, g)< d ∗(sbad, g)). It therefore follows directly
+from Lemma A.1 that
+V ∗(sbad, g)< V ∗(s∗, g).
+Thus, the term
+
+V ∗(s∗, g)−V ∗(sbad, g)
+
+is strictly positive.
+The difference in Q-values,∆Q, is the sum of a strictly positive term and a strictly positive term
+(Term 2). The sum is therefore strictly positive.
+∆Q >0i.e Q ∗(s, a∗, g)> Q ∗(s, abad, g)
+This shows that for any states, the shortest-path actiona ∗ ∼π ∗(a|s, g)is the unique greedy action
+with respect toQ ∗. Therefore, the greedy policy with respect toQ∗ must be the optimal shortest-path
+policyπ ∗.

@@ -1,0 +1,44 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+Table 7:Pre-screening gate validation. FOSC and RDI screening vs.
+full AutoAttack evaluation on RobustBench models.
+Model FOSC RDI Rob. Acc. Flag
+Wang2023Better_WRN-70 0.04 0.78 70.69% —
+Pang2022_WRN-70 0.05 0.76 71.07% —
+Rebuffi2021_70_16 0.06 0.68 66.56% —
+Gowal2021_70_16 0.05 0.72 66.10% —
+Gowal2020_70_16 0.07 0.65 65.87% —
+Rebuffi2021_28_10 0.06 0.63 64.58% —
+Gowal2021_28_10 0.08 0.61 63.38% —
+Xu2023_WRN-28 0.09 0.59 63.89% —
+Sehwag2021_ResNest 0.11 0.48 60.27%✓
+Wong2020Fast 0.14 0.34 43.21%✓
+0.3 0.4 0.5 0.6 0.7 0.8
+40
+60
+80
+RDI Score
+Robust Accuracy (%)
+Passed gate
+Flagged (masking)
+Trend (R2 =0.91)
+Figure 7:RDI score vs. robust accuracy (full AutoAttack) for ten
+RobustBench CIFAR-10 ℓ∞ models. Red triangles = flagged by
+FOSC (>0.1 ). The near-linear relationship (OLS R2 = 0.91, n= 10)
+validates RDI as a fast screening proxy.
+ship between RDI and robust accuracy.
+12.3 Experiment 2: Multi-Norm Worst-Case
+Analysis
+Figure 8 demonstrates the central finding from Gap G1: singlenorm (ℓ∞) evaluation overestimates robustness. Across ten
+RobustBench models:
+• Average multi-normrobustness drops 12.3 pp (mean) from
+singleℓ ∞.
+• Worst-case multi-normdrops 23.5 pp (mean), confirming that a

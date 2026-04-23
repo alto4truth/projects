@@ -1,0 +1,28 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+R-CoV: Region-Aware Chain-of-Verification
+for Alleviating Object Hallucinations in LVLMs
+Jiahao Xie1,2, Alessio Tonioni3, Nathalie Rauschmayr3, Federico Tombari3, Bernt Schiele1,2
+1Max Planck Institute for Informatics, SIC 2VIA Research Center 3Google
+Abstract
+Large vision-language models (LVLMs) have demonstrated
+impressive performance in various multimodal understanding and reasoning tasks. However, they still struggle with
+object hallucinations,i.e., the claim of nonexistent objects
+in the visual input. To address this challenge, we proposeRegion-awareChain-of-Verification (R-CoV), a visual chain-of-verification method to alleviate object hallucinations in LVLMs in a post-hoc manner. Motivated
+by how humans comprehend intricate visual information—
+often focusing on specific image regions or details within a
+given sample—we elicit such region-level processing from
+LVLMs themselves and use it as a chaining cue to detect
+and alleviate their own object hallucinations. Specifically,
+our R-CoV consists of six steps: initial response generation,
+entity extraction, coordinate generation, region description,
+verification execution, and final response generation. As a
+simple yet effective

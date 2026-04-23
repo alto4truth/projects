@@ -1,0 +1,18 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 4
+section: f2lp-ap-9
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+s the entire homophily spectrum. On heterophilous graphs,
+F2LP-APachieves state-of-the-art (SOTA) performance onTexas(0.842),Wisconsin(0.825), andCornell(0.763), effectively mitigating the performance
+degradation seen in conventional GNNs like GCN due to over-smoothing. Remarkably, this superiority extends to homophilous environments, whereF 2LPAPyields the overall SOTA onCora(0.835), surpassing even supervised models. Furthermore, it maintains the top performance among all training-free methods onCiteSeer(0.708) andPubMed(0.782).
+Efficiency-Performance Trade-off.As a training-free framework,F 2LP-AP
+substantially reduces computational overhead while delivering dominant accuracy. On large-scale networks likePubMed, its inference latency is approximately
+3%of that required by GCN, achieving a significant speedup without sacrificing classification precision. Compared to non-adaptive variants likeFixedAPPNP
+and high-complexity baselines such asCoHOp,F 2LP-APyields superior results
+across all tested benchmarks, validating the necessity of dynamically adjusting

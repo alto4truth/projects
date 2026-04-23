@@ -1,0 +1,37 @@
+title: Exploring High-Order Self-Similarity for Video Understanding
+source: arxiv
+year: 2026
+document_id: exploring-high-order-self-similarity-for-video-understanding
+authors: Manjin Kim; Heeseung Kwon; Karteek Alahari; Minsu Cho
+page: 3
+section: enc-blocks-3
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20760v1
+
+4 Manjin Kim 1∗, Heeseung Kwon2∗, Karteek Alahari3, and Minsu Cho1
+Table 8: Results of temporal action detection on THUMOS-14. We report
+mAP with tIoU thresholds from 0.3 to 0.7 and their average. * reproduced by out setup.
+method backbone THUMOS-14
+0.3 0.4 0.5 0.6 0.7 Avg.
+TALLFormer [12]VSwin-B 76.0 - 63.2 - 34.5 59.2
+ActionFormer [91] I3D 82.1 77.8 71.0 59.4 43.9 66.8
+TriDet [68] I3D 83.6 80.1 72.9 62.4 47.4 69.3
+AdaTAD [51] VMAE-B87.0 82.4 75.3 63.8 49.2 71.5
+AdaTAD [51] VMAE-L 87.7 84.1 76.7 66.4 52.4 73.5
+AdaTAD* [51] VMAE-B85.7 82.3 75.3 63.4 50.1 71.4
++MOSS VMAE-B87.3 82.9 75.7 64.8 50.3 72.2
+AdaTAD* [51] VMAE-L 87.5 83.777.666.5 51.9 73.5
++MOSS VMAE-L88.184.577.667.752.874.1
+Table 9: Results of GEBD on Kinetics-GEBD and TAPOS. * reproduced by
+our setup. “Avg. F1" is an averaged F1 score with relative distance thresholds from 0.05
+to 0.5. with 0.05 interval.
+method Kinetics-GEBD TAPOS
+F1@0.05 Avg. F1F1@0.05 Avg. F1
+Temporal Perceiver [75]74.8 86.0 55.2 73.2
+DDM-Net [76] 76.4 87.3 60.4 72.8
+SC-Transformer [37] 77.7 88.1 61.8 74.2
+BasicGEBD [99] 76.8 86.6 60.0 71.0
+EfficientGEBD [99] 78.3 88.3 63.1 74.8
+BasicGEBD* [99] 76.9 86.4 60.1 71.2
+BasicGEBD+MOSS 79.4 89.0 68.5 76.6
+D.

@@ -1,0 +1,37 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 9
+section: a-weighted-angle-distance-on-strings-17
+chunk: 47
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+Definition 7.11.Let Σ be a finite alphabet and let Σ N be the one-sided full shift, equipped
+with the product topology, and letτ:x 1x2 · · · 7→x 2x3 . . .be the left shift. (See [8, Chapter 1]
+for the standard shift-space topology, and [17,§1.1] for the one-sided Kolmogorov/measuretheoretic viewpoint; in particular, cylinder sets generate the Borelσ-algebra.)
+Ashift-invariant Borel probability measureon Σ N is a Borel probability measureµsuch that
+µ◦τ −1 =µ. We writeM τ(ΣN) for the set of such measures.
+Forn≥1 andW∈Σ n, define thecylinder set
+Cyl(W) :={x∈Σ N :x 1x2 · · ·x n =W},
+and the length-ncylinder marginal
+pµ
+n(W) :=µ(Cyl(W)).
+Shift-invariant measures are a natural receptacle for limitingn-gram statistics. A finite
+string can be viewed as a short sample from a symbolic process, while a shift-invariant
+measure records the translation-stable distribution of all finite blocks. In particular, for
+µ∈ M τ(ΣN) the marginals satisfy the consistency relations
+X
+a∈Σ
+pµ
+n+1(W a) =p µ
+n(W) and
+X
+a∈Σ
+pµ
+n+1(aW) =p µ
+n(W),
+where the first identity is just disjoint union of cylinders, and the second follows from
+µ(Cyl(W)) =µ(τ −1Cyl(W)) together withτ −1Cyl(W) = F
+a∈Σ Cyl(aW) (see [17,§1.1]

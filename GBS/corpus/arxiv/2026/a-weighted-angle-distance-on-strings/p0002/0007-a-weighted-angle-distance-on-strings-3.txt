@@ -1,0 +1,49 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 2
+section: a-weighted-angle-distance-on-strings-3
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+Remark2.2.In formal language theory, a string is commonly referred to as a “word”; in
+genomics, ak-gram is typically referred to as a “k-mer”. We opt to retain the phraseology
+more common in computer science and machine learning.
+We writeN={1,2, . . .}for the set of positive integers. We identifyR Σn
+with the space
+of real-valued functions on Σ n, so that a vectorv∈R Σn
+is written asv:X7→v(X).
+Definition 2.3.ForS∈Σ ∗ andn∈N, we define [S] n ∈R Σn
+as follows:
+[S]n :X7→c(S, X).
+Thus, [S] n counts all lengthnsubstrings ofS.
+Example 2.4.Let Σ ={a, b}and letS=abab. Then [S] 2 ={aa: 0, ab: 2, ba: 1, bb: 0}.
+Omitting 0 entries, we write [S] 2 ={ab: 2, ba: 1}.
+Recall that forv∈R N a vector, we write∥v∥= √v·vfor the Euclidean norm ofv.
+Definition 2.5.For any integerN≥0, we define theangle distanceθ:R N
+≥0 ×R N
+≥0 →[0, π/2]
+by
+θ(u, v) :=
+
+
+
+arccos
+
+u·v
+∥u∥∥v∥
+
+ifu, v̸= 0,
+0 ifu=v= 0,
+π
+2 else.
+The mapθis a pseudometric on its domain, and restricts to a metric on the unit sphere
+inR M
+≥0.
+We are now ready to define our main object of study.
+Definition 2.6.Let Σ be a finite alphabet, and letρ >0 be arbitrary. We define the
+ρ-weighted angle distanced ρ : Σ∗ ×Σ ∗ →R ≥0 as
+dρ : (S, T)7→
+X

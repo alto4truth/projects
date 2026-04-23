@@ -1,0 +1,23 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 2
+section: abstract
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+e strategies and error patterns from outcome-specific trajectory subsets. Comparative
+skills, which encode why one continuation outperforms another, are distilled from the paired rollout branches produced
+by PROACTRL (Section 3.3), exploiting shared prefixes to provide the most localized contrastive signal. Priority scores
+are updated only for entries that were actually retrieved and associated with improved outcomes, creating a lightweight
+mechanism that progressively surfaces high-value experience.
+Within the online evolution framework, retrieval is not a passive heuristic but an explicit policy action optimized jointly
+with task behavior. As the experience base grows through continued interaction, selective retrieval becomes increasingly
+critical: indiscriminate querying floods context with irrelevant information, while missed opportunities leave the agent
+repeating past errors. However, standard outcome-level rewards cannot provide the step-level supervision needed to
+learn which retrieval decisions are beneficial. The next section introduces PROACTRL, which addresses this through
+paired-branch process rewards.
+3.3 Proactive Reinforcement Learning-based Retrieval
+Within the onl

@@ -1,0 +1,32 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+ource languages, which
+is reflected in the high standard deviation. The
+performance gap reflects Qwen 2.5’s poorer multilingual support compared to alternative models6.
+Although >=70B models mainly yield the highest
+result across all the settings, the addition of the
+external evidence hurts the performance in the majority of the cases, especially for Spanish, French,
+Italian and English.
+For the rest of the models, we can see that the
+retrieved evidence is mainly beneficial compared
+to the baseline results, but they still underperform
+compared to the largest models.
+General Performance Trends.The incorporation of additional external data frequently leads to
+performance degradation rather than improvement
+in high-resource languages compared to the baseline results. This trend is particularly pronounced
+in larger models, suggesting a negative correlation
+between model size and the beneficial utilization
+of external data sources. Nevertheless, the opposite trend is observable with the two less-resourced
+languages.
+Examining results by external data source, we
+observe the same trend: larger models consistently
+outperform smaller ones, suggesting that LLMs
+with greater parameter counts

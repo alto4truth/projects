@@ -1,0 +1,26 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 1
+section: rag-db
+chunk: 4
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+3 Methodology
+Figure 2 presents the overall curation pipeline used to constructRSRCC, while Figure 3 illustrates
+representative no-change cases that are often falsely identified as semantic changes. Our framework
+is designed as a hierarchical semi-supervised curation pipeline centered onBest-of-𝑁 ranking.
+It combines four stages: semantic segmentation for candidate localization, connected component
+analysis for region extraction, image-text semantic screening, and retrieval-augmentedBest-of-𝑁
+validation for ambiguous cases.
+Transformer-Based Segmentation ModelFirst, we localize candidate change regions through
+semantic segmentation. We employ a transformer-based segmentation model with a ViT-L encoder
+and a lightweight ViT-Lite decoder. The encoder extracts multi-scale visual features𝜙(I) from
+an input image I, and the decoder maps them to dense semantic predictions𝑆∈R 𝐻×𝑊×𝐾
+through upsampling and feature fusion. The predicted per-pixel semantic distribution is given by
+ˆ𝑦(𝑘)
+𝑖, 𝑗 =softmax(𝜓(𝜙(I))) , where𝜓(·) denotes the segmentation head and𝑘∈ {1, . . . , 𝐾} indexes
+the semantic classes. To address class imbalance in remote sensing imagery, we train the model
+with Dice loss,LDice

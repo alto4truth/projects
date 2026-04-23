@@ -1,0 +1,25 @@
+title: Self-Aware Vector Embeddings for Retrieval-Augmented Generation: A Neuroscience-Inspired Framework for Temporal, Confidence-Weighted, and Relational Knowledge
+source: arxiv
+year: 2026
+document_id: self-aware-vector-embeddings-for-retrieval-augmented-generation-a-neuroscience-inspired-framework-for-temporal-confidence-weighted-and-relational-knowledge
+authors: Naizhong Xu
+page: 16
+section: instructions
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20598v1
+
+at 40–90-day intervals. Authority sources are drawn from {official-DB, policy, tech-doc, wiki}, with
+base_confidence set from the authority table in Section 3.2. Every fifth topic gains adepends_on
+edge to the previous topic, producing a sparse dependency graph. With probability 0.30 per topic,
+a Slack-sourced “rumor” vector is injected: recent (1–10 days old), low authority (0.30), and stating
+a wrong value—an explicit contradiction candidate. The resulting corpus contains 258 vectors, 60
+topics, 18 contradictions, and 11 dependency edges.
+Three query kinds are generated. Acurrentquery asks for the latest value of a topic; ground
+truth is the most recent canonical version. Atime-pointquery asks for the value as of a historical
+date; ground truth is the version valid at that date. Aconflictquery is identical in text to a
+current query on a topic that has a Slack contradiction; ground truth is still the canonical version,
+testing whether a retriever can avoid being misled by a fresh-but-wrong document. The benchmark
+produces60 + 60 + 18 = 138queries.
+9.2 Methods
+All methods share the same first-stage retriever (TF–IDF with 1–2-gram features,K = 8candidates)
+and differ only in second

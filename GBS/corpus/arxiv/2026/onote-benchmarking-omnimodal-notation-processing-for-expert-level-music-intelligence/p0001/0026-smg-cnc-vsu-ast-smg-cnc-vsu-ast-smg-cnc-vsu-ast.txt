@@ -1,0 +1,26 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+urthermore, to systematically prevent model hallucination and
+ensure standardized output parsing during the automated evaluation, we applied a strict set of global formatting constraints (e.g.,
+specific JSON schemas, sequence length limits, and anti-loop rules).
+To focus on the core semantic requirements of each task, these
+global formatting constraints are omitted from the individual task
+descriptions below.
+The core semantic prompts for the four primary evaluation tracks
+are illustrated in Figure 6.
+In evaluating the capabilities of Large Language Models (LLMs)
+across diverse music notation systems, unstandardized outputs
+often lead to the failure of automated parsing scripts. To ensure
+the fairness of the evaluation and the computability of the results,
+ONOTE introduces a strict set ofGlobal Formatting Constraints.
+Independent of the task-specific prompts, these global constraints
+explicitly define the standard output specifications for three core
+music notation representations: ABC Notation, Numbered Musical

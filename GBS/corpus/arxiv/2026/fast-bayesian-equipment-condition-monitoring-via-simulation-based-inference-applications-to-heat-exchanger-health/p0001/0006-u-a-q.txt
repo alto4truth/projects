@@ -1,0 +1,36 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+4
+stochastic occurrence of a jump is governed by the relaxed gating variableIi. At each time step, a jump probability is calculated from the Poisson arrival rateλas
+Pjump = 1−exp(−λ). The operator is defined by passing
+a latent uniform sampleu i ∼Uniform(0,1)through a
+steep sigmoid function:
+Ii = 1
+1 + exp(−k(Pjump −u i)) .(12)
+The magnitude of the potential jump,Ji, is drawn from
+an exponential distribution. To ensure a mean jump size
+ofβ f, the distribution is parameterized by the rate1/βf:
+Ji ∼Exp
+ 1
+βf
+
+,whereE[J i] =β f .(13)
+Overall, the fouling process depends on the arrival rate
+λand the strength parameterβ f. Asλincreases, the
+frequency of stochastic events grows, while a higherβf
+increases the average magnitude of each individual jump.
+The expected growth of the fouling factor can be analyzed via the linearity of expectation. For the postinduction phase (i > τ), where the temporal gateS(i)≈
+1, the expected increment is the product of the expected
+jump probability and the expected jump magnitude:
+E[∆Ri] =E[I i]·E[J i]·g f = (1−e −λ)·β f ·g f .(14)
+Fort > τ, the total accumulated fouling is the sum of
+these independent increments over the active duration of
+the failure. T

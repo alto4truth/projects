@@ -1,0 +1,28 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+alternative
+to stochastic regularization while maintaining architectural flexibility across diverse tasks.
+1. Introduction
+Regularization is a fundamental component of modern
+machine learning, enabling models with high expressive
+power to generalize beyond the training data. Classical approaches such as𝓁2 weight decay [19], early stopping [26],
+and Jacobian or gradient-norm regularization [28] directly
+modify the training objective to penalize complex hypothesesandsensitivitytoperturbations.Asdeepneuralnetworks
+havegrownindepth,width,andstructuralsophistication,the
+designofeffectiveregularizationtechniqueshasbecomeincreasinglycriticalforachievingrobustgeneralizationacross
+diverse learning regimes.
+Among existing regularization methods, dropout [15]
+remains one of the most widely adopted. Originally introduced as a stochastic training procedure that randomly
+deactivates neurons, dropout was shown to significantly
+reduceoverfittingbypreventingco-adaptationandimplicitly
+averaging over an ensemble of subnetworks [29]. Since its
+introduction, dropout has been successfully applied across
+a wide range of architectures and tasks, including convolutional networks, recurrent models, and Tran

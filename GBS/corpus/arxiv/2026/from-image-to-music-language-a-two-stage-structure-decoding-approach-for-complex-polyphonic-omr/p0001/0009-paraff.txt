@@ -1,0 +1,64 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 1
+section: paraff
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+in post-processing step. For polyphonic notation,
+it requires global reasoning about voices, ticks, durations, and measure boundaries. Our topology
+25
+
+Annotation Agent (LLM)
+MCP T ool Environment
+An Issue Measure
+Automatic regulation failed
+Request measure info
+(score image & event data)
+Analyze & construct a fix
+Submit fix, request quality eval
+Pass?
+Commit final result
+Reflect and suggest
+improvements
+Which rules were most useful?
+What guidelines are missing?
+Annotation complete
+Fix written · Feedback recorded
+Return score image
+and event data
+Return quality metrics
+pass / fail
+Confirm write
+Yes
+No
+Figure 11: A preliminary agent-assisted annotation loop for issue measures. The agent requests
+measure-level context (image crop and event data), proposes a structured fix, and uses automatic
+quality evaluation as a guardrail.
+formulation and probability-guided tree search make this reasoning explicit: the model provides local
+evidence, and the solver searches and verifies to select a globally consistent structure.
+In experiments on an independent LilyPond test set, probability-guided search substantially improves
+both tick accuracy and voice assignment over rule-based greedy decoding and a stronger linearequations baseline. This supports a practical view of OMR: when annotation budgets are limited,
+combining learned predictors with rule-based exploration and evaluation can raise the ceiling of
+recognition quality, while also producing structured data that can be fed back to train stronger models.
+As a practical resource for future work, we are considering releasing the lilypond-topology
+dataset used in this paper, including the LilyPond source files, engraved images, and the resulting
+topology-cluster data. Looking ahead, we also plan to build a more complete benchmark that
+evaluates a full OMR pipeline from images to a music-language representation, rather than only
+isolated sub-tasks.
+We also run an IMSLP 3 data mining project 4 that aims to convert open sheet-music images into
+a usable symbolic music dataset. Our goal is to make this corpus practical for downstream tasks,
+including symbolic music generation, algorithmic performance, and automatic transcription from
+performances back to notation.
+Several directions remain open. A stronger learned evaluator could reduce brittleness and improve
+ranking among near-correct hypotheses. Efficiency is also important for unusually large measures,
+where the search space becomes extreme. Tighter handling of upstream uncertainty in visually
+sensitive semantics would make the full pipeline more robust. Finally, beyond data collection, we also
+view RL-based finetuning of multimodal LLMs using these annotation agent rollouts as a promising
+direction.
+3https://imslp.org/
+4https://github.com/k-l-lambda/imslp-mining
+26

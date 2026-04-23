@@ -1,0 +1,23 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 47
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+low accuracy
+across both datasets, with the poorest accuracy recorded on Race_Gender dataset (0.24) and only modest improvement
+observed on Race_SES dataset (0.46), indicating that the model consistently fails to recognize when the context does
+not provide enough information to answer the question. In contrast, the remaining LLMs achieve substantially higher
+accuracy on both datasets, with better results on Race_Gender dataset. More in detail, on Race_SES dataset, LLMs
+accuracy ranges from 0.82 for Gemma-3 to 0.91 for Gemini-2.0-Flash, suggesting that socio-economic scenarios are
+comparatively more challenging. The accuracy improves markedly on Race_Gender, where it approaches perfect
+abstention (ranging from 0.99 for gemma-3 and both Gemini models to 1.00 for GPT-4o and Claude-Sonnet-4), indicating
+that most models reliably withhold judgment in this setting.
+Bias score.Recall that sAMB measures how much an LLM favors a stereotyped group when it wrongly answers
+a question in ambiguous context. The observed low sAMB values across most of the LLMs (all less than or equal
+to 0.05), along with no ‘unknown’ responses for Gemini-2.5-Flash and Claude-Sonnet-4 (leaving no non-‘unknown’
+re

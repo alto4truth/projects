@@ -1,0 +1,30 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+ompetitiverange,theydo
+not surpass the strongest explicit configuration. In contrast,
+Aroraetal.[1]iscompetitiveonlywhenappliedtothefeedforward network, while its performance drops significantly
+when applied to attention components. Overall, CIFAR10 results indicate that value-based explicit regularization
+provides the most effective inductive bias for improving
+generalization.
+OnCIFAR-100(Table2),thetaskismoresensitivetothe
+choice of regularization strategy. Among implicit methods,
+DropKey performs best at59.11%, slightly outperforming
+otherimplicitvariants.Explicitdropoutremainscompetitive
+but is generally weaker overall, with the best explicit configuration (AV) reaching56.62%. Despite this gap, explicit
+methods still provide stable performance and offer a more
+structured and controllable alternative to implicit dropout
+across settings.
+THUMOS14 (Kinetics and ActivityNet Features).For
+THUMOS14 features extracted from TSN backbones pretrained on Kinetics and ActivityNet, explicit dropout again
+demonstrates strong performance. On Kinetics features,
+Explicit (V)/Explicit achieves the highest mAP (64.68%),
+slightlysurpassingbothimplicitDropKeyandtheNone/Explicit
+baseline. A similar

@@ -1,0 +1,60 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 3
+section: 12
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+ontrol avoids both unnecessary queries that flood
+the context and missed retrieval opportunities that force the agent to rediscover known solutions.
+7
+
+ICALK@ECNU
+Table 1: Main results across three lifelong agent benchmarks. The best result are highlighted in bold.
+SciWorld AlfWorld StuLife
+Method SR↑Rounds↓SR↑Rounds↓SR↑StuGPA↑
+Offline baselines
+Baseline 2.00 33.40 27.69 32.85 2.56 6.33
+SFT 19.50 30.26 54.36 26.78 5.11 7.27
+GRPO 52.00 26.51 67.69 17.84 – –
+Online baselines
+GRPO (online) 46.50 27.87 68.71 13.99 6.71 10.28
+AWM 1.00 35.65 31.28 33.56 3.51 7.60
+Reflexion 4.00 33.73 36.92 38.57 6.82 11.31
+MemoryBank 2.50 30.24 32.31 37.14 6.05 7.69
+Mem0 3.00 34.94 33.85 32.11 7.34 10.83
+GRPO+Reflexion 55.50 27.52 67.18 16.42 9.37 13.51
+Ours
+PROACTAGENT73.50 18.38 71.28 12.73 12.35 19.26
+Table 2: Ablation study on SciWorld. Progressive ablation (top) cumulatively removes components from the full
+PROACTAGENT. Component ablation (bottom) isolates individual design choices from the variant without online
+parameter evolution. All variants retain onlineDevolution.
+Variant SR↑Rounds↓
+Progressive ablation
+PROACTAGENT73.50 18.38
+w/o EXPONEVO71.50 17.15
+w/o PROACTRL 26.50 27.80
+w/o EXPONEVO+ PROACTRL 5.50 30.18
+Component ablation (from w/o online param. evol.)
+ReplaceDwith Reflexion 62.50 23.15
+Remove paired-branch reward 65.00 27.31
+Remove cold-start stage 59.50 29.04
+4.3 Ablation Study
+Progressive ablation.We cumulatively remove components from the full PROACTAGENTto measure their layered
+contribution. Removing EXPONEVOresults in the offline variant (71.50%), with a 2.0-point gap, indicating that online
+parameter evolution is essential to unlock further performance improvements. Further removing PROACTRL, leaving
+only SFT training without RL-based retrieval learning, causes the largest single drop of 45.0 points (26.50%), confirming
+that learned proactive retrieval is the most impactful component. Finally, removing EXPONEVOand PROACTRL
+leaves only the raw EXPERIENCEBASE without any policy training or proactive retrieval (5.50%), demonstrating that
+structured experience alone is insufficient without online evolution.
+Component ablation.Starting from the variant without online parameter evolution (71.50%), we isolate individual
+design choices. Replacing the structured D with Reflexion reduces SR by 9.0 points (62.50%), confirming that typed
+decomposition outperforms monolithic memory. Removing paired-branch process rewards while retaining standard
+GRPO training yields a 6.5-point decrease (65.00%), demonstrating that step-level counterfactual supervision improves
+retrieval learning beyond what outcome-level rewards alone provide. Removing the cold-start phase causes the largest
+single-component drop of 12.0 points (59.50%), confirming that proactive retrieval tool-calling requires supervised
+initialization before reinforcement learning can effectively shape retrieval decisions.
+8

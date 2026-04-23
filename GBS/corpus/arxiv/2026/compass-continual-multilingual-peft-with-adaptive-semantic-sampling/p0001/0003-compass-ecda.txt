@@ -1,0 +1,23 @@
+title: COMPASS: COntinual Multilingual PEFT with Adaptive Semantic Sampling
+source: arxiv
+year: 2026
+document_id: compass-continual-multilingual-peft-with-adaptive-semantic-sampling
+authors: Noah Flynn
+page: 1
+section: compass-ecda
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20720v1
+
+accumulated across
+temporal periods. Real-world deployment involves sequential distribution shifts as user needs evolve over
+time. To evaluate COMPASS-ECDA’s ability to handle multiple temporal shifts, we simulate a deployment
+trajectory spanning five distinct periods with evolving subject distributions.
+We partition the 57 MMLU subjects into temporal phases representing usage evolution (detailed subject
+allocation in Appendix D). Period T1 establishes initial deployment with 27 foundational subjects, followed
+by shifts towards 10 advanced STEM domains (T2), 10 humanities and ethics subjects (T3), 10 professional
+domains (T4), and, finally, a return to 10 subjects from the original T1 subject distribution, simulating
+cyclical usage while testing retention of intervening knowledge from T2-T4.
+Each period consists of approximately 2K samples per language and each transition is applied, and assessed,
+over 4 increments of 500 samples each. At each transition, the JS divergence trigger detects the distribution
+shift and initiates adapter updates (see Appendix D) for optimal trigger threshold setting). Performance is
+tracked throughout the adaptation process, measuring ability to adapt

@@ -1,0 +1,30 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 18
+section: precision-highlights-whether-the-method-successfully
+chunk: 56
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+IDENTIFIES BACKGROUND PIXELS AS NOT BELONGING TO THE OBJECT.
+Segmentation Method Segmentation Evaluation (%)
+mIoURecall Precision
+FPN + ResNet50 [30] 93.14 95.89 96.97
+SegFormer-B0 [53] 93.01 96.07 96.64
+BiSeNetv2 [55] 84.41 88.43 94.91
+DANet [19] 92.61 95.91 96.37
+Fast SCNN [42] 84.64 88.89 94.72
+FCN + MobileNetv2 [32] 90.67 94.83 93.67
+SAM [27] 92.41 94.03 97.88
+mentation evaluation dataset with more challenging samples
+whose masks include clothes and accessories, to the extent
+of our knowledge. When looking at harder samples, such as
+the third image in Figure 10, it is much clearer that there
+is a significant difference between the evaluated networks’
+capacity to deal with occlusions and appropriately segment
+accessories, with SAM being the only model capable of
+including the hat in the output mask.
+Fig. 10. Segmentation masks obtained by each of the considered segmentation methods in four CelebAMask-HQ samples. The second row depicts
+the GT segmentation masks.

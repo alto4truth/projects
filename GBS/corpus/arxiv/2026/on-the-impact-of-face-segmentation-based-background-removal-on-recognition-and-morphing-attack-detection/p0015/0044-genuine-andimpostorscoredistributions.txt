@@ -1,0 +1,29 @@
+title: On the Impact of Face Segmentation-Based Background Removal on Recognition and Morphing Attack Detection
+source: arxiv
+year: 2026
+document_id: on-the-impact-of-face-segmentation-based-background-removal-on-recognition-and-morphing-attack-detection
+authors: Eduarda Caldeira; Guray Ozgur; Fadi Boutros; Naser Damer
+page: 15
+section: genuine-andimpostorscoredistributions
+chunk: 44
+source_ref: https://arxiv.org/pdf/2604.20585v1
+
+Figures 6, 7 and 8 show the histograms of the genuine and
+impostor score distributions of FERET [40], FRGCv2 [39],
+IJB-C [35] and their segmented variants, when evaluated by
+the four FR models considered in the main paper (ElasticFace
+[4], ArcFace [14], SwinFace [43] and TransFace [11]). It is
+possible to observe that there are no significant differences
+between the plots obtained by the same FR model when
+analyzing each version of FERET (Figure 6). Despite being
+Fig. 3. Pictures from FERET, FRGCv2, and IJB-C before and after
+background removal by SAM using the five facial landmarks and the
+perimeter of the box as segmentation prompts. The margins were added to
+highlight the images’ borders after background removal. Notice that while
+FERET, FRGCv2 portrait, and IJB-C achieve good segmentation results,
+segmenting a FRGCv2 landscape picture (third column) with these prompts
+leads to poor background removal.
+Fig. 4. Landscape pictures of FRGCv2 before and after background
+removal by SAM using the five facial landmarks and different bidirectional
+horizontal extensions of the bounding box extracted by RetinaFace as
+segmentation prompts (the vertical limits of the box are the image up an

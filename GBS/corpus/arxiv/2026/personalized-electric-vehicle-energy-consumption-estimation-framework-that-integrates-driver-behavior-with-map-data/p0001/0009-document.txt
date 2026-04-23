@@ -1,0 +1,26 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+energy consumption models. To address these limitations, we propose a
+modular system architecture that unifies personalized driver modeling with
+comprehensive map feature integration and physics-based energy consumption estimation. The architecture comprises seven interconnected modules
+that produce personalized energy consumption estimates for a driver-selected
+route through a structured processing pipeline, illustrated in Fig. 1.
+3.2. Module Descriptions and Data Flow
+1)Map Display Handler:The pipeline begins with the Map Display
+Handler, which serves as the user interface for route selection. Implemented as a Python-Selenium wrapper around OpenStreetMap (OSM)
+controlled via ChromeDriver, this module enables users to specify start
+and destination points through address search or marker placement.
+The Selenium handler monitors URL changes and HTML elements
+to confirm successful route retrieval, prompting automatic download
+of the corresponding route geometry as a GeoJSON file containing
+latitude-longitude GPS coordinates. This geographic representation
+forms the main input for subsequent processing stages.
+4

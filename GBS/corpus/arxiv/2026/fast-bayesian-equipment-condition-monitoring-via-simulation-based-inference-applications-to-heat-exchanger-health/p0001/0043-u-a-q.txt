@@ -1,0 +1,24 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 43
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+13
+identification is highly robust, even in regimes where individual parameters are weakly identifiable. This distinction highlights that reliable anomaly detection may
+be achievable even when precise quantification of degradation dynamics remains challenging.
+Several limitations should be considered. First, parameter identifiability depends strongly on the observability
+of the underlying process; for example, the fouling intensity and changepoint parameters are difficult to estimate in scenarios with sparse or inactive degradation.
+These challenges arise from both measurement noise and
+structuralpropertiesofthestochasticmodel. Second, the
+study relies on synthetic data generated from a simplified degradation model, which does not fully capture the
+complexity of real industrial systems. In particular, assumptions such as stationary noise and simplified fouling
+dynamics may limit direct transferability. Additionally,
+the use of engineered summary statistics, while computationally efficient, may discard information present in the
+full time series.
+Despite these limitations, the approach is broadly applicable due to its model-agnostic nature. SBI does not
+require an explicit likelihoo

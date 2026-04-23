@@ -1,0 +1,34 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+es to determine which elements fromB are required for the
+completion of t. For every candidate dependency
+(r→t), its probability is estimated as
+P(r→t) = kt
+N ,
+where kt denotes the number of times subtask r
+was identified as necessary for t and N is the number of queries. To filter out spurious associations,
+the Wilson confidence interval is applied to the resulting probabilities. The procedure is carried out
+in two passes: first over the entire bankB, and then
+restricted to the subtasks previously identified as
+relevant, which refines the weighting of relations.
+The final output is an ontology graph G= (V, E)
+that encodes the model’s hypothesized structure of
+interrelations among subtasks. The full procedure
+is summarized in Algorithm 3.
+After constructing the ontology G= (V, E) ,
+each goal plan P[I] is expanded with its dependencies. For every subtask s∈ P[I] , we recursively
+collect all prerequisites in G. The union of these
+subtasks with the original goals defines the plan’s
+vertices, which are then topologically sorted so
+that prerequisites precede dependents. The result
+is a linearized plan P containing the goals and all
+supporting subtasks (Algorithm 4).
+Algorithm 2Subtask

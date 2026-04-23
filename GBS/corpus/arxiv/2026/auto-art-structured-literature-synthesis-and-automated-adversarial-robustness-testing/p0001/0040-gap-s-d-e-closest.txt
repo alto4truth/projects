@@ -1,0 +1,27 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 40
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+Regulatory implications.The EU AI Act [ 48] (Article 15)
+mandates “accuracy, robustness and cybersecurity” for highrisk AI systems—explicitly mentioning adversarial examples,
+data poisoning, and model poisoning—yet does not specify
+evaluation protocols. NIST AI 100-2e2025 [24] supplies an
+authoritative taxonomy, and the GenAI Profile [49] maps over
+200 actions across 12 risk categories, but neither prescribes
+a concrete evaluation pipeline. MITRE ATLAS v5.3.0 [ 37]
+now catalogues 84 techniques including agentic AI attack
+vectors. ISO/IEC 42001 [55] provides the first certifiable AI
+management system standard, with Clause 6.1 requiring identification of adversarial threats. OW ASP’s LLM Top 10 [50] and
+Agentic Applications Top 10 [36] standardise agent-specific
+threat taxonomies. Our analysis suggests this regulatory underspecification carries risk: the same model can appear robust
+or vulnerable depending on the evaluation pipeline. AUTOART’s compliance mapping provides a concrete bridge: NIST
+AI RMF function MEASURE maps to multi-norm evaluation;
+OWASP LLM01 (Prompt Injection) maps to agentic attack
+modules; EU AI Act Article 15 maps to the pre-screening gate
+and worst-case reporti

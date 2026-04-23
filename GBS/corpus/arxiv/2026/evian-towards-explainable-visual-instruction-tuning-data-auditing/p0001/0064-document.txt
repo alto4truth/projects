@@ -1,0 +1,32 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 64
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+tic cascade that prioritizes the knowledge category
+with a probability of 0.8 for texts flagged contains_knowledge, followed by the reasoning category with a probability of 0.6 for those with contains_reasoning, and otherwise defaults to the consistency category. This initial choice, in turn, dictates the method for subtype determination: while
+subtypes for the consistency category are chosen
+uniformly at random, a more nuanced approach is
+employed for the contextually-sensitive knowledge
+and reasoning categories, for which a second LLM
+call intelligently selects the most plausible subtype
+using the following prompt.
+Prompt for Category and Subtype Selection
+You are a text analysis expert. Your task is to
+select the single best error-injection strategy
+for the “Original Text” from the “Available
+Options”.
+Available Options:{error_options_text}
+Original Text:“{text_to_analyze}”
+Analyze the text and choose the error code
+from the options that is most relevant to the
+text’s content. Respond ONLY with a JSON
+object containing your choice.
+Stage 3: Defect GenerationFinally, with a
+specific error subtype selected, a third LLM call
+rewrites the original text according to the corresponding

@@ -1,0 +1,29 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+12 Authors Suppressed Due to Excessive Length
+T able 3:Ablation study on the components of our proposed optimization framework
+using the 2B model. We report the average accuracy across TFV and TQA benchmarks.
+Optimization Method TFV-Avg. TQA-Avg.
+GRPO 81.34 46.43
+DAPO 82.48 49.04
+PGPO (w/o Process Supervision) 83.12 49.34
+PGPO (Ours)86.12 51.04
+Impact of Optimization Algorithms.Table 3 compares PGPO against standard
+GRPO, Direct Alignment Policy Optimization (DAPO), and a PGPO variant
+lacking critic-gated process rewards. DAPO serves as an intermediate baseline
+using decoupled clipping constraints but lacking length-aware dynamic sampling
+and process supervision. Upgrading GRPO to DAPO improves the TQA average
+by 2.61% (from 46.43% to 49.04%), validating that decoupled clipping stabilizes
+visual domain learning. Adding length-aware dynamic sampling (PGPO w/o
+Process Supervision) yields a further 0.30% TQA boost, confirming that filtering low-information, mid-length trajectories enhances optimization efficiency.
+The most profound leap occurs when activating the critic VLM for step-level
+process supervision. Full PGPO improves upon GRPO by 4.78% on TFV (from
+81.34% to 86.12%) and 4.6

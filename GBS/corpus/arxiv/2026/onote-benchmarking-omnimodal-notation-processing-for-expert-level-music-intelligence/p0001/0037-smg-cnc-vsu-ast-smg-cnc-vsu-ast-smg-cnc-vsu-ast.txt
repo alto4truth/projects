@@ -1,0 +1,26 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 37
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+otation (Jianpu) Evaluation
+Role:As an extremely strict music theory professor, review and score AI-generated Jianpu based on rhythmic values and
+musicality (Score 1-5).
+Syntax Guide:|separates measures, spaces separate complete beats. A standalone number (e.g., 1, 0) or an extension dash (-)
+occupies 1 beat. Two numbers in parentheses (e.g.,(3 4)) represent two eighth notes occupying 1 beat.
+1. Rhythmic Verification:Exactly 4.0 beats per measure between|symbols. (Score 5: All correct; Score 3: Half correct; Score 1:
+All incorrect).
+2. Aesthetic Analysis:Evaluate motif, melodic contour (rise/fall of notation numbers), and rhythmic groove. (Score 5: Rich and
+logical; Score 1: Does not constitute actual music).
+Output Constraints:Output ONLY the scores without analysis. Format:Technical Score: [ ]/5, Aesthetic Score: [
+]/5, Average Score: [ ]/5.
+Critic C: ASCII Guitar Tablature Evaluation
+Role:As an extremely strict fingerstyle guitar master, review and score AI-generated ASCII guitar tabs based on layout,
+fingering, and musicality (Score 1-5).
+1. Layout and Timing:The 6 strings must align perfectly vertically. Assuming 4/4 time, characters on each string between two
+bar lines (|) mu

@@ -1,0 +1,22 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 2
+section: abstract
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+ICALK@ECNU
+Figure 1: Comparison of retrieval strategies for online lifelong agents. Static initialization provides memory once at task
+start, failing when task dynamics shift. Continuous retrieval queries at every step, causing context overload. LLM-gated
+retrieval adds a separate model to judge necessity, incurring latency and cost. Proactive retrieval (ours) learns when to
+retrieve through paired-branch process rewards, achieving adaptive control without additional model calls.
+retrieval at every step, increasing access to external experience but often introducing substantial redundancy and context
+overload. LLM-gated retrieval [16, 17] further employs an additional model or heuristic to decide whether retrieval is
+needed, improving flexibility at the cost of extra latency and inference overhead. These studies demonstrate the promise
+of memory-augmented lifelong agents, but also reveal that effective experience utilization depends critically on how
+retrieval is controlled and how accumulated experience is updated over time.
+However, existing lifelong agents still face two fundamental limitations.First, current retrieval mechanisms remain
+essentially passive: retrieval is triggere

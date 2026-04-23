@@ -1,0 +1,34 @@
+title: A Hierarchical MARL-Based Approach for Coordinated Retail P2P Trading and Wholesale Market Participation of DERs
+source: arxiv
+year: 2026
+document_id: a-hierarchical-marl-based-approach-for-coordinated-retail-p2p-trading-and-wholesale-market-participation-of-ders
+authors: Patrick Wilk; Ethan Cantor; Yikui Liu; Jie Li
+page: 2
+section: abstract
+chunk: 38
+source_ref: https://arxiv.org/pdf/2604.20586v1
+
+MARL-Based Coordinated P2P Electricity Trading
+Figure 3:Time-series of P2P participants energy overlaid with
+hourly wholesale price forecasts in Case I.
+Table 2 provides the permissible bidding specifications
+for the P2P and wholesale markets, including prosumers
+and aggregator price ranges and maximum markup. These
+valuescanbeadaptedtospecificagreementsormarketrules,
+thereby defining the feasible cost bounds for participants in
+different markets.
+4.1. Effectiveness of the Proposed SEAM-LESS
+Three cases are studied to compare the four market
+strategies:
+Case I: Each P2P participant is designated as either a
+buyer or seller: prosumers 1 and 3 hold negative quantities
+(asbuyer),whileprosumers2and4alwaysmaintainpositive
+quantities(asseller).Figure3illustratestheevaluationdata,
+whereallprosumers’hourlyquantitiesandwholesaleprices
+are randomly varied by±5 units during training.
+Case II: In contrast to Case I, where sellers hold market
+power due to scarce and valuable supply, Case II tests the
+inverse scenario by negating all participants’ quantities, so
+prosumers 1 and 3 become sellers and prosumers 2 and
+4 become buyers. This setup evaluates how buyers wield
+market power in the P2P mar

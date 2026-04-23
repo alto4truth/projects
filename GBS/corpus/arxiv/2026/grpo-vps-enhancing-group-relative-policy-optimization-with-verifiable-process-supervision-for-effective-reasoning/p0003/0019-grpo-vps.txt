@@ -1,0 +1,33 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 19
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+Published as a conference paper at ICLR 2026
+Algorithm 1:GRPO WITH VERIFIABLE PROCESS SUPERVISION
+Input:Question setD; Base policyπ θb; Entropy percentilep; Segment numberm; Progress reward
+weightα; Training stepsS
+Output:Updated policy parametersθ
+1Initialize policyπ θ ←π θb
+2foriteration= 1, . . . , Sdo
+3Sample a mini-batchD b ⊂ D
+4foreach questionx∈ D b with target answery ∗ do
+5Generate full trajectoryo∼π θ(·|x)
+6Compute token entropiese t
+7Segmento= (z 1, . . . , zm, y)using adaptive entropy-based cutpoints
+8Compute initial confidenceC 0 =π θ(y∗ |x)
+9fork= 1tomdo
+10C k =π θ(y∗ |x, z ≤k)
+11∆C k =C k −C k−1
+12Compute hybrid advantages ˜At using Eq. 6
+13Update policyπ θ using policy gradient with ˜At
+we include a comprehensive set of baselines categorized by their use of outcome-level vs. process-level
+supervision:
+•Outcome Supervision Only.This category includes methods that rely solely on final answer correctness for reward assignment. We consider GRPO and its recent variants, DrGRPO (Liu et al., 2025)
+and GSPO (Zheng et al., 2025), which enhance group-wise comparison or propagate advantages with
+entropy-based mechanisms. We also include the BASE models without RL fine-tuning f

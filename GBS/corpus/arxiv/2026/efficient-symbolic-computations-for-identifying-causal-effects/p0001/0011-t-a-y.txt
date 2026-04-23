@@ -1,0 +1,25 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+1 2 3
+Figure 2: Mixed graph for the instrumental variable model.
+λwv =b(σ)/a(σ), whereaandbare polynomials in the entries of the covariance matrixΣ = (σ ij),
+and wherea(σ)is not the zero polynomial.
+We now explain how methods from computational algebra can be used for deciding whether a
+given graph allows for rational identifiability of the parameters. LetR[x1, . . . , xm]be a polynomial
+ring, i.e., the set of all polynomials in the indeterminatesx 1, . . . , xm with real coefficients. In
+our setting, we work with indeterminates corresponding to the matricesΛ,ΩandΣ. To define
+this, letλ={λ uv :u→v∈D}be indeterminates corresponding to the directed edges and let
+ω={ω uv :u↔v∈B, u < v} ∪ {ω vv :v∈V}be indeterminates corresponding to the bidirected
+edges. For convenience, we will denote byθ=λ∪ωthe set all indeterminates corresponding to
+the directed and the bidirected edges. Moreover, letσ={σuv : 1≤u≤v≤p}be indeterminates
+representing the entries of the covariance matrix. From now on, we will consider the matrixΛas a
+matrix of symbolic indeterminates with entriesΛuv =λ uv ifu→v∈DandΛ uv = 0else. Similarly,
+the matrixΩhas entriesΩ uv = Ωvu =ω uv ifu↔v∈Boru=v, andΩ uv = 0else. The matrix

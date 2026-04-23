@@ -1,0 +1,49 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 51
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+ema.
+{
+"summary": "<brief behavioral summary>",
+"error_list": ["<negative textual gradient>",
+...],
+"experience_list": ["<positive textual
+gradient>", ...]
+}
+User input.The model receives the task, the trajectory,
+and optionally a reference answer.
+D.3 Optimization Proposal Prompt
+(Optimizer LLM)
+Optimizer System Prompt
+Role.Given the currentTextual Parameter Graph (TPG)
+and an error cluster, generate anoptimization proposal
+∆G.
+Inputs.
+• the current TPGG
+• an error cluster Ck summarizing a recurring failure
+pattern
+• optional historical optimization experiences from
+GRAO, including similar contexts, graph edits, and
+effectiveness scores
+Goal.Propose minimal but effective graph edits that address the root cause while preserving useful behavior.
+Supported operations.
+•REWRITE_NODE(v, new_content)
+•PRUNE_EDGE(u, v)
+•ADD_NODE(v_new, content)
+•ADD_EDGE(u, v)
+Key instructions.
+• Diagnose the root cause before editing.
+• Prefer reusable fixes over task-specific patches.
+• If historical experiences are provided, imitate effective
+strategies and avoid ineffective ones.
+• Keep the proposal internally consistent with the current
+graph.
+Key output schema.
+{
+"problem_context": "<abstract failu

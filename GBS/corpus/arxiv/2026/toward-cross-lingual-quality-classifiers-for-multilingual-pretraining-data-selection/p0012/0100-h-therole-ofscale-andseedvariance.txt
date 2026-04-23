@@ -1,0 +1,64 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 12
+section: h-therole-ofscale-andseedvariance
+chunk: 100
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+variance suggests that the specific subset of examples used to define the quality boundary heavily
+influences which knowledge domains are selected.
+26
+
+Published as a paper at 3rd DATA-FM workshop @ ICLR 2026, Brazil.
+Table 14: Comparison of the HQ baseline against a version trained with a different sampling seed
+(HQ seed) on Arabic. The variation in results across tasks suggests that in lower-resource settings,
+the specific documents selected for the anchor set can significantly impact the classifier’s decision
+boundary.
+Benchmark No filtering HQ HQ seed
+ARC-Easy 0.27160.28980.2838
+AlGhafa PIQA-MT0.51940.5145 0.5095
+AlGhafa RACE 0.2715 0.27750.2879
+AlGhafa SciQ 0.4261 0.44320.4492
+ARC-Challenge 0.2678 0.26600.2720
+Belebele_c 0.3222 0.32330.3289
+GMMLU_c 0.24750.25750.2450
+HellaSwag0.39090.3873 0.3909
+Include_c0.30250.2681 0.2844
+M_MMLU_c0.26690.2614 0.2653
+AlGhafa PIQA0.61320.6088 0.6126
+XNLI0.33490.3309 0.3317
+XStoryCloze 0.5903 0.59230.5930
+Aggregate acc_norm0.3711 0.37080.3734
+Average rank1.92 2.311.69
+Table 15: Comparison of standard HQ against variants with different classifier seeds, LLM training
+seeds, and larger positive anchor sets (HQ all) on French. Results indicate that variance in data
+selection (classifier seed) has a larger impact on downstream performance than the stochasticity of
+the LLM training itself.
+Benchmark No filtering HQ HQ (seed) HQ seed
+LLM Training HQ (all)
+ARC-Challenge 0.2891 0.30710.32160.2985 0.3080
+Belebele_c 0.3444 0.3511 0.3500 0.33890.3544
+GMMLU_c 0.2625 0.2925 0.29000.30750.2875
+HellaSwag0.48830.4748 0.4761 0.4774 0.4773
+Include_c 0.38660.41530.4057 0.4129 0.4105
+M_MMLU_c 0.2831 0.2945 0.2944 0.29460.2949
+XNLI 0.4707 0.4855 0.48230.49040.4695
+XWinograd 0.63860.65060.5904 0.6265 0.6386
+Aggregate acc_norm0.39540.40890.4013 0.4058 0.4051
+Average rank3.882.383.38 2.62 2.62
+To mitigate this variance, we examine two complementary strategies: increasing positive sample
+coverage by using all available high-quality anchors (HQ all), and varying the LLM training seed
+independently from the filtering process. While altering the LLM seed introduces minor variability,
+the dominant source of instability arises from the classifier sampling process itself.
+Using the full positive set moderately improves robustness but does not consistently outperform
+standard HQ filtering, suggesting diminishing returns from scale alone.
+This result is counterintuitive if we assume that “more data is better.” We hypothesize that this
+degradation is due to an informational saturation effect: by providing the classifier with the entire,
+unfiltered anchor pool, we likely introduced a higher ratio of “non-helpful” or marginal samples that
+are present in the positive datasets but lack strong educational signal. This prevents the classifier
+from establishing a sharp decision boundary between truly high-quality content and baseline web
+text. This suggests that representative, curated sampling is a more effective strategy for training
+quality filters than just increasing the number of training samples. These results motivate multilin27

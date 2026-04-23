@@ -1,0 +1,29 @@
+title: Coverage, Not Averages: Semantic Stratification for Trustworthy Retrieval Evaluation
+source: arxiv
+year: 2026
+document_id: coverage-not-averages-semantic-stratification-for-trustworthy-retrieval-evaluation
+authors: Andrew Klearman; Radu Revutchi; Rohin Garg; Rishav Chakravarti; Samuel Marc Denton; Yuan Xue
+page: 1
+section: msc-scc-zqc-msc-scc-zqc
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20763v1
+
+rst Case capture central
+tendency and tail performance.
+et al., 2017), and MS MARCO (Nguyen et al., 2016) . Building on these foundations, more recent benchmarks have
+been developed to target specific failure modes of RAG
+systems, including MultiHop-RAG (Tang & Yang, 2024),
+CRAG (Yang et al., 2024), GlobalQA (Luo et al., 2025),
+Long2RAG (Qi et al., 2024), MT-RAG (IBM Research,
+2025), mmRAG (Xu et al., 2025), and QE-RAG (Zhang
+et al., 2025). However, these benchmarks largely rely on
+static or narrowly defined evaluation settings, leaving the
+limitation targeted in this paper unexamined.
+Query Taxonomies and Curation.Prior work has proposed principled benchmark curation via query taxonomies
+that classify queries by task type (Teixeira de Lima et al.,
+2025) or operational category (Lyu et al., 2025). However,
+these approaches focus on query-level properties and do not
+address corpus-level semantic coverage gaps.
+Corpus Stratification.Methods such as GraphRAG (Edge
+et al., 2025), RAPTOR (Sarthi et al., 2024), and HippoRAG (Gutierrez et al., 2024) explore corpus stratification to improve retrieval efficiency and quality. GraphRAG
+is most closely related, but our approach detects relatio

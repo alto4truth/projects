@@ -1,0 +1,16 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 29
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+d InfoTabs,
+V-tableR1 (4B) scores 87.95% and 88.94% respectively, effectively matching or
+surpassing the performance of much larger proprietary models like GPT-4.1
+(87.32% / 92.43%) and Gemini-1.5-Flash (88.16% / 91.43%). The improvement
+over the SFT baseline (e.g., TabFact: 83.88%→87.95%) indicates that explicitly verifying cell coordinates also reduces the hallucination of non-existent table
+facts, leading to more robust semantic entailment.

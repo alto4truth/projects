@@ -1,0 +1,22 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+Dropoutisawidelyusedregularizationtechniqueindeeplearning,butitseffectsaretypicallyrealized
+through stochastic masking rather than explicit optimization objectives. We propose a deterministic
+formulation that expresses dropout as an additive regularizer directly incorporated into the training
+loss. The framework derives explicit regularization terms for Transformer architectures, covering
+attention query, key, value, and feed-forward components with independently controllable strengths.
+This formulation removes reliance on stochastic perturbations while providing clearer and finegrainedcontroloverregularizationstrength.Experimentsacrossimageclassification,temporalaction
+detection, and audio classification show that explicit dropout matches or outperforms conventional
+implicitmethods,withconsistentgainswhenappliedtoattentionandfeed-forwardnetworklayers.Ablation studies demonstrate stable performance and controllable regularization through regularization
+coefficientsanddropoutrates.Overall,explicitdropoutoffersapracticalandinterpretablealternative
+to stochastic regularization while maintaining architectural flexibility across diverse tasks.
+1. Introduction
+Regularization is a fundame

@@ -1,0 +1,17 @@
+title: Enhancing Research Idea Generation through Combinatorial Innovation and Multi-Agent Iterative Search Strategies
+source: arxiv
+year: 2026
+document_id: enhancing-research-idea-generation-through-combinatorial-innovation-and-multi-agent-iterative-search-strategies
+authors: Shuai Chen; Chengzhi Zhang
+page: 1
+section: document
+chunk: 58
+source_ref: https://arxiv.org/pdf/2604.20548v1
+
+Ms in the task of generating research ideas.
+Figure. 8. Comparative Performance of Single-Agent vs. Multi-Agent Systems Across Itera-tions
+!"#
+!$#
+!%#
+
+21 4.9 Entity Recombination Analysis Combinatorial innovation theory suggests that creative ideas rarely emerge from en-tirely new inventions; instead, they arise through atypical recombination of existing elements. In this study, entities such as methods, tasks, datasets, and metrics are treated as basic knowledge units, and their recombination reflects the core mechanism of com-binatorial innovation. Therefore, tracing how entities are inherited, introduced, and re-organized across iterations provides a useful lens for understanding how the proposed framework generates innovative research ideas. Based on the comparative results in Section 4.4, we select three high-performing generated proposals for fine-grained en-tity-level analysis. To support this analysis, we fine-tune the scientific entity extraction model Hgere (Yan et al., 2023) on the SciNLP dataset (Duan et al., 2025), which defines five entity types: Method, Task, Metric, Dataset, and Other. We then extract entities from the in-termediate outputs of each iteration, including both the generated ideas and their corre-sponding knowledge bases. Here, the knowledge base consists of the previous-round idea together with the titles and abstracts of the newly retrieved literature. For each round, we calculate the entity overlap ratio between the generated idea and its knowledge base, and trace the source of each entity as originating from the last idea, retrieved references, or the LLM itself. Table 5 presents the entity counts of ideas and knowledge bases across iterations for the three selected cases. Table 5. Entity Counts of Ideas and Knowledge Bases Across Iteration Stages . Idea_id T1(idea) T1(KB) T2(idea) T2(KB) T3(idea) T3(KB) 1 51 487 58 561 60 335 2 48 297 56 422 61 946 3 54 289 61 338 58 410 Note: T1=Turn 1, T2=Turn 2, T3=Turn 3, KB= Knowledge Base. To illustrate the recombination dynamics in detail, we present one representative case: Causal Neuro-Symbolic Swarm Intelligence with Human-in-the-Loop Adap-tation for Autonomous Disaster Response. Table 6 summarizes the sources of entities in Idea 1 across the three turns. Figure 9 shows the entity structure of the initial idea. Table 6. The source of entities in Idea 1 . Turn1 Turn 2 Turn 3 Entity Counts of the Idea 51 58 60 From Last Idea 6(11.8%) 25(43.1%) 47(78.3%) From Reference 9(17.6%) 2(3.3%) 3(5%) From LLM 36 31 10 Note: The percentage in parentheses indicates the entity overlap rate between the idea and its corresponding knowledge base.

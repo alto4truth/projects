@@ -1,0 +1,72 @@
+title: From Image to Music Language: A Two-Stage Structure Decoding Approach for Complex Polyphonic OMR
+source: arxiv
+year: 2026
+document_id: from-image-to-music-language-a-two-stage-structure-decoding-approach-for-complex-polyphonic-omr
+authors: Nan Xu; Shiheng Li; Shengchao Hou
+page: 2
+section: bom-k4-tn3-td8
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20522v1
+
+unding)
+• Partial voices: Not every voice fills the full measure. A voice may cover only part. This is normal —
+spaceTime > 0indicates unused time.
+42
+
+•Cross-staff voices: Events on different staves belong to different voices.
+Time Warp (Tuplets) — Verify Carefully
+•timeWarp: { numerator, denominator } — tuplet ratio. Effective duration = baseDuration
+* numerator / denominator.
+• Formula: N notes in the time of M→ each note gets timeWarp: { numerator: M,
+denominator: N }.
+• Common ratios: triplet {2,3}, quintuplet {4,5}, sextuplet {4,6}, octuplet in compound meter
+{3,4}.
+• Constraints: numerator/denominator must be >0.5 (≤0.5 triggers error). Only 2/3 is “regular”;
+other ratios reducequalityScore.
+• Within a voice, a tuplet group’s total tick sum must be divisible by its denominator, otherwise
+fractionalWarp=true→fine=false.
+CRITICAL— Do NOT preserve timeWarp from the original regulation blindly. If you can make durations
+sum correctly WITHOUTtimeWarp, always prefernull. Only use timeWarp when the image clearly shows
+tuplet notation.
+Quality Metrics
+fine Acceptable quality (no fatal errors, tickTwist<0.3, no fractional warp, no irregular tick, no surplus
+time, no beam broken, no grace in voice)
+error Fatal problems (tickTwist>=1.0, tick overlap, voice rugged, corrupted events, null events>2, overranged, bad timewarp ratio)
+perfect Ideal regulation. Requires fine=true PLUStickTwist<0.2, spaceTime=0, no irregular warps,
+no grace dominant.
+qualityScore 0–1 composite score. 0 = error, 1 = perfect. Factors: spaceTime loss, duration rate, irregular
+warps,tickTwist 2. Patched measures get 1.0.
+tickTwistTime-position non-linearity.<0.2= good,<0.3= fine,≥1.0= error (fatal).
+spaceTimeUnused time in voices (gaps), in whole-note units. Allowed for fine, but must be 0 for perfect.
+surplusTimeTotal time exceeding measure duration across all voices. Must be 0.
+beamBrokenBeam Open/Continue/Close sequence is invalid within a voice.
+voiceRuggedSame event ID appears in multiple voices. Fatal error.
+tickOverlappedEvents within a voice overlap in time. Fatal error.
+Feature Confidence (ML Classifier) — Trust Over Regulation
+• feature.divisions: Array of 7 floats (indices 0–6 = whole through 64th). The index with highest value is
+ML’s best guess. Compare with assignedevent.division — if they disagree, the higher-confidence
+value is usually correct.
+• feature.dots: [dot1_conf, dot2_conf]. If feature.dots[1] > 0.1 butevent.dots = 0, a
+dot was likely missed.
+•feature.grace: Float confidence score. Always verify against the background image.
+Event ID vs Array Index (CRITICAL): All fields useevent ID values( event.id, typically 1-based), NOT
+array indices.voicesarrays contain event IDs.
+Recognition Data Issues (Upstream Errors)These are NOT regulation failures — they are upstream
+misclassifications that propagate:
+• False grace notes: Events incorrectly tagged with grace="grace". Fix: set grace: false in the
+event’s solution entry.
+•Wrong division/dots: Note value misrecognized. Fix: set correctdivisionanddots.
+• Missing dots: ML sometimes fails to detect augmentation dots on half notes. Check feature.dots
+confidence.
+• Phantom/duplicate events: Two events at nearly the same x. Keep the more complete one in voices;
+leave the duplicate out.
+•Missing events: Events visible in the image but not detected. Cannot fix — mark asstatus=-1.
+Common Agent Mistakes (A VOID THESE)
+1. Excessive voice splitting (most common): Creating 3–4 voices when 1–2 would suffice. If events are
+sequential (non-overlapping) on the same staff, they are ONE voice. Stem direction changes alone do
+NOT justify a new voice.
+2. Blindly copying timeWarp from regulation: Unless you see actual tuplet brackets in the image, set
+timeWarp: null.
+3. Wrong division leading to cascading tick errors: Always verify each event’s division against
+feature.divisionsAND the image before computing ticks.
+43

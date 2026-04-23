@@ -1,0 +1,27 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 3
+section: f2lp-ap-7
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+8 Yutong Shen*, Ruizhe Xia, Jingyi Liu, Yinqi Liu
+This process involves no re-parameterization of probability distributions but
+rather a hard assignment based on geometric membership:
+ˆyi = arg max
+c∈{1,...,C}
+Si,c (9)
+This closed-form assignment mechanism ensures thatF 2LP-APmaintains superior computational efficiency while exhibiting intrinsic model robustness. Since
+the entire inference pipeline, from the robust estimation of prototypes, is independent of gradient updates, the algorithm demonstrates significantly stronger
+generalization stability than traditional parametric GNNs when handling structurally noisy or dynamically evolving graph data.
+4 Experiments
+4.1 Experimental Setup
+Datasets and Benchmarks.To comprehensively evaluate the robustness of
+F2LP-APacross diverse topological properties, we select eight representative
+graph datasets. Following the standard literature, these datasets are categorized
+into two groups based on theirhomophily ratios: (1)Strongly homophilous
+networks(Cora,CiteSeer, andPubMed), where the probability of nodes sharing labels with their neighbors exceeds 0.8; and (2)Heterophilous networks
+(Texas,Wisconsin,Cornell,Chameleon, andSquirrel), with hom

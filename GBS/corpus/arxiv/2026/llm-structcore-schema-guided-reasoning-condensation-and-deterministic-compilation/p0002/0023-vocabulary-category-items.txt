@@ -1,0 +1,27 @@
+title: LLM StructCore: Schema-Guided Reasoning Condensation and Deterministic Compilation
+source: arxiv
+year: 2026
+document_id: llm-structcore-schema-guided-reasoning-condensation-and-deterministic-compilation
+authors: Serhii Zabolotnii
+page: 2
+section: vocabulary-category-items
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20560v1
+
+negating
+the stability benefits. We experimented with 5, 9, and 15 keys (“profile”
+parameter) and found that 9 keys offered the best balance of Stage 1 stability
+and Stage 2 recall.
+6 Related Work
+Clinical information extraction has a long history, from rule-based systems
+to modern LLM approaches. The i2b2/VA challenges [13] and ShARe/CLEF
+eHealth tasks [12] established key clinical NLP benchmarks for structured
+information extraction from unstructured clinical text. More recently, large
+language models have demonstrated the potential to encode substantial
+clinical knowledge [10], with domain-specific models like Med-Gemini [9]
+achieving strong results on medical question answering and clinical reasoning
+tasks.
+Structured Generation.Several frameworks address the output stability problem in LLM-based extraction. Constrained decoding [14] enforces
+grammar constraints during token generation. SGLang [15] provides programmatic control over LLM execution with RadixAttention for efficient structured
+output. XGrammar [3] offers a flexible engine for grammar-constrained generation. Our approach is complementary: rather than constraining the LLM’s
+token-level output, we simplify the targe

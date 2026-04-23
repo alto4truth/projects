@@ -1,0 +1,26 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 5
+section: f2lp-ap-11
+chunk: 25
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+of 26.9% and 39.9%
+overFixedAPPNPandProto-GeoMed, respectively. Similar trends are observed
+onCiteSeerandPubMed, with gains reaching up to 14.4% and 7.9%, validating
+the advantage of adaptive propagation in smooth topologies. (2)Low-Homophily Scenarios: Our framework demonstrates superior adaptability in complex
+structures, outperformingFixedAPPNPby 13.8% onWisconsin, while matching the state-of-the-art performance ofProto-GeoMedonTexas. (3)Efficiency:
+Despite the dynamic parameter adjustment, the execution time ofF 2LP-AP
+(0.016s–0.089s) remains within a reasonable range, incurring only a marginal increase compared toFixedAPPNPand thus achieving an optimal trade-off between
+performance and computational overhead.
+As shown in Figure 3 and Table 1, the ablation results demonstrate that the
+geometric median consistently outperforms the arithmetic mean across all eight
+datasets, with an average accuracy improvement of 5.8%, particularly showing
+more pronounced gains on low-homophily datasets such asChameleon(12.8%)
+andSquirrel(14.3%), thereby validating its superior robustness and versatility
+as a prototype estimation method.
+4.4 Impact of Graph Homophily on Performance Stabilit
+Expe

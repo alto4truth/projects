@@ -1,0 +1,25 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+426 0.852 0.568 0.846 0.440 0.836 0.576 0.844
+GLM4-Flash 0.408 0.489 0.445 0.695 0.218 0.408 0.284 0.603
+GLM4-Plus 0.385 0.328 0.354 0.627 0.167 0.200 0.182 0.531
+GPT-4o 0.464 0.836 0.597 0.851 0.442 0.633 0.521 0.762
+GPT-4o-mini 0.284 0.820 0.422 0.766 0.274 0.767 0.403 0.743
+Gemini 2.0 0.362 0.842 0.506 0.818 0.329 0.671 0.436 0.738
+Step-R1-V-Mini* 0.455 0.750 0.566 0.813 0.444 0.721 0.550 0.798
+QvQ-Max* 0.485 0.402 0.440 0.631 0.244 0.836 0.378 0.737
+Gemini 2.5 Pro* 0.273 0.921 0.422 0.791 0.364 0.984 0.531 0.872
+annotator training. Annotators were allowed to retake the test multiple times and were required to
+achieve at least 95% accuracy before beginning formal annotation. The remaining 50 questions were
+randomly and covertly embedded into the annotation workflow to monitor annotation quality.
+(3) Dynamic Quality Control Strategy:To improve annotation accuracy while controlling annotation costs, we adopted a dynamic labeling strategy based on the difficulty of each sample. Specifically,
+for each instance, the first annotator determined whether the content was related to a product or
+service. If deemed unrelated, the sample was directly labeled as non-covert advertisement. For

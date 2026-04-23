@@ -1,0 +1,30 @@
+title: Variance Is Not Importance: Structural Analysis of Transformer Compressibility Across Model Scales
+source: arxiv
+year: 2026
+document_id: variance-is-not-importance-structural-analysis-of-transformer-compressibility-across-model-scales
+authors: Samuel Salfati
+page: 1
+section: document
+chunk: 10
+source_ref: https://arxiv.org/pdf/2604.20682v1
+
+PCA ignores
+(3)
+Perturbation analysis confirms that sensitivity is approximately uniform across all 768 dimensions when averaged across tokens, while variance is highly concentrated. The product
+(importance) is therefore distributed broadly, with no safe directions to discard.
+4.2 Finding 2: Block Linearity Is Conditional
+Finding 2.Transformer blocks are approximately linear on calibration data, but this linearity
+is conditional on the upstream activation distribution. Replacing upstream blocks shifts the
+distribution, degrading the linear approximation for downstream blocks.
+Table 2: Block linearity (R 2) comparison across models
+Block GPT-2R 2 Mistral 7BR 2
+0 (first)≈0.95 0.168
+5≈0.95 0.452
+15≈0.95 0.580
+25≈0.95 0.638
+31 (last)≈0.95 0.930
+Single-block replacement works: on Mistral 7B, replacing block 31 with a rank-773 linear
+map (6.3M parameters replacing 218M) yields only +1.71 perplexity on held-out data. However,
+sequential multi-block replacement fails:R 2 degrades from 0.94 to 0.60 across 5 replaced blocks,
+with perplexity increasing by +151 after 5 blocks.
+4

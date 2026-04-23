@@ -1,0 +1,55 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 1
+section: mathematical-background
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+hat
+co-exist with asynchronous behavior, known as a “chimera”
+state [16, 19], emerges in the phase dynamics of the network
+with homogeneous phase lag.
+
+3
+the network exhibits long transients, rich spatiotemporal dynamics, and signatures of spatiotemporal chaos
+(Fig. 1). The rich spatiotemporal dynamics in the phase
+of this system (Fig. 1b,c) are in fact the result of complexlinear dynamics viewed through the lens of a nonlinear readout, since the phase Arg(x j(t))∀jis a nonlinear function applied to each element of the statex(t).
+This system, with complex-linear dynamics and a nonlinear readout, has recently been found to allow a range
+of computations – from logic gates, short-term memory,
+and message encryption [16] to simple computer vision
+tasks like image segmentation [20], while also being exactly mathematically interpretable. Finally, an input to
+this network is straightforward to incorporate into this
+framework:
+xk =D τ xk−1 + ¯Buk (6)
+where ¯B= (∆K) −1(eK∆ −I)∆Bis the discrete-time
+input projection to the system andu k is an input vector
+(e.g. following an encoder block) at time pointk.
+The operatorD τ can be diagonalized numerically, in
+general. In addition, many connection patterns inKadmit fully analytical forms for diagonalizingD τ. For example, if the strength of connections from nodeito other
+nodesjfalls off with distance (e.g. with a power law), and
+the same connection rule is applied to each nodei, then
+the adjacency matrix defining this network will be circulant. A circulant matrix is constructed by cyclically
+permuting a generating vectorcNtimes, resulting in an
+N×Nmatrix. The Circulant Diagonalization Theorem
+(CDT) states that all circulants are diagonalized by the
+same unitary matrixF, with entriesf ij [21]:
+fij = 1√
+N
+exp
+
+−2πi
+N (i−1)(j−1)
+
+,(7)
+and there is a similar closed-form expression for the
+eigenvalues in terms of the generating vectorc(see Appendix I A). Applying the change of basisF † to Eq. (6)
+then results in:
+˜xk =e Λτ ˜xk−1 + ˜Buk,(8)
+where ˜xk =F †xk,Λis a diagonal matrix containing
+the eigenvaluesλ s ofK(see Appendix I A), and ˜B=
+F † ¯B. As demonstrated in the next section, Eq. (8) allows
+revealing a precise correspondence with a family of linear
+time-invariant SSMs used in sequence processing.

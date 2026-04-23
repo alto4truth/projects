@@ -1,0 +1,27 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 1
+section: rag-db
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+vision–language–guided framework, which remains sensitive to localized
+and small-scale variations often misrepresented in existing ground truth datasets.
+Furthermore, Figure 12 presents cases of newly built or extended roads that our approach identifies
+correctly,whilepreviousmethodsclassifythemasno-changeduetoincompletegroundtruthcoverage.
+This emphasizes our model’s capability to generalize to fine-grained, low-contrast structural updates,
+even in challenging rural or semi-urban regions.
+E Human Agreement Evaluation of Preference-Filtered Pseudo-Labels
+E.1 On Convergence under Noisy Pseudo-Labels
+We formalize the intuition that preference-guided filtering yields high-quality pseudo-labels whose
+aggregate supervision remains statistically aligned with true semantic changes, even when individual
+annotations are imperfect.
+ConvergenceunderHigh-ConfidencePseudo-LabelsLet (𝑋, 𝑌) berandomvariableswhere 𝑋∈ X
+denotes an input region and𝑌∈ {0,1} indicates the true change label. Let˜𝑌∈ {0,1} denote the
+pseudo-label produced by our segmentation and ranking pipeline, and let𝐷∈ {0,1} indicate whether
+a sample is retained after preference-based filtering.
+Assume
+P( ˜𝑌=𝑌|𝑋, 𝐷=1) ≥1−𝜀,∀𝑋∈ X,(25

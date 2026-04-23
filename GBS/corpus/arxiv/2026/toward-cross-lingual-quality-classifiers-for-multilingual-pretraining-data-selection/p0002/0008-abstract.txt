@@ -1,0 +1,22 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 2
+section: abstract
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+al.,
+2020) utilize a Transformer architecture trained on a masked language modeling objective across
+100+ languages simultaneously. The core power of these models lies in their ability to align semantic clusters across languages within a shared embedding space. During pre-training, the model learns
+that semantically equivalent words occupy similar topological positions regardless of surface form.
+For example, the English word “Science” and the German word “Wissenschaft” are positioned near
+each other in the 768-dimensional embedding space, as both relate similarly to concepts like “logic”
+and “fact.” This alignment enables classification based on geometric position in latent space rather
+than surface-level syntax.
+Model-Based Quality Filtering.A paradigm shift occurred with model-based classifiers.
+FineWeb-Edu (Penedo et al., 2024) used Llama-3 (Grattafiori et al., 2024) as a judge to score educational quality and create a knowledge-rich dataset. To scale this approach, Li et al. (2025) and
+Messmer et al. (2025) used lightweight classifiers based on FastText (Joulin et al., 2016) or MLPs
+trained on embeddings of an XLM-RoBERTa model. Our work builds directly upon the FineWeb2HQ pip

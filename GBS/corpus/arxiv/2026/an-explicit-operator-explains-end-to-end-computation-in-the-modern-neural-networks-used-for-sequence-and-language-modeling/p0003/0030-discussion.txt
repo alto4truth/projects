@@ -1,0 +1,23 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 3
+section: discussion
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+l rates, preventing any single mode from dominating purely due to stability or an intrinsically long lifetime. This produces nearly uniform distributions of energy across modes, which can flexibly process diverse input patterns. Third, the complex-valued parameterization of S4 approximates heterogeneous time delays across
+connections in the recurrent layer [24], expanding the effective dimensionality of the system [41] and enhancing
+its computational capacity [35, 39, 42–44].
+These physical insights also extend beyond simple traveling wave patterns in the recurrent layer. When connectivity or phase-lag parameters are altered, a specific set of
+modes could be designed to have similar decay rates, resulting in more complex interference patterns than occur
+in S4D-Lin by default. This could produce longer-lived
+transient spatiotemporal structures that could, in turn,
+be useful for capturing longer-time input dependencies,
+and could further improve SSMs’ capabilities relative to
+transformers. The mathematical framework introduced
+in this work can thus suggest specific, mathematically
+guided design principles for future SSM architectures. In
+addition, the analysis presented here could be

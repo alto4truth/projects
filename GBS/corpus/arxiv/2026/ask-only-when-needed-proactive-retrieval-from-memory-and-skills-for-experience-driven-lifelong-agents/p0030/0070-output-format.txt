@@ -1,0 +1,24 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 30
+section: output-format
+chunk: 70
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+Output strictly a JSON object containing 1-3 memory objects. No markdown text outside the
+JSON.
+‘‘‘json
+{{
+"skills": [
+{{
+"when_to_use": "Abstract description of the triggering state...",
+"experience": "Imperative rule or actionable advice for the next action. (e.g., ’
+Always verify the file path with ls before attempting to read.’)"
+}}
+]
+}}
+‘‘‘
+23

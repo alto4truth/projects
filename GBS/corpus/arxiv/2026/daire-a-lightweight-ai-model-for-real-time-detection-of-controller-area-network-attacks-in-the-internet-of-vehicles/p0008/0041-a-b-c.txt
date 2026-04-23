@@ -1,0 +1,37 @@
+title: DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles
+source: arxiv
+year: 2026
+document_id: daire-a-lightweight-ai-model-for-real-time-detection-of-controller-area-network-attacks-in-the-internet-of-vehicles
+authors: Shahid Alam; Amina Jameel; Zahida Parveen; Ehab Alnfrawy; Adeela Ashraf; Raza Uddin; Jamal Aqib
+page: 8
+section: a-b-c
+chunk: 41
+source_ref: https://arxiv.org/pdf/2604.20771v1
+
+ng metrics to evaluate the performance of DAIRE.
+The Detection Rate (DR), also known as Recall or True Positive
+Rate, measures the number of true samples that have been accurately
+predicted as true. It is defined as follows:
+𝐷𝑅 = 𝑇 𝑃
+𝑇 𝑃 + 𝐹 𝑁
+False Positive Rate (FPR) refers to the number of negative samples
+that have been incorrectly predicted as true. It is defined as:
+𝐹 𝑃 𝑅 = 𝐹 𝑃
+𝑇 𝑁 + 𝐹 𝑃
+Accuracy measures the total number of samples that have been
+correctly predicted. It is defined as:
+𝐴𝑐𝑐𝑢𝑟𝑎𝑐𝑦 = 𝑇 𝑃 + 𝑇 𝑁
+𝑇 𝑃 + 𝑇 𝑁 + 𝐹 𝑃 + 𝐹 𝑁
+Precision indicates the proportion of samples that have been predicted as true, regardless of whether these samples are actually true or
+false. It is defined as:
+𝑃 𝑟𝑒𝑐𝑖𝑠𝑖𝑜𝑛 = 𝑇 𝑃
+𝑇 𝑃 + 𝐹 𝑃
+F1-score is the weighted average of precision and recall. It is defined
+as:
+𝐹1 − 𝑠𝑐𝑜𝑟𝑒 = 2𝑇 𝑃
+2𝑇 𝑃 + 𝐹 𝑃 + 𝐹 𝑁
+5.3. Experiments and results
+We conducted a series of systematic experiments to evaluate and
+validate the effectiveness and efficiency of the proposed DAIRE model.
+The experiments were performed using the two recent and widely used
+IoV datasets: CICIoV2024 and Car-Hacking. Our experiments were designed to (i) tune the hyperparameters, (ii) evaluate model per

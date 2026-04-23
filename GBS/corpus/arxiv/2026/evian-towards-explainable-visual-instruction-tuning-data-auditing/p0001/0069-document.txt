@@ -1,0 +1,39 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 69
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+ical factors like the ‘steering wheel
+(strategic direction)’
+C. External Knowledge Errors
+• knowledge_entity: If the response mentions a
+real-world named entity, rewrite it by corrupting that entity (e.g., ‘Eiffel Tower in London’).
+• knowledge_context: Rewrite the response to
+place an object or scene in a wrong historical
+or technological context.
+• knowledge_definition: If the response defines
+a concept, rewrite it to provide an incorrect
+definition.
+• knowledge_attribution: If the response mentions a creation or quote, misattribute it to the
+wrong source.
+C Sensitivity Analysis on Component
+Weights
+To further validate the robustness of EVIAN and
+explore the impact of different quality dimensions
+on downstream performance, we conducted a sensitivity analysis by adjusting the aggregation weights
+refer to Section 3.4.
+We designed three biased weighting schemes,
+where one dimension is assigned a dominant
+weight of 60% ( w= 0.6 ), while the remaining
+two dimensions are assigned 20% (w= 0.2 ) each.
+The configurations are:
+• Vision-Centric: wV = 0.6, wL = 0.2, wK =
+0.2. Prioritizes visual fidelity.
+• Reason-Centric: wL = 0.6, w V =
+0.2, wK = 0.2. Prioritizes logical soundness.
+• Knowle

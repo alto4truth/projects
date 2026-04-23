@@ -1,0 +1,24 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 61
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+he “car” for a “truck”.
+After being prompted with the image containing the bounding box, the LVLM tends to refocus on the region of interest, where the “truck” no longer appears. This process also
+makes the response from the LVLM more interpretable, as it
+provides cues about how the model derives its final answer.
+B.2. Open-Ended Questions
+Figure 6 provides more examples with an open-ended question: “Please describe the image in detail.” As the length of
+the generated response increases, the LVLM tends to hallucinate more nonexistent objects, causing a more severe hallucination issue. Nevertheless, R-CoV successfully detects
+the hallucinated objects “chair”, “potted plants”, “clock”,
+and “vase”, all of which have a verification score of 0.00.
+Similar to the cases of yes-or-no questions, such
+a region-aware chain-of-verification pipeline further enhances the interpretability of the hallucination mitigation
+process. More specifically, with the aid of the generated
+bounding boxes and region descriptions, one can easily understand that the LVLM misidentifies the bench as a “chair”,
+the painting as “potted plants”, the musical-instrumentshaped pipe as a “clock” or a “vase”, respectively

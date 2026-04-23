@@ -1,0 +1,24 @@
+title: Efficient Symbolic Computations for Identifying Causal Effects
+source: arxiv
+year: 2026
+document_id: efficient-symbolic-computations-for-identifying-causal-effects
+authors: Benjamin Hollering; Pratik Misra; Nils Sturma
+page: 1
+section: t-a-y
+chunk: 31
+source_ref: https://arxiv.org/pdf/2604.20516v1
+
+Definition 4.3.LetR[x 1, . . . , xm]be a polynomial ring with variables partitioned into blocksB1
+andB 2. Suppose thatw= (w 1, . . . , wm)∈N m is a weighting. A monomial order onR[x1, . . . , xm]
+is aw-graded (lex-)elimination order, if we first compare monomials by their weighted degree, and
+break ties using a (lex-)elimination order.
+Theorem 4.4.LetFbe a reduced Gröbner basis of the idealI wh ⊆R[θ, σ, h]with respect to a
+w-graded lex-elimination order forθ rem, where the weightingwis the trek-weighting. Then, all
+parametersq∈θ rem are rationally identifiable if and only if, for eachq∈θrem, the basisFcontains
+an element that has leading termq·a(θid, σ, h)for somea∈R[θ id, σ, h].
+Of course, by Lemma 4.2, whenever the Gröbner basis from Theorem 4.4 contains an identifying
+polynomialqa(θ id, σ, h)−b(θ id, σ, h), then the parameterq∈θis rationally identifiable. Now, a
+key observation is that if there is a parameterq∈θ rem that is rationally identifiably, then it is
+usually not necessary to compute the full Gröbner basisFin Theorem 4.4. Instead we compute
+the elements in reduced Gröbner basisFdegree by degree. As soon as we obtain an homogenized
+identifying polynomial for someq∈θ rem,

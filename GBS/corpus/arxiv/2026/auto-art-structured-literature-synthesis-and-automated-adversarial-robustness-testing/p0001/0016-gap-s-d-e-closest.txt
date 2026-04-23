@@ -1,0 +1,34 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 16
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+dologically sound.
+3. Why this matters.Safety decisions about products, regulatory compliance, and legal liability depend on robustness
+numbers that the literature examined here shows are systematically inflated. The EU AI Act now requires demonstrated
+robustness for high-risk systems, and the gap between reported
+and actual robustness translates directly into regulatory and
+engineering risk.
+11 AUTO-ART: Framework Design
+The AUTO-ART framework is publicly available at https:
+//github.com/abhitall/auto-art[1].
+11.1 Detailed Architecture
+Figure 5 illustrates the data flow through AUTO-ART’s
+pipeline with tensor shapes at each stage. The model under
+test f:R B×C×H×W →R B×K (for K classes) is wrapped
+in a framework-agnostic estimator that normalises inference
+across PyTorch, TensorFlow, and scikit-learn backends. The
+pre-screening gate operates on intermediate representations
+ϕ(x)∈R B×D (penultimate layer), computing class centroids
+µc ∈R D for RDI and gradient norms for FOSC.
+11.2 Threat Coverage
+Figure 6 shows AUTO-ART’s seven attack categories and their
+module counts, spanning classical adversarial ML through
+agentic LLM threats.
+11.3 Gap-to-Module Mapping
+Table 6 shows how each id

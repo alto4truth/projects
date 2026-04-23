@@ -1,0 +1,70 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 48
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+B.2. Proposed Explicit Dropout Regularizer
+Our proposed formulation introduces a structured explicit dropout regularizer for a single linear layer. The final
+training objective is
+𝐽(𝐗,𝐖) =𝐽 task (𝐗,𝐖) +𝐑(𝐗,𝐖),(105)
+where,
+𝐑(𝐗,𝐖) = 𝑝2
+2𝑛
+𝑁∑
+𝑟=1
+𝑑1∑
+𝑘=1
+𝑑∑
+𝑖=1
+𝑑∑
+𝑗=1
+𝑋𝑟𝑖𝑋𝑟𝑗𝑊𝑘𝑖𝑊𝑘𝑗.(106)
+Here𝑛is the batch size,𝑊∈ℝ 𝑑1×𝑑 is the weights matrix
+of the linear layer, and𝑝is the dropout probability.
+Each term in the summation corresponds to a contributionfromaspecificpairofinputfeatures(𝑖, 𝑗)andoutputunit
+𝑘, capturing both diagonal (feature-wise) and off-diagonal
+(cross-feature)interactions.Thediagonalcomponentrecovers the prior explicit dropout regularizer [1], while the offdiagonal terms introduce additional structured regularization dependent on feature covariances.
+B.3. Decomposition of the Proposed Regularizer
+We now show that the proposed regularizer can be
+written as
+𝑅(𝐗,𝐖) = ̂𝑅(𝐗,𝐖) + Δ𝑅(𝐗,𝐖),(107)
+= 𝑝2
+2𝑛
+𝑁∑
+𝑟=1
+𝑑1∑
+𝑘=1
+( 𝑑∑
+𝑖=𝑗
+𝑋2
+𝑟𝑖𝑊 2
+𝑘𝑖 +
+𝑑∑
+𝑖≠𝑗
+𝑋𝑟𝑖𝑋𝑟𝑗𝑊𝑘𝑖𝑊𝑘𝑗
+)
+.
+(108)
+Diagonal Term (𝑖=𝑗).The first term corresponds to the
+classical explicit dropout regularizer structure:
+𝑅diag(𝐗,𝐖) = 𝑝2
+2𝑛
+𝑁∑
+𝑟=1
+𝑑1∑
+𝑘=1
+𝑑∑
+𝑗=1
+𝑋2
+𝑟𝑗𝑊 2
+𝑘𝑗.(109)
+Rearranging the sums gives
+𝑅diag(𝐗,𝐖) = 𝑝2
+2
+𝑑∑
+𝑗=1

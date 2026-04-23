@@ -1,0 +1,28 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 4
+section: f2lp-ap-9
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+el(H=.23)
+Method Acc. F1 Time Acc. F1 Time Acc. F1 Time Acc. F1 Time
+GCN∗ 0.5530.3651.0150.6080.269 1.053 0.5000.203 1.014 0.3220.242 2.466
+CoHOp 0.4210.1480.5240.4900.156 0.536 0.5790.149 0.537 0.2480.195 1.348
+LabelProp 0.132 0.076 0.0130.314 0.189 0.013 0.263 0.202 0.013 0.262 0.253 0.022
+kNN@5 0.684 0.599 0.0100.804 0.517 0.012 0.711 0.385 0.009 0.227 0.198 0.343
+Proto-GeoMed0.8420.7870.0100.706 0.498 0.008 0.7630.5190.009 0.303 0.301 0.036
+FixedAPPNP0.816 0.759 0.0080.725 0.514 0.011 0.737 0.503 0.011 0.293 0.290 0.987
+F2LP-AP 0.8420.7870.0160.8250.589 0.024 0.7630.5190.018 0.2880.285 0.069
+4.2 Multi-method Performance Evaluation Across Diverse Graph
+Homophily Levels
+Experimental Evaluation.To assess the generalizability ofF 2LP-APacross
+varying graph topologies, we benchmark our proposed framework against seven
+mainstream baselines using eight representative datasets.
+Discussion and Key Insights.As shown in Table 1, experimental results
+demonstrate thatF 2LP-APexhibits exceptional robustness and generalization
+capabilities across the entire homophily spectrum. On heterophilous graphs,
+F2LP-APachieves state-of-the-art (SOTA) performance onTexas(0.842),Wisconsin(0.825), andCorn

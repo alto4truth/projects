@@ -1,0 +1,15 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+l(log 0.015,1.0),
+βl ∼LogNormal(log 0.0004,0.4),
+λ∼LogNormal(log 2.0,0.5).
+These priors enforce positivity while remaining broad
+enough to cover the range of fouling and leakage behaviors considered in the study as shown in Fig. 4.

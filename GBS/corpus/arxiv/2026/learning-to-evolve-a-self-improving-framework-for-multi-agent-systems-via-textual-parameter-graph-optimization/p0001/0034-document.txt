@@ -1,0 +1,28 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+to modify agent structure and dependencies. Third,clusteringimproves the quality of
+optimization signals: removing clustering reduces
+performance to 26.52, while replacing semantic
+clustering with random grouping causes a severe
+drop to 19.97. This suggests that coherent aggregation of similar failure patterns is crucial, and that
+noisy grouping can be actively harmful.
+Overall, these results indicate that the graph representation, structural edit space, and semantic clustering mechanism are complementary components
+of TPGO rather than interchangeable implementation details.
+5.4 Optimization Stability Analysis
+We further examine whether GRAO improves the
+stabilityof iterative optimization. On theBrowser
+Automationsubset of MCP-Universe, we compare
+the fullTPGO (with GRAO)againstTPGO (w/o
+GRAO), where the Optimizer LLM updates the
+policy using only the latest error cluster, without retrieving historical optimization experiences. Both
+variants start from the same ReAct baseline, and we
+track success rate over five optimization iterations.
+Figure 3 shows that GRAO is crucial for stable it-

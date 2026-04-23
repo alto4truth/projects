@@ -1,0 +1,33 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 14
+section: performance-comparison-on-video-amodal-segmentation
+chunk: 40
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+DATASETS.
+Method FISHBOWL MOViD-A
+mIoU f mIoU o mIoU f mIoU o
+PCNET [34] 87.04 65.02 64.35 27.31
+AISformer [6] - - 67.72 33.65
+SaV os [39] 88.63 71.55 60.01 22.64
+C2F-Seg [32] 91.68 81.21 71.67 36.13
+Amodal SAM 92.74 83.36 73.06 39.21
+Effect of the encoder-focused adaptation. To illustrate
+that adjusting the image encoder results in enhanced generalization compared to adapting the mask decoder, we conduct
+experiments on the KINS [7] and COCOA-cls [9] datasets for
+comparison. The results, as indicated in the 1st and 3rd rows of
+Table IV, demonstrate that Encoder-focused Adaptation yields
+superior performance.
+Effect of the Spatial Completion Adapter (SCA). In
+contrast to standard convolution, the gated convolution adopted
+in the proposed SCA employs input region-specific masks to
+improve feature processing through a learned dynamic selection mechanism. To assess the SCA’s effects in reconstructing
+occluded regions of target objects, we have a comparison with
+the adapter implemented with the conventional convolution
+layer, instead of the gated convolution. By comparing the
+results of “EA+SCA” and “EA” of Table IV, we can observe
+that SCA yields much better results than the standard a

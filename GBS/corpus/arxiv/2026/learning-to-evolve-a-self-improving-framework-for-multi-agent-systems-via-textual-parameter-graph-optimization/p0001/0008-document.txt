@@ -1,0 +1,29 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+idually optimizable semantic
+units.
+• We designGroup Relative Agent Optimization (GRAO), a novelself-evolving metaoptimization strategythat leverages historical experience to continuously improve the
+quality of its optimization proposals.
+• Extensive experiments demonstrate that our
+framework significantly enhances the performance and efficiency of state-of-the-art
+(SOTA) agent systems on complex benchmarks, achieving higher success rates through
+automated, evolutionary optimization.
+2 Related Work
+2.1 Language Agent Systems
+While single-agent systems (SAS) such as the ReAct framework (Yao et al., 2023) offer simplicity
+and efficiency, their capabilities are inherently limited. To overcome these limitations, LLM-based
+multi-agent systems (MAS) have emerged as a powerful paradigm for complex problem-solving. The
+prevailing design methodology involves decomposing a task into sub-tasks and assigning them to
+specialized agents that emulate collaborative human teams (Park et al., 2023; Guo et al., 2024).
+This approach, however, introduces a vast design
+space with numerous critical choices that shape
+collaboration and behavior. For instance, at the
+system level, designers must define the

@@ -1,0 +1,44 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 52
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+epSpeed ZeRO Stage 3 for memory optimization, resulting in an effective global batch size of
+128. All key hyperparameters are detailed in Table 5.
+Table 5: Supervised Fine-Tuning (SFT) Hyperparameters for the Base Model.
+Hyperparameter Value
+Base Model Qwen2VL-2B
+Epochs 1
+Learning Rate5×10 −6
+Batch Size (per device) 2
+Gradient Accumulation Steps 8
+Weight Decay 0.0
+Warmup Ratio 0.1
+LR Scheduler Cosine
+Max Gradient Norm 1.0
+Precision BF16
+Max Sequence Length 8192
+Gradient Checkpointing Enabled
+Optimization ZeRO-3
+A.3 Prompt Engineering for Phase 1:
+Response Decomposition
+Step 1: Prompt for Semantic Tagging
+Response: {response}
+Your task is to precisely insert <INFER> for
+subjective judgments and <KNOW> for external knowledge.
+Critical Guidelines for Annotation:
+1. Tag the Complete Thought:Precisely
+wrap the shortest, complete phrase that
+conveys the entire logical idea (like a
+cause-and-effect statement) or the full
+piece of external information.
+2. Tag Interpretations of Effect/Cause:
+Always tag phrases that describe the effect, purpose, or reason for a visual element.
+3. Strictly Visual is NOT Tagged:DO
+NOT tag objective, verifiable descriptions of visual facts.
+4. Do Not Change Wo

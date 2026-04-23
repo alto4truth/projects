@@ -1,0 +1,27 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 1
+section: rag-db
+chunk: 15
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+contextual understanding, while ours achieves the highest score, confirming the complementary role
+of each stage in producing reliable change annotations. Our method significantly outperforms all
+baselines across the board.Table 3reports human agreement results measuring annotator acceptance
+of the generated questions and answers. High scores across binary, multiple-choice, and open-ended
+formats indicate that human evaluators consistently found the outputs coherent, relevant, and aligned
+with the visual content. These results validate the linguistic quality and factual consistency of the
+generated dataset, demonstrating strong human-model agreement across all task types.
+Table4: BaselinebenchmarkperformanceacrossLLMsandquestiontypes. MetricsincludeAccuracy,
+BERTScore, and BLEU-𝑛 (1–4) for change and no-change cases, with total accuracy summarizing
+overall performance.
+LLM Used Question Type Metric Change(↑)No Change(↑)Total Accuracy(↑)
+Gemini-2.5-Flash
+Yes/No Questions Accuracy 67.02 38.96 65.65
+Multiple-Choice Questions Accuracy 46.93 28.71 46.04
+Open-Ended Questions BERTScore 35.97 32.28 35.77
+Open-Ended Questions BLEU-1 88.37 77.37 87.93
+Open-Ended Questions BLEU-2 73.39 66.79

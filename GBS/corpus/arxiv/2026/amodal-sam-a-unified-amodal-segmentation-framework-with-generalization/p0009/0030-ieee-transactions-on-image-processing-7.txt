@@ -1,0 +1,29 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 9
+section: ieee-transactions-on-image-processing-7
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+tioning from
+amodal segmentation to video presents unique challenges due
+to the temporal volatility of occlusion patterns and the dynamic
+trajectories of objects. In this context, the frame-by-frame
+derivation of the spatial priorM spec is often insufficient. To
+resolve this, we propose a progressive temporal approach that
+exploits spatio-temporal coherence. Specifically, the prediction
+output from the preceding frame is utilized to generate a coarse
+Region of Interest (ROI), which subsequently serves as the
+Mspec input for the current frame. This recursive propagation
+mechanism ensures that the model maintains a persistent
+”amodal memory” of the object’s position, even under severe
+or transient occlusions.
+Optimization and Training.Following the original SAM2 training protocol, we employ a joint image-video training
+strategy. To further fortify the amodal reasoning capability, we
+incorporate the optimization objectives from our image-based
+framework, including segmentation supervision, region consistency, and holistic topological regularization. This synergistic
+integration not only validates the generalization of our SCA
+design but also establishes a resilient framework for openw

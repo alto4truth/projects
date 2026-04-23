@@ -1,0 +1,24 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 4
+section: mnist
+chunk: 40
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+FSE128:20 Minqi Shao, Shangzhou Xia, and Jianjun Zhao
+thereby impairing the accuracy of mutation testing. To assess the robustness and effectiveness of
+QuanForge under noisy conditions, we evaluate it against several representative noise channels
+on the default.mixed simulator of PennyLane, including depolarizing, bit flip, phase flip, phase
+damping, amplitude damping, crosstalk, drift, and thermal relaxation, with reference to APIs [4] or
+noise models [2]. They are inserted at random positions with a probability of 1% to approximate
+real hardware conditions, and detailed parameters are selected referring to Qiskit documents [1, 3].
+To alleviate computational overhead, we train a smaller-scale HCQC using the ansatz U_TTN. All
+other algorithmic and mutation operator settings are consistent with RQ1. The results in Table
+9 show that, compared to the original suites, strong suites have still achieved higher scores than
+weak ones under all operators. Under all operators, HConf and Adv suites yield the lowest and
+highest scores, respectively. This illustrates the effectiveness of QuanForge in distinguishing the
+quality of test suites under noisy quantum conditions.
+4.8 Threats to Validi

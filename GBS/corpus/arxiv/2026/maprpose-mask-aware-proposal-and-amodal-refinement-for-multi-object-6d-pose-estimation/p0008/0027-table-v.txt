@@ -1,0 +1,32 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 8
+section: table-v
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+epresent predictions from our full model, its
+w/o AMPR variant, and competing methods. On LM-O dataset
+(Fig. 4, frames A–C), Frames A and B are mainly affected
+by background clutter and inter-object interference, which
+introduce ambiguity in feature matching. Frame C presents
+severe occlusion, with a large portion of the target object
+invisible. Despite these challenges, our full model maintains
+accurate geometric alignment and stable pose estimation. In
+contrast, the w/o AMPR variant and competing methods
+exhibit noticeable rotational deviations, particularly under
+severe occlusion, as they rely heavily on fragmented visible
+regions. On YCB-V dataset (Fig. 5, frames D–F), Frame
+D is dominated by heavy occlusion, while Frames E and
+F are influenced by cluttered backgrounds and dense object
+overlap. Our full model consistently produces well-aligned pose
+predictions with tight contour consistency. Without amodal
+mask prediction, performance degrades under occlusion, often
+resulting in inaccurate orientation or failure to recover the
+correct object geometry.
+To verify the contribution of the AMPR module to the
+refinement process, we analyze the convergence behavior of
+our model across

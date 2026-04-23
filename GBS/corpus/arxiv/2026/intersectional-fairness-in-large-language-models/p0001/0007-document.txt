@@ -1,0 +1,23 @@
+title: Intersectional Fairness in Large Language Models
+source: arxiv
+year: 2026
+document_id: intersectional-fairness-in-large-language-models
+authors: Chaima Boufaied; Ronnie De Souza Santos; Ann Barcomb
+page: 1
+section: document
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20677v1
+
+-level output patterns, and repeated responses reveal systematic disparities across
+contexts and intersectional groups.
+Main Findings Summary.Our results revealed several key insights about LLM intersectional fairness:
+• LLMs perform well in ambiguous contexts, but indeterminate predictions limit subgroup fairness metrics,
+while in disambiguated contexts accuracy is influenced by stereotype alignment, with higher performance on
+stereotype-reinforcing cases, especially pronounced in race–gender intersections.
+• Although subgroup fairness disparities are sometimes low, outcome distributions can still remain uneven across
+intersectional groups.
+• Across repeated runs, LLMs differ in the consistency of their outputs, showing that model behavior is not only
+model-dependent but also sensitive to repeated prompting across contexts and question polarities.
+The rest of this paper is structured as follows: Section 2 introduces relevant background concepts. Section 3 reviews
+related work. Section 4 outlines the research methodology used for our evaluation of the fairness and consistency of the
+studied LLM models. Section 5 presents and discusses the findings of our research questions. In Sect

@@ -1,0 +1,30 @@
+title: V-tableR1: Process-Supervised Multimodal Table Reasoning with Critic-Guided Policy Optimization
+source: arxiv
+year: 2026
+document_id: v-tabler1-process-supervised-multimodal-table-reasoning-with-critic-guided-policy-optimization
+authors: Yubo Jiang; Yitong An; Xin Yang; Abudukelimu Wuerkaixi; Xuxin Cheng; Fengying Xie; Zhiguo Jiang; Cao Liu; Ke Zeng; Haopeng Zhang
+page: 1
+section: document
+chunk: 30
+source_ref: https://arxiv.org/pdf/2604.20755v1
+
+V-tableR1: Process-Supervised Multimodal Table Reasoning 11
+T able 2:Performance comparison on Table Fact Verification (TFV) and Table Question Answering (TQA) benchmarks. We report the accuracy for each dataset along
+with the average score for each category. The best performance among open-source
+models is inbold.
+Model TFV TQA
+TabFact InfoTabs Avg. FinQA HiTab TAT-QA TabMWP WTQ Avg.
+Closed-Source VLMs
+GPT-4o 85.16 88.75 86.96 13.42 27.59 30.98 71.88 57.80 40.33
+GPT-4.1 87.32 92.43 89.88 23.44 32.39 47.63 74.06 63.45 48.19
+Gemini-2.5-Flash 88.16 91.43 89.80 40.48 55.43 70.27 88.37 78.18 66.55
+Open-Source VLMs
+InternVL-2.5-8B [6] 72.92 74.67 73.80 19.42 32.26 41.44 72.80 57.80 44.74
+InternVL-2.5-14B [6] 75.98 77.48 76.73 24.27 33.43 46.28 74.34 61.89 48.04
+LLaVA-1.5-7B [18] 23.25 32.34 27.80 1.50 3.66 8.29 5.92 12.32 6.34
+LLaVA-1.5-13B [18] 28.37 37.34 32.86 1.24 5.81 10.05 6.14 15.63 7.77
+LLaVA-NeXT-7B [17] 34.18 41.23 37.71 2.03 4.67 12.64 19.16 8.36 9.37
+Qwen2.5-VL-72B [3] 73.45 72.82 73.14 19.34 44.04 52.23 81.95 65.70 52.65
+Qwen3-VL-2B [2] 70.40 74.83 72.62 10.50 29.80 32.07 68.60 46.04 37.40
+Qwen3-VL-4B [2] 73.28 77.33 75.31 14.74 27.75 35.19 71.92 54.72 40.86
+Qwen3-VL-8B [2]

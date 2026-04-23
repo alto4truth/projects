@@ -1,0 +1,19 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 132
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+rithm violated the US Fair Housing Act [63]. The suit claimed that CrimSAFE’s automatic rejection of applicants based on prior arrests (even withdrawn
+
+Chapter 3: The Model is Not the Market 120
+charges) disproportionately impacted people of colour. The plaintiffs argued that by relying on arrest data, which reflects systemic racial disparities, the algorithm perpetuated housing discrimination. Though CoreLogic maintained that its reports were neutral, the case spotlighted how design choices in data inclusion and interpretation can reproduce entrenched inequities. Table 18: Drawing out sociotechnical concepts from the CoreLogic example. Concept Core Logic example Goal Provide an automated screening score for rental applicants, ostensibly to simplify or speed up the tenant selection process for landlords. Abstract concept being modelled
+Whether an applicant poses a high or low risk to the landlord or property, often determined by past criminal history or other factors deemed relevant to “tenant suitability.”
+Data proxies used
+Records of prior arrests, convictions, and possibly non-convictions (such as withdrawn or dismissed charges). Additional demographic details, possibly including credit score or address history, decisions made by CoreLogic about which data sources to include and how to weigh them.
+Data issues
+Criminal databases, credit reports, potentially user-submitted applications. The question arises whether these data sources are updated, accurate, or reflect systemic biases (e.g., higher arrest rates in certain neighbourhoods) Stakeholders Landlords/Property Managers: Could over-rely on an automated score, mistakenly rejecting qualified tenants. Tenants: Risk being denied housing due to algorithmic bias, especially if charges were withdrawn or records misattributed. CoreLogic: Legal liability and reputational damage if found to violate fair housing laws. Trustworthiness Does the model align with fair housing standards and reflect actual tenant suitability? How transparent are the data sources and scoring criteria? Is there an appeal or correction mechanism if applicants are wrongly flagged? As Ericson et al. [118] argue, AI systems do not simply automate decisions but restructure how labour and accountability are distributed across infrastructures. In cases like CrimSAFE, responsibility is fragmented between landlords, software providers, and data brokers, creating accountability shadows in which those most affected by housing decisions struggle to identify any actor who can be meaningfully answerable. Read through the MaSH Loops lens, the CoreLogic case shows how machine scoring, landlord decision-making, data-broker infrastructure, and tenant vulnerability recursively interact, producing housing exclusion as a property of the wider sociotechnical loop rather than of the algorithm alone.

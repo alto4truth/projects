@@ -1,0 +1,35 @@
+title: Near-Future Policy Optimization
+source: arxiv
+year: 2026
+document_id: near-future-policy-optimization
+authors: Chuanyu Qin; Chenxu Yang; Qingyi Si; Naibin Gu; Dingyu Yao; Zheng Lin; Peng Fu; Nan Duan; Jiaqi Wang
+page: 1
+section: document
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20733v1
+
+.35
+0.40Entropy
+GRPO
+AutoNPO
+200 250 300 350 400 450 500
+Global Step
+0.40
+0.42
+0.44
+0.46
+0.48
+0.50
+0.52
+0.54Validation Accuracy GRPO
+Late-stage NPO (no IS)
+Late-stage NPO (exact IS)
+(a) Training reward dynamics. (b) Re-expanded entropy. (c) IS correction is marginal.
+Figure 4Training dynamics of (Auto)NPO compared with vanilla GRPO.Red shaded regionsin panels (a)
+and (b) highlight AutoNPO’s intervention windows.(a)Training reward dynamics: AutoNPO stays above GRPO
+throughout, with the gap widening step-wise after each intervention window.(b)Generation entropy: GRPO undergoes
+a steady entropy collapse, while AutoNPO’s interventions actively re-expand exploration and preserve a substantially
+higher-entropy policy.(c)IS-correction ablation on the late-stage intervention: the two NPO variants with and without
+exact importance-sampling correction both clearly outperform GRPO, indicating that IS correction is marginal for
+NPO. Thick lines are smoothed curves; thin lines show raw logged values.
+8

@@ -1,0 +1,30 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 11
+section: a-weighted-angle-distance-on-strings-21
+chunk: 60
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+22 GRANT MOLNAR
+Proof.The claim is immediate from Lemma 7.5 and Lemma 7.21.□
+Lemma 7.23.Letρ∈(0,1). LetS, T∈Σ ∗, letn∈N, and letϕ: Σ ∗ →Σ ∗ be an isometry.
+We haveθ n(S, T) =θ n(ϕ(S), ϕ(T)).
+Proof.This is immediate from Proposition 7.6, Lemma 7.21, and Lemma 7.22.□
+Theorem 7.24.Letρ∈(0,1). Every isometry ofΣ ∗ is either a character-permutation, or
+the composition of a character-permutation with reversal.
+Proof.Letρ∈(0,1). If|Σ|= 1, then the claim is trivial and immediate from Lemma 7.22.
+So suppose|Σ| ≥2.
+Letϕbe an isometry of Σ ∗ underd ρ. By Lemma 7.22,ϕinduces a permutationπon Σ;
+extendingπto Σ ∗ character-wise induces another isometry on Σ ∗, andπ −1ϕis an isometry
+which fixes Σ. Without loss of generality, we now assume thatϕfixes Σ. We wish to show
+thatϕis either the identity map or the reversal mapR.
+We claim at least thatϕ(a k) =a k for any charactera∈Σ and anyk≥1. Indeed, by
+Proposition 7.6, we see
+θ1(ϕ(ak), a) =θ 1(ϕ(ak), ϕ(a)) =θ 1(ak, a) = 0,
+buta k is the only lengthkstring with the propertyθ 1(ak, a) = 0, so Lemma 7.22 implies
+ϕ(ak) =a k.
+Leta, b∈Σ be distinct characters. By Lemma 7.23,ϕpreservesθ 1, soθ 1(ϕ(ab), a) =
+θ1(ab, a) andθ 1(ϕ(ab), b) =θ 1(ab, b). As|ϕ(ab)|=

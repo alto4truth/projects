@@ -1,0 +1,28 @@
+title: F\textsuperscript{2}LP-AP: Fast \& Flexible Label Propagation with Adaptive Propagation Kernel
+source: arxiv
+year: 2026
+document_id: f-textsuperscript-2-lp-ap-fast-flexible-label-propagation-with-adaptive-propagation-kernel
+authors: Yutong Shen; Ruizhe Xia; Jingyi Liu; Yinqi Liu
+page: 2
+section: f2lp-ap-5
+chunk: 11
+source_ref: https://arxiv.org/pdf/2604.20736v1
+
+e local topological environment. For any nodev i ∈ V, the LCC is
+defined as:
+LCC i = 2|Ei|
+di(di −1) (5)
+whered i denotes the degree of nodev i and|E i|represents the number of actual
+edges between its neighbors. A highLCC i typically indicates that a node resides
+within a dense, homophilous community, whereas a lowLCC i suggests that
+the node is situated at a topological boundary or an interface of heterophilous
+connections.
+To balance the preservation of local features with the assimilation of global
+structural information, we construct mapping functions that bridge the gap betweenLCC i and the propagation dynamics, specifically the depthK i and the
+teleport probabilityα i. Regarding the propagation depthK i, nodes in dense
+clusters (high LCC) can achieve information aggregation through fewer steps,
+while nodes in sparse regions (low LCC) require deeper propagation to acquire
+sufficient contextual information. Simultaneously, for the teleport probabilityαi,
+we decreaseα i in highly homophilous regions to allow for more thorough feature
+smoothing, while increasingα i in regions with high heterophily risk to retain
+the node’s intrinsic feature anchors. The joint mapping system is f

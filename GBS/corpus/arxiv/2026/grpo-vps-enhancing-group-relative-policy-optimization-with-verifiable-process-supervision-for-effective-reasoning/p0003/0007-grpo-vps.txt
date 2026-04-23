@@ -1,0 +1,22 @@
+title: GRPO-VPS: Enhancing Group Relative Policy Optimization with Verifiable Process Supervision for Effective Reasoning
+source: arxiv
+year: 2026
+document_id: grpo-vps-enhancing-group-relative-policy-optimization-with-verifiable-process-supervision-for-effective-reasoning
+authors: Jingyi Wang; Lei Zhu; Tengjin Weng; Song-Li Wu; Haochen Tan; Jierun Chen; Chaofan Tao; Haoli Bai; Lu Hou; Lifeng Shang; Xiao-Ping Zhang
+page: 3
+section: grpo-vps
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20659v1
+
+he
+correct answer; and (2) at the micro level, reasoning segments that reduce the probed probability tend to be of
+low quality. Based on these observations, our method leverages the model’s own reasoning trace to generate
+localized supervision signals, enabling more targeted and effective policy updates. Specifically, we segment
+the model’s response into discrete reasoning segments and strategically concatenate the correct final answer
+at each segment boundary. By extracting the model’s conditional probability of the correct answer at these
+positions, we obtain a proxy for its evolving belief state. The differences in these probabilities between adjacent segments serve as segment-wise supervision signals, complementing trajectory-level advantages and
+quantifying the contribution of each reasoning segment toward the final outcome.
+This approach offers two key benefits: (1) it provides dense, interpretable feedback aligned with the model’s
+internal decision flow and (2) it avoids reliance on auxiliary models (Schulman et al., 2017; Zha et al., 2025;
+Cui et al., 2025; He et al., 2024b) or Monte Carlo rollouts (Qu et al., 2025; Dai et al., 2025), ensuring high
+2

@@ -1,0 +1,18 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 6
+section: b-additionalinformation
+chunk: 63
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+e
+R-Net size to an MLP of 64 units (we did not see an improvement in classification accuracy
+for large sizes) and used a local distance thresholdτ= 10 on all tasks. We also see that
+weighing the local reward by a factor of 5 before summing it with the global reward gave
+better performance.
+•Goal sampling for all algorithms: The same goal-sampling method was used for all baselines in this paper as well as ORS and all variations. Goals were sampled in three different
+ways according to probabilities from a categorical distribution defined as follows:
+23

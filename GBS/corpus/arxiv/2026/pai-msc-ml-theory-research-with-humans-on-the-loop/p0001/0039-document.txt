@@ -1,0 +1,61 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+l-eligible agents. Red dashed arrows are
+loopbacks triggered by gate failures. Theory and experiment tracks run in parallel when both are selected.
+13
+
+Configuration Typical
+cost
+Typical
+runtime
+Notes
+Quickstart (markdown, no
+counsel)
+$2–10 15–40 min Single-model run, light
+paper draft
+Base pipeline +
+LATEX/PDF
+$10–40 30–90 min Requires LATEX toolchain
+Base pipeline + math
+agents
+$20–60 60–150 min Adds theorem-oriented
+stages
+Counsel mode $50–200 2–5 hrs Multi-model debate and
+synthesis
+Tree search (no counsel) $60–180 2–4 hrs Parallel proof
+exploration
+Tree search + counsel $200–600 4–10 hrs Highest-cost single-run
+mode
+Full paper campaign $100–400 6–12 hrs Multi-stage orchestration
+over several runs
+Table 2: Runtime and spend envelopes for representativepAI/MScconfigurations. Actual values vary with task
+scope, model choice, revision loops, and experiment intensity.
+Every completed stage is persisted to SQLite incheckpoints.db, making long runs restartable and allowing
+downstream tools to reason about partially completed workspaces. Budget tracking is implemented through
+budget_state.json,budget_ledger.jsonl, andrun_token_usage.json.
+5 Related Work
+The literature relevant topAI/MScspans four lines. We position the system briefly here; a comprehensive
+survey is in Appendix B.
+Scholarly writing assistants.Early LLM-era work focused on citation-grounded text generation rather
+thanfullresearchautomation. SystemssuchasCiteBench[53], ChatCite[54], ScholarCopilot[55], SurveyGen
+[56], and editor-native tools like OverleafCopilot [57] and PaperDebugger [58] established that retrieval
+quality and claim–evidence linkage matter more than surface fluency. These are important precursors, but
+their primary artifact is a section or draft rather than a coordinated research program.
+Manuscript-first research-to-paper agents.The closest predecessors are end-to-end systems targeting research-to-paper execution. Data-to-paper [59] emphasized provenance and backward traceability. The
+AI Scientist [60] and its successor [61] pushed toward fully autonomous ML research with tree search and automated review. Agent Laboratory [62] showed that human feedback at stage boundaries materially improves
+quality. CycleResearcher [63] coupled generation with review loops, AI-Researcher [64] introduced ScientistBench for open-ended evaluation, and AgentRxiv [65] enabled cross-run collaboration through a preprintserver abstraction. freephdlabor [66] argued for fully dynamic, user-customizable workflows. Relative to
+these systems,pAI/MScplaces more weight on a tighter artifact contract, theory–experiment coordination,
+and bounded workflow control.
+Autonomous discovery and open platforms.Broader systems target scientific discovery rather than
+manuscript production. AI co-scientist [67] debates and refines hypotheses in biomedicine; InternAgent
+[68, 69] pursues long-horizon discovery across domains; AlphaEvolve [70] and Mathematical Exploration at
+Scale[71]targetalgorithmicandmathematicaldiscovery; andDeepInnovator[72]trainsmodelsforinnovative
+14

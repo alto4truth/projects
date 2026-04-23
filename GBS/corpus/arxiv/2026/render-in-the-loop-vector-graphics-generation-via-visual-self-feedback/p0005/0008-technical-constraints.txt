@@ -1,0 +1,47 @@
+title: Render-in-the-Loop: Vector Graphics Generation via Visual Self-Feedback
+source: arxiv
+year: 2026
+document_id: render-in-the-loop-vector-graphics-generation-via-visual-self-feedback
+authors: Guotao Liang; Zhangcheng Wang; Juncheng Hu; Haitao Zhou; Ziteng Xue; Jing Zhang; Dong Xu; Qian Yu
+page: 5
+section: technical-constraints
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20730v1
+
+mples. It leverages large
+multimodal transformers to generate complex vector graphics and demonstrates
+strong scalability with large training corpora.
+
+20 G. Liang et al.
+Reinforcement Learning-based Methods.SVGen[39] introduces reinforcement
+learning for SVG generation by optimizing the generation policy using the Group
+Relative Policy Optimization (GRPO) [11] algorithm. The method aims to improve the alignment between generated SVG outputs and evaluation metrics
+through policy optimization. As one of the first RL-based approaches for SVG
+generation, it provides an important baseline for evaluating reinforcement learning strategies in vector graphics synthesis.
+Unless otherwise specified, we use the official implementations of these baselines and follow the hyperparameters recommended in their original papers.
+C Comparison with LIVE and DiffVG
+While optimization-based vectorization methods such as LIVE [24] and DiffVG [20] can achieve high visual fidelity through gradient descent, their resulting SVG representations often lack human-interpretable structure and logical
+layering.
+As demonstrated in Fig. S4, these methods typically generate a massive number of redundant paths and messy overlapping layers to merely fit the target
+image pixels. This “stroke-stacking” behavior leads to bloated SVG files that are
+difficult for human designers to edit, animate, or reuse. In contrast, our proposed
+Render-in-the-Loopframework leverages the semantic prior of Multimodal
+Large Language Models (MLLMs) to generate clean, geometrically logical, and
+highly editable vector graphics that align with human drawing habits.
+D MMSVGBench
+We evaluate our method on MMSVGBench [56], a benchmark proposed by OmniSVG [56] for evaluating multimodal SVG generation models. The benchmark
+contains 600 synthetic samples covering two tasks: text-to-SVG and image-toSVG. Each task contains 300 evaluation samples, further divided into icon-level
+and illustration-level complexity.
+To ensure fair evaluation and avoid training data leakage, all prompts and
+images in MMSVGBench are generated from scratch using GPT [1] models.
+Therefore, the benchmark samples are guaranteed to be unseen during model
+training.
+Each benchmark sample contains the input modality (text or image), task
+type, semantic category (icon or illustration), and metadata such as the source
+URL. Following the protocol of OmniSVG, we report FID, CLIP score, Aesthetic
+score and HPS for text-to-SVG tasks, and DINO similarity, SSIM, LPIPS, and
+MSE for image-to-SVG tasks.
+References
+1. Achiam, J., Adler, S., Agarwal, S., Ahmad, L., Akkaya, I., Aleman, F.L., Almeida,
+D., Altenschmidt, J., Altman, S., Anadkat, S., et al.: Gpt-4 technical report. arXiv
+preprint arXiv:2303.08774 (2023)

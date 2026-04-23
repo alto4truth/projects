@@ -1,0 +1,30 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+Table 1: Ablation study of the SuperIgor framework, measuring agent SuccessRate on the Atom subset of the
+CrafText dataset across two training cycles
+Ontology Curriculum DPO SFT Cycle-1 Cycle-2
+✗✓ ✓ ✓0.06 N/A
+✓✗✓ ✓0.08 N/A
+✓ ✓✗✓0.34 0.39
+✓ ✓ ✓✗0.25 0.13
+✓ ✓ ✓ ✓0.35 0.45
+SuccessRate on the Atom subset of the CrafText instruction dataset. The analysis of the results yields
+two central findings.
+(1) Curriculum is effective only when paired
+with high-quality, ontology-structured plans.Although full-cycle results may suggest that gains
+are driven by curriculum learning, the ablation
+shows that curriculum is effective only when combined with ontology-guided plan generation. Without ontology—i.e., without structured, hierarchical
+plans—the curriculum lacks a meaningful ordering
+signal and fails to improve performance (Cycle1: 0.06). In contrast, ontology-based plans encode a natural hierarchy of goals, enabling a principled progression from simple to complex tasks.
+This alignment between plan structure and staged
+learning makes the curriculum operative, increasing Cycle-1performance from0.06to0.35.
+(2) DPO improves the RL agent by learning
+to prioritize plans that lead to higher-quality b

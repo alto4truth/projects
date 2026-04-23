@@ -1,0 +1,27 @@
+title: GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with Flexible Multi-Modal Diffusion Transformers
+source: arxiv
+year: 2026
+document_id: georelight-learning-joint-geometrical-relighting-and-reconstruction-with-flexible-multi-modal-diffusion-transformers
+authors: Yuxuan Xue; Ruofan Liang; Egor Zakharov; Timur Bagautdinov; Chen Cao; Giljoo Nam; Shunsuke Saito; Gerard Pons-Moll; Javier Romero
+page: 1
+section: document
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20715v1
+
+GeoRelight: Learning Joint Geometrical Relighting and Reconstruction with
+Flexible Multi-Modal Diffusion Transformers
+Yuxuan Xue1,2 Ruofan Liang1 Egor Zakharov1 Timur Bagautdinov1 Chen Cao1
+Giljoo Nam1 Shunsuke Saito1 Gerard Pons-Moll2,3 Javier Romero1
+1 Codec Avatars Lab, Meta 2 University of Tübingen
+3 Max Planck Institute for Informatics, Saarland Informatics Campus
+Place Holder for Teaser
+Input Albedo Normal Reconstruction Relighting with Different Environment Illumination
+01 0304 05 0809
+Figure 1.GeoRelight.Given a monocular image (left), our framework jointly generates a relit image under novel illumination (right),
+disentangles image intrinsics like albedo (2nd column) and normals (3rd column), and extracts a fine-grained 3D pointcloud (4th column).
+Abstract
+Relighting a person from a single photo is an attractive but ill-posed task, as a 2D image ambiguously entangles 3D geometry, intrinsic appearance, and illumination.
+Current methods either use sequential pipelines that suffer
+from error accumulation, or they do not explicitly leverage
+3D geometry during relighting, which limits physical consistency. Since relighting and estimation of 3D geometry
+are mutually beneficial t

@@ -1,0 +1,34 @@
+title: Anchor-and-Resume Concession Under Dynamic Pricing for LLM-Augmented Freight Negotiation
+source: arxiv
+year: 2026
+document_id: anchor-and-resume-concession-under-dynamic-pricing-for-llm-augmented-freight-negotiation
+authors: Hoang Nguyen; Lu Wang; Marta Gaia Bras
+page: 11
+section: calibra-tion
+chunk: 50
+source_ref: https://arxiv.org/pdf/2604.20732v1
+
+This appendix describes the prompt design and calibration
+of the five LLM carrier personas used in Experiment 3 (Section 6).
+Prompt Architecture
+Each carrier persona is implemented as a system prompt for
+GPT-OSS 20B (served via Ollama, temperature = 0 .3). Following the constraint-based approach of NegotiationArena [7],
+each prompt provides (1) an exact opening rate at a target
+fraction of the negotiation range, (2) a behavioral description
+of the concession style, and (3) hard constraints: floor rate,
+maximum concession per round, and walk-away conditions.
+The LLM exercises genuine agency within these guardrails.
+All prompts share a common instruction block enforcing
+rate formatting, concise responses, clear accept/reject signals,
+and a structured reasoning step before each counter-offer.
+Persona Parameters
+Table 2 summarizes the calibrated parameters for each persona.
+Coop. TFT Dead. Anch. Hard.
+Opening (%) 30 60 70 95 90
+Floor (%) 2 0 0 0 0
+Walk-away Never 3 stalls Never Rd 9 Rd 8
+Max conc./rd 8% Mirror 0.5/12% 2% 1/8%
+Table 2: Calibrated persona parameters. Opening and
+floor are percentages of the range above cost. Dual
+concession values indicate early/late round budgets.
+Calib

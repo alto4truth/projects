@@ -1,0 +1,34 @@
+title: Personalized electric vehicle energy consumption estimation framework that integrates driver behavior with map data
+source: arxiv
+year: 2026
+document_id: personalized-electric-vehicle-energy-consumption-estimation-framework-that-integrates-driver-behavior-with-map-data
+authors: Sreechakra Vasudeva Raju Rachavelpula; Sangwhan Cha
+page: 1
+section: document
+chunk: 21
+source_ref: https://arxiv.org/pdf/2604.20764v1
+
+locity smoothly
+decelerates by setting:
+vc(t) =v f(t)−
+
+vf(t) tanh
+ k sr(t)
+sf(t)−s(t)
+
+
+,(6)
+ensuring curve speed attainment before event onset.
+10
+
+Integration..Euler’s method advances the state vectory={s, v, a, j}T via
+y(t+h) =y(t) +f(t, y)h.
+The resulting velocity, acceleration, and jerk profiles provide realistic past
+driving sequences for the Driver LSTM Module’s batch inferencing.
+Figure 3: PID Controller module architecture showing Command Velocity Generator and
+Vehicle Dynamics Model interaction.
+4.5. Driver LSTM Module
+4.5.1. Theoretical Background
+The Driver LSTM Module employs a sequence-to-sequence Bidirectional
+LSTM-based hybrid encoder-decoder architecture similar to the one used by
+11

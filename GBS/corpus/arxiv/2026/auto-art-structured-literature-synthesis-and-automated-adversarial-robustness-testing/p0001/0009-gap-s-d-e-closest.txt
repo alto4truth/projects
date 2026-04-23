@@ -1,0 +1,40 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+ov.
+5
+5
+4
+3.5
+3.5
+3
+3
+2.5
+Consequence (1–5)
+Figure 2:Assumption risk ranking. A1–A2 are existential threats to
+the leaderboard paradigm.
+shows protocols are broken [C6]. On multi-attack metrics:
+average gains conflict with catastrophic worst cases [C2].
+Strongest evidence.Cross-model re-evaluation documents
+systematic optimism [C1]—the largest empirical finding. Average gains coexist with worst-case < random guessing [C2].
+DBP collapses under correct gradient + sampling [C6].
+Key open question.Which evaluation stack—adaptive ensembles, stochastic replication, attack-independent metrics,
+autonomous agents—should bemandatorybefore certifying a
+model as safe against adaptive, multi-channel adversaries in
+open deployment?
+8 Assumption Stress Test
+We identify eight assumptions the corpus relies on but never
+explicitly validates (Figure 2).
+Assumptions are ranked from most to least consequential.
+Each is foundational to the conclusions drawn and plausibly
+false or context-dependent.
+A1.A fixed attack suite represents safety.Shared by:C1,
+C2, C5.Risk: High. Consequence:If false, all leaderboard rankings are temporally bounded artifacts—conclusions
+need wholesale revision, and the entire c

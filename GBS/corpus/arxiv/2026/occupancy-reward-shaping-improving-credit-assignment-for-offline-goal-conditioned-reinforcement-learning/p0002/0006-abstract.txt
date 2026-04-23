@@ -1,0 +1,24 @@
+title: Occupancy Reward Shaping: Improving Credit Assignment for Offline Goal-Conditioned Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: occupancy-reward-shaping-improving-credit-assignment-for-offline-goal-conditioned-reinforcement-learning
+authors: Aravind Venugopal; Jiayu Chen; Xudong Wu; Chongyi Zheng; Benjamin Eysenbach; Jeff Schneider
+page: 2
+section: abstract
+chunk: 6
+source_ref: https://arxiv.org/pdf/2604.20627v1
+
+leverage it for credit assignment.
+In this paper, we formalize how world models encode world geometry. Specifically, using tools
+for optimal transport, we show that long-term temporal dependencies can be explicitly recovered
+from the velocity field of a learned occupancy model trained with flow matching (Liu et al., 2022b;
+Lipman et al., 2022). Building on this insight, we proposeOccupancy Reward Shaping(ORS), a
+reward-shaping method that extracts global goal-reaching information from the dataset occupancy
+measure into a scalar reward while provably preserving the optimal policy. We demonstrate that
+ORS significantly enhances performance, improving2.2×over its sparse-reward base algorithm
+and achieving24%-248%improvements over state-of-the-art methods on 13 challenging locomotion and manipulation tasks from OGBench (Park et al., 2024a). Furthermore, ORS consistently
+outperforms baselines on 3 tasks that involve controlling actuators in a nuclear fusion reactor called
+a Tokamak (Char et al., 2023), showing its utility in complex, real-world systems.
+2 RELATEDWORK
+Offline GCRL.Offline GCRL has been a long-standing area of research in RL (Kaelbling, 1993;
+Schaul et al., 2015), stemmi

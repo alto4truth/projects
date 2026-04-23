@@ -1,0 +1,29 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 7
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+cation results, given the discovered inconsistencies.
+We evaluate the effectiveness of R-CoV on several
+widely used hallucination benchmarks: POPE [25] and
+MME [13] for closed VQA tasks, as well as CHAIR [38]
+and GPT-4o assisted evaluation for open-ended generation
+tasks. Our extensive experiments across multiple advanced
+LVLMs demonstrate that R-CoV consistently alleviates hallucinations in diverse evaluation settings.
+Our main contributions are summarized as follows:
+1)We introduce R-CoV , a region-aware visual chainof-verification method to alleviate object hallucinations in
+LVLMs. Our simple yet effective plug-and-play method can
+be seamlessly applied to various LVLMs without requiring
+retraining or external detection models.
+2)We contribute a comprehensive study on how to design visual prompts to better incorporate the visual information into R-CoV , which has largely been ignored in existing
+language-centric hallucination correction methods.
+3)We conduct extensive experiments across multiple
+LVLMs and evaluation settings. R-CoV achieves consistent
+and significant performance improvements, demonstrating
+its strong potential to alleviate hallucinations. We also
+show that R-CoV

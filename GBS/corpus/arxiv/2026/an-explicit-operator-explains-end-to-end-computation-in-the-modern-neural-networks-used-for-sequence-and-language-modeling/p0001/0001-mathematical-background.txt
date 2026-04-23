@@ -1,0 +1,48 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 1
+section: mathematical-background
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+Consider a network ofNnodes arranged on a onedimensional ring. The network evolves in time according
+to:
+˙ψi =ω+κ
+NX
+j=1
+aij
+
+sin (ψj −ψ i −ϕ ij)
+−i cos (ψj −ψ i −ϕ ij)
+
+,
+(1)
+whereψ i(t)∈Cis the state of nodeiat timet,ω∈R
+is the intrinsic oscillation frequency, the matrix element
+aij ∈Rrepresents the connection from nodejtoi,κ∈R
+homogeneously scales the strength of connections in the
+network,ϕ ij ∈Ris a phase lag in the connection, and
+i = √−1 is the imaginary unit (note thatiis an index).
+We have recently shown that Eq. (1) admits an exact
+solution [15]. To see this, change Eq. (1) to a rotating
+coordinate frame (in whichωcan be set to zero w.l.o.g. –
+see, for example, [18]), multiply Eq. (1) by i, and apply
+standard identities to obtain:
+i ˙ψi =κe −iψi
+NX
+j=1
+aije−iϕij eiψj .(2)
+This system of equations is nonlinear inψ i; however, by
+applying the nonlinear coordinate transformationx i =
+eiψi and noticing that dxi
+dt = ieiψi dψi
+dt , we obtain an exact
+solution in the new variablex, expressed in matrix form
+as:
+x(t) =e Ktx(0),(3)
+wherex(t)∈C N is the solution for the state vector of
+the network at timet,eis the matrix exponential, the
+matrixKhas elementsk ij =κe −iϕij aij, and

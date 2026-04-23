@@ -1,0 +1,35 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+d.
+Table 2: Feature models used in the experiments with structural metrics and blueprint sizes.
+Feature ModelSW SMW IDE SMG COM SEA CVE BDB CNNl CNNf
+#Features 6 13 14 33 48 145 169 117 3,296 6,867
+#Relationships 4 8 11 19 25 73 15 54 1,561 3,516
+#Cross-tree constraints 1 2 2 4 21 13 153 282 76 9
+Tree Depth 2 2 2 3 3 10 4 5 10 11
+#Blueprint tokens 68 143 178 360 740 1,456 2,367 3,780 33,823 71,812
+Abbreviations: SW=Sandwich, SMW=Smartwatch, IDE=IDE product line, SMG=Strategy Mobile Game,
+COM=Computer, SEA=Subsea Control System, CVE=Cybersecurity Vulnerability, BDB=Berkeley DB,
+CNNl=light CNN architectures, CNNf=full CNN architectures.
+Metrics extracted with FLAMA 2.0.1 and Glucose3; blueprint token counts measured in tokens.
+Table 3: AOs considered in the experiments.
+ID Solver-free AOs ID Solver-based AOs
+AO1#Features AO10Satisfiable/Void
+AO2#Leaf Features AO11Configuration Satisfiable
+AO3Tree Depth AO12#Valid Configurations
+AO4#Mandatory Features AO13Core Features
+AO5#Optional Features AO14Dead Features
+AO6#Or Groups AO15False Optional Features
+AO7#Alternative Groups AO16Generalization
+AO8#Requires
+AO9#Excludes
+canonical content: integers for counts, true/false for
+booleans, and

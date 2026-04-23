@@ -1,0 +1,25 @@
+title: Amodal SAM: A Unified Amodal Segmentation Framework with Generalization
+source: arxiv
+year: 2026
+document_id: amodal-sam-a-unified-amodal-segmentation-framework-with-generalization
+authors: Bo Zhang; Zhuotao Tian; Xin Tao; Songlin Tang; Jun Yu; Wenjie Pei
+page: 1
+section: ieee-transactions-on-image-processing-1
+chunk: 3
+source_ref: https://arxiv.org/pdf/2604.20748v1
+
+in the same domain witnessed during training. However,
+in open-world scenarios, models must generalize to novel
+object categories and contexts that have not been seen during
+model training, which poses challenges to current amodal
+segmentation models, as shown in Fig. 1.
+To enhance open-world visual perception capabilities, the
+Segment Anything Model (SAM) [1] was introduced, demonstrating remarkable generalization to new samples. However,
+SAM is inherently constrained to segment visible regions,
+thereby lacking the capacity to address open-world challenges
+*Wenjie Pei and Zhuotao Tian are corresponding authors.
+Bo Zhang, Zhuotao Tian, Jun Yu and Wenjie Pei are with the Department
+of Computer Science, Harbin Institute of Technology at Shenzhen, Shenzhen
+518057, China.
+Xin Tao and Songlin Tang are with Kuaishou Technology, Shenzhen,
+Guangdong, China

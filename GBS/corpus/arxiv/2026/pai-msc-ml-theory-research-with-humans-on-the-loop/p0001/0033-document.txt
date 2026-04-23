@@ -1,0 +1,25 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+gle, self-contained walkthrough ofpAI/MSc. The workflow contains 23 specialist
+agents and 30 total graph nodes; the additional nodes are routing gates and control points shown in Figure 1.
+We describe the pipeline phases, reference the artifact contract from Section 2, summarize the optional
+modules, and close with the operational model. Readers who want full implementation details should consult
+Appendix A.
+4.1 Pipeline phases
+At the core of the release is a fixed LangGraph workflow. “Fixed” refers to the execution topology: the graph
+always traverses the same high-level stages and routing logic, even though the generated content remains
+stochastic. The system is not deterministic in output, but it is explicit and repeatable in control flow. The
+graph is organized into six phases.
+Phase 1: Discovery and feasibility screening.The run begins with apersona_council
+stage (Section 3.1), followed byliterature_review_agent, a feasibility gate,brainstorm_agent, and
+formalize_goals_agent. This phase grounds the task in prior work, checks whether the direction appears
+feasible, and converts a high-level objective into a concrete technical plan.
+Phase 2: Track planning and routing.Planning w

@@ -1,0 +1,32 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 20
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+δ+):Extracted from successful trajectories, δ+ distills high-quality
+reasoning patterns or effective tool-use strategies. It serves as a template for reinforcing
+correct behaviors (e.g., "The agent correctly
+broke down the problem into sub-steps A, B,
+and C.").
+• Negative Gradient ( δ−):Generated from
+failed trajectories, δ− pinpoints specific errors like hallucinations or tool misuse and
+suggests a corrective action (e.g., "The agent
+hallucinated a parameter for the search tool;
+it should have usedlist_parametersfirst.").
+Step 2: Gradient Aggregation via Clustering.
+Applying updates from every individual negative
+gradient δ− can be inefficient and lead to noisy,
+conflicting modifications. To address this, we aggregate gradients to identify systemic error patterns.
+We employ a semantic clustering approach on the
+set of all generated negative gradients {δ−
+k }. By
+embedding the textual descriptions of errors, we
+group them into clusters, where each cluster represents a recurring type of failure, such as "misunderstanding a specific tool’s constraints" or "inefficient
+inter-agent communication." This step allows the
+system to target underlying root causes rather than
+fixing isolated

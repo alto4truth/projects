@@ -1,0 +1,22 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+ieldthelargestgainsinaccuracyatthecostofhighertrainingtimecomputation.Incontrast,theBILprovidesconsistentimprovements
+over ZOH with modest additional overhead, offering the most favorable
+trade-off between precision and efficiency. These findings elucidate the
+pivotal role of discretization in SSM-based vision architectures and furnish empirically grounded justification for adopting BIL as the default
+discretization baseline for state-of-the-art SSM models.
+Keywords:Mamba·State Space Models·Vision Mamba·Discretization·Bilinear Transform·Higher-Order Hold.
+1 Introduction
+State Space Models (SSMs), such as Vision Mamba (ViM), have received significant attention in recent years [11] [18]. ViM presents a promising alternative
+to Vision Transformers (ViTs), which leverage their ability to capture complex
+dependencies, but at a quadratic rate of calculations due to their attention mechanisms [10] [14] [31]. SSMs have near-linear scalability in sequence length and
+hardware-efficient processing [11]. Mamba has recently been adapted to computer vision tasks; ViM [33], Vmamba [18], and VideoMamba [16] demonstrate
+Mamba’s ability to handle long-range dependencies while addressing the computat

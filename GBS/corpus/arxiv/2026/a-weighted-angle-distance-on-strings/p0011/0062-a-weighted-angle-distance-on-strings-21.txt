@@ -1,0 +1,19 @@
+title: A weighted angle distance on strings
+source: arxiv
+year: 2026
+document_id: a-weighted-angle-distance-on-strings
+authors: Grant Molnar
+page: 11
+section: a-weighted-angle-distance-on-strings-21
+chunk: 62
+source_ref: https://arxiv.org/pdf/2604.20633v1
+
+in Σ ∗, and letT 1 =s 1 . . . sN andT 2 =s 2 . . . sN+1 be the twoN-grams of
+S. Byθ N-invariance, we seeθ N(ϕ(S), ϕ(T1)), θN(ϕ(S), ϕ(T2))< π
+2 , soϕ(T 1) andϕ(T 2) are
+the twoN-grams ofϕ(S). Now ifχ=−1, thenϕ(T 1) =R(T 1) andϕ(T 2) =R(T 2), which
+uniquely determinesϕ(S) =R(S). Likewise, ifχ= 1, thenϕ(T 1) =T 1 andϕ(T 2) =T 2,
+which uniquely determinesϕ(S) =S. The claim follows.□
+8.Appendix: Tables and plots
+8.1.Tables and plots.For completeness we include the main numeric summaries and plots
+generated fromresults.csvby our analysis script.

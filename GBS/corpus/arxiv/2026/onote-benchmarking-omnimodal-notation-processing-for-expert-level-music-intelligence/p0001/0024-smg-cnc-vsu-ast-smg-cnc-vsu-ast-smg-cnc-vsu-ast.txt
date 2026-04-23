@@ -1,0 +1,26 @@
+title: ONOTE: Benchmarking Omnimodal Notation Processing for Expert-level Music Intelligence
+source: arxiv
+year: 2026
+document_id: onote-benchmarking-omnimodal-notation-processing-for-expert-level-music-intelligence
+authors: Menghe Ma; Siqing Wei; Yuecheng Xing; Yaheng Wang; Fanhong Meng; Peijun Han; Luu Anh Tuan; Haoran Luo
+page: 1
+section: smg-cnc-vsu-ast-smg-cnc-vsu-ast-smg-cnc-vsu-ast
+chunk: 24
+source_ref: https://arxiv.org/pdf/2604.20719v1
+
+consistent
+musical content across modalities. In addition to aligned audio
+data, we also prepare complete, standardized symbolic groundtruth texts in the target notation format for each audio clip. During
+evaluation, the model takes a segmented music audio as input and
+predicts the corresponding symbolic music notation. The modelgenerated transcription is then quantitatively compared with the
+reference text from multiple dimensions, including pitch sequence,
+temporal position, note duration, and structural organization. By
+measuring the consistency between the predicted sequence and the
+ground truth, we reliably evaluate the model’s audio perception
+ability, temporal alignment precision, and the accuracy of end-toend audio-to-symbolic transcription.
+A.4 Symbolic Music Generation & Aesthetics
+(SMG) Data
+Different from the previous three discriminative and transductive
+tasks that rely on pre-collected score images or audio, the Symbolic Music Generation & Aesthetics task is a generative task that
+evaluates the model’s capacity for creative music expression. This
+task does not use existing score images as input; instead, it examines whether the model can independently produce coheren

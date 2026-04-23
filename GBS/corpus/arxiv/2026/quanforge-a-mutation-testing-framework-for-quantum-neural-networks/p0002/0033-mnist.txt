@@ -1,0 +1,19 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 2
+section: mnist
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+h model properties, including expressivity, trainability, and robustness.
+Answer to RQ3:For the Add operator, the Hadamard and SWAP gates cause the most
+significant performance degradation due to their strong, non-local transformations. In contrast,
+phase and rotation gates have milder effects. For the Delete and Modify operators, controlled
+gates have a high impact because they disrupt entanglement and non-local correlations.
+4.7 Discussion
+4.7.1 Performance of different operators in generating effective mutants.Mutation operators affect
+QNNs through heterogeneous faults, introducing noisy transformations, loss of entanglement,
+Proc. ACM Softw. Eng., Vol. 3, No. FSE, Article FSE128. Publication date: July 2026.

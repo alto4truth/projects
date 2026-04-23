@@ -1,0 +1,22 @@
+title: An explicit operator explains end-to-end computation in the modern neural networks used for sequence and language modeling
+source: arxiv
+year: 2026
+document_id: an-explicit-operator-explains-end-to-end-computation-in-the-modern-neural-networks-used-for-sequence-and-language-modeling
+authors: Anif N. Shikder; Ramit Dey; Sayantan Auddy; Luisa Liboni; Alexandra N. Busch; Arthur Powanwe; Ján Mináč; Roberto C. Budzinski; Lyle E. Muller
+page: 2
+section: results
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20595v1
+
+uced in the previous sections to analyze the dynamics in the recurrent
+layer of S4D. Specifically, using the explicit basisFfrom
+the nonlinear oscillator context, we can now write the
+statex k as a superposition of the eigenmodesf j:
+xk =
+NX
+j=1
+µj(k)f j .(11)
+Here,µ j(k) =⟨f j|xk⟩is the complex amplitude of the
+jth eigenvector in the basis, which represents a traveling
+1 Note thatτused here is equivalent to ∆tin the work introducing
+S4D-Lin [8].

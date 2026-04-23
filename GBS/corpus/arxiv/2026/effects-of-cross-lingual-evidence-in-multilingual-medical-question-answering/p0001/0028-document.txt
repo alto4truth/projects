@@ -1,0 +1,29 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 28
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+5.1 Monolingual Retrieval Results
+The experimental results from monolingual retrieval in Table 1 show significant performance
+variations across different retrieval methods, model
+sizes, and languages. Analyzing the comprehensive evaluation across six languages (English (EN),
+Spanish (ES), French (FR), Italian (IT), Basque
+(EU), and Kazakh (KK)), several key patterns
+emerge regarding optimal configurations for multilingual information retrieval. For all the results,
+we established statistical significance, as described
+in Appendix D.
+Model-wise Performance.Intuitively, the main
+observation from the results is that model size
+significantly impacts performance, with a general
+trend of increasing accuracy as the number of parameters grows. The average performance across
+all retrieval methods and benchmarks shows a clear
+scaling effect. The largest models mainly exhibit
+the best performance across all the settings. Qwen2.5-72B consistently outperforms the 70B version
+of Llama in the higher-resource languages, and underperforms in lower-resource languages, which
+is reflected in the high standard deviation. The
+performance gap reflects Qwen 2.5’s poorer multilingual support compared to al

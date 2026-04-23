@@ -1,0 +1,27 @@
+title: The Expense of Seeing: Attaining Trustworthy Multimodal Reasoning Within the Monolithic Paradigm
+source: arxiv
+year: 2026
+document_id: the-expense-of-seeing-attaining-trustworthy-multimodal-reasoning-within-the-monolithic-paradigm
+authors: Karan Goyal; Dikshant Kukreja
+page: 1
+section: document
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20665v1
+
+rference scenarios where the multimodal alignment training process catastrophically degrades
+the base LLM’s inherent reasoning capabilities (𝑆𝑤𝑣 <𝑆 𝑡 ).
+(2) The Ablation Fallacy: 𝑀𝐺 does not measure faithful integration; it measures the leverage of an additional signal under conditions of artificial starvation. From an informationtheoretic perspective, if we starve a model of required information (by deleting the image), any subsequent failure
+cannot be definitively attributed to an architectural inability
+to process vision. We cannot discover the limits of a model’s
+knowledge extraction prowess by measuring what happens
+when knowledge is deleted.
+2.2 The Necessity of a Paradigm Shift
+To build trustworthy systems capable of synthesising powerful
+combinations of visual and textual data, we must move beyond
+data ablation and the race to new dataset creation. We must isolate
+thearchitectural bottleneckfrom thedataset bias. If the research
+community continues to use ablative metrics, we risk deploying
+models that extract unaligned priors rather than grounded visual
+truths, leading to benign looking catastrophic failures in real-world
+applications.
+2.3 Operationalising the Paradigm Shif

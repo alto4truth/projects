@@ -1,0 +1,31 @@
+title: Cooperative Profiles Predict Multi-Agent LLM Team Performance in AI for Science Workflows
+source: arxiv
+year: 2026
+document_id: cooperative-profiles-predict-multi-agent-llm-team-performance-in-ai-for-science-workflows
+authors: Shivani Kumar; Adarsh Bharathwaj; David Jurgens
+page: 5
+section: sanctioning-phase
+chunk: 9
+source_ref: https://arxiv.org/pdf/2604.20658v1
+
+roups had the same size. Fewer groups were used
+for CPR+Sanction as it was intended as a variant of CPR designed to test the impact of
+sanctioning.
+18
+
+Preprint. Under review.
+Game Group sizes
+Weakest Link 3, 5, 8, 10
+Collective Risk 3, 5, 8, 10
+O-Ring Team 3, 5, 8
+Public Goods 3, 4, 5, 8, 10
+CPR 3, 5, 8, 10
+CPR+Sanction 5
+Table 4: Group sizes (agents per group) used in each game. All games use 2 groups.
+C AI-for-Science agent prompts
+Below is the system prompt template used for all AI Lab agents, followed by representative
+role descriptions.
+C.1 System prompt template
+You are{role name}, a member of the{team display name}team.
+PROJECT:{science task description}
+YOUR ROLE:{role description}

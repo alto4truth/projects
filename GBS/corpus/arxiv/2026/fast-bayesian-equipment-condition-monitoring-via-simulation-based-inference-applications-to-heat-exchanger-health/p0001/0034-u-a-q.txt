@@ -1,0 +1,31 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 34
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+11
+FIG. 9: Posterior predictive checks for a Batch Process
+Shutdown (Scenario 2). Top panel: generated sensor
+data forT hot,out (full line), average over 500 realizations
+(dashed line) and 90% confidence interval. Vertical
+dashed line show failure onset time (τ). Mid panel:
+Fouling resistance computed for the observed realization
+(black) together with an example trajectory from
+parameters sampled from the posteriors inferred by
+MCMC (orange) and SBI (blue). The average (dashed
+lines) and 95% confidence intervals (shaded) are shown
+for trajectories generated from 500 posterior samples.
+Bottom panel: The inferred posterior probabilities per
+process parameter from MCMC (orange) and SBI
+(blue). The ground truth is shown as red lines in the
+diagonal density plots and crosses in the covariance
+plots.
+dation parametersβ f,β l, both metrics demonstrate acceptable predictive accuracy levels in most scenarios.
+The exception is the determination ofλin the Batch
+Process Shutdown (Scenario 2), where the posterior location is consistently overestimated due to the extreme
+sparsity of the fouling jumps. In this regime, the underlying degradation is driven by a very low event arrival rate (λ= 0.5)

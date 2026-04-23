@@ -1,0 +1,24 @@
+title: QuanForge: A Mutation Testing Framework for Quantum Neural Networks
+source: arxiv
+year: 2026
+document_id: quanforge-a-mutation-testing-framework-for-quantum-neural-networks
+authors: Minqi Shao; Shangzhou Xia; Jianjun Zhao
+page: 1
+section: mnist
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20706v1
+
+mperfections.
+Since mutation operators introduce faults that alter the decision boundary, inputs near the original
+boundary are particularly sensitive and prone to revealing faults. Consequently, high-quality test
+suites are expected to achieve higher mutation scores. To validate this hypothesis, we employ the
+eight test suites constructed in Section 4.3.1 to evaluate the effectiveness of QuanForge in assessing
+data quality. Specifically, we generate effective mutants using different MOs, and compute the
+average mutation scores across all MOs for all suites, respectively.
+The experimental results in Table 3 show several observations.(1)Taking the original suite
+as the baseline, all strong suites have consistently achieved higher mutation scores while weak
+suites have lower scores, which aligns with expectations. Strong suites are more sensitive to the
+shifts of the decision boundary brought by mutations, therefore equipped with a strong ability
+to kill mutants. The opposite holds for the weak suites.(2)Within the weak suites, HConf suites
+2We estimate gradients using NES [57] for gradient-based attacks under finite shots. The step is configured as 50.
+Proc. ACM Softw. Eng., Vol. 3,

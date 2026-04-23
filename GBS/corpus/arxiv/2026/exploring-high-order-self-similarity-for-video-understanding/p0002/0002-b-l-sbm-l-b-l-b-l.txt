@@ -1,0 +1,27 @@
+title: Exploring High-Order Self-Similarity for Video Understanding
+source: arxiv
+year: 2026
+document_id: exploring-high-order-self-similarity-for-video-understanding
+authors: Manjin Kim; Heeseung Kwon; Karteek Alahari; Minsu Cho
+page: 2
+section: b-l-sbm-l-b-l-b-l
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20760v1
+
+Optimization
+batch size 128 96 128 96 128 80 128 80
+epochs 30 40 30 30 30
+learning rate 1e-3 2e-4 1e-3 2e-4 1e-3 2e-4 1e-3 2e-4
+lr schedule cosine decay
+optimizer AdamW (β 1= 0.9,β2= 0.999)
+weight decay 0.15
+warmup epochs 4
+pre-train CLIP400M CLIP400M CLIP400M+K400CLIP400M+K400
+Augmentation
+sampling dense (stride=8) uniform uniform uniform
+resize RandomResizedCrop
+RandAugment - rand-m7-n4-mstd0.5-inc1 - random flip 0.5
+label smoothing 0.1
+repeated Aug. 2 2 1 1
+gray scale 0.2 - - MOSS module
+window(L, U, V) (5,9,9)

@@ -1,0 +1,30 @@
+title: Self-Guided Plan Extraction for Instruction-Following Tasks with Goal-Conditional Reinforcement Learning
+source: arxiv
+year: 2026
+document_id: self-guided-plan-extraction-for-instruction-following-tasks-with-goal-conditional-reinforcement-learning
+authors: Zoya Volovikova; Nikita Sorokin; Dmitriy Lukashevskiy; Aleksandr Panov; Alexey Skrynnik
+page: 4
+section: pp-o-t
+chunk: 50
+source_ref: https://arxiv.org/pdf/2604.20601v1
+
+Figure 7: Coverage of reference subtasks (out of 23)
+across different LLMs. Higher is better.
+we regenerated both the ontology and the full training dataset (plans), and then trained an RL agent
+using our Skill Curriculum Learning procedure.
+Table 5 reports the agent’s success rate on
+the training split under different planner models. The experiment includes models from the
+Qwen and Gemma families, as well as the larger
+microsoft/NextCoder-32Bmodel.
+(1) Larger models do not necessarily produce
+better ontologies or plans.Although one may expect the largest models to generate the most structured plans, but NextCoder-32B performance is
+surpassed by significantly smaller Qwen models.
+Qwen-32B yields the highest performance (0.43),
+and even Qwen-7B outperforms Gemma-12B, indicating that model family and training specialization
+matter more than raw parameter count.
+(2) Qwen models produce more stable and semantically consistent plan structures.Models
+from the Qwen family demonstrate higher robustness in generating hierarchical task decompositions
+that align with our ontology constraints. This leads
+to more reliable curriculum construction and more
+effective RL training.
+(3) Some widely u

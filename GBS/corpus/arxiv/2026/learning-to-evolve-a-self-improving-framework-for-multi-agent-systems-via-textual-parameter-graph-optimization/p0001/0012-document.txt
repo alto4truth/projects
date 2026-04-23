@@ -1,0 +1,31 @@
+title: Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization
+source: arxiv
+year: 2026
+document_id: learning-to-evolve-a-self-improving-framework-for-multi-agent-systems-via-textual-parameter-graph-optimization
+authors: Shan He; Runze Wang; Zhuoyun Du; Huiyu Bai; Zouying Cao; Yu Cheng; Bo Zheng
+page: 1
+section: document
+chunk: 12
+source_ref: https://arxiv.org/pdf/2604.20714v1
+
+.1 Problem Formulation
+We formalize a multi-agent system A as being parameterized by a collection of configurable natural
+language elements, which we termtextual parameters Θ. These parameters encompass all the system’s textual components, such as system prompts
+for each agent {Pi}, descriptions of available tools
+{Dj}, and the rules governing inter-agent communication.
+Given a downstream task distribution T , represented by a dataset of input-output pairs (Q, A) =
+{(qk, ak)}N
+k=1, the system A(Θ) takes an input
+query qk and produces a final outputˆak. This execution generates a corresponding trajectory τk, which
+is a detailed record of the agents’ intermediate reasoning steps, tool calls, and communications.
+The objective is to discover the optimal set of
+textual parameters Θ∗ that maximizes the system’s
+performance as measured by a reward metric R
+(e.g., success rate). This optimization problem can
+be expressed as:
+Θ∗ = arg max
+Θ∈S
+E(q,a)∼T [R(A(Θ, q), a)](1)
+where S represents the vast, discrete, and unstructured space of all possible textual configurations.
+The intractability of navigating S is the primary obstacle, as conventional optimization methods and
+exhaustive search are

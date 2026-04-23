@@ -1,0 +1,55 @@
+title: pAI/MSc: ML Theory Research with Humans on the Loop
+source: arxiv
+year: 2026
+document_id: pai-msc-ml-theory-research-with-humans-on-the-loop
+authors: Mahmoud Abdelmoneum; Pierfrancesco Beneventano; Tomaso Poggio
+page: 1
+section: document
+chunk: 56
+source_ref: https://arxiv.org/pdf/2604.20622v1
+
+e organizing question
+is how far one can push a hypothesis-to-paper workflow while keeping human steering sparse and scientific
+artifacts explicit.
+30
+
+B.4 Open multi-agent scientific platforms and decentralized research commons
+A newer line of work moves away from both bounded single-run pipelines and monolithic laboratory agents
+toward persistent, open, multi-agent scientific ecosystems. The most important reference here is the OpenClaw/MoltbookecosystemanalyzedbyWeideneretal.[73]. OpenClawitselfisnotamanuscript-firstresearch
+agent in the narrow sense; its official documentation presents it as a self-hosted gateway and plugin platform
+for AI agents across messaging channels and skills [79]. What makes it relevant to research automation is
+that it became a substrate on top of which scientific-agent ecosystems were rapidly built.
+Within that ecosystem, ClawdLab and Beach.Science instantiate two distinct architectural responses. The
+ClawdLab paper of Weidener et al. [73] presents ClawdLab as a structured laboratory platform with hard role
+restrictions, PI-led governance, explicit adversarial critique, and externally verifiable evidence requirements.
+The public ClawdLab site [80] reinforces this emphasis through specialized roles, permanent reports, and
+cryptographically auditable logs. Beach.Science, by contrast, is presented both in Weidener et al. [73] and in
+the public repository [81] as an open research commons in which heterogeneous agents and humans exchange,
+evaluate, and refine hypotheses in a more decentralized environment.
+This platform-oriented line is important because it introduces design questions that bounded workflow papers
+often understate: agent identity, governance, auditability, reward design, role restrictions, and persistent
+public interaction. Relative to ClawdLab or Beach.Science,pAI/MScis deliberately less open-ended and
+less ecosystem-oriented. It is designed as a governed research-to-paper pipeline rather than as a generalpurpose research commons. But these platforms are still highly relevant because they reveal what breaks
+when one relaxes workflow constraints, and because they show that future scientific-agent systems may need
+governance and auditability mechanisms that exceed what isolated pipeline papers currently provide.
+B.5 Verification substrates for machine learning theory and applied mathematics
+BecausepAI/MScis built with a current emphasis on machine learning theory and adjacent quantitative
+fields, it should also be positioned relative to work on formal mathematical verification, not only relative to
+manuscript agents. Quantitative disciplines differ from many applied domains in that they sometimes admit
+verification loops much stronger than human critique alone.
+LeanDojo [82] is a central enabling platform in this regard: it turns Lean repositories into programmatically
+accessible training and evaluation environments for theorem proving, with structured proof states, premises,
+and proof traces. miniF2F [83] provides a cross-system benchmark for Olympiad-style formal mathematics,
+allowing direct comparison of theorem provers across formal systems. At a more public frontier, AlphaGeometry [84] demonstrated that synthetic-data-driven neuro-symbolic reasoning can reach olympiad-level
+geometry performance, and AlphaProof [85] brought reinforcement-learning-based formal reasoning into the
+IMO setting through Lean-verified proofs.
+These systems are not research-to-paper agents in the ordinary sense. However, they are directly relevant
+to theorem-heavy workflows because they illustrate a stronger class of verification loop: when full or partial
+formalization is feasible, the most meaningful verifier is not another critic agent but a compiler-like checker.
+This is one reasonpAI/MSctreats theorem-oriented reasoning as an optional rigor-enhancing extension
+rather than as a cosmetic extra.
+B.6 Evaluation context: capability benchmarks versus manuscript benchmarks
+Finally, several recent benchmarks matter for positioning capability claims, even though they are not
+manuscript-quality benchmarks. GAIA [86] evaluates general AI assistants on real-world, tool-using tasks.
+GPQA [87] probes graduate-level “Google-proof” scientific question answering. Humanity’s Last Exam [88]
+31

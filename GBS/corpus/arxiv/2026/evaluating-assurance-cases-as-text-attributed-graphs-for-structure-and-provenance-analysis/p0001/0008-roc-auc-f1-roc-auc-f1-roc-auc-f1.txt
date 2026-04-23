@@ -1,0 +1,21 @@
+title: Evaluating Assurance Cases as Text-Attributed Graphs for Structure and Provenance Analysis
+source: arxiv
+year: 2026
+document_id: evaluating-assurance-cases-as-text-attributed-graphs-for-structure-and-provenance-analysis
+authors: Fariz Ikhwantri; Dusica Marijan
+page: 1
+section: roc-auc-f1-roc-auc-f1-roc-auc-f1
+chunk: 8
+source_ref: https://arxiv.org/pdf/2604.20577v1
+
+els. Among all methods, GCN shows relatively balanced positive and negative node
+fidelity (Fid(+) ≈ 0.53, Fid(−) ≈ 0.47), suggesting moderate but interpretable attribution alignment with the model’s decision process.
+In contrast, SAGE-3 layers achieve near-zero or perfectly polarised
+fidelity values, reflecting overconfident decision boundaries where
+only a few nodes dominate the prediction.
+To assess the influence of specific argument elements, we analysed GNNExplainer importance scores categorised by GSN node
+type (Figure 3). Human-authored data shows a distributed weighting across Argument, Claim, and Goal nodes. In contrast, LLMgenerated data show a statistically skewed distribution, with disproportionate importance assigned to high-level Goal and Strategy
+elements. Furthermore, Context nodes in the LLM cohort show a
+bimodal distribution, suggesting inconsistent structural integration.
+These findings indicate that GNN provenance detection succeeds by
+identifying systematic hierarchical imbalances in LLM-generated

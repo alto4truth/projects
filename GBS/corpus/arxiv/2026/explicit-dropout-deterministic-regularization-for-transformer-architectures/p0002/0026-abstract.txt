@@ -1,0 +1,39 @@
+title: Explicit Dropout: Deterministic Regularization for Transformer Architectures
+source: arxiv
+year: 2026
+document_id: explicit-dropout-deterministic-regularization-for-transformer-architectures
+authors: Vidhi Agrawal; Illia Oleksiienko; Alexandros Iosifidis
+page: 2
+section: abstract
+chunk: 26
+source_ref: https://arxiv.org/pdf/2604.20505v1
+
+Table 2
+Effect of implicit and explicit dropout regularization on CIFAR100 with dropout ratio of 0.2 using a 7-layer Vision Transformer. Results report test accuracy.
+Dropout on Attention
+Sequence
+Dropout on
+FF network
+Accuracy (%)
+DropAttention
+(Implicit) [23]
+Implicit 58.01±1.20
+DropKey (Implicit) [20] Implicit59.11±1.23
+None Implicit 59.01±1.13
+(Q) Arora et al. [1] Explicit 37.59±0.79
+(K) Arora et al. [1] Explicit 29.61±0.85
+(V) Arora et al. [1] Explicit 37.16±1.51
+none Arora et al. [1] 55.42±1.37
+None Explicit 56.81±2.84
+Explicit (Q) Explicit 53.79±4.82
+Explicit (K) Explicit 51.53±0.90
+Explicit (V) Explicit 55.15±0.84
+Explicit (AV) Explicit 56.62±2.03
+protocol ensures a fair comparison and provides a reliable
+estimate of performance stability.
+CIFAR-10 and CIFAR-100.On CIFAR-10 (Table 1),
+explicit dropout—particularly when applied to the value
+(V) branch—achieves the best overall performance, reaching86.38%, outperforming all implicit methods and other
+explicitvariants.WhileimplicitapproachessuchasDropAttentionandDropKeyremaininacompetitiverange,theydo
+not surpass the strongest explicit configuration. In contrast,
+Aroraetal.[1]iscompetitiveonlywhenappliedtothefeedforward networ

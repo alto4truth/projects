@@ -1,0 +1,26 @@
+title: Where and What: Reasoning Dynamic and Implicit Preferences in Situated Conversational Recommendation
+source: arxiv
+year: 2026
+document_id: where-and-what-reasoning-dynamic-and-implicit-preferences-in-situated-conversational-recommendation
+authors: Dongding Lin; Jian Wang; Yongqi Li; Wenjie Li
+page: 2
+section: items-in-scene510-1015-1520-2025-25
+chunk: 39
+source_ref: https://arxiv.org/pdf/2604.20749v1
+
+n explicit constraint (brandModern Arts) and an implicit visual
+preference (compatibility with theirwardrobe). As
+shown in Figure 9, baseline models exhibit distinct
+failure modes. The small-scale modelALBEFgenerates a generic caption, ignoring the specific brand
+constraint. The text-only baselineReGeSsuffers
+from hallucination, inventing a “black” table despite the system previously stating only a brown
+one exists. While the strong MLLMQwen2.5VLcorrectly identifies the brand, its response is
+factually rigid and fails to address the user’s underlying concern about style compatibility. In contrast,SiPeRsuccessfully grounds the “Modern
+Arts” brand in the visual object and, crucially, links
+its neutral attributes back to the user’s initial latent goal (“won’t clash with my wardrobe”). This
+demonstrates the effectiveness of our Bayesian Inverse Inference in disentangling implicit intents
+from surface-level dialogue.
+Case B: Scene transition required (Figure 10).
+Figure 10 illustrates a dynamic scenario where the
+user requests a specific item (Nature Photographersblouse) that is absent in the current location (Scene-1, containing sweaters) but available
+in a different section (Scene-2).

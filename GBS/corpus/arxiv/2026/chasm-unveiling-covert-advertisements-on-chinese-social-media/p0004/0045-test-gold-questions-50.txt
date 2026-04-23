@@ -1,0 +1,61 @@
+title: CHASM: Unveiling Covert Advertisements on Chinese Social Media
+source: arxiv
+year: 2026
+document_id: chasm-unveiling-covert-advertisements-on-chinese-social-media
+authors: Jingyi Zheng; Tianyi Hu; Yule Liu; Zhen Sun; Zongmin Zhang; Zifan Peng; Wenhan Dong; Xinlei He
+page: 4
+section: test-gold-questions-50
+chunk: 45
+source_ref: https://arxiv.org/pdf/2604.20511v1
+
+or non-standard components.
+• Please refer to our LLM policy ( https://neurips.cc/Conferences/2025/LLM)
+for what should or should not be described.
+20
+
+A Guideline of Detecting Covert Advertisement
+Observation object:In order to effectively evaluate whether a post is a hidden advertisement, the
+annotator should pay comprehensive attention to all parts of the post. Specifically, the annotator
+needs to focus on the image, body content, and comments
+Identify content:The annotator should first determine whether the content is related to a product
+or paid service. If it clearly falls into a category unrelated to commercial goods, it can be simply
+classified as non-advertising content (Option 1). The annotator’s next task is to determine whether
+the content is a covert advertisement. It is important to avoid misclassifying general lifestyle sharing
+content as advertising. Annotators should carefully distinguish between the two based on the
+following evidence:
+Table 5: Common Evidence of Covert Advertising in Social Media Content
+Common Characteristics of Covert Advertisements
+1. Often include detailed product information such as price, purchase method, and product address.
+2. Frequently contain purchase links, either embedded in the image or placed in the comment section.
+3. May direct followers to join groups, message privately, or move to external platforms.
+4. Comment sections may include remarks from users pointing out that the content is an ad.
+5. Often use irrelevant but popular product tags to attract unrelated traffic.
+6. Commonly promote unknown products or counterfeit versions of well-known items.
+7. May use clickbait-style or eye-catching titles to draw attention.
+8. Tend to focus on a single product or a set of products from the same brand, rather than covering
+diverse items.
+9. Adopt formal or commercial-style language, while lifestyle content tends to be casual and personal.
+10. Rarely mention disadvantages; instead, ads often exaggerate product strengths.
+11. Use exaggerated promotional phrases, such as “best of the year” or “unbeatable value.”
+12. Brand names appear repeatedly and are visually emphasized in both text and images.
+13. The product is usually the central focus, unlike non-advertising content that may highlight other
+themes like travel or personal experiences.
+Typical examples:We have summarized several common types of covert advertisements for the
+annotator’s reference. Covert advertisements can take various forms, such as images displaying
+the name of the online shop and product, or comments explicitly mentioning the shop name. In
+some cases, comments may subtly convey product or shop names in complex ways, or images and
+comments may include product descriptions that hint at where to find the link. Other examples
+include text making clear references to a product, comments suggesting private messages to share
+product links, product names visible directly in the image, or even product links hidden in flipped or
+reversed images. These examples serve as a guide but do not cover all possible manifestations of
+covert advertisements. We show some typical examples in Figure 4.
+B Implement Details
+The details of the models, including their parameter sizes and download links, are summarized in
+Table 6.
+In our setup, we fine-tuned the model by inserting LoRA adapters (rank 8, α= 32 ) into all linear
+layers, using micro-batches of size 1 with gradient accumulation over 16 steps to emulate a larger
+effective batch. Optimization was handled by AdamW ( β1 = 0.9, β2 = 0.95, ϵ= 1×10 −8) at a
+learning rate of 1×10 −4 with a weight decay of 0.1, guided by a cosine scheduler (no warmup)
+across three epochs. Inputs were truncated to 4096 tokens using the delete strategy, and bfloat16
+mixed precision was enabled to improve speed and reduce memory usage.
+21

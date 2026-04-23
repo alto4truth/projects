@@ -1,0 +1,31 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 22
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+Table 2: Principled taxonomy of semantic defects used in benchmark construction, categorizing errors into three
+dimensions aligned with EVIAN’s evaluation modules:Consistency,Reasoning, andKnowledge.
+Error Subtype Description / Generation Strategy
+Image-Text Consistency (SV )
+Attribute Describes an object’s attribute (e.g., color, material) incorrectly.
+Spatial Details incorrect spatial relations between objects.
+Action Assigns a wrong action or state to a subject.
+Fake Introduces a plausible yet non-existent object.
+Misidentification Misidentifies an existing object.
+Logical Coherence (SL)
+Conclusion Generalizes hastily from a single detail.
+Causal Mistakes correlation for causation between events.
+Prediction Makes a baseless prediction from scant evidence.
+Procedural Adds a flawed or superfluous step to a process.
+Comparison Forms a misleading analogy from superficial traits.
+Factual Accuracy (SK)
+Entity Corrupts facts about a named entity.
+Context Places an object in a wrong historical/technological context.
+Definition Provides an incorrect definition of a concept.
+Attribution Misattributes a quote or work to the wrong source.
+Evaluation Protocol.For all methods, we finetune Qwe

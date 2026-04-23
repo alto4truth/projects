@@ -1,0 +1,27 @@
+title: Early-Stage Product Line Validation Using LLMs: A Study on Semi-Formal Blueprint Analysis
+source: arxiv
+year: 2026
+document_id: early-stage-product-line-validation-using-llms-a-study-on-semi-formal-blueprint-analysis
+authors: Viet-Man Le; Thi Ngoc Trang Tran; Sebastian Lubos; Alexander Felfernig; Damian Garber
+page: 1
+section: document
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20523v1
+
+on it raises:Are off-the-shelf LLMs capable of performing
+feature model analysis operations directly on semi-formal blueprints?
+The next section presents our methodology.
+4 Methodology
+4.1 Research Questions
+We evaluate whether off-the-shelf LLMs can execute AOs on semiformal blueprints and how they compare to a solver oracle (FLAMA
+[12]). The evaluation is structured around three research questions:
+RQ1 Accuracy.How accurately can different LLMs perform solverfree and solver-based AOs on blueprint inputs?
+RQ2 Cost.How do end-to-end costs (runtime and token usage)
+relate to achieved accuracy across models?
+RQ3 Failure modes.What types of errors do LLMs exhibit when
+performing AOs? How do these vary across model families?
+4.2 LLMs Under Study
+We evaluate 12 publicly available LLMs, spanning bothgeneralpurpose(e.g., GPT-4.1, Claude Sonnet 4, DeepSeek Chat) and
+reasoning-optimizedvariants (e.g., Grok 4 Fast Reasoning, GPT5 mini, Gemini 2.5 Pro). All models are accessed via their official
+APIs without any fine-tuning, enabling a direct comparison between mainstream and reasoning-focused architectures.
+To ensure comparability, every model is queried under identical conditions: temperatu

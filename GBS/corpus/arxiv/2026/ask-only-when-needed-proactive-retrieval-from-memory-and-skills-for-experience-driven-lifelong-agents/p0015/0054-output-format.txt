@@ -1,0 +1,36 @@
+title: Ask Only When Needed: Proactive Retrieval from Memory and Skills for Experience-Driven Lifelong Agents
+source: arxiv
+year: 2026
+document_id: ask-only-when-needed-proactive-retrieval-from-memory-and-skills-for-experience-driven-lifelong-agents
+authors: Yuxuan Cai; Jie Zhou; Qin Chen; Liang He
+page: 15
+section: output-format
+chunk: 54
+source_ref: https://arxiv.org/pdf/2604.20572v1
+
+Output strictly a JSON object containing 1-3 memory objects. No markdown text outside the
+JSON.
+‘‘‘json
+{{
+"skills": [
+{{
+"when_to_use": "When [Task Requirement / Specific Scenario / Observation] matches
+...",
+20
+
+ICALK@ECNU
+"experience": "[Actionable, step-by-step standard procedure to replicate success]."
+}}
+]
+}}
+‘‘‘
+E.3 Failure Skill Extraction Prompt
+The following prompt extracts corrective rules from failed trajectories. It focuses exclusively on the forward-looking
+solution rather than the diagnosis of past mistakes, ensuring that extracted entries are immediately actionable.
+Failure Skill Extraction Prompt
+You are an expert Meta-Cognitive Forensic Analyst reviewing a failed trajectory of an LLM
+Agent.
+Your goal is to extract high-utility **Correction Memories** that will prevent this
+specific failure from recurring.
+You must look past surface-level errors to identify the solution, ensuring the memory **
+only contains the correct path forward**, not a record of the mistake.

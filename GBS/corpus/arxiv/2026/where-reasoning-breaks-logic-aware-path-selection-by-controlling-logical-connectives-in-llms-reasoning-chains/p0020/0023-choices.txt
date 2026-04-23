@@ -1,0 +1,23 @@
+title: Where Reasoning Breaks: Logic-Aware Path Selection by Controlling Logical Connectives in LLMs Reasoning Chains
+source: arxiv
+year: 2026
+document_id: where-reasoning-breaks-logic-aware-path-selection-by-controlling-logical-connectives-in-llms-reasoning-chains
+authors: Seunghyun Park; Yuanyuan Lei
+page: 20
+section: choices
+chunk: 23
+source_ref: https://arxiv.org/pdf/2604.20564v1
+
+Steering 0.89 1.00α= 0.5
+TTPO 0.89 0.93 –
+Branching 1.02 1.53K=20, L=20
+Table 12: Efficiency for 4B models. Token-cost counts the total number of next-token forward steps (including
+lookahead branches) normalized by greedy. Time is measured wall-clock latency normalized by greedy under the
+same hardware and decoding setup.
+the ZebraLogic test set and normalized by greedy.
+Hyperparameters.For reference, we summarize
+the main decoding hyperparameters in Table 12:
+beam size for beam search, n for self-consistency,
+α for steering, and (K, L) for branching. These
+knobs directly control the amount of additional inference time computation for search based methods,
+while TTPO modifies model behavior through training and does not introduce inference time search.

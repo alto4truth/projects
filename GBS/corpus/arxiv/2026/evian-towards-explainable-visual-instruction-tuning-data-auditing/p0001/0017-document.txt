@@ -1,0 +1,30 @@
+title: Evian: Towards Explainable Visual Instruction-tuning Data Auditing
+source: arxiv
+year: 2026
+document_id: evian-towards-explainable-visual-instruction-tuning-data-auditing
+authors: Zimu Jia; Mingjie Xu; Andrew Estornell; Jiaheng Wei
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20544v1
+
+emphasizing SK for knowledge-intensive tasks or
+SL/SV for creative captioning). To investigate the
+impact of these variations, we conduct a sensitivity analysis on the component weights, which is
+detailed in Appendix C. This flexibility ensures
+that data selected by EVIAN aligns with diverse
+modeling objectives.
+4 Benchmarking Data Quality via
+Controlled Defect Injection
+To quantitatively validate a data auditing pipeline’s
+ability to detect fine-grained flaws in logical coherence, factual accuracy, and image-text consistency,
+a tailored benchmark with systematically injected
+defects is essential, as existing datasets lack the
+controlled errors needed for such a targeted evaluation. To ensure consistency with prior work, we
+adopt the SCALE methodology (Xu et al., 2025b)
+as the starting point for benchmark construction.
+From its source pool of 500,000 multimodal samples across eight datasets (Table 1), we derive two
+complementary components: (i) a 50,000-sample
+“gold standard” set purified by SCALE, and (ii) a
+250,000-sample “challenge” set obtained via random down-sampling followed by our defect injection pipeline. Together, these components yield a
+reproducible benchmark of 300,00

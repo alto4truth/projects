@@ -1,0 +1,29 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 14
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+sserstein distance between the SBI and MCMC posteriors quantifies the discrepancy between the amortized SBI posterior and the
+MCMC reference posterior. The Continuous Ranked
+Probability Score (CRPS) and credible-interval coverage
+are used to evaluate the quality of each inferred posterior.
+These metrics are evaluated separately for each continuous parameter of interest.
+CRPS is a generalization of the Mean Absolute Error
+(MAE) for probabilistic predictions [49]. It is calculated
+by comparing the empirical cumulative distribution function (ECDF) of posterior samples with the step function
+CDF at the true value. Lower CRPS indicates a posterior
+that is sharper and better aligned with the ground-truth.
+The Wasserstein distance is instead a similarity metric
+between two probability distributions. The convergence
+rate of empirical Wasserstein estimators typically behaves asn−1/d, wherenis the number of samples anddis
+the dimension, implying that standard empirical Wasserstein distance becomes a poor measure of similarity for
+high-dimensional data. It is also sensitive to extreme
+outliers.
+III. EXPERIMENTS
+The aim is to evaluate the robustness of the Bayesian
+diagnostic framework by iden

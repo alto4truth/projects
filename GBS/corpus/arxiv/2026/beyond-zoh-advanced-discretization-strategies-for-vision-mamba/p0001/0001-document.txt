@@ -1,0 +1,24 @@
+title: Beyond ZOH: Advanced Discretization Strategies for Vision Mamba
+source: arxiv
+year: 2026
+document_id: beyond-zoh-advanced-discretization-strategies-for-vision-mamba
+authors: Fady Ibrahim; Guangjun Liu; Guanghui Wang
+page: 1
+section: document
+chunk: 1
+source_ref: https://arxiv.org/pdf/2604.20606v1
+
+Beyond ZOH: Advanced Discretization Strategies
+for Vision Mamba
+Fady Ibrahim[0009−0004−6534−598X], Guangjun Liu[0000−0002−3301−1166], and
+Guanghui Wang[0000−0003−3182−104X]
+Toronto Metropolitan University, 350 Victoria St, Toronto, ON M5B 2K3
+Abstract.Vision Mamba, as a state space model (SSM), employs a
+zero-order hold (ZOH) discretization, which assumes that input signals remain constant between sampling instants. This assumption degrades temporal fidelity in dynamic visual environments and constrains
+the attainable accuracy of modern SSM-based vision models. In this
+paper, we present a systematic and controlled comparison of six discretization schemes instantiated within the Vision Mamba framework:
+ZOH, first-order hold (FOH), bilinear/Tustin transform (BIL), polynomialinterpolation(POL),higher-orderhold(HOH),andthefourth-order
+Runge–Kutta method (RK4). We evaluate each method on standard visualbenchmarkstoquantifyitsinfluenceinimageclassification,semantic
+segmentation, and object detection. Our results demonstrate that POL
+andHOHyieldthelargestgainsinaccuracyatthecostofhighertrainingtimecomputation.Incontrast,theBILprovidesconsistentimprovements
+over ZOH with modest additional

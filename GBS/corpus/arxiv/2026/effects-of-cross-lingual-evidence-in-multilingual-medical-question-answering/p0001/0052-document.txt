@@ -1,0 +1,21 @@
+title: Effects of Cross-lingual Evidence in Multilingual Medical Question Answering
+source: arxiv
+year: 2026
+document_id: effects-of-cross-lingual-evidence-in-multilingual-medical-question-answering
+authors: Anar Yeginbergen; Maite Oronoz; Rodrigo Agerri
+page: 1
+section: document
+chunk: 52
+source_ref: https://arxiv.org/pdf/2604.20531v1
+
+s (%)
+Google Cohere Google Cohere
+English 9.24 4.12 0.00 1.36
+Spanish 9.29 3.96 0.00 1.20
+Italian 9.32 3.90 0.08 2.32
+French 9.32 3.88 0.00 1.92
+Basque 2.54 2.43 54.80 17.68
+Kazakh 4.17 2.61 31.36 22.08
+Table 2: Retrieved document availability across languages using Google Search (via Serper) and Cohere.
+C Backtranslation results
+We backtransalte the human-written Spanish questions into each target language and back into Spanish. We evaluate the quality of backtrslations with

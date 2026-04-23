@@ -1,0 +1,25 @@
+title: Fast Bayesian equipment condition monitoring via simulation based inference: applications to heat exchanger health
+source: arxiv
+year: 2026
+document_id: fast-bayesian-equipment-condition-monitoring-via-simulation-based-inference-applications-to-heat-exchanger-health
+authors: Peter Collett; Alexander Johannes Stasik; Simone Casolo; Signe Riemer-Sørensen
+page: 1
+section: u-a-q
+chunk: 2
+source_ref: https://arxiv.org/pdf/2604.20735v1
+
+e∆T LM denotes the log-mean temperature difference (LMTD) between the two streams, defined as
+∆TLM = (Thot,in −T cold,out)−(T hot,out −T cold,in)
+ln
+
+Thot,in−Tcold,out
+Thot,out−Tcold,in
+ .(5)
+While the heat transfer rateQis traditionally solved
+using the LMTD method, the nonlinear nature of the
+LMTD requires iterative root-finding for unknown outlet
+temperatures. To facilitate efficient Bayesian inference,
+we utilize the effectiveness-NTU (ϵ-NTU) method [38],
+which provides an explicit analytical solution. The heat
+transfer is expressed as:
+Q=ϵC min(Thot,in −T cold,in),(6)

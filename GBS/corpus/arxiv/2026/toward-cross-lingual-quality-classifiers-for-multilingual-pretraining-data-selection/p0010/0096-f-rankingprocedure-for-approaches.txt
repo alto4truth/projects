@@ -1,0 +1,17 @@
+title: Toward Cross-Lingual Quality Classifiers for Multilingual Pretraining Data Selection
+source: arxiv
+year: 2026
+document_id: toward-cross-lingual-quality-classifiers-for-multilingual-pretraining-data-selection
+authors: Yassine Turki; Vinko Sabolčec; Bettina Messmer; Martin Jaggi
+page: 10
+section: f-rankingprocedure-for-approaches
+chunk: 96
+source_ref: https://arxiv.org/pdf/2604.20549v1
+
+For each language, we evaluate filtering strategies by training 1B parameter Apertus models on
+their filtered outputs and benchmarking on language-appropriate tasks (detailed in Appendix G). We
+rank methods by their performance on each individual benchmark, then compute the average rank
+across all benchmarks for that language. A lower average rank indicates better overall performance.
+This ranking approach is robust to scale differences across benchmarks and emphasizes consistency
+across diverse evaluation tasks. We also include mean normalized accuracy as a metric, as it gives
+us more quantitative insight for the performance gain of each method.

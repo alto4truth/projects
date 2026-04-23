@@ -1,0 +1,18 @@
+title: R-CoV: Region-Aware Chain-of-Verification for Alleviating Object Hallucinations in LVLMs
+source: arxiv
+year: 2026
+document_id: r-cov-region-aware-chain-of-verification-for-alleviating-object-hallucinations-in-lvlms
+authors: Jiahao Xie; Alessio Tonioni; Nathalie Rauschmayr; Federico Tombari; Bernt Schiele
+page: 1
+section: document
+chunk: 17
+source_ref: https://arxiv.org/pdf/2604.20696v1
+
+oordinatesr i. In (ii), we further investigate
+different shapes, colors, and sizes of visual prompts to draw
+on top of the image. We will show the effects of different
+design choices in the experimental section.
+Stage 5: Verification execution.After obtaining the region descriptions, the next stage is to verify whether they
+contain the original entities to assess if any hallucinations
+exist. Specifically, for each entitye i, given the region descriptionsA i ={a i,j}, j= 1, ..., L, whereLis the number
+3

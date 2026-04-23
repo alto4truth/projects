@@ -1,0 +1,45 @@
+title: Tokenised Flow Matching for Hierarchical Simulation Based Inference
+source: arxiv
+year: 2026
+document_id: tokenised-flow-matching-for-hierarchical-simulation-based-inference
+authors: Giovanni Charles; Cosmo Santoni; Seth Flaxman; Elizaveta Semenova
+page: 1
+section: gpu-nvidia-a100-pcie-40gb
+chunk: 27
+source_ref: https://arxiv.org/pdf/2604.20723v1
+
+periment. TFMPE posterior samples remain concentrated around the simulator ground truth
+across all Windkessel resistance and compliance parameters.
+27
+
+Figure 11: Posterior predictive check for the scaledns = 16haemodynamics cohort across the four
+terminal vessels of the aortic-arch network:Adescending aorta,Binnominate artery,Cleft common
+carotid artery, andDleft subclavian artery. Observed outlet flow waveforms (black) are shown
+against posterior predictive samples (blue). All 11 inferred global and local parameters achieve 95%
+CI coverage.
+A.8 SEIR Model Formulation
+The seasonal SEIR model uses a standard compartmental structure with Poisson-distributed observations:
+ys(t)∼Poisson(αE s(t)), t∈i s
+dSs
+dt =−λ sSs
+dEs
+dt =λ sSs −αE s
+dIs
+dt =αE s −γI s
+dRs
+dt =γI s
+λs = βsIs
+Ns
+βs =β 0
+
+1 +A s sin
+2πt
+365 −ϕ
+
+where λs is the force of infection andys(t)represents daily incidence at sites observed at times
+is ∼Uniform (0, T). Here α is the latent-to-infectious progression rate, soα−1 is the mean incubation
+period; γ is the recovery rate, soγ−1 is the mean infectious period; andϕ is the shared seasonal
+phase offset controlling when transmission peaks within the year. In Section 3.2 these quantities are
+held fixed, while inference targets the global baseline transmissionβ0 and the site-specific seasonal
+amplitudesA s.
+28

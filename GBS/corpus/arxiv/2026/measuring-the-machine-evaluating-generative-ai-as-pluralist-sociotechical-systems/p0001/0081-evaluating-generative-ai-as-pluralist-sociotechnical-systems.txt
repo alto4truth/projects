@@ -1,0 +1,16 @@
+title: Measuring the Machine: Evaluating Generative AI as Pluralist Sociotechical Systems
+source: arxiv
+year: 2026
+document_id: measuring-the-machine-evaluating-generative-ai-as-pluralist-sociotechical-systems
+authors: Rebecca L. Johnson
+page: 1
+section: evaluating-generative-ai-as-pluralist-sociotechnical-systems
+chunk: 81
+source_ref: https://arxiv.org/pdf/2604.20545v1
+
+3 LLMs produce distributions over possible continuations; low-probability generations can expose latent tendencies that central-tendency metrics miss.
+
+Chapter 2: The Ghost in the Machine Has an American Accent 68
+seemingly low-probability outputs are analytically significant. Because large language models like GPT-3 operate probabilistically, outliers are not simply noise to be discarded but signals that expose underlying model tendencies. A value shift observed in just one of six or a dozen outputs may still reflect systemic bias or failure modes with ethical consequences, especially in high-stakes or scaled deployments. As such, we argue that qualitative “beachcombing” is not a methodological weakness, but an essential tool for probing the complex, non-linear behaviours of generative AI and for developing evaluative frameworks capable of accommodating ethical plurality. Because GPT-3 is a stochastic system, individual outputs are not treated here as evidence of fixed or internally held values. The analysis turns instead on recurring differences in moral framing across comparable prompts and source texts. Outputs that were internally incoherent, nonsensical, or unresponsive to the prompt were excluded, and the remaining outputs were read qualitatively for evaluative emphasis and moral reasoning rather than token-level variation. The claim, then, is comparative rather than anthropomorphic: these patterns suggest distributional tendencies shaped by training data, not stable inner values.
+2.2.1 Limitations Due to limitations on the research team’s access to the number of tokens in GPT-3 and the financial costs associated with over-reaching these, the output was set to a maximum of 250 tokens. The same reason limited the number of iterations to six to twelve times per test, though we found this often sufficient to observe a mutation of values from input to output. Additionally, due to the ephemeral nature of LLMs, the results cannot be reproduced as the model no longer exists in that format.
+2.3 Results: Value Drift Across Contexts To explore how GPT-3 handles culturally embedded ethical values, we conducted a series of tests using short input texts drawn from multiple countries, contexts, and value traditions. These texts were selected for their clear normative positions, often ones that diverge from reported statistically dominant US values and often included laws, political speeches, philosophical writings, and multilateral declarations. In each case, we prompted GPT-3 to summarise or explain the text, then analysed its outputs for value drift, stability, or reframing. Where relevant, we drew on external empirical datasets, such as the World Values Survey, to better contextualise these outcomes.

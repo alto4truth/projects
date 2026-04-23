@@ -1,0 +1,29 @@
+title: Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing
+source: arxiv
+year: 2026
+document_id: auto-art-structured-literature-synthesis-and-automated-adversarial-robustness-testing
+authors: Abhijit Talluri
+page: 1
+section: gap-s-d-e-closest
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20704v1
+
+sarial drift require sustained deployment
+monitoring that no academic lab currently conducts at scale.
+Closest paper:Daiet al.[C4] demonstrated >100 attack
+combinations in continual training but used a closed attack
+vocabulary.
+Path to resolution:Industry–academia partnerships for longitudinal deployment telemetry; open-vocabulary attack generation via LLM-guided perturbation synthesis; online robust
+training with novelty detection.
+6 Methodology Audit
+Step 2: Synthesis.Dominant methodology:Computational
+ML experiments and benchmark construction account for 7 of
+9 entries. Rationale: executable attacks operationalise claims
+where analytic certification is prohibitive [C5], and reproducibility demands public code and checkpoints [C1,C2,C6].
+Absent despite relevance:Randomised controlled trials
+(RCTs) of deployment pipelines, ethnography of security practitioner workflows, prospective field studies of adversarial
+incidents in production, and user studies of how practitioners
+interpret robustness reports. These absences limit the field’s
+ability to validate that lab findings transfer to operational settings.
+Step 3: Weakest methodology.Among peer-reviewed
+entries, Songet al.[C5] is mo

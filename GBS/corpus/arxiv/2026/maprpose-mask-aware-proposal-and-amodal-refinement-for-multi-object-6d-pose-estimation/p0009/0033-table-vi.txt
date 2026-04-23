@@ -1,0 +1,30 @@
+title: MAPRPose: Mask-Aware Proposal and Amodal Refinement for Multi-Object 6D Pose Estimation
+source: arxiv
+year: 2026
+document_id: maprpose-mask-aware-proposal-and-amodal-refinement-for-multi-object-6d-pose-estimation
+authors: Yang Luo; Yan Gong; Yongsheng Gao; Xiaoying Sun; Jie Zhao
+page: 9
+section: table-vi
+chunk: 33
+source_ref: https://arxiv.org/pdf/2604.20650v1
+
+om 70% to over 90%
+and further boosting the inference steady-state to 1.50 FPS.
+These results demonstrate that the N×B batching strategy
+successfully achieves high-throughput pose estimation without
+compromising accuracy, effectively utilizing modern hardware
+parallelism.
+V. CONCLUSION
+We present MAPRPose, a hierarchical 6D pose estimation
+framework designed to harness visible masks as explicit
+geometric priors, mitigating the impact of severe occlusion and background clutter in zero-shot scenarios. The
+MAPP module systematically prunes the hypothesis space
+via mask-constrained correspondences. Simultaneously, the
+AMPR mechanism rectifies truncation effects through joint
+amodal prediction and dynamic ROI normalization, bolstering
+robustness against partial visibility. By transcending conventional CAD-based rendering in favor of a tensorized RGBXYZ re-projection scheme, our pipeline facilitates massive
+parallelization across multiple instances and hypotheses. This
+architecture achieves a 43× increase in inference throughput
+over FoundationPose while maintaining competitive precision.
+Collectively, these advancements position MAPRPose as a
+scalable paradigm that reconciles high-preci

@@ -1,0 +1,41 @@
+title: RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking
+source: arxiv
+year: 2026
+document_id: rsrcc-a-remote-sensing-regional-change-comprehension-benchmark-constructed-via-retrieval-augmented-best-of-n-ranking
+authors: Roie Kazoom; Yotam Gigi; George Leifman; Tomer Shekel; Genady Beryozkin
+page: 1
+section: rag-db
+chunk: 5
+source_ref: https://arxiv.org/pdf/2604.20623v1
+
+head and𝑘∈ {1, . . . , 𝐾} indexes
+the semantic classes. To address class imbalance in remote sensing imagery, we train the model
+with Dice loss,LDice =1− 1
+𝐾
+Í𝐾
+𝑘=1
+2Í𝐻
+𝑖=1
+Í𝑊
+𝑗=1 𝑦 (𝑘)
+𝑖, 𝑗 ˆ𝑦(𝑘)
+𝑖, 𝑗
+Í𝐻
+𝑖=1
+Í𝑊
+𝑗=1 𝑦 (𝑘)
+𝑖, 𝑗 +Í𝐻
+𝑖=1
+Í𝑊
+𝑗=1 ˆ𝑦(𝑘)
+𝑖, 𝑗 +𝜖 , where𝜖 is a constant for numerical
+stability.
+Object-Level Change DetectionAfter obtaining semantic segmentation masks for each image pair,
+weextractcandidatechangeregionsusingconnectedcomponentanalysis[ 29]. Thisstepconvertspixellevelmaskdifferencesintocoherentobject-levelproposals,whichserveascandidatesemanticchanges
+for dataset curation. Algorithm 1 summarizes the filtering procedure, which suppresses spurious
+noise and retains structurally meaningful regions. Formally, let𝑀𝑡 , 𝑀𝑡+Δ𝑡 ∈ {0,1, . . . , 𝐾} 𝐻×𝑊
+denote the predicted semantic masks at times𝑡 and 𝑡+Δ𝑡 . We define the difference mask as
+𝐷=I[𝑀 𝑡 ≠𝑀 𝑡+Δ𝑡 ], where𝐷∈ {0,1} 𝐻×𝑊 marks pixels whose semantic labels differ across time.
+Connected component partitions 𝐷 into disjoint regionsC={𝐶 1, 𝐶2, . . . , 𝐶𝑁 }, where each𝐶𝑖
+denotes a contiguous candidate change region. Each region is then filtered using adaptive thresholds
+𝜏min, 𝜏iou, and𝜏changed, which remove small region
