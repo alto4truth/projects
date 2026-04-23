@@ -1,0 +1,16 @@
+title: 99 Elm Problems
+source: wikibooks
+year: undated
+document_id: 99-elm-problems
+authors: 
+page: 9
+section: passing-functions-as-arguments
+chunk: 16
+source_ref: https://en.wikibooks.org/wiki/99_Elm_Problems
+
+In many programming languages functions are first-class. This means that a function is a value that can be passed as a argument to other functions. Functions are as fundamental as integers, characters, booleans and strings. The problems below demonstrate functions in the Elm core that take functions as arguments. Likewise, you will often create your own functions that take functions as arguments.
+
+== Functions that take functions ==
+Problem 28 - Use List.sortBy to sort a list.
+Problem 31 - Use List.filter to implement the Sieve of Eratosthenes.
+Problem 34 - Use List.filter to implement Euler’s totient function.

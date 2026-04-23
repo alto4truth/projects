@@ -1,0 +1,14 @@
+title: 99 Elm Problems
+source: wikibooks
+year: undated
+document_id: 99-elm-problems
+authors: 
+page: 119
+section: problem-68
+chunk: 126
+source_ref: https://en.wikibooks.org/wiki/99_Elm_Problems
+
+68.a) Generate the preorder sequence of a tree. (Preorder processes each sub-tree <root> <left> <right>.) For example, the preorder sequence of the a(b(d,e),c(,f(g,))) is 'abdecfg'.
+68.a) Generate the inorder sequence of a tree. (Inorder processes each sub-tree <left> <root> <right>.) For example, the preorder sequence of the a(b(d,e),c(,f(g,))) is 'abdecfg'.
+68.c) Can you use preorder/2 from problem part a) in the reverse direction; i.e. given a preorder sequence, construct a corresponding tree? If not, make the necessary arrangements.
+68.c) With both the preorder and inorder sequences of nodes a binary tree tree is determined unambiguously. Generate a tree from the preorder and inorder representations of a tree.

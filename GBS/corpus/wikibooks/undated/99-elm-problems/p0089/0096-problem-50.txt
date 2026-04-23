@@ -1,0 +1,11 @@
+title: 99 Elm Problems
+source: wikibooks
+year: undated
+document_id: 99-elm-problems
+authors: 
+page: 89
+section: problem-50
+chunk: 96
+source_ref: https://en.wikibooks.org/wiki/99_Elm_Problems
+
+Construct a list hc(S,C) terms, where C is the Huffman code word for the symbol S. In our example, the result could be Hs = [hc(a,'0'), hc(b,'101'), hc(c,'100'), hc(d,'111'), hc(e,'1101'), hc(f,'1100')] [hc(a,'01'),...etc.]. The task shall be performed by the predicate huffman/2 defined as follows: % huffman(Fs,Hs) :­ Hs is the Huffman code table for the frequency table Fs

@@ -1,0 +1,14 @@
+title: 99 Elm Problems
+source: wikibooks
+year: undated
+document_id: 99-elm-problems
+authors: 
+page: 109
+section: problem-63
+chunk: 116
+source_ref: https://en.wikibooks.org/wiki/99_Elm_Problems
+
+Construct a complete binary tree.
+A complete binary tree with height H is defined as follows:
+The levels 1,2,3,...,H-1 contain the maximum number of nodes.
+In level H, which may contain less than the maximum possible number of nodes, all the nodes are "left-adjusted". This means that in a level-order tree traversal all internal nodes come first, the leaves come second, and empty successors come last.

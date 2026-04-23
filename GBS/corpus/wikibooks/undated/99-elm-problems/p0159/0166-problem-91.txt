@@ -1,0 +1,11 @@
+title: 99 Elm Problems
+source: wikibooks
+year: undated
+document_id: 99-elm-problems
+authors: 
+page: 159
+section: problem-91
+chunk: 166
+source_ref: https://en.wikibooks.org/wiki/99_Elm_Problems
+
+Find a path for for a chess knight on an NxN chessboard such that it visits every square exactly once? A set of solutions is given on the The_Knights_Tour page. Hints: Represent the squares by pairs of their coordinates of the form X/Y, where both X and Y are integers between 1 and N. (Note that '/' is just a convenient functor, not division!) Define the relation jump(N,X/Y,U/V) to express the fact that a knight can jump from X/Y to U/V on a NxN chessboard. And finally, represent the solution of our problem as a list of N*N knight positions (the knight's tour).
