@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 458
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+us, for example, if the body of the generic package contains an assignment statement:
+
+Constraint_Error is raised when this instantiation is executed.
+
+==== rationale ====
+The language specifies that when constraint checking is performed for generic formal objects and parameters and return values of generic formal subprograms, the constraints of the actual subtype (not the formal subtype) are enforced (Ada Reference Manual 1995, §§12.4 [Annotated] and §12.6 [Annotated]). Thus, the subtype specified in a formal in out object parameter and the subtypes specified in the profile of a formal subprogram need not match those of the actual object or subprogram.
+Thus, even with a generic unit that has been instantiated and tested many times and with an instantiation that reported no errors at instantiation time, there can be a run-time error. Because the subtype constraints of the generic formal are ignored, the Ada Reference Manual (1995, §§12.4 [Annotated] and §12.6 [Annotated]) suggests using the name of a base type in such places to avoid confusion. Even so, you must be careful not to assume the freedom to use any value of the base type because the instantiation imposes the subtype constraints of the generic actual parameter. To be safe, always refer to specific values of the type via symbolic expressions containing attributes like 'First, 'Last, 'Pred, and 'Succ rather than via literal values.
+For generics, attributes provide the means to maintain generality. It is possible to use literal values, but literals run the risk of violating some constraint. For example, assuming that an array's index starts at 1 may cause a problem when the generic is instantiated for a zero-based array type.

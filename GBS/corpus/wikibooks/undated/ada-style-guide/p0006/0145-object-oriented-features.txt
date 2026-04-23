@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 145
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+data structure with a homogeneous interface but whose data elements have a heterogeneous implementation. See also Guidelines 8.4.8, 9.2.1, and 9.3.5.
+
+== Multiple Inheritance ==
+Ada provides several mechanisms to support multiple inheritance, where multiple inheritance is a means for incrementally building new abstractions from existing ones, as defined at the beginning of this chapter. Specifically, Ada supports multiple inheritance module inclusion (via multiple with/use clauses), multiple inheritance "is-implemented-using" via private extensions and record composition, and multiple inheritance mixins via the use of generics, formal packages, and access discriminants (Taft 1994).
+
+=== Multiple Inheritance Techniques ===
+
+==== guideline ====
+Consider using type composition for implementation, as opposed to interface, inheritance.
+Consider using a generic to "mix in" functionality to a derivative of some core abstraction.
+Consider using access discriminants to support "full" multiple inheritance where an object must be referenceable as an entity of two or more distinct unrelated abstractions.

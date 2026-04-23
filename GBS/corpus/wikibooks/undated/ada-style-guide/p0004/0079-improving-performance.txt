@@ -1,0 +1,25 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 4
+section: improving-performance
+chunk: 79
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+these operations may be significantly different from similar operations on packed Boolean arrays. See also Guideline 10.5.7.
+
+=== Bounded Strings ===
+
+==== guideline ====
+Use the predefined bounded strings when predictable performance is an issue and measured performance indicates.
+
+==== rationale ====
+The unbounded strings may be allocated on the heap. If bounded strings are not allocated on the heap, then they may provide better performance. Determine the impact of using the string type declared in instantiations of Ada.Strings.Bounded.Generic_Bounded_Length versus the type declared in Ada.Strings.Unbounded.
+The predefined Ada 95 language environment defines packages that support both bounded and unbounded strings. Using bounded strings may avoid the unpredictable duration of delays associated with using heap storage.
+
+=== String Handling Subprograms ===
+
+==== guideline ====
+Use the procedural form of the string handling subprograms when measured performance indicates.

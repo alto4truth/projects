@@ -1,0 +1,26 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 28
+section: using-events
+chunk: 304
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+ing the event because of the exception thrown on an "empty" event. This example shows clearly that an event is nothing more than a multicast delegate.
+
+Executing the functions associated with an event is called raising the event.
+The functions associated with the event are called event handlers
+EventArgs class - MSDN
+
+By convention an event uses a delegate that returns void and take 2 arguments:
+an object of type System.Object that contains a reference to the object that raised the event.
+an object from a class derived from EventArgs that contains the data passed from the object that raised the event to the event handlers.
+The EventArgs class does not contain any data by itself.
+So an event with no data will use a delegate of the form
+public delegate void DelegateTypeName (object sender, EventArgs e)
+
+This simple event example is the same as the last one with the IntEventArgs class that serves for passing the int argument to the event handler and all the parameters changed to follow the calling convention for events.
+
+EventHandler delegates - MSDN and MSDN

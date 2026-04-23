@@ -1,0 +1,12 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 66
+section: b-next
+chunk: 184
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+==== Example using a table of 2-byte offsets ====
+Another very similar technique to the above branch table can be used. Instead of a table of branch instructions, a table of absolute or relative addresses (offsets) can be built by the Assembler. This requires just one extra instruction but increases the branch range to 64K without need for additional base register coverage and halves the size of the Table.

@@ -1,0 +1,31 @@
+title: A Brief Introduction to the LaTeX Typesetting Environment
+source: wikibooks
+year: undated
+document_id: a-brief-introduction-to-the-latex-typesetting-environment
+authors: 
+page: 3
+section: typesetting-the-basics
+chunk: 19
+source_ref: https://en.wikibooks.org/wiki/A_Brief_Introduction_to_the_LaTeX_Typesetting_Environment
+
+refore would be too much to go into in a short crash-course such as this one.
+Let's take a look at two of the author's favorite \usepackage functions.
+
+===== \usepackage[parfill]{parskip} =====
+The author loves this option because it makes writing the document feel slightly more like what we're all used to if we learned to type in a word-processor.
+If this \usepackage wasn't specified, something typed as so:
+
+This is a paragraph
+
+This is also a paragraph
+
+Would typeset to one single paragraph. If you're not using the \usepackage[parfill]{parskip} \usepackage in your document, you'll have to end paragraphs as so:
+
+This is the end of a paragraph I've written; I'd like the next to be on a new line \\
+
+The double slash specifies the end of a paragraph or line.
+
+===== \usepackage{amssymb} =====
+The details of this package are a bit convoluted, but it's important for anyone who will be typing mathematical functions. There are a lot of math symbols out there and having access to them in the \LaTeX environment is crucial. For instance, with the \usepackage{amssymb} modifier at the beginning of the document typing:
+
+$$\alpha = \frac{\pi}{\Beta}$$

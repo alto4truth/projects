@@ -1,0 +1,23 @@
+title: Advanced phone customization
+source: wikibooks
+year: undated
+document_id: advanced-phone-customization
+authors: 
+page: 7
+section: build-completed-successfully-16-seconds
+chunk: 18
+source_ref: https://en.wikibooks.org/wiki/Advanced_phone_customization
+
+== Install the build ==
+Assuming the build completed without errors (it will be obvious when it finishes), type the following in the terminal window the build ran in:
+
+cd $OUT
+
+There you’ll find all the files that were created. The two files of more interest are:
+
+recovery.img, which is the LineageOS recovery image.
+lineage-14.1-20180808-UNOFFICIAL-a5y17lte.zip, which is the LineageOS installer package. This will vary depending on your phone and version.
+And that's it! You can use your ROM as any other custom ROM that you'll download off the internet.
+
+== References ==
+This article was taken mainly from LineageOS's wiki.

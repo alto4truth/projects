@@ -1,0 +1,43 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 62
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+nteger to an object, thus resulting in boxing.
+The object o can then be unboxed and assigned to integer variable i:
+
+o = 123;
+i = (int) o; // unboxing
+
+Performance of boxing and unboxing
+In relation to simple assignments, boxing and unboxing are computationally expensive processes. When a value type is boxed, an entirely new object must be allocated and constructed. To a lesser degree, the cast required for unboxing is also expensive computationally.
+
+=== TypeForwardedToAttribute Class ===
+See MSDN
+
+For a discussion of TypeForwardToAttribute in the CLR see MSDN
+Other possible links: Marcus' Blog, NotGartner
+
+== Using Collections ==
+Exam objective: Manage a group of associated data in a .NET Framework application by using collections.
+(Refer System.Collections namespace - MSDN)
+
+===== ArrayList class =====
+see MSDN
+The ArrayList class is used for arrays whose size will dynamically increase as required. An ArrayList is not necessarily sorted.
+
+using System;
+using System.Collections;
+
+public class Demo {
+public static void Main() {
+ArrayList myArrayList = new ArrayList();
+myArrayList.Add("Testing");
+myArrayList.Add("1...2...3");
+}
+}

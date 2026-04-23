@@ -1,0 +1,34 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 4
+section: counting-part-2-sort-and-uniq
+chunk: 9
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+Creating another frequency table ==
+And returning to the census data, we can now easily compute the complete distribution of occupants per household:
+
+$ grep "^H" pums_53.dat | cut -c106-107 | sort | uniq -c
+1796 00
+7192 01
+7890 02
+3551 03
+3195 04
+1391 05
+518 06
+190 07
+79 08
+39 09
+14 10
+14 11
+3 12
+3 13
+
+== Example - Verifying a primary key ==
+This is a good opportunity to point out a big benefit of being able to play with data in this fashion. It allows you to quickly spot potential problems in a dataset. In the above example, why are there 1,796 households with 0 occupants? As another example of quickly verifying the integrity of data, let's make sure that household id is truly a unique identifier:
+
+$ grep "^H" pums_53.dat | cut -c2-8 | sort | uniq -c | grep -v "^ *1 " | wc -l
+0

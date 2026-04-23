@@ -1,0 +1,14 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 67
+section: b-next
+chunk: 187
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+An alternative approach here is to have the two-byte branch offsets within TABLE2
+* (it then also uses one less instruction and eliminates the need for TABLE1 but this
+* may require twice the size of TABLE2 (depending upon the need for validation, and also on
+* the range of the input character).

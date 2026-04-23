@@ -1,0 +1,32 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 12
+section: job-control
+chunk: 25
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+command bg to send the stopped job to background. So, we might start the web browser Lynx, stop it, send it to the background like this:
+
+%lynx
+^z
+%bg
+
+The job stopped by control-z is passed to the background and continues running.
+
+=== To Foreground a Job ===
+You can call a job to foreground using the command fg. Used on its own it will recall job most recently started in background. If we have just sent lynx to the background as above then:
+
+% fg
+will move the job into foreground.
+
+=== What Jobs are Running? ===
+Either of two commands can be used to find out what jobs are running in background.
+
+==== jobs ====
+The command jobs is available in many shells and reports the jobs running, the job numbers, the process name (and if you want the process group id with the option -l). You can use it like this:
+
+%jobs.
+In the output the numbers in square brackets ('[' and ']') are the job numbers that are used by the process control commands such as fg and bg.

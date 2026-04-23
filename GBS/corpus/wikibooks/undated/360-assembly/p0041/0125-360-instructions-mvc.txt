@@ -1,0 +1,28 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 41
+section: 360-instructions-mvc
+chunk: 125
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+MVC - SS - Opcode D2 - Move Character
+The MVC instruction allows the movement of 1 to 256 characters from one location in memory to another. It is a six byte, SS (storage-to-storage) instruction. As with the 360 series, movement is right to left, thus the first argument is the target to move to (with optional length specification), the right argument is the source to move from. For movement of more than 256 bytes in one instruction, the MVCL instruction should be used.
+
+== Example usage ==
+MVC TARGET,SOURCE MOVE SOURCE TO TARGET
+MVC TARGET(40),SOURCE MOVE 40 BYTES FROM SOURCE TO TARGET
+MVC TARGET+10(20),SOURCE+3 MOVE 20 BYTES STARTING AT SOURCE+3 TO TARGET+10
+MVC 5(3,14),SOURCE MOVE 3 BYTES FROM SOURCE TO THE ADDRESS BEGINNING AT
+* REGISTER 14 PLUS 5
+
+The following example is commonly used to clear out a print line:
+
+MVI TARGET,C' ' PUT A BLANK AT THE BEGINNING OF THE LINE
+MVC TARGET+1(132),TARGET MOVES THE FIRST BLANK TO CHARACTER 2, WHICH MOVES TO CHAR. 3, THEN 4 AND SO ON
+
+== Format ==
+MVC D1(L,B1),D2(B2)
+Where

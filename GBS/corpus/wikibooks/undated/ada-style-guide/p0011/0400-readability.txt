@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 400
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ing other constant and named numbers. For example:
+
+is more self-explanatory and easier to maintain than:
+
+The following literals should be constants:
+
+==== rationale ====
+Using identifiers instead of literals makes the purpose of expressions clear, reducing the need for comments. Constant declarations consisting of expressions of numeric literals are safer because they do not need to be computed by hand. They are also more enlightening than a single numeric literal because there is more opportunity for embedding explanatory names. Clarity of constant declarations can be improved further by using other related constants in static expressions defining new constants. This is not less efficient because static expressions of named numbers are computed at compile time.
+A constant has a type. A named number can only be a universal type: universal_integer or universal_real. Strong typing is enforced for constants but not for named numbers or literals. Named numbers allow compilers to generate more efficient code than for constants and to perform more complete error checking at compile time. If the literal contains a large number of digits (as Pi in the example above), the use of an identifier reduces keystroke errors. If keystroke errors occur, they are easier to locate either by inspection or at compile time.
+Independence of literals means that the few literals that are used do not depend on one another and that any relationship between constant or named values is shown in the static expressions. Linear independence of literal values gives the property that if one literal value changes, all of the named numbers of values dependent on that literal are automatically changed.
+See Guideline 4.1.4 for additional guidelines on choosing a parameterless function versus a constant.

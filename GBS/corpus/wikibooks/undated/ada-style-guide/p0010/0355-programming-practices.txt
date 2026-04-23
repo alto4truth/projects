@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 355
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+checked_Conversion in package bodies.
+
+==== example ====
+The following example shows how to use the 'Valid attribute to check validity of scalar data:
+
+==== rationale ====
+An unchecked conversion is a bit-for-bit copy without regard to the meanings attached to those bits and bit positions by either the source or the destination type. The source bit pattern can easily be meaningless in the context of the destination type. Unchecked conversions can create values that violate type constraints on subsequent operations. Unchecked conversion of objects mismatched in size has implementation-dependent results.
+Using the 'Valid attribute on scalar data allows you to check whether it is in range without raising an exception if it is out of range. There are several cases where such a validity check enhances the readability and maintainability of the code:

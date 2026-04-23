@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 167
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+Also, an implementation may not be able to perform type checking on such parameters even if the surrounding environment is capable of providing them.
+
+==== notes ====
+Real-time, embedded applications may not have an "operator" initiating the program to supply the parameters, in which case it would be more appropriate for the program to have been compiled with a package containing the appropriate constant values or for the program to read the necessary values from switch settings or a downloaded auxiliary file. In any case, the variation in surrounding initiating environments is far too great to depend upon the kind of last-minute (program) parameterization implied by (subprogram) parameters to the main subprogram. POSIX 5 provides a standard operating system command line interface that might be a more appropriate alternative to the Ada command line facility depending on the implementation family of an application.
+
+=== Encapsulating Implementation Dependencies ===

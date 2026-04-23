@@ -1,0 +1,15 @@
+title: Advanced Data Structures and Algorithms
+source: wikibooks
+year: undated
+document_id: advanced-data-structures-and-algorithms
+authors: 
+page: 1
+section: advanced-data-structures-and-algorithms
+chunk: 3
+source_ref: https://en.wikibooks.org/wiki/Advanced_Data_Structures_and_Algorithms
+
+reference, chapters can be more independent of each other. Further, you can assume the reader already knows the basic data-structures and algorithms.
+
+=== FFT Multiplication* ===
+As covered in the Algorithms book, by breaking an integer into two parts and treating it as a polynomial, we were able to derive a better-than-grade-school multiplication algorithm. Even more gains in efficiency can be made if we break the integer into three parts instead. However, we don't need to stop there: we can generalize the technique of polynomial multiplication and interpolation by breaking an n digit binary number into a degree n polynomial, which breaks the number up into its individual digits (and is the furthest we can divide such a number).
+We noticed that evaluating the polynomial representations at points 1, -1, and 0 made the expressions easy, but if we are to use degree-2n polynomials, how can we come up with enough points to use? The trick is to evaluate the polynomial using complex numbers, in particular, by using "roots of unity": that is, complex numbers that are all distance 1 from the origin.

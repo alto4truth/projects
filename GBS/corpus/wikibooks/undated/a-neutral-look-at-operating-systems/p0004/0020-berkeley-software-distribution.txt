@@ -1,0 +1,20 @@
+title: A Neutral Look at Operating Systems
+source: wikibooks
+year: undated
+document_id: a-neutral-look-at-operating-systems
+authors: 
+page: 4
+section: berkeley-software-distribution
+chunk: 20
+source_ref: https://en.wikibooks.org/wiki/A_Neutral_Look_at_Operating_Systems
+
+ad of putting those things into their ports collection. Thus the base OpenBSD system (with no added packages) has more components than the other BSDs.
+
+=== MirOS BSD ===
+MirOS BSD was a set of patches, and now is a fork, of OpenBSD. The project is based in Europe. They have resurrected some features that OpenBSD dropped, and moved some packages from the base system to MirPorts, the ports collection. There is a plan to port MirOS to Linux kernel.
+
+== Quasijarus ==
+Quasijarus is different from the other BSDs. It is a fork of 4.3BSD-Tahoe (without the later 4.4BSD changes that the other *BSD projects have). Like 4.3BSD, it only runs on VAX. Essentially, it is a slightly modified 4.3BSD-Tahoe system.
+
+== See also ==
+BSD Category on Wikipedia

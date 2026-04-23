@@ -1,0 +1,14 @@
+title: A Neutral Look at Operating Systems
+source: wikibooks
+year: undated
+document_id: a-neutral-look-at-operating-systems
+authors: 
+page: 4
+section: berkeley-software-distribution
+chunk: 12
+source_ref: https://en.wikibooks.org/wiki/A_Neutral_Look_at_Operating_Systems
+
+The BSDs originate from the custom Unix distribution created at the University of California at Berkeley. The distro was called the Berkeley Software Distribution. Because BSD was a modified Unix, it was only available to those with Unix source code licenses from AT&T. Later versions of BSD became free software without any AT&T code.
+Today, there are four main free operating system projects derived from BSD. This page also mentions three other distributions based on those projects. They all have Wikipedia articles: DragonFly BSD, FreeBSD, PC-BSD, DesktopBSD, NetBSD, OpenBSD, MirOS BSD.
+These are also called *BSD projects because they have "BSD" at the end of their names to show their ancestry. The BSD licensing allows for almost any redistribution and modification. Thus, the BSD projects frequently take code from each other; a new feature from one BSD project might appear later in the others.
+BSDs are distributed as complete operating systems with kernel and userland. The BSD projects provide a "ports tree" with Makefiles that automate downloading, patching, building, and installing software and handling dependencies; FreeBSD ports and NetBSD pkgsrc are examples. They also provide

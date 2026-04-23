@@ -1,0 +1,34 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 14
+section: source-code-presentation
+chunk: 526
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+y not print correctly.
+
+==== automation notes ====
+The guidelines in this section are easily enforced with an automatic code formatter.
+
+== Summary ==
+
+=== code formatting ===
+Use consistent spacing around delimiters.
+Use the same spacing as you would in regular prose.
+Indent and align nested control structures, continuation lines, and embedded units consistently.
+Distinguish between indentation for nested control structures and for continuation lines.
+Use spaces for indentation, not the tab character (Nissen and Wallis 1984, §2.2).
+Align operators vertically to emphasize local program structure and semantics.
+Use vertical alignment to enhance the readability of declarations.
+Provide, at most, one declaration per line.
+Indent all declarations in a single declarative part at the same level.
+Align parameter modes and parentheses vertically.
+Use blank lines to group logically related lines of text (NASA 1987).
+Highlight the top of each package or task specification, the top of each program unit body, and the end statement of each program unit.
+Start each statement on a new line.
+Write no more than one simple statement per line.
+Break compound statements over multiple lines.
+Adhere to a maximum line length limit for source code (Nissen and Wallis 1984, §2.3).

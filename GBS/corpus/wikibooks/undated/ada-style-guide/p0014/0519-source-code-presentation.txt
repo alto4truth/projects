@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 14
+section: source-code-presentation
+chunk: 519
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ssary, parameter-specific comments. Vertical alignment of parameters across subprograms within a compilation unit increases the readability even more.
+
+==== notes ====
+Various options are available for subprogram layout. The second example above aligns all of the subprogram names and parameter names in a program. This has the disadvantage of occupying an unnecessary line where subprogram names are short and looking awkward if there is only one parameter.
+The third example is a format commonly used to reduce the amount of editing required when parameter lines are added, deleted, or reordered. The parentheses do not have to be moved from line to line. However, the last parameter line is the only one without a semicolon.
+
+==== exceptions ====
+When an operator function has two or more formal parameters of the same type, it is more readable to declare the parameters in a single one-line list rather than to separate the formal parameter list into multiple formal parameter specifications.

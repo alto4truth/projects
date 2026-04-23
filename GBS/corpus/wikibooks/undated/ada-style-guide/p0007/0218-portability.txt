@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 218
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+f these features, provide an interface for the rest of your program to use, which can be ported through replacement of the interface's implementation.
+
+== Input/Output ==
+I/O facilities in Ada are not a part of the syntactic definition of the language. The constructs in the language have been used to define a set of packages for this purpose. These packages are not expected to meet all the I/O needs of all applications, in particular, embedded systems. They serve as a core subset that may be used on straightforward data and that can be used as examples of building I/O facilities upon the low-level constructs provided by the language. Providing an I/O definition that could meet the requirements of all applications and integrate with the many existing operating systems would result in unacceptable implementation dependencies.
+The types of portability problems encountered with I/O tend to be different for applications running with a host operating system versus embedded targets where the Ada run-time is self-sufficient. Interacting with a host operating system offers the added complexity of coexisting with the host file system structures (e.g., hierarchical directories), access methods (e.g., indexed sequential access method [ISAM]), and naming conventions (e.g., logical names and aliases based on the current directory). The section on Input/Output in ARTEWG (1986) provides some examples of this kind of dependency. Embedded applications have different dependencies that often tie them to the low-level details of their hardware devices.
+The major defense against these inherent implementation dependencies in I/O is to try to isolate their functionality in any given application. The majority of the following guidelines are focused in this direction.

@@ -1,0 +1,26 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 46
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+'// VB.NET
+Try
+Throw New Exception("This is an exception.")
+Catch ex As Exception
+Console.WriteLine(ex.Message)
+End Try
+
+=== Events and Delegates ===
+
+For the “official” discussion of events and delegates see MSDN. What we will do here is a little more general discussion of the many concepts involved.
+The first concept is delegation or the idea that part of the functionality of a class can be done “elsewhere” in the program, it can be delegated. The important benefit of delegation is that the “delegating” object does not have to know how the delegated functionality is actually implemented. One way to “delegate” is to define an interface. If an object has a reference to an interface it can delegate part of its functionality to the object implementing that interface without knowing much about that object.
+.NET 2.0 defines another reference type called a delegate that implements the delegation pattern in a slightly different way. A delegate is a type that defines a reference to a single function that must have the same signature as the delegate definition. A signature is a description of the type of the function parameters and its return type. Like a class you can create an object of that type. The object created is a reference to a function that can be assigned (set the reference to a specific function), be passed as parameter or executed (the function that is referenced is actually executed). Unlike an interface, a delegate defines only one function and a delegate instance can be created directly (no need to have another class implementing the interface).
+Most delegates in .NET derive from a multicast delegate. A multicast delegate is a delegate that keeps a list of references to functions having the same signature as the delegate definition instead of a single reference. You can add a reference to a multicast delegate using the += operator. When you execute a multicast delegate each function referenced is executed in turn.
+If an object is from a class that implements a multicast delegate member, then if you have a reference to that object you can "add" to the multicast delegate a reference to a function of your choice. If the object decides to "execute" its delegate member then the function from which you added a reference will be executed.
+This multicast delegate member is precisely what an event is in .NET. This is why events and delegates are almost always discussed together.
+The procedure to define an event is:

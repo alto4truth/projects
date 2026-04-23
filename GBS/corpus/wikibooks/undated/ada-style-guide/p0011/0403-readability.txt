@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 403
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ild packages containing constructors.
+
+==== instantiation ====
+Name a child package containing constructors <whatever>.Constructor.
+
+==== example ====
+
+==== rationale ====
+Including a word like New, Make, or Create in a constructor name makes its purpose clear. You may want to restrict the use of the prefix New to constructors that return an access value because the prefix suggests the internal use of an allocator.
+Putting all constructors in a child package, even when they return access values, is a useful organizational principle.
+For information regarding the use of Ada constructors, refer to Guideline 9.3.3.

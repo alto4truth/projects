@@ -1,0 +1,37 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 316
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+structures beyond a nesting level of five.
+
+==== example ====
+The following section of code:
+
+can be rewritten more clearly and with less nesting as:
+
+==== rationale ====
+Deeply nested structures are confusing, difficult to understand,
+and difficult to maintain. The problem lies in the difficulty
+of determining what part of a program is contained at any given
+level. For expressions, this is important in achieving the correct
+placement of balanced grouping symbols and in achieving the desired
+operator precedence.
+For control structures, the question involves what part is controlled.
+Specifically, is a given statement at the proper level of nesting,
+that is, is it too deeply or too shallowly nested, or is the given
+statement associated with the proper choice, for example, for
+if or case statements? Indentation helps, but
+it is not a panacea. Visually inspecting alignment
+of indented code (mainly intermediate levels) is an uncertain
+job at best. To minimize the complexity of the code, keep the
+maximum number of nesting levels between three and five.
+
+==== notes ====
+Ask yourself the following questions to help you simplify the
+code:

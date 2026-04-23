@@ -1,0 +1,28 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 14
+section: 360-instructions-bc
+chunk: 50
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+100 BNE X1 branch if a not equal b - BC 7,X1
+47D0A06A BNH LABEL branch if a not high - BC 13,label
+4740A06A BNL LABEL branch if a not low - BC 4,label
+
+=== Used after arithmetic operations ===
+4710A06A BO LABEL branch on overflow - BC 1,label
+47276100 BP X1 branch on plus - BC 2,X1
+4740A06A BM LABEL branch on minus - BC 4,label
+4780A06A BZ LABEL branch on zero - BC 8,label
+47D0A06A BNP LABEL branch on not plus - BC 13,label
+47B0A06A BNM LABEL branch on not minus - BC 11,label
+4770A06A BNZ LABEL branch on not zero - BC 7,label
+
+=== Used after Test Under Mask instructions ===
+47176100 BO X1 branch on ones - BC 1,X1
+4740A06A BM LABEL branch on mixed - BC 4,label
+4780A06A BZ LABEL branch on zeroes - BC 8,label
+47E0A06A BNO LABEL branch on not ones - BC 14,label

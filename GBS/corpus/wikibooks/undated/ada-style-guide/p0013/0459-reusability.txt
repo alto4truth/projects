@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 459
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+constraint. For example, assuming that an array's index starts at 1 may cause a problem when the generic is instantiated for a zero-based array type.
+
+==== notes ====
+Adding a generic formal parameter that defines the subtype of the generic formal object does not address the ramifications of the constraint checking rule discussed in the above rationale. You can instantiate the generic formal type with any allowable subtype, and you are not guaranteed that this subtype is the first subtype:
+
+You can instantiate the subtype Object_Range with any Integer subtype, for example, Positive. However, the actual variable Object can be of Positive'Base, i.e., Integer and its value are not guaranteed to be greater than 0.
+
+=== Overloading in Generic Units ===
+
+==== guideline ====
+Be careful about overloading the names of subprograms exported by the same generic package.
+
+==== example ====

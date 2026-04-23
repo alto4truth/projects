@@ -1,0 +1,30 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 5
+section: joining-the-data-with-join
+chunk: 14
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+n two and only two input files.
+
+== Multi-file Joins ==
+To join several files you can loop through them.
+
+$ join -t , -a 1 -a 2 -o 0,1.2,2.2 j1 j2 > J
+
+File "J" is now the full outer join of "j1", "j2".
+
+$ join -t , -a 1 -a 2 -o 0,1.2,2.2 J j3 > J
+
+and so on through j4, j5, ...
+For many files this is best done with a loop
+
+$ for i in * ; do join -t , -a 1 -a 2 -o 0,1.2,2.2 J $i > J ; done
+
+== Sorted Data Note ==
+join assumes that the input data has been sorted by the field to be joined. See section on sort for details.
+• Counting Part 2 - sort and uniq
+Credits: Some text adapted from Ted Harding's email to the R mailing list.

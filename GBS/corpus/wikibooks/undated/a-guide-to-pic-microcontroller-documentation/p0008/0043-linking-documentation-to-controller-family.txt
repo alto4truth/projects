@@ -1,0 +1,16 @@
+title: A Guide To PIC Microcontroller Documentation
+source: wikibooks
+year: undated
+document_id: a-guide-to-pic-microcontroller-documentation
+authors: 
+page: 8
+section: linking-documentation-to-controller-family
+chunk: 43
+source_ref: https://en.wikibooks.org/wiki/A_Guide_To_PIC_Microcontroller_Documentation
+
+vices share common peripherals, even across sub-families, providing an easy migration path for developers. The four sub-families are officially named:
+
+Base-Line - devices based upon a processor core using a 12-bit instruction set. Microcontrollers with the prefix PIC10, PIC12 or PIC16 could be base-line products.
+Mid-Range - devices based upon a processor core using a 14-bit instruction set. Microcontrollers with the prefix PIC12 or PIC16 could be mid-range products. The rfPIC12 devices (with integrated radio transmitter) also belong to this family.
+Enhanced Mid-Range - devices based upon a processor core using a 14-bit instruction set with extended instruction set, larger memory addressing and other improvements compared to mid-range products. Microcontrollers with the prefix PIC12F1 and PIC16F1 are extended mid-range products.
+High-End - devices based upon a processing core using a 16-bit instruction set, some of which may also have a high-level programming language optimised extended instruction set and data-memory addressing. Microcontrollers with the prefix PIC18 will be a high-end product.

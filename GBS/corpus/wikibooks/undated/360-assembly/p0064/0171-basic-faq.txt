@@ -1,0 +1,21 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 64
+section: basic-faq
+chunk: 171
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+This attempts to define terms related to the IBM 360 and similar mainframes.
+
+Base-displacement. Addresses on the 360 series mainframe which are given in an instruction are given in base-displacement form, in which the address is referenced by a 4-bit number representing one of the 16 registers, numbered 0 to 15, which is used as a base, and a 12-bit index which is added to the contents of that register (unless that base register is register 0), as a displacement. The value of the displacement, plus the contents of the specific register, create the base-displacement address.
+Op code. The first byte of an instruction (or the first two in some later models) determines what instruction it is. The byte (bytes) is (are) called the operation code, or op code.
+Program check. An error in a program that causes hardware to stop its execution as an exception. A program will be terminated unless the program has issued a request to the operating system to trap the exception. Program checks include any of the following:
+Data exception. Program has attempted to perform packed arithmetic upon invalid packed data.
+Divide exception. Program has attempted to divide by zero.
+Execute exception. Program has attempted to use an EXECUTE instruction as the target of an EXECUTE instruction
+Operation exception. Program has attempted to execute an invalid instruction.
+Privileged operation exception. Program has attempted to execute a privileged or I/O instruction.
+Protection exception. Program has attempted to read or write memory it is not allowed to access.

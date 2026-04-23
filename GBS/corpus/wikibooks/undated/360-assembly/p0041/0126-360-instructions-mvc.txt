@@ -1,0 +1,30 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 41
+section: 360-instructions-mvc
+chunk: 126
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+E LINE
+MVC TARGET+1(132),TARGET MOVES THE FIRST BLANK TO CHARACTER 2, WHICH MOVES TO CHAR. 3, THEN 4 AND SO ON
+
+== Format ==
+MVC D1(L,B1),D2(B2)
+Where
+
+D1 is the displacement from base register B1, and is the target address
+D2 is the displacement from base register B2, and is the source address
+L is the number of bytes to move from source to target, valid values of 1 to 256.
+
+== Opcode ==
+
+The MVC instruction is not intended as a NOP, therefore at least one byte must be moved. Because the 1 byte length value can only hold the values 0 to 255, the length to be moved that is inserted into the instruction is one less than the actual L value in the source code, or, the actual length to move is one higher than the length field stored in the instruction.
+
+== Availability ==
+The MVC instruction is available on all models.
+
+== Purpose of Instruction ==
+The MVC instruction can be used to move from 1 to 256 bytes of data. The MVCL instruction is available on 370 and above machines for moving larger volumes of data.

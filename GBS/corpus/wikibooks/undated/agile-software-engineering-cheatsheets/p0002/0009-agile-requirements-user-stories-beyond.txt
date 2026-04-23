@@ -1,0 +1,29 @@
+title: Agile Software Engineering Cheatsheets
+source: wikibooks
+year: undated
+document_id: agile-software-engineering-cheatsheets
+authors: 
+page: 2
+section: agile-requirements-user-stories-beyond
+chunk: 9
+source_ref: https://en.wikibooks.org/wiki/Agile_Software_Engineering_Cheatsheets
+
+team can reasonably do, and will minimize the waste incurred with items that are completed but not ready for release.
+Example of a Definition of Done:
+
+All acceptance criteria passing
+Checked into the main branch
+Tested as per test plan
+Demo’d to PM
+Increases unit tests coverage
+Code review + implement all identified changes required
+All bugs fixed and verified
+Added to release notes
+This should be created, used, and maintained by the team, and is team-specific.
+
+== Personas ==
+Personas are fictional characters created to represent the different user types within a targeted demographic, attitude and/or behavior set that might use a site, brand or product in a similar way.
+Using personas while defining a story can help the team focus on the need of specific users, instead of developing generic features which won’t be great for everyone. They also help us focus on a subset of the users, so we can get feedback earlier and develop products more gradually.
+
+== Vertical Slices ==
+Ideally, user stories represent thin slices which cut through all necessary architectural layers of the product. This way we can get the end-to-end feedback and have more chance of getting real value.

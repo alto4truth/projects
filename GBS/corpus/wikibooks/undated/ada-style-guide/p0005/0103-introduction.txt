@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 5
+section: introduction
+chunk: 103
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+then use that awareness to recognize the engineering tradeoffs that you will eventually be asked to make when you are the experienced Ada programmer.
+
+=== To The Experienced Ada Programmer ===
+As an experienced Ada programmer, you are already writing code that conforms to many of the guidelines in this book. In some areas, however, you may have adopted a personal programming style that differs from that presented here, and you might be reluctant to change. Carefully review those guidelines that are inconsistent with your current style, make sure that you understand their rationale, and consider adopting them. The overall set of guidelines in this book embodies a consistent approach to producing high-quality programs that would be weakened by too many exceptions.
+Consistency is another important reason for general adoption of common guidelines. If all the staff of a project write source text in the same style, many critical project activities are easier. Consistent code simplifies formal and informal code reviews, system integration, code reuse within a project, and the provision and application of supporting tools. In practice, corporate or project standards may require deviations from the guidelines to be explicitly commented, so adopting a nonstandard approach may require extra work.
+Some of the guidelines in this book, particularly in the chapters on concurrency, portability, reusability, object-oriented features, and performance, focus on design tradeoffs. These guidelines ask you to consider whether using an Ada feature is an appropriate design decision for your application. There are often several ways to implement a particular design decision, and these guidelines discuss the tradeoffs you should consider in making your decision.

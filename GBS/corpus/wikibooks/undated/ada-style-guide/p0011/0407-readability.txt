@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 407
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+, or highlighting them with dashed lines is useful because it makes the code easier to read. Subsequent chapters of this book elaborate on this point.
+
+==== automation notes ====
+The guideline about storing redundant information in comments applies only to manually generated comments. There are tools that automatically maintain information about the code (e.g., calling units, called units, cross-reference information, revision histories, etc.), storing it in comments in the same file as the code. Other tools read comments but do not update them, using the information from the comments to automatically generate detailed design documents and other reports.
+The use of such tools is encouraged and may require that you structure your header comments so they can be automatically extracted and/or updated. Beware that tools that modify the comments in a file are only useful if they are executed frequently enough. Automatically generated obsolete information is even more dangerous than manually generated obsolete information because it is more trusted by the reader.
+Revision histories are maintained much more accurately and completely by configuration management tools. With no tool support, it is very common for an engineer to make a change and forget to update the revision history. If your configuration management tool is capable of maintaining revision histories as comments in the source file, then take advantage of that capability, regardless of any compromise you might have to make about the format or location of the revision history. It is better to have a complete revision history appended to the end of the file than to have a partial one formatted nicely and embedded in the file header.

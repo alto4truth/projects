@@ -1,0 +1,19 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 15
+section: be-yes
+chunk: 55
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ey for the target address must be the same as the current process (or this process must have a key of 0) or a memory protect violate exception occurs.
+
+== Alternative branch instructions ==
+The BALR instruction is used to branch to the address in a register and save the current address as a return address, similar to a procedure or function call in a high-level language
+The BCR instruction is used in the same manner as the BC instruction, but is used to branch to the address in the specified second argument register.
+The BCT instruction is used is used to subtract 1 from a register then branch to the specified address if the result is not zero.
+The BCTR instruction is used is used to subtract 1 from a register then branch to the address in the register specified in the second argument if the result is not zero.
+The BRC instruction is used to branch to the address relative to the current program counter, contained in an immediate (16 bit) value.
+The BRCL instruction is used to branch to the address relative to the current program counter, contained in an immediate (32 bit) value.

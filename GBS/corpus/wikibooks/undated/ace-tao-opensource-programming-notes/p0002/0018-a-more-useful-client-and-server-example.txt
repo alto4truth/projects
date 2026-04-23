@@ -1,0 +1,16 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 2
+section: a-more-useful-client-and-server-example
+chunk: 18
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+link portion of you application is likely to require the following objects:
+
+-lpqxx -lTAO_PortableServer -lTAO_CosNaming -lTAO_AnyTypeCode -lACE -lTAO
+
+=== Deployment ===
+Until recently, ACE+TAO didn't have a deployment plan worth mentioning. I'm not sure which version it was that they acquired a make install target for their platforms, suffice it to say, you want to use their more modern versions, such as 5.8.x and above. If you are on a redhat style linux distro, they even have pre-compiled RPMs. Installing ACE+TAO will place the libraries in your system's common directory, as well as placing the tao binaries in some common bin location like /usr/bin. Once this prerequisite is over with, installing your app is simplicity itself. just copy your binary to a directory from which you can run it. One more thing, remember that you're probably going to want to have a copy of a name server running somewhere on your net, configured to load at boot time.

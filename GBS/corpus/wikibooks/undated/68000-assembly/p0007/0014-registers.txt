@@ -1,0 +1,19 @@
+title: 68000 Assembly
+source: wikibooks
+year: undated
+document_id: 68000-assembly
+authors: 
+page: 7
+section: registers
+chunk: 14
+source_ref: https://en.wikibooks.org/wiki/68000_Assembly
+
+With the exception of the 16-bit status register, all 68000 registers are 32-bits wide.
+There are eight data registers: d0, d1, d2, d3, d4, d5, d6, and d7. These are intended to hold numbers that will have various mathematical and logical operations performed on them.
+There are seven address registers: a0, a1, a2, a3, a4, a5, and a6. These are typically used as pointers.
+There is one active stack pointer: SP, also called a7.
+Normally the processor is in user mode.
+In user mode, SP refers to the User Stack Pointer (USP) register.
+(During interrupts, the active stack pointer SP is another register called the Interrupt Stack Pointer or the System Stack Pointer. The 68020 and higher processors have a third register called the Master Stack Pointer. Neither the ISP nor the MSP can be accessed in user mode).
+The 68K includes special addressing modes that make it easy to manipulate a data stack structure using any address register.
+The Program Counter (PC) points to the current instruction. On the 68000, only the lower 24 bits output to any pins, giving a maximum addressing range of 16MiB. The Program Counter is changed automatically when a new instruction is loaded or when a BRA, BCC, BSR

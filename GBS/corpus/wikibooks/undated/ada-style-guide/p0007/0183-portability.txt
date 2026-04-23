@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 183
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+===
+Use an implementation that supports the Numerics Annex (Ada Reference Manual 1995, Annex G) when performance and accuracy are overriding concerns.
+
+==== rationale ====
+The Numerics Annex defines the accuracy and performance requirements for floating- and fixed-point arithmetic. The Annex provides a "strict" mode in which the compiler must support these requirements. To guarantee that your program's numerical performance is portable, you should compile and link in the strict mode. If your program relies upon the numeric properties of the strict mode, then it will only be portable to other environments that support the strict numerics mode.
+The accuracy of floating-point numbers is based on what machine numbers can be represented exactly in storage. A computational result in a register can fall between two machine numbers when the register contains more bits than storage. You can step through the machine numbers using the attributes 'Pred and 'Succ. Other attributes return values of the mantissa, exponent, radix, and other characteristics of floating- and fixed-point numbers.
+
+=== Accuracy Analysis ===

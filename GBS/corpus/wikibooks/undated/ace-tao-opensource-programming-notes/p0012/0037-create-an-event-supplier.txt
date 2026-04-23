@@ -1,0 +1,49 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 12
+section: create-an-event-supplier
+chunk: 37
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+ext::_narrow (naming_context_object.in ());
+
+CosNaming::Name ec_name;
+ec_name.length(1);
+ec_name[0].id = string_dup("CosEventService"); //TAO Specific
+
+// Resolve the binding to the event channel object reference.
+CosEventChannelAdmin::EventChannel_var channel = CosEventChannelAdmin::EventChannel::_narrow(naming_context->resolve(ec_name));
+//resolve_name<CosEventChannelAdmin::EventChannel>(
+//naming_context, ec_name);
+
+// Get the admin object to the event channel
+CosEventChannelAdmin::SupplierAdmin_var supplier_admin =
+channel->for_suppliers();
+
+// Obtain a ProxyPushConsumer from the SupplierAdmin.
+consumer = supplier_admin->obtain_push_consumer();
+
+// Invoke the connect_push_supplier operation, passing
+// a nil PushSupplier reference to it.
+CosEventComm::PushSupplier_var nil_supplier =
+CosEventComm::PushSupplier::_nil();
+consumer->connect_push_supplier(nil_supplier);
+
+MyTimer *mt = new MyTimer();
+ACE_Time_Value initialDelay (3);
+ACE_Time_Value interval (6);
+ACE_Reactor reactor;
+reactor.schedule_timer (mt, 0, initialDelay, interval);
+reactor.run_reactor_event_loop();
+
+while(1){
+cout << "In while loop." << endl;
+sleep(100);
+}
+
+orb->destroy ();
+return EXIT_SUCCESS;
+}

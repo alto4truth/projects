@@ -1,0 +1,17 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 2
+section: 360-architecture
+chunk: 6
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+omponents. Some operating systems have the capacity for a program to be marked as "authorized," in which case the program can run in supervisor state.
+
+== Memory Protection ==
+The memory protection key (bits 8-11) is 4 bits and determines which memory areas a particular program has access to. Pages of the computer's memory are marked with certain protection keys, and only a program running with the same key (or key of zero) may write to a particular section of memory. Some versions of the hardware have read protection as well.
+
+== Virtual Memory ==
+The 370 and above support "Dynamic Address Translation" in which a program can be loaded into a virtual address and the virtual address is translated automatically into a real address directly by the hardware. Multiple programs can be mapped into more virtual memory than the machine actually possesses, allowing more programs than can actually fit in memory to run simultaneously, or to allow programs larger than the actual amount of memory available to be run. The operating system can write pages to and read from disk space to store programs when not executing, or when not using all of their memory.

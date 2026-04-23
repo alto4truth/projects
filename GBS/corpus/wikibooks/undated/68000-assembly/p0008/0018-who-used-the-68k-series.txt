@@ -1,0 +1,30 @@
+title: 68000 Assembly
+source: wikibooks
+year: undated
+document_id: 68000-assembly
+authors: 
+page: 8
+section: who-used-the-68k-series
+chunk: 18
+source_ref: https://en.wikibooks.org/wiki/68000_Assembly
+
+The Motorola 68K series of microprocessors was used by many manufacturers:
+
+Apple in their Macintosh computers until they switched to the PowerPC series of microprocessors, and in their LaserWriter printers until they switched to the AMD 29000 series of microprocessors.
+The Commodore Amiga
+Sun, HP, SGI and other 80s Unix workstations before their switch to RISC processors like SPARC, PA-RISC and MIPS.
+Atari ST/STE/TT/Falcon line of personal computers.
+Sinclair for the Sinclair QL (which was also re-badged as the ICL one-per-desk).
+NeXT before they became a software-only company.
+The Sharp X68000 series of personal computers.
+Palm in their handheld PDAs until they switched to the ARM series of microprocessors. Almost all applications run in emulated 68K mode, however.
+The 680x0 was popular in arcade machines until the middle of the 1990s. It can be found in many Capcom games.
+The Sega Mega Drive (Genesis in the U.S.) used a 68000 as the main processor. The successor, SEGA Saturn, used one as a sound processor.
+The Sequential Circuits Prophet VS, Ensoniq EPS, and several other synthesizers used the 68000 in the late 80's.
+The Atari Jaguar had a 68000 as the central CPU among many dedicated processors.
+The Texas Instruments Calculators TI-89, TI-92, Voyage 200 and TI-89 Titanium.
+Tandy/Radio Shack in their TRS-80 Model 16 1982, 16B 1983 and Tandy 6000 1984, running Xenix OS 2.0 1981 and 3.0 1982 licensed from Microsoft, which are licensed variants of AT&T's UNIX OS 7th Edition 1979 and System III 1981 respectively.
+Many embedded computer systems use 68K family microprocessors, often running real-time operating systems.
+One thing to note is that the PowerPC is not binary compatible with the 68K processor. Their assembly languages are completely different.
+However, Apple has written an emulator (in PowerPC assembly language) which allows PowerPC microprocessors to interpret machine language code written for 68K microprocessors, albeit with a substantial performance decrease versus native PowerPC machine language.
+The Motorola 68K is a CISC-based CPU that operates on memory organized in a Big-Endian fashion.

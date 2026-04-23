@@ -1,0 +1,27 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 39
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+hem) and custom classes (where you will code the essential of your program logic).
+We have examples of using and building classes.
+
+=== Interfaces ===
+
+If you want to get really confused on what exactly is object-oriented programming just check the Wikipedia article on Polymorphism :-).
+The idea is just to be able to have a single type of reference to the "common part" of different types that have "something in common".
+Rectangles and Ellipses are both "Shapes" so how can we get part of a program to manipulate "Shapes" without knowing about the specific of Rectangles or Ellipses. In such a situation we say that Shapes are polymorphic (literally they can take many forms).
+In object-oriented programming you get this behavior with inheritance. A reference to a parent class (Shape) will manipulate child objects (Rectangles or Ellipses) without problems.
+Interfaces were developed to get the same behavior in the context of component-based computing where you don't have access to the source code so you cannot use inheritance. The interface construct was the basis of all component communication in COM.
+An interface is a contract to implement a set of methods in a clearly defined manner (method signatures). If you know that a class implements an interface you know that you can use any of the defined methods.
+From that definition it is easy to imagine having a reference to an "interface instance" from which you can call any of the interface methods. So easy in fact that the framework provides just that.
+Now suppose that instead of a Shape being a parent of Rectangle we just have a Shape interface that is implemented both by Rectangle and Ellipse. If I have a reference to a Rectangle object, I will be able to "cast" it to a reference to a Shape interface and pass it to the part of the program that knows only about "Shape objects".
+This is exactly the same polymorphic behavior that we had via inheritance.
+The class libraries rely heavily on interfaces and a clear understanding of the concept is essential.
+An interesting problem with interfaces compared with inheritance is that you do not get a default implementation (virtual parent methods) so you have to recode everything. The techniques and tools do exist here but there is always some extra work to do. More on that with generics...
+We have examples of using and building interfaces. Some interfaces of the System namespace are shown in the standard interfaces section.

@@ -1,0 +1,28 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 19
+section: 360-instructions-bct
+chunk: 68
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+BCT — Branch on Count — Opcode 46 / Decimal 70 —
+4 byte RX
+Instruction.
+
+== Format ==
+BCT target_register,displacement (index_register,base_register)
+BCT 2,LABEL
+BCT 15,106(10)
+BCT 0,256(7,6)
+
+The first argument is a target register which value is affected by the instruction.
+The second argument is the address to branch to. This consists of a base register, an index register, and a displacement address. The displacement is used as an unsigned offset of 0 to 4095 from the value in the base register, and this displacement is added to the value contained in the base register. If the index register is 0, it is ignored; otherwise, its contents are added to the previous result to obtain the final address.
+The base_register and index_register values are 0 to 15. The offset address is 0 to 4095.
+The target and base_register values will be determined automatically by the assembler if the USING pseudo-instruction has been used, and the target address label used (the displacement) is within 4096 bytes of the value of some base register.
+
+== Availability ==
+The BCT instruction is
+available on all models, 360, 370 and z/System.

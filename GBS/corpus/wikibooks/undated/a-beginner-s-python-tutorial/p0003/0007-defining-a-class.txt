@@ -1,0 +1,20 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 3
+section: defining-a-class
+chunk: 7
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+[statement 3]
+[etc.]
+
+Makes little sense? That's okay, here is an example that creates the definition of a Shape:
+
+Code Example 2 - Example of a Class
+
+What you have created is a description of a shape (That is, the variables) and what operations you can do with the shape (That is, the functions). This is very important - you have not made an actual shape, simply the description of what a shape is. The shape has a width (x), a height (y), and an area and perimeter (area(self) and perimeter(self)). No code is run when you define a class - you are simply making functions and variables.
+The function called __init__ is run when we create an instance of Shape - that is, when we create an actual shape, as opposed to the 'blueprint' we have here, __init__ is run. You will understand how this works later.
+self is how we refer to things in the class from within itself. self is the first parameter in any function defined inside a class. Any function or variable created on the first level of indentation (that is, lines of code that start one TAB to the right of where we put class Shape) is automatically put into self. To access these functions and variables elsewhere inside the class, their name must be preceded with self and a full-stop (e.g. self.variable_name).

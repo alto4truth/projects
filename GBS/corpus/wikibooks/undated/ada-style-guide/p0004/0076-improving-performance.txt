@@ -1,0 +1,34 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 4
+section: improving-performance
+chunk: 76
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+=== Assigning Alternatives ===
+
+==== guideline ====
+Use overwriting for conditional assignment when measured performance indicates.
+
+==== example ====
+
+==== rationale ====
+Determine the impact of styles of assigning alternative values. The examples illustrate two common methods of doing this; for many systems, the performance difference is significant.
+
+=== Packed Boolean Array Shifts ===
+
+==== guideline ====
+When measured performance indicates, perform packed Boolean array shift operations by using slice assignments rather than repeated bit-wise assignment.
+
+==== example ====
+
+==== rationale ====
+Determine the impact of slice manipulation when shifting packed Boolean arrays. For Ada 83 implementations using packed Boolean arrays, shift operations may be much faster when slice assignments are used as opposed to for loop moving one component at a time. For Ada 95 implementations, consider using modular types instead (see Guideline 10.6.3).
+
+=== Subprogram Dispatching ===
+
+==== guideline ====
+Use static subprogram dispatching when measured performance indicates.

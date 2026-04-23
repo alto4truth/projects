@@ -1,0 +1,20 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 21
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+dvanced and others are awaiting your contributions. The more advanced sections are not all at the beginning of the module.
+
+=== The .NET Framework ===
+
+In the certification paths where exam 70-536 "Microsoft .NET Framework 2.0
+Application Development Foundation" is present, it represents the first step of the certification process. It is thus natural to start this first study guide with a short discussion of the framework as a whole.
+The definition on MSDN .NET main page is: "The .NET Framework is Microsoft's managed code programming model for building applications on Windows clients, servers, and mobile or embedded devices. Developers use .NET to build applications of many types: Web applications, server applications, smart client applications, console applications, database applications, and more".
+Wikipedia's definition is: "The Microsoft .NET Framework is a software component included with the Microsoft Windows operating system. It provides a large body of pre-coded solutions to common software development requirements, and manages the execution of programs written specifically for the framework. The .NET Framework is intended to be used by most new applications created for the Windows platform"
+The problem with Microsoft's definition is that it refers to a "managed code programming model" which is still Microsoft terminology. The best definition for it: "Managed code is code that has its execution managed by the .NET Framework Common Language Runtime" (see Brad Adams blog on MSDN).
+Wikipedia's definition points to the two more important aspects from a developer point of view:

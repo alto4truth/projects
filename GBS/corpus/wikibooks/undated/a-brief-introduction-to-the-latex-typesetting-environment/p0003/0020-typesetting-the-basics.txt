@@ -1,0 +1,26 @@
+title: A Brief Introduction to the LaTeX Typesetting Environment
+source: wikibooks
+year: undated
+document_id: a-brief-introduction-to-the-latex-typesetting-environment
+authors: 
+page: 3
+section: typesetting-the-basics
+chunk: 20
+source_ref: https://en.wikibooks.org/wiki/A_Brief_Introduction_to_the_LaTeX_Typesetting_Environment
+
+environment is crucial. For instance, with the \usepackage{amssymb} modifier at the beginning of the document typing:
+
+$$\alpha = \frac{\pi}{\Beta}$$
+
+Will give you the proper Greek letters. Other modifiers may do so as well, but they may look different or require different commands to call them.
+For the rest of this book, unless otherwise specified, the amssymb \usepackage will be used in all the documents to handle the mathematical aspects. For that reason, if you're using a different math symbol package you may experience errors in recreating the examples provided; the author cannot help other than to say that Google is your friend when looking up functions in \LaTeX.
+
+==== The \begin{} and \end{} functions ====
+In our example we had two of these. The first was
+
+\begin{document}
+
+Which tells \LaTeX that what we're going to be typing next is the document itself, rather than the commands that it needs to have to specify how to typeset the document. If you try to typeset any document without the \begin{document} command you will get an error.
+We also have the following command:
+
+\begin{figure}

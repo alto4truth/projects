@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 215
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+strong typing facilities in Ada. An implementation is free to limit the types that may be matched and the results that occur when object sizes differ.
+
+==== exceptions ====
+Unchecked type conversion is useful in implementation-dependent parts of Ada programs where lack of portability is isolated and where low-level programming and foreign language interfacing are the objectives.
+If an enumeration representation clause is used, unchecked type conversion is the only language-provided way to retrieve the internal integer code of an enumeration value.
+
+=== Run-Time Dependencies ===
+
+==== guideline ====
+Avoid the direct invocation of or implicit dependence upon an underlying host operating system or Ada run-time support system, except where the interface is explicitly defined in the language (e.g., Annex C or D of the Ada Reference Manual [1995]).
+Use standard bindings and the package Ada.Command_Line when you need to invoke the underlying run-time support system.
+Use features defined in the Annexes rather than vendor-defined features.

@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 348
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ou may see. For example, you may only see the converted exception in a traceback that does not list the point where the original exception was raised.
+
+==== notes ====
+It is possible, but not recommended, to use Exception_Id to distinguish between different exceptions in an others handler. The type Exception_Id is implementation defined. Manipulating values of type Exception_Id reduces the portability of your program and makes it harder to understand.
+
+=== Propagation ===
+
+==== guideline ====
+Handle all exceptions, both user and predefined.
+For every exception that might be raised, provide a handler in suitable frames to protect against undesired propagation outside the abstraction.

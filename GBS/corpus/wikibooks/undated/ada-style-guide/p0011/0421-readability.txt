@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 421
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+oducing an error.
+See also Guideline 9.3.1 for a discussion of what kind of documentation you should provide regarding tagged types and redispatching.
+
+==== notes ====
+Further improvements can be made on the above example by declaring the variables Count and Sum in a local block so that their scope is limited and their initializations occur near their usage, e.g., by naming the block Compute_Average or by moving the code into a function called Average_Of. The computation of Max_Number can also be separated from the computation of Average. However, those changes are the subject of other guidelines; this example is only intended to illustrate the proper use of comments.
+
+=== Marker Comments ===

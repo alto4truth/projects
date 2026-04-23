@@ -1,0 +1,25 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 15
+section: find-a-service-on-a-naming-server
+chunk: 45
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+After your naming service (and other services are running), the presence of your services can be tested for by trying the following:
+
+tao_nslist -ORBInitRef NameService=corbaloc:iiop:localhost:12345/NameService
+
+This should then produce the following output:
+
+Naming Service:
+---------
+
+Where your named services appear below the dashed line.
+Now to actually connect the two applications. To make our previous example Naming Service aware, we need to add in the code to attach to the Naming Service, then, resolve our service from within that context. The following code, put in place of the code to bring in the IOR from the command line resolves a reference to the factory object using a human readable URL from the command line which is persistent from reboot to reboot. Here's the code snippet we'll be applying:
+
+Note that the code is potentially all boiler plate which can be placed in a reusable function. The only two original parts of the code are the URL pulled in from the command line, and the string representing the name of or remote class, "Widgets".
+
+./client corbaloc::localhost:12345/NameService

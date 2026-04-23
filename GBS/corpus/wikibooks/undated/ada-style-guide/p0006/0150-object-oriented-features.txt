@@ -1,0 +1,30 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 150
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+hen a type is composed of several others types, you should use heterogeneous data structuring techniques, discussed in Guideline 5.4.2.
+
+== Summary ==
+
+=== tagged type hierarchies ===
+Consider using type extension when designing an is-a (generalization/specialization) hierarchy.
+Use tagged types to preserve a common interface across differing implementations (Taft 1995a).
+When defining a tagged type in a package, consider including a definition of a general access type to the corresponding class-wide type.
+In general, define only one tagged type per package.
+The implementation of the dispatching operations of each type in a derivation class rooted in a tagged type T should conform to the expected semantics of the corresponding dispatching operations of the class-wide type T'Class.
+Consider using a controlled type whenever a type allocates resources that must be deallocated or otherwise "cleaned up" on destruction or overwriting.
+Use a derivation from a controlled type in preference to providing an explicit "cleanup" operation that must be called by clients of the type.
+When overriding the adjustment and finalization procedures derived from controlled types, define the finalization procedure to undo the effects of the adjustment procedure.
+Derived type initialization procedures should call the initialization procedure of their parent as part of their type-specific initialization.
+Derived type finalization procedures should call the finalization procedure of their parent as part of their type-specific finalization.
+Consider deriving a data structure's components rather than the enclosing data structure from a controlled type.
+Consider using abstract types and operations in creating classification schemes, for example, a taxonomy, in which only the leaf objects will be meaningful in the application.
+Consider declaring root types and internal nodes in a type tree as abstract.
+Consider using abstract types for generic formal derived types.
+Consider using abstract types to develop different implementations of a single abstraction.

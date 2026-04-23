@@ -1,0 +1,19 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 17
+section: my-first-shell-script
+chunk: 34
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+== What is a shell script? ==
+So far we have been issuing Unix commands at the shell prompt. This is a very straightforward way of working but in some circumstances it isn't ideal. Suppose you have a file that you process in a particular, complex way - subjecting its contents to a string of different Unix processes? You can do this using pipes and redirects at the command line, but if you make a mistake you may have to start again. (Of course, trying out a complex procedure for the first time you were working on a copy of the data file, weren't you?). It would also be irritating if you needed to do this often, maybe regularly, and had to go through the process a command at a time with all the opportunities for making typos that this would provide.
+Fortunately, Unix provides a quite simple way to avoid these situation. You can create a text file containing Unix commands; give it a name with the extension .sh and then execute the whole bunch of commands by invoking this filename at the command prompt. Let's start with a very simple example.
+
+=== Creating a script ===
+In the pico editor, create a file containing the following text, exactly as it appears here.
+
+#!/usr/bin/bash
+ls -l .*

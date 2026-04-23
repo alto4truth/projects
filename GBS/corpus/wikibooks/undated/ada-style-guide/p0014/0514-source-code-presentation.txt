@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 14
+section: source-code-presentation
+chunk: 514
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+s a statement to be broken over two lines, especially if the break is at an inappropriate spot, it may be preferable to relax the alignment guideline.
+
+==== automation notes ====
+The last example above shows a kind of "semantic alignment" that is not typically enforced or even preserved by automatic code formatters. If you break expressions into semantic parts and put each on a separate line, beware of using a code formatter later. It is likely to move the entire expression to a single line and accumulate all the comments at the end. However, there are some formatters that are intelligent enough to leave a line break intact when the line contains a comment. A good formatter will recognize that the last example above does not violate the guidelines and would, therefore, preserve it as written.
+
+=== Alignment of Declarations ===
+
+==== guideline ====
+Use vertical alignment to enhance the readability of declarations.
+Provide, at most, one declaration per line.
+Indent all declarations in a single declarative part at the same level.
+
+==== instantiation ====
+For declarations not separated by blank lines, follow these alignment rules:

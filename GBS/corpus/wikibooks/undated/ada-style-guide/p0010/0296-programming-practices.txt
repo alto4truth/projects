@@ -1,0 +1,36 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 296
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+the use
+of records, especially in conjunction with record representation
+clauses, could be useful to map onto the layout of the hardware
+in question.
+
+==== notes ====
+It may seem desirable to store heterogeneous data in parallel
+arrays in what amounts to a FORTRAN-like style. This style is
+an artifact of FORTRAN's data structuring limitations. FORTRAN
+only has facilities for constructing homogeneous arrays.
+
+==== exceptions ====
+If the application must interface directly to hardware, and the
+hardware requires that information be distributed among various
+locations, then it may not be possible to use records.
+
+=== Heterogeneous Polymorphic Data ===
+
+==== guideline ====
+Use access types to class-wide types to implement heterogeneous polymorphic data structures.
+Use tagged types and type extension rather than variant records (in combination with enumeration types and case statements).
+
+==== example ====
+An array of type Employee_List can contain pointers to
+part-time and full-time employees (and possibly other kinds of
+employees in the future):

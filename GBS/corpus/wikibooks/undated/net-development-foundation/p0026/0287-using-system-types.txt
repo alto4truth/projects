@@ -1,0 +1,26 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 26
+section: using-system-types
+chunk: 287
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+MyInt = null;
+return MyInt ?? 27; // returns 27, since MyInt is null
+
+For more information see the blog entry by R. Aaron Zupancic on the ?? Operator
+
+=== Building a value type ===
+Building a value type must be very simple. The following example defines a custom "point" structure with only 2 double members. See boxing and unboxing for a discussion of implicit conversion of value types to reference types.
+
+=== Using a user-defined value type ===
+The above example can be used here. Note that the p variable does not have to be initialized with the new operator.
+
+=== Using enumerations ===
+The following sample shows simple uses of the System enumeration DayOfWeek. The code is much simpler to read than testing for an integer value representing a day. Note that using ToString() on an enum variable will give the string representation of the value (ex. “Monday” instead of “1”).
+The possible values can be listed using Reflection. See that section for details.
+For a discussion of the Enum class see MSDN
+There is a special type of enumeration called a flags enumeration. The exam objectives do not mention it specifically. See MSDN if you are interested.

@@ -1,0 +1,12 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 2
+section: a-more-useful-client-and-server-example
+chunk: 8
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+In the previous client server example, 4 files were edited to present a really basic example of a CORBA enabled application which presented a RMI interface in a factory type interface. Not terribly interesting, or useful. Ideally, one of these applications would act to serve up networked objects/entities which could answer questions as well as perform tasks. It would also be nice to have it perform these tasks with a database back end. The point of such a service would be to implement an in-memory database, the members of which are capable of individually acting like instantiated objects.
+CORBA provides a framework to hang networked objects on called the Portable Object Adapter (POA). This framework, and a rather complicated framework it is, is capable of keeping references to your objects, performing reference counting of your objects, and doing garbage collection on spent objects. For this example, we'll only use the POA to store references to the factory object. Other services the POA offers we'll ignore for the moment, and perform our own object lifetime operations. In later examples, we'll explore the utility of using more of the features of a POA, however, since these feature

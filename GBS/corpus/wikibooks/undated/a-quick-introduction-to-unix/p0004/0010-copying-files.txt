@@ -1,0 +1,30 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 4
+section: copying-files
+chunk: 10
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+== Copying Files ==
+
+=== cp (copy) ===
+To make a new copy of some file, say file1 in the current working directory with the name file2, you can use the command cp like this
+
+cp file1 file2
+Sometimes you will wish to copy a file across directories. There are two ways you could do this. First you might use cd to get to your destination directory.
+
+% cd ~/mydirectory
+Then at the Unix prompt, type,
+
+% cp ~/science.txt .
+Don't forget to type the dot . at the end of this first command line. Remember, in Unix, the dot means the current directory.
+Now you can if you wish make copies of this file in this directory in the usual way, for example
+
+% cp science.txt science.bak
+Another way to achieve the same result is to use the full, absolute pathname - that is start at the root (/) and specify all the directories in the path for the original and all the directories in the path for the destination. You might have a command looking like
+
+cp /nfs/fs-i/UM0098/ccaajim/train.doc /nfs/fs-i/UM0098/ccaajim/myretiredfiles/train.doc.bak
+Of course, it's easy to make mistakes typing long path names.

@@ -1,0 +1,38 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 109
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+Byte streams ====
+Exam objective: Manage byte streams by using Stream classes.
+(Refer System.IO namespace)
+FileStream class - MSDN
+Stream class - MSDN
+
+System.IO.Stream is the abstract base class that all other streams inherit from. It is not possible in instantiate a Stream class. Instead use one of the other classes that derive from Stream.
+In terms of the 70-536 exam objectives, the most important classes that inherit from Stream are:
+System.IO.FileStream
+System.IO.MemoryStream
+System.IO.Compression.DeflateStream
+System.IO.Compression.GZipStream
+System.Security.Cryptography.CryptoStream
+System.IO.BufferedStream
+For a complete list of classes that inherit from Stream see MSDN.
+For a discussion on File and Stream IO see MSDN.
+MemoryStream class - MSDN
+BufferedStream class - MSDN
+
+==== Reader and Writer classes ====
+Exam objective: Manage the .NET Framework application data by using Reader and Writer classes.
+(Refer System.IO namespace)
+StringReader class and StringWriter class - MSDN and MSDN
+
+StringReader and StringWriter inherit from TextReader/TextWriter.
+StringReader is a TextReader for strings.
+StringWriter is a TextWriter for strings.
+TextReader class and TextWriter class

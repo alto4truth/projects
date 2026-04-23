@@ -1,0 +1,29 @@
+title: 68000 Assembly
+source: wikibooks
+year: undated
+document_id: 68000-assembly
+authors: 
+page: 2
+section: addressing-modes
+chunk: 6
+source_ref: https://en.wikibooks.org/wiki/68000_Assembly
+
+you choose is largely a matter of personal preference, but most people find (xyz).W easier to read.
+
+=== Absolute far addressing ===
+Assembler syntax:
+
+(xyz).L
+xyz.L
+Operate on the location pointed to by letters like xyz, sign-extended by the assembler. Some instructions only accept one or the other of near or far absolute addresses, thus the separation. Like absolute near, you can include the parentheses at your discretion.
+
+=== Program counter indirect with displacement ===
+Assembler syntax:
+
+x(PC)
+(x)(PC)
+(x,PC)
+Operate on the memory value at x + PC, where x is a 16-bit immediate value. Note that PC is the address of the extension word that x is stored in (right after the instruction's word). All syntaxes are equivalent, but some assemblers won't take them all.
+
+=== Program counter indirect with index ===
+Assembler syntax:

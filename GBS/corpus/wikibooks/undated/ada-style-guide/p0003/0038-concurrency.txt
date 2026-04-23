@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 38
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+guideline is still applicable, however, if the application could ever be ported to a multiprocessor environment.
+
+=== Defensive Task Communication ===
+
+==== guideline ====
+Provide a handler for exception Program_Error whenever you cannot avoid a selective accept statement whose alternatives can all be closed (Honeywell 1986).
+Make systematic use of handlers for Tasking_Error.
+Be prepared to handle exceptions during a rendezvous .
+Consider using a when others exception handler.
+
+==== example ====
+This block allows recovery from exceptions raised while attempting to communicate a command to another task:
+
+In this select statement, if all the guards happen to be closed, the program can continue by executing the else part. There is no need for a handler for Program_Error. Other exceptions can still be raised while evaluating the guards or attempting to communicate. You will also need to include an exception handler in the task Throttle so that it can continue to execute after an exception is raised during the rendezvous:

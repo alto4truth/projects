@@ -1,0 +1,21 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 25
+section: 360-instructions-dr
+chunk: 80
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ion.
+The second argument is the source value register.
+
+== Availability ==
+The DR instruction is available on all models of the 360, 370 and z/System.
+
+== Operation ==
+The DR instruction divides the dividend - 64-bit signed value stored in pair of registers T and T+1, where T is target register number (T shall contain most significant part and T+1 shall contain least significant part), by the divisor - 32-bit signed value in the source register. The target register number T shall be even. The instruction places quotient to register T and remainder to register T+1, both as 32-bit signed values.
+The divisor shall not be zero. The quotient shall fit into limits of 32-bit signed value (-2147483648 till 2147483647).
+The DR instruction performs so-called T-division when quotient is truncated to zero; the remainder sign is equal to the dividend sign, if both values are not equal to 0; in other words, (remainder * dividend >= 0).
+The Condition Code field in the Program Status Word is not changed.

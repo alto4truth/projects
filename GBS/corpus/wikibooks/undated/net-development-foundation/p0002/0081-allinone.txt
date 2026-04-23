@@ -1,0 +1,29 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 81
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+a service ====
+Exam objective: Implement, install, and control a service
+(Refer System.ServiceProcess namespace)
+Inherit from ServiceBase class - MSDN
+
+A service is a long-running executable. It does not provide a user interface, and does not require any user to be logged onto the computer. Services run as System, but it is possible to choose to have them run under a different user account. The ServiceBase class is a base class for a service. It must be derived from when creating a new service.
+Almost all services will override the OnStart and OnStop methods of ServiceBase.
+ServiceController class and ServiceControllerPermission class
+
+ServiceController class - MSDN
+ServiceControllerPermission class - MSDN
+ServiceInstaller and ServiceProcessInstaller class
+
+ServiceInstaller - MSDN
+ServiceProcessInstaller class - MSDN
+ServiceChangeDescription structure and ServiceChangeReason enumeration
+
+SessionChangeDescription structure - MSDN
+SessionChangeReason enumeration - MSDN

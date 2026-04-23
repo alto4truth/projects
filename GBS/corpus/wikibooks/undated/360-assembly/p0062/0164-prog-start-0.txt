@@ -1,0 +1,18 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 62
+section: prog-start-0
+chunk: 164
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+R 14 And leave
+0000DA 56 *
+0000DC 00000000 57 X DC A(MAIN)
+0000E0 4040404040404040 58 BLANKS DC 1000C' '
+0004C8 00000000 59 ITEM DC A(0)
+0004CC 60 END
+
+Here is how the program was assembled.

@@ -1,0 +1,18 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 4
+section: attaching-your-applications-to-the-core-services
+chunk: 21
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+below is the string starting with "corbaloc" and continuing to the end of the line. The latter option is my preferred method to get a server started.
+
+./YourServer -ORBInitRef NameService=corbaloc:iiop:yoyodyne.com:12345/NameService
+The -ORBInitRef option is simply passed to the CORBA::ORB_init() function in the opening lines of your application, so you could optionally pass this in directly to the function, thus obviating the need for this long command line. In practice, however, I've always used this long command line form as it makes it easier to move the app around.
+To start the client side, using the command line from above is fine.
+
+./YourClient -ORBInitRef NameService=corbaloc:iiop:yoyodyne.com:12345/NameService
+One final note unrelated to connecting your apps into the framework. The ACE+TAO framework, because it was designed to work on Microsoft's platform, comes with a non-standard way to start up the app. If you want to run your shiny new app as a daemon, you need to add -ORBDaemon to the command line. If you are doing this under linux, don't try the daemon() C function call in your source, it'll only serve to confuse things.

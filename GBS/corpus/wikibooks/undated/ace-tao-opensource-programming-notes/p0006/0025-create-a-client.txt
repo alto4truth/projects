@@ -1,0 +1,43 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 6
+section: create-a-client
+chunk: 25
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+== main.cpp ==
+
+== ace_service.idl ==
+// Forward declare
+interface Widget;
+
+interface My_Factory
+{
+// = TITLE
+// A factory class for the widget interfaces
+//
+// = DESCRIPTION
+// Return the Widget interfaces based on their names
+//
+Widget get_widget (in string widget_name);
+};
+
+interface Widget
+{
+// = TITLE
+// A simple interface to query the name and price of a widget
+//
+// = DESCRIPTION
+// Return the price and name of a single widget
+//
+
+readonly attribute string full_name;
+// Get the name.
+
+double price ();
+// Get the price
+
+};

@@ -1,0 +1,50 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 290
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+te types.
+Use private types in preference to nonprivate types.
+Explicitly export needed operations rather than easing restrictions.
+
+==== example ====
+
+==== rationale ====
+Limited private types and private types support abstraction
+and information hiding
+better than nonprivate types. The more restricted the type, the
+better information hiding is served. This, in turn, allows the
+implementation to change without affecting the rest of the program.
+While there are many valid reasons to export types, it is better
+to try the preferred route first, loosening the restrictions only
+as necessary. If it is necessary for a user of the package to
+use a few of the restricted operations, it is better to export
+the operations explicitly and individually via exported subprograms
+than to drop a level of restriction. This practice retains the
+restrictions on other operations.
+Limited private types have the most restricted set of operations
+available to users of a package. Of the types that must be made
+available to users of a package, as many as possible should be
+derived from the controlled types or limited private. Controlled
+types give you the ability to adjust assignment and to finalize
+values, so you no longer need to create limited private types
+to guarantee a client that assignment and equality obey deep copy/comparison
+semantics. Therefore, it is possible to export a slightly less
+restrictive type (i.e., private type that extends Ada.Finalization.Controlled)
+that has an adjustable assignment operator and overridable equality
+operator. See also Guideline 5.4.5 .
+The operations available to limited private types are membership
+tests, selected components,
+components for the selections of any discriminant,
+qualification and explicit conversion,
+and attributes 'Base
+and 'Size. Objects of a limited
+private type also have the attribute 'Constrained
+if there are discriminants. None of these operations allows the
+user of the package to manipulate objects in a way that depends
+on the structure of the type.

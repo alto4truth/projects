@@ -1,0 +1,36 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 106
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+class - MSDN
+FormatterConverter class - MSDN
+FormatterServices class - MSDN
+
+===== StreamingContext structure =====
+StreamingContext structure - MSDN
+
+==== XML Serialization ====
+Exam objective: Control the serialization of an object into XML format by using the System.Xml.Serialization namespace.
+XmlSerializer class - MSDN
+
+Exam objective: Serialize and deserialize objects into XML format by using the XmlSerializer class
+Control serialization by using serialization attributes - MSDN
+
+For a list of attributes for controlling serialization see MSDN
+Implement XML Serialization interfaces to provide custom formatting for XML serialization - MSDN
+Delegates and event handlers are provided by the System.Xml.Serialization namespace - MSDN
+
+==== Custom serialization ====
+Exam objective: Implement custom serialization formatting by using the Serialization Formatter classes.
+SoapFormatter class - MSDN
+
+(Refer System.Runtime.Serialization.Formatters.Soap namespace)
+BinaryFormatter class - MSDN
+
+(Refer System.Runtime.Serialization.Formatters.Binary namespace

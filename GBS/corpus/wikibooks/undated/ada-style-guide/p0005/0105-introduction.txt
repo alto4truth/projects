@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 5
+section: introduction
+chunk: 105
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+this detail, including Rumbaugh et al. (1991), Jacobson et al. (1992), the ADARTS Guidebook (Software Productivity Consortium 1993), and Booch (1994).
+
+=== To The Software Project Manager ===
+Technical management plays a key role in ensuring that the software produced in the course of a project is correct, reliable, maintainable, and portable. Management must create a project-wide commitment to the production of high-quality code; define project-specific coding standards and guidelines; foster an understanding of why uniform adherence to the chosen coding standards is critical to product quality; and establish policies and procedures to check and enforce that adherence. The guidelines contained in this book can aid such an effort.
+An important activity for managers is the definition of coding standards for a project or organization. These guidelines do not, in themselves, constitute a complete set of standards; however, they can serve as a basis for standards. Several guidelines indicate a range of decisions, but they do not prescribe a particular decision. For example, the second guideline in the book (Guideline 2.1.2) advocates using a consistent number of spaces for indentation and indicates in the rationale that two to four spaces would be reasonable. With your senior technical staff, you should review each such guideline and arrive at a decision about its instantiation that will constitute your project or organizational standard.
+Two other areas require managerial decisions about standardization. Guideline 3.1.4 advises you to avoid arbitrary abbreviations in object or unit names. You should prepare a glossary of acceptable abbreviations for a project that allows the use of shorter versions of application-specific terms (e.g., FFT for Fast Fourier Transform or SPN for Stochastic Petri Net). You should keep this glossary short and restrict it to terms that need to be used frequently as part of names. Having to refer continually to an extensive glossary to understand source text makes it hard to read.
+The portability guidelines given in Chapter 7 need careful attention. Adherence to them is important even if the need to port the resulting software is not currently foreseen. Following the guidelines improves the potential reusability of the resulting code in projects that use different Ada implementations. You should insist that when particular project needs force the relaxation of some of the portability guidelines, nonportable features of the source text are prominently indicated. Observing the Chapter 7 guidelines requires definition and standardization of project- or organization-specific numeric types to be used in place of the (potentially nonportable) predefined numeric types.
+Your decisions on standardization issues should be incorporated in a project or organization coding standards document. With coding standards in place, you need to ensure adherence to them. Gaining the wholehearted commitment of your programming staff to use the standards is critical. Given this commitment and the example of high-quality Ada being produced by your programmers, it will be far easier to conduct effective formal code reviews that check compliance to project standards.
+Some general issues concerning the management of Ada projects are discussed by Hefley, et al. (1992).

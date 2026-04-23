@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 171
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ckages.
+Avoid the use of features added to the predefined packages that are not specified in the Ada language definition or Specialized Needs Annexes.
+
+==== rationale ====
+Vendor-added features are not likely to be provided by other implementations. Even if a majority of vendors eventually provide similar additional features, they are unlikely to have identical formulations. Indeed, different vendors may use the same formulation for (semantically) entirely different features. See Guideline 7.5.2 for further information on vendor-supplied exceptions.
+Ada has introduced a number of new pragmas and attributes that were not present in Ada 83 (Ada Reference Manual 1983). These new pragmas and attributes may clash with implementation-defined pragmas and attributes.

@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 469
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+cant, create a copy of the fully functional part and comment out the unused operations with an indication that they are redundant in this application.
+
+=== Generic Units ===
+
+==== guideline ====
+Use generic units to avoid code duplication.
+Parameterize generic units for maximum adaptability.
+Reuse common instantiations of generic units, as well as the generic units themselves.

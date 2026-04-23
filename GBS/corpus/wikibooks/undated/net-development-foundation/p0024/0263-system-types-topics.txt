@@ -1,0 +1,19 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 24
+section: system-types-topics
+chunk: 263
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+objects and so on. Gradually the called methods will return and the '’main’’ method will eventually finish, marking the end of the program execution.
+
+=== System types ===
+
+This section will be obvious for experienced object oriented developers but some of the specific objectives of the exam are directly related to the type system.
+Types are a way to classify the concepts or objects of a language. The way this classification is organized is called a 'type system'. The types themselves can also be categorized in different ways by the type system.
+The first way to categorize types in .NET is to make a difference between types that are part of the framework class libraries (System types) and types that will be constructed by the developer (custom types).
+Writing object oriented programs can be seen as the process of defining one or more custom types. Those types are then packaged in some kind of execution unit (Assemblies in the case of .NET). The assemblies are compiled and then executed starting at some entry point that will be a specified method of one of the custom type.
+Those custom types use:

@@ -1,0 +1,16 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 17
+section: my-first-shell-script
+chunk: 41
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+ciple of creating script files. However, I do think it's worthwhile reflecting for a moment on how you might go about doing this in Microsoft Windows.
+
+=== Generalising the script with variables ===
+Our script is fine as it is but it's rather specialised. Suppose that I wanted to carry out a similar process one day on a file about religion. One approach would be to create a new shell script with different files and search terms. This is not optimal though. A better approach would be to parametrize or generalise the existing script.
+The shell provides you with a number of variable names to represent positional parameters. These are values that can be substituted into your script from the command line based on the order they are typed in. The variable $0 is reserved for the name of your script. We don't need that right now. Instead we are going to use three numbered variables to represent the search string, input file and output file for our data processing. They will be called by the names $1, $2 and $3 respectively in the script.
+Amend your script file so that it reads

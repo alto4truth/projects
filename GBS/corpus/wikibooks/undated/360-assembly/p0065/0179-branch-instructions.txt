@@ -1,0 +1,17 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 65
+section: branch-instructions
+chunk: 179
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+t zero, branch
+* to address in R15
+Example BCTR R1,R0 Reduce R1 by 1 but do not branch. This instruction is often
+* used to subtract 1 from a register
+
+== Branch Table (technique) ==
+A branch table is a literally a set of contiguous unconditional branch instructions which are of equal length (usually 4 bytes), that are used to very efficiently branch directly to one of this set, using an index. This index is often generated from some source input value that may itself be non-sequential as in the example below. This method is considerably faster than using either a binary search or sequential table lookup for example. Lookups involve compare instructions and a subsequent conditional branch. Only 5 instructions are used in the example (2 of which are unconditional branch) that perform the following:-

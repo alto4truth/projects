@@ -1,0 +1,29 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 18
+section: pathnames
+chunk: 43
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+== Pathnames ==
+
+=== pwd (print working directory) ===
+Pathnames tell you where you are in the whole file-system. So, to find out the pathname to your home-directory, type cd ~ to get back to your home and then
+
+% pwd
+The full pathname looks something like this -
+/home/nfs/fs-i/UM0098/ccaajim
+which means that ccaajim (your home directory) is in the sub-directory UM0098 (the group directory),which in turn is located in the fs-i sub-directory, which is in the nfs sub-directory, which is in the top-level root directory, called / (pronounced root) .
+
+=== Home directories and pathnames ===
+
+==== Understanding pathnames ====
+In some Unix systems (including socrates on WTS) you will find it necessary to prefix pathnames with ~ if you want to ensure that they start from your home directory rather than the current directory or the root.
+First use cd to get back to your home-directory, then type
+
+% ls mytraining
+to list the contents of your mytraining directory.
+Now type

@@ -1,0 +1,32 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 147
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+oid Add(Guid id, T item)
+{
+Dictionary.Add(id, item);
+}
+
+public T this[Guid id]
+{
+get
+{
+return (T)Dictionary[id];
+}
+set
+{
+Dictionary[id] = value;
+}
+}
+}
+
+Well it's probably not as wonderful as you expected, a lot of methods the standard dictionary has aren’t even implemented, but hey I have to leave some fun things to do for you the reader.
+So what exactly did we do in the above code? We have created a Dictionary that is indexed by a Guid and uses a type parameter to limit our add method and our indexer. Now when we create a new instance of the class and specify the type parameter we have a type-safe dictionary which can be used to store and retrieve the type of objects by the given Guid.
+The T in the declaration is only a name for the thing, we could as easily use the following: VeryLongNameForTheTypeParameter instead of T.
+Ok so we have seen how to use the type parameter to create a generic class. But before we move on to the next part lets look at the System.Collections.Generic.Dictionary<>. This class must be instantiated by providing 2 type parameters named TKey and TValue. This shows us that we can use more than one type parameter in our definition, and also shows that it was a waste of time to build my own dictionary class I could as easily used the generic dictionary like this: Dictionary<Guid, Client> and be over with it.

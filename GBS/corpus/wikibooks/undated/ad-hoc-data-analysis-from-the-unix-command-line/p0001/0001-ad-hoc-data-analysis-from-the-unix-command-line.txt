@@ -1,0 +1,19 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 1
+section: ad-hoc-data-analysis-from-the-unix-command-line
+chunk: 1
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+Once upon a time, I was working with a colleague who needed to do some quick data analysis to get a handle on the scope of a problem. He was considering importing the data into a database or writing a program to parse and summarize that data. Either of these options would have taken hours at least, and possibly days. I wrote this on his whiteboard:
+
+Your friends: cat, find, grep, wc, cut, sort, uniq
+These simple commands can be combined to quickly answer the kinds of questions for which most people would turn to a database, if only the data were already in a database. You can quickly (often in seconds) form and test hypotheses about virtually any record oriented data source.
+
+== Intended audience ==
+You've logged into a Unix box of some flavor and run some basic commands like ls and cd and cat. If you don't know what the ls command does, you need a more basic introduction to Unix than I'm going to give here.
+
+== Table of Contents ==

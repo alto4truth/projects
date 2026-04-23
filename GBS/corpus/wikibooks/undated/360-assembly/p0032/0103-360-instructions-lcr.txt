@@ -1,0 +1,30 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 32
+section: 360-instructions-lcr
+chunk: 103
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+hen it is necessary to negate a 32-bit integer value.
+
+== Availability ==
+The LCR instruction is available on all models of the 360, 370 and z/System.
+
+== Operation ==
+The LCR instruction copies negation of the 32-bit value from the register specified by the second argument to the register specified by the first argument.
+Register 0 is valid for either register and is not ignored as in some other instructions.
+
+== Condition Codes ==
+If signed integer overflow occurs, i.e. source is -2147483648 (hex 80000000), CC is set to 3.
+Otherwise, CC is set to 0, 1 or 2, if sum is equal to zero, below zero or above zero accordingly.
+
+== Exceptions and Faults ==
+If signed integer overflow is detected and the bit 36 in PSW is set, operation exception occurs.
+
+== Related instructions ==
+To subtract an integer value from register, see SR, S, SH, SL or SLR.
+To load and complement 64-bit integer value, see LCGR.
+To load and complement 32-bit integer value and extend it to 64 bits, see LCGFR.

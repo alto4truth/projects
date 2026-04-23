@@ -1,0 +1,36 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 12
+section: create-an-event-supplier
+chunk: 39
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+_Value ¤t_time, const void *nuts)
+{
+//create an event
+accepted accept_event;
+accept_event.bill = 1;
+accept_event.status = 1;
+accept_event.command = 0;
+
+//Insert the event data into an any.
+Any any;
+any <<= accept_event;
+
+//Now, push the event to the proxy (consumer)
+consumer->push(any);
+cout << "Pushing event." << endl;
+}
+
+== eventsource.idl ==
+struct accepted{
+unsigned long bill;
+unsigned long status;
+unsigned long command;
+};
+
+== Link Line Details ==
+-lTAO_CosNaming -lTAO_CosEvent -lTAO_PortableServer -lTAO_AnyTypeCode -lTAO -lACE

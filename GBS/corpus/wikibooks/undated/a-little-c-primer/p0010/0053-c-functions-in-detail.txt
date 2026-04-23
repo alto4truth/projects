@@ -1,0 +1,31 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 10
+section: c-functions-in-detail
+chunk: 53
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+th the statement:
+
+The calling routine accepted the return value as follows:
+
+The return value can be used directly as a parameter to other functions:
+
+The return value does not have to be used; "printf()", for example, returns
+the number of characters it prints, but few programs bother to check.
+A function can contain more than one "return" statement:
+
+A "return" can be placed anywhere in a function. It doesn't have to return a
+value; without a value, "return" simply causes an exit from the function.
+However, this does imply that the data type of the function must be declared
+as "void":
+
+If there's no "return" in a function, the function returns after it executes
+its last statement. Again, this means the function type must be declared
+"void".
+The "return" statement can only return a single value, but this value can
+be a "pointer" to an array or a data structure. Pointers are a complicated
+subject and will be discussed in detail later.

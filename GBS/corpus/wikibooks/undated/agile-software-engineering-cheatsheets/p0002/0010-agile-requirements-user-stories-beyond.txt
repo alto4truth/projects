@@ -1,0 +1,30 @@
+title: Agile Software Engineering Cheatsheets
+source: wikibooks
+year: undated
+document_id: agile-software-engineering-cheatsheets
+authors: 
+page: 2
+section: agile-requirements-user-stories-beyond
+chunk: 10
+source_ref: https://en.wikibooks.org/wiki/Agile_Software_Engineering_Cheatsheets
+
+cut through all necessary architectural layers of the product. This way we can get the end-to-end feedback and have more chance of getting real value.
+
+== Definition of Ready - DoR ==
+Teams often use a checklist which represents what we commonly want to consider before we are ready to pull the story into our pipeline.
+DoR can include things like:
+
+Performance
+Scalability
+Supportability (log entries, monitoring & troubleshooting)
+Deployment (upgrade & rollback, any changes to the )
+Compatibility (backward & forward compatibility with other systems and services)
+Dependencies to other systems/teams
+While not all items will apply to all stories, these are things we want to ask ourselves before we start working on a story so we minimize the change of omitting an important aspect of the story.
+
+== Tasks ==
+Stories are sometimes broken down into tasks which are undertaken by individual members of the delivery team. Tasks are typically very small (less than half a day).
+Breaking down into tasks will often surface some questions about the requirements and the design of the user story.
+
+== Possible ways to break down stories ==
+You can use the following patterns to break down stories:

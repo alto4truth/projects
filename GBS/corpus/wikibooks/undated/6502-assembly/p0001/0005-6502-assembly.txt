@@ -1,0 +1,29 @@
+title: 6502 Assembly
+source: wikibooks
+year: undated
+document_id: 6502-assembly
+authors: 
+page: 1
+section: 6502-assembly
+chunk: 5
+source_ref: https://en.wikibooks.org/wiki/6502_Assembly
+
+he computation.
+Example
+The value $02 in X is added to $01 for a sum of $03. The value $A5 at address $0003 is loaded into the Accumulator.
+
+LDA $01,X
+
+=== Zero Page Indexed with Y: zp,y ===
+The value in Y is added to the specified zero page address for a sum address. The value at the sum address is used to perform the computation.
+Example
+The value $03 in Y is added to $01 for a sum of $04. The value $E3 at address $0004 is loaded into the Accumulator.
+
+LDA $01,Y
+
+=== Zero Page Indexed Indirect: (zp,x) ===
+The value in X is added to the specified zero page address for a sum address. The little-endian address stored at the two-byte pair of sum address (LSB) and sum address plus one (MSB) is loaded and the value at that address is used to perform the computation.
+Example
+The value $02 in X is added to $15 for a sum of $17. The address $D010 at addresses $0017 and $0018 will be where the value $0F in the Accumulator is stored.
+
+STA ($15,X)

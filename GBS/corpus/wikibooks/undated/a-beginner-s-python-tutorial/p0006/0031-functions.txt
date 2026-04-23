@@ -1,0 +1,17 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 6
+section: functions
+chunk: 31
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+In our previous lesson, I said that we would delve into purposeful programming. That involves user input, and user input requires a thing called functions.
+What are functions? Well, in effect, functions are little self-contained programs that perform a specific task, which you can incorporate into your own, larger programs. After you have created a function, you can use it at any time, in any place. This saves you the time and effort of having to retell the computer what to do every time it does a common task, for example getting the user to type something in.
+
+== Using a function ==
+Python has lots of pre-made functions. You can use these pre-made functions right now, simply by 'calling' them. 'Calling' a function involves you giving a function input, and it will return a value (like a variable would) as output. Don't understand? Here is the general form that calling a function takes:
+
+Code Example 1 - How to call a function

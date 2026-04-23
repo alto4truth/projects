@@ -1,0 +1,21 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 62
+section: prog-start-0
+chunk: 168
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+P pseudo-instruction tells the assembler that register can no longer be used, until it is specified in another USING pseudo-instruction.
+By convention
+
+Operating systems often use register 0 and 1 in Supervisor Calls and expect values or address of a list of values to be provided using one or both of these registers; they are also often used (sometimes along with register 15) to return result values from Supervisor Calls. For this reason, register 1 should not be used as a base register in an executable code section, but is acceptable to reference a DSECT mapping labels to the displacement from Register 1.
+Some operating systems and certain instructions may provide or use Register 2 and/or Register 15, so care should be taken if Register 2 or 15 is used as the base register in an assembly language module that issues supervisor calls or macros that issue supervisor calls.
+The Linux operating system on the 390/zSystem hardware uses registers 1 through 6 for arguments, so these registers should not be considered to remain the same or be usable after a supervisor call on S/390 Linux.
+Register 13 is often used as a pointer to an 18-word register save area (for programs running in 24 or 32 bit mode), so it should only be used for this purpose. If the program is not calling any subroutines and saves the value of register 13 on entry, and restores it on exit, register 13 may be used for any purpose. However, if register 13 is being used for some other purpose where it is not pointing to a save area, this should be documented in the program so that anyone doing maintenance on the program in the future is not confused by this practice. Note, register 13 can be used for other purposes such as to point to a rewritable area (such as for reentrant programs that dynamically acquire memory) or for anything else, as long as the first 18 words it points to are available as a register save area.
+Register 14 is often used as the return address for the program to exit back to the caller (or the operating system if the program is not a subroutine). If the program saves register 14 on entry, and restores it on exit, register 14 may be used for any purpose.
+Register 15 is typically provided as the entry point of the program, and thus is acceptable as the USING register; only if the program must itself call a subroutine, then it must establish a different register as its base register. However, some operating systems also use register 15 in addition to registers 0 and 1 to return values, so it may be best not to use register 15 as a base register if the routine issues supervisor calls or macros that issue supervisor calls.
+Address can be * for the current program counter, or it can be a label in the current module, or a label plus a value. This allows the assembler to know which base register to use for references to addresses in the current module. It may also be used when referencing a DSECT to assign to labels used in the DSECT a base/displacement address.
+A main program (i.e. not a subroutine which has a base register loaded by the caller) would use the BALR or BASR instruction to load the contents of a base register, then issue a USING pseudo-instruction to inform the assembler that the particular register was available as a base register.

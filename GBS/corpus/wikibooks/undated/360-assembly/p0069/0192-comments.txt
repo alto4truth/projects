@@ -1,0 +1,27 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 69
+section: comments
+chunk: 192
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+A comment in 360 Assembly is a portion of text that is not processed by the assembler and is used by the programmer to add a description to the code. There are three forms of comments, line comments, code comments and macro comments.
+
+== Line Comments ==
+If a line begins with one (or more) asterisks ("*), the rest of the line is treated as a comment
+
+Examples:
+
+* This is a comment line because it begins with an asterisk
+**** This is a comment line also
+************************************************
+* This is a comment 'box' *
+************************************************
+
+Caution: The assembler uses a line beginning with *PROCESS to optionally set certain options if a *PROCESS line appears as the first line in the source file.
+
+== Code Comments ==
+After a valid 360 instruction, after a single blank, everything else on the line is treated as a comment. For the purpose of this example it is assumed that R14 is equated to 14, R15 is equated to 15 etc., to provide cross reference - see EQU Assembler pseudo-instruction)

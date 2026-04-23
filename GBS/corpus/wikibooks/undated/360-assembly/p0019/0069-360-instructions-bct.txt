@@ -1,0 +1,24 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 19
+section: 360-instructions-bct
+chunk: 69
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+t) is within 4096 bytes of the value of some base register.
+
+== Availability ==
+The BCT instruction is
+available on all models, 360, 370 and z/System.
+
+== Purpose of Instruction ==
+The BCT instruction subtracts 1 from the value of the contents of the target register specified in the first argument. If the value in the target register after the subtraction is zero, no branch occurs. Otherwise the program branches to the specified address. Note that if the result in the target register before subtraction is 0, the result is negative 1 and the branch occurs. If the value in the target register before subtraction is the smallest possible value, the result is the highest possible value, the overflow is ignored and the branch occurs.
+
+== Typical Usage ==
+To do a loop statement where 1 is subtracted from the value contained in the target register, and a branch should occur if the result is not 0.
+
+== Operation ==
+The value contained in the target register specified as the first argument is reduced by 1. If the value after subtraction is 0, execution continues with the instruction following this instruction. Otherwise, execution transfers to the address specified as the second argument.

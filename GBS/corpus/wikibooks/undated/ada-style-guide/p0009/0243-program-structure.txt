@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 243
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+nt.
+The following example shows the use of a parameterless function instead of a constant:
+
+This same example could have been written using constants:
+
+==== rationale ====
+A side effect is a change to any variable that is not local to the subprogram. This includes changes to variables by other subprograms and entries during calls from the function if the changes persist after the function returns. Side effects are discouraged because they are difficult to understand and maintain. Additionally, the Ada language does not define the order in which functions are evaluated when they occur in expressions or as actual parameters to subprograms. Therefore, a program that depends on the order in which side effects of functions occur is erroneous. Avoid using side effects anywhere.
+
+=== Packages ===

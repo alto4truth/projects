@@ -1,0 +1,26 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 57
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+utes ===
+
+=== Using generic types ===
+The use of the four major categories of System Generic Types will mainly be demonstrated elsewhere in this book:
+
+The nullable type was discussed above
+A whole section follows on Generic collections
+The generic event handler will be discussed in the Event / Delegate section.
+The generic delegates will also be discussed in the Event / Delegate section as well as in the Generic collections section (Comparer class).
+If you copy the next very simple example in Visual Studio and try to add something other than an int to the list the program will not compile. This demonstrates the strong typing capability of generics.
+
+You can use List<string> instead of List<int> and you will get a list of strings for the same price (you are using the same List(T) class).
+
+=== Building generics ===
+The programming of a custom generic collection was shown in the article mentioned in the topics discussion.
+Here we have an example of a Generic Function. We use the trivial problem of swapping two references. Although very simple we still see the basic benefits of Generics:

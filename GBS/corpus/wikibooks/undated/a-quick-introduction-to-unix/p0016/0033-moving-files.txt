@@ -1,0 +1,19 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 16
+section: moving-files
+chunk: 33
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+== Moving files ==
+
+=== mv (move) ===
+Suppose that you want to rename a file. In Unix, we talk about moving the file and the command that does it is mv. For example
+
+mv file1 file2
+moves (or renames) file1 to file2.
+This differs from copying the file: you end up with only one file rather than two.
+You can move files across directories by specifying the pathname just as you can for the cp or copy command.

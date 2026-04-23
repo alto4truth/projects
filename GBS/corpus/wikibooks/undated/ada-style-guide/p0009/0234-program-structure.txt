@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 234
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+e the job easier. Many of the guidelines listed below are often given as general program design guidelines.
+
+=== Separate Compilation Capabilities ===
+
+==== guideline ====
+Place the specification of each library unit package in a separate file from its body.
+Avoid defining library unit subprograms that are not intended to be used as main programs. If such subprograms are defined, then create an explicit specification, in a separate file, for each library unit subprogram.
+Minimize the use of subunits.
+In preference to subunits, use child library units to structure a subsystem into manageable units.
+Place each subunit in a separate file.
+Use a consistent file naming convention.
+In preference to nesting in a package body, use a private child and with it to the parent body.
+Use private child unit specifications for data and subprograms that are required by (other) child units that extend a parent unit's abstraction or services.

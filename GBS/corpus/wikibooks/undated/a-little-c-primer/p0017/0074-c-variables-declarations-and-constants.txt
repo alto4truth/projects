@@ -1,0 +1,41 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 17
+section: c-variables-declarations-and-constants
+chunk: 74
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+h the statement:
+
+In an inverse fashion, the address of a variable can be obtained
+with "&":
+
+To sum up:
+
+A pointer is declared in the form: "*myptr".
+
+If "myvar" is a variable, then "&myvar" is a pointer to that variable.
+
+If "myptr" is a pointer, then "*myptr" gives the variable data for that
+pointer.
+
+Pointers are useful because they allow a function to return a value through a
+parameter variable. Otherwise, the function will simply get the data the
+variable contains and have no access to the variable itself.
+One peculiar aspect of C is that the name of an array actually specifies a
+pointer to the first element in the array. For example, given the string
+declaration:
+
+-- then the function call:
+
+-- will actually pass the address of the character array to the function, and
+the function will be able to modify it. However:
+
+-- gives the value in the array value with index 12. Remember that this is
+the 13th element, since indexes always start at 0.
+There are more peculiarities to strings in C. Another interesting point is
+that a string literal actually evaluates to a pointer to the string it
+defines. This means that in the following operation:

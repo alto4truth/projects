@@ -1,0 +1,28 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 387
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+n identifier in seemingly different name spaces can, in fact, lead to visibility clashes if the enclosing program units are intended to work together.
+
+==== notes ====
+See Guideline 8.1.2 for a discussion on how to use the application domain as a guideline for selecting abbreviations.
+
+=== Subtype Names ===
+
+==== guideline ====
+Use singular, general nouns as subtype identifiers.
+Choose identifiers that describe one of the subtype's values.
+Consider using suffixes for subtype identifiers that define visible access types, visible subranges, or visible array types.
+For private types, do not use identifier constructions (e.g., suffixes) that are unique to subtype identifiers.
+Do not use the subtype names from predefined packages.
+
+==== example ====
+
+In particular, Day should be used in preference to Days or Day_Type.
+The identifier Historical_Year might appear to be specific, but it is actually general, with the adjective historical describing the range constraint:

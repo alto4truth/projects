@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 114
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+es and then choose selectively whether to make only the name of the module (package) visible or its contents (via a use clause).
+
+=== Tagged Types ===
+
+==== guideline ====
+Consider using type extension when designing an is-a (generalization/specialization) hierarchy.
+Use tagged types to preserve a common interface across differing implementations (Taft 1995a).
+When defining a tagged type in a package, consider including a definition of a general access type to the corresponding class-wide type.
+In general, define only one tagged type per package.
+
+==== example ====
+Consider the type structure for a set of two-dimensional geometric objects positioned in a Cartesian coordinate system (Barnes 1996). The ancestor or root type Object is a tagged record. The components common to this type and all its descendants are an x and y coordinate. Various descendant types include points, circles, and arbitrary shapes. Except for points, these descendant types extend the root type with additional components; for example, the circle adds a radius component:
+
+The following is an example of general access type to the corresponding class-wide type:

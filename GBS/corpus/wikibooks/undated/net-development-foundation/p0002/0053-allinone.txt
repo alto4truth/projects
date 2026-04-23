@@ -1,0 +1,22 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 53
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+a default value instead of a null value. The ?? operator returns the left operand of a statement if not null, otherwise it returns the right operand.
+
+int? MyInt = null;
+return MyInt ?? 27; // returns 27, since MyInt is null
+
+For more information see the blog entry by R. Aaron Zupancic on the ?? Operator
+
+=== Building a value type ===
+Building a value type must be very simple. The following example defines a custom "point" structure with only 2 double members. See boxing and unboxing for a discussion of implicit conversion of value types to reference types.
+
+=== Using a user-defined value type ===
+The above example can be used here. Note that the p variable does not have to be initialized with the new operator.

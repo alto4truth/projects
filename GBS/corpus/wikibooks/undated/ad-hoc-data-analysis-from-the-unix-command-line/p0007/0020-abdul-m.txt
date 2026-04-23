@@ -1,0 +1,22 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 7
+section: abdul-m
+chunk: 20
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+nd then hit tab.
+
+$ wc -l gender.txt
+5017 gender.txt
+$ cut -d" " -f2 gender.txt | grep M | wc -l
+1051
+$ cut -d" " -f2 gender.txt | grep F | wc -l
+3966
+
+Apparently there's much more variation in female names than male names.
+If your system's cut command delimits on tab, the above command becomes simply
+cut -f2 gender.txt.

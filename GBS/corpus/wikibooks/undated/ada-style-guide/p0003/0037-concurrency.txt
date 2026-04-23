@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 37
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+r data synchronization and communication than the rendezvous. You must design protected operations to be bounded, short, and not potentially blocking.
+
+==== notes ====
+In some cases, additional functions can be added to a task. For example, a task controlling a communication device might be responsible for a periodic function to ensure that the device is operating correctly. This type of addition should be done with care, realizing that the response time of the task might be impacted (see the above rationale).
+Minimizing the work performed during a rendezvous or selective accept loop of a task can increase the rate of execution only when it results in additional overlaps in processing between the caller and callee or when other tasks can be scheduled due to the shorter period of execution. Therefore, the largest increases in execution rates will be seen in multiprocessor environments. In single-processor environments, the increased execution rate will not be as significant and there might even be a small net loss. The guideline is still applicable, however, if the application could ever be ported to a multiprocessor environment.
+
+=== Defensive Task Communication ===

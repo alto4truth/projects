@@ -1,0 +1,30 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 16
+section: 360-instructions-bcr
+chunk: 57
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+egisters will be referenced by using the label R followed by the register number, e.g. R5 for Register 5, R6 for Register 6, R14 for Register 14, etc.
+
+BCR 2,R5
+BHR R6 - Special opcode: Branch if High Register, same as BCR 2,R6
+BCR 1,R1
+BOR R1 - Same as BC 1,R1
+BCR 15,R10
+BR R10 - BR opcode is unconditional branch
+and is same as BCR 15,R10
+BCR 3,R6
+
+If the mask or base_register is zero, the instruction is a no-operation, and does not branch.
+If the mask is 15 the branch is unconditional (unless the base_register is 0, in which case it does not branch). So in either of the following cases:
+BCR X,0
+BCR 0,X
+
+Where X is any value from 0 to 15, the branch is not taken.
+
+== Mask ==
+After executing an instruction which does an arithmetic, test or comparison, the processor sets the "Condition Code" flags (bits 18 and 19) in the PSW register, allowing the condition code to be examined for a potential branch. For example, suppose we are using an arithmetic instruction e.g. arithmetic add called "AR". Then in following conditions the value of "Condition Code" will be as following:

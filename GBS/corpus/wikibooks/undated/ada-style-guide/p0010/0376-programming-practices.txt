@@ -1,0 +1,27 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 376
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+equality operator for a private type.
+When overloading the equality operator for types, maintain the properties of an algebraic equivalence relation.
+
+==== using exceptions ====
+When it is easy and efficient to do so, avoid causing exceptions to be raised.
+Provide handlers for exceptions that cannot be avoided.
+Use exception handlers to enhance readability by separating fault handling from normal execution.
+Do not use exceptions and exception handlers as goto statements.
+Do not evaluate the value of an object (or a part of an object) that has become abnormal because of the failure of a language-defined check.
+When writing an exception handler for others, capture and return additional information about the exception through the Exception_Name, Exception_Message, or Exception_Information subprograms declared in the predefined package Ada.Exceptions.
+Use others only to catch exceptions you cannot enumerate explicitly, preferably only to flag a potential abort.
+During development, trap others, capture the exception being handled, and consider adding an explicit handler for that exception.
+Handle all exceptions, both user and predefined .
+For every exception that might be raised, provide a handler in suitable frames to protect against undesired propagation outside the abstraction .
+Do not rely on being able to identify the fault-raising, predefined, or implementation-defined exceptions.
+Use the facilities defined in Ada.Exceptions to capture as much information as possible about an exception.
+Use blocks to associate localized sections of code with their own exception handlers.

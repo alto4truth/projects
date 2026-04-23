@@ -1,0 +1,36 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 38
+section: 360-instructions-lr
+chunk: 118
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+LR - Load Register - RR Instruction - Opcode 18
+
+== Format ==
+LR 2,6 Copy the contents of register 6 into register 2, replacing the existing contents of register 2
+The specific syntax is
+
+LR target register, source register.
+
+== Opcode ==
+
+The first argument is a target register which value is affected by the instruction.
+The second argument is the source register.
+The target register and source register values are 0 to 15.
+
+== Example usage ==
+The LR instruction is used to copy the contents of the second register argument (the source register) into the first register argument (the target register), replacing the contents of the target register with the contents of the source register. The following is an example of how the instruction would assemble in various forms from an assembly language listing:
+
+1826 LR 2,6
+1892 LR 9,2
+18FA LR 15,10
+
+== Typical Usage ==
+When it is necessary to copy the contents of a register in order to preserve the value in the original register, or where the purpose is to propagate the value contained in one register to another register.
+
+== Availability ==
+The LR instruction is available on all models of the 360, 370 and z/System.

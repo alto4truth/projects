@@ -1,0 +1,25 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 25
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+icrosoft documentation you can see MSDN.
+The last thing we will note here is that the common language runtime (CLR) can execute in different contexts:
+
+ASP.NET for web applications, where it is directly linked to the Internet Information Server (IIS).
+Internet Explorer for client side web controls
+In a standalone host for console, service and windows applications.
+By default, examples in this book will use standalone executables. This is just because they are more easy to deploy for very simple programs. This does not imply that Windows applications are preferable to web applications.
+
+=== Where this book fits ===
+
+The image on the right, also taken from Wikipedia, gives a simplified but clear view of the functional components of the framework.
+This book (and the related exam) deals with the "Base Class Library" component and the basic relations of a program with the "Common Language Runtime" component.
+The book does not cover ASP.NET, ADO.NET, WF or any other more specialized components.
+We can say that we extensively cover the basics but that we shallowly cover the framework itself.
+The relations with the common language runtime include such things as:

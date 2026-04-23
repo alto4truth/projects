@@ -1,0 +1,30 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 214
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ll Ada implementations. The portability issue arises in that unchecked storage deallocations might cause varying results in different implementations.
+
+==== exceptions ====
+Using unchecked deallocation of storage can be beneficial in local control of highly iterative or recursive algorithms where available storage may be exceeded.
+
+=== Unchecked Access ===
+
+==== guideline ====
+Avoid dependence on the attribute Unchecked_Access (see Guideline 5.9.2).
+
+==== rationale ====
+Access values are subject to accessibility restrictions. Using the attribute Unchecked_Access prevents these rules from being checked, and the programmer runs the risk of having dangling references.
+
+=== Unchecked Conversion ===
+
+==== guideline ====
+Avoid dependence on Ada.Unchecked_Conversion (see Guideline 5.9.1).
+
+==== rationale ====
+The unchecked type conversion mechanism is, in effect, a means of bypassing the strong typing facilities in Ada. An implementation is free to limit the types that may be matched and the results that occur when object sizes differ.

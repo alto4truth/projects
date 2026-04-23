@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 202
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+not raise implementation-specific exceptions.
+Convert implementation-specific exceptions within interface packages to visible user-defined exceptions.
+
+==== rationale ====
+No exception defined specifically by an implementation can be guaranteed to be portable to other implementations whether or not they are from the same vendor. Not only may the names be different, but the range of conditions triggering the exceptions may be different also.
+If you create interface packages for the implementation-specific portions of your program, those packages can catch or recognize implementation-specific exceptions and convert them into user-defined exceptions that have been declared in the specification. Do not allow yourself to be forced to find and change the name of every handler you have written for these exceptions when the program is ported.

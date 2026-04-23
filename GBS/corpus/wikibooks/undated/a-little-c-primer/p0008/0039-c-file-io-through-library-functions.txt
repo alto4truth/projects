@@ -1,0 +1,49 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 8
+section: c-file-io-through-library-functions
+chunk: 39
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+", n1, n1, n1 );
+fprintf( fp, "%d %o %x \n", n2, n2, n2 );
+fprintf( fp, "%f %10.10f %e %5.4e \n", n3, n3, n3, n3 );
+
+/* Rewind file. */
+
+rewind( fp );
+
+/* Read back data. */
+
+puts( "" );
+fscanf( fp, "%d %d %d", &i[0], &i[1], &i[2] );
+printf( " %d\t%d\t%d\n", i[0], i[1], i[2] );
+fscanf( fp, "%d %o %x", &i[0], &i[1], &i[2] );
+printf( " %d\t%d\t%d\n", i[0], i[1], i[2] );
+fscanf( fp, "%f %f %f %f", &f[0], &f[1], &f[2], &f[3] );
+printf( " %f\t%f\t%f\t%f\n", f[0], f[1], f[2], f[3] );
+
+fclose( fp );
+}
+
+The program generates the output:
+
+16 16 16
+256 256 256
+3.141593 3.141593 3.141593 3.141600
+
+The "fwrite()" and "fread()" functions are used for binary file I/O. The
+syntax of "fwrite()" is as follows:
+
+fwrite( <array_pointer>, <element_size>, <count>, <file_pointer> );
+
+The array pointer is of type "void", and so the array can be of any type.
+The element size and count, which give the number of bytes in each array
+element and the number of elements in the array, are of type "size_t", which
+are equivalent to "unsigned int".
+The "fread()" function similarly has the syntax:
+
+fread( <array_pointer>, <element_size>, <count>, <file_pointer> );

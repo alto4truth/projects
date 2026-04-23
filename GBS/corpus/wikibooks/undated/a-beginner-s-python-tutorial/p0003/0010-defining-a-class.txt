@@ -1,0 +1,23 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 3
+section: defining-a-class
+chunk: 10
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+nce from outside of itself. Following on from the code we ran above, we would do this:
+
+Code Example 4 - accessing attributes from outside an instance
+
+As you see, where self would be used from within the class instance, its assigned name is used when outside the class. We do this to view and change the variables inside the class, and to access the functions that are there.
+We aren't limited to a single instance of a class - we could have as many instances as we like. I could do this:
+
+Code Example 5 - More than one instance
+
+Both long_rectangle and fat_rectangle have their own functions and variables contained inside them - they are totally independent of each other. There is no limit to the number of instances I could create.
+
+== Lingo ==
+Object-oriented programming has a set of lingo that is associated with it. It's about time that we have this all cleared up:

@@ -1,0 +1,19 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 15
+section: for-loop
+chunk: 89
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+wo things to it - the menu choice we made, and the location of the key. It will return one thing - whether or not the key has been found. Lets see it:
+
+Code Example 7 - Creating an inspect function
+
+Now the main program can be a little simpler. Let's take it from the while loop, and change things around:
+
+Code Example 8 - The new game
+
+Now the program becomes massively shorter - from a cumbersome 83 lines, to a very shapely 50 lines! Of course, you lose quite a bit of versatility - all the items in the room do the same thing. You automatically open the door when you find the key. The game becomes a little less interesting. It also becomes a little harder to change.

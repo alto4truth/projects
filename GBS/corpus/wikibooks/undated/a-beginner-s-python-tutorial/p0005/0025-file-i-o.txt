@@ -1,0 +1,20 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 5
+section: file-i-o
+chunk: 25
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+completely unformatted, but if you were to pass the output of openfile.read() to print (by typing print openfile.read()) it would be nicely formatted.
+
+== Seek and You Shall Find ==
+Did you try typing in print openfile.read()? Did it fail? It likely did, and reason is because the 'cursor' has changed its place. Cursor? What cursor? Well, a cursor that you really cannot see, but still a cursor. This invisible cursor tells the read function (and many other I/O functions) where to start from. To set where the cursor is, you use the seek() function. It is used in the form seek(offset, whence).
+whence is optional, and determines where to seek from. If whence is 0, the bytes/letters are counted from the beginning. If it is 1, the bytes are counted from the current cursor position. If it is 2, then the bytes are counted from the end of the file. If nothing is put there, 0 is assumed.
+offset describes how far from whence that the cursor moves. for example:
+openfile.seek(45,0) would move the cursor to 45 bytes/letters after the beginning of the file.
+openfile.seek(10,1) would move the cursor to 10 bytes/letters after the current cursor position.
+openfile.seek(-77,2) would move the cursor to 77 bytes/letters before the end of the file (notice the - before the 77)
+Try it out now. Use openfile.seek() to go to any spot in the file and then try typing print openfile.read(). It will print from the spot you seeked to. But realise that openfile.read() moves the cursor to the end of the file – you will have to seek again.

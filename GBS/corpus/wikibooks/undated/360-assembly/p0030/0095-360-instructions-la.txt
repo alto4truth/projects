@@ -1,0 +1,33 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 30
+section: 360-instructions-la
+chunk: 95
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+LA - Load Address - Opcode 41 - RX format Instruction (32 Bit)
+
+== Format ==
+LA 2,N2
+LA 11,106(8,10)
+The specific syntax is
+
+LA target register,offset(index register,base register)
+If a label is used instead of explicit index and base register and offset, then the offset, index register and base register values will be determined automatically by the assembler if the USING pseudo-instruction has been used, and the target address label used is within 4095 bytes of the value of some base register.
+
+The first argument is a target register which value is affected by the instruction.
+The second argument is the address to be resolved.
+The base_register and index_register values are 0 to 15. The offset value is 0 to 4095. If either or both base and index registers are specified as 0, the value of that register is presumed to contain 0.
+In 31-bit mode, bit 0 is always cleared by this instruction. In 24-bit mode; bits 1-7 are also cleared.
+
+== Availability ==
+The LA instruction is available on all models of the 360, 370 and z/System.
+
+== Condition code ==
+This instruction does not alter the condition code.
+
+== Usage ==
+The LA instruction has three general uses.

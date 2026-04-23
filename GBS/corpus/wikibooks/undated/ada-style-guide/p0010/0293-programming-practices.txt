@@ -1,0 +1,32 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 293
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+es that the designated subprogram has the same parameter/result
+profile as the one specified in the subprogram access type.
+See also Guideline 7.3.2 .
+
+== Data Structures ==
+The data structuring capabilities of Ada are a powerful resource;
+therefore, use them to model the data as closely as possible.
+It is possible to group logically related data and let the language
+control the abstraction and operations
+on the data rather than requiring the programmer or maintainer
+to do so. Data can also be organized in a building block fashion.
+In addition to showing how a data structure is organized (and
+possibly giving the reader an indication as to why it was organized
+that way), creating the data structure from smaller components
+allows those components to be reused. Using the features that
+Ada provides can increase the maintainability of your code.
+
+=== Discriminated Records ===
+
+==== guideline ====
+When declaring a discriminant, use as constrained a subtype as possible (i.e., subtype with as specific a range constraint as possible).
+Use a discriminated record rather than a constrained array to represent an array whose actual values are unconstrained.

@@ -1,0 +1,34 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 307
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+See the examples in Guidelines 8.3.6 (using access discriminants
+to build an iterator) and 9.5.1 (using access discriminants in
+multiple inheritance).
+
+==== rationale ====
+The access discriminant is essentially a pointer of an anonymous
+type being used as a discriminant. Because the access discriminant
+is of an anonymous access type, you cannot declare other objects
+of the type. Thus, once you initialize the discriminant, you create
+a "permanent" (for the lifetime of the object) association
+between the discriminant and the object it accesses. When you
+create a self-referential structure, that is, a component of the
+structure is initialized to point to the enclosing object, the
+"constant" behavior of the access discriminant provides
+the right behavior to help you maintain the integrity of the structure.
+See also Rationale (1995, §4.6.3) for a discussion of access
+discriminants to achieve multiple views of an object.
+See also Guideline 6.1.3 for an example of an access discriminant
+for a task type.
+
+=== Modular Types ===
+
+==== guideline ====
+Use modular types rather than Boolean arrays when you create data structures that need bit-wise operations, such as and and or.

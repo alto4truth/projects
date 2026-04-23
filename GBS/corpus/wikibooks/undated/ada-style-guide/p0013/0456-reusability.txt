@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 456
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+on a Special Needs Annex, you warn the user that he should only reuse the component in a compilation environment that provides the necessary support.
+
+==== notes ====
+You can restrict the ranges of values of the inputs by careful selection or construction of the subtypes of the formal parameters. When you do so, the compiler-generated checking code may be more efficient than any checks you might write. Indeed, such checking is part of the intent of the strong typing in the language. This presents a challenge, however, for generic units where the user of your code selects the types of the parameters. Your code must be constructed to deal with any value of any subtype the user may choose to select for an instantiation.
+
+=== Subtypes in Generic Specifications ===
+
+==== guideline ====
+Use first subtypes when declaring generic formal objects of mode in out.
+Beware of using subtypes as subtype marks when declaring parameters or return values of generic formal subprograms.
+Use attributes rather than literal values.

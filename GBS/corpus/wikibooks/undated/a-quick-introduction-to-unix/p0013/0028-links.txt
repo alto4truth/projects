@@ -1,0 +1,15 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 13
+section: links
+chunk: 28
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+== Links ==
+There are times when it may be helpful to have two different names that refer to the same file. For example, a file may have a very long name that cannot be changed because it is needed for identification purposes. For ease of use, you could also refer to the file using a shorter name. These different references to the same file are called links, and there are two different kinds of links: hard links and soft links.
+
+=== Hard Links ===
+A hard link is a name that directly references a file on the file system. Most filenames are hard links: they refer to a file system location on a storage medium. More than one filename can refer to that file system location. If file1 and file2 are both hard links that refer to a file that contains text, any editing saved in file1 will show up when you look at file2. Hard links are independent, so if you remove file1, file2 still refers to the file on the filesystem.

@@ -1,0 +1,27 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 141
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+ecified index.
+/// </summary>
+/// <value></value>
+public Client this[int index]
+{
+get
+{
+return (Client)List[index];
+}
+set
+{
+List[index] = value;
+}
+}
+}
+
+This looks a lot better than when we where using the ArrayList in the first example and is in general a good way to go. But what if your application grows, and we get more types that we want to store in collections like an Account, or a bank. With the 1.1 framework we had to create a new collection class for every type of object that we used, or fall back to the ugly ArrayList method. However with the new 2.0 framework MS has added Generics. This makes it possible to create classes and methods that use type parameters. This allows developers to create classes and methods that defer the specifications of certain types until the class is defined and instantiated in the code. By using the generic type parameters developers can write classes that others can use without incurring the risks involved with un-typed classes like ArrayList and reduces the work developers have to do compared to creating typed collections. So lets look at how the code looks when we are using the Generic List<T> class from the framework.

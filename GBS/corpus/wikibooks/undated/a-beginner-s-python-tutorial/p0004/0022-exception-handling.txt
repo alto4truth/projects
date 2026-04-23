@@ -1,0 +1,24 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 4
+section: exception-handling
+chunk: 22
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+hould to is rewrite the program to cope with this exception. With what? try and except!
+
+Code Example 10 - yet another solution
+
+Problem solved again.
+
+== Endless Errors ==
+The approach that we used above is not recommended. Why? Because apart from the error that we know can happen, except: catches every other error too. What if this means we never see an error that could cause problems down the track? If except: catches every error under the sun, we have no hope of controlling what errors we deal with, and the other ones that we want to see, because so far we haven't dealt with them. We also have little hope of dealing with more than one type of error in the same block of code. What should one do, when all is hopeless? Here is an example of code with such a situation:
+
+Code Example 11 - The Problem We Face
+
+Okay, you enter your two numbers and it works. Enter a letter, and it gives you a NameError. Lets rewrite the code to deal with a NameError only. We'll put the program in a loop, so it restarts if an error occurs (using continue, which starts the loop from the top again, and break, which leaves the loop):
+
+Code Example 12 - Dealing With NameError

@@ -1,0 +1,30 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 8
+section: parti-chapter-3-arrays-methods
+chunk: 31
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+y.pop( );
+This method removes the last element from the array and then returns the name of the element. This example will show how “pop” method works.
+
+Line 1 declares “myarray” array with 4 elements: 1, 2, 3, 4. Line 2 declares “popped” variable without assigning any data type. In line 4 we pop “myarray” and write the last element, which is popped to the “popped” variable. In line 5 we trace variable “popped” to see the name of the element which was popped, and in line 6 we trace “myarray”. The Output window must trace the following:
+
+4
+1,2,3
+
+===== push =====
+Array.push( <element1>, <element2> );
+This method adds one or more elements to the end of the array and then returns the length of the new array.
+
+The first line declare “myarray” array with two elements: 1, 2. The second line declares “newlength” variable in which we will keep the new length of the array. In line 4 we add two elements 3 and 4 to the end of “myarray” using “push” method and then write the new length of the array in “newlength”. The following must be traced in Output window:
+
+4
+1,2,3,4
+
+===== reverse =====
+Array.reverse( );
+“reverse” method reverses the array.

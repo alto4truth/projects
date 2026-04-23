@@ -1,0 +1,21 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 14
+section: 360-instructions-bc
+chunk: 51
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+,X1
+4740A06A BM LABEL branch on mixed - BC 4,label
+4780A06A BZ LABEL branch on zeroes - BC 8,label
+47E0A06A BNO LABEL branch on not ones - BC 14,label
+
+== Operation ==
+Upon performing an arithmetic operation or a comparison, certain bits in the Program Status Word called the Condition Code are set or cleared. In the case of comparison of two fields, the left value is considered the "A" value, and the right value is considered the "B" value, and the result of the comparison of A to B tests how A compares to B, either low, high, equal or not-equal.
+In the case of an arithmetic operation, the result being plus, minus, zero or having had an overflow is tested.
+In the case of the test under mask instructions, the result of the test being all ones, all zeroes, or mixed ones and zeroes.
+The Branch on Condition instruction is used following such a test to compare the condition code bits to the mask value. If bits set in the mask match bits which are set in the condition code (or all of the bits in the mask are set), and the base register of the target address is not 0, the target address is placed into the PSW as the new address of the current instruction and the branch is taken. Otherwise execution continues with the next instruction following the branch on condition instruction.
+The target address is constructed by adding the contents of the base and index registers to the offset address. If the index register is zero its value is not used.

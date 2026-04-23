@@ -1,0 +1,49 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 5
+section: c-console-io
+chunk: 17
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+is a test!\n" );
+—which can include the contents of variables:
+printf( "Value1: %d Value2: %f\n", intval, floatval );
+
+The available format codes are:
+
+%d decimal integer
+%ld long decimal integer
+%c character
+%s string
+%e floating-point number in exponential notation
+%f floating-point number in decimal notation
+%g use %e and %f, whichever is shorter
+%u unsigned decimal integer
+%o unsigned octal integer
+%x unsigned hex integer
+
+Using the wrong format code for a particular data type can lead to bizarre
+output. Further control can be obtained with modifier codes; for example, a
+numeric prefix can be included to specify the minimum field width:
+
+%10d
+
+This specifies a minimum field width of ten characters. If the field width
+is too small, a wider field will be used. Adding a minus sign:
+
+%-10d
+—causes the text to be left-justified.
+A numeric precision can also be specified:
+
+%6.3f
+
+This specifies three digits of precision in a field six characters wide.
+A string precision can be specified as well, to indicate the maximum number of
+characters to be printed. For example:
+
+/* prtint.c */
+
+#include <stdio.h>

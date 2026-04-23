@@ -1,0 +1,30 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 40
+section: 360-instructions-mr
+chunk: 123
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+MR - Multiply Register - Opcode 1C
+
+== Format ==
+MR 2,7
+The specific syntax is
+
+MR target register, source register.
+
+The first argument is a one with lesser number of pair of target registers which value is affected by the instruction.
+The second argument is the source value register.
+
+== Availability ==
+The MR instruction is available on all models of the 360, 370 and z/System.
+
+== Operation ==
+The MR instruction does multiply of two signed 32-bit integers. The first multiplicand is got from the general register T+1, where T is number of the target register (first operand). The second multiplicand is got from the source register (second operand). The resulting product as 64-bit signed value is then placed into registers T (most significand 32 bits) and T+1 (least significand 32 bits). The target register number T shall be even.
+The Condition Code field in the Program Status Word is not changed.
+
+== Exceptions and Faults ==
+If an odd register number is specified as the target register, operation exception occurs.

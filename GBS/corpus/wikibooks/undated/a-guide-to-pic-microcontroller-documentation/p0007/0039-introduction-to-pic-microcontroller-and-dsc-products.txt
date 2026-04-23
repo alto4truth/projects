@@ -1,0 +1,13 @@
+title: A Guide To PIC Microcontroller Documentation
+source: wikibooks
+year: undated
+document_id: a-guide-to-pic-microcontroller-documentation
+authors: 
+page: 7
+section: introduction-to-pic-microcontroller-and-dsc-products
+chunk: 39
+source_ref: https://en.wikibooks.org/wiki/A_Guide_To_PIC_Microcontroller_Documentation
+
+== Methodology behind PIC® controller documentation ==
+Microcontrollers and digital signal processors (DSPs) are challenging products to document. On the one hand, the semiconductor vendor has to describe the functionality of the device's processing core, the functionality and possible settings of peripherals and the electrical and packaging specifications of the device. This description needs to concentrate on the raw functionality of the device's circuitry and the registers which they form. For example, a UART (Universal Asynchronous Receiver Transmitter) peripheral's functionality, as described in a datasheet, focuses upon, among other things, setting up the related transmit and receive pins of the device for use as a serial interface, how to calculate the required baudrate settings and how to enable parity support.
+On the other hand, raw details on functionality and setup alone cannot inform a developer how to use that peripheral, processor or other feature in an actual application. Using our UART example again we know that a UART can be used in a variety of serial interfacing standards such as RS-232 and RS-485 amongst others. In addition that standard may have standardized so

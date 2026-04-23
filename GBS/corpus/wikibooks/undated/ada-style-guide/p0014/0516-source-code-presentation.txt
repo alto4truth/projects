@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 14
+section: source-code-presentation
+chunk: 516
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+level:
+
+Declarations of enumeration literals can be listed in one or more columns as:
+
+or, to save space:
+
+or, to emphasize related groups of values:
+
+==== rationale ====
+Many programming standards documents require tabular repetition of names, types, initial values, and meaning in unit header comments. These comments are redundant and can become inconsistent with the code. Aligning the declarations themselves in tabular fashion (see the examples above) provides identical information to both compiler and reader; enforces, at most, one declaration per line; and eases maintenance by providing space for initializations and necessary comments. A tabular layout enhances readability, thus preventing names from "hiding" in a mass of declarations. This applies to all declarations: types, subtypes, objects, exceptions, named numbers, and so forth.

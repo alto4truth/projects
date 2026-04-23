@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 497
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+whether your implementation supports dead code removal, and be prepared to take other steps to eliminate the overhead of redundant code if necessary.
+
+=== Table-Driven Programming ===
+
+==== guideline ====
+Write table-driven reusable parts wherever possible and appropriate.
+
+==== example ====
+The epitome of table-driven reusable software is a parser generation system. A specification of the form of the input data and of its output, along with some specialization code, is converted to tables that are to be "walked" by preexisting code using predetermined algorithms in the parser produced. Other forms of "application generators" work similarly.
+
+==== rationale ====
+Table-driven (sometimes known as data-driven) programs have behavior that depends on data with'ed at compile time or read from a file at run-time. In appropriate circumstances, table-driven programming provides a very powerful way of creating general-purpose, easily tailorable, reusable parts.
+See Guideline 5.3.4 for a short discussion of using access-to-subprogram types in implementing table-driven programs.

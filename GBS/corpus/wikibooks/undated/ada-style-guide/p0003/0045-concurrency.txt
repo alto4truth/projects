@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 45
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+the task that reads a command and the one that acts on it. Without knowledge about their relative scheduling, the actual results cannot be predicted:
+
+The following example shows a vending machine that dispenses the amount requested into an appropriately sized container. The guards reference the global variables Num_Requested and Item_Count, leading to a potential problem in the wrong amount being dispensed into an inappropriately sized container:
+
+The interleaving of the execution of R1 and R2 can lead to Num_Requested being changed before the entry call to Dispense is accepted. Thus, R1 might receive fewer items than requested or R2's request might be bounced because the request manager thinks that what R2 is requesting exceeds R2's personal limit. By using the local variable, you will dispense the correct amount. Furthermore, by using the pragma Volatile (Ada Reference Manual 1995, §C.6 [Annotated]), you ensure that the Item_Count is reevaluated when the guards are evaluated. Given that the variable Item_Count is not updated in this task body, the compiler might otherwise have optimized the code and not generated code to reevaluate Item_Count every time it is read:

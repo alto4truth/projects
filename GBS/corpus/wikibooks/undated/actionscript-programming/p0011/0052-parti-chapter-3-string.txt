@@ -1,0 +1,24 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 11
+section: parti-chapter-3-string
+chunk: 52
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+is followed after the specified character is not involved in the search process. In the following example the value returned by “indexOf” method is 6:
+
+===== slice =====
+String.slice( <startindex>, [endindex] );
+This method returns a string that includes the <startindex> character and all characters up to (but not including) the [endindex] character. If you do not specify [endindex] parameter then the return value will be a string that includes the <startindex> character and all characters up to the end of the String. In this example we slice the word “How” from the String “How are you?”:
+
+Now lets slice all characters from 4 till the end of the String:
+
+===== split =====
+This method is discussed later after Array data type.
+
+===== substr =====
+String.substr( <startindex>, [length] );
+This method returns the characters in a string from the index specified in the <startindex> parameter through the number of characters specified in the [length] parameter. It is nearly the same as method “slice” but in this function you specify the length of the string to be cut, not the index of the last character. This example illustrates the use of this method:

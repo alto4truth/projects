@@ -1,0 +1,18 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 4
+section: copying-files
+chunk: 11
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+/nfs/fs-i/UM0098/ccaajim/train.doc /nfs/fs-i/UM0098/ccaajim/myretiredfiles/train.doc.bak
+Of course, it's easy to make mistakes typing long path names.
+
+==== Copying a directory and files ====
+You can use cp to copy a directory and the files it contains (including subdirectories and their files) to a new location. The command looks like
+
+cp -r ~/training/linux/* ~/training/backup/linux
+This makes a copy of the complete contents of the directory linux in backup/linux. The new, target, directory will be created for you.

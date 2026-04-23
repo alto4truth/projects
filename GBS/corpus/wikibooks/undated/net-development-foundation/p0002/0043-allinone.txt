@@ -1,0 +1,19 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 43
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+of problem. We will point out the types of problems when we give examples of each type of collections.
+We have two sections with collections examples:
+
+Using collections for the classes in the System.Collections namespace.
+Using specialized collections for the classes in the System.Collections.Specialized namespace.
+The major drawback of collections is that in "real life" objects that are grouped together usually have some characteristics in common (they are the same type, have a common parent type or support a common interface). So most of the time we know "more" about the objects than merely their organization. Collections do not allow us to use that knowledge to validate the objects passed to the collection or code logic applicable to all objects of the collection (without casting and exception handling that is).
+Generic collections where introduced in version 2.0 of the framework. They solve this problem while keeping the other advantages of collections. For that reason they should be used whenever possible instead of "plain" collections.
+Some external links on collections are GotDotNet and AspNetResources
+See MSDN for a general discussion on arrays, collections and data structures.

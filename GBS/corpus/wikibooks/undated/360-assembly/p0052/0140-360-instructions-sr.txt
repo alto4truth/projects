@@ -1,0 +1,27 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 52
+section: 360-instructions-sr
+chunk: 140
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+t between -2**31 and 2**31-1, CC is set to 3.
+Otherwise, CC is set to 0, 1 or 2, if difference is equal to zero, below zero or above zero accordingly.
+
+== Exceptions and Faults ==
+If signed integer overflow is detected and the bit 36 in PSW is set, operation exception occurs.
+
+== Related instructions ==
+To subtract by double word value from the full 64-bit double word of both registers on the z/Series, see SGR.
+To subtract by word value from the full 64-bit double word of the other register on the z/Series, see SGFR.
+To subtract by full 64-bit double word register on the z/Series from a 64-bit double word in memory, see SG.
+To subtract from full 64-bit double word register on the z/Series from a 32-bit word in memory, see SGF.
+To subtract by word value from memory, see S.
+To subtract by half-word value from memory, see SH.
+To subtract by value and set condition codes according to unsigned arithmetic, or add not most significant part of multi-word integer value, see SL or SLR.
+To subtract 32-bit word floating-point values, see SE, SER, SD or SDR.
+To add a 32-bit word integer value, see AR, A, AH, AL or ALR.
+To check condition code, see BC or BCR.

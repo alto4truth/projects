@@ -1,0 +1,31 @@
+title: 6502 Assembly
+source: wikibooks
+year: undated
+document_id: 6502-assembly
+authors: 
+page: 1
+section: 6502-assembly
+chunk: 9
+source_ref: https://en.wikibooks.org/wiki/6502_Assembly
+
+ellaneous ===
+Break: BRK
+Force an Interrupt
+Flags: B = 1, I = 1
+
+No Operation: NOP
+No Operation
+Flags: none
+
+== Instruction table ==
+
+== References ==
+
+== Related Wikibooks ==
+NES Programming: The Nintendo Entertainment System uses a version of the 6502
+65c02 Assembly, a descendant of the 6502, used in many home computers, video game consoles, and embedded systems.
+Super NES Programming: the Super NES uses the 65c816, a descendant of the 6502
+History of Apple Inc.: early Apple computers all used some version of the 6502
+History of Computers/The Rise of the Microcomputer
+X86 Disassembly/Disassemblers and Decompilers#Disassembly of 8 bit CPU code mentions some 6502 disassemblers
+Computer Programming/Hello world#Accumulator .2B index register machine: MOS Technology 6502.2C CBM KERNEL.2C MOS assembler syntax

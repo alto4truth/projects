@@ -1,0 +1,44 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 7
+section: start-program
+chunk: 37
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+print opening message
+
+while we let the program run, do this:
+#Print what options you have
+print Option 1 - add
+print Option 2 - subtract
+print Option 3 - multiply
+print Option 4 - divide
+print Option 5 - quit program
+
+ask the person what option they want and look for an integer
+if it is option 1:
+ask for first number
+ask for second number
+add them together
+display the result on screen
+if it is option 2:
+ask for first number
+ask for second number
+subtract one from the other
+display the result on screen
+if it is option 3:
+ask for first number
+ask for second number
+multiply them
+display the result on screen
+if it is option 4:
+ask for first number
+ask for second number
+divide the first by the second
+display the result on screen
+if it is option 5:
+tell the loop to stop
+Display a goodbye message on screen

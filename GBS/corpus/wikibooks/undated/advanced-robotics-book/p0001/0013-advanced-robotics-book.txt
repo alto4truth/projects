@@ -1,0 +1,13 @@
+title: Advanced Robotics Book
+source: wikibooks
+year: undated
+document_id: advanced-robotics-book
+authors: 
+page: 1
+section: advanced-robotics-book
+chunk: 13
+source_ref: https://en.wikibooks.org/wiki/Advanced_Robotics_Book
+
+in, which is also called the reference point; the difference, or how far away the robot is, from the origin; and the direction of the reference point.
+
+In mathematics for robotics, there is also forward and inverse kinematics. To start, forward kinematics also goes by the name “direct kinematics,” and in forward kinematics, the only things that are given are the angle of each joint and the length of each link. What one has to calculate is the position of any point in the robot’s work volume. When it comes to inverse kinematics, one does the opposite; one is given the length of each joint and the position of the point in work volume, and one has to calculate the angle of each joint.

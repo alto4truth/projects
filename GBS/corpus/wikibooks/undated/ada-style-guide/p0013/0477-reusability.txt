@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 477
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+rs from the ADO (the first example) simply by being generic, so that the user can instantiate it multiple times to obtain multiple stacks of integers:
+
+The fourth example is a slight variant on the third, still a GADO but with parameters. It differs from the third example by making the data type of the stack a generic parameter so that stacks of data types other than Integer can be created. Also, Maximum_Stack_Size has been made a generic parameter that defaults to 100 but can be specified by the user, rather than a constant defined by the package:
+
+The fifth example is a generic abstract data type (GADT). It differs from the GADO in the fourth example in the same way that the ADT in the second example differed from the ADO in the first example; it exports the Stack type, which allows the user to declare any number of stacks:

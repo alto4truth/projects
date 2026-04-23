@@ -1,0 +1,18 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 12
+section: introduction
+chunk: 208
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+This module tries to help you learn the .NET framework. It will not address the .NET vs Java comparisons and discussions.
+
+=== Framework structure ===
+
+The image on the right is taken from the Wikipedia article on the .NET framework (see above).
+It describes the process followed by a program written in a .NET compatible language from source code to execution. The important difference with that and more conventional programming languages (ex. C++) is the fact that the program is compiled twice. The first compilation is done from the original language to a "common intermediate language" (CIL). This is what actually goes "in" an assembly.
+The second compilation is done from the CIL to machine code. This compilation is usually performed automatically by the "just-in-time" (JIT) compiler. It is also possible to use the Native Image Generator (ngen) utility to create the machine code in advance of runtime.
+This architecture has many direct implications for the subjects of this book. Among them:

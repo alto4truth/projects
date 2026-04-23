@@ -1,0 +1,15 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 18
+section: standard-input-standard-output-redirection-and-pipes
+chunk: 38
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+"This is the Unix philosophy: Write programs that do one thing and do it well. Write programs to work together. Write programs to handle text streams, because that is a universal interface."—Doug McIlroy, the inventor of Unix pipes
+The commands I'm going to talk about here are called filters. Data passes through them and they modify it a bit on the way. These commands read data from their "standard input" and write data to their "standard output." By default, standard input is your keyboard and standard output is your screen. For example, the tr command is a filter that translates one set of characters to another. This invocation of tr turns all lower case characters to upper case characters:
+
+$ tr "[:lower:]" "[:upper:]"
+hello

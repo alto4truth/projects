@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 406
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+in comments.
+Make comments visually distinct from the code.
+Structure comments in header so that information can be automatically extracted by a tool.
+
+==== rationale ====
+The structure and function of well-written code is clear without comments. Obscured or badly structured code is hard to understand, maintain, or reuse regardless of comments. Bad code should be improved, not explained. Reading the code itself is the only way to be absolutely positive about what the code does; therefore, the code should be made as readable as possible.
+Using comments to duplicate information in the code is a bad idea for several reasons. First, it is unnecessary work that decreases productivity. Second, it is very difficult to correctly maintain the duplication as the code is modified. When changes are made to existing code, it is compiled and tested to make sure that it is once again correct. However, there is no automatic mechanism to make sure that the comments are correctly updated to reflect the changes. Very often, the duplicate information in a comment becomes obsolete at the first code change and remains so through the life of the software. Third, when comments about an entire system are written from the limited point of view of the author of a single subsystem, the comments are often incorrect from the start.
+Comments are necessary to reveal information difficult or impossible to obtain from the code. Subsequent chapters of this book contain examples of such comments. Completely and concisely present the required information.
+The purpose of comments is to help readers understand the code. Misspelled, ungrammatical, ambiguous, or incomplete comments defeat this purpose. If a comment is worth adding, it is worth adding correctly in order to increase its usefulness.
+Making comments visually distinct from the code by indenting them, grouping them together into headers, or highlighting them with dashed lines is useful because it makes the code easier to read. Subsequent chapters of this book elaborate on this point.

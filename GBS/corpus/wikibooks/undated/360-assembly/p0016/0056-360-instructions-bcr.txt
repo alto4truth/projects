@@ -1,0 +1,32 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 16
+section: 360-instructions-bcr
+chunk: 56
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+BCR — Branch on Condition Register — Opcode 07 / Decimal 7 —
+2 byte RR
+Instruction.
+
+== Format ==
+BCR mask_value,branch_register (both values are 0 to 15)
+BCR 6,1
+
+The first argument is a mask which the condition code is compared against.
+The second argument is the source register whose contents are to be used as the location to transfer to if the mask matches the currently set condition code.
+The Mask value and base register values are 0 to 15.
+
+== Availability ==
+The BCR instruction is
+available on all models, 360, 370 and z/System.
+
+== Usage ==
+This instruction provides three types of branch operations: no branch (equivalent to no operation), branch conditionally depending on a mask value, and unconditional branch.
+
+BCR 0,0 No branch
+
+Note: Since it may be difficult to understand the difference between the mask and register values, to distinguish between the mask value and the register, registers will be referenced by using the label R followed by the register number, e.g. R5 for Register 5, R6 for Register 6, R14 for Register 14, etc.

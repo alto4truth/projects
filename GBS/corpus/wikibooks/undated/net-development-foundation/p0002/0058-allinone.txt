@@ -1,0 +1,14 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 58
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+xample of a Generic Function. We use the trivial problem of swapping two references. Although very simple we still see the basic benefits of Generics:
+
+We don't have to recode a swap function for every type
+The generalization does not cost us the strong typing (try swapping an int and a string, it wont compile)

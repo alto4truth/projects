@@ -1,0 +1,27 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 389
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+he name of a subtype from the predefined packages is sure to confuse a programmer when that subtype appears somewhere without a package qualification.
+
+==== notes ====
+This style guide tries to be consistent with the Ada Reference Manual (1995) in use of the terms "type" and "subtype" name. In general, a "type" refers to the abstract concept, as in a type declaration, while the "subtype" refers to the name given to that abstract concept in an actual declaration. Thus, what was called a type name in Ada 83 (Ada Reference Manual 1983) is now called a subtype name.
+
+=== Object Names ===
+
+==== guideline ====
+Use predicate clauses or adjectives for Boolean objects.
+Use singular, specific nouns as object identifiers.
+Choose identifiers that describe the object's value during execution.
+Use singular, general nouns as identifiers for record components.
+
+==== example ====
+Non-Boolean objects:
+
+Boolean objects:

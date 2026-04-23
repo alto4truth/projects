@@ -1,0 +1,75 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 5
+section: c-console-io
+chunk: 23
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+ons. These two functions will be discussed in the next chapter.
+
+/* caps.c */
+
+#include <stdio.h>
+#include <ctype.h>
+
+#define SEEK 0
+#define REPLACE 1
+
+int main(void)
+{
+int ch, state = SEEK;
+while(( ch = getchar() ) != EOF )
+{
+switch( state )
+{
+case REPLACE:
+switch( ch )
+{
+case ' ':
+case '\t':
+case '\n': state = SEEK;
+break;
+default: ch = tolower( ch );
+break;
+}
+break;
+case SEEK:
+switch( ch )
+{
+case ' ':
+case '\t':
+case '\n': break;
+default: ch = toupper( ch );
+state = REPLACE;
+break;
+}
+}
+putchar( ch );
+}
+return 0;
+}
+
+The "puts()" function is like a simplified version of "printf()" without
+format codes. It prints a string that is automatically terminated with a
+newline:
+
+puts( "Hello world!" );
+
+The "fgets()" function is particularly useful: it reads a line of text
+terminated by a newline. It is much less finicky about its inputs than "scanf()":
+
+/* cgets.c */
+
+#include <stdio.h>
+#include <string.h>
+
+#include <stdlib.h>
+
+int main(void)
+{
+char word[256],
+*guess = "blue\n";
+int i, n = 0;

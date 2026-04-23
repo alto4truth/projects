@@ -1,0 +1,38 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 4
+section: c-command-line-arguments
+chunk: 14
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+le program demonstrates:
+
+If this program is run from the command line as follows:
+
+stooges moe larry curley
+
+—the output is:
+stooges
+moe
+larry
+curley
+
+In practice, the command line will probably take a number of arguments, some
+of which will indicate options or switches, designated by a leading "-" or
+"/". Some of the switches may be specified separately or together, and some
+may accept an associated parameter. Other arguments will be text strings,
+giving numbers, file names, or other data.
+The following example program demonstrates parsing the command-line arguments
+for an arbitrary program. It assumes that the legal option characters are
+"A", "B", "C", and "S", in either upper- or lower-case. The "S" option must
+be followed by some string representing a parameter.
+
+For a more practical example, here's a simple program, based on an example
+from the previous chapter, that attempts to read the names of an input and
+output file from the command line. If no files are present, it uses standard
+input and standard output instead. If one file is present, it is assumed to
+be the input file and opens up standard output. This is a useful template
+for simple file-processing programs.

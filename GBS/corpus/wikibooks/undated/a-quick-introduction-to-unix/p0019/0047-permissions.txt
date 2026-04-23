@@ -1,0 +1,25 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 19
+section: permissions
+chunk: 47
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+the use account belongs.
+The symbols r, w, etc., have slightly different meanings depending on whether they refer to a simple file or to a directory.
+
+=== Access rights on files ===
+r (or -), indicates read permission (or otherwise), that is, the presence or absence of permission to read and copy the file
+w (or -), indicates write permission (or otherwise), that is, the permission (or otherwise) to change a file
+x (or -), indicates execution permission (or otherwise), that is, the permission to execute a file, where appropriate
+
+=== Access rights on directories ===
+r allows users to list files in the directory;
+w means that users may delete files from the directory or move files into it;
+x means the right to access files in the directory. This implies that you may read files in the directory provided you have read permission on the individual files.
+So, in order to read a file, you must have execute permission on the directory containing that file, and hence on any directory containing that directory as a subdirectory, and so on, up the tree.
+
+=== Some examples ===

@@ -1,0 +1,22 @@
+title: Adriane-Manual
+source: wikibooks
+year: undated
+document_id: adriane-manual
+authors: 
+page: 1
+section: adriane-manual
+chunk: 24
+source_ref: https://en.wikibooks.org/wiki/Adriane-Manual
+
+he technology part describes the installation on hard disk or USB flash drive, the configuration of the system and gives guidance on technical issues.
+
+== Installation from CD or DVD to USB flash drive ==
+Adriane originally is a life solution that runs from CD or DVD. Nevertheless the integrated program flash-knoppix offers a comfortable way to install Adriane on an USB flash drive and, in case there is enough storage capacity left, to create an overlay file or a separate partition to store own files and individual settings.
+Installing the system to an USB drive the compression of the basic file system and the boot procedure wil stay the same as booting from a CD, but the on a USB stick installed version runs up to 5-times faster than from a CD and offers the opportunity to keep and store own data and files, even to crypt them.
+Within Adriane please select the menu item “settings” and then the point “save to Flash disk” to start the installation.
+From (Adriane-) Knoppix version 7.2 and higher, there are two variants to set-up the writable overlay:
+1. Creating a “virtual hard drive" as an image file in the folder "KNOPPIX" on the disk. The maximum file size for the overlay will be 4 GB, due to the FAT32 formatting. This option is recommended, if the disk should not newly be partitioned and formatted, but only Knoppix data should be transmitted and a master boot record should be created.
+2. Creating a dedicated Linux partition: This option normally requires a repartitioning of the disk with previously existing data will be deleted or overwritten. The advantage of this method is the possibility to use the complete disk for Linux and so to be able to save even more than 4 GB own data.
+Due to the many explanations given in many text boxes, the text output from flash-Knoppix, it is difficult to understand and not so easy to use as other parts of Adriane. First you are asked to determine the destination disk, on which the data should be stored. Please be very careful to choose the correct location, which is not used for other purposes, because all data on this drive could be destroyed! Never select your internal hard disc!
+The next step is to define the desired form of overlay (in case there is space left on the USB device): image file in FAT32 or an additional partition (which deletes and partition this part of the disc). Selecting the second option two security questions (both have to be answered “yes”) will be asked to prevent accidental loss of data loss and to continue the installation. One question is to define the size of the writable overlay container in Mega-Byte (MB). Next question is if or if not to encrypt your personal data and to define the individual password.
+The (optional) partitioning, the formating of and data transfer to the USB drive will last a while, depending on type, disk speed and amount of data that is transferred. On screen you will see and hear a roughly estimated percentage of progress. The end of the process will be acknowledged with a corresponding success (or error) message.

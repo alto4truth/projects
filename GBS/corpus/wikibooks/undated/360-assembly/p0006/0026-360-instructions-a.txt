@@ -1,0 +1,29 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 6
+section: 360-instructions-a
+chunk: 26
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+in the Program Status Word is changed according to the resulting value.
+The source argument address shall be aligned to word boundary (i.e. 4 bytes).
+
+== Condition Codes ==
+If signed integer overflow occurs, i.e. sum is not between −231 and 231−1, CC is set to 3.
+Otherwise, CC is set to 0, 1 or 2, if sum is equal to zero, below zero or above zero accordingly.
+
+== Exceptions and Faults ==
+If signed integer overflow is detected and the bit 36 in PSW is set, operation exception occurs.
+The source address must be within the range of valid memory or an operation exception occurs.
+The storage key for the source address must be the same as the current process or a memory protect violate exception occurs.
+
+== Related instructions ==
+To add value from register, see AR.
+To add half-word value from memory, see AH.
+To add value and set condition codes according to unsigned arithmetic, or add not most significant part of multi-word integer value, see AL or ALR.
+To add floating-point values, see AE, AER, AD or ADR.
+To subtract integer value, see S, SR, SH, SL or SLR.
+To check condition code, see BC or BCR.

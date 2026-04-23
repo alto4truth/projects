@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 361
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+n obsolete feature. You should use a protected procedure and the appropriate pragmas (Rationale 1995, §C.3.2).
+
+=== Suppression of Exception Check ===
+
+==== guideline ====
+Do not suppress exception checks during development.
+If necessary, during operation, introduce blocks that encompass the smallest range of statements that can safely have exception checking removed.
+
+==== rationale ====
+If you disable exception checks and program execution results in a condition in which an exception would otherwise occur, the program execution is erroneous. The results are unpredictable. Further, you must still be prepared to deal with the suppressed exceptions if they are raised in and propagated from the bodies of subprograms, tasks, and packages you call.
+By minimizing the code that has exception checking removed, you increase the reliability of the program. There is a rule of thumb that suggests that 20% of the code is responsible for 80% of the CPU time. So, once you have identified the code that actually needs exception checking removed, it is wise to isolate it in a block (with appropriate comments) and leave the surrounding code with exception checking in effect.
+
+=== Initialization ===

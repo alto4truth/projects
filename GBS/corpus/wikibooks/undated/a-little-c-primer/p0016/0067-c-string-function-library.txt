@@ -1,0 +1,47 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 16
+section: c-string-function-library
+chunk: 67
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+variable. Using a string constant for the destination, of course, makes no sense.
+These comments are applicable to most of the other string functions.
+
+== strncpy() ==
+There is a variant form of "strcpy" named "strncpy" that will copy "n"
+characters of the source string to the destination string, presuming there
+are that many characters available in the source string. For example, if the
+following change is made in the example program:
+
+—then the results change to:
+New strings:
+
+xxxxxx 1
+xxxxxz 2
+
+Notice that the parameter "n" is declared "size_t", which is defined in "string.h".
+Because there is no null byte among the first 5 characters, strncpy does not add '\0' after copying.
+
+== strcat() ==
+The "strcat()" function joins two strings:
+
+This prints:
+
+Tweedledee Tweedledum
+
+== strncat() ==
+There is a variant version of "strcat()" named "strncat()" that will append
+"n" characters of the source string to the destination string. If the
+example above used "strncat()" with a length of 7:
+
+—the result would be:
+Tweedledee Tweedle
+
+Again, the length parameter is of type "size_t".
+
+== strcmp() ==
+The "strcmp()" function compares two strings:

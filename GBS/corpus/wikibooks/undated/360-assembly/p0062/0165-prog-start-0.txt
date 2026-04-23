@@ -1,0 +1,25 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 62
+section: prog-start-0
+chunk: 165
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+00 57 X DC A(MAIN)
+0000E0 4040404040404040 58 BLANKS DC 1000C' '
+0004C8 00000000 59 ITEM DC A(0)
+0004CC 60 END
+
+Here is how the program was assembled.
+
+On line 13, the branch is to hexadecimal adderss 8C in the program (label START), and in the instruction, It is assembled as 45F0806C, where 45 is the hexadecimal opcode of the BAL instruction, F being register 15, the first 0 indicating no Index register was used, and 806C is a base-displacement address of hexadeciaml address 08C plus the address in register 8, which was used because of the USING pseudo-instruction on line 10.
+On line 29, the instruction is assembled as 4150D4C0 where 41 is the LA instruction, the 5 means register 5 is the target register to be loaded, the first 0 again indicating no Index register was used, and {{mono|D4C0|| is used indicating that the address is 4C0 hexadecimal bytes plus the address in register 13. This is correct, as ITEM is located at hexadecimal address 4dc8 in the program. The assembler uses register 13 because the using statement on line 21 places the displacement in register 13 as 8 bytes closer to ITEM than register 8.
+Similarly, for the instructions on lines 31-33, the address in Register 13 is "closer" to (the (displacement is less) than register 8, so register 13 is used.
+The instructions on lines 35-37 tell the assembler that registers 2-4 point to these locations.
+On lines 39-41, since the assembler has been told each of these registers points to the item that they are being told to load the address, in each case, that register has a displacement of 0 from the target address, so that register (with an offset of 0) is used.
+On line 43, the assembler was told register 3 is the same address as ITEM, so the assembler uses register 3 with a displacement of 0. Compare this to the identical instruction on line 29, where the address in register 13 produces the smallest displacement, so it was used rather tan register 8.
+Here is an example of an inline subroutine which sets up a temporary base register for the subroutine.
+For the purpose of this example it is assumed that R14 is equated to 14, R15 is equated to 15 etc., to provide cross reference - see EQU Assembler pseudo-instruction)

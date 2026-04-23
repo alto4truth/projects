@@ -1,0 +1,18 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 17
+section: my-first-shell-script
+chunk: 36
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+ute for group and other and write, read, execute for owner).
+Now you can execute the commands in the file just by invoking the filename at the prompt:
+
+% ./hid.sh
+(I have to type ./ because this file isn't in the current path. For the moment I want to ignore this complication - it has nothing to do with shell scripting and everything to do with Unix environment variables).
+
+=== A more useful script ===
+To illustrate a rather more interesting shell script, I'm going to process a file called science.txt. I created this file by stripping all the images and formatting from the Wikipedia article on science. You are of course welcome to try the same.

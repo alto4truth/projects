@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 447
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+== Understanding and Clarity ==
+It is particularly important that parts intended for reuse should be easy to understand. What the part does, how to use it, what anticipated changes might be made to it in the future, and how it works are facts that must be immediately apparent from inspection of the comments and the code itself. For maximum readability of reusable parts, follow the guidelines in Chapter 3, some of which are repeated more strongly below.
+
+=== Application-Independent Naming ===
+
+==== guideline ====
+Select the least restrictive names possible for reusable parts and their identifiers .
+Select the generic name to avoid conflicting with the naming conventions of instantiations of the generic.
+Use names that indicate the behavioral characteristics of the reusable part, as well as its abstraction.
+
+==== example ====
+General-purpose stack abstraction:
+
+Renamed appropriately for use in current application:

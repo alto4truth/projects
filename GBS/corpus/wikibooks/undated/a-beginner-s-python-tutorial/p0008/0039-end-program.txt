@@ -1,0 +1,23 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 8
+section: end-program
+chunk: 39
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+'+' operator tells python to add things, the 'if' operator tells python to do something if conditions are met.)
+This is how the 'def' operator works:
+
+Code Example 8 - The def operator
+def function_name(parameter_1, parameter_2):
+{this is the code in the function}
+{more code}
+{more code}
+return {value to return to the main program}
+{this code isn't in the function}
+{because it isn't indented}
+#remember to put a colon ":" at the end
+#of the line that starts with 'def'

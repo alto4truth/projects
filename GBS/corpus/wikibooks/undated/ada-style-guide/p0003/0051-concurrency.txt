@@ -1,0 +1,25 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 51
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+nization and communication than the rendezvous. See Guideline 6.1.1 for an example of this use of protected objects.
+
+=== Communication Complexity ===
+
+==== guideline ====
+Minimize the number of accept and select statements per task .
+Minimize the number of accept statements per entry.
+
+==== example ====
+Use:
+
+rather than:
+
+==== rationale ====
+This guideline reduces conceptual complexity. Only entries necessary to understand externally observable task behavior should be introduced. If there are several different accept and select statements that do not modify task behavior in a way important to the user of the task, there is unnecessary complexity introduced by the proliferation of select/accept statements. Externally observable behavior important to the task user includes task timing behavior, task rendezvous initiated by the entry calls, prioritization of entries, or data updates (where data is shared between tasks).

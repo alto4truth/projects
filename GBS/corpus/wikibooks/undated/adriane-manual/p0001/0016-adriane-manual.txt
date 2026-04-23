@@ -1,0 +1,15 @@
+title: Adriane-Manual
+source: wikibooks
+year: undated
+document_id: adriane-manual
+authors: 
+page: 1
+section: adriane-manual
+chunk: 16
+source_ref: https://en.wikibooks.org/wiki/Adriane-Manual
+
+e root directory. The following table shows a brief summary of usual disk labels and devices, which match with the device list in the directory /dev :
+
+The first four partitions on a disc are referred as "primary partitions", one of them may be an "extended partition" that contains one or many additional partitions referred as “logical partitions” and are numbered 5 or higher in the device name.
+Adriane users don’t need to care for the correct device names, since the numbering follows a logical schema, different to DOS arbitrary assignments ("C", "D",:, "Z:" ) to hard-disk partitions, CDs or DVDs, or network drives.
+The content of a mounted partition using Knoppix/Adriane will normally be shown as a subdirectory of “/media”. So for example “/media/SDA 1” refers to the 1st partition on the 1st disc drive.

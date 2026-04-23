@@ -1,0 +1,18 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 2
+section: a-more-useful-client-and-server-example
+chunk: 11
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+= Design =
+This client's issue was with a customer framework that was chewing up too much resources, freezing when GC operations were in effect, and generally not scaling as well as they'd hoped. To proof the improvements they could hope to realize, I went out onto the net, and downloaded one of those free, randomly generated address/credit card databases. I then used this to fill an in-memory DBMS based in Boost's Muti-Index Container, and then used a CORBA factory idiom to feed these objects to clients. When the clients were done with these objects, they called a destroy method on them and the server's POA would clean them up. Simple to understand, but not the speediest design.
+
+== The IDL ==
+
+=== Source File Actor.idl ===
+
+Now, run your IDL through the compiler to get your machine generated code out:

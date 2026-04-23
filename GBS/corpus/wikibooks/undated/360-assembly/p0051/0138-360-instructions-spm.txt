@@ -1,0 +1,26 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 51
+section: 360-instructions-spm
+chunk: 138
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+SPM — Set Program Mask — Opcode 04 / Decimal 04 — 2 byte RR Instruction.
+
+== Format ==
+SPM program_mask_register, unused
+SPM 1, 0 (Register 1 would contain the new mask, note that only the first 4 bits will be used.)
+
+== Availability ==
+The SPM instruction can be used on the 360, 370, 390, and System/Z.
+
+== Purpose of Instruction ==
+The SPM instruction changes the program mask and so masking arithmetic exceptions against causing an interrupt.
+
+Bit 0 - Integer overflow
+Bit 1 - Decimal overflow
+Bit 2 - Floating-point underflow
+Bit 3 - Floating-point overflow

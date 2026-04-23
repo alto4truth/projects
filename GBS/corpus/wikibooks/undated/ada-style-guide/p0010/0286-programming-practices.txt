@@ -1,0 +1,64 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 286
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+e range of Listing_Paper
+when the line is empty. All the indices can be mixed in expressions,
+as long as the results fall within the correct subtypes:
+
+==== rationale ====
+The name of a derived type can make clear its intended use and
+avoid proliferation of similar type definitions. Objects of two
+derived types, even though derived from the same type, cannot
+be mixed in operations unless such operations are supplied explicitly
+or one is converted to the other explicitly. This prohibition
+is an enforcement of strong typing.
+Define new types, derived types, and subtypes cautiously and deliberately.
+The concepts of subtype and derived type are not equivalent, but
+they can be used to advantage in concert. A subtype limits the
+range of possible values for a type but does not define a new
+type.
+Types can have highly constrained sets of values without eliminating
+useful values. Used in concert, derived types and subtypes can
+eliminate many flag variables and type
+conversions within executable statements. This renders the program
+more readable, enforces the abstraction,
+and allows the compiler to enforce strong typing constraints.
+Many algorithms begin or end with values just outside the normal
+range. If boundary values are not compatible within subexpressions,
+algorithms can be needlessly complicated. The program can become
+cluttered with flag variables and special cases when it could
+just test for zero or some other sentinel
+value just outside normal range.
+The type Columns and the subtype Listing_Paper
+in the example above demonstrate how to allow sentinel values.
+The subtype Listing_Paper could be used as the type for
+parameters of subprograms declared in the specification of a package.
+This would restrict the range of values that could be specified
+by the caller. Meanwhile, the type Columns could be used
+to store such values internally to the body of the package, allowing
+First_Column - 1 to be used as a sentinel value. This
+combination of types and subtypes allows compatibility between
+subtypes within subexpressions without type conversions as would
+happen with derived types.
+The choice between type derivation and type extension depends
+on what kind of changes you expect to occur to objects in the
+type. In general, type derivation is a very simple form of inheritance:
+the derived types inherit the structure, operations, and values
+of the parent type (Rationale 1995, §4.2 ). Although you can
+add operations, you cannot augment the data structure. You can
+derive from either scalar or composite types.
+Type extension is a more powerful form of inheritance, only applied
+to tagged records, in which you can augment both the
+type's components and operations. When the record implements an
+abstraction with the potential for reuse and/or extension, it
+is a good candidate for making it tagged. Similarly,
+if the abstraction is a member of a family of abstractions with
+well-defined variable and common properties, you should consider
+a tagged record.

@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 169
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+packages.
+Refer to Annex M of the Ada Reference Manual (1995) for a list of implementation-dependent features.
+
+==== example ====
+See Guideline 7.1.3.
+
+==== rationale ====
+Encapsulating hardware and implementation dependencies in a package allows the remainder of the code to ignore them and, thus, to be fully portable. It also localizes the dependencies, making it clear exactly which parts of the code may need to change when porting the program.
+Some implementation-dependent features may be used to achieve particular performance or efficiency objectives. Commenting these objectives ensures that the programmer can find an appropriate way to achieve them when porting to a different implementation or explicitly recognize that they cannot be achieved.
+Interrupt entries are implementation-dependent features that may not be supported (e.g., VAX Ada uses pragmas to assign system traps to "normal" rendezvous). However, interrupt entries cannot be avoided in most embedded, real-time systems, and it is reasonable to assume that they are supported by an Ada implementation. The value for an interrupt is implementation-defined. Isolate it.

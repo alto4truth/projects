@@ -1,0 +1,26 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 174
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+r use of these features where possible. By documenting their usage, you are leaving a record of potential porting difficulties for future programmers.
+
+=== Dependence on Parameter Passing Mechanism ===
+
+==== guideline ====
+Do not write code whose correct execution depends on the particular parameter passing mechanism used by an implementation (Ada Reference Manual 1995, §6.2 [Annotated]; Cohen 1986).
+If a subprogram has more than one formal parameter of a given subtype, at least one of which is [in] out, make sure that the subprogram can properly handle the case when both formal parameters denote the same actual object.
+
+==== example ====
+The output of this program depends on the particular parameter passing mechanism that was used:
+
+If the parameter passing mechanism is by copy, the results on the standard output file are:
+0 0 5
+If the parameter passing mechanism is by reference, the results are:
+0 5 5
+The following code fragment shows where there is a potential for bounded error when a procedure is called with actual parameters denoting the same object:

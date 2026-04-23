@@ -1,0 +1,18 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 14
+section: 360-instructions-bc
+chunk: 47
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+he assembler if the USING pseudo-instruction has been used, and the target address label used is within 4096 bytes of the value of some base register.
+
+The first argument is a mask which the condition code is compared against.
+The second argument is the location to transfer to if the mask matches the currently set condition code. The offset value is added to the values in the base and index registers to form the target address. Most instruction usage tends to use one base register with an index register of zero, but if two non-zero registers are used, the target address will be the same no matter which register is the base register and which is the index register.
+The mask, base_register and index_register values are 0 to 15. The offset value is 0 to 4095.
+If the mask or base_register is zero, the instruction is a no-operation, and does not branch.
+If the mask is 15 the branch is unconditional (unless the base register is 0, in which case it does not branch).
+The value in the index_register is not used if the index_register specified is 0.

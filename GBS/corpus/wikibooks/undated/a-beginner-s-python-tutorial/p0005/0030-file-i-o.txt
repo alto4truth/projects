@@ -1,0 +1,24 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 5
+section: file-i-o
+chunk: 30
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+ll see bits of the list we created.
+Now to re-open, or unpickle, your file. to use this, we would use pickle.load():
+
+Code Example 4 - unpickletest.py
+
+Nifty, eh?
+Of course, the limitation above is that we can only put in one object to a file. We could get around this by putting lots of picklable objects in a list or dictionary, and then pickling that list or dictionary. This is the quickest and easiest way, but you can do some pretty advanced stuff if you have advanced knowledge of pickle.
+Or we can just use multiple 'pickle.dump(list, file)' functions:
+
+and multiple 'pickle.load(file)' functions:
+
+We won't cover complex examples here.
+
+== References ==

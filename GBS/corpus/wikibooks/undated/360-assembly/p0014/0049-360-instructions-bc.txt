@@ -1,0 +1,29 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 14
+section: 360-instructions-bc
+chunk: 49
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+== Other Opcodes ==
+The assembler provides the mask as part of several optional opcodes. These simply require the target address. These opcodes are:
+
+== Optional formats ==
+For the example machine code shown on the left, the address LABEL is presumed to be at offset 106 (06A hex) from register 10, and the address X1 is presumed to be at offset 256 (0100 hex) from the sum of base register 6 and index register 7.
+
+=== Mask value ignored ===
+47F0A06A B LABEL unconditional branch - equivalent to BC 15,label
+47076100 NOP X1 no-operation - BC 0,X1
+47FC0006 BC 15,6(12,0) despite the mask being 15, because the base register is 0,
+* this is also a no-op
+
+=== Used after standard comparison of a and b ===
+4780A06A BE LABEL branch if a equal b - BC 8,label
+4720A06A BH LABEL branch if a high - BC 2,label
+4740A06A BL LABEL branch if a low - BC 4,label
+47776100 BNE X1 branch if a not equal b - BC 7,X1
+47D0A06A BNH LABEL branch if a not high - BC 13,label
+4740A06A BNL LABEL branch if a not low - BC 4,label

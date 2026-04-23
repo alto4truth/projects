@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 5
+section: introduction
+chunk: 101
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+your application in your environment outweighs the negative side effects on understandability, maintainability, and portability of the resulting code.
+
+== How To Use This Book ==
+This book is intended for those involved in the actual development of software systems written in Ada. The following sections discuss how to make the most effective use of the material presented. Readers with different levels of Ada experience or different roles in a software project will need to use the book in different ways.
+There are a number of ways in which this book can be used: as a guide to good Ada style; as a comprehensive list of guidelines that will contribute to better Ada programs; or as a reference work to consult for usage examples of and design-tradeoff discussion on specific features of the language. The book contains many guidelines, some of which are quite complex. Learning them all at the same time should not be necessary; it is unlikely that you will be using all the features of the language at once. However, it is recommended that all programmers (and, where possible, other Ada project staff) make an effort to read and understand Chapters 2, 3, 4, and Chapter 5 up to Section 5.7. Some of the material is quite difficult (e.g., Section 4.2, which discusses visibility), but it covers issues that are fundamental to the effective use of Ada and is important for any software professional involved in building Ada systems.
+This book is not intended as an introductory text on Ada or as a complete manual of the Ada language. It is assumed that you already know the syntax of Ada and have a rudimentary understanding of the semantics. With such a background, you should find the guidelines useful, informative, and often enlightening.
+If you are learning Ada, you should equip yourself with a comprehensive introduction to the language. Two good introductory texts on Ada 83 are Barnes (1989) and Cohen (1986). Both authors have published new books that cover Ada 95 (Barnes 1996, Cohen 1996). Once you become familiar with these texts, you are encouraged to use them in conjunction with Rationale (1995). The Ada Reference Manual (1995) should be regarded as a companion to these books. The majority of guidelines reference the sections of the Ada Reference Manual (1995) that define the language features being discussed. Appendix A cross references sections of the Ada Language Reference Manual to the guidelines.

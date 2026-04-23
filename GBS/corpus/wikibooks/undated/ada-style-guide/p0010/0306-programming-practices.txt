@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 306
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+s that denote the "useful"
+data. You can use an access-to-object to return an access to the
+useful data, excluding the pointers used to chain objects.
+
+=== Access Discriminants ===
+
+==== guideline ====
+Use access discriminants to create self-referential data structures, i.e., a data structure one of whose components points to the enclosing structure.
+
+==== example ====
+See the examples in Guidelines 8.3.6 (using access discriminants
+to build an iterator) and 9.5.1 (using access discriminants in
+multiple inheritance).

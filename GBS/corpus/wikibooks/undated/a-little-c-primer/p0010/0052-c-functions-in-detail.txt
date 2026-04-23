@@ -1,0 +1,41 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 10
+section: c-functions-in-detail
+chunk: 52
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+they would remain
+distinct variables.
+Parameters are, of course, matched with arguments in the order in which they
+are sent:
+
+This prints:
+
+a=1 b=100
+
+This program can be modified to show that the arguments are not affected by
+any operations the function performs on the parameters, as follows:
+
+This prints:
+
+a=1 b=100
+a=42 b=666
+x=1 y=100
+
+Arrays can be sent to functions as if they were any other type of variable:
+
+It is possible to define functions with a variable number of parameters. In
+fact, "printf()" is such a function. This is a somewhat advanced issue and
+we won't worry about it further in this document.
+The normal way to get a value out of a function is simply to provide it as
+a return value. This neatly encapsulates the function and isolates it from
+the calling routine. In the example in the first section, the function
+"sphere()" returned a "float" value with the statement:
+
+The calling routine accepted the return value as follows:
+
+The return value can be used directly as a parameter to other functions:

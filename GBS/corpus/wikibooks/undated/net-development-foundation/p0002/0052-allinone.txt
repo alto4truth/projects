@@ -1,0 +1,30 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 52
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+operty that returns true if Value != null. It provides a means to check your type for a non-null value before using it where you might throw an error:
+
+int? MyInt = null;
+int MyOtherInt;
+MyOtherInt = MyInt.Value + 1; // Error! You can't add null + 1!!
+if (MyInt.HasValue) MyOtherInt = MyInt.Value + 1; // This is a better way.
+
+Value returns the value of your type, null or otherwise.
+
+int? MyInt = 27;
+if (MyInt.HasValue) return MyInt.Value; // returns 27.
+MyInt = null;
+return MyInt; // returns null.
+
+Wrapping / Unwrapping
+Wrapping is the process of packaging a value m from a non-nullable type N to a nullable type N? via the expression new N?(m)
+Unwrapping is the process of evaluating a nullable type N? for instance m as type N or NULL and is performed via the 'Value' property (e.g. m.Value).
+Note: Unwrapping a null instance generates the exception System.InvalidOperationException
+The ?? Operator (aka the Null Coalescing Operator)
+While not for use solely with Nullable types, the ?? operator proves very useful when you want to use a default value instead of a null value. The ?? operator returns the left operand of a statement if not null, otherwise it returns the right operand.

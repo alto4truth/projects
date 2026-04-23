@@ -1,0 +1,27 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 21
+section: services
+chunk: 257
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+main.
+To unload an application domain, use the static AppDomain.Unload function:
+
+AppDomain ad = AppDomain.CreateDomain("Name");
+AppDomain.Unload(ad);
+
+===== Configure an application domain =====
+See MSDN
+The most likely reason to modify the application domain configuration, is to restrict certain permissions to limit the damage if an attacker exploits vulnerabilities in an assembly.
+An example is to run an assembly in the Internet Zone. The Internet Zone has limited permissions. To do this create a Zone Evidence and supply it as a parameter when creating the Application Domain:
+
+object [] myEvidenceTypes = {new Zone (SecurityZone.Internet)};
+Evidence myEvidence = new Evidence(myEvidenceTypes, null);
+AppDomain ad = AppDomain.CreateDomain("Name", myEvidence); // Pass the Evidence when creating the App. Domain
+ad.ExecuteAssembly(@"c:\path\to\file.exe");
+
+It is also possible to execute only one assembly in an Application Domain with different permissions;

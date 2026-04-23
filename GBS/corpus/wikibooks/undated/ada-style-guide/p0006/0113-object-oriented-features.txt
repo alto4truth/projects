@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 113
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+e hierarchy because the internals of an abstract reusable framework probably do not need to be visible to a particular instantiation of the framework.
+
+== Tagged Type Hierarchies ==
+You should use inheritance primarily as a mechanism for implementing a class hierarchy from an object-oriented design. A class hierarchy should be a generalization/specialization ("is-a") relationship. This relationship may also be referred to as "is-a-kind-of," not to be confused with "is an instance of." This "is-a" usage of inheritance is in contrast to other languages in which inheritance is used also to provide the equivalent of the Ada context clauses with and use. In Ada, you first identify the external modules of interest via with clauses and then choose selectively whether to make only the name of the module (package) visible or its contents (via a use clause).
+
+=== Tagged Types ===

@@ -1,0 +1,27 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 27
+section: exercises1
+chunk: 65
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+== Task One ==
+Change to the bash shell.
+
+== Task Two ==
+Use the command pwd.
+Write down the full path to your home directory.
+
+== Task Three ==
+Look at the image of an example filestructure tree here. Trace and write down the path from the root to the folder ccaastu
+
+== Task Four ==
+Change your current view to your home directory.
+
+List all the files with the extension .bat.
+
+How many files are there?
+ls -1 | wc -l

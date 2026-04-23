@@ -1,0 +1,29 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 180
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ypes and expressions, must be used with great care if full portability of the resulting program is to be guaranteed.
+
+=== Predefined Numeric Types ===
+
+==== guideline ====
+Avoid using the predefined numeric types in package Standard. Use range and digits declarations and let the implementation pick the appropriate representation.
+For programs that require greater accuracy than that provided by the global assumptions, define a package that declares a private type and operations as needed; see Pappas (1985) for a full explanation and examples.
+Consider using predefined numeric types (Integer, Natural, Positive) for:
+Indexes into arrays where the index type is not significant, such as type String
+"Pure" numbers, that is, numbers with no associated physical unit (e.g., exponents)
+Values whose purpose is to control a repeat or iteration count
+
+==== example ====
+The second and third examples below are not representable as subranges of Integer on a machine with a 16-bit word. The first example below allows a compiler to choose a multiword representation, if necessary.
+Use:
+
+rather than:
+
+or:

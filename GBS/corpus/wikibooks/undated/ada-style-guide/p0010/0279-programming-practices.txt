@@ -1,0 +1,34 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 279
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ariable, cannot be named otherwise.
+Named association allows subprograms to have new parameters inserted
+with minimal ramifications to existing calls.
+
+==== notes ====
+The judgment of when named parameter association improves readability
+is subjective. Certainly, simple or familiar subprograms, such
+as a swap routine or a sine function, do not require the extra
+clarification of named association in the procedure call.
+
+==== caution ====
+A consequence of named parameter association is that the formal
+parameter names may not be changed without modifying the text
+of each call.
+
+=== Default Parameters ===
+
+==== guideline ====
+Provide default parameters to allow for occasional, special use of widely used subprograms or entries.
+Place default parameters at the end of the formal parameter list.
+Consider providing default values to new parameters added to an existing subprogram.
+
+==== example ====
+Ada Reference Manual (1995) contains many examples of this practice.

@@ -1,0 +1,18 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 4
+section: 360-family
+chunk: 17
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+hine while the IBM 370 and predecessors are 32-bit machines.
+In software emulation there are some proprietary applications and three open source ones:
+
+The Z390 portable assembler provides an Assembler-H (high level) equivalent assembler, Cobol compiler, linkage editor and execution environment for programs written in assembler or Cobol
+The Hercules system provides an emulation of either System 370 or z/System hardware satisfactorily enough to run IBM-based operating systems and user programs running within those systems.
+QEMU is an open source emulator for many platforms, including z/Architecture (which it calls s390x). It only supports running Linux as a guest operating system.
+The 360 architecture is a big endian machine (as opposed to the typical Intel or AMD x86 processor, which is little endian), in that values are stored high to low. For example, the 16-bit value 256 would be stored (in hex) as 0100 on a 360-series machine, but be stored as 0001 on an Intel Pentium. The number 1, on the other hand, if rendered as a 16-bit number, would be stored (in hex) as 0001 on a 360, and 0100 on a Pentium. Also, the standard character set on the 360/370/Z-System is EBCDIC, while the Pentium/X86/X64 uses ASCII (and Unicode, a superset of ASCII). This can cause a number of headaches in conversion of binary data files - or even text files - from one machine to another.
+The bit order for bytes, half words, words, double words, and quad words, proceeds from left to right, with bit 0 being the most significant bit, and bit 7 in byte, bit 15 in a halfword, it 31 in a word, or bit 63 in a doubleword, is the least significant byte. Here is the correlation of bits, bytes, halfworrds. words and doublewords:

@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 199
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+n which tasks of the same priority are handled may vary between implementations even if the implementations use the same general scheduling algorithm.
+
+==== exceptions ====
+In real-time systems, it is often necessary to tightly control the tasking algorithm to obtain the required performance. For example, avionics systems are frequently driven by cyclic events with limited asynchronous interruptions. A nonpreemptive tasking model is traditionally used to obtain the greatest performance in these applications. Cyclic executives can be programmed in Ada, as can a progression of scheduling schemes from cyclic through multiple-frame-rate to full asynchrony (MacLaren 1980), although an external clock is usually required.
+
+=== Abort ===
+
+==== guideline ====
+Avoid using the abort statement.
+
+==== rationale ====
+The rationale for this appears in Guideline 6.3.3. In addition, treatment of the abort statement varies from implementation to implementation, thereby hindering portability.
+
+=== Unprotected Shared Variables and Pragmas Atomic and Volatile ===

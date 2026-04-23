@@ -1,0 +1,17 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 24
+section: system-types-topics
+chunk: 262
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+== Topics ==
+
+=== Programs, objects and methods ===
+
+.NET is essentially a set of tools to build and execute computer programs. A computer program is a set of instructions given to a computer that executes those instructions automatically to manipulate some data. .NET follows the object-oriented paradigm which means that the instructions and data are grouped around ‘’objects’’ that represent things or concepts. Objects that share the same instructions and manipulate the same kind of data are grouped into the same type.
+An object-oriented program is the definition of a series of types. For each type the kind of data and the instructions are specified. The instructions are grouped inside methods. One of the available instructions is the creation of an object of a defined type. Another kind of instruction is the request to execute a method associated with an object. This is called invoking a method. When a method is invoked its instructions are executed until the method terminates (returns). When the method returns the calling (invoking) method executes its next instruction (statement).
+When you start the execution of a program the system creates a first object and invokes a method of that object (this is called the main method). Inside that method other objects are typically created and methods of those objects are invoked. Those methods will invoke other methods and create other objects and so on. Gradually the called methods will return and the '’main’’ method will eventually finish, marking the end of the program execution.

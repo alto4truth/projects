@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 23
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+d structures are necessary when you must create and destroy tasks or protected objects dynamically or when you must reference them by different names.
+
+==== notes ====
+Though changing the task or protected object from an anonymous type to a declared type is trivial, structural changes to the software architecture might not be trivial. Introduction of multiple tasks or protected objects of the declared type might require the scope of the type to change and might change the behavior of the network of synchronizing tasks and protected objects.
+
+=== Dynamic Tasks ===
+
+==== guideline ====
+Minimize dynamic creation of tasks because of the potentially high startup overhead; reuse tasks by having them wait for new work on some appropriate entry queue.
+
+==== example ====
+The approach used in the following example is not recommended. The example shows why caution is required with dynamically allocated task and protected objects. It illustrates how a dynamic task can be disassociated from its name:

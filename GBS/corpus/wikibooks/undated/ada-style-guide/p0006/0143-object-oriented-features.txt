@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 143
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+be recovered using a specific instantiation of the generic. Also see Guidelines 5.3.2 and 5.4.7 for a discussion of
+self-referential data structures.
+
+== Managing Visibility ==
+
+=== Derived Tagged Types ===
+
+==== guideline ====
+Consider giving derived tagged types the same visibility to the parent type as other clients of the parent.
+Define a derived tagged type in a child of the package that defines the base type if the implementation of the derived type requires greater visibility into the implementation of the base type than other clients of the base type require.
+
+==== example ====
+The following example illustrates the need for a derived type to have greater visibility into the implementation of the base type than other clients of the base type. In this example of a stack class hierarchy, Push and Pop routines provide a homogeneous interface for all variations of stacks. However, the implementation of these operations requires greater visibility into the base types due to the differences in the data elements. This example is adapted from Barbey, Kempe, and Strohmeier (1994):

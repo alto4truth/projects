@@ -1,0 +1,16 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 54
+section: 360-instructions-svc
+chunk: 147
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+SVC — Supervisor Call — Opcode 0A / Decimal 10 —
+2 byte RR
+Instruction.
+
+== Format ==
+SVC number (where number is 0-255 decimal or X'00' to X'FF')

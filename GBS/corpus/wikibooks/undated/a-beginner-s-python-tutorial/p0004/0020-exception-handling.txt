@@ -1,0 +1,26 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 4
+section: exception-handling
+chunk: 20
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+he best and easiest ways is to use the try and except operators.
+Here is an example of try being used in a program:
+
+Code Example 7 - The try operator
+
+This is an example of a really messy bit of code that I was trying to fix. First, the code under try: is run. If there is an error, the compiler jumps to the except section and prints world.errormsg. The program doesn't stop right there and crash, it runs the code under except: then continues on.
+Let's try that where the error occurred in our code (line 6). The menu function now is:
+
+Code Example 8 - testing our fix
+
+Try entering a letter when you're asked for a number and see what happens. Dang. We fixed one problem, but now it has caused another problem further down the track. This happens all the time. (Sometimes you end up going around in circles, because your code is an absolute mess). Let's have a look at the error:
+
+Code Example 9 - Yet another error message
+Traceback (most recent call last):
+File "/home/steven/errortest.py", line 12, in -toplevelprint 'You picked answer', (answer + 1)
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'

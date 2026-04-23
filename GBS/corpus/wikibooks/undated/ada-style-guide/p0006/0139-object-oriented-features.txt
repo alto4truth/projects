@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 139
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+onstruction logic and initialization logic in distinct subprograms so that you are able to call the initialization routine for the parent tagged type.
+
+==== notes ====
+When you extend a tagged type (regardless whether it is an abstract type), you can choose to declare as abstract some of the additional operations. Doing so, however, means that the derived type must also be declared as abstract. If this newly derived type has inherited any functions that name it as the return type, these inherited functions now also become abstract (Barnes 1996). If one of these primitive functions served as the constructor function, you have now violated the first guideline in that the constructor has become a primitive abstract operation.
+
+=== Equality ===
+
+==== guideline ====
+When you redefine the "=" operator on a tagged type, make sure that it has the expected behavior in extensions of this type and override it if necessary.
+
+==== example ====
+The following example is adapted from the discussion of equality and inheritance in Barnes (1996):

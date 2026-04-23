@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 147
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+en operations as well as the new operations. For example, you could implement the overridden Display operation using some of the inherited operations:
+
+Assuming you have defined several generics with these additional features, to create the desired window, you use a combination of generic instantiations and private type extension, as shown in the following code:
+
+The following example shows "full" multiple inheritance.
+Assume previous definition of packages for Savings_Account and Checking_Account. The following example shows the definition of an interest-bearing checking account (NOW account):
+
+Another possibility is that the savings and checking accounts are both implemented based on a common Account abstraction, resulting in inheriting a Balance state twice for NOW_Account.Object. To resolve this ambiguity, you need to use an abstract type hierarchy for the multiple inheritance of interface and separate mixins for the multiple inheritance of implementation.

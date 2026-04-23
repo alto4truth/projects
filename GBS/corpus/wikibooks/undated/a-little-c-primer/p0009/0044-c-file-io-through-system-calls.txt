@@ -1,0 +1,44 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 9
+section: c-file-io-through-system-calls
+chunk: 44
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+the desired filename for the new file. The
+"permission bits" give the "access rights" to the file. A file has three
+"permissions" associated with it:
+
+Write permission:
+Allows data to be written to the file.
+
+Read permission:
+Allows data to be read from the file.
+
+Execute permission:
+Designates that the file is a program that can be run.
+
+These permissions can be set for three different levels:
+
+User level:
+Permissions apply to individual user.
+
+Group level:
+Permissions apply to members of user's defined "group".
+
+System level:
+Permissions apply to everyone on the system.
+
+For the "creat()" system call, the permissions are expressed in octal, with
+an octal digit giving the three permission bits for each level of
+permissions. In octal, the permission settings:
+
+0644
+—grant read and write permissions for the user, but only read permissions
+for group and system. The following octal number gives all permissions to
+everyone:
+
+0777

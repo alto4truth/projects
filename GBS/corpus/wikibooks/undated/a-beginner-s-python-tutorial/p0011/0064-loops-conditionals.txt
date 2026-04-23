@@ -1,0 +1,20 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 11
+section: loops-conditionals
+chunk: 64
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+ogramming practice in any language, but Python requires that you do it. Here is an example of both of the above points:
+
+Code Example 10 - Indentation
+
+Notice the three levels of indents there:
+Each line in the first level starts with no spaces. It is the main program, and will always execute.
+Each line in the second level starts with four spaces. When there is an 'if' or loop on the first level, everything on the second level after that will be looped/'ifed', until a new line starts back on the first level again.
+Each line in the third level starts with eight spaces. When there is an 'if' or loop on the second level, everything on the third level after that will be looped/'ifed', until a new line starts back on the second level again.
+This goes on infinitely, until the person writing the program has an internal brain explosion, and cannot understand anything he/she has written.
+There is another loop, called the 'for' loop, but we will cover that in a later lesson, after we have learnt about lists.

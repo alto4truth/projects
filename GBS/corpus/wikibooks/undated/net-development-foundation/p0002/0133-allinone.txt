@@ -1,0 +1,38 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 133
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+nd control text in a .NET Framework application by using regular expressions
+(Refer System.Text namespace)
+(Refer System.RegularExpressions namespace)
+
+===== String class =====
+The String class is not a specific exam objective but was added to have a place to discuss some of its characteristics.
+String class - MSDN
+
+===== StringBuilder class =====
+The StringBuilder class is used for very fast string concatenation. If you use conventional string concatenation
+then it will run very slow because a string is held in an array. Each concatenation causes the array to increase its size
+and the memory has to be copied to a new location internally. This is very slow.
+For fast string concatenations use StringBuilder instead. It is about 1000 times faster (depending on the string
+you concatenate).
+StringBuilder class - MSDN
+
+Refer to the example to measure the performance differences.
+
+===== Regex class =====
+Regex class - MSDN
+
+===== Match class and MatchCollection class =====
+Match class - MSDN
+MatchCollection class - MSDN
+
+===== Group class and GroupCollection class =====
+Group class - MSDN
+GroupCollection class - MSDN

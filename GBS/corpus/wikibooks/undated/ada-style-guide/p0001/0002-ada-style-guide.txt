@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 1
+section: ada-style-guide
+chunk: 2
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ability
+Chapter 9: Object-Oriented Features
+Chapter 10: Improving Performance
+Chapter 11: Portable Dining Philosophers Example
+References
+Bibliography
+
+== Preface ==
+This style guide is an update to the Ada 95 Quality and Style Guide to reflect the latest update to the Ada language, commonly called Ada 2012. The purpose of this guide is to help computer professionals produce better Ada programs by identifying a set of stylistic guidelines that will directly impact the quality of their Ada programs. This style guide is not intended to replace the Ada Reference Manual, or the Rationale, or to serve as a tutorial for the Ada programming language.
+The style guide is divided into chapters that map to the major decisions that each programmer addresses when creating high-quality, reliable, reusable, and portable Ada software. Some overlap exists in the chapters because not all programming decisions can be made independently. Individual chapters address source code presentation, readability, program structure, programming practice, concurrency, portability, reusability, performance, and a new chapter on object-oriented features.
+Each chapter is divided into guidelines, using a format that supports wide usage because its content is both prescriptive and tailorable. Each guideline consists of a concise statement of the principles that should be followed and a rationale explaining why the guideline is important. The guidelines also provide usage examples, in addition to possible exceptions to applying the guidelines. Many of the guidelines are specific enough to be adopted as corporate or project programming standards. Others require a managerial decision on a particular instantiation before they can be used as standards. In such cases, a sample instantiation is presented and used throughout the examples.

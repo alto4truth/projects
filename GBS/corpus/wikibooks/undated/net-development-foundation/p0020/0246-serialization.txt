@@ -1,0 +1,26 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 20
+section: serialization
+chunk: 246
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+gets the character at a certain position and advances.
+BinaryReader class and BinaryWriter class
+
+BinaryReader class - MSDN
+BinaryWriter class - MSDN
+
+==== Compression and isolated storage ====
+Exam objective: Compress or decompress stream information in a .NET Framework application and improve the security of application data by using isolated storage.
+(Refer System.IO.Compression namespace)
+(Refer System.IO.IsolatedStorage namespace)
+IsolatedStorageFile class - MSDN
+IsolatedStorageFileStream class - MSDN
+DeflateStream class - MSDN
+GZipStream class - MSDN
+
+Previous / Next

@@ -1,0 +1,35 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 34
+section: 360-instructions-lgr
+chunk: 108
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+LGR - Load Register - 64 Bit - Opcode B904 - RRE Instruction
+
+== Format ==
+LGR 2,6
+The specific syntax is
+
+LGR target register, source register.
+
+The first argument is a target register which value is affected by the instruction.
+The second argument is the source value register.
+
+== Availability ==
+The LGR instruction is 64-bit, and is only available on the 370 series and z/System. It will cause an opcode exception on the 360 series.
+
+== Operation ==
+The LGR instruction copies a 64-bit value from the register specified by the second argument to the register specified by the first argument.
+Condition codes are not changed.
+Register 0 is valid for either register and is not ignored as in some other instructions.
+
+== Exceptions and Faults ==
+360 Series: Opcode Exception
+370 Series and zSystem: None.
+
+== Most Closely-related Instruction ==
+The most closely-related instruction is Add Logical Register (ALR) and not Load Address (LA), as is sometimes assumed. Whereas L loads a value from memory, LA does not access memory; it only calculates a number, which can but does not have to be an address.

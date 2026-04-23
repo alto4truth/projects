@@ -1,0 +1,21 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 11
+section: parti-chapter-3-string
+chunk: 49
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+riage return characters, respectively. They have no graphical representation but, depending on the application, can affect the visual display of text.
+
+You will understand the use of this method later. For now you must know this. Now lets write a program which will print all codes of the characters of string “hello”.
+
+===== concat =====
+String.concat( <val1>, …, <valN> );
+This method combines the value of the String object with the parameters and returns the newly formed string. But note, it doesn’t change the string, it just returns it. This example shows the use of this method:
+
+===== fromCharCode =====
+String.fromCharCode( <c1>, …, <cN> );
+This method returns a string made up of the characters represented by the character codes (ASCII values) in the parameters. In this method “String” must not be replaced with a name of String variable for example: “mystring.fromCharCode”, it must be left as “String”. In this case “String” is represented by as a String object. The following example creates a “hello” string:

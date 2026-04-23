@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 4
+section: improving-performance
+chunk: 87
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+records as parallel arrays when measured performance indicates.
+Use a sequence of assignments for an aggregation when measured performance indicates.
+
+=== algorithms ===
+Use incremental schemes instead of mod and rem when measured performance indicates.
+Use the short-circuit control form when measured performance indicates.
+Use the case statement when measured performance indicates.
+Use hard-coded constraint checking when measured performance indicates.
+Use column-first processing of two-dimensional arrays when measured performance indicates.
+Use overwriting for conditional assignment when measured performance indicates.
+When measured performance indicates, perform packed Boolean array shift operations by using slice assignments rather than repeated bit-wise assignment.
+Use static subprogram dispatching when measured performance indicates.<

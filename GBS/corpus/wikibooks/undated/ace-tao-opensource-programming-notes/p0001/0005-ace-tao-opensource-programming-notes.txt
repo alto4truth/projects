@@ -1,0 +1,27 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 1
+section: ace-tao-opensource-programming-notes
+chunk: 5
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+f compiled in features seems to be a little light. That being said, its certainly a good way to get started, and will handle 90% of your applications.
+
+== Build Instructions on Linux ==
+To make installing all of TAO easier use the following script. It will take a lot of time to build so using a script is a good option. The script can also be modified to compile only the necessary TAO features.
+
+=== Things to check after install ===
+After completing the bulding of the TAO it is important to check if everything is done correctly, Hence run the "tests" available in ACE and TAO to check.
+If the system is built in Linux then the Naming service is not available by default, but the functionality is provided by tao-cosnaming just like the IDL build is given by tao-idl. you can create a softlink for NamingService with tao_cosnaming by using
+
+Steps
+
+Run the tests (ACE_wrappers/tests and ACE_wrappers/TAO/tests)
+check all the links for the binaries (tao_idl, tao_cosnaming.. etc)
+Start with the examples
+Present in 2 locations just running then playing around with them is a great start
+ACE_wrappers/TAO/DevGuideExamples/ and
+ACE_wrappers/TAO/Examples/

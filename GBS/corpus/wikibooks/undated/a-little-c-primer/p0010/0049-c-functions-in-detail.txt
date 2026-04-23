@@ -1,0 +1,31 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 10
+section: c-functions-in-detail
+chunk: 49
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+As noted previously, any C program must have a "main()" function to contain
+the code executed by default when the program is run.
+A program can contain as many functions as needed. All functions are
+"visible" to all other functions. For example:
+
+In this example, "main()" can call "func1()" and "func2()"; "func1()" can
+call "func2()"; and "func2()" can call "func1()". In principle, even
+"main()" could be called by other functions, but it's hard to figure out why
+anyone would want to do so. Although "main()" is the first function in the
+listing above, there's no particular requirement that it be so, but by
+convention it always should be.
+Functions can call themselves recursively. For example, "func1()" can call
+"func1()" indefinitely, or at least until a stack overflow occurs. You
+cannot declare functions inside other functions.
+Functions are defined as follows:
+
+They begin with a function header that starts with a return value type
+declaration ("float" in this case), then the function name ("sphere"), and
+finally the arguments required ("int rad").
+ANSI C dictates that function prototypes be provided to allow the compiler to
+perform better checking on function calls:

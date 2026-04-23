@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 166
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+position and the expected values of the argument, as well as provides a default in cases where the environment was unable to provide the information:
+
+==== rationale ====
+The predefined language environment declares the package Ada.Command_Line, providing a standardized way for a program to obtain the values of a command line. Because all Ada compilers must implement the packages in the predefined language environment, you can create a program that is more portable, maintainable, and readable by using this package. You should, however, be aware that even though the language defines the objects and type profiles of this package, it does not force a relationship between the function results and any other entity or operation, and thus, allows the possibility of a nonportable behavior and specification.
+The value returned by the function Ada.Command_Line.Argument_Count is implementation-dependent. Different operating systems follow different conventions regarding the parsing and meaning of command line parameters. To enhance your program's portability, assume the simplest case: that the external execution environment does not support passing arguments to a program.
+Some operating systems are capable of acquiring and interpreting returned integer values near 0 from a function, but many others cannot. Further, many real-time, embedded systems will not be designed to terminate, so a function or a procedure having parameters with modes out or in out will be inappropriate to such applications.
+This leaves procedures with in parameters. Although some operating systems can pass parameters into a program as it starts, others are not. Also, an implementation may not be able to perform type checking on such parameters even if the surrounding environment is capable of providing them.

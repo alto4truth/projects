@@ -1,0 +1,25 @@
+title: 68000 Assembly
+source: wikibooks
+year: undated
+document_id: 68000-assembly
+authors: 
+page: 2
+section: addressing-modes
+chunk: 9
+source_ref: https://en.wikibooks.org/wiki/68000_Assembly
+
+r the final read or write.
+
+=== Immediate addressing ===
+Assembler syntax:
+
+#xyz
+Operate on xyz.
+
+=== Status Register addressing ===
+Assembler syntax:
+
+SR
+CCR
+SR is the entire status register, including the system byte. CCR is just the flags. Other than that, I don't know how this works. SR is only available in supervisor mode.
+The only instructions that are allowed to use this addressing mode are: MOVE, ANDI (AND immediate), EORI (exclusive OR immediate) and ORI (OR immediate) known as: MOVE to/from CCR, MOVE to/from SR, ANDI to CCR, ORI to CCR, EORI to CCR, ANDI to SR, ORI to SR, EORI to SR.

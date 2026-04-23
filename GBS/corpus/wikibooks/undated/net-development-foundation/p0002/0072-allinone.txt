@@ -1,0 +1,45 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 72
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+ions ==
+Exam objective: Manage data in a .NET Framework application by using specialized collections.
+(Refer System.Collections.Specialized namespace)
+
+=== Specialized String classes ===
+StringCollection class - MSDN
+StringDictionary class - MSDN
+StringEnumerator class - MSDN
+
+===== Specialized Dictionary classes =====
+HybridDictionary class - MSDN
+IOrderedDictionary interface and OrderedDictionary class
+IOrderedDictionary Interface - MSDN
+OrderedDictionary class - MSDN
+ListDictionary class - MSDN
+
+=== Named collections ===
+NameObjectCollectionBase class - MSDN
+NameObjectCollectionBase.KeysCollection class - MSDN
+NameValueCollection class - MSDN
+
+=== CollectionsUtil class ===
+CollectionsUtil class - MSDN
+
+=== BitVector32 structure and BitVector32.Section structure ===
+BitVector32 structure - MSDN
+BitVector32.Section structure - MSDN
+
+== Standard interfaces ==
+Exam objective: Implement .NET Framework interfaces to cause components to comply with standard contracts.
+(Refer System namespace)
+IComparable interface - MSDN
+
+The IComparable interface defines a comparison method that a value type or class implements to create a type-specific comparison method
+IDisposable interface - MSDN

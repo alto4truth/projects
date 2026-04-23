@@ -1,0 +1,30 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 49
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+" oriented remarks about value types.
+Value types contain the values they are assigned:
+
+int a = 1; // the variable "a" contains "1" of value type int
+
+Value types can also be created by using the new keyword. Using the new keyword initializes the variable with the default value obtained from the type's default constructor:
+
+int a = new int(); // using the default constructor via the new keyword
+return a; // returns "0" in the case of type Int.
+
+Value types can be declared without being initialized, but they must be initialized to some value before being used:
+
+int a; // This is perfectly acceptable
+return a; // NOT acceptable! You can't use "a" because "a" doesn't have a value!
+
+Value types cannot equal null. .NET 2.0 provides a Nullable type to get around this limitation, which is discussed in the next section, but null is not a valid value for value types:
+
+int a = null; // Won't compile - throws an error.
+
+If you copy a Value type to another Value type, the value is copied. Changing the value of the copy has no effect on the value of the original. The second is merely a copy of the first - they are in no way connected after assignment. This is fairly intuitive:

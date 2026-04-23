@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 344
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+nder what conditions to raise them. Other issues are addressed in the guidelines in Sections 4.3 and 7.5.
+
+=== Handling Versus Avoiding Exceptions ===
+
+==== guideline ====
+When it is easy and efficient to do so, avoid causing exceptions to be raised.
+Provide handlers for exceptions that cannot be avoided.
+Use exception handlers to enhance readability by separating fault handling from normal execution.
+Do not use exceptions and exception handlers as goto statements.
+Do not evaluate the value of an object (or a part of an object) that has become abnormal because of the failure of a language-defined check.

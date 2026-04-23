@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 336
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+mple ====
+
+See also the example in Guideline 5.7.1, where a package-level renames clause provides an abbreviation for the package Rational_Numbers_IO.
+
+==== rationale ====
+If the renaming facility is abused, the code can be difficult to read. A renames clause can substitute an abbreviation for a qualifier or long package name locally. This can make code more readable yet anchor the code to the full name. You can use the renames clause to evaluate a complex name once or to provide a new "view" of an object (regardless of whether it is tagged). However, the use of renames clauses can often be avoided or made obviously undesirable by carefully choosing names so that fully qualified names read well.
+When a subprogram body calls another subprogram without adding local data or other algorithmic content, it is more readable to have this subprogram body rename the subprogram that actually does the work. Thus, you avoid having to write code to "pass through" a subprogram call (Rationale 1995, §II.12).
+The list of renaming declarations serves as a list of abbreviation definitions (see Guideline 3.1.4). As an alternative, you can rename a package at the library level to define project-wide abbreviations for packages and then with the renamed packages. Often the parts recalled from a reuse library do not have names that are as general as they could be or that match the new application's naming scheme. An interface package exporting the renamed subprograms can map to your project's nomenclature. See also Guideline 5.7.1.
+The method described in the Ada Reference Manual 1995, §8.5 [Annotated] for renaming a type is to use a subtype (see Guideline 3.4.1).
+The use type clause eliminates the need for renaming infix operators. Because you no longer need to rename each operator explicitly, you avoid errors such as renaming a + to a -. See also Guideline 5.7.1.

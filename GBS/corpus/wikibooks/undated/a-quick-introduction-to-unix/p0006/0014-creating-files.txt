@@ -1,0 +1,26 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 6
+section: creating-files
+chunk: 14
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+== Creating Files ==
+Files are essentially containers. You can fill a file with a variety of kinds of data, rather as you might fill a bucket with water or sand. There are occasions when the facility to create an empty bucket is useful.
+
+=== The command touch ===
+%touch my_new_file
+This creates a file called my_new_file. One other use of touch is to update a file's date and time. This is done with the option -t. For example
+
+%touch -t 201010112230 my_new_file
+This would update the time and date stamp for the file causing it to show the date and time 11 October 2010 at 22:30. The data and time format is yyyymmddhhmm.
+You can check the effect of touch with ls -l
+
+=== Why use touch? ===
+One very good use for touch is to help create directory and file structures. Suppose that in a university departmental office each year you must create various administrative files. You will need a file of the new students; a file of staff; a file of options offered that year and so on. From your home you might first of all create a directory to hold the student files:
+
+% mkdir -p /degreeadmin/2010/students
+and then to be sure that you have the correct file structure

@@ -1,0 +1,32 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 5
+section: creating-directories
+chunk: 12
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+== Creating Directories ==
+
+=== mkdir (make directory) ===
+You can make a subdirectory of your home directory for your own data files. To make a subdirectory called mytraining in your current working directory type
+
+% mkdir mytraining
+To see the directory you have just created, type
+
+% ls
+You can also make a hidden directory if you want to. Use a dot as the first character of the directory name for it to be hidden.
+
+==== Creating down a path ====
+Surprisingly often you want to create a directory but not directly at your current position in the directory tree. Suppose I am in my home directory and I want to create directories to hold some files for two courses but in
+
+~/documents/2010/IT/training/Unix/
+The first course is an introduction to Linux, second an introduction to Solaris. I can create these directories like this:
+
+% mkdir ~/documents/2010/IT/training/Unix/Linux
+and
+
+% mkdir ~/documents/2010/IT/training/Unix/Solaris
+Naturally, you don't have to specify the complete path from ~, but I have done so here for clarity.

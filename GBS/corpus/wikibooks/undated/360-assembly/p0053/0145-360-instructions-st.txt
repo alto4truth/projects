@@ -1,0 +1,23 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 53
+section: 360-instructions-st
+chunk: 145
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+es assumed. Whereas L loads a value from memory, LA does not access memory; it only calculates a number, which can but does not have to be an address.
+
+=== 32-Bit Instructions ===
+To load an 8-bit byte (character) value from memory, see IC.
+To load one or more 8-bit byte values into a register according to a mask, see ICM
+To load a 16-bit half-word value from memory, see LH.
+To load a 12-bit unsigned value into a register or add up to 4095 to the values in one or two 32-bit registers, see LA.
+To copy a 32-bit word value from one register to another register, see LR.
+To load a 32-bit word value from memory, see L.
+To store an 8-bit byte (character) value in memory, see STC.
+To store one or more 8-bit byte values into memory according to a mask, see STCM
+To store a 16-bit half-word value in memory, see STH.
+To store a 32-bit word value in memory, see ST.

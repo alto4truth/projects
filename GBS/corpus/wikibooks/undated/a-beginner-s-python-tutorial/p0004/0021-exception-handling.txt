@@ -1,0 +1,19 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 4
+section: exception-handling
+chunk: 21
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+/steven/errortest.py", line 12, in -toplevelprint 'You picked answer', (answer + 1)
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+
+What has happened this time is that the menu function has returned no value - it only printed an error message. When, at the end of the program, we try to print the returned value plus 1, what is the returned value? There is no returned value? So what is 1 + ... well, we have no clue what we are adding 1 to!
+We could just return any old number, but that would be lying. What we really should to is rewrite the program to cope with this exception. With what? try and except!
+
+Code Example 10 - yet another solution
+
+Problem solved again.

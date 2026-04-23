@@ -1,0 +1,31 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 29
+section: using-generic-collections
+chunk: 310
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+nce is simply declared using the List<T> syntax where T is the specific type.
+Generic List.Enumerator structure - MSDN
+Generic SortedList class - MSDN
+
+=== Generic Queue class and Generic Queue.Enumerator structure ===
+Generic Queue class - MSDN
+Generic Queue.Enumerator structure - MSDN
+
+=== Generic SortedDictionary class ===
+See MSDN
+For differences between SortedList and SortedDictionary are explained see MSDN
+
+=== Generic LinkedList ===
+A Generic Linked List represents a doubly linked list and is a general-purpose linked list. It supports enumerators and implements the ICollection interface, consistent with other classes in the .NET Framework.
+Generic LinkedList class - MSDN
+Generic LinkedList.Enumerator structure - MSDN
+Generic LinkedListNode class - MSDN
+
+=== Generic Stack class and Generic Stack.Enumerator structure ===
+Generic Stack class - MSDN
+Generic Stack.Enumerator structure - MSDN

@@ -1,0 +1,33 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 474
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ust declare the type extension as abstract. The instantiator of the generic can then extend the type again to achieve the desired mixin configuration.
+
+==== notes ====
+The predefined packages, Sequential_IO and Direct_IO, take private types. This will complicate I/O requirements for limited private types and should be considered during design.
+There are also some cases where you must use a limited private formal type. These cases arise when the formal type has an access discriminant, or the formal is used as the parent type in defining a type extension that itself includes a component of a limited type (e.g., task type), or the formal defines a new discriminant part with an access discriminant.
+
+=== Using Generic Units to Encapsulate Algorithms ===
+
+==== guideline ====
+Use generic units to encapsulate algorithms independently of data type.
+
+==== example ====
+This is the specification of a generic sort procedure:
+
+The generic body looks just like a regular procedure body and can make full use of the generic formal parameters in implementing the sort algorithm:
+
+The generic procedure can be instantiated as:
+
+or:
+
+and called as:
+
+or:

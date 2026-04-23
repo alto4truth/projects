@@ -1,0 +1,35 @@
+title: Advanced phone customization
+source: wikibooks
+year: undated
+document_id: advanced-phone-customization
+authors: 
+page: 12
+section: rooting-your-phone
+chunk: 30
+source_ref: https://en.wikibooks.org/wiki/Advanced_phone_customization
+
+gress sign either on the phone or Odin. Rebooting the phone led to stock, as expected (as nothing actually happened). Here's the log from Odin3 v3.09:
+
+<ID:0/004> Added!!
+<ID:0/004> Removed!!
+<ID:0/012> Added!!
+<ID:0/012> Odin v.3 engine (ID:12)..
+<ID:0/012> File analysis..
+<ID:0/012> SetupConnection..
+<ID:0/012> Initialization..
+<ID:0/012> Get PIT for mapping..
+<ID:0/012> Firmware update start..
+<ID:0/012> SingleDownload.
+<ID:0/012> recovery.img
+<ID:0/012> NAND Write Start!!
+<ID:0/012> Complete(Write) operation failed.
+<OSM> All threads completed. (succeed 0 / failed 1)
+<ID:0/012> Removed!!
+<ID:0/004> Added!!
+
+So I tried to change the USB port on the computer and then downloaded the latest version of Odin3. And it worked! What I'm not sure is which of the two (or both?) helped; but do keep it in mind if you do the same.
+
+== Magisk ==
+It is a very useful application which can manage your root and can 'hide' it from applications which check for its presence. It can be installed by flashing its ROM in TWRP.
+
+== Passing SafetyNet ==

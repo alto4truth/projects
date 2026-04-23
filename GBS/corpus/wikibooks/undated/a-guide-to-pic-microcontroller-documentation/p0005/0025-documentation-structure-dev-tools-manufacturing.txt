@@ -1,0 +1,19 @@
+title: A Guide To PIC Microcontroller Documentation
+source: wikibooks
+year: undated
+document_id: a-guide-to-pic-microcontroller-documentation
+authors: 
+page: 5
+section: documentation-structure-dev-tools-manufacturing
+chunk: 25
+source_ref: https://en.wikibooks.org/wiki/A_Guide_To_PIC_Microcontroller_Documentation
+
+ain capabilities of the three currently supported programming tools:
+
+The following provides a little more detail on the individual programming tools:
+
+MPLAB® PM3 - A full programming tool supporting (with few exceptions) all of the microcontroller products manufactured by Microchip. Through interchangeable programming sockets the wide array of packages in which the microcontrollers are delivered can be programmed. In-circuit programming is also supported through the ICSP interface for controllers that are already soldered onto a circuit board. Multiple ".hex" files can be saved on an SD or MCC card allowing for stand-alone operation. A "safe-mode" allows the programmer to reduce the PM3s functionality to programming only, ideal for on a production line, simplifying use by reducing functionality to avoid mistakes or access to other ".hex" files saved on the system. Serialisation and a DOS command line allow further functionality without the need to use the MPLAB® IDE. For those wishing to move from PROMATE® II to the PM3 an adapter is available allowing the PROMATE® II programming sockets to be used with the PM3.
+Quick Start Poster - Simple "getting started" information in poster format - DS51450
+User's Guide - Detailed description of the tool's programming modes and functionality - DS51464
+Design Guide for ICSP™ - Additional poster format documentation providing important design information for the In-Circuit Serial Programming (ICSP™) of controllers already soldered onto a circuit board - DS51474
+All PM3 documentation is to be found on the PM3 product page at www.microchip.com/pm3

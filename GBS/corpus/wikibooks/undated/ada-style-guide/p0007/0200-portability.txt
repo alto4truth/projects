@@ -1,0 +1,30 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 200
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ent varies from implementation to implementation, thereby hindering portability.
+
+=== Unprotected Shared Variables and Pragmas Atomic and Volatile ===
+
+==== guideline ====
+Do not use unprotected shared variables.
+Consider using protected types to provide data synchronization.
+Have tasks communicate through the rendezvous mechanism.
+Do not use unprotected shared variables as a task synchronization device.
+Consider using protected objects to encapsulate shared data.
+Use pragma Atomic or Volatile only when you are forced to by run-time system deficiencies.
+
+==== example ====
+See Guidelines 6.1.1 and 6.1.2.
+
+==== rationale ====
+The rationale for this appears in Guidelines 6.1.1 and 6.2.4. In addition, the treatment of unprotected shared variables varies from implementation to implementation, thereby hindering portability.
+
+== Exceptions ==
+You should exercise care when using predefined exceptions because aspects of their treatment may vary between implementations. Implementation-specific exceptions must, of course, be avoided. See Guidelines 4.3 an 5.8 for further information on exceptions. See Guideline 7.1.6 for further information on vendor-supplied features.

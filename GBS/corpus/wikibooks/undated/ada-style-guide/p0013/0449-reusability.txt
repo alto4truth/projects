@@ -1,0 +1,25 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 449
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+fferent restrictions (bounded, unbounded, etc.) can be stored in the same Ada library and used as part of the same Ada program.
+
+=== Abbreviations ===
+
+==== guideline ====
+Do not use abbreviations in identifier or unit names.
+
+==== example ====
+
+The following abbreviation may not be clear when used in an application:
+
+==== rationale ====
+This is a stronger guideline than Guideline 3.1.4. However well commented, an abbreviation may cause confusion in some future reuse context. Even universally accepted abbreviations, such as GMT for Greenwich Mean Time, can cause problems and should be used only with great caution.
+The difference between this guideline and Guideline 3.1.4 involves issues of domain. When the domain is well-defined, abbreviations and acronyms that are accepted in that domain will clarify the meaning of the application. When that same code is removed from its domain-specific context, those abbreviations may become meaningless.
+In the example above, the package, Greenwich_Mean_Time, could be used in any application without loss of meaning. But the function Get_GMT could easily be confused with some other acronym in a different domain.

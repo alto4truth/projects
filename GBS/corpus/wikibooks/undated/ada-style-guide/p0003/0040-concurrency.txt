@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 40
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+n to be closed, exception Program_Error will be raised. Other exceptions can still be raised while evaluating the guards or attempting to communicate:
+
+==== rationale ====
+The exception Program_Error is raised if a selective accept statement (select statement containing accepts) is reached, all of whose alternatives are closed (i.e., the guards evaluate to False and there are no alternatives without guards), unless there is an else part. When all alternatives are closed, the task can never again progress, so there is by definition an error in its programming. You must be prepared to handle this error should it occur.
+Because an else part cannot have a guard, it can never be closed off as an alternative action; thus, its presence prevents Program_Error. However, an else part, a delay alternative, and a terminate alternative are all mutually exclusive, so you will not always be able to provide an else part. In these cases, you must be prepared to handle Program_Error.
+The exception Tasking_Error can be raised in the calling task whenever it attempts to communicate. There are many situations permitting this. Few of them are preventable by the calling task.
+If an exception is raised during a rendezvous and not handled in the accept statement, it is propagated to both tasks and must be handled in two places (see Guideline 5.8).
+The handling of the others exception can be used to avoid propagating unexpected exceptions to callers (when this is the desired effect) and to localize the logic for dealing with unexpected exceptions in the rendezvous. After handling, an unknown exception should normally be raised again because the final decision of how to deal with it might need to be made at the outermost scope of the task body.

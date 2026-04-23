@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 29
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+cution. If you need to ensure a sequence of execution, you should make use of Ada's synchronization mechanisms, i.e., protected objects or rendezvous.
+
+==== notes ====
+Work is being done to minimize these problems, including the introduction of a scheduling algorithm known as the priority ceiling protocol (Goodenough and Sha 1988). The priority ceiling protocol reduces the blocking time that causes priority inversion to only one critical region (defined by the entries in a task). The protocol also eliminates deadlock (unless a task recursively tries to access a critical region) by giving a ceiling priority to each task accessing a resource that is as high as the priority of any task that ever accesses that resource. This protocol is based on priority inheritance and, thus, deviates from the standard Ada tasking paradigm, which supports priority ceiling emulation instead of the priority ceiling blocking that occurs with priority inheritance.
+Priorities are used to control when tasks run relative to one another. When both tasks are not blocked waiting at an entry, the highest priority task is given precedence. However, the most critical tasks in an application do not always have the highest priority. For example, support tasks or tasks with small periods might have higher priorities because they need to run frequently.
+All production-quality validated Ada 95 compilers will probably support pragma Priority. However, you should use caution unless (Annex D is specifically supported.
+There is currently no universal consensus on how to apply the basic principles of rate monotonic scheduling (RMS) to the Ada 95 concurrency model. One basic principle of RMS is to arrange all periodic tasks so that tasks with shorter periods have higher priorities than tasks with longer periods. However, with Ada 95, it might be faster to raise the priorities of tasks whose jobs suddenly become critical than to wait for an executive task to reschedule them. In this case, priority inversion can be minimized using a protected object with pragma Locking_Policy(Ceiling_Locking) as the server instead of a task.

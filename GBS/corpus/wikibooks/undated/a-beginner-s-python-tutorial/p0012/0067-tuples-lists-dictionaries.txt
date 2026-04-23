@@ -1,0 +1,23 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 12
+section: tuples-lists-dictionaries
+chunk: 67
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+- the key does the same thing. (Each key must be unique, though!) You can add, remove, and modify the values in dictionaries. Example: telephone book.
+
+== Tuples ==
+Tuples are pretty easy to make. You give your tuple a name, then after that the list of values it will carry. For example, the months of the year:
+
+Code Example 1 - creating a tuple
+
+Note that the '\' thingy at the end of the first line carries over that line of code to the next line. It is useful way of making big lines more readable.
+Technically, you don't have to put those parentheses there (the '(' and ')' thingies), but it stops Python from getting things confused.
+You may have spaces after the commas if you feel it necessary - it doesn't really matter.
+Python then organises those values in a handy, numbered index - starting from zero, in the order that you entered them in. It would be organised like this:
+
+And that is tuples! Really easy...

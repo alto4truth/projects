@@ -1,0 +1,18 @@
+title: A Brief Introduction to the LaTeX Typesetting Environment
+source: wikibooks
+year: undated
+document_id: a-brief-introduction-to-the-latex-typesetting-environment
+authors: 
+page: 3
+section: typesetting-the-basics
+chunk: 18
+source_ref: https://en.wikibooks.org/wiki/A_Brief_Introduction_to_the_LaTeX_Typesetting_Environment
+
+age of graphs that you think would look better displayed in a landscape style there is a different command for this and we will introduce it later on.
+
+==== The \usepackage option ====
+This is probably the simplest concept to think of, while also being one of the more difficult to deal with. If you're using a different application to typeset your documents than the ones suggested in this book then you'll have to look at the documentation when you're using this command.
+Essentially what's happening here is that you're adding functionality to your code. It's similar to adding a library to a Java program so that your code can utilize simple functions predefined by yourself or other people. However, not every LaTeX distribution comes with every package you would need.
+MacTex has a majority of the commonly used packages preinstalled and MikTex has an option to automatically download any that aren't already installed on the system being used. However, if you should come across an error where your typesetting application cannot find the package or doesn't have it installed you'll either have to go about writing without using it, or find it online and install it yourself.
+The details of installing a usepackage on a LaTeX typsetting program is a bit tedious and the author recommends using a Google search or the documentation provided with your application for those purposes since every distribution on different operating systems is different and therefore would be too much to go into in a short crash-course such as this one.
+Let's take a look at two of the author's favorite \usepackage functions.

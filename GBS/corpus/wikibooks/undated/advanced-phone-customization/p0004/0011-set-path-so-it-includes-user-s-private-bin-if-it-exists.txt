@@ -1,0 +1,23 @@
+title: Advanced phone customization
+source: wikibooks
+year: undated
+document_id: advanced-phone-customization
+authors: 
+page: 4
+section: set-path-so-it-includes-user-s-private-bin-if-it-exists
+chunk: 11
+source_ref: https://en.wikibooks.org/wiki/Advanced_phone_customization
+
+wer this to -j 3 or -j 2. On the other hand, -c will ask repo to pull in only the current branch instead of all branches that are available on GitHub.
+
+=== Prepare the device-specific code ===
+This depends on your device.
+
+=== Turn on caching to speed up build ===
+Make use of ccache if you want to speed up subsequent builds by running:
+
+export USE_CCACHE=1
+
+and adding that line to your ~/.bashrc file. Then, specify the maximum amount of disk space you want ccache to use by typing this:
+
+ccache -M 50G

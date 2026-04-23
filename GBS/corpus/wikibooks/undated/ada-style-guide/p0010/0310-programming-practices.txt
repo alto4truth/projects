@@ -1,0 +1,40 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 310
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+an exception on most machines
+because it is requesting a huge array (indexed
+from the smallest integer to the largest one):
+
+=== Array Attributes ===
+
+==== guideline ====
+Use array attributes 'First, 'Last, or 'Length instead of numeric literals for accessing arrays.
+Use the 'Range of the array instead of the name of the index subtype to express a range.
+Use 'Range instead of 'First .. 'Last to express a range.
+
+==== example ====
+
+==== rationale ====
+In the example above, it is better to use Name_String'Range
+in the for loop than to use Name_String_Size,
+Name_String'First .. Name_String'Last, or 1 .. 30
+because it is clearer, less error-prone, and less dependent on
+the definitions of Name_String and Name_String_Size.
+If Name_String is changed to have a different index type
+or if the bounds of the array are changed, this will still work
+correctly. This enhances program reliability.
+
+=== Parenthetical Expressions ===
+
+==== guideline ====
+Use parentheses to specify the order of subexpression evaluation to clarify expressions (NASA 1987 ).
+Use parentheses to specify the order of evaluation for subexpressions whose correctness depends on left to right evaluation.
+
+==== example ====

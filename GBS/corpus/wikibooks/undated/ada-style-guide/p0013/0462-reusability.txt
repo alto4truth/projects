@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 462
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ity of concurrent access for which the user may not have planned. In such a case, the user should be warned by a comment in the generic specification.
+
+=== Exceptions ===
+
+==== guideline ====
+Propagate exceptions out of reusable parts. Handle exceptions within reusable parts only when you are certain that the handling is appropriate in all circumstances.
+Propagate exceptions raised by generic formal subprograms after performing any cleanup necessary to the correct operation of future invocations of the generic instantiation.
+Leave state variables in a valid state when raising an exception.
+Leave parameters unmodified when raising an exception.
+
+==== example ====

@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 323
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ments of an array:
+
+To iterate over all elements in a linked list:
+
+Situations requiring a "loop and a half" arise often. For this, use:
+
+rather than:
+
+==== rationale ====
+A for loop is bounded, so it cannot be an "infinite loop." This is enforced by the Ada language, which requires a finite range in the loop specification and does not allow the loop counter of a for loop to be modified by a statement executed within the loop. This yields a certainty of understanding for the reader and the writer not associated with other forms of loops. A for loop is also easier to maintain because the iteration range can be expressed using attributes of the data structures upon which the loop operates, as shown in the example above where the range changes automatically whenever the declaration of the array is modified. For these reasons, it is best to use the for loop whenever possible, that is, whenever simple expressions can be used to describe the first and last values of the loop counter.
+The while loop has become a very familiar construct to most programmers. At a glance, it indicates the condition under which the loop continues. Use the while loop whenever it is not possible to use the for loop but when there is a simple Boolean expression describing the conditions under which the loop should continue, as shown in the example above.
+The plain loop statement should be used in more complex situations, even if it is possible to contrive a solution using a for or while loop in conjunction with extra flag variables or exit statements. The criteria in selecting a loop construct are to be as clear and maintainable as possible. It is a bad idea to use an exit statement from within a for or while loop because it is misleading to the reader after having apparently described the complete set of loop conditions at the top of the loop. A reader who encounters a plain loop statement expects to see exit statements.
+There are some familiar looping situations that are best achieved with the plain loop statement. For example, the semantics of the Pascal repeat until loop, where the loop is always executed at least once before the termination test occurs, are best achieved by a plain loop with a single exit at the end of the loop. Another common situation is the "loop and a half" construct, shown in the example above, where a loop must terminate somewhere within the sequence of statements of the body. Complicated "loop and a half" constructs simulated with while loops often require the introduction of flag variables or duplication of code before and during the loop, as shown in the example. Such contortions make the code more complex and less reliable.
+Minimize the number of ways to exit a loop to make the loop more understandable to the reader. It should be rare that you need more than two exit paths from a loop. When you do, be sure to use exit statements for all of them, rather than adding an exit statement to a for or while loop.

@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 249
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+lines 4.1.1, 4.2.1, 8.4.1, and 8.4.8.
+See also Guideline 9.4.1 for a discussion of the use of child library units in creating a tagged type hierarchy.
+
+=== Cohesion ===
+
+==== guideline ====
+Make each package serve a single purpose.
+Use packages to group related data, types, and subprograms.
+Avoid collections of unrelated objects and subprograms (NASA 1987; Nissen and Wallis 1984).
+Consider restructuring a system to move two highly related units into the same package (or package hierarchy) or to move relatively independent units into separate packages.
+
+==== example ====
+As a bad example, a package named Project_Definitions is obviously a "catch all" for a particular project and is likely to be a jumbled mess. It probably has this form to permit project members to incorporate a single with clause into their software.
+Better examples are packages called Display_Format_Definitions, containing all the types and constants needed by some specific display in a specific format, and Cartridge_Tape_Handler, containing all the types, constants, and subprograms that provide an interface to a special-purpose device.

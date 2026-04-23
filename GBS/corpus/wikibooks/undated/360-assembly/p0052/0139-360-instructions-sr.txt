@@ -1,0 +1,31 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 52
+section: 360-instructions-sr
+chunk: 139
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+SR - Subtract Register - Opcode 1B
+
+== Format ==
+SR 2,1
+The specific syntax is
+
+SR target register, source register.
+
+The first argument is a target register which value is affected by the instruction.
+The second argument is the source value register.
+
+== Availability ==
+The SR instruction is available on all models of the 360, 370 and z/System.
+
+== Operation ==
+The SR instruction reads 32-bit integer value from the register specified by the second argument and subtracts it from the value of register specified by the first argument. The register specified by the first argument holds the operation result after the instruction is executed. The Condition Code field in the Program Status Word is changed according to the resulting value.
+This instruction can also be used with both register arguments being the same in order to clear that register to zero. The same function occurs if both arguments are the same register in the XR instruction.
+
+== Condition Codes ==
+If signed integer overflow occurs, i.e. difference is not between -2**31 and 2**31-1, CC is set to 3.
+Otherwise, CC is set to 0, 1 or 2, if difference is equal to zero, below zero or above zero accordingly.

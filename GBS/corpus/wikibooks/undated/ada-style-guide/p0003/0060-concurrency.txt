@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 60
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ne 5.9.1 for a discussion of the 'Valid attribute.) You also can still safely assign to local objects and call operations of global protected objects.
+
+=== Abnormal Termination ===
+
+==== guideline ====
+Place an exception handler for others at the end of a task body.
+Consider having each exception handler at the end of a task body report the task's demise.
+Do not rely on the task status to determine whether a rendezvous can be made with the task.
+
+==== example ====
+This is one of many tasks updating the positions of blips on a radar screen. When started, it is given part of the name by which its parent knows it. Should it terminate due to an exception, it signals the fact in one of its parent's data structures:

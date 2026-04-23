@@ -1,0 +1,36 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 23
+section: special-directories
+chunk: 61
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+== The abbreviated directories . and .. ==
+The directories named . and .. are relative names. They are interpreted by the shell in the current context. While this takes a moment or two longer to grasp than ordinary absolute directory names, it is a very useful thing about Unix.
+In any directory you can type
+
+% ls -a
+As you will see, there are two directories listed called (.) and (..). These appear in all Unix directories.
+
+=== Current directory (.) ===
+In Unix . means the current directory, so typing
+
+% cd .
+means that you stay where you are.
+This may not seem very useful at first, but you will often find it very useful – remember that it is a relative directory name.
+
+=== Parent directory (..) ===
+.. means the parent of the current directory, so typing
+
+% cd ..
+will take you up one directory.
+
+=== Home directory (~) ===
+Typing cd alone or cd ~ always returns you to your home directory. This is very useful if you are lost in the file system. Typing cd / takes you to the root.
+What do you think
+
+% ls ~/..
+would list?

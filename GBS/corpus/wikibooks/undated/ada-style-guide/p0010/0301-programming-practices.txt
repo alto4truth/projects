@@ -1,0 +1,37 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 301
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+refully chosen name for the component of the larger record
+that is used to select the smaller enhances readability, for example:
+
+=== Dynamic Data ===
+
+==== guideline ====
+Differentiate between static and dynamic data. Use dynamically allocated objects with caution.
+Use dynamically allocated data structures only when it is necessary to create and destroy them dynamically or to be able to reference them by different names.
+Do not drop pointers to undeallocated objects.
+Do not leave dangling references to deallocated objects.
+Initialize all access variables and components within a record.
+Do not rely on memory deallocation.
+Deallocate explicitly.
+Use length clauses to specify total allocation size.
+Provide handlers for Storage_Error.
+Use controlled types to implement private types that manipulate dynamic data.
+Avoid unconstrained record objects unless your run-time environment reliably reclaims dynamic heap storage.
+Unless your run-time environment reliably reclaims dynamic heap storage, declare the following items only in the outermost, unnested declarative part of either a library package, a main subprogram, or a permanent task:
+Access types
+Constrained composite objects with nonstatic bounds
+Objects of an unconstrained composite type other than unconstrained records
+Composite objects large enough (at compile time) for the compiler to allocate implicitly on the heap
+Unless your run-time environment reliably reclaims dynamic heap storage or you are creating permanent, dynamically allocated tasks, avoid declaring tasks in the following situations:
+Unconstrained array subtypes whose components are tasks
+Discriminated record subtypes containing a component that is an array of tasks, where the array size depends on the value of the discriminant
+Any declarative region other than the outermost, unnested declarative part of either a library package or a main subprogram
+Arrays of tasks that are not statically constrained

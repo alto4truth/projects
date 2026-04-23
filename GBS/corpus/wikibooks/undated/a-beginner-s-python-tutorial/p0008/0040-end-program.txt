@@ -1,0 +1,22 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 8
+section: end-program
+chunk: 40
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+ain program}
+{this code isn't in the function}
+{because it isn't indented}
+#remember to put a colon ":" at the end
+#of the line that starts with 'def'
+
+function_name is the name of the function. You write the code that is in the function below that line, and have it indented. (We will worry about parameter_1 and parameter_2 later, for now imagine there is nothing between the parentheses.
+Functions run completely independent of the main program. Remember when I said that when the computer comes to a function, it doesn't see the function, but a value, that the function returns? Here's the quote:
+"To the computer, the variable 'a' doesn't look like 'a' - it looks like the value that is stored inside it. Functions are similar - to the main program (that is, the program that is running the function), they look like the value of what they give in return of running."
+A function is like a miniature program that some parameters are given to - it then runs itself, and then returns a value. Your main program sees only the returned value. If that function flew to the moon and back, and then at the end had:
+
+Code Example 9 - return

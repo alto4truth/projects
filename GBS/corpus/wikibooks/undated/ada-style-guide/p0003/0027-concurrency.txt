@@ -1,0 +1,14 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 27
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+n change the default policy of FIFO queues.)
+A solution might be to provide an entry for a High priority user and an entry for a Medium priority user.
+
+However, in this approach, T1 still waits for one execution of Operation when T2 has already gained control of the task Server. In addition, the approach increases the communication complexity (see Guideline 6.2.6).

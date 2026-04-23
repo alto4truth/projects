@@ -1,0 +1,71 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 73
+section: pseudo-instructions
+chunk: 202
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+tions available. Some pseudo instructions are used for conditional assembly or macro processing, and some are only available while processing a macro.
+
+*PROCESS - Special processing options
+ACONTROL - Change assembler options and controls
+ACTR - Limit AIF/AGO branch counts in macros
+ADATA - Writes information to the ADATA file
+AGO - Conditional transfer of assembly
+AIF - Conditional test at assembly time
+AINSERT - Insert records into input stream
+ALIAS - Supply alternate name for external symbol
+AMODE - Declare addressing mode
+ANOP - Assembly no-op
+AREAD - Read from input stream
+CATTR - Specify a class name and attributes
+CCW - specify 8-byte, 24-bit address I/O instruction
+CCW0 - Same as CCW
+CCW1 - Specify 8-byte, 31-bit address I/O instruction
+CEJECT - Conditional ejecf
+CNOP = Conditional no-op
+COM - Declare common control section
+COPY - Include code
+CSECT - Declare a control section
+CXD - Return total external dummy section size
+DC - Declare a constant value
+DROP - Discontinue use of an addressing register
+DS - Declare name for a storage location
+DSECT - Declare a dummy section
+DXD - Define external dummy section
+EJECT - Skip to next page on listing
+END - Declare end of an assembly
+ENTRY - Declare a public entry point
+EQU - Declare a symbol
+EXITCTL - Set values to pass to certain user exits
+EXTRN - Declare a strong (required) external symbol
+GBLA / GBLB / GBLC - declare a global symbol for a macro
+ICTL - Declare source code column margins
+ISEQ - Validate sequence numbers
+LCLA / LCLB / LCLC - declare a local symbol for a macro
+LOCTR - Specify multiple location counters
+LTORG - Generate all literals
+MACRO - Declare the start of a macro
+MEND - Declare the end of a macro
+MEXIT - Declare the termination of processing of a macro
+MNOTE - Declare error (or warning) in a macro
+OPSYN - Define or delete an op code
+ORG - Set current location counter value
+POP - Restore PRINT settings
+PRINT - Declare listing conditions
+PUNCH - Add information to object output
+PUSH - Save current PRINT settings
+REPRO - Copy next card to object file without translation
+RMODE - Declare real addressing mode
+RSECT - Declare a read=only CSECT
+SETA / SETB / SETC - declare value of a conditional symbol
+SPACE - Generate blank lines in listing
+TITLE - Add a title to a listing
+START - Declare the start of a control section
+USING - Declare addressing registers
+WXTRN - Declare weak (optional) external symbol
+XATTR - Assign attributes to an external symbol
+Comments - Programmer remarks about the program

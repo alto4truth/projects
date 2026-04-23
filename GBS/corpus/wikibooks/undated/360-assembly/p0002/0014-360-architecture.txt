@@ -1,0 +1,25 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 2
+section: 360-architecture
+chunk: 14
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+on is to be performed.
+
+(CC)- Bits 18 and 19: Condition Code, used to indicate the results of an arithmetic, comparison, test, or logical instruction.
+
+(Prog Mask) - Bits 20-23: Indicates if certain arithmetic exceptions are masked against causing an interrupt. These bits can be set or cleared through the SPM instruction. These masks are
+Bit 20 - Integer overflow
+Bit 21 - Decimal overflow
+Bit 22 - Floating-point underflow
+Bit 23 - Floating-point overflow
+(RI) (128-bit PSW) - Bit 24: Reserved for IBM use.
+(A) (64-bit PSW) - Bit 32: Set if 31-bit addressing is enabled; clear if 24-bit addressing is in use.
+(Instruction Address) address of the current instruction being executed:
+(64-bit PSW) - Bits 33-63: 24-bit address (or 31-bit if A-bit is set).
+(128-bit PSW) - Bits 64-127: 64-bit address.
+{EA} and (BA) - Bit 31 and 32 (128-bit PSW) : Controls Addressing Mode. If EA and BA are zero; 24-bit addressing is in effect. If EA is 0 and BA is 1, 31 bit addressing is in effect. If Both are 1, 64-bit addressing is in effect. If EA is 1 and BA is 0, a specification exception will be thrown.

@@ -1,0 +1,29 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 122
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+mplemented extensively in .NET because a lot of information is maintained at the common intermediate language (CIL) level.
+Among other things you can:
+
+get information about running assembly or assembly constituents (modules, classes, methods, etc.), this is particularly useful for dynamically loaded assemblies that are not known at compile time.
+put custom attributes in your code and retrieve those attributes at run time.
+dynamically invoke methods.
+"emit" and execute CIL code at run time.
+
+=== Mailing ===
+
+== Classes, Interfaces, and tools ==
+
+==== COM interoperability ====
+Exam objective: Expose COM components to the .NET Framework and .NET Framework components to COM
+(Refer System.Runtime.InteropServices namespace)
+
+==== Exposing COM Components to the .NET Framework ====
+First there is an article in the .NET developers guide that covers the first part of this section, see MSDN
+Import a type library as an assembly - MSDN

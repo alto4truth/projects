@@ -1,0 +1,30 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 382
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ucing the Ada language may want to consider an alternative instantiation. The Ada Reference Manual (1995) chose bold lowercase for all reserved words.
+
+==== automation notes ====
+Ada names are not case sensitive. Therefore, the names max_limit, MAX_LIMIT, and Max_Limit denote the same object or entity. A good code formatter should be able to automatically convert from one style to another as long as the words are delimited by underscores.
+As recommended in Guideline 3.1.4, abbreviations should be project-wide. An automated tool should allow a project to specify those abbreviations and format them accordingly.
+
+=== Abbreviations ===
+
+==== guideline ====
+Do not use an abbreviation of a long word as an identifier where a shorter synonym exists.
+Use a consistent abbreviation strategy.
+Do not use ambiguous abbreviations.
+To justify its use, an abbreviation must save many characters over the full word.
+Use abbreviations that are well-accepted in the application domain.
+Maintain a list of accepted abbreviations, and use only abbreviations on that list.
+
+==== example ====
+Use:
+
+rather than:

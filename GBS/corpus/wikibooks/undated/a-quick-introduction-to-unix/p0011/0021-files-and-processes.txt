@@ -1,0 +1,19 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 11
+section: files-and-processes
+chunk: 21
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+Everything in Unix is a file or a process. In Unix a file is just a destination for or a source of a stream of data. Thus a printer, for example, is a file and so is the screen.
+A process is a program that is currently running. So a process may be associated with a file. The file stores the instructions that are executed for that process to run.
+Another way to look at it is that file is a collection of data that can be referred to by name. Files are created by users either directly (using text editors, running compilers etc.) or indirectly (by running some program - like processing a text input file to produce a formatted file for printing).
+Examples of files include:
+
+a text document;
+a program written in a programming language such as C++ or Java;
+a jpeg image;
+a directory: directories can be thought of as the analogue of Windows’ folders. Directories are files that contain links to other files.

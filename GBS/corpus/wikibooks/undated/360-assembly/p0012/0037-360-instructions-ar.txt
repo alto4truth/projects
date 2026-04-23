@@ -1,0 +1,33 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 12
+section: 360-instructions-ar
+chunk: 37
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+AR - Add Register - Opcode 1A
+
+== Format ==
+AR 2,1
+The specific syntax is
+
+AR target register, source register.
+
+The first argument is a target register which value is affected by the instruction.
+The second argument is the source value register.
+
+== Availability ==
+The AR instruction is available on all models of the 360, S/370. ESA/390, and z/System.
+
+== Operation ==
+The AR instruction reads a 32-bit integer value from the register specified by the second argument and adds it to the value of the register specified by the first argument. The Condition Code field in the Program Status Word is changed according to the resulting value.
+
+== Condition Codes ==
+If signed integer overflow occurs, i.e. sum is not between -2**31 and 2**31-1, CC is set to 3.
+Otherwise, CC is set to 0, 1 or 2, if sum is equal to zero, below zero or above zero accordingly.
+
+== Exceptions and Faults ==
+If signed integer overflow is detected and the bit 36 in PSW is set, an operation exception occurs.

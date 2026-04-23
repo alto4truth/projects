@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 394
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+r type extension through derivation and through generic mixin (see also Guideline 9.5.1), you achieve readable declarations of objects and procedures.
+
+==== notes ====
+A naming convention for classes draws a hard line between object-oriented abstractions and other kinds of abstractions. Given that engineers have been defining abstract data types in Ada 83 (Ada Reference Manual 1983) for over 10 years, you may not want to change the naming convention just for the sake of using type extension with a type. You must consider how important it is to call out uses of inheritance in the overall use of abstractions in your program. If you prefer to emphasize abstraction, in general, over the mechanism used to implement the abstraction (i.e., inheritance, type-extension, and polymorphism), you may not want to impose such a stringent naming convention. You do not hamper quality by favoring a smoother transition in naming conventions from abstractions developed without inheritance to those developed with inheritance.
+If you choose a naming convention that highlights the use of object-oriented features and later decide to change the declaration to one that does not use an object-oriented feature, the change may be expensive. You must naturally change all occurrences of the names and must be careful not to introduce errors as you update the names. If you choose a naming convention that prohibits the use of suffixes or prefixes to characterize the declaration, you lose the opportunity to convey the intended usage of the declared item.

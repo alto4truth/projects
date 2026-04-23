@@ -1,0 +1,27 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 269
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+grams and tasks.
+Minimize the scope within which with clauses apply.
+Only with those units directly needed.
+Carefully consider encapsulation of tasks.
+
+==== exceptions ====
+For unavoidable internal errors for which no user recovery is possible, declare a single user-visible exception. Inside the abstraction, provide a way to distinguish between the different internal errors.
+Do not borrow an exception name from another context.
+Export (declare visibly to the user) the names of all exceptions that can be raised.
+In a package, document which exceptions can be raised by each subprogram and task entry.
+Do not raise exceptions for internal errors that can be avoided or corrected within the unit.
+Do not raise the same exception to report different kinds of errors that are distinguishable by the user of the unit.
+Provide interrogative functions that allow the user of a unit to avoid causing exceptions to be raised.
+When possible, avoid changing state information in a unit before raising an exception.
+Catch and convert or handle all predefined and compiler-defined exceptions at the earliest opportunity.
+Do not explicitly raise predefined or implementation-defined exceptions.
+Never let an exception propagate beyond its scope.

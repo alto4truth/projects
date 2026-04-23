@@ -1,0 +1,27 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 14
+section: 360-instructions-bc
+chunk: 46
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+BC - Branch on Condition - RX type instruction - Opcode 47 / Decimal 71
+
+== Availability ==
+The BC instruction is available on all models of the 360, 370 and z/System.
+
+== Format ==
+BC 2,LABEL
+BH LABEL - Special opcode, same as BC 2,LABEL
+BC 1,L1
+BO L1 - Same as BC 1,L1
+BC 15,106(0,10)
+B 106(0,10) - B opcode is unconditional branch and is same as BC 15
+BC 3,256(7,6)
+The specific syntax is
+
+BC mask,offset(index register,base register)
+Where the offset, index register and base register values will be determined automatically by the assembler if the USING pseudo-instruction has been used, and the target address label used is within 4096 bytes of the value of some base register.

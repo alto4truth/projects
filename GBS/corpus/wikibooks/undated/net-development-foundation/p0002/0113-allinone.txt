@@ -1,0 +1,34 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 113
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+, user security policy, and application domain security policy. Any one of these security policies can deny an untrusted managed assembly permissions.
+
+=== Classes, interfaces, and tools ===
+
+==== Implement code access security ====
+Exam objective: Implement code access security to improve the security of a .NET Framework application.
+(Refer System.Security namespace)
+SecurityManager class - MSDN
+CodeAccessPermission class - MSDN
+Modify the Code Access security policy at the machine, user, and enterprise policy level by using the Code Access Security Policy tool (Caspol.exe) - MSDN
+PermissionSet class, NamedPermissionSet class, and PermissionSetCollection class
+
+PermissionSet class - MSDN
+NamedPermissionSet class - MSDN
+PermissionSetCollection class
+There does not seem to be such a thing, to be investigated...
+Standard Security interfaces
+
+IEvidenceFactory interface - MSDN
+IPermission interface - MSDN
+
+==== Implement access control ====
+Exam objective: Implement access control by using the System.Security.AccessControl classes.
+DirectorySecurity class, FileSecurity class, FileSystemSecurity class, and RegistrySecurity class

@@ -1,0 +1,16 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 61
+section: 360-instructions-using
+chunk: 160
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+The USING pseudo-instruction is used to inform the assembler of the contents of various registers which are to be used in base-displacement addressing. It does not generate any executable instructions, it provides information to the assembler.
+The format for the USING pseudo-instruction is:
+
+USING address,register1[,register2[,...]]
+Register1 can be any of the general purpose registers 1 through 15. It tells the assembler that this register has been loaded with the address specified as the first parameter. Because many instructions - including branch instructions - treat register 0 as a non-action or containing the actual value 0, register 0 should not be used for this purpose. A second (or subsequent) register, indicated by the parameter register2 optionally provides a second base register, and is presumed to contain the address of the first parameter plus 4096. Each subsequent register, if specified, is presumed by the assembler tocontaino the address 4096 above the address specified in the preceding register
+Example:

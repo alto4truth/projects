@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 354
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+rary order dependencies are not, strictly speaking, a case of erroneous execution; thus, they are discussed in Guideline 7.1.9 as a portability issue.
+
+=== Unchecked Conversion ===
+
+==== guideline ====
+Use Ada.Unchecked_Conversion only with the utmost care (Ada Reference Manual 1995, §13.9 [Annotated]).
+Consider using the 'Valid attribute to check the validity of scalar data.
+Ensure that the value resulting from Ada.Unchecked_Conversion properly represents a value of the parameter's subtype.
+Isolate the use of Ada.Unchecked_Conversion in package bodies.
+
+==== example ====
+The following example shows how to use the 'Valid attribute to check validity of scalar data:

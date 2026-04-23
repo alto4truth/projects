@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 126
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+der using abstract types for generic formal derived types.
+Consider using abstract types to develop different implementations of a single abstraction.
+
+==== example ====
+In a banking application, there are a wide variety of account types, each with different features and restrictions. Some of the variations are fees, overdraft protection, minimum balances, allowable account linkages (e.g., checking and savings), and rules on opening the account. Common to all bank accounts are ownership attributes: unique account number, owner name(s), and owner tax identification number(s). Common operations across all types of accounts are opening, depositing, withdrawing, providing current balance, and closing. The common attributes and operations describe the conceptual bank account. This idealized bank account can form the root of a generalization/specialization hierarchy that describes the bank's array of products. By using abstract tagged types, you ensure that only account objects corresponding to a specific product will be created. Because any abstract operations must be overridden with each derivation, you ensure that any restrictions for a specialized account are implemented (e.g., how and when the account-specific fee structure is applied):

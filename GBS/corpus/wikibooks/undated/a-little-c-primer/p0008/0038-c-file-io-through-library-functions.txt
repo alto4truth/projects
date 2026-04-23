@@ -1,0 +1,63 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 8
+section: c-file-io-through-library-functions
+chunk: 38
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+the two numbers that were stored
+with "fprintf()" in the last example:
+
+/* frdata.c */
+
+#include <stdio.h>
+
+void main()
+{
+int n1;
+float n2;
+FILE *fp;
+
+fp = fopen( "data", "r" );
+fscanf( fp, "%d %f", &n1, &n2 );
+printf( "%d %f", n1, n2 );
+fclose( fp );
+}
+
+The "fscanf()" function uses the same format codes as "fprintf()", with the
+familiar exceptions:
+
+There is no "%g" format code.
+The "%f" and "%e" format codes work the same.
+There is a "%h" format code for reading short integers.
+Numeric modifiers can be used, of course. The "fscanf()" function returns
+the number of items that it successfully read, or the EOF code, an "int", if
+it encounters the end of the file or an error.
+The following program demonstrates the use of "fprintf()" and "fscanf()":
+
+/* fprsc.c */
+
+#include <stdio.h>
+
+void main()
+{
+int ctr, i[3], n1 = 16, n2 = 256;
+float f[4], n3 = 3.141592654f;
+FILE *fp;
+
+fp = fopen( "data", "w+" );
+
+/* Write data in: decimal integer formats
+decimal, octal, hex integer formats
+floating-point formats */
+
+fprintf( fp, "%d %10d %-10d \n", n1, n1, n1 );
+fprintf( fp, "%d %o %x \n", n2, n2, n2 );
+fprintf( fp, "%f %10.10f %e %5.4e \n", n3, n3, n3, n3 );
+
+/* Rewind file. */
+
+rewind( fp );

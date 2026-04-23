@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 16
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+uires synchronous unbuffered communication.
+
+==== example ====
+The naturally concurrent objects within the problem domain can be modeled as Ada tasks.
+
+Multiple tasks that implement the decomposition of a large, matrix multiplication algorithm are an example of an opportunity for real concurrency in a multiprocessor target environment. In a single processor target environment, this approach may not be justified due to the overhead incurred from context switching and the sharing of system resources.
+A task that updates a radar display every 30 milliseconds is an example of a cyclic activity supported by a task.
+A task that detects an over-temperature condition in a nuclear reactor and performs an emergency shutdown of the systems is an example of a task to support a high-priority activity.

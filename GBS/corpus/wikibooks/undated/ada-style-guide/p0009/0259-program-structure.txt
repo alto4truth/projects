@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 259
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+library Rational_Numbers.IO. This example is adapted from the Ada Reference Manual (1995, §§7.1 [Annotated], 7.2 [Annotated], and 10.1.1 [Annotated]):
+
+==== rationale ====
+Restricting visibility of a program unit ensures that the program unit is not called from some part of the system other than that which was intended. This is done by nesting it inside the only unit that uses it, by hiding it inside a package body rather than declaring it in the package specification, or by declaring it as a private child unit. This avoids errors and eases the job of maintainers by guaranteeing that a local change in that unit will not have an unforeseen global effect.
+Restricting visibility of a library unit by using with clauses on subunits rather than on the entire parent unit is useful in the same way. In the example above, it is clear that the package Text_IO is used only by the Listing_Facilities package of the compiler.
+Nesting inside subprograms and tasks is discouraged because it leads to unreusable components. These components are essentially unreusable because they make undesirable up-level references into the defining context. Unless you truly want to ensure that the program unit is not called from some unintended part of the system, you should minimize this form of nesting.
+See also Guideline 4.2.1 for a discussion of the use of child units.

@@ -1,0 +1,14 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 2
+section: 360-architecture
+chunk: 3
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+The 360 architecture is a 32-bit machine (64-bit for z/System), in which the standard word size is 32 bits (64 for z/System). When using 32-bit instructions, depending on the addressing mode, many instructions do not use all 32 bits, but may only use the lower 24 or 31 bits of the address, register, or memory. The 360 supports up to 16 mebibytes (2^24 or 16*1024^3) of memory and 24-bit addressing. The 370 and 390 support up to 2 gibibytes (2^31) of memory and 31-bit addressing. The z/System supports up to 16 exbibytes (2^64) of memory and 64-bit addressing.
+
+== Features ==
+The 360 architecture has:-

@@ -1,0 +1,20 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 10
+section: p00001170100001401000010420010110000010147030400100012005003202200000-005301000
+chunk: 25
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+ou don't yet understand the scope of your problem, it is usually best to spend 30 seconds writing a program that will run for 3 hours than vice versa.
+
+== The online manual ==
+The "man" command displays information about a given command (colloquially referred to as the command's "man page"). The online man pages are an extremely valuable resource; if you do any serious work with the commands presented here, you'll eventually read all their man pages top to bottom. In Unix literature the man page for a command (or function, or file) is typically referred to as command(n). The number "n" specifies a section of the manual to disambiguate entries which exist in multiple sections. So, passwd(1) is the man page for the passwd command, and passwd(5) is the man page for the passwd file. On a Linux system you ask for a certain section of the manual by giving the section number as the first argument as in "man 5 passwd". Here's what the man command has to say about itself:
+
+$ man man
+man(1) man(1)
+NAME
+man - format and display the on-line manual pages
+manpath - determine user's search path for man pages

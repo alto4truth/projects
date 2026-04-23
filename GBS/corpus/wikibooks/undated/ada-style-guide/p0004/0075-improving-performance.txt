@@ -1,0 +1,36 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 4
+section: improving-performance
+chunk: 75
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+=== Checking for Constraint Errors ===
+
+==== guideline ====
+Use hard-coded constraint checking when measured performance indicates.
+
+==== example ====
+
+==== rationale ====
+Determine the impact of using exception handlers to detect constraint errors. If the exception handling mechanism is slow, then hard-coded checking may be more efficient.
+
+=== Order of Array Processing ===
+
+==== guideline ====
+Use column-first processing of two-dimensional arrays when measured performance indicates.
+
+==== example ====
+
+==== rationale ====
+Determine the impact of processing two-dimensional arrays in row-major order versus column-major order. While most Ada compilers are likely to use row-major order, it is not a requirement. In the presence of good optimization, there may be no significant difference in the above examples. Using static array bounds is also likely to be significant here. See Guidelines 10.4.1 and 10.4.2.
+
+=== Assigning Alternatives ===
+
+==== guideline ====
+Use overwriting for conditional assignment when measured performance indicates.
+
+==== example ====

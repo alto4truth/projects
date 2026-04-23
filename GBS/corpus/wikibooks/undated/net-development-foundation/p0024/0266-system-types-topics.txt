@@ -1,0 +1,19 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 24
+section: system-types-topics
+chunk: 266
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+e essentially compositions of those types.
+All of the built-in types are value types except for Object and String.
+The built-in value types consist of
+
+the integer types (Byte, SByte, Int16, Int32, Int64, UInt16, UInt32 and UInt64)
+the floating point types (Single and Double)
+the logical type (Boolean)
+other (Char, Decimal, InPtr and UInPtr)
+All built-in value types are defined in the System namespace (ex. System.Int32) and have keywords that represent them in the VB and C# (ex. int in C#, integer in VB.NET) except for InPtr and UInPtr.

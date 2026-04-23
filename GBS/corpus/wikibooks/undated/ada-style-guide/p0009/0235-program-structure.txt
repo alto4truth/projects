@@ -1,0 +1,30 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 235
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ivate child unit specifications for data and subprograms that are required by (other) child units that extend a parent unit's abstraction or services.
+
+==== example ====
+The file names below illustrate one possible file organization and associated consistent naming convention. The library unit name uses the adb suffix for the body. The suffix ads indicates the specification, and any files containing subunits use names constructed by separating the body name from the subunit name with an underscore:
+
+text_io.ads — the specification
+text_io.adb — the body
+text_io_integer_io.adb — a subunit
+text_io_fixed_io.adb — a subunit
+text_io_float_io.adb — a subunit
+text_io_enumeration_io.adb — a subunit
+
+Depending on what characters your file system allows you to use in file names, you could show the distinction between parent and subunit name more clearly in the file name. If your file system allows the "#" character, for example, you could separate the body name from the subunit name with a #:
+
+text_io.ads — the specification
+text_io.adb — the body
+text_io#integer_io.adb — a subunit
+text_io#fixed_io.adb — a subunit
+text_io#float_io.adb — a subunit
+text_io#enumeration_io.adb — a subunit

@@ -1,0 +1,24 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 12
+section: create-an-event-supplier
+chunk: 35
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+== Discussion ==
+The easiest of the two event sides to design is the supplier. In TAO 1.5 there are a few event examples. My favorite is the COSEC on the TAO site, which is similar to the example in the TAO Developer's Guide example. Unfortunately, in the examples on the TAO site, there are no comments. What follows is an example of a simple event supplier which sends an event every 6 seconds. To accomplish this, an ACE timer is set up (with associated handler/callback) which serves to send the event at the appointed time. Finally, the timer is inserted into an ACE reactor and told to "run" in open loop mode.
+When reading the code, note at the top of main that connections are made to the orb, the naming service, and the event service. Then, quite a bit of boilerplate code related to creating connections to the event service can be found. The last line of this boilerplate code determines that the event channel will not care that consumers are disconnecting.
+
+== main.cpp ==
+/************************************************
+* EventSource
+*
+* A test program for snding events over TAO's event service
+*/
+
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif

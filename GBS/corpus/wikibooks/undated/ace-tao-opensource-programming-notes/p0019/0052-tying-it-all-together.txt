@@ -1,0 +1,13 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 19
+section: tying-it-all-together
+chunk: 52
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+well start to appear as the preferred middleware technology for most of your needs.
+To make the examples in this book, I used KDevelop as the programming IDE. I used this on Linux, and then used Microsoft's Visual C++ for the MS environment. Generally, I'd do all my development first under Linux as developing and deploying services under Linux is much easier. This is not to say that testing out the examples shouldn't be done under Ms Windows. Problems you will run into under Windows include the usual issue with lack of support for server based applications. If you look under the ACE directory in the TAO distribution, there is an example of a Microsoft server which I believe I've gotten to work in the past.
+If you're going to use KDevelop, or a similar autotools based IDE, then, you'll want to put the appropriate libraries in the LDFLAGS line of your project. If your IDE doesn't support a GUI field to set this, then edit your Makefile.AM file so that the <your project name>_LDFLAGS variable has the following items in it: -lTAO_PortableServer -lTAO_CosNaming -lTAO_AnyTypeCode -lACE -lTAO , plus any database libraries you might need.

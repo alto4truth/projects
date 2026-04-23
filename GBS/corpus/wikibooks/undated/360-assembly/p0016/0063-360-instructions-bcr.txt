@@ -1,0 +1,24 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 16
+section: 360-instructions-bcr
+chunk: 63
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ine linkage. In this example, a no response is handled internally (at label NO) while a yes response transfers control to another routine (called YES)
+
+CHECKINQ NOP 0(0)
+* Optionally, the instruction 'CHECKINQ EQU *' could have been used. This would have
+* generated no instructions.
+BALR 3,0 Come back here if neither Y nor N
+* optionally, the instruction LA 3,CHECKINQ could have been used. :
+USING *,3 Let Assembler ue R3 for local addresses
+L 4,YESRTN Place to go for Yes response
+LA 5,NO Place to go for No response
+CALL INQUIRE,(QUES,1,RESP) Call an external module called INQUIRE
+CLC RESP(1),QY1 Compare one byte for 'Y'
+BER 4 "Resp" is the A value in an A:B comparison
+CLC RESP(1),QY2 Now test (length 1) for 'y'

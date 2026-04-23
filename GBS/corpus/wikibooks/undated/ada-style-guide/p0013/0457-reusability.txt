@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 457
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+f using subtypes as subtype marks when declaring parameters or return values of generic formal subprograms.
+Use attributes rather than literal values.
+
+==== example ====
+In the following example, it appears that any value supplied for the generic formal object Object would be constrained to the range 1..10. It also appears that parameters passed at run-time to the Put routine in any instantiation and values returned by the Get routine would be similarly constrained:
+
+However, this is not the case. Given the following legal instantiation:
+
+Object, Parameter, and the return value of Get are constrained to the range 15..30. Thus, for example, if the body of the generic package contains an assignment statement:
+
+Constraint_Error is raised when this instantiation is executed.

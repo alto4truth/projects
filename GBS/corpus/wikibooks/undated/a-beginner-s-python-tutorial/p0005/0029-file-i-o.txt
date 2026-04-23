@@ -1,0 +1,24 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 5
+section: file-i-o
+chunk: 29
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+you will have to write import pickle. Simple enough? Then open an empty file, and use pickle.dump() to drop the object into that file. Let's try that:
+
+Code Example 3 - pickletest.py
+
+First we open 'filename' for writing binary data(wb) - open('filename', 'wb')
+Then we dump our list into binary file.
+The code to do this is laid out like pickle.dump(object_to_pickle, file_object) where:
+
+object_to_pickle is the object you want to pickle (i.e. save it to file)
+file_object is the file object you want to write to (in this case, the file object is 'file')
+After you close the file, open it in notepad and look at what you see. Along with some other gibblygook, you will see bits of the list we created.
+Now to re-open, or unpickle, your file. to use this, we would use pickle.load():
+
+Code Example 4 - unpickletest.py

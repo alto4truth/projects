@@ -1,0 +1,43 @@
+title: 68000 Assembly
+source: wikibooks
+year: undated
+document_id: 68000-assembly
+authors: 
+page: 2
+section: addressing-modes
+chunk: 7
+source_ref: https://en.wikibooks.org/wiki/68000_Assembly
+
+truction's word). All syntaxes are equivalent, but some assemblers won't take them all.
+
+=== Program counter indirect with index ===
+Assembler syntax:
+
+x(PC,Dn.W)
+x(PC,Dn.W*scale)
+x(PC,Dn.L)
+x(PC,Dn.L*scale)
+x(PC,An.W)
+x(PC,An.W*scale)
+x(PC,An.L)
+x(PC,An.L*scale)
+(x)(PC,Dn.W)
+(x)(PC,Dn.W*scale)
+(x)(PC,Dn.L)
+(x)(PC,Dn.L*scale)
+(x)(PC,An.W)
+(x)(PC,An.W*scale)
+(x)(PC,An.L)
+(x)(PC,An.L*scale)
+(x,PC,Dn.W)
+(x,PC,Dn.W*scale)
+(x,PC,Dn.L)
+(x,PC,Dn.L*scale)
+(x,PC,An.W)
+(x,PC,An.W*scale)
+(x,PC,An.L)
+(x,PC,An.L*scale)
+Like PC with displacement, but another register is added as well. Scale can be 1, 2, 4, or 8. Scale is not supported on all devices. Some assemblers won't take certain syntaxes.
+
+=== Memory indirect addressing ===
+Assembler syntax:

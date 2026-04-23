@@ -1,0 +1,26 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 4
+section: improving-performance
+chunk: 80
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+= String Handling Subprograms ===
+
+==== guideline ====
+Use the procedural form of the string handling subprograms when measured performance indicates.
+
+==== rationale ====
+Determine the relative performance cost of functions and procedures having the same name and functionality in Ada.Strings.Fixed, Ada.Strings.Bounded, Ada.Strings.Unbounded and the corresponding child packages whose names include Wide.
+While functional notation typically leads to clearer code, it may cause the compiler to generate additional copying operations.
+
+=== Constraint Checking ===
+
+==== guideline ====
+Use strong typing with carefully selected constraints to reduce run-time constraint checking when measured performance indicates.
+
+==== example ====
+In this example, two potential constraint checks are eliminated. If the function Get_Response returns String, then the initialization of the variable Input would require constraint checking. If the variable Last is type Positive, then the assignment inside the loop would require constraint checking:

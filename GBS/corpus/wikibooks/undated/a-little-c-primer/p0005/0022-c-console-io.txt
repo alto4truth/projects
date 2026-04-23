@@ -1,0 +1,34 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 5
+section: c-console-io
+chunk: 22
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+tandard output. Such a filter can be used as an element to
+construct more sophisticated applications:
+
+type file.txt > filter1 | filter2 > outfile.txt
+
+The following filter capitalizes the first character in each word in the
+input. The program operates as a "state machine", using a variable that can
+be set to different values, or "states", to control its operating mode. It
+has two states: SEEK, in which it is looking for the first character, and
+REPLACE, in which it is looking for the end of a word.
+In SEEK state, it scans through whitespace (space, tab, or newline), echoing
+characters. If it finds a printing character, it converts it to uppercase
+and goes to REPLACE state. In REPLACE state, it converts characters to
+lowercase until it hits whitespace, and then goes back to SEEK state.
+The program uses the "tolower()" and "toupper()" functions to make case
+conversions. These two functions will be discussed in the next chapter.
+
+/* caps.c */
+
+#include <stdio.h>
+#include <ctype.h>
+
+#define SEEK 0
+#define REPLACE 1

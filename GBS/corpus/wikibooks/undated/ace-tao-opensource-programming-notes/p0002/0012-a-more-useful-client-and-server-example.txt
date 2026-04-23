@@ -1,0 +1,24 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 2
+section: a-more-useful-client-and-server-example
+chunk: 12
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+ot the speediest design.
+
+== The IDL ==
+
+=== Source File Actor.idl ===
+
+Now, run your IDL through the compiler to get your machine generated code out:
+
+tao_idl -GI Actor.idl
+This generates a bunch of files, the one we'll be editing first, is the ActorI.h file. This is where the interface for the IDL is stored. Since we will be needing a database connection in the factory class to perform some operations, our first edit will be to add a database connection object to the My_Factory_i class. Just put it up near the top, and we'll initialize it when the factory starts up. For this example, I used PostgreSQL as the database. An example of the code edit I made is listed below. That's it for this file.
+
+== The Interface ==
+
+=== Source File ActorI.h ===

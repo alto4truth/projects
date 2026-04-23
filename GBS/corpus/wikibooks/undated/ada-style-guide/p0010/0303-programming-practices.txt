@@ -1,0 +1,113 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 303
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+using Finalize
+to make sure that when an object is finalized (i.e., goes out
+of scope), the dynamically allocated elements are chained on a
+free list:
+
+==== rationale ====
+See also 6.3.2 for variations
+on these problems. A dynamically allocated object is an object
+created by the execution of an allocator (new).
+Allocated objects referenced by access variables allow you to
+generate aliases , which are
+multiple references to the same object. Anomalous behavior can
+arise when you reference a deallocated object by another name.
+This is called a dangling reference. Totally disassociating a
+still-valid object from all names is called dropping a pointer.
+A dynamically allocated object that is not associated with a name
+cannot be referenced or explicitly deallocated.
+A dropped pointer depends on an implicit memory
+manager for reclamation of space. It also raises questions for
+the reader as to whether the loss of access to the object was
+intended or accidental.
+An Ada environment is not required to provide deallocation of
+dynamically allocated objects. If provided, it may be provided
+implicitly (objects are deallocated when their access type goes
+out of scope), explicitly (objects are deallocated when Ada.Unchecked_Deallocation
+is called), or both. To increase the likelihood of the storage
+space being reclaimed, it is best to call Ada.Unchecked_Deallocation
+explicitly for each dynamically created object when you are finished
+using it. Calls to Ada.Unchecked_Deallocation also document
+a deliberate decision to abandon an object, making the code easier
+to read and understand. To be absolutely certain that space is
+reclaimed and reused, manage your own "free
+list." Keep track of which objects you are finished with,
+and reuse them instead of dynamically allocating new objects later.
+The dangers of dangling references are that you may attempt to
+use them, thereby accessing memory that you have released to the
+memory manager and that may have been subsequently allocated for
+another purpose in another part of your program. When you read
+from such memory, unexpected errors may occur because the other
+part of your program may have previously written totally unrelated
+data there. Even worse, when you write to such memory you can
+cause errors in an apparently unrelated part of the code by changing
+values of variables dynamically allocated by that code. This type
+of error can be very difficult to find. Finally, such errors may
+be triggered in parts of your environment that you did not write,
+for example, in the memory management system itself, which may
+dynamically allocate memory to keep records about your dynamically
+allocated memory.
+Keep in mind that any unreset component of a record or array can
+also be a dangling reference or carry a bit pattern representing
+inconsistent data. Components of an access type are always initialized
+by default to null; however, you should not rely on this
+default initialization. To enhance readability and maintainability,
+you should include explicit initialization.
+Whenever you use dynamic allocation, it is possible to run out
+of space. Ada provides a facility (a length clause) for requesting
+the size of the pool of allocation space at compile time. Anticipate
+that you can still run out at run time. Prepare handlers for the
+exception Storage_Error, and consider carefully what
+alternatives you may be able to include in the program for each
+such situation.
+There is a school of thought that dictates avoidance of all dynamic
+allocation. It is largely based on the fear of running out of
+memory during execution. Facilities, such as length clauses and
+exception handlers for Storage_Error, provide explicit
+control over memory partitioning and error recovery, making this
+fear unfounded.
+When implementing a complex data structure (tree, list, sparse
+matrices, etc.), you often use access types. If you are not careful,
+you can consume all your storage with these dynamically allocated
+objects. You could export a deallocate operation, but it is impossible
+to ensure that it is called at the proper places; you are, in
+effect, trusting the clients. If you derive from controlled types
+(see 8.3.3 , and 9.2.3 for more
+information), you can use finalization to deal with deallocation
+of dynamic data, thus avoiding storage exhaustion. User-defined
+storage pools give better control over the allocation policy.
+A related but distinct issue is that of shared versus copy semantics:
+even if the data structure is implemented using access types,
+you do not necessarily want shared semantics. In some instances
+you really want := to create a copy, not a new reference,
+and you really want = to compare the contents, not the
+reference. You should implement your structure as a controlled
+type. If you want copy semantics, you can redefine Adjust
+to perform a deep copy and = to perform a comparison
+on the contents. You can also redefine Finalize to make
+sure that when an object is finalized (i.e., goes out of scope)
+the dynamically allocated elements are chained on a free list
+(or deallocated by Ada.Unchecked_Deallocation).
+The implicit use of dynamic (heap) storage by an Ada program during
+execution poses significant risks that software failures may occur.
+An Ada run-time environment may use implicit dynamic (heap) storage
+in association with composite objects, dynamically created tasks,
+and catenation. Often, the algorithms used to manage the dynamic
+allocation and reclamation of heap storage cause fragmentation
+or leakage, which can lead to storage exhaustion. It is usually
+very difficult or impossible to recover from storage exhaustion
+or Storage_Error without reloading and restarting the
+Ada program. It would be very restrictive to avoid all uses of
+implicit allocation. On the other hand, preventing both explicit
+and implicit deallocation significantly reduces the risks of fragmentation
+and leakage without overly restricting your use of composite objects,
+access values, task objects, and catenation.

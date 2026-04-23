@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 44
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+n entry barrier of a protected unit, you should remember that the condition of the barrier is evaluated both before and after queueing a given caller.
+
+=== Unprotected Shared Variables ===
+
+==== guideline ====
+Use calls on protected subprograms or entries to pass data between tasks rather than unprotected shared variables.
+Do not use unprotected shared variables as a task synchronization device.
+Do not reference nonlocal variables in a guard .
+If an unprotected shared variable is necessary, use the pragma Volatile or Atomic.
+
+==== example ====
+This code will either print the same line more than once, fail to print some lines, or print garbled lines (part of one line followed by part of another) nondeterministically. This is because there is no synchronization or mutual exclusion between the task that reads a command and the one that acts on it. Without knowledge about their relative scheduling, the actual results cannot be predicted:

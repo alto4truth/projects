@@ -1,0 +1,13 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 2
+section: classes
+chunk: 4
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+your basic golf club. Each time you create a new club, simply specify its attributes - the length of its shaft, its weight, etc.
+Or what if you want a golf club, which has added extra features? Maybe you decide to attach a clock to your golf club (why, I don't know - it was your idea). Does this mean that we have to create this golf club from scratch? We would have to write code first for our basic golf club, plus all of that again, and the code for the clock, for our new design. Wouldn't it be better if we were to just take our existing golf club, and then tack the code for the clock to it?
+These problems are what a thing called object-oriented-programming solves. It puts functions and variables together in a way that they can see each other and work together, be replicated, and altered as needed, and not when unneeded. And we use a thing called a 'class' to do this.

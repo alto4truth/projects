@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 242
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+rom a file will change what character is read next, this is accepted as a minor side effect compared to the primary purpose of the following function:
+
+However, the use of a function like this could lead to a subtle problem. Any time the order of evaluation is undefined, the order of the values returned by the function will effectively be undefined. In this example, the order of the characters placed in Word and the order that the following two characters are given to the Suffix parameters are unknown. No implementation of the Next_Character function can guarantee which character will go where:
+
+Of course, if the order is unimportant (as in a random number generator), then the order of evaluation is unimportant.
+The following example shows the use of a parameterless function instead of a constant:
+
+This same example could have been written using constants:

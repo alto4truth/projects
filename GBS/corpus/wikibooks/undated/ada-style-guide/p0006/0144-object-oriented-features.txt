@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 144
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+greater visibility into the base types due to the differences in the data elements. This example is adapted from Barbey, Kempe, and Strohmeier (1994):
+
+==== rationale ====
+If the derived type can be defined without any special visibility of the base type, this provides for the best possible decoupling of the implementation of the derived type from changes in the implementation of the base type. On the other hand, the operations of an extension of a tagged type may need additional information from the base type that is not commonly needed by other clients.
+When the implementation of a derived tagged type requires visibility of the implementation of the base type, use a child package to define the derived type. Rather than providing additional public operations for this information, it is better to place the definition of the derived type in a child package. This gives the derived type the necessary visibility without risking misuse by other clients.
+This situation is likely to arise when you build a data structure with a homogeneous interface but whose data elements have a heterogeneous implementation. See also Guidelines 8.4.8, 9.2.1, and 9.3.5.

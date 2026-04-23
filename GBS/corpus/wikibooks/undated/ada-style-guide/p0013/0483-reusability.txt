@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 483
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+es the access discriminant technique would be considered active, while an iterator that uses the type extension technique would be considered passive.
+
+==== notes ====
+You can use an access to subprogram type as an alternative to generic instantiation, using a nongeneric parameter as a pointer to subprogram. You would then apply the referenced subprogram to every element in a collection ( Rationale 1995, §3.7.2). There are drawbacks to this approach, however, because you cannot use it to create a general purpose iterator. Anonymous access to subprogram parameters is not allowed in Ada; thus, the following fragment is illegal:
+
+The formal parameter Action must be of a named access subtype, as in:
+
+In order for this to work, you must make sure that the action subprogram is in scope and not defined internal to another subprogram. If it is defined as a nested procedure, it would be illegal to access it. See the Rationale (1995, §4.4.4) for a more complete example.
+For further discussion of passive and active iterators, see the Rationale (1995, §3.7.1 and §4.4.4), Ross (1989), and Booch (1987).
+
+=== Decimal Type Output and Information Systems Annex ===

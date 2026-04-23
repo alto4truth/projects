@@ -1,0 +1,28 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 15
+section: c-standard-utility-library-time-library
+chunk: 65
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+o.h>
+#include <time.h>
+
+void main()
+{
+time_t *t;
+time( t );
+puts( ctime( t ) );
+}
+
+This program prints a string of the form:
+
+Tue Dec 27 15:18:16 1994
+
+== Further reading ==
+C Programming/Standard libraries
+C Programming/C Reference
+C++ Programming/Code/Standard C Library

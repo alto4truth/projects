@@ -1,0 +1,18 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 67
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+pe safety and application performance in a .NET Framework application by using generic collections.
+(Refer System.Collections.Generic namespace MSDN )
+
+=== Collection.Generic interfaces ===
+Generic IComparable interface - MSDN
+Note that IComparable<T> is a member of the System namespace.
+You use this interface when you create a class and you want it to be used with generic types that support ordering (ex. SortedList<T> or List<T>.Sort()) without having to specify a comparer object. The only method of IComparable<T> is CompareTo<T>(T other). There is an example on MSDN.
+The following example implements IComparable<T> for a custom made Point class. The example uses a List<T> instead of a SortedList<T> or OrderedDictionnary<T> because the comparaison is done based on the distance of the points from the origin which can give the same value for many points.

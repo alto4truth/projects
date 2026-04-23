@@ -1,0 +1,28 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 80
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+browser component.
+The exam objectives concerning services are very basic and touch the first problems that you will encounter when dealing with them:
+
+Since the service has no user interface then who will start and stop it? The answer is that the operating system executes the services directly but you have to ‘’register’’ your service to let the system know where it is and what to do with it (this is the installation process)
+A process with a user interface essentially waits for events coming from the user. How does a service ‘’work’’ in the absence of a message pump (the technique to get user input in a typical online application)?
+If the service does a user interface function it will “hang” waiting for a non-existent user. How can you avoid that?
+The more important and complicated design issues are not covered by this exam and will be treated by the enterprise development exam.
+
+==== Multithreading ====
+
+==== Application Domain ====
+
+=== Classes, Interfaces, and tools ===
+
+==== Implement, install, and control a service ====
+Exam objective: Implement, install, and control a service
+(Refer System.ServiceProcess namespace)
+Inherit from ServiceBase class - MSDN

@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 251
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+s. Even such libraries should be broken into a collection of packages, each containing a logically cohesive set of subprograms.
+
+=== Data Coupling ===
+
+==== guideline ====
+Avoid declaring variables in package specifications.
+
+==== example ====
+This is part of a compiler. Both the package handling error messages and the package containing the code generator need to know the current line number. Rather than storing this in a shared variable of type Natural, the information is stored in a package that hides the details of how such information is represented and makes it available with access routines:
+
+==== rationale ====
+Strongly coupled program units can be difficult to debug and very difficult to maintain. By protecting shared data with access functions, the coupling is lessened. This prevents dependence on the data structure, and access to the data can be controlled.

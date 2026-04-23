@@ -1,0 +1,13 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 13
+section: dealing-with-iors
+chunk: 40
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+As described earlier, the raw IOR string for tying together client and server isn't the preferred method to getting the two sides to talk together. In a production environment, the usual method is to use a naming service. This serves both as a way to advertise a location for a service, and as a method to keep the effective IOR of the service constant. You might have noticed, had you played with the previous server example more than once that the IOR string tended to change. With this method, you can ensure both consistency and readability.
+The infrastructure used by CORBA programs to perform such address registration and lookups is the naming service. For TAO, the naming service is started with several command line args. In the examples below, the arg "-ORBEndPoint" is used to define where the service will listen, and the arg "-ORBDaemon" is designed to force the daemon to actually act like a daemon. Oddly enough, none of the services (daemons) you will be compiling with TAO will actually act like daemons, unless you use this optional arg.
+The endpoint is critical to running any TAO service or compiled client/server app. If you don't supply one, the default endpoint is the multicas

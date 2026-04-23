@@ -1,0 +1,23 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 29
+section: 360-instructions-l
+chunk: 92
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+s within 4096 bytes of the value of some base register.
+
+== Availability ==
+The L instruction is available on all models of the 360, 370 and z/System.
+
+== Operation ==
+The L instruction reads a 32-bit integer value from the memory address specified by the argument and puts it to the register specified by the first argument. The high bits of a 64-bit register are unchanged.
+The source argument address shall be aligned to word boundary (i.e. 4 bytes). The Condition Code field in the Program Status Word is not changed.
+
+== Exceptions and Faults ==
+The source address must be within the range of valid memory or an operation exception occurs.
+The source address must be aligned to a word boundary or an address exception occurs.
+The storage key for the source address must be such that the location is readable by the current process (or the process must be privileged with a key of zero) or a memory protect violate exception occurs.

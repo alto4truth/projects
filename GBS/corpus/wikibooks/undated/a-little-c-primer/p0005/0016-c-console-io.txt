@@ -1,0 +1,43 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 5
+section: c-console-io
+chunk: 16
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+er program or a file. The program itself neither knows nor cares.
+Console I/O requires the declaration:
+
+#include <stdio.h>
+
+Useful functions include:
+
+printf() Print a formatted string to stdout.
+scanf() Read formatted data from stdin.
+putchar() Print a single character to stdout.
+getchar() Read a single character from stdin.
+puts() Print a string to stdout.
+gets() Read a line from stdin.
+
+Windows-based compilers also have an alternative library of console I/O functions.
+These functions require the declaration:
+
+#include <conio.h>
+
+The three most useful Windows console I/O functions are:
+
+getch() Get a character from the keyboard (no need to press Enter).
+getche() Get a character from the keyboard and echo it.
+kbhit() Check to see if a key has been pressed.
+
+The "printf()" function, as explained previously, prints a string that may
+include formatted data:
+
+printf( "This is a test!\n" );
+—which can include the contents of variables:
+printf( "Value1: %d Value2: %f\n", intval, floatval );
+
+The available format codes are:

@@ -1,0 +1,29 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 164
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+character set. You should not use a nonstandard Ada character set unless intentionally producing a nonportable user interface with a specific purpose.
+
+=== Comments ===
+
+==== guideline ====
+Use highlighting comments for each package, subprogram, and task where any nonportable features are present.
+For each nonportable feature employed, describe the expectations for that feature.
+
+==== example ====
+
+==== rationale ====
+Explicitly commenting each breach of portability will raise its visibility and aid in the porting process. A description of the nonportable feature's expectations covers the common case where vendor documentation of the original implementation is not available to the person performing the porting process.
+
+=== Main Subprogram ===
+
+==== guideline ====
+Consider using only a parameterless procedure as the main subprogram.
+Consider using Ada.Command_Line for accessing values from the environment, but recognize that this package's behavior and even its specification are nonportable (see Guideline 7.1.6).
+Encapsulate and document all uses of package Ada.Command_Line.

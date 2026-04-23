@@ -1,0 +1,129 @@
+title: A First Course to Network Coding
+source: wikibooks
+year: undated
+document_id: a-first-course-to-network-coding
+authors: 
+page: 4
+section: information-measure-and-handy-inequations
+chunk: 10
+source_ref: https://en.wikibooks.org/wiki/A_First_Course_to_Network_Coding
+
+hird criterion with conditional entropy:
+
+H
+(
+X
+Y
+)
+=
+H
+(
+X
+)
++
+H
+(
+Y
+
+|
+
+X
+)
+=
+H
+(
+Y
+)
++
+H
+(
+X
+
+|
+
+Y
+)
+
+{\displaystyle H(XY)=H(X)+H(Y|X)=H(Y)+H(X|Y)}
+
+. Rolling two dice at once or rolling one after the other should have the same uncertainty. And this can be extended to more than two d.r.v.s:
+
+H
+(
+
+X
+
+1
+
+,
+
+X
+
+2
+
+,
+.
+.
+.
+,
+
+X
+
+N
+
+)
+=
+
+∑
+
+n
+=
+1
+
+N
+
+H
+(
+
+X
+
+N
+
+|
+
+X
+
+1
+
+,
+
+X
+
+2
+
+,
+.
+.
+.
+,
+
+X
+
+N
+−
+1
+
+)
+
+{\displaystyle H(X_{1},X_{2},...,X_{N})=\sum _{n=1}^{N}H(X_{N}|X_{1},X_{2},...,X_{N-1})}
+
+. This is called the chain rule of entropy.
+Convex Function
+
+== Properties of Entropy ==
+Non-negativity
+
+== Inequalities ==
+Jensen's inequality
+
+== References ==

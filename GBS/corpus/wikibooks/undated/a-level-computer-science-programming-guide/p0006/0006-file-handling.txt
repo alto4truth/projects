@@ -1,0 +1,23 @@
+title: A Level Computer Science Programming Guide
+source: wikibooks
+year: undated
+document_id: a-level-computer-science-programming-guide
+authors: 
+page: 6
+section: file-handling
+chunk: 6
+source_ref: https://en.wikibooks.org/wiki/A_Level_Computer_Science_Programming_Guide
+
+=== Note for VB.NET users: ===
+While the methods used here are still valid, they are generally not used. They have been included in this guide as they are more similar to the Pseudocode file management, hopefully making them easier to understand. Even though it is not practice to use them, they should still be acceptable in an exam.
+
+== Handling Text Files ==
+
+=== Opening Text Files ===
+
+In VB.NET you can use the FreeFile() function to automatically obtain an unused file number, avoiding any problems that could occur if accidentally using the same number for two files.It is good practice to always keep track of your file numbers, as it will help reduce bugs (aka forgetting or using the wrong file number), remove any Magic Numbers and make the code easier to read and understand.
+
+=== Reading From Text Files ===
+Once a file is opened in 'Read' mode, you can use the following commands to read the data from the files.
+
+The Variable should be of data type STRING. This command reads the text file line by line.

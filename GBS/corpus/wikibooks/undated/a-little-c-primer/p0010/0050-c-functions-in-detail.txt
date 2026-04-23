@@ -1,0 +1,44 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 10
+section: c-functions-in-detail
+chunk: 50
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+guments required ("int rad").
+ANSI C dictates that function prototypes be provided to allow the compiler to
+perform better checking on function calls:
+
+For an example, consider a simple program that "fires" a weapon (simply by
+printing "BANG!"):
+
+This prints:
+
+Firing!
+BANG!
+Fired!
+
+Since "fire()" does not return a value and does not accept any arguments,
+both the return value and the argument are declared as "void"; "fire()" also
+does not use a "return" statement and simply returns automatically when
+completed.
+Let's modify this example to allow "fire()" to accept an argument that
+defines a number of shots. This gives the program:
+
+This prints:
+
+Firing!
+BANG!
+BANG!
+BANG!
+BANG!
+BANG!
+Fired!
+
+This program passes a single parameter, an integer, to the "fire()" function.
+The function uses a "for" loop to execute a "BANG!" the specified number of
+times—more on "for" later.
+If a function requires multiple arguments, they can be separated by commas:

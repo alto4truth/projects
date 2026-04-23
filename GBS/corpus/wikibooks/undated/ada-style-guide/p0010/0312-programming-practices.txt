@@ -1,0 +1,53 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 312
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+use of negatives.
+Choose names of flags so they represent states that can be used in positive form.
+
+==== example ====
+Use:
+
+rather than either:
+
+or:
+
+==== rationale ====
+Relational expressions
+can be more readable and understandable when stated in a positive
+form. As an aid in choosing the name, consider that the most frequently
+used branch in a conditional construct
+should be encountered first.
+
+==== exceptions ====
+There are cases in which the negative form is unavoidable. If
+the relational expression better reflects what is going on in
+the code, then inverting the test to adhere to this guideline
+is not recommended.
+
+=== Short Circuit Forms of the Logical Operators ===
+
+==== guideline ====
+Use short-circuit forms of the logical operators to specify the order of conditions when the failure of one condition means that the other condition will raise an exception.
+
+==== example ====
+Use:
+
+or:
+
+rather than either:
+
+or:
+
+to avoid Constraint_Error.
+Use:
+
+rather than:
+
+to avoid referencing a field in a nonexistent object.

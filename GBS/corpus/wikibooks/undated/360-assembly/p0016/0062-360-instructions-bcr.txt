@@ -1,0 +1,17 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 16
+section: 360-instructions-bcr
+chunk: 62
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ion code. If the bits in the mask match the bits in the condition code, (and the base register of the target address is not zero) the branch is taken.
+
+=== Unconditional Branch ===
+A branch to another location (the equivalent of a GOTO in high-level languages or a RETURN if inside of a procedure or subroutine) is performed by setting all the bits in the mask, e.g. BCR 15, or using the BR instruction. As long as the base register is not zero, the branch will always be taken; if the base register is zero, the branch is never taken.
+
+== Typical Usage ==
+The branch on condition register and optional formats are typically used after performing a comparison or arithmetic operation. In the following code, a question is asked, the response is compared to yes or no, and the question is re-issued if not either. The 'CALL' macro is used to create a standard subroutine linkage. In this example, a no response is handled internally (at label NO) while a yes response transfers control to another routine (called YES)

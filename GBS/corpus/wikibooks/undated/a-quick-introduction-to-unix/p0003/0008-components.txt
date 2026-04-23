@@ -1,0 +1,23 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 3
+section: components
+chunk: 8
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+cts the kernel to run the program cat on somefile;
+When the program finishes the kernel passes control back to the shell and displays the Unix prompt.
+
+=== Which shell? ===
+There are a number of different shells for Unix. People can become very attached to the shell they prefer. Popular shells include
+
+sh - the bourne shell
+bash - the bourne again shell
+csh - the c shell
+ksh - the Korn shell (strangely, not named for the band)
+zsh - the z shell
+You can invoke any shell installed on your system with one of the above commands at the prompt. (Notice that this means you start a new shell within a shell!). We won't cover the distinctions about different shells at this time. When you begin to write Unix Shell Scripts you will probably want to choose a shell and stick with it if you can. Each shell has its advocates. The Bourne again shell is popular with many script writers. Some in the Unix community have expressed doubts about the suitability of the c shell for scripting, but this is something you can address when you know more about Unix (see Csh Programming Considered Harmful).
+You can start a shell of a particular kind by typing the shell name at the command line prompt.

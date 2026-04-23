@@ -1,0 +1,20 @@
+title: Adriane-Manual
+source: wikibooks
+year: undated
+document_id: adriane-manual
+authors: 
+page: 1
+section: adriane-manual
+chunk: 20
+source_ref: https://en.wikibooks.org/wiki/Adriane-Manual
+
+b-directories are marked with [DIR].
+
+===== Enter or leave directories =====
+Another option menu appears when you select a file with the input button:
+
+The menu points shown with three dots at the end will need a target directory for their execution, therefore selecting them will start again a navigation at the starting point of the file manager (i.e. "Browse user's home directory" and the list of attached disks). Open the desired target directory and select in the offered options the option “Copy (or move) file to this directory”. The success (or failure) is acknowledged with an appropriate message, then the initial file Manager menu appears again.
+
+===== To be done =====
+The recursive copy (directory with content) is not yet supported in Adriane file manager in the Knoppix version 7.2.0. It is however recommended for frequent working with files to learn about and use these commands in the shell.
+Directories being part to mounted disks get the same device name as the disc name in the file manager (e.g. /media/sda1 etc.).

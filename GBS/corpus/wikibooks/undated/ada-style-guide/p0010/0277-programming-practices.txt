@@ -1,0 +1,39 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 277
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+asier to use.
+
+=== Formal Parameters ===
+
+==== guideline ====
+Name formal parameters descriptively to reduce the need for comments.
+
+==== example ====
+
+==== rationale ====
+Following the variable naming guidelines ( 3.2.1 and
+3.2.3 ) for formal parameters can make calls
+to subprograms read more like regular prose, as shown in the example
+above, where no comments are necessary. Descriptive names of this
+sort can also make the code in the body of the subprogram more
+clear.
+
+=== Named Association ===
+
+==== guideline ====
+Use named parameter association in calls of infrequently used subprograms or entries with many formal parameters.
+Use named association when instantiating generics.
+Use named association for clarification when the actual parameter is any literal or expression.
+Use named association when supplying a nondefault value to an optional parameter.
+
+==== instantiation ====
+Use named parameter association in calls of subprograms or entries called from less than five places in a single source file or with more than two formal parameters.
+
+==== example ====

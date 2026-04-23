@@ -1,0 +1,19 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 27
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+are nevertheless augmented or changed in new versions. We will try to keep track of those as side notes where possible.
+
+=== Programming paradigms ===
+
+Keeping things very (too much?) simple we can say that a programming paradigm is a "style" of programming, a specific way to model problems and "translate" their solution in code.
+From a developer point of view the .NET framework (and its class libraries) is a general-purpose object-oriented platform that is constantly extended to support other programming paradigms (generic programming with Generics, Aspect programming with attributes, Reactive programming with WF, Functional programming with Lambda expressions in C# 3.0, etc.). That "extension process" mirrors that of Java. The .NET and Java platforms are the only two that currently support such extensive multi-paradigms extension process.
+Discussing the extent and "theoretical soundness" of each of those paradigm implementations is obviously out of scope for this book.
+Our point here is that navigating through all those programming styles in the same platform can get kind of confusing. Maintaining code is also getting more and more difficult because two original programmers could have solved the same problem using widely different "styles" or constructs.
+We will thus try to connect, where possible, the different .NET concepts with their respective "style" to give the reader some context.

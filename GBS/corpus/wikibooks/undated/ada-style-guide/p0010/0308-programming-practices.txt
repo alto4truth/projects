@@ -1,0 +1,36 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 308
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+=
+
+==== guideline ====
+Use modular types rather than Boolean arrays when you create data structures that need bit-wise operations, such as and and or.
+
+==== example ====
+
+==== rationale ====
+Modular types are preferred when the number of bits is known to
+be fewer than the number of bits in a word and/or performance
+is a serious concern. Boolean arrays are appropriate when the
+number of bits is not particularly known in advance and performance
+is not a serious issue. See also Guideline 10.6.3 .
+
+== Expressions ==
+Properly coded expressions can enhance the readability and understandability
+of a program. Poorly coded expressions can turn a program into
+a maintainer's nightmare.
+
+=== Range Values ===
+
+==== guideline ====
+Use 'First or 'Last instead of numeric literals to represent the first or last values of a range.
+Use 'Range or the subtype name of the range instead of 'First .. 'Last.
+
+==== example ====

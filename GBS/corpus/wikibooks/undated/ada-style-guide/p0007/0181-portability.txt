@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 181
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+on a machine with a 16-bit word. The first example below allows a compiler to choose a multiword representation, if necessary.
+Use:
+
+rather than:
+
+or:
+
+==== rationale ====
+An implementor is free to define the range of the predefined numeric types. Porting code from an implementation with greater accuracy to one of lesser accuracy is a time consuming and error-prone process. Many of the errors are not reported until run-time.
+This applies to more than just numerical computation. An easy-to-overlook instance of this problem occurs if you neglect to use explicitly declared types for integer discrete ranges (array sizes, loop ranges, etc.) (see Guidelines 5.5.1 and 5.5.2). If you do not provide an explicit type when specifying index constraints and other discrete ranges, a predefined integer type is assumed.
+The predefined numeric types are useful when you use them wisely. You should not use them to avoid declaring numeric types—then you lose the benefits of strong typing. When your application deals with different kinds of quantities and units, you should definitely separate them through the use of distinct numeric types. However, if you are simply counting the number of iterations in an iterative approximation algorithm, declaring a special integer type is probably overkill. The predefined exponentiation operators ** require an integer as the type of its right operand.
+You should use the predefined types Natural and Positive for manipulating certain kinds of values in the predefined language environment. The types String and Wide_String use an index of type Positive. If your code indexes into a string using an incompatible integer type, you will be forced to do type conversion, reducing its readability. If you are performing operations like slices and concatenation, the subtype of your numeric array index is probably insignificant and you are better off using a predefined subtype. On the other hand, if your array represents a table (e.g., a hash table), then your index subtype is significant, and you should declare a distinct index type.

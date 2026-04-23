@@ -1,0 +1,30 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 453
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+= guideline ====
+Use named numbers and static expressions to allow multiple dependencies to be linked to a small number of symbols.
+
+==== example ====
+
+==== rationale ====
+To reuse software that uses named numbers and static expressions appropriately, just one or a small number of constants need to be reset, and all declarations and associated code are changed automatically. Apart from easing reuse, this reduces the number of opportunities for error and documents the meanings of the types and constants without using error-prone comments.
+
+=== Unconstrained Arrays ===
+
+==== guideline ====
+Use unconstrained array types for array formal parameters and array return values.
+Make the size of local variables depend on actual parameter size, where appropriate.
+
+==== example ====
+
+==== rationale ====
+Unconstrained arrays can be declared with their sizes dependent on formal parameter sizes. When used as local variables, their sizes change automatically with the supplied actual parameters. This facility can be used to assist in the adaptation of a part because necessary size changes in local variables are taken care of automatically.
+
+=== Minimizing and Documenting Assumptions ===

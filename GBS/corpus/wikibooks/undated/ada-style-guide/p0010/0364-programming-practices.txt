@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 364
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+n, it is not handled in that immediate scope. It is raised to the enclosing scope. This can be controlled by nesting blocks.
+See also Guideline 9.2.3.
+
+==== notes ====
+Sometimes, elaboration order can be dictated with pragma Elaborate_All. Pragma Elaborate_All applied to a library unit causes the elaboration of the transitive closure of the unit and its dependents. In other words, all bodies of library units reachable from this library unit's body are elaborated, preventing an access-before-elaboration error (Rationale 1995, §10.3). Use the pragma Elaborate_Body when you want the body of a package to be elaborated immediately after its declaration.
+
+5.9.7 Direct_IO and Sequential_IO
+
+==== guideline ====
+Ensure that values obtained from Ada.Direct_IO and Ada.Sequential_IO are in range.
+Use the 'Valid attribute to check the validity of scalar values obtained through Ada.Direct_IO and Ada.Sequential_IO.

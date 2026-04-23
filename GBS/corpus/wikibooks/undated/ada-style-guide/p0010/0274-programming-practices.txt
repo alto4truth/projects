@@ -1,0 +1,40 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 274
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+the inconvenience of naming the loops.
+
+=== Block Names ===
+
+==== guideline ====
+Associate names with blocks when they are nested.
+
+==== example ====
+
+==== rationale ====
+When there is a nested block structure, it can be difficult to
+determine which end corresponds to which block. Naming
+blocks alleviates this confusion. The choice of a good
+name for the block documents its purpose, reducing the need for
+explanatory comments. If a name for the block is very difficult
+to choose, this could indicate a need for more thought about the
+algorithm.
+This guideline is also useful if nested blocks are broken over
+a screen or page boundary.
+It can be difficult to think up a name for each block; therefore,
+the guideline specifies nested blocks. The benefits in readability
+and second thought outweigh the inconvenience of naming the blocks.
+
+=== Exit Statements ===
+
+==== guideline ====
+Use loop names on all exit statements from nested loops.
+
+==== example ====
+See the example in 5.1.1 .

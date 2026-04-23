@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 120
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ntations because this is part of the expected semantic model of the class-wide type.
+With the alternative approach, the above processing loop becomes:
+
+==== rationale ====
+All the properties expected of a class-wide type by clients of that type should be meaningful for any specific types in the derivation class of the class-wide type. This rule is related to the object-oriented programming
+"substitutability principle" for consistency between the semantics of an object-oriented superclass and its subclasses (Wegner and Zdonik 1988). However, the separation of the polymorphic class-wide type T'Class from the root specific type T in Ada 95 clarifies this principle as a design rule on derivation classes rather than a correctness principle for derivation itself.
+When a dispatching operation is used on a variable of a class-wide type T'Class, the actual implementation executed will depend dynamically on the actual tag of the value in the variable. In order to rationally use T'Class, it must be possible to understand the semantics of the operations on T'Class without having to study the implementation of the operations for each of the types in the derivation class rooted in T. Further, a new type added to this derivation class should not invalidate this overall understanding of T'Class because this could invalidate existing uses of the class-wide type. Thus, there needs to be an overall set of semantic properties of the operations of T'Class that is preserved by the implementations of the corresponding dispatching operations of all the types in the derivation class.
+One way to capture the semantic properties of an operation is to define a "precondition" that must be true before the operation is invoked and a "postcondition" that must be true (given the precondition) after the operation has executed. You can (formally or informally) define pre- and postconditions for each operation of T'Class without reference to the implementations of dispatching operations of specific types. These semantic properties define the "minimum" set of properties common to all types in the derivation class. To preserve this minimum set of properties, the implementation of the dispatching operations of all the types in the derivation class rooted in T (including the root type T) should have (the same or) weaker preconditions than the corresponding operations of T'Class and (the same or) stronger postconditions than the T'Class operations. This means that any invocation of a dispatching operation on T'Class will result in the execution of an implementation that requires no more than what is expected of the dispatching operation in general (though it could require less) and delivers a result that is no less than what is expected (though it could do more).

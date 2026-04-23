@@ -1,0 +1,38 @@
+title: A Brief Introduction to the LaTeX Typesetting Environment
+source: wikibooks
+year: undated
+document_id: a-brief-introduction-to-the-latex-typesetting-environment
+authors: 
+page: 3
+section: typesetting-the-basics
+chunk: 21
+source_ref: https://en.wikibooks.org/wiki/A_Brief_Introduction_to_the_LaTeX_Typesetting_Environment
+
+nt. If you try to typeset any document without the \begin{document} command you will get an error.
+We also have the following command:
+
+\begin{figure}
+
+Which tells \LaTeX that what follows needs to be put in the class of 'figure' and handled as such. As we said above, the figure is actually quite complicated, but for our purposes it's just like a box we can put things which we want to stay together.
+Now, one must be very careful when using a \begin{} statement because if something begins, it must end. Think of a Java class. We cannot say
+
+static void main([] int)
+{
+
+without also specifying the end of the class, the code would not compile. In order to get a functioning program, we'd need
+
+static void main([] int)
+{
+Commands
+}
+
+The same is true of a LaTeX \begin{} command, we also need to end what we began or the document will not typeset. For the figure, this is done as follows:
+
+\begin{figure}
+Contents of the figure
+More contents of the figure
+Maybe some math ...
+\end{figure}
+
+And everything is all well and good.
+However, the \begin{document} function is slightly more crucial and will need to be used with care.

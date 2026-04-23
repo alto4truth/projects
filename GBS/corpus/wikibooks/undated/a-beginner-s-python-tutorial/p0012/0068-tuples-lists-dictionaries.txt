@@ -1,0 +1,24 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 12
+section: tuples-lists-dictionaries
+chunk: 68
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+andy, numbered index - starting from zero, in the order that you entered them in. It would be organised like this:
+
+And that is tuples! Really easy...
+
+== Lists ==
+Lists are extremely similar to tuples. Lists are modifiable (or 'mutable', as a programmer may say), so their values can be changed. Most of the time we use lists, not tuples, because we want to easily change the values of things if we need to.
+Lists are defined very similarly to tuples. Say you have FIVE cats, called Tom, Snappy, Kitty, Jessie and Chester. To put them in a list, you would do this:
+
+Code Example 2 - Creating a list
+
+As you see, the code is exactly the same as a tuple, EXCEPT that all the values are put between square brackets, not parentheses. Again, you don't have to have spaces after the comma, but it does make it more readable.
+You recall values from lists exactly the same as you do with tuples. For example, to print the name of your 3rd cat you would do this:
+
+Code Example 3 - Recalling items from a list

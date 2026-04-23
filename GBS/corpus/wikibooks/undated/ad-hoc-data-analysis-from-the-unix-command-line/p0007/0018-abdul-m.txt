@@ -1,0 +1,23 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 7
+section: abdul-m
+chunk: 18
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+But on closer inspection there are tab characters delimiting the columns:
+
+$ od -bc gender.txt | head
+0000000 101 101 122 117 116 040 040 040 040 040 040 011 115 012 101 102
+A A R O N \t M \n A B
+0000020 102 105 131 040 040 040 040 040 040 011 106 012 101 102 102 111
+B E Y \t F \n A B B I
+0000040 105 040 040 040 040 040 040 011 106 012 101 102 102 131 040 040
+E \t F \n A B B Y
+0000060 040 040 040 040 040 011 106 012 101 102 104 125 114 040 040 040
+\t F \n A B D U L
+0000100 040 040 040 011 115 012 101 102 105 040 040 040 040 040 040 040
+\t M \n A B E

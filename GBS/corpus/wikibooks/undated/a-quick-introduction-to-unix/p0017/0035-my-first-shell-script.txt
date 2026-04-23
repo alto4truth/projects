@@ -1,0 +1,25 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 17
+section: my-first-shell-script
+chunk: 35
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+ple.
+
+=== Creating a script ===
+In the pico editor, create a file containing the following text, exactly as it appears here.
+
+#!/usr/bin/bash
+ls -l .*
+
+Save this file as hid.sh in your home directory. We are going to use this script at the command line, just like a command.
+This will list all the files and directories (and their contents) that begin with a dot (which is to say the hidden files and directories). The first line in the script (the exclamation mark in this context is called a "bang", so the first line begins with hash bang also called shebang) ensures that Unix can find the shell to execute this file.
+Before we run it we have to deal with the permissions on this file so that it can be executed. Unix does not allow files to be executed by default (and this is a very good thing). The command to make the file executable is
+
+% chmod 755 hid.sh
+(I've used a shorthand here - 755 - to set the permissions for read and execute for group and other and write, read, execute for owner).
+Now you can execute the commands in the file just by invoking the filename at the prompt:

@@ -1,0 +1,28 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 27
+section: 360-instructions-ex
+chunk: 87
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+le will go for FIELDC and second nibble will go for FIELDD
+EX R6,TARGET2
+////// FIELDD (5 bytes) is added to FIELDC (4 bytes). and stored into FIELDC.
+
+////////as there are two R0s means both nibbles together is x'00'
+EX R6,TARGET3
+////////as R6 has rightmost byte=x'34' so the object code will be x'18 34' after EX instruction execution
+////////AND content of register4 will be loaded into register3
+
+== Purpose of Instruction ==
+The EX instruction is used to allow a program to modify itself in order to change certain arguments of other instructions without actually modifying the program's code. One use could be to move a string of 256 bytes or fewer, by executing an MVC instruction where the EX instruction changes the length value in that instruction.
+
+== Typical Usage ==
+
+== Operation ==
+The EX instruction ORs (not replace, OR) the low byte of the R1 register, with the 2nd byte (normally length) of the target instruction, which is then executed.
+A 2nd use is to generate an intentional S0C3 abend, by coding Ex 0,*
+This produces a good dump and does not alter regs 14-1 as happens when the ABEND macro is used. This technique is not reserved for IBM use, as some have maintained.

@@ -1,0 +1,30 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 6
+section: picking-the-data-apart-with-cut
+chunk: 15
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+== Fixed width data ==
+How many households had just 1 person? Referring to the file layout, we see that the 106th and 107th characters of a household record indicate the number of people in the household. We can use the cut command to pull out just that bit of data from each record. The argument -c106-107 instructs cut to print the 106th through 107th characters of each line. The head command prints just the first few lines of a file (or its standard input).
+
+$ census_data>grep "^H" pums_53.dat | cut -c106-107 | head -5
+03
+02
+03
+02
+02
+
+You can give cut a comma separated list to pull out multiple ranges. To see the household id along with the number of occupants of the household:
+
+$ census_data>grep "^H" pums_53.dat | cut -c2-8,106-107 | head -5
+000011703
+000024602
+000231203
+000242102
+000250202
+
+The -c argument is used for working with so called "fixed-width" data. Data where the columns of a record are found at certain offset in bytes from the beginning of a record. Fixed width data abounds on a Unix system. ls -l writes its output in a fixed width format:

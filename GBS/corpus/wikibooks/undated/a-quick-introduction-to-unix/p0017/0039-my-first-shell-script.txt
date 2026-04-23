@@ -1,0 +1,15 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 17
+section: my-first-shell-script
+chunk: 39
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+eresting file and it illustrates something about shell scripting but we can improve it. At the moment the search is case sensitive so amend it to read
+
+grep -i 'science' science.txt > scioutput.txt
+so that it finds not just science but Science. As usual you should test. You probably could get away without testing this last change but in real life it really is a good idea to test a script after each change so that you fix problems quickly before they get too difficult to untangle - or debug as the jargon has it.
+One final amendment suggests itself. Let's add line numbers so that if we want to check a reference to our search term in context we can easily find it.

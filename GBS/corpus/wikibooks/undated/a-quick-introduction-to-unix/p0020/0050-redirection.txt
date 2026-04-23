@@ -1,0 +1,18 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 20
+section: redirection
+chunk: 50
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+== Redirection ==
+When you issue a command that has some output, we say that by default it will write to the standard output which is the screen. If a command needs input we say it reads from the standard input which is the keyboard. The ls command which we have seen a lot of produces a list of files and directories as its output and it prints it on screen. We are going to use a new command - cat - to investigate how we can 'redirect' streams from the standard input or output.
+
+=== Displaying file contents ===
+You can use the command cat to take input and write it to the standard output. Usually you use it like this
+
+%cat myfile.txt
+and it will put the contents of myfile.txt on screen and then return you to the prompt. It scrolls the contents very fast!

@@ -1,0 +1,30 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 22
+section: shells-and-subshells
+chunk: 59
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+bash subshell I will see something like:
+
+And if I close this shell with exit I see:
+
+=== Shells contain processes and variables ===
+A shell provides
+
+a prompt for the user to communicate by starting, managing, interacting with and ending processes
+a container for processes and variables
+When you invoke a subshell, any processes started in that shell are contained within it. Any data items that are created die with the shell unless they are committed to some persistent storage - perhaps written to a file on a hard drive or exported from the parent shell to new shells. Exporting is not covered here: we assume for now that variables die in the shell they are created in.
+To make this more concrete, consider this sequence. We start from any shell in a terminal session and create a shell variable, like this
+
+$ MYVARIABLE="This is the original shell"
+To check the contents we can use echo and we prefix the variable name with $, like this:
+
+$ echo $MYVARIABLE
+Now we invoke a subshell. We will use the bash shell. Like this
+
+$ bash
+This starts a new bash subshell which we can see from the changed prompt, and in the subshell we create a shell variable like this

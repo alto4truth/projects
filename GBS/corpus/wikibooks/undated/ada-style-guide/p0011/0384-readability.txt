@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 384
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+than:
+
+But in an application that commonly deals with message formats that meet military standards, DOD_STD_MSG_FMT is an acceptable abbreviation for:
+
+==== rationale ====
+Many abbreviations are ambiguous or unintelligible unless taken in context. As an example, Temp could indicate either temporary or temperature. For this reason, you should choose abbreviations carefully when you use them. The rationale in Guideline 8.1.2 provides a more thorough discussion of how context should influence the use of abbreviations.
+Because very long variable names can obscure the structure of the program, especially in deeply nested (indented) control structures, it is a good idea to try to keep identifiers short and meaningful. Use short unabbreviated names whenever possible. If there is no short word that will serve as an identifier, then a well-known unambiguous abbreviation is the next best choice, especially if it comes from a list of standard abbreviations used throughout the project.
+You can establish an abbreviated format for a fully qualified name using the renames clause. This capability is useful when a very long, fully qualified name would otherwise occur many times in a localized section of code (see Guideline 5.7.2).
+A list of accepted abbreviations for a project provides a standard context for using each abbreviation.

@@ -1,0 +1,30 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 328
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+potential infinite loops or infinite recursion.
+
+==== notes ====
+If a loop uses the for iteration scheme (Guideline 5.6.4), it follows this guideline.
+
+==== exceptions ====
+Embedded control applications have loops that are intended to be infinite. Only a few loops within such applications should qualify as exceptions to this guideline. The exceptions should be deliberate (and documented) policy decisions.
+This guideline is most important to safety critical systems. For other systems, it may be overkill.
+
+=== Goto Statements ===
+
+==== guideline ====
+Do not use goto statements.
+
+==== rationale ====
+A goto statement is an unstructured change in the control flow. Worse, the label does not require an indicator of where the corresponding goto statement(s) are. This makes code unreadable and makes its correct execution suspect.
+Other languages use goto statements to implement loop exits and exception handling. Ada's support of these constructs makes the goto statement extremely rare.
+
+==== notes ====
+If you should ever use a goto statement, highlight both it and the label with blank space. Indicate at the label where the corresponding goto statement(s) may be found.

@@ -1,0 +1,13 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 1
+section: ace-tao-opensource-programming-notes
+chunk: 1
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+This book addresses issues related to TAO CORBA development and integration.
+First, a word or two about the nature of open source projects. The main benefit of an open source project is that you get a working product you can use, complete with community support. This support often takes the form of user's support as well as developer support. Ideally, these support avenues also include documentation. Should the open source project in question lack some of the pieces mentioned above, its utility as an open source product (particularly as the product becomes more complex) is necessarily diminished.
+ACE+TAO is a wonderful product which compares well to other open source products like Orbit or Mico. It encompasses much of the current standard and comes complete with all the services you would expect (and some extras too). Unfortunately, except for the most basic services (the naming service) there are precious few documented programming examples in their tutorial. While there are several source files in the examples directory, these are sadly not written with documented code (often without even a header describing the use for the example), and certainly not included in any web page exp

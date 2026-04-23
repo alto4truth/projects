@@ -1,0 +1,41 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 16
+section: 360-instructions-bcr
+chunk: 59
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ivalent to BCR 15,14
+0705 NOP 5 no-operation - BCR 0,5
+07F0 BCR 15,0 despite the mask being 15, because the base register is 0,
+* this is also a no-op
+
+=== Used after standard comparison of a and b ===
+0785 BER 5 branch if a equal b - BCR 8,5
+0725 BHR 5 branch if a high - BCR 2,5
+0745 BLR 5 branch if a low - BCR 4,5
+0775 BNER 5 branch if a not equal b - BCR 7,5
+07D5 BNHR 5 branch if a not high - BCR 13,5
+0745 BNLR 5 branch if a not low - BCR 4,5
+
+=== Used after arithmetic operations ===
+0715 BOR 5 branch on overflow - BCR 1,label
+0727 BPR 7 branch on plus - BCR 2,7
+0745 BMR 5 branch on minus - BCR 4,5
+0785 BZR 5 branch on zero - BCR 8,5
+07E5 BNOR 5 branch on not ones - BCR 14,5
+07D5 BNPR 5 branch on not plus - BCR 13,5
+07B5 BNMR 5 branch on not minus - BCR 11,5
+0775 BNZR 5 branch on not zero - BCR 7,5
+
+=== Used after Test Under Mask instructions ===
+4717 BOR 7 branch on ones - BCR 1,7
+474F BMR 15 branch on mixed - BCR 4,15
+478E BZ 14 branch on zeroes - BCR 8,14
+47E5 BNO 5 branch on not ones - BCR 14,5
+
+== Availability ==
+The BCR instruction is available on all models of the 360, 370 and z/System.

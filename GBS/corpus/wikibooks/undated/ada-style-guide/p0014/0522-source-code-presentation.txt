@@ -1,0 +1,37 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 14
+section: source-code-presentation
+chunk: 522
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ne of dashes immediately before and immediately after the definition.
+If two dashed lines are adjacent, omit the longer of the two.
+
+==== example ====
+
+==== rationale ====
+It is easy to overlook parts of program units that are not visible on the current page or screen. The page lengths of presentation hardware and software vary widely. By clearly marking the program's logical page boundaries (e.g., with a dashed line), you enable a reader to quickly check whether all of a program unit is visible. Such pagination also makes it easier to scan a large file quickly, looking for a particular program unit.
+
+==== exceptions ====
+This guideline does not address code layout on the physical "page" because the dimensions of such pages vary widely and no single guideline is appropriate.
+
+==== automation notes ====
+The guidelines in this section are easily enforced with an automatic code formatter.
+
+=== Number of Statements Per Line ===
+
+==== guideline ====
+Start each statement on a new line.
+Write no more than one simple statement per line.
+Break compound statements over multiple lines.
+
+==== example ====
+Use:
+
+rather than:
+
+exceptional case:

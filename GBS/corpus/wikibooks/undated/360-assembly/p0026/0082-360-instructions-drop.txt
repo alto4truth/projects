@@ -1,0 +1,17 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 26
+section: 360-instructions-drop
+chunk: 82
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+The DROP pseudo-instruction is used to inform the assembler that a register previously declared in a USING pseudo-instruction is no longer available for use as a base register in instructions, and should not be used for that purpose. The assembler will revert to using any remaining register previously declared in a USING statement that has the smallest displacement from the target address.
+The format for the DROP pseudo-instruction is:
+
+DROP register1[,register2[,...]]
+Register1, register2 etc. can be any of the general purpose registers 1 through 15 which was previously declared in a USING pseudo-instruction. As register 0 is effectively unavailable for use as a base register, it is virtually never used in a USING pseudo-instruction, and so would not be used in a DROP pseudo-instruction
+Here is an example of an inline subroutine which sets up a temporary base register for the subroutine.
+For the purpose of this example it is assumed that R14 is equated to 14, R15 is equated to 15 etc., to provide cross reference - see EQU Assembler pseudo-instruction)

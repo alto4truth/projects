@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 4
+section: improving-performance
+chunk: 89
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+oth rendezvous and protected types are inefficient, consider the use of the Real-Time Systems Annex ((Ada Reference Manual 1995, Annex D [Annotated]).
+
+=== pragmas ===
+When measured performance indicates, use pragma Inline when calling overhead is a significant portion of the routine's execution time.
+Use pragma Restrictions to express the user's intent to abide by certain restrictions.
+Use pragma Preelaborate where allowed.
+Use pragma Pure where allowed.
+Use pragma Discard_Names when the names are not needed by the application and data space is at a premium.
+Use pragma Suppress where necessary to achieve performance requirements.
+Use pragma Reviewable to aid in the analysis of the generated code.

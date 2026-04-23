@@ -1,0 +1,18 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 24
+section: system-types-topics
+chunk: 274
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+at will affect program execution. We will talk about those in the Configuration section of this book.
+See MSDN for the discussion of attributes in C#.
+
+=== Collections ===
+
+A collection is a grouping of objects. The framework has many types of collections that cover most of the situations where you would process objects as a group. Knowing these collection types will save you the time to "re-code" equivalent logic and will keep your program more maintainable.
+Unlike arrays collections come in many flavors each with its specific internal organization. Each type of collection is related to a specific type of problem. We will point out the types of problems when we give examples of each type of collections.
+We have two sections with collections examples:

@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 467
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+lization, consider deriving them, when possible, from the types Ada.Finalization.Controlled or Ada.Finalization.Limited_Controlled.
+
+==== example ====
+
+==== rationale ====
+This functionality is particularly important in designing/programming an abstraction. You have to balance the completeness of the abstraction against its extensibility. Completeness ensures that you have configured the abstraction correctly, without built-in assumptions about its execution environment. It also ensures the proper separation of functions so that they are useful to the current application and, in other combinations, to other applications. Extensibility ensures that reusers can add functionality by extension, using tagged type hierarchies (see Guideline 8.4.8 and Chapter 9) or child library packages (see Guidelines 4.1.6, 8.4.1, and 9.4.1).
+In designing for reuse, you need to think in terms of clean abstractions. If you provide too little functionality and rely on your reusers to extend the abstraction, they risk having an abstraction that lacks cohesion. This hodgepodge abstraction has inherited many operations, not all of which are necessary or work together.
+When a reusable part can be implemented reasonably using dynamic data, then any application that must control memory can use the initialization and finalization routines to guard against memory leakage. Then, if data structures become dynamic, the applications that are sensitive to these concerns can be easily adapted.
+The predefined types Ada.Finalization.Controlled or Ada.Finalization.Limited_Controlled provide automatic, user-definable initialization, adjustment, and finalization procedures. When you declare controlled types and objects, you are guaranteed that the compiler will insert the necessary calls to initialization, adjustment, and finalization, making your code less error-prone and more maintainable. When overriding the Initialize and Finalize routines on the controlled types, make sure to call the parent Initialize or Finalize.

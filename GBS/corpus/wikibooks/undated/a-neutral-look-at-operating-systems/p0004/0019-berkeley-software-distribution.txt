@@ -1,0 +1,16 @@
+title: A Neutral Look at Operating Systems
+source: wikibooks
+year: undated
+document_id: a-neutral-look-at-operating-systems
+authors: 
+page: 4
+section: berkeley-software-distribution
+chunk: 19
+source_ref: https://en.wikibooks.org/wiki/A_Neutral_Look_at_Operating_Systems
+
+r BSDs, Linux, Darwin, and Solaris. A bootstrap script is provided as part of pkgsrc to adapt it to the host OS and build the necessary support tools.
+
+== OpenBSD ==
+OpenBSD was forked off NetBSD when Theo de Raadt had a disagreement with the NetBSD Core Team. Theo founded OpenBSD in the early 1990s. Due to living in Canada Theo was able to legally incorporate strong cryptography into OpenBSD without encumberance by US laws.
+OpenBSD is widely thought of as "the most secure OS". Its motto is "Secure by Default". OpenBSD developers review all of the code by hand in order to search for security holes. The default installation of OpenBSD leaves a lot of features turned off, contributing to its motto. OpenBSD runs well on many different platforms due to its NetBSD lineage. OpenBSD is also the origin of OpenSSH, which is the most popular implementation of ssh, which replaces insecure network logins with the secure ssh protocol.
+The OpenBSD project has been replacing many of the GNU programs in their system with programs having BSD-licenses, non-copyleft versions, but they still use GNU gcc and binutils to build. They also use CVS, a source-revision control system under the GNU GPL license, but plan to replace it with their own OpenCVS when ready. OpenBSD also includes some large packages like perl, Apache 1.x, sendmail, and bind in the base system instead of putting those things into their ports collection. Thus the base OpenBSD system (with no added packages) has more components than the other BSDs.

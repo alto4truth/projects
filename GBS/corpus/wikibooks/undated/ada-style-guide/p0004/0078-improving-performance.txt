@@ -1,0 +1,34 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 4
+section: improving-performance
+chunk: 78
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+e may be a significant performance difference between evaluation of simple aggregates and evaluation of extension aggregates.
+
+=== Protected Types ===
+
+==== guideline ====
+For mutual exclusion, when measured performance indicates, use protected types as an alternative to tasking rendezvous.
+To implement an interrupt handler, when performance measurement indicates, use a protected procedure.
+
+==== example ====
+
+==== rationale ====
+Protected objects are meant to be much faster than tasks used for the same purpose (see Guideline 6.1.1). Determine the impact of using protected objects to provide access safely to encapsulated data in a concurrent program.
+
+=== Bit Operations on Modular Types ===
+
+==== guideline ====
+Use modular types rather than packed Boolean arrays when measured performance indicates.
+
+==== example ====
+
+==== rationale ====
+Determine the impact of performing bit-wise operations on modular types. The performance of these operations may be significantly different from similar operations on packed Boolean arrays. See also Guideline 10.5.7.
+
+=== Bounded Strings ===

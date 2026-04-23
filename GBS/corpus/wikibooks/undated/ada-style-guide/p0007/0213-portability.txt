@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 213
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ned pragmas and attributes.
+
+=== Unchecked Deallocation ===
+
+==== guideline ====
+Avoid dependence on Ada.Unchecked_Deallocation (see Guideline 5.9.2).
+
+==== rationale ====
+The unchecked storage deallocation mechanism is one method for overriding the default time at which allocated storage is reclaimed. The earliest default time is when an object is no longer accessible, for example, when control leaves the scope where an access type was declared (the exact point after this time is implementation-dependent). Any unchecked deallocation of storage performed prior to this may result in an erroneous Ada program if an attempt is made to access the object.
+This guideline is stronger than Guideline 5.9.2 because of the extreme dependence on the implementation of Ada.Unchecked_Deallocation. Using it could cause considerable difficulty with portability.
+
+==== notes ====
+Ada.Unchecked_Deallocation is a supported feature in all Ada implementations. The portability issue arises in that unchecked storage deallocations might cause varying results in different implementations.

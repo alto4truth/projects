@@ -1,0 +1,35 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 276
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+Include the designator at the end of a subprogram body.
+Include the defining identifier at the end of a protected unit declaration.
+
+==== example ====
+
+==== rationale ====
+Repeating names on the end of these compound statements ensures
+consistency throughout the code. In addition, the named end
+provides a reference for the reader if the unit spans a page or
+screen boundary or if it contains a nested unit.
+
+== Parameter Lists ==
+A subprogram or entry parameter list is the interface to the abstraction
+implemented by the subprogram or entry. It is important that it
+is clear and that it is expressed in a consistent style. Careful
+decisions about formal parameter naming and ordering can make
+the purpose of the subprogram easier to understand, which can
+make it easier to use.
+
+=== Formal Parameters ===
+
+==== guideline ====
+Name formal parameters descriptively to reduce the need for comments.
+
+==== example ====

@@ -1,0 +1,20 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 9
+section: importing-modules
+chunk: 50
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+u use the from operator. You use it in the form of from modulename import itemname. Here is an example:
+
+Code Example 4 - importing individual objects
+
+What is the point of this? Well, maybe you could use it to make your code a little more readable. If we get into heaps of modules inside modules, it could also remove that extra layer of crypticness.
+If you wanted to, you could import everything from a module in this way by using from modulename import *. Of course, this can be troublesome if there are objects in your program with the same name as some items in the module. With large modules, this can easily happen, and can cause many a headache. A better way to do this would be to import a module in the normal way (without the from operator) and then assign items to a local name:
+
+Code Example 5 - mainprogram.py continued
+
+This way, you can remove some crypticness, AND have all of the items from a certain module.

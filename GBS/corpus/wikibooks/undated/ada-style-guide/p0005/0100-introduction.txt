@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 5
+section: introduction
+chunk: 100
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+pendence are useful and desirable, even when reuse is not expected, because the resulting code is more resistant to both planned and unplanned change.
+
+=== Object-Oriented Features ===
+Chapter 9 defines a set of guidelines in common objected-oriented terms that exploit some of the features of Ada 95 that are not in Ada 83. The guidelines discuss the use of the new Ada features of type extension (tagged types), abstract tagged types, and abstract subprograms to implement single inheritance, multiple inheritance, and polymorphism.
+
+=== Performance ===
+Chapter 10 defines a set of guidelines intended to enhance performance. It is recognized that some approaches to performance are at odds with maintainability and portability. Most of the guidelines in this chapter read ". . . when measured performance indicates." "Indicates" means that you have determined that the benefit in increased performance to your application in your environment outweighs the negative side effects on understandability, maintainability, and portability of the resulting code.

@@ -1,0 +1,27 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 6
+section: c-control-constructs
+chunk: 27
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+"==" is used to perform the "equals" test, while "=" is used as
+the assignment operator, often causes confusion and is a common bug in C
+programming:
+
+C also contains decision-making statements, such as "if":
+
+This example can be more easily implemented using an "else" clause:
+
+Since there is only one statement in each clause the curly brackets aren't
+really necessary. This example would work just as well:
+
+However, the brackets make the structure more obvious and prevent errors if
+you add statements to the conditional clauses. The compiler doesn't care one
+way or another, it generates the same code.
+There is no "elseif" keyword, but "if" statements can be nested:
+
+This is somewhat clumsy. The "switch" statement does a cleaner job:

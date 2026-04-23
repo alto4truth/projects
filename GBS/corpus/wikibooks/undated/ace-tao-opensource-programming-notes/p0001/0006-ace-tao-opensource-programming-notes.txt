@@ -1,0 +1,50 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 1
+section: ace-tao-opensource-programming-notes
+chunk: 6
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+s
+Present in 2 locations just running then playing around with them is a great start
+ACE_wrappers/TAO/DevGuideExamples/ and
+ACE_wrappers/TAO/Examples/
+
+=== Core Development Operations ===
+In this section, the basic tasks which should allow the user to create most CORBA enabled applications are described.
+
+Before you start
+Create a server
+Create a client
+Dealing with IIOP Endpoints
+Starting the basic services
+Advertise your service on a naming service
+Find a service on a naming server
+A more useful client and server example
+Attaching your applications to the core services
+Configuring your app to work with an Implementation Repository
+Create a process with both client and server
+Create an event supplier
+Create an event consumer
+Create a notifier supplier
+Create a notifier consumer
+
+=== Services ===
+The following sections describe the various services, their configuration, and, if not covered above, should include an example.
+
+Naming
+Event
+Real-Time Event
+Time
+Notification
+Concurrency
+Life Cycle
+Load Balancing
+Logging
+Property
+Scheduling
+Security
+SSLIOP Pluggable Protocol

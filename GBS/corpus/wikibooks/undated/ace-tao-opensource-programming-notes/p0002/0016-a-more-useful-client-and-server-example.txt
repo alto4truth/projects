@@ -1,0 +1,15 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 2
+section: a-more-useful-client-and-server-example
+chunk: 16
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+tes an ORB, attaches to the naming service, and initializes the in-memory database from the postgreSQL database.
+
+=== Source File objectserver.cpp ===
+
+Now that we've discussed all the code required to make the server, it's worth noting some of the parts of the application which make it worthwhile as a useful example. note for instance that some of the methods in the factory as well as the entity class, Actor, return complex types. Few, if any of the on-line examples I found discussed how to do this. The main reason many of the other examples don't show this is its a fairly deep topic which requires the developer to first understand how the CORBA spec deals with its own funky brand of memory management. I won't go into all the options here, except to say that most applications I've worked on have either used integral types, in which case, there are no concerns, or a fairly simple usage of the CORBA containers such as sequence, string, and the odd struct. The previously described code uses all of them and shows how to deal with the memory. The key is in name of the automatically generated variable names which come out of the IDL compiler. Those names ending in _var are CORBA's idea of an STL::auto_ptr. This means that they own the pointed to object, and like a typical stl container, when they go out of scope, they clean up their own memory, and that contained in the client and server ORBs. Strings merrit special mention as they seem to have their own separate treatment. Notice that in the code, instead of using straight assignment, or new, or some other special operator, CORBA uses the string_dup() function. Don't think about it, just do it. It's required by the spec. As for the sequence and struct, using the _var variable is sufficient.

@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 327
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+of this subprogram's usage. One call specifies a maximum recursion depth of 50. The second takes the default (1,000). The third uses a computed bound:
+
+==== rationale ====
+Recursion, and iteration using structures other than for statements, can be infinite because the expected terminating condition does not arise. Such faults are sometimes quite subtle, may occur rarely, and may be difficult to detect because an external manifestation might be absent or substantially delayed.
+By including counters and checks on the counter values, in addition to the loops themselves, you can prevent many forms of infinite loops. The inclusion of such checks is one aspect of the technique called Safe Programming (Anderson and Witty 1978).
+The bounds of these checks do not have to be exact, just realistic. Such counters and checks are not part of the primary control structure of the program but a benign addition functioning as an execution-time "safety net," allowing error detection and possibly recovery from potential infinite loops or infinite recursion.
+
+==== notes ====
+If a loop uses the for iteration scheme (Guideline 5.6.4), it follows this guideline.

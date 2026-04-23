@@ -1,0 +1,27 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 411
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+include information about how the unit fits into the enclosing software system.
+Describe the performance (time and space) characteristics of the unit.
+
+==== instantiation ====
+Put the name of the program unit in the header.
+Briefly explain the purpose of the program unit.
+For packages, describe the effects of the visible subprograms on each other and how they should be used together.
+List all exceptions that can be raised by the unit.
+List all global effects of the unit.
+List preconditions and postconditions of the unit.
+List hidden tasks activated by the unit.
+Do not list the names of parameters of a subprogram.
+Do not list the names of package subprograms just to list them.
+Do not list the names of all other units used by the unit.
+Do not list the names of all other units that use the unit.
+
+==== example ====

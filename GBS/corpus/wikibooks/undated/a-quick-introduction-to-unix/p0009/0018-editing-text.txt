@@ -1,0 +1,27 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 9
+section: editing-text
+chunk: 18
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+== Pico: the simplest editor ==
+So far we have been using built-in Unix commands issued directly at the shell prompt. To take things a little further we really need to be able to create and edit text files. There are a large number of different editors available for Unix users, among them
+
+vi
+emacs
+ed
+pico
+JOE
+We are going to use pico because it is very widely installed on Unix systems and is by far the easiest to use for the beginner.
+Pico is a terminal based program and when you start it the terminal switches from the prompt to the pico editing screen. So, if you type
+
+% pico
+you should see
+
+where at the bottom of the screen you see two rows of Pico command help. This on-screen help is what makes Pico attractive to beginners. Although the commands are unfamiliar (and perhaps even idiosyncratic) you have reminders always to-hand. Pico doesn't have the sophisticated text manipulation functions or flexibility that other Unix editors have, but we don't need that yet.
+
+You can start Pico with a filename as well, typing, for example

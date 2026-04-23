@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 463
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+antiation.
+Leave state variables in a valid state when raising an exception.
+Leave parameters unmodified when raising an exception.
+
+==== example ====
+
+==== rationale ====
+On most occasions, an exception is raised because an undesired event (such as floating-point overflow) has occurred. Such events often need to be dealt with entirely differently with different uses of a particular software part. It is very difficult to anticipate all the ways that users of the part may wish to have the exceptions handled. Passing the exception out of the part is the safest treatment.
+In particular, when an exception is raised by a generic formal subprogram, the generic unit is in no position to understand why or to know what corrective action to take. Therefore, such exceptions should always be propagated back to the caller of the generic instantiation. However, the generic unit must first clean up after itself, restoring its internal data structures to a correct state so that future calls may be made to it after the caller has dealt with the current exception. For this reason, all calls to generic formal subprograms should be within the scope of a when others exception handler if the internal state is modified, as shown in the example above.
+When a reusable part is invoked, the user of the part should be able to know exactly what operation (at the appropriate level of abstraction) has been performed. For this to be possible, a reusable part must always do all or none of its specified function; it must never do half. Therefore, any reusable part that terminates early by raising or propagating an exception should return to the caller with no effect on the internal or external state. The easiest way to do this is to test for all possible exceptional conditions before making any state changes (modifying internal state variables, making calls to other reusable parts to modify their states, updating files, etc.). When this is not possible, it is best to restore all internal and external states to the values that were current when the part was invoked before raising or propagating the exception. Even when this is not possible, it is important to document this potentially hazardous situation in the comment header of the specification of the part.
+A similar problem arises with parameters of mode out or in out when exceptions are raised. The Ada language distinguishes between "by-copy" and "by-reference" parameter passing. In some cases, "by-copy" is required; in other cases, "by-reference" is required; and in the remaining cases, either mechanism is allowed. The potential problem arises in those cases where the language does not specify the parameter passing mechanism to use. When an exception is raised, the copy-back does not occur, but for an Ada compiler, which passes parameters by reference (in those cases where a choice is allowed), the actual parameter has already been updated. When parameters are passed by copy, the update does not occur. To reduce ambiguity, increase portability, and avoid situations where some but not all of the actual parameters are updated when an exception is raised, it is best to treat values of out and in out parameters like state variables, updating them only after it is certain that no exception will be raised.
+See also Guideline 7.1.8.

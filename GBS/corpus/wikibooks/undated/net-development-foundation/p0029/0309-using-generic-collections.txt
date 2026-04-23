@@ -1,0 +1,32 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 29
+section: using-generic-collections
+chunk: 309
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+Dictionary.ValueCollection.Enumerator structure
+Generic Dictionary.ValueCollection class - MSDN
+Dictionary.ValueCollection.Enumerator structure - MSDN
+
+=== Generic Comparer class and Generic EqualityComparer class ===
+Generic Comparer class - MSDN
+The Comparer<T> class serves as a base class to easily implement the IComparer<T> interface.
+The example is the same then for the IComparable<T> except that now a Comparer<T> derived object is given to the List<T>.Sort() method instead of implementing the IComparable<T> interface on Point.
+This way of preceding has 2 advantages:
+It can be used even if you dont have access to the source code of Point
+You can have more than one Comparer derived class for the same Point class
+
+Generic EqualityComparer class - MSDN
+
+=== Generic KeyValuePair structure ===
+see MSDN
+
+=== Generic List class, Generic List.Enumerator structure, and Generic SortedList class ===
+Generic List class - MSDN
+A generic list class instance is simply declared using the List<T> syntax where T is the specific type.
+Generic List.Enumerator structure - MSDN
+Generic SortedList class - MSDN

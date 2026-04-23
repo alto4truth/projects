@@ -1,0 +1,35 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 95
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+- MSDN
+InstallEventHandler delegate - MSDN
+Configure concurrent garbage collection - MSDN
+Register remote objects by using configuration files - MSDN
+
+==== Manage an event log ====
+Exam objective: Manage an event log by using the System.Diagnostics namespace
+EventLog class - MSDN
+EventSourceCreationData class - MSDN
+
+===== Write to an event log =====
+MSDN
+
+===== Read from an event log =====
+MSDN
+
+===== Create a new event log =====
+You create an EventLog by creating the first event source that writes to that log.
+The two simplest way to do this are:
+
+Use the EventLog.CreateEventSource method
+Create an EventLog instance, specify a source and then write to the log. The actual creation takes place on execution of the first write.
+Note that there is no "EventSource" class in the System.Diagnostics namespace even though an object representing the source is created in the registry.
+
+The recommended way, which does not seem to be covered on the Training Kit (so probably not on the exam) is to use the EventLogInstaller class during the installation of the application. For reference purposes see MSDN

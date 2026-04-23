@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 142
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+site data structure.
+Avoid using type extensions for parameterized abstractions when generics provide a more appropriate mechanism.
+
+==== example ====
+
+==== rationale ====
+Both generics and class-wide types allow a single algorithm to be applicable to multiple, specific types. With generics, you achieve polymorphism across unrelated types because the type used in the instantiation must match the generic formal part. You specify required operations using generic formal subprograms, constructing them as needed for a given instantiation. Generics are ideal for capturing relatively small, reusable algorithms and programming idioms, for example, sorting algorithms, maps, bags, and iterators. As generics become large, however, they become unwieldy, and each instantiation may involve additional generated code. Class-wide programming, including class-wide types and type extension, is more appropriate for building a large subsystem because you avoid the additional generated code and unwieldy properties of generics.
+Class-wide programming enables you to take a set of heterogeneous data structures and provide a homogeneous-looking interface across the whole set. See also Guideline 9.2.1 on using tagged types to describe heterogeneous polymorphic data.
+In object-oriented programming languages without generic capabilities, it was common to use inheritance to achieve much the same effect. However, this technique is generally less clear and more cumbersome to use than the equivalent explicit generic definition. The nongeneric, inheritance approach can always be recovered using a specific instantiation of the generic. Also see Guidelines 5.3.2 and 5.4.7 for a discussion of
+self-referential data structures.

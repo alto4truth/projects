@@ -1,0 +1,33 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 15
+section: c-standard-utility-library-time-library
+chunk: 63
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+The utility functions library features a grab-bag of functions. It
+requires the declaration:
+
+#include <stdlib.h>
+
+Useful functions include:
+
+atof( <string> ) Convert numeric string to double value.
+atoi( <string> ) Convert numeric string to int value.
+atol( <string> ) Convert numeric string to long value.
+rand() Generates pseudorandom integer.
+srand( <seed> ) Seed random-number generator -- "seed" is an "int".
+exit( <status> ) Exits program -- "status" is an "int".
+system( <string> ) Tells system to execute program given by "string".
+abs( n ) Absolute value of "int" argument.
+labs( n ) Absolute value of long-int argument.
+
+The functions "atof()", "atoi()", and "atol()" will return 0 if they can't
+convert the string given them into a value.
+The time and date library includes a wide variety of functions, some of them
+obscure and nonstandard. This library requires the declaration:
+
+#include <time.h>

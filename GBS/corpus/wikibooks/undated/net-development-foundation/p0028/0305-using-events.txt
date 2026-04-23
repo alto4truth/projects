@@ -1,0 +1,29 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 28
+section: using-events
+chunk: 305
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+int argument to the event handler and all the parameters changed to follow the calling convention for events.
+
+EventHandler delegates - MSDN and MSDN
+
+There are two special delegates defined in the System namespace to help you with the events declarations.
+The first is the EventHandler delegate. It passes no data. An event that passes no data can be declared as:
+public event EventHandler EventName
+
+without having to declare a custom delegate.
+This is the usual way to declare an event that passes no data.
+
+The second is the EventHandler<T> generic delegate where T is a type derived from EventArgs
+public event EventHandler<T> EventName
+
+again no need to declare a custom delegate type.
+This is the usual way to declare an event that passes data to the event handlers.
+Note that in this case you still have to declare the type T derived from EventArgs.
+
+This concludes the basic examples for events and delegates.

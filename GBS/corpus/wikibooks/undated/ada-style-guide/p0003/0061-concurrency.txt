@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 61
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+en part of the name by which its parent knows it. Should it terminate due to an exception, it signals the fact in one of its parent's data structures:
+
+==== rationale ====
+A task will terminate if an exception is raised within it for which it has no handler. In such a case, the exception is not propagated outside of the task (unless it occurs during a rendezvous). The task simply dies with no notification to other tasks in the program. Therefore, providing exception handlers within the task, and especially a handler for others, ensures that a task can regain control after an exception occurs. If the task cannot proceed normally after handling an exception, this affords it the opportunity to shut itself down cleanly and to notify tasks responsible for error recovery necessitated by the abnormal termination of the task.
+You should not use the task status to determine whether a rendezvous can be made with the task. If Task A depends on Task B and Task A checks the status flag before it rendezvouses with Task B, there is a potential that Task B fails between the status test and the rendezvous. In this case, Task A must provide an exception handler to handle the Tasking_Error exception raised by the call to an entry of an abnormal task (see Guideline 6.3.1).

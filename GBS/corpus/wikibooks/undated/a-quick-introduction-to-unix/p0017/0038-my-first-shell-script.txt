@@ -1,0 +1,19 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 17
+section: my-first-shell-script
+chunk: 38
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+hat we know about Unix? The answer, as I'm sure you knew, is with grep. To find all the lines that contain the word science we would issue the command
+
+% grep 'science' science.txt
+So now create a text file with this as the first line after the shebang directive. You can call it scisearch.sh. When you have saved your file and changed the permissions, test it. Does it do what you expected? If it doesn't correct it, if it does, carry on.
+This could be quite interesting. But rather than just display the results on screen, it would be more useful if they were saved to a file. We can do this with a redirect. Open the file scisearch.sh and change it so that it reads
+
+grep 'science' science.txt > scioutput.txt
+When you have made this change test and if necessary amend your file again.
+Now, this is already an interesting file and it illustrates something about shell scripting but we can improve it. At the moment the search is case sensitive so amend it to read

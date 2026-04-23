@@ -1,0 +1,47 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 12
+section: c-operators
+chunk: 57
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+he previous
+chapter:
+
+a = ( b < 2 ) ? b : 10;
+
+This conditional operator is also known as the "triadic" operator.
+There are similar logical operators:
+
+! logical NOT
+&& logical AND
+|| logical OR
+
+Remember that these are logical operations, not bitwise operations—don't confuse "&&" and "||" with "&" and "|". The distinction is that while
+the bitwise operators perform the operations on a bit-by-bit basis, the
+logical operations simply assess the values of their operands to be either 0
+or 1 (any nonzero operand value evaluates to 1 in such comparisons) and
+return either a 0 or a 1:
+
+if(( A == 5 ) && ( B == 10 ))
+{
+...
+}
+
+Finally, there is a "sizeof" operand that returns the size of a particular
+operand in bytes:
+
+int tvar;
+...
+printf ( "Size = %d\n", sizeof( int ) );
+
+This comes in handy for some mass storage operations. The "sizeof()"
+function can be given a data type name or the name of a variable, and the
+variable can be an array, in which case "sizeof()" gives the size of the
+entire array.
+The precedence of these operators in math functions—that is, which ones
+are evaluated before others—are defined as follows, reading from the
+highest precedence to the lowest:

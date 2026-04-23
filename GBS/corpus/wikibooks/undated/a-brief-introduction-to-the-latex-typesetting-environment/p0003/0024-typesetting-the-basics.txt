@@ -1,0 +1,21 @@
+title: A Brief Introduction to the LaTeX Typesetting Environment
+source: wikibooks
+year: undated
+document_id: a-brief-introduction-to-the-latex-typesetting-environment
+authors: 
+page: 3
+section: typesetting-the-basics
+chunk: 24
+source_ref: https://en.wikibooks.org/wiki/A_Brief_Introduction_to_the_LaTeX_Typesetting_Environment
+
+following sections and then modify the example above to have 2 equations you may wish to see in a document, or two random equations, with each method.
+
+=== Inline Mathematical Functions ===
+The simplest way to place a mathematical function in a LaTeX document is to do it inside of a sentence or paragraph your writing. For instance, say we wanted to define a variable we'll use in a later equation in the same sentence it is described:
+
+We will let the function f(x) be defined as $f(x) = \sqrt{x}$
+
+The way this was achieved was with the use of the dollar-sign symbols. Whenever you'll be placing an equation inside of a paragraph or sentence, you use the "$" symbol to tell LaTeX that what comes next should be treated as a math equation rather than as simple text.
+You'll want to be careful about using words inside of equations however, since they are handled very differently. The best method would be as follows:
+
+We assume that the constant n is defined to be in units of moles$^{-1}$

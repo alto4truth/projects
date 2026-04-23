@@ -1,0 +1,26 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 14
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+signed to the handler.
+Avoid the use of global variables in entry barriers.
+Avoid the use of barrier expressions with side effects.
+
+==== example ====
+
+==== rationale ====
+Protected objects are intended to provide a "lightweight" mechanism for mutual exclusion and data synchronization. You should use a task only when you need to introduce explicitly a new, concurrent thread of control (see Guideline 6.1.2).
+Protected objects offer a low overhead, efficient means to coordinate access to shared data. A protected type declaration is similar to a program unit and consists of both a specification and a body. The data to be protected must be declared in the specification, as well as the operations that can be used to manipulate this data. If some operations are only allowed conditionally, entries must be provided. Ada 95 rules require that entry barriers be evaluated at the end of procedure calls and entry calls on protected objects. Entry barriers should avoid referring to global variables so that the underlying assumptions of the state of the protected object are not violated. Protected procedures and entries should be used to change the state of a protected object.
+Most clients of an abstraction do not need to know how it is implemented, whether it is a regular abstraction or a shared abstraction. A protected type is inherently a limited type, and you can use protected types to implement a limited private type exported by a package. As pointed out in Guideline 5.3.3, abstractions are best implemented using private types (possibly derived from controlled types) or limited private types, providing appropriate operations that overcome the restrictiveness imposed by the use of private types.
+The Rationale (1995, §9.1) describes the interrupt handling features that make the protected procedure the recommended building block:
+A protected procedure is very well suited to act as an interrupt handler for a number of reasons; they both typically have a short bounded execution time, do not arbitrarily block, have a limited context and finally they both have to integrate with the priority model. The nonblocking critical region matches the needs of an interrupt handler, as well as the needs of non-interrupt-level code to synchronize with an interrupt handler. The entry barrier construct allows an interrupt handler to signal a normal task by changing the state of a component of the protected object and thereby making a barrier true.
+When using protected procedures for interrupt handling, you must ensure that the ceiling priority of the handler is at least as high as the maximum possible priority of the interrupt to be handled. With priority-ceiling locking, the delivery of an interrupt with a higher priority than the ceiling priority of the handler will result in erroneous execution (Ada Reference Manual 1995, §C.3.1 [Annotated]).
+A global variable could be changed by another task or even by a call of a protected function. These changes will not be acted upon promptly. Therefore, you should not use a global variable in an entry barrier.
+Side effects in barrier expressions can cause undesirable dependencies. Therefore, you should avoid the use of barrier expressions that can cause side effects.
+See also Guideline .

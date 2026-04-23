@@ -1,0 +1,24 @@
+title: Advanced phone customization
+source: wikibooks
+year: undated
+document_id: advanced-phone-customization
+authors: 
+page: 12
+section: rooting-your-phone
+chunk: 29
+source_ref: https://en.wikibooks.org/wiki/Advanced_phone_customization
+
+that the root would easily be performed.
+
+== Using Odin ==
+For Samsung phones only. Only available on Windows. The Knox switch (if present) will trip.
+
+Get the root file ready.
+Download Odin (there are many different versions, which mainly differ in the names used).
+Launch the phone in Download mode: hold the Volume Down+Power+Home buttons together when the phone is off. Accept the disclaimer.
+Select the root file in the appropriate category in Odin (the file should tell you which one).
+Click Start. Make sure that the phone is detected (a yellow box like COM x should appear).
+The phone will restart and the phone should now be rooted. Look for a SuperSu app or similar to confirm the presence of a root.
+
+=== Logs ===
+1. Odin failed during rooting. The writing to the phone memory never started on a Galaxy S6. The USB plug was pulled off after waiting for a noticeable amount of time with no progress sign either on the phone or Odin. Rebooting the phone led to stock, as expected (as nothing actually happened). Here's the log from Odin3 v3.09:

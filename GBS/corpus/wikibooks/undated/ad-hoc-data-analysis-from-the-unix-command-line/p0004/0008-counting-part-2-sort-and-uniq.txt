@@ -1,0 +1,59 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 4
+section: counting-part-2-sort-and-uniq
+chunk: 8
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+niq to write counts associated with each distinct entry:
+
+$ sort foo | uniq -c
+6 a
+2 b
+1 c
+
+Sorting a CSV file by an arbitrary column is easy as well:
+
+$ cat file.csv
+a, 10, 0.5
+b, 20, 0.1
+c, 14, 0.01
+d, 55, 0.23
+e, 94, 0.78
+f, 1, 0.34
+g, 75, 1.0
+h, 3, 2.0
+i, 12, 1.5
+$ sort -n -t"," -k 2 file.csv
+f, 1, 0.34
+h, 3, 2.0
+a, 10, 0.5
+i, 12, 1.5
+c, 14, 0.01
+b, 20, 0.1
+d, 55, 0.23
+g, 75, 1.0
+e, 94, 0.78
+$ sort -n -t"," -k 3 file.csv
+c, 14, 0.01
+b, 20, 0.1
+d, 55, 0.23
+f, 1, 0.34
+a, 10, 0.5
+e, 94, 0.78
+g, 75, 1.0
+i, 12, 1.5
+h, 3, 2.0
+
+== Example - Creating a frequency table ==
+The combination of sort and uniq -c is extremely powerful. It allows one to create frequency tables from virtually any record oriented text data. Returning to the name to gender mapping of the previous chapter, we could have gotten the count of male and female names in one command like this:
+
+$ cut -d" " -f2 gender.txt | sort | uniq -c
+3966 F
+1051 M
+
+== Example - Creating another frequency table ==
+And returning to the census data, we can now easily compute the complete distribution of occupants per household:

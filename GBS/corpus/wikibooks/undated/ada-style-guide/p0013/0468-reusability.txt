@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 468
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+more maintainable. When overriding the Initialize and Finalize routines on the controlled types, make sure to call the parent Initialize or Finalize.
+
+==== notes ====
+The example illustrates end condition functions. An abstraction should be automatically initialized before its user gets a chance to damage it. When that is not possible, it should be supplied with initialization operations. In any case, it needs finalization operations. One way to supply the initialization and finalization operations is to derive the abstraction from the predefined types Ada.Finalization.Controlled or Ada.Finalization.Limited_Controlled. Wherever possible, query operations should be provided to determine when limits are about to be exceeded, so that the user can avoid causing exceptions to be raised.
+It is also useful to provide reset operations for many objects. To see that a reset and an initiation can be different, consider the analogous situation of a "warm boot" and a "cold boot" on a personal computer.
+Even if all of these operations are not appropriate for the abstraction, the exercise of considering them aids in formulating a complete set of operations, others of which may be used by another application.
+Some implementations of the language link all subprograms of a package into the executable file, ignoring whether they are used or not, making unused operations a liability (see Guideline 8.4.5). In such cases, where the overhead is significant, create a copy of the fully functional part and comment out the unused operations with an indication that they are redundant in this application.

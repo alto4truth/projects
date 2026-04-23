@@ -1,0 +1,42 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 8
+section: parti-chapter-3-arrays-methods
+chunk: 35
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+lete count>);
+
+In line 12 we delete all elements beginning from the second element. This is the use of deleting all elements after specified location:
+
+Array.splice( <start> );
+
+The output of our example must be:
+
+--------MYARRAY-------a,b,e,f
+--------Adding 'c' and 'd' from location 2-------a,b,c,d,e,f
+--------Removing two elements from location 3-------a,b,c,f
+--------Removing all elements from location 1-------a
+
+===== toString =====
+Array.toString( );
+The method “toString” converts the array to a string.
+
+The output is:
+
+1,2,3,4,5
+
+===== unshift =====
+Array.unshift( <value0>, <value1>, <…> );
+The method “unshift” is similar to method “push”. The only difference is that “push” adds new elements to the end of the array when “unshift” adds the elements to the beginning of the array.
+
+The output is:
+
+4
+1,2,3,4
+
+« Previous
+Next »

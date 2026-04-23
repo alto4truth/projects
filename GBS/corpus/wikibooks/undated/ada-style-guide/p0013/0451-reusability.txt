@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 451
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+specification.
+
+==== example ====
+The following example shows how a very general algorithm can be developed but must be clearly documented to be used:
+
+==== rationale ====
+The generic capability is one of Ada's strongest features because of its formalization. However, not all of the assumptions made about generic formal parameters can be expressed directly in Ada. It is important that any user of a generic know exactly what that generic needs in order to behave correctly.
+In a sense, a generic specification is a contract where the instantiator must supply the formal parameters and, in return, receives a working instance of the specification. Both parties are best served when the contract is complete and clear about all assumptions.

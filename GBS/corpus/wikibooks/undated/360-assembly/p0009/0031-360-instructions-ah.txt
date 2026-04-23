@@ -1,0 +1,24 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 9
+section: 360-instructions-ah
+chunk: 31
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+m is not between -2**31 and 2**31-1, CC is set to 3.
+Otherwise, CC is set to 0, 1 or 2, if sum is equal to zero, below zero or above zero accordingly.
+
+== Exceptions and Faults ==
+If signed integer overflow is detected and the bit 36 in PSW is set, operation exception occurs.
+The target address must be within the range of valid memory or an operation exception occurs.
+The storage key for the source address must be the same as the current process or a memory protect violate exception occurs.
+
+== Related instructions ==
+To add value from register, see AR.
+To add word value from memory, see A.
+To add value and set condition codes according to unsigned arithmetic, or add not most significant part of multi-word integer value, see AL or ALR.
+To add floating-point values, see AE, AER, AD or ADR.
+To subtract half-word value from memory, see SH.

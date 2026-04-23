@@ -1,0 +1,154 @@
+title: A First Course to Network Coding
+source: wikibooks
+year: undated
+document_id: a-first-course-to-network-coding
+authors: 
+page: 4
+section: information-measure-and-handy-inequations
+chunk: 9
+source_ref: https://en.wikibooks.org/wiki/A_First_Course_to_Network_Coding
+
+)
+
+{\displaystyle H(X)=-\sum P(x)\log _{b}P(x)}
+
+, in other words, the expectation of
+
+l
+o
+
+g
+
+b
+
+1
+
+P
+(
+x
+)
+
+{\displaystyle log_{b}{\frac {1}{P(x)}}}
+
+.
+Letter 'b' in the base specifies the unit of entropy. If b = 2, the unit is bit (binary unit, note the difference between this and the other 'bit' -- binary digit); b = e, it's nat (natural unit). Unless specified otherwise, we use bit. This form of expectation of negative logarithm is tailor-made by Shannon for the three criteria we described in the last section.
+Joint Entropy We defined entropy of a single d.r.v., the definition of two d.r.v.s is immediate:
+
+H
+(
+X
+)
+=
+−
+
+∑
+
+x
+,
+y
+∈
+S
+(
+X
+,
+Y
+)
+
+P
+(
+x
+,
+y
+)
+log
+⁡
+P
+(
+x
+,
+y
+)
+
+{\displaystyle H(X)=-\sum _{x,y\in S(X,Y)}P(x,y)\log P(x,y)}
+
+.
+Conditional Entropy The entropy of a d.r.v. conditioning on another d.r.v. is defined as:
+
+H
+(
+X
+
+|
+
+Y
+=
+y
+)
+=
+−
+
+∑
+
+x
+∈
+X
+
+P
+(
+x
+
+|
+
+y
+)
+log
+⁡
+P
+(
+x
+
+|
+
+y
+)
+
+{\displaystyle H(X|Y=y)=-\sum _{x\in X}P(x|y)\log P(x|y)}
+
+.
+Now we can express the third criterion with conditional entropy:
+
+H
+(
+X
+Y
+)
+=
+H
+(
+X
+)
++
+H
+(
+Y
+
+|
+
+X
+)
+=
+H
+(
+Y
+)
++
+H
+(
+X
+
+|
+
+Y
+)
+
+{\displaystyle H(XY)=H(X)+H(Y|X)=H(Y)+H(X|Y)}

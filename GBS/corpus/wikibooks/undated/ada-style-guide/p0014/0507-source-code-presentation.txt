@@ -1,0 +1,30 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 14
+section: source-code-presentation
+chunk: 507
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+a formatting tool because they are based on the semantics, not the syntax, of the Ada code. More details are given in the "automation notes" sections.
+
+== Code Formatting ==
+The "code formatting" of Ada source code affects how the code looks, not what the code does. Topics included here are horizontal spacing, indentation, alignment, pagination, and line length. The most important guideline is to be consistent throughout the compilation unit as well as the project.
+
+=== Horizontal Spacing ===
+
+==== guideline ====
+Use consistent spacing around delimiters.
+Use the same spacing as you would in regular prose.
+
+==== instantiation ====
+Specifically, leave at least one blank space in the following places, as shown in the examples throughout this book. More spaces may be required for the vertical alignment recommended in subsequent guidelines.
+
+Before and after the following delimiters and binary operators:
+
+Outside of the quotes for string (") and character (' ) literals, except where prohibited.
+Outside, but not inside, parentheses.
+After commas (,) and semicolons (;).
+Do not leave any blank spaces in the following places, even if this conflicts with the above recommendations.

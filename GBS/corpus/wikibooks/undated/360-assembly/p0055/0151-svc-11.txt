@@ -1,0 +1,14 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 55
+section: svc-11
+chunk: 151
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ld either receive an error code or would be treated as a program error, either transferring to the recovery routine or terminating the offending task.
+
+== Operation ==
+When a supervisor call instruction occurs, the program counter is advanced by two, the PSW is stored in the "Supervisor Call Old PSW Address," the supervisor call number is stored in the "Interrupt Number address", and the new PSW is loaded from the "Supervisor Call New PSW address" all of which differ from model to model. Execution continues at the program counter value retrieved from the Supervisor Call New PSW.

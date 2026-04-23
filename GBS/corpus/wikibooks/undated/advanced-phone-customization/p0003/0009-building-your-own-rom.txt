@@ -1,0 +1,20 @@
+title: Advanced phone customization
+source: wikibooks
+year: undated
+document_id: advanced-phone-customization
+authors: 
+page: 3
+section: building-your-own-rom
+chunk: 9
+source_ref: https://en.wikibooks.org/wiki/Advanced_phone_customization
+
+~/bin directory will contain the git-repo tool (commonly named “repo”) and the ~/android/lineage directory will contain the source code of LineageOS.
+
+=== Install the repo command ===
+Enter the following to download the repo binary and make it executable (runnable):
+
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+chmod a+x ~/bin/repo
+
+=== Put the ~/bin directory in your path of execution ===
+In recent versions of Ubuntu, ~/bin should already be in your PATH. You can check this by opening ~/.profile with a text editor and verifying the following code exists (add it if it is missing):

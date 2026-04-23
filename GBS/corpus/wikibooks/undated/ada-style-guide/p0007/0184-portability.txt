@@ -1,0 +1,25 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 184
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+attributes return values of the mantissa, exponent, radix, and other characteristics of floating- and fixed-point numbers.
+
+=== Accuracy Analysis ===
+
+==== guideline ====
+Carefully analyze what accuracy and precision you really need.
+
+==== rationale ====
+Floating-point calculations are done with the equivalent of the implementation's predefined floating-point types. The effect of extra "guard" digits in internal computations can sometimes lower the number of digits that must be specified in an Ada declaration. This may not be consistent over implementations where the program is intended to be run. It may also lead to the false conclusion that the declared types are sufficient for the accuracy required.
+You should choose the numeric type declarations to satisfy the lowest precision (smallest number of digits) that will provide the required accuracy. Careful analysis will be necessary to show that the declarations are adequate. When you move to a machine with less precision, you probably can use the same type declaration.
+
+=== Accuracy Constraints ===
+
+==== guideline ====
+Do not press the accuracy limits of the machine(s).

@@ -1,0 +1,14 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 133
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+pe, then document (in some project-consistent way) this use in the body of the operation subprogram so that it can be easily found during maintenance.
+
+==== example ====
+This example (Volan 1994) is intended to show a clean derivation of a square from a rectangle. You do not want to derive Square from Rectangle because Rectangle has semantics that are inappropriate for Square. (For instance, you can make a rectangle with any arbitrary height and width, but you should not be able to make a square this way.) Instead, both Square and Rectangle should be derived from some common abstract type, such as:

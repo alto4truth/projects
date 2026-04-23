@@ -1,0 +1,11 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 7
+section: create-a-notifier-consumer
+chunk: 26
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+TAO's Notification service implements the OMG's specification for an extension to the event service. This new specification adds QOS and event filtering to the existing event model. For most applications, this infrastructure is a bit beyond what's needed, and for that reason, there aren't examples included in this book. If you wish to contribute a model, feel free.

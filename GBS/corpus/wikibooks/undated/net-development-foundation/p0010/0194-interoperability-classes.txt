@@ -1,0 +1,33 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 10
+section: interoperability-classes
+chunk: 194
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+== Classes, Interfaces, and tools ==
+
+==== COM interoperability ====
+Exam objective: Expose COM components to the .NET Framework and .NET Framework components to COM
+(Refer System.Runtime.InteropServices namespace)
+
+==== Exposing COM Components to the .NET Framework ====
+First there is an article in the .NET developers guide that covers the first part of this section, see MSDN
+Import a type library as an assembly - MSDN
+
+Add references to type libraries
+Same link as above, see second paragraph.
+Type Library Importer (Tlbimp.exe) - MSDN
+Generate interop assemblies from type libraries - MSDN
+Imported Library Conversion - MSDN
+Imported Module Conversion - MSDN
+Imported Type Conversion - MSDN
+Imported Member Conversion - MSDN
+Imported Parameter Conversion - MSDN
+TypeConverter class - MSDN
+Create COM types in managed code - MSDN
+Compile an interop project - MSDN
+Deploy an interop application - MSDN

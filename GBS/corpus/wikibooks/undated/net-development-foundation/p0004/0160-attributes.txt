@@ -1,0 +1,24 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 4
+section: attributes
+chunk: 160
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+Check[])Attribute.GetCustomAttributes(m, typeof(QualityCheck));
+foreach (QualityCheck attr in attrArray)
+{
+Console.Writeline(attr.IsApproved);
+}
+}
+}
+}
+
+=== External links ===
+MSDN2 .NET Framework Developer's Guide: Attributes Overview
+MSDN2 C# Programming Guide: Entry for Attributes
+The C# Station Tutorial - Lesson 16: Using Attributes
+Bill Bozeman's weblog on attributes

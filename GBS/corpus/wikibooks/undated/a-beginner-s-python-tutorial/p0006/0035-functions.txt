@@ -1,0 +1,18 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 6
+section: functions
+chunk: 35
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+re similar - to the main program (that is, the program that is running the function), they look like the value of what they give in return of running.
+
+== A Calculator Program ==
+Let's write another program, one that will act as a calculator. This time it will do something more adventurous than what we have done before. There will be a menu that will ask you whether you want to multiply two numbers together, add two numbers together, divide one number by another, or subtract one number from another. The only problem is that the raw_input function returns what you type in as a string, whereas we want the number 1, not the letter 1 (and yes, in Python, there is a difference).
+Luckily, somebody wrote the function input (eval(input()) in Python 3), which returns what you typed in to the main program - but crucially, as a number, not a letter. If you type an integer (a whole number), what comes out of input is an integer. And if you put that integer into a variable, the variable will be an integer-type variable, which means you can perform addition, subtraction and other mathematical operations on it.
+Now, let's design this calculator properly. We want a menu that is returned to every time you finish adding, subtracting, etc. In other words, to loop (HINT!!!) while (BIG HINT!!!) you tell it the program should still run.
+We want it to perform an option in the menu associated with the number you enter. That involves you typing in a number (a.k.a. input) and an if loop.
+Let's write it out in understandable English first:

@@ -1,0 +1,25 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 246
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+tial change helps to minimize the effort required to implement that change by preventing unnecessary dependencies among unrelated parts of the system.
+
+==== notes ====
+The most prevalent objection to this guideline usually involves performance penalties. See Guideline 10.7.1 for a discussion about subprogram overhead.
+
+=== Child Library Units ===
+
+==== guideline ====
+If a new library unit represents a logical extension to the original abstraction, define it as a child library unit.
+If a new library unit is independent (e.g., introduces a new abstraction that depends only in part on the existing one), then encapsulate the new abstraction in a separate library unit.
+Use child packages to implement a subsystem.
+Use public child units for those parts of a subsystem that should be visible to clients of the subsystem.
+Use private child units for those parts of a subsystem that should not be visible to clients of the subsystem.
+Use private child units for local declarations used only in implementing the package specification.
+Use child packages to implement constructors, even when they return access values.

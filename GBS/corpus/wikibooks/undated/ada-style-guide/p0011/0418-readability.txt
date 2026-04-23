@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 418
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+aised should be commented:
+
+Here is a more complex example, involving multiple record and access types that are used to form a complex data structure:
+
+==== rationale ====
+It is very useful to add comments explaining the purpose, structure, and semantics of the data structures. Many maintainers look at the data structures first when trying to understand the implementation of a unit. Understanding the data that can be stored, along with the relationships between the different data items and the flow of data through the unit, is an important first step in understanding the details of the unit.
+In the first example above, the names Current_Column and Current_Row are relatively self-explanatory. The name Desired_Column is also well chosen, but it leaves the reader wondering what the relationship is between the current column and the desired column. The comment explains the reason for having both.
+Another advantage of commenting on the data declarations is that the single set of comments on a declaration can replace multiple sets of comments that might otherwise be needed at various places in the code where the data is manipulated. In the first example above, the comment briefly expands on the meaning of "current" and "marked." It states that the "current" position is the location of the cursor, the "current" position is in the current buffer, and the "marked" position was marked by the user. This comment, along with the mnemonic names of the variables, greatly reduces the need for comments at individual statements throughout the code.
+It is important to document the full meaning of exceptions and under what conditions they can be raised, as shown in the second example above, especially when the exceptions are declared in a package specification. The reader has no other way to find out the exact meaning of the exception (without reading the code in the package body).
+Grouping all the exceptions together, as shown in the second example, can provide the reader with the effect of a "glossary" of special conditions. This is useful when many different subprograms in the package can raise the same exceptions. For a package in which each exception can be raised by only one subprogram, it may be better to group related subprograms and exceptions together.
+When commenting exceptions, it is better to describe the exception's meaning in general terms than to list all the subprograms that can cause the exception to be raised; such a list is harder to maintain. When a new routine is added, it is likely that these lists will not be updated. Also, this information is already present in the comments describing the subprograms, where all exceptions that can be raised by the subprogram should be listed. Lists of exceptions by subprogram are more useful and easier to maintain than lists of subprograms by exception.
+In the third example, the names of the record fields are short and mnemonic, but they are not completely self-explanatory. This is often the case with complex data structures involving access types. There is no way to choose the record and field names so that they completely explain the overall organization of the records and pointers into a nested set of sorted lists. The comments shown are useful in this case. Without them, the reader would not know which lists are sorted, which lists are doubly linked, or why. The comments express the intent of the author with respect to this complex data structure. The maintainer still has to read the code if he wants to be sure that the double links are all properly maintained. Keeping this in mind when reading the code makes it much easier for the maintainer to find a bug where one pointer is updated and the opposite one is not.
+See Guideline 9.3.1 for the rationale for documenting the use of redispatching operations. (Redispatching means converting an argument of one primitive operation to a class-wide type and making a dispatching call to another primitive operation.) The rationale in Guideline 9.3.1 discusses whether such documentation should be in the specification or the body.

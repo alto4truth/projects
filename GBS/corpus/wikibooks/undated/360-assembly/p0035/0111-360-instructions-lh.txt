@@ -1,0 +1,21 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 35
+section: 360-instructions-lh
+chunk: 111
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+LH - Load Halfword - Opcode 48 - RX format Instruction (32 Bit)
+
+== Format ==
+LH 2,N2
+LH 11,106(8,10)
+The specific syntax is
+
+LH target register,offset(index register,base register)
+Where the offset, index register and base register values will be determined automatically by the assembler if the USING pseudo-instruction has been used, and the target address label used is within 4096 bytes of the value of some base register.
+
+== Opcode ==

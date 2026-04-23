@@ -1,0 +1,25 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 13
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+tasks. The Ada rendezvous and protected objects provide powerful mechanisms for both synchronization and mutual exclusion.
+
+=== Protected Objects ===
+
+==== guideline ====
+Consider using protected objects to provide mutually exclusive access to data.
+Consider using protected objects to control or synchronize access to data shared by multiple tasks .
+Consider using protected objects to implement synchronization, such as a passive resource monitor.
+Consider encapsulating protected objects in the private part or body of a package.
+Consider using a protected procedure to implement an interrupt handler.
+Do not attach a protected procedure handler to a hardware interrupt if that interrupt has a maximum priority greater than the ceiling priority assigned to the handler.
+Avoid the use of global variables in entry barriers.
+Avoid the use of barrier expressions with side effects.
+
+==== example ====

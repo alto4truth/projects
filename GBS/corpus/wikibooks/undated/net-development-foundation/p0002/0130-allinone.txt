@@ -1,0 +1,39 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 130
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+here is a wikibook on regular expressions which, among other things, point to this Tutorial.
+Regular expressions support in .NET basically allows for:
+
+testing the match of a string to a regex pattern (Regex.IsMatch method)
+extracting the substrings that "match" part of a pattern (Regex.Match method with Match and Group classes).
+
+===== Text encoding =====
+
+=== Classes, Interfaces, and tools ===
+
+==== Format data based on culture information. ====
+(Refer System.Globalization namespace)
+
+===== Access culture and region information =====
+Exam objective: Access culture and region information in a .NET Framework application
+CultureInfo class - MSDN
+CultureTypes enumeration - MSDN
+RegionInfo class - MSDN
+
+===== Format date and time values based on the culture. =====
+DateTimeFormatInfo class - MSDN
+
+===== Format number values based on the culture. =====
+NumberFormatInfo class - MSDN
+NumberStyles enumeration - MSDN
+
+===== Perform culture-sensitive string comparison. =====
+CompareInfo class - MSDN
+CompareOptions enumeration - MSDN

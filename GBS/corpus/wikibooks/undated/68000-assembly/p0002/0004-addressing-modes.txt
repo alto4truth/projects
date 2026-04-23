@@ -1,0 +1,31 @@
+title: 68000 Assembly
+source: wikibooks
+year: undated
+document_id: 68000-assembly
+authors: 
+page: 2
+section: addressing-modes
+chunk: 4
+source_ref: https://en.wikibooks.org/wiki/68000_Assembly
+
+ies to D0 the longword to which A1 points, and increases A1 with 4 (because of Long).
+
+=== Indirect addressing with predecrement ===
+Assembler syntax:
+
+-(An)
+Same as indirect addressing, but An will be decremented by the size of the operation BEFORE the instruction is executed. The only exception is byte operations on A7 - this register must point to an even address, so it will always decrement by at least 2. Note that there is no postdecrement or preincrement addressing mode.
+Example:
+
+First decreases A0 with 4(size of operand), then copies the long word starting at address stored in A0 to D2.
+
+=== Indirect addressing with displacement ===
+Assembler syntax:
+
+x(An)
+(x)(An)
+(x,An)
+Operate on the location pointed to by x + An, where x is a 16-bit immediate value. All listed syntaxes are equivalent, but some assemblers won't accept them all.
+
+=== Indirect addressing with index ===
+Assembler syntax:

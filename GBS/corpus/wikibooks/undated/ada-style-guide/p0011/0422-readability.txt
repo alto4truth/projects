@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 422
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+r, those changes are the subject of other guidelines; this example is only intended to illustrate the proper use of comments.
+
+=== Marker Comments ===
+
+==== guideline ====
+Use pagination markers to mark program unit boundaries (see Guideline 2.1.7).
+Repeat the unit name in a comment to mark the begin of a package body, subprogram body, task body, or block if the begin is preceded by declarations.
+For long or heavily nested if and case statements, mark the end of the statement with a comment summarizing the condition governing the statement.
+For long or heavily nested if statements, mark the else part with a comment summarizing the conditions governing this portion of the statement.
+
+==== example ====

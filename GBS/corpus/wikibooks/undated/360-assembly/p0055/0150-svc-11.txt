@@ -1,0 +1,16 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 55
+section: svc-11
+chunk: 150
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+f the machine.
+Some operating systems have privileged SVCs which are not available to user programs, and not all operating systems use all SVC values.
+
+== Typical Usage ==
+Typically a supervisor call is used as part of an Operating System macro. For example, under MVS, VS/1, and z/OS the WTO macro issues an SVC 35. Some operating systems will provide services to various parts of itself by using a "privileged" supervisor call. The supervisor call is not technically a privileged instruction, it is that the operating system will not allow a non-privileged program to use that particular supervisor call and will either fault the program or return an error depending on what the supervisor call manager has been programmed to do.
+For example, many operating systems have a macro call for a user program to request (and release) memory for itself. IBM OS/VS uses the "GETMAIN"/"FREEMAIN" macros, while Univac's VS/9 and Fujitsu's BS2000 use "REQM"/"RELM" while Linux uses the equivalent of the "malloc" function from the C language. However, if an operating system needed to store information in the operating system's own memory, such as information about a task, that the user program should not have access to, an operating system routine needing to do this could "reinvent the wheel" by rewriting the memory allocation code, which might introduce errors; it could create a fixed table which would limit the number of possible available "slots" for this purpose, or, if the operating system were one massive program it could call the memory allocation routine at a fixed address. An alternative to all of these is for the operating system to simply issue an SVC instruction on itself to request privileged memory (or a pointer to privileged memory.) This would eliminate having to have the entire operating system resident in memory all the time, and would allow the operating system to be dynamically loaded as needed. A non-privileged program attempting to use this "privileged" SVC would either receive an error code or would be treated as a program error, either transferring to the recovery routine or terminating the offending task.

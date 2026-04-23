@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 170
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ms, and it is reasonable to assume that they are supported by an Ada implementation. The value for an interrupt is implementation-defined. Isolate it.
+
+==== notes ====
+You can use Ada to write machine-dependent programs that take advantage of an implementation in a manner consistent with the Ada model but that make particular choices where Ada allows implementation freedom. These machine dependencies should be treated in the same way as any other implementation-dependent features of the code.
+
+=== Implementation-Added Features ===
+
+==== guideline ====
+Avoid the use of vendor-supplied packages.
+Avoid the use of features added to the predefined packages that are not specified in the Ada language definition or Specialized Needs Annexes.

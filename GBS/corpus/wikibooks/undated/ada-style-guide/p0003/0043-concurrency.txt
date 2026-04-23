@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 43
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+g code is preempted between evaluating the condition and initiating the call, the assumption that the task is still callable might no longer be valid:
+
+==== rationale ====
+Attributes 'Callable, 'Terminated, and 'Count are all subject to race conditions. Between the time you reference an attribute and the time you take action, the value of the attribute might change. Attributes 'Callable and 'Terminated convey reliable information once they become False and True, respectively. If 'Callable is False, you can expect the callable state to remain constant. If 'Terminated is True, you can expect the task to remain terminated. Otherwise, 'Terminated and 'Callable can change between the time your code tests them and the time it responds to the result.
+The Ada Reference Manual 1995, §9.9 [Annotated] itself warns about the asynchronous increase and decrease of the value of 'Count. A task can be removed from an entry queue due to execution of an abort statement as well as expiration of a timed entry call. The use of this attribute in guards of a selective accept statement might result in the opening of alternatives that should not be opened under a changed value of 'Count.
+The value of the attribute 'Count is stable for protected units because any change to an entry queue is itself a protected action, which will not occur while any other protected action is already proceeding. Nevertheless, when you use 'Count within an entry barrier of a protected unit, you should remember that the condition of the barrier is evaluated both before and after queueing a given caller.

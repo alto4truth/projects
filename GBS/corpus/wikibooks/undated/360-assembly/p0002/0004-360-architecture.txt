@@ -1,0 +1,20 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 2
+section: 360-architecture
+chunk: 4
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ory and 31-bit addressing. The z/System supports up to 16 exbibytes (2^64) of memory and 64-bit addressing.
+
+== Features ==
+The 360 architecture has:-
+
+16 general purpose 32-bit registers (64-bit on the z/System) numbered 0 to 15 (usually Equated to the labels "R0" through "R15")
+16 32-bit access registers numbered 0 to 15 if access mode is enabled (bits 16 and 17 of the PSW are set to X'01'); (Access registers are not available on the 360)
+16 privileged 32-bit control registers, 0 to 15, used to control various operations of the computer (not available on the 360)
+4 floating point 64-bit registers numbered 0, 2, 4 and 6, while the 370, 390, and z/System have a full 15 floating-point registers, and
+a 64-bit (128 bit on z/System) Program Status Word (PSW). The Program Status Word is comprised of the privileged bit, the program counter, and the memory protection key, among other flag bits.

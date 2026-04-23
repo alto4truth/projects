@@ -1,0 +1,14 @@
+title: 68000 Assembly
+source: wikibooks
+year: undated
+document_id: 68000-assembly
+authors: 
+page: 6
+section: labels
+chunk: 13
+source_ref: https://en.wikibooks.org/wiki/68000_Assembly
+
+Labels are simply names for lines. You can have as many labels as you want. Typically, there are only a few places you'll want to refer to, for example the starting points of functions, loop starts and loop ends, and certain data storage locations.
+The assembler handles labels as aliases for numbers. When it encounters one, it assigns it the current value of the assembler's PC. (I will refer to this as "declaring" the label.) This label can then be used as an operand anywhere a number can. They are usually used in Jcc or Bcc instructions.
+Note that you can reference labels before they're actually declared. This is known as forward referencing, and is handled differently depending on the assembler. Usually, it just uses a known safe value (like the current PC), flags the location, and makes a second pass to substitute the real value. This may change the size of the label, in which case a third pass will be needed, and so on. Some assemblers require you to explicitly define the size of a jump/branch to keep from having to make a third pass. The assembler you use may have different behavior.
+Labels and storage space:

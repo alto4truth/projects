@@ -1,0 +1,15 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 1
+section: ace-tao-opensource-programming-notes
+chunk: 4
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+== Build Instructions ==
+http://htmlpreview.github.io/?https://github.com/DOCGroup/ATCD/blob/master/TAO/TAO-INSTALL.html
+http://www.theaceorb.com/faq/index.html#HowToBuildACEandTAOonWindows
+The only caveat is that you want to be careful with the "traditional build under a UNIX environment. It treats the install target dir as a sandbox it owns, so if you have chosen /usr/local, like you would with a typical automake project, understand that if there is a problem with the build, the last thing the traditional build env will do is to delete its sandbox (/usr/local).
+On the other hand, if you like a no fuss option, Ken Sedgwick over at bonsai.com has provided pre-built RPMs or use the ones provided by Remedy IT from OpenSuSE Build Service (see http://download.opensuse.org/repositories/devel:/libraries:/ACE:/micro). The binaries provided aren't of the debug variety, so they don't take up the shocking amount of space an installation of ACE+TAO build with -g can. The bummer seems to be that the number of compiled in features seems to be a little light. That being said, its certainly a good way to get started, and will handle 90% of your applications.

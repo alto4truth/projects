@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 129
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ms when your tagged type hierarchy violates the expected semantics of the class-wide type dispatching operations. The Rationale (1995, §4.2) explains:
+
+When building an abstraction that is to form the basis of a class of types, it is often convenient not to provide actual subprograms for the root type but just abstract subprograms which can be replaced when inherited. This is only allowed if the root type is declared as abstract; objects of an abstract type cannot exist. This technique enables common class-wide parts of a system to be written without being dependent on the properties of any specific type at all. Dispatching always works because it is known that there can never be any objects of the abstract type and so the abstract subprograms could never be called.
+See Guidelines 8.3.8 and 9.2.1.
+The multiple inheritance techniques discussed in Guideline 9.5.1 make use of abstract tagged types. The basic abstraction is defined using an abstract tagged (limited) private type (whose full type declaration is a null record) with a small set of abstract primitive operations. While abstract operations have no bodies and thus cannot be called, they are inherited. Derivatives of the abstraction then extend the root type with components that provide the data representation and override the abstract operations to provide callable implementations (Rationale 1995, §4.4.3). This technique allows you to build multiple implementations of a single abstraction. You declare a single interface and vary the specifics of the data representation and operation implementation.

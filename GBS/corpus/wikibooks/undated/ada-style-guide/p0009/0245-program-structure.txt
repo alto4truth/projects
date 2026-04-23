@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 245
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+erfaces in subprograms within packages.
+Use packages and subprograms to encapsulate and hide program details that may change (Nissen and Wallis 1984).
+
+==== example ====
+Reading the names and other attributes of external files is highly machine dependent. A package called Directory could contain type and subprogram declarations to support a generalized view of an external directory that contains external files. Its internals may, in turn, depend on other packages more specific to the hardware or operating system:
+
+==== rationale ====
+Packages are the principal structuring facility in Ada. They are intended to be used as direct support for abstraction, information hiding, and modularization. For example, they are useful for encapsulating machine dependencies as an aid to portability. A single specification can have multiple bodies isolating implementation-specific information so other parts of the code do not need to change.
+Encapsulating areas of potential change helps to minimize the effort required to implement that change by preventing unnecessary dependencies among unrelated parts of the system.

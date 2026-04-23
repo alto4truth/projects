@@ -1,0 +1,39 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 17
+section: c-variables-declarations-and-constants
+chunk: 80
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+example:
+
+This prints:
+
+0
+2
+4
+6
+8
+10
+12
+14
+
+-- since the initial value of a integer is 0 by default. It is not a
+good idea to rely on a default value!
+
+There are two other variable declarations that should be recognized, though
+there's little reason to use them: "register", which declares that a
+variable should be assigned to a CPU register, and "volatile", which tells
+the compiler that the contents of the variable may change spontaneously.
+There is more and less than meets the eye to these declarations. The
+"register" declaration is discretionary: the variable will be loaded into a
+CPU register if it can, and if not it will be loaded into memory as normal.
+Since a good optimizing compiler will try to make the best use of CPU
+registers anyway, this is not in general all that useful a thing to do.
+The "volatile" declaration appears ridiculous at first sight, something like
+one of those "joke" computer commands like "halt and catch fire". Actually,
+it's used to describe a hardware register that can change independently of
+program operation, such as the register for a realtime clock.

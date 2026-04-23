@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 195
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ress and do all your own default initialization, etc. It is unlikely you would use this last option because you lose automatic default initialization.
+
+== Tasking ==
+The definition of tasking in the Ada language leaves many characteristics of the tasking model up to the implementor. This allows a vendor to make appropriate tradeoffs for the intended application domain, but it also diminishes the portability of designs and code employing the tasking features. In some respects, this diminished portability is an inherent characteristic of concurrency approaches (see Nissen and Wallis 1984, 37).
+A discussion of Ada tasking dependencies when employed in a distributed target environment is beyond the scope of this book. For example, multiprocessor task scheduling, interprocessor rendezvous, and the distributed sense of time through package Calendar are all subject to differences between implementations. For more information, Nissen and Wallis (1984) and ARTEWG (1986) touch on these issues, and Volz et al. (1985) is one of many research articles available.
+If the Real-Time Systems Annex is supported, then many concurrency aspects are fully defined and, therefore, a program can rely on these features while still being portable to other implementations that conform to the Real-Time Systems Annex. The following sections provide guidelines based on the absence of this annex.

@@ -1,0 +1,30 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 291
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+e are discriminants. None of these operations allows the
+user of the package to manipulate objects in a way that depends
+on the structure of the type.
+
+==== notes ====
+The predefined packages Direct_IO and
+Sequential_IO do not accept limited private types as
+generic parameters. This restriction should be considered when
+I/O operations are needed for a type.
+See Guideline 8.3.3 for a discussion of the use of private and
+limited private types in generic units.
+
+=== Subprogram Access Types ===
+
+==== guideline ====
+Use access-to-subprogram types for indirect access to subprograms.
+Wherever possible, use abstract tagged types and dispatching rather than access-to-subprogram types to implement dynamic selection and invocation of subprograms.
+
+==== example ====
+The following example is taken from the Rationale (1995, §3.7.2) :

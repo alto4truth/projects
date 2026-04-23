@@ -1,0 +1,25 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 14
+section: g-n-u-p-l-o-t
+chunk: 29
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+Linux version 3.7 patchlevel 1
+last modified Fri Oct 22 18:00:00 BST 1999
+
+Terminal type set to 'x11'
+gnuplot> plot 'time_vs_income' with points
+
+And the resulting plot:
+
+Recall that 0 on the x-axis is midnight, and 20 is 200 minutes after midnight or about 3:20am. Increased density in the beginning of the traditional 1st and 2nd shift periods is apparent. Folks who work regular business hours clearly have higher incomes. It would be interesting to compute the average income in each time bucket, but that makes a pretty hairy command line perl script. Here is it in all its gruesome glory:
+
+$ cat pums_53.dat | grep "^P" | cut -c196-198,297-303 | grep -v "^000" |
+grep -v " $" | perl -ne '/(\d{3})(\d{7})/; $sum{$1}+=$2; $count{$1}++; END { foreach $k
+(keys(%count)) {print $k," ",$sum{$k}/$count{$k},"\n"}}' | sort -n > time_vs_avgincome
+
+You can plot the result for yourself if you're curious.

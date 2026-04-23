@@ -1,0 +1,14 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 52
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+s task timing behavior, task rendezvous initiated by the entry calls, prioritization of entries, or data updates (where data is shared between tasks).
+
+==== notes ====
+Sanden (1994) argues that you need to trade off the complexity of the guards associated with the accept statements against the number of select/accept statements. Sanden (1994) shows an example of a queue controller for bank tellers where there are two modes, open and closed. You can implement this scenario with one loop and two select statements, one for the open mode and the other for the closed mode. Although you are using more select/accept statements, Sanden (1994) argues that the resulting program is easier to understand and verify.

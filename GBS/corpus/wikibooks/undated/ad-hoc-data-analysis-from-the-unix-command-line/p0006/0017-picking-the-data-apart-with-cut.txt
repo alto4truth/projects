@@ -1,0 +1,34 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 6
+section: picking-the-data-apart-with-cut
+chunk: 17
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+
+The 7th column of the password file is the user's login shell. How many people use bash as their shell?
+
+$ cut -d: -f7 /etc/passwd | grep -c /bin/bash
+170
+
+You can give either -c or -f a comma separated list, so to see a few users that use tcsh as their shell:
+
+$ cut -d: -f1,7 /etc/passwd | grep /bin/tcsh | head -5
+iglass:/bin/tcsh
+svowell:/bin/tcsh
+dsedaris:/bin/tcsh
+skine:/bin/tcsh
+jhitt:/bin/tcsh
+
+=== Tricky delimiters ===
+The space character is a common delimiter. Unfortunately, your shell probably discards all extra whitespace on the command line. You can sneak a space character past your shell by wrapping it in quotes, like: cut -d" " -f 5
+The tab character is another common delimiter. It can be hard to spot, because on the screen it just looks like any other white space. The od (octal dump) command can give you insight into the precise formatting of a file. For instance I have a file which maps first names to genders (with 95% probability). When casually inspected, it looks like fixed width data:
+
+$ head -5 gender.txt

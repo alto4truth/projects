@@ -1,0 +1,22 @@
+title: Advanced phone customization
+source: wikibooks
+year: undated
+document_id: advanced-phone-customization
+authors: 
+page: 11
+section: overclocking-and-governors
+chunk: 25
+source_ref: https://en.wikibooks.org/wiki/Advanced_phone_customization
+
+Before we start,
+
+== Introduction ==
+Overclocking is the process of boosting your phone's CPU beyond the rated speed, which can improve performance. Changing the governor gives you finer control on your phone's mechanism, potentially allowing you to choose between performance or battery life.
+
+== Governor ==
+A governor is a series of settings that control how your phone controls the CPU. Your phone would have some default governors, which would often be named as
+
+ondemand: supposed to be the best of both worlds - boosting performance during high loads - while dropping the clock speed otherwise to save battery life.
+conservative: A battery-optimised version of onedmand
+powersave: For the most battery life. Often drops the clock speed to the lowest, may also switch off some cores. Could make your phone unresponsive, be careful!
+... and many more. Check the internet to find more about the quirks of some governors.

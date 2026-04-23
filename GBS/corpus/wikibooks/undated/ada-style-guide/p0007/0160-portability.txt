@@ -1,0 +1,25 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 160
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+s are determined from the reduced accuracy type, although the implementation accuracy is unchanged (Rationale 1995, §3.3).
+
+=== Global Assumptions ===
+
+==== guideline ====
+Make informed assumptions about the support provided for the following on potential target platforms:
+Number of bits available for type Integer (range constraints)
+Number of decimal digits of precision available for floating-point types
+Number of bits available for fixed-point types (delta and range constraints)
+Number of characters per line of source text
+Number of bits for Root_Integer expressions
+Number of seconds for the range of Duration
+Number of milliseconds for Duration'Small
+Minimum and maximum scale for decimal types
+Avoid assumptions about the values and the number of values included in the type Character.

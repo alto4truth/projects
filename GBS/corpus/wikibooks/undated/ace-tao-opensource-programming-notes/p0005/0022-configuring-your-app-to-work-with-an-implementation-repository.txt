@@ -1,0 +1,11 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 5
+section: configuring-your-app-to-work-with-an-implementation-repository
+chunk: 22
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+CORBA allows for the service of persistent objects, i.e., objects not residing in RAM, or cached memory in a runnable state. The IMR is the infrastructure which provides this functionality. The thing is, with modern servers, this really isn't a concern as the ACE+TAO executables are quite small. For a smaller chunk of hardware, like a PC or laptop, this still holds true as the executables are really quite small. The point being, that if you need to use the IMR, your app is likely quite beefy and needs to run in a multi server environment, thus, you can afford the $200 USD for the manual from OCI to figure out how to use it effectively. That being said, it isn't too bad as most of the functionality is baked into the command line of your service app. You can also look at the TAO documentation, which as usual, gets you 80% there. TAO IMR

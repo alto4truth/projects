@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 158
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+he exception Numeric_Error
+Various representation specifications, including at clauses, mod clauses, interrupt entries, and the Storage_Size attribute
+
+==== rationale ====
+Ten years of reflection on the use of Ada 83 led to the conclusion that some features of the original language are not as useful as originally intended. These features have been replaced with others in the Ada 95 revision. It would have been desirable to remove the obsolescent features completely, but that would have prevented the upward compatible transition of programs from Ada 83 to Ada 95. Thus, the obsolescent features remain in the language and are explicitly labeled as such in Annex J of the Ada Reference Manual (1995). The features listed in Annex J are candidates for removal from the language during its next revision. If a program's lifetime may extend beyond the next language revision, it should avoid the obsolescent language features unless backward compatibility with Ada 83 forces their use.

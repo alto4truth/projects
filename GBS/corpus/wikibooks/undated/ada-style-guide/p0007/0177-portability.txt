@@ -1,0 +1,28 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 177
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+raised, the new value may be read, or the old value of the object may be used (Ada Reference Manual 1995, §6.2 [Annotated]).
+See also Guideline 8.2.7.
+
+==== exceptions ====
+Frequently, when interfacing Ada to foreign code, dependence on parameter-passing mechanisms used by a particular implementation is unavoidable. In this case, isolate the calls to the foreign code in an interface package that exports operations that do not depend on the parameter-passing mechanism.
+
+=== Arbitrary Order Dependencies ===
+
+==== guideline ====
+Avoid depending on the order in which certain constructs in Ada are evaluated.
+
+==== example ====
+The output of this program depends upon the order of evaluation of subprogram parameters, but the Ada Reference Manual 1995, §6.4 [Annotated] specifies that these evaluations are done in an arbitrary order:
+
+If the parameters to the "&" function are evaluated in textual order, the output is:
+1 2
+If the parameters are evaluated in the reverse order, the output is:
+2 1

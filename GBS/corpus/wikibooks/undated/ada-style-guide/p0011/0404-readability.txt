@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 404
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+when they return access values, is a useful organizational principle.
+For information regarding the use of Ada constructors, refer to Guideline 9.3.3.
+
+== Comments ==
+Comments in source text are a controversial issue. There are arguments both for and against the view that comments enhance readability. In practice, the biggest problem with comments is that people often fail to update them when the associated source text is changed, thereby making the commentary misleading. Commentary should be reserved for expressing needed information that cannot be expressed in code and highlighting cases where there are overriding reasons to violate one of the guidelines. If possible, source text should use self-explanatory names for objects and program units, and it should use simple, understandable program structures so that little additional commentary is needed. The extra effort in selecting (and entering) appropriate names and the extra thought needed to design clean and understandable program structures are fully justified.
+Use comments to state the intent of the code. Comments that provide an overview of the code help the maintenance programmer see the forest for the trees. The code itself is the detailed "how" and should not be paraphrased in the comments.
+Comments should be minimized. They should provide needed information that cannot be expressed in the Ada language, emphasize the structure of code, and draw attention to deliberate and necessary violations of the guidelines. Comments are present either to draw attention to the real issue being exemplified or to compensate for incompleteness in the sample program.
+Maintenance programmers need to know the causal interaction of noncontiguous pieces of code to get a global, more or less complete sense of the program. They typically acquire this kind of information from mental simulation of parts of the code. Comments should be sufficient enough to support this process (Soloway et al. 1986).
+This section presents general guidelines about how to write good comments. It then defines several different classes of comments with guidelines for the use of each. The classes are file headers, program unit specification headers, program unit body headers, data comments, statement comments, and marker comments.

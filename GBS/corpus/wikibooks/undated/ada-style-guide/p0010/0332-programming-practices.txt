@@ -1,0 +1,29 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 332
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+information as a parameter. Named component association makes aggregates more readable.
+See Guideline 10.4.5 for the performance impact of aggregates.
+
+== Visibility ==
+As noted in Guideline 4.2, Ada's ability to enforce information hiding and separation of concerns through its visibility controlling features is one of the most important advantages of the language. Subverting these features, for example, by too liberal use of the use clause, is wasteful and dangerous.
+
+=== The Use Clause ===
+
+==== guideline ====
+When you need to provide visibility to operators, use the use type clause.
+Avoid/minimize the use of the use clause (Nissen and Wallis 1984).
+Consider using a package renames clause rather than a use clause for a package.
+Consider using the use clause in the following situations:
+When standard packages are needed and no ambiguous references are introduced
+When references to enumeration literals are needed
+Localize the effect of all use clauses.
+
+==== example ====
+This is a modification of the example from Guideline 4.2.3. The effect of a use clause is localized:

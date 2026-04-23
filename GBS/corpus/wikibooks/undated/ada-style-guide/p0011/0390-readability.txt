@@ -1,0 +1,28 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 390
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+'s value during execution.
+Use singular, general nouns as identifiers for record components.
+
+==== example ====
+Non-Boolean objects:
+
+Boolean objects:
+
+==== rationale ====
+Using specific nouns for objects establishes a context for understanding the object's value, which is one of the general values described by the subtype's name (see Guideline 3.2.2). Object declarations become very English-like with this style. For example, the first declaration above is read as "Today is a Day."
+General nouns, rather than specific, are used for record components because a record object's name will supply the context for understanding the component. Thus, the following component is understood as "the year of retirement":
+
+Following conventions that relate object types and parts of speech makes code read more like text. For example, because of the names chosen, the following code segment needs no comments:
+
+==== notes ====
+If it is difficult to find a specific noun that describes an object's value during the entire execution of a program, the object is probably serving multiple purposes. Multiple objects should be used in such a case.
+
+=== Naming of Tagged Types and Associated Packages ===

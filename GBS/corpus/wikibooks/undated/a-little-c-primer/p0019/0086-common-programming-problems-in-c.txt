@@ -1,0 +1,27 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 19
+section: common-programming-problems-in-c
+chunk: 86
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+hen "x" is 20. Since C does not do bounds
+checking, this one might be hard to catch.
+6: Muddling syntax for multidimensional arrays. If:
+
+data[10][10]
+
+—is a two-dimensional array, then:
+data[2][7]
+—will select an element in that array. However:
+data[ 2, 7 ]
+—will give invalid results but not be flagged as an error by C.
+7: Confusing strings and character constants. The following is a string:
+
+"Y"
+
+—as opposed to the character constant:
+'Y'

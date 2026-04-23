@@ -1,0 +1,16 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 3
+section: counting-part-1-grep-and-wc
+chunk: 6
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+a record, an H or P, indicates which kind of record it is. We can grep for and count just person records like this:
+
+$ grep -c "^P" pums_53.dat
+59150
+
+The caret '^' means that the 'P' must occur at the beginning of the line. So there were about 5.9 million people in Washington State in 2000. Also interesting, the average household had 59,150/(85,025-59,150) = 2.3 people.

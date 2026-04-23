@@ -1,0 +1,28 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 12
+section: job-control
+chunk: 24
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+== Controlling Jobs in Unix ==
+A process in Unix - that is something doing a particular job - can run either in foreground or background. A job in foreground will be showing currently in the shell and you cannot communicate with the shell until either the job is finished or you interrupt it. A job running in background starts and returns you to the prompt where you can enter further commands while the background process continues. A background job can write to the current terminal window.
+Jobs start by default in the foreground.
+
+=== Background Jobs ===
+You can either start a job in background or send it to background after it has started.
+
+==== To start a job in background ====
+To the command to start the job you append &. So, we can run the gnu c compiler to compile the program hello in the background like this:
+
+% gcc hello.c -o hello &
+
+==== To move a started job to background ====
+If you start a job in the foreground, you can move it to background. First, you stop the job with control-z, then use the command bg to send the stopped job to background. So, we might start the web browser Lynx, stop it, send it to the background like this:
+
+%lynx
+^z
+%bg

@@ -1,0 +1,21 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 10
+section: 360-instructions-al
+chunk: 34
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+eration exception occurs.
+The storage key for the source address must be the same as the current process or a memory protect violate exception occurs.
+
+== Notes ==
+The AL and ALR instructions are useful to implement adding of integer values longer than 32 bit in code that is intended to run in 24- or 31-bit address spaces. In that case, one should use AL or ALR to count all parts of the sum (possibly except the most significant one), and, if CC is 2 or 3 after the adding (i.e. carry have happened), increment the nearest higher part of the sum.
+
+== Related instructions ==
+To add value logically from register, see ALR.
+To add value arithmetically from memory, see A.
+To subtract integer value, see S, SR, SH, SL or SLR.
+To check condition code, see BC or BCR.

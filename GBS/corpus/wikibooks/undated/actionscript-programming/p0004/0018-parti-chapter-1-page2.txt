@@ -1,0 +1,28 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 4
+section: parti-chapter-1-page2
+chunk: 18
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+of the SWF file from which the movie clip was downloaded. As in the previous property add "trace(box._url)" and you will see the path of the SWF file.
+
+=== Target ===
+This returns the target path of the Movie Clip. This is nearly what we discussed in "TotalFrames". For example as we mentioned there, if we were in car then our target will be "\building\garage\car". Or another example: if you create a Movie Clip and set its name "m1" and then create another Movie Clip and put the previous Movie Clip in this one and name the new one "m2" then if in "m1" actions you write:
+
+then the return path will be "\m2\m1"
+
+=== DropTarget ===
+Discussed later.
+
+=== FocusRect ===
+This is a Boolean (true, false) value that specifies whether a movie clip has a yellow rectangle around it when it has keyboard focus. If the focus is set, then it returns true else false.
+
+=== FramesLoaded ===
+The property _framesloaded tells how many frames of the movie were loaded. This is very useful to monitor the download process.
+
+=== SoundBufTime ===
+Discussed later.

@@ -1,0 +1,15 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 55
+section: svc-11
+chunk: 152
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+New PSW address" all of which differ from model to model. Execution continues at the program counter value retrieved from the Supervisor Call New PSW.
+
+[1] Bits 5 and 6 of byte 137 are set to 012 unless the SVC was the result of an EXECUTE instruction, then they are set to 102; the rest of the bits are cleared. Byte 139 contains the SVC number; everything else in bytes 136-139 are zeroed.
+The supervisor call routine has access to the memory and registers of the calling routine, and can use these to retrieve arguments and/or return results. The registers used differ for each operating system, e.g. OS/VS1, MVS, and VM would usually use registers 0 and 1, (in rare cases register 2 as well), and sometimes 14 or 15; the same is true for the VS/9 operating system on the Univac 90/60, 90/70 and 90/80 mainframe computers, while Linux on S/390 uses registers 0 through 6 depending on the number of arguments and may use 14 or 15 in some instances. The register usage for supervisor calls is a convention established by general usage, not mandated by the hardware.
+The supervisor call routine can exit in any of several ways:

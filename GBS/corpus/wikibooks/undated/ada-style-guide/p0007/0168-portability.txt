@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 168
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ernative to the Ada command line facility depending on the implementation family of an application.
+
+=== Encapsulating Implementation Dependencies ===
+
+==== guideline ====
+Create packages specifically designed to isolate hardware and implementation dependencies and designed so that their specification will not change when porting.
+Clearly indicate the objectives if machine or solution efficiency is the reason for hardware or implementation-dependent code.
+For the packages that hide implementation dependencies, maintain different package bodies for different target environments.
+Isolate interrupt receiving tasks into implementation-dependent packages.
+Refer to Annex M of the Ada Reference Manual (1995) for a list of implementation-dependent features.
+
+==== example ====
+See Guideline 7.1.3.

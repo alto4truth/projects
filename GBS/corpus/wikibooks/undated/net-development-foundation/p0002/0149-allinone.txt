@@ -1,0 +1,33 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 149
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+custom attribute class.
+Creating the parameters for your class.
+Assigning an attribute to a code member.
+Retrieving attribute information at runtime.
+
+=== Creating a Custom Attribute Class ===
+As previously mentioned, there are several predefined attributes in the .NET Framework; you may have already used them in your code. The XML parser in particular relies heavily on attributes when (de)serializing objects. You can also define your own custom attributes, as we will show here. Defining a custom attribute involves three steps:
+
+Assigning the AttributeUsageAttribute attribute to your class.
+Writing the code to define your custom attribute class.
+Creating the parameters for your class.
+
+==== Assigning the "AttributeUsageAttribute" To Your Class ====
+
+==== Defining A Custom Attribute Class ====
+
+==== Creating Parameters For An Attribute ====
+
+=== Assigning An Attribute To A Code Member ===
+You have already seen examples of assigning an attribute to a code member. However, there are some points that must be clarified.
+
+Disambiguation is the clarification of the use of an attribute on a code member.
+Syntax - there is more than one way to apply multiple attributes.

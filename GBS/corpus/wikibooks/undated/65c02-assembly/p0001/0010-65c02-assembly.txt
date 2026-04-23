@@ -1,0 +1,37 @@
+title: 65c02 Assembly
+source: wikibooks
+year: undated
+document_id: 65c02-assembly
+authors: 
+page: 1
+section: 65c02-assembly
+chunk: 10
+source_ref: https://en.wikibooks.org/wiki/65c02_Assembly
+
+ative (N), Zero (Z), and Carry (C) status flags are used for conditional (branch) instructions.
+All Compare instructions affect flags in the same way:
+
+Test Bits in Memory with Accumulator: BIT
+A & M
+Flags: N = M7, V = M6, Z
+
+=== Branch ===
+
+Unlike the other branch instructions, BBR and BBS have two operands. The M operand, used for the Set or Reset comparison, is always the zp addressing mode. The branch address operand is the r addressing mode, and has the same meaning as the other branch instructions.
+
+=== Transfer ===
+
+=== Stack ===
+
+The processor status is stored as a single byte with the following flags bits from high to low: NV--DIZC.
+
+=== Subroutines and Jump ===
+Jump to New Location: JMP
+Jump to new location by changing the value of the program counter.
+Flags: none
+
+Jump to New Location Saving Return Address: JSR
+Jumps to a subroutine
+The address before the next instruction (PC - 1) is pushed onto the stack: first the upper byte followed by the lower byte. As the stack grows backwards, the return address is therefore stored as a little-endian number in memory.
+PC is set to the target address.
+Flags: none

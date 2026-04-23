@@ -1,0 +1,34 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 11
+section: loops-conditionals
+chunk: 57
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+(Our final lesson before we get into interacting with human input. Can't wait, can you?)
+Just imagine you needed a program to do something 20 times. What would you do? You could copy and paste the code 20 times, and have a virtually unreadable program. Or, you could tell the computer to repeat a bit of code between point A and point B, until the time comes that you need it to stop. Such a thing is called a loop.
+
+== The while loop ==
+The following are examples of a type of loop, called the while loop:
+
+Code Example 1 – The while loop
+
+How does this program work? Let's go through it in English (this is called pseudocode):
+
+Code Example 2 – Plain-language while loop
+'a' now equals 0
+As long as 'a' is less than 10, do the following:
+Make 'a' one larger than what it already is.
+print on-screen what 'a' is now worth.
+
+What does this do? Let's go through what the computer would be 'thinking' when it is in the while loop:
+
+Code Example 3 – while loop process
+#JUST GLANCE OVER THIS QUICKLY
+#(It looks fancy, but is really simple.)
+Is 'a' less than 10? YES (it's 0)
+Make 'a' one larger (now 1)
+print on-screen what 'a' is (1)

@@ -1,0 +1,22 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 19
+section: 360-instructions-bct
+chunk: 70
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+, execution continues with the instruction following this instruction. Otherwise, execution transfers to the address specified as the second argument.
+
+== Condition Codes ==
+Condition codes are not changed. If the value is the lowest possible value and overflow to the highest value occurs, it is ignored.
+
+== Exceptions and Faults ==
+If the address to branch to is not in the same PSW storage key (unless this process' storage key is 0) a protect violate exception occurs.
+If the address to branch to is odd, an address exception occurs.
+If the address is not within available memory, a specification exception occurs.
+
+== Alternative branch instructions ==
+The BCTR instruction provides the same functionality but with the branch address in another register.

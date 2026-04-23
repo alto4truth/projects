@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 189
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+afest case. But in reality, each time comparisons involve small values, you should evaluate the situation to determine which technique is appropriate.
+
+==== notes ====
+Regardless of language, real-valued computations have inaccuracy. That the corresponding mathematical operations have algebraic properties usually introduces some confusion. This guideline explains how Ada deals with the problem that most languages face.
+
+=== Decimal Types and the Information Systems Annex ===

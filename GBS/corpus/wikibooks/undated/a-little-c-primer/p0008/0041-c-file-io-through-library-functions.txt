@@ -1,0 +1,51 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 8
+section: c-file-io-through-library-functions
+chunk: 41
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+ter> );
+
+The "getc()" function similarly gets a single character from an open file.
+It has the syntax:
+
+<character variable> = getc( <file pointer> );
+
+The "getc()" function returns "EOF" on error. The console I/O functions
+"putchar()" and "getchar()" are really only special cases of "putc()" and
+"getc()" that use standard output and input.
+The "fputs()" function writes a string to a file. It has the syntax:
+
+fputs( <string / character array>, <file pointer> );
+
+The "fputs()" function will return an EOF value on error. For example:
+
+fputs( "This is a test", fptr );
+
+The "fgets()" function reads a string of characters from a file. It has the
+syntax:
+
+fgets( <string>, <max_string_length>, <file_pointer> );
+
+The "fgets" function reads a string from a file until if finds a newline or
+grabs <string_length-1> characters. It will return the value NULL on an
+error.
+The following example program simply opens a file and copies it to another
+file, using "fgets()" and "fputs()":
+
+/* fcopy.c */
+
+#include <stdio.h>
+
+#define MAX 256
+
+void main()
+{
+FILE *src, *dst;
+char b[MAX];
+
+/* Try to open source and destination files. */

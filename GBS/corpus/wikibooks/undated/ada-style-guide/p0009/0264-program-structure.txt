@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 264
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+the earliest opportunity.
+Do not explicitly raise predefined or implementation-defined exceptions.
+Never let an exception propagate beyond its scope.
+
+==== example ====
+This package specification defines two exceptions that enhance the abstraction:

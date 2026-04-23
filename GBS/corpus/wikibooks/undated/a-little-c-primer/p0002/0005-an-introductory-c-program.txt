@@ -1,0 +1,19 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 2
+section: an-introductory-c-program
+chunk: 5
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+own above are "preprocessor directives".
+C compilation is a multi-pass process. To create a program, a C compiler system performs the following steps:
+
+It runs the source file text through a "C preprocessor". All this does is perform various text manipulations on the source file, such as "macro expansion", "constant expansion", "file inclusion", and "conditional compilation", which are also explained later. The output of the preprocessor is a second-level source file for actual compilation. You can think of the C preprocessor as a sort of specialized automatic "text editor".
+Next, it runs the second-level source file through the compiler proper, which actually converts the source code statements into their binary equivalents. That is, it creates an "object file" from the source file.
+The object file still cannot be executed, however. If it uses C library functions, such as "printf()" in the example above, the binary code for the library functions has to be merged, or "linked", with the program object file. Furthermore, some addressing information needs to be linked to the object file so it can actually be loaded and run on the target system.
+These linking tasks are performed by a "linker", which takes one or more object files and links them to binary library files to create an "executable" file that can actually be run.
+C has a large number of libraries and library functions. C by itself has few statements, so much of its functionality is implemented as library calls.
+Commands intended for the C preprocessor, instead of the C compiler itself, start with a "#" and are known as "preprocessor directives" or "metacommands". The example program above has two such metacommands:

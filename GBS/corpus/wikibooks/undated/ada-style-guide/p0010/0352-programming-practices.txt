@@ -1,0 +1,14 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 352
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ssage to the exception. During code development, debugging, and maintenance, this information should be useful to localize the cause of the exception.
+
+==== notes ====
+The optimal size for the sections of code you choose to protect by a block and its exception handlers is very application-dependent. Too small a granularity forces you to expend more effort in programming for abnormal actions than for the normal algorithm. Too large a granularity reintroduces the problems of determining what went wrong and of resuming normal flow.

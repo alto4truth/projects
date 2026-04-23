@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 135
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+the class-wide dispatching operations in the extensions of derived types, you will minimize or avoid the problems discussed here about redispatching.
+
+=== Class-Wide Operations ===
+
+==== guideline ====
+Consider using a class-wide operation (i.e., an operation with parameter[s] of a class-wide type) when an operation can be written, compiled, and tested without knowing all the possible descendants of a given tagged type (Barnes 1996).
+Consider using a class-wide operation when you do not want an operation to be inherited and/or overridden.
+
+==== example ====
+The following example is adapted from Barnes (1996) using the geometric objects from the example of Guideline 9.2.1 and declaring the following functions as primitives in the package specification:
+
+A function for computing the moment of a force about a fulcrum can now be created using a class-wide type as follows:
+
+Because Moment accepts the class-wide formal parameter of Object'Class, it can be called with an actual parameter that is any derivation of type Object. Assuming that all derivations of type object have defined a function for Area, Moment will dispatch to the appropriate function when called. For example:

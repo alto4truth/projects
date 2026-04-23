@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 464
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+of out and in out parameters like state variables, updating them only after it is certain that no exception will be raised.
+See also Guideline 7.1.8.
+
+==== notes ====
+A reusable part could range from a low-level building block (e.g., data structure, sorting algorithm, math function) to a large reusable subsystem. The lower level the building block, the less likely that the reusable part will know how to handle exceptions or produce meaningful results. Thus, the low-level parts should propagate exceptions. A large reusable subsystem, however, should be able to handle any anticipated exceptions independently of the variations across which it is reused.

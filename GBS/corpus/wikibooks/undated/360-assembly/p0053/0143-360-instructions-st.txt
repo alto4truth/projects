@@ -1,0 +1,19 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 53
+section: 360-instructions-st
+chunk: 143
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+within 4096 bytes of the value of some base register.
+
+== Availability ==
+The ST instruction is available on all models of the 360, 370 and z/System.
+
+== Operation ==
+The ST instruction takes the 32-bit integer value contained in the source register specified by the first argument and stores that value in the memory address specified by the second argument (the target address).
+The target address is constructed by taking the value stored in the base register, adding to it the value of the 12-bit offset (called a displacement) address, then adding the value stored in the index register (unless the index register is 0, then its contents are not added) to the base and displacement address, to determine the target address. In the above example of the address 106(8,10), the address value stored in register 10 is added to the displacement address 106 (hexadecimal 6A), then the address value stored in register 8 is added to this to create the target address. Had register 0 been used instead of 8, the value stored in register 0 would not have been used.
+The target address must be aligned to a word boundary (i.e. 4 bytes). The Condition Code field in the Program Status Word is not changed.

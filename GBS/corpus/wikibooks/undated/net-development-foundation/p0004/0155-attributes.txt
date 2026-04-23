@@ -1,0 +1,25 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 4
+section: attributes
+chunk: 155
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+== Annexes: Building custom attributes ==
+Original text for this page authored by William "Scott" Baker
+
+=== Attributes Summary ===
+Attributes are a way to "tag" elements of your code's metadata with descriptive information that can be accessed at runtime using reflection. Attributes must derive from System.Attribute, either directly or indirectly. A multitude of attributes exist in the .NET framework; you can also define your own. There are three aspects to using attributes in your code:
+
+Defining a custom attribute class, which involves:
+Assigning the AttributeUsageAttribute attribute to your class.
+Writing the code to define your custom attribute class.
+Creating the parameters for your class.
+Assigning an attribute to a code member.
+Retrieving attribute information at runtime.
+
+=== Creating a Custom Attribute Class ===
+As previously mentioned, there are several predefined attributes in the .NET Framework; you may have already used them in your code. The XML parser in particular relies heavily on attributes when (de)serializing objects. You can also define your own custom attributes, as we will show here. Defining a custom attribute involves three steps:

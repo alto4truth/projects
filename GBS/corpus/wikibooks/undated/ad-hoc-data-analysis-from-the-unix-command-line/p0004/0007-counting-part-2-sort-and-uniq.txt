@@ -1,0 +1,46 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 4
+section: counting-part-2-sort-and-uniq
+chunk: 7
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+So far we've seen how to use cut, grep and wc to select and count records with certain qualities. But each set of records we'd like to count requires a separate command, as with counting the numbers of male and female names in the most recent example. Combining the uniq and sort commands allows us to count many groups at once.
+
+== uniq and sort ==
+The uniq command squashes out contiguous duplicate lines. That is, it copies from its standard input to its standard output, but if a line is identical to the immediately preceding line, the duplicate line is not written. For example:
+
+$ cat foo
+a
+a
+a
+b
+b
+a
+a
+a
+c
+$ uniq foo
+a
+b
+a
+c
+
+Note that 'a' is written twice because uniq compares only to the immediately preceding line. If the data is sorted first, we get each distinct record just once:
+
+$ sort foo | uniq
+a
+b
+c
+
+Finally, giving the -c option causes uniq to write counts associated with each distinct entry:
+
+$ sort foo | uniq -c
+6 a
+2 b
+1 c
+
+Sorting a CSV file by an arbitrary column is easy as well:

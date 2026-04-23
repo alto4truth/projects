@@ -1,0 +1,36 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 5
+section: c-console-io
+chunk: 25
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+ers follows:
+
+/* lfilter.c */
+
+#include <stdio.h>
+
+int main (void)
+{
+char b[256];
+while (( fgets(b, 256, stdin) ) != NULL )
+{
+puts( b );
+}
+return 0;
+}
+
+The "fgets()" function returns NULL, defined in "stdio.h", on input
+termination or error.
+The Windows-based console-I/O functions "getch()" and "getche()" operate much as
+"getchar()" does, except that "getche()" echoes the character automatically.
+The "kbhit()" function is very different in that it only indicates if a key
+has been pressed or not. It returns a nonzero value if a key has been
+pressed, and zero if it hasn't. This allows a program to poll the keyboard
+for input, instead of hanging on keyboard input and waiting for something to
+happen. As mentioned, these functions require the "conio.h" header file, not
+the "stdio.h" header file.

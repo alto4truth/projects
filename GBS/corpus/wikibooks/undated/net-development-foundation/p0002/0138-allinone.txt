@@ -1,0 +1,38 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 138
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+foreach (Client client in clients)
+{
+Console.WriteLine("The account {0} belongs to {1}", client.AccountNumber, client.Name);
+}
+Console.ReadLine();
+}
+}
+
+This probably looks familiar for most of the readers, but by using an ArrayList we are not type safe, which is in my opinion is bad. Also we need to cast (and uncast) the object when we want to do something cool with it. With value types there is an other issue, we constantly Box and unbox the objects in the list.
+A better way store the clients would be to use typed collections, this will solve the problem with type safety and we don’t have to cast the retrieved object every time we use it. A good way to do this is by inheriting an object form the CollectionBase class and looks like this:
+
+/// <summary>
+/// Representation of a client
+/// </summary>
+public class Client
+{
+private string _name;
+private string _accountNumber;
+
+/// <summary>
+/// Gets or sets the account number.
+/// </summary>
+/// <value>The account number.</value>
+public string AccountNumber
+{
+get { return _accountNumber; }
+set { _accountNumber = value; }
+}

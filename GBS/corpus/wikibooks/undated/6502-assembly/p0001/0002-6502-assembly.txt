@@ -1,0 +1,42 @@
+title: 6502 Assembly
+source: wikibooks
+year: undated
+document_id: 6502-assembly
+authors: 
+page: 1
+section: 6502-assembly
+chunk: 2
+source_ref: https://en.wikibooks.org/wiki/6502_Assembly
+
+rogram counter is 16 bits wide, so up to 2^16 (65536) bytes of memory are addressable. Certain regions of memory are reserved for particular purposes:
+
+== Memory Addressing Modes ==
+Each instruction uses one of thirteen memory addressing modes, which determines the operand of the instruction. An example is provided for each.
+
+=== Accumulator: A ===
+The Accumulator is implied as the operand, so no address needs to be specified.
+Example
+Using the ASL (Arithmetic Shift Left) instruction with no operands, the Accumulator is always the value being shifted left.
+
+ASL
+
+=== Implied: i ===
+The operand is implied, so it does not need to be specified.
+Example
+The operands being implied here are X, the source of the transfer, and A, the destination of the transfer.
+
+TXA
+
+=== Immediate: # ===
+The operand is used directly to perform the computation.
+Example
+The value $22 is loaded into the Accumulator.
+
+LDA #$22
+
+=== Absolute: a ===
+A full 16-bit address is specified and the byte at that address is used to perform the computation.
+Example
+The value $24 at address $D010 is loaded into the X register.
+
+LDX $D010

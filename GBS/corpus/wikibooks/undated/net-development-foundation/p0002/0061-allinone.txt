@@ -1,0 +1,35 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 61
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+value type from the object. In this example, the integer variable i is boxed and assigned to object o:
+
+int i = 123;
+object o = (object) i; // boxing
+
+Please also note that it is not necessary to explicitly cast an integer to an object (as shown in the example above) to cause the integer to be boxed. Invoking any of its methods would also cause it to be boxed on the heap (because only the boxed form of the object has a pointer to a virtual method table):
+
+int i=123;
+String s=i.toString(); //This call will cause boxing
+
+There is also a third way in which a value type can be boxed. That happens when you pass a value type as a parameter to a function that expects an object.
+Let's say there is a function prototyped as:
+
+void aFunction(object value)
+
+Now let's say from some other part of your program you call this function like this:
+
+int i=123;
+aFunction(i); //i is automatically boxed
+
+This call would automatically cast the integer to an object, thus resulting in boxing.
+The object o can then be unboxed and assigned to integer variable i:
+
+o = 123;
+i = (int) o; // unboxing

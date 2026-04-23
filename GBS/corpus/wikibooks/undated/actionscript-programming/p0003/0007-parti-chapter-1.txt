@@ -1,0 +1,13 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 3
+section: parti-chapter-1
+chunk: 7
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+ommon Libraries" menu. After you have added the button right click it and choose "Actions" from the popup menu. In the Script pane type the following:
+
+But note, if you are using the Normal mode then don’t write this. Choose "Properties" from the left side of the "Actions" window and then double click "_visible". You will notice than the first and third lines will be written automatically, but the second line will just be "_visible". In the "Expression" field above the Script pane write "ball._visible = false". But if you are using the Advanced mode, then copy all the code written above. The first line is the beginning of "Release" event. "Release" event occurs when the user clicks the button. The structure of writing events is "on (<name of event>) {". The "{" tells the program the beginning of the event. And "}" tells the end of the event. So when the user clicks the button, the code written between "{" and "}" is being executed. The second line makes the ball invisible, using "_visible" property. This property can be set to "true" ("yes"), this means visible, and to "false" ("no"), this means invisible. This type of construction ( "true" and "false") is called "Boolean", which you will learn later.

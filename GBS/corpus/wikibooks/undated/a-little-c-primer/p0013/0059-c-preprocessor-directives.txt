@@ -1,0 +1,31 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 13
+section: c-preprocessor-directives
+chunk: 59
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+We've already seen the "#include" and "#define" preprocessor directives.
+The C preprocessor supports several other directives as well. All such
+directives start with a "#" to allow them to be distinguished from C language
+commands.
+As explained in the first chapter, the "#include" directive allows the
+contents of other files to be included in C source code:
+
+Notice that the standard header file "stdio.h" is specified in angle
+brackets. This tells the C preprocessor that the file can be found in the
+standard directories designated by the C compiler for header files. To
+include a file from a nonstandard directory, use double quotes:
+
+Include files can be nested. They can call other include files.
+Also as explained in the first chapter, the "#define" directive can be used
+to specify symbols to be substituted for specific strings of text:
+
+In this case, the preprocessor does a simple text substitution on PI
+throughout the source listing. The C compiler proper not only does not know
+what PI is, it never even sees it.
+The "#define" directive can be used to create function-like macros that allow
+parameter substitution. For example:

@@ -1,0 +1,25 @@
+title: Adriane-Manual
+source: wikibooks
+year: undated
+document_id: adriane-manual
+authors: 
+page: 1
+section: adriane-manual
+chunk: 25
+source_ref: https://en.wikibooks.org/wiki/Adriane-Manual
+
+see and hear a roughly estimated percentage of progress. The end of the process will be acknowledged with a corresponding success (or error) message.
+
+== Set up and save the volume settings ==
+The "Settings" menu item "Volume" starts the mixer tool rexima, offering various controllers to set all input and output channels of the sound card. Using Arrow right or left keys will change the value of the selected controller. Arrow up or down key will move to the next or previous control. If you hit ESCAPE or the key Q the current settings of the controllers will be saved in the file /etc/aumixrc and – in case you are running the system using an USB drive - will be active after a reboot.
+Advanced users can also edit this file directly through the shell. The corresponding command is:
+
+sudo nano /etc/aumixrc
+
+The aumixrc file is not complicated, here an example:
+
+vol:84:84:P
+speaker:84:84:P
+pcm2:84:84:P
+igain:84:84:P
+phout:84:84:P

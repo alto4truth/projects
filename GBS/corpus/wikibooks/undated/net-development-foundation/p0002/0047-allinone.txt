@@ -1,0 +1,20 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 47
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+ber is precisely what an event is in .NET. This is why events and delegates are almost always discussed together.
+The procedure to define an event is:
+
+You define a delegate type as a reference to functions having a specific signature
+You add an Event member to a class and associate it with the delegate type you just define, this instantiate a multicast delegate associated with the event
+When you have a reference to an object of the class you can add a reference to any method that has the same signature as the delegate type.
+When the object raises the event, the associate multicast delegate is executed which triggers the execution of the referenced function.
+Most of the time you will add a reference to one of your own method. When the referenced object fires its event it actually executes one of your methods without knowing it. This setup is an implementation of the publish / subscribe pattern. You subscribe to an event, signaling that you want to be informed when a specific "event" happens. Many object can subscribe to the same event. When the referenced object fires its event it "publishes" a message that the event has effectively happened in the form of a function call to all the "registered" functions.
+So any class can define events. Many system classes define events to communicate to your code the fact that "something" happened in the executing environment (the mouse moved, a key was pressed, a message was received on a socket, etc.). Constructing a program that "waits" for events to happen and then react to them is called event programming. Most online applications and services follow this design. We will discuss in more details the way system events are catched in the section on multithreading.
+For examples of events and delegates see this section.

@@ -1,0 +1,30 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 6
+section: 360-instructions-a
+chunk: 25
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+A - Add - Opcode 5A
+
+== Format ==
+A 2,N2
+A 11,106(0,10)
+The specific syntax is
+
+A target register,offset(index register,base register)
+Where the offset, index register and base register values will be determined automatically by the assembler if the USING pseudo-instruction has been used, and the target address label used is within 4096 bytes of the value of some base register.
+
+The first argument is a target register which value is affected by the instruction.
+The second argument is the source value location.
+The mask, base_register and index_register values are 0 to 15. The offset value is 0 to 4095.
+
+== Availability ==
+The A instruction is available on all models of the 360, 370 and z/System.
+
+== Operation ==
+The A instruction reads 32-bit integer value from the memory address specified by the argument and adds it to the value of register specified by the first argument. The Condition Code field in the Program Status Word is changed according to the resulting value.
+The source argument address shall be aligned to word boundary (i.e. 4 bytes).

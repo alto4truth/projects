@@ -1,0 +1,17 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 30
+section: value-types
+chunk: 311
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+== Value Types ==
+Data types, such as integers and floating-point numbers that are copied when they are passed as arguments (that is, they are passed by value). In the .NET Framework, these are called value types. The runtime supports two kinds of value types: Built-in value types and User-defined value types.
+Value types are stored as efficiently as primitive types, yet you can call methods on them. You can create instances of value types, pass them as parameters, store them as local variables, or store them in a field of another value type or object. Value types do not have the overhead associated with storing an instance of a class and they do not require constructors.
+For each value type, the runtime supplies a corresponding boxed type, which is a class that has the same state and behavior as the value type. When you define a value type, you are defining both the boxed and the unboxed type.
+Value types can have fields, properties, and events. They can also have methods.
+
+reference: http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpguide/html/cpconvaluetypes.asp

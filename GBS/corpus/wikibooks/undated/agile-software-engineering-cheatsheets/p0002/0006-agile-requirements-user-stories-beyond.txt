@@ -1,0 +1,25 @@
+title: Agile Software Engineering Cheatsheets
+source: wikibooks
+year: undated
+document_id: agile-software-engineering-cheatsheets
+authors: 
+page: 2
+section: agile-requirements-user-stories-beyond
+chunk: 6
+source_ref: https://en.wikibooks.org/wiki/Agile_Software_Engineering_Cheatsheets
+
+resolution
+Testable... so we have a good way to know when we are done
+
+== Valuable Stories ==
+There are different ways user stories can provide value:
+
+User value - The best value possible - The user story increases the value of our product from the user’s perspective
+Feedback from users (e.g. demo or mockup to users)
+Feedback from PM
+Remove technical uncertainty
+Remove schedule uncertainty - Finishing this story gets us closer to our goal
+Enables us to deliver faster (e.g. refactor the database schema, invest in continuous integration...) - This is the worse type of value as users would prefer not to pay for this, and cannot provide an indication of priority relative to other user stories. These are not really user stories but rather engineering work items, and are best handled continuously alongside user stories, but when they accumulate and need to be managed, a portion of the team’s attention and effort will need to be allocated to these types of items
+
+== Beyond User Stories: Epics, Themes, MMFs ==
+While stories are the basic unit of requirement, a higher-level view is usually needed, and may include:

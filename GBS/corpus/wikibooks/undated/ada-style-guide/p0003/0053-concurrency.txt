@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 53
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+closed mode. Although you are using more select/accept statements, Sanden (1994) argues that the resulting program is easier to understand and verify.
+
+== Termination ==
+The ability of tasks to interact with each other using Ada's intertask communication features makes it especially important to manage planned or unplanned (e.g., in response to a catastrophic exception condition) termination in a disciplined way. To do otherwise can lead to a proliferation of undesired and unpredictable side effects as a result of the termination of a single task.
+The guidelines on termination focus on the termination of tasks. Wherever possible, you should use protected objects (see Guideline 6.1.1), thus avoiding the termination problems associated with tasks.
+
+=== Avoiding Undesired Termination ===
+
+==== guideline ====
+Consider using an exception handler for a rendezvous within the main loop inside each task.
+
+==== example ====
+In the following example, an exception raised using the primary sensor is used to change Mode to Degraded still allowing execution of the system:

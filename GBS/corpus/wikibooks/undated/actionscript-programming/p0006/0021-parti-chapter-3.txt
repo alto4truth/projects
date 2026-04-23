@@ -1,0 +1,17 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 6
+section: parti-chapter-3
+chunk: 21
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+== Data types ==
+In this chapter we will learn how to use variables and data types. First lets talk about variables. Variables are very useful to keep data in them, but each variable has its data type. Below are listed data types available in ActionScript:
+
+=== General concepts and difference between Number and String data types ===
+Lets write a small program to test this data types. Create a new movie and open Frame 1’s actions by right clicking the first frame in the Timeline window and choosing "Actions". In the Script pane type the following:
+
+The first line declares a new number variable: "num". The word "var" is used to declare variables. After "var" must follow the variable’s name, in our case it is "num". You can declare variables without assigning any data type. For example:

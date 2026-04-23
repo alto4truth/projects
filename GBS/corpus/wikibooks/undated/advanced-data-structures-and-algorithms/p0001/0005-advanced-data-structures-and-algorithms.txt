@@ -1,0 +1,28 @@
+title: Advanced Data Structures and Algorithms
+source: wikibooks
+year: undated
+document_id: advanced-data-structures-and-algorithms
+authors: 
+page: 1
+section: advanced-data-structures-and-algorithms
+chunk: 5
+source_ref: https://en.wikibooks.org/wiki/Advanced_Data_Structures_and_Algorithms
+
+\displaystyle O(1)}
+
+insertion with linked lists. It'd be nice if we could find some middle ground, say with
+
+O
+(
+log
+⁡
+N
+)
+
+{\displaystyle O(\log N)}
+
+(amortized) running time for all operations. Well, Soren Sandmann has implemented GSequence, which uses a splay tree to achieve exactly that. [TODO: This structure doesn't have a widely accepted name yet. If someone can think of a better name, suggest it.]
+I think B-tree algorithms give worst-case O(ln(N)) insertion, deletion, and access by name. Is GSequence better in some way? I've been told that some operating systems stored files and directories on disk as B-trees. --DavidCary 23:39, 21 July 2005 (UTC)
+There's a number of balanced trees that give O(ln N) performance. The idea here is just wrapping a list interface around a tree. You might as well just say that you can use a tree since a list interface is only for implementation convenience.
+There are various heap data structures that give O(log(N)) insertion, deletion and access by name.
+I believe these are called random-access lists. Also, it is possible to get O(1) insertion and O(log N) indexing; e.g. Okasaki's skew-binomial random access lists. If there is an interest, I can upload a demonstration-quality implementation in Common Lisp.

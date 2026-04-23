@@ -1,0 +1,34 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 65
+section: branch-instructions
+chunk: 176
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ess is in Register 15, put
+* return address in R14
+Example4 BALR R12,R0 Load Register 12 with the address of the next instruction,
+* but do not branch
+
+Storage (RS)
+Example1 B 4(R15) Branch to the location in R15 plus the (12 bit)
+* decimal displacement of 4
+Example2 B X'010'(R15) Branch to the location in R15 plus the (12 bit) hex
+* displacement of decimal 16
+Example3 B LABEL1 Branch to the location with the specified address (Base &
+* displacement set by the Assembler)
+Example4 BAL R14,X'010'(R15) Branch to location in (R15 plus displacement), put
+* return address in R14.
+LABEL1 EQU * A location (within the range of the base register
+* for the program)
+* B 106(R0) Do not branch; treat as NO-OP
+
+Indexed (RX)
+Example1 B 4(R15,R1) Branch to location whose address is calculated from R15
+* plus 4 plus R1
+Example2 B 10(R12,R0) No branch because index register is 0; treated as NO-OP
+Example3 B 10(R0,R12) This is standard, and will branch to the address at the
+* location in Register 12 + a displacement of 10

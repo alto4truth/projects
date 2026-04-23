@@ -1,0 +1,64 @@
+title: Advanced Data Structures and Algorithms
+source: wikibooks
+year: undated
+document_id: advanced-data-structures-and-algorithms
+authors: 
+page: 1
+section: advanced-data-structures-and-algorithms
+chunk: 4
+source_ref: https://en.wikibooks.org/wiki/Advanced_Data_Structures_and_Algorithms
+
+uate the polynomial using complex numbers, in particular, by using "roots of unity": that is, complex numbers that are all distance 1 from the origin.
+
+=== Trie data structure ===
+A Trie, also called digital tree and sometimes radix tree or prefix tree (as they can be searched by prefixes), is an ordered tree data structure often used to store an associative array where the keys are usually strings.
+Unlike a binary search tree, no node in the tree stores a complete key.
+
+=== Tree-List ===
+w:Rope (computer science)
+When dealing with lists, we normally have two choices: either we get
+
+O
+(
+1
+)
+
+{\displaystyle O(1)}
+
+indexed access but
+
+O
+(
+N
+)
+
+{\displaystyle O(N)}
+
+insertion with vectors, or
+
+O
+(
+N
+)
+
+{\displaystyle O(N)}
+
+indexing and
+
+O
+(
+1
+)
+
+{\displaystyle O(1)}
+
+insertion with linked lists. It'd be nice if we could find some middle ground, say with
+
+O
+(
+log
+⁡
+N
+)
+
+{\displaystyle O(\log N)}

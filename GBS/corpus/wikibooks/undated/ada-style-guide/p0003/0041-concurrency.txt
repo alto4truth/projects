@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 41
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ption should normally be raised again because the final decision of how to deal with it might need to be made at the outermost scope of the task body.
+
+==== notes ====
+There are other ways to prevent Program_Error at a selective accept. These involve leaving at least one alternative unguarded or proving that at least one guard will evaluate True under all circumstances. The point here is that you or your successors will make mistakes in trying to do this, so you should prepare to handle the inevitable exception.
+
+=== Attributes 'Count, 'Callable, and 'Terminated ===
+
+==== guideline ====
+Do not depend on the values of the task attributes 'Callable or 'Terminated ( Nissen and Wallis 1984).
+Do not depend on attributes to avoid Tasking_Error on an entry call.
+For tasks, do not depend on the value of the entry attribute 'Count.
+Using the 'Count attribute with protected entries is more reliable than using the 'Count attribute with task entries.

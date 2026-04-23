@@ -1,0 +1,35 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 19
+section: permissions
+chunk: 48
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+directory containing that file, and hence on any directory containing that directory as a subdirectory, and so on, up the tree.
+
+=== Some examples ===
+
+=== Sticky bit ===
+The sticky bit is symbolized by a "t" flag: it means that the file or directory can only be deleted by its owner (or root).
+
+=== setuid bit ===
+The setuid bit is symbolized by an "s" flag: it means that the file should be executed with the userid of its owner.
+
+== Changing access rights ==
+
+=== chmod (changing file mode) ===
+Only the owner of a file can use chmod to change the permissions of a file. The options of chmod are as follows
+
+For example, to remove read write and execute permissions on the file allcolours for the group and others, type
+
+% chmod go-rwx allcolours
+This will leave the other permissions unaffected.
+To give read and write permissions on the file allcolours to all,
+
+% chmod a+rw allcolours
+
+=== Using integer parameters with chmod ===
+As well as using the syntax outlined above you can also use chmod with a numeric parameter that represents the users and permissions intended. A common example is

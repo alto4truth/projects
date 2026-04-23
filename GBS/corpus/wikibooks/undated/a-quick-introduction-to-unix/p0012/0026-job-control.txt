@@ -1,0 +1,23 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 12
+section: job-control
+chunk: 26
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+%jobs.
+In the output the numbers in square brackets ('[' and ']') are the job numbers that are used by the process control commands such as fg and bg.
+
+==== ps ====
+The command ps will print information about processes currently running. Actually, it is a little more complicated than that. The command prints information about processes controlled by the current terminal and current effective user id. The process identification number needed by some commands for controlling the process will be given in this case in the first column of output.
+
+%ps
+
+==== Using job numbers ====
+Now that you can identify a job's number using jobs or ps, you can use them to control jobs. If you have several jobs running in background, you can select one to bring to foreground by using its job number. Instead of using bare fg you add the job number like this:
+
+%fg 2
+This would take the job with the number two (identified by jobs) and bring it to the foreground.

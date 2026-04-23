@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 386
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+n given using single-letter names for variables. Continue this convention for mathematical equations where they would recall the formula, for example:
+
+With the use of child packages, a poor choice of package, subunit, and identifier names can lead to a visibility clash with subunits. See the Rationale (1995, §8.1) for a sample of the resulting, rather obscure code.
+
+==== rationale ====
+A program that follows these guidelines can be more easily comprehended. Self-documenting names require fewer explanatory comments. Empirical studies have shown that you can further improve comprehension if your variable names are not excessively long (Schneiderman 1986, 7). The context and application can help greatly. The unit of measure for numeric entities can be a source of subtype names.
+You should try not to use the same name as an identifier for different declarations, such as an object and a child package. Overusing an identifier in seemingly different name spaces can, in fact, lead to visibility clashes if the enclosing program units are intended to work together.

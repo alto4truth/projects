@@ -1,0 +1,14 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 2
+section: an-introductory-c-program
+chunk: 6
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+C compiler itself, start with a "#" and are known as "preprocessor directives" or "metacommands". The example program above has two such metacommands:
+
+The first statement, "#include <stdio.h>", simply merges the contents of the file "stdio.h" into the current program file before compilation. The "stdio.h" file contains declarations required for use of the standard-I/O library, which provides the "printf()" function.
+Incidentally, the "stdio.h" file, or "header file", only contains declarations. The actual code for the library is contained in separate library files that are added at link time. Custom header files loaded with custom declarations can be created if needed, and then included in a program as follows:

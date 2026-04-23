@@ -1,0 +1,20 @@
+title: Agile Software Engineering Cheatsheets
+source: wikibooks
+year: undated
+document_id: agile-software-engineering-cheatsheets
+authors: 
+page: 2
+section: agile-requirements-user-stories-beyond
+chunk: 7
+source_ref: https://en.wikibooks.org/wiki/Agile_Software_Engineering_Cheatsheets
+
+= Beyond User Stories: Epics, Themes, MMFs ==
+While stories are the basic unit of requirement, a higher-level view is usually needed, and may include:
+
+Theme (a broad category of stories, such as monetization, mobile, SEO...)
+Epic - A large story representing a feature-level item, which is broken down into multiple user stories
+MMFs - Minimally Marketable Features which represent the minimum subset of stories in an epic which can be released and marketed to users. This level of requirements often is often managed and visualized at the enterprise level akin to the way user stories are managed by delivery teams. Note that an MMF may include Epics and/or vice-versa.
+A product’s first MMF is the MVP - The Minimum Viable Product
+
+== The Backlog ==
+Stories are kept in a single, prioritized backlog, which represents user stories we will probably start working on soon. As we get closer to working on the stories, we groom them, breaking them down and fleshing them out, so the delivery teams can pull them in.

@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 260
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+rom some unintended part of the system, you should minimize this form of nesting.
+See also Guideline 4.2.1 for a discussion of the use of child units.
+
+==== notes ====
+One way to minimize the coverage of a with clause is to use it only with subunits that really need it. Consider making those subunits separate compilation units when the need for visibility to a library unit is restricted to a subprogram or two.
+
+=== Hiding Tasks ===
+
+==== guideline ====
+Carefully consider encapsulation of tasks.
+
+==== example ====

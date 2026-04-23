@@ -1,0 +1,28 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 27
+section: using-collections
+chunk: 297
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+== Using Collections ==
+Exam objective: Manage a group of associated data in a .NET Framework application by using collections.
+(Refer System.Collections namespace - MSDN)
+
+===== ArrayList class =====
+see MSDN
+The ArrayList class is used for arrays whose size will dynamically increase as required. An ArrayList is not necessarily sorted.
+
+using System;
+using System.Collections;
+
+public class Demo {
+public static void Main() {
+ArrayList myArrayList = new ArrayList();
+myArrayList.Add("Testing");
+myArrayList.Add("1...2...3");
+}
+}

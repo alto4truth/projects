@@ -1,0 +1,36 @@
+title: A Brief Introduction to the LaTeX Typesetting Environment
+source: wikibooks
+year: undated
+document_id: a-brief-introduction-to-the-latex-typesetting-environment
+authors: 
+page: 3
+section: typesetting-the-basics
+chunk: 12
+source_ref: https://en.wikibooks.org/wiki/A_Brief_Introduction_to_the_LaTeX_Typesetting_Environment
+
+=== Example 1 ===
+As a simple example, let's use a LaTeX template to create a simple document. Afterwards we'll discuss what everything we typed did and how it can be modified or expounded upon in the future. This example doesn't produce anything particularly pretty so don't expect a gorgeous end-result.
+Open the LaTeX application you chose to install and create a new .tex document. In the entry window, type the following and be sure to change <Your Name Here> to your actual name:
+
+\documentclass[10pt,a4paper,oneside]{article}
+\usepackage{geometry}
+\geometry{letterpaper}
+\usepackage[parfill]{parskip}
+\usepackage{epsfig}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage[]{hyperref}
+\usepackage{amssymb}
+%
+\begin{document}
+\begin{figure}
+\centering
+{\large\bf My First LaTeX Document}\\
+By: <Your Name Here>\\
+\end{figure}
+%
+This is my first document using the LaTeX typesetting environment.
+%
+It isn't very detailed, but it certainly looks good.
+%
+\end document

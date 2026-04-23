@@ -1,0 +1,44 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 15
+section: for-loop
+chunk: 87
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+then do it in python:
+
+Code Example 5 - Plain-english version of code
+#Plain-english version of our 'game'
+
+Tell the computer about our menu function
+
+Print a welcoming message, showing a description of the room.
+We will give the player six things to look at: plant, painting,\
+vase, lampshade, shoe, and the door
+
+Tell the computer that the door is locked
+Tell the computer where the key is
+
+present a menu, telling you what things you can 'operate':
+It will give you the six options
+It will ask the question "what will you look at?"
+
+if the user wanted to look at:
+plant:
+If the key is here, give the player the key
+otherwise, tell them it isn't here
+painting:
+same as above
+etc.
+door:
+If the player has the key, let them open the door
+Otherwise, tell them to look harder
+
+Give the player a well done message, for completing the game.
+
+From this, we can write a real program. Ready? Here it is (skip typing the comments):
+
+Code Example 6 - Text Adventure Game

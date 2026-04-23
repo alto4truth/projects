@@ -1,0 +1,21 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 5
+section: file-i-o
+chunk: 27
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+rds, and returns a list, with each list element holding a line of code. Use it with fileobjectname.readlines(). For example, if you had the text file:
+
+Code Example 2 - example text file
+Line 1
+
+Line 3
+Line 4
+
+Line 6
+
+The returned list from readlines() would be:

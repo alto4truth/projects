@@ -1,0 +1,25 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 21
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+etached from the task (Rationale 1995, §9.6). This reduces and might eliminate bottlenecks in the parallel activation of tasks (Rationale 1995, §9.6).
+
+==== notes ====
+Using an access discriminant to initialize a task has a potential danger in that the data being referenced could change after the rendezvous. This possibility and its effects should be considered and, if necessary, appropriate actions taken (e.g., copy the referenced data and not rely on the data pointed to by the discriminant after initialization).
+
+=== Anonymous Task Types and Protected Types ===
+
+==== guideline ====
+Consider using single task declarations to declare unique instances of concurrent tasks.
+Consider using single protected declarations to declare unique instances of protected objects.
+
+==== example ====
+The following example illustrates the syntactic differences between the kinds of tasks and protected objects discussed here. Buffer is static, but its type is anonymous. No type name is declared to enable you to declare further objects of the same type.
+
+Because it is declared explicitly, the task type Buffer_Manager is not anonymous. Channel is static and has a name, and its type is not anonymous.

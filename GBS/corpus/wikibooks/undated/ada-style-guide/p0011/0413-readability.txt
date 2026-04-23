@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 413
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+hat when a subprogram call causes activation of a task hidden in a package body, the task may continue to consume resources after the subroutine ends.
+
+==== notes ====
+Some projects have deferred most of the commentary to the end rather than at the beginning of the program unit. Their rationale is that program units are written once and read many times and that long header comments make the start of the specification difficult to find.
+
+==== exceptions ====
+Where a group of program units are closely related or simple to understand, it is acceptable to use a single header for the entire group of program units. For example, it makes sense to use a single header to describe the behavior of Max and Min functions; Sin, Cos, and Tan functions; or a group of functions to query related attributes of an object encapsulated in a package. This is especially true when each function in the set is capable of raising the same exceptions.
+
+=== Program Unit Body Headers ===

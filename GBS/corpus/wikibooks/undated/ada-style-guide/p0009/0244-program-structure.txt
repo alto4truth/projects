@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 244
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+efore, a program that depends on the order in which side effects of functions occur is erroneous. Avoid using side effects anywhere.
+
+=== Packages ===
+
+==== guideline ====
+Use packages for information hiding.
+Use packages with tagged types and private types for abstract data types.
+Use packages to model abstract entities appropriate to the problem domain.
+Use packages to group together related type and object declarations (e.g., common declarations for two or more library units).
+Encapsulate machine dependencies in packages. Place a software interface to a particular device in a package to facilitate a change to a different device.
+Place low-level implementation decisions or interfaces in subprograms within packages.
+Use packages and subprograms to encapsulate and hide program details that may change (Nissen and Wallis 1984).

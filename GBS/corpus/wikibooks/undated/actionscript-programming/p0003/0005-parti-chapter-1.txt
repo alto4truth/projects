@@ -1,0 +1,21 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 3
+section: parti-chapter-1
+chunk: 5
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+== Properties ==
+Every Symbol instance in Flash has properties, which control the object itself and how it is displayed and its interaction with the environment. However, Graphic type symbol instances cannot be referenced with action script, since you can´t assign them an instance name.
+
+Properties in ActionScript contain an underscore before the property name, to indicate that it pertains to the display or environment. The properties of a symbol instance can be modified in design time or in runtime using action script, an essential task for animation.
+In this chapter we will learn to use properties.
+
+=== Width, Height Measures ===
+Width and height are the vertical and horizontal sizes of the object. The use of them are just as the use of x and y properties. Add the following lines to the previous example and you will understand.
+
+=== XScale, YScale ===
+Scaling the local coordinate system affects the _x and _y property settings, which are defined in whole pixels. For example, if the parent movie clip is scaled to 50%, setting the _x property moves an object in the movie clip by half the number of pixels as it would if the movie were set at 100%.

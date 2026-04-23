@@ -1,0 +1,56 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 11
+section: create-an-event-consumer
+chunk: 32
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+umers();
+
+//Get a proxy supplier from the consumer admin
+CosEventChannelAdmin::ProxyPushSupplier_var supplier = consumerAdmin->obtain_push_supplier();
+
+//Connect to the proxy push supplier, passing the push consumer object ref to it
+supplier->connect_push_consumer(consumer.in());
+
+//Activate the POA via its POAManager
+PortableServer::POAManager_var poa_manager = poa->the_POAManager();
+poa_manager->activate();
+cout << "Starting to receive events" << endl;
+
+//Start the event loop
+orb->run();
+orb->destroy();
+
+return EXIT_SUCCESS;
+}
+
+== eventsinkconsumer_i.h ==
+#ifndef EVENTSINKCONSUMER_I_H
+#define EVENTSINKCONSUMER_I_H
+
+#include <iostream>
+#include "eventsinkC.h"
+#include "eventsinkI.h"
+
+/**
+The class responsible for specializing the POA_CosEventComm::PushConsumer interface
+
+@author Evan Carew <Carew@pobox.com>
+*/
+class EventSinkConsumer_i : public virtual POA_CosEventComm::PushConsumer
+{
+CORBA::ORB_var orb_;
+public:
+EventSinkConsumer_i(CORBA::ORB_ptr orb);
+virtual void push( const CORBA::Any &data) throw(CORBA::SystemException);
+virtual void disconnect_push_consumer() throw(CORBA::SystemException);
+};
+
+#endif
+
+== eventsinkconsumer_i.cpp ==
+#include "eventsinkconsumer_i.h"

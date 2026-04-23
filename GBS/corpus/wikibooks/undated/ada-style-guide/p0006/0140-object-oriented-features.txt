@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 140
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+pe and override it if necessary.
+
+==== example ====
+The following example is adapted from the discussion of equality and inheritance in Barnes (1996):
+
+==== rationale ====
+Equality is applied to all components of a record. When you extend a tagged type and compare two objects of the derived type for equality, the parent components as well as the new extension components will be compared. Therefore, when you redefine equality on a tagged type and define extensions on this type, the parent components are compared using the redefined equality. The extension components are also compared, using either predefined equality or some other redefined equality if appropriate. The behavior of inherited equality differs from the behavior of other inherited operations. When other primitives are inherited, if you do not override the inherited primitive, it can only operate on the parent components of the object of the extended type. Equality, on the other hand, generally does the right thing.
+
+=== Polymorphism ===

@@ -1,0 +1,16 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 4
+section: parti-chapter-1-page2
+chunk: 12
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+s window set its width to 100, height to 20, font size to 20, Var to "info" and change the Text Type to "Dynamic Text". There are 3 types of Text Type
+
+Static Text – you choose this type of Text if you don’t want the value of the Text to be changed. For example, if you just want to "hello" in the Text and you don’t want "hello" to be changed during runtime, then you use "Static Text". This is good for usual texts.
+Dynamic Text – this type of Text can be change at any time during runtime. This type of Text is very useful if you want to write information of current process.
+Input Text – this is a text field and is almost the same as "Dynamic Text". The only difference between these two types is that "Input Text" Text can be changed by the user, but "Dynamic Text" can’t be changed at all.
+So we use "Dynamic Text" type in our example to see the values of xmouse and ymouse. "Var" property is value of the Text. For example if you have a "Input Text", which’s "Var" property is set to "zzz" and want to retrieve its value, then you can get it from the "zzz". I mean that the value of the textbox is stored in "zzz". But by using the "Var", in our case "zzz", you can also change the value of the Text". For example if you write

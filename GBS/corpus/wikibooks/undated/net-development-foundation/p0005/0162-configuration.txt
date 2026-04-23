@@ -1,0 +1,37 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 5
+section: configuration
+chunk: 162
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+bject that is not touched by the exam objectives so we will not cover it in this study guide.
+
+==== .NET framework installer ====
+
+==== Event log ====
+
+MSDN's definition is "Windows event logs allow your applications and components to record information about important events. You can use these records to audit access to your system, troubleshoot problems, and re-create usage patterns"
+For a general discussion see MSDN
+For specifics on the EventLog class and some cautions about its use see MSDN
+
+==== Performance monitoring ====
+
+==== Debugging and tracing ====
+
+==== Management information and events ====
+Windows Management Instrumentation - MSDN
+
+=== Classes, Interfaces, and tools ===
+
+==== Embed configuration management ====
+Exam objective: Embed configuration management functionality into a .NET Framework application.
+(Refer System.Configuration namespace)
+Configuration class and ConfigurationManager class
+
+Configuration class - MSDN
+ConfigurationManager class - MSDN
+ConfigurationSettings class, ConfigurationElement class, ConfigurationElementCollection class, and ConfigurationElementProperty class

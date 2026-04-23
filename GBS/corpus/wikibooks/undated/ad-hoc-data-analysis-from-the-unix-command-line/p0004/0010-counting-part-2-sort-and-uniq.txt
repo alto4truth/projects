@@ -1,0 +1,17 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 4
+section: counting-part-2-sort-and-uniq
+chunk: 10
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+ata, let's make sure that household id is truly a unique identifier:
+
+$ grep "^H" pums_53.dat | cut -c2-8 | sort | uniq -c | grep -v "^ *1 " | wc -l
+0
+
+This grep invocation will print only lines that do not (because of the -v flag) begin with a series of spaces followed by a 1 (the count from uniq -c) followed by a tab (entered using the control-v trick). Since the number of lines written is zero, we know that each household id occurs once and only once in the file.
+The technique of grepping uniq's output for lines with a certain count is generally useful. One other common application is finding the set of overlapping (duplicated) keys in a pair of files by grepping the output of uniq -c for lines that begin with a 2.

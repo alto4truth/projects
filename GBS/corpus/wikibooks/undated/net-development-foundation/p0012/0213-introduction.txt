@@ -1,0 +1,23 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 12
+section: introduction
+chunk: 213
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+or constructs.
+We will thus try to connect, where possible, the different .NET concepts with their respective "style" to give the reader some context.
+
+=== Assemblies ===
+
+According to MSDN assemblies are: "the building blocks of .NET Framework applications; they form the fundamental unit of deployment, version control, reuse, activation scoping, and security permissions".
+The .NET Framework is now Microsoft's preferred way of developing applications on the Windows platform. In that respect it succeeds the Component Object Model (COM). This is important to mention because despite some deployment and management problems (remember DLL Hell?) COM played an important role in the development of component-based computing (reusing whole executable components, not only program code). Major efforts have been invested to transfer the component-based concepts of COM to the .NET framework and a significant part of this book deals with those (security, installation, versioning, etc.).
+The assembly is the successor of the COM component.
+
+Previous / Next
+
+== External links ==
+.Net Framework Architecture

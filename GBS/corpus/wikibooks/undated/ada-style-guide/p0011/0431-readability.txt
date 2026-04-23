@@ -1,0 +1,48 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 431
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+s (in this sense, operations to create and/or initialize an object).
+Use names indicative of their content for child packages containing constructors.
+
+=== comments ===
+Make the code as clear as possible to reduce the need for comments.
+Never repeat information in a comment that is readily available in the code.
+Where a comment is required, make it concise and complete.
+Use proper grammar and spelling in comments.
+Make comments visually distinct from the code.
+Structure comments in headers so that information can be automatically extracted by a tool.
+Put a file header on each source file.
+Place ownership, responsibility, and history information for the file in the file header.
+Put a header on the specification of each program unit.
+Place information required by the user of the program unit in the specification header.
+Do not repeat information (except unit name) in the specification header that is present in the specification.
+Explain what the unit does, not how or why it does it.
+Describe the complete interface to the program unit, including any exceptions it can raise and any global effects it can have.
+Do not include information about how the unit fits into the enclosing software system.
+Describe the performance (time and space) characteristics of the unit.
+Place information required by the maintainer of the program unit in the body header.
+Explain how and why the unit performs its function, not what the unit does.
+Do not repeat information (except unit name) in the header that is readily apparent from reading the code.
+Do not repeat information (except unit name) in the body header that is available in the specification header.
+Comment on all data types, objects, and exceptions unless their names are self-explanatory.
+Include information on the semantic structure of complex, pointer-based data structures.
+Include information about relationships that are maintained between data objects.
+Omit comments that merely repeat the information in the name.
+Include information on redispatching for tagged types in cases where you intend the specializations (i.e., derived types) to override these redispatching operations.
+Minimize comments embedded among statements.
+Use comments only to explain parts of the code that are not obvious.
+Comment intentional omissions from the code.
+Do not use comments to paraphrase the code.
+Do not use comments to explain remote pieces of code, such as subprograms called by the current unit.
+Where comments are necessary, make them visually distinct from the code.
+Use pagination markers to mark program unit boundaries.
+Repeat the unit name in a comment to mark the begin of a package body, subprogram body, task body, or block if the begin is preceded by declarations.
+For long or heavily nested if and case statements, mark the end of the statement with a comment summarizing the condition governing the statement.
+For long or heavily nested if statements, mark the else part with a comment summarizing the conditions governing this portion of the statement.

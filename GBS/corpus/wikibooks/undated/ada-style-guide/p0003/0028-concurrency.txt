@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 28
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+eration when T2 has already gained control of the task Server. In addition, the approach increases the communication complexity (see Guideline 6.2.6).
+
+==== rationale ====
+The pragma Priority allows relative priorities to be placed on tasks to accomplish scheduling. Precision becomes a critical issue with hard-deadline scheduling. However, there are certain problems associated with using priorities that warrant caution.
+Priority inversion occurs when lower priority tasks are given service while higher priority tasks remain blocked. In the first example, this occurred because entry queues are serviced in FIFO order, not by priority. There is another situation referred to as a race condition . A program like the one in the first example might often behave as expected as long as T1 calls Server.Operation only when T2 is not already using Server.Operation or waiting. You cannot rely on T1 always winning the race because that behavior would be due more to fate than to the programmed priorities. Race conditions change when either adding code to an unrelated task or porting this code to a new target.
+You should not rely upon task priorities to achieve an exact sequence of execution or rely upon them to achieve mutual exclusion. Although the underlying dispatching model is common to all Ada 95 implementations, there might be differences in dispatching, queuing, and locking policies for tasks and protected objects. All of these factors might lead to different sequences of execution. If you need to ensure a sequence of execution, you should make use of Ada's synchronization mechanisms, i.e., protected objects or rendezvous.

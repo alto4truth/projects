@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 59
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+eration may be cancelled (through a special input key) unless the commit transaction has begun. The code is extracted from the Rationale (1995, §9.4):
+
+==== rationale ====
+When an abort statement is executed, there is no way to know what the targeted task was doing beforehand. Data for which the target task is responsible might be left in an inconsistent state. The overall effect on the system of aborting a task in such an uncontrolled way requires careful analysis. The system design must ensure that all tasks depending on the aborted task can detect the termination and respond appropriately.
+Tasks are not aborted until they reach an abort completion point such as beginning or end of elaboration, a delay statement, an accept statement, an entry call, a select statement, task allocation, or the execution of an exception handler. Consequently, the abort statement might not release processor resources as soon as you might expect. It also might not stop a runaway task because the task might be executing an infinite loop containing no abort completion points. There is no guarantee that a task will not abort until an abort completion point in multiprocessor systems, but the task will almost always stop running right away.
+An asynchronous select statement allows an external event to cause a task to begin execution at a new point, without having to abort and restart the task (Rationale 1995, §9.3). Because the triggering statement and the abortable statement execute in parallel until one of them completes and forces the other to be abandoned, you need only one thread of control. The asynchronous select statement improves maintainability because the abortable statements are clearly delimited and the transfer cannot be mistakenly redirected.
+In task bodies and in the abortable part of an asynchronous select, you should avoid assigning to nonatomic global objects, primarily because of the risk of an abort occurring before the nonatomic assignment completes. If you have one or more abort statements in your application and the assignment is disrupted, the target object can become abnormal, and subsequent uses of the object lead to erroneous execution (Ada Reference Manual 1995, §9.8 [Annotated]). In the case of scalar objects, you can use the attribute 'Valid, but there is no equivalent attribute for nonscalar objects. (See Guideline 5.9.1 for a discussion of the 'Valid attribute.) You also can still safely assign to local objects and call operations of global protected objects.

@@ -1,0 +1,20 @@
+title: A Guide To PIC Microcontroller Documentation
+source: wikibooks
+year: undated
+document_id: a-guide-to-pic-microcontroller-documentation
+authors: 
+page: 11
+section: section-3-term-based-guide-to-documentation
+chunk: 54
+source_ref: https://en.wikibooks.org/wiki/A_Guide_To_PIC_Microcontroller_Documentation
+
+stand what peripheral or feature name to search for based upon their current knowledge of other devices.
+
+=== Microchip PIC MCUs and DSCs ===
+
+== F ==
+
+===== FSR =====
+FSR - File Select Register - a register in data memory used together with a INDF to implement indirect addressing. When you write software in C or some other high-level language, the compiler uses a FSR as an address register whenever you use character strings or other arrays, many other data structures, or many other abstract data types. Assembly language programmers may be familiar with what other manufacturers call an "index register" or an "address register". PIC18F parts often have 3 FSR registers (and 3 corresponding INDF registers). Recent PIC16F parts typically have 2 FSR registers (and 2 corresponding INDF registers).
+
+== G ==

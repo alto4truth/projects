@@ -1,0 +1,29 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 338
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+Limit overloading to widely used subprograms that perform similar actions on arguments of different types (Nissen and Wallis 1984).
+
+==== example ====
+
+==== rationale ====
+Excessive overloading can be confusing to maintainers (Nissen and Wallis 1984, 65). There is also the danger of hiding declarations if overloading becomes habitual. Attempts to overload an operation may actually hide the original operation if the parameter profile is not distinct. From that point on, it is not clear whether invoking the new operation is what the programmer intended or whether the programmer intended to invoke the hidden operation and accidentally hid it.
+
+==== notes ====
+This guideline does not prohibit subprograms with identical names declared in different packages.
+
+=== Overloaded Operators ===
+
+==== guideline ====
+Preserve the conventional meaning of overloaded operators (Nissen and Wallis 1984).
+Use "+" to identify adding, joining, increasing, and enhancing kinds of functions.
+Use "-" to identify subtraction, separation, decreasing, and depleting kinds of functions.
+Use operator overloading sparingly and uniformly when applied to tagged types.
+
+==== example ====

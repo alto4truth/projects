@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 128
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+y shows one possible implementation; however, you could provide an alternate implementation of the Hashed_Set abstraction using other data structures.
+
+==== rationale ====
+In many classification schemes, for example, a taxonomy, only objects at the leaves of the classification tree are meaningful in the application. In other words, the root of the hierarchy does not define a complete set of values and operations for use by the application. The use of "abstract" guarantees that there will be no objects of the root or intermediate nodes. Concrete derivations of the abstract types and subprograms are required so that the leaves of the tree become objects that a client can manipulate.
+You can only declare abstract subprograms when the root type is also abstract. This is useful as you build an abstraction that forms the basis for a family of abstractions. By declaring the primitive subprograms to be abstract, you can write the "common class-wide parts of a system . . . without being dependent on the properties of any specific type at all" (Rationale 1995, §4.2).
+Abstract types and operations can help you resolve problems when your tagged type hierarchy violates the expected semantics of the class-wide type dispatching operations. The Rationale (1995, §4.2) explains:

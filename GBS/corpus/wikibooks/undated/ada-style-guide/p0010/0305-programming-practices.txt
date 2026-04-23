@@ -1,0 +1,34 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 305
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+code fragment shows a use of aliased objects, using
+the attribute 'Access to implement a generic component
+that manages hashed collections of objects:
+
+==== rationale ====
+Aliasing allows the programmer to have indirect access to declared
+objects. Because you can update aliased objects through more than
+one path, you must exercise caution to avoid unintended updates.
+When you restrict the aliased objects to being constant, you avoid
+having the object unintentionally modified. In the example above,
+the individual message objects are aliased constant message strings
+so their values cannot be changed. The ragged array is then initialized
+with references to each of these constant strings.
+Aliasing allows you to manipulate objects using indirection while
+avoiding dynamic allocation. For example, you can insert an object
+onto a linked list without dynamically allocating the space for
+that object (Rationale 1995, §3.7.1 ).
+Another use of aliasing is in a linked data structure in which
+you try to hide the enclosing container. This is essentially the
+inverse of a self-referential data structure (see Guideline 5.4.7 ).
+If a package manages some data using a linked data structure,
+you may only want to export access values that denote the "useful"
+data. You can use an access-to-object to return an access to the
+useful data, excluding the pointers used to chain objects.

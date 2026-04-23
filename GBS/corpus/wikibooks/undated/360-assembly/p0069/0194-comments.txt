@@ -1,0 +1,24 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 69
+section: comments
+chunk: 194
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+using previous register
+*
+TABLE DC C'ABCDEFGHIJKLMNOPQRSTUVWXYZ' Table of letters of the alphabet
+INPUT DS Cl80 Input area
+OUTPUT DS Cl80 Output area
+
+A comment - line or code - is not printed when it appears in a macro if PRINT NOGEN has been used. It is also not printed if it appears after a PRINT OFF statement has been issued.
+Note: If a code comment is to be specified on a macro instruction where no arguments are to be passed to the macro, it is recommended that a space, a comma, and another space precede the comment to prevent the first word from being interpreted as an argument to the macro.
+
+== Macro Comments ==
+Macro comments are used for commenting macros (but can be used outside of macros in mainline program code), and are not listed on the program listing. They are the same as code comments, only they begin with ".*" instead of "*".
+
+.* This comment will never be listed
+* This comment will be listed if not following PRINT OFF or PRINT NOGEN (if in a macro)

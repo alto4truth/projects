@@ -1,0 +1,14 @@
+title: A Guide To PIC Microcontroller Documentation
+source: wikibooks
+year: undated
+document_id: a-guide-to-pic-microcontroller-documentation
+authors: 
+page: 7
+section: introduction-to-pic-microcontroller-and-dsc-products
+chunk: 40
+source_ref: https://en.wikibooks.org/wiki/A_Guide_To_PIC_Microcontroller_Documentation
+
+can be used in a variety of serial interfacing standards such as RS-232 and RS-485 amongst others. In addition that standard may have standardized software layer with which it is commonly used (for example ANSI escape sequences used with VT100), and a common circuit layout external to the controller to implement the required signalling (for example a MAX-232 family transceiver used with RS-232).
+A further challenge documenting controller products is due to their infinite flexibility, as programmable products, and the fact that the software can be written in a variety of different programming languages using a broad range of software tools from different vendors of which some, or perhaps none, come from the silicon vendor themselves.
+Lastly there is the issue of the software programs and hardware tools used for creating and debugging the firmware for the controller and the programming tools used for small production runs or mass-production.
+As a result, datasheets alone typically contain around 100 pages, often running to several hundred pages, and in the interest of keeping the size of the datasheet manageable, much common and implementation or application specific data is located

@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 19
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+=== example ====
+The following code fragment shows how a task type with discriminant can be used to associate data with a task (Rationale 1995, §9.6):
+
+The following example shows how to use discriminants to associate data with tasks, thus allowing the tasks to be parameterized when they are declared and eliminating the need for an initial rendezvous with the task:
+
+The next example shows how an initial rendezvous can be used to associate data with tasks. This is more complicated and more error prone than the previous example. This method is no longer needed in Ada 95 due to the availability of discriminants with task types and protected types:

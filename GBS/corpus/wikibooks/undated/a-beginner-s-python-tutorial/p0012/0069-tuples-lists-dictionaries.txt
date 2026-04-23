@@ -1,0 +1,23 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 12
+section: tuples-lists-dictionaries
+chunk: 69
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+xactly the same as you do with tuples. For example, to print the name of your 3rd cat you would do this:
+
+Code Example 3 - Recalling items from a list
+
+You can also recall a range of examples, like above, for example - cats[0:2] would return your 1st and 2nd cats, or said another way, this expression would return the zero-th element and the one-th, or first, element, and would stop at two-th element. The output would look like this:
+
+Where lists come into their own is how they can be modified. To add a value to a list, you use the append() function. Let's say you got a new cat called Catherine. To add her to the list you'd do this:
+
+Code Example 4 - Adding items to a list
+
+That's a little weird, isn't it? I'll explain. That function is in a funny spot - after a period, after the list name. You'll get to see those things more in a later lesson. For the meanwhile, this is the form of the function that adds a new value to a list:
+
+Code Example 5 - Using the append function

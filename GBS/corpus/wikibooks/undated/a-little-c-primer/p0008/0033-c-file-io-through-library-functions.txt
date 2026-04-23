@@ -1,0 +1,35 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 8
+section: c-file-io-through-library-functions
+chunk: 33
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+The file-I/O library functions are much like the console-I/O functions. In
+fact, most of the console-I/O functions can be thought of as special cases of
+the file-I/O functions. The library functions include:
+
+fopen() Create or open a file for reading or writing.
+fclose() Close a file after reading or writing it.
+
+fseek() Seek to a certain location in a file.
+rewind() Rewind a file back to its beginning and leave it open.
+rename() Rename a file.
+remove() Delete a file.
+
+fprintf() Formatted write.
+fscanf() Formatted read.
+fwrite() Unformatted write.
+fread() Unformatted read.
+putc() Write a single byte to a file.
+getc() Read a single byte from a file.
+fputs() Write a string to a file.
+fgets() Read a string from a file.
+
+All these library functions depend on definitions made in the "stdio.h"
+header file, and so require the declaration:
+
+#include <stdio.h>

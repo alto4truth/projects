@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 416
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ode. Such duplication is unnecessary and hard to maintain. Similarly, do not repeat the information from the header of the program unit specification.
+
+==== notes ====
+It is often the case that a program unit is self-explanatory so that it does not require a body header to explain how it is implemented or why. In such a case, omit the header entirely, as in the case with Position_Of above. Be sure, however, that the header you omit truly contains no information. For example, consider the difference between the two header sections:
+
+and:
+
+The first is a message from the author to the maintainer saying "I can't think of anything else to tell you," while the second may mean "I guarantee that this unit is entirely portable."
+
+=== Data Comments ===

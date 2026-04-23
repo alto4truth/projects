@@ -1,0 +1,18 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 5
+section: 360-instructions
+chunk: 22
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+s an error by the assembler; an attempt to branch to an odd address will result in an address exception.
+There are four instruction set architectures:
+
+360 instructions are those which were part of the original IBM 360 mainframe instruction set architecture and are shown on the table below in this color: [ ]. Except for instructions marked "360 only," these instructions work on all models.
+370 instructions were added with the creation of the IBM 370 and are shown on the table below in this color: [ ]. They are only available on 370- and higher-series machines and will not work (and will "throw an exception") if they are attempted to be executed on a 360. Instructions marked "370 only" will also throw an exception on the 390 or Z. Instructions marked "370 only" and "390 only" will throw an exception on the z/System.
+ESA/390 instructions were created for the 390 and are shown on the table below in this color: [ ]. They are only available on ESA/390 and z/System mainframes and will throw an exception if they are attempted to be executed on a 360 or S/370. Instructions marked "390 Only" will throw an exception on the z/System.
+z/System instructions were created after the 370 and 390 and are shown on the table below in this color: [ ]. They will throw an exception on 360, 370, or 390 hardware and work only on z/System mainframes.
+In general, there are seven classes of instructions:

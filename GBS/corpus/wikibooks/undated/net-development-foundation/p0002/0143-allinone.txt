@@ -1,0 +1,33 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 143
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+am name="accountNumber">The account number.</param>
+public Client(string name, string accountNumber)
+{
+_name = name;
+_accountNumber = accountNumber;
+}
+
+/// <summary>
+/// The Main entry point of the console application
+/// </summary>
+/// <param name="args">The command line arguments</param>
+static void Main(string[] args)
+{
+List<Client> clients = new List<Client>();
+clients.Add(new Client("Marco", "332-3355"));
+clients.Add(new Client("Martinus", "453-5662"));
+foreach (Client client in clients)
+{
+Console.WriteLine("The account {0} belongs to {1}", client.AccountNumber, client.Name);
+}
+Console.ReadLine();
+}
+}

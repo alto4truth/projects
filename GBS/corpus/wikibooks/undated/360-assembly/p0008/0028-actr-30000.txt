@@ -1,0 +1,14 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 8
+section: actr-30000
+chunk: 28
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+Meaning that a maximum of 30000 AGO or successful AIF instructions may be executed before assembly is stopped (if inside a macro) or ends (if in conditional assembly). The assembler counts the number of these against the ACTR value, subtracting one for each and if the count becomes zero or negative, processing is terminated.
+In a macro, if the number of AGO or successful AIF pseudo instructions that have been executed reaches this value, the macro is exited at that point. If this macro was called from another macro, assembly resumes at the place where this macro was called. This macro's ACTR value has no affect on the calling macro, if it did not have an ACTR pseudo-instruction it continues without limits. If it did have an ACTR pseudo instruction, it continues with the limit it had for whatever unused part of its limit it has remaining.
+In conditional assembly outside of a macro, if the number of AGO or successful AIF instructions reaches that value, the assembly ends as if the source code file had ended at that point. The remainder of the program is treated as comments except ewrrors will be flagged.
+The value supplied is divided by 2 if a serious error is detected.

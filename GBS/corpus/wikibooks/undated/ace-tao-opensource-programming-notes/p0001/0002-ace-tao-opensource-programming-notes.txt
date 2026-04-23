@@ -1,0 +1,15 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 1
+section: ace-tao-opensource-programming-notes
+chunk: 2
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+adly not written with documented code (often without even a header describing the use for the example), and certainly not included in any web page explaining their code or use.
+Object Computing, Inc. freely provides the Getting Started chapter of their TAO Developer's Guide (that can be purchased for around $20.00). This chapter is complete with code examples and walks the user through the steps needed to make a simple TAO client and server. The open-source TAO 1.4a distribution contains all examples referenced in the TAO Developer's Guide, while the FAQ contains some helpful information for beginners and experts alike.
+Remedy IT provides freely the CORBA Programmers Guide.
+Additionally, the comp.soft-sys.ace and comp.object.corba newsgroups are monitored by groups and individuals able to field questions related to both TAO and CORBA, and the TAO mailing lists are available for questions, discussion, and reporting bugs related to TAO.
+The following sections should expand on the single example provided with ACE+TAO (the quoter example) with sections designed to help the user with the event service, the notification service, and other real-time issues. Those reading this page wishing

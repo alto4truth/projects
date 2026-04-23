@@ -1,0 +1,17 @@
+title: Advanced Robotics Book
+source: wikibooks
+year: undated
+document_id: advanced-robotics-book
+authors: 
+page: 1
+section: advanced-robotics-book
+chunk: 21
+source_ref: https://en.wikibooks.org/wiki/Advanced_Robotics_Book
+
+e elements in the environment, like the lighting, the chemicals in the air, and the color changes, as they can affect what a robot sees in its vision.
+
+== Knowledge Based Vision Systems ==
+A vision system is used in robotics to organize programs to process images and to recognize objects. In order for this to work properly and to allow a robot system to perform at a desired level in its environment, a vision system should adjust to numerous working circumstances by altering and correcting the limitations that manage the system’s several processing phases. A knowledge based vision system must decide which vision modules to connect together, and it must be the power source of image acquisition. Knowledge-based vision systems that analyze knowledge that is given explicitly can be used for this task.
+For knowledge based vision system, one must give the robot the parameters of the object, such as the curves or corners of a specific object. From this information, the robot can produce certain controllers. Based on what the robot was given as well as what it computes on its own, the knowledge based vision system can create a model showing the objects, which can be revised by the user.
+A knowledge based vision system is responsible for tuning parameters that it comes across, obtaining images through changing shutter speeds of a camera or adjusting the light settings possibly, and observing the system’s configuration to make changes if necessary. A knowledge based vision system may encounter different types of input data, so it must be able to adjust accordingly to changes it may come across while running. Through its blueprint, a knowledge-based vision system has the capability to recognize new information about the surroundings in the world and alter its actions consequently.
+Knowledge based vision systems, however, can be expensive to use. Having to collect knowledge, such as images, can be money- and time-consuming. Knowledge based visions systems still should be researched and altered to work better in dynamic worldly situations.

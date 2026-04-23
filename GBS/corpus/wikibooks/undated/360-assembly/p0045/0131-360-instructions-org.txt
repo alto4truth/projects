@@ -1,0 +1,27 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 45
+section: 360-instructions-org
+chunk: 131
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ORG Pseudo instruction - Set value of program counter
+The ORG pseudo instruction tells the assembler to set the value of the location counter to the specified address, or to reset the location counter if altered by a prior ORG.
+
+== Format ==
+
+where
+
+name is an optional defined symbol
+or
+.symbol is an optional conditional assembly label
+and
+expr is an optional relocatable address within the current control section
+
+== Description ==
+The ORG pseudo instruction alters the location counter of this control section (the current CSECT, DSECT, or START). If name is specified, the address is adjusted to the value of the previously defined symbolname. If expr is specified, it must not be lower than the lowest address defined for this control section. An ORG statement without an expr value resets the location counter to the highest address used in the current control section.
+
+== Examples ==

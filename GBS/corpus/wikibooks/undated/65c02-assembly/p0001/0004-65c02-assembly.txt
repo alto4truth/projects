@@ -1,0 +1,46 @@
+title: 65c02 Assembly
+source: wikibooks
+year: undated
+document_id: 65c02-assembly
+authors: 
+page: 1
+section: 65c02-assembly
+chunk: 4
+source_ref: https://en.wikibooks.org/wiki/65c02_Assembly
+
+be specified.
+Example
+Using the ASL (Arithmetic Shift Left) instruction with no operands, the Accumulator is always the value being shifted left.
+
+ASL
+
+=== Implied: i ===
+The operand is implied, so it does not need to be specified.
+Example
+The operands being implied here are X, the source of the transfer, and A, the destination of the transfer.
+
+TXA
+
+=== Immediate: # ===
+The operand is used directly to perform the computation.
+Example
+The value $22 is loaded into the Accumulator.
+
+LDA #$22
+
+=== Absolute: a ===
+A full 16-bit address is specified and the byte at that address is used to perform the computation.
+Example
+The value at address $D010 is loaded into the X register.
+
+LDX $D010
+
+=== Zero Page: zp ===
+A single byte specifies an address in the first page of memory ($00xx), also known as the zero page, and the byte at that address is used to perform the computation.
+Example
+The value at address $0002 is loaded into the Y register.
+
+LDY $02
+
+=== Stack: s ===
+Essentially the same as Implied (i). The difference is that these instructions perform stack operations; pushing or pulling operands from the stack.

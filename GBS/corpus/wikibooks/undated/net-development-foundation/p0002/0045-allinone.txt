@@ -1,0 +1,53 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 45
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+(For example when you declare a variable of that type).
+
+// C#
+List<int> myIntList = new List<int>()
+
+'// VB.NET
+Dim myIntList As New List(Of Integer)
+
+In the .NET framework this substitution is done during the second compilation (the just-in-time compilation from CIL to machine code). Said differently, generics are supported by the CIL and are thus part of the framework itself, not of the language used (ex. C#).
+For more coverage on generics see MSDN.
+We have examples of using and building generic types.
+For examples of generics collections see the using generic collections section.
+
+=== Exceptions ===
+
+This is how you throw a general exception:
+
+// C#
+throw new Exception("This is an exception.");
+
+'// VB.NET
+Throw New Exception("This is an exception.")
+
+This is how you handle an exception:
+
+// C#
+try
+{
+throw new Exception("This is an exception.");
+}
+catch (Exception e)
+{
+Console.WriteLine(e.Message);
+}
+
+'// VB.NET
+Try
+Throw New Exception("This is an exception.")
+Catch ex As Exception
+Console.WriteLine(ex.Message)
+End Try
+
+=== Events and Delegates ===

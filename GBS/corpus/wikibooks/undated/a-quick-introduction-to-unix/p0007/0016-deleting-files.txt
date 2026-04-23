@@ -1,0 +1,34 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 7
+section: deleting-files
+chunk: 16
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+== Deleting files and directories ==
+
+=== rm (remove) ===
+To delete (remove) a file you use the command rm. So you might create a copy of a science.txt file and then delete it. You would type
+
+% cp science.txt tempfile.txt
+% ls
+% rm tempfile.txt
+% ls
+
+To delete several files you may be able to use a wildcard. Consider the following command
+
+% rm *.txt
+This will delete all files in the current directory with names ending .txt. If you use extensions (the bit of the filename after the dot) systematically this can be useful.
+
+=== rmdir (remove directory) ===
+You can use the rmdir command to remove a directory. If you have an empty directory that you no long require for example, you can type
+
+%rmdir someoldolddirectory
+(Of course, your directory probably isn't called someoldolddirectory but I think you get the idea.)
+If however, you try to remove a directory that has files in it, you will not be able to since Unix will not let you remove a non-empty directory. The solution is to use the option –r on the rm command like this
+
+% rm -r directory
+and this will remove a directory and all its subdirectories even if they contain files. The -r stands for recursive.

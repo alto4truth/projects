@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 490
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+an instance of a preexisting generic.
+
+==== example ====
+A procedure like the following:
+
+can be rewritten as a generic unit:
+
+and then instantiated:
+
+==== rationale ====
+Context (with) clauses specify the names of other units upon which this unit depends. Such dependencies cannot and should not be entirely avoided, but it is a good idea to minimize the number of them that occur in the specification of a unit. Try to move them to the body, leaving the specification independent of other units so that it is easier to understand in isolation. Also, organize your reusable parts in such a way that the bodies of the units do not contain large numbers of dependencies on each other. Partitioning your library into independent functional areas with no dependencies spanning the boundaries of the areas is a good way to start. Finally, reduce dependencies by using generic formal parameters instead of with statements, as shown in the example above. If the units in a library are too tightly coupled, then no single part can be reused without reusing most or all of the library.
+The first (nongeneric) version of Produce_And_Store_A above is difficult to reuse because it depends on Package_A that may not be general purpose or generally available. If the operation Produce_And_Store has reuse potential that is reduced by this dependency, a generic unit and an instantiation should be produced as shown above. The with clause for Package_A has been moved from the Produce_And_Store generic procedure, which encapsulates the reusable algorithm to the Produce_And_Store_A instantiation. Instead of naming the package that provides the required operations, the generic unit simply lists the required operations themselves. This increases the independence and reusability of the generic unit.
+This use of generic formal parameters in place of with clauses also allows visibility at a finer granularity. The with clause on the nongeneric version of Produce_And_Store_A makes all of the contents of Package_A visible to Produce_And_Store_A, while the generic parameters on the generic version make only the Produce and Store operations available to the generic instantiation.
+Generic formal packages allow for "safer and simpler composition of generic abstractions" ( Rationale 1995, §12.6). The generic formal package allows you to group a set of related types and their operations into a single unit, avoiding having to list each type and operation as an individual generic formal parameter. This technique allows you to show clearly that you are extending the functionality of one generic with another generic, effectively parameterizing one abstraction with another.

@@ -1,0 +1,22 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 55
+section: svc-11
+chunk: 149
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+or in specific fields which were passed in the original call.
+In some cases, a supervisor call will never return. There are several possible reasons:
+
+The SVC number (second byte) is invalid, because neither the operating system nor a local routine processes that SVC number, and the program has not established a recovery routine, (error handler) so the program/task is terminated.
+The SVC number is not permitted to be used by this class of program, and the program has not established an error recovery routine, so the program/task is terminated.
+The SVC number may be used by this class of program, but the user operating it lacks the privileges to do so, the program has not established an error recovery routine, so the program/task is terminated.
+One of the above cases occurs and a recovery routine was established, and it is given control.
+The call is in fact the operating system call to terminate the program.
+The call is to a routine to transfer to another program.
+The call is to log off the user (although this may be considered a type of program termination).
+The call is to a routine to cause a shutdown of the machine.
+Some operating systems have privileged SVCs which are not available to user programs, and not all operating systems use all SVC values.

@@ -1,0 +1,16 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 2
+section: an-introductory-c-program
+chunk: 4
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+Here's a simple C program to calculate the volume of a sphere:
+
+The first feature that can be observed in this program is that comments are enclosed by "/*" and "*/". Comments can go almost anywhere, since the compiler ignores them. Another obvious feature is that individual statements in the program end with a ";". Either forgetting a ";" or adding one where it isn't needed is a common C programming bug. Lines of code are grouped into blocks by using curly brackets ("{ }").
+C is case-sensitive. All C keywords are in lower-case. Program variable and function names in whatever case desired, but by convention they should be in lower case. "Constants", to be discussed a bit later, are upper case by convention.
+Not all the lines in a C program are executable statements. Some of the statements shown above are "preprocessor directives".
+C compilation is a multi-pass process. To create a program, a C compiler system performs the following steps:

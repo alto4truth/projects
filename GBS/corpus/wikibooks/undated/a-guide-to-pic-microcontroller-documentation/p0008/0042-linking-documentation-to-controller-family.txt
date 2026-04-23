@@ -1,0 +1,16 @@
+title: A Guide To PIC Microcontroller Documentation
+source: wikibooks
+year: undated
+document_id: a-guide-to-pic-microcontroller-documentation
+authors: 
+page: 8
+section: linking-documentation-to-controller-family
+chunk: 42
+source_ref: https://en.wikibooks.org/wiki/A_Guide_To_PIC_Microcontroller_Documentation
+
+== Linking documentation to controller family ==
+Since the inception of Microchip Technology in 1989 and the first PIC® microcontrollers, the PIC16C5X family, a fairly consistent pattern of documentation has emerged which has been retained as the 8-bit families grew and newer 16-bit and 32-bit families have been added.
+The first step to getting the information you are seeking is to understand which family of product you intend to use. The 8-bit product family is especially confusing in this area since products with the same prefix, i.e. PIC12 or PIC16, are not necessarily all based upon the same underlying processor architecture.
+
+=== 8-bit families ===
+The 8-bit family of RISC Havard-architecture microcontrollers are based upon four different processor architectures with a common core set of assembler instructions which are upwards compatible across the sub-families. In addition many devices share common peripherals, even across sub-families, providing an easy migration path for developers. The four sub-families are officially named:

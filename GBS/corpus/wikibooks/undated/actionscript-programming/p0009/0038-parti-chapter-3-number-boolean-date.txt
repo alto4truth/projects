@@ -1,0 +1,20 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 9
+section: parti-chapter-3-number-boolean-date
+chunk: 38
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+type is a masked number data type. The values “true” and “false” are numbers. “true” is 1 and “false” is 0. To test this, we can write a simple code:
+
+If you run the program, you will see “0” in “output window”. Lets understand what we have done. First we declared a Number variable “i”, then assigned “false” to it. If you omit the third line, the output will be “false”. But what have we done? In line three we added 0 to variable “i”. Why have we done this? Because we wanted Flash to think that we added some number to variable “i” which would change the value of it. So it converted the stored “false” value to number and then added 0 to it. Briefly we made Flash convert the value “false” to number. If we write “true” instead of “false” in line 2, then you will see that the traced value is 1. This means that actually “true” and “false” values are numbers and correspondingly equal to 1 and 0.
+
+===== valueOf =====
+String.valueOf( );
+This method returns true if the primitive value type of the specified Boolean object is true, false if it is false.
+
+=== Date ===
+This is a very complicated data type, it has 37 methods. Now we will learn some of them.

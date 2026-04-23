@@ -1,0 +1,14 @@
+title: A Neutral Look at Operating Systems
+source: wikibooks
+year: undated
+document_id: a-neutral-look-at-operating-systems
+authors: 
+page: 10
+section: microsoft-windows
+chunk: 52
+source_ref: https://en.wikibooks.org/wiki/A_Neutral_Look_at_Operating_Systems
+
+dard, TCP/IP. This critical error allowed Microsoft to regain control, albeit with little concern at the time for complete and secure implementations.
+
+=== Windows 95, Windows 98, Windows 98 SE, Windows Me ===
+Windows 95 introduced pre-emptive multitasking to the consumer Windows family. This was very important at the time, as Windows had gained (with hindsight, unfairly) a reputation for being unstable; in reality, however, the large majority of the errors were in the applications and third-party drivers that Windows ran. Pre-emptive multitasking allowed for an application to fail without bringing down the whole machine. Nevertheless, these versions of Windows still lacked adequate housekeeping, such that a failing application could leave the memory in such a mess that a reboot was needed. In practice, however, most people using commercial applications saw relatively few crashes. Three fundamental problems remained:

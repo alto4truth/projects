@@ -1,0 +1,56 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 12
+section: c-operators
+chunk: 56
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+ND c
+a = b ^ c b XOR c
+a = b | c b OR c
+
+C allows math operations to be performed in a shortcut fashion:
+
+operation shortcut
+_________________________
+
+a = a * b a *= b
+a = a / b a /= b
+a = a % b a %= b
+a = a + b a += b
+a = a - b a -= b
+a = a << b a <<= b
+a = a >> b a >>= b
+a = a & b a &= b
+a = a ^ b a ^= b
+a = a | b a |= b
+_________________________
+
+The C relational operations were discussed in the previous chapter and are
+repeated here for completeness:
+
+a == b equals
+a != b not equals
+a < b less than
+a > b greater than
+a <= b less than or equals
+a >= b greater than or equals
+
+These are actually math operations that yield 1 if true and 0 if false. The
+following operation actually makes syntactic sense:
+
+a = b * ( b < 2 ) + 10 * ( b >= 2 );
+
+This would give "a" the value "b" if "b" is less than 2, and the value "10"
+otherwise. This is cute, but not recommended. It's cryptic; may make
+porting to other languages more difficult; and in this case, it can be done
+much more effectively with the conditional operator discussed in the previous
+chapter:
+
+a = ( b < 2 ) ? b : 10;
+
+This conditional operator is also known as the "triadic" operator.
+There are similar logical operators:

@@ -1,0 +1,27 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 6
+section: c-control-constructs
+chunk: 28
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+s the same code.
+There is no "elseif" keyword, but "if" statements can be nested:
+
+This is somewhat clumsy. The "switch" statement does a cleaner job:
+
+The "switch" statement tests the value of a single variable; unlike the "if"
+statement, it can't test multiple variables. The optional "default" clause
+is used to handle conditions not covered by the other cases.
+Each clause ends in a "break", which causes execution to break out of the
+"switch". Leaving out a "break" can be another subtle error in a C program,
+since if it isn't there, execution flows right through to the next clause.
+However, this can be used to advantage. Suppose in our example the routine
+can also be asked to fire a ROCKET, which is the same as a MISSILE:
+
+The "break" statement is not specific to "switch" statements. It can be used
+to break out of other control structures, though good program design tends to
+avoid such improvisations:

@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 190
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+e confusion. This guideline explains how Ada deals with the problem that most languages face.
+
+=== Decimal Types and the Information Systems Annex ===
+
+==== guideline ====
+In information systems, declare different numeric decimal types to correspond to different scales (Brosgol, Eachus, and Emery 1994).
+Create objects of different decimal types to reflect different units of measure (Brosgol, Eachus, and Emery 1994).
+Declare subtypes of the appropriately scaled decimal type to provide appropriate range constraints for application-specific types.
+Encapsulate each measure category in a package (Brosgol, Eachus, and Emery 1994).
+Declare as few decimal types as possible for unitless data (Brosgol, Eachus, and Emery 1994).
+For decimal calculations, determine whether the result should be truncated toward 0 or rounded.
+Avoid decimal types and arithmetic on compilers that do not support the Information Systems Annex (Ada Reference Manual 1995, Annex F) in full.
+
+==== example ====

@@ -1,0 +1,24 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 24
+section: system-types-topics
+chunk: 264
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+emblies are compiled and then executed starting at some entry point that will be a specified method of one of the custom type.
+Those custom types use:
+
+System types to execute "pre-programmed" instruction sequences
+other custom types
+System types are also packaged in assemblies. The custom assemblies must reference the system assemblies in order to use the System types.
+There are other ways to categorize types in .NET. One of them is by the way the objects created based on those types are mapped to the computer memory. This will give us Value types and Reference types.
+Another way is by Reflection category (Class, Value types, Interfaces, Generics, etc.).
+Yet another way is to distinguish the types that are directly supported by the runtime (built-in types) from those defined either in the class libraries or custom.
+Those categories can also be intersected with one another, that will give us such things as "Built-in value types" or "System interfaces". Stay alert of the categorizations used when you encounter such combinations.
+Namespaces are a way to organize types so that they can be more easily found. See this for a discussion on namespaces.
+In the context of namespaces the System types are the types included in the System namespace or one of its sub-namespace and Custom types (non system types) should use other namespaces.
+For a peek at how Microsoft describes the .NET type system see MSDN. And then for an overview of the class libraries (System types) see MSDN.
+Most of the exam is in fact based on how to use the common parts of the type libraries (System types). This is why the list of exam objectives (and this book TOC) is so long.

@@ -1,0 +1,27 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 366
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ompiler believes is in range. Most compiler vendors allow the option of suppressing optimization, which can be helpful.
+
+=== Exception Propagation ===
+
+==== guideline ====
+Prevent exceptions from propagating outside any user-defined Finalize or Adjust procedure by providing handlers for all predefined and user-defined exceptions at the end of each procedure.
+
+==== rationale ====
+Using Finalize or Adjust to propagate an exception results in a bounded error (Ada Reference Manual 1995, §7.6.1 [Annotated]). Either the exception will be ignored or a Program_Error exception will be raised.
+
+=== Protected Objects ===
+
+==== guideline ====
+Do not invoke a potentially blocking operation within a protected entry, a protected procedure, or a protected function.
+
+==== rationale ====
+The Ada Reference Manual 1995, §9.5.1 [Annotated] lists the potentially blocking operations:

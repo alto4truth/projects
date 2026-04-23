@@ -1,0 +1,34 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 26
+section: using-system-types
+chunk: 284
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+"The value of var1 is {0}, the value of var2 is {1}", var1, var2);
+
+Which would result in the output:
+
+The value of var1 is 1, the value of var2 is 25
+
+Changing the value of the copy (var2 in this instance) had no effect on the value of the original (var1).
+This is different from reference types which copy a reference to the value, not the value itself.
+Value types cannot be derived from.
+Value types as method parameters are passed by value by default. A copy of the value-type is made and the copy is passed to the method as a parameter. If the parameter is changed inside the method it will not affect the value of the original value type.
+
+=== Nullable type ===
+See MSDN
+A nullable type...
+
+Is a generic type
+Is an instance of System.Nullable struct.
+Can only be declared on value types.
+Is declared with System.Nullable<type> or the shorthand type? - the two are interchangeable.
+System.Nullable<int> MyNullableInt; // the long version
+int? MyNullableInt; // the short version
+
+Accepts the normal range of values of the underlying type, as well as null.
+bool? MyBoolNullable; // valid values: true || false || null

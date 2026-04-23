@@ -1,0 +1,27 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 357
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+nguages or using a language-defined input procedure. The Ada Reference Manual 1995, §13.9.1 [Annotated] lists the full rules concerning data validity.
+
+=== Unchecked Deallocation ===
+
+==== guideline ====
+Isolate the use of Ada.Unchecked_Deallocation in package bodies.
+Ensure that no dangling reference to the local object exists after exiting the scope of the local object.
+
+==== rationale ====
+Most of the reasons for using Ada.Unchecked_Deallocation with caution have been given in Guideline 5.4.5. When this feature is used, no checking is performed to verify that there is only one access path to the storage being deallocated. Thus, any other access paths are not made null. Depending on the value of these other access paths could result in erroneous execution.
+If your Ada environment implicitly uses dynamic heap storage but does not fully and reliably reclaim and reuse heap storage, you should not use Ada.Unchecked_Deallocation.
+
+=== Unchecked Access ===
+
+==== guideline ====
+Minimize the use of the attribute Unchecked_Access, preferably isolating it to package bodies.
+Use the attribute Unchecked_Access only on data whose lifetime/scope is "library level."

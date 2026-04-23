@@ -1,0 +1,19 @@
+title: A Guide To PIC Microcontroller Documentation
+source: wikibooks
+year: undated
+document_id: a-guide-to-pic-microcontroller-documentation
+authors: 
+page: 4
+section: documentation-structure
+chunk: 13
+source_ref: https://en.wikibooks.org/wiki/A_Guide_To_PIC_Microcontroller_Documentation
+
+evelopment on the target controller.
+The tools and their documentation are family specific and are discussed in the relevant family specific chapters.
+
+=== Integrated Development Environment (IDE) documentation ===
+Although it is possible to develop software for applications without resorting to an IDE, medium to large size projects quickly benefit from the structure and features an IDE provides, allowing project based settings to be set using a visual environment and binary code to be generated without resorting to command-line calls or writing batch or make files. On the downside, obviously there are a lot of settings to be tackled to create the first project and, as with any new software, it is difficult to know in the first instance where to "click", what to select, and what to enter in all the boxes.
+Microchip offers their own IDE, called MPLAB®, which can be used for code development on all of their controller products and be used with all of their current development tools. In order to get over the initial hurdle, the first documentation point is the "MPLAB® IDE Quick Start Guide", document DS51281.
+Once the first few test projects have been tackled, the "MPLAB® IDE User's Guide" should be referred to for further in depth information on features and functions in the IDE (document DS51519).
+With MPLAB® itself there are also numerous compiler HTML help files containing, amongst other things, tutorials. Like all help files the key is to knowing which terms to search for, which itself is sometimes an art in its own right.
+Since MPLAB® is controller product independent the documentation of this software is not be discussed in the device family specific chapters.

@@ -1,0 +1,32 @@
+title: A Beginner's Guide to MS Windows Optimization
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-ms-windows-optimization
+authors: 
+page: 1
+section: a-beginner-s-guide-to-ms-windows-optimization
+chunk: 25
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_MS_Windows_Optimization
+
+Update your Windows regularly
+Update your programs regularly
+Use only new drivers
+Save before printing
+The most important drivers install/update are:
+
+Motherboard: Check the manufacturer's web page and download the newest ones. Its important. I have seen computers crashing in very odd ways with bad motherboard drivers. Of what I know W7 installs most motherboard drivers through MS Update.
+Network card: Important too, if the internet is working try MS Update, if it fails check the PC/motherboards manufacturers web page.
+Sound: the same as Network card.
+Bluetooth: the same as Network card
+Webcam: the same as Network card
+Graphic card: this one is special. If Windows do find your GFX, its still recommended to update the drivers. Mainly because you can gain more performance. It's a little bit trickier to update the GFX. Remember, I wrote that there are 3 player on GFX market, nVidia, ATI/AMD and Intel. If you have an Intel card, don't update, its enough with the Windows Update.
+Nvidia: If you have a nVidia GeForce GFX, go to http://www.nvidia.com and download and update your graphics card.
+ATI/AMD: If you have an ATI Radeon, go to http://www.ati.com and download and update your graphics card.
+Remember: if you are a gamer, and play new games, keep an eye out for new drivers. Often updating GFX drivers will increase the performance in the games. Sometime even dramatically. Don't be lazy, update GFX drivers often. They are released once every 1–2 months.
+If you have a laptop, it may be impossible to install the official drivers. What you can do is to modify them with a program, that will enable you to update the drivers.
+For laptop users with a nVidia card: http://www.driverheaven.net/nvmodtool.php
+For laptop users with an ATI card: http://www.driverheaven.net/modtool.php
+Just read the instructions, its not too hard.
+One more thing here, if you divide your hard drive into 2 or more partitions, you have to format the other ones to be able to see them. Go to: (start->Control Panel->System and Maintenance->Administrative Tools->PC Management->Disk Management).
+Here right click on the unallocated partition of the disk, and select new simple volume. Follow the instructions.
+Summary: After the install, update Windows with MS Update, install all the missing drivers. And don't forget about GFX drivers.

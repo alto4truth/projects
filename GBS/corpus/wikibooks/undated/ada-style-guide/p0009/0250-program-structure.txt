@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 250
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ecific format, and Cartridge_Tape_Handler, containing all the types, constants, and subprograms that provide an interface to a special-purpose device.
+
+==== rationale ====
+The degree to which the entities in a package are related has a direct impact on the ease of understanding packages and programs made up of packages. There are different criteria for grouping, and some criteria are less effective than others. Grouping the class of data or activity (e.g., initialization modules) or grouping data or activities based on their timing characteristics is less effective than grouping based on function or need to communicate through data (Charette 1986).
+The "correct" structuring of a system can make a tremendous difference in the maintainability of a system. Although it may seem painful at the time, it is important to restructure if the initial structuring is not quite right.
+See also Guideline 5.4.2 on heterogeneous data.
+
+==== notes ====
+Traditional subroutine libraries often group functionally unrelated subroutines. Even such libraries should be broken into a collection of packages, each containing a logically cohesive set of subprograms.
+
+=== Data Coupling ===

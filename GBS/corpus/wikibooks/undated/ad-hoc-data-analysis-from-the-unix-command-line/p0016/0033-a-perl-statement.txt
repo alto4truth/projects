@@ -1,0 +1,15 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 16
+section: a-perl-statement
+chunk: 33
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+}
+
+This loop reads standard input a line at a time into the variable $_, and then executes the statement(s) give by the -e argument. Given -p instead of -n, perl to adds a print statement to the loop as well:
+
+while (<>) {

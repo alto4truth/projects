@@ -1,0 +1,38 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 309
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+literals to represent the first or last values of a range.
+Use 'Range or the subtype name of the range instead of 'First .. 'Last.
+
+==== example ====
+
+==== rationale ====
+In the example above, it is better to use Weather_Stations
+in the for loop than to use Weather_Stations'First
+.. Weather_Stations'Last or 1 .. Max_Stations because
+it is clearer, less error-prone, and less dependent on the definition
+of the type Weather_Stations. Similarly, it is better
+to use Temperature'First in the offset calculation than
+to use All_Time_Low because the code will still be correct
+if the definition of the subtype Temperature is changed.
+This enhances program reliability.
+
+==== caution ====
+When you implicitly specify ranges and attributes like this, be
+careful that you use the correct subtype name. It is easy to refer
+to a very large range without realizing it. For example, given
+the declarations:
+
+then the first declaration below works fine, but the second one
+is probably an accident and raises an exception on most machines
+because it is requesting a huge array (indexed
+from the smallest integer to the largest one):
+
+=== Array Attributes ===

@@ -1,0 +1,21 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 11
+section: loops-conditionals
+chunk: 61
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+s false, don't loop. With this in mind, lets have a look at the operators (symbols that represent an action) that are involved in boolean expressions:
+
+Don't get '=' and '==' mixed up - the '=' operator makes what is on the left equal to what is on the right. the '==' operator says whether the thing on the left is the same as what is on the right, and returns true or false.
+
+== Conditional Statements ==
+OK! We've (hopefully) covered 'while' loops. Now let's look at something a little different - conditionals.
+Conditionals are where a section of code is only run if certain conditions are met. This is similar to the 'while' loop you just wrote, which only runs when x doesn't equal 0. However, Conditionals are only run once. The most common conditional in any program language, is the 'if' statement. Here is how it works:
+
+Code Example 6 - if statement and example
+
+Example 2 there looks tricky. But all we have done is run an 'if' statement every time the 'while' loop runs. Remember that the % just means the remainder from a division - just checking that there is nothing left over if the number is divided by two - showing it is even. If it is even, it prints what 'n' is.

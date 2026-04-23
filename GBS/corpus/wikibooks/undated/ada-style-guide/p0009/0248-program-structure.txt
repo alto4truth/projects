@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 248
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ndividual child packages provide specific parts of the windowing abstraction, such as atoms, fonts, graphic output, cursors, and keyboard information:
+
+==== rationale ====
+The user can create more precise packages with less cluttered interfaces, using child library packages to extend the interfaces as needed. The parent contains only the relevant functionality. The parent provides a general-purpose interface, while the child units provide more complete programming interfaces, tailored to that aspect of an abstraction that they are extending or defining.
+Child packages build on the modular strength of Ada where "the distinct specification and body decouple the user interface to a package (the specification) from its implementation (the body)" (Rationale 1995, §II.7). Child packages provide the added capability of being able to extend a parent package without recompiling the parent or the parent's clients.
+Child packages allow you to write logically distinct packages that share a private type. The visibility rules give the private part of the child specification and the body of the child visibility into the private part of the parent. Thus, you can avoid creating a monolithic package for the sake of developing abstractions that share a private type and need to know its representation. The private representation is not available to clients of the package, so the abstraction in the package and its children is maintained.
+Using private child packages for local declarations enables you to have available the support declarations you need when implementing both the parent package and extensions to the parent package. You enhance the maintainability of your program by using a common set of support declarations (data representations, data manipulation subprograms). You can modify the internal representation and the implementation of the support subprograms without modifying or recompiling the rest of your subsystem because these support subprograms are implemented in the body of the private child package. See also Guidelines 4.1.1, 4.2.1, 8.4.1, and 8.4.8.
+See also Guideline 9.4.1 for a discussion of the use of child library units in creating a tagged type hierarchy.

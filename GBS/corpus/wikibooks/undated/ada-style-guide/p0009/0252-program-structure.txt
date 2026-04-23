@@ -1,0 +1,33 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 252
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+shared data with access functions, the coupling is lessened. This prevents dependence on the data structure, and access to the data can be controlled.
+
+==== notes ====
+The most prevalent objection to this guideline usually involves performance penalties. When a variable is moved to the package body, subprograms to access the variable must be provided and the overhead involved during each call to those subprograms is introduced. See Guideline 10.7.1 for a discussion about subprogram overhead.
+
+=== Tasks ===
+
+==== guideline ====
+Use tasks to model abstract, asynchronous entities within the problem domain.
+Use tasks to define concurrent algorithms for multiprocessor architectures.
+Use tasks to perform concurrent, cyclic, or prioritized activities (NASA 1987).
+
+==== rationale ====
+The rationale for this guideline is given under Guideline 6.1.2. Chapter 6 discusses tasking in more detail.
+
+=== Protected Types ===
+
+==== guideline ====
+Use protected types to control or synchronize access to data or devices.
+Use protected types to implement synchronization tasks, such as a passive resource monitor.
+
+==== example ====
+See example in Guideline 6.1.1.

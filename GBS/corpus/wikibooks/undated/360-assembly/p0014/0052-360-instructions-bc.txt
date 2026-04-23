@@ -1,0 +1,20 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 14
+section: 360-instructions-bc
+chunk: 52
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ress is constructed by adding the contents of the base and index registers to the offset address. If the index register is zero its value is not used.
+
+== Purpose of Instruction ==
+The 'Branch on Condition instruction is the general purpose branch within a program. It has three variations: no branch or No Operation, conditional branch depending upon a test, or unconditional branch.
+
+=== No Operation ===
+The 'no branch' - BC 0 - or 'NOP' is typically used to create a label which is not tied to an existing instruction. It may be used by a macro for alignment to force an instruction or data onto a specific boundary but without causing a program exception if the instruction is branched to. It can also be used to provide 'slack' space to allow later patching of the binary without having to reassemble the program. A NOP will also occur, regardless of the mask value, if the base register of the branch is also zero.
+
+=== Conditional Branch ===
+The bits in the mask are compared to the bits in the condition code. If the bits in the mask match the bits in the condition code, (and the base register of the target address is not zero) the branch is taken.

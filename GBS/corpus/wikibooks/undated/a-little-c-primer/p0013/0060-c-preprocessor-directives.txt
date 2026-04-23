@@ -1,0 +1,36 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 13
+section: c-preprocessor-directives
+chunk: 60
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+what PI is, it never even sees it.
+The "#define" directive can be used to create function-like macros that allow
+parameter substitution. For example:
+
+This macro could then be used in an expression as follows:
+
+Beware that such function-like macros don't behave exactly like true
+functions. For example, suppose "x++" is as an argument for the macro above:
+
+This would result in "x" being incremented twice because "x++" is
+substituted in the expression twice:
+
+Along with the "#define" directive, there is also an "#undef" directive that
+undefines a constant that has been previously defined:
+
+Another feature supported by the C preprocessor is conditional compilation,
+using the following directives:
+
+These directives can test the values of defined constants to define which
+blocks of code are passed on to the C compiler proper:
+
+These directives can be nested if needed. The "#if" and "#elif" can also
+test to see if a constant has been defined at all, using the "defined"
+operator:
+
+—or test to see if a constant has not been defined:

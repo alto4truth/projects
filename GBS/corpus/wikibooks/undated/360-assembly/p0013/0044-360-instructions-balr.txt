@@ -1,0 +1,19 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 13
+section: 360-instructions-balr
+chunk: 44
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+V constant containing an external symbol if the external routine is in a different module, or
+in 64-bit mode with an LG instruction of an AD constant.
+
+== Conventional usage ==
+While the BALR instruction can be used for any type of subroutine call, either internal or external, when used with a non-zero source_register it primarily is used to call an external routine. The standard convention on IBM, Unisys and Fujitsu Operating Systems has been to use Register 14 as the target register, with Register 15 pre-loasded with the address of the external routine to call. Also, (in 24- and 32-bit applications) Register 13 is used to contain a 72-word storage area provided by the calling routine to allow the called routine to save Registers 14 and 0 through 12.
+Typically for internal subroutines (within the same module), the BAL instruction is preferred.
+
+== Exceptions and Faults ==
+The BALR instruction has no faults, however

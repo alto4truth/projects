@@ -1,0 +1,16 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 4
+section: parti-chapter-1-page2
+chunk: 14
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+he left side of the button, the x coordinate will be less than 0 and if you click right side of the object, then the x coordinate will be more than 0.
+
+=== CurrentFrame ===
+This property tells you which frame of current Movie Clip is being played now. I wrote Movie Clip instead of object, because this property is available only for Movie Clip. This time we will create more complicated example.
+Step 1
+Select the Rectangle Tool in the Toolbox, draw a rectangle, double click it and press F8 to convert it to symbol. When the "Convert to Symbol" dialog appears, set its’ name "g_box" and behavior "Graphic".

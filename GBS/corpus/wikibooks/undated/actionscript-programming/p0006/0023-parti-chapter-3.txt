@@ -1,0 +1,17 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 6
+section: parti-chapter-3
+chunk: 23
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+and in line 5 we set the "txt" value to "hi". And finally when we trace these two variables in lines 7 and 8 we saw the output:
+
+Now lets make a test.
+
+In first 4 lines we declare 2 number and 2 string variables and set their values. In lines 6 and 7 we calculate two same data type variables with each other and keep the result in the first variable. For example in line 6 "num1" variable is 20, by using "+=" operator we add "num1" "num2". We can replace the line with "num1 = num1 + num2". This is the same. If we add 5 to 20 the result will be 25. In line 7 we combine two strings with each other. The result is kept in "txt1" as in "Hello…". Now test the movie by pressing Ctrl + Enter and you will see the results 25 and "Hello…". Now lets test the same example but only change lines 6 and 7:
+
+What do you think will happen? Test the movie and see. The variable "num1" will become a string, because the result will be:

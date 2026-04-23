@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 50
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+cy cannot be obtained unless Period is within + or - 0.005 seconds. This period cannot be guaranteed because of the inaccuracy of the delay statement:
+
+==== rationale ====
+Use of these constructs always poses a risk of race conditions. Using them in loops, particularly with poorly chosen task priorities , can have the effect of busy waiting.
+These constructs are very much implementation dependent. For conditional entry calls and selective accepts with else parts, the Ada Reference Manual 1995, §9.7 [Annotated] does not define "immediately." For timed entry calls and selective accepts with delay alternatives, implementors might have ideas of time that differ from each other and from your own. Like the delay statement, the delay alternative on the select construct might wait longer than the time required (see Guideline 6.1.7).
+Protected objects offer an efficient means for providing data-oriented synchronization. Operations on protected objects incur less execution overhead than tasks and are more efficient for data synchronization and communication than the rendezvous. See Guideline 6.1.1 for an example of this use of protected objects.
+
+=== Communication Complexity ===

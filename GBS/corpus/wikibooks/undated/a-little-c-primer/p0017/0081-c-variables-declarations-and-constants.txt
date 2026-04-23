@@ -1,0 +1,27 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 17
+section: c-variables-declarations-and-constants
+chunk: 81
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+e". Actually,
+it's used to describe a hardware register that can change independently of
+program operation, such as the register for a realtime clock.
+
+C is fairly flexible in conversions between data types. In many cases, the
+type conversion will happen transparently. If a "char" is converted to a
+"short" data type, or an "int" is converted to a "long" data type, for
+example, the converted data type can easily accommodate any value in the
+original data type.
+Converting from a bigger to a smaller data type can lead to odd errors. The
+same is true for conversions between signed and unsigned data types. For
+this reason, type conversions should be handled carefully, and it is usually
+preferable to do them explicitly, using a "cast" operation. For example, a
+cast conversion can be performed from an "int" value to a "float" value as
+follows:
+
+It is possible to define custom "enumerated" types in C. For example:

@@ -1,0 +1,31 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 14
+section: source-code-presentation
+chunk: 521
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ank lines:
+
+==== rationale ====
+When blank lines are used in a thoughtful and consistent manner, sections of related code are more visible to readers.
+
+==== automation notes ====
+Automatic formatters do not enforce this guideline well because the decision on where to insert blank lines is a semantic one. However, many formatters have the ability to leave existing blank lines intact. Thus, you can manually insert the lines and not lose the effect when you run such a formatter.
+
+=== Pagination ===
+
+==== guideline ====
+Highlight the top of each package or task specification, the top of each program unit body, and the end statement of each program unit.
+
+==== instantiation ====
+Specifically, it is recommended that you:
+
+Use file prologues, specification headers, and body headers to highlight those structures as recommended in Guideline 3.3.
+Use a line of dashes, beginning at the same column as the current indentation to highlight the definition of nested units embedded in a declarative part. Insert the line of dashes immediately before and immediately after the definition.
+If two dashed lines are adjacent, omit the longer of the two.
+
+==== example ====

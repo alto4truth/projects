@@ -1,0 +1,26 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 10
+section: 360-instructions-al
+chunk: 33
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ter values are 0 to 15. The offset value is 0 to 4095.
+
+== Availability ==
+The AL instruction is available on all models of the 360, 370 and z/System.
+
+== Operation ==
+The AL instruction reads 32-bit integer value from the memory address specified by the argument and adds it to the value of register specified by the first argument. The least significant 32 bits of the 33-bit result sum is placed to the target register. The Condition Code field in the Program Status Word is changed according to the resulting value (sum), treated as unsigned integer (see below).
+The source argument address shall be aligned to word boundary (i.e. 4 bytes).
+
+== Condition Codes ==
+The least significant bit of CC field of the PSW is set if sum is not zero and cleared otherwise.
+The most significant bit of CC field of the PSW keeps carry bit (i.e. the most significant bit of the 33-bit sum).
+
+== Exceptions and Faults ==
+The source address must be within the range of valid memory or an operation exception occurs.
+The storage key for the source address must be the same as the current process or a memory protect violate exception occurs.

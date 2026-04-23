@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 476
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+pes) in preference to abstract data objects.
+Consider using generic units to implement abstract data types independently of their component data type.
+
+==== example ====
+This example presents a series of different techniques that can be used to generate abstract data types and objects. A discussion of the merits of each follows in the rationale section below. The first is an abstract data object (ADO), which can be used to encapsulate an abstract state machine. It encapsulates one stack of integers:
+
+The second example is an abstract data type (ADT). It differs from the ADO by exporting the Stack type, which allows the user to declare any number of stacks of integers. Because multiple stacks may now exist, it is necessary to specify a Stack argument on calls to Push and Pop:
+
+The third example is a parameterless generic abstract data object (GADO). It differs from the ADO (the first example) simply by being generic, so that the user can instantiate it multiple times to obtain multiple stacks of integers:

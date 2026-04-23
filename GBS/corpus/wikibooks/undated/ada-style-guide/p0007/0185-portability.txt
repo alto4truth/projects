@@ -1,0 +1,32 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 185
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+you probably can use the same type declaration.
+
+=== Accuracy Constraints ===
+
+==== guideline ====
+Do not press the accuracy limits of the machine(s).
+
+==== rationale ====
+Just because two different machines use the same number of digits in the mantissa of a floating-point number does not imply they will have the same arithmetic properties. Some Ada implementations may give slightly better accuracy than required by Ada because they make efficient use of the machine. Do not write programs that depend on this.
+
+=== Comments ===
+
+==== guideline ====
+Comment the analysis and derivation of the numerical aspects of a program.
+
+==== rationale ====
+Decisions and background about why certain precisions are required in a program are important to program revision or porting. The underlying numerical analysis leading to the program should be commented.
+
+=== Subexpression Evaluation ===
+
+==== guideline ====
+Anticipate the range of values of subexpressions to avoid exceeding the underlying range of their base type. Use derived types, subtypes, factoring, and range constraints on numeric types (see Guidelines 3.4.1, 5.3.1, and 5.5.3).

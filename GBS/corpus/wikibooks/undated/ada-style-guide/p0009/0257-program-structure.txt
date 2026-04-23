@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 257
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ounded_Length is nested inside the specification of package Ada.Strings.Bounded. The nested package is a generic, grouping closely related operations.
+
+==== rationale ====
+Grouping package specifications into an encompassing package emphasizes a relationship of commonality among those packages. It also allows them to share common implementation details resulting from the relationship. Nesting packages allows you to organize the name space of the package in contrast to the semantic effect of nesting inside of subprograms or task bodies.
+An abstraction occasionally needs to present different views to different classes of users. Building one view upon another as an additional abstraction does not always suffice because the functionality of the operations presented by the views may be only partially disjointed. Nesting specifications groups the facilities of the various views, yet associates them with the abstraction they present. Abusive mixing of the views by another unit would be easy to detect due to the multiple use clauses or an incongruous mix of qualified names.
+See the rationale discussed in Guideline 4.2.1.
+
+=== Restricting Visibility ===

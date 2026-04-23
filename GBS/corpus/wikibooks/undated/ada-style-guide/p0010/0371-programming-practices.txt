@@ -1,0 +1,28 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 371
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ode indication of all procedure and entry parameters (Nissen and Wallis 1984).
+Use the most restrictive parameter mode applicable to your application.
+
+==== types ====
+Use existing types as building blocks by deriving new types from them.
+Use range constraints on subtypes.
+Define new types, especially derived types, to include the largest set of possible values, including boundary values.
+Constrain the ranges of derived types with subtypes, excluding boundary values.
+Use type derivation rather than type extension when there are no meaningful components to add to the type.
+Avoid anonymous array types.
+Use anonymous array types for array variables only when no suitable type exists or can be created and the array will not be referenced as a whole (e.g., used as a subprogram parameter).
+Use access parameters and access discriminants to guarantee that the parameter or discriminant is treated as a constant.
+Derive from controlled types in preference to using limited private types.
+Use limited private types in preference to private types.
+Use private types in preference to nonprivate types.
+Explicitly export needed operations rather than easing restrictions.
+Use access-to-subprogram types for indirect access to subprograms.
+Wherever possible, use abstract tagged types and dispatching rather than access-to-subprogram types to implement dynamic selection and invocation of subprograms.

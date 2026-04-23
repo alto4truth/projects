@@ -1,0 +1,29 @@
+title: 65c02 Assembly
+source: wikibooks
+year: undated
+document_id: 65c02-assembly
+authors: 
+page: 1
+section: 65c02-assembly
+chunk: 6
+source_ref: https://en.wikibooks.org/wiki/65c02_Assembly
+
+JMP instruction.
+Example
+The addresses $A001 and $A002 are read, returning $FF and $00 respectively. The address $00FF is then jumped to.
+
+JMP ($A001)
+
+=== Absolute Indirect Indexed with X: (a,x) ===
+The value in X is added to the specified address for a sum address. The little-endian address stored at the two-byte pair of sum address (LSB) and sum address plus one (MSB) is loaded and the value at that address is used to perform the computation. Only used by the JMP instruction.
+Example
+The value $06 in X is added to $EO15 for a sum of $EO1B. The address $D010 at addresses $E01B and $E01C are read. The address $D010 is then jumped to.
+
+JMP ($E015,X)
+
+=== Absolute Indexed with X: a,x ===
+The value in X is added to the specified address for a sum address. The value at the sum address is used to perform the computation.
+Example
+The value $02 in X is added to $C001 for a sum of $C003. The value $5A at address $C003 is used to perform the add with carry (ADC) operation.
+
+ADC $C001,X

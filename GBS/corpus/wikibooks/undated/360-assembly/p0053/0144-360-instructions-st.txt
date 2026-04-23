@@ -1,0 +1,20 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 53
+section: 360-instructions-st
+chunk: 144
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+e been used.
+The target address must be aligned to a word boundary (i.e. 4 bytes). The Condition Code field in the Program Status Word is not changed.
+
+== Exceptions and Faults ==
+The target address must be within the range of valid memory or an operation exception occurs.
+The target address must be aligned to a word boundary or an address exception occurs.
+The storage key for the target address must be the same as the current process (or the process must be privileged with a key of zero) or a memory protect violate exception occurs.
+
+== Most Closely-related Instruction ==
+The most closely-related instruction is Add Logical Register (ALR) and not Load Address (LA), as is sometimes assumed. Whereas L loads a value from memory, LA does not access memory; it only calculates a number, which can but does not have to be an address.

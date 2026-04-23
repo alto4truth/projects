@@ -1,0 +1,48 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 16
+section: c-string-function-library
+chunk: 68
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+he result would be:
+Tweedledee Tweedle
+
+Again, the length parameter is of type "size_t".
+
+== strcmp() ==
+The "strcmp()" function compares two strings:
+
+The "strcmp()" function returns a 0 for a successful comparison, and nonzero
+otherwise. The comparison is case-sensitive, so answering "BLUE" or "Blue"
+won't work.
+There are three alternate forms for "strcmp()":
+
+=== strncmp() ===
+A "strncmp()" function which, as might be guessed, compares "n" characters in the source string with the destination string:
+"strncmp( s1, s2, 6 )".
+
+=== stricmp() ===
+A "stricmp()" function that ignores case in comparisons.
+
+=== strnicmp() ===
+A case-insensitive version of "strncmp" called "strnicmp".
+
+== strchr() ==
+The "strchr" function finds the first occurrence of a character in a
+string. It returns a pointer to the character if it finds it, and null if
+not. For example:
+
+This prints:
+
+MEAS:VOLT:DC?
+VOLT:DC?
+DC?
+
+The character is defined as a character constant, which C regards as an
+"int". Notice how the example program increments the pointer before using it
+("++p") so that it doesn't point to the ":" but to the character following
+it.

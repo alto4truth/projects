@@ -1,0 +1,44 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 7
+section: c-dynamic-memory-allocation-deallocation
+chunk: 30
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+For simple programs, it is OK to just declare an array of a given size:
+
+char buffer[1024]
+
+In more sophisticated programs, this leads to trouble. There may be no way
+of knowing how big an array needs to be for the specific task the program is
+performing, and so allocating an array in a fixed size will either result in
+wasted memory or in not having enough to do the job.
+The answer to this problem is to have the program allocate the memory at
+runtime, and that's what the "malloc()" library function does. For example,
+let's use "malloc()" to allocate an array of "char":
+
+/*malloc.c */
+
+#include <stdio.h>
+#include <stdlib.h> /*For "malloc", "exit" functions. */
+
+int main()
+{
+char *p; /*Pointer to array. */
+unsigned count; /*Size of array. */
+
+puts( "Size of array?" );
+scanf( "%d", &count ); /*Get size in bytes. */
+p = malloc( (size_t)count ); /*Allocate array. */
+if( p == NULL ) /*Check for failure. */
+{
+puts( "Can't allocate memory!" );
+exit( 0 );
+}
+puts( "Allocated array!" );
+free( p ); /*Release memory. */
+return 0;
+}

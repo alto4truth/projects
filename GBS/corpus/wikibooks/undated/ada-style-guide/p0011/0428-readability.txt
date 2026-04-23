@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 428
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+sary, use representation clauses to match requirements of external devices.
+
+==== example ====
+Use:
+
+rather than:
+
+and add the following if necessary:
+
+==== rationale ====
+Enumerations are more robust than numeric codes; they leave less potential for errors resulting from incorrect interpretation and from additions to and deletions from the set of values during maintenance. Numeric codes are holdovers from languages that have no user-defined types.
+In addition, Ada provides a number of attributes ('Pos, 'Val, 'Succ, 'Pred, 'Image, and 'Value) for enumeration types that, when used, are more reliable than user-written operations on encodings.
+A numeric code may at first seem appropriate to match external values. Instead, these situations call for a representation clause on the enumeration type. The representation clause documents the "encoding." If the program is properly structured to isolate and encapsulate hardware dependencies (see Guideline 7.1.5), the numeric code ends up in an interface package where it can be easily found and replaced if the requirements change.
+In general, avoid using representation clauses for enumeration types. When there is no obvious ordering of the enumeration literals, an enumeration representation can create portability problems if the enumeration type must be reordered to accommodate a change in representation order on the new platform.

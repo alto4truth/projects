@@ -1,0 +1,15 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 2
+section: 360-architecture
+chunk: 10
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ly. When a program runs on OS/VS1 or z/OS, Supervisor Calls are passed values in register 0, 1, or if more than 2, in a list pointed to by register 1.
+
+== Program Status Word ==
+The Program Status Word (PSW) is a 64-bit (on the IBM 360, 370, ESA/390, Univac and Fujitsu) or 128 bit (on the IBM z/System) privileged register which contains information about the current state of the machine (bit 12 determines if it is a 64-bit or 128 bit register). Unlike the general registers, the PSW is not directly accessible either to read or write. Privileged programs can change the contents of the entire PSW through the privileged LPSW (on 360/370/390 series) or LPSWE (on z/System) instructions. Non-privileged programs may change some bits in the PSW through execution of comparison instructions, test instructions and the SVC instruction, or through certain arithmetic and comparison instructions, as well as via branch instructions. Sections of the PSW which have fixed values are shown in the table below in green.
+Note that the IBM mainframe convention for bit numbering is the opposite to the commonly used convention. Bit 0 is the most significant bit; bit 64 (or 128 on 64-bit systems) is the least significant bit.

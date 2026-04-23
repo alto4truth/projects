@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 203
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ion. Do not allow yourself to be forced to find and change the name of every handler you have written for these exceptions when the program is ported.
+
+== Representation Clauses And Implementation-Dependent Features ==
+Ada provides many implementation-dependent features that permit greater control over and interaction with the underlying hardware architecture than is normally provided by a high-order language. These mechanisms are intended to assist in systems programming and real-time programming to obtain greater efficiency (e.g., specific size and layout of variables through representation clauses) and direct hardware interaction (e.g., interrupt entries) without having to resort to assembly level programming.
+Given the objectives for these features, it is not surprising that you must usually pay a significant price in portability to use them. In general, where portability is the main objective, do not use these features. When you must use these features, encapsulate them in packages that are well-commented as interfacing to the particular target environment. This section identifies the various features and their recommended use with respect to portability.

@@ -1,0 +1,23 @@
+title: 65c02 Assembly
+source: wikibooks
+year: undated
+document_id: 65c02-assembly
+authors: 
+page: 1
+section: 65c02-assembly
+chunk: 2
+source_ref: https://en.wikibooks.org/wiki/65c02_Assembly
+
+on of the new instructions/modes on the 65c02.
+
+== Syntax ==
+Syntax will vary between assemblers - this book will use the following syntax throughout:
+
+== Introduction ==
+The 65C02 CPU has an 8-bit data bus, and a 16-bit address bus. All registers are 8-bit except for the 16-bit Program Counter (PC) register. Therefore the CPU is considered to be 8-bit.
+That the address bus is 16-bit means that the CPU can access 2^16 individual bytes of memory, from address $0000 to address $FFFF, which is 65536 bytes (64KB).
+Communication with peripheral units (e.g. video, audio, disk and controllers for a game system) is often performed with memory-mapped I/O.
+The memory is divided into "pages", each of 256 bytes (within the range of an 8-bit offset). Page n is the n'th page in the memory, with a starting address of 256*n, and end address of (256*(n+1))-1. E.g. the "zero page" starts at address 0, and ends at address 255. See memory layout below for more details.
+Slightly less than half of the 65c02 CPUs opcodes deal with memory stored in the Zero Page. Memory stored in the zero page often takes less time to process.
+
+== Registers ==

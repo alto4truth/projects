@@ -1,0 +1,27 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 37
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+x. System.String) and have their own constructs in the .NET languages (ex. string in C#).
+The reference types are themselves split in four categories:
+
+pointers
+arrays
+classes
+interfaces
+We will not talk about pointers in this book because no exam objective references them.
+The next three sections will present arrays, classes and interfaces.
+For a comparison of value / reference types try this.
+For other notes and an example of using reference types see this.
+
+=== Arrays ===
+
+An array is essentially a group of objects, usually of the same type, than can be accessed via an index.
+For a general discussion of arrays you can see the Wikipedia article (on the right) or go to the Wikibook on data structures.
+Arrays once were one of the most used features of programming languages because you can go from one item in the array to the next in a very efficient way (you can see C pointers and arrays if you want more details on this). Today the availability of much more “computer power” has moved the focus from arrays to collections. The two main problems of arrays are:

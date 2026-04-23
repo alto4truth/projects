@@ -1,0 +1,28 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 24
+section: system-types-topics
+chunk: 265
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+act based on how to use the common parts of the type libraries (System types). This is why the list of exam objectives (and this book TOC) is so long.
+
+=== Hello world ===
+For the newcomers to .NET, you may want to take a little break from the concepts here and make sure that you see how the concepts discussed so far are used in a very simple example. The next concepts are not that trivial. We will put such an example here.
+
+=== Value types ===
+
+Value types represent one part of the Value / Reference classification of the type system.
+An instance of a value type directly contains its data (value). For example an Int32 local variable has its memory allocated directly on the stack.
+The value types are themselves split in 3 categories:
+
+The built-in value types
+User-defined value types
+Enumerations
+Remember that built-in types are the types directly supported by the runtime.
+They are the building blocks of any program because they are what the machine instructions ultimately act upon. The rest are essentially compositions of those types.
+All of the built-in types are value types except for Object and String.
+The built-in value types consist of

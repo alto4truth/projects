@@ -1,0 +1,13 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 8
+section: portable-dining-philosophers-example
+chunk: 231
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+This chapter presents an elaborate implementation of Edsger Dijkstra's famous Dining Philosophers; a classical demonstration of deadlock problems in concurrent programming. This example demonstrates the portability of Ada packages and tasking and illustrates many of the Ada 95 quality and style guidelines. Since many of the guidelines leave the program writer to decide what is best, there is no single best or correct example of how to use Ada. Instead, you will find several styles that differ from your own that may deserve consideration.
+
+This version of the Dining Philosophers example was provided by Dr. Michael B. Feldman of the George Washington University and Bjorn Kallberg of CelciusTech Systems, Sweden. This example was compiled using the GNAT Ada 95 compiler, version 2.07, on a Sun platform.

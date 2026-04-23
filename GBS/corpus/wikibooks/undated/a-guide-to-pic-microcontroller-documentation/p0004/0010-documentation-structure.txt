@@ -1,0 +1,19 @@
+title: A Guide To PIC Microcontroller Documentation
+source: wikibooks
+year: undated
+document_id: a-guide-to-pic-microcontroller-documentation
+authors: 
+page: 4
+section: documentation-structure
+chunk: 10
+source_ref: https://en.wikibooks.org/wiki/A_Guide_To_PIC_Microcontroller_Documentation
+
+.
+
+=== Microcontroller and DSC Documentation ===
+Documentation for microcontroller and DSC products can be broken down into three core document types:
+
+Datasheet - the datasheet documents how a specific controller device, or a group of devices with the same subset of features, functions. This document typically includes, as a minimum, descriptions of the processing core, memory, peripherals, electrical characteristics, timing characteristics, packaging types and general development information.
+Errata - many devices also have errata which describe situations where the chosen device, or group of devices, do not function precisely as described in the datasheet. Where possible a workaround for the issue is also offered. Often such issues are restricted to a single peripheral, often in a specific mode of operation or under certain usage conditions.
+Family Reference Manual - the Family Reference Manual, when available, can be considered the inverse of the datasheet. Where the datasheet contains device specific information, this document provides generic information at the sub-family level of the internal workings of the controllers and their peripherals. This document often contains application relevant code examples and a detailed description of the processor architecture which, if included in every related datasheet, would unnecessarily expand the size of the datasheet. Naturally, care must be taken when using this document to ensure that the same peripheral (or version of that peripheral) and the required pins are actually available on the device being used by referring back to the datasheet. Due to the volume of information contained within its pages, individual chapters of this document may be available for download as well as the entire document.
+Other documents that can be downloaded on an "as needs" basis include:

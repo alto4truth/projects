@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 163
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+that machine's native character set rather than Latin 1. As a result, some character values may or may not be supported, for example, the smiley face.
+
+==== notes ====
+Of the microcomputers currently available for incorporation within embedded systems, 16-bit and 32-bit processors are prevalent. Using current representation schemes, 6 decimal digits of floating point accuracy imply a representation mantissa at least 21 bits wide, leaving 11 bits for exponent and sign within a 32-bit representation. This correlates with the data widths of floating point hardware currently available for the embedded systems market. A 32-bit minimum on fixed-point numbers correlates with the accuracy and storage requirements of floating point numbers. The 16-bit example for Root_Integer expressions matches that for Integer storage. (The 32-bit integers can be assumed if the application will only be considered for 32-bit processors with a corresponding 32-bit operating system and supporting compiler.)
+The values for the range and accuracy of values of the predefined type Duration are the limits expressed in the Ada Reference Manual 1995, §9.6 [Annotated]. You should not expect an implementation to provide a wider range or a finer granularity.
+A standard-mode Ada character set of Latin 1 can be assumed in most cases for the contents and internal behavior of type Character and packages Character.Latin_1, Character.Handling, and Strings.Maps. However, this does not mean that the target hardware platform is capable of displaying the entire character set. You should not use a nonstandard Ada character set unless intentionally producing a nonportable user interface with a specific purpose.

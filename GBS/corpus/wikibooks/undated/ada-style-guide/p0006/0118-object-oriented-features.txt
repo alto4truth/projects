@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 118
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ut invalidating the existing transaction processing code. These are the important practical consequences of the design rule captured in the guideline:
+
+The precondition of Execute(T) for all T in Transaction.Object'Class is that Is_Valid(T) is True. The postcondition is the T.Has_Executed = True. This model is trivially satisfied by the root type Transaction.Object.
+Consider the following derived type:
+
+The precondition for the specific operation Pay_Transaction.Execute(T) is that Pay_Transaction.Is_Valid(T) is True, which is the same precondition as for the dispatching operation Execute on the class-wide type. (The actual validity check is different, but the statement of the "precondition" is the same.) The postcondition for Pay_Transaction.Execute(T) includes T.Has_Executed = True but also includes the appropriate condition on T.Data for computation of pay.
+The class-wide transaction type can then be properly used as follows:

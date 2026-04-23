@@ -1,0 +1,35 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 3
+section: c-character-class-test-library
+chunk: 12
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+These functions perform various tests on characters. They require the
+declaration:
+
+#include <ctype.h>
+
+The character is represented as an "int" and the functions return an "int".
+They return 0 if the test is false and non-0 if the test is true:
+
+isalnum( c ) Character is alpha or digit.
+isalpha( c ) Character is alpha.
+iscntrl( c ) Character is control character.
+isdigit( c ) Character is decimal digit.
+isgraph( c ) Character is printing character (except space).
+islower( c ) Character is lower-case.
+isprint( c ) Character is printing character (including space).
+ispunct( c ) Character is printing character but not space/alpha-digit.
+isspace( c ) Character is space, FF, LF, CR, HT, VT.
+isupper( c ) Character is upper-case.
+isxdigit( c ) Character is hex digit.
+
+The library also contains two conversion functions that also accept and
+return an "int":
+
+tolower( c ) Convert to lower case.
+toupper( c ) Convert to upper case.

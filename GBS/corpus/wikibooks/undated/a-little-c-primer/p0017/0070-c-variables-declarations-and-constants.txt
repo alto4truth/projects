@@ -1,0 +1,26 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 17
+section: c-variables-declarations-and-constants
+chunk: 70
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+C supports a flexible set of variable types and structures, as well as common arithmetic and math functions along with a few interesting operators that are unique to C. This chapter explains them in detail, and ends with a short discussion of preprocessor commands.
+C includes the following fundamental data types:
+
+These are representative values. The definitions tend to vary between
+implementations. For example, in some systems an "int" is 16 bits, and a
+"long double" could be 64 bits. The only thing that is guaranteed is the
+precedence:
+
+short <= int <= long
+float <= double <= long double
+
+One peculiarity of C that can lead to maddening problems is that while there
+is an "unsigned char" data type, for some reason many functions that deal
+with individual characters require variables to be declared "int" or
+"unsigned int".
+Declarations are of the form:

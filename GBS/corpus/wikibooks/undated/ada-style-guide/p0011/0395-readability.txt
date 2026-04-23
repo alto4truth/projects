@@ -1,0 +1,38 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 395
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+prohibits the use of suffixes or prefixes to characterize the declaration, you lose the opportunity to convey the intended usage of the declared item.
+
+=== Program Unit Names ===
+
+==== guideline ====
+Use action verbs for procedures and entries.
+Use predicate clauses for Boolean functions.
+Use nouns for non-Boolean functions.
+Give packages names that imply a higher level of organization than subprograms. Generally, these are noun phrases that describe the abstraction provided.
+Give tasks names that imply an active entity.
+Use nouns descriptive of the data being protected for protected units.
+Consider naming generic subprograms as if they were nongeneric subprograms.
+Consider naming generic packages as if they were nongeneric packages.
+Make the generic names more general than the instantiated names.
+
+==== example ====
+The following are sample names for elements that compose an Ada program:
+Sample procedure names:
+
+Sample function names for Boolean-valued functions:
+
+Sample function names for non-Boolean-valued functions:
+
+Sample package names:
+
+Sample protected objects:
+
+Sample task names:

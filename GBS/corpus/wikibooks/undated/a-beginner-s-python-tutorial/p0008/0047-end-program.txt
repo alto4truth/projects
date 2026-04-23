@@ -1,0 +1,23 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 8
+section: end-program
+chunk: 47
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+this: "), input("to this: ")) as the parameters for the add program, you could have variables. For example,
+
+Code Example 16 - variables as parameters
+
+For the above, remember that the function you are passing the variables to cannot change the variables themselves - they are simply used as values. You could even put the values straight into the function:
+
+Code Example 17 - the end result
+
+This is because the only thing the function sees are the values that are passed on as parameters. Those values are put into the variables that are mentioned when 'add' is defined (the line 'def add(a,b)' ). The function then uses those parameters to do its job.
+In short:
+
+the only thing functions see of the main program is the parameters that are passed to it
+the only thing the main program sees of functions is the returned value that it passes back

@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 115
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+components; for example, the circle adds a radius component:
+
+The following is an example of general access type to the corresponding class-wide type:
+
+==== rationale ====
+You can derive new types from both tagged and untagged types, but the effects of this derivation are different. When you derive from an untagged type, you are creating a new type whose implementation is identical to the parent. Values of the derived types are subject to strong type checking; thus, you cannot mix the proverbial apples and oranges. When you derive a new type from an untagged type, you are not allowed to extend it with new components. You are effectively creating a new interface without changing the underlying implementation (Taft 1995a).
+In deriving from a tagged type, you can extend the type with new components. Each descendant can extend a common interface (the parent's). The union of a tagged type and its descendants form a class, and a class offers some unique features not available to untagged derivations. You can write class-wide operations that can be applied to any object that is a member of the class. You can also provide new implementations for the descendants of tagged types, either by overriding inherited primitive operations or by creating new primitive operations. Finally, tagged types can be used as the basis for multiple inheritance building blocks (see Guideline 9.5.1).
+Reference semantics are very commonly used in object-oriented programming. In particular, heterogeneous polymorphic data structures based on tagged types require the use of access types. It is convenient to have a common definition for such a type provided to any client of the package defining the tagged type. A heterogeneous polymorphic data structure is a composite data structure (such as an array) whose elements have a homogeneous interface (i.e., an access to class-wide type) and whose elements' implementations are heterogeneous (i.e., the implementation of the elements uses different specific types). See also Guidelines 9.3.5 on polymorphism and 9.4.1 on managing visibility of tagged type hierarchies.
+In Ada, the primitive operations of a type are implicitly associated with the type through scoping rules. The definition of a tagged type and a set of operations corresponds together to the "traditional" object-oriented programming concept of a "class." Putting these into a package provides a clean encapsulation mechanism.

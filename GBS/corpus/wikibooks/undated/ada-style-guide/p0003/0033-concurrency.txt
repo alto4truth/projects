@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 33
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+d type inheritance hierarchy.
+Consider using generics to provide extensibility of data types requiring the restrictions provided by protected objects.
+
+==== rationale ====
+Once a component of a protected type is added to an inheritance hierarchy of an abstract data type, further extensibility of that data type is impaired. When you constrain the concurrent behavior of a type (i.e., introduce a protected type component), you lose the ability to modify that behavior in subsequent derivations. Therefore, when the need arises for a version of an abstract data type to impose the restrictions provided by protected objects, the opportunity for reuse is maximized by adding the protected objects at the leaves of the inheritance hierarchy.
+The reusability of common protected operations (e.g., mutually exclusive read/write operations) can be maximized by using generic implementations of abstract data types. These generic implementations then provide templates that can be instantiated with data types specific to individual applications.
+
+==== notes ====
+You can address synchronization within an inheritance hierarchy in one of three ways:

@@ -1,0 +1,34 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 4
+section: improving-performance
+chunk: 70
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+CES (1995a, 1995b, 1995c); Clapp, Mudge, and Roy (1990); Goforth, Collard, and Marquardt (1990); Knight (1990); Newport (1995); and Weidermann (1990).
+
+== Program Structure ==
+
+=== Blocks ===
+
+==== guideline ====
+Use blocks (see Guideline 5.6.9) to introduce late initialization when measured performance indicates.
+
+==== example ====
+
+==== rationale ====
+Late initialization allows a compiler more choices in register usage optimization. Depending on the circumstance, this may introduce a significant performance improvement.
+Some compilers incur a performance penalty when declarative blocks are introduced. Careful analysis and timing tests by the programmer may identify those declarative blocks that should be removed.
+
+==== notes ====
+It is difficult to accurately predict through code inspections which declarative blocks improve performance and which degrade performance. However, with these general guidelines and a familiarity with the particular implementation, performance can be improved.
+
+== Data Structures ==
+
+=== Dynamic Arrays ===
+
+==== guideline ====
+Use constrained arrays when measured performance indicates.

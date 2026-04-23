@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 432
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ement.
+For long or heavily nested if statements, mark the else part with a comment summarizing the conditions governing this portion of the statement.
+
+=== using types ===
+Limit the range of scalar types as much as possible.
+Seek information about possible values from the application.
+Do not reuse any of the subtype names in package Standard.
+Use subtype declarations to improve program readability (Booch 1987).
+Use derived types and subtypes in concert.
+Use enumeration types instead of numeric codes.
+Only if absolutely necessary, use representation clauses to match requirements of external devices.

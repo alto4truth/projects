@@ -1,0 +1,23 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 5
+section: 360-instructions
+chunk: 23
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+. They will throw an exception on 360, 370, or 390 hardware and work only on z/System mainframes.
+In general, there are seven classes of instructions:
+
+Branch Instructions, which jump from one part of a program to another
+Data Transfer Instructions, which move data from one part of memory (including registers)
+Control Flow Instructions, which make changes in the scope of execution of a program
+Arithmetic Instructions, which do computations
+Logic Instructions, which make comparisons
+Shift and Rotate Instructions, which move bits right or left,
+Privileged Instructions, used by the operating system or other programs having special permission, primarily to do input/output or to control the operations of the machine, and
+Other Instructions, instructions not otherwise classified
+Additionally, the S/370 and S/390 had an optional Vector Facility, whose instruction opcodes can be seen in the table below, beginning with A4 hexadecimal. Support for the Vector Facility was discontinued with the z/Architecture; however, the z13 reintroduced vector instructions, albeit a new set of vector instructions with incompatible opcodes from the old 370/390 Vector Facility. (The new z13 vector instructions are not currently in the table.)
+The table below lists specific instructions available on the four instruction set architectures. The table can be sorted by column. To do so, click on the symbol at the top of a column. The numeric value of opcodes listed is shown in hexadecimal only.

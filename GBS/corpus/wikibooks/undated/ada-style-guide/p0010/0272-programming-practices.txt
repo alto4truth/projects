@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 272
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+== Optional Parts of the Syntax ==
+Parts of the Ada syntax, while optional, can enhance the readability
+of the code. The guidelines given below concern use of some of
+these optional features.
+
+=== Loop Names ===
+
+==== guideline ====
+Associate names with loops when they are nested (Booch 1986, 1987).
+Associate names with any loop that contains an exit statement.
+
+==== example ====

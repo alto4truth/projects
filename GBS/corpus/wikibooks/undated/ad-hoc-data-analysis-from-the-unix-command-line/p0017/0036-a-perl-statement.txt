@@ -1,0 +1,51 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 17
+section: a-perl-statement
+chunk: 36
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+8000
+0004100
+0004300
+0005300
+
+And after:
+
+$ cat pums_53.dat | grep "^P" | cut -c297-303 |
+perl -pe '$_=10000*int($_/10000)."\n"' | head -4
+10000
+0
+0
+0
+
+And finally, the distribution (up to $100,000). The extra grep [0-9] ensures that blank records are not considered in the distribution.
+
+$ cat pums_53.dat | grep "^P" | cut -c297-303 | grep [0-9] |
+perl -pe '$_=10000*int($_/10000)."\n"' | sort -n | uniq -c | head -12
+20 -10000
+15193 0
+8038 10000
+6776 20000
+5436 30000
+3685 40000
+2370 50000
+1536 60000
+899 70000
+521 80000
+326 90000
+283 100000
+
+== Example - Finding the median (or any percentile) of a distribution ==
+If we sort all the incomes in order and had a way to pluck out the middle number, we could easily get the median. I'll give two ways to do this. The first uses cat -n. If given the -n option, cat prepends line numbers to each line. We see that there are 46,359 non blank records, so the 23179th one in sorted order is the median.
+
+$ cat pums_53.dat | grep "^P" | cut -c297-303 | grep [0-9] | wc -l
+46359
+$ cat pums_53.dat | grep "^P" | cut -c297-303 | grep [0-9] | sort |
+cat -n | grep "^ *23179"
+23179 0019900
+
+An even simpler method, using head and tail:

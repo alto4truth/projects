@@ -1,0 +1,23 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 5
+section: creating-directories
+chunk: 13
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+% mkdir ~/documents/2010/IT/training/Unix/Solaris
+Naturally, you don't have to specify the complete path from ~, but I have done so here for clarity.
+
+==== Creating a whole path ====
+mkdir -p
+Perhaps less often you want to create not a single directory but rather a directory subtree - that is a directory and directories beneath it. Suppose I am in my home directory and I want to create directories to hold some files for two courses: Redhat for Beginners and Advanced Redhat. We can do this with the -p option on the mkdir command.
+Here is the command to create the first directory:
+
+% mkdir -p ~/documents/2010/IT/training/Unix/Linux/Redhat/beginners
+This creates the two directories we require in one go. We can then issue the command
+
+% mkdir ~/documents/2010/IT/training/Unix/Linux/Redhat/advanced
+Notice the difference between these two.

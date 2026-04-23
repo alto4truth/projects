@@ -1,0 +1,17 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 4
+section: parti-chapter-1-page2
+chunk: 13
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+lue of the textbox is stored in "zzz". But by using the "Var", in our case "zzz", you can also change the value of the Text". For example if you write
+
+then the value of the Text will become "hello";
+Step 3
+Right click the button you have created and choose "Actions" from the popup menu to open the actions of the button. Make sure that the "Advanced Mode" is turn on and write the following:
+
+The first and the third lines are the beginning and the end of the "Release" event (discussed in property "Visible"). The second line sets our Dynamic Text’s value to the mouse coordinates using "_xmouse" and "_ymouse" properties. So when you click the button you will see the coordinates of the mouse in the Dynamic Text. But the null point is the center of the object. So if you click the left side of the button, the x coordinate will be less than 0 and if you click right side of the object, then the x coordinate will be more than 0.

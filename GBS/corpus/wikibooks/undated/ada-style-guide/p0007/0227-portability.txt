@@ -1,0 +1,29 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 227
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+tion clause to specify number of storage units.
+Do not compare access-to-subprogram values.
+Consider using explicitly defined storage pool mechanisms.
+
+=== tasking ===
+Do not depend on the order in which task objects are activated when declared in the same declarative list.
+Do not depend on a particular delay being achievable (Nissen and Wallis 1984).
+Never use knowledge of the execution pattern of tasks to achieve timing requirements.
+Do not assume a correlation between System.Tick and type Duration.
+Do not depend on the order in which guard conditions are evaluated or on the algorithm for choosing among several open select alternatives.
+Do not assume that tasks execute uninterrupted until they reach a synchronization point.
+Use pragma Priority to distinguish general levels of importance only.
+Avoid using the abort statement.
+Do not use unprotected shared variables.
+Consider using protected types to provide data synchronization.
+Have tasks communicate through the rendezvous mechanism.
+Do not use unprotected shared variables as a task synchronization device.
+Consider using protected objects to encapsulate shared data.
+Use pragma Atomic or Volatile only when you are forced to by run-time system deficiencies.

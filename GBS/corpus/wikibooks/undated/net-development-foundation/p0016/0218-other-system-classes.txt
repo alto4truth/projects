@@ -1,0 +1,24 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 16
+section: other-system-classes
+chunk: 218
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+tive: Implement .NET Framework interfaces to cause components to comply with standard contracts.
+(Refer System namespace)
+IComparable interface - MSDN
+
+The IComparable interface defines a comparison method that a value type or class implements to create a type-specific comparison method
+IDisposable interface - MSDN
+
+The IDispose interface can be used to explicitly release unmanaged resources in custom classes. The consumer of an object can call this method when the object is no longer needed.
+The .Net garbage collector releases memory allocated to managed objects when they are no longer used, however, it is not possible to predict when garbage collection will occur and it has no knowledge of unmanaged resources such as window handles, or open files and streams.
+IConvertible interface - MSDN
+ICloneable interface - MSDN
+INullableValue interface - MSDN
+IEquatable interface - MSDN
+IFormattable interface - MSDN

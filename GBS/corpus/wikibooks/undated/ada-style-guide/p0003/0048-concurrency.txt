@@ -1,0 +1,25 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 48
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ackages Ada.Numerics.Float_Random and Ada.Numerics.Discrete_Random). See Guideline 7.7.5 for the I/O issue.
+
+=== Selective Accepts and Entry Calls ===
+
+==== guideline ====
+Use caution with conditional entry calls to task entries.
+Use caution with selective accept with else parts.
+Do not depend upon a particular delay in timed entry calls to task entries.
+Do not depend upon a particular delay in selective accepts with delay alternatives.
+Consider using protected objects instead of the rendezvous for data-oriented synchronization.
+
+==== example ====
+The conditional entry call in the following code results in a potential race condition that might degenerate into a busy waiting loop (i.e., perform the same calculation over and over). The task Current_Position containing entry Request_New_Coordinates might never execute if the loop-containing task (shown in the following code fragment) has a higher priority than Current_Position because it does not release the processing resource:
+
+The addition of a delay, as shown, may allow Current_Position to execute until it reaches an accept for Request_New_Coordinates:

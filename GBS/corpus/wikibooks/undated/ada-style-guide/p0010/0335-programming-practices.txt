@@ -1,0 +1,26 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 335
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+Ada source code, resolve overloading of names, and automatically convert between the use clause or fully qualified names.
+
+=== The Renames Clause ===
+
+==== guideline ====
+Limit the scope of a renaming declaration to the minimum necessary scope.
+Rename a long, fully qualified name to reduce the complexity if it becomes unwieldy (see Guideline 3.1.4).
+Use renaming to provide the body of a subprogram if this subprogram merely calls the first subprogram.
+Rename declarations for visibility purposes rather than using the use clause, except for operators (see Guideline 5.7.1).
+Rename parts when your code interfaces to reusable components originally written with nondescriptive or inapplicable nomenclature.
+Use a project-wide standard list of abbreviations to rename common packages.
+Provide a use type rather than a renames clause to provide visibility to operators.
+
+==== example ====
+
+See also the example in Guideline 5.7.1, where a package-level renames clause provides an abbreviation for the package Rational_Numbers_IO.

@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 350
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+se ends, close files, release surfaces to manual control, sound alarms) and implies that all available programmed attempts at recovery have been made.
+
+=== Localizing the Cause of an Exception ===
+
+==== guideline ====
+Do not rely on being able to identify the fault-raising, predefined, or implementation-defined exceptions.
+Use the facilities defined in Ada.Exceptions to capture as much information as possible about an exception.
+Use blocks to associate localized sections of code with their own exception handlers.
+
+==== example ====
+See Guideline 5.6.9.

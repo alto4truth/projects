@@ -1,0 +1,24 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 8
+section: end-program
+chunk: 41
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+a value. Your main program sees only the returned value. If that function flew to the moon and back, and then at the end had:
+
+Code Example 9 - return
+
+then all your program would see is the string "hello", where the name of the function was. It would have no idea what else the program did.
+Because it is a separate program, a function doesn't see any of the variables that are in your main program, and your main program doesn't see any of the variables that are in a function. For example, here is a function that prints the words "hello" onscreen, and then returns the number '1234' to the main program:
+
+Code Example 10 - using return
+
+Think about the last line of code above. What did it do? Type in the program (you can skip the comments), and see what it does. The output looks like this:
+
+Code Example 11 - the output
+hello
+1234

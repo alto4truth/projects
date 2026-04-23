@@ -1,0 +1,23 @@
+title: A Brief Introduction to the LaTeX Typesetting Environment
+source: wikibooks
+year: undated
+document_id: a-brief-introduction-to-the-latex-typesetting-environment
+authors: 
+page: 3
+section: typesetting-the-basics
+chunk: 13
+source_ref: https://en.wikibooks.org/wiki/A_Brief_Introduction_to_the_LaTeX_Typesetting_Environment
+
+nd{figure}
+%
+This is my first document using the LaTeX typesetting environment.
+%
+It isn't very detailed, but it certainly looks good.
+%
+\end document
+
+==== The \documentclass property ====
+This particular option can be set anywhere in the document in theory, although good practice generally dictates placing it before the \begin{document} flag. For convenience, the author suggests placing it as the first part of any document, simply so that it isn't forgotten. If this flag is not specified before typesetting, the outcome is difficult to anticipate; some typesetting applications simply won't typeset while others will assume some default which may or may not be what you like. If you're planning on making the .tex file available to others, or typesetting on another machine later which may have a different application, it's best just to place it at the top.
+Let's dissect the command used above:
+
+\documentclass[10pt,a4paper,oneside]{article}

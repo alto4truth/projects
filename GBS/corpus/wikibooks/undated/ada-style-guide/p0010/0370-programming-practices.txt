@@ -1,0 +1,25 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 370
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+accept statement.
+Include the designator at the end of a subprogram body.
+Include the defining identifier at the end of a protected unit declaration.
+
+==== parameter lists ====
+Name formal parametername formal parameters descriptively to reduce the need for comments .
+Use named parameter association in calls of infrequently used subprograms or entries with many formal parameters .
+Use named association when instantiating generics.
+Use named association for clarification when the actual parameter is any literal or expression.
+Use named association when supplying a nondefault value to an optional parameter.
+Provide default parameters to allow for occasional, special use of widely used subprograms or entries.
+Place default parameters at the end of the formal parameter list.
+Consider providing default values to new parameters added to an existing subprogram.
+Show the mode indication of all procedure and entry parameters (Nissen and Wallis 1984).
+Use the most restrictive parameter mode applicable to your application.

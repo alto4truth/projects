@@ -1,0 +1,18 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 36
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+r examples and notes on using value types see this section. See also examples of building and using user-defined value types.
+
+=== Reference types ===
+
+Reference types represent the other part of the Value / Reference classification of the type system.
+Contrary to value types, an instance of a reference type does not directly contain its data (value), but instead contains some kind of a reference to the memory location of that value. For example a String local variable has memory allocated on the stack for a reference to the contained string, not the string itself. In that case the string itself will be allocated on the heap and garbage collected (more on that later).
+Two built-in types are considered reference types: Object and String and they are also directly referenced in the System libraries (ex. System.String) and have their own constructs in the .NET languages (ex. string in C#).
+The reference types are themselves split in four categories:

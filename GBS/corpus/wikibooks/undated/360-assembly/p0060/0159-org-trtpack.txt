@@ -1,0 +1,24 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 60
+section: org-trtpack
+chunk: 159
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+DC 10X'00',XL6'080804040804',10X'00',XL6'080804040804'
+ORG TRTPACK+X'20'
+DC 10X'20',XL6'080804040804',10X'00',XL6'080804040804'
+ORG TRTPACK+X'40'
+DC 10X'40',XL6'080804040804',10X'00',XL6'080804040804'
+ORG TRTPACK+X'60'
+DC 10X'60',XL6'080804040804',10X'00',XL6'080804040804'
+ORG TRTPACK+X'80'
+DC 10X'80',XL6'080804040804',10X'00',XL6'080804040804'
+ORG
+
+Related instructions
+
+TR is slightly related, although it's function is very different.

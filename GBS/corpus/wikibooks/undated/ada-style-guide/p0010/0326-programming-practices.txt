@@ -1,0 +1,27 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 326
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+... then exit form is needed only in the case where other statements, in addition to the exit statement, must be executed conditionally. For example:
+
+Loops with many scattered exit statements can indicate fuzzy thinking regarding the loop's purpose in the algorithm. Such an algorithm might be coded better some other way, for example, with a series of loops. Some rework can often reduce the number of exit statements and make the code clearer.
+See also Guidelines 5.1.3 and 5.6.4.
+
+=== Recursion and Iteration Bounds ===
+
+==== guideline ====
+Consider specifying bounds on loops.
+Consider specifying bounds on recursion.
+
+==== example ====
+Establishing an iteration bound:
+
+Establishing a recursion bound:
+
+Following are examples of this subprogram's usage. One call specifies a maximum recursion depth of 50. The second takes the default (1,000). The third uses a computed bound:

@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 34
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+data types specific to individual applications.
+
+==== notes ====
+You can address synchronization within an inheritance hierarchy in one of three ways:
+
+You can declare the root as a limited tagged type with a component that belongs to a protected type and give the tagged type primitive operations that work by invoking the protected operations of that component.
+Given a tagged type implementing an abstract data type (perhaps resulting from several extensions), you can declare a protected type with a component belonging to the tagged type. The body of each protected operation would then invoke the corresponding operation of the abstract data type. The protected operations provide mutual exclusion.
+You can use a hybrid approach where you declare a protected type with a component of some tagged type. You then use this protected type to implement a new root tagged type (not a descendant of the original tagged type).

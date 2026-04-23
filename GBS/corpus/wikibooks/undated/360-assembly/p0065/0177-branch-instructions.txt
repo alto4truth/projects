@@ -1,0 +1,29 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 65
+section: branch-instructions
+chunk: 177
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+is 0; treated as NO-OP
+Example3 B 10(R0,R12) This is standard, and will branch to the address at the
+* location in Register 12 + a displacement of 10
+
+=== Conditional branch ===
+A conditional branch instruction causes the location counter in the PSW to be set to the address specified in the register or the register plus a 12-bit offset, if a condition is satisfied (and the register is not 0). There are two types, condition by mask and condition by index.
+Conditional branches may be one of the following types:-
+
+Condition by mask, Storage (RS)
+Example BE 4(R15) Branch to the location in (R15 plus 4), if previous
+* comparison gave "Equal" condition (8)
+Example BE 12(R0) As specified earlier, branch on R0 is treated as a NO-OP
+* and does not branch
+Example BC 8,4(R15) Branch to the location in (R15 plus 4), if previous
+* comparison gave "Equal" condition (8)
+* (same as above but specifying actual condition code
+* value = 8)
+Example BC 7,X'010'(R15) Branch to the location in (R15 plus X'010') if previous
+* comparison gave "Unequal" (Branch Not Equal) condition (7)

@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 121
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+dispatching operation in general (though it could require less) and delivers a result that is no less than what is expected (though it could do more).
+
+==== exceptions ====
+Tagged types and type extension may sometimes be used primarily for type implementation reasons rather than for polymorphism and dispatching. In particular, a nontagged private type may be implemented using a type extension of a tagged type. In such cases, it may not be necessary for the implementation of the derived type to preserve the semantic properties of the class-wide type because the membership of the new type in the tagged type derivation class will not generally be known to clients of the type.
+
+=== Controlled Types ===

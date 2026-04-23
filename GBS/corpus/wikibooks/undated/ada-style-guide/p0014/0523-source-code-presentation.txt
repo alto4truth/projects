@@ -1,0 +1,32 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 14
+section: source-code-presentation
+chunk: 523
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+te no more than one simple statement per line.
+Break compound statements over multiple lines.
+
+==== example ====
+Use:
+
+rather than:
+
+exceptional case:
+
+==== rationale ====
+A single statement on each line enhances the reader's ability to find statements and helps prevent statements being missed. Similarly, the structure of a compound statement is clearer when its parts are on separate lines.
+
+==== exceptions ====
+If a statement is longer than the remaining space on the line, continue it on the next line. This guideline includes declarations, context clauses, and subprogram parameters.
+According to the Ada Reference Manual 1995, §1.1.4 [Annotated], "The preferred places for other line breaks are after semicolons."
+
+==== automation notes ====
+The guidelines in this section are easily enforced with an automatic code formatter, with the single exception of the last example, which shows a semantic grouping of multiple statements onto a single line.
+
+==== exceptions ====
+The example of Put and New_Line statements shows a legitimate exception. This grouping of closely related statements on the same line makes the structural relationship between the groups clear.

@@ -1,0 +1,37 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 304
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+reduces the risks of fragmentation
+and leakage without overly restricting your use of composite objects,
+access values, task objects, and catenation.
+
+==== exceptions ====
+If a composite object is large enough to be allocated on the heap,
+you can still declare it as an in or in out
+formal parameter. The guideline is meant to discourage declaring
+the object in an object declaration, a formal out parameter,
+or the value returned by a function.
+You should monitor the leakage and/or fragmentation from the heap.
+If they become steady-state and do not continually increase during
+program or partition execution, you can use the constructs described
+in the guidelines.
+
+=== Aliased Objects ===
+
+==== guideline ====
+Minimize the use of aliased variables.
+Use aliasing for statically created, ragged arrays (Rationale 1995, §3.7.1 ).
+Use aliasing to refer to part of a data structure when you want to hide the internal connections and bookkeeping information.
+
+==== example ====
+
+The following code fragment shows a use of aliased objects, using
+the attribute 'Access to implement a generic component
+that manages hashed collections of objects:

@@ -1,0 +1,25 @@
+title: A Brief Introduction to the LaTeX Typesetting Environment
+source: wikibooks
+year: undated
+document_id: a-brief-introduction-to-the-latex-typesetting-environment
+authors: 
+page: 3
+section: typesetting-the-basics
+chunk: 26
+source_ref: https://en.wikibooks.org/wiki/A_Brief_Introduction_to_the_LaTeX_Typesetting_Environment
+
+so:
+
+This is a sentence that would describe the following random equation:
+$$f(x) = \frac{\sqrt{x}}{2}$$
+Where $f$ is a function of $x$ called $f(x)$.
+
+Not that any of the above is particularly helpful in real life, but it demonstrates the difference between a single dollar-sign and a double dollar-sign. While the things given to LaTeX as $f$, $x$, and $f(x)$ will be kept in their respective sentence, the other equation kept in the double dollar-signs ($$) will be given its own line.
+Please note that a double dollar sign can be substituted with $[ and $] and that both forms will not be numbered.
+If we wish to have a numbered equation so that it can be referenced later or automatically added to a list of equations in the table of contents, we would modify the above example as so:
+
+This is a sentence that would describe the following random equation:
+\begin{equation}
+f(x) = \frac{\sqrt{x}}{2}
+\end{equation}
+Where $f$ is a function of $x$ called $f(x)$.

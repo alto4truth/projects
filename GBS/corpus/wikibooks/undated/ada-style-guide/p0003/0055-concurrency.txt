@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 55
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+can introduce a race condition where the tested task fails after the test but before the entry call (see Guideline 6.2.3).
+
+=== Normal Termination ===
+
+==== guideline ====
+Do not create nonterminating tasks unintentionally.
+Explicitly shut down tasks that depend on library packages.
+Confirm that a task is terminated before freeing it with Ada.Unchecked_Deallocation.
+Consider using a select statement with a terminate alternative rather than an accept statement alone.
+Consider providing a terminate alternative for every selective accept that does not require an else part or a delay .
+Do not declare or create a task within a user-defined Finalize procedure after the environment task has finished waiting for other tasks.
+
+==== example ====
+This task will never terminate:

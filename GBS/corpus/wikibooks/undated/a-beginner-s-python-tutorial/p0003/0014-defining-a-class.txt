@@ -1,0 +1,16 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 3
+section: defining-a-class
+chunk: 14
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+int, the IDLE command line starts where your code ends - so typing a line of code is like adding that line to the end of the program you have written.
+
+== Pointers and Dictionaries of Classes ==
+Thinking back, when you say that one variable equals another, e.g. variable2 = variable1, the variable on the left-hand side of the equal-sign takes on the value of the variable on the right. With class instances, this happens a little differently - the name on the left becomes the class instance on the right. So in instance2 = instance1, instance2 is 'pointing' to instance1 - there are two names given to the one class instance, and you can access the class instance via either name.
+In other languages, you do things like this using pointers, however in python this all happens behind the scenes.
+The final thing that we will cover is dictionaries of classes. Keeping in mind what we have just learnt about pointers, we can assign an instance of a class to an entry in a list or dictionary. This allows for virtually any amount of class instances to exist when our program is run. Lets have a look at the example below, and see how it describes what I am talking about:

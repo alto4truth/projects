@@ -1,0 +1,30 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 21
+section: services
+chunk: 252
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+to a method containing your logic. For example:
+Thread t1 = new Thread (new ThreadStart(LengthyLogic));
+public void LengthyLogic ()
+{
+// Logic code
+}
+
+ParameterizedThreadStart delegate - MSDN
+When you start a thread, sometimes you need to pass in some data for processing. .NET 2.0 provides a new delegate, ParameterizedThreadStart, which takes a parameter of type object. The class has a new overload function Thread.Start. It allows you to specify the value to be passed into the thread. This approach is simple, but is not type-safe. Example:
+Thread t1 = new Thread(new ParameterizedThreadStart(LengthyLogic));
+// Use the overload of the Start method that has a parameter of type Object.
+t1.Start(myData);
+static void LengthyLogic(object data)
+{
+// Logic code
+}
+
+SynchronizationContext class - MSDN
+The Code Project Example for SynchronizationContext Class [1]
+Timeout class, Timer class, TimerCallback delegate, WaitCallback delegate, WaitHandle class, and WaitOrTimerCallback delegate

@@ -1,0 +1,28 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 17
+section: c-variables-declarations-and-constants
+chunk: 78
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+me of a
+structure is passed to a function, the function works only on its local copy
+of the structure. To return values, an address must be specified:
+
+There is a shorthand way to get at the elements of a structure with the
+pointer to the structure instead of the structure itself. If "sptr" is a
+pointer to a structure of type "person", its fields can be accessed as
+follows:
+
+C contains a concept similar to a structure known as a "union". A union is declared in much the same way as a structure. For example:
+
+The difference is that the union can store either of these values, but not
+both at the same time. A "char" value or an "int" value can be stored in an
+instance of the union defined above, but it's not possible to store both at
+the same time. Only enough memory is allocated for the union to store the
+value of the biggest declared item in it, and that same memory is used to
+store data for all the declared items. Unions are not often used and will
+not be discussed further.

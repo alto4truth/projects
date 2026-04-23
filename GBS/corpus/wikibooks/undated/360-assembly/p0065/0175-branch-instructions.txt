@@ -1,0 +1,26 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 65
+section: branch-instructions
+chunk: 175
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+he branch address is 0, no branch will occur
+BCTR R1,R0 Subtract 1 from the contents of R1, but since the target
+* branch register is 0, do not branch
+
+=== Unconditional branch ===
+An unconditional branch instruction causes the Program location counter (PSW) to be set to the address specified in the register or the register plus a 12-bit offset, or the register & offset plus the value of an additional "index" register.
+The branch does not occur, and is treated as a no-op, for a BR instruction using register 0. The branch does not occur, and is treated as an instruction to load the address of the following instruction into the left register, if the right register in a BALR instruction is 0. No conditional branch - including unconditional branch - will occur if the index register is 0.
+These instructions may be one of the following types:-
+
+Register to register (RR)
+Example1 BR R15 Branch to the location whose address is in Register 15
+Example2 BR R0 No Branch - Acts like no-op
+Example3 BALR R14,R15 Branch to the location whose address is in Register 15, put
+* return address in R14
+Example4 BALR R12,R0 Load Register 12 with the address of the next instruction,
+* but do not branch

@@ -1,0 +1,24 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 26
+section: using-system-types
+chunk: 283
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+limitation, which is discussed in the next section, but null is not a valid value for value types:
+
+int a = null; // Won't compile - throws an error.
+
+If you copy a Value type to another Value type, the value is copied. Changing the value of the copy has no effect on the value of the original. The second is merely a copy of the first - they are in no way connected after assignment. This is fairly intuitive:
+
+int var1 = 1;
+int var2 = var1; //the value of var1 (a "1" of type int) is copied to var2
+var2 = 25; // The "1" value in var2 is overwritten with "25"
+Console.WriteLine("The value of var1 is {0}, the value of var2 is {1}", var1, var2);
+
+Which would result in the output:
+
+The value of var1 is 1, the value of var2 is 25

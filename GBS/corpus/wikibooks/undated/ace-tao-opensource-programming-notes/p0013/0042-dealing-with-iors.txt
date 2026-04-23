@@ -1,0 +1,26 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 13
+section: dealing-with-iors
+chunk: 42
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+Naming_Service -ORBEndPoint iiop://localhost:12345 -ORBDaemon
+This should set up your naming service on port 12345 on the localhost interface. To test that this is up and working, try the following:
+
+nslist -ORBInitRef NameService=corbaloc:iiop:localhost:12345/NameService
+This should then produce the following output:
+
+Naming Service:
+---------
+
+This shows that your naming service is up and running , but reporting no services yet. To see what a service looks like, try the following command to start the event service (which we will be using in later examples):
+
+CosEvent_Service -ORBInitRef NameService=corbaloc:iiop:localhost:12345/NameService -ORBDaemon
+Now, when you run nslist again, you will see the following output:
+
+Naming Service:
+--------CosEventService: object reference: Protocol: IIOP, Endpoint: 10.0.0.53:32802

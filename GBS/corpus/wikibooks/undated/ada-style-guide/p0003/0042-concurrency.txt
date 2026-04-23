@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 42
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+e of the entry attribute 'Count.
+Using the 'Count attribute with protected entries is more reliable than using the 'Count attribute with task entries.
+
+==== example ====
+In the following examples, Dispatch'Callable is a Boolean expression, indicating whether a call can be made to the task Intercept without raising the exception Tasking_Error. Dispatch'Count indicates the number of callers currently waiting at entry Transmit. Dispatch'Terminated is a Boolean expression, indicating whether the task Dispatch is in a terminated state.
+This task is badly programmed because it relies upon the values of the 'Count attributes not changing between evaluating and acting upon them:
+
+If the following code is preempted between evaluating the condition and initiating the call, the assumption that the task is still callable might no longer be valid:

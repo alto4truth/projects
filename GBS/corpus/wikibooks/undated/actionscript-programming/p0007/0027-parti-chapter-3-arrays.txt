@@ -1,0 +1,19 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 7
+section: parti-chapter-3-arrays
+chunk: 27
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+“btnOK”. The scene must look like this.
+
+Step 5
+This is enough for our design. Now open the Frame 1 actions and type the following in the Script Pane:
+
+Then right click “btnOK” and choose “Actions” to view its’ actions. In the Script pane type the following:
+
+I think you understood everything. The first part of code was nearly the same as in the previous example, and in the second part of code we write a code which must be performed when the user click our “btnOK”. In lines 1 and 3 is written the beginning and the end of “release” event, and in line 2 we write the element of the “users” array which the user has written as “input” is the text which the user has written in the Input Text and “output” is the Dynamic Text in which the element of array is written.
+The arrays can also be multidimensional. For example you have some users and their phone number and address. For not making 3 different arrays it is easier to create one multidimensional array. The example below shows how to do that.

@@ -1,0 +1,39 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 17
+section: c-variables-declarations-and-constants
+chunk: 77
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+These issues become particularly tricky when passing strings as parameters to
+functions. The following example shows how to get around the pitfalls:
+
+It is possible to define "structures" in C, which are collections of different data elements:
+
+This program has a few interesting features:
+
+The structure has to be defined by a "struct" declaration before it can
+declare any structures themselves. In this case we define a struct of
+type "person".
+
+Instances of the struct ("m") are then declared as by defining the
+structure type ("struct person").
+
+Elements of the structure are accessed with a "dot" notation ("m.name",
+"m.age", and "m.wage").
+
+A structure can be copied to another structure with a single assignment
+statement, as long as the structures are of the same type:
+
+It is also possible to declare arrays of structures:
+
+-- or even embed structures inside structure declarations:
+
+-- in which case the nested structure would be accessed as follows:
+
+The name of a structure defines a variable, not an address. If the name of a
+structure is passed to a function, the function works only on its local copy
+of the structure. To return values, an address must be specified:

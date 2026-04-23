@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 324
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+two exit paths from a loop. When you do, be sure to use exit statements for all of them, rather than adding an exit statement to a for or while loop.
+
+=== Exit Statements ===
+
+==== guideline ====
+Use exit statements to enhance the readability of loop termination code (NASA 1987).
+Use exit when ... rather than if ... then exit whenever possible (NASA 1987).
+Review exit statement placement.
+
+==== example ====
+See the examples in Guidelines 5.1.1 and Guidelines 5.6.4.

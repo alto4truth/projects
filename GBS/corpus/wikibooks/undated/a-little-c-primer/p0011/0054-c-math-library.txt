@@ -1,0 +1,49 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 11
+section: c-math-library
+chunk: 54
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+This chapter discusses some useful standard C libraries:
+
+math library
+standard utility library
+the "sprintf()" function
+string function library
+character class test library
+And the following minor topics:
+
+command-line arguments
+dynamic memory allocation
+pointers to functions
+PC memory model and other declarations
+troubleshooting hints
+The math library requires the declaration:
+
+#include <math.h>
+
+The math functions consist of:
+
+sin( x ) Sine of x.
+cos( x ) Cosine of x.
+tan( x ) Tangent of x.
+asin( x ) Inverse sine of x.
+acos( x ) Inverse cosine of x.
+atan( x ) Inverse tangent of x.
+sinh( x ) Hyperbolic sine of x.
+cosh( x ) Hyperbolic cosine of x.
+tanh( x ) Hyperbolic tangent of x.
+exp( x ) Exponential function -- e^x.
+log( x ) Natural log of x.
+log10( x ) Base 10 log of x.
+pow( x, y ) Power function -- x^y.
+sqrt( x ) Square root of x.
+ceil( x ) Smallest integer not less than x, returned as double.
+floor( x ) Greatest integer not greater than x, returned as double.
+fabs( x ) Absolute value of x.
+
+All values are "doubles", and trig values are expressed in radians.

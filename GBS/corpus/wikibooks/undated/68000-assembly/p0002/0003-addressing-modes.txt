@@ -1,0 +1,31 @@
+title: 68000 Assembly
+source: wikibooks
+year: undated
+document_id: 68000-assembly
+authors: 
+page: 2
+section: addressing-modes
+chunk: 3
+source_ref: https://en.wikibooks.org/wiki/68000_Assembly
+
+ation pointed to by An. For example:
+
+lea $1234,A1
+move.w D0,(A1)
+
+will move the first 16 bits of D0 into the word starting at $1234.
+Another example:
+
+Copies the long word starting at address location stored in A0 (you say A0 points to the long word). If you refer to a word or a long word, the address in the address register must be an EVEN number. Take care with this!!!
+
+=== Indirect addressing with postincrement ===
+Assembler syntax:
+
+(An)+
+Same as indirect addressing, but An will be increased by the size of the operation after the instruction is executed. The only exception is byte operations on A7 - this register must point to an even address, so it will always increment by at least 2.
+Example:
+
+Copies to D0 the longword to which A1 points, and increases A1 with 4 (because of Long).
+
+=== Indirect addressing with predecrement ===
+Assembler syntax:

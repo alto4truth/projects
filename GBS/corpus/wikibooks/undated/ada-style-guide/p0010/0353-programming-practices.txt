@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 353
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+l actions than for the normal algorithm. Too large a granularity reintroduces the problems of determining what went wrong and of resuming normal flow.
+
+== Erroneous execution and bounded errors ==
+Ada 95 introduces the category of bounded errors. Bounded errors are cases where the behavior is not deterministic but falls within well-defined bounds (Rationale 1995, §1.4). The consequence of a bounded error is to limit the behavior of compilers so that an Ada environment is not free to do whatever it wants in the presence of errors. The Ada Reference Manual 1995, §1.1.5 [Annotated] defines a set of possible outcomes for the consequences of undefined behavior, as in an uninitialized value or a value outside the range of its subtype. For example, the executing program may raise the predefined exception Program_Error, Constraint_Error, or it may do nothing.
+An Ada program is erroneous when it generates an error that is not required to be detected by the compiler or run-time environments. As stated in the Ada Reference Manual 1995, §1.1.5 [Annotated], "The effects of erroneous execution are unpredictable." If the compiler does detect an instance of an erroneous program, its options are to indicate a compile time error; to insert the code to raise Program_Error, possibly to write a message to that effect; or to do nothing at all.
+Erroneousness is not a concept unique to Ada. The guidelines below describe or explain some specific instances of erroneousness defined in the Ada Reference Manual 1995, §1.1.5 [Annotated]. These guidelines are not intended to be all-inclusive but rather emphasize some commonly overlooked problem areas. Arbitrary order dependencies are not, strictly speaking, a case of erroneous execution; thus, they are discussed in Guideline 7.1.9 as a portability issue.

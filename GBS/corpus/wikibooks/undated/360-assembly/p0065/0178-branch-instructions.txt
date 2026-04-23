@@ -1,0 +1,24 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 65
+section: branch-instructions
+chunk: 178
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+lue = 8)
+Example BC 7,X'010'(R15) Branch to the location in (R15 plus X'010') if previous
+* comparison gave "Unequal" (Branch Not Equal) condition (7)
+
+Condition by index, storage (RX)
+Example BCT R1,4(R15) Reduce value in R1 by 1 and, if it is not zero, branch
+* to location in (R15 plus 4 )
+Example BCT R1,12(R0) The register is reduced by 1, but the branch will never occur
+
+Condition by Index, Register (RR)
+Example BCTR R1,R15 Reduce value in R1 by 1 and, if it is not zero, branch
+* to address in R15
+Example BCTR R1,R0 Reduce R1 by 1 but do not branch. This instruction is often
+* used to subtract 1 from a register

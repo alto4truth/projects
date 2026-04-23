@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 501
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ocedure and, therefore, must be overridden by all descendants.) You will not need to modify the payroll code as you specialize the kinds of employees:
+
+==== rationale ====
+The general algorithm can depend polymorphically on objects of the class-wide type of the root tagged type without caring what specialized types are derived from the root type. The generalized algorithm does not need to be changed if additional types are added to the type hierarchy. See also Guideline 5.4.2. Furthermore, the child package hierarchy then mirrors the inheritance hierarchy.
+A general root tagged type can define the common properties and have common operations for a hierarchy of more specific types. Software that depends only on this root type will be general, in that it can be used with objects of any of the more specific types. Further, the general algorithms of clients of the root type do not have to be changed as more specific types are added to the type hierarchy. This is a particularly effective way to organize object-oriented software for reuse.
+Separating the hierarchy of derived tagged types into individual packages enhances reusability by reducing the number of items in package interfaces. It also allows you to with only the capabilities needed.
+See also Guidelines 9.2, 9.3.1, 9.3.5, and 9.4.1.

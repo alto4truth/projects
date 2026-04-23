@@ -1,0 +1,33 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 26
+section: using-system-types
+chunk: 282
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+== Using System types ==
+Exam objective: Manage data in a .NET Framework application by using the .NET Framework 2.0 system types.
+(Refer System namespace)
+
+=== Value types usage ===
+Following are some "usage" oriented remarks about value types.
+Value types contain the values they are assigned:
+
+int a = 1; // the variable "a" contains "1" of value type int
+
+Value types can also be created by using the new keyword. Using the new keyword initializes the variable with the default value obtained from the type's default constructor:
+
+int a = new int(); // using the default constructor via the new keyword
+return a; // returns "0" in the case of type Int.
+
+Value types can be declared without being initialized, but they must be initialized to some value before being used:
+
+int a; // This is perfectly acceptable
+return a; // NOT acceptable! You can't use "a" because "a" doesn't have a value!
+
+Value types cannot equal null. .NET 2.0 provides a Nullable type to get around this limitation, which is discussed in the next section, but null is not a valid value for value types:
+
+int a = null; // Won't compile - throws an error.

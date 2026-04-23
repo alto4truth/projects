@@ -1,0 +1,37 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 318
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+identifiers
+and loop and block names.
+
+=== Slices ===
+
+==== guideline ====
+Use slices rather than a loop to copy part of an array.
+
+==== example ====
+
+==== rationale ====
+An assignment statement with slices is simpler and clearer than
+a loop and helps the reader see the intended action. See also
+Guideline 10.5.7 regarding possible performance issues of slice
+assignments versus loops.
+
+=== Case Statements ===
+
+==== guideline ====
+Minimize the use of an others choice in a case statement.
+Do not use ranges of enumeration literals in case statements.
+Use case statements rather than if/elsif statements, wherever possible.
+Use type extension and dispatching rather than case statements if, possible.
+
+==== example ====
+
+Now consider a change in the type:

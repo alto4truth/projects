@@ -1,0 +1,29 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 3
+section: counting-part-1-grep-and-wc
+chunk: 5
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+"90% of data analysis is counting" - John Rauser
+...well, at least once you've figured out the right question to ask, which is, perhaps, the other 90%.
+
+== Example - Counting the size of a population ==
+The simplest command for counting things is wc, which stands for word count. By default, wc prints the number of lines, words, and characters in a file.
+
+$ wc pums_53.dat
+85025 1219861 25659175 pums_53.dat
+
+Nearly always we just want to count the number of lines (records), which can be done by giving the -l option to wc.
+
+$ wc -l pums_53.dat
+85025 pums_53.dat
+
+== Example - Using grep to select a subset ==
+So, recalling that this is a 1% sample, there were 8.5 million people in Washington as of the 2000 census? Nope, the census data has two kinds of records, one for households and one for persons. The first character of a record, an H or P, indicates which kind of record it is. We can grep for and count just person records like this:
+
+$ grep -c "^P" pums_53.dat
+59150

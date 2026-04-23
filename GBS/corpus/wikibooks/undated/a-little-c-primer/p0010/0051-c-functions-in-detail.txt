@@ -1,0 +1,35 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 10
+section: c-functions-in-detail
+chunk: 51
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+op to execute a "BANG!" the specified number of
+times—more on "for" later.
+If a function requires multiple arguments, they can be separated by commas:
+
+The word "parameter" is sometimes used in place of "argument". There is
+actually a fine distinction between these two terms: the calling routine
+specifies "arguments" to the called function, while the called function
+receives the "parameters" from the calling routine.
+When a parameter is listed in the function header, it becomes a local
+variable to that function. It is initialized to the value provided as an
+argument by the calling routine. If a variable is used as an argument, there
+is no need for it to have the same name as the parameter specified in the
+function header.
+For example:
+
+The integer variable passed to "fire()" has the name "shots", but "fire()"
+accepts the value of "shots" in a local variable named "n". The argument and
+the parameter could also have the same name, but even then they would remain
+distinct variables.
+Parameters are, of course, matched with arguments in the order in which they
+are sent:
+
+This prints:
+
+a=1 b=100

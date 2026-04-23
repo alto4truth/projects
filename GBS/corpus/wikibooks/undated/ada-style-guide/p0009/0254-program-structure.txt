@@ -1,0 +1,28 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 254
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+or example, by excessive reliance on the use clause, is wasteful and dangerous. See also Guidelines 5.7 and 9.4.1.
+
+=== Minimization of Interfaces ===
+
+==== guideline ====
+Put only what is needed for the use of a package into its specification.
+Minimize the number of declarations in package specifications.
+Do not include extra operations simply because they are easy to build.
+Minimize the context (with) clauses in a package specification.
+Reconsider subprograms that seem to require large numbers of parameters.
+Do not manipulate global data within a subprogram or package merely to limit the number of parameters.
+Avoid unnecessary visibility; hide the implementation details of a program unit from its users.
+Use child library units to control the visibility of parts of a subsystem interface.
+Use private child packages for those declarations that should not be used outside the subsystem.
+Use child library units present different views of an entity to different clients.
+Design (and redesign) interfaces after having worked out the logic of various expected clients of the interface.
+
+==== example ====

@@ -1,0 +1,12 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 73
+section: pseudo-instructions
+chunk: 201
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+Pseudo Instructions are special commands to the assembler about the positioning of the program, the address the program should presumed to be assembled at, the name of the module, data declarations, the title and printing options for the program, defining and calling macros, macro looping and test, and end of source code. Unless a machine instruction is issued, these do not generate executable code.
+The pseudo instructions varied from version to version of the assembler, and higher-level and more powerful assemblers provided for all of the instructions. All pseudo instructions are 2-5 letters in length. The following lists the general pseudo instructions available. Some pseudo instructions are used for conditional assembly or macro processing, and some are only available while processing a macro.

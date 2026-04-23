@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 397
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+r hardware toward application requirements.
+See also Guideline 3.2.4 for the use of special-purpose suffixes in packages associated with tagged types.
+
+==== notes ====
+There are some conflicting conventions in current use for task entries. Some programmers and designers advocate naming task entries with the same conventions used for subprograms to blur the fact that a task is involved. Their reasoning is that if the task is reimplemented as a package, or vice versa, the names need not change. Others prefer to make the fact of a task entry as explicit as possible to ensure that the existence of a task with its presumed overhead is recognizable. Project-specific priorities may be useful in choosing between these conventions.
+
+=== Constants and Named Numbers ===

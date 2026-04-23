@@ -1,0 +1,17 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 19
+section: permissions
+chunk: 45
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+== File access rights ==
+In your home directory, type
+
+% ls -l
+You will see that you now get lots of detail about the contents of your directory.
+
+Each file (and directory) has access rights, which may be displayed by typing ls -l. Also, ls -lg gives additional information as to which group owns the file (istrain in the following example):

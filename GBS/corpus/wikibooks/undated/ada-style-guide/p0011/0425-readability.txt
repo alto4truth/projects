@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 425
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+atures facilitates earlier and more complete error detection than that which is available with less strongly typed languages.
+
+=== Declaring Types ===
+
+==== guideline ====
+Limit the range of scalar types as much as possible.
+Seek information about possible values from the application.
+Do not reuse any of the subtype names in package Standard.
+Use subtype declarations to improve program readability (Booch 1987).
+Use derived types and subtypes in concert (see Guideline 5.3.1).
+
+==== example ====
+
+By the following declaration, the programmer means, "I haven't the foggiest idea how many," but the actual base range will show up buried in the code or as a system parameter:

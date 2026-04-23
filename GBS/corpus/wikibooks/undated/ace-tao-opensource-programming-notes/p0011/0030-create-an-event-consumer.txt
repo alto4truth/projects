@@ -1,0 +1,41 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 11
+section: create-an-event-consumer
+chunk: 30
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+== Discussion ==
+This event client is designed to accept the events from the previously defined event server. The main difference between the server, where you can simply stuff some message in a CORBA::Any object and sent it to the event dispatcher, the client needs to overload the POA_CosEventComm::PushConsumer class. Specifically, the push and disconnect members need to be overridden.
+
+== main.cpp ==
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
+#include <iostream>
+#include <cstdlib>
+#include "eventsinkC.h"
+#include "eventsinkconsumer_i.h"
+
+using namespace std;
+
+//#include "acbc.h"
+
+int main(int argc, char *argv[])
+{
+// Initialize the ORB.
+CORBA::ORB_var orb = CORBA::ORB_init(argc, argv, "whatever");
+
+CORBA::Object_var poa_object = orb->resolve_initial_references ("RootPOA");
+//Now we need a reference to the naming service
+CORBA::Object_var naming_context_object = orb->resolve_initial_references ("NameService");
+CosNaming::NamingContext_var naming_context =
+CosNaming::NamingContext::_narrow (naming_context_object.in ());
+
+CosNaming::Name ec_name;
+ec_name.length(1);
+ec_name[0].id = CORBA::string_dup("CosEventService"); //TAO Specific

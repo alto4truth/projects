@@ -1,0 +1,39 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 9
+section: c-file-io-through-system-calls
+chunk: 46
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+ee modes (defined in the "fcntl.h" header
+file):
+
+O_RDONLY Open for reading only.
+O_WRONLY Open for writing only.
+O_RDWR Open for reading and writing.
+
+For example, to open "data" for writing, assuming that the file had been
+created by another program, the following statements would be used:
+
+int fd;
+fd = open( "data", O_WRONLY );
+
+A few additional comments before proceeding:
+
+A "creat()" call implies an "open()". There is no need to "creat()" a file and then "open()" it.
+There is an operating-system-dependent limit on the number of files that a program can have open at any one time.
+The file descriptor is no more than an arbitrary number that a program uses to distinguish one open file for another. When a file is closed, re-opening it again will probably not give it the same file descriptor.
+The "close()" system call is very simple. All it does is "close()" an open
+file when there is no further need to access it. The "close()" system call
+has the syntax:
+
+close( <file descriptor> );
+
+The "close()" call returns a value of 0 if it succeeds, and returns -1 if it
+encounters an error.
+The "unlink()" system call deletes a file. It has the syntax:
+
+unlink( <file_name_string> );

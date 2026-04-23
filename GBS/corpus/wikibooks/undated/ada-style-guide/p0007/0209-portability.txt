@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 209
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+sing machine code inserts by delineating what went wrong with attempts to use other higher level constructs.
+
+=== Interfacing to Foreign Languages ===
+
+==== guideline ====
+Use the package Interfaces and its language-defined child packages rather than implementation-specific mechanisms.
+Consider using pragma Import rather than access-to-subprogram types for interfacing to subprograms in other languages. (Preferably using the "External_Name =>" argument.)
+Isolate all subprograms employing pragmas Import, Export, and Convention to implementation-specific (interface) package bodies.
+
+==== example ====
+This example shows how to interface with the following cube root function written in C:

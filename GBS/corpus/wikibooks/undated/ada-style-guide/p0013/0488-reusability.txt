@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 488
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+entire library. Coupling between reusable parts should only occur when it provides a strong benefit perceptible to the user.
+
+=== Subsystem Design ===
+
+==== guideline ====
+Consider structuring subsystems so that operations that are only used in a particular context are in different child packages than operations used in a different context.
+Consider declaring context-independent functionality in the parent package and context-dependent functionality in child packages.
+
+==== rationale ====
+The generic unit is a basic building block. Generic parameterization can be used to break dependencies between program units so that they can be reused separately. However, it is often the case that a set of units, particularly a set of packages, are to be reused together as a subsystem. In this case, the packages can be collected into a hierarchy of child packages, with private packages to hide internal details. The hierarchy may or may not be generic. Using the child packages allows subsystems to be reused without incorporating too many extraneous operations because the unused child packages can be discarded in the new environment.
+See also Guidelines 4.1.6 and 8.3.1.

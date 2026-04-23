@@ -1,0 +1,28 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 21
+section: this-is-a-test
+chunk: 41
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+Many Unix commands that take a file as an argument will read from standard input if not given a file. For example, the grep command searches a file for a string and prints the lines that match. If I wanted to find my entry in the password file I might say:
+
+$ grep jrauser /etc/passwd
+jrauser:x:7777:100:John Rauser:/home/jrauser:/bin/bash
+
+But I could also redirect a file to grep's standard input using "<" operator. You can see that the "<" and ">" operators are like little arrows that indicate the flow of data.
+
+$ grep jrauser < /etc/passwd
+jrauser:x:7777:100:John Rauser:/home/jrauser:/bin/bash
+
+You can use the pipe "|" operator to connect the standard output of one command to the standard input of the next. The cat command reads a file and writes it to its standard output, so yet another way to find my entry in the password file is:
+
+$ cat /etc/passwd | grep jrauser
+jrauser:x:7777:100:John Rauser:/home/jrauser:/bin/bash
+
+For a slightly more interesting example, the mail command will send a message it reads from standard input. Let's send my entry in the password file to me in an email.
+
+$ cat /etc/passwd | grep jrauser | mail -s "passwd entry" jrauser@example.com

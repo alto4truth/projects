@@ -1,0 +1,50 @@
+title: 68000 Assembly
+source: wikibooks
+year: undated
+document_id: 68000-assembly
+authors: 
+page: 2
+section: addressing-modes
+chunk: 5
+source_ref: https://en.wikibooks.org/wiki/68000_Assembly
+
+ediate value. All listed syntaxes are equivalent, but some assemblers won't accept them all.
+
+=== Indirect addressing with index ===
+Assembler syntax:
+
+x(An,Dn.W)
+x(An,Dn.W*scale)
+x(An,Dn.L)
+x(An,Dn.L*scale)
+x(An,An.W)
+x(An,An.W*scale)
+x(An,An.L)
+x(An,An.L*scale)
+(x)(An,Dn.W)
+(x)(An,Dn.W*scale)
+(x)(An,Dn.L)
+(x)(An,Dn.L*scale)
+(x)(An,An.W)
+(x)(An,An.W*scale)
+(x)(An,An.L)
+(x)(An,An.L*scale)
+(x,An,Dn.W)
+(x,An,Dn.W*scale)
+(x,An,Dn.L)
+(x,An,Dn.L*scale)
+(x,An,An.W)
+(x,An,An.W*scale)
+(x,An,An.L)
+(x,An,An.L*scale)
+Same as above, but another register will also be added. Scale can be 1, 2, 4, or 8. Scale is not supported on all devices. Not all assemblers will take all listed syntaxes.
+
+=== Absolute near addressing ===
+Assembler syntax:
+
+(xyz).W
+xyz.W
+Operate on the location pointed to by letters like xyz, sign-extended by the assembler. You can write this either with or without the parentheses, and most assemblers can take either one. Which you choose is largely a matter of personal preference, but most people find (xyz).W easier to read.
+
+=== Absolute far addressing ===
+Assembler syntax:

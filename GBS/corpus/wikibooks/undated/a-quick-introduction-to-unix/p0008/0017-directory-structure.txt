@@ -1,0 +1,16 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 8
+section: directory-structure
+chunk: 17
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+All Unix files are integrated in a single directory structure. The file-system is arranged in a structure like an inverted tree. The top of this tree is the root and is written as a slash ‘/’.
+
+In the diagram on the left, we see that the home directory of the user ccaajim contains two sub-directories (stats and pictures) and a file called train.doc.
+The full path to the file train.doc is /nfs/fs-i/UM0098/ccaajim/train.doc
+This is rather different from the view you get of a Windows file structure. Unix integrates all the files into one directory structure rather than listing different physical storage devices each with its own root. The filestructure is logical rather than physical. If the computer had a CD ROM drive then it might appear as a folder under, say, nfs, called cd.
+You will find some directories on all (or almost all) Unix systems and it may help to have an idea what they contain, even if most users will never go near some of them.

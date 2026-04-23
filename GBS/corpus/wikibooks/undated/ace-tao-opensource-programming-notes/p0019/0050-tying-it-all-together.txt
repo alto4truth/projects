@@ -1,0 +1,12 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 19
+section: tying-it-all-together
+chunk: 50
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+Over the last 10 years, my usage of CORBA technologies has included Orbit, JacOrb, and ACE+TAO. Of the three technologies, ACE+TAO has been the most useful as it has been the most portable among platforms, and the most feature rich. The promise of CORBA of course is that you put in some IDL, run it through the IDL compiler, and out comes a mostly written client server application. As you've seen with the previous examples, this is mostly a stretch goal for the existing spec. The only area where this applies is for the RPC style applications. For everything else, you, the programmer, are responsible for doing quite a bit of non-network related CORBA internal programming. Perhaps, some day in the distant future, this spec can be widened to the point that many of the desired features can be accessed from the IDL. That being said, it is quite nice not to have to worry about the networking aspect of programming. It's also nice to be able to rely on the POA to manage objects, even if this is only a slight improvement over modern C++ template patterns such as those found in the STL and Boost.
+The warts of this particular implementation of a committee designed spec should in no way detract

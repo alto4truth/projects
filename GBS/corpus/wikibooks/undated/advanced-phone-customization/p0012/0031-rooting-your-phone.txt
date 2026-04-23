@@ -1,0 +1,20 @@
+title: Advanced phone customization
+source: wikibooks
+year: undated
+document_id: advanced-phone-customization
+authors: 
+page: 12
+section: rooting-your-phone
+chunk: 31
+source_ref: https://en.wikibooks.org/wiki/Advanced_phone_customization
+
+your root and can 'hide' it from applications which check for its presence. It can be installed by flashing its ROM in TWRP.
+
+== Passing SafetyNet ==
+
+You may find that you are unable to use Google Pay or access similar services (like Netflix). This happens because you are rooted, custom OS phone will fail SafetyNet.
+Fixing this problem usually involves editing the fingerprint of build.prop to match one which has been previously validated with the phone (apps exist on the Play Store to assist with it, or you can do it from TWRP itself). Sources like XDA Developers are a good place to find one; alternatively, one can try using the Magisk extension MagiskHidePropsConf instead.
+
+After that, you may find that your phone gives an error saying that "there is an internal problem with your phone". While this problem is not hard to fix, your phone is safe as is and there is no cause for concern over this message being displayed .
+
+== References ==

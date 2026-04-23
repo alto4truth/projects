@@ -1,0 +1,19 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 19
+section: security
+chunk: 227
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+ving the security of the .NET Framework applications by using the .NET Framework 2.0 security features
+
+=== Topics ===
+
+==== Code access security ====
+
+Code access security, CAS, allows the control of various permissions granted to specific managed applications. MSDN
+Permissions allow access to system resources. A permission set is a collection of permissions. A code group relates exactly one permission set to exactly one evidence type. Evidence is used to identify an assembly. Evidence types can include the application directory, cryptographic hash of the assembly, publisher's digital signature, site from which the assembly was downloaded, cryptographic strong name of the assembly, URL from which the assembly was downloaded, and the security zone in which the assembly is running. Security zones include the computer zone, local Intranet zone, Internet zone, trusted site, and untrusted sites. See the Internet options security tab in Internet Explorer to view various security zones. An assembly can be associated with multiple code groups. Permission sets can be associated with multiple code groups.
+A security policy is a logical grouping of code groups and permission sets. An untrusted managed assembly must pass through four security policies: The Enterprise security policy, machine security policy, user security policy, and application domain security policy. Any one of these security policies can deny an untrusted managed assembly permissions.

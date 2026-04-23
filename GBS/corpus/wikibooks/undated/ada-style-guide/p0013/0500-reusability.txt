@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 500
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+archy to decouple a generalized algorithm from the details of dependency on specific types.
+
+==== example ====
+
+Given the following array declaration:
+
+you can write a procedure that computes the wage of each employee, regardless of the different types of employees that you create. The Employee_List consists of an array of pointers to the various kinds of employees, each of which has an individual Compute_Wage procedure. (The primitive Compute_Wage is declared as an abstract procedure and, therefore, must be overridden by all descendants.) You will not need to modify the payroll code as you specialize the kinds of employees:

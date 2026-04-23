@@ -1,0 +1,20 @@
+title: A Guide To PIC Microcontroller Documentation
+source: wikibooks
+year: undated
+document_id: a-guide-to-pic-microcontroller-documentation
+authors: 
+page: 5
+section: documentation-structure-dev-tools-manufacturing
+chunk: 23
+source_ref: https://en.wikibooks.org/wiki/A_Guide_To_PIC_Microcontroller_Documentation
+
+e tools such as MPLAB™ IDE. These are briefly mentioned here with notes on where to find relevant documentation should you acquire one of these tools.
+
+PICkit™ 2 - forerunner to the PICkit™ 3. Supported most microcontrollers of all families until the launch of the PICkit™ 3, after which the support for future newly introduced microcontrollers will be reduced or even phased out. Originally conceived as a pure budget programmer tool, the PICkit™ 2 acquired its debugging capability later in its product life. As a programming tool it is supported by its own Windows GUI allowing it to be used without the MPLAB® IDE. Features a command line tool suitable for production programming or use with 3rd Party software (e.g. MatrixMultimedias FlowCode development environment) and a "Programmer-To-Go" mode allowing the PICkit™ 2 to be used as a stand-alone programmer (i.e. without a connection to a host PC) as long as the target circuit provides the tool with power. Currently the only tool support under Windows, Linux and MAC OS.
+Documentation - all relevant documentation and software can be found at www.microchip.com/pickit2
+ICD 2 - forerunner to the ICD 3. First "low-cost" in-circuit debug tool allowing developers to debug their application on the actual microcontroller they intended to use while the microcontroller was physically soldered in to the application circuitry. The target microcontroller needed a matching "debug module", implemented on the silicon, for the debug to function and also required two I/O pins for the data connection to the tool. Featured both debugging and programming facility supported through the MPLAB® IDE. With the introduction of the ICD 3 little if any major further support for newly released microcontrollers is expected.
+Documentation - all relevant documentation can be found at www.microchip.com/icd2
+ICE 2000 - a hardware, full-feature emulator complete with hardware breakpoint support, trace and full-speed emulation. Supported almost all the PIC12, PIC16, PIC17 and earlier PIC18 microcontrollers. Connection to the PC used the parallel interface. The device consisted of three parts; the "POD", the main part of the emulator connected to the PC; a "processor module" which supported a small group or family of similar devices; and a "device adaptor" which allowed the processor adaptor to be connected to the circuit in place of the microcontroller device which was planned to be used. Due to the complexity of this tool the purchase cost was very high, and a move to another controller device warranted further investment in the matching device adaptor, processor module or both. There is no further development of this tool.
+Documentation - all relevant documentation can be found at www.microchip.com/ice2000
+ICE 4000 - essentially the next generation in-circuit emulator follow-up to the ICE4000, supporting the PIC18 and the then new 16-bit dsPIC30 devices. Had improved supply voltage support, deeper trace buffers, unlimited breakpoints, external trigger input and signal output for synchronisation with external tools (e.g. oscilloscope) and a USB interface to the PC. Acceptance and use was never as broad as the ICE2000, partially due to similar high purchase and maintenance costs as the ICE 2000 and partially due to the attractiveness of the new, and significantly cheaper, ICD 2 despite its comparatively reduced debugging capability. There is no further development of this tool.
+Documentation - all relevant documentation can be found at www.microchip.com/ice4000

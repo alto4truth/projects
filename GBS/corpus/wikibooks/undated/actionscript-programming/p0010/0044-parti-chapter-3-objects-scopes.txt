@@ -1,0 +1,28 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 10
+section: parti-chapter-3-objects-scopes
+chunk: 44
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+);
+
+Now double click the “movie clip” you have created for navigating to it and open its first frame’s actions and write the following:
+
+trace(MyVar);
+
+Now play the movie. The output will be:
+
+This example demonstrated that the variable which was declared in the timeline cannot be accessed from other objects like “movie clip”. To avoid this we can declare our variable as global. Declaring global variables are like declaring a usual variables except two things: 1) do no write “var” at the beginning of the declaration and 2) append “_global” text at the beginning of the variable’s name. Example:
+
+_global.MyVar = new String("Hello!!!");
+
+Now if you test the following example once more, but this time declare “MyVar” variable as global it will work great.
+
+== Timeline variables ==
+This group of variables are accessible everywhere in the timeline. This means that if you declare a variable in frame 1, it can be accessed from all other frames and scenes, in short from everywhere in the timeline. Declaring timeline variables are like declaring a usual variables except writing the keyword “var” at the beginning of the declaration. Example:
+
+MyVar = new String("Hello!!!");

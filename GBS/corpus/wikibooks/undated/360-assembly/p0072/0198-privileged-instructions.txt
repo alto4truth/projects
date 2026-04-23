@@ -1,0 +1,18 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 72
+section: privileged-instructions
+chunk: 198
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+Privileged Instructions are programming instructions that need to be restrited to the operating system in order to protect system resources, system integrity, or system security. These include, but are not limited to:
+
+I/O instructions. To make sure two programs do not try to write to a printer, or edit a database record, or other errors that could corrupt files, a program issues I/O requests to the operating system, and it handles these operations.
+Load PSW. The PSW (program status word) contains the status about the computer and the currently executing job.
+Insert storage key, set storage key. Change or read any memory.
+Page table functions. Contaminate other jobs, lose pages swapped out to disc, corrupt memory and/or other jobs.
+Diagnose. Used by operating systems to issue requests to the hypervisor.
+Programs that do not have privileges are known as "problem" programs. Without protecting the PSW, page tables, or I/O devices, problem programs could:

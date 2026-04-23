@@ -1,0 +1,16 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 65
+section: branch-instructions
+chunk: 172
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+The branch instructions for the 360 Series mainframe computer come in two types: instructions which branch where a return address is provided (such as a subroutine call) and one-way branches where no return address is provided.
+All branch instructions come in 3 forms: No Branch At all, otherwise known as No-Operation or NO-OP, Conditional Branch, and Unconditional Branch
+In the examples below, it is presumed that R0,R1,R14,R15 are labels "equated" to the equivalent registers in these examples (0, 1, 14 and 15, respectively) to provide a cross reference listing. The examples would function equally well without the R prefixes, but it is common practice for programmers to use a label equated to each of the numbers, because references to registers do not show up in the cross-reference listing, but references to symbols do.
+
+== Branch with return address provided ==
+The following instructions provide a branch to another address, where a register is provided to store the address of the instruction following the branch to provide a means to return to the calling point.

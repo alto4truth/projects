@@ -1,0 +1,31 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 9
+section: parti-chapter-3-number-boolean-date
+chunk: 36
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+== Data types ==
+
+=== Number ===
+In section General concepts and difference between Number and String data types you understood the difference between String and Number data types. Now we will analyze Number data type in details. The following is the structure of declaring Number variable:
+
+var <name> = new Number( [initnumber] );
+
+The parameter <name> is the name of the variable you want to declare, and the parameter [initnumber] is the value you want the variable to be assigned when it is created.
+
+==== Methods ====
+
+===== toString =====
+String.toString( );
+This method returns the string representation of the specified String object. You already know the difference between Number and String objects so there is no need to explain why we need this method.
+
+===== valueOf =====
+String.valueOf( );
+This method returns the primitive value type of the specified Number variable (object).
+
+=== Boolean ===
+Now lets test the Boolean data type. Add a new button or movie clip in the scene and set its’ name to “testobject”, then open the actions of Frame 1 and write the following in Script pane:

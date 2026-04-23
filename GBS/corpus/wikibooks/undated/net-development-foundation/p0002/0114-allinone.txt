@@ -1,0 +1,40 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 114
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+by using the System.Security.AccessControl classes.
+DirectorySecurity class, FileSecurity class, FileSystemSecurity class, and RegistrySecurity class
+
+DirectorySecurity class - MSDN
+FileSecurity class - MSDN
+FileSystemSecurity class - MSDN
+RegistrySecurity class - MSDN
+AccessRule class - MSDN
+AuthorizationRule class and AuthorizationRuleCollection class
+
+AuthorizationRule class - MSDN
+AuthorizationRuleCollection class - MSDN
+CommonAce class, CommonAcl class, CompoundAce class, GenericAce class, and GenericAcl class
+
+CommonAce class - MSDN
+CommonAcl class - MSDN
+CompoundAce class - MSDN
+GenericAce class - MSDN
+GenericAcl class - MSDN
+AuditRule class - MSDN
+MutexSecurity class, ObjectSecurity class, and SemaphoreSecurity class
+
+MutexSecurity class - MSDN
+ObjectSecurity class - MSDN
+SemaphoreSecurity class - MSDN
+
+==== Implement custom authentication scheme ====
+Exam objective: Implement a custom authentication scheme by using the System.Security.Authentication classes.
+(Refer System.Security.Authentication namespace - MSDN)
+For a reference on custom authentification schemes see MSDN

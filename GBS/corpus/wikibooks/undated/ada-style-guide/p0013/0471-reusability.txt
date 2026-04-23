@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 471
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+o be widely used. If so, place each such instantiation in your reuse library so that they can be found and shared by others.
+See also Guideline 9.3.5.
+
+=== Formal Private and Limited Private Types ===
+
+==== guideline ====
+Consider using a limited private type for a generic formal type when you do not need assignment on objects of the type inside the generic body.
+Consider using a nonlimited private type for a generic formal type when you need normal assignment on objects of the type inside the body of the generic.
+Consider using a formal tagged type derived from Ada.Finalization.Controlled when you need to enforce special assignment semantics on objects of the type in the body of the generic.
+Export the least restrictive type that maintains the integrity of the data and abstraction while allowing alternate implementations.
+Consider using a limited private abstract type for generic formal types of a generic that extends a formal private tagged type.
+
+==== example ====
+The first example shows a case of a template providing only a data structure, a case in which assignment is clearly not needed in the body of the generic:

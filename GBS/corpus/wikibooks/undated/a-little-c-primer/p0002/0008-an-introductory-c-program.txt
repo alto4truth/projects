@@ -1,0 +1,20 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 2
+section: an-introductory-c-program
+chunk: 8
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+arguments enclosed in following parentheses, with commas separating the arguments. In the program above, the "printf()" function is called as follows:
+
+This invocation provides two arguments. The first—"Volume: %f\n"—supplies text and some formatting information. The second—"volume"—supplies a numeric value.
+A function may or may not return a value. The "sphere()" function does, and so is invoked as follows:
+
+A function uses the "return" keyword to return a value. In the case of "sphere", it returns the volume of the sphere with the statement:
+
+All variables in a C program must be "declared" by specifying their name and type. The example program declares two variables for the "main" routine:
+
+—and one in the "sphere" routine:

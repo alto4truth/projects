@@ -1,0 +1,56 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 267
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+for export to the user of the unit. Once the error situation is couched in terms of the application, it can be handled in those terms.
+
+== Summary ==
+
+=== high-level structure ===
+Place the specification of each library unit package in a separate file from its body.
+Avoid defining library unit subprograms that are not intended to be used as main programs. If such subprograms are defined, then create an explicit specification, in a separate file, for each library unit subprogram.
+Minimize the use of subunits.
+In preference to subunits, use child library units to structure a subsystem into manageable units.
+Place each subunit in a separate file.
+Use a consistent file naming convention.
+In preference to nesting in a package body, use a private child and with it to the parent body.
+Use private child unit specifications for data and subprograms that are required by (other) child units that extend a parent unit's abstraction or services.
+When possible, express configuration pragmas through compiler options or other means that do not require modifications to the source code.
+When configuration pragmas must be placed in source code, consider isolating them to one compilation unit per partition; if specified, the main subprogram for the partition is recommended.
+Use subprograms to enhance abstraction.
+Restrict each subprogram to the performance of a single action.
+Use a function when the subprogram's primary purpose is to provide a single value.
+Minimize the side effect of a function.
+Consider using a parameterless function when the value does not need to be static.
+Use a parameterless function (instead of a constant) if the value should be inherited by types derived from the type.
+Use a parameterless function if the value itself is subject to change.
+Use packages for information hiding.
+Use packages with tagged types and private types for abstract data types.
+Use packages to model abstract entities appropriate to the problem domain.
+Use packages to group together related type and object declarations (e.g., common declarations for two or more library units).
+Encapsulate machine dependencies in packages. Place a software interface to a particular device in a package to facilitate a change to a different device.
+Place low-level implementation decisions or interfaces in subprograms within packages.
+Use packages and subprograms to encapsulate and hide program details that may change (Nissen and Wallis 1984).
+If a new library unit represents a logical extension to the original abstraction, define it as a child library unit.
+If a new library unit is independent (e.g., introduces a new abstraction that depends only in part on the existing one), then encapsulate the new abstraction in a separate library unit.
+Use child packages to implement a subsystem.
+Use public child units for those parts of a subsystem that should be visible to clients of the subsystem.
+Use private child units for those parts of a subsystem that should not be visible to clients of the subsystem.
+Use private child units for local declarations used only in implementing the package specification.
+Use child packages to implement constructors, even when they return access values.
+Make each package serve a single purpose.
+Use packages to group related data, types, and subprograms.
+Avoid collections of unrelated objects and subprograms (NASA 1987; Nissen and Wallis 1984).
+Consider restructuring a system to move two highly related units into the same package (or package hierarchy) or to move relatively independent units into separate packages.
+Avoid declaring variables in package specifications.
+Use tasks to model abstract, asynchronous entities within the problem domain.
+Use tasks to define concurrent algorithms for multiprocessor architectures.
+Use tasks to perform concurrent, cyclic, or prioritized activities (NASA 1987).
+Use protected types to control or synchronize access to data or devices.
+Use protected types to implement synchronization tasks, such as a passive resource monitor.

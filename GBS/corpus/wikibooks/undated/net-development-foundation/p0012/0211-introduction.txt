@@ -1,0 +1,37 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 12
+section: introduction
+chunk: 211
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+extensively cover the basics but that we shallowly cover the framework itself.
+The relations with the common language runtime include such things as:
+
+Deployment
+Security
+Configuration
+Reflection
+Services
+Relationship with WMI
+Interoperability
+etc.
+The base class library includes
+
+types
+collections
+generics
+text manipulation
+basic drawing
+basic globalization
+serialization
+basic input/output
+multi-threading
+etc.
+All in all they are kind of "dry" topics. This idea of starting with an extensive coverage of the basics is certainly not the most interesting learning pattern for a beginner. This is why we advise real beginners to start with more adequate material.
+One last note about the framework "stack" is that new versions tend to add new components instead of "redoing" existing ones. This means that most of the "2.0" basics are still valid in "3.5". Some "basic" functionalities are nevertheless augmented or changed in new versions. We will try to keep track of those as side notes where possible.
+
+=== Programming paradigms ===

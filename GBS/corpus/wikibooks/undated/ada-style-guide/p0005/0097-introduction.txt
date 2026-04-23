@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 5
+section: introduction
+chunk: 97
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+to a consistent set of conventions that the whole project team will follow. Automatic code formatters can help in enforcing this kind of consistency.
+
+=== Program Structure ===
+Chapter 4 addresses overall program structure. Proper structure improves program clarity. This is analogous to readability on lower levels and includes issues of high-level structure, in particular the use of packages and child packages, visibility, and exceptions. The majority of the guidelines in this chapter are concerned with the application of sound software engineering principles, such as information hiding, abstraction, encapsulation, and separation of concerns.
+
+=== Programming Practices ===
+Chapter 5 presents guidelines that define consistent and logical language feature usage. These guidelines address optional parts of the syntax, types, data structures, expressions, statements, visibility, exceptions, and erroneous execution.

@@ -1,0 +1,26 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 282
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+l procedure and entry parameters (Nissen and Wallis 1984 ).
+Use the most restrictive parameter mode applicable to your application.
+
+==== example ====
+
+==== rationale ====
+By showing the mode of parameters, you aid the reader. If you
+do not specify a parameter mode, the default
+mode is in. Explicitly showing the mode indication of
+all parameters is a more assertive action than simply taking the
+default mode. Anyone reviewing the code later will be more confident
+that you intended the parameter mode to be in.
+Use the mode that reflects the actual use of the parameter. You
+should avoid the tendency to make all parameters in out
+mode because out mode parameters may be examined as well
+as updated.

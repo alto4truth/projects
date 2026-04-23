@@ -1,0 +1,26 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 2
+section: a-more-useful-client-and-server-example
+chunk: 17
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+ng_dup() function. Don't think about it, just do it. It's required by the spec. As for the sequence and struct, using the _var variable is sufficient.
+
+=== The Client ===
+Most of the client is boilerplate code, i.e., setup of the CORBA connection. The actual usage of the CORBA object looks just like a function call. As mentioned above, the only thing to watch out for is the usage of the three object types struct, sequence, and string. Have a look at the example client below to get a feel for how it works:
+
+=== Source objectclient.cpp ===
+
+== Deploying the App ==
+
+=== Compilation ===
+The TAO web site does a passable job of helping the developer new to ACE+TAO through the task of compiling their new applications. Despite these instructions, there are often some questions on their list serve regarding apps not compiling or linking. The compilation command you are going to need with a 5.8.x or later version of ACE+TAO is likely to require the following local objects:
+
+ActorC.cpp ActorI.cpp ActorS.cpp objectserver.cpp
+and the link portion of you application is likely to require the following objects:
+
+-lpqxx -lTAO_PortableServer -lTAO_CosNaming -lTAO_AnyTypeCode -lACE -lTAO

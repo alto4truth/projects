@@ -1,0 +1,51 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 8
+section: c-file-io-through-library-functions
+chunk: 37
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+tf( fp, " %d %f", n1, n2 );
+fclose( fp );
+}
+—stores the following ASCII data:
+16 3.14159
+
+The formatting codes are exactly the same as for "printf()":
+
+%d decimal integer
+%ld long decimal integer
+%c character
+%s string
+%e floating-point number in exponential notation
+%f floating-point number in decimal notation
+%g use %e and %f, whichever is shorter
+%u unsigned decimal integer
+%o unsigned octal integer
+%x unsigned hex integer
+
+Field-width specifiers can be used as well. The "fprintf()" function returns
+the number of characters it dumps to the file, or a negative number if it
+terminates with an error.
+The "fscanf()" function is to "fprintf()" what "scanf()" is to "printf()":
+it reads ASCII-formatted data into a list of variables. It has the syntax:
+
+fscanf( <file pointer>, <string>, <variable list> );
+
+However, the "string" contains only format codes, no text, and the "variable
+list" contains the addresses of the variables, not the variables themselves.
+For example, the program below reads back the two numbers that were stored
+with "fprintf()" in the last example:
+
+/* frdata.c */
+
+#include <stdio.h>
+
+void main()
+{
+int n1;
+float n2;
+FILE *fp;

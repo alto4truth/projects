@@ -1,0 +1,31 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 289
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+structure (see
+Guideline 5.4.6 ), you need the access parameter to be able to
+manipulate the data the discriminant accesses (Rationale 1995,
+§3.7.1 ).
+
+==== notes ====
+For anonymous task types, see Guideline 6.1.4 .
+
+==== exceptions ====
+If you are creating a unique table, for example, the periodic
+table of the elements, consider using an anonymous array type.
+
+=== Private Types ===
+
+==== guideline ====
+Derive from controlled types in preference to using limited private types.
+Use limited private types in preference to private types.
+Use private types in preference to nonprivate types.
+Explicitly export needed operations rather than easing restrictions.
+
+==== example ====

@@ -1,0 +1,19 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 9
+section: parti-chapter-3-number-boolean-date
+chunk: 37
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+dd a new button or movie clip in the scene and set its’ name to “testobject”, then open the actions of Frame 1 and write the following in Script pane:
+
+The first line declares a Boolean variable “show” and sets its’ value to “false”. In the third line we set “testobject’s” property “Visible” to the “show” variable we declared. If you test the movie you won't see the “testobject”, because the show value is “false” but if you change the word “false” in line 1 to “true” then the object will be shown.
+
+==== Methods ====
+
+===== toString =====
+String.toString( );
+This method returns the string representation of the Boolean object. Now you ask why do you need to use this method if you can do without it by just writing for example: “x=x+true;”, where x is a String variable. To understand the use of “toString” method you must first understand the Boolean data type. Actually the Boolean data type is a masked number data type. The values “true” and “false” are numbers. “true” is 1 and “false” is 0. To test this, we can write a simple code:

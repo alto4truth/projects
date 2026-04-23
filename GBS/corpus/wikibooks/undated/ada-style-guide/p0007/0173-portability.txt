@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 173
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+m the Specialized Needs Annexes (systems programming, real-time systems, distributed systems, information systems, numerics, and safety and security).
+
+==== rationale ====
+The Specialized Needs Annexes define standards for specific application areas without extending the syntax of the language. You can port a program with specific domain needs (e.g., distributed systems, information systems) across vendor implementations more easily if they support the features standardized in an annex rather than rely on specific vendor extensions. The purpose of the annexes is to provide a consistent and uniform way to address issues faced in several application areas where Ada is expected to be used. Because different compilers will support different sets of annexes if any, you may have portability problems if you rely on the features defined in any given annex.
+The Specialized Needs Annexes provide special capabilities that go beyond the core language definition. Because compilers are not required to support the special-purpose annexes, you should localize your use of these features where possible. By documenting their usage, you are leaving a record of potential porting difficulties for future programmers.

@@ -1,0 +1,17 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 30
+section: 360-instructions-la
+chunk: 98
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+truction is often used to compute an address, it can be used to set the value of a register, e.g. a way to increment register 1 by 1 is the following:
+
+LA 1, 1(0,1)
+Or to increment register 7 by 5
+
+LA 7, 5(0,7)
+In some cases, (24- and 31-bit modes) the LA instruction is used to create addressing for program segments larger than 4095 bytes, by arranging a second register to point 4096 bytes after the first:

@@ -1,0 +1,19 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 24
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+n) utility to create the machine code in advance of runtime.
+This architecture has many direct implications for the subjects of this book. Among them:
+
+The "source code" of the second compilation (the CIL code) is always available to the virtual machine at runtime. This means that this code can easily be analyzed at runtime, contrary to conventional compiled environment. This characteristic is the base for the reflection functionality of the platform. Not only can we analyze the "intermediate source code" but we can actually create (emit) some of it at runtime and then do the "just-in-time" compilation and execution.
+The execution is done in the context of the CLR (this is the "managed" code concept). Put another way, we can say that the runtime always "knows" what it sends for execution, contrary to a conventional environment where the code is executed directly by the operating system. This implies that you can tell the runtime to execute, or not, this or that type of code. This is the basis for code access security.
+Most of the features of the .NET languages (C#, VB, etc.) are directly related to features of the intermediate language. Put another way, most of the time, the first compilation is pretty straightforward. Some of the constructs though do not have direct equivalents in the CIL (ex. properties in C# are mapped to class methods in the CIL).
+We could continue like that for a long time. The point we want to make here is that a developer has much to gain from a detailed understanding of the platform, even if it is not directly mentioned as an objective of the exam.
+If you want to read on the framework in Microsoft documentation you can see MSDN.
+The last thing we will note here is that the common language runtime (CLR) can execute in different contexts:

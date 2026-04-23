@@ -1,0 +1,22 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 9
+section: create-a-process-with-both-client-and-server
+chunk: 28
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+The model here is to set up a client like app, and at regular intervals, call the server code's handler on a once through (no loop) mode. Note the odd way this is crafted so that the poll function is called after the orb's process loop times-out. So, what can happen here is that the handler can call out to other ORBs and the run() member of the local orb can act as a part time server. According to the TAO Developer's manual, the TCP stack will act as your cache while the poll function is doing its thing, thus, don't spend too much time in the poll function.
+
+MyHandler ph;
+
+//Set up a delay value of 6 s
+ACE_Time_Value interval (6, 0);
+//Run the ORB's event loop and poll the bill acceptor
+while(1){
+orb->run(interval);
+ph.poll();
+}
+orb->destroy ();

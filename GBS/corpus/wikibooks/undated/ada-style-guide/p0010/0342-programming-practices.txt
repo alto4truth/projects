@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 342
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ntional algebraic meaning implied by this symbol. As described in Baker (1991), the following properties should remain true for the equality operator:
+
+Reflexive
+a = a
+Symmetric
+a = b ==> b = a
+Transitive
+a = b and b = c ==> a = c
+In redefining equality, you are not required to have a result type of Standard.Boolean. The Rationale (1995, §6.3) gives two examples where your result type is a user-defined type. In a three-valued logic abstraction, you redefine equality to return one of True, False, or Unknown. In a vector processing application, you can define a component-wise equality operator that returns a vector of Boolean values. In both these instances, you should also redefine inequality because it is not the Boolean complement of the equality function.

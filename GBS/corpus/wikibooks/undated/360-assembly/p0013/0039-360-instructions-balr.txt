@@ -1,0 +1,28 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 13
+section: 360-instructions-balr
+chunk: 39
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+BALR — Branch and Link Register — Opcode 05 / Decimal 05 —
+2 byte RR
+Instruction.
+
+== Format ==
+BALR target_register,source_register (both register values are 0 to 15)
+BALR 6,1
+
+The first argument is a target register which value is affected by the instruction.
+The second argument is the source register.
+The target register and source register values are 0 to 15.
+
+== Availability ==
+The BALR instruction is
+available on all models, 360, 370 and z/System.
+
+== Purpose of Instruction ==
+BALR is a Branch and Link Register Instruction for use in transferring to different locations for code running in 24- 31, or 64-bit mode. It stores the address of the next sequential instruction in the target register, then jumps to the address specified in the source_register, unless register 0 is specified, in which case no branch is taken. This instruction remains for compatibility with 360 machines; for 370 and above, the BASR instruction is preferred.

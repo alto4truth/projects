@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 123
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+of their type-specific finalization.
+Consider deriving a data structure's components rather than the enclosing data structure from a controlled type.
+
+==== example ====
+The following example demonstrates the use of controlled types in the implementation of a simple linked list. Because the Linked_List type is derived from Ada.Finalization.Controlled, the Finalize procedure will be called automatically when objects of the Linked_List type complete their scope of execution:

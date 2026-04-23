@@ -1,0 +1,32 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 8
+section: end-program
+chunk: 42
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+did it do? Type in the program (you can skip the comments), and see what it does. The output looks like this:
+
+Code Example 11 - the output
+hello
+1234
+
+So what happened?
+when 'def hello()' was run, a function called 'hello' was created
+When the line 'hello()' was run, the function 'hello' was executed (The code inside it was run)
+The function 'hello' printed "hello" onscreen, then returned the number '1234' back to the main program
+The main program now sees the line as 'print 1234' and as a result, printed '1234'
+That accounts for everything that happened. remember, that the main program had NO IDEA that the words "hello" were printed onscreen. All it saw was '1234', and printed that onscreen.
+
+== Passing Parameters to Functions ==
+There is one more thing we will cover in this (monstrously huge) lesson - passing parameters to a function. Think back to how we defined functions:
+
+Code Example 12 - Defining functions with parameters
+def function_name(parameter_1,parameter_2):
+{this is the code in the function}
+{more code}
+{more code}
+return {value (e.g. text or number) to return to the main program}

@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 136
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+uming that all derivations of type object have defined a function for Area, Moment will dispatch to the appropriate function when called. For example:
+
+==== rationale ====
+The use of class-wide operations avoids unnecessary duplication of code. Run-time dispatching may be used where necessary to invoke appropriate type-specific operations based on an operand's tag.
+See also Guideline 8.4.3 for a discussion of class-wide pointers in an object-oriented programming framework registry.
+
+=== Constructors ===
+Ada does not define a unique syntax for constructors. In Ada a constructor for a type is defined as an operation that produces as a result a constructed object, i.e., an initialized instance of the type.

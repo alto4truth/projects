@@ -1,0 +1,18 @@
+title: A First Course to Network Coding
+source: wikibooks
+year: undated
+document_id: a-first-course-to-network-coding
+authors: 
+page: 2
+section: communication-model-and-network-concepts
+chunk: 4
+source_ref: https://en.wikibooks.org/wiki/A_First_Course_to_Network_Coding
+
+hannon and Weaver developed a very well-known model of communication that has since taken after their names. This model contains six major components:
+
+Information source, which produce a message;
+Transmitter, which converts the message into forms that are suitable for transmission: an e-mail, for instance, translate a message into a digital stream of ‘1’s and ‘0’s that can be sent via internet;
+Channel, through which the message is conveyed. It could be a physical connection, like a landline, or a logical one, like one you establish when you call someone and they pick up;
+Receiver, which reconstruct the original message from the transmitted data;
+Destination, where the message arrives;
+Noise source, a dysfunctional, yet important element of communication: it interferes with the data during transmission and makes it difficult to reconstruct the original message.

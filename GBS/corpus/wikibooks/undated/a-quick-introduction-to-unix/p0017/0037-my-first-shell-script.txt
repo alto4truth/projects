@@ -1,0 +1,15 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 17
+section: my-first-shell-script
+chunk: 37
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+.txt. I created this file by stripping all the images and formatting from the Wikipedia article on science. You are of course welcome to try the same.
+
+==== scenario ====
+From the point of view of "real Unix scripting", what I do next is rather unnatural. Unix power users would not create a shell file of the kind I do below but would definitely use the piping and redirecting of grep output directly on the command line. But my aim here is to dazzle, hopefully inspire, and teach a little. So, learn and pass on.
+Let us imagine that you are a historian of ideas. You want to know how Wikipedia presents the development of the idea of science. To begin with we'll just look at the lines of the Wikipedia article on science that actually contain the word science (as I mentioned above, I'm using a file that I created that only contains unformatted text from the article). How can we find these lines using what we know about Unix? The answer, as I'm sure you knew, is with grep. To find all the lines that contain the word science we would issue the command

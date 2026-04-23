@@ -1,0 +1,22 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 31
+section: routine-csect
+chunk: 99
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+BALR 12,0
+USING *,12,11
+LA 11,4095(0,12) Register 0 explicitly stated as the index register
+LA 11,1(11) Register 0 is implied for the Index register
+
+In the above case, register 12 is the base register for the first 4096 bytes of the routine, and register 11 is the base register for the portion of the program above 4096 bytes.
+
+== Exceptions and Faults ==
+None. The address being generated is not checked for validity, and because in all modes (24-bit, 31-bit or 64-bit), bit 0 is always cleared, overflow cannot occur.
+
+== Most Closely-related Instruction ==
+The most closely-related instruction is Add Logical Register (ALR) and not Load Address (LA), as is sometimes assumed. Whereas L loads a value from memory, LA does not access memory; it only calculates a number, which can but does not have to be an address.

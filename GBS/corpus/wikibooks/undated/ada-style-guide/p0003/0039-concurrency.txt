@@ -1,0 +1,13 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 39
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+also need to include an exception handler in the task Throttle so that it can continue to execute after an exception is raised during the rendezvous:
+
+In this select statement, if all the guards happen to be closed, exception Program_Error will be raised. Other exceptions can still be raised while evaluating the guards or attempting to communicate:

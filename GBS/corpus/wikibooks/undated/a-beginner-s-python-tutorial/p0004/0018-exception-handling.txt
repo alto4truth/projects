@@ -1,0 +1,33 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 4
+section: exception-handling
+chunk: 18
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+know what the problem is, how do we fix it. Well, the error message has isolated where the problem is, so we'll only concentrate on that bit of code.
+
+Code Example 3 - calling the menu function
+
+This is a call to a function. The error occurred in the function in the following line
+
+Code Example 4 - Where it went wrong
+
+raw_input always returns a string, hence our problem. Let's change it to input(), which, when you type in a number, it returns a number:
+
+Code Example 5 - Fixing it
+
+Bug fixed!
+
+== Exceptions - Limitations of the Code ==
+Okay, the program works when you do something normal. But what if you try something weird? Type in a letter (lets say, 'm') instead of a number? Whoops!
+
+Code Example 6 - Another error message
+Traceback (most recent call last):
+File "/home/steven/errortest.py", line 10, in -toplevelanswer = menu(< I'll snip it here >)
+File "/home/steven/errortest.py", line 6, in menu
+return input(question) - 1
+File "", line 0, in -toplevelNameError: name 'm' is not defined

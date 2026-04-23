@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 221
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ing performance and space availability (ARTEWG 1986).
+
+=== Input/Output on Access Types ===
+
+==== guideline ====
+Avoid performing I/O on access types.
+
+==== rationale ====
+The Ada Reference Manual 1995, §A.7 [Annotated] does not specify the effects of I/O on access types. When such a value is written, it is placed out of reach of the implementation. Thus, it is out of reach of the reliability-enhancing controls of strong type checking.
+Consider the meaning of this operation. One possible implementation of the values of access types is virtual addresses. If you write such a value, how can you expect another program to read that value and make any sensible use of it? The value cannot be construed to refer to any meaningful location within the reader's address space, nor can a reader infer any information about the writer's address space from the value read. The latter is the same problem that the writer would have trying to interpret or use the value if it is read back in. To wit, a garbage collection and/or heap compaction scheme may have moved the item formerly accessed by that value, leaving that value "pointing" at space that is now being put to indeterminable uses by the underlying implementation.

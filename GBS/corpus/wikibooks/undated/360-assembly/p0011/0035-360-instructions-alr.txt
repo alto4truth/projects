@@ -1,0 +1,34 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 11
+section: 360-instructions-alr
+chunk: 35
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ALR - Add Logical Register - Opcode 1E
+
+== Format ==
+ALR 2,1
+The specific syntax is
+
+ALR target register, source register.
+
+The first argument is a target register which value is affected by the instruction.
+The second argument is the source value register.
+
+== Availability ==
+The ALR instruction is available on all models of the 360, 370 and z/System.
+
+== Operation ==
+The ALR instruction reads 32-bit integer value from the register specified by the second argument and adds it to the value of the register specified by the first argument. The least significant 32 bits of the 33-bit result sum is placed to the target register. The Condition Code field in the Program Status Word is changed according to the resulting value (sum), treated as unsigned integer (see below).
+As this is a 32-bit instruction, on the zSystem, the high 32 bits of the register are unaffected.
+
+== Condition Codes ==
+The least significant bit of CC field of the PSW is set if sum is not zero and cleared otherwise.
+The most significant bit of CC field of the PSW keeps carry bit (i.e. the most significant bit of the 33-bit sum).
+
+== Exceptions and Faults ==
+None.

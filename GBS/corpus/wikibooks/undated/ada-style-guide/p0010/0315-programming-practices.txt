@@ -1,0 +1,39 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 315
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+precision of the arithmetic on a certain machine),
+then the = would have to be used. But never use =
+on real operands as a condition to exit a loop .
+
+== Statements ==
+Careless or convoluted use of statements can make a program hard
+to read and maintain even if its global structure is well organized.
+You should strive for simple and consistent use of statements
+to achieve clarity of local program structure. Some of the guidelines
+in this section counsel use or avoidance of particular statements.
+As pointed out in the individual guidelines, rigid adherence to
+those guidelines would be excessive, but experience has shown
+that they generally lead to code with improved reliability and
+maintainability.
+
+=== Nesting ===
+
+==== guideline ====
+Minimize the depth of nested expressions (Nissen and Wallis 1984 ).
+Minimize the depth of nested control structures (Nissen and Wallis 1984 ).
+Try using simplification heuristics (see the following Notes ).
+
+==== instantiation ====
+Do not nest expressions or control structures beyond a nesting level of five.
+
+==== example ====
+The following section of code:
+
+can be rewritten more clearly and with less nesting as:

@@ -1,0 +1,32 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 299
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+k element names that read well when inner elements are referenced.
+Consider using type extension to organize large data structures.
+
+==== example ====
+
+==== rationale ====
+You can make complex data structures understandable and comprehensible
+by composing them of familiar building blocks. This technique
+works especially well for large record types with parts that fall
+into natural groupings. The components factored into separately
+declared records, based on a common quality or purpose, correspond
+to a lower level of abstraction
+than that represented by the larger record.
+When designing a complex data structure, you must consider whether
+type composition or type extension is the best suited technique.
+Type composition refers to creating a record component whose type
+is itself a record. You will often need a hybrid of these techniques,
+that is, some components you include through type composition
+and others you create through type extension. Type extension may
+provide a cleaner design if the "intermediate" records
+are all instances of the same abstraction family. See also Guidelines
+5.4.2 and 9.2.1 .

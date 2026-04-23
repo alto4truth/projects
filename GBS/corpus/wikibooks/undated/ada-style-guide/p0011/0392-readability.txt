@@ -1,0 +1,27 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 392
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+hat can be "mixed in" to core abstractions.
+The second instantiation highlights the use of object-oriented features through special names or suffixes:
+
+Name class packages after the object they represent, without a suffix (Rosen 1995).
+Name mixin packages after the facet they represent, appending the suffix _Facet (Rosen 1995).
+Name the main tagged type Instance (Rosen 1995).
+Follow the declaration of the specific type with a subtype named Class for the corresponding class-wide type (Rosen 1995).
+
+==== example ====
+The following two-part example from the Rationale (1995, §§4.4.4 and 4.6.2) applies the naming conventions of the first instantiation.
+For the first part of this example, assume the type Set_Element was declared elsewhere:
+
+The second part of this example applies the naming convention to mixin packages that support a windowing system:
+
+The following example applies the naming conventions of the second instantiation, as discussed in Rosen (1995):
+
+Sample declarations might look like:

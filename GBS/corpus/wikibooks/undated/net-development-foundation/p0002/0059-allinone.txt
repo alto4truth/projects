@@ -1,0 +1,18 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 59
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+ave to recode a swap function for every type
+The generalization does not cost us the strong typing (try swapping an int and a string, it wont compile)
+
+Next step is to present an example including a generic interface, a generic class that implements that generic interface and a class derived from that generic class. The sample also uses interface and derivation constraints.
+This is another simple problem involving employees and suppliers which have nothing in common except that they can request payment to a "payment handler" (see visitor pattern).
+The problem is to know where to put the logic if you have specific processing to do for a certain kind of payment just for employees. There are myriads of ways to solve that problem but the use of generics make the following sample clean, explicit and strongly typed.
+The other nice thing is that it has nothing to do with containers or collections where you will find almost all of generic samples.
+Please note that the EmployeeCheckPayment<T> class derives from CheckPayment<T> giving a stronger constraint on the type parameter T (must be employee not just implement IPaymentInfo). That gives us the to opportunity to have access (in its RequestPayment method) to all payment logic (from the base class) at the same time as all employee public interface (thru the sender method parameter) and that without having to do any cast.

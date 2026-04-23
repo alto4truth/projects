@@ -1,0 +1,26 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 11
+section: interoperability-topics
+chunk: 200
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+== Topics ==
+
+=== Interoperability ===
+
+=== Reflection ===
+
+The Wikipedia definition for reflection in computer science is: "The process by which a computer program can observe and modify its own structure and behavior. The programming paradigm driven by reflection is called reflective programming".
+The concept is implemented extensively in .NET because a lot of information is maintained at the common intermediate language (CIL) level.
+Among other things you can:
+
+get information about running assembly or assembly constituents (modules, classes, methods, etc.), this is particularly useful for dynamically loaded assemblies that are not known at compile time.
+put custom attributes in your code and retrieve those attributes at run time.
+dynamically invoke methods.
+"emit" and execute CIL code at run time.
+
+=== Mailing ===

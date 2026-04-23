@@ -1,0 +1,44 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 17
+section: a-perl-statement
+chunk: 34
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+print $_;
+}
+
+== Example - Using perl to create an indicator variable ==
+Education level is recorded in columns 53-54 as ordered set of categories, where 11 and above indicates a college degree. Let's condense this to a single indicator variable for completed college or not. The raw data:
+
+$ cat pums_53.dat | grep "^P" | cut -c53-54 | head -5
+12
+11
+06
+03
+08
+
+And once passed through the perl script:
+
+$ cat pums_53.dat | grep "^P" | cut -c53-54 |
+perl -ne 'print $_>=11?1:0,"\n"' | head -5
+1
+1
+0
+0
+0
+
+And the final result:
+
+~/census_data>cat pums_53.dat | grep "^P" | cut -c53-54 |
+perl -ne 'print $_>=11?1:0,"\n"' | sort | uniq -c
+37507 0
+21643 1
+
+About 36% of Washingtonians have a college degree.
+
+== Example - computing conditional probability of membership in two sets ==
+Let's look at the relationship between education level and whether or not people ride their bikes to work. People's mode of transportation to work is encoded as a series of categories in columns 191-192, where category 9 indicates a bicycle. We'll use an inline perl script to rewrite both education level and mode of transportation:

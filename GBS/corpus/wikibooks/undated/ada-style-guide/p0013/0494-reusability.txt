@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 494
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ers. The root types should not themselves depend on the registry. See Chapter 9 for a more complete discussion of the use of object-oriented features.
+
+=== Part Families ===
+
+==== guideline ====
+Create families of generic or other parts with similar specifications.
+
+==== example ====
+The Booch parts (Booch 1987) are an example of the application of this guideline.
+
+==== rationale ====
+Different versions of similar parts (e.g., bounded versus unbounded stacks) may be needed for different applications or to change the properties of a given application. Often, the different behaviors required by these versions cannot be obtained using generic parameters. Providing a family of parts with similar specifications makes it easy for the programmer to select the appropriate one for the current application or to substitute a different one if the needs of the application change.

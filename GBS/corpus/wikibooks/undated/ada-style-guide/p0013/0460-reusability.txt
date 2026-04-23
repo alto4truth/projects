@@ -1,0 +1,26 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 460
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+Generic Units ===
+
+==== guideline ====
+Be careful about overloading the names of subprograms exported by the same generic package.
+
+==== example ====
+
+==== rationale ====
+If the generic package shown in the example above is instantiated with Integer (or any subtype of Integer) as the actual type corresponding to generic formal Item, then the two Put procedures have identical interfaces, and all calls to Put are ambiguous. Therefore, this package cannot be used with type Integer. In such a case, it is better to give unambiguous names to all subprograms. See the Ada Reference Manual 1995, §12.3 [Annotated] for more information.
+
+=== Hidden Tasks ===
+
+==== guideline ====
+Within a specification , document any tasks that would be activated by with'ing the specification and by using any part of the specification.
+Document which generic formal parameters are accessed from a task hidden inside the generic unit.
+Document any multithreaded components.

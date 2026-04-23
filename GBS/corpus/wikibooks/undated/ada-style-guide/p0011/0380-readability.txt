@@ -1,0 +1,38 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 380
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+rouped by fours beginning on either side of the radix point.
+
+==== example ====
+
+To represent the number 1/3 as a constant, use:
+
+Avoid this use:
+
+or:
+
+==== rationale ====
+Consistent use of uppercase or lowercase aids scanning for numbers. Underscores serve to group portions of numbers into familiar patterns. Consistency with common use in everyday contexts is a large part of readability.
+
+==== notes ====
+If a rational fraction is represented in a base in which it has a terminating rather than a repeating representation, as 3#0.1# does in the example above, it may have increased accuracy upon conversion to the machine base.
+(This is wrong for named numbers as in this example - they must be calculated exactly.)
+
+=== Capitalization ===
+
+==== guideline ====
+Make reserved words and other elements of the program visually distinct from each other.
+
+==== instantiation ====
+Use lowercase for all reserved words (when used as reserved words).
+Use mixed case for all other identifiers, a capital letter beginning every word separated by underscores.
+Use uppercase for abbreviations and acronyms (see automation notes).
+
+==== example ====

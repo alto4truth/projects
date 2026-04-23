@@ -1,0 +1,17 @@
+title: A Neutral Look at Operating Systems
+source: wikibooks
+year: undated
+document_id: a-neutral-look-at-operating-systems
+authors: 
+page: 4
+section: berkeley-software-distribution
+chunk: 16
+source_ref: https://en.wikibooks.org/wiki/A_Neutral_Look_at_Operating_Systems
+
+ved from this one.
+FreeBSD was the first to have the soft updates feature to improve disk performance and recovery of filesystems from system crashes.
+
+=== PC-BSD ===
+PC-BSD is a project to build a system based on FreeBSD and KDE. It is very easy to install. After the other BSDs are installed, they give the user only a root shell prompt, and no graphical user interface is configured. After installing PC-BSD, a KDE desktop environment is already configured. PC-BSD also has a graphical installer which helps the user create a first non-root user account and includes customizing BSD disklabel.
+PC-BSD users can download *.pbi files, double-click their icons, and install them as binary packages. This is a rare feature among BSD and even Linux distributions, but common on Windows and Mac OS X. Optionally, KDE menu and desktop items are created. Not only are the *.pbi packages available, but the FreeBSD ports collection is also available.
+Both OS installation and *.pbi files are demonstrated in the PC-BSD tour.

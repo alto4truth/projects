@@ -1,0 +1,17 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 7
+section: parti-chapter-3-arrays
+chunk: 26
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+size to 20, var to “output” and change the Text Type to “Dynamic Text”. Place this Text under the two previous labels. The scene must look like this.
+
+Step 4
+Set the Fill Color to green and the Stroke Color to black. Then select the Rectangle Tool in the Toolbox, click the “Round Rectangle Radius” button in the Options window, set the “Corner Radius” to 5, press OK and draw a rectangle. Double click the rectangle you have drawn and set its width to 35 and height to 25. Select the Text Tool from the Toolbox and draw Text. Then select it and in the Properties window set its’ width to 25, height to 18, font size to 13, color to red and change the Text Type to “Static Text”. Type “OK” in it and place it in the center of the rectangle. Now select the whole rectangle and this text (by dragging mouse) and convert it to button. In the “Convert to Symbol” dialog set the button’s name to “button” and press OK. Select the button you have created, place it near the Input Text and in the Property window set its name to “btnOK”. The scene must look like this.
+
+Step 5
+This is enough for our design. Now open the Frame 1 actions and type the following in the Script Pane:

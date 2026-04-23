@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 178
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+meters to the "&" function are evaluated in textual order, the output is:
+1 2
+If the parameters are evaluated in the reverse order, the output is:
+2 1
+
+==== rationale ====
+The Ada language defines certain evaluations to occur in arbitrary order (e.g., subprogram parameters). While a dependency on the order of evaluation may not adversely affect the program on a certain implementation, the code might not execute correctly when it is ported. For example, if two actual parameters of a subprogram call have side effects, the effect of the program could depend on the order of evaluation (Ada Reference Manual 1995, §1.1.4 [Annotated]). Avoid arbitrary order dependencies, but also recognize that even an unintentional error of this kind could prohibit portability.

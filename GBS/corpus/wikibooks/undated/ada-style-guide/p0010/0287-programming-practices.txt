@@ -1,0 +1,32 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 287
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+rly,
+if the abstraction is a member of a family of abstractions with
+well-defined variable and common properties, you should consider
+a tagged record.
+
+==== notes ====
+The price of the reduction in the number of independent type declarations
+is that subtypes and derived types change when the base type is
+redefined. This trickle-down of changes is sometimes a blessing
+and sometimes a curse. However, usually it is intended and beneficial.
+
+=== Anonymous Types ===
+
+==== guideline ====
+Avoid anonymous array types.
+Use anonymous array types for array variables only when no suitable type exists or can be created and the array will not be referenced as a whole (e.g., used as a subprogram parameter).
+Use access parameters and access discriminants to guarantee that the parameter or discriminant is treated as a constant.
+
+==== example ====
+Use:
+
+rather than:

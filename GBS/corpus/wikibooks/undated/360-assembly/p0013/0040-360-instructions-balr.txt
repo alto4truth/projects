@@ -1,0 +1,17 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 13
+section: 360-instructions-balr
+chunk: 40
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+in which case no branch is taken. This instruction remains for compatibility with 360 machines; for 370 and above, the BASR instruction is preferred.
+
+== Typical Usage ==
+It is used in two cases. First, to establish a base register to address locations in the current module being executed. Second, it is used to call an external routine, saving the return address. Note that when registers are used in examples, the labels R0, R1, through R15 are used to represent the values 0 or 1 through 15, respectively.
+
+== Operation ==
+The operation of this instruction is different depending on address mode.

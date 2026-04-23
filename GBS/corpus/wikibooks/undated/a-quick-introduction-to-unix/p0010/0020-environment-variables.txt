@@ -1,0 +1,13 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 10
+section: environment-variables
+chunk: 20
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+To get all the system environment Variables: printenv.
+To get one by its name: echo $PATH.
+To modify it: export $PATH="/usr/local/sbin:/usr/local/bin".

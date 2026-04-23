@@ -1,0 +1,26 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 14
+section: source-code-presentation
+chunk: 520
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+e to declare the parameters in a single one-line list rather than to separate the formal parameter list into multiple formal parameter specifications.
+
+==== automation notes ====
+Most of the guidelines in this section are easily enforced with an automatic code formatter. The one exception is the last example, which shows vertical alignment of parentheses to emphasize terms of an expression. This is difficult to achieve with an automatic code formatter unless the relevant terms of the expression can be determined strictly through operator precedence.
+
+=== Blank Lines ===
+
+==== guideline ====
+Use blank lines to group logically related lines of text (NASA 1987).
+
+==== example ====
+
+This example separates different kinds of declarations with blank lines:
+
+==== rationale ====
+When blank lines are used in a thoughtful and consistent manner, sections of related code are more visible to readers.

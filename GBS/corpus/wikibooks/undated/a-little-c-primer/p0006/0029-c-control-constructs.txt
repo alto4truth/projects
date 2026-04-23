@@ -1,0 +1,31 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 6
+section: c-control-constructs
+chunk: 29
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+ecific to "switch" statements. It can be used
+to break out of other control structures, though good program design tends to
+avoid such improvisations:
+
+If the "for" loop were nested inside a "while" loop, a "break" out of the
+"for" loop would still leave you stuck in the "while" loop. The "break"
+keyword only applies to the control construct that executes it.
+There is also a "continue" statement that skips to the end of the loop body
+and continues with the next iteration of the loop. For example:
+
+Finally, there is a "goto" statement:
+
+—that jumps to an arbitrary tag within a function, but the use of this
+statement is generally discouraged and it is rarely seen in practice.
+While these are the lot of C's true control structures, there is also a
+special "conditional operator" that performs a simple conditional assignment
+of the form:
+
+—using a much tidier, if more cryptic, format:
+
+the ?: construct is called a ternary operator—or the ternary operator—as it takes 3 arguments.

@@ -1,0 +1,59 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 8
+section: c-file-io-through-library-functions
+chunk: 36
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+igin" is an "int" and is one of three standard values, defined in
+"stdio.h":
+
+SEEK_SET Start of file.
+SEEK_CUR Current location.
+SEEK_END End of file.
+
+The "fseek()" function returns 0 on success and non-zero on failure.
+The "rewind()", "rename()", and "remove()" functions are straightforward.
+The "rewind()" function resets an open file back to its beginning. It has
+the syntax:
+
+rewind( <file_pointer> );
+
+The "rename()" function changes the name of a file:
+
+rename( <old_file_name_string>, <new_file_name_string> );
+
+The "remove()" function deletes a file:
+
+remove( <file_name_string> )
+
+The "fprintf()" function allows formatted ASCII data output to a file, and
+has the syntax:
+
+fprintf( <file pointer>, <string>, <variable list> );
+
+The "fprintf()" function is identical in syntax to "printf()", except for the
+addition of a file pointer parameter. For example, the "fprintf()" call in
+this little program:
+
+/* fprpi.c */
+
+#include <stdio.h>
+
+void main()
+{
+int n1 = 16;
+float n2 = 3.141592654f;
+FILE *fp;
+
+fp = fopen( "data", "w" );
+fprintf( fp, " %d %f", n1, n2 );
+fclose( fp );
+}
+—stores the following ASCII data:
+16 3.14159
+
+The formatting codes are exactly the same as for "printf()":

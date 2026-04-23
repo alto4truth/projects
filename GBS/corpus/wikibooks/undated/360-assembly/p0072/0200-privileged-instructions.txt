@@ -1,0 +1,19 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 72
+section: privileged-instructions
+chunk: 200
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+m additional privilege(s). Often the same SVC can be used to reset the request, revoking the privilege.
+These are the privileged instructions:
+Legend:
+
+Available on all models unless indicated by (360 only) or (360 & 370 only)
+Available on the 370, 390 and z/System
+Available on the 390 and z/System
+Available only on the z/System
+Using any of these in a problem (unprivileged) program will cause a protection exception. Using one of these instructions in a privileged program on the wrong class of machine will cause an operation exception.

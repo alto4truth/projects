@@ -1,0 +1,31 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 4
+section: counting-part-2-sort-and-uniq
+chunk: 12
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+t -rn
+12074 3
+7007 1
+3161
+1372 6
+1281 4
+757 2
+170 8
+43 9
+6 5
+4 7
+
+Type 3, electricity, is most common, followed by type 1, gas. Type 7 is solar power.
+
+== Converting the frequency table to proper CSV ==
+The output of uniq -c is not in proper CSV form. This makes is necessary to convert the output if further operations on the output are wanted.
+Here we use a bit of inline perl to rewrite the lines and reverse the order of the fields.
+
+$ cut -d" " -f2 gender.txt | sort | uniq -c | perl -pe 's/^\s*([0-9]+) (\S+).*/$2, $1/'
+F, 3966
+M, 1051

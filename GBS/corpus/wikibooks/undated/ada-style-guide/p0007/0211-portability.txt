@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 211
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+g Ada variables to foreign language variables. By hiding these dependencies within interface packages, the amount of code modification can be reduced.
+
+==== exceptions ====
+It is often necessary to interact with other languages, if only an assembly language, to reach certain hardware features. In these cases, clearly comment the requirements and limitations of the interface and pragma Import, Export, and Conventions usage.
+
+=== Implementation-Specific Pragmas and Attributes ===
+
+==== guideline ====
+Avoid pragmas and attributes added by the compiler implementor.

@@ -1,0 +1,27 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 454
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+daptation of a part because necessary size changes in local variables are taken care of automatically.
+
+=== Minimizing and Documenting Assumptions ===
+
+==== guideline ====
+Minimize the number of assumptions made by a unit.
+For assumptions that cannot be avoided, use subtypes or constraints to automatically enforce conformance.
+For assumptions that cannot be automatically enforced by subtypes, add explicit checks to the code.
+Document all assumptions.
+If the code depends upon the implementation of a specific Special Needs Annex for proper operation, document this assumption in the code.
+
+==== example ====
+The following poorly written function documents but does not check its assumption:
+
+The next example enforces conformance with its assumption, making the checking automatic and the comment unnecessary:
+
+The next example explicitly checks and documents its assumption:

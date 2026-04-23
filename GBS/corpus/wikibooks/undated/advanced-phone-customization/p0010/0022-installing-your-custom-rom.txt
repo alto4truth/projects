@@ -1,0 +1,18 @@
+title: Advanced phone customization
+source: wikibooks
+year: undated
+document_id: advanced-phone-customization
+authors: 
+page: 10
+section: installing-your-custom-rom
+chunk: 22
+source_ref: https://en.wikibooks.org/wiki/Advanced_phone_customization
+
+Now that we've the prerequisites ready, let's start!
+
+== Flashing recovery ==
+A recovery is a type of bootloader which allows you to flash custom ROMs, back up the current OS (including apps) of your phone and wipe the phone if desired. Since most phone bootloaders are far too limited in their capability, we need to flash a custom one.
+For this guide, we'll use Team Win Recovery Project (TWRP).
+Download TWRP for your device from here. Then enter download mode. How to access it depends on your device. Once in there, flash it and immediately boot to recovery (hint: the combination is most likely different!).
+If you do not boot immediately to recovery, you'll most likely find that the original bootloader is still present; repeat the process if that happens.
+Once you are in recovery, it's fine to restart; you'll see your stock OS. This is normal as you haven't overwritten the OS yet, only the recovery.

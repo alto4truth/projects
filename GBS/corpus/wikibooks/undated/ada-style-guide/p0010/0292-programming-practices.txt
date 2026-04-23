@@ -1,0 +1,36 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 292
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+es to implement dynamic selection and invocation of subprograms.
+
+==== example ====
+The following example is taken from the Rationale (1995, §3.7.2) :
+
+==== rationale ====
+Access-to-subprogram types allow you to create data structures
+that contain subprogram references. There are many uses for this
+feature, for instance, implementing state machines, call backs
+in the X Window System, iterators (the operation to be applied
+to each element of a list), and numerical algorithms (e.g., integration
+function) (Rationale 1995, §3.7.2 ).
+You can achieve the same effect as access-to-subprogram types
+for dynamic selection by using abstract tagged types. You declare
+an abstract type with one abstract operation and then use an access-to-class-wide
+type to get the dispatching effect. This technique provides greater
+flexibility and type safety than
+access-to-subprogram types (Ada Reference Manual 1995, §3.10.2 [Annotated]).
+Access-to-subprogram types are useful in implementing dynamic
+selection. References to the subprograms can be stored directly
+in the data structure. In a finite state machine, for example,
+a single data structure can describe the action to be taken on
+state transitions. Strong type checking is maintained because
+Ada 95 requires that the designated subprogram has the same parameter/result
+profile as the one specified in the subprogram access type.
+See also Guideline 7.3.2 .

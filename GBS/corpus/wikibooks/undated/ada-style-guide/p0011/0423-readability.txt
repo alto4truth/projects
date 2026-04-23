@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 423
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+heavily nested if statements, mark the else part with a comment summarizing the conditions governing this portion of the statement.
+
+==== example ====
+
+==== rationale ====
+Marker comments emphasize the structure of code and make it easier to scan. They can be lines that separate sections of code or descriptive tags for a construct. They help the reader resolve questions about the current position in the code. This is more important for large units than for small ones. A short marker comment fits on the same line as the reserved word with which it is associated. Thus, it adds information without clutter.
+The if, elsif, else, and end if of an if statement are often separated by long sequences of statements, sometimes involving other if statements. As shown in the first example, marker comments emphasize the association of the keywords of the same statement over a great visual distance. Marker comments are not necessary with the block statement and loop statement because the syntax of these statements allows them to be named with the name repeated at the end. Using these names is better than using marker comments because the compiler verifies that the names at the beginning and end match.
+The sequence of statements of a package body is often very far from the first line of the package. Many subprogram bodies, each containing many begin lines, may occur first. As shown in the second example, the marker comment emphasizes the association of the begin with the package.

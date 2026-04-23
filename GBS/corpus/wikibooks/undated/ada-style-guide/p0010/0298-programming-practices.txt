@@ -1,0 +1,32 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 298
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ding primitives
+for a single operation call common "operation-specific"
+code.
+See also Guideline 9.2.1 for a more detailed discussion of tagged
+types.
+
+==== exceptions ====
+In some instances, you may want to use a variant record approach
+to organize modularity around operations. For graphic output,
+for example, you may find it more maintainable to use variant
+records. You must make the tradeoff of whether adding a new operation
+will be less work than adding a new variant.
+
+=== Nested Records ===
+
+==== guideline ====
+Record structures should not always be flat. Factor out common parts.
+For a large record structure, group related components into smaller subrecords.
+For nested records, pick element names that read well when inner elements are referenced.
+Consider using type extension to organize large data structures.
+
+==== example ====

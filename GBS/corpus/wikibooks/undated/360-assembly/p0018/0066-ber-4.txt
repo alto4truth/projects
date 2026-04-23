@@ -1,0 +1,34 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 18
+section: ber-4
+chunk: 66
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+CLC RESP(L'QN1),QN1 Test 'N' (L' tells the assembler to use
+* the specied length of
+BER 5 Answer was 'N'
+CLC RESP(1),QN2 Is it 'n'?
+BNER 3 Something else, try again
+BR 5 Answer was 'n'
+QUES DC C'Are you ready to start?' Construct a 'C' language-type
+DC X'00' string, zero terminated
+RESP DS C One byte response
+QY1 DC C'Y' Available responses
+QY2 DC C'y'
+QN1 DC C'N'
+QN2 DC C'n'
+YESRTN DC V(YES) External module YES
+*
+* This will handle a 'no' answer
+DROP 3 Tell assembler Reg. 3 is no
+* longer available for addressing
+NO NOP 0(0) Handle a no
+
+== Exceptions and Faults ==
+The target address contained within the base register must not be odd, or an operation exception occurs
+The target address contained within the base register must be within the range of valid memory or an operation exception occurs.
+The storage key for the target address contained within the base register must be the same as the current process (or this process must have a key of 0) or a memory protect violate exception occurs.

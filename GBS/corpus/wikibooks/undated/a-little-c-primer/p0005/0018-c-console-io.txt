@@ -1,0 +1,81 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 5
+section: c-console-io
+chunk: 18
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+tring precision can be specified as well, to indicate the maximum number of
+characters to be printed. For example:
+
+/* prtint.c */
+
+#include <stdio.h>
+
+int main(void)
+{
+printf( "<%d>\n", 336 );
+printf( "<%2d>\n", 336 );
+printf( "<%10d>\n", 336 );
+printf( "<%-10d>\n", 336 );
+return 0;
+}
+
+This prints:
+
+<336>
+<336>
+< 336>
+<336 >
+
+Similarly:
+
+/* prtfloat.c */
+
+#include <stdio.h>
+
+int main(void)
+{
+printf( "<%f>\n", 1234.56 );
+printf( "<%e>\n", 1234.56 );
+printf( "<%4.2f>\n", 1234.56 );
+printf( "<%3.1f>\n", 1234.56 );
+printf( "<%10.3f>\n", 1234.56 );
+printf( "<%10.3e>\n", 1234.56 );
+return 0;
+}
+
+—prints:
+<1234.560000>
+<1.234560e+03>
+<1234.56>
+<1234.6>
+< 1234.560>
+< 1.234e+03>
+
+And finally:
+
+/* prtstr.c */
+
+#include <stdio.h>
+
+int main(void)
+{
+printf( "<%2s>\n", "Barney must die!" );
+printf( "<%22s>\n", "Barney must die!" );
+printf( "<%22.5s>\n", "Barney must die!" );
+printf( "<%-22.5s>\n", "Barney must die!" );
+return 0;
+}
+
+—prints:
+<Barney must die!>
+< Barney must die!>
+< Barne>
+<Barne >
+
+Just for convenience, the table of special characters listed in chapter 2 is
+repeated here. These characters can be embedded in "printf" strings:

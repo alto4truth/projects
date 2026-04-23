@@ -1,0 +1,50 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 430
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+se abbreviations that are well-accepted in the application domain.
+Maintain a list of accepted abbreviations, and use only abbreviations on that list.
+
+=== naming conventions ===
+Choose names that are as self-documenting as possible.
+Use a short synonym instead of an abbreviation.
+Use names given by the application, but do not use obscure jargon.
+Avoid using the same name to declare different kinds of identifiers.
+Use singular, general nouns as subtype identifiers.
+Choose identifiers that describe one of the subtype's values.
+Consider using suffixes for subtype identifiers that define visible access types, visible subranges, or visible array types.
+For private types, do not use identifier constructions (e.g., suffixes) that are unique to subtype identifiers.
+Do not use the subtype names from predefined packages.
+Use predicate clauses or adjectives for Boolean objects.
+Use singular, specific nouns as object identifiers.
+Choose identifiers that describe the object's value during execution.
+Use singular, general nouns as identifiers for record components.
+Use a consistent naming convention for tagged types and associated packages.
+Use action verbs for procedures and entries.
+Use predicate clauses for Boolean functions.
+Use nouns for non-Boolean functions.
+Give packages names that imply a higher level of organization than subprograms. Generally, these are noun phrases that describe the abstraction provided.
+Give tasks names that imply an active entity.
+Use nouns descriptive of the data being protected for protected units.
+Consider naming generic subprograms as if they were nongeneric subprograms.
+Consider naming generic packages as if they were nongeneric packages.
+Make the generic names more general than the instantiated names.
+Use symbolic values instead of literals, wherever possible.
+Use the predefined constants Ada.Numerics.Pi and Ada.Numerics.e for the mathematical constants Pi and e.
+Use constants instead of variables for constant values.
+Use a constant when the value is specific to a type or when the value must be static.
+Use named numbers instead of constants, whenever possible.
+Use named numbers to replace numeric literals whose type or context is truly universal.
+Use constants for objects whose values cannot change after elaboration. (United Technologies 1987).
+Show relationships between symbolic values by defining them with static expressions.
+Use linearly independent sets of literals.
+Use attributes like 'First and 'Last instead of literals, wherever possible.
+Use a name that indicates the kind of problem the exception represents.
+Include a prefix like New, Make, or Create in naming constructors (in this sense, operations to create and/or initialize an object).
+Use names indicative of their content for child packages containing constructors.

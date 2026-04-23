@@ -1,0 +1,22 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 102
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+==
+Exam objective: Implementing serialization and input/output functionality in a .NET Framework application
+
+=== Topics ===
+
+==== Serialization ====
+
+Wikipedia's definition for serialization is : "in the context of data storage and transmission, serialization is the process of saving an object onto a storage medium (such as a file, or a memory buffer) or to transmit it across a network connection link in binary form".
+The problem that is addressed here is that an object is created by a running process and is thus bound to the lifetime of that process instance. If for whatever reason, and there can be many, you want to "transport" the object in the context of another process instance you've got a problem, that you solve by "saving" the state of you object in the original process and "restoring" it in the destination process. This "saving" part is called serialization and the "restoring" part is called deserialization.
+
+==== Serializable attribute ====
+An object is serializable if its class name is prefixed with the [Serializable] attribute.

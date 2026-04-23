@@ -1,0 +1,27 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 21
+section: searching-text-files
+chunk: 55
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+== Searching the contents of a file ==
+
+=== Simple searching using less ===
+Using less, you can search though a text file for a keyword (pattern). For example, to search through science.txt for the word science, type
+
+% less science.txt
+This writes the first screenfull of the file to the screen. While still in less, you can type a forward slash / followed by the word to search
+
+/science
+As you can see, less finds and highlights the keyword. Type n to search for the next occurrence of the word.
+This is useful but relatively limited and inflexible. It is not hard to imagine simple situations where you might want to quickly check the contents of a file (is this the essay where I talked about left recursion?). But we often want to do just a bit more. That is where the very famous Unix utility grep comes in.
+
+=== grep ===
+grep is one of many standard Unix utilities. It searches files for specified words or patterns. First clear the screen (type clear at the prompt), then type
+
+% grep science science.txt
+As you can see, grep has printed out each line containing the word science but it is case sensitive. If we type

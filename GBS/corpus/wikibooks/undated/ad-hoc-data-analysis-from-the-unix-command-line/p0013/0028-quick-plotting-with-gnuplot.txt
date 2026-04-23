@@ -1,0 +1,19 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 13
+section: quick-plotting-with-gnuplot
+chunk: 28
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+== Example - creating a scatter plot ==
+Does the early bird get the worm? Let's look at the relationship between the time a person leaves for work and their income. Income is recorded in columns 297-303, and the time a person leaves for work is recorded in columns 196-198, encoded in ten minute intervals. This pipeline extracts, cleans and formats the data:
+
+$ cat pums_53.dat | grep "^P" | cut -c196-198,297-303 | grep -v "^000" |
+grep -v " $" | perl -pe 'substr($_,3,0)=" ";' > time_vs_income
+
+The greps knock out records for which either field is null, and the perl script inserts a space between the two columns so gnuplot can parse the columns apart. Plotting in gnuplot is simple:
+
+$ gnuplot

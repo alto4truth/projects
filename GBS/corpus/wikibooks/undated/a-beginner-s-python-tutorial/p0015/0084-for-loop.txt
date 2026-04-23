@@ -1,0 +1,28 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 15
+section: for-loop
+chunk: 84
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+== Introduction ==
+Well, in the first lesson about loops, I said I would put off teaching you the for loop, until we had reached lists. Well, here it is!
+
+== The 'for' Loop ==
+Basically, the for loop does something for every value in a list. The way it is set out is a little confusing, but otherwise is very basic. Here is an example of it in code:
+
+Code Example 1 - The for Loop
+
+As you see, when the loop executes, it runs through all of the values in the list mentioned after 'in'. It then puts them into value, and executes through the loop, each time with value being worth something different. Let's see it a again, in a classic cheerleading call that we all know:
+
+Code Example 2 - A for loop example
+
+A couple of things you've just learnt:
+As you see, strings (remember - strings are lines of text) are just lists with lots of characters.
+The program went through each of the letters (or values) in word, and it printed them onscreen.
+
+Code Example 3 - Looping through a range
+Sometimes, you may only need to loop a certain amount of times (say 10). If you're coming from another programming language, you might be looking for the usual for loop in a format somewhat like this:

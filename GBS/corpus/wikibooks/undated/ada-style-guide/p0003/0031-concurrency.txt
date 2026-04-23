@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 31
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+should use the delay until statement. The following example (Rationale 1995, §9.3) shows how to satisfy a periodic requirement with an average period:
+
+==== rationale ====
+There are two forms of delay statement. The delay will cause a delay for at least a specified time interval. The delay until causes a delay until an absolute wake-up time. You should choose the form appropriate to your application.
+The Ada language definition only guarantees that the delay time is a minimum. The meaning of a delay or delay until statement is that the task is not scheduled for execution before the interval has expired. In other words, a task becomes eligible to resume execution as soon as the amount of time has passed. However, there is no guarantee of when (or if) it is scheduled after that time because the required resources for that task might not be available at the expiration of the delay .
+A busy wait can interfere with processing by other tasks. It can consume the very processor resource necessary for completion of the activity for which it is waiting. Even a loop with a delay can have the impact of busy waiting if the planned wait is significantly longer than the delay interval. If a task has nothing to do, it should be blocked at an accept or select statement, an entry call, or an appropriate delay.
+The expiration time for a relative delay is rounded up to the nearest clock tick. If you use the real-time clock features provided by (Annex D, however, clock ticks are guaranteed to be no greater than one millisecond (Ada Reference Manual 1995, §D.8 [Annotated]).

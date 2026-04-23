@@ -1,0 +1,16 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 5
+section: 360-instructions
+chunk: 20
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+390 ("390"), and z/System ("Z"). Each instruction format, along with a breakdown and explanation of the format, is provided in the table below.
+Notes:
+
+Under "Availability," unless "all" is specified, it is available on certain models, namely: "370" indicates an instruction is available on 370 and later models (370,390, and z/System); "ESA/390" indicates that an instruction is available on 390 and z/System; and "Z" indicates an instruction is available on z/System only. However, despite the listed availability of a particular instruction format, the availability of a specific instruction of that format may be further restricted.
+A "base-displacement" address is described as "B1, D1" where a base-displacement address is used or as either "B2, D2" or "B2, D2, X2" where an index register is also used (the address is indexed). If a base-displacement address is not indexed, the X2 field on the second operand is not used. The B or X values refer to a 4-bit register value from 0 to 15, and the D value is an unsigned, 12-bit displacement address.
+Instructions take a multiple of two bytes, and are two, four or six bytes in length.

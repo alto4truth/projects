@@ -1,0 +1,28 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 398
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+esumed overhead is recognizable. Project-specific priorities may be useful in choosing between these conventions.
+
+=== Constants and Named Numbers ===
+
+==== guideline ====
+Use symbolic values instead of literals where the symbolic value improves readability.
+Use symbolic values instead of literals if the value occurs at more than one place and might need to be changed.
+Use the predefined constants Ada.Numerics.Pi and Ada.Numerics.e for the mathematical constants Pi and e.
+Use constants instead of variables for constant values.
+Use a constant when the value is specific to a type or when the value must be static.
+Use named numbers instead of constants, whenever possible.
+Use named numbers to replace numeric literals whose type or context is truly universal.
+Use constants for objects whose values cannot change after elaboration (United Technologies 1987).
+Show relationships between symbolic values by defining them with static expressions.
+Use linearly independent sets of literals.
+Use attributes like 'First and 'Last instead of literals, wherever possible.
+
+==== example ====

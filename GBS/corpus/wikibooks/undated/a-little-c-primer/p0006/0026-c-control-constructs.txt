@@ -1,0 +1,38 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 6
+section: c-control-constructs
+chunk: 26
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+C contains a number of looping constructs, such as the "while" loop:
+
+If "test" starts with an initial value less than or equal to 0 the "while"
+loop will not execute even once. There is a variant, "do", that will always
+execute at least once:
+
+The most common looping construct is the "for" loop, which creates a loop
+much like the "while" loop but in a more compact form:
+
+Notice that with all these loops, the initial loop statement does not end
+with a ";". If a ";" was placed at the end of the "for" statement above, the
+"for" statement would execute to completion, but not run any of the
+statements in the body of the loop.
+The "for" loop has the syntax:
+
+All the elements in parentheses are optional. A "for" loop could be run
+indefinitely with:
+
+—although using an indefinite "while" is cleaner:
+
+It is possible to use multiple expressions in either the initialization or
+the modifying expression with the "," operator:
+
+The conditional tests available to C are as follows:
+
+The fact that "==" is used to perform the "equals" test, while "=" is used as
+the assignment operator, often causes confusion and is a common bug in C
+programming:

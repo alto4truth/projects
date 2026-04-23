@@ -1,0 +1,21 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 4
+section: parti-chapter-1-page2
+chunk: 17
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+ything. But if you want to access it via "_root" then you will write "_root.box._currentframe".
+Step 5
+Now test the movie and you will see the result.
+
+=== TotalFrames ===
+_totalframes property just tells you how many frames are in the Movie Clip. For testing it we will use the previous example. Right click the keyframe in the Timeline window in Scene1 and choose "Actions". Then write the following in the Script pane:
+
+Trace is used to record programming notes or to display messages in the Output window while testing a movie. The use of trace is the following "trace(expression);". For example if you write "trace ("hello!!!");" then "hello!!!" will be displayed in the Output window. But this action is working only in Macromedia Flash MX. I mean that if you publish your movie, the user won’t see the Output window. So use it just for yourself to test the movies. Now lets go back to our example. This code will write the frames count to the Output window, and it will be 32.
+
+=== URL ===
+_url property retrieves the URL of the SWF file from which the movie clip was downloaded. As in the previous property add "trace(box._url)" and you will see the path of the SWF file.

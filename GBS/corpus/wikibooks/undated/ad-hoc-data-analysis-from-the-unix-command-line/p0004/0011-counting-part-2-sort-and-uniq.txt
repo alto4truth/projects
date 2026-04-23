@@ -1,0 +1,28 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 4
+section: counting-part-2-sort-and-uniq
+chunk: 11
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+on application is finding the set of overlapping (duplicated) keys in a pair of files by grepping the output of uniq -c for lines that begin with a 2.
+
+== Example - A frequency table sorted by most common category ==
+Throwing an extra sort on the end of the pipeline will sort the frequency table so that the most common class is at the top (or bottom). This is useful when data is categorical and does not have a natural order. You'll want to give sort the -n option so that it sorts the counts numerically instead of lexically, and I like to give the -r option to reverse the sort so that the output is sorted in descending order, but this just a stylistic issue. For example, here is the distribution of household heating fuel from most common to least common:
+
+$ grep "^H" pums_53.dat | cut -c132 | sort | uniq -c | sort -rn
+12074 3
+7007 1
+3161
+1372 6
+1281 4
+757 2
+170 8
+43 9
+6 5
+4 7
+
+Type 3, electricity, is most common, followed by type 1, gas. Type 7 is solar power.

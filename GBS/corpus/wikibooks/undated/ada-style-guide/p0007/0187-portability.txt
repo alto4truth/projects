@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 187
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+l tests on real valued arguments, avoiding the <, >, =, and /= operations.
+Use values of type attributes in comparisons and checking for small values.
+
+==== example ====
+The following examples test for (1) absolute "equality" in storage, (2) absolute "equality" in computation, (3) relative "equality" in storage, and (4) relative "equality" in computation:
+
+And, specifically, for "equality" to 0:

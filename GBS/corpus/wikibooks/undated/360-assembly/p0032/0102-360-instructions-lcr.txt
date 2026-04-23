@@ -1,0 +1,36 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 32
+section: 360-instructions-lcr
+chunk: 102
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+LCR - Load Register Complement - RR Instruction - Opcode 13
+
+== Format ==
+LCR 2,6 Copy the two's complement (integer negation) of contents of register 6 into register 2, replacing the existing contents of register 2
+The specific syntax is
+
+LCR target register, source register.
+
+== Opcode ==
+
+The first argument is a target register which value is affected by the instruction.
+The second argument is the source register.
+The target register and source register values are 0 to 15.
+
+== Example usage ==
+The LCR instruction is used to copy the integer negation of the second register argument (the source register) into the first register argument (the target register), replacing the contents of the target register with the contents of the source register. The following is an example of how the instruction would assemble in various forms from an assembly language listing:
+
+1326 LCR 2,6
+1392 LCR 9,2
+13FA LCR 15,10
+
+== Typical Usage ==
+When it is necessary to negate a 32-bit integer value.
+
+== Availability ==
+The LCR instruction is available on all models of the 360, 370 and z/System.

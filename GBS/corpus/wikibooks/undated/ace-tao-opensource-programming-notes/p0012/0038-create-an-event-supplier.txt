@@ -1,0 +1,65 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 12
+section: create-an-event-supplier
+chunk: 38
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+elay, interval);
+reactor.run_reactor_event_loop();
+
+while(1){
+cout << "In while loop." << endl;
+sleep(100);
+}
+
+orb->destroy ();
+return EXIT_SUCCESS;
+}
+
+== etimer.h ==
+#ifndef MYTIMER_H
+#define MYTIMER_H
+#include <ace/streams.h>
+#include <orbsvcs/CosNamingC.h>
+#include <orbsvcs/CosEventCommS.h>
+#include <orbsvcs/CosEventChannelAdminC.h>
+#include "eventsourceC.h"
+/**
+Simple ACE timer impl for polling the bill acceptor & handling events
+
+@author Evan Carew <carew@pobox.com>
+*/
+class MyTimer: public ACE_Event_Handler{
+public:
+int handle_timeout(const ACE_Time_Value &, const void * = 0);
+};
+
+#endif
+
+== etimer.cpp ==
+/************************************************
+* EventSource
+*
+* A test program for snding events over TAO's event service
+*/
+#include "etimer.h"
+#include "eventsourceC.h"
+using namespace std;
+using namespace CORBA;
+
+extern CosEventChannelAdmin::ProxyPushConsumer_var consumer;
+
+/*!
+\fn MyTimer::handle_timeout(const ACE_Time_Value &, const void * = 0)
+*/
+int MyTimer::handle_timeout(const ACE_Time_Value ¤t_time, const void *nuts)
+{
+//create an event
+accepted accept_event;
+accept_event.bill = 1;
+accept_event.status = 1;
+accept_event.command = 0;

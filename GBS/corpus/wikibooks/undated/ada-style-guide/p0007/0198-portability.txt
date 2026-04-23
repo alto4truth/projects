@@ -1,0 +1,27 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 198
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+eline ====
+Do not depend on the order in which guard conditions are evaluated or on the algorithm for choosing among several open select alternatives.
+
+==== rationale ====
+The language does not define the order of these conditions, so assume that they are arbitrary.
+
+=== Task Scheduling Algorithm ===
+
+==== guideline ====
+Do not assume that tasks execute uninterrupted until they reach a synchronization point.
+Use pragma Priority to distinguish general levels of importance only (see Guideline 6.1.6).
+
+==== rationale ====
+The Ada tasking model requires that tasks be synchronized only through the explicit means provided in the language (i.e., rendezvous, task dependence, pragma Atomic). The scheduling algorithm is not defined by the language and may vary from time sliced to preemptive priority. Some implementations provide several choices that a user may select for the application.
+
+==== notes ====
+The number of priorities may vary between implementations. In addition, the manner in which tasks of the same priority are handled may vary between implementations even if the implementations use the same general scheduling algorithm.

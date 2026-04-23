@@ -1,0 +1,13 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 127
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+vation, you ensure that any restrictions for a specialized account are implemented (e.g., how and when the account-specific fee structure is applied):
+
+See the abstract set package in Guideline 9.5.1 for an example of creating an abstraction with a single interface and the potential for multiple implementations. The example only shows one possible implementation; however, you could provide an alternate implementation of the Hashed_Set abstraction using other data structures.

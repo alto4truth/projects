@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 347
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+tion. For any other error, the function provides more complete traceback information. The amount of traceback information is implementation dependent.
+
+==== rationale ====
+The predefined package Ada.Exceptions allows you to log an exception, including its name and traceback information. When writing a handler for others, you should provide information about the exception to facilitate debugging. Because you can access information about an exception occurrence, you can save information suitable for later analysis in a standard way. By using exception occurrences, you can identify the particular exception and either log the details or take corrective action.
+Providing a handler for others allows you to follow the other guidelines in this section. It affords a place to catch and convert truly unexpected exceptions that were not caught by the explicit handlers. While it may be possible to provide "fire walls" against unexpected exceptions being propagated without providing handlers in every block, you can convert the unexpected exceptions as soon as they arise. The others handler cannot discriminate between different exceptions, and, as a result, any such handler must treat the exception as a disaster. Even such a disaster can still be converted into a user-defined exception at that point. Because a handler for others catches any exception not otherwise handled explicitly, one placed in the frame of a task or of the main subprogram affords the opportunity to perform final cleanup and to shut down cleanly.
+Programming a handler for others requires caution. You should name it in the handler (e.g., Error : others;) to discriminate either which exception was actually raised or precisely where it was raised. In general, the others handler cannot make any assumptions about what can be or even what needs to be "fixed."
+The use of handlers for others during development, when exception occurrences can be expected to be frequent, can hinder debugging unless you take advantage of the facilities in Ada.Exceptions. It is much more informative to the developer to see a traceback with the actual exception information as captured by the Ada.Exceptions subprograms. Writing a handler without these subprograms limits the amount of error information you may see. For example, you may only see the converted exception in a traceback that does not list the point where the original exception was raised.

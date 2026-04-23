@@ -1,0 +1,14 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 30
+section: 360-instructions-la
+chunk: 97
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ed. However, the SR or XR instruction with the same register number for both arguments will zero a register faster and produces a shorter instruction.
+
+== Operation ==
+The LA instruction computes either a 31-bit value (if the program is running in 31-bit or 64-bit address mode) or a 24-bit value from the address specified by the second argument and stores it in the register specified by the first argument, clearing the high bit (0) in 31-bit or 64-bit mode, and the high byte (bits 0-7) in 24-bit mode. The address is computed by using the base-displacement value of the address. The address value, from 0 to 4095, is added to the value of the contents of the base register (unless it is register 0, then it is presumed to contain zero). To this is added the value of the contents of the index register (unless it is register 0, then it is also presumed to contain zero). In 31-bit or 64-bit mode, the high bit is forced to 0. In 24-bit mode, the high byte is forced to 0. This total is then stored in the target register. This value does not have to be a valid address; while the LA instruction is often used to compute an address, it can be used to set the value of a register, e.g. a way to increment register 1 by 1 is the following:

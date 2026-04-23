@@ -1,0 +1,19 @@
+title: A Brief Introduction to the LaTeX Typesetting Environment
+source: wikibooks
+year: undated
+document_id: a-brief-introduction-to-the-latex-typesetting-environment
+authors: 
+page: 3
+section: typesetting-the-basics
+chunk: 23
+source_ref: https://en.wikibooks.org/wiki/A_Brief_Introduction_to_the_LaTeX_Typesetting_Environment
+
+ypeset as a document, we must be sure to end it as follows
+\end{document}
+
+Now everything will be good to go and you will be able to typeset the code.
+
+== Mathematical Functions ==
+LaTeX is a wonderful change from word-processing in the way that it handles mathematical input. In most word processors another application needs to be run within the main program in order to create the properly formatted equations. Once this is done they are usually placed in the document as an image but even if they aren't putting them precisely where you want them is often a hassle, changing the document after placing the equation is difficult, and many times the formatting of the mathematics will be different from that of the rest of the document making it look unprofessional.
+LaTeX is different in that you won't be able to see what you've written until you typeset the document. For that reason the equations you type are handled by the back-end and placed in the document with proper formatting and in the right location.
+There are two main ways to insert a mathematical equation into your document. Read the 2 following sections and then modify the example above to have 2 equations you may wish to see in a document, or two random equations, with each method.

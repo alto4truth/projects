@@ -1,0 +1,36 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 375
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+variable when building a record to pass as an actual parameter
+Use positional association only when there is a conventional ordering of the arguments.
+
+==== visibility ====
+When you need to provide visibility to operators, use the use type clause.
+Avoid/minimize the use of the use clause (Nissen and Wallis 1984).
+Consider using a package renames clause rather than a use clause for a package.
+Consider using the use clause in the following situations:
+When standard packages are needed and no ambiguous references are introduced
+When references to enumeration literals are needed
+Localize the effect of all use clauses.
+Limit the scope of a renaming declaration to the minimum necessary scope.
+Rename a long, fully qualified name to reduce the complexity if it becomes unwieldy.
+Use renaming to provide the body of a subprogram if this subprogram merely calls the first subprogram.
+Rename declarations for visibility purposes rather than using the use clause, except for operators .
+Rename parts when your code interfaces to reusable components originally written with nondescriptive or inapplicable nomenclature.
+Use a project-wide standard list of abbreviations to rename common packages.
+Provide a use type rather than a renames clause to provide visibility to operators.
+Limit overloading to widely used subprograms that perform similar actions on arguments of different types (Nissen and Wallis 1984).
+Preserve the conventional meaning of overloaded operators (Nissen and Wallis 1984).
+Use "+" to identify adding, joining, increasing, and enhancing kinds of functions.
+Use "-" to identify subtraction, separation, decreasing, and depleting kinds of functions.
+Use operator overloading sparingly and uniformly when applied to tagged types.
+Define an appropriate equality operator for private types.
+Consider redefining the equality operator for a private type.
+When overloading the equality operator for types, maintain the properties of an algebraic equivalence relation.

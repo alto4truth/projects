@@ -1,0 +1,24 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 2
+section: a-more-useful-client-and-server-example
+chunk: 15
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+moment on the factory.
+The actor class accesses the in-memory database with the Person object. you can see it created in the constructor for Actor_i.
+
+=== Source file ActorI.h ===
+
+== The Application ==
+The in-memory database is defined in the header file person.h, and, as mentioned earlier, is based on Boost's multi-index class. This allows the designer to create a container of objects which can have multiple indexes in them. The file is as follows:
+
+=== Source File person.h ===
+
+If you look in ActorI.cpp, you'll see in void Actor_i::setPersonId (::Actor::uint ps) how the multi-index object is used to search for data. To get an idea for how this code works, with respect to the Boost container, have a look at their documentation of Boost::Multi-index the library.
+Now, on to the server code. This code is rather simple, and mostly driven by boilerplate code. The IDL compiler doesn't generate any of this, tho it probably could. in this case, the server creates an ORB, attaches to the naming service, and initializes the in-memory database from the postgreSQL database.
+
+=== Source File objectserver.cpp ===

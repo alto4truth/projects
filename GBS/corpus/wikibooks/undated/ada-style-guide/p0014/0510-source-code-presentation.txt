@@ -1,0 +1,33 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 14
+section: source-code-presentation
+chunk: 510
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+separator (see Guideline 2.1.4). In this context, it makes sense to put spaces before and after the colon rather than only after it as in normal text.
+
+==== automation notes ====
+The guidelines in this section are easily enforced with an automatic code formatter.
+
+=== Indentation ===
+
+==== guideline ====
+Indent and align nested control structures, continuation lines, and embedded units consistently.
+Distinguish between indentation for nested control structures and for continuation lines.
+Use spaces for indentation, not the tab character (Nissen and Wallis 1984, §2.2).
+
+==== instantiation ====
+Specifically, the following indentation conventions are recommended, as shown in the examples throughout this book. Note that the minimum indentation is described. More spaces may be required for the vertical alignment recommended in subsequent guidelines.
+
+Use the recommended paragraphing shown in the Ada Reference Manual (1995).
+Use three spaces as the basic unit of indentation for nesting.
+Use two spaces as the basic unit of indentation for continuation lines.
+A label is outdented three spaces:
+
+The if statement and the plain loop:
+
+Loops with the for and while iteration schemes:

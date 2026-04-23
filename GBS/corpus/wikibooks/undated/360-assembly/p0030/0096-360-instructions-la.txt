@@ -1,0 +1,25 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 30
+section: 360-instructions-la
+chunk: 96
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+0, 370 and z/System.
+
+== Condition code ==
+This instruction does not alter the condition code.
+
+== Usage ==
+The LA instruction has three general uses.
+
+To set a register to an immediate value from 0 to 4095 (use register 0 for the base and index registers and the amount to add as the displacement).
+To add an immediate value from 1 to 4095 to any register except 0, either use register 0 for the index register, and the same register for the base and target registers, or use register 0 as the base register and the same register for the index and target registers, and the amount to add to that register as the displacement.
+To set a register to any value up to 2^31 in 31-bit or 64-bit mode, or 2^24 in 24-bit mode. Use whichever register has the desired amount as the base (or index) register, if there is an additional amount to add, the value in an index (or base) register may be used, and, if desired, this may also be increased by the displacement address.
+If the displacement is 0 and either (1) the base register is 0, and the index and target registers are the same (and are any register except 0), or (2) the index register is 0 and the base and target registers are the same (and any register except 0), the instruction is effectively a no-op (equivalent to an instruction to add 0 to the specified register).
+If the displacement address, base and index registers are all zero, it zeros the target register (although the XR or SR instruction with both arguments the same would be faster and use less memory).
+Note that unlike most instructions, the LA instruction is used to place a value into a register; the resulting address does not have to correspond to an actual address and is not checked for validity. Overflow cannot occur as the top bit of the result is always set to 0, and in 24-bit mode, the top 7 bits of the result are set to 0.
+The LA instruction could be used to clear the value of a register by using 0 for the base, index and displacement values; the actual value in register 0 would not be used and the register would be zeroed. However, the SR or XR instruction with the same register number for both arguments will zero a register faster and produces a shorter instruction.

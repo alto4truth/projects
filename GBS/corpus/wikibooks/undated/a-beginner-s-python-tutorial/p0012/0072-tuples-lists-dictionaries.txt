@@ -1,0 +1,23 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 12
+section: tuples-lists-dictionaries
+chunk: 72
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+d ] things. Guess what! dictionaries have { and } things - curly braces. Here is an example below, showing a dictionary with four phone numbers in it:
+
+Code Example 7 - Creating a dictionary
+
+The program would then print Lewis Lame's number onscreen. Notice how instead of identifying the value by a number, like in the cats and months examples, we identify the value, using another value - in this case the person's name.
+Ok, you've created a new phone book. Now you want to add new numbers to the book. What do you do? A very simple line of code:
+
+Code Example 8 - Adding entries to a dictionary
+
+All that line is saying is that there is a person called Gingerbread Man in the phone book, and his number is 1234567. In other words - the key is 'Gingerbread Man', and the value is 1234567.
+You delete entries in a dictionary just like in a list. Let's say Andrew Parson is your neighbour, and shot your cat. You never want to talk to him again, and therefore don't need his number. Just like in a list, you'd do this:
+
+Code Example 9 - Removing entries from a dictionary

@@ -1,0 +1,26 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 499
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ming a variable S of type String, the following expression:
+
+can now be replaced by more portable and preexisting language-defined operations such as:
+
+==== rationale ====
+The predefined Ada language environment includes string handling packages to encourage portability. They support different categories of strings: fixed length, bounded length, and unbounded length. They also support subprograms for string construction, concatenation, copying, selection, ordering, searching, pattern matching, and string transformation. You no longer need to define your own string handling packages.
+
+=== Tagged Type Hierarchies ===
+
+==== guideline ====
+Consider using hierarchies of tagged types to promote generalization of software for reuse.
+Consider using a tagged type hierarchy to decouple a generalized algorithm from the details of dependency on specific types.
+
+==== example ====
+
+Given the following array declaration:

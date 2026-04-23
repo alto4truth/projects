@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 5
+section: introduction
+chunk: 99
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ach to protecting shared data. The guidelines in this chapter support the use of protected types to encapsulate and synchronize access to shared data.
+
+=== Portability and Reusability ===
+Chapters 7 and 8 address issues of designing for change from slightly different perspectives. Chapter 7 addresses the fundamentals of portability, the ease of changing software from one computer system or environment to another, and the impact of specific feature usage on portability. Chapter 8 addresses code reusability, the extent to which code can be used in different applications with minimal change.
+The portability guidelines discussed in Chapter 7 need careful attention. Adherence to them is important even if the need to port the resulting software is not currently foreseen. Following the guidelines improves the potential reusability of the resulting code in projects that use different Ada implementations. You should insist that when particular project needs force the relaxation of some of the portability guidelines, nonportable features of the source text are prominently indicated.
+The reusability guidelines given in Chapter 8 are based on the principles of encapsulation and design for change. These guidelines stress that understanding and clarity, robustness, adaptability, and independence are useful and desirable, even when reuse is not expected, because the resulting code is more resistant to both planned and unplanned change.

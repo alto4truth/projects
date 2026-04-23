@@ -1,0 +1,38 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 273
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+Associate names with loops when they are nested (Booch 1986, 1987).
+Associate names with any loop that contains an exit statement.
+
+==== example ====
+
+==== rationale ====
+When you associate a name with a loop, you must include that name
+with the associated end for that loop (Ada Reference Manual 1995).
+This helps readers find the associated end for any given loop.
+This is especially true if loops are broken over screen or page
+boundaries. The choice of a good
+name for the loop documents its purpose, reducing the need for
+explanatory comments. If a name for a loop is very difficult to
+choose, this could indicate a need for more thought about the
+algorithm.
+Regularly naming loops helps you follow Guideline 5.1.3. Even
+in the face of code changes, for example, adding an outer or inner
+loop, the exit statement does not become ambiguous.
+It can be difficult to think up a name for every loop; therefore,
+the guideline specifies nested loops. The benefits in readability
+and second thought outweigh the inconvenience of naming the loops.
+
+=== Block Names ===
+
+==== guideline ====
+Associate names with blocks when they are nested.
+
+==== example ====

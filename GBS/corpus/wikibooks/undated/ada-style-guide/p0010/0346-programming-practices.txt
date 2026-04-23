@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 346
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+n handler has executed completely or correctly. See also Guideline 5.9.1, which discusses abnormal objects in the context of Ada.Unchecked_Conversion.
+
+=== Handlers for Others ===
+
+==== guideline ====
+When writing an exception handler for others, capture and return additional information about the exception through the Exception_Name, Exception_Message, or Exception_Information subprograms declared in the predefined package Ada.Exceptions.
+Use others only to catch exceptions you cannot enumerate explicitly, preferably only to flag a potential abort.
+During development, trap others, capture the exception being handled, and consider adding an explicit handler for that exception.
+
+==== example ====
+The following simplified example gives the user one chance to enter an integer in the range 1 to 3. In the event of an error, it provides information back to the user. For an integer value that is outside the expected range, the function reports the name of the exception. For any other error, the function provides more complete traceback information. The amount of traceback information is implementation dependent.

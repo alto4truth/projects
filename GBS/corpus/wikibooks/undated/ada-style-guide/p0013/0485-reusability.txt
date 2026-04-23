@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 485
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+these differences into account. By encapsulating them, you limit the impact of change in adapting the financial package.
+
+=== Implementing Mixins ===
+
+==== guideline ====
+Consider using abstract tagged types and generics to define reusable units of functionality that can be "mixed into" core abstractions (also known as mixins).
+
+==== example ====
+Note the use of an abstract tagged type as a generic formal parameter and as the exported extended type in the pattern that follows, excerpted from the Rationale (1995, §4.6.2):
+
+The following code shows how the generic might be instantiated to "mixin" the desired features in the final type extension. See also Guideline 9.5.1 for a related example of code.

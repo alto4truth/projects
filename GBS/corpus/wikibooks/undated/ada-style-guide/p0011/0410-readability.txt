@@ -1,0 +1,25 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 410
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+fices, changes departments, or even leaves the company because the department is likely to retain responsibility for the original version of the code.
+
+==== notes ====
+With modern configuration management systems, explicitly capturing version history as header comments may be superfluous. The configuration management tool maintains a more reliable and consistent (from a content point of view) change history. Some systems can re-create earlier versions of a unit.
+
+=== Program Unit Specification Headers ===
+
+==== guideline ====
+Put a header on the specification of each program unit.
+Place information required by the user of the program unit in the specification header.
+Do not repeat information (except unit name) in the specification header that is present in the specification.
+Explain what the unit does, not how or why it does it.
+Describe the complete interface to the program unit, including any exceptions it can raise and any global effects it can have.
+Do not include information about how the unit fits into the enclosing software system.
+Describe the performance (time and space) characteristics of the unit.

@@ -1,0 +1,36 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 11
+section: 360-instructions-alr
+chunk: 36
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+The most significant bit of CC field of the PSW keeps carry bit (i.e. the most significant bit of the 33-bit sum).
+
+== Exceptions and Faults ==
+None.
+
+== Notes ==
+The AL and ALR instructions are useful to implement adding of integer values longer than 32 bit. In that case, one should use AL or ALR to count all parts of the sum (possibly except the most significant one), and, if CC is 2 or 3 after the adding (i.e. carry have happened), increment the nearest higher part of the sum.
+
+== Related instructions ==
+
+=== 16 bit ===
+To add half-word see AH
+To subtract haLF-word, see SH
+
+=== 32-bit ===
+To add logical word value from memory, see AL.
+To add signed value from memory, see A
+To add signed value from register, see AR
+To subtract logical value, see SL or SLR.
+To subtract signed value, see SR, S,
+
+=== Floating Point ===
+To add floating-point values, see AE, AER, AD or ADR.
+
+=== Condition Code ===
+To check condition code, see BC or BCR.

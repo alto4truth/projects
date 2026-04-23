@@ -1,0 +1,13 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 13
+section: dealing-with-iors
+chunk: 41
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+arg.
+The endpoint is critical to running any TAO service or compiled client/server app. If you don't supply one, the default endpoint is the multicast endpoint. This default endpoint is described as being useful for apps where performance isn't an issue, or for testing. That being said, this author couldn't get the multicast IIOP endpoint to work on a stock Linux FC4 system, even though the Linux system swore that multicasting was up and running. I was able to verify the bug by running the multicast test app under the ACE framework test directory. To ensure that anyone reading this is able to get something up and running, we will therefore set up a client with the explicitly defined endpoint of "localhost".
+There are two basic forms of this endpoint, there is the service advertising its services, and the client trying to find a service. To make this discussion intuitive, we will assume that in each example, a naming service server is running and reachable from your test box. To get the naming service started, try the following:

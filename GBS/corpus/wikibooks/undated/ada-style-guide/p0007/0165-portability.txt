@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 165
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+is package's behavior and even its specification are nonportable (see Guideline 7.1.6).
+Encapsulate and document all uses of package Ada.Command_Line.
+
+==== example ====
+The following example encapsulates the arguments for a hypothetical "execution mode" argument passed from the environment. It encapsulates both the expected position and the expected values of the argument, as well as provides a default in cases where the environment was unable to provide the information:

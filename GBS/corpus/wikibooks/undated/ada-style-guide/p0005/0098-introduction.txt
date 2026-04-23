@@ -1,0 +1,14 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 5
+section: introduction
+chunk: 98
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ese guidelines address optional parts of the syntax, types, data structures, expressions, statements, visibility, exceptions, and erroneous execution.
+
+=== Concurrency ===
+Chapter 6 defines the correct use of concurrency to develop predictable, reliable, reusable, and portable software. The topics include tasking, protected units, communication, and termination. One major area of enhancement of the Ada language has been better support for shared data. The task mechanism had been the only available approach to protecting shared data. The guidelines in this chapter support the use of protected types to encapsulate and synchronize access to shared data.

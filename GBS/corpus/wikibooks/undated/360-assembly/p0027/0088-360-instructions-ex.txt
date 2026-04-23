@@ -1,0 +1,18 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 27
+section: 360-instructions-ex
+chunk: 88
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+a good dump and does not alter regs 14-1 as happens when the ABEND macro is used. This technique is not reserved for IBM use, as some have maintained.
+
+== Exceptions and Faults ==
+If the target instruction is itself an EX instruction, an Execute Exception occurs
+If the target instruction is not on an even address, an Address Exception occurs
+If the target instruction does not contain a valid opcode, an Operation Exception occurs
+If the target instruction is a privileged instruction, a Protect Violate exception occurs unless this task has the privileged bit in the PSW set
+If the instruction to be executed has an exception, that exception will be thrown

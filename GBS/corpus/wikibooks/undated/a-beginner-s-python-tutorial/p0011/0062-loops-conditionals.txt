@@ -1,0 +1,39 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 11
+section: loops-conditionals
+chunk: 62
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+a division - just checking that there is nothing left over if the number is divided by two - showing it is even. If it is even, it prints what 'n' is.
+
+== 'else' and 'elif' - When it Ain't True ==
+There are many ways you can use the 'if' statement, to deal with situations where your boolean expression ends up FALSE. They are 'else' and 'elif'.
+'else' simply tells the computer what to do if the conditions of 'if' aren't met. For example, read the following:
+
+Code Example 7 - the else statement
+
+'a' is not greater than five, therefore what is under 'else' is done.
+'elif' is just a shortened way of saying 'else if'. When the 'if' statement fails to be true, 'elif' will do what is under it IF the conditions are met. For example:
+
+Code Example 8 - The elif statement
+
+The 'if' statement, along with 'else' and 'elif' follow this form:
+
+Code Example 9 - the complete if syntax
+if {conditions}:
+{run this code}
+elif {conditions}:
+{run this code}
+elif {conditions}:
+{run this code}
+else:
+{run this code}
+
+#You can have as many or as few elif statements as you need
+#anywhere from zero to the sky.
+#You can have at most one else statement
+#and only after all other ifs and elifs.

@@ -1,0 +1,49 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 313
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+example ====
+Use:
+
+or:
+
+rather than either:
+
+or:
+
+to avoid Constraint_Error.
+Use:
+
+rather than:
+
+to avoid referencing a field in a nonexistent object.
+
+==== rationale ====
+The use of short-circuit control forms prevents a class of data-dependent
+errors or exceptions that can occur as a result of expression
+evaluation. The short-circuit forms guarantee an order
+of evaluation and an exit from the sequence of relational
+expressions as soon as the expression's result can be determined.
+In the absence of short-circuit forms, Ada does not provide a
+guarantee of the order of expression evaluation, nor does the
+language guarantee that evaluation of a relational
+expression is abandoned when it becomes clear that it evaluates
+to False (for and) or True (for or).
+
+==== notes ====
+If it is important that all parts of a given expression always
+be evaluated, the expression probably violates Guideline 4.1.4 ,
+which limits side-effects in functions.
+
+=== Accuracy of Operations With Real Operands ===
+
+==== guideline ====
+Use <= and >= in relational expressions with real operands instead of =.
+
+==== example ====

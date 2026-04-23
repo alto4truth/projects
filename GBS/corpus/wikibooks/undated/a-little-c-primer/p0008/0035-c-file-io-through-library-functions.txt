@@ -1,0 +1,42 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 8
+section: c-file-io-through-library-functions
+chunk: 35
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+o end of file.
+r+ Open a file for reading and writing.
+w+ Open and wipe (or create) for reading and writing.
+a+ Open a file for reading and appending.
+
+The "filename" is simply a string of characters.
+It is often useful to use the same statements to communicate either with
+files or with standard I/O. For this reason, the "stdio.h" header file
+includes predefined file pointers with the names "stdin" and "stdout".
+There's no need to do an "fopen()" on them—they can just be assigned to
+a file pointer:
+
+fpin = stdin;
+fpout = stdout;
+—and any following file-I/O functions won't know the difference.
+The "fclose()" function simply closes the file given by its file pointer
+parameter. It has the syntax:
+
+fclose( fp );
+
+The "fseek()" function call allows the byte location in a file to be
+selected for reading or writing. It has the syntax:
+
+fseek( <file_pointer>, <offset>, <origin> );
+
+The offset is a "long" and specifies the offset into the file, in bytes. The
+"origin" is an "int" and is one of three standard values, defined in
+"stdio.h":
+
+SEEK_SET Start of file.
+SEEK_CUR Current location.
+SEEK_END End of file.

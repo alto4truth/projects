@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 253
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+evices.
+Use protected types to implement synchronization tasks, such as a passive resource monitor.
+
+==== example ====
+See example in Guideline 6.1.1.
+
+==== rationale ====
+The rationale for this guideline is given under Guideline 6.1.1. Chapter 6 discusses concurrency and protected types in more detail.
+
+== Visibility ==
+Ada's ability to enforce information hiding and separation of concerns through its visibility controlling features is one of the most important advantages of the language, particularly when "pieces of a large system are being developed separately." Subverting these features, for example, by excessive reliance on the use clause, is wasteful and dangerous. See also Guidelines 5.7 and 9.4.1.
+
+=== Minimization of Interfaces ===

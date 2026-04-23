@@ -1,0 +1,62 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 62
+section: prog-start-0
+chunk: 163
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+he register resulting in the lowest displacement address generated. The following example will demonstrate. This example is from an assembler listing.
+
+000000 1 ************
+000000 2 * Determine which register the assembler uses
+000000 3 * Author - Paul Robinson
+000000 4 * Date - 11/28/20
+000000 5 *****************
+000000 6 TITLE 'Using test'
+000000 7 PRINT NOGEN
+000000 8 *
+000000 9 MAIN CSECT
+000000 10 USING MAIN,8
+000000 90ECD00C 11 STM 14,12,12(13)
+000004 188F 12 LR 8,15 Reg 8 now contiains start address
+000006 45F0806C 00006C 13 BAL 15,START
+00000C 0000000000000000 14 DC 18F'0'
+000054 D4C1C9D540404040 15 DC CL8'MAIN' Create a marker visible during coredumps
+00005C F1F161F2F861F2F0 16 DC CL8'11/28/20' Date compiled
+000064 F0F14BF0F3404040 17 DC CL8'01.03' Version number of program
+00006C 50FD0008 18 START ST 15,8(13) Link savearea to preious savearea
+000070 50DF0004 19 ST 13,4(15)
+000074 18DF 20 LR 13,15 R13 now points to new savearea
+000076 21 USING MAIN+8,13
+000076 22 WTO 'Program Started'
+000090 28 *
+000090 4150D4C0 0004C8 29 LA 5,ITEM
+000094 30 *
+000094 4120D0D8 0000E0 31 LA 2,BLANKS
+000098 4130D4C0 0004C8 32 LA 3,ITEM
+00009C 4140D0D4 0000DC 33 LA 4,X
+0000A0 34 *
+0000A0 35 USING X,4
+0000A0 36 USING ITEM,3
+0000A0 37 USING BLANKS,2
+0000A0 38 *
+0000A0 41202000 0000E0 39 LA 2,BLANKS
+0000A4 41303000 0004C8 40 LA 3,ITEM
+0000A8 41404000 0000DC 41 LA 4,X
+0000AC 42 *
+0000AC 41503000 0004C8 43 LA 5,ITEM
+0000B0 44 *
+0000B0 45 WTO 'Program ended.'
+0000C8 58D0D004 51 L 13,4(,13) Restore old savearea
+0000CC 41F00000 52 LA 15,0
+0000D0 58E0D00C 53 L 14,12(,13)
+0000D4 982CD01C 54 LM 2,12,28(13)
+0000D8 07FE 55 BR 14 And leave
+0000DA 56 *
+0000DC 00000000 57 X DC A(MAIN)
+0000E0 4040404040404040 58 BLANKS DC 1000C' '
+0004C8 00000000 59 ITEM DC A(0)
+0004CC 60 END

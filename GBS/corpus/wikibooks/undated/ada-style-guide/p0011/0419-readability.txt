@@ -1,0 +1,26 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 419
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+all to another primitive operation.) The rationale in Guideline 9.3.1 discusses whether such documentation should be in the specification or the body.
+
+=== Statement Comments ===
+
+==== guideline ====
+Minimize comments embedded among statements.
+Use comments only to explain parts of the code that are not obvious.
+Comment intentional omissions from the code.
+Do not use comments to paraphrase the code.
+Do not use comments to explain remote pieces of code, such as subprograms called by the current unit.
+Where comments are necessary, make them visually distinct from the code.
+
+==== example ====
+The following is an example of very poorly commented code:
+
+The following is improved by not repeating things in the comments that are obvious from the code, not describing the details of what goes in inside of Convert_To_Integer, deleting an erroneous comment (the one on the statement that accumulates the sum), and making the few remaining comments more visually distinct from the code.

@@ -1,0 +1,33 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 503
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+abbreviations in identifier or unit names.
+Document the expected behavior of generic formal parameters just as you document any package specification.
+
+=== robustness ===
+Use named numbers and static expressions to allow multiple dependencies to be linked to a small number of symbols.
+Use unconstrained array types for array formal parameters and array return values.
+Make the size of local variables depend on actual parameter size, where appropriate.
+Minimize the number of assumptions made by a unit.
+For assumptions that cannot be avoided, use subtypes or constraints to automatically enforce conformance.
+For assumptions that cannot be automatically enforced by subtypes, add explicit checks to the code.
+Document all assumptions.
+If the code depends upon the implementation of a specific Special Needs Annex for proper operation, document this assumption in the code.
+Use first subtypes when declaring generic formal objects of mode in out.
+Beware of using subtypes as subtype marks when declaring parameters or return values of generic formal subprograms.
+Use attributes rather than literal values.
+Be careful about overloading the names of subprograms exported by the same generic package.
+Within a specification, document any tasks that would be activated by with'ing the specification and by using any part of the specification.
+Document which generic formal parameters are accessed from a task hidden inside the generic unit.
+Document any multithreaded components.
+Propagate exceptions out of reusable parts. Handle exceptions within reusable parts only when you are certain that the handling is appropriate in all circumstances.
+Propagate exceptions raised by generic formal subprograms after performing any cleanup necessary to the correct operation of future invocations of the generic instantiation.
+Leave state variables in a valid state when raising an exception.
+Leave parameters unmodified when raising an exception.

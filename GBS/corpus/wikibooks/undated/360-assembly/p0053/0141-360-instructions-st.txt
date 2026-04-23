@@ -1,0 +1,21 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 53
+section: 360-instructions-st
+chunk: 141
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ST - Store - Opcode 50 - RX format Instruction (32 Bit)
+
+== Format ==
+ST 2,N2
+ST 11,106(8,10)
+The specific syntax is
+
+ST source register,displacement(index register,base register)
+Where the displacement, index register and base register values will be determined automatically by the assembler if the USING pseudo-instruction has been used, and the target address label used is within 4096 bytes of the value of some base register.
+
+== Opcode ==

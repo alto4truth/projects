@@ -1,0 +1,32 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 10
+section: interoperability-classes
+chunk: 195
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+rsion - MSDN
+TypeConverter class - MSDN
+Create COM types in managed code - MSDN
+Compile an interop project - MSDN
+Deploy an interop application - MSDN
+
+==== Exposing .NET Framework Components to COM ====
+The rest of the objectives of that section directly refers to MSDN
+Qualify the .NET Framework types for interoperation - MSDN
+Apply Interop attributes, such as the ComVisibleAttribute class - MSDN
+Package an assembly for COM - MSDN
+Deploy an application for COM access - MSDN
+
+=== Call DLL functions ===
+Exam objective: Call unmanaged DLL functions in a .NET Framework application, and control the marshalling of data in a .NET Framework application.
+(Refer System.Runtime.InteropServices namespace)
+Platform Invoke - MSDN
+Create a class to hold DLL functions - MSDN
+Create prototypes in managed code - MSDN
+
+DllImportAttribute class - MSND
+Call a DLL function - MSDN

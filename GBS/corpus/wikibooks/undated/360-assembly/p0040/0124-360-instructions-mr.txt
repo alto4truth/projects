@@ -1,0 +1,24 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 40
+section: 360-instructions-mr
+chunk: 124
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+am Status Word is not changed.
+
+== Exceptions and Faults ==
+If an odd register number is specified as the target register, operation exception occurs.
+
+== Notes ==
+Getting first multiplicand from T+1 instead of T, where T is target register number, can be confusing for program code reader. For example, "MR 2,2" multiplies values of registers 2 and 3, but "MR 2,3" calculates square of value of register 3.
+
+== Related instructions ==
+To multiply by word value from memory, see M.
+To divide by word value from register, see DR.
+To add word value from register, see AR.
+To add value and set condition codes according to unsigned arithmetic, or add not most significant part of multi-word integer value, see AL or ALR.
+To multiply floating-point values, see MER, MDR, ME or MD.

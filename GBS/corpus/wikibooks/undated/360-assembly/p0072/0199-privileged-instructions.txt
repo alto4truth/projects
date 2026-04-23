@@ -1,0 +1,20 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 72
+section: privileged-instructions
+chunk: 199
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+Programs that do not have privileges are known as "problem" programs. Without protecting the PSW, page tables, or I/O devices, problem programs could:
+
+Grant themselves privileges
+Allow themselves to reset their storage key, allowing them to change any memory
+Rewrite, contaminate or destroy page tables, losing or corrupting other jobs
+Change the system date and time
+Halt the machine
+Anyone having heard about or seen the effects of malware or ransomware can understand the kind of damage a rogue privileged program do to a computer. Unless you have your own machine (like using the Hercules emulator on Linux, Mac, Raspberry Pi, or Windows, and don't care if something in the virtual environment is damaged), or you know exactly what you're doing, it's probably best to restrict privileged functions to the operating system than allow just anyone to use them willy-nilly. However, because sometimes problem programs in a production environment legitimately have a need to execute privileged instructions or access operating system tables or memory belonging to another process, many installations will install a "private" SVC routine ("private" in that is only set up on that machine, and is not part of the "stock" operating system supplied by the developer) and that SVC either grants privileged state to that process or changes an operating system table to grant the program additional privilege(s). Often the same SVC can be used to reset the request, revoking the privilege.
+These are the privileged instructions:
+Legend:

@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 17
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+perature condition in a nuclear reactor and performs an emergency shutdown of the systems is an example of a task to support a high-priority activity.
+
+==== rationale ====
+These guidelines reflect the intended uses of tasks. They all revolve around the fact that a task has its own thread of control separate from the main subprogram (or environment task) of a partition. The conceptual model for a task is a separate program with its own virtual processor. This provides the opportunity to model entities from the problem domain in terms more closely resembling those entities and the opportunity to handle physical devices as a separate concern from the main algorithm of the application. Tasks also allow naturally concurrent activities that can be mapped to multiple processors within a partition when available.
+You should use tasks for separate threads of control. When you synchronize tasks, you should use the rendezvous mechanism only when you are trying to synchronize actual processes (e.g., specify a time-sensitive ordering relationship or tightly coupled interprocess communication). For most synchronization needs, however, you should use protected objects (see Guideline 6.1.1), which are more flexible and can minimize unnecessary bottlenecks. Additionally, passive tasks are probably better modeled through protected objects than active tasks.
+Resources shared between multiple tasks, such as devices, require control and synchronization because their operations are not atomic. Drawing a circle on a display might require that many low-level operations be performed without interruption by another task. A display manager would ensure that no other task accesses the display until all these operations are complete.

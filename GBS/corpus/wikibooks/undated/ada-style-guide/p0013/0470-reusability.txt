@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 470
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+plication.
+Parameterize generic units for maximum adaptability.
+Reuse common instantiations of generic units, as well as the generic units themselves.
+
+==== rationale ====
+Ada does not allow data types to be passed as actual parameters to subprograms during execution. Such parameters must be specified as generic formal parameters to a generic unit when it is instantiated. Therefore, if you want to write a subprogram for which there is variation from call to call in the data type of objects on which it operates, then you must write the subprogram as a generic unit and instantiate it once for each combination of data type parameters. The instantiations of the unit can then be called as regular subprograms.
+You can pass subprograms as actual parameters either by declaring access-to-subprogram values or generic formal subprogram parameters. See Guideline 5.3.4 for a discussion of the tradeoffs.
+If you find yourself writing two very similar routines differing only in the data type they operate on or the subprograms they call, then it is probably better to write the routine once as a generic unit and instantiate it twice to get the two versions you need. When the need arises later to modify the two routines, the change only needs to be made in one place. This greatly facilitates maintenance.
+Once you have made such a choice, consider other aspects of the routine that these two instances may have in common but that are not essential to the nature of the routine. Factor these out as generic formal parameters. When the need arises later for a third similar routine, it can be automatically produced by a third instantiation if you have foreseen all the differences between it and the other two. A parameterized generic unit can be very reusable.
+It may seem that the effort involved in writing generic rather than nongeneric units is substantial. However, making units generic is not much more difficult or time-consuming than making them nongeneric once you become familiar with the generic facilities. It is, for the most part, a matter of practice. Also, any effort put into the development of the unit will be recouped when the unit is reused, as it surely will be if it is placed in a reuse library with sufficient visibility. Do not limit your thinking about potential reuse to the application you are working on or to other applications with which you are very familiar. Applications with which you are not familiar or future applications might be able to reuse your software.
+After writing a generic unit and placing it in your reuse library, the first thing you are likely to do is to instantiate it once for your particular needs. At this time, it is a good idea to consider whether there are instantiations that are very likely to be widely used. If so, place each such instantiation in your reuse library so that they can be found and shared by others.
+See also Guideline 9.3.5.

@@ -1,0 +1,24 @@
+title: A Level Computer Science Programming Guide
+source: wikibooks
+year: undated
+document_id: a-level-computer-science-programming-guide
+authors: 
+page: 6
+section: file-handling
+chunk: 7
+source_ref: https://en.wikibooks.org/wiki/A_Level_Computer_Science_Programming_Guide
+
+se the following commands to read the data from the files.
+
+The Variable should be of data type STRING. This command reads the text file line by line.
+
+The EOF() function can be used in Pseudocode and VB.NET to determine whether the file pointer is at the end of the file. It returns a Boolean Value, and can be useful when implementing loops.
+
+=== Writing To Text Files ===
+Once a file is opened in 'Write' or 'Append' mode, you can use the following commands to write the data to the files.
+
+The Variable should be of data type STRING.
+
+=== Closing Text Files ===
+
+You should always remember to close your files. Failure to do so can result in major problems later on when any program tries to open the file, or the program tries to open or edit a different file with the same identifier.

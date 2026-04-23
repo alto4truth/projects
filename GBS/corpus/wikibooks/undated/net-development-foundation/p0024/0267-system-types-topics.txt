@@ -1,0 +1,22 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 24
+section: system-types-topics
+chunk: 267
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+em namespace (ex. System.Int32) and have keywords that represent them in the VB and C# (ex. int in C#, integer in VB.NET) except for InPtr and UInPtr.
+
+All value types derive from System.ValueType either directly for built-in and user-defined or indirectly through System.Enum for enumerations.
+Enumerations are a way to name a set of values of an underlying integer type (signed or unsigned). As restrictions of an integer type they act as their underlying type.
+User-defined value types and Enumerations both include System types and Custom types.
+An example of a System user-defined value-type would be System.Drawing.Point used in drawing.
+You build custom value types using specific language constructs (struct in C#, Structure in VB.NET).
+An example of a System enumeration would be the System.Data.CommandType enumeration that specifies if a table is a text command, a call to a stored procedure, etc.
+You build custom enumerations using specific language constructs (enum in C#, Enum in VB.NET).
+For examples and notes on using value types see this section. See also examples of building and using user-defined value types.
+
+=== Reference types ===

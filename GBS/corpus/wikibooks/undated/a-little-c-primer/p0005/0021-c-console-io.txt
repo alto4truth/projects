@@ -1,0 +1,41 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 5
+section: c-console-io
+chunk: 21
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+le, the following program accepts characters from standard input one at
+a time:
+
+/* inout.c */
+
+#include <stdio.h>
+
+int main (void)
+{
+unsigned int ch;
+
+while ((ch = getchar()) != EOF)
+{
+putchar( ch );
+}
+return 0;
+}
+
+The "getchar" function returns an "int" and also terminates with an EOF.
+Notice the neat way C allows a program to get a value and then test it in the
+same expression, a particularly useful feature for handling loops.
+One word of warning on single-character I/O: if a program is reading
+characters from the keyboard, most operating systems won't send the
+characters to the program until the user presses the "Enter" key, meaning
+it's not possible to perform single-character keyboard I/O this way.
+The little program above is the essential core of a character-mode text
+"filter", a program that can perform some transformation between standard
+input and standard output. Such a filter can be used as an element to
+construct more sophisticated applications:
+
+type file.txt > filter1 | filter2 > outfile.txt

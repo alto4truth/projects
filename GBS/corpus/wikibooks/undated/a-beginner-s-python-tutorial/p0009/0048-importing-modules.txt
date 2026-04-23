@@ -1,0 +1,22 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 9
+section: importing-modules
+chunk: 48
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+Last lesson we covered the killer topic of Classes. As you can remember, classes are neat combinations of variables and functions in a nice, neat package. Programming lingo calls this feature encapsulation, but regardless of what it is called, it's a really cool feature for keeping things together so the code can be used in many instances in lots of places. Of course, you've got to ask, "how do I get my classes to many places, in many programs?". The answer is to put them into a module, to be imported into other programs.
+
+== Module? What's a Module? ==
+A module is a Python file that (generally) has only definitions of variables, functions, and classes. For example, a module might look like this:
+
+Code Example 1 - moduletest.py
+
+As you see, a module looks pretty much like your normal Python program.
+So what do we do with a module? We import bits of it (or all of it) into other programs.
+To import all the variables, functions and classes from moduletest.py into another program you are writing, we use the import operator. For example, to import moduletest.py into your main program, you would have this:
+
+Code Example 2 - mainprogram.py

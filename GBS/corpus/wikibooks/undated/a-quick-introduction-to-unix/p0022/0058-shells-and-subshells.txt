@@ -1,0 +1,20 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 22
+section: shells-and-subshells
+chunk: 58
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+== Shells and subshells ==
+When we open a terminal session a shell will be started for us. That is why we have a prompt visible in our terminal window.
+Within a shell we can open another shell - a subshell - by invoking the shell program file or executable. Imagine for example that you have a shell open, the plain vanilla shell sh. You see this:
+
+At the prompt in this shell, I can invoke a new subshell. I can invoke bash shell with the command bash. The new shell can be closed down with the command exit. If I invoke a bash subshell I will see something like:
+
+And if I close this shell with exit I see:
+
+=== Shells contain processes and variables ===
+A shell provides

@@ -1,0 +1,14 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 5
+section: introduction
+chunk: 94
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+== Organization of this Book ==
+The format of this book follows the well-received guideline format of the Ada Quality and Style: Guidelines for Professional Programmer's, version 02.01.01 (AQ&S 83) (Software Productivity Consortium 1992). The style guide is divided into sections that map to the major decisions that each programmer must make when creating high-quality, reliable, reusable, and portable Ada software. Some overlap exists in the sections because not all programming decisions can be made independently.
+Individual chapters address source code presentation, readability, program structure, programming practices, concurrency, portability, reusability, and performance, and a new chapter addresses object-oriented features. Each chapter ends with a summary of the guidelines it contains. The last chapter shows a complete implementation of the Dining Philosophers example, provided by Dr. Michael B. Feldman and Mr. Bjorn Kallberg. Many of the guidelines in this book were used to create this example. An appendix provides a cross-reference matrix between the Ada Reference Manual (1995) sections and the guidelines in this style guide.
+This book is written using the general software e

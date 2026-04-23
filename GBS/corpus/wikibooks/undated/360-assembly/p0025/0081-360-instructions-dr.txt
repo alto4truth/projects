@@ -1,0 +1,27 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 25
+section: 360-instructions-dr
+chunk: 81
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+n, if both values are not equal to 0; in other words, (remainder * dividend >= 0).
+The Condition Code field in the Program Status Word is not changed.
+
+== Exceptions and Faults ==
+If an odd register number is specified as the target register, operation exception occurs.
+If the divisor is zero, operation exception occurs.
+If signed integer overflow is detected and the bit 36 in PSW is set, operation exception occurs.
+
+== Example ==
+Consider that register 4 contains 0, 5 - 13 and 11 - 4. The instruction "DR 4,11" will divide the contents of register 13 by 4, place the quotient (equals to 3) in register 4 and place the remainder (equals to 1) in register 5.
+
+== Related instructions ==
+To divide by word value from memory, see D.
+To multiply by word value from register, see MR.
+To subtract word value from register, see SR.
+To add value and set condition codes according to unsigned arithmetic, or add not most significant part of multi-word integer value, see AL or ALR.
+To divide floating-point values, see DER, DDR, DE or DD.

@@ -1,0 +1,25 @@
+title: A Brief Introduction to the LaTeX Typesetting Environment
+source: wikibooks
+year: undated
+document_id: a-brief-introduction-to-the-latex-typesetting-environment
+authors: 
+page: 3
+section: typesetting-the-basics
+chunk: 15
+source_ref: https://en.wikibooks.org/wiki/A_Brief_Introduction_to_the_LaTeX_Typesetting_Environment
+
+. For now, we'll stick with the {article} class because it will allow us to create simple documents like those most readers will be looking to create.
+
+===== An important note =====
+In the above example you'll notice that some of the document is written inside of two flags, namely:
+
+\begin{figure}
+
+and
+
+\end{figure}
+
+These specify a figure in \LaTeX which is not itself a very simple object, as nothing in \LaTeX truly is. However, we will not be playing a lot with the options available in \LaTeX figures so don't worry.
+The caveat here is that if you were to try to typeset the above example without using the following command before the \begin{document} constructor:
+
+\usepackage{subfigure}

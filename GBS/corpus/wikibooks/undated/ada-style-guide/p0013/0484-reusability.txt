@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 484
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+tive iterators, see the Rationale (1995, §3.7.1 and §4.4.4), Ross (1989), and Booch (1987).
+
+=== Decimal Type Output and Information Systems Annex ===
+
+==== guideline ====
+Localize the currency symbol, digits separator, radix mark, and fill character in picture output.
+Consider using the # character in picture layouts so that the edited numeric output lengths are invariant across currency symbols of different lengths.
+
+==== example ====
+
+==== rationale ====
+Currencies differ in how they are displayed in a report. Currencies use different symbols of different lengths (e.g., the American $, the German DM, and the Austrian ÖS). They use different symbols to separate digits. The United States and the United Kingdom use the comma to separate groups of thousands, whereas Continental Europe uses the period. The United States and the United Kingdom use a period as a decimal point; Continental Europe uses the comma. For a program involving financial calculations that is to be reused across countries, you need to take these differences into account. By encapsulating them, you limit the impact of change in adapting the financial package.
+
+=== Implementing Mixins ===

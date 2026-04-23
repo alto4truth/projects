@@ -1,0 +1,27 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 396
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+olean-valued functions:
+
+Sample function names for non-Boolean-valued functions:
+
+Sample package names:
+
+Sample protected objects:
+
+Sample task names:
+
+The following sample piece of code shows the clarity that results from using the parts-of-speech naming conventions:
+
+When packages and their subprograms are named together, the resulting code is very descriptive:
+
+==== rationale ====
+Using these naming conventions creates understandable code that reads much like natural language. When verbs are used for actions, such as subprograms, and nouns are used for objects, such as the data that the subprogram manipulates, code is easier to read and understand. This models a medium of communication already familiar to a reader. Where the pieces of a program model a real-life situation, using these conventions reduces the number of translation steps involved in reading and understanding the program. In a sense, your choice of names reflects the level of abstraction from computer hardware toward application requirements.
+See also Guideline 3.2.4 for the use of special-purpose suffixes in packages associated with tagged types.

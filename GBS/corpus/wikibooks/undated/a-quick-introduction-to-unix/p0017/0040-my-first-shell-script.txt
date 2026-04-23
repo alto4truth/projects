@@ -1,0 +1,16 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 17
+section: my-first-shell-script
+chunk: 40
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+e final amendment suggests itself. Let's add line numbers so that if we want to check a reference to our search term in context we can easily find it.
+
+grep -in 'science' science.txt > scioutput.txt
+(Of course now you could use a copy of the original with the lines numbered - you could do this with cat -n and a redirect of the output)
+Now you should check the file scioutput.txt - use less or open it with Pico - to see that the contents are what you expect.
+This is a fairly simple shell script. It's only real purpose is to illustrate the general principle of creating script files. However, I do think it's worthwhile reflecting for a moment on how you might go about doing this in Microsoft Windows.

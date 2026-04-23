@@ -1,0 +1,38 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 11
+section: create-an-event-consumer
+chunk: 33
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+on);
+virtual void disconnect_push_consumer() throw(CORBA::SystemException);
+};
+
+#endif
+
+== eventsinkconsumer_i.cpp ==
+#include "eventsinkconsumer_i.h"
+
+using namespace std;
+
+/** \fn EventSinkConsumer_i::EventSinkConsumer_i(CORBA::ORB_ptr orb)
+* Just make a copy of the orb pointer in the constructor.
+*/
+EventSinkConsumer_i::EventSinkConsumer_i(CORBA::ORB_ptr orb)
+: orb_(CORBA::ORB::_duplicate(orb))
+{}
+
+/** \fn EventSinkConsumer_i::push( const CORBA::Any &data)
+* Override the push op
+*/
+void EventSinkConsumer_i::push( const CORBA::Any &data) throw(CORBA::SystemException){
+//Extract the event data from the Any
+accepted *bill_event;
+if(data >>= bill_event)
+cout << "Bill Event Data: Bill = " << bill_event->bill << " Status = " <<
+bill_event->status << " Command = " << bill_event->command << endl;
+}

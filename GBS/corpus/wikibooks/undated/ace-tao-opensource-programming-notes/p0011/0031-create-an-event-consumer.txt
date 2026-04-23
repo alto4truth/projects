@@ -1,0 +1,35 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 11
+section: create-an-event-consumer
+chunk: 31
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+arrow (naming_context_object.in ());
+
+CosNaming::Name ec_name;
+ec_name.length(1);
+ec_name[0].id = CORBA::string_dup("CosEventService"); //TAO Specific
+
+// Resolve the binding to the event channel object reference.
+CosEventChannelAdmin::EventChannel_var channel = CosEventChannelAdmin::EventChannel::_narrow(naming_context->resolve(ec_name));
+// resolve_name<CosEventChannelAdmin::EventChannel>(
+// naming_context, ec_name);
+//Instanciate the servant
+EventSinkConsumer_i servant(orb.in());
+
+//Register it with the root POA
+naming_context_object = orb->resolve_initial_references("RootPOA");
+PortableServer::POA_var poa = PortableServer::POA::_narrow(naming_context_object.in());
+PortableServer::ObjectId_var oid = poa->activate_object(&servant);
+CORBA::Object_var consumer_obj = poa->id_to_reference(oid.in());
+CosEventComm::PushConsumer_var consumer = CosEventComm::PushConsumer::_narrow(consumer_obj.in());
+
+//Get a consumer admin object for the event channel
+CosEventChannelAdmin::ConsumerAdmin_var consumerAdmin = channel->for_consumers();
+
+//Get a proxy supplier from the consumer admin
+CosEventChannelAdmin::ProxyPushSupplier_var supplier = consumerAdmin->obtain_push_supplier();

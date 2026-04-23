@@ -1,0 +1,17 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 6
+section: creating-files
+chunk: 15
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+all create a directory to hold the student files:
+
+% mkdir -p /degreeadmin/2010/students
+and then to be sure that you have the correct file structure
+
+% touch /degreeadmin/2010/students/student_list.txt
+and similarly for any other files and directories you need.

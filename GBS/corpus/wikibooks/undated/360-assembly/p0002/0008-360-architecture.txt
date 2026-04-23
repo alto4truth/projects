@@ -1,0 +1,37 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 2
+section: 360-architecture
+chunk: 8
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+le attempts to violate security, ordinary system requests, or machine damage. Some of the more common of the many exceptions available are as follows:
+
+Addressing - Reference to non-existent memory. While this is often a programming error, if a program accesses virtual memory that is not swapped in, this exception would legitimately occur, and in this case is not an error condition.
+Clock - The time-of-day clock has signalled another second has occurred. This is not an error condition.
+Data - Invalid decimal data values in packed arithmetic, out-of-range values in certain arithmetic or trap instructions,
+Decimal Divide - Division by 0 with decimal arithmetic instructions.
+Decimal Overflow - Digits are lost when a result is too large for the area supplied.
+External Interrupt - A device attached to the computer has signalled an interrupt. This is not an error condition.
+Execute - An attempt is made to use an EXECUTE instruction (EX) on an instruction with the EXECUTE opcode.
+Fixed-Point Divide - Division by 0 with binary arithmetic instructions.
+Fixed-Point Overflow - Result exceeds the maximum value permissible
+Floating-Point Divide - Division by 0 with F.P. arithmetic instructions
+Floating-Point Significance - Fraction becomes zero
+Floating-Point Square Root - Value less than zero
+I/O Interrupt - An input or output device (printer, keyboard, Ethernet) has signalled that it has finished processing data or commands sent to it or has input available
+Machine Check - Some part of the hardware has had a failure.
+Monitor - Flagged value in MONITOR CALL instruction is used.
+Operand - Certain values given to I/O instructions is incorrect.
+Operation - Attempt to execute an invalid operation code.
+Page Translation - The memory page to be referenced has its address table marked as invalid (this would not necessarily be an error, it might mean the operating system has swapped that page out and it needs to be restored)
+Primary Authority - Incorrect or invalid values given to the PROGRAM TRANSFER (PT) instruction.
+Privileged Operation - A problem program attempts to execute a privileged instruction.
+Protection - Accessing invalid, non-existent or unauthorized memory.
+Specification - Attempt to execute (or transfer control to) an instruction at an odd address; use an incorrect floating-point register in some F.P. arithmetic instructions; using a memory address in an instruction that is not on the correct address boundary (half word, word, double word) for that instruction.
+Supervisor Call - The program has issued a SUPERVISOR CALL (SVC) instruction. This is not an error condition.
+Timer Interrupt - The interrupt timer has signalled a time limit has occurred. This is not an error condition.
+Translation - Invalid code given to the PROGRAM CALL (PC) instruction.

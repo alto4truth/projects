@@ -1,0 +1,14 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 13
+section: partii-chapter-4
+chunk: 56
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+var to “input1” and the second ones to “input2”. Then add a button and set its name to “button”. Add the following lines to the actions of “button1”:
+
+In line 2 we check if input1 equals input2 using “if” and operator “==” (Note: don’t confuse “=” with “==” because they are different operators. “=” assigns value to the variable, but “==” only checks two expressions. For example if you have “if” and you want to check if any variable “a” equals “hello” then you must write “ a==”hello” ” in the condition. If you write “ a=”hello” “ then a will become “hello”.) and if so then we trace “YES” else we trace “NO”.
+But now imagine another situation. You have an Input Text and a button and when the user type his/her name in the Input Text and clicks the button you want to trace different values. To solve this you must add the following code to the button:

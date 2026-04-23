@@ -1,0 +1,27 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 14
+section: source-code-presentation
+chunk: 512
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+tion:
+
+Instantiations of generic units and record indentation:
+
+Indentation for record alignment:
+
+Tagged types and type extension:
+
+==== example ====
+
+==== rationale ====
+Indentation improves the readability of the code because it gives you a visual indicator of the program structure. The levels of nesting are clearly identified by indentation, and the first and last keywords in a construct can be matched visually.
+While there is much discussion on the number of spaces to indent, the reason for indentation is code clarity. The fact that the code is indented consistently is more important than the number of spaces used for indentation.
+Additionally, the Ada Reference Manual 1995, §1.1.4 [Annotated] states that the layout shown in the examples and syntax rules in the manual is the recommended code layout to be used for Ada programs: "The syntax rules describing structured constructs are presented in a form that corresponds to the recommended paragraphing . . . . Different lines are used for parts of a syntax rule if the corresponding parts of the construct described by the rule are intended to be on different lines . . . . It is recommended that all indentation be by multiples of a basic step of indentation (the number of spaces for the basic step is not defined)."
+It is important to indent continuation lines differently from nested control structures to make them visually distinct. This prevents them from obscuring the structure of the code as you scan it.
+Listing context clauses on individual lines allows easier maintenance; changing a context clause is less error-prone.
+Indenting with spaces is more portable than indenting with tabs because tab characters are displayed differently by different terminals and printers.

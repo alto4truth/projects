@@ -1,0 +1,19 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 7
+section: parti-chapter-3-arrays
+chunk: 25
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+he first element in an array is always 0. Now lets write a small program to understand arrays better. Write the code written below to Frame 1 actions.
+
+In line 1 we declare array “users” which consists of 3 elements. In lines 3-5 we set “users” each element. If you have an array and you want to get or set any of its element then you must write the name of the array, then “[]” and the number of element inside the quotation marks (“[]”). For example in line 3 we set the first element of “users” to “User 1”. You can use arrays for storing any data in them. For example you have an array which consists only of 2 elements. You can set the first elements value a string (e.g. myArray[0] = “hello”) and the second element a number (e.g. myArray[1] = 5). And finally in the lines 8-11 we trace our “users” array. Now we will create a more complicated example. Follow the steps:
+Step 1
+Select the Text Tool from the Toolbox and draw Text. Then select it and in the Properties window set its’ width to 80, height to 25, font size to 20 and change the Text Type to “Static Text”. Type “Number:” in it.
+Step 2
+Select the Text Tool from the Toolbox and draw Text. Then select it and in the Properties window set its’ width to 30, height to 25, font size to 20, var to “input”, change the Text Type to “Input Text” and select “Show Border Around Text” button . Place this Text near the previous Text. This will be our input field.
+Step 3
+Select the Text Tool from the Toolbox and draw Text. Then select it and in the Properties window set its’ width to 110, height to 25, font size to 20, var to “output” and change the Text Type to “Dynamic Text”. Place this Text under the two previous labels. The scene must look like this.

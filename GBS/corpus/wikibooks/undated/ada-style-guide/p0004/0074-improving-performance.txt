@@ -1,0 +1,39 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 4
+section: improving-performance
+chunk: 74
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+mpact of using the mod and rem operators. One of the above styles may be significantly more efficient than the other.
+
+=== Short-Circuit Operators ===
+
+==== guideline ====
+Use the short-circuit control form when measured performance indicates.
+
+==== example ====
+
+==== rationale ====
+Determine the impact of using nested if statements versus using the and then or or else operator. One of the above may be significantly more efficient than the other.
+
+=== Case Statement Versus elsif ===
+
+==== guideline ====
+Use the case statement when measured performance indicates.
+
+==== example ====
+
+==== rationale ====
+Determine the impact of using case statements versus the elsif construct. If the case statement is implemented using a small jump table, then it may be significantly more efficient than the if .. then .. elsif construct.
+See also Guideline 8.4.6 for a discussion of the table-driven programming alternative.
+
+=== Checking for Constraint Errors ===
+
+==== guideline ====
+Use hard-coded constraint checking when measured performance indicates.
+
+==== example ====

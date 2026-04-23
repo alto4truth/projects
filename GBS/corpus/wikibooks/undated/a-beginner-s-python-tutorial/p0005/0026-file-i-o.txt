@@ -1,0 +1,17 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 5
+section: file-i-o
+chunk: 26
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+(). It will print from the spot you seeked to. But realise that openfile.read() moves the cursor to the end of the file – you will have to seek again.
+
+== Other I/O Functions ==
+There are many other functions that help you with dealing with files. They have many uses that empower you to do more, and make the things you can do easier. Let's have a look at tell(), readline(), readlines(), write() and close().
+tell() returns where the cursor is in the file. It has no parameters, just type it in (like what the example below will show). This is infinitely useful, for knowing what you are referring to, where it is, and simple control of the cursor. To use it, type fileobjectname.tell() - where fileobjectname is the name of the file object you created when you opened the file (in openfile = open('pathtofile', 'r') the file object name is openfile).
+readline() reads from where the cursor is till the end of the line. Remember that the end of the line isn't the edge of your screen - the line ends when you press enter to create a new line. This is useful for things like reading a log of events, or going through something progressively to process it. There are no parameters you have to pass to readline(), though you can optionally tell it the maximum number of bytes/letters to read by putting a number in the brackets. Use it with fileobjectname.readline().
+readlines() is much like readline(), however readlines() reads all the lines from the cursor onwards, and returns a list, with each list element holding a line of code. Use it with fileobjectname.readlines(). For example, if you had the text file:

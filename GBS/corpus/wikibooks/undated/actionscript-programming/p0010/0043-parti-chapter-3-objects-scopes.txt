@@ -1,0 +1,20 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 10
+section: parti-chapter-3-objects-scopes
+chunk: 43
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+functions they are declared in (functions are like events, you will learn about them later). Now lets understand each of this groups in more details.
+
+== Global variables ==
+First of all lets understand what means the phrase “the global variables are accessible everywhere in the movie”. As you know the flash document contain scenes and may contain other objects like movie clips, buttons, pictures, etc. By declaring a global variable it can be used everywhere listed above or in short everywhere in the movie (flash document). For the demonstration lets do the following: create a new “movie clip” (for doing it just draw something in the scene, select it and press “F8”. When “Convert to Symbol” dialog appear type the name of the “movie clip”, select “Movie Clip” as behavior and press “OK”) and make sure it is added to the scene (if it isn’t press F11 to see the “library” window and drag your “movie clip” to the scene. Then open the actions of the first frame of the scene and write the following code:
+
+var MyVar = new String("Hello!!!");
+
+Now double click the “movie clip” you have created for navigating to it and open its first frame’s actions and write the following:
+
+trace(MyVar);

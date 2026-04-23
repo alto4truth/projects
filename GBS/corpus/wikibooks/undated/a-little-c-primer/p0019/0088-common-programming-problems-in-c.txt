@@ -1,0 +1,32 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 19
+section: common-programming-problems-in-c
+chunk: 88
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+ters are
+supposed to be specified, and the reverse. If the function returns a value
+through a parameter, that means it must be specified as a pointer:
+
+myfunc( &myvar );
+
+The following will not do the job:
+
+myfunc( myvar );
+
+Remember that a function may require a pointer as a parameter even if it
+doesn't return a value, though as a rule this is not a good programming
+practice.
+14: Getting mixed up when using nested "if" and "else" statements. The best
+way to avoid problems with this is to always use brackets. Avoiding
+complicated "if" constructs is also a good idea; use "switch" if there's any
+choice in the matter. Using "switch" is also useful even for simple "if"
+statements, since it makes it easier to expand the construct if that is
+necessary.
+15: Forgetting semicolons—though the compiler usually catches this—or
+adding one where it isn't supposed to be—which it usually doesn't. For
+example:

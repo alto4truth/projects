@@ -1,0 +1,24 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 22
+section: shells-and-subshells
+chunk: 60
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+. Like this
+
+$ bash
+This starts a new bash subshell which we can see from the changed prompt, and in the subshell we create a shell variable like this
+
+bash% MYVARIABLE="This is the subshell. When it closes, this variable is destroyed!"
+To check the contents of this variable we use echo exactly as before:
+
+bash% echo $MYVARIABLE
+Before going further, make sure you know what this will display.
+Now, if we exit, the bash subshell closes and we return to our original shell. Work out what the result of typing
+
+$ echo $MYVARIABLE
+would be.

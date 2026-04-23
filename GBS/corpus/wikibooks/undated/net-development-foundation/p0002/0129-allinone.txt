@@ -1,0 +1,31 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 129
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+lobalization, drawing, and text manipulation functionality in a .NET Framework application
+
+=== Topics ===
+
+==== Globalization ====
+
+==== Drawing ====
+
+==== Text manipulation ====
+Text manipulation, in the context of the exam objectives, covers 3 main subjects: string building, regular expressions and text encoding. We look at each in the following paragraphs.
+
+===== String and StringBuilder classes =====
+Text manipulation starts with the representation of a string which is done via the String class. No specific exam objective mentions the String class but we added a section for it because you must understand some of its specific characteristics.
+Next comes the StringBuilder class that serves for efficient construction.
+
+===== Regular expressions =====
+
+The Regex, Match and Group classes together implement the regular expressions support in the .NET framework.
+Regular expressions are a world by themselves and have been around for quite some time.
+There is a wikibook on regular expressions which, among other things, point to this Tutorial.
+Regular expressions support in .NET basically allows for:

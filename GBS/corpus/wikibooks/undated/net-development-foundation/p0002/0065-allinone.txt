@@ -1,0 +1,45 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 65
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+etEnumerator method of the IEnumerable interface.
+public class Colors : System.Collections.IEnumerable
+{
+string[] colors = { "Red", "Green", "Blue" };
+
+public System.Collections.IEnumerator GetEnumerator()
+{
+for (int i = 0; i < colors.Length; i++)
+{
+yield return colors[i];
+}
+}
+}
+
+This enables the class to be accessed using a standard foreach statement. A class is not restricted to implementing only a single iterator. Multiple iterators can be supplied, for example to enable iteration in both ascending and descending order of a list. To call a named iterator, use the following syntax:
+foreach (int i in myList.NamedIterator())
+{
+System.Console.WriteLine(i);
+}
+
+The yield statement marks a point where execution of a iterator will resume on a subsequent iteration. This can be used to supply multiple yield statements:
+public System.Collections.IEnumerator GetEnumerator()
+{
+yield return "Statement returned on iteration 1";
+yield return "Statement returned on iteration 2";
+}
+
+To end the iteration programmatically, use the
+yield break;
+
+statement.
+Hashtable class - MSDN
+
+Used to represent a collection of key/value pairs.
+CollectionBase class and ReadOnlyCollectionBase class

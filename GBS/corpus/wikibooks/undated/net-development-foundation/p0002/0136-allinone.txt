@@ -1,0 +1,44 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 136
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+nnexes are a series of articles on specific subjects that are referenced by the main text but were not integrated in it.
+
+== Annexes: Generic types ==
+
+=== Introduction ===
+In order to understand Generics, we should first look why we would want to use them. This is best explained with a simple example. Let's say we want to create a collection of clients, this is something that we do often. We take a simple Client class that has a name and an account number. Often an ArrayList will be used to store multiple clients in memory like this:
+
+/// <summary>
+/// Representation of a client
+/// </summary>
+public class Client
+{
+private string _name;
+private string _accountNumber;
+
+/// <summary>
+/// Gets or sets the account number.
+/// </summary>
+/// <value>The account number.</value>
+public string AccountNumber
+{
+get { return _accountNumber; }
+set { _accountNumber = value; }
+}
+
+/// <summary>
+/// Gets or sets the name.
+/// </summary>
+/// <value>The name.</value>
+public string Name
+{
+get { return _name; }
+set { _name = value; }
+}

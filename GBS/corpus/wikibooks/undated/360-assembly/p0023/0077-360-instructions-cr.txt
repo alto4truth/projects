@@ -1,0 +1,16 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 23
+section: 360-instructions-cr
+chunk: 77
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+== Format ==
+CR 2,6 compares the values inside the registers R2 and R6
+
+If R2 is equal to R6 then it sets the condition code in PSW 0.
+If the R2 is greater than R6 then it sets the Condition Code in PSW 2.
+Otherwise it sets the condition code in PWS 1.

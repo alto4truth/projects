@@ -1,0 +1,15 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 10
+section: installing-python
+chunk: 52
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+== What is Python? ==
+
+If you don't understand this, don't worry. Just skip it and move on.
+Python is an interpreted programming language. For those who don't know, a programming language is what you write down to tell a computer what to do. However, the computer doesn't read the language directly—there are hundreds of programming languages, and it couldn't understand them all. So, when someone writes a program, they will write it in their language of choice, and then compile it—that is, turn it into lots of 0s and 1s, that the computer can easily and quickly understand. A Windows program that you buy is already compiled for Windows—if you opened the program file up, you'd just get a mass of weird characters and rectangles. Give it a go—find a small Windows program, and open it up in Notepad or Wordpad. See what garbled mess you get.
+But that Windows program is compiled for Windows—no other machine can run that program, unless it has Windows. What Python is, is a language which is never actually compiled in full—instead, an interpreter turns each line of code into 0s and 1s that your computer can understand. And it is done on the fly—it compiles the bits of the program you are using as you are using them. If you were to quit the program and come back another day, it would compile the bits you are using, as you are using them, again. Seems a waste of time? Maybe, but the fact is that when you come back another day, you might be using a Windows PC instead of a Mac. You might send the program to a friend, who uses another type of computer. Or you might post your program on the internet, where everyone using all different types of systems might download it. That is the wonder of an interpreted programming language—it is like a language that everyone can understand.

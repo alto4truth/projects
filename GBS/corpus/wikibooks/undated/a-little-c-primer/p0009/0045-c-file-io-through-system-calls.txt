@@ -1,0 +1,41 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 9
+section: c-file-io-through-system-calls
+chunk: 45
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+nd write permissions for the user, but only read permissions
+for group and system. The following octal number gives all permissions to
+everyone:
+
+0777
+
+An attempt to "creat()" an existing file (for which the program has write
+permission) will not return an error. It will instead wipe the contents
+of the file and return a file descriptor for it.
+For example, to create a file named "data" with read and write permission for
+everyone on the system would require the following statements:
+
+#define RD_WR 0666
+...
+int fd; /Define file descriptor. */
+fd = creat( "data", RD_WR );
+
+The "open()" system call opens an existing file for reading or writing. It
+has the syntax:
+
+<file descriptor variable> = open( <filename>, <access mode> );
+
+The "open()" call is similar to the "creat()" call in that it returns a file
+descriptor for the given file, and returns a file descriptor of -1 if it
+encounters an error. However, the second parameter is an "access mode", not
+a permission code. There are three modes (defined in the "fcntl.h" header
+file):
+
+O_RDONLY Open for reading only.
+O_WRONLY Open for writing only.
+O_RDWR Open for reading and writing.

@@ -1,0 +1,33 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 285
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+e size of the executable code is not greatly affected.
+For guidelines on specific kinds of data structures and tagged
+types, see 9.2.1 , respectively.
+
+=== Derived Types and Subtypes ===
+
+==== guideline ====
+Use existing types as building blocks by deriving new types from them.
+Use range constraints on subtypes.
+Define new types, especially derived types, to include the largest set of possible values, including boundary values.
+Constrain the ranges of derived types with subtypes, excluding boundary values.
+Use type derivation rather than type extension when there are no meaningful components to add to the type.
+
+==== example ====
+Type Table is a building block for the creation of new
+types:
+
+The following are distinct types that cannot be intermixed in
+operations that are not programmed explicitly to use them both:
+
+Below, Source_Tail has a value outside the range of Listing_Paper
+when the line is empty. All the indices can be mixed in expressions,
+as long as the results fall within the correct subtypes:

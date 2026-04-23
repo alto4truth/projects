@@ -1,0 +1,17 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 6
+section: functions
+chunk: 32
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+(like a variable would) as output. Don't understand? Here is the general form that calling a function takes:
+
+Code Example 1 - How to call a function
+
+See? Easy.
+function_name identifies which function it is you want to use (you'd figure...). For example, the function raw_input(this function has been renamed to input in Python 3), which will be the first function that we will use.
+Parameters are the values you pass to the function to tell it what it should do, and how to do it.. for example, if a function multiplies any given number by five, the stuff in parameters tells the function which number it should multiply by five. Put the number 70 into parameters, and the function will do 70×5.

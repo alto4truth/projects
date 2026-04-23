@@ -1,0 +1,35 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 4
+section: attributes
+chunk: 158
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+/2006", IsApproved = false)]
+public class ExampleClass
+{
+
+public static void Main()
+{
+GetSingleAttribute(typeof(ExampleClass), typeof(QualityCheck))
+}
+
+public static void GetSingleAttribute(Type targetType, Type attrType)
+{
+typeof(attrType) attr = (attrType)Attribute.GetCustomAttribute(targetType, typeof(attrType));
+
+if (attr == null)
+{ //... }
+else
+{
+Console.Writeline(attr.IsApproved);
+}
+}
+
+An important factor to keep in mind is that the GetCustomAttribute method is designed to read one and only one attribute. GetCustomAttribute actually checks to see if more than one attribute matches - if there is no match it returns null, but if there is more than one match it will throw an AmbiguousMatchException. When checking for attributes the only time it is safe to use GetCustomAttribute is when the attribute's definition states [AttributeUsage(AllowMultiple=false)].
+
+==== Retrieving Multiple Attributes From A Member ====
+Reading multiple instances of an attribute on a member isn't much different than reading one; to read multiple attributes use the plural GetCustomAttributes, which returns an array of attributes. You can then iterate through the resultant array and read the values:

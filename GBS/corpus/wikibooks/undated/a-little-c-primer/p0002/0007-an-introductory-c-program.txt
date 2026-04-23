@@ -1,0 +1,16 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 2
+section: an-introductory-c-program
+chunk: 7
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+that are added at link time. Custom header files loaded with custom declarations can be created if needed, and then included in a program as follows:
+
+Angle brackets ("< >") are not used with custom header files. They only are used to define the default header files provided standard with a C compiler (and which, on Unix/Linux systems, are found in directory "/usr/include" ).
+A C program is built up of one or more functions. The program above contains two user-defined functions, "main()" and "sphere()", as well as the "printf()" library function.
+The "main()" function is mandatory when writing a self-contained program. It defines the function that is automatically executed when the program is run. All other functions will be directly or indirectly called by "main()".
+A C function is called simply by specifying its name, with any arguments enclosed in following parentheses, with commas separating the arguments. In the program above, the "printf()" function is called as follows:

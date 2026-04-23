@@ -1,0 +1,32 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 65
+section: branch-instructions
+chunk: 181
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+the time taken to perform validity and go to the appropriate label is fixed, irrespective of the number of different valid one byte input characters.
+
+=== Example using a table of branch instructions ===
+SR R15,R15 Clear index register to zero (32 bits)
+IC R15,INPUT Insert input byte into low order bits of R15
+* (bits 24-31 forming X'000000C1' for "A")
+IC R15,TABLE2(R15) Use R15 as Index to extract a 0,4,8,12 or 16 from
+* the 2nd Table
+B TABLE1(R15) Branch using the index now in R15
+TABLE1 EQU * ---Start of Branch table--- (each branch instruction
+* is 4 bytes long and unconditional)
+B ERROR 00 = Invalid input value (that is, any byte
+* not = A,S,M or D)
+B ADD 04 = Input value was "A"
+B SUBTRACT 08 = Input value was "S"
+B MULTIPLY 12 = Input value was "M"
+B DIVIDE 16 = Input value was "D"
+* ---End of Branch table
+ERROR EQU *
+* print or display error message or similar
+ADD EQU *
+* perform addition and continue with rest of program

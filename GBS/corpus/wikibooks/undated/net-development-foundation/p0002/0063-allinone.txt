@@ -1,0 +1,30 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 63
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+public class Demo {
+public static void Main() {
+ArrayList myArrayList = new ArrayList();
+myArrayList.Add("Testing");
+myArrayList.Add("1...2...3");
+}
+}
+
+===== Collection interfaces =====
+ICollection interface and IList interface
+ICollection interface - MSDN
+The ICollection interface is the base interface for classes in the System.Collections namespace.
+The ICollection interface extends IEnumerable; IDictionary and IList are more specialized interfaces that extend ICollection. An IDictionary implementation is a collection of key/value pairs, like the Hashtable class. An IList implementation is a collection of values and its members can be accessed by index, like the ArrayList class.
+Some collections that limit access to their elements, such as the Queue class and the Stack class, directly implement the ICollection interface.
+If neither the IDictionary interface nor the IList interface meet the requirements of the required collection, derive the new collection class from the ICollection interface instead for more flexibility.
+The following tables list the members exposed by the ICollection type.
+Public Properties
+Count - Gets the number of elements contained in the ICollection.
+IsSynchronized - Gets a value indicating whether access to the ICollection is synchronized (thread safe).
+SyncRoot - Gets an object that can be used to synchronize access to the ICollection.

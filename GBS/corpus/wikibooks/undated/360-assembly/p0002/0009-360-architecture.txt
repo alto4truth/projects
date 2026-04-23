@@ -1,0 +1,23 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 2
+section: 360-architecture
+chunk: 9
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+timer has signalled a time limit has occurred. This is not an error condition.
+Translation - Invalid code given to the PROGRAM CALL (PC) instruction.
+
+== Register Conventions ==
+Certain registers on the 360 are "reserved" either by hardware requirements, or by convention (operating system usage or common practice). Note these are mere conventions or general practice, as technically no general register is reserved to any specific use at all.
+Register 0 is generally used in a number of instructions as a placeholder to indicate a lack of action. Many instructions treat use of register 0 as having a presumed value of zero or equivalent to address X'00000000' in memory (X'0000000000000000' on 64-bit models). Depending on the operating system and whether address 0 is real address 0 or a virtual address, this area may be protected against reading, writing, or both (unless the current task is operating in supervisor state or storage key 0).
+Register 1 is, by convention, used to point to the list of arguments (32 bit addresses) passed to a called subroutine, and for passing arguments for operating system calls (SVC's). It is also used by the Translate and Test instruction TRT specifically.
+Register 2 may be used by some operating systems, or by certain instructions for additional parameters or return values, but is usually available for general use.
+Register 3 thru Register 12 are available for general use (except on Linux where registers numbered below 7 may be used for arguments to Supervisor Calls).
+Register 13 is, by convention, used to point to a save area for storing the passed registers by a called subroutine. It is the logical equivalent of a "stack pointer" on processors that have a stack. Programs running as standalone applications that call no subroutines may use this register for any purpose, but this is not recommended without placing warnings in the source code that this is being done, as it is non-standard and may be missed by anyone who later performs maintenance on that application.
+Register 14 is, by convention, used to provide the address for a called subroutine to return to the caller.
+Register 15 is, by convention, used to provide the entry point address of a called subroutine and to provide the initial base register for the subroutine. The subroutine may continue to use register 15 as its base register if it is short (and doesn't itself call a lower level subroutine or issue a Supervisor Call that changes Register 15) or, more typically, it will save this register (and others) immediately in the provided save area of Register 13 and use a different register (or set of registers) for the base. Also, register 15 may be used by some operating systems to provide some arguments for (or return values from) SVC's. Its use for this purpose bears some similarity to the Program Counter register on some mini and microcomputers. Register 15, by convention, is also frequently used as a return value from called subroutines, often set to an index value (0,4,8,12 etc.), suitable for direct use in a branch table immediately after return.
+When a program runs on the Linux operating system, supervisor calls are passed up to 6 values in registers 1 through 6, respectively. When a program runs on OS/VS1 or z/OS, Supervisor Calls are passed values in register 0, 1, or if more than 2, in a list pointed to by register 1.

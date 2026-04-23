@@ -1,0 +1,27 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 16
+section: 360-instructions-bcr
+chunk: 58
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+are using an arithmetic instruction e.g. arithmetic add called "AR". Then in following conditions the value of "Condition Code" will be as following:
+
+Then consider for example instruction "BNZR". It's mask is 7. What does that mean?
+This instruction branches if the result is not zero, which means it branches if the value of condition code is not zero. So it is 1,2 or 3. Consider the following table
+
+The example above gives us mask (0111) = 7. For each of following opcodes you can construct the table ZNPO and find the corresponding mask.
+
+== Other Opcodes ==
+The assembler provides the mask as part of several optional opcodes. These opcodes simply require the base register, which contains the target address to which to branch. The opcodes are as follows:
+
+== Optional formats ==
+
+=== Mask value ignored ===
+07FE BR 14 unconditional branch - equivalent to BCR 15,14
+0705 NOP 5 no-operation - BCR 0,5
+07F0 BCR 15,0 despite the mask being 15, because the base register is 0,
+* this is also a no-op

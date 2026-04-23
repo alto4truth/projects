@@ -1,0 +1,26 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 223
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+nowledge.
+
+=== Current Error Files ===
+
+==== guideline ====
+Consider using Current_Error and Set_Error for run-time error messages.
+
+==== example ====
+
+==== rationale ====
+The package Text_IO includes the concept of a current error file. You should report errors to the user through the associated subprograms Current_Error and Set_Error instead of the standard output facilities. In interactive applications, using the Text_IO error facilities increases the portability of your user interface.
+
+==== notes ====
+In a program with multiple tasks for I/O, you need to be careful of two or more tasks trying to set Current_Input, Current_Output, or Current_Error. The potential problem lies in unprotected updates to the "shared" state associated with a package, in this case, the package Text_IO. Guidelines 6.1.1 and 6.2.4 discuss the related issues of unprotected shared variables.
+
+== Summary ==

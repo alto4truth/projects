@@ -1,0 +1,19 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 11
+section: parti-chapter-3-string
+chunk: 48
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+parameter, for reading the third character you must put 2 as <index>. Now lets write a program which will get the second character of string “hello”.
+
+===== charCodeAt =====
+String.charCodeAt( <index> );
+For understanding what this method does you must first know something about the keyboard and “ASCII value”. Each “symbol”, which is printed on the screen has an equivalent code. For example the code of the capital letter “A” is 65. In the American Standard(“ASCII”) there are 127 character codes. All computers in the world support ASCII standard. In this character set (character codes from 0 to 127) are only the standard codes of the symbols. For example the code of the symbol “©” in Microsoft® Windows® is 165. In other operating systems it can be another code. Here is the list of symbols with their equivalent codes:
+
+?These characters aren't supported by Microsoft Windows.
+
+* *Values 8, 9, 10, and 13 convert to backspace, tab, linefeed, and carriage return characters, respectively. They have no graphical representation but, depending on the application, can affect the visual display of text.

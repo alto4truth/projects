@@ -1,0 +1,35 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 57
+section: bz-notfound
+chunk: 156
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+SRCHTBL DC XL256'00'
+
+ORG SRCHTBL+C'D'
+DC X'04'
+ORG SRCHTBL+C'K'
+DC X'08'
+ORG
+
+Condition code, etc.
+
+If no character is found, the condition code is set to 0.
+If a character is found:
+
+The scanning terminates
+Register 1 indicates the address of the data character found.
+The byte in the scan table that was non-zero is placed into the low byte of reg-2. The remaining bytes of reg-2 are not changed. This is the only instruction that changes register 2 without reg-2 being specified.
+If the character that is found is the last character of the scanned field, the condition code is set to 2; otherwise, it is set to 1.
+Translate and test is implemented in micro code. Checks one byte at a time until either it finds a byte, or the data being scanned is exhausted.
+Exceptions and Faults
+
+Protection Exception - the source or the target is outside of the legal address range assigned to this task
+
+Example looking for a non-blank on a print line.
+
+TRT LINE,NONBLANK

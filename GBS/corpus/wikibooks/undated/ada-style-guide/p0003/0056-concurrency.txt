@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 56
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+a user-defined Finalize procedure after the environment task has finished waiting for other tasks.
+
+==== example ====
+This task will never terminate:
+
+==== rationale ====
+The implicit environment task does not terminate until all other tasks have terminated. The environment task serves as a master for all other tasks created as part of the execution of the partition; it awaits termination of all such tasks in order to perform finalization of any remaining objects of the partition. Thus, a partition will exist until all library tasks are terminated.
+A nonterminating task is a task whose body consists of a nonterminating loop with no selective accept with terminate or a task that depends on a library package. Execution of a subprogram or block containing a task cannot complete until the task terminates. Any task that calls a subprogram containing a nonterminating task will be delayed indefinitely.
+A task that depends on a library package cannot be forced to terminate using a selective accept construct with alternative and should be terminated explicitly during program shutdown. One way to explicitly shut down tasks that depend on library packages is to provide them with exit entries and have the main subprogram call the exit entry just before it terminates.
+The Ada Reference Manual 1995, §13.1.2 [Annotated] states that a bounded error results from freeing a discriminated, unterminated task object. The danger lies in deallocating the discriminants as a result of freeing the task object. The effect of unterminated tasks containing bounded errors at the end of program execution is undefined.
+Execution of an accept statement or of a selective accept statement without an else part, a delay, or a terminate alternative cannot proceed if no task ever calls the entry(s) associated with that statement. This could result in deadlock. Following the guideline to provide a terminate alternative for every selective accept without an else or a delay entails programming multiple termination points in the task body. A reader can easily "know where to look" for the normal termination points in a task body. The termination points are the end of the body's sequence of statements and alternatives to select statements.
+When the environment task has been terminated, either normally or abnormally, the language does not specify whether to await a task activated during finalization of the controlled objects in a partition. While the environment task is waiting for all other tasks in the partition to complete, starting up a new task during finalization results in a bounded error (Ada Reference Manual 1995, §10.2 [Annotated]). The exception Program_Error can be raised during creation or activation of such a task.

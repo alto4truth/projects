@@ -1,0 +1,29 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 37
+section: 360-instructions-lpsw
+chunk: 117
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+LPSW - ? - Opcode 82 - Privileged Instruction
+
+== Example usage ==
+LPSW
+
+== Availability ==
+The LPSW instruction is available on all models. It is a privileged instruction.
+
+== Purpose of Instruction ==
+This instruction allows a privileged program to load the entire contents of the PSW from a location. The typical usage would be for an Operating System to set up the next task to run, or to return control to a problem program after completing processing of a Supervisor Call
+
+== Typical Usage ==
+
+== Operation ==
+This is a privileged instruction, and is available on the 360 only. LPSWE is used on 370 and z/System.
+
+== Exceptions and Faults ==
+Privileged Operation
+Invalid Opcode (370 and z/System)

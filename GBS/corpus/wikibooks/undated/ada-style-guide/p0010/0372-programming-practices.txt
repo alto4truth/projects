@@ -1,0 +1,49 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 372
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ssible, use abstract tagged types and dispatching rather than access-to-subprogram types to implement dynamic selection and invocation of subprograms.
+
+==== data structures ====
+When declaring a discriminant, use as constrained a subtype as possible (i.e., subtype with as specific a range constraint as possible).
+Use a discriminated record rather than a constrained array to represent an array whose actual values are unconstrained.
+Use records to group heterogeneous but related data.
+Consider records to map to I/O device data.
+Use access types to class-wide types to implement heterogeneous polymorphic data structures.
+Use tagged types and type extension rather than variant records (in combination with enumeration types and case statements).
+Record structures should not always be flat. Factor out common parts.
+For a large record structure, group related components into smaller subrecords.
+For nested records, pick element names that read well when inner elements are referenced.
+Consider using type extension to organize large data structures.
+Differentiate between static and dynamic data. Use dynamically allocated objects with caution.
+Use dynamically allocated data structures only when it is necessary to create and destroy them dynamically or to be able to reference them by different names.
+Do not drop pointers to undeallocated objects.
+Do not leave dangling references to deallocated objects.
+Initialize all access variables and components within a record.
+Do not rely on memory deallocation.
+Deallocate explicitly.
+Use length clauses to specify total allocation size.
+Provide handlers for Storage_Error .
+Use controlled types to implement private types that manipulate dynamic data.
+Avoid unconstrained record objects unless your run-time environment reliably reclaims dynamic heap storage.
+Unless your run-time environment reliably reclaims dynamic heap storage, declare the following items only in the outermost, unnested declarative part of either a library package, a main subprogram, or a permanent task:
+Access types
+Constrained composite objects with nonstatic bounds
+Objects of an unconstrained composite type other than unconstrainedrecords
+Composite objects large enough (at compile time) for the compiler to allocate implicitly on the heap
+Unless your run-time environment reliably reclaims dynamic heap storage or you are creating permanent, dynamically allocated tasks, avoid declaring tasks in the following situations:
+Unconstrained array subtypes whose components are tasks
+Discriminated record subtypes containing a component that is an array of tasks, where the array size depends on the value of the discriminant
+Any declarative region other than the outermost, unnested declarative part of either a library package or a main subprogram
+Arrays of tasks that are not statically constrained
+Minimize the use of aliased variables.
+Use aliasing for statically created, ragged arrays (Rationale 1995, §3.7.1).
+Use aliasing to refer to part of a data structure when you want to hide the internal connections and bookkeeping information.
+Use access discriminants to create self-referential data structures, i.e., a data structure one of whose components points to the enclosing structure.
+Use modular types rather than a Boolean arrays when you create data structures that need bit-wise operations, such as and and or.

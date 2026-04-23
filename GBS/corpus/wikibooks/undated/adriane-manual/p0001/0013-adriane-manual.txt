@@ -1,0 +1,17 @@
+title: Adriane-Manual
+source: wikibooks
+year: undated
+document_id: adriane-manual
+authors: 
+page: 1
+section: adriane-manual
+chunk: 13
+source_ref: https://en.wikibooks.org/wiki/Adriane-Manual
+
+he ESCAPE key. Within this menu navigation is done by the arrow keys without CapsLock.
+The next table shows the most important commands within elinks:
+
+Note: To enter a text entry field you must activate the access first using the ENTER key. Unless you do so, every input will be interpreted as a new command instead of an entry!
+Input mode: having entered a text entry (one or more lines) by pressing “Enter” the letter or number keys will loose their functionality as command and will work as input for text. For text entries for more than one line there is a special function: you can use the F4 key to open the well-known Nano editor to edit your text in full-screen mode. To store your text and quit the editor press the hotkey CONTROL-X.
+Dialogue in elinks: forms or commands can trigger additional dialog boxes and activated elements will be read by screen reader. Dialogue boxes may contain a selection or a text input field without any further controls, others may come with functions like e.g. "Edit", "Delete" or "Save". Those will not be read by screen reader, unless they are activated by tab, like for example in the dialog of the Bookmark Manager (button "s") and in the comprehensive settings menu (button "o").
+Images and multimedia files: some hyperlinks lead to images or videos. With the ENTER key the content of this link will be shown in case of pictures with the “FBI” image viewer or for audio or video content with the “mplayer” multimedia player. On some websites, however, pictures are shown directly on the page and link pictures not as a link to the picture file, but to another web-page. To visualize the pictures using hyper-links in a terminal (console) open a picture using the key “v” instead of pressing “Enter”. Using “fbi” viewer pictures can be zoomed (key “+” plus) or decreased (key “-” minus). To quit press “q”. When viewing pictures the screen reader is de-activated.

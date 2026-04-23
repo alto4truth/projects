@@ -1,0 +1,49 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 6
+section: generic-types
+chunk: 177
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+foreach (Client client in clients)
+{
+Console.WriteLine("The account {0} belongs to {1}", client.AccountNumber, client.Name);
+}
+Console.ReadLine();
+}
+}
+
+/// <summary>
+/// A list of clients
+/// </summary>
+public class ClientList : CollectionBase
+{
+/// <summary>
+/// Adds the specified client to the list.
+/// </summary>
+/// <param name="client">The client.</param>
+/// <returns></returns>
+public int Add(Client client)
+{
+return List.Add(client);
+}
+
+/// <summary>
+/// Gets or sets the <see cref="T:Client"/> at the specified index.
+/// </summary>
+/// <value></value>
+public Client this[int index]
+{
+get
+{
+return (Client)List[index];
+}
+set
+{
+List[index] = value;
+}
+}
+}

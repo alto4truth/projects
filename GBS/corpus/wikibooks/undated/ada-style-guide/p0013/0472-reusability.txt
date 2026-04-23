@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 472
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+first example shows a case of a template providing only a data structure, a case in which assignment is clearly not needed in the body of the generic:
+
+The second example shows a template that composes new operations out of (nonassignment) operations passed as generic formal parameters:
+
+The third example shows how to use Ada's controlled types to provide special assignment semantics:

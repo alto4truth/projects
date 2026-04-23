@@ -1,0 +1,16 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 12
+section: tuples-lists-dictionaries
+chunk: 65
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+Your brain still hurting from the last lesson? Never worry, this one will require a little less thought. We're going back to something simple - variables - but a little more in depth.
+Think about it - variables store one bit of information. They may regurgitate that information at any point, and their bit of information can be changed at any time. Variables are great at what they do - storing a piece of information that may change over time.
+But what if you need to store a long list of information, which doesn't change over time? Say, for example, the names of the months of the year. Or maybe a long list of information, that does change over time? Say, for example, the names of all your cats. You might get new cats, some may die, some may run away. What about a phone book? For that you need to do a bit of referencing - you would have a list of names, and attached to each of those names, a phone number. How would you do that?
+
+== The Solution - Lists, Tuples, and Dictionaries ==
+For these three problems, Python uses three different solutions - lists, tuples, and dictionaries:

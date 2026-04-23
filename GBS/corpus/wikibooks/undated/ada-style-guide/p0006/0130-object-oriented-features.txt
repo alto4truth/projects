@@ -1,0 +1,14 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 130
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+mplementations of a single abstraction. You declare a single interface and vary the specifics of the data representation and operation implementation.
+
+==== notes ====
+When you use abstract data types as described in this guideline, you can have multiple implementations of the same abstraction available to you within a single program. This technique differs from the idea of writing multiple package bodies to provide different implementations of the abstraction defined in a package specification because with the package body technique, you can only include one of the implementations (i.e., bodies) in your program.

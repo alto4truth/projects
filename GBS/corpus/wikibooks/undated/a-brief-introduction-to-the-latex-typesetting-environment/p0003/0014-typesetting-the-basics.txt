@@ -1,0 +1,21 @@
+title: A Brief Introduction to the LaTeX Typesetting Environment
+source: wikibooks
+year: undated
+document_id: a-brief-introduction-to-the-latex-typesetting-environment
+authors: 
+page: 3
+section: typesetting-the-basics
+chunk: 14
+source_ref: https://en.wikibooks.org/wiki/A_Brief_Introduction_to_the_LaTeX_Typesetting_Environment
+
+e a different application, it's best just to place it at the top.
+Let's dissect the command used above:
+
+\documentclass[10pt,a4paper,oneside]{article}
+
+First is the command itself, called by typing \documentclass before the \begin{document} command which is discussed in a later section. Secondly come the options. Specifics come inside the brackets - [] and specify a variety of things. There are a ridiculous number of options you can specify here so we'll ignore those for now and just discuss the ones you're most likely to use in the beginning.
+First there's the 10pt option we used. This is the font-size for the document. This can be changed in paragraphs or for individual words later in the document, however there is a separate command for that we'll discuss later as well. If you'd like to see how this varies, change the command we used but make 10pt 11pt, or 12pt, and you'll see how the text size for the document changes.
+Note that between options there is no space but a comma (,); this is the general format we will use for options in this book. It is also the standard for option modifiers in the \LaTeX language but some specific packages allow spaces while others don't and it's best to be safe.
+Second there's the command a4paper. If you're not familiar with the types of paper available, or the modifiers available in \LaTeX, don't bother changing this command. a4paper is used for standard 8.5",11" paper while the 'legal' flag is used for legal sized paper. Until you're more familiar with the system, the author advises not playing with this command too much.
+Finally there's the oneside option. As it says, this causes \LaTeX to produce documents that will print one-sided. This is a bit of an outmoded command since usually when you print a document on a printer that even supports multisided documents the option is instead handled by the printer driver. Nevertheless, \LaTeX embeds a command in the .pdf it creates that will cause some print drivers to automatically print one-sided regardless of the defaults although, generally speaking, this kind of driver will not be encountered by the average user.
+The last bit of the \documentclass modifier is located in curly-brackets {} and is '{article}'. While what we created isn't technically an article it's the easiest style of document to work with. There are also {book} and {letter} modifiers which are typical, and a whole slew of others you can use once you're more familiar. For now, we'll stick with the {article} class because it will allow us to create simple documents like those most readers will be looking to create.

@@ -1,0 +1,32 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 21
+section: searching-text-files
+chunk: 56
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+then type
+
+% grep science science.txt
+As you can see, grep has printed out each line containing the word science but it is case sensitive. If we type
+
+% grep Science science.txt
+we see it is distinguishes between Science and science.
+To ignore upper/lower case distinctions, use the -i option, i.e. type
+
+% grep -i science science.txt
+To search for a phrase or pattern (i.e. a string of characters with a space in it) you must enclose it in single quotes. For example to search for current domain, type
+
+% grep -i 'current domain' science.txt
+Some of the other options for grep are:
+
+Try some of them and see the different results. Don't forget, you can use more than one option at a time. For example, the number of lines without the words science or Science is
+
+% grep -ivc science science.txt
+grep is one of the most powerful Unix utilities. There are extensions such as egrep as well. A good knowledge of the power of grep can make you a very productive Unix user. This is however a quick introduction and so this is all are going to cover.
+
+=== wc (word count) ===
+A handy little utility is the wc command, short for word count. To do a word count on science.txt, type

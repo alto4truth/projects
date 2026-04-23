@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 22
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+e.
+
+Because it is declared explicitly, the task type Buffer_Manager is not anonymous. Channel is static and has a name, and its type is not anonymous.
+
+==== rationale ====
+The use of anonymous tasks and protected objects of anonymous type avoids a proliferation of task and protected types that are only used once, and the practice communicates to maintainers that there are no other tasks or protected objects of that type. If the need arises later to have additional tasks or protected objects of the same type, then the work required to convert an anonymous task to a task type or an anonymous protected object to a protected type is minimal.
+The consistent and logical use of task and protected types, when necessary, contributes to understandability. Identical tasks can be declared using a common task type. Identical protected objects can be declared using a common protected type. Dynamically allocated task or protected structures are necessary when you must create and destroy tasks or protected objects dynamically or when you must reference them by different names.

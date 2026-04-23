@@ -1,0 +1,21 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 54
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+sing a user-defined value type ===
+The above example can be used here. Note that the p variable does not have to be initialized with the new operator.
+
+=== Using enumerations ===
+The following sample shows simple uses of the System enumeration DayOfWeek. The code is much simpler to read than testing for an integer value representing a day. Note that using ToString() on an enum variable will give the string representation of the value (ex. “Monday” instead of “1”).
+The possible values can be listed using Reflection. See that section for details.
+For a discussion of the Enum class see MSDN
+There is a special type of enumeration called a flags enumeration. The exam objectives do not mention it specifically. See MSDN if you are interested.
+
+=== Building an enumeration ===
+Building a custom enumeration is pretty straightforward as shown by the following example.

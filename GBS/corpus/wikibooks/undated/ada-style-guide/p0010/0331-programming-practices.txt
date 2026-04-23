@@ -1,0 +1,28 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 331
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+xception handlers can catch exceptions close to the point of origin and allow them to be either handled, propagated, or converted.
+
+=== Aggregates ===
+
+==== guideline ====
+Use an aggregate instead of a sequence of assignments to assign values to all components of a record.
+Use an aggregate instead of a temporary variable when building a record to pass as an actual parameter.
+Use positional association only when there is a conventional ordering of the arguments.
+
+==== example ====
+It is better to use aggregates:
+
+than to use consecutive assignments or temporary variables:
+
+==== rationale ====
+Using aggregates during maintenance is beneficial. If a record structure is altered, but the corresponding aggregate is not, the compiler flags the missing field in the aggregate assignment. It would not be able to detect the fact that a new assignment statement should have been added to a list of assignment statements.
+Aggregates can also be a real convenience in combining data items into a record or array structure required for passing the information as a parameter. Named component association makes aggregates more readable.
+See Guideline 10.4.5 for the performance impact of aggregates.

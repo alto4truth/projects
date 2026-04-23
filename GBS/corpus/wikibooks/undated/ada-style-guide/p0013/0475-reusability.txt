@@ -1,0 +1,27 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 475
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+full use of the generic formal parameters in implementing the sort algorithm:
+
+The generic procedure can be instantiated as:
+
+or:
+
+and called as:
+
+or:
+
+==== rationale ====
+A sort algorithm can be described independently of the data type being sorted. This generic procedure takes the Element data type as a generic limited private type parameter so that it assumes as little as possible about the data type of the objects actually being operated on. It also takes Data as a generic formal parameter so that instantiations can have entire arrays passed to them for sorting. Finally, it explicitly requires the two operators that it needs to do the sort: Should_Precede and Swap. The sort algorithm is encapsulated without reference to any data type. The generic can be instantiated to sort an array of any data type.
+8.3.5 Using Generic Units for Data Abstraction
+
+==== guideline ====
+Consider using abstract data types (not to be confused with Ada's abstract types) in preference to abstract data objects.
+Consider using generic units to implement abstract data types independently of their component data type.

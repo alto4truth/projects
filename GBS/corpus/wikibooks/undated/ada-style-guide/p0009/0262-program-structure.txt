@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 262
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+milies, unless you add parameters and extra code to the procedures to make it possible for callers to direct the procedures to use these capabilities.
+
+== Exceptions ==
+This section addresses the issue of exceptions in the context of program structures. It discusses how exceptions should be used as part of the interface to a unit, including what exceptions to declare and raise and under what conditions to raise them. Information on how to handle, propagate, and avoid raising exceptions is found in Guideline 5.8. Guidelines on how to deal with portability issues are in Guideline 7.5.
+
+=== Using Exceptions to Help Define an Abstraction ===

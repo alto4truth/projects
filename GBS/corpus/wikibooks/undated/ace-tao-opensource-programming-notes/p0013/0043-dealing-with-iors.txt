@@ -1,0 +1,16 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 13
+section: dealing-with-iors
+chunk: 43
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+nslist again, you will see the following output:
+
+Naming Service:
+--------CosEventService: object reference: Protocol: IIOP, Endpoint: 10.0.0.53:32802
+
+Finally, we have a working set of servers we have connected together with IIOP endpoints. When you connect your clients and servers together, you will be using the same process... start the naming server, possibly the event service (or others) and then start in with your clients and servers. For linux, the people associated with the ACE+TAO project have provided RPM packages with script files designed to interract with linux's boot facilities which will start the naming service (and the others) automatically.

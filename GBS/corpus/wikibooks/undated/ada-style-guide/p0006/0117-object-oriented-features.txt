@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 117
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+eigh the convenience. You do not provide a package body in this situation unless you have declared nonabstract operations on members of the hierarchy.
+
+=== Properties of Dispatching Operations ===
+
+==== guideline ====
+The implementation of the dispatching operations of each type in a derivation class rooted in a tagged type T should conform to the expected semantics of the corresponding dispatching operations of the class-wide type T'Class.
+
+==== example ====
+The key point of both of the alternatives in the following example is that it must be possible to use the
+class-wide type Transaction.Object'Class polymorphically without having to study the implementations of each of the types derived from the root type Transaction.Object. In addition, new transactions can be added to the derivation class without invalidating the existing transaction processing code. These are the important practical consequences of the design rule captured in the guideline:

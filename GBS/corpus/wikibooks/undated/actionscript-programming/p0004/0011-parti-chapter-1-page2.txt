@@ -1,0 +1,18 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 4
+section: parti-chapter-1-page2
+chunk: 11
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+== Properties ==
+
+=== XMouse, YMouse ===
+Say you have a button and the user clicks it. You want to get the position of the mouse. This property will help you get the coordinates of the mouse.
+Step 1
+Create any button (by drawing it yourself or taking it from Common Libraries) and set its name to "button1".
+Step 2
+Select the Text Tool from the Toolbox and draw it. Then select it and in the Properties window set its width to 100, height to 20, font size to 20, Var to "info" and change the Text Type to "Dynamic Text". There are 3 types of Text Type

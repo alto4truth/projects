@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 466
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+de is of high quality, clear, and conforms to well-established design principles such as information hiding, it is easier to adapt in unforeseen ways.
+
+=== Complete Functionality ===
+
+==== guideline ====
+Provide core functionality in a reusable part or set of parts so that the functionality in this abstraction can be meaningfully extended by its reusers.
+More specifically, provide initialization and finalization procedures for every data structure that may contain dynamic data.
+For data structures needing initialization and finalization, consider deriving them, when possible, from the types Ada.Finalization.Controlled or Ada.Finalization.Limited_Controlled.
+
+==== example ====

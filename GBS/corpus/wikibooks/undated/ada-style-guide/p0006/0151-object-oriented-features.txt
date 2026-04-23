@@ -1,0 +1,34 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 151
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+der using abstract types for generic formal derived types.
+Consider using abstract types to develop different implementations of a single abstraction.
+
+=== tagged type operations ===
+Consider declaring a primitive abstract operation based on the absence of a meaningful "default" behavior.
+Consider declaring a primitive nonabstract operation based on the presence of a meaningful "default" behavior.
+When overriding an operation, the overriding subprogram should not raise exceptions that are not known to the users of the overridden subprogram.
+If redispatching is used in the implementation of the operations of a type, with the specific intent that some of the redispatched-to operations be overridden by specializations for the derived types, then document this intent clearly in the specification as part of the "interface" of a parent type with its derived types.
+When redispatching is used (for any reason) in the implementation of a primitive operation of a tagged type, then document (in some project-consistent way) this use in the body of the operation subprogram so that it can be easily found during maintenance.
+Consider using a class-wide operation (i.e., an operation with parameter[s] of a class-wide type) when an operation can be written, compiled, and tested without knowing all the possible descendants of a given tagged type (Barnes 1996).
+Consider using a class-wide operation when you do not want an operation to be inherited and/or overridden.
+Avoid declaring a constructor as a primitive abstract operation.
+Use a primitive abstract operation to declare an initialization function or constructor only when objects of the inheriting derived types will not require additional parameters for initialization.
+Consider using access discriminants to provide parameters to default initialization.
+Use constructors for explicit initialization.
+Consider splitting the initialization and construction of an object.
+Consider declaring a constructor operation in a child package.
+Consider declaring a constructor operation to return an access value to the constructed object (Dewar 1995).
+When you redefine the "=" operator on a tagged type, make sure that it has the expected behavior in extensions of this type and override it if necessary.
+Consider using class-wide programming to provide run-time, dynamic polymorphism when constructing larger, reusable, extensible frameworks.
+When possible, use class-wide programming rather than variant records.
+Use class-wide programming to provide a consistent interface across the set of types in the tagged type hierarchy (i.e., class).
+Consider using generics to define a new type in terms of an existing type, either as an extension or as a container, collection, or composite data structure.
+Avoid using type extensions for parameterized abstractions when generics provide a more appropriate mechanism.

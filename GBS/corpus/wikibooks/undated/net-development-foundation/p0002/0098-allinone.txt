@@ -1,0 +1,28 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 98
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+and Trace ====
+Exam objective: Debug and trace a .NET Framework application by using the System.Diagnostics namespace.
+Debug class and Debugger class
+
+Debug class - MSDN
+The four static writing methods of the Debug class - Write, WriteLine, WriteIf and WriteLineIf - let you write debug messages to inspect your program's flow and catch errors. Calls to these methods are ignored in the release version of your program (see 'The ConditionalAttribute attribute' below for details).
+In Visual Studio, the default target for Debug's write methods is the Output window. You can use Debug's Listeners property to access the associated TraceListenerCollection. The following code shows how to use the Remove and Add methods of the collection to control where debug messages are sent to. If you add more than one listener of the same type, the associated target receives the text multiple times.
+
+Debugger class - MSDN
+Trace class - MSDN
+CorrelationManager class - MSDN
+TraceListener class - MSDN
+TraceSource class - MSDN
+TraceSwitch class - MSDN
+XmlWriterTraceListener class - MSDN
+DelimitedListTraceListener class - MSDN
+EventlogTraceListener class - MSDN
+Debugger attributes - MSDN

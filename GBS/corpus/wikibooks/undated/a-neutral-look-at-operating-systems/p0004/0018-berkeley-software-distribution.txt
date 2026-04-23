@@ -1,0 +1,17 @@
+title: A Neutral Look at Operating Systems
+source: wikibooks
+year: undated
+document_id: a-neutral-look-at-operating-systems
+authors: 
+page: 4
+section: berkeley-software-distribution
+chunk: 18
+source_ref: https://en.wikibooks.org/wiki/A_Neutral_Look_at_Operating_Systems
+
+sktop system based on KDE.
+DesktopBSD developed its own graphical tools integrated with KDE: ports manager, disk mounter and network configuring tool.
+
+== NetBSD ==
+The focus of NetBSD is to provide a stable, multiplatform, research and server operating system. NetBSD is widely regarded as being one of the most portable operating systems.
+NetBSD runs on a very wide variety of architectures. There are at least 54 architectures including some very exotic ones such as the Sega Dreamcast. These architectures involve at least 17 processor types. These platforms are supported from a single CVS tree, avoiding the need for third party patches to use various hardware. The highly cross-compilable system (with full toolchain), and excellent documentation make it very useful for developers.
+The NetBSD packages collection, pkgsrc, is also portable. pkgsrc supports the other BSDs, Linux, Darwin, and Solaris. A bootstrap script is provided as part of pkgsrc to adapt it to the host OS and build the necessary support tools.

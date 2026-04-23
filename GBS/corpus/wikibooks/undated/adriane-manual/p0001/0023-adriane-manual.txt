@@ -1,0 +1,24 @@
+title: Adriane-Manual
+source: wikibooks
+year: undated
+document_id: adriane-manual
+authors: 
+page: 1
+section: adriane-manual
+chunk: 23
+source_ref: https://en.wikibooks.org/wiki/Adriane-Manual
+
+any further data) you are in your home directory /home/knoppix:
+
+cd
+mount /media/sdb1
+cp -a /media/sdb1/"My Music" musicfolder-copy
+umount /media/sdb1
+
+There is a special aspect in this example: the name of the music folder contains a blank space. To let the cp command know that not two different folders are meant, but that it is the folder’s name with a blank space, the folder’s name it set into “ “ (quotation marks). Otherwise the cp command understands that "My Music" are two different folders (My and Music).
+After the copy operation completes the media player (menu "Multimedia") is ablte to open the directory, where the files were copied to, using "Browse files".
+By the way, the mount or unmount command in this example is only required, if the USB stick was not previously mounted by the file manager.
+The shell can be exited using the exit command.
+
+= Installation and configuration of Adriane =
+The technology part describes the installation on hard disk or USB flash drive, the configuration of the system and gives guidance on technical issues.

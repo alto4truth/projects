@@ -1,0 +1,33 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 14
+section: g-n-u-p-l-o-t
+chunk: 30
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+ach $k
+(keys(%count)) {print $k," ",$sum{$k}/$count{$k},"\n"}}' | sort -n > time_vs_avgincome
+
+You can plot the result for yourself if you're curious.
+
+== Example - Creating a bar chart with gnuplot ==
+Let's look at historic immigration rates among Washingtonians. Year of immigration is recorded in columns 78-81, and 0000 means the person is a native born citizen. We can apply the usual tricks with cut, grep, sort, and uniq, but it's a bit hard to see the patterns when scrolling back and forth in text output, it would nicer if we could see a plot.
+
+$ cat pums_53.dat | grep "^P" | cut -c78-81 | grep -v 0000 | sort | uniq -c | head -10
+2 1910
+7 1914
+12 1919
+7 1920
+6 1921
+5 1922
+7 1923
+5 1924
+8 1925
+
+Gnuplot is a fine graphing tool for this purpose, but it wants the category label to come first, and the count to come second, so we need to write a perl script to reverse uniq's output and stick the result in a file. See perlrun(1) for details on the -a and -F options to perl.
+
+$ cat pums_53.dat | grep "^P" | cut -c78-81 | grep -v 0000 | sort | uniq -c |
+perl -lape 'chomp $F[-1]; $_ = join " ", reverse @F' > year_of_immigration

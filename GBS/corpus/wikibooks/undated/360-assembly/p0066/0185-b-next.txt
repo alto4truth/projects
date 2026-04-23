@@ -1,0 +1,30 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 66
+section: b-next
+chunk: 185
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+just one extra instruction but increases the branch range to 64K without need for additional base register coverage and halves the size of the Table.
+
+SR R15,R15 Clear index register to zero (32 bits)
+IC R15,INPUT Insert input byte into low order bits of R15
+* (bits 24-31 - forming X'000000C1' for "A")
+IC R15,TABLE2(R15) Use R15 as Index to extract a 0,2,4,6 or 8 from
+* the 2nd Table
+LH R15,TABLE1(R15) extract two byte offset into low order bits of R15
+B TABLE1(R15) Branch using the table address plus offset now in R15
+TABLE1 DS 0H ---Start of Offset table--- (each is 2 bytes long)
+DC Al2(ERROR-TABLE1) 00 = Invalid input value
+DC AL2(ADD-TABLE1) 02 = Input value was "A"
+DC AL2(SUBTRACT-TABLE1) 04 = Input value was "S"
+DC AL2(MULTIPLY-TABLE1) 06 = Input value was "M"
+DC AL2(DIVIDE-TABLE1) 08 = Input value was "D"
+* ---End of Branch table
+ERROR EQU *
+* print or display error message or similar
+ADD EQU *
+* perform addition and continue with rest of program

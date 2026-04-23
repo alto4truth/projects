@@ -1,0 +1,36 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 4
+section: improving-performance
+chunk: 71
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+mance can be improved.
+
+== Data Structures ==
+
+=== Dynamic Arrays ===
+
+==== guideline ====
+Use constrained arrays when measured performance indicates.
+
+==== rationale ====
+If array bounds are not known until run-time, then calculations of these bounds may affect run-time performance. Using named constants or static expressions as array bounds may provide better performance than using variables or nonstatic expressions. Thus, if the values of Lower and Upper are not determined until run-time, then:
+
+may cause address and offset calculations to be delayed until run-time, introducing a performance penalty. See NASA (1992) for a detailed discussion of the tradeoffs and alternatives.
+
+=== Zero-Based Arrays ===
+
+==== guideline ====
+Use zero-based indexing for arrays when measured performance indicates.
+
+==== rationale ====
+For some compilers, offset calculations for an array whose lower bound is 0 (either the integer zero or the first value of an enumeration type) are simplified. For other compilers, optimization is more likely if the lower bound is 1.
+
+=== Unconstrained Records ===
+
+==== guideline ====
+Use fixed-size components for records when measured performance indicates.

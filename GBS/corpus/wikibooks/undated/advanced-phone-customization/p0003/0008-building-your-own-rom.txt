@@ -1,0 +1,29 @@
+title: Advanced phone customization
+source: wikibooks
+year: undated
+document_id: advanced-phone-customization
+authors: 
+page: 3
+section: building-your-own-rom
+chunk: 8
+source_ref: https://en.wikibooks.org/wiki/Advanced_phone_customization
+
+ngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
+
+(take libwxgtk2.8-dev instead of libwxgtk3.0-dev if you're on older than Ubuntu 16.04)
+
+(libwxgtk3.0-dev Was changed to libwxgtk3.0-gtk3-dev in Ubuntu 20.04)
+You'll also need Java. Different versions of LineageOS require different JDK (Java Development Kit) versions.
+
+LineageOS 14.1-15.1: OpenJDK 1.8 (install openjdk-8-jdk)
+LineageOS 11.0-13.0: OpenJDK 1.7 (install openjdk-7-jdk)*
+* Ubuntu 16.04 and newer do not have OpenJDK 1.7 in the standard package repositories. See the Ask Ubuntu question “How do I install openjdk 7 on Ubuntu 16.04 or higher?”. Note that the suggestion to use PPA openjdk-r is outdated (the PPA has never updated their offering of openjdk-7-jdk, so it lacks security fixes); skip that answer even if it is the most upvoted.
+
+=== Create the directories ===
+You’ll need to set up some directories in your build environment.
+To create them:
+
+mkdir -p ~/bin
+mkdir -p ~/android/lineage
+
+The ~/bin directory will contain the git-repo tool (commonly named “repo”) and the ~/android/lineage directory will contain the source code of LineageOS.

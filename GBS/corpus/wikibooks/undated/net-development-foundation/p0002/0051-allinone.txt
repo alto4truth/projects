@@ -1,0 +1,32 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 51
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+the parameter is changed inside the method it will not affect the value of the original value type.
+
+=== Nullable type ===
+See MSDN
+A nullable type...
+
+Is a generic type
+Is an instance of System.Nullable struct.
+Can only be declared on value types.
+Is declared with System.Nullable<type> or the shorthand type? - the two are interchangeable.
+System.Nullable<int> MyNullableInt; // the long version
+int? MyNullableInt; // the short version
+
+Accepts the normal range of values of the underlying type, as well as null.
+bool? MyBoolNullable; // valid values: true || false || null
+
+Be careful with nullable booleans! In if, for, while or logical evaluation statements a nullable boolean will equate a null value with false—it will not throw an error.
+Methods: T GetValueOrDefault() & T GetValueOrDefault(T defaultValue)
+Returns the stored value or the default value if the stored value is set to null.
+Properties: HasValue & Value
+Nullable types have two read only properties: HasValue and Value.
+HasValue is a boolean property that returns true if Value != null. It provides a means to check your type for a non-null value before using it where you might throw an error:

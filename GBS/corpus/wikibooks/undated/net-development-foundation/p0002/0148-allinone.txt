@@ -1,0 +1,28 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 148
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+waste of time to build my own dictionary class I could as easily used the generic dictionary like this: Dictionary<Guid, Client> and be over with it.
+
+=== External links ===
+MSDN2 .NET Framework Developer's Guide : Generics in the .NET Framework
+MSDN2 C# Programmer's Reference : Generics (C# Programming Guide)
+
+== Annexes: Building custom attributes ==
+Original text for this page authored by William "Scott" Baker
+
+=== Attributes Summary ===
+Attributes are a way to "tag" elements of your code's metadata with descriptive information that can be accessed at runtime using reflection. Attributes must derive from System.Attribute, either directly or indirectly. A multitude of attributes exist in the .NET framework; you can also define your own. There are three aspects to using attributes in your code:
+
+Defining a custom attribute class, which involves:
+Assigning the AttributeUsageAttribute attribute to your class.
+Writing the code to define your custom attribute class.
+Creating the parameters for your class.
+Assigning an attribute to a code member.
+Retrieving attribute information at runtime.

@@ -1,0 +1,33 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 8
+section: parti-chapter-3-arrays-methods
+chunk: 30
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+== Data types ==
+
+=== Arrays ===
+
+==== Methods ====
+
+===== concat =====
+Array.concat( <array1>, <array2> );
+The method “concat” combines arrays with each other. For example this code combines two arrays.
+
+The result will be:
+
+a,b,c,d,5,f
+
+===== join =====
+Array.join( <separator> );
+The method join is used to tell the program to return the array values separating them with current separator. For example this code declares an array variable “array1” with 3
+
+elements: “a”, “b”, “c” and then trace the array values by using the current separator. In line 3 we use “ ; ” separator. This means that the return value will be “a ; b ; c”. In line 4 we use “ + “ separator. So the return value will be “a + b + c”. In line 5 we use “ zz “ separator. Return value will be “a zz b zz c”. If you don’t use any separator, then the default separator (“,”) is used. So the traced value in line 6 will be “a,b,c”.
+
+===== pop =====
+Array.pop( );
+This method removes the last element from the array and then returns the name of the element. This example will show how “pop” method works.

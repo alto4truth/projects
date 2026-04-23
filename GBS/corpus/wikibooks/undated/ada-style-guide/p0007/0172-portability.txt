@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 172
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+were not present in Ada 83 (Ada Reference Manual 1983). These new pragmas and attributes may clash with implementation-defined pragmas and attributes.
+
+==== exceptions ====
+There are many kinds of applications that require the use of these features. Examples include multilingual systems that standardize on a vendor's file system, applications that are closely integrated with vendor products (i.e., user interfaces), and embedded systems for performance reasons. Isolate the use of these features into packages.
+If a vendor-supplied package is provided in compilable source code form, use of the package does not make a program nonportable provided that the package does not contain any nonportable code and can be lawfully included in your program.
+
+=== Specialized Needs Annexes ===
+
+==== guideline ====
+Use features defined in the Specialized Needs Annexes rather than vendor-defined features.
+Document clearly the use of any features from the Specialized Needs Annexes (systems programming, real-time systems, distributed systems, information systems, numerics, and safety and security).

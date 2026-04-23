@@ -1,0 +1,17 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 65
+section: branch-instructions
+chunk: 180
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ns and a subsequent conditional branch. Only 5 instructions are used in the example (2 of which are unconditional branch) that perform the following:-
+
+1. Validate the input (translates any input values, other than A,S,M,D, to a null index value)
+2. Translate the input value (using an INSERT CHARACTER (IC) instruction with an index) to one of 0,4,8,12 or 16 (the index). Earlier versions of this technique used (TR) & (IC) instructions, which was 4-5 times slower than using two (IC) instructions).
+3. Branch unconditionally to the appropriate unconditional branch instruction using the index - a zero value results in branching to an error routine. (unconditional branches do not rely on previous character or numeric comparison instructions)
+Example Consider an input variable that is a single byte character in the range A-Z , where specific values such as A,S,M,D decide the processing logic within the program. In this case A=Add,S=Subtract,M=Multiply and D=Divide.
+In the following two examples, the time taken to perform validity and go to the appropriate label is fixed, irrespective of the number of different valid one byte input characters.

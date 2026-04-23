@@ -1,0 +1,31 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 96
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+ng Kit (so probably not on the exam) is to use the EventLogInstaller class during the installation of the application. For reference purposes see MSDN
+
+==== Manage processes and monitor performance ====
+Exam objective: Manage system processes and monitor the performance of a .NET Framework application by using the diagnostics functionality of the .NET Framework 2.0.
+(Refer System.Diagnostics namespace)
+Get a list of all running processes.
+
+Process class - MSDN
+For example code for GetCurrentProcess(), GetProcessesByName(), GetProcesses(), and GetProcessById() see MSDN
+Retrieve information about the current process - MSDN
+Get a list of all modules loaded by a process
+
+The Process.Modules property returns a strongly-typed collection of ProcessModule objects that represent the Process' currently loaded modules.
+For the Process.Modules property see MSDN
+For the ProcessModule class see MSDN
+PerformanceCounter class, PerformanceCounterCategory, and CounterCreationData class
+
+PerformanceCounter class - MSDN
+PerformanceCounterCategory - MSDN
+CounterCreationData class - MSDN
+Start a process both by using and by not using command-line arguments

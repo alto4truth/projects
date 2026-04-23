@@ -1,0 +1,32 @@
+title: A Brief Introduction to the LaTeX Typesetting Environment
+source: wikibooks
+year: undated
+document_id: a-brief-introduction-to-the-latex-typesetting-environment
+authors: 
+page: 2
+section: introduction
+chunk: 6
+source_ref: https://en.wikibooks.org/wiki/A_Brief_Introduction_to_the_LaTeX_Typesetting_Environment
+
+$$f(x)=\frac{y}{x}$$
+
+Which would give you a non-numbered equation that looks like so:
+
+f
+(
+x
+)
+=
+
+y
+x
+
+{\displaystyle f(x)={\frac {y}{x}}}
+
+The only thing that may be initially confusing is that what you see in the document you edit, namely the .tex file, would be the slightly ugly bit between the dollar signs. Until the document was typeset which is something we will discuss later in this chapter.
+
+== Typesetting Applications ==
+This author has used Apple OS X and Microsoft Windows to run LaTeX typesetting applications. Since this is a crash-course, rather than a long and drawn out exposition on the environment, we shall discuss the relevant details of only two applications, one for each of the aforementioned operating systems.
+The reader is greatly encouraged to look for their own typesetting applications and add them to the list below titled User Suggested Typesetting Applications. The two suggested here are the two that the author is familiar with, knows how to install, and are similar enough in design and layout that the rest of the book can be written with instructions that will prove valid (in most cases) for both applications.
+
+For Windows and OS X respectively we have:

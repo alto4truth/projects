@@ -1,0 +1,36 @@
+title: 65c02 Assembly
+source: wikibooks
+year: undated
+document_id: 65c02-assembly
+authors: 
+page: 1
+section: 65c02-assembly
+chunk: 12
+source_ref: https://en.wikibooks.org/wiki/65c02_Assembly
+
+B = 1, I = 1
+
+No Operation: NOP
+No Operation
+Flags: none
+
+Wait for Interrupt: WAI
+Wait for Interrupt
+Flags: none
+
+Stop mode: STP
+Stop mode
+Flags: none
+
+== Opcode map ==
+List of all the OpCodes present. An opcode is an "operation code", the first byte in an instruction. This byte decides which operation is being performed. Multiple assembler mnemonics (eg. ADC, BIT, JMP et.c.) correspond to several different opcodes. There is one opcode per addressing mode used. For example, the menmonic ASL have multiple opcodes, one for each addressing mode supported by the CPU.
+Opcodes marked with an asterisk (*) are opcodes that did not exist for the 6502 CPU.
+Blank entries are supposed to behave identical the NOP instruction (EA).
+
+== References ==
+
+== Further reading ==
+
+6502 Assembly
+Super NES Programming: the Super NES uses the 65c816, a descendant of the 6502
+Super NES Programming/65c816 reference

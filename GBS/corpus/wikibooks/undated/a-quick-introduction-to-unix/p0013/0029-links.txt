@@ -1,0 +1,24 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 13
+section: links
+chunk: 29
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+ed in file1 will show up when you look at file2. Hard links are independent, so if you remove file1, file2 still refers to the file on the filesystem.
+
+=== Soft Links ===
+A soft link (also called a Symbolic link) is a name that references a filename (not a file). If file1 is the name of a file in your home directory (a hard link to the file on the file system) and file2 is a soft link, it refers not to the file on the file system, but to file1. Anything saved in file1 will still show up in file2, but if file1 is removed, file2 will no longer refer to a valid filename.
+
+=== ln (link) ===
+The Unix command to create links is ln. By default, the ln command creates hard links. The option -s tells the command to create a soft link instead.
+Let's create a file and then create a hard link and a soft link.
+
+% touch file.txt
+% ls -l
+% ln file.txt hardlink.txt
+% ln -s file.txt softlink.txt
+% ls -l

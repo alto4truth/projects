@@ -1,0 +1,19 @@
+title: A Neutral Look at Operating Systems
+source: wikibooks
+year: undated
+document_id: a-neutral-look-at-operating-systems
+authors: 
+page: 6
+section: dos
+chunk: 23
+source_ref: https://en.wikibooks.org/wiki/A_Neutral_Look_at_Operating_Systems
+
+of any kind although they could be added later to use devices.)
+In common with most other OSs, Disk Operating Systems consist of four primary modules:
+
+The extended input/output system which reads and writes to disk and tape, reads from keyboard and writes to screen and/or printer. (Hence the term "read-out" is a Hollywood nonsense neologism for "display"). Most DOSs are at least minimally open, so that third party developers can write hardware "drivers" (extensions to the I/O system) to support their hardware. Mac OSs are the most restrictive, Linux the least (fully open). Older Apple DOSs were actually fairly open.
+The Network connection. (This is just a special case of I/O but occasionally it is useful to treat it separately.) No early OSs had networking (ignoring the trivial case of attached terminals), but it was added during the 1970 to 1990 period.
+The task scheduler. Its function is to determine which process should run next and for how long. In early OSs, this was fairly rudimentary - one task had complete control and if an application crashed, the machine crashed. Interrupts were used to give control back to the OS and a different process takes over. A "grown up" OS needs pre-emptive multi-tasking, which came to the mainframe world with Exec 8 on Univac hardware in about 1970 and to the personal computer world in 1985 with AmigaOS.
+The file (and directory) system
+The User Interface - in early OSs, this is just a command-line environment.
+All modern OSs are disk operating systems, but the term "DOS" has stuck to the first generation personal computers that used it.

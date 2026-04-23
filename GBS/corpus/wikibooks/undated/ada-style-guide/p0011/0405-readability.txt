@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 405
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+. The classes are file headers, program unit specification headers, program unit body headers, data comments, statement comments, and marker comments.
+
+=== General Comments ===
+
+==== guideline ====
+Make the code as clear as possible to reduce the need for comments.
+Never repeat information in a comment that is readily available in the code.
+Where a comment is required, make it concise and complete.
+Use proper grammar and spelling in comments.
+Make comments visually distinct from the code.
+Structure comments in header so that information can be automatically extracted by a tool.

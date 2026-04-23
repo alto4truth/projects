@@ -1,0 +1,16 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 100
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+er System.Management namespace - MSDN)
+Retrieve a collection of Management objects by using the ManagementObjectSearcher class and its derived classes
+
+The classes in the System.Management namespace let you use Windows Management Instrumentation (WMI) to manage computer systems. The most notable class in this namespace is ManagementObjectSearcher, that you can use to retrieve management objects based on a WMI query.
+Information that can be retrieved this way ranges from computer case type (notebook, desktop...) over processor and hard disks details to information about running services and processes. Consult the WMI Reference on MSDN for an overview of all WMI classes and their properties.
+In the example below a rough and dirty method is defined that prints all properties for all management information objects of a given WMI class. It is then used to print information about the current computer system.

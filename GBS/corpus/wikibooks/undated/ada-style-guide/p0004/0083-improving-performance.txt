@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 4
+section: improving-performance
+chunk: 83
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+n measured performance indicates, use pragma Inline when calling overhead is a significant portion of the routine's execution time.
+
+==== example ====
+
+==== rationale ====
+If calling overhead is a significant portion of a subprogram's execution time, then using pragma Inline may reduce execution time.
+Procedure and function invocations include overhead that is unnecessary when the code involved is very small. These small routines are usually written to maintain the implementation hiding characteristics of a package. They may also simply pass their parameters unchanged to another routine. When one of these routines appears in some code that needs to run faster, either the implementation-hiding principle needs to be violated or a pragma Inline can be introduced.
+The use of pragma Inline does have its disadvantages. It can create compilation dependencies on the body; that is, when the specification uses a pragma Inline, both the specification and corresponding body may need to be compiled before the specification can be used. As updates are made to the code, a routine may become more complex (larger) and the continued use of a pragma Inline may no longer be justified.

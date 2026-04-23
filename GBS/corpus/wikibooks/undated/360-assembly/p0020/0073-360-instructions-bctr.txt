@@ -1,0 +1,22 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 20
+section: 360-instructions-bctr
+chunk: 73
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+cted from the value contained in the target register, and a branch should occur to the address contained in the branch register if the result isn't 0.
+
+== Operation ==
+The value contained in the register specified as the first argument is reduced by 1. If the branch register is 0, or the value after subtraction of the value in the target register is 0, execution continues with the instruction following this instruction. Otherwise, execution transfers to the address contained in the register specified as the second argument.
+
+== Condition Codes ==
+Condition codes are not changed. If the value is the lowest possible value and overflow to the highest value occurs, it is ignored.
+
+== Exceptions and Faults ==
+The target address contained within the branch register must not be odd, or an operation exception occurs
+The target address contained within the branch register must be within the range of valid memory or an operation exception occurs.
+The storage key for the target address must be the same as the current process (or this process must have a key of 0) or a memory protect violate exception occurs.

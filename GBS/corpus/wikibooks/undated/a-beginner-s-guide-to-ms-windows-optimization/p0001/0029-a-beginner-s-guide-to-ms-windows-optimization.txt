@@ -1,0 +1,27 @@
+title: A Beginner's Guide to MS Windows Optimization
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-ms-windows-optimization
+authors: 
+page: 1
+section: a-beginner-s-guide-to-ms-windows-optimization
+chunk: 29
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_MS_Windows_Optimization
+
+ram suits claiming to improve the general performance in a magical way. Don't be fooled, most of them don't work.
+The first thing we should do, is to:
+
+Remove all programs we don't use from the PC. If you just formatted your PC, you don't have to do this.
+Install all the programs you are going to use. Don't forget to unmark the ads during the installation process. Follow step 7.
+Now, start CCleaner. CCleaner is a small and a very good program used to get rid of stuff like temporary files and auto start programs.
+In the program select Cleaner tab, press “analyze” and then “Run Cleaner”. Now all the temporary files are cleared.
+Next select the Registry tab, then “scan for issues” and then “fix selected issues”. Press no to “you want a backup of those files”, and then “fix all selected issues”.
+Next select tools and startup. Here you will have a list of everything that is auto starting, meaning starting when you start your PC. Some of it is important, some is not. That's why you should disable the stuff you are uncertain of and not delete. Google the .exe file to see what they do. But generally, disabling the anti virus program, drivers for e.g. Sound card and GFX is not to recommend.
+The reason for disabling programs to autostart is to save RAM memory. And in this way both speed up the startup of the computer, and avoid getting RAM full.
+To see how much RAM your PC is using, press Alt+Ctrl+Del buttons simultaneously, and then “start Windows task manager”.
+Then select the performance tab. Here you can see how much ram is used, and how much CPU is used.
+Usually, if you don't do anything with the PC, and you don't have any programs running, The CPU activity should be round 0-5%. If its fluctuating up to 60-90% then you have something running on your PC that shouldn't be running, like viruses or ad ware. Solution? Step 5.
+In the processes tab, you can see which program uses the most RAM memory and CPU.
+Another way of disabling a program to auto start is to open up the program in question, go to its setting menu, and unmark the box saying start on system startup. This can be done in majority of programs, e.g. MSN and Skype.
+The best way to see which programs auto start, is to reboot the PC and then check the Windows task manager. You can also see which programs opened up in the lower right corner in Windows.
+There is one more important thing I would like to cover. It is the Windows graphical performance properties. Sound scary, but what it means is that you can choose either:

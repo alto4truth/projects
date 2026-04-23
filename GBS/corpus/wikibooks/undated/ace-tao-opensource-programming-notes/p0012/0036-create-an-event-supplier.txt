@@ -1,0 +1,48 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 12
+section: create-an-event-supplier
+chunk: 36
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+**********************
+* EventSource
+*
+* A test program for snding events over TAO's event service
+*/
+
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
+#include <iostream>
+#include <cstdlib>
+#include "eventsourceI.h"
+#include "eventsourceC.h"
+#include "etimer.h"
+#include <ace/Reactor.h>
+#include <orbsvcs/CosNamingC.h>
+#include <orbsvcs/CosEventCommS.h>
+#include <orbsvcs/CosEventChannelAdminC.h>
+
+using namespace std;
+using namespace CORBA;
+CosEventChannelAdmin::ProxyPushConsumer_var consumer;
+
+int main(int argc, char *argv[])
+{
+// Initialize the ORB.
+ORB_var orb = ORB_init(argc, argv, "whatever");
+
+Object_var poa_object = orb->resolve_initial_references ("RootPOA");
+//Now we need a reference to the naming service
+Object_var naming_context_object = orb->resolve_initial_references ("NameService");
+CosNaming::NamingContext_var naming_context =
+CosNaming::NamingContext::_narrow (naming_context_object.in ());
+
+CosNaming::Name ec_name;
+ec_name.length(1);
+ec_name[0].id = string_dup("CosEventService"); //TAO Specific

@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 205
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+eeded to implement a design.
+Do not assume that sharing source files between programs guarantees the same representation of data types in those files.
+
+==== rationale ====
+In many cases, it is easy to use representation clauses to implement an algorithm, even when it is not necessary. There is also a tendency to document the original programmer's assumptions about the representation for future reference. But there is no guarantee that another implementation will support the representation chosen. Unnecessary representation clauses also confuse porting or maintenance efforts, which must assume that the programmer depends on the documented representation.
+Interfaces to external systems and devices are the most common situations where a representation clause is needed. Uses of pragma Import and address clauses should be evaluated during design and porting to determine whether a representation clause is needed.
+Without representation clauses, the language does not require two compilations of an unchanged file to result in the same data representation. Things that can change the representation between compilations include:

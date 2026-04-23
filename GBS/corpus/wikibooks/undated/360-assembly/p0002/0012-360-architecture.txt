@@ -1,0 +1,24 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 2
+section: 360-architecture
+chunk: 12
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+0 is the most significant bit; bit 64 (or 128 on 64-bit systems) is the least significant bit.
+
+An explanation of the fields in the PSW is as follows.
+
+(R) - Bit 1: Set (value 1) to allow Program Event Recording (PER) interrupts if certain PER event-mask bits are set in Control Register 9.
+(T) - Bit 5: Set if Dynamic Address Translation (DAT) is enabled; this allows for virtualization of addresses; if clear, all addresses used in registers are real addresses.
+(IO) - Bit 6: Set if Input/Outpit (IO) interrupts can occur, controlled by bits in Control Register 6.
+(EX) - Bit 7: Set if external interrupts can occur.
+(Key) - Bits 8-11: Contains the storage key for the current running task. This key is 0 for privileged tasks. A task may only write to areas of memory which are marked with the same key unless its key is 0. Some models may allow or prohibit reading of memory marked with a different key (for a task not running with a key of 0) depending on what the operating system has chosen. Some operating systems allow (read-only) access to locations below X'1000' in order to allow user programs to read pointers to system tables. (This presumes the user program is not running at virtual address 0).
+(Type) - Bit 12: Set for 64-bit PSW; clear if 128-bit PSW.
+(M) - Bit 13: Set if a Machine Check interrupt is permitted to occur in the event of detection of damage. Subject to mask bits set in Control Register 14.
+(W) - Bit 14: Set if the machine is in wait state, clear if the machine is running.
+(P) - Bit 15: Set if the machine is in supervisor state, clear if the machine is in problem state.
+(AS)- Bits 16 and 17: Used in combination with the T-bit to control how address translation is to be performed.

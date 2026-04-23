@@ -1,0 +1,29 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 10
+section: parti-chapter-3-objects-scopes
+chunk: 40
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+== Data types ==
+
+=== String.split (method) ===
+String.split( <separator>, [limit] );
+This function splits the specified String into substrings by breaking it wherever the specified <separator> parameter occurs, and returns the substrings in an array. For example you have a string of values separated with commas. By using this method you can separate this values and import them into an array. This example illustrates how to do that:
+
+1. var tmpString = new String("Mario,Henry,George,Amy,Kate");
+2. var tmpValues = new Array();
+3. tmpValues = tmpString.split(",");
+4. trace(tmpValues[0]);
+5. trace(tmpValues[1]);
+6. trace(tmpValues[2]);
+7. trace(tmpValues[3]);
+8. trace(tmpValues[4]);
+
+By specifying [limit] parameter you can limit the number of values. For example if we set the parameter [limit] in the previous example to 2 then the length of the array will be 2 and only first two values: “Mario” and “Henry” will be traced.
+
+=== Objects ===
+Nearly everything in Macromedia Flash is an object. For example all data types are objects. Now lets see what we can do with objects. First of all by declaring an object variable we can then assign to it any other data type. Example:

@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 256
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ing code that logically should be part of the shared abstraction. See Guideline 8.3.1 for a discussion of interfaces from the reusability perspective.
+
+==== notes ====
+In some cases, subroutine libraries look like large, monolithic packages. In such cases, it may be beneficial to break these up into smaller packages, grouping them according to category (e.g., trigonometric functions).
+
+=== Nested Packages ===
+
+==== guideline ====
+Use child packages rather than nested packages to present different views of the same abstraction.
+Nest package specifications within another package specification only for grouping operations or hiding common implementation details.
+
+==== example ====
+Annex A of the Ada Reference Manual (1995) gives an example of package specification nesting. The specification of the generic package Generic_Bounded_Length is nested inside the specification of package Ada.Strings.Bounded. The nested package is a generic, grouping closely related operations.

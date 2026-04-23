@@ -1,0 +1,18 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 21
+section: this-is-a-test
+chunk: 42
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+dard input. Let's send my entry in the password file to me in an email.
+
+$ cat /etc/passwd | grep jrauser | mail -s "passwd entry" jrauser@example.com
+
+= Using output with headers =
+In many situations, you end up with output that has a first line that is a header describing the data, and subsequent lines that are the data. An example is ps:
+
+$ ps | head -5

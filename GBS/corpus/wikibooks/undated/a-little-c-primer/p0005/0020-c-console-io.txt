@@ -1,0 +1,42 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 5
+section: c-console-io
+chunk: 20
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+wline),
+though a count, for example "%10d", can be included to define a specific
+field width. Formatting codes are the same as for "printf()", except:
+
+There is no "%g" format code.
+The "%f" and "%e" format codes work the same.
+There is a "%h" format code for reading short integers.
+If characters are included in the format code, "scanf()" will read in the
+characters and discard them. For example, if the example above were modified
+as follows:
+
+scanf( "%d,%s", &val, name );
+
+—then "scanf()" will assume that the two input values are comma-separated and swallow the comma when it is encountered.
+If a format code is preceded with an asterisk, the data will be read and
+discarded. For example, if the example were changed to:
+
+scanf( "%d%*c%s", &val, name );
+—then if the two fields were separated by a ":", that character would be read in and discarded.
+The "scanf()" function will return the value EOF (an "int"), defined in
+"stdio.h", when its input is terminated.
+The "putchar()" and "getchar()" functions handle single character I/O. For
+example, the following program accepts characters from standard input one at
+a time:
+
+/* inout.c */
+
+#include <stdio.h>
+
+int main (void)
+{
+unsigned int ch;

@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 20
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+one than the previous example. This method is no longer needed in Ada 95 due to the availability of discriminants with task types and protected types:
+
+==== rationale ====
+Using discriminants to parameterize protected objects provides a low-overhead way of specializing the protected object. You avoid having to declare and call special subprograms solely for the purpose of passing this information to the protected object.
+Task discriminants provide a way for you to identify or parameterize a task without the overhead of an initial rendezvous. For example, you can use this discriminant to initialize a task or tell it who it is (from among an array of tasks) (Rationale 1995, §II.9). More importantly, you can associate the discriminant with specific data. When you use an access discriminant, you can bind the data securely to the task because the access discriminant is constant and cannot be detached from the task (Rationale 1995, §9.6). This reduces and might eliminate bottlenecks in the parallel activation of tasks (Rationale 1995, §9.6).

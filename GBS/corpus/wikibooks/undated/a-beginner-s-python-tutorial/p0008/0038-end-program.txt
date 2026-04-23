@@ -1,0 +1,19 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 8
+section: end-program
+chunk: 38
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+Let's put this in something that Python can understand:
+
+Code Example 7 - Python version of menu
+
+Wow! That is an impressive program! Paste it into Python IDLE, save it as 'calculator.py' and run it. Play around with it - try all options, entering in integers (numbers without decimal points), and numbers with stuff after the decimal point (known in programming as a floating point). Try typing in text, and see how the program chucks a minor fit, and stops running (That can be dealt with, using error handling, which we can address later.)
+
+== Define Your Own Functions ==
+Well, it is all well and good that you can use other people's functions, but what if you want to write your own functions, to save time, and maybe use them in other programs? This is where the 'def' operator comes in. (An operator is just something that tells python what to do, e.g. the '+' operator tells python to add things, the 'if' operator tells python to do something if conditions are met.)
+This is how the 'def' operator works:

@@ -1,0 +1,34 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 379
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+moting readability of the code, if underscores are used in names, a code formatter has more control over altering capitalization. See Guideline 3.1.3.
+
+=== Numbers ===
+
+==== guideline ====
+Represent numbers in a consistent fashion.
+Represent literals in a radix appropriate to the problem.
+Use underscores to separate digits the same way commas or periods (or spaces for nondecimal bases) would be used in normal text.
+When using scientific notation, make the E consistently either uppercase or lowercase.
+In an alternate base, represent the alphabetic characters in either all uppercase or all lowercase.
+
+==== instantiation ====
+Decimal and octal numbers are grouped by threes beginning on the left side of the radix point and by fives beginning on the right side of the radix point.
+The E is always capitalized in scientific notation.
+Use uppercase for the alphabetic characters representing digits in bases above 10.
+Hexadecimal numbers are grouped by fours beginning on either side of the radix point.
+
+==== example ====
+
+To represent the number 1/3 as a constant, use:
+
+Avoid this use:
+
+or:

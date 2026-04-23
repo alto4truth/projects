@@ -1,0 +1,41 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 28
+section: 360-instructions-isk
+chunk: 89
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ISK - Insert Storage Key - Opcode 09 - RR Instruction (360 Only) Privileged Instruction
+
+== Format ==
+
+== Opcode ==
+
+The first argument is a target register which value is affected by the instruction.
+The second argument is the source register.
+The target register and source register values are 0 to 15.
+
+== Example usage ==
+ISK R1,R2
+
+== Availability ==
+The ISK instruction is available only on 360 models. It is a privileged instruction.
+
+== Purpose of Instruction ==
+This instruction is used to get the Storage Key for the address specified in the Second operand and store into the first operand's bottom byte(1byte).
+ISK instruction provides support to get the storage key in 2K units of Page. ISKE will get the storage key for the 4K units of page.
+
+== Typical Usage ==
+
+== Operation ==
+This is a privileged instruction, and is only available on the 360 series. The ISKE instruction is available on later 370 and zSystem processors.
+
+== Condition Codes ==
+Condition codes are not changed.
+
+== Exceptions and Faults ==
+Privileged Operation
+Invalid Opcode (370 and z/System)

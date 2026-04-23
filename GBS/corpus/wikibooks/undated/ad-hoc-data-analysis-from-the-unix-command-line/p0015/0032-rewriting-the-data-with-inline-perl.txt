@@ -1,0 +1,14 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 15
+section: rewriting-the-data-with-inline-perl
+chunk: 32
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+== Command Line perl ==
+A tutorial on perl is beyond the scope of this document; if you don't know perl, you should learn at least a little bit. If you invoke perl like perl -n -e '#a perl statement' the -n option causes perl to wrap your -e argument in a implicit while loop like this:
+
+while (<>) {

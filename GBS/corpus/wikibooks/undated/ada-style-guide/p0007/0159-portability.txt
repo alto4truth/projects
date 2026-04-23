@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 159
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+xtend beyond the next language revision, it should avoid the obsolescent language features unless backward compatibility with Ada 83 forces their use.
+
+==== exceptions ====
+When you instantiate Ada.Text_IO.Float_IO, the values of the Default_Fore and Default_Aft fields are set from the values of the 'Fore and 'Aft attributes of the actual floating-point type used in the instantiation. If you declare a reduced accuracy floating-point type that you then use to instantiate Ada.Text_IO.Float_IO, the output field widths are determined from the reduced accuracy type, although the implementation accuracy is unchanged (Rationale 1995, §3.3).
+
+=== Global Assumptions ===

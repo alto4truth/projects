@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 409
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+a revision history in the file header, including a summary of each change, the date, and the name of the person making the change.
+
+==== example ====
+
+==== rationale ====
+Ownership information should be present in each file if you want to be sure to protect your rights to the software. Furthermore, for high visibility, it should be the first thing in the file.
+Responsibility and revision history information should be present in each file for the sake of future maintainers; this is the header information most trusted by maintainers because it accumulates. It does not evolve. There is no need to ever go back and modify the author's name or the revision history of a file. As the code evolves, the revision history should be updated to reflect each change. At worst, it will be incomplete; it should rarely be wrong. Also, the number and frequency of changes and the number of different people who made the changes over the history of a unit can be good indicators of the integrity of the implementation with respect to the design.
+Information about how to find the original author should be included in the file header, in addition to the author's name, to make it easier for maintainers to find the author in case questions arise. However, detailed information like phone numbers, mail stops, office numbers, and computer account user names are too volatile to be very useful. It is better to record the department for which the author was working when the code was written. This information is still useful if the author moves offices, changes departments, or even leaves the company because the department is likely to retain responsibility for the original version of the code.

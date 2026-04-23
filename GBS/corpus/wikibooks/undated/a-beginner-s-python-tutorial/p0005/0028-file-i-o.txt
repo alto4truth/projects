@@ -1,0 +1,27 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 5
+section: file-i-o
+chunk: 28
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+For example, if you had the text file:
+
+Code Example 2 - example text file
+Line 1
+
+Line 3
+Line 4
+
+Line 6
+
+The returned list from readlines() would be:
+
+The write() function, writes to the file. How did you guess? It writes from where the cursor is, and overwrites text in front of it - like in MS Word, where you press 'insert' and it writes over the top of old text. To utilise this most purposeful function, put a string between the brackets to write e.g. fileobjectname.write('this is a string').
+close, you may figure, closes the file so that you can no longer read or write to it until you reopen in again. Simple enough. To use, you would write fileobjectname.close(). Simple!
+In Python IDLE mode, open up a test file (or create a new one...) and play around with these functions. You can do some simple (and very inconvenient) text editing.
+Pickles, in Python, are objects saved to a file. An object in this case could be a variables, instance of a class, or a list, dictionary, or tuple. Other things can also be pickled, but with limits. The object can then be restored, or unpickled, later on. In other words, you are 'saving' your objects.
+So how do we pickle? With the dump() function, which is inside the pickle module - so at the beginning of your program you will have to write import pickle. Simple enough? Then open an empty file, and use pickle.dump() to drop the object into that file. Let's try that:

@@ -1,0 +1,38 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 297
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+e ====
+An array of type Employee_List can contain pointers to
+part-time and full-time employees (and possibly other kinds of
+employees in the future):
+
+==== rationale ====
+Polymorphism is a means of factoring out the
+differences among a collection of abstractions so that programs
+may be written in terms of the common properties. Polymorphism
+allows the different objects in a heterogeneous data structure
+to be treated the same way, based on dispatching operations defined
+on the root tagged type. This eliminates the need for case
+statements to select the processing required for each specific
+type. Guideline 5.6.3 discusses the maintenance impact of using
+case statements.
+Enumeration types, variant records, and
+case statements are hard to maintain because
+the expertise on a given variant of the data type tends to be
+spread all over the program. When you create a tagged type hierarchy
+(tagged types and type extension), you can avoid the variant records,
+case statement, and single enumeration type
+that only supports the variant record discriminant. Moreover,
+you localize the "expertise" about the variant within
+the data structure by having all the corresponding primitives
+for a single operation call common "operation-specific"
+code.
+See also Guideline 9.2.1 for a more detailed discussion of tagged
+types.

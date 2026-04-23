@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 333
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+the effect of all use clauses.
+
+==== example ====
+This is a modification of the example from Guideline 4.2.3. The effect of a use clause is localized:
+
+==== rationale ====
+These guidelines allow you to maintain a careful balance between maintainability and readability. Use of the use clause may indeed make the code read more like prose text. However, the maintainer may also need to resolve references and identify ambiguous operations. In the absence of tools to resolve these references and identify the impact of changing use clauses, fully qualified names are the best alternative.
+Avoiding the use clause forces you to use fully qualified names. In large systems, there may be many library units named in with clauses. When corresponding use clauses accompany the with clauses and the simple names of the library packages are omitted (as is allowed by the use clause), references to external entities are obscured and identification of external dependencies becomes difficult.
+In some situations, the benefits of the use clause are clear. A standard package can be used with the obvious assumption that the reader is very familiar with those packages and that additional overloading will not be introduced.
+The use type clause makes both infix and prefix operators visible without the need for renames clauses. You enhance readability with the use type clause because you can write statements using the more natural infix notation for operators. See also Guideline 5.7.2.
+You can minimize the scope of the use clause by placing it in the body of a package or subprogram or by encapsulating it in a block to restrict visibility.

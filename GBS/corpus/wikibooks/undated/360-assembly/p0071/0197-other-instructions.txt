@@ -1,0 +1,22 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 71
+section: other-instructions
+chunk: 197
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+= Other Instructions =
+There are a number of specialized instructions for the IBM 360/370/390/Z-System which don't fit neatly into the rest of the groups of instructions.
+
+Program Return - PR
+Set Addressing Mode (to 24 bits) - SAM24
+Set Addressing Mode (to 31 bits) - SAM31
+Set Addressing Mode (to 64 bits) - SAM64
+Set Clock Programmable Field - SCKPF
+Supervisor Call - SVC - Used to request services from the operating system.
+Test Addressing Mode - TAM
+Trap - TRAP2
+Update Tree - UPT

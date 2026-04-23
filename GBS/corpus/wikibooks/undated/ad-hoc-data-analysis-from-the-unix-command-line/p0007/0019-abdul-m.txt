@@ -1,0 +1,24 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 7
+section: abdul-m
+chunk: 19
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+40 011 106 012 101 102 104 125 114 040 040 040
+\t F \n A B D U L
+0000100 040 040 040 011 115 012 101 102 105 040 040 040 040 040 040 040
+\t M \n A B E
+
+The first thing to do is read your system's manpage on "cut": it may already delimit by tab by default. If not, it requires a bit of trickery to get a tab character past your shell to the cut command. First, many shells have a feature called tab completion; when you hit tab they don't actually insert a tab, instead they attempt to figure out which file, directory or command you want and type that instead. In many shells you can overcome this special functionality by typing a control-v first. Whatever character you type after the control-v is literally inserted. Like a space character, you need to protect the tab character with quotes or the shell will discard it like any other white space separating pieces of the command line.
+So to get the ratio of male first names to female first names I might run the following commands. Between the double quotes I typed control-v and then hit tab.
+
+$ wc -l gender.txt
+5017 gender.txt
+$ cut -d" " -f2 gender.txt | grep M | wc -l
+1051
+$ cut -d" " -f2 gender.txt | grep F | wc -l
+3966

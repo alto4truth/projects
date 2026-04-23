@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 363
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+potential problem with initializing access values:
+
+The second example illustrates the issue of ensuring the elaboration of an entity before its use:
+
+==== rationale ====
+Ada does not define an initial default value for objects of any type other than access types, whose initial default value is null. If you are initializing an access value at the point at which it is declared and the allocation raises the exception Storage_Error, the exception is raised in the calling not the called procedure. The caller is unprepared to handle this exception because it knows nothing about the problem-causing allocation.
+Operating systems differ in what they do when they allocate a page in memory: one operating system may zero out the entire page; a second may do nothing. Therefore, using the value of an object before it has been assigned a value causes unpredictable (but bounded) behavior, possibly raising an exception. Objects can be initialized implicitly by declaration or explicitly by assignment statements. Initialization at the point of declaration is safest as well as easiest for maintainers. You can also specify default values for components of records as part of the type declarations for those records.
+Ensuring initialization does not imply initialization at the declaration. In the example above, Goal must be initialized via a function call. This cannot occur at the declaration because the function Sense has not yet been elaborated, but it can occur later as part of the sequence of statements of the body of the enclosing package.
+An unelaborated function called within a declaration (initialization) raises the exception, Program_Error, that must be handled outside of the unit containing the declarations. This is true for any exception the function raises even if it has been elaborated.
+If an exception is raised by a function call in a declaration, it is not handled in that immediate scope. It is raised to the enclosing scope. This can be controlled by nesting blocks.
+See also Guideline 9.2.3.

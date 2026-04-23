@@ -1,0 +1,23 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 20
+section: 360-instructions-bctr
+chunk: 72
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+et register and branch register values are 0 to 15.
+
+== Example usage ==
+BCTR 1,9
+
+== Availability ==
+The BCTR instruction is available on all models.
+
+== Purpose of Instruction ==
+The BCTR instruction subtracts 1 from the value of the contents of the target register specified in the first argument. If the value in the target register after the subtraction is zero (or the branch register is 0), no branch occurs. Otherwise the program branches to the address contained in the branch register specified in the second argument. Note that if the result in the target register before subtraction is 0, the result is negative 1 and the branch occurs (unless the branch register is 0). If the value in the target register is the lowest possible value, the overflow that occurs is ignored, the result in the target register is the highest possible value, and the branch occurs (unless the branch register is 0). A BCTR 0,0 instruction is the equivalent of decrementing register 0 by 1.
+
+== Typical Usage ==
+To do a loop statement where 1 is subtracted from the value contained in the target register, and a branch should occur to the address contained in the branch register if the result isn't 0.

@@ -1,0 +1,44 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 4
+section: attributes
+chunk: 159
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+ibutes use the plural GetCustomAttributes, which returns an array of attributes. You can then iterate through the resultant array and read the values:
+
+QualityCheck[] attrArray = (QualityCheck[])Attribute.GetCustomAttributes(t, typeof(QualityCheck));
+
+foreach (QualityCheck attr in attrArray)
+{
+Console.Writeline(attr.IsApproved);
+}
+
+==== Retrieving A Single Attribute Type From Multiple Members ====
+What if you want to do something a little more complex, like checking each method in a class for a QualityCheck attribute? Thanks to the System.Reflection namespace, we don't have to even break a sweat. Simply read all the members (methods, in this instance) into a MemberInfo array and iterate through them:
+
+using System.Reflection
+
+public class ExampleClass
+{
+public static void Main()
+{
+RetrieveAttributes(typeof(ExampleClass));
+}
+
+public void RetrieveAttributes(Type t)
+{
+MemberInfo[] methodList = t.GetMethods();
+foreach (MemberInfo m in methodList)
+{
+QualityCheck[] attrArray = (QualityCheck[])Attribute.GetCustomAttributes(m, typeof(QualityCheck));
+foreach (QualityCheck attr in attrArray)
+{
+Console.Writeline(attr.IsApproved);
+}
+}
+}
+}

@@ -1,0 +1,37 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 12
+section: c-operators
+chunk: 58
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+operators in math functions—that is, which ones
+are evaluated before others—are defined as follows, reading from the
+highest precedence to the lowest:
+
+() [] -> .
+! ~ ++ -- (cast) & sizeof - (minus prefix)
+/ %
++ -
+<< >>
+< <= > >=
+== !=
+&
+
+^
+|
+&&
+||
+?:
+= += -= *= /= %= >>= <<= &=
+^= |=
+,
+
+Of course, parentheses can be used to control precedence. If in doubt about
+the order of evaluation of an expression, add more parentheses. They won't
+cause any trouble and might save some pain.
+Advanced math operations are available as library functions. These will be
+discussed in a later chapter.

@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 24
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+s why caution is required with dynamically allocated task and protected objects. It illustrates how a dynamic task can be disassociated from its name:
+
+==== rationale ====
+Starting up a task has significant overhead in many implementations. If an application has a need for dynamically created tasks, the tasks should be implemented with a top-level loop so that after such a task completes its given job, it can cycle back and wait for a new job.
+You can use dynamically allocated tasks and protected objects when you need to allow the number of tasks and protected objects to vary during execution. When you must ensure that tasks are activated in a particular order, you should use dynamically allocated tasks because the Ada language does not define an activation order for statically allocated task objects. In using dynamically allocated tasks and protected objects, you face the same issues as with any use of the heap.
+
+=== Priorities ===

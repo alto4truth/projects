@@ -1,0 +1,21 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 44
+section: d3-l-b1-d1-b2-d2
+chunk: 130
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+Symbolic Format: [symbolic name] MVZ D1(L,B1),D2(B2)
+[symbolic name) MVZ name1,name2
+
+* The zone portion (high order 4 bits) of each byte from the second operand is placed in the zone portion of the corresponding byte of the first operand field.
+* The instruction moves the data one byte at a time left to right. The zone portion of the leftmost (high-order) byte of the sending field is moved first.
+* The operands may overlap in memory.
+* The numeric portion (low-order 4 bits) of each byte are unchanged in either field.
+* The first and second operands may overlap.
+* A maximum of 256 bytes may be moved.
+
+The condition code is unchanged.

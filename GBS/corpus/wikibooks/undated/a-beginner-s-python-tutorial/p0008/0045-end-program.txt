@@ -1,0 +1,17 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 8
+section: end-program
+chunk: 45
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+messy code replaced with nice, neat functions. This will make it so much easier to look at again in the future.
+
+Code Example 14 - Calculator program
+
+The initial program had 34 lines of code. The new one actually had 35 lines of code! It is a little longer, but if you look at it the right way, it is actually simpler.
+You defined all your functions at the top. This really isn't part of your main program - they are just lots of little programs, that you will call upon later. You could even re-use these in another program if you needed them, and didn't want to tell the computer how to add and subtract again.
+If you look at the main part of the program (between the line 'loop = 1' and 'print "Thank you for..."'), it is only 15 lines of code. That means that if you wanted to write this program differently, you would only have to write 15 or so lines, as opposed to the 34 lines you would normally have to without functions.

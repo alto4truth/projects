@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 156
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+make in a given situation involves design tradeoffs. The rationale for these guidelines is intended to give you insight into some of these tradeoffs.
+
+== Fundamentals ==
+This section introduces some generally applicable principles of writing portable Ada programs. It includes guidelines about the assumptions you should make with respect to a number of Ada features and their implementations and guidelines about the use of other Ada features to ensure maximum portability.
+
+=== Obsolescent Features ===

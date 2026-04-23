@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 236
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+— the body
+text_io#integer_io.adb — a subunit
+text_io#fixed_io.adb — a subunit
+text_io#float_io.adb — a subunit
+text_io#enumeration_io.adb — a subunit
+
+Some operating systems are case-sensitive, although Ada itself is not a case-sensitive language. For example, you could choose a convention of all lowercase file names.

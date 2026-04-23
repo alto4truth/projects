@@ -1,0 +1,29 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 5
+section: c-console-io
+chunk: 15
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+This chapter covers console (keyboard/display) and file I/O. You've already seen one console-I/O function, "printf()", and there are several others. C has two separate approaches toward file I/O, one based on library functions that is similar to console I/O, and a second that uses "system calls". These topics are discussed in detail below.
+Console I/O in general means communications with the computer's keyboard
+and display. However, in most modern operating systems the keyboard and
+display are simply the default input and output devices, and user can easily
+redirect input from, say, a file or other program and redirect output to,
+say, a serial I/O port:
+
+type infile > myprog > com
+
+The program itself, "myprog", doesn't know the difference. The program uses
+console I/O to simply read its "standard input (stdin)"—which might be
+the keyboard, a file dump, or the output of some other program—and print
+to its "standard output (stdout)"—which might be the display or printer
+or another program or a file. The program itself neither knows nor cares.
+Console I/O requires the declaration:
+
+#include <stdio.h>
+
+Useful functions include:

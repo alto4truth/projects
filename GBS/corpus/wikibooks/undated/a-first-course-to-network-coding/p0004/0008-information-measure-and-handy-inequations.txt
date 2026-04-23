@@ -1,0 +1,116 @@
+title: A First Course to Network Coding
+source: wikibooks
+year: undated
+document_id: a-first-course-to-network-coding
+authors: 
+page: 4
+section: information-measure-and-handy-inequations
+chunk: 8
+source_ref: https://en.wikibooks.org/wiki/A_First_Course_to_Network_Coding
+
+d result should be equal to that of the single choice. The three intuitive properties described above serves as criteria for choosing such expression.
+
+== Definitions ==
+Discrete Random Variable Let
+
+X
+
+{\displaystyle X}
+
+be a discrete random variable with alphabet
+
+?
+?
+
+{\displaystyle ??}
+
+and PMF
+
+P
+
+X
+
+(
+x
+)
+=
+P
+r
+(
+X
+=
+x
+)
+,
+x
+∈
+X
+.
+
+{\displaystyle P_{X}(x)=Pr(X=x),x\in X.}
+
+Hereon,
+
+P
+
+X
+
+(
+x
+)
+
+{\displaystyle P_{X}(x)}
+
+is often written as
+
+P
+(
+x
+)
+
+{\displaystyle P(x)}
+
+for convenience, and discrete random variable as d.r.v.
+Entropy The entropy of a d.r.v. is defined as:
+
+H
+(
+X
+)
+=
+−
+∑
+P
+(
+x
+)
+
+log
+
+b
+
+⁡
+P
+(
+x
+)
+
+{\displaystyle H(X)=-\sum P(x)\log _{b}P(x)}
+
+, in other words, the expectation of
+
+l
+o
+
+g
+
+b
+
+1
+
+P
+(
+x
+)
+
+{\displaystyle log_{b}{\frac {1}{P(x)}}}

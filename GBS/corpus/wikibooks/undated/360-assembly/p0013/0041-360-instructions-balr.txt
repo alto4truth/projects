@@ -1,0 +1,18 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 13
+section: 360-instructions-balr
+chunk: 41
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ed to represent the values 0 or 1 through 15, respectively.
+
+== Operation ==
+The operation of this instruction is different depending on address mode.
+
+== 24-bit operation ==
+On 64-bit machines, the target register is loaded as follows: bits 0 to 31 are unchanged; bits 32-39 contain the instruction length code, condition cods, and program mask bits from the current PSW; bits 33 to 63 are loaded with the address of the next instruction following this one. If the source register is not 0, bits 33-63 of the source register are loaded into the PSW as the new next instruction address.
+On 24- or 31-bit machines, or when operating in 24-bit mode, the target register is loaded as follows: bits 0 to 7 contain the instruction length code, condition cods, and program mask bits from the current PSW; bits 8 to 31 a loaded with the address of the next instruction following this one. If the source register is not 0, bits 8-31 of the source register are loaded into the PSW as the new next instruction address.

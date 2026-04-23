@@ -1,0 +1,24 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 67
+section: b-next
+chunk: 188
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+An alternative method of defining TABLE2 above, letting the Assembler automate the placement of the index bytes, is as follows (example shown for "A" and "D" only for brevity).
+
+TABLE2 DC 256AL1(0) define 256 bytes of nulls
+ORG TABLE2+C'A' repeat these two lines for each
+* valid input character
+DC AL1(02) (The 'ORG' Assembler statement above
+* resets to correct position)
+ORG TABLE2+C'D'
+DC AL1(08)
+ORG At end, reset to earlier position after
+* end of 256 byte table
+
+==== Example using a table of 4-byte absolute addresses ====
+A table of absolute addresses can be built by the Assembler. This requires just one extra instruction but increases the branch range to 2 gigabytes (i.e. the whole address space for 31 bit processors).

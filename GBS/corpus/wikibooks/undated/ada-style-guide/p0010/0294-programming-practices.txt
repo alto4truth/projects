@@ -1,0 +1,40 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 294
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+range constraint as possible).
+Use a discriminated record rather than a constrained array to represent an array whose actual values are unconstrained.
+
+==== example ====
+An object of type Name_Holder_1 could potentially hold
+a string whose length is Natural'Last:
+
+An object of type Name_Holder_2 imposes a more reasonable
+restriction on the length of its string component:
+
+==== rationale ====
+When you use the discriminant to constrain an array inside a discriminated
+record, the larger the range of values the discriminant can assume,
+the more space an object of the type might require. Although your
+program may compile and link, it will fail at execution when the
+run-time system is unable to create an object of the potential
+size required.
+The discriminated record captures the intent of an array whose
+bounds may vary at run-time. A simple constrained array definition
+(e.g., type Number_List is array (1 .. 42) of Integer;)
+does not capture the intent that there are at most 42 possible
+numbers in the list.
+
+=== Heterogeneous Related Data ===
+
+==== guideline ====
+Use records to group heterogeneous but related data.
+Consider records to map to I/O device data.
+
+==== example ====

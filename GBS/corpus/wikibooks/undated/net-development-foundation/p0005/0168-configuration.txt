@@ -1,0 +1,29 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 5
+section: configuration
+chunk: 168
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+class - MSDN
+PerformanceCounterCategory - MSDN
+CounterCreationData class - MSDN
+Start a process both by using and by not using command-line arguments
+
+Starting a Process Overview
+Processes are started using one of the overloaded Process.Start() methods. When passing sensitive data such as passwords to Process.Start(), use one of the two overloaded Start() methods that accept a SecureString as an argument type.
+External links
+MSDN2 Entry for Starting a Process - Process.Start()
+MSDN2 Entry for Starting a Process with ProcessStartInfo. This example demonstrates how to launch IE.
+MSDN2 Entry for Starting a Process with Command Line Arguments
+MSDN2 Passing a Password as a SecureString to Process.Start()
+MSDN2 SecureString class
+StackTrace class - MSDN
+StackFrame class - MSDN
+
+==== Debug and Trace ====
+Exam objective: Debug and trace a .NET Framework application by using the System.Diagnostics namespace.
+Debug class and Debugger class

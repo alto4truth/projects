@@ -1,0 +1,49 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 8
+section: c-file-io-through-library-functions
+chunk: 42
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+()":
+
+/* fcopy.c */
+
+#include <stdio.h>
+
+#define MAX 256
+
+void main()
+{
+FILE *src, *dst;
+char b[MAX];
+
+/* Try to open source and destination files. */
+
+if ( ( src = fopen( "infile.txt", "r" )) == NULL )
+{
+puts( "Can't open input file." );
+exit();
+}
+if ( (dst = fopen( "outfile.txt", "w" )) == NULL )
+{
+puts( "Can't open output file." );
+fclose( src );
+exit();
+}
+
+/* Copy one file to the next. */
+
+while( ( fgets( b, MAX, src ) ) != NULL )
+{
+fputs( b, dst );
+}
+
+/* All done, close up shop. */
+
+fclose( src );
+fclose( dst );
+}

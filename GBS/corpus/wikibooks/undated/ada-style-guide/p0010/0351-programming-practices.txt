@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 351
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ible about an exception.
+Use blocks to associate localized sections of code with their own exception handlers.
+
+==== example ====
+See Guideline 5.6.9.
+
+==== rationale ====
+In an exception handler, it is very difficult to determine exactly which statement and which operation within that statement raised an exception, particularly the predefined and implementation-defined exceptions. The predefined and implementation-defined exceptions are candidates for conversion and propagation to higher abstraction levels for handling there. User-defined exceptions, being more closely associated with the application, are better candidates for recovery within handlers.
+User-defined exceptions can also be difficult to localize. Associating handlers with small blocks of code helps to narrow the possibilities, making it easier to program recovery actions. The placement of handlers in small blocks within a subprogram or task body also allows resumption of the subprogram or task after the recovery actions. If you do not handle exceptions within blocks, the only action available to the handlers is to shut down the task or subprogram as prescribed in Guideline 5.8.3.
+As discussed in Guideline 5.8.2, you can log run-time system information about the exception. You can also attach a message to the exception. During code development, debugging, and maintenance, this information should be useful to localize the cause of the exception.

@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 122
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+cause the membership of the new type in the tagged type derivation class will not generally be known to clients of the type.
+
+=== Controlled Types ===
+
+==== guideline ====
+Consider using a controlled type whenever a type allocates resources that must be deallocated or otherwise "cleaned up" on destruction or overwriting.
+Use a derivation from a controlled type in preference to providing an explicit "cleanup" operation that must be called by clients of the type.
+When overriding the adjustment and finalization procedures derived from controlled types, define the finalization procedure to undo the effects of the adjustment procedure.
+Derived type initialization procedures should call the initialization procedure of their parent as part of their type-specific initialization.
+Derived type finalization procedures should call the finalization procedure of their parent as part of their type-specific finalization.
+Consider deriving a data structure's components rather than the enclosing data structure from a controlled type.

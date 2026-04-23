@@ -1,0 +1,26 @@
+title: A Brief Introduction to the LaTeX Typesetting Environment
+source: wikibooks
+year: undated
+document_id: a-brief-introduction-to-the-latex-typesetting-environment
+authors: 
+page: 3
+section: typesetting-the-basics
+chunk: 27
+source_ref: https://en.wikibooks.org/wiki/A_Brief_Introduction_to_the_LaTeX_Typesetting_Environment
+
+would describe the following random equation:
+\begin{equation}
+f(x) = \frac{\sqrt{x}}{2}
+\end{equation}
+Where $f$ is a function of $x$ called $f(x)$.
+
+Everything inside of the \begin{equation} and \end{equation} brackets will be formatted as a single equation and it will be numbered by LaTeX. This is especially useful if you'll be referencing the equation a lot in your text, or if you'd like to make it available later on in the table of contents.
+It's important to note that if you have two separate equations that you want numbered you would not place both of them inside the \begin{} and \end{} functions. This would be typeset as a single equation which would not look very much like what you're hoping for. Each individual equation would need to be bracketed within its own \begin{} and \end{} functions as shown here:
+
+Here are our first two equations:
+\begin{equation}
+f(x) = 2x^2
+\end{equation}
+\begin{equation}
+g(x) = f(x)^2 = 4x^4
+\end{equation}

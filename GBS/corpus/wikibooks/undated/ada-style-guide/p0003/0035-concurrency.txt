@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 35
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+a component of some tagged type. You then use this protected type to implement a new root tagged type (not a descendant of the original tagged type).
+
+== Communication ==
+The need for tasks to communicate gives rise to most of the problems that make concurrent programming so difficult. Used properly, Ada's intertask communication features can improve the reliability of concurrent programs; used thoughtlessly, they can introduce subtle errors that can be difficult to detect and correct.
+
+=== Efficient Task Communication ===
+
+==== guideline ====
+Minimize the work performed during a rendezvous.
+Minimize the work performed in the selective accept loop of a task.
+Consider using protected objects for data synchronization and communication.
+
+==== example ====
+In the following example, the statements in the accept body are performed as part of the execution of both the caller task and the task Server, which contains Operation and Operation2. The statements after the accept body are executed before Server can accept additional calls to Operation or Operation2.

@@ -1,0 +1,40 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 17
+section: c-variables-declarations-and-constants
+chunk: 73
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+nd the only symptom will be that the
+program acts very strangely.
+
+Of particular importance are arrays of characters, which are used to store
+strings:
+
+The string "This is a test!" is used to initialize "s" through the
+"strcpy()" function, discussed in a later chapter. The stored string will
+contain a terminating "null" character (the character with ASCII code 0,
+represented by '\0'). The null is used by C functions that manipulate
+strings to determine where the end of the string is, and it is important to
+remember the null is there.
+The curious reader may wonder why the "strcpy()" function is needed to
+initialize the string. It might seem to be easier to do:
+
+In fact, this is an absurd operation, but to explain why, the concept of
+"pointers" must be introduced.
+
+C programs can define pointers that contain the address of a variable or
+an array. For example, a pointer could be defined named:
+
+-- that gives the address of a variable, rather than the variable itself. A
+value could then be put into that location with the statement:
+
+In an inverse fashion, the address of a variable can be obtained
+with "&":
+
+To sum up:
+
+A pointer is declared in the form: "*myptr".

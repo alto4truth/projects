@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 162
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ified in Ada Reference Manual 1995, §9.6 [Annotated])
+20 milliseconds for Duration'Small (as specified in Ada Reference Manual 1995, §9.6 [Annotated])
+
+==== rationale ====
+Some assumptions must be made with respect to certain implementation-specific values. The exact values assumed should cover the majority of the target equipment of interest. Choosing the lowest common denominator for values improves portability. Implementations may supply an alternate character set specific to a locale or environment. For instance, the implementation on an IBM-compatible PC may support that machine's native character set rather than Latin 1. As a result, some character values may or may not be supported, for example, the smiley face.

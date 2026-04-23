@@ -1,0 +1,55 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 5
+section: c-console-io
+chunk: 19
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+e >
+
+Just for convenience, the table of special characters listed in chapter 2 is
+repeated here. These characters can be embedded in "printf" strings:
+
+'\a' alarm (beep) character
+'\p' backspace
+'\b' backspace
+'\f' formfeed
+'\n' newline
+'\r' carriage return
+'\t' horizontal tab
+'\v' vertical tab
+'\\' backslash
+'\?' question mark
+'\'' single quote
+'\"' double quote
+'%%' percentage
+'\0NN' character code in octal
+'\xNN' character code in hex
+'\0' null character
+
+The "scanf()" function reads formatted data using a syntax similar to that of
+"printf", except that it requires pointers as parameters, since it has to
+return values. For example:
+
+/* cscanf.c */
+
+#include <stdio.h>
+
+int main(void)
+{
+int val;
+char name[256];
+
+printf( "Enter your age and name.\n" );
+scanf( "%d %s", &val, name );
+printf( "Your name is: %s -- and your age is: %d\n", name, val );
+return 0;
+}
+
+There is no "&" in front of "name" since the name of a string is already a
+pointer. Input fields are separated by whitespace (space, tab, or newline),
+though a count, for example "%10d", can be included to define a specific
+field width. Formatting codes are the same as for "printf()", except:

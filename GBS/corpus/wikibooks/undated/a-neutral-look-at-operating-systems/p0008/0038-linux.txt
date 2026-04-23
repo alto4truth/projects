@@ -1,0 +1,19 @@
+title: A Neutral Look at Operating Systems
+source: wikibooks
+year: undated
+document_id: a-neutral-look-at-operating-systems
+authors: 
+page: 8
+section: linux
+chunk: 38
+source_ref: https://en.wikibooks.org/wiki/A_Neutral_Look_at_Operating_Systems
+
+and Slackware have many derivatives, some of which are also for advanced users. Users considering either one should look into the derivatives as well.
+
+=== Debian GNU/Linux ===
+Debian is a non-commercial distribution known for its package management system and strict requirements of its packages and releases.
+Debian comes in three branches: stable, testing and unstable. New packages to be included in the distribution are initially pushed to the unstable branch. Once the package has been shown not to cause too many crashes it is pushed to testing where it will stay for several months while thousands of users test it and work out bugs. Once most release critical bugs are solved, the package will be a candidate for the stable branch.
+An advantage is that the Debian stable branch is very stable indeed and almost bug free but at the price of being a bit outdated. Debian stable often does not include support for the latest hardware and software features desktop users like to see. Therefore, most desktop users of Debian prefer some kind of mix of Stable, Testing and sometimes even Unstable for their final desktop configuration.
+Debian also has a very good package management system, quite possibly THE best package management system of any OS in the world.
+Debian is also known for being a completely free (as in freedom) operating system, and unless you include the 'non-free' branch in your sources file, everything will be Free Software. The word Free does not pertain to cost (you can sell these things) but to freedom: every package in Debian gives you the right to use, distribute, and modify the software (even for money).
+See Using Debian in a Graphic environment.

@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 481
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+as:
+
+the passive iterator is instantiated, specifying the name of the routine that should be called for each list element when the iterator is called.
+
+The passive iterator can then be called as:
+
+Alternatively, the active iterator can be used without the second instantiation required by the passive iterator:
+
+The second example shows a code excerpt from Rationale (1995, §3.7.1) on how to construct iterators using access discriminants:
+
+The iterator operations allow you to iterate over the elements of the set with the component This of the iterator object accessing the current element. The access discriminant always points to the enclosing set to which the current element belongs.
+The third example uses code fragments from Rationale (1995, §4.4.4) to show an iterator using type extension and dispatching:
+
+The general purpose iterator looks like this:

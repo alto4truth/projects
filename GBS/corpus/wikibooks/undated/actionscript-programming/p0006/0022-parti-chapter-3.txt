@@ -1,0 +1,15 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 6
+section: parti-chapter-3
+chunk: 22
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+riables. After "var" must follow the variable’s name, in our case it is "num". You can declare variables without assigning any data type. For example:
+
+"var i;" means that we declare i variable without assigning any data type. In in our code "var num = new Number();" we declare "num" variable and assign "Number" data type. This means that "num" variable can keep and work with only numbers. The word "Number" and other data types must be followed with the brackets. If there is nothing written in the brackets then the value of the variable is set to its default. In our case, our num variable is 0 at first. If you delete the line 4, you will notice, that the traced value is 0. In line 2 we declare another variable "txt" but this time we assign it "String" data type. This means that "txt" variable will not be able to calculate or simply work with numbers. In line 4 we set the value of "num" to 5 and in line 5 we set the "txt" value to "hi". And finally when we trace these two variables in lines 7 and 8 we saw the output:
+
+Now lets make a test.

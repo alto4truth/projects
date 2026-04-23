@@ -1,0 +1,36 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 27
+section: using-collections
+chunk: 299
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+whether access to the ICollection is synchronized (thread safe).
+SyncRoot - Gets an object that can be used to synchronize access to the ICollection.
+
+Public Methods
+CopyTo - Copies the elements of the ICollection to an Array, starting at a particular Array index.
+
+IList interface - MSDN
+IComparer interface, IEqualityComparer interface, and IKeyComparer interface
+IComparer interface - MSDN
+IEqualityComparer interface - MSDN
+IKeyComparer interface - IKeyComparer does not exist in .Net 2.0
+IDictionary interface and IDictionaryEnumerator interface
+IDictionary interface - MSDN
+IDictionaryEnumerator interface - MSDN
+IEnumerable interface and IEnumerator interface - MSDN and MSDN
+
+IHashCodeProvider interface - MSDN - Interface is now obsolete (as of .NET 2.0)
+
+=== Iterators ===
+See MSDN
+
+An iterator is effectively a lightweight version of the IEnumerable interface. It is primarily used with foreach statements.
+You will normally implement the GetEnumerator method of the IEnumerable interface.
+public class Colors : System.Collections.IEnumerable
+{
+string[] colors = { "Red", "Green", "Blue" };

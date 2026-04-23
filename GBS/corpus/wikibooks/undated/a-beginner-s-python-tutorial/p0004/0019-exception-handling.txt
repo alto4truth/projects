@@ -1,0 +1,20 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 4
+section: exception-handling
+chunk: 19
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+t here >)
+File "/home/steven/errortest.py", line 6, in menu
+return input(question) - 1
+File "", line 0, in -toplevelNameError: name 'm' is not defined
+
+What is this telling us? There are two code listings - one in line 10, and the other in line 6. What this is telling us is that when we called the menu function in line 10, an error occurred in line 6 (where we take away 1). This makes sense if you know what the input() function does - I did a bit of reading and testing, and realised that if you type in a letter or word, it will assume that you are mentioning a variable! so in line 6, we are trying to take 1 away from the variable 'm', which doesn't exist.
+Have no clue on how to fix this? One of the best and easiest ways is to use the try and except operators.
+Here is an example of try being used in a program:
+
+Code Example 7 - The try operator

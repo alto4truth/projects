@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 502
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+the number of items in package interfaces. It also allows you to with only the capabilities needed.
+See also Guidelines 9.2, 9.3.1, 9.3.5, and 9.4.1.
+
+== Summary ==
+
+=== understanding and clarity ===
+Select the least restrictive names possible for reusable parts and their identifiers.
+Select the generic name to avoid conflicting with the naming conventions of instantiations of the generic.
+Use names that indicate the behavioral characteristics of the reusable part, as well as its abstraction .
+Do not use abbreviations in identifier or unit names.
+Document the expected behavior of generic formal parameters just as you document any package specification.

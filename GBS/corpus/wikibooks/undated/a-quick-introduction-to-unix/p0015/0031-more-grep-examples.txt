@@ -1,0 +1,62 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 15
+section: more-grep-examples
+chunk: 31
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+== Anchors ==
+
+=== Beginning of line ===
+A search can be constrained to find the string at the beginning of the line with the symbol ^.
+Example:
+
+Finds the string A at the beginning of lines.
+
+=== End of line ===
+A search can be constrained to find the string at the end of the line with the symbol $.
+Example:
+
+Finds the string 5 at the end of lines.
+
+== Counting empty lines ==
+The combination search string ^$ finds empty lines.
+
+== To match any single character ==
+The meta-character . matches any single character except the end of line character.
+
+=== Example ===
+The input file contains these lines:
+
+We search with
+
+The results are
+
+The first line doesn't match.
+
+== To match zero or more characters ==
+The meta-character * matches zero or more occurences of the previous character.
+
+=== Example ===
+The input file bells containes these lines
+
+We search with
+
+The results are
+
+=== Example ===
+The input file is as the previous example. The . is used after the * to require at least a single character.
+We search with
+
+The results are
+
+Contrast this with the previous example. Here, we match everything except be.
+
+=== Example ===
+The input file is as before.
+We search with
+
+The results are

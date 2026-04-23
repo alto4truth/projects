@@ -1,0 +1,45 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 7
+section: c-dynamic-memory-allocation-deallocation
+chunk: 31
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+ULL ) /*Check for failure. */
+{
+puts( "Can't allocate memory!" );
+exit( 0 );
+}
+puts( "Allocated array!" );
+free( p ); /*Release memory. */
+return 0;
+}
+
+The header file "stdlib.h" must be included, and a pointer to the memory
+block to be allocated must be declared. The "malloc()" function sets the
+pointer to the allocated memory block with:
+
+p = malloc( (size_t)count );
+
+The count is in bytes and it is "cast" to the type of "size_t", which is
+defined in "stdio.h". The pointer returned by "malloc()" is assigned to
+the variable "p", which is of type "char *". In ANSI C, "malloc()" returns
+a pointer of type "void *", which can be assigned to any other pointer type
+without a cast.
+If the "malloc()" fails because it can't allocate the memory, it returns the
+value NULL (as defined in "stdio.h").
+It is simple to allocate other data types:
+
+int *buf;
+...
+buf = malloc( (size_t)sizeof( int ) );
+
+The "sizeof()" function is used to determine the number of bytes in the "int"
+data type.
+When the programs finished using the memory block, it get rids of it using
+the "free" function:
+
+free( p );

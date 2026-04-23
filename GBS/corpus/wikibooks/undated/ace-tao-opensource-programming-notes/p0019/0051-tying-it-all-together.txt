@@ -1,0 +1,14 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 19
+section: tying-it-all-together
+chunk: 51
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+e patterns such as those found in the STL and Boost.
+The warts of this particular implementation of a committee designed spec should in no way detract from its substantial advantages, most notably, its performance in relation to other technologies, and relative ease of programming, again in relation to comparable technologies. For example, a white paper available from the ACE+TAO website details the performance advantage in using TAO's CORBA to Microsoft's .Net protocol as being 40x faster, and a comparison of to J2EE performance and features (if a bit dated) is generally favourable to CORBA.
+As the examples in this Wikibook illustrate, using TAO's CORBA to implement a programming environment to distribute objects and events demonstrates, performing most tasks in a distributed manner isn't that hard. Using TAO's CORBA for a robust, configurable, error free implementation makes it that much more desirable, and when you consider the performance advantages of using this technology as glue for your various programming projects, CORBA may well start to appear as the preferred middleware technology for most of your needs.
+To make the examples in this book, I used KDevelop as the programm

@@ -1,0 +1,16 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 2
+section: a-more-useful-client-and-server-example
+chunk: 14
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+le was inspired by Henning's book on using CORBA in combination with the STL containers. So, here's the interface file.
+
+=== Source File Actor.cpp ===
+
+Let's go over the code. The constructor for the factory creates the postgres connection object. The factory destructor doesn't do anything. The factory get_actor member does the job of instantiating a new Actor_i interface object. Figuring out how to write this code was quite a job for me. Since I didn't have a copy of the OCI document, I was left using more generic documents such as Henning's book. While these books will give you an idea of how something can be architected, specific implementations are definitely on you as the developer. The problem with this code as shown in the getter is that an extra reference count is placed on this object as it is created. I can't find any way to decrement this, so the effect is that when we are done with the object in our client, it gets decremented once, but not enough to get the object garbage collected. To fix this, the created object has a built in destructor function we will be discussing later. That's it for the moment on the factory.
+The actor class accesses the in-memory database with the Person object. you can see it created in the constructor for Actor_i.

@@ -1,0 +1,424 @@
+{
+  "title": "A Quick Introduction to Unix",
+  "source": "wikibooks",
+  "year": "undated",
+  "document_id": "a-quick-introduction-to-unix",
+  "authors": [],
+  "source_ref": "https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix",
+  "chunks": [
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0001/0001-a-quick-introduction-to-unix.txt",
+      "page": 1,
+      "section": "a-quick-introduction-to-unix",
+      "chunk": 1
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0001/0002-a-quick-introduction-to-unix.txt",
+      "page": 1,
+      "section": "a-quick-introduction-to-unix",
+      "chunk": 2
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0001/0003-a-quick-introduction-to-unix.txt",
+      "page": 1,
+      "section": "a-quick-introduction-to-unix",
+      "chunk": 3
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0001/0004-a-quick-introduction-to-unix.txt",
+      "page": 1,
+      "section": "a-quick-introduction-to-unix",
+      "chunk": 4
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0001/0005-a-quick-introduction-to-unix.txt",
+      "page": 1,
+      "section": "a-quick-introduction-to-unix",
+      "chunk": 5
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0002/0006-changing-directories.txt",
+      "page": 2,
+      "section": "changing-directories",
+      "chunk": 6
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0003/0007-components.txt",
+      "page": 3,
+      "section": "components",
+      "chunk": 7
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0003/0008-components.txt",
+      "page": 3,
+      "section": "components",
+      "chunk": 8
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0003/0009-components.txt",
+      "page": 3,
+      "section": "components",
+      "chunk": 9
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0004/0010-copying-files.txt",
+      "page": 4,
+      "section": "copying-files",
+      "chunk": 10
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0004/0011-copying-files.txt",
+      "page": 4,
+      "section": "copying-files",
+      "chunk": 11
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0005/0012-creating-directories.txt",
+      "page": 5,
+      "section": "creating-directories",
+      "chunk": 12
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0005/0013-creating-directories.txt",
+      "page": 5,
+      "section": "creating-directories",
+      "chunk": 13
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0006/0014-creating-files.txt",
+      "page": 6,
+      "section": "creating-files",
+      "chunk": 14
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0006/0015-creating-files.txt",
+      "page": 6,
+      "section": "creating-files",
+      "chunk": 15
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0007/0016-deleting-files.txt",
+      "page": 7,
+      "section": "deleting-files",
+      "chunk": 16
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0008/0017-directory-structure.txt",
+      "page": 8,
+      "section": "directory-structure",
+      "chunk": 17
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0009/0018-editing-text.txt",
+      "page": 9,
+      "section": "editing-text",
+      "chunk": 18
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0009/0019-editing-text.txt",
+      "page": 9,
+      "section": "editing-text",
+      "chunk": 19
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0010/0020-environment-variables.txt",
+      "page": 10,
+      "section": "environment-variables",
+      "chunk": 20
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0011/0021-files-and-processes.txt",
+      "page": 11,
+      "section": "files-and-processes",
+      "chunk": 21
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0011/0022-files-and-processes.txt",
+      "page": 11,
+      "section": "files-and-processes",
+      "chunk": 22
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0011/0023-files-and-processes.txt",
+      "page": 11,
+      "section": "files-and-processes",
+      "chunk": 23
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0012/0024-job-control.txt",
+      "page": 12,
+      "section": "job-control",
+      "chunk": 24
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0012/0025-job-control.txt",
+      "page": 12,
+      "section": "job-control",
+      "chunk": 25
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0012/0026-job-control.txt",
+      "page": 12,
+      "section": "job-control",
+      "chunk": 26
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0012/0027-job-control.txt",
+      "page": 12,
+      "section": "job-control",
+      "chunk": 27
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0013/0028-links.txt",
+      "page": 13,
+      "section": "links",
+      "chunk": 28
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0013/0029-links.txt",
+      "page": 13,
+      "section": "links",
+      "chunk": 29
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0014/0030-listing-files-and-directories.txt",
+      "page": 14,
+      "section": "listing-files-and-directories",
+      "chunk": 30
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0015/0031-more-grep-examples.txt",
+      "page": 15,
+      "section": "more-grep-examples",
+      "chunk": 31
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0015/0032-more-grep-examples.txt",
+      "page": 15,
+      "section": "more-grep-examples",
+      "chunk": 32
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0016/0033-moving-files.txt",
+      "page": 16,
+      "section": "moving-files",
+      "chunk": 33
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0017/0034-my-first-shell-script.txt",
+      "page": 17,
+      "section": "my-first-shell-script",
+      "chunk": 34
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0017/0035-my-first-shell-script.txt",
+      "page": 17,
+      "section": "my-first-shell-script",
+      "chunk": 35
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0017/0036-my-first-shell-script.txt",
+      "page": 17,
+      "section": "my-first-shell-script",
+      "chunk": 36
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0017/0037-my-first-shell-script.txt",
+      "page": 17,
+      "section": "my-first-shell-script",
+      "chunk": 37
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0017/0038-my-first-shell-script.txt",
+      "page": 17,
+      "section": "my-first-shell-script",
+      "chunk": 38
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0017/0039-my-first-shell-script.txt",
+      "page": 17,
+      "section": "my-first-shell-script",
+      "chunk": 39
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0017/0040-my-first-shell-script.txt",
+      "page": 17,
+      "section": "my-first-shell-script",
+      "chunk": 40
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0017/0041-my-first-shell-script.txt",
+      "page": 17,
+      "section": "my-first-shell-script",
+      "chunk": 41
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0017/0042-my-first-shell-script.txt",
+      "page": 17,
+      "section": "my-first-shell-script",
+      "chunk": 42
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0018/0043-pathnames.txt",
+      "page": 18,
+      "section": "pathnames",
+      "chunk": 43
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0018/0044-pathnames.txt",
+      "page": 18,
+      "section": "pathnames",
+      "chunk": 44
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0019/0045-permissions.txt",
+      "page": 19,
+      "section": "permissions",
+      "chunk": 45
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0019/0046-permissions.txt",
+      "page": 19,
+      "section": "permissions",
+      "chunk": 46
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0019/0047-permissions.txt",
+      "page": 19,
+      "section": "permissions",
+      "chunk": 47
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0019/0048-permissions.txt",
+      "page": 19,
+      "section": "permissions",
+      "chunk": 48
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0019/0049-permissions.txt",
+      "page": 19,
+      "section": "permissions",
+      "chunk": 49
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0020/0050-redirection.txt",
+      "page": 20,
+      "section": "redirection",
+      "chunk": 50
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0020/0051-redirection.txt",
+      "page": 20,
+      "section": "redirection",
+      "chunk": 51
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0020/0052-redirection.txt",
+      "page": 20,
+      "section": "redirection",
+      "chunk": 52
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0020/0053-redirection.txt",
+      "page": 20,
+      "section": "redirection",
+      "chunk": 53
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0020/0054-redirection.txt",
+      "page": 20,
+      "section": "redirection",
+      "chunk": 54
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0021/0055-searching-text-files.txt",
+      "page": 21,
+      "section": "searching-text-files",
+      "chunk": 55
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0021/0056-searching-text-files.txt",
+      "page": 21,
+      "section": "searching-text-files",
+      "chunk": 56
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0021/0057-searching-text-files.txt",
+      "page": 21,
+      "section": "searching-text-files",
+      "chunk": 57
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0022/0058-shells-and-subshells.txt",
+      "page": 22,
+      "section": "shells-and-subshells",
+      "chunk": 58
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0022/0059-shells-and-subshells.txt",
+      "page": 22,
+      "section": "shells-and-subshells",
+      "chunk": 59
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0022/0060-shells-and-subshells.txt",
+      "page": 22,
+      "section": "shells-and-subshells",
+      "chunk": 60
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0023/0061-special-directories.txt",
+      "page": 23,
+      "section": "special-directories",
+      "chunk": 61
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0024/0062-toc.txt",
+      "page": 24,
+      "section": "toc",
+      "chunk": 62
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0025/0063-todo.txt",
+      "page": 25,
+      "section": "todo",
+      "chunk": 63
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0026/0064-wildcards.txt",
+      "page": 26,
+      "section": "wildcards",
+      "chunk": 64
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0027/0065-exercises1.txt",
+      "page": 27,
+      "section": "exercises1",
+      "chunk": 65
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0028/0066-exercises2.txt",
+      "page": 28,
+      "section": "exercises2",
+      "chunk": 66
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0029/0067-exercises2-1.txt",
+      "page": 29,
+      "section": "exercises2-1",
+      "chunk": 67
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0030/0068-exercises3.txt",
+      "page": 30,
+      "section": "exercises3",
+      "chunk": 68
+    },
+    {
+      "path": "wikibooks/undated/a-quick-introduction-to-unix/p0031/0069-exercises4.txt",
+      "page": 31,
+      "section": "exercises4",
+      "chunk": 69
+    }
+  ]
+}

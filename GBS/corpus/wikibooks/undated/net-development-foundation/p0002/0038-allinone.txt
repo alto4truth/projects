@@ -1,0 +1,32 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 38
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+ls on this). Today the availability of much more “computer power” has moved the focus from arrays to collections. The two main problems of arrays are:
+
+They are fixed length
+They support only one internal organization
+Collections address most of the shortcomings of arrays (at a cost though). Arrays can still be considered for a fixed group of objects that have to be efficiently manipulated.
+We will have some examples in the using arrays section.
+
+=== Classes ===
+
+Classes are themselves split in three:
+
+user-defined classes
+boxed value types
+delegates
+Boxed value types will be discussed a little later in the boxing / unboxing section.
+Delegates will also be covered later in their section.
+User-defined classes are the basic realizations of the object oriented concepts.
+Obviously a lot can be said about classes but since no exam objective reference to them we will assume that the reader is already familiar with the concept and have already worked with them (in .NET or elsewhere).
+You can have System classes (hundreds and hundreds of them) and custom classes (where you will code the essential of your program logic).
+We have examples of using and building classes.
+
+=== Interfaces ===

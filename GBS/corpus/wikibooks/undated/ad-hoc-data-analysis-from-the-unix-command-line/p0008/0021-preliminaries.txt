@@ -1,0 +1,33 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 8
+section: preliminaries
+chunk: 21
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+== Formatting ==
+These typesetting conventions will be used when presenting example interactions at the command line:
+
+$ command argument1 argument2 argument3
+output line 1
+output line 2
+output line 3
+[...]
+
+The "$ " is the shell prompt. What you type is shown in boldface; command output is in regular type.
+
+== Example data ==
+I will use the following sample files in the examples.
+
+=== The Unix password file ===
+The password file can be found in /etc/passwd. Every user on the system has one line (record) in the file. Each record has seven fields separated by colon (':') characters. The fields are username, encrypted password, userid, default group, gecos, home directory and default shell. We can look at the first few lines with the head command, which prints just the first few lines of a file. Correspondingly, the tail command prints just the last few lines.
+
+$ head -5 /etc/passwd
+root:x:0:0:root:/:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin

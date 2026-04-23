@@ -1,0 +1,19 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 21
+section: searching-text-files
+chunk: 57
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+l are going to cover.
+
+=== wc (word count) ===
+A handy little utility is the wc command, short for word count. To do a word count on science.txt, type
+
+% wc -w science.txt
+To find out how many lines the file has, type
+
+% wc -l science.txt

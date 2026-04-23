@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 340
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ects the number or order of its parameters, locating the occurrences that must be changed can be difficult.
+
+=== Overloading the Equality Operator ===
+
+==== guideline ====
+Define an appropriate equality operator for private types.
+Consider redefining the equality operator for a private type.
+When overloading the equality operator for types, maintain the properties of an algebraic equivalence relation.

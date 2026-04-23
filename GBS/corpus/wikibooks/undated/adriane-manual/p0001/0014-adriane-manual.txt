@@ -1,0 +1,18 @@
+title: Adriane-Manual
+source: wikibooks
+year: undated
+document_id: adriane-manual
+authors: 
+page: 1
+section: adriane-manual
+chunk: 14
+source_ref: https://en.wikibooks.org/wiki/Adriane-Manual
+
+viewer pictures can be zoomed (key “+” plus) or decreased (key “-” minus). To quit press “q”. When viewing pictures the screen reader is de-activated.
+
+=== Managing files - file manager with the Adriane menu system ===
+Note: more advanced LINUX users may surely prefer this hell described in the next chapter managing files and directories, because tasks up much quicker to do but it requires a lot of special knowledge.
+Advanced Linux users may prefer the shell for all tasks relating to the copying, deleting, moving and renaming files and directories, because with knowledge of some simple commands such tasks can be solved in a fraction of the time it can be done by navigating through menus.
+The Adriane File Manager is a simple but very powerful tool which summarizes the most important tasks in the simple menus. However, in many cases several steps have to be taken to e.g. copy a directory with all the files to an USB stick.
+When entering the menu item "Manage files" in the Adriane main menu, there will be shown a list of available directories and disc drives. The first menu item is always the own root directory (path /home/knoppix), which contains all your personal files and settings and is always writable for the user.
+If Adriane runs from CD no files or data will be saved. However, if a USB Flash disk is used you can use an overlay which writes your personal data to district image file or partition on the hard disk. Of cause data can be stored on any device, but first these devices have to be made accessible, you have to “mounted” them. When you want to remove these devices after finishing your work please remember to unmount this disc for safe removal.

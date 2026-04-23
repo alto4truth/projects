@@ -1,0 +1,41 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 374
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+lure of one condition means that the other condition will raise an exception.
+Use <= and >= in relational expressions with real operands instead of =.
+
+==== statements ====
+Minimize the depth of nested expressions (Nissen and Wallis 1984).
+Minimize the depth of nested control structures (Nissen and Wallis 1984).
+Try using simplification heuristics.
+Use slices rather than a loop to copy part of an array.
+Minimize the use of an others choice in a case statement.
+Do not use ranges of enumeration literals in case statements.
+Use case statements rather than if/elsif statements, wherever possible.
+Use type extension and dispatching rather than case statements, if possible.
+Use for loops, whenever possible.
+Use while loops when the number of iterations cannot be calculated before entering the loop but a simple continuation condition can be applied at the top of the loop.
+Use plain loops with exit statements for more complex situations.
+Avoid exit statements in while and for loops.
+Minimize the number of ways to exit a loop.
+Use exit statements to enhance the readability of loop termination code (NASA 1987).
+Use exit when ... rather than if ... then exit whenever possible (NASA 1987).
+Review exit statement placement.
+Consider specifying bounds on loops.
+Consider specifying bounds on recursion.
+Do not use goto statements.
+Minimize the number of return statements from a subprogram (NASA 1987).
+Highlight return statements with comments or white space to keep them from being lost in other code.
+Use blocks to localize the scope of declarations.
+Use blocks to perform local renaming.
+Use blocks to define local exception handlers.
+Use an aggregate instead of a sequence of assignments to assign values to all components of a record
+Use an aggregate instead of a temporary variable when building a record to pass as an actual parameter
+Use positional association only when there is a conventional ordering of the arguments.

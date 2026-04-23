@@ -1,0 +1,32 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 14
+section: source-code-presentation
+chunk: 518
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+lignment ===
+
+==== guideline ====
+Align parameter modes and parentheses vertically.
+
+==== instantiation ====
+Specifically, it is recommended that you:
+
+Place one formal parameter specification per line.
+Vertically align parameter names, colons, the reserved word in, the reserved word out, and parameter subtypes.
+Place the first parameter specification on the same line as the subprogram or entry name. If any parameter subtypes are forced beyond the line length limit, place the first parameter specification on a new line indented the same as a continuation line.
+
+==== example ====
+
+The following two examples show alternate instantiations of this guideline:
+
+or:
+
+Aligning parentheses makes complicated relational expressions more clear:
+
+==== rationale ====
+This alignment facilitates readability and understandability, and it is easy to achieve given automated support. Aligning parameter modes provides the effect of a table with columns for parameter name, mode, subtype, and, if necessary, parameter-specific comments. Vertical alignment of parameters across subprograms within a compilation unit increases the readability even more.

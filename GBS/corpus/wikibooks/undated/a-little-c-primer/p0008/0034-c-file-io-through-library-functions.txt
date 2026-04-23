@@ -1,0 +1,40 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 8
+section: c-file-io-through-library-functions
+chunk: 34
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+from a file.
+
+All these library functions depend on definitions made in the "stdio.h"
+header file, and so require the declaration:
+
+#include <stdio.h>
+
+C documentation normally refers to these functions as performing "stream
+I/O", not "file I/O". The distinction is that they could just as well handle
+data being transferred through a modem as a file, and so the more general
+term "data stream" is used rather than "file". However, we'll stay with the
+"file" terminology in this document for the sake of simplicity.
+The "fopen()" function opens and, if need be, creates a file. Its syntax
+is:
+
+<file pointer> = fopen( <filename>, <access mode> );
+
+The "fopen()" function returns a "file pointer", declared as follows:
+
+FILE *<file pointer>;
+
+The file pointer will be returned with the value NULL, defined in "stdio.h",
+if there is an error. The "access modes" are defined as follows:
+
+r Open for reading.
+w Open and wipe (or create) for writing.
+a Append -- open (or create) to write to end of file.
+r+ Open a file for reading and writing.
+w+ Open and wipe (or create) for reading and writing.
+a+ Open a file for reading and appending.

@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 337
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+nfix operators. Because you no longer need to rename each operator explicitly, you avoid errors such as renaming a + to a -. See also Guideline 5.7.1.
+
+==== notes ====
+You should choose package names to be minimally meaningful, recognizing that package names will be widely used as prefixes (e.g., Pkg.Operation or Object : Pkg.Type_Name;). If you rename every package to some abbreviation, you defeat the purpose of choosing meaningful names, and it becomes hard to keep track of what all the abbreviations represent.
+For upward compatibility of Ada 83 programs in an Ada 95 environment, the environment includes library-level renamings of the Ada 83 library level packages (Ada Reference Manual 1995, §J.1 [Annotated]). It is not recommended that you use these renamings in Ada 95 code.
+
+=== Overloaded Subprograms ===
+
+==== guideline ====
+Limit overloading to widely used subprograms that perform similar actions on arguments of different types (Nissen and Wallis 1984).
+
+==== example ====

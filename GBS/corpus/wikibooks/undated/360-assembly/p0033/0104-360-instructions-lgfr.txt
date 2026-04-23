@@ -1,0 +1,33 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 33
+section: 360-instructions-lgfr
+chunk: 104
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+LGFR - Load Register And Sign-Extend - RRE Instruction - Opcode B914
+
+== Format ==
+LGFR 2,6 Copy the contents of register 6 into register 2, sign-extending from 32 to 64 bits.
+The specific syntax is
+
+LGFR target register, source register.
+
+== Opcode ==
+Template:360 opcode RRE
+
+== Example usage ==
+The LGFR instruction is used to copy the contents of the second register argument (the source register) into the first register argument (the target register), replacing the contents of the target register with the contents of the source register, sign-extended from 32 to 64 bits. The following is an example of how the instruction would assemble in various forms from an assembly language listing:
+
+B914 0026 LGFR 2,6
+B914 0092 LGFR 9,2
+B914 00FA LGFR 15,10
+
+== Typical Usage ==
+When it is necessary to extend integer value as a signed one from 32 to 64 bits, having the source in a general register.
+
+== Availability ==
+The LGFR instruction is 64-bit, and is only available on the 390 series and z/System. It will cause an opcode exception on the 360 and 370 series.

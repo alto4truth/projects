@@ -1,0 +1,25 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 9
+section: importing-modules
+chunk: 49
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+riting, we use the import operator. For example, to import moduletest.py into your main program, you would have this:
+
+Code Example 2 - mainprogram.py
+
+This assumes that the module is in the same directory as mainprogram.py, or is a default module that comes with python. You leave out the '.py' at the end of the file - it is ignored. You normally put all import statements at the beginning of the python file, but technically they can be anywhere. In order to use the items of the module in your main program, you use the following:
+
+Code Example 3 - mainprogram.py continued
+
+As you see, the modules that you import act very much like the classes we looked at last lesson - anything inside them must be preceded with modulename for it to work.
+
+== More About Modules ==
+Wish you could get rid of the modulename part that you have to put before every item you use from a module? No? Never? Well, I'll teach it to you anyway.
+One way to avoid this hassle is to import only the wanted objects from the module. To do this, you use the from operator. You use it in the form of from modulename import itemname. Here is an example:
+
+Code Example 4 - importing individual objects

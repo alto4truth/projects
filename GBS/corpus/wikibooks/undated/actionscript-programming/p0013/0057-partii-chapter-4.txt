@@ -1,0 +1,36 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 13
+section: partii-chapter-4
+chunk: 57
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+his/her name in the Input Text and clicks the button you want to trace different values. To solve this you must add the following code to the button:
+
+If you want you can write a simple program just for you. You can create two Input Texts one button, a Dynamic Text (that will show the status) and write a code to determine if the user who want enter your program is member or not. This little program will be your security, keeping other people away. Below is shown a little fragment of the button’s actions:
+
+UserName is the “var” property of the first Input Text
+Password is the “var” property of the second Input Text
+Status is the “var” property of the Dynamic Text
+
+=== For ===
+“For” is used to repeat the code for several times. Below is shown the use of “For”:
+
+Now I will bring you example where you need to use “For”. For example you want to add all numbers from 1 to 10 (1+2+3+4+…+10). For doing it you have to write the following code:
+
+1. var i = new Number();
+2. i += 1;
+3. i += 2;
+4. i += 3;
+5. i += 4;
+6. i += 5;
+7. i += 6;
+8. i += 7;
+9. i += 8;
+10. i += 9;
+11. i += 10;
+
+(or if you are too smart)

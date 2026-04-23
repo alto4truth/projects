@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 479
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+er to write or understand than the specification of the ADO. The bodies are also nearly identical.
+Compare the body for the simplest version, the ADO:
+
+with the body for the most powerful and flexible version, the GADT:
+
+There is only one difference. The ADO declares a local object called Stack, while the GADT has one additional parameter (called Stack) on each of the exported procedures Push and Pop.
+
+=== Iterators ===
+
+==== guideline ====
+Provide iterators for traversing complex data structures within reusable parts.
+Consider providing both active and passive iterators.
+Protect the iterators from errors due to modification of the data structure during iteration.
+Document the behavior of the iterators when the data structure is modified during traversal.

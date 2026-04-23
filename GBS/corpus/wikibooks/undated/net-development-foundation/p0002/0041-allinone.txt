@@ -1,0 +1,22 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 41
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+e examples of using and building interfaces. Some interfaces of the System namespace are shown in the standard interfaces section.
+
+=== Attributes ===
+
+We now take a short break of our discussions on types to talk a little bit about attributes. First of all attributes are not types. They are elements of information that are added to a program element (assemblies, classes, method, etc.) to qualify it outside of the normal code associated with that element.
+Those added "attributes" serves at doing manipulations of the underlying program element without having to modify the execution logic of the element.
+Why would we ever want to manipulate program elements outside execution code? The short answer here is that object oriented concepts do not easily deal with what is known as cross-cutting concerns, or aspects of a program that apply to all or most classes. Examples of such aspects are security, persistence, serialization, etc. Instead of modifying every class to add serialization logic (which has nothing to do with business rules) you can add serialization attributes to the class to direct the serialization process of those classes without changing the business logic (execution code).
+A number of functionality of the framework rely on attributes to add information to program elements. The attributes are kept by the compilation process and associated with their qualifying element in the assemblies. They are analyzed programmatically at run time using reflection to adjust the behavior of "cross-cutting" functionalities.
+As for types we have System attributes (part of the framework) and Custom attributes (built by the developer). The development of Customs attributes will be treated in the reflection section. Until then we will limit ourselves with System attributes and focus on defining them and knowing how they will determine the behavior of framework.
+The attributes usage section will give some example of how simple System attributes can be used.
+Let's note here that attributes are not the only way to add "non-execution" information to a program to modify its behavior. XML configuration files for example can be used to specify parameters that will affect program execution. We will talk about those in the Configuration section of this book.
+See MSDN for the discussion of attributes in C#.

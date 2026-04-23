@@ -1,0 +1,22 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 65
+section: branch-instructions
+chunk: 173
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+address, where a register is provided to store the address of the instruction following the branch to provide a means to return to the calling point.
+
+== Branch without return ==
+The following instructions are available for all models of the 360 series, including the 360, 370, 390 and z/System.
+
+[1] Extended mnemonics provide condition tests, including BR and B for unconditional branch; BNO, BE, BNE, BH, BL and BM, among others
+
+== Examples ==
+The general use of these is explained below.
+
+=== No Branch ===
+Certain types of branch instructions are treated as a no branch, or no-operation (NO-OP). Generally they involve the use of Register 0 or a mask value of 0. These are:

@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 5
+section: introduction
+chunk: 104
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+often several ways to implement a particular design decision, and these guidelines discuss the tradeoffs you should consider in making your decision.
+
+=== To Experienced Object-Oriented Programmers ===
+As an experienced object-oriented programmer, you will appreciate the effort that has gone into elegantly extending the Ada language to include powerful object-oriented features. These new features are integrated tightly with the existing language features and vocabulary. This book is intentionally written to provide a view from the perspective of style; therefore, Ada object-oriented features are used throughout the book. Disciplined use of these features will promote programs that are easier to read and modify. These features also give you flexibility in building reusable components. Chapter 9 addresses object-oriented programming and the issues of inheritance and polymorphism. Earlier chapters cross reference the Chapter 9 guidelines.
+You will find it easier to take advantage of many of the concepts in Chapter 9 if you have done an object-oriented design. The results of an object-oriented design would include a set of meaningful abstractions and hierarchy of classes. The abstractions need to include the definition of the design objects, including structure and state, the operations on the objects, and the intended encapsulation for each object. The details on designing these abstractions and the hierarchy of classes are beyond the scope of this book. A number of good sources exist for this detail, including Rumbaugh et al. (1991), Jacobson et al. (1992), the ADARTS Guidebook (Software Productivity Consortium 1993), and Booch (1994).

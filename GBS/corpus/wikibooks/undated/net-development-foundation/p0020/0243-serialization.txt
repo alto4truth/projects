@@ -1,0 +1,29 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 20
+section: serialization
+chunk: 243
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+So do not use a directory path there.
+You can add methods such as the WaitForChanged(..) to watch for changes in the specified area.
+Path class - MSDN
+
+The System.IO.Path class has many useful static methods for creating and parsing resource paths.
+ErrorEventArgs class and ErrorEventHandler delegate
+
+ErrorEventArgs class - MSDN
+ErrorEventHandler delegate - MSDN
+RenamedEventArgs class and RenamedEventHandler delegate
+
+RenamedEventArgs class - MSDN
+RenamedEventHandler delegate - MSDN
+
+==== Byte streams ====
+Exam objective: Manage byte streams by using Stream classes.
+(Refer System.IO namespace)
+FileStream class - MSDN
+Stream class - MSDN

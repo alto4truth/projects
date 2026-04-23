@@ -1,0 +1,20 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 56
+section: 360-instructions-trt
+chunk: 155
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+TRT - SS - Opcode DD - Scan a data string, looking for 1 or more specific characters.
+The TRT instruction scans a field, looking for specific bytes. TRT does not change any data. The D1 field contains the address of the data to be scanned. The D2 field contains the address of a 256 byte table where each byte contains either X'00' or a non-zero byte, at the offset in the HEX table of the byte being searched for. TRT sets the condition code, indicating whether the object character(s) was found.
+Availability
+The TRT instruction is available on all models.
+Caution
+TRT changes both registers 1 and 2. TRT is the only instruction that changes reg-2 as part of the operation, so if you use TRT, then don't use reg-2 as your base.
+Purpose of Instruction
+The TRT instruction searches for specific bytes. For example, if you wanted to find the next occurrence either of C'D' or C'K', you would code:
+
+TRT DATA,SRCHTBL

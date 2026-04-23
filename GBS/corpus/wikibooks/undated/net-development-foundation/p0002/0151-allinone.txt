@@ -1,0 +1,41 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 151
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+r.
+Retrieve attributes of a single type from multiple members.
+
+==== Retrieving A Single Attribute From A Member ====
+To access attribute information:
+
+Declare an instance of the attribute type.
+Use the Attribute.GetCustomAttribute(type, typeof) method to read the attribute into the instance.
+Use the properties of the instance to read the values.
+The example code below declares a class ExampleClass with a QualityCheck attribute. The GetSingleAttribute method accepts a target member type and the type of attribute you're looking for. The Attribute.GetCustomAttribute method retrieves the attribute information into the attr object, from which we can read the all-important IsApproved property:
+
+[QualityCheck("Scott Baker", "02/04/2006", IsApproved = false)]
+public class ExampleClass
+{
+
+public static void Main()
+{
+GetSingleAttribute(typeof(ExampleClass), typeof(QualityCheck))
+}
+
+public static void GetSingleAttribute(Type targetType, Type attrType)
+{
+typeof(attrType) attr = (attrType)Attribute.GetCustomAttribute(targetType, typeof(attrType));
+
+if (attr == null)
+{ //... }
+else
+{
+Console.Writeline(attr.IsApproved);
+}
+}

@@ -1,0 +1,15 @@
+title: A First Course to Network Coding
+source: wikibooks
+year: undated
+document_id: a-first-course-to-network-coding
+authors: 
+page: 4
+section: information-measure-and-handy-inequations
+chunk: 7
+source_ref: https://en.wikibooks.org/wiki/A_First_Course_to_Network_Coding
+
+Inequalities involving these concepts will be introduced, too, to help reinforce readers’ understanding and enlarge their toolbox for future learning.
+
+== Introduction ==
+To understand network coding, one need background knowledge in information theory. Among the essential concepts of information theory, a fundamental one is Shannon’s information measure - entropy, mutual information and relative entropy. Instead of considering semantic aspects of information, the entropy measures the uncertainty of the outcome of a discrete random variable. Mutual information, as its name suggests, is how much information one d.r.v. contains about the other, or how much uncertainty one d.r.v. 'kills' for the other. Then we come to relative entropy, which can be seen as a generalization of mutual information. It measures the 'distance' between two d.r.v.s' probability distribution. After the three basic concepts are delivered, we introduce the inequalities that further characterize the properties of the information measures.
+To characterize uncertainty, consider a coin flip. If the coin is not fair, say, the head has a 0.8 chance to turn up, while the tail only has a 0.2 chance. Then your uncertainty is low because you are quite certain that the head will turn up. However, if it is a fair coin, you will be more uncertain because the head and tail are equally likely to turn up. So if you were to use a mathematical expression to characterize the uncertainty of an outcome, this expression should be of the form of expectation, and reach its maximum when all choices are equally likely. Moreover, if we use dice instead of coin, or roulette instead of dice, then the uncertainty should grow as the number of choices grow. That is, the expression characterizing it should be increasing with the number of choices, i.e. the size of the alphabet. Lastly, if you roll two dices at once, the uncertainty of '3' and '4' turn up should be the same as that of rolling one dice then the other. So if sequential choices yield the same outcome as a single one, then the expressions of these choices should be able to combine and the combined result should be equal to that of the single choice. The three intuitive properties described above serves as criteria for choosing such expression.

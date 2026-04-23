@@ -1,0 +1,27 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 385
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+calized section of code (see Guideline 5.7.2).
+A list of accepted abbreviations for a project provides a standard context for using each abbreviation.
+
+== Naming Conventions ==
+Choose names that clarify the object's or entity's intended use. Ada allows identifiers to be any length as long as the identifier fits on a line with all characters being significant (including underscores). Identifiers are the names used for variables, constants, program units, and other entities within a program.
+
+=== Names ===
+
+==== guideline ====
+Choose names that are as self-documenting as possible.
+Use a short synonym instead of an abbreviation (see Guideline 3.1.4).
+Use names given by the application, but do not use obscure jargon.
+Avoid using the same name to declare different kinds of identifiers.
+
+==== example ====
+In a tree-walker, using the name Left instead of Left_Branch is sufficient to convey the full meaning given the context. However, use Time_Of_Day instead of TOD.
+Mathematical formulas are often given using single-letter names for variables. Continue this convention for mathematical equations where they would recall the formula, for example:

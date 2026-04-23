@@ -1,0 +1,25 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 14
+section: very-simple-programs
+chunk: 81
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+-
+
+== Order of Operations ==
+Here are some examples that you might want to try, if you're rusty on this:
+
+=== Code Example 3 – Order of operations ===
+
+In the first example, the computer calculates 2 * 3 first, then adds 1 to it. This is because multiplication has the higher priority (at 3) and addition is below that (at a lowly 4).
+In the second example, the computer calculates 1 + 2 first, then multiplies it by 3. This is because parentheses (brackets, like the ones that are surrounding this interluding text ;) ) have the higher priority (at 1), and addition comes in later than that.
+Also remember that the math is calculated from left to right, unless you put in parentheses. The innermost parentheses are calculated first. Watch these examples:
+
+=== Code Example 4 – Parentheses ===
+
+In the first example, 4 - 40 is calculated, then - 3 is done.
+In the second example, 40 - 3 is calculated, then it is subtracted from 4.

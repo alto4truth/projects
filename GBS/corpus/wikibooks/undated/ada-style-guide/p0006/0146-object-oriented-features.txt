@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 146
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+iscriminants to support "full" multiple inheritance where an object must be referenceable as an entity of two or more distinct unrelated abstractions.
+
+==== example ====
+Both examples that follow are taken directly from Taft (1994). The first shows how to use multiple inheritance techniques to create an abstract type whose interface inherits from one type and whose implementation inherits from another type. The second example shows how to enhance the functionality of a basic abstraction by mixing in new features.
+The abstract type Set_Of_Strings provides the interface to inherit:
+
+In the package body, you define the bodies of the operations (i.e., Enter, Remove,Combine, Size, etc.) using the operations available on Hash_Table. You must also provide any necessary "glue" code.
+In this second example, the type Basic_Window responds to various events and calls:
+
+You use mixins to add features such as labels, borders, menu bar, etc.:
+
+In the generic body, you implement any overridden operations as well as the new operations. For example, you could implement the overridden Display operation using some of the inherited operations:

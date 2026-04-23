@@ -1,0 +1,39 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 9
+section: c-file-io-through-system-calls
+chunk: 47
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+if it succeeds, and returns -1 if it
+encounters an error.
+The "unlink()" system call deletes a file. It has the syntax:
+
+unlink( <file_name_string> );
+
+It returns 0 on success and -1 on failure.
+Note: Even after unlink, you will be able to read / write using fd.
+The "write()" system call writes data to an open file. It has the syntax:
+
+write( <file descriptor>, <buffer>, <buffer length> );
+
+The file descriptor is returned by a "creat()" or "open()" system call. The
+"buffer" is a pointer to a variable or an array that contains the data; and
+the "buffer length" gives the number of bytes to be written into the file.
+While different data types may have different byte lengths on different
+systems, the "sizeof()" statement can be used to provide the proper buffer
+length in bytes. A "write()" call could be specified as follows:
+
+float array[10];
+...
+write( fd, array, sizeof( array ) );
+
+The "write()" function returns the number of bytes it actually writes. It
+will return -1 on an error.
+The "read()" system call reads data from a open file. Its syntax is exactly
+the same as that of the "write()" call:
+
+read( <file descriptor>, <buffer>, <buffer length> );

@@ -1,0 +1,21 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 20
+section: redirection
+chunk: 51
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+like this
+
+%cat myfile.txt
+and it will put the contents of myfile.txt on screen and then return you to the prompt. It scrolls the contents very fast!
+
+=== Using cat to capture from the keyboard ===
+When you use cat in the way described, the input is from a file and it writes to the standard output (you guessed it: the screen). But we can direct cat to take its input from elsewhere than a file and we can send its output to somewhere other than the screen.
+You can use cat to capture what is typed at the keyboard and send it to some output. We can try it by typing cat without specifying a file name, like this
+
+% cat
+You can now type at the keyboard and when you have entered as many characters as you wish press return for a new line. When you are finished typing altogether, type Control-d (written as ^D for short) to end the process. If you run cat like this without naming a file to read, it reads the standard input (the keyboard) and on receiving the 'end of file' (^D), copies it to the standard output (the screen).

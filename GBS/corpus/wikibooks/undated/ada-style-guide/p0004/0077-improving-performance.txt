@@ -1,0 +1,39 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 4
+section: improving-performance
+chunk: 77
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ad (see Guideline 10.6.3).
+
+=== Subprogram Dispatching ===
+
+==== guideline ====
+Use static subprogram dispatching when measured performance indicates.
+
+==== example ====
+The term "static dispatching" in this example refers to the use of if/elsif sequences to explicitly determine which subprograms to call based on certain conditions:
+
+==== rationale ====
+Determine the impact of dynamic and static subprogram dispatching. The compiler may generate much more efficient code for one form of dispatching than the other.
+
+==== notes ====
+Dynamic dispatching will almost certainly be more efficient than an explicit if . . . elsif sequence. However, you should be aware of any optimizing decisions made by a compiler that might affect this situation.
+
+== Types ==
+
+=== Aggregates for Type Extensions ===
+
+==== guideline ====
+Use only simple aggregates when measured performance indicates.
+
+==== example ====
+
+==== rationale ====
+Determine the impact of using extension aggregates. There may be a significant performance difference between evaluation of simple aggregates and evaluation of extension aggregates.
+
+=== Protected Types ===

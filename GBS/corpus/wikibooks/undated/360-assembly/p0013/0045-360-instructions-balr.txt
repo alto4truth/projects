@@ -1,0 +1,25 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 13
+section: 360-instructions-balr
+chunk: 45
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ernal subroutines (within the same module), the BAL instruction is preferred.
+
+== Exceptions and Faults ==
+The BALR instruction has no faults, however
+
+The target address contained within the branch register must not be odd, or an operation exception occurs
+The target address contained within the branch register must be within the range of valid memory or an operation exception occurs.
+The storage key for the target address must be the same as the current process (or this process must have a key of 0) or a memory protect violate exception occurs.
+
+== See also ==
+BAL - Similar instruction usually used to call internal subroutines
+BASR - Alternative branch instruction for external subroutines on 370 or 390 machines
+BAS - Alternative internal subroutine call similar to BASR
+BSM - Used to nranch while changing the mode from 24 to 31 bit or 31 to 24 bit
+BASSM - Used to nranch while changing the mode from 24 to 31 bit or 31 to 24 bit

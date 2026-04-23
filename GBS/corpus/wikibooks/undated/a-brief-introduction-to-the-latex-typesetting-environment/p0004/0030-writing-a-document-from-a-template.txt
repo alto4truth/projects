@@ -1,0 +1,45 @@
+title: A Brief Introduction to the LaTeX Typesetting Environment
+source: wikibooks
+year: undated
+document_id: a-brief-introduction-to-the-latex-typesetting-environment
+authors: 
+page: 4
+section: writing-a-document-from-a-template
+chunk: 30
+source_ref: https://en.wikibooks.org/wiki/A_Brief_Introduction_to_the_LaTeX_Typesetting_Environment
+
+se in a moment, it may be a good idea to copy this into your typesetting application so you can see what it look like, but don't typeset it quite yet:
+
+\documentclass[11pt,a4paper,oneside]{article}
+\usepackage{geometry}
+\geometry{letterpaper}
+\usepackage[parfill]{parskip}
+\usepackage{epsfig}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+\pagestyle{fancy}
+\usepackage[]{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\setcounter{tocdepth}{1}
+%Document begins here
+\begin{document}
+\title{An Example}
+\author{An Author}
+\date{1/1/12} % delete this line to display the current date
+\maketitle
+\abstract{This is an abstract}
+\tableofcontents
+\section{Section 1}
+This is a section
+\subsection{Subsection 1}
+This is a subsection
+\end{document}
+
+The first thing you'll want to note is that any line beginning with a '%' symbol
+
+== Letters ==
+
+== Books ==

@@ -1,0 +1,17 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 14
+section: event
+chunk: 44
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+== Installation ==
+These days, the pre-compiled RPMs for redhat type servers (Fedora, RedHat, CentOS, etc.) are a pretty handy way to get your name server installed and running as a boot time service. That's certainly what I use on my laptop for testing, and at work on our servers. I don't know if someone has done something similar for the Microsoft platform, but I don't really consider this to be a popular choice for critical service platform due to their regular downtime requirements in an enterprise setting.
+The very nice CosEventServer implementation provided for RedHat, and I assume other server vendors of the UNIX variety, has a config directory in /etc . The values in the config directory are easy to understand and edit, and there are mercifully few options to set. For instance, my opt file in /etc/tao, is the stock config file which came with the distro and is as follows:
+
+Note that the endpoint string doesn't have an address. This means it listens to all interfaces. If you wish to define a more restrictive listener, place your address after the double slashes, but before the colon. i.e.
+
+-ORBListenEndpoints iiop://localhost:2809

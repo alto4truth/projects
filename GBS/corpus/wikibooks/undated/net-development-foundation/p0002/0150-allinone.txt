@@ -1,0 +1,28 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 150
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+d.
+
+Disambiguation is the clarification of the use of an attribute on a code member.
+Syntax - there is more than one way to apply multiple attributes.
+
+==== Disambiguation ====
+
+==== Syntax: Applying Multiple Attributes ====
+
+=== Retrieving Attribute Information At Runtime ===
+Being able to declare and apply attributes is not very helpful unless we can retrieve that data and do something with it. Fortunately, its a straightforward process. There are three basic scenarios that will be addressed:
+
+Retrieve a single attribute from a member.
+Retrieve multiple attributes from a member.
+Retrieve attributes of a single type from multiple members.
+
+==== Retrieving A Single Attribute From A Member ====
+To access attribute information:

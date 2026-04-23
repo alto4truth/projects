@@ -1,0 +1,20 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 41
+section: 360-instructions-mvc
+chunk: 127
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+uction can be used to move from 1 to 256 bytes of data. The MVCL instruction is available on 370 and above machines for moving larger volumes of data.
+
+== Typical Usage ==
+When a program needs to move a string from one location to another. If the length is not specified, the assembler uses the specified length of the target field. The assembler will flag an error if the target length is over 256 bytes. The minimum length that can be moved is one byte.
+
+== Operation ==
+The string of characters in the address noted in the right operand is moved, for the specified length, to the address noted in the left operand. Bytes are moved one at a time.
+
+== Exceptions and Faults ==
+Protection Exception - the source or the target is outside of the legal address range assigned to this task

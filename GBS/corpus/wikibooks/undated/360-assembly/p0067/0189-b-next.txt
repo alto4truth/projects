@@ -1,0 +1,38 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 67
+section: b-next
+chunk: 189
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ssembler. This requires just one extra instruction but increases the branch range to 2 gigabytes (i.e. the whole address space for 31 bit processors).
+
+SR R15,R15 Clear index register to zero (32 bits)
+IC R15,INPUT Insert input byte into low order bits of R15
+* (bits 24-31 - forming X'000000C1' for EBCDIC "A")
+IC R15,TABLE2(R15) Use R15 as Index to extract a 0,4,8,12 or 16
+* from the 2nd Table
+ICM R15,15,TABLE1(R15) extract absolute address into all 32 bits of R15 from the 2nd Table
+* The previous ICM instruction above could also be accomplished with
+* L R15,TABLE1(R15)
+BR R15 Branch using the address in R15
+TABLE1 DS 0H ---Start of Offset table--- (each is 2 bytes long)
+DC A(ERROR) 00 = Invalid input value
+DC A(ADD) 04 = Input value was "A"
+DC A(SUBTRACT) 08 = Input value was "S"
+DC A(MULTIPLY) 12 = Input value was "M"
+DC A(DIVIDE) 16 = Input value was "D"
+* ---End of Branch table
+ERROR EQU * Label for Errors - could be in a
+* different CSECT (R15=Entry point address)
+*
+* print or display error message or similar
+ADD EQU * Label for 'Add' - could be in a
+* different CSECT through either
+* an EXTRN ADD statement, or changing
+* the A(ADD) to V(ADD) (or whatever name)
+*
+* perform addition and continue with rest of program

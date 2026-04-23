@@ -1,0 +1,38 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 14
+section: source-code-presentation
+chunk: 511
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+tion for continuation lines.
+A label is outdented three spaces:
+
+The if statement and the plain loop:
+
+Loops with the for and while iteration schemes:
+
+The block and the case statement as recommended in the Ada Reference Manual (1995):
+
+These case statements save space over the Ada Reference Manual (1995) recommendation and depend on very short statement lists, respectively. Whichever you choose, be consistent:
+
+The various forms of selective accept and the timed and conditional entry calls:
+
+The accept statement:
+
+A subunit:
+
+Proper bodies of program units:
+
+Context clauses on compilation units are arranged as a table. Generic formal parameters do not obscure the unit itself. Function, package, and task specifications use standard indentation:
+
+Instantiations of generic units and record indentation:
+
+Indentation for record alignment:
+
+Tagged types and type extension:
+
+==== example ====

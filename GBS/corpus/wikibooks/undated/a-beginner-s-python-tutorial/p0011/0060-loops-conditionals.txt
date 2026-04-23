@@ -1,0 +1,23 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 11
+section: loops-conditionals
+chunk: 60
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+while loop example
+
+Remember, to make a program, you open IDLE, click 'File > New Window', type your program in the new window, then press F5 to run.
+
+== Boolean Expressions (Boolean... what?!?) ==
+What do you type in the area marked {conditions that the loop continues}? The answer is a boolean expression.
+What? A forgotten concept for the non-math people here. Never mind, boolean expression just means a question that can be answered with a TRUE or FALSE response. For example, if you wanted to say your age is the same as the person next to you, you would type:
+My age == the age of the person next to me
+And the statement would be TRUE. If you were younger than the person opposite, you'd say:
+My age < the age of the person opposite me
+And the statement would be TRUE. If, however, you were to say the following, and the person opposite of you was younger than you:
+My age < the age of the person opposite me
+The statement would be FALSE - the truth is that it is the other way around. This is how a loop thinks - if the expression is true, keep looping. If it is false, don't loop. With this in mind, lets have a look at the operators (symbols that represent an action) that are involved in boolean expressions:

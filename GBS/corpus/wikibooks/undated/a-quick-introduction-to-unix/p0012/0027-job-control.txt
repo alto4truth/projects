@@ -1,0 +1,24 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 12
+section: job-control
+chunk: 27
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+sing bare fg you add the job number like this:
+
+%fg 2
+This would take the job with the number two (identified by jobs) and bring it to the foreground.
+
+=== Killing a Job ===
+You can terminate Unix jobs in different ways. A simple way is to bring the job to foreground and terminate it, with control-c for example.
+The Unix command kill can be used to terminate a background process. You can follow kill either by the job number (prefixed with %) or the process identification number (PID). A common misconception is that the -9 (SIGKILL signal) is required to terminate a process. This is a bad practice because the SIGKILL signal does not allow the process to gracefully terminate and makes it immediately terminate. This can cause problems with memory management. The proper way to kill a process is with the -2 (SIGINT) signal which allows the process to perform cleanup:
+
+%kill -2 %2
+The %2 specifies the PID of the process. To kill using a job number, the percent sign is omitted:
+
+%kill -2 1367
+If the -2 signal does not work, the process may be blocked or may be executing improperly. In this case, use -1 (SIGHUP), -15 (SIGTERM), and then at last resort -9 (SIGKILL).

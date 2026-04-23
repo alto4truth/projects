@@ -1,0 +1,24 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 13
+section: 360-instructions-balr
+chunk: 43
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+PSW as the new next instruction address.
+
+== 64-bit operation ==
+The address of the next instruction is loaded into bits 0-64 of the target register.
+
+== Source Register is zero ==
+For the First example, establishing a base register, the format is BALR R5,R0 The value of the current PC (Program Counter) plus 2 (the size of this instruction) is loaded into the target register (R5 in this case). Execution continues at the next instruction and no branch occurs.
+
+== Source Register not zero ==
+For the Second example, calling an external routine, the format is BALR R5,R3It will store the Next Sequential Address after the BALR instruction in R5 and jump to the address stored in R3. R3 will have to have been preloaded before issuing this instruction with the address of the external routine, either by
+
+an LA or LAY instruction
+in 24- or 32-bit mode, with an L instruction of an A constant if the external routine is local to this module, or a V constant containing an external symbol if the external routine is in a different module, or
+in 64-bit mode with an LG instruction of an AD constant.

@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 381
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+capital letter beginning every word separated by underscores.
+Use uppercase for abbreviations and acronyms (see automation notes).
+
+==== example ====
+
+==== rationale ====
+Visually distinguishing reserved words allows you to focus on program structure alone, if desired, and also aids scanning for particular identifiers.
+The instantiation chosen here is meant to be more readable for the experienced Ada programmer, who does not need reserved words to leap off the page. Beginners to any language often find that reserved words should be emphasized to help them find the control structures more easily. Because of this, instructors in the classroom and books introducing the Ada language may want to consider an alternative instantiation. The Ada Reference Manual (1995) chose bold lowercase for all reserved words.

@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 119
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ue but also includes the appropriate condition on T.Data for computation of pay.
+The class-wide transaction type can then be properly used as follows:
+
+If you had not defined the operation Is_Valid on transactions, then the validity condition for pay computation (valid name and hours worked) would have to directly become the precondition for Pay_Transaction.Execute. But this would be a "stronger" precondition than that on the class-wide dispatching operation, violating the guideline. As a result of this violation, there would be no way to guarantee the precondition of a dispatching call to Execute, leading to unexpected failures.
+An alternative resolution to this problem is to define an exception to be raised by an Execute operation when the transaction is not valid. This behavior becomes part of the semantic model for the class-wide type: the precondition for Execute(T) becomes simply True (i.e., always valid), but the postcondition becomes "either" the exception is not raised and Has_Executed = True "or" the exception is raised and Has_Executed = False. The implementations of Execute in all derived transaction types would then need to satisfy the new postcondition. It is important that the "same" exception be raised by "all" implementations because this is part of the expected semantic model of the class-wide type.
+With the alternative approach, the above processing loop becomes:

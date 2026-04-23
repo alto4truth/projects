@@ -1,0 +1,26 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 24
+section: system-types-topics
+chunk: 276
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+ns.
+Some external links on collections are GotDotNet and AspNetResources
+See MSDN for a general discussion on arrays, collections and data structures.
+
+=== Generics ===
+
+Generic programming or the use of parameterized types is not an object oriented concept. In that sense Generics are a bit like attributes, they were added to main stream object-oriented platforms to take care of situations that are not easily covered by object-oriented techniques.
+To start our discussion please read the following interesting linked article (annexes) that introduces the concept of generics in the context of generic collections. This external tutorial does the same.
+The concept of Generics is interesting because it applies the concept of generalization to types. Types themselves are generalizations of objects (the basis of object-oriented programming). So here we start manipulating types, namely having types as parameters.
+The actual type will be obtained when you substitute the parameter type with a specific type (For example when you declare a variable of that type).
+
+// C#
+List<int> myIntList = new List<int>()
+
+'// VB.NET
+Dim myIntList As New List(Of Integer)

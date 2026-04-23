@@ -1,0 +1,15 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 79
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+ess that does not require a user interface. Why would you need a long-running process that does not require a user interface? Essentially two reasons:
+
+Doing maintenance tasks that do not need user intervention. A backup software for example will regularly check the backup schedule and execute the different backup tasks when needed. No user interface is needed for that.
+Responding to requests that come from other processes or from the operating system. An http server such as IIS (Windows component that process web requests) will receive http requests coming from client browsers and produce responses (html pages) to those same browsers. A database process is another good example. Again the http server does not need a user interface because the interface with the client is managed by the client browser component.
+The exam objectives concerning services are very basic and touch the first problems that you will encounter when dealing with them:

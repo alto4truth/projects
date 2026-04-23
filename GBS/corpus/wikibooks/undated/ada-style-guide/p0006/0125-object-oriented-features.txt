@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 125
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ion after descendant-specific finalization. (You may position the parent initialization and/or finalization at the beginning or end of the procedure.)
+
+=== Abstract Types ===
+
+==== guideline ====
+Consider using abstract types and operations in creating classification schemes, for example, a taxonomy, in which only the leaf objects will be meaningful in the application.
+Consider declaring root types and internal nodes in a type tree as abstract.
+Consider using abstract types for generic formal derived types.
+Consider using abstract types to develop different implementations of a single abstraction.

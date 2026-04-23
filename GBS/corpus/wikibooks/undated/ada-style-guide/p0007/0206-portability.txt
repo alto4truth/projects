@@ -1,0 +1,29 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 206
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+o compilations of an unchanged file to result in the same data representation. Things that can change the representation between compilations include:
+
+A change in a file earlier in the compilation order
+A change in the optimization strategy or level
+A change in versions of the compiler
+A change in actual compilers
+A change in the availability of system resources
+Therefore, two independently linked programs or partitions should only share data that has their representations explicitly controlled.
+
+==== notes ====
+During a porting effort, all representation clauses can be evaluated as either design artifacts or specifications for accessing interface data that might change with a new implementation.
+
+=== Package System ===
+
+==== guideline ====
+Avoid using package System constants except in attempting to generalize other machine-dependent constructs.
+
+==== rationale ====
+Because the values in this package are implementation-provided, unexpected effects can result from their use.

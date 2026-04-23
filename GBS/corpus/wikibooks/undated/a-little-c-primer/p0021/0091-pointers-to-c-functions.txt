@@ -1,0 +1,28 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 21
+section: pointers-to-c-functions
+chunk: 91
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+This document has explained how to declare pointers to variables, arrays,
+and structures in C. It is also possible to define pointers to functions.
+This feature allows functions to be passed as arguments to other functions.
+This is useful for, say, building a function that determines solutions to a
+range of math functions.
+The syntax for declaring pointers to functions is obscure, and so let's start
+with an oversimplified example: declaring a pointer to the standard library function
+"printf()":
+
+The function pointer has to be declared as the same type ("int" in this case)
+as the function it represents.
+Next, let's pass function pointers to another function. This function will
+assume the functions passed to it are math functions that accept double and
+return double values:
+
+It is obvious that not all functions can be passed to "testfunc()". The
+function being passed must agree with the expected number and type of
+parameters, as well as with the value returned.

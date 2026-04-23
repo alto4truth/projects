@@ -1,0 +1,19 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 4
+section: parti-chapter-1-page2
+chunk: 15
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+ngle, double click it and press F8 to convert it to symbol. When the "Convert to Symbol" dialog appears, set its’ name "g_box" and behavior "Graphic".
+
+Step 2
+Press F11 to see the Library window and click "Create New Symbol" . When the "Create New Symbol" dialog appears, set its’ name to "m_box" and the behavior to "Movie Clip" and press OK. When you are in "m_box" , add "g_box" graphic from the library. Then right click the 32-nd frame in Timeline window and choose "Insert Keyframe". Now click any frame between 1 and 32 and in the Properties window from the Tween combo box choose "Motion". Then in Rotate combo box choose
+"CW" (Clockwise) and in the "Rotation Count" field type 1. This will make the box 1 time to rotate in clockwise direction.
+Step 3
+Now go to the "Scene1" and select the Text Tool from the Toolbox. Draw a Text and set its’ width to 40, height to 20, font size to 20, Var to "info" and change the Text Type to "Dynamic Text".
+Step 4
+Now right click our box and choose "Actions". When the Actions windows appears make sure the "Advanced Mode" is turned on and type the following the movieclip m_box:

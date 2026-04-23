@@ -1,0 +1,15 @@
+title: A Brief Introduction to the LaTeX Typesetting Environment
+source: wikibooks
+year: undated
+document_id: a-brief-introduction-to-the-latex-typesetting-environment
+authors: 
+page: 3
+section: typesetting-the-basics
+chunk: 17
+source_ref: https://en.wikibooks.org/wiki/A_Brief_Introduction_to_the_LaTeX_Typesetting_Environment
+
+solve a lot of problems in the future if you're using different packages and should help with troubleshooting when you're writing your own documents.
+
+==== The geometry option ====
+The geometry option is also important to set in any document. It can be specified with the flag as shown above. More often than not you'll be printing in a portrait rather than landscape since the document will probably be something you'd read in print.
+It's important to note, and we will get into this later on in the book, that this flag cannot be changed throughout the document. It's a one-time deal. If you've got a page of graphs that you think would look better displayed in a landscape style there is a different command for this and we will introduce it later on.

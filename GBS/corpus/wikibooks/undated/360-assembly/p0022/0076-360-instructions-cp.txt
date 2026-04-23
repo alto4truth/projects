@@ -1,0 +1,14 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 22
+section: 360-instructions-cp
+chunk: 76
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+Compare Packed Decimal Instruction, format
+
+The data string located at the storage address specified by operand-2 (b2+d2) is compared to the data string located at the storage address specified by operand-1 (b1+d1).
+The operands may be different lengths with a maximum length of 16 bytes (or 31 digits since this is packed) for each operand. This is an arithmetic comparison.

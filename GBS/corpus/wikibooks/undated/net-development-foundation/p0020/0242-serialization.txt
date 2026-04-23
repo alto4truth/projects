@@ -1,0 +1,45 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 20
+section: serialization
+chunk: 242
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+System.Runtime.Serialization.Formatters.Soap namespace)
+BinaryFormatter class - MSDN
+
+(Refer System.Runtime.Serialization.Formatters.Binary namespace
+
+==== File system classes ====
+Exam objective: Access files and folders by using the File System classes.
+(Refer System.IO namespace)
+File class and FileInfo class
+
+For common IO tasks see MSDN
+File class - MSDN
+FileInfo class - MSDN
+Directory class and DirectoryInfo class
+
+Directory class - MSDN
+DirectoryInfo class - MSDN
+DriveInfo class and DriveType enumeration
+
+DriveInfo class - MSDN
+DriveType enumeration - MSDN
+FileSystemInfo class and FileSystemWatcher class
+
+FileSystemInfo class
+FileSystemWatcher class
+The FileSystemWatcher class is designed to detected changes in the filesystem.
+It can be parametrised with the Filter and Path Property.
+Example:
+FileSystemWatcher w = new FileSystemWatcher();
+w.Filter = "*.txt";
+w.Path = @"C:\Windows";
+
+The Filter property is only used to check the pattern of a file name. So do not use a directory path there.
+You can add methods such as the WaitForChanged(..) to watch for changes in the specified area.
+Path class - MSDN

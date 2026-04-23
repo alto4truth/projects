@@ -1,0 +1,18 @@
+title: Adriane-Manual
+source: wikibooks
+year: undated
+document_id: adriane-manual
+authors: 
+page: 1
+section: adriane-manual
+chunk: 17
+source_ref: https://en.wikibooks.org/wiki/Adriane-Manual
+
+Knoppix/Adriane will normally be shown as a subdirectory of “/media”. So for example “/media/SDA 1” refers to the 1st partition on the 1st disc drive.
+
+==== Mounting devices ====
+As part and below the /home directory the recognized devices are listed. If the device is already mounted, it is marked as “mounted”. All others, recognized and referred arelisted with their device name and manufacturer name.
+When selecting a unmounted device or disk by pressing the “Enter” key a dialog is opened, proposing to mount this device. To exit the mounting process press ESCAPE (Esc) and you will be lead to the directory you started from.
+Knoppix/Adriane automatically detects all standard file systems such as the LINUX based (ext2, ext3, ext4, reiserfs, xfs) or the DOS/Windows types (FAT32, NTFS or ExFAT ). However, some file systems need specific file permissions ("Permissions" and access control lists) and might be difficult to use for inexperienced users. In such a case working with the shell might be the better solution, because you are working with administrator rights and more functions for rights management are available.
+Encrypted partitions cannot be mounted with the simple Adriane file manager. But mounting it manually including the needed unlocking mechanism in th Shell will enable access in the file manager. It will appear in the list of mounted devices.
+If a selected volume is already mounted, not the mounting dialogue will show up, but another dialogue box will offer to navigate to the selected device or to unmount the drive, close and store all file modifications and to unmount the device. Without unmounting e.g. a CD or DVD drive it will not be possible to open and remove a CD or DVD.

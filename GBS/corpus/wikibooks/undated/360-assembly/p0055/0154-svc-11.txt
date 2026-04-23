@@ -1,0 +1,17 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 55
+section: svc-11
+chunk: 154
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+s or changes in memory, which the user pointed to via registers or argument lists in registers. The results and values are operating-system dependent.
+
+== Condition Codes ==
+Condition codes are changed to the value of the condition codes stored in the condition code bits of the PSW stored at the Supervisor Call New PSW address. When returning from the Supervisor call, the Supervisor routine in the operating system may choose to change any condition codes as a result of its operation. Otherwise the condition codes upon return to the program issuing the SVC will be the same as they were when the call was made.
+
+== Exceptions and Faults ==
+The Supervisor Call is a non-privileged instruction, and will not cause a program exception. The specific SVC number to use for any particular service is assigned by the operating system the program runs under, and if incorrect, the operating system may produce no noticeable result, unexpected, or undesired results, terminate the program, or transfer control to an exception routine.

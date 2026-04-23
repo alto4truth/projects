@@ -1,0 +1,25 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 157
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+Ada features and their implementations and guidelines about the use of other Ada features to ensure maximum portability.
+
+=== Obsolescent Features ===
+
+==== guideline ====
+In programs or components intended to have a long life, avoid using the features of Ada declared as "obsolescent" by Annex J of the Ada Reference Manual (1995), unless the use of the feature is needed for backward compatibility with Ada 83 (Ada Reference Manual 1983).
+Document the use of any obsolescent features.
+Avoid using the following features:
+The short renamings of the packages in the predefined environment (e.g., Text_IO as opposed to Ada.Text_IO)
+The character replacements of ! for |, : for #, and % for quotation marks
+Reduced accuracy subtypes of floating-point types
+The 'Constrained attribute as applied to private types
+The predefined package ASCII
+The exception Numeric_Error
+Various representation specifications, including at clauses, mod clauses, interrupt entries, and the Storage_Size attribute

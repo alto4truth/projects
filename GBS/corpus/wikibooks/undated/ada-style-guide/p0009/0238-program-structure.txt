@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 238
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ase, the additional context clause on the parent body (and other child package bodies) that names the private child package of supporting subprograms.
+
+=== Configuration Pragmas ===
+
+==== guideline ====
+When possible, express configuration pragmas through compiler options or other means that do not require modifications to the source code.
+When configuration pragmas must be placed in source code, consider isolating them to one compilation unit per partition; if specified, the main subprogram for the partition is recommended.

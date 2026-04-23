@@ -1,0 +1,62 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 2
+section: appendices
+chunk: 3
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+== Appendix A: pcalc source code ==
+A perl read-eval-print loop. This makes a very handy calculator on the command line. Example usage:
+
+$ pcalc 1+2
+3
+$ pcalc "2*2"
+4
+$ pcalc 2*3
+6
+
+Source:
+
+#!/opt/third-party/bin/perl
+use strict;
+if ($#ARGV >= 0) {
+eval_print(join(" ",@ARGV))
+} else {
+use Term::ReadLine;
+my $term = new Term::ReadLine 'pcalc';
+while ( defined ($_ = $term->readline("")) ) {
+s/[\r\n]//g;
+eval_print($_);
+$term->addhistory($_) if /\S/;
+}
+}
+
+sub eval_print {
+my ($str) = @_;
+my $result = eval $str;
+if (!defined($result)) {
+print "Error evaluating '$str'\n";
+} else {
+print $result,"\n";
+}
+}
+
+== Appendix B: Random unfinished ideas ==
+Ideas too good to delete, but that aren't fleshed out.
+
+=== Micro shell scripts from the command line ===
+Example - which .so has the object I want?
+
+=== Using backticks ===
+
+==== Example - killing processes by name ====
+kill `ps auxww | grep httpd | grep -v grep | awk '{print $2}'`
+
+==== Example - tailing the most recent log file in one easy step ====
+tail -f `ls -rt *log | tail -1`
+
+=== James' xargs trick ===
+James uses echo with xargs and feeds one xargs' output into another xargs in clever ways to build up complex command lines.

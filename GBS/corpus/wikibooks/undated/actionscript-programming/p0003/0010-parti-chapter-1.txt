@@ -1,0 +1,16 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 3
+section: parti-chapter-1
+chunk: 10
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+ord "box" in the second line to "box2" and it will look like "box2._rotation = 45; ", then, by testing the movie you will see that the box is rotated.
+
+=== Alpha ===
+Alpha gives the object transparency. If alpha value is set to 0, then the object is completely invisible. If the value is set to 100, then the object is completely visible. You can set alpha value to your object both in design time by choosing "Alpha" in "Color" combo box in the Property window and in runtime, by using ActionScript. To test this add the following line to the previous example.
+
+The following line will make the box transparent.

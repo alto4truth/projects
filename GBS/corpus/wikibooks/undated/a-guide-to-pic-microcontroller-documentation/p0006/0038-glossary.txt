@@ -1,0 +1,16 @@
+title: A Guide To PIC Microcontroller Documentation
+source: wikibooks
+year: undated
+document_id: a-guide-to-pic-microcontroller-documentation
+authors: 
+page: 6
+section: glossary
+chunk: 38
+source_ref: https://en.wikibooks.org/wiki/A_Guide_To_PIC_Microcontroller_Documentation
+
+== D ==
+DSP - Digital Signal Processor - processor designed to efficiently process discrete signal data (e.g. audio, video). Key processor instruction on a DSP is the MAC instruction (multiply and accumulate) which allows a single piece of data to be multiplied by a single coefficient value and added to the value currently in the processors accumulator, all in a single processing cycle.
+DSC - Digital Signal Controller - acronym used by Microchip Technology to define their dsPIC family of products which contain a microprocessing core and a DSP. The alternative definition is used to highlight the products embedded control properties (fixed latency times for jumps into interrupt routines, fixed instruction processing time) regardless of which instruction the processor is currently processing, which is typically not the case for pure DSP architectures.
+
+== W ==
+Workaround - typically a software solution to a hardware problem in a controller product. Usually involves reordering code to avoid a hardware problem, or changing a setting under certain situations.

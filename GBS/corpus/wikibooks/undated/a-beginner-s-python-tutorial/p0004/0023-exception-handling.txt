@@ -1,0 +1,21 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 4
+section: exception-handling
+chunk: 23
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+n error occurs (using continue, which starts the loop from the top again, and break, which leaves the loop):
+
+Code Example 12 - Dealing With NameError
+
+Here, we restarted the loop if you typed in something wrong. In line 12 we assumed you wanted to quit the program if you didn't press 1, so we quit the program.
+But there are still problems. If we leave something blank, or type in an unusual character like ! or ;, the program gives us a SyntaxError. Lets deal with this. When we are asking for the numbers to subtract, we will give a different error message. When we ask to press 1, we will again assume the user wants to quit.
+
+Code Example 13 - Now, dealing with SyntaxError
+
+As you can see, you can have multiple except uses, each dealing with a different problem. You can also have one except to deal with multiple exceptions, by putting them inside parentheses and separating them with commas.
+Now we have a program that is very difficult, to crash by an end user. As a final challenge, see if you can crash it. There is one way I have thought of - if you read the section on human error carefully, you might know what it is.

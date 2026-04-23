@@ -1,0 +1,20 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 26
+section: using-system-types
+chunk: 289
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+SDN if you are interested.
+
+=== Building an enumeration ===
+Building a custom enumeration is pretty straightforward as shown by the following example.
+
+=== Using reference types ===
+Reference types are more commonly referred to as objects. Classes, Interfaces and Delegates are all reference types, as well as the built-in reference types System.Object and System.String. Reference types are stored in managed Heap memory.
+Unlike Value types, reference types can be assigned the value null.
+Copying a reference type copies a reference that points to the object, not a copy of the object itself. This can seem counter-intuitive at times, since changing a copy of a reference will also change the original.
+A Value type stores the value it is assigned, plain and simple - but a Reference type stores a pointer to a location in memory (on the heap). Think of the heap as a bunch of lockers and the Reference type holds the locker number (there are no locks in this metaphor). Copying a Reference type is like giving someone a copy of your locker number, rather than a copy of its contents. Two Reference types that point to the same memory is like two people sharing the same locker - both can modify its content:

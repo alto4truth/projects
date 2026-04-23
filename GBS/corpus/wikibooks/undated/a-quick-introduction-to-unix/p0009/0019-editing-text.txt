@@ -1,0 +1,21 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 9
+section: editing-text
+chunk: 19
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+on functions or flexibility that other Unix editors have, but we don't need that yet.
+
+You can start Pico with a filename as well, typing, for example
+
+pico firstscript.sh
+Notice that I gave the file the extension .sh to remind me - and Unix - that it is a script file (of which more later). The screen will look just the same if the file doesn't exist when you start but if the file does already exist then its contents will be displayed on screen. You enter text directly at the Pico cursor and issue commands with combinations of the control key and a character (the character part is not case sensitive). If you issue a command and wish to cancel it you use ^c. You can move about your file with the arrow keys.
+
+== Pico Peculiarities ==
+Some Pico behaviour will take a little getting used to.
+
+Pico does have a little more functionality than this (although not much!) but this is enough for current purposes. Before you go on to creating scripts, use the Pico editor to create a text file of your own making sure to practise these few commands.

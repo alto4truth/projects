@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 152
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ollection, or composite data structure.
+Avoid using type extensions for parameterized abstractions when generics provide a more appropriate mechanism.
+
+=== managing visibility ===
+Consider giving derived tagged types the same visibility to the parent type as other clients of the parent.
+Define a derived tagged type in a child of the package that defines the base type if the implementation of the derived type requires greater visibility into the implementation of the base type than other clients of the base type require.
+
+=== multiple inheritance ===
+Consider using type composition for implementation, as opposed to interface, inheritance.
+Consider using a generic to "mix in" functionality to a derivative of some core abstraction.
+Consider using access discriminants to support "full" multiple inheritance where an object must be referenceable as an entity of two or more distinct unrelated abstractions.

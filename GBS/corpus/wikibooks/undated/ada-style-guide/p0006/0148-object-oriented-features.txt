@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 148
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+u need to use an abstract type hierarchy for the multiple inheritance of interface and separate mixins for the multiple inheritance of implementation.
+
+==== rationale ====
+In other languages such as Eiffel and C++, multiple inheritance serves many purposes. In Eiffel, for instance, you must use inheritance both for module inclusion and for inheritance itself (Taft 1994). Ada provides context clauses for module inclusion and child libraries for finer modularization control. Ada does not provide a separate syntax for multiple inheritance. Rather, it provides a set of building blocks in type extension and composition that allow you to mix in additional behaviors.
+A library of mixins allows the client to mix and match in order to develop an implementation. Also see Guideline 8.3.8 about implementing mixins.
+You should not use multiple inheritance to derive an abstraction that is essentially unrelated to its parent(s). Thus, you should not try to derive a menu abstraction by inheriting from a command line type and a window type. However, if you have a basic abstraction such as a window, you can use multiple inheritance mixins to create a more sophisticated abstraction, where a mixin is the package containing the type(s) and operations that will extend the parent abstraction.
+Use self-referential data structures to implement types with "full" multiple inheritance ("multiple polymorphism").
+A common mistake is to use multiple inheritance for parts-of relations. When a type is composed of several others types, you should use heterogeneous data structuring techniques, discussed in Guideline 5.4.2.

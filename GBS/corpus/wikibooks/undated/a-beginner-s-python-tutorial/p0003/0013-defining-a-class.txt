@@ -1,0 +1,22 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 3
+section: defining-a-class
+chunk: 13
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+lass
+
+If we wanted to define a new class, let's say a square, based on our previous Shape class, we would do this:
+
+Code Example 7 - Using inheritance
+
+It is just like normally defining a class, but this time we put the parent class that we inherited from in brackets after the name. As you can see, this lets us describe a square really quickly. That's because we inherited everything from the shape class, and changed only what needed to be changed. In this case we redefined the __init__ function of Shape so that the X and Y values are the same.
+Let's take from what we have learnt, and create another new class, this time inherited from Square. It will be two squares, one immediately left of the other:
+
+Code Example 8 - DoubleSquare class
+
+This time, we also had to redefine the perimeter function, as there is a line going down the middle of the shape. Try creating an instance of this class. As a helpful hint, the IDLE command line starts where your code ends - so typing a line of code is like adding that line to the end of the program you have written.

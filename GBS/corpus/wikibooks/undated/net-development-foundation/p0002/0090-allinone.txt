@@ -1,0 +1,28 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 90
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+ain;
+
+AppDomainSetup ads = AppDomain.CurrentDomain.SetupInformation;
+Console.WriteLine(ads.ConfigurationFile);
+Console.WriteLine(ads.ApplicationName);
+
+== Configuration, diagnostic, management, and installation ==
+Exam objective: Embedding configuration, diagnostic, management, and installation features into a .NET Framework application
+
+=== Topics ===
+
+==== Configuration management ====
+Configuration management is used here in a restricted sense. It refers to the adaptation of an application to a specific execution environment or user. This is usually done thru the use of configuration files that specify the run time parameters of the application. The typical example of such configuration information is the connection string used to locate and connect to the application database. The exam objectives are all related to the actual interaction of the application with its configuration files.
+The management or the design of the configuration files themselves is a vast subject that is not touched by the exam objectives so we will not cover it in this study guide.
+
+==== .NET framework installer ====
+
+==== Event log ====

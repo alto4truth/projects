@@ -1,0 +1,21 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 15
+section: for-loop
+chunk: 88
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+for completing the game.
+
+From this, we can write a real program. Ready? Here it is (skip typing the comments):
+
+Code Example 6 - Text Adventure Game
+
+Well, a very simple, but fun, game. Don't get daunted by the amount of code there, 53 of the lines are just the 'if' statements, which is the easiest thing to read there. (Once you comprehend all the indentation, you'll be able to make your own game, and you can make it as simple [or as complex] as you like.)
+
+== Making the Game Better ==
+The first question you should ask is "does this program work?". The answer here is yes. Then you should ask "does this program work well?" - not quite. The menu() function is great - it reduces a lot of typing. The 'while' loop that we have, however, is a little messy - four levels of indents, for a simple program. We can do better!
+Now, this will become much MUCH more straightforward when we introduce classes. But that will have to wait. Until then, let's make a function that reduces our mess. We will pass two things to it - the menu choice we made, and the location of the key. It will return one thing - whether or not the key has been found. Lets see it:

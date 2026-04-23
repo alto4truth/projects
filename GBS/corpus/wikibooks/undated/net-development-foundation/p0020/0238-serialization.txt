@@ -1,0 +1,21 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 20
+section: serialization
+chunk: 238
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+s called deserialization.
+
+==== Serializable attribute ====
+An object is serializable if its class name is prefixed with the [Serializable] attribute.
+
+==== Object Serialization ====
+One can use the BinaryFormatter class to serialize an object. To serialize, use the BinaryFormatter's Serialize() method which takes a stream and a serializable object as parameters. To deserialize, use the BinaryFormatter's Deserialize() method which takes a stream as a parameter and returns a object that can be cast back to the original object type. Remember to close streams after you use them by calling the stream's Close() method.
+
+==== XML Serialization ====
+One can use the XmlSerializer class to serialize an object. To serialize, use the XmlSerializer's Serialize() method which takes a stream and a serializable object as parameters. To deserialize, use the XmlSerializer's Deserialize() method which takes a stream as a parameter and returns a object that can be cast back to the original object type. Remember to close streams after you use them by calling the stream's Close() method.
+For an overview of XML and SOAP serialization see MSDN

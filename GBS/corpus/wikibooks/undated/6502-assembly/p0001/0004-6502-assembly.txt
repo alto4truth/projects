@@ -1,0 +1,36 @@
+title: 6502 Assembly
+source: wikibooks
+year: undated
+document_id: 6502-assembly
+authors: 
+page: 1
+section: 6502-assembly
+chunk: 4
+source_ref: https://en.wikibooks.org/wiki/6502_Assembly
+
+JMP instruction.
+Example
+The addresses $A001 and $A002 are read, returning $FF and $00 respectively. The address $00FF is then jumped to.
+
+JMP ($A001)
+
+=== Absolute Indexed with X: a,x ===
+The value in X is added to the specified address for a sum address. The value at the sum address is used to perform the computation.
+Example
+The value $02 in X is added to $C001 for a sum of $C003. The value $5A at address $C003 is used to perform the add with carry (ADC) operation.
+
+ADC $C001,X
+
+=== Absolute Indexed with Y: a,y ===
+The value in Y is added to the specified address for a sum address. The value at the sum address is used to perform the computation.
+Example
+The value $03 in Y is added to $F001 for a sum of $F004. The value $EF at address $F004 is incremented (INC) and $F0 is written back to $F004.
+
+INC $F001,Y
+
+=== Zero Page Indexed with X: zp,x ===
+The value in X is added to the specified zero page address for a sum address. The value at the sum address is used to perform the computation.
+Example
+The value $02 in X is added to $01 for a sum of $03. The value $A5 at address $0003 is loaded into the Accumulator.
+
+LDA $01,X

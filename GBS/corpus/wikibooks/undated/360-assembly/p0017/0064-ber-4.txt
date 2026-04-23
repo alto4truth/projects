@@ -1,0 +1,29 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 17
+section: ber-4
+chunk: 64
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+CLC RESP(L'QN1),QN1 Test 'N' (L' tells the assembler to use
+* the specied length of the named label)
+BER 5 Answer was 'N'
+CLC RESP(1),QN2 Is it 'n'?
+BNER 3 Something else, try again
+BR 5 Answer was 'n'
+QUES DC C'Are you ready to start?' Construct a 'C' language-type
+DC X'00' string, zero terminated
+RESP DS C One byte response
+QY1 DC C'Y' Available responses
+QY2 DC C'y'
+QN1 DC C'N'
+QN2 DC C'n'
+YESRTN DC V(YES) External module YES
+*
+* This will handle a 'no' answer
+==Typical Usage==
+
+The branch on condition register and optional formats are typically used after performing a comparison or arithmetic operation. In the following code, a question is asked, the response is compared to yes or no, and the question is re-issued if not either. The 'CALL' macro is used to create a standard subroutine linkage. In this example, a no response is handled internally (at label NO) while a yes response transfers control to another routine (called YES)

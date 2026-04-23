@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 26
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+upon task priorities to achieve a particular sequence of task execution.
+
+==== example ====
+For example, let the tasks have the following priorities:
+
+At some point in its execution, T1 is blocked. Otherwise, T2 and Server might never execute. If T1 is blocked, it is possible for T2 to reach its call to Server's entry (Operation) before T1. Suppose this has happened and that T1 now makes its entry call before Server has a chance to accept T2's call.
+This is the timeline of events so far:
+T1 blocks
+T2 calls Server.Operation
+T1 unblocks
+T1 calls Server.Operation—Does Server accept the call from T1 or from T2?
+You might expect that, due to its higher priority, T1's call would be accepted by Server before that of T2. However, entry calls are queued in first-in-first-out (FIFO) order and not queued in order of priority (unless pragma Queueing_Policy is used). Therefore, the synchronization between T1 and Server is not affected by T1's priority. As a result, the call from T2 is accepted first. This is a form of priority inversion. (Annex D can change the default policy of FIFO queues.)
+A solution might be to provide an entry for a High priority user and an entry for a Medium priority user.

@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 161
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+Duration'Small
+Minimum and maximum scale for decimal types
+Avoid assumptions about the values and the number of values included in the type Character.
+
+==== instantiation ====
+These are minimum values (or minimum precision in the case of Duration'Small) that a project or application might assume that an implementation provides. There is no guarantee that a given implementation provides more than the minimum, so these would be treated by the project or application as maximum values also.
+16 bits available for type Integer (-2**15 .. 2**15 - 1)
+6 decimal digits of precision available for floating-point types
+24 bits available for fixed-point types
+200 characters per line of source text
+16 bits for expressions
+-86_400 .. 86_400 seconds (1 day) for the range of Duration (as specified in Ada Reference Manual 1995, §9.6 [Annotated])
+20 milliseconds for Duration'Small (as specified in Ada Reference Manual 1995, §9.6 [Annotated])

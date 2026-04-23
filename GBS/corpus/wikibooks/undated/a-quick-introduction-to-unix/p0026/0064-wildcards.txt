@@ -1,0 +1,29 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 26
+section: wildcards
+chunk: 64
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+== Wildcards ==
+A wildcard is a character that can stand for all members of some class of characters. When you use a wildcard the computer systems substitutes the members of the class for the wildcard character. The examples below will make this clearer. We will use the command ls for illustration.
+
+=== The * wildcard ===
+The character * is a wildcard and matches zero or more character(s) in a file (or directory) name. For example, in your mytraining directory, you might type
+
+% ls list*
+This will list all files in the current directory starting with list.
+You could type
+
+% ls *list
+This will list all files in the current directory ending with list.
+
+=== The ? wildcard ===
+The character ? will match exactly one character.
+So ?ouse will match files like house and mouse, but not grouse.
+An example use of this syntax is:
+
+% ls ?list

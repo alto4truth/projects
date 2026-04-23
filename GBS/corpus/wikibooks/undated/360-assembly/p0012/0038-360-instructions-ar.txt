@@ -1,0 +1,21 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 12
+section: 360-instructions-ar
+chunk: 38
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ove zero accordingly.
+
+== Exceptions and Faults ==
+If signed integer overflow is detected and the bit 36 in PSW is set, an operation exception occurs.
+
+== Related instructions ==
+To add word value from memory, see A.
+To add half-word value from memory, see AH.
+To add value and set condition codes according to unsigned arithmetic, or add not most significant part of multi-word integer value, see AL or ALR.
+To add floating-point values, see AE, AER, AD or ADR.
+To subtract an integer value from register, see SR, S, SH, SL or SLR.

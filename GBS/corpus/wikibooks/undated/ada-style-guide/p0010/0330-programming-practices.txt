@@ -1,0 +1,30 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 330
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+the code more clear.
+
+==== exceptions ====
+Do not avoid return statements if it detracts from natural structure and code readability.
+
+=== Blocks ===
+
+==== guideline ====
+Use blocks to localize the scope of declarations.
+Use blocks to perform local renaming.
+Use blocks to define local exception handlers.
+
+==== example ====
+
+==== rationale ====
+Blocks break up large segments of code and isolate details relevant to each subsection of code. Variables that are only used in a particular section of code are clearly visible when a declarative block delineates that code.
+Renaming may simplify the expression of algorithms and enhance readability for a given section of code. But it is confusing when a renames clause is visually separated from the code to which it applies. The declarative region allows the renames to be immediately visible when the reader is examining code that uses that abbreviation. Guideline 5.7.1 discusses a similar guideline concerning the use clause.
+Local exception handlers can catch exceptions close to the point of origin and allow them to be either handled, propagated, or converted.
+
+=== Aggregates ===

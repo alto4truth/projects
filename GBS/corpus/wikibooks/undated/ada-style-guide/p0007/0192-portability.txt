@@ -1,0 +1,30 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 192
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+equires a minimum of 18 significant digits. It also specifies a Text_IO.Editing package that provides support analogous to the COBOL picture approach.
+
+=== Storage Control ===
+The management of dynamic storage can vary between Ada environments. In fact, some environments do not provide any deallocation. The following Ada storage control mechanisms are implementation-dependent and should be used with care in writing portable programs.
+
+=== Representation Clause ===
+
+==== guideline ====
+Do not use a representation clause to specify number of storage units.
+
+==== rationale ====
+The meaning of the 'Storage_Size attribute is ambiguous; specifying a particular value will not improve portability. It may or may not include space allocated for parameters, data, etc. Save the use of this feature for designs that must depend on a particular vendor's implementation.
+
+==== notes ====
+During a porting activity, it can be assumed that any occurrence of storage specification indicates an implementation dependency that must be redesigned.
+
+=== Access-to-Subprogram Values ===
+
+==== guideline ====
+Do not compare access-to-subprogram values.

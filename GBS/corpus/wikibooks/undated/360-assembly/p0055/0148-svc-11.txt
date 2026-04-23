@@ -1,0 +1,19 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 55
+section: svc-11
+chunk: 148
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+The argument is an immediate value from 0 to 255 (X'0' thru X'FF').
+
+== Availability ==
+The SVC instruction is
+available on all models, 360, 370 and z/System.
+
+== Purpose of Instruction ==
+This instruction is used to allow a program to call the operating system in order to request services. The operand is the Supervisor Call number, which is in the range 0 to 255 (decimal). The value of the operand is operating system dependent. Typically, a supervisor call is made after loading certain machine registers with values. Supervisor Calls may or may not return information. They may return the information in registers, or in specific fields which were passed in the original call.
+In some cases, a supervisor call will never return. There are several possible reasons:

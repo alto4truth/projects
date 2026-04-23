@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 360
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+use the package Ada.Interrupts to associate handlers with interrupts.
+Avoid using the address clause for nonimported program units.
+
+==== example ====
+
+==== rationale ====
+The result of specifying a single address for multiple objects or program units is undefined, as is specifying multiple addresses for a single object or program unit. Specifying multiple address clauses for an interrupt is also undefined. It does not necessarily overlay objects or program units, or associate a single entry with more than one interrupt.
+You are responsible for ensuring the validity of an address you specify. Ada requires that the object of an address be an integral multiple of its alignment.
+In Ada 83 (Ada Reference Manual 1983) you had to use values of type System.Address to attach an interrupt entry to an interrupt. While this technique is allowed in Ada 95, you are using an obsolete feature. You should use a protected procedure and the appropriate pragmas (Rationale 1995, §C.3.2).
+
+=== Suppression of Exception Check ===

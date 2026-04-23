@@ -1,0 +1,27 @@
+title: Advanced phone customization
+source: wikibooks
+year: undated
+document_id: advanced-phone-customization
+authors: 
+page: 10
+section: installing-your-custom-rom
+chunk: 23
+source_ref: https://en.wikibooks.org/wiki/Advanced_phone_customization
+
+ns.
+Once you are in recovery, it's fine to restart; you'll see your stock OS. This is normal as you haven't overwritten the OS yet, only the recovery.
+
+== Installing your custom OS ==
+Go to Wipe and wipe off the system and data partitions.
+Go to Advanced and wipe off the Dalvik cache.
+If the ROM is already present on your phone, go to Install and select the ROM to install. If not, you need to download the Android SDK. Launch adb, and use the adb send and adb push to install the ROM, whose file should be in your hard drive.
+Flash GApps. You must do this before leaving the recovery (Android 6+). If the phone boots, restart the process, as the phone will misbehave if GApps is installed after the phone first boots.
+Restart the phone and complete the first boot process.
+
+=== Logs ===
+1. On the computer side: Here's the log from adb:
+
+F:\Program Files\Android\android-sdk\platform-tools>adb sideload F:\Users\<username>\Downloads\RR-O-v6.1.0-20180619-zero-common-Official.zip
+loading: 'F:\Users\<username>\Downloads\RR-O-v6.1.0-20180619-zero-common-Official.zip'* daemon not running. starting it now on port 5037 *
+* daemon started successfully *
+Total xfer: 0.95x

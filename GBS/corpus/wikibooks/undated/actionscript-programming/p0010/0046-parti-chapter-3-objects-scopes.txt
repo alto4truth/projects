@@ -1,0 +1,20 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 10
+section: parti-chapter-3-objects-scopes
+chunk: 46
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+pear enter the button’s name, select “Button” as a behavior and press “OK”), open its actions and write the following:
+
+on (release) {
+trace(MyVar);
+}
+
+Now test the movie (tip: just press “Ctrl+Enter” for doing that). If you now press the button the output will be: “Hello!!!”. What has happened? Isn’t “MyVar” a local variable? The answer is yes, it is local variable. The cause that it is accessible from the button is that it is declared in the frame. By writing anything in frame’s actions it is made a part of “_root” object and as all frames are part of “_root” object they “see” each other. This means that if you declare a local variable in any frame, then it is made a local variable of “_root” object, so it can be accessed from any frame and especially button, located on that frame (all object located on timeline are members of “_root” object). So all this means that a local variable, declare in timeline, is the same as a timeline variable.
+
+« Previous
+Next »

@@ -1,0 +1,23 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 25
+section: 360-instructions-dr
+chunk: 79
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+DR - Divide by Register - Opcode 1D
+
+== Format ==
+DR 2,7
+The specific syntax is
+
+DR target register, source register.
+
+The first argument is a one with lesser number of pair of target registers which value is affected by the instruction.
+The second argument is the source value register.
+
+== Availability ==
+The DR instruction is available on all models of the 360, 370 and z/System.

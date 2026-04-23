@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 258
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+to the multiple use clauses or an incongruous mix of qualified names.
+See the rationale discussed in Guideline 4.2.1.
+
+=== Restricting Visibility ===
+
+==== guideline ====
+Consider using private child packages in lieu of nesting.
+Restrict the visibility of program units as much as possible by nesting them inside package bodies (Nissen and Wallis 1984) if you cannot use a private child package.
+Minimize nesting program units inside subprograms and tasks.
+Minimize the scope within which with clauses apply.
+Only with those units directly needed.
+
+==== example ====
+This program illustrates the use of child library units to restrict visibility. The procedure Rational_Numbers.Reduce is nested inside the body of Rational_Numbers to restrict its visibility to the implementation of this abstraction. Rather than make the text input/output facilities visible to the entire rational number hierarchy, it is only available to the body of the child library Rational_Numbers.IO. This example is adapted from the Ada Reference Manual (1995, §§7.1 [Annotated], 7.2 [Annotated], and 10.1.1 [Annotated]):

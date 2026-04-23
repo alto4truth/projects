@@ -1,0 +1,23 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 58
+section: bz-allblank
+chunk: 157
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+- REG-1 CONTAINS ADDRESS OF NON-BLANK CHAR
+NONBLANK DC 256C' '
+
+ORG NONBLANK+C' '
+DC X'00'
+ORG
+
+Example testing a packed field.
+
+SR 2,2
+TRT PACKDATA,TRTPACK TEST THE PACKED FIELD WITH 'C', 'D', OR 'F' SIGN
+BC 2,GOODDATA IF ANY SIGN '0A' - '0F' IS GOOD, USE THIS.
+B BRTBL(2) TO RESTRICT SIGNS TO '0C' '0D' AND '0F', USE THIS.

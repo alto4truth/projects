@@ -1,0 +1,28 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 429
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ntation can create portability problems if the enumeration type must be reordered to accommodate a change in representation order on the new platform.
+
+== Summary ==
+
+=== spelling ===
+Use underscores to separate words in a compound name.
+Represent numbers in a consistent fashion.
+Represent literals in a radix appropriate to the problem.
+Use underscores to separate digits the same way commas or periods (or spaces for nondecimal bases) would be used in normal text.
+When using scientific notation, make the E consistently either uppercase or lowercase.
+In an alternate base, represent the alphabetic characters in either all uppercase or all lowercase.
+Make reserved words and other elements of the program visually distinct from each other.
+Do not use an abbreviation of a long word as an identifier where a shorter synonym exists.
+Use a consistent abbreviation strategy.
+Do not use ambiguous abbreviations.
+To justify its use, an abbreviation must save many characters over the full word.
+Use abbreviations that are well-accepted in the application domain.
+Maintain a list of accepted abbreviations, and use only abbreviations on that list.

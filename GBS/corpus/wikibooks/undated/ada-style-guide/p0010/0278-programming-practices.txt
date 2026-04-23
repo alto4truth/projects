@@ -1,0 +1,29 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 278
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+calls of subprograms or entries called from less than five places in a single source file or with more than two formal parameters.
+
+==== example ====
+
+==== rationale ====
+Calls of infrequently used subprograms or entries with many formal
+parameters can be difficult to understand without referring to
+the subprogram or entry code. Named parameter association can
+make these calls more readable.
+When the formal parameters have been named appropriately, it is
+easier to determine exactly what purpose the subprogram serves
+without looking at its code. This reduces the need for named constants
+that exist solely to make calls more readable. It also allows
+variables used as actual parameters to be given names indicating
+what they are without regard to why they are being passed in a
+call. An actual parameter, which is an expression rather than
+a variable, cannot be named otherwise.
+Named association allows subprograms to have new parameters inserted
+with minimal ramifications to existing calls.

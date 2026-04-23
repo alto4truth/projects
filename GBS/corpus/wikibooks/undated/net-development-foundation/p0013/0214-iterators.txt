@@ -1,0 +1,13 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 13
+section: iterators
+chunk: 214
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+== Value Types ==
+An iterator is a section of code that enables one to traverse a data structure and return each element of the same type in turn.
+The iterator code uses the yield return statement to return each element in turn. When the yield return statement is reached, the current location is stored. Execution is restarted from this location the next time the iterator is called.

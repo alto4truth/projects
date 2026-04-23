@@ -1,0 +1,30 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 62
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+sk A must provide an exception handler to handle the Tasking_Error exception raised by the call to an entry of an abnormal task (see Guideline 6.3.1).
+
+=== Circular Task Calls ===
+
+==== guideline ====
+Do not call a task entry that directly or indirectly results in a call to an entry of the original calling task.
+
+==== rationale ====
+A software failure known as task deadlock will occur if a task calls one of its own entries directly or indirectly via a circular chain of calls.
+
+=== Setting Exit Status ===
+
+==== guideline ====
+Avoid race conditions in setting an exit status code from the main program when using the procedure Ada.Command_Line.Set_Exit_Status.
+In a program with multiple tasks, encapsulate, serialize, and check calls to the procedure Ada.Command_Line.Set_Exit_Status.
+
+==== rationale ====
+In accordance with the rules of Ada, tasks in library-level packages may terminate after the main program task. If the program permits multiple tasks to use Set_Exit_Status, then there can be no guarantee that any particular status value is the one actually returned.
+
+== Summary ==

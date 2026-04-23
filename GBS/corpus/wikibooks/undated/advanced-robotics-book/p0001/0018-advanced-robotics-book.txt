@@ -1,0 +1,17 @@
+title: Advanced Robotics Book
+source: wikibooks
+year: undated
+document_id: advanced-robotics-book
+authors: 
+page: 1
+section: advanced-robotics-book
+chunk: 18
+source_ref: https://en.wikibooks.org/wiki/Advanced_Robotics_Book
+
+matics together. This obstacle avoidance process is done by abstracting the constraints from the avoidance method.
+
+== Task Planning and Navigation ==
+
+Task planning, which is being able to achieve a goal by performing certain smaller tasks to reach the ultimate goal, involves learning the spatial requirements for a robot to perform basic operations, such as navigation, efficiently and properly. Because of requirements of robot-environments in the real work force, task planning in robotics should be executed efficiently.
+For a robot to plan for a task appropriately, mobile robots usually rely exclusively on spatial information, which it can learn through synchronization of the sensors to obtain and understand information from the outside surroundings, and on trivial domain knowledge, like labels attached to objects and places. Some robots may have information stored about configured space to determine an appropriate path across the configured space that it is knowledgeable about so that it can navigate around barriers. Some robots depend on sensors or programmed rules within the code of the robot in order to pick a suitable route to take when moving. There are also neural network systems that allow a robot to learn as it goes by experimentation. If the robot runs into an object which forces it to turn around, the robot will know, from now on, that it should not go that way again to avoid the particular obstacle. Also, there are some algorithms that can derive a path for robots to take to maximize the distance from a specific obstacle.
+In order for robots to successfully perform task planning and navigation, the robot must have organized communication between all of its parts, such as the sensors. Every component of a robot significantly influences the performance. A robot needs to be able to function without collisions as well as knowing what safe conditions are necessary; this includes making sure the robot does not encounter unsafe temperatures or lights, for example.

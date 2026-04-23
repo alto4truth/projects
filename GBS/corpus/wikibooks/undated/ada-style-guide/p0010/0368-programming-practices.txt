@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 368
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+bort-deferred operations.
+Do not create a task that depends on a master that is included entirely within the execution of an abort-deferred operation.
+
+==== rationale ====
+An abort-deferred operation is one of the following:
+
+Protected entry, protected procedure, or protected function
+User-defined Initialize procedure used as the last step of a default initialization of a controlled object
+User-defined Finalize procedure used in finalization of a controlled object
+User-defined Adjust procedure used in assignment of a controlled object
+The Ada Reference Manual 1995, §9.8 [Annotated] states that the practices discouraged in the guidelines result in bounded error. The exception Program_Error is raised if the implementation detects the error. If the implementation does not detect the error, the operations proceed as they would outside an abort-deferred operation. An abort statement itself may have no effect.
+
+== Summary ==

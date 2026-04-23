@@ -1,0 +1,19 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 2
+section: a-more-useful-client-and-server-example
+chunk: 13
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+reSQL as the database. An example of the code edit I made is listed below. That's it for this file.
+
+== The Interface ==
+
+=== Source File ActorI.h ===
+
+Now on to the ActorI.cpp file. The implementation is jest a matter of filling out the IDL created carcase. This source needs to create a live database connection, connect to the multi-index in-memory database, perform searches, and write certain things back to the database. The most difficult thing to figure out how to do is how to manage the created CORBA objects. The documentation from the open-source support community is pretty thin on the ground, and generally of a type not terribly useful for development. There is however a book for sale by OCI which helps in presenting useful examples which are great for development. This example was inspired by Henning's book on using CORBA in combination with the STL containers. So, here's the interface file.
+
+=== Source File Actor.cpp ===

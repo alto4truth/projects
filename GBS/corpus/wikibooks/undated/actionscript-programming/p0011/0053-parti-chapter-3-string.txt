@@ -1,0 +1,29 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 11
+section: parti-chapter-3-string
+chunk: 53
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+in this function you specify the length of the string to be cut, not the index of the last character. This example illustrates the use of this method:
+
+===== substring =====
+String.substring( <startindex>, [endindex] );
+This method returns a string consisting of the characters between the points specified by the <startindex> and [endindex] parameters. If the parameter [endindex] is not specified then the string which is returned consists of the characters from the point <startindex> till the end of the string. This example illustrates the use of this method:
+
+===== toLowerCase =====
+String.toLowerCase( );
+This method returns a copy of the specified String, with all of the uppercase characters converted to lowercase. For example a string “Hello” will be converted to “hello”:
+
+===== toUpperCase =====
+String.toUpperCase( );
+This method returns a copy of the specified String, with all of the lowercase characters converted to uppercase. For example a string “Hello” will be converted to “HELLO”:
+
+==== Properties ====
+
+===== length =====
+String.length
+This method returns the length of the string. For example the length of string “hello” will be 5:

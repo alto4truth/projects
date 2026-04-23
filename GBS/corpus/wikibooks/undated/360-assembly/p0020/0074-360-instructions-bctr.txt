@@ -1,0 +1,14 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 20
+section: 360-instructions-bctr
+chunk: 74
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ey for the target address must be the same as the current process (or this process must have a key of 0) or a memory protect violate exception occurs.
+
+== Alternative branch instructions ==
+The BCT instruction provides the same functionality but with the branch address specified in Indexed Base-Displacement format.

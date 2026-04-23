@@ -1,0 +1,28 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 7
+section: c-dynamic-memory-allocation-deallocation
+chunk: 32
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+he number of bytes in the "int"
+data type.
+When the programs finished using the memory block, it get rids of it using
+the "free" function:
+
+free( p );
+
+C also contains two other memory-allocation functions closely related to
+"malloc()": the "calloc()" function, which performs the same function as
+"malloc()" but allows the block allocated to be specified in terms of number
+of elements:
+
+void *calloc( size_t <number_elements>, size_t <sizeof_element_type> );
+
+—and the "realloc()" function, which reallocates the size of an array
+that's already been allocated:
+
+void *realloc( void *<block_pointer>, size_t <size_in_bytes> );

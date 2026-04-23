@@ -1,0 +1,13 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 49
+section: account-ds-cl8
+chunk: 135
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ORG , RESET TO NEXT BYTE AFTER PRNTLINE
+
+The comma on the last line is used to be sure the assembler does not presume the first word of the comment is interpreted as an argument to that ORG statement

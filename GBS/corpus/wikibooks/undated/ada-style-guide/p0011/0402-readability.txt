@@ -1,0 +1,32 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 402
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+loop unrolling). Therefore, the use of a symbolic value like the following would neither improve readability nor maintainability:
+
+=== Exceptions ===
+
+==== guideline ====
+Use a name that indicates the kind of problem the exception represents.
+
+==== example ====
+
+==== rationale ====
+Naming exceptions according to the kind of problem they are detecting enhances the readability of the code. You should name your exceptions as precisely as you can so that the maintainer of the code understands why the exception might be raised. A well-named exception should be meaningful to the clients of the package declaring the exception.
+
+=== Constructors ===
+
+==== guideline ====
+Include a prefix like New, Make, or Create in naming constructors (in this sense, operations to create and/or initialize an object).
+Use names indicative of their content for child packages containing constructors.
+
+==== instantiation ====
+Name a child package containing constructors <whatever>.Constructor.
+
+==== example ====

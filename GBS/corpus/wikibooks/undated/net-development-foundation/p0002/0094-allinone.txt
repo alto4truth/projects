@@ -1,0 +1,28 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 94
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+nfigure the .NET Framework applications by using configuration files, environment variables, and the .NET Framework Configuration tool (Mscorcfg.msc).
+
+For a "cookbook" on for the procedures discussed in this section see MSDN and the corresponding How-To section.
+Installer class - MSDN
+Configure which runtime version a .NET Framework application should use - MSDN
+Configure where the runtime should search for an assembly - MSDN
+Configure the location of an assembly and which version of the assembly to use - MSDN and MSDN
+Direct the runtime to use the DEVPATH environment variable when searching for assemblies - MSDN
+AssemblyInstaller class - MSDN
+ComponentInstaller class - MSDN
+Configure a .NET Framework application by using the .NET Framework Configuration tool (Mscorcfg.msc) - MSDN
+ManagedInstaller class - MSDN
+InstallContext class - MSDN
+InstallerCollection class - MSDN
+Implement IManagedInstaller interface - MSDN
+InstallEventHandler delegate - MSDN
+Configure concurrent garbage collection - MSDN
+Register remote objects by using configuration files - MSDN

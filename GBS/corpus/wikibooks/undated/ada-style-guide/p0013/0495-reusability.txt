@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 495
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+for the programmer to select the appropriate one for the current application or to substitute a different one if the needs of the application change.
+
+==== notes ====
+A reusable part that is structured from subparts that are members of part families is particularly easy to tailor to the needs of a given application by substitution of family members.
+Guideline 9.2.4 discusses the use of tagged types in building different versions of similar parts (i.e., common interface, multiple implementations).
+
+=== Conditional Compilation ===
+
+==== guideline ====
+Structure reusable code to take advantage of dead code removal by the compiler.
+
+==== example ====

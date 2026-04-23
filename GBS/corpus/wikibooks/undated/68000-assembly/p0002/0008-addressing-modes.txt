@@ -1,0 +1,43 @@
+title: 68000 Assembly
+source: wikibooks
+year: undated
+document_id: 68000-assembly
+authors: 
+page: 2
+section: addressing-modes
+chunk: 8
+source_ref: https://en.wikibooks.org/wiki/68000_Assembly
+
+2, 4, or 8. Scale is not supported on all devices. Some assemblers won't take certain syntaxes.
+
+=== Memory indirect addressing ===
+Assembler syntax:
+
+([bd,An],od)
+([bd,An],An.W*scale,od)
+([bd,An],An.L*scale,od)
+([bd,An],Dn.W*scale,od)
+([bd,An],Dn.L*scale,od)
+([bd,An,An.W*scale],od)
+([bd,An,An.L*scale],od)
+([bd,An,Dn.W*scale],od)
+([bd,An,Dn.L*scale],od)
+([bd,PC],od)
+([bd,PC],An.W*scale,od)
+([bd,PC],An.L*scale,od)
+([bd,PC],Dn.W*scale,od)
+([bd,PC],Dn.L*scale,od)
+([bd,PC,An.W*scale],od)
+([bd,PC,An.L*scale],od)
+([bd,PC,Dn.W*scale],od)
+([bd,PC,Dn.L*scale],od)
+These addressing modes perform two memory accesses - first a read in to a table of addresses, second the actual read or write. Not supported by all devices. In memory indirect preindexed mode, the CPU will first read bd+An+Rn*scale, then add od, and use the resulting value as the address for the final read or write. In memory indirect postindexed mode, the CPU will first read bd+An, then add Rn*scale+od, and use the resulting value as the address for the final read or write.
+
+=== Immediate addressing ===
+Assembler syntax:
+
+#xyz
+Operate on xyz.
+
+=== Status Register addressing ===
+Assembler syntax:

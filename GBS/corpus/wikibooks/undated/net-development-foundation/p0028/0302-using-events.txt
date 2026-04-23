@@ -1,0 +1,22 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 28
+section: using-events
+chunk: 302
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+== Using events and delegates ==
+Exam objectives: Control interactions between .NET Framework application components by using events and delegates.
+(Refer System namespace)
+Delegate class - MSDN
+
+Delegates hold pointers to one or more functions and invoke them as needed.
+One common use of delegates is for event handling. A class that raises an event does not know what objects or methods want to receive the event, so an intermediary or pointer mechanism is needed between the object raising the event and the object(s) receiving the event. Delegates can be used as function pointers to accomplish this.
+A delegate is a class, but unlike a regular class it has a signature. In the .Net framework you just declare the delegate and the CLR handles the implementation of the class.
+//delegate declaration
+public delegate void AlarmEventHandler(object sender,EventArgs e);
+
+The first complete example just declare a delegate type, then declare a variable of that type, assign a function to it and execute the delegate variable which has the effect of executing the function.

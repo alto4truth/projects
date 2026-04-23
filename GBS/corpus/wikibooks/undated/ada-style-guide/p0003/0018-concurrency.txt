@@ -1,0 +1,25 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 18
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+without interruption by another task. A display manager would ensure that no other task accesses the display until all these operations are complete.
+
+=== Discriminants ===
+
+==== guideline ====
+Consider using discriminants to minimize the need for an explicit initialization operation (Rationale 1995, §9.1).
+Consider using discriminants to control composite components of the protected objects, including setting the size of an entry family (Rationale 1995, §9.1).
+Consider using a discriminant to set the priority of a protected object (Rationale 1995, §9.1).
+Consider using a discriminant to identify an interrupt to a protected object (Rationale 1995, §9.1).
+Consider declaring a task type with a discriminant to indicate (Rationale 1995, §9.6):
+Priority, storage size, and size of entry families of individual tasks of a type
+Data associated with a task (through an access discriminant)
+
+==== example ====
+The following code fragment shows how a task type with discriminant can be used to associate data with a task (Rationale 1995, §9.6):

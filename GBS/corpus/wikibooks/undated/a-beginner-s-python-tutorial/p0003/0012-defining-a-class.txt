@@ -1,0 +1,22 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 3
+section: defining-a-class
+chunk: 12
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+les, lists, dictionaries, etc. That is, they are objects
+a class is known as a 'data structure' - it holds data, and the methods to process that data.
+
+== Inheritance ==
+Let's have a look back at the introduction. We know how classes group together variables and functions, known as attributes and methods, so that both the data and the code to process it, are in the same spot. We can create any number of instances of that class, so that we don't have to write new code for every new object we create. But what about adding extra features to our golf club design? This is where inheritance comes into play.
+Python makes inheritance really easy. We define a new class, based on another, 'parent' class. Our new class brings everything over from the parent, and we can also add other things to it. If any new attributes or methods have the same name as an attribute or method in our parent class, it is used instead of the parent one. Remember the Shape class?
+
+Code Example 6 - the Shape class
+
+If we wanted to define a new class, let's say a square, based on our previous Shape class, we would do this:
+
+Code Example 7 - Using inheritance

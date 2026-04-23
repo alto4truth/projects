@@ -1,0 +1,29 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 20
+section: 360-instructions-bctr
+chunk: 71
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+BC - Branch on Count - RX type instruction - Opcode 46
+
+== Format ==
+BCTR 2,4
+BCTR 15,3
+BCTR 7,8
+BCTR 1,0 - Value in register 1 is decremented, but no branch will occur
+
+== Opcode ==
+
+The first argument is a target register which value is affected by the instruction.
+The second argument is the branch register whose contents are to be used as the location to transfer to (if the argument is not zero).
+The target register and branch register values are 0 to 15.
+
+== Example usage ==
+BCTR 1,9
+
+== Availability ==
+The BCTR instruction is available on all models.

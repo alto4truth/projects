@@ -1,0 +1,31 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 14
+section: source-code-presentation
+chunk: 515
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+in a single declarative part at the same level.
+
+==== instantiation ====
+For declarations not separated by blank lines, follow these alignment rules:
+
+Align the colon delimiters.
+Align the := initialization delimiter.
+When trailing comments are used, align the comment delimiter.
+When the declaration overflows a line, break the line and add an indentation level for those lines that wrap. The preferred places to break, in order, are: (1) the comment delimiter; (2) the initialization delimiter; (3) the colon delimiter.
+For enumeration type declarations that do not fit on a single line, put each literal on a separate line, using the next level of indentation. When appropriate, semantically related literals can be arranged by row or column to form a table.
+
+==== example ====
+Variable and constant declarations can be laid out in a tabular format with columns separated by the symbols :, :=, and --
+
+If this results in lines that are too long, they can be laid out with each part on a separate line with its unique indentation level:
+
+Declarations of enumeration literals can be listed in one or more columns as:
+
+or, to save space:
+
+or, to emphasize related groups of values:

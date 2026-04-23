@@ -1,0 +1,18 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 3
+section: advertise-your-service-on-a-naming-service
+chunk: 19
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+== Discussion ==
+So the previous client/server pair were a bit clunky. What they lacked in elegance, they gained in brevity. This client/server example will show how to edit the previous examples so that they use the naming service and nolonger rely on the clunky manual IOR method of addressing. As a side note, these IOR strings are only good for the length of time the server is running. Since each new process generates a unique IOR string, storing them in a file for client reuse just isn't feasible, therefore, we use the naming service, which acts like a DNS for our services.
+So, to make this work, we need to get a reference to a naming service, create a name with which to bind our service under, and register that name with the naming service. The following lines of code are what we will need:
+
+Placing this code above the "orb->run" line of the previous server will get it on the naming server. For the full source code, see the following listing
+
+== main.cpp ==
+So, as you can see, the main difference here is the addition of a new include for the naming service and the code snipit mentioned above. The other portions of the server remain exactly the same.

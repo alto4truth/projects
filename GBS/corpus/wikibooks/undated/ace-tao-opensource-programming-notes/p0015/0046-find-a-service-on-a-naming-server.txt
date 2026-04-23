@@ -1,0 +1,15 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 15
+section: find-a-service-on-a-naming-server
+chunk: 46
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+L pulled in from the command line, and the string representing the name of or remote class, "Widgets".
+
+./client corbaloc::localhost:12345/NameService
+
+In this example, everything is on one box, but in reality, none of these services need be running on the same hardware, they only need to be reachable by the indicated ports. Now, lets take a look at the client code.

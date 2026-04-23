@@ -1,0 +1,66 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 15
+section: c-standard-utility-library-time-library
+chunk: 64
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+and date library includes a wide variety of functions, some of them
+obscure and nonstandard. This library requires the declaration:
+
+#include <time.h>
+
+The most essential function is "time()", which returns the number of seconds
+since midnight proleptic Coordinated Universal Time (UTC) of January 1, 1970, not counting leap seconds. It returns a value as "time_t" (a "long") as
+defined in the header file.
+The following function uses "time()" to implement a program delay with
+resolution in seconds:
+
+/* delay.c */
+
+#include <stdio.h>
+
+#include <time.h>
+
+void sleep( time_t delay );
+
+void main()
+{
+puts( "Delaying for 3 seconds." );
+sleep( 3 );
+puts( "Done!" );
+}
+
+void sleep( time_t delay )
+{
+time_t t0, t1;
+time( &t0 );
+do
+{
+time( &t1 );
+}
+while (( t1 - t0 ) < delay );
+}
+
+The "ctime()" function converts the time value returned by "time()" into a
+time-and-date string. The following little program prints the current time
+and date:
+
+/* time.c */
+
+#include <stdio.h>
+#include <time.h>
+
+void main()
+{
+time_t *t;
+time( t );
+puts( ctime( t ) );
+}
+
+This program prints a string of the form:
+
+Tue Dec 27 15:18:16 1994

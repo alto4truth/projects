@@ -1,0 +1,24 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 26
+section: using-system-types
+chunk: 296
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+nteger to an object, thus resulting in boxing.
+The object o can then be unboxed and assigned to integer variable i:
+
+o = 123;
+i = (int) o; // unboxing
+
+Performance of boxing and unboxing
+In relation to simple assignments, boxing and unboxing are computationally expensive processes. When a value type is boxed, an entirely new object must be allocated and constructed. To a lesser degree, the cast required for unboxing is also expensive computationally.
+
+=== TypeForwardedToAttribute Class ===
+See MSDN
+
+For a discussion of TypeForwardToAttribute in the CLR see MSDN
+Other possible links: Marcus' Blog, NotGartner

@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 393
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+The following example applies the naming conventions of the second instantiation, as discussed in Rosen (1995):
+
+Sample declarations might look like:
+
+The above scheme works whether you use full names or a use clause. As long as you use the same name for all the specific types (i.e., type Instance) and class-wide types, the unqualified names will always hide one another. Thus, the compiler will insist you use full name qualification to resolve the ambiguity introduced by the use clause (Rosen 1995).
+
+==== rationale ====
+You want to use a naming scheme that is consistent and readable and conveys the intent of the abstraction. Ideally, the naming scheme should be uniform in how it handles the different ways in which tagged types are used to create classes. If the naming convention is too rigid, however, you will write code fragments that appear stilted from a readability point of view. By using a similar naming convention for type extension through derivation and through generic mixin (see also Guideline 9.5.1), you achieve readable declarations of objects and procedures.

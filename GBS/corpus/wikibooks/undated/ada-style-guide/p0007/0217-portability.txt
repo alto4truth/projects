@@ -1,0 +1,14 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 217
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ard binding to operating system services, such as POSIX/Ada, and you write POSIX-compliant calls, your program should be portable across more systems.
+
+==== exceptions ====
+In real-time, embedded systems, making calls to low-level support system facilities may often be unavoidable. Isolating the uses of these facilities may be too difficult. Comment them as you would machine code inserts (see Guideline 7.6.3); they are, in a sense, instructions for the virtual machine provided by the support system. When isolating the uses of these features, provide an interface for the rest of your program to use, which can be ported through replacement of the interface's implementation.

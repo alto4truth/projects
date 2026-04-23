@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 191
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+l types and arithmetic on compilers that do not support the Information Systems Annex (Ada Reference Manual 1995, Annex F) in full.
+
+==== example ====
+
+==== rationale ====
+The Ada language does not provide any predefined decimal types. Therefore, you need to declare decimal types for the different scales you will need to use. Differences in scale and precision must be considered in deciding whether or not a common type will suffice (Brosgol, Eachus, and Emery 1994).
+You need different types for objects measured in different units. This allows the compiler to detect mismatched values in expressions. If you declare all decimal objects to be of a single type, you forego the benefits of strong typing. For example, in an application that involves several currencies, each currency should be declared as a separate type. You should provide appropriate conversions between different currencies.
+You should map data with no particular unit of measure to a small set of types or a single type to avoid the explosion of conversions between numeric types.
+Separate the range requirement on a decimal type from its precision, i.e., the number of significant digits required. From the point of view of planning for change and ease of maintenance, you can use the digit's value to accommodate future growth in the values to be stored in objects of the type. For example, you may want to anticipate growth for database values and report formats. You can constrain the values of the type through a range constraint that matches current needs. It is easier to modify the range and avoid redefining databases and reports.
+Ada automatically truncates toward 0. If your requirements are to round the decimal result, you must explicitly do so using the 'Round attribute.
+The core language defines the basic syntax of and operations on decimal types. It does not specify, however, the minimum number of significant digits that must be supported. Nor does the core language require the compiler to support values of Small other than powers of 2, thus enabling the compiler effectively to reject a decimal declaration (Ada Reference Manual 1995, §3.5.9 [Annotated]). The Information Systems Annex provides additional support for decimal types. It requires a minimum of 18 significant digits. It also specifies a Text_IO.Editing package that provides support analogous to the COBOL picture approach.

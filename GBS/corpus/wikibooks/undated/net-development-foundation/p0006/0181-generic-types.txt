@@ -1,0 +1,28 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 6
+section: generic-types
+chunk: 181
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+foreach (Client client in clients)
+{
+Console.WriteLine("The account {0} belongs to {1}", client.AccountNumber, client.Name);
+}
+Console.ReadLine();
+}
+}
+
+Thanks to Generics we have created a type-safe collection as easy as we would normally instantiate an ArrayList without writing our own typed collection.
+Now that we have had a brief look at how we can use Generics to reduce the amount of code we need to write, while still using typed collections let's see how we could create our custom Generic Class. To demonstrate this I have created an example Class which inherits from the DictionaryBase class. This implementation of the dictionary class will accept a GUID as the key and has a Type parameter as the value type. If you are a bit like me you will use GUIDS to identify your records in a database so using this as the key in a Typed collection was something I liked to do a lot. So now I’ve got a cool dictionary that I can use with all my objects I created when retrieving data from my database, and I will give you the code:
+
+/// <summary>
+/// Representation of a client
+/// </summary>
+public class Client
+{
+private string _name;
+private string _accountNumber;

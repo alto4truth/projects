@@ -1,0 +1,17 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 8
+section: end-program
+chunk: 44
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+ble called second_word, and so on. This is how values are passed from the main program to functions - inside the parentheses, after the function name.
+
+== A Final Program ==
+Think back to that calculator program. Did it look a bit messy to you? I think it did, so lets re-write it, with functions.
+To design - First we will define all the functions we are going to use with the 'def' operator (still remember what an operator is ;) ). Then we will have the main program, with all that messy code replaced with nice, neat functions. This will make it so much easier to look at again in the future.
+
+Code Example 14 - Calculator program

@@ -1,0 +1,60 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 5
+section: c-console-io
+chunk: 24
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+anf()":
+
+/* cgets.c */
+
+#include <stdio.h>
+#include <string.h>
+
+#include <stdlib.h>
+
+int main(void)
+{
+char word[256],
+*guess = "blue\n";
+int i, n = 0;
+
+puts( "Guess a color (use lower case please):" );
+while( fgets(word, 256, stdin) != NULL )
+{
+if( strcmp( word, guess ) == 0 )
+{
+puts( "You win!" );
+break;
+}
+else
+{
+puts( "No, try again." );
+}
+}
+return 0;
+}
+
+This program includes the "strcmp" function, which performs string
+comparisons and returns 0 on a match. This function is described in more
+detail in the next chapter.
+These functions can be used to implement filters that operate on lines of
+text, instead of characters. A core program for such filters follows:
+
+/* lfilter.c */
+
+#include <stdio.h>
+
+int main (void)
+{
+char b[256];
+while (( fgets(b, 256, stdin) ) != NULL )
+{
+puts( b );
+}
+return 0;
+}

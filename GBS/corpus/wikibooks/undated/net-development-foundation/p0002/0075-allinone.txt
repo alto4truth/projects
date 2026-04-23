@@ -1,0 +1,17 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 75
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+type, then declare a variable of that type, assign a function to it and execute the delegate variable which has the effect of executing the function.
+
+The second delegate example implement the concept of a callback function. A function is called with a delegate as an argument. When it executes the delegate it has no knowledge of exactly what function is executed. Part of its behavior is delegated to the function passed as a parameter (thru the delegate).
+
+The third delegate example uses a delegate member to produce the same pattern as an event. Note that executing the delegate member without assigning at least one function will cause an exception. Also assigning 2 functions with the += operator will execute the 2 functions when the delegate is executed. If the delegate has a return code, the return value of the last executed function will be returned.
+
+The fourth example is the basic example of an event. It is exactly as the third example with the event keyword added to the member declaration and a test before calling the event because of the exception thrown on an "empty" event. This example shows clearly that an event is nothing more than a multicast delegate.

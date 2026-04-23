@@ -1,0 +1,23 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 15
+section: for-loop
+chunk: 86
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+loops, and functions. That is pretty much all we need for quite a bit of programming. So let's set ourselves a task.
+
+Code Example 4 - A menu function
+
+That wasn't very difficult, was it? the actual program only took up five lines - this is the wonder of how much we have learnt so far! All my comments take up sixteen lines - more than three times the program length. It is a good idea to comment your programs extensively. Remember that if you are going to be publishing your code open-source, there are going to be a lot of people checking out the code that you have written. We'll see the function we just wrote in our first example program.
+
+== Our First 'Game' ==
+What will our first example program be? How about a (very) simple text adventure game? Sounds like fun! It will only encompass one room of a house, and will be extremely simple. There will be five things, and a door. In one of the five things, is a key to the door. You need to find the key, then open the door. I will give a plain-english version first, then do it in python:
+
+Code Example 5 - Plain-english version of code
+#Plain-english version of our 'game'
+
+Tell the computer about our menu function

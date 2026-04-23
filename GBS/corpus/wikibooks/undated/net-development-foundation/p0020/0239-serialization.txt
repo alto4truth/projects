@@ -1,0 +1,47 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 20
+section: serialization
+chunk: 239
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+ject type. Remember to close streams after you use them by calling the stream's Close() method.
+For an overview of XML and SOAP serialization see MSDN
+
+==== Custom Serialization ====
+The ISerializable interface allows an object to control its own serialization and deserialization.
+
+==== Readers ====
+
+==== Writers ====
+
+==== Formatters ====
+A formatter is used to serialize objects into streams.
+
+==== Streams ====
+
+==== File IO ====
+
+==== Managing Byte Streams ====
+
+==== Compression ====
+
+==== Isolated storage ====
+For a general discussion on IsolatedStorage tasks see MSDN
+
+=== Classes, Interfaces, and tools ===
+
+==== Serialize and deserialize ====
+Exam objective: Serialize or deserialize an object or an object graph by using runtime serialization techniques.
+(Refer System.Runtime.Serialization namespace)
+
+===== Serialization interfaces =====
+IDeserializationCallback interface - MSDN
+IFormatter interface and IFormatterConverter interface
+
+IFormatter interface - MSDN
+IFormatterConverter interface - MSDN
+ISerializable interface - MSDN

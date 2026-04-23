@@ -1,0 +1,21 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 29
+section: 360-instructions-l
+chunk: 90
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+L - Load - Opcode 58 - RX format Instruction (32-bit)
+
+== Format ==
+L 2,N2
+L 11,106(8,10)
+The specific syntax is
+
+L target register,offset(index register,base register)
+where the offset, index register, and base register values are determined automatically by the assembler if the USING pseudo-instruction is used and the target address label used is within 4096 bytes of the value of some base register.
+
+== Opcode ==

@@ -1,0 +1,44 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 20
+section: redirection
+chunk: 54
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+the Input ===
+We use the < symbol to redirect the input for a command.
+For example, the command sort sorts a list alphabetically or numerically. Type
+
+% sort
+Then type in the names of some animals. Press [Return] after each one.
+
+dog
+cat
+bird
+ape
+^D (control d to stop)
+The output will be
+
+ape
+bird
+cat
+dog
+
+==== Redirecting input to a file ====
+Using < you can redirect the input to come from a file rather than the keyboard. For example, to sort the list of colours, type
+
+% sort < allcolours
+and the sorted list will be output to the screen.
+To redirect the output of the sorted list to a file, type,
+
+% sort < allcolours > sortedcolours
+Use cat to display the contents of the file sortedcolours.
+
+=== Piping ===
+As well as redirecting the output of a command to a file, we can pass it along to another process using piping. For example
+
+% sort < allcolours | wc -l
+In this case, the output of the sort command is passed on to the wc command and processed before being displayed.

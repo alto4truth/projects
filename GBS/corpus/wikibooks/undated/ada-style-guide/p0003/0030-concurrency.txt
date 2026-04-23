@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 30
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+n this case, priority inversion can be minimized using a protected object with pragma Locking_Policy(Ceiling_Locking) as the server instead of a task.
+
+=== Delay Statements ===
+
+==== guideline ====
+Do not depend on a particular delay being achievable (Nissen and Wallis 1984).
+Use a delay until not a delay statement to delay until a specific time has been reached.
+Avoid using a busy waiting loop instead of a delay.
+
+==== example ====
+The phase of a periodic task is the fraction of a complete cycle elapsed as measured from a specified reference point. In the following example, an inaccurate delay causes the phase of the periodic task to drift over time (i.e., the task starts later and later in the cycle):
+Periodic:
+
+To avoid an inaccurate delay drift, you should use the delay until statement. The following example (Rationale 1995, §9.3) shows how to satisfy a periodic requirement with an average period:

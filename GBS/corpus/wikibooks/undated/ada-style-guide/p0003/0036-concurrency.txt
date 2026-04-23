@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 36
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ains Operation and Operation2. The statements after the accept body are executed before Server can accept additional calls to Operation or Operation2.
+
+==== rationale ====
+To minimize the time required to rendezvous, only work that needs to be performed during a rendezvous, such as saving or generating parameters, should be allowed in the accept bodies.
+When work is removed from the accept body and placed later in the selective accept loop, the additional work might still suspend the caller task. If the caller task calls entry Operation again before the server task completes its additional work, the caller is delayed until the server completes the additional work. If the potential delay is unacceptable and the additional work does not need to be completed before the next service of the caller task, the additional work can form the basis of a new task that will not block the caller task.
+Operations on protected objects incur less execution overhead than tasks and are more efficient for data synchronization and communication than the rendezvous. You must design protected operations to be bounded, short, and not potentially blocking.

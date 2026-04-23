@@ -1,0 +1,30 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 5
+section: parti-chapter-2
+chunk: 19
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+== Operators (1) ==
+In this chapter you will learn all of the operators which are used in ActionScript.
+Usual operators
+
+Arithmetic operators
+
+Assignment operators
+
+Other operators are discussed later after chapter Data types.
+
+=== Comments ===
+Comments are useful for keeping track of what you intended, and for passing information to other developers if you work in a collaborative environment or are providing samples. There are two types of using comments. The first one is a one line comment and the other one: multi-line comment. For implementing one line comment just put "//" followed by your comment at the end of the line, if the line is not empty, and at the beginning of the line if it is empty. Examples:
+This example demonstrates the use of comment at the end of the line
+
+This example demonstrates the use of comment in an empty line
+
+This example demonstrates the use of comment in an empty line in work
+
+Note that you cannot use any type of comment inside the script!
+For implementing a multi-line comment you must just put your comment between symbols "/*" and "*/" (Note that all rules applied for one line comment are also applied for multi-line comment). Examples:

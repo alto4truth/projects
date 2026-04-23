@@ -1,0 +1,26 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 362
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+is wise to isolate it in a block (with appropriate comments) and leave the surrounding code with exception checking in effect.
+
+=== Initialization ===
+
+==== guideline ====
+Initialize all objects prior to use.
+Use caution when initializing access values.
+Do not depend on default initialization that is not part of the language.
+Derive from a controlled type and override the primitive procedure to ensure automatic initialization.
+Ensure elaboration of an entity before using it.
+Use function calls in declarations cautiously.
+
+==== example ====
+The first example illustrates the potential problem with initializing access values:
+
+The second example illustrates the issue of ensuring the elaboration of an entity before its use:

@@ -1,0 +1,36 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 21
+section: services
+chunk: 258
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+ain
+ad.ExecuteAssembly(@"c:\path\to\file.exe");
+
+It is also possible to execute only one assembly in an Application Domain with different permissions;
+
+object [] myEvidenceTypes = {new Zone (SecurityZone.Internet)};
+Evidence myEvidence = new Evidence(myEvidenceTypes, null);
+AppDomain ad = AppDomain.CreateDomain("Name");
+ad.ExecuteAssembly(@"c:\path\to\file.exe", myEvidence); // Pass the Evidence in the ExecuteAssembly function
+
+Except Evidence, you can also use the AppDomainSetup class to set other properties.
+
+AppDomainSetup ads = new AppDomainSetup();
+ads.ApplicationBase = @"c:\Test";
+ads.DisallowCodeDownload = true;
+AppDomain ad = AppDomain.CreateDomain("Name", null, ads); // use null as second parameter for default Evidence
+
+===== Retrieve setup information from an application domain =====
+See MSDN
+Use the SetupInformation property of an AppDomain to read the settings from that application domain;
+
+AppDomainSetup ads = AppDomain.CurrentDomain.SetupInformation;
+Console.WriteLine(ads.ConfigurationFile);
+Console.WriteLine(ads.ApplicationName);
+
+Previous / Next

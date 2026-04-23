@@ -1,0 +1,34 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 63
+section: arithmetic
+chunk: 169
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+= Arithmetic Instructions =
+
+== Binary integer arithmetic instructions ==
+Instructions are sorted alphabetically. The instructions marked as "logical" set condition code (CC) field in PSW according to unsigned treating of values. Otherwise, condition codes reflect treating values as 2-complement signed values.
+
+Add - A
+Add Half - AH
+Add Logical - AL
+Add Logical Register - ALR
+Add Register - AR
+Load Register Complement - LCR
+Subtract - S
+Subtract Half - SH
+Subtract Logical - SL
+Subtract Logical Register - SLR
+Subtract Register - SR
+Multiply - M
+Multiply with Register - MR
+Divide - D
+Divide by Register - DR
+
+== Decimal integer arithmetic instructions ==
+
+== Floating number instructions ==

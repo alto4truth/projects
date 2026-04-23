@@ -1,0 +1,31 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 20
+section: redirection
+chunk: 52
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+ing a file to read, it reads the standard input (the keyboard) and on receiving the 'end of file' (^D), copies it to the standard output (the screen).
+
+=== Redirecting the Output ===
+As I have said, you can redirect both the input and the output from commands.
+You use the > symbol to redirect the output to a file. For example, to create a file called colours containing a list of colour names, type
+
+% cat > colours
+Then type in the names of some colours. Press [Return] after each one and end with ^D.
+
+pink
+yellow
+purple
+^D (this means press [Ctrl] and [d] to stop).
+The cat command reads the standard input (the keyboard) and the > redirects the output (which would normally go to the screen) into a file called colours
+To read the contents of the file, type
+
+% cat colours
+(This is not a particularly good way to create text files - normally I would recommend an editor like vi or emacs or pico but we're learning about readirection, not text editing.)
+
+==== Appending to a file ====
+If you use >> to redirect, then standard output will be redirected to the end of the file and appended to the existing contents. So to add more items to the file colours, type

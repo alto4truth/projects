@@ -1,0 +1,21 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 13
+section: variables-scripts
+chunk: 78
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+alled a string. Try this program:
+
+Code Example 4 – Strings
+
+The output will be:
+
+Code Example 5 – String output
+Good morning
+Good morning to you too!
+
+As you see, the variables above were holding text. Variable names can also be longer than one letter—here, we had word1, word2, and word3. As you can also see, strings can be added together to make longer words or sentences. The comma adds a space and then the variable to the string, so print(word1, word2) outputs Good morning, but with the + it would print Goodmorning.

@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 334
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+an minimize the scope of the use clause by placing it in the body of a package or subprogram or by encapsulating it in a block to restrict visibility.
+
+==== notes ====
+Avoiding the use clause completely can cause problems with enumeration literals, which must then be fully qualified. This problem can be solved by declaring constants with the enumeration literals as their values, except that such constants cannot be overloaded like enumeration literals.
+An argument defending the use clause can be found in Rosen (1987).
+
+==== automation notes ====
+There are tools that can analyze your Ada source code, resolve overloading of names, and automatically convert between the use clause or fully qualified names.
+
+=== The Renames Clause ===

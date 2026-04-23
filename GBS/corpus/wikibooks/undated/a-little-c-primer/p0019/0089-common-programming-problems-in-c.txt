@@ -1,0 +1,34 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 19
+section: common-programming-problems-in-c
+chunk: 89
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+15: Forgetting semicolons—though the compiler usually catches this—or
+adding one where it isn't supposed to be—which it usually doesn't. For
+example:
+
+for( x = 1; x < 10; ++x );
+{
+printf( "%d\n", x );
+}
+—prints only the number 10.
+16: Forgetting "break" statements in "switch" constructs. As commented
+earlier, doing so will simply cause execution to flow from one clause of the
+"switch" to the next.
+17: Careless mixing and misuse of signed and unsigned values, or of
+different data types. This can lead to some insanely subtle bugs. One
+particular problem to watch out for is declaring single character variables
+as "unsigned char". Many I/O functions will expect values of "unsigned int"
+and fail to properly flag EOF. It is recommended to cast function arguments
+to the proper type even if it appears that type conversion will take care of
+it on its own.
+18: Confusion of variable names. To ensure portability of code, it is recommended that the first six characters of such identifiers be unique.
+19: In general, excessively tricky and clever code. Programs are nasty
+beasts and even if it works, it will have to be modified and even ported to
+different languages. Maintain a clean structure and do the simple
+straightforward thing, unless it imposes an unacceptable penalty.

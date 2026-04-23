@@ -1,0 +1,26 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 489
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+orating too many extraneous operations because the unused child packages can be discarded in the new environment.
+See also Guidelines 4.1.6 and 8.3.1.
+
+=== Using Generic Parameters to Reduce Coupling ===
+
+==== guideline ====
+Minimize with clauses on reusable parts, especially on their specifications.
+Consider using generic parameters instead of with statements to reduce the number of context clauses on a reusable part.
+Consider using generic formal package parameters to import directly all the types and operations defined in an instance of a preexisting generic.
+
+==== example ====
+A procedure like the following:
+
+can be rewritten as a generic unit:
+
+and then instantiated:

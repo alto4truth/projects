@@ -1,0 +1,29 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 4
+section: c-command-line-arguments
+chunk: 13
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+C allows a program to obtain the command line arguments provided when the
+executable is called, using two optional parameters of "main()" named "argc
+(argument count)" and "argv (argument vector)".
+The "argc" variable gives the count of the number of command-line parameters
+provided to the program. This count includes the name of the program itself,
+so it will always have a value of at least one. The "argv" variable is a
+pointer to the first element of an array of strings, with each element containing one of the
+command-line arguments.
+The following example program demonstrates:
+
+If this program is run from the command line as follows:
+
+stooges moe larry curley
+
+—the output is:
+stooges
+moe
+larry
+curley

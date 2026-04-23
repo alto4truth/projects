@@ -1,0 +1,43 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 311
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+987 ).
+Use parentheses to specify the order of evaluation for subexpressions whose correctness depends on left to right evaluation.
+
+==== example ====
+
+==== rationale ====
+The Ada rules of operator
+precedence are defined in the Ada Reference Manual 1995, §4.5 [Annotated]
+and follow the same commonly accepted precedence of algebraic
+operators. The strong typing facility in Ada combined with the
+common precedence rules make many parentheses unnecessary. However,
+when an uncommon combination of operators occurs, it may be helpful
+to add parentheses even when the precedence rules apply. The expression:
+
+is clearer, and equivalent to:
+
+The rules of evaluation do specify left to right evaluation for
+operators with the same precedence level. However, it is the most
+commonly overlooked rule of evaluation when checking expressions
+for correctness.
+
+=== Positive Forms of Logic ===
+
+==== guideline ====
+Avoid names and constructs that rely on the use of negatives.
+Choose names of flags so they represent states that can be used in positive form.
+
+==== example ====
+Use:
+
+rather than either:
+
+or:

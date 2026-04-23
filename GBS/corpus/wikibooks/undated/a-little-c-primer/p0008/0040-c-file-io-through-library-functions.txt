@@ -1,0 +1,57 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 8
+section: c-file-io-through-library-functions
+chunk: 40
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+are equivalent to "unsigned int".
+The "fread()" function similarly has the syntax:
+
+fread( <array_pointer>, <element_size>, <count>, <file_pointer> );
+
+The "fread()" function returns the number of items it actually read.
+The following program stores an array of data to a file and then reads it
+back using "fwrite()" and "fread()":
+
+/* fwrrd.c */
+
+#include <stdio.h>
+
+#include <math.h>
+
+#define SIZE 20
+
+void main()
+{
+int n;
+float d[SIZE];
+FILE *fp;
+
+for( n = 0; n < SIZE; ++n ) /* Fill array with roots. */
+{
+d[n] = (float)sqrt( (double)n );
+}
+fp = fopen( "data", "w+" ); /* Open file. */
+fwrite( d, sizeof( float ), SIZE, fp ); /* Write it to file. */
+rewind( fp ); /* Rewind file. */
+fread( d, sizeof( float ), SIZE, fp ); /* Read back data. */
+for( n = 0; n < SIZE; ++n ) /* Print array. */
+{
+printf( "%d: %7.3f\n", n, d[n] );
+}
+fclose( fp ); /* Close file. */
+}
+
+The "putc()" function is used to write a single character to an open file.
+It has the syntax:
+
+putc( <character>, <file pointer> );
+
+The "getc()" function similarly gets a single character from an open file.
+It has the syntax:
+
+<character variable> = getc( <file pointer> );

@@ -1,0 +1,35 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 4
+section: improving-performance
+chunk: 73
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+mples.
+
+=== Record and Array Aggregates ===
+
+==== guideline ====
+Use a sequence of assignments for an aggregation when measured performance indicates.
+
+==== rationale ====
+Determine the impact of using an aggregate versus a sequence of assignments. Using an aggregate generally requires the use of a temporary variable. If the aggregate is "static" (i.e., its size and components are known at compile- or link-time, allowing link-time allocation and initialization), then it will generally be more efficient than a sequence of assignments. If the aggregate is "dynamic," then a series of assignments may be more efficient because no temporary variable is needed.
+See Guideline 5.6.10 for a discussion of aggregates from the point of view of readability and maintainability.
+See Guideline 10.6.1 for a discussion of extension aggregates.
+
+== Algorithms ==
+
+=== Mod and rem Operators ===
+
+==== guideline ====
+Use incremental schemes instead of mod and rem when measured performance indicates.
+
+==== example ====
+
+==== rationale ====
+Determine the impact of using the mod and rem operators. One of the above styles may be significantly more efficient than the other.
+
+=== Short-Circuit Operators ===

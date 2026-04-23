@@ -1,0 +1,26 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 7
+section: parti-chapter-3-arrays
+chunk: 28
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+phone number and address. For not making 3 different arrays it is easier to create one multidimensional array. The example below shows how to do that.
+
+In lines 1 to 3 we create a multidimensional array “users”. You can write all these lines in one line. The variable is declared in three lines because it is easier to read. If you combine these lines then the result will be a very long line. Why we don’t put “;” after each line? Because the lines 2 and 3 are the other parts of the main line. So by putting the “;” in the 3-rd line we tell the computer that this was the end. The program will think that this is only one line. Now lets understand how we create a multidimensional array. This is the type of writing multidimensional arrays:
+
+var <array name>:Array = new Array( [ <first array>, <second array>, <…> );
+
+When you write “var myarray = new Array( [], [], [] );” you create an array with 3 subarrays. Imagine something like this:
+
+Myarray
+0
+value
+1
+value
+2
+value
+If you write “var myarray:Array = new Array ( [ [], [] ], [], [ [] ] );” then this is something like this:

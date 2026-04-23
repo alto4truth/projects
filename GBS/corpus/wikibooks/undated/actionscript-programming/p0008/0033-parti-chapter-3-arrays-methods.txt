@@ -1,0 +1,28 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 8
+section: parti-chapter-3-arrays-methods
+chunk: 33
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+opies the elements of one array and then returns them as an array. To use this method you must give it the start and the last indexes of the elements.
+
+For example the following example copies the second, third and forth elements and returns them to “array2”. The second parameter ( “end” ) which you give to “slice” method is not sliced. In the previous example we set the first parameter to 1 and the second to 4. If you test the movie the output will be “2,3,4”. As the first element of the array is 0, so the value of array1[1] is 2. The value of array1[4] is 5. But it is not sliced.
+
+===== sort =====
+Array.sort( );
+The method “sort” sorts the array.
+
+The following example creates an array, trace it then sort it and trace the sorted array. The output must be
+
+c,a,d,b,e
+a,b,c,d,e
+
+===== sortOn =====
+Array.sortOn( <fieldname> );
+The method “sortOn” is similar to sort, because it sorts too. But to understand what the difference is lets test the following example:
+
+You will notice that the array is ordered by “name” field, not “phone” or “address”.

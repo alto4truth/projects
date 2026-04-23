@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 131
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ed in a package specification because with the package body technique, you can only include one of the implementations (i.e., bodies) in your program.
+
+== Tagged Type Operations ==
+You can use three options when you define the operations on a tagged type and its descendants. These categories are primitive abstract, primitive nonabstract, and class-wide operations. An abstract operation must be overridden for a nonabstract derived type. A nonabstract operation may be redefined for a subclass. A class-wide operation cannot be overridden by a subclass definition. A class-wide operation can be redefined for the derivation class rooted in the derived type; however, this practice is discouraged because of the ambiguities it introduces in the code.
+Through careful usage of these options, you can ensure that your abstractions preserve class-wide properties, as discussed in Guideline 9.2.1. As stated above, this principle requires that any type that is visibly derived from some parent type must fully support the semantics of the parent type.
+
+=== Primitive Operations and Redispatching ===

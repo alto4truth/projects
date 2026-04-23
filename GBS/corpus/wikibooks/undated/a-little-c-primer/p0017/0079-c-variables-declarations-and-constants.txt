@@ -1,0 +1,42 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 17
+section: c-variables-declarations-and-constants
+chunk: 79
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+clared item in it, and that same memory is used to
+store data for all the declared items. Unions are not often used and will
+not be discussed further.
+
+The following example program shows a practical use of structures. It tests a set of functions that perform operations on three-dimensional vectors:
+vadd(): Add two vectors.
+vsub(): Subtract two vectors.
+vdot(): Vector dot product.
+vcross(): Vector cross product.
+vnorm(): Norm (magnitude) of vector.
+vangle(): Angle between two vectors.
+vprint(): Print out vector.
+
+The program follows:
+
+The concept of local and global variables should be clear by now. It is
+also possible to declare a local variable as "static", meaning it retains its
+value from one invocation of the function to the next. For example:
+
+This prints:
+
+0
+2
+4
+6
+8
+10
+12
+14
+
+-- since the initial value of a integer is 0 by default. It is not a
+good idea to rely on a default value!

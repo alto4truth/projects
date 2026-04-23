@@ -1,0 +1,43 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 295
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ated Data ===
+
+==== guideline ====
+Use records to group heterogeneous but related data.
+Consider records to map to I/O device data.
+
+==== example ====
+
+==== rationale ====
+You help the maintainer find all of the related data by gathering
+it into the same construct, simplifying any modifications that
+apply to all rather than part. This, in turn, increases reliability.
+Neither you nor an unknown maintainer is liable to forget to deal
+with all the pieces of information in the executable statements,
+especially if updates are done with aggregate assignments whenever
+possible.
+The idea is to put the information a maintainer needs to know
+where it can be found with the minimum of effort. For example,
+if all information relating to a given Craft is in the
+same place, the relationship is clear both in the declarations
+and especially in the code accessing and updating that information.
+But, if it is scattered among several data structures, it is less
+obvious that this is an intended relationship as opposed to a
+coincidental one. In the latter case, the declarations may be
+grouped together to imply intent, but it may not be possible to
+group the accessing and updating code that way. Ensuring the use
+of the same index to access the corresponding element in each
+of several parallel arrays is difficult if the accesses are at
+all scattered.
+If the application must interface directly to hardware, the use
+of records, especially in conjunction with record representation
+clauses, could be useful to map onto the layout of the hardware
+in question.

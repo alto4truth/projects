@@ -1,0 +1,33 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 2
+section: an-introductory-c-program
+chunk: 10
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+is given internal linkage. Declarations like this:
+
+identify "a" as an int whose storage is defined elsewhere; preferably in another translation unit.
+
+Besides the variable declarations, the example programs above also feature a function declaration, or "function prototype", that allows the C compiler to perform checks on calls to the function in the program and flag an error if they are not correct:
+
+The function prototypes declare the type of value the function returns (the type will be "void" if it does not return a value), and the arguments that are to be provided with the function.
+Finally, the "printf()" library function provides text output capabilities for the program. The "printf()" function can be used to print a simple message as follows:
+
+—displays the text:
+Hello, world!
+
+Remember that "printf()" doesn't automatically add a "newline" to allow following "printf()"s to print on the next display line. For example:
+
+—prints the text:
+
+Twas bryllig and the slithy toves
+
+A newline character ("\n") must be added to force a newline. For example:
+
+—gives:
+Hello,
+world!

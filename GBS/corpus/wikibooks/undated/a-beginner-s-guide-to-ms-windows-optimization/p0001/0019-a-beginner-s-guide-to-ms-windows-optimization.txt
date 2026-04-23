@@ -1,0 +1,25 @@
+title: A Beginner's Guide to MS Windows Optimization
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-ms-windows-optimization
+authors: 
+page: 1
+section: a-beginner-s-guide-to-ms-windows-optimization
+chunk: 19
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_MS_Windows_Optimization
+
+we checked its with the latest service pack (SP3 for XP, SP2 for Vista). And we have all the drivers from the website on an usb drive. OK, next step.
+
+== Step 5: Installing Windows - Total Annihilation ==
+Before you wake up your blood thirsty destructive side, check that you have done your backup, I know I am repeating myself on this topic, but formatting the disk till erase all data on the drive. Check that you have a serial key for Windows, and check that you have the newest drivers for Windows.
+Before we can install a new operating system, we need to check one option in the BIOS. We need to check that CD/DVD is booting (starting) before the HDD. It may sound complicated, but its really easy. To enter BIOS, we need to restart the PC
+The first couple of seconds when the PC is booting you may see a message like “To enter BIOS press F2”. You have to press that key before Windows starts. It is usually the F1, F2, F12 or the DEL key. If unsure, press all of them when the computer is starting.
+In the BIOS you move around in the menus using the arrow keys. Don't worry, if you don't save any settings you won't break anything, if unsure, press the power button and start all over again. In the BIOS you need to find something that is called Boot Order or Boot device priority. Look around in the menus. If you find it, make sure that the CD/DVD is listed before the HDD. Don't forget to save the settings. If unsure read the manual, if you don't have one, download one from the manufacturers website.
+Here is an old but good YouTube clip about BIOS: http://www.youtube.com/watch?v=Tc1t3c5Yke8
+Because there are millions of guides about installing Windows. I am not going to reinvent the wheel again, so here are some good ones. Just follow them.
+Just one more thing, the partitions, you will have to choose if you want to install Windows on the whole disk, or to split the disk into partitions. The easiest is to install Windows on one disk with one partition. And if you don't want to complicate things, do that.
+But if you e.g. create 2 partitions, e.g. C: and Z:, you can install Windows on C: and then use Z: for all your files. And then when you will have to install/format the disk again, you can only format C: and leave Z: alone. This will save you a lot of time. The choice is yours.
+If you choose to do 2 or more partitions, just remember to do the C: at least 20-30GB big, I would recommend 40GB (40 000 MB).
+One final note from me, there are 2 versions of each of the operating system, a 32 bit version, called x86 and a 64 bit version called x64. The 64 bit version is only for computers with 4 GB RAM or more. Don't install 64 bit system on 2 GB, it's a waste of memory.
+I know, I have it. But it was purely experimental.
+Windows 7:

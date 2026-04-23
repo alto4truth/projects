@@ -1,0 +1,37 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 17
+section: c-variables-declarations-and-constants
+chunk: 71
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+ome reason many functions that deal
+with individual characters require variables to be declared "int" or
+"unsigned int".
+Declarations are of the form:
+
+Variable names can be at least 31 characters long, though modern compilers
+will always support longer names. Variables names can be made up of letters,
+digits, and the "_" (underscore) character; the first character must be a
+letter. While it is possible to use uppercase letters in variable names,
+conventional C usage reserves uppercase for constant names. A leading "_" is
+also legal, but is generally reserved for marking internal library names.
+C allows several variables to be declared in the same statement, with commas
+separating the declarations. The variables can be initialized when declared.
+Constant values for declarations can be declared in various formats:
+
+128 decimal int
+256u decimal unsigned int
+512l decimal long int
+0xAF hex int
+0173 octal int
+0.243 float
+0.1732f float
+15.75E2 float
+'a' character
+"giday" string
+
+There are a number of special characters defined in C:

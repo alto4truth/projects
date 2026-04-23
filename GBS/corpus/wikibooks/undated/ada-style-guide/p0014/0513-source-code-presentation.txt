@@ -1,0 +1,31 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 14
+section: source-code-presentation
+chunk: 513
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+Indenting with spaces is more portable than indenting with tabs because tab characters are displayed differently by different terminals and printers.
+
+==== exceptions ====
+If you are using a variable width font, tabs will align better than spaces. However, depending on your tab setting, lines of successive indentation may leave you with a very short line length.
+
+==== automation notes ====
+The guidelines in this section are easily enforced with an automatic code formatter.
+
+=== Alignment of Operators ===
+
+==== guideline ====
+Align operators vertically to emphasize local program structure and semantics.
+
+==== example ====
+
+==== rationale ====
+Alignment makes it easier to see the position of the operators and, therefore, puts visual emphasis on what the code is doing.
+The use of lines and spacing on long expressions can emphasize terms, precedence of operators, and other semantics. It can also leave room for highlighting comments within an expression.
+
+==== exceptions ====
+If vertical alignment of operators forces a statement to be broken over two lines, especially if the break is at an inappropriate spot, it may be preferable to relax the alignment guideline.

@@ -1,0 +1,27 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 219
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+cies in I/O is to try to isolate their functionality in any given application. The majority of the following guidelines are focused in this direction.
+
+=== Name and Form Parameters ===
+
+==== guideline ====
+Use constants and variables as symbolic actuals for the Name and Form parameters on the predefined I/O packages. Declare and initialize them in an implementation dependency package.
+
+==== rationale ====
+The format and allowable values of these parameters on the predefined I/O packages can vary greatly between implementations. Isolation of these values facilitates portability. Not specifying a Form string or using a null value does not guarantee portability because the implementation is free to specify defaults.
+
+==== notes ====
+It may be desirable to further abstract the I/O facilities by defining additional Create and Open procedures that hide the visibility of the Form parameter entirely (see Pappas 1985, 54-55).
+
+=== File Closing ===
+
+==== guideline ====
+Close all files explicitly.

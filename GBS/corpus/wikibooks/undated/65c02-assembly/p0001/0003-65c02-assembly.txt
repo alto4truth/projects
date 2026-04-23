@@ -1,0 +1,28 @@
+title: 65c02 Assembly
+source: wikibooks
+year: undated
+document_id: 65c02-assembly
+authors: 
+page: 1
+section: 65c02-assembly
+chunk: 3
+source_ref: https://en.wikibooks.org/wiki/65c02_Assembly
+
+of the 65c02 CPUs opcodes deal with memory stored in the Zero Page. Memory stored in the zero page often takes less time to process.
+
+== Registers ==
+
+== Memory layout ==
+16-bit values are stored in memory in little-endian, so the least significant byte is stored before the most significant. E.g. if address $0000 contains $FF and address $0001 contains $00, reading a two-byte value from $0000 will result in $00FF.
+Signed integers are in two's complement and can represent values from -128 (%10000000) to +127 (%01111111). Bit 7 is set if the integer is negative.
+The 6502's program counter is 16 bits wide, so up to 2^16 (65536) bytes of memory are addressable. Certain regions of memory are reserved for particular purposes:
+
+== Memory Addressing Modes ==
+Each instruction uses one of thirteen memory addressing modes, which determines the operand of the instruction. An example is provided for each.
+
+=== Accumulator: A ===
+The Accumulator is implied as the operand, so no address needs to be specified.
+Example
+Using the ASL (Arithmetic Shift Left) instruction with no operands, the Accumulator is always the value being shifted left.
+
+ASL

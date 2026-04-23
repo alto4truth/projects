@@ -1,0 +1,17 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 1
+section: 360-assembly
+chunk: 1
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+This book is about assembly language programming for the Fujitsu BS2000 Mainframe and the IBM 360, 370, ESA/390, 93xx and z/System family of mainframe computers. The same assembly language was also used on the Univac 90/60, 90/70, and 90/80 mainframes. The machines generally provided upward compatibility for user programs (a program such as a payroll program written for MVS on a 24-bit 360 in the 1960 or early 1970s, will run unmodified on 31-bit VS/1 in the 1980s. While a later program (say an accounts payable application) written for 31-bit VS/1 in the 1980s wouldn't run on a 360 if it used 31-bit operations, both programs will run unmodified under z/OS on a 64-bit z/System in 2015.)
+The term "360" will be used to refer to an instruction which works on all of these models, while the other designations - System/370, S/370, 370; ESA/390, 390; z/System, Z - will be used to refer to features available only in later models of this processor type. This book will attempt to teach how to program in 360 assembly, the history of the processor family, and the basic architecture of 360 and later processor systems.
+
+== Table of Contents ==
+
+Introduction
+Basic FAQ

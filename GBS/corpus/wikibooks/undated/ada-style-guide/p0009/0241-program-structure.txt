@@ -1,0 +1,26 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 241
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+m readability by hiding the details of a particular activity. It is not necessary that a subprogram be called more than once to justify its existence.
+
+==== notes ====
+Guideline 10.7.1 discusses dealing with the overhead of subroutine calls.
+
+=== Functions ===
+
+==== guideline ====
+Use a function when the subprogram's primary purpose is to provide a single value.
+Minimize the side effect of a function.
+Consider using a parameterless function when the value does not need to be static.
+Use a parameterless function (instead of a constant) if the value should be inherited by types derived from the type.
+Use a parameterless function if the value itself is subject to change.
+
+==== example ====
+Although reading a character from a file will change what character is read next, this is accepted as a minor side effect compared to the primary purpose of the following function:

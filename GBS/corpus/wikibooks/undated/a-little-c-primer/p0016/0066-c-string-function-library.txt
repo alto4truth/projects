@@ -1,0 +1,51 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 16
+section: c-string-function-library
+chunk: 66
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+The string-function library requires the declaration:
+
+The most important string functions are as follows:
+
+strlen() Get length of a string.
+strcpy() Copy one string to another.
+strcat() Link together (concatenate) two strings.
+strcmp() Compare two strings.
+strchr() Find character in string.
+strstr() Find string in string.
+strlwr() Convert string to lowercase.
+strupr() Convert string to uppercase.
+
+== strlen() ==
+The "strlen()" function gives the length of a string, not including the
+NUL character at the end:
+
+This prints:
+
+Length of <XXX> is 3.
+
+== strcpy() ==
+The "strcpy" function copies one string from another. For example:
+
+This will print:
+
+Original strings:
+
+xxxxxx 1
+zzzzzz 2
+
+New strings:
+
+xxxxxx 1
+xxxxxx 1
+
+Please be aware of two features of this program:
+
+This program assumes that "s2" has enough space to store the final string. The "strcpy()" function won't bother to check, and will give erroneous results if that is not the case.
+A string constant can be used as the source string instead of a string variable. Using a string constant for the destination, of course, makes no sense.
+These comments are applicable to most of the other string functions.

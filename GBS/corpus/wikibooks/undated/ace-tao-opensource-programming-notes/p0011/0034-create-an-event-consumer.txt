@@ -1,0 +1,38 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 11
+section: create-an-event-consumer
+chunk: 34
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+event)
+cout << "Bill Event Data: Bill = " << bill_event->bill << " Status = " <<
+bill_event->status << " Command = " << bill_event->command << endl;
+}
+
+/** \fn EventSinkConsumer_i::disconnect_push_consumer()
+* Override the disconnect operation
+*/
+void EventSinkConsumer_i::disconnect_push_consumer() throw(CORBA::SystemException){
+//Deactivate this object
+CORBA::Object_var obj = orb_->resolve_initial_references("djb");
+PortableServer::Current_var current = PortableServer::Current::_narrow(obj.in());
+PortableServer::POA_var poa = current->get_POA();
+PortableServer::ObjectId_var objectId = current->get_object_id();
+poa->deactivate_object(objectId.in());
+}
+
+== eventsink.idl ==
+Actually, this is a copy of eventsource.idl.
+
+struct accepted{
+unsigned long bill;
+unsigned long status;
+unsigned long command;
+};
+
+== Link Line Details ==
+-lTAO_CosEvent_Skel -lTAO_CosEvent -lTAO_PortableServer -lTAO_CosNaming -lTAO_AnyTypeCode -lTAO -lACE

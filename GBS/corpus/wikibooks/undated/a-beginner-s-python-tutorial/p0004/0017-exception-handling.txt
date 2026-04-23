@@ -1,0 +1,18 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 4
+section: exception-handling
+chunk: 17
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+t you can't join a string of letters and a number into one string of text. Let's go through the error message and have a look at how it tells us that:
+
+File "/home/steven/errortest.py", line 10, in -toplevel- tells us a couple of things. File "/home/steven/errortest.py" tells us which file the error occurred in. This is useful if you use lots of modules that refer to each other. line 10, in -toplevel- tells us that it is in line # 10 of the file, and in the top level (that is, no indentation).
+answer = menu(['A','B','C','D','E','F','H','I'],'Which letter is your favourite? ') duplicates the code where the error is.
+Since this line calls a function, the next two lines describe where in the function the error occurred.
+TypeError: unsupported operand type(s) for -: 'str' and 'int' tells you the error. In this case, it is a 'TypeError', where you tried to subtract incompatible variables.
+There are multiple file and code listings for a single error, because the error occurred with the interaction of two lines of code (e.g. when using a function, the error occurred on the line where the function was called, AND the line in the function where things went wrong).
+Now that we know what the problem is, how do we fix it. Well, the error message has isolated where the problem is, so we'll only concentrate on that bit of code.

@@ -1,0 +1,35 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 87
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+cation domain:
+
+AppDomain ad = AppDomain.CreateDomain("Name");
+
+Use AppDomain.CurrentDomain to get the application domain the calling thread is using.
+
+===== Load assemblies into an application domain =====
+See MSDN
+It is possible to execute an assembly by name using AppDomain.ExecuteAssemblyByName:
+
+AppDomain ad = AppDomain.CreateDomain("Name");
+ad.ExecuteAssemblyByName("aname, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a9b8c7d6");
+
+Or use AppDomain.ExecuteAssembly to supply a path to the assemby:
+
+AppDomain ad = AppDomain.CreateDomain("Name");
+ad.ExecuteAssembly(@"c:\path\to\file.exe");
+
+===== Unload an application domain =====
+See MSDN
+It is not possible to unload assemblies from the default application domain. However if an assembly is loaded in a different application domain, you can unload the whole application domain which includes all assemblies in that application domain.
+To unload an application domain, use the static AppDomain.Unload function:
+
+AppDomain ad = AppDomain.CreateDomain("Name");
+AppDomain.Unload(ad);

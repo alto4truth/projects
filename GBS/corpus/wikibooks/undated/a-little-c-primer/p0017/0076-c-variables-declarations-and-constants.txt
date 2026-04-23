@@ -1,0 +1,31 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 17
+section: c-variables-declarations-and-constants
+chunk: 76
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+put the character "L" into the variable "ch".
+This is very well and good, but why care? The reason to care is because
+this explains why the operation:
+
+-- is absurd. This statement tells the C compiler to reserve 128 bytes of
+memory and set a pointer named "s" to point to them. Then it reserves
+another block of memory to store "This is a test!" and points "s" to that.
+This means the block of 128 bytes of memory that were originally allocated is
+now sitting empty and unusable, and the program is actually accessing the
+memory that stores "This is a test!".
+This will seem to work for a while, until the program tries to store more
+bytes into that block than can fit into the 16 bytes reserved for "This is a
+test!". Since C is poor about bounds checking, this may cause all kinds of
+trouble.
+This is why "strcpy()" is usually necessary. It isn't needed for a string
+that won't be modified or will not be used to store more data than it is
+initialized to, and under such circumstances the following statements will
+work fine:
+
+These issues become particularly tricky when passing strings as parameters to
+functions. The following example shows how to get around the pitfalls:

@@ -1,0 +1,16 @@
+title: A Brief Introduction to the LaTeX Typesetting Environment
+source: wikibooks
+year: undated
+document_id: a-brief-introduction-to-the-latex-typesetting-environment
+authors: 
+page: 3
+section: typesetting-the-basics
+chunk: 16
+source_ref: https://en.wikibooks.org/wiki/A_Brief_Introduction_to_the_LaTeX_Typesetting_Environment
+
+t if you were to try to typeset the above example without using the following command before the \begin{document} constructor:
+
+\usepackage{subfigure}
+
+it would still work. This is because a figure is not a subfigure. We'll use a subfigure in later examples but if you were to try to use a subfigure without \usepackage{subfigure} you'd get an error and your document wouldn't typset. This is because a figure is an inherent object in the \LaTeX library where a subfigure is not and therefore \LaTeX has no idea what you're talking about when you say subfigure unless you give it a \usepackage to reference.
+Remembering this fact will solve a lot of problems in the future if you're using different packages and should help with troubleshooting when you're writing your own documents.

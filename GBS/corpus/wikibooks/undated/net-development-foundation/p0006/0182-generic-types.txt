@@ -1,0 +1,50 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 6
+section: generic-types
+chunk: 182
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+you the code:
+
+/// <summary>
+/// Representation of a client
+/// </summary>
+public class Client
+{
+private string _name;
+private string _accountNumber;
+
+/// <summary>
+/// Gets or sets the account number.
+/// </summary>
+/// <value>The account number.</value>
+public string AccountNumber
+{
+get { return _accountNumber; }
+set { _accountNumber = value; }
+}
+
+/// <summary>
+/// Gets or sets the name.
+/// </summary>
+/// <value>The name.</value>
+public string Name
+{
+get { return _name; }
+set { _name = value; }
+}
+
+/// <summary>
+/// Initializes a new instance of the <see cref="T:Client"/> class.
+/// </summary>
+/// <param name="name">The name.</param>
+/// <param name="accountNumber">The account number.</param>
+public Client(string name, string accountNumber)
+{
+_name = name;
+_accountNumber = accountNumber;
+}

@@ -1,0 +1,29 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 319
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+wherever possible.
+Use type extension and dispatching rather than case statements if, possible.
+
+==== example ====
+
+Now consider a change in the type:
+
+This change may have an unnoticed and undesired effect in the
+case statement. If the choices had been enumerated explicitly,
+as when Red | Green | Blue => instead of when
+Red .. Blue =>, then the case statement would
+not have compiled. This would have forced the maintainer to make
+a conscious decision about what to do in the case of Yellow.
+In the following example, assume that a menu has been posted,
+and the user is expected to enter one of the four choices. Assume
+that User_Choice is declared as a Character
+and that Terminal_IO.Get handles errors in user input.
+The less readable alternative with the if/elsif statement
+is shown after the case statement:

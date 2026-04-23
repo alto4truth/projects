@@ -1,0 +1,25 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 137
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+In Ada a constructor for a type is defined as an operation that produces as a result a constructed object, i.e., an initialized instance of the type.
+
+==== guideline ====
+Avoid declaring a constructor as a primitive abstract operation.
+Use a primitive abstract operation to declare an initialization function or constructor only when objects of the inheriting derived types will not require additional parameters for initialization.
+Consider using access discriminants to provide parameters to default initialization.
+Use constructors for explicit initialization.
+Consider splitting the initialization and construction of an object.
+Consider declaring a constructor operation in a child package.
+Consider declaring a constructor operation to return an access value to the constructed object (Dewar 1995).
+
+==== example ====
+The following example illustrates the declaration of a constructor in a child package:
+
+The following example shows how to split the initialization and construction of an object:

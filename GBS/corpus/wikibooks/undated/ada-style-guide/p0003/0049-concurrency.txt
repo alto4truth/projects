@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 49
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+processing resource:
+
+The addition of a delay, as shown, may allow Current_Position to execute until it reaches an accept for Request_New_Coordinates:
+
+The following selective accept with else again does not degenerate into a busy wait loop only because of the addition of a delay statement:
+
+The following timed entry call might be considered an unacceptable implementation if lost communications with the reactor for over 25 milliseconds results in a critical situation:
+
+In the following "selective accept with delay" example, the accuracy of the coordinate calculation function is bounded by time. For example, the required accuracy cannot be obtained unless Period is within + or - 0.005 seconds. This period cannot be guaranteed because of the inaccuracy of the delay statement:

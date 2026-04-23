@@ -1,0 +1,20 @@
+title: A Guide To PIC Microcontroller Documentation
+source: wikibooks
+year: undated
+document_id: a-guide-to-pic-microcontroller-documentation
+authors: 
+page: 5
+section: documentation-structure-dev-tools-manufacturing
+chunk: 16
+source_ref: https://en.wikibooks.org/wiki/A_Guide_To_PIC_Microcontroller_Documentation
+
+n the target controller and information on flash programming for production purposes. The main documentation areas have previously been identified as:
+
+Microcontroller or DSC documentation
+Programming language tools documentation
+Integrated Development Environment (IDE) documentation (if used)
+Hardware debugger and/or programmer documentation
+Flash program memory programming documentation
+In this section, the last two points will be examined in more detail.
+The hardware debugger and programmer documentation helps us to understand the capabilities and limitations of the available tools needed to debug the application we will develop on the target hardware. This encompasses everything from number of available debugging breakpoints and controller resources needed to support debugging to recommended circuitry to guarantee successful in-circuit programming during manufacturing.
+For those keen to develop their own programming tools, either for their own manufacturing facilities or for the purpose of selling programming tools for the PIC® family of microcontrollers, the program memory programming documentation must be examined in detail.

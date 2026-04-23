@@ -1,0 +1,54 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 19
+section: common-programming-problems-in-c
+chunk: 85
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+There are a number of common programming pitfalls in C that trap even
+experienced programmers:
+1: Confusing "=" (assignment operator) with "==" (equality operator). For
+example:
+
+if ( x = 1 ){ /* wrong! */
+}
+...
+if ( x == 1 ){ /* good. */
+}
+
+and
+
+for ( x == 1; ... /* wrong! */
+...
+for ( x = 1; ... /* good. */
+
+2: Confusing precedence of operations in expressions. When in doubt, use
+parentheses to enforce precedence.
+It never hurts to use a few extra parenthesis.
+3: Confusing structure-member operators. If "struct_val" is a structure and
+"struct_ptr" is a pointer to a structure, then:
+
+struct_val->myname
+
+—is wrong and so is:
+struct_ptr.myname
+
+4: Using incorrect formatting codes for "printf()" and "scanf()". Using a
+"%f" to print an "int", for example, can lead to bizarre output.
+5: Remember that the actual base index of an array is 0, and the final index
+is 1 less than the declared size. For example:
+
+int data[20];
+...
+for ( x = 1; x <= 20; ++x )
+{
+printf( "%d\n", data[x] );
+}
+—will give invalid results when "x" is 20. Since C does not do bounds
+checking, this one might be hard to catch.
+6: Muddling syntax for multidimensional arrays. If:
+
+data[10][10]

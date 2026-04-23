@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 300
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ion may
+provide a cleaner design if the "intermediate" records
+are all instances of the same abstraction family. See also Guidelines
+5.4.2 and 9.2.1 .
+
+==== notes ====
+A carefully chosen name for the component of the larger record
+that is used to select the smaller enhances readability, for example:
+
+=== Dynamic Data ===

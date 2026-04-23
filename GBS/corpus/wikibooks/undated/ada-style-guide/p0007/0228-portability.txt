@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 228
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+onsider using protected objects to encapsulate shared data.
+Use pragma Atomic or Volatile only when you are forced to by run-time system deficiencies.
+
+==== exceptions ====
+Do not depend on the exact locations at which predefined exceptions are raised.
+Do not rely on the behavior of Ada.Exceptions beyond the minimum defined in the language.
+Do not raise implementation-specific exceptions.
+Convert implementation-specific exceptions within interface packages to visible user-defined exceptions.

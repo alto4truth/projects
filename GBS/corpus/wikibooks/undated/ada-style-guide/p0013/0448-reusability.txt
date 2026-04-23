@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 448
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+eusable part, as well as its abstraction.
+
+==== example ====
+General-purpose stack abstraction:
+
+Renamed appropriately for use in current application:
+
+==== rationale ====
+Choosing a general or application-independent name for a reusable part encourages its wide reuse. When the part is used in a specific context, it can be instantiated (if generic) or renamed with a more specific name.
+When there is an obvious choice for the simplest, clearest name for a reusable part, it is a good idea to leave that name for use by the reuser of the part, choosing a longer, more descriptive name for the reusable part. Thus, Bounded_Stack is a better name than Stack for a generic stack package because it leaves the simpler name Stack available to be used by an instantiation.
+Include indications of the behavioral characteristics (but not indications of the implementation) in the name of a reusable part so that multiple parts with the same abstraction (e.g., multiple stack packages) but with different restrictions (bounded, unbounded, etc.) can be stored in the same Ada library and used as part of the same Ada program.
+
+=== Abbreviations ===

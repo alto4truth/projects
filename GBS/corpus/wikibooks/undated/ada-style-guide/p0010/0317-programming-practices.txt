@@ -1,0 +1,39 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 317
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+keep the
+maximum number of nesting levels between three and five.
+
+==== notes ====
+Ask yourself the following questions to help you simplify the
+code:
+
+Can some part of the expression be put into a constant or variable?
+Does some part of the lower nested control structures represent a significant and, perhaps, reusable computation that I can factor into a subprogram ?
+Can I convert these nested if statements into a case statement?
+Am I using else if where I could be using elsif?
+Can I reorder the conditional expressions controlling this nested structure?
+Is there a different design that would be simpler?
+
+==== exceptions ====
+If deep nesting is required frequently, there may be overall design
+decisions for the code that should be changed. Some algorithms
+require deeply nested loops and segments controlled by conditional
+branches. Their continued use can be ascribed to their efficiency,
+familiarity, and time-proven utility. When nesting is required,
+proceed cautiously and take special care with the choice of identifiers
+and loop and block names.
+
+=== Slices ===
+
+==== guideline ====
+Use slices rather than a loop to copy part of an array.
+
+==== example ====

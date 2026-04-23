@@ -1,0 +1,17 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 62
+section: prog-start-0
+chunk: 162
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+BALR 12,0
+USING *,12,11
+LA 11,4095(12)
+LA 11,1(11)
+
+In the above example, the USING pseudo-instruction tells the assembler that register 12 is established as the base register for the first 4096 bytes of this module, and that register 11 is established for the second 4096 bytes. After register 12 has been loaded with the current address through the BALR instruction, register 11 is loaded with the address 4096 bytes later in the program. Note that this uses the older LA instruction, which cannot add more than 4095 to the value contained in a register, so two LA instructions must be used. While this combination of instructions will work on all models of IBM hardware as well as competitor's equipment, later versions of IBM hardware such as the z/Series provide more efficient instructions for this purpose.
+If a specific location is addressed by more than one register, the assembler may become confused and issue an MNOTE level 4 (warning) because it is not sure which register to use, in which case it uses the highest numbered register pointing to the address in question. However, if the using addresses of two or more registers overlap, the assembler will choose the register resulting in the lowest displacement address generated. The following example will demonstrate. This example is from an assembler listing.

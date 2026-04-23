@@ -1,0 +1,52 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 224
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+th a package, in this case, the package Text_IO. Guidelines 6.1.1 and 6.2.4 discuss the related issues of unprotected shared variables.
+
+== Summary ==
+
+=== fundamentals ===
+In programs or components intended to have a long life, avoid using the features of Ada declared as "obsolescent" by Annex J of the Ada Reference Manual (1995), unless the use of the feature is needed for backward compatibility with Ada 83 (Ada Reference Manual 1983).
+Document the use of any obsolescent features.
+Avoid using the following features:
+The short renamings of the packages in the predefined environment (e.g., Text_IO as opposed to Ada.Text_IO)
+The character replacements of ! for |, : for #, and % for quotation marks
+Reduced accuracy subtypes of floating-point types
+The 'Constrained attribute as applied to private types
+The predefined package ASCII
+The exception Numeric_Error
+Various representation specifications, including at clauses, mod clauses, interrupt entries, and the Storage_Size attribute
+Make informed assumptions about the support provided for the following on potential target platforms:
+Number of bits available for type Integer (range constraints)
+Number of decimal digits of precision available for floating-point types
+Number of bits available for fixed-point types (delta and range constraints)
+Number of characters per line of source text
+Number of bits for Root_Integer expressions
+Number of seconds for the range of Duration
+Number of milliseconds for Duration'Small
+Minimum and maximum scale for decimal types
+Avoid assumptions about the values and the number of values included in the type Character.
+Use highlighting comments for each package, subprogram, and task where any nonportable features are present.
+For each nonportable feature employed, describe the expectations for that feature.
+Consider using only a parameterless procedure as the main subprogram.
+Consider using Ada.Command_Line for accessing values from the environment, but recognize that this package's behavior and even its specification are nonportable.
+Encapsulate and document all uses of package Ada.Command_Line.
+Create packages specifically designed to isolate hardware and implementation dependencies and designed so that their specification will not change when porting.
+Clearly indicate the objectives if machine or solution efficiency is the reason for hardware or implementation-dependent code.
+For the packages that hide implementation dependencies, maintain different package bodies for different target environments.
+Isolate interrupt receiving tasks into implementation-dependent packages.
+Refer to Annex M of the Ada Reference Manual (1995) for a list of implementation-dependent features.
+Avoid the use of vendor-supplied packages.
+Avoid the use of features added to the predefined packages that are not specified in the Ada language definition or Specialized Needs Annexes.
+Use features defined in the Specialized Needs Annexes rather than vendor-defined features.
+Document clearly the use of any features from the Specialized Needs Annexes (systems programming, real-time systems, distributed systems, information systems, numerics, and safety and security).
+Do not write code whose correct execution depends on the particular parameter passing mechanism used by an implementation (Ada Reference Manual 1995, §6.2 [Annotated]; Cohen 1986).
+If a subprogram has more than one formal parameter of a given subtype, at least one of which is [in] out, make sure that the subprogram can properly handle the case when both formal parameters denote the same actual object.
+Avoid depending on the order in which certain constructs in Ada are evaluated .

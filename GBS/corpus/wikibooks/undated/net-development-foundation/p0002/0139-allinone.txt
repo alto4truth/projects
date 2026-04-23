@@ -1,0 +1,56 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 139
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+.
+/// </summary>
+/// <value>The account number.</value>
+public string AccountNumber
+{
+get { return _accountNumber; }
+set { _accountNumber = value; }
+}
+
+/// <summary>
+/// Gets or sets the name.
+/// </summary>
+/// <value>The name.</value>
+public string Name
+{
+get { return _name; }
+set { _name = value; }
+}
+
+/// <summary>
+/// Initializes a new instance of the <see cref="T:Client"/> class.
+/// </summary>
+/// <param name="name">The name.</param>
+/// <param name="accountNumber">The account number.</param>
+public Client(string name, string accountNumber)
+{
+_name = name;
+_accountNumber = accountNumber;
+}
+
+/// <summary>
+/// The Main entry point of the console application
+/// </summary>
+/// <param name="args">The command line arguments</param>
+static void Main(string[] args)
+{
+ClientList clients = new ClientList();
+clients.Add(new Client("Marco", "332-3355"));
+clients.Add(new Client("Martinus", "453-5662"));
+foreach (Client client in clients)
+{
+Console.WriteLine("The account {0} belongs to {1}", client.AccountNumber, client.Name);
+}
+Console.ReadLine();
+}
+}

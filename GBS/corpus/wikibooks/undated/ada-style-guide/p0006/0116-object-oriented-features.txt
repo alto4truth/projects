@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 116
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+together to the "traditional" object-oriented programming concept of a "class." Putting these into a package provides a clean encapsulation mechanism.
+
+==== exceptions ====
+If the root of the hierarchy does not define a complete set of values and operations, then use an abstract tagged type (see Guideline 9.2.4). This abstract type can be thought of as the least common denominator of the class, essentially a conceptual and incomplete type.
+If a descendant needs to remove one of the components or primitive operations of its ancestor, it may not be appropriate to extend the tagged type.
+An exception to using reference semantics is when a type is exported that would not be used in a data structure or made part of a collection.
+If the implementation of two tagged types requires mutual visibility and the two types are generally used together, then it may be best to define them together in one package, though thought should be given to using child packages instead (see Guideline 9.4.1). Also, it can be convenient to define a small hierarchy of (completely) abstract types (or a small part of a larger hierarchy) all in one package specification; however, the negative impact on maintainability may outweigh the convenience. You do not provide a package body in this situation unless you have declared nonabstract operations on members of the hierarchy.

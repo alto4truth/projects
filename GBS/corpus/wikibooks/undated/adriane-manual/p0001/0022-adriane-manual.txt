@@ -1,0 +1,22 @@
+title: Adriane-Manual
+source: wikibooks
+year: undated
+document_id: adriane-manual
+authors: 
+page: 1
+section: adriane-manual
+chunk: 22
+source_ref: https://en.wikibooks.org/wiki/Adriane-Manual
+
+s described in the section "navigation by keyboard".
+Beside the direct access the Shell offers comfortable usage of the operating system and programs:
+
+For a fast navigation in the file system and file management in the shell the following table maybe helpful, as it shows some of the most important commands, being used by any Unix based systems:
+
+Paths within a UNIX file system always have the same syntax, a slash “/” between file and directory names, e.g. directory/subdirectory/file.txt. "Absolute" paths begin with the root directory /, relative paths with the actual directory . (dot), what can also be omitted.
+Here is an example to copy a directory and its content from an USB disc drive /media/sdb1 to the current directory (entering cd without any further data) you are in your home directory /home/knoppix:
+
+cd
+mount /media/sdb1
+cp -a /media/sdb1/"My Music" musicfolder-copy
+umount /media/sdb1

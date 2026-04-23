@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 54
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+====
+In the following example, an exception raised using the primary sensor is used to change Mode to Degraded still allowing execution of the system:
+
+==== rationale ====
+Allowing a task to terminate might not support the requirements of the system. Without an exception handler for the rendezvous within the main task loop, the functions of the task might not be performed.
+
+==== notes ====
+The use of an exception handler is the only way to guarantee recovery from an entry call to an abnormal task. Use of the 'Terminated attribute to test a task's availability before making the entry call can introduce a race condition where the tested task fails after the test but before the entry call (see Guideline 6.2.3).
+
+=== Normal Termination ===

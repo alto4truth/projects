@@ -1,0 +1,29 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 82
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+rviceChangeDescription structure and ServiceChangeReason enumeration
+
+SessionChangeDescription structure - MSDN
+SessionChangeReason enumeration - MSDN
+
+==== Develop multithreaded applications ====
+Exam objective: Develop multithreaded .NET Framework applications
+(Refer System.Threading namespace)
+Thread class - MSDN
+ThreadPool class - MSDN
+ThreadStart delegate, ParameterizedThreadStart delegate, and SynchronizationContext class
+
+ThreadStart delegate - MSDN
+The simplest way to create a thread is to instantiate the Thread class. The Thread constructor takes a delegate argument. The ThreadStart delegate points to a method containing your logic. For example:
+Thread t1 = new Thread (new ThreadStart(LengthyLogic));
+public void LengthyLogic ()
+{
+// Logic code
+}

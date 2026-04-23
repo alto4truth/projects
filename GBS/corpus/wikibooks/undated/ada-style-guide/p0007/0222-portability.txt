@@ -1,0 +1,27 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 222
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+formerly accessed by that value, leaving that value "pointing" at space that is now being put to indeterminable uses by the underlying implementation.
+
+=== Package Ada.Streams.Stream_IO ===
+
+==== guideline ====
+Consider using Sequential_IO or Direct_IO instead of Stream_IO unless you need the low-level, heterogeneous I/O features provided by Stream_IO.
+
+==== rationale ====
+Sequential_IO and Direct_IO are still well suited for processing homogeneous files. Additionally, in cases where the intent is to process homogeneous files, the use of Sequential_IO or Direct_IO has the advantage of enforcing this intent at compile time.
+Stream_IO should be reserved for processing heterogeneous files. In this case, a file is not a sequence of objects of all the same type but rather a sequence of objects of varying types. To read a heterogeneous sequence of objects in the correct order requires some application-specific knowledge.
+
+=== Current Error Files ===
+
+==== guideline ====
+Consider using Current_Error and Set_Error for run-time error messages.
+
+==== example ====

@@ -1,0 +1,41 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 27
+section: 360-instructions-ex
+chunk: 85
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+EX - EXecute - Opcode X / Decimal
+
+== Format ==
+BCTR R1,0
+EX R1,LABEL
+LABEL PACK PACKIT,0(L,R3)
+L will be replaced with last byte value of R1
+
+== Opcode ==
+
+== Availability ==
+The EX instruction is available on all models, 360, 370 and z/System.
+EX (Execute)
+EX R5,TARGET
+this has a purpose of modifying target code slightly before executing the target code.
+if the first operand isn't R0 then only the modifying target code possible.
+
+here, as shown X(0), this ZERO for declaring the length of bytes which are going to move from Y to X.
+while EXE instruction executed it will do the OR of rightmost byte in the register with field of length bits in MVC instruction.
+and now the TargetCODE means the MVC code here.
+So, now here 4bytes will be copied from Y to X field. and We can change the field according to need through changing the value in the register5.
+
+more example::
+R4 = X
+’00000005’
+R5 = X
+’FFFFFF04’
+R6 = X
+’00000034’
+
+the values stored previously in those registers......

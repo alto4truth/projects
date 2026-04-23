@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 473
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+t) operations passed as generic formal parameters:
+
+The third example shows how to use Ada's controlled types to provide special assignment semantics:
+
+==== rationale ====
+For a generic component to be usable in as many contexts as possible, it should minimize the assumptions that it makes about its environment and should make explicit any assumptions that are necessary. In Ada, the assumptions made by generic units can be stated explicitly by the types of the generic formal parameters. A limited private generic formal type prevents the generic unit from making any assumptions about the structure of objects of the type or about operations defined for such objects. A private (nonlimited) generic formal type allows the assumption that assignment and equality comparison operations are defined for the type. Thus, a limited private data type cannot be specified as the actual parameter for a private generic formal type.
+In general, you should choose the private or limited private generic formal type based on the need for assignment inside a generic. Limited private types should be used for abstractions that do not need assignment, as in the first two examples above. In the third example, where assignment is needed, a type derived from a controlled type is specified to ensure that the correct assignment semantics will be available. If you need equality in the body of the generic, you may need to redefine equality as well to get the correct semantics; you would then need to include a formal generic subprogram parameter for the = function.
+The situation is reversed for types exported by a reusable part. For exported types, the restrictions specified by limited and limited private are restrictions on the user of the part, not on the part itself. To provide maximum capability to the user of a reusable part, export types with as few restrictions as possible. Apply restrictions as necessary to protect the integrity of the exported data structures and the abstraction for the various implementations envisioned for that generic.
+Because they are so restrictive, limited private types are not always the best choice for types exported by a reusable part. In a case where it makes sense to allow the user to make copies of and compare data objects, and when the underlying data type does not involve access types (so that the entire data structure gets copied or compared), then it is better to export a (nonlimited) private type. In a case where it makes sense to allow the user to make copies of and compare data objects and when the underlying data type involves access types (so that the entire data structure gets copied or compared), then it is better to export a controlled type and an (overridden) equality operation. In cases where it does not detract from the abstraction to reveal even more about the type, then a nonprivate type (e.g., a numeric, enumerated, record, or array type) should be used.
+One use of generic units is to create a mixin generic (see Guideline 8.3.8) to extend a tagged type. In this situation, you want to use the most restrictive type as the generic formal type, that is, a formal type that is both limited and abstract. When you instantiate the generic, if the actual type is nonlimited, the type extension will also be nonlimited. In the generic package, you must declare the type extension as abstract. The instantiator of the generic can then extend the type again to achieve the desired mixin configuration.

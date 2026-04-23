@@ -1,0 +1,31 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 110
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+from TextReader/TextWriter.
+StringReader is a TextReader for strings.
+StringWriter is a TextWriter for strings.
+TextReader class and TextWriter class
+
+TextReader class - MSDN
+TextReader and TextWriter are abstract base classes that StreamReader, StreamWriter, StringReader, and StringWriter derive from. StreamReader and StringReader derive from TextReader. StreamWriter and StringWriter derive from TextWriter.
+TextWriter class - MSDN
+StreamReader class and StreamWriter class - MSDN and MSDN
+
+The StreamReader and StreamWriter classes provide basic functionality for reading and writing to character-based streams (ReadLine(), WriteLine(), ReadToEnd()).
+StreamReader and StreamWriter inherit from the abstract classes TextReader and TextWriter:
+StreamReader is a TextReader of streams.
+StreamWriter is a TextWriter of streams.
+The Peek and the Read method of a StreamReader:
+The Peek-method gets the character at a certain position, but does not advance.
+The Read-method gets the character at a certain position and advances.
+BinaryReader class and BinaryWriter class
+
+BinaryReader class - MSDN
+BinaryWriter class - MSDN

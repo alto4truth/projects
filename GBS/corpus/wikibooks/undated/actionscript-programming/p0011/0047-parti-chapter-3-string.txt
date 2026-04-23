@@ -1,0 +1,22 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 11
+section: parti-chapter-3-string
+chunk: 47
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+== Data types ==
+
+=== String ===
+In the previous section you understood the difference between String and Number data types. Now we will analyze String data type in details. The following is the structure of declaring String variable:
+
+Parameter <name> is the name of the variable you want to declare, and the parameter [expression] is the value you want the variable to be assigned when it is created.
+
+==== Methods ====
+
+===== charAt =====
+String.charAt( <index> );
+This method returns the character in the position specified by the parameter <index>. The first character of the string is indicated by 0, so if you want to read the first character of the specified string you must put 0 as <index> parameter, for reading the third character you must put 2 as <index>. Now lets write a program which will get the second character of string “hello”.

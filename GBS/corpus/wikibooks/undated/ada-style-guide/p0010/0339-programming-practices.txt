@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 339
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ation, decreasing, and depleting kinds of functions.
+Use operator overloading sparingly and uniformly when applied to tagged types.
+
+==== example ====
+
+==== rationale ====
+Subverting the conventional interpretation of operators leads to confusing code.
+The advantage of operator overloading is that the code can become more clear and written more compactly (and readably) when it is used. This can make the semantics simple and natural. However, it can be easy to misunderstand the meaning of an overloaded operator, especially when applied to descendants. This is especially true if the programmer has not applied natural semantics. Thus, do not use overloading if it cannot be used uniformly and if it is easily misunderstood.
+
+==== notes ====
+There are potential problems with any overloading. For example, if there are several versions of the "+" operator and a change to one of them affects the number or order of its parameters, locating the occurrences that must be changed can be difficult.
+
+=== Overloading the Equality Operator ===

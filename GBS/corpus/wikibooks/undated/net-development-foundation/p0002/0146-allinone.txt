@@ -1,0 +1,53 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 146
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+am name="accountNumber">The account number.</param>
+public Client(string name, string accountNumber)
+{
+_name = name;
+_accountNumber = accountNumber;
+}
+
+/// <summary>
+/// The Main entry point of the console application
+/// </summary>
+/// <param name="args">The command line arguments</param>
+static void Main(string[] args)
+{
+GuidDictionary<Client> clients = new GuidDictionary<Client>();
+Guid clientID1 = Guid.NewGuid();
+Guid clientID2 = Guid.NewGuid();
+clients.Add(clientID1, new Client("Marco", "332-3355"));
+clients.Add(clientID2, new Client("Martinus", "453-5662"));
+Console.WriteLine("The account {0} belongs to {1}", clients[clientID1].AccountNumber, clients[clientID1].Name);
+Console.WriteLine("The account {0} belongs to {1}", clients[clientID2].AccountNumber, clients[clientID2].Name);
+Console.ReadLine();
+}
+}
+
+public class GuidDictionary<T> : DictionaryBase
+{
+public void Add(Guid id, T item)
+{
+Dictionary.Add(id, item);
+}
+
+public T this[Guid id]
+{
+get
+{
+return (T)Dictionary[id];
+}
+set
+{
+Dictionary[id] = value;
+}
+}
+}

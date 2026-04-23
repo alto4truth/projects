@@ -1,0 +1,25 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 208
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ze other implementation-dependent features (see Pappas (1985, §13.7.1).
+
+=== Machine Code Inserts ===
+
+==== guideline ====
+Avoid machine code inserts.
+
+==== rationale ====
+The Ada Reference Manual (1995, Annex C) suggests that the package that implements machine code inserts is optional. Additionally, it is not standardized so that machine code inserts are most likely not portable. In fact, it is possible that two different vendors' syntax will differ for an identical target, and differences in lower-level details, such as register conventions, will hinder portability.
+
+==== exceptions ====
+If machine code inserts must be used to meet another project requirement, recognize and document the portability decreasing effects.
+In the declarative region of the body of the routine where machine code inserts are being used, insert comments explaining what functions inserts provide and (especially) why the inserts are necessary. Comment the necessity of using machine code inserts by delineating what went wrong with attempts to use other higher level constructs.
+
+=== Interfacing to Foreign Languages ===

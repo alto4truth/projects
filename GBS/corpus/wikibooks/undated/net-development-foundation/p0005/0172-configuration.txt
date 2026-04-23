@@ -1,0 +1,28 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 5
+section: configuration
+chunk: 172
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+ts all properties for all management information objects of a given WMI class. It is then used to print information about the current computer system.
+
+ManagementObjectSearcher class - MSDN
+Enumerate all disk drivers, network adapters, and processes on a computer
+The following code uses one overload of the ManagementObjectSearcher constructor to list all physical and logical disk drives, network adapters and running processes on a system.
+
+Retrieve information about all network connections
+Example to be provided
+Retrieve information about all services that are paused
+The following code uses a ManagementObjectSearcher object to retrieve all running services and then displays their names.
+
+ManagementQuery class - MSDN
+EventQuery class - MSDN
+
+ObjectQuery class - MSDN
+Subscribe to management events by using the ManagementEventWatcher class - MSDN
+
+Previous / Next

@@ -1,0 +1,36 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 314
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+of Operations With Real Operands ===
+
+==== guideline ====
+Use <= and >= in relational expressions with real operands instead of =.
+
+==== example ====
+
+==== rationale ====
+Fixed- and floating-point
+values, even if derived from similar expressions, may not be exactly
+equal. The imprecise, finite representations of real numbers in
+hardware always have round-off errors so that any variation in
+the construction path or history of two real numbers has the potential
+for resulting in different numbers, even when the paths or histories
+are mathematically equivalent.
+The Ada definition of model intervals also means that the use of <= is more portable
+than either < or =.
+
+==== notes ====
+Floating-point arithmetic is treated in Guideline 7.2.7 .
+
+==== exceptions ====
+If your application must test for an exact value of a real number
+(e.g., testing the precision of the arithmetic on a certain machine),
+then the = would have to be used. But never use =
+on real operands as a condition to exit a loop .

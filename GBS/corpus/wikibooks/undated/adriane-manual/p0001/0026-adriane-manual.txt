@@ -1,0 +1,23 @@
+title: Adriane-Manual
+source: wikibooks
+year: undated
+document_id: adriane-manual
+authors: 
+page: 1
+section: adriane-manual
+chunk: 26
+source_ref: https://en.wikibooks.org/wiki/Adriane-Manual
+
+:
+
+sudo nano /etc/aumixrc
+
+The aumixrc file is not complicated, here an example:
+
+vol:84:84:P
+speaker:84:84:P
+pcm2:84:84:P
+igain:84:84:P
+phout:84:84:P
+
+The "84" is in this example for the percentage volume (0-100), which "P" means that the output is switched on ("play"). After the values were changed as needed the file can be stored as usual using the nano editor, press control-X (Ctl + X). The new settings will automatically be activated at the next reboot.

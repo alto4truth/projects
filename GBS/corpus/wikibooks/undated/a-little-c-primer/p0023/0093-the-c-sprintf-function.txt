@@ -1,0 +1,27 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 23
+section: the-c-sprintf-function
+chunk: 93
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+The "sprintf" function creates strings with formatted data. Technically
+speaking, this is part of the standard-I/O library, and requires the
+declaration:
+
+However, it is really a string function and needs to be discussed along with
+the other string functions. The syntax of "sprintf()" is exactly the same as
+it is for "printf()", except there is an extra parameter at the beginning,
+which is a pointer to a string. Instead of outputting to standard output,
+sprintf outputs to the string. For example:
+
+—prints the string:
+Formatted data: 42 / 1.1234
+
+There is also an "sscanf()" function that similarly mirrors "scanf()" functionality.
+
+== C STRING FUNCTION LIBRARY ==
+moved to A Little C Primer/C String Function Library

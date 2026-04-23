@@ -1,0 +1,20 @@
+title: A Guide To PIC Microcontroller Documentation
+source: wikibooks
+year: undated
+document_id: a-guide-to-pic-microcontroller-documentation
+authors: 
+page: 11
+section: section-3-term-based-guide-to-documentation
+chunk: 56
+source_ref: https://en.wikibooks.org/wiki/A_Guide_To_PIC_Microcontroller_Documentation
+
+tures.
+
+== M ==
+MSSP - Master Synchronous Serial Port - a serial peripheral interface that can be used either as an I2C, SPI or MicrowireTM interface.
+
+== P ==
+PPS - Peripheral Pin Select - a module allowing peripherals with a standard digital input or output to be connected to one of up to 30 remappable pins on the controller. Remappable peripherals include (but are not limited to) the CCP module, comparator outputs and the UARTs. Peripheral inputs and outputs which are not remappable are those which have a purely analogue functionality (A/D converter), which are complex (PMP parallel interface) or use a special I/O circuitry (I2C). Remappable inputs and outputs may be connected to more than one pin simultaneously, may be connected to the same pin (to increase drive strength as an example) and an single pin could be simultaneously connected to an input from one peripheral and an output from another (allowing hardware loopback for a serial interface).
+
+== S ==
+SFR - Special Function Register - a register in data memory with a defined functionality, such as the STATUS register or a register used to configure a hardware module. The opposite of a #GPR.

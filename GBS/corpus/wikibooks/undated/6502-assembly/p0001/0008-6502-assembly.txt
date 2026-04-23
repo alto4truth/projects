@@ -1,0 +1,44 @@
+title: 6502 Assembly
+source: wikibooks
+year: undated
+document_id: 6502-assembly
+authors: 
+page: 1
+section: 6502-assembly
+chunk: 8
+source_ref: https://en.wikibooks.org/wiki/6502_Assembly
+
+rom $1200 as one would expect. This is due to an overflow in the lower byte of the indirect address not being carried into the upper byte.
+Flags: none
+
+Jump to New Location Saving Return Address: JSR
+Jumps to a subroutine
+The address before the next instruction (PC - 1) is pushed onto the stack: first the upper byte followed by the lower byte. As the stack grows backwards, the return address is therefore stored as a little-endian number in memory.
+PC is set to the target address.
+Flags: none
+
+Return from Subroutine: RTS
+Return from a subroutine to the point where it called with JSR.
+The return address is popped from the stack (low byte first, then high byte).The return address is incremented and stored in PC.
+Flags: none
+
+Return from Interrupt: RTI
+Return from an interrupt.
+P is popped from the stack.
+PC is popped from the stack.
+Flags: all
+
+=== Set and Clear ===
+
+=== Miscellaneous ===
+Break: BRK
+Force an Interrupt
+Flags: B = 1, I = 1
+
+No Operation: NOP
+No Operation
+Flags: none
+
+== Instruction table ==
+
+== References ==

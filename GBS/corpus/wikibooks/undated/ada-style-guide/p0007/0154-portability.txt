@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 154
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+sions concerning portability usually concentrate on the differences in computer systems, but the development and run-time environment may also change:
+
+portability (software)
+The ease with which software can be transferred from one computer system or environment to another (IEEE Dictionary 1984).
+Most portability problems are not pure language issues. Portability involves hardware (byte order, device I/O) and software (utility libraries, operating systems, run-time libraries). This chapter will not address these challenging design issues.
+This chapter does identify the more common portability problems that are specific to Ada when moving from one platform or compiler to another. It also suggests ways that nonportable code can be isolated. By using the implementation hiding features of Ada, the cost of porting can be significantly reduced.
+In fact, many language portability issues are solved by the strict definition of the Ada language itself. In most programming languages, different dialects are prevalent as vendors extend or dilute a language for various reasons: conformance to a programming environment or features for a particular application domain. The Ada Compiler Validation Capability (ACVC) was developed by the U.S. Department of Defense at the Ada Validation Facility, ASD/SIDL, Wright-Patterson Air Force Base, to ensure that implementors strictly adhered to the Ada standard.
+As part of the strict definition of Ada, certain constructs are defined to be erroneous, and the effect of executing an erroneous construct is unpredictable. Therefore, erroneous constructs are obviously not portable. Erroneous constructs and bounded errors are discussed in Guideline 5.9.10 and are not repeated in this chapter.
+Most programmers new to the language expect Ada to eliminate all portability problems; it definitely does not. Certain areas of Ada are not yet covered by validation. The definition of Ada leaves certain details to the implementor. The compiler implementor's choices, with respect to these details, affect portability.
+The revisions to the Ada language approved in the 1995 standard generate a new area of portability concerns. Some programs are intended to have a long life and may start in Ada 83 (Ada Reference Manual 1983) but transition to Ada 95 (Ada Reference Manual 1995). Although this style guide focuses on the current Ada standard and does not address transition issues, there are portability issues relating to using certain features of the language. These issues revolve around the language features designated as obsolescent in Annex J of the Ada Reference Manual (1995).
+The constructs of the language have been developed to satisfy a series of needs. These constructs can legitimately be used even though they may impact portability. There are some general principles to enhancing portability that are exemplified by many of the guidelines in this chapter. They are:

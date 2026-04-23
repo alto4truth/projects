@@ -1,0 +1,29 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 498
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+sily tailorable, reusable parts.
+See Guideline 5.3.4 for a short discussion of using access-to-subprogram types in implementing table-driven programs.
+
+==== notes ====
+Consider whether differences in the behavior of a general-purpose part could be defined by some data structure at compile- or run-time, and if so, structure the part to be table-driven. The approach is most likely to be applicable when a part is designed for use in a particular application domain but needs to be specialized for use in a specific application within the domain. Take particular care in commenting the structure of the data needed to drive the part.
+Table-driven programs are often more efficient and easier to read than the corresponding case or
+if-elsif-else networks to compute the item being sought or looked up.
+
+=== String Handling ===
+
+==== guideline ====
+Use the predefined packages for string handling.
+
+==== example ====
+Writing code such as the following is no longer necessary in Ada 95:
+
+Assuming a variable S of type String, the following expression:
+
+can now be replaced by more portable and preexisting language-defined operations such as:

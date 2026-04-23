@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 365
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+Ada.Sequential_IO are in range.
+Use the 'Valid attribute to check the validity of scalar values obtained through Ada.Direct_IO and Ada.Sequential_IO.
+
+==== rationale ====
+The exception Data_Error can be propagated by the Read procedures found in these packages if the element read cannot be interpreted as a value of the required subtype (Ada Reference Manual 1995, §A.13 [Annotated]). However, if the associated check is too complex, an implementation need not propagate Data_Error. In cases where the element read cannot be interpreted as a value of the required subtype but Data_Error is not propagated, the resulting value can be abnormal, and subsequent references to the value can lead to erroneous execution.
+
+==== notes ====
+It is sometimes difficult to force an optimizing compiler to perform the necessary checks on a value that the compiler believes is in range. Most compiler vendors allow the option of suppressing optimization, which can be helpful.
+
+=== Exception Propagation ===

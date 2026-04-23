@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 186
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ing range of their base type. Use derived types, subtypes, factoring, and range constraints on numeric types (see Guidelines 3.4.1, 5.3.1, and 5.5.3).
+
+==== example ====
+This example is adapted from the Rationale (1995, §3.3):
+
+==== rationale ====
+The Ada language does not require that an implementation perform range checks on subexpressions within an expression. Ada does require that overflow checks be performed. Thus, depending on the order of evaluation and the size of the registers, a subexpression will either overflow or produce the mathematically correct result. In the event of an overflow, you will get the exception Constraint_Error. Even if the implementation on your program's current target does not result in an overflow on a subexpression evaluation, your program might be ported to an implementation that does.
+
+=== Relational Tests ===
+
+==== guideline ====
+Consider using <= and >= to do relational tests on real valued arguments, avoiding the <, >, =, and /= operations.
+Use values of type attributes in comparisons and checking for small values.

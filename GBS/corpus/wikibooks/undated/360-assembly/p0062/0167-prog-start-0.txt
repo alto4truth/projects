@@ -1,0 +1,18 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 62
+section: prog-start-0
+chunk: 167
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+using previous register
+*
+TABLE DC C'ABCDEFGHIJKLMNOPQRSTUVWXYZ' Table of letters of the alphabet
+INPUT DS Cl80 Input area
+OUTPUT DS Cl80 Output area
+
+As the above example stated, the USING pseudo-instruction tells the assembler that a specific register contains the specified address, while the DROP pseudo-instruction tells the assembler that register can no longer be used, until it is specified in another USING pseudo-instruction.
+By convention

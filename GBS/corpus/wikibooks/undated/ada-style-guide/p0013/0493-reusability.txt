@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 493
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+u have a recursive dependency (i.e., package A's body depends on package B's specification and package B's body depends on package A's specification).
+
+==== notes ====
+Pragma Elaborate_All controls the order of elaboration of one unit with respect to another. This is another way of coupling units and should be avoided when possible in reusable parts because it restricts the number of configurations in which the reusable parts can be combined. Recognize, however, that pragma Elaborate_All provides a better guarantee of elaboration order because if using this pragma uncovers elaboration problems, they will be reported at link time (as opposed to a run-time execution error).
+Any time you call a subprogram (typically a function) during the elaboration of a library unit, the body of the subprogram must have been elaborated before the library unit. You can ensure this elaboration happens by adding a pragma Elaborate_Body for the unit containing the function. If, however, that function calls other functions, then it is safer to put a pragma Elaborate_All on the unit containing the function.
+For a discussion of the pragmas Pure and Preelaborate, see also the Ada Reference Manual (1995, §10.2.1 [Annotated]) and the Rationale (1995, §10.3). If you use either pragma Pure or Preelaborate, you will not need the pragma Elaborate_Body.
+The idea of a registry is fundamental to many object-oriented programming frameworks. Because other library units will need to call it during their elaboration, you need to make sure that the registry itself is elaborated early. Note that the registry should only depend on the root types of the type hierarchies and that the registry should only hold "class-wide" pointers to the objects, not more specific pointers. The root types should not themselves depend on the registry. See Chapter 9 for a more complete discussion of the use of object-oriented features.

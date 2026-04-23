@@ -1,0 +1,14 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 2
+section: 360-architecture
+chunk: 7
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+be run. The operating system can write pages to and read from disk space to store programs when not executing, or when not using all of their memory.
+
+== Exceptions ==
+As programs do not always work correctly, or may require certain actions to be performed on their behalf by the operating system, the 360 series support various exceptions to indicate an event has occurred. Some exceptions indicate errors, possible attempts to violate security, ordinary system requests, or machine damage. Some of the more common of the many exceptions available are as follows:

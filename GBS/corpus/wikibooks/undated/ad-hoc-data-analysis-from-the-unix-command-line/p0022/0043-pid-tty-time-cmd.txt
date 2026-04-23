@@ -1,0 +1,26 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 22
+section: pid-tty-time-cmd
+chunk: 43
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+22313 ttys000 0:00.86 -bash
+31537 ttys001 0:00.06 -bash
+22341 ttys002 0:00.28 -bash
+70093 ttys002 0:00.00 head -5
+
+If you wish to manipulate the data but not the header use tail with -n switch to start at line 2. For example:
+
+$ ps | tail -n +2 | grep bash | head -5
+22313 ttys000 0:00.86 -bash
+31537 ttys001 0:00.06 -bash
+22341 ttys002 0:00.28 -bash
+70120 ttys002 0:00.00 -bash
+
+This output shows only "bash" processes (because of grep)
+
+== References ==

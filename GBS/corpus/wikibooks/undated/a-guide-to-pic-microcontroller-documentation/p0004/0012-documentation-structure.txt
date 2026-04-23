@@ -1,0 +1,18 @@
+title: A Guide To PIC Microcontroller Documentation
+source: wikibooks
+year: undated
+document_id: a-guide-to-pic-microcontroller-documentation
+authors: 
+page: 4
+section: documentation-structure
+chunk: 12
+source_ref: https://en.wikibooks.org/wiki/A_Guide_To_PIC_Microcontroller_Documentation
+
+ation, but definitely something helpful during the design and manufacturing process, are the following electronic files which are sometimes available:
+
+BSDL Files - used for implementing boundary scan during manufacturing.
+CAD/CAE Footprints and Schematic Symbols - provides the symbols and footprints needed for PCB layout for around ten of the most popular CAD/CAE design tools.
+
+=== Programming language documentation ===
+Developing software for PIC controllers can be undertaken using one of two programming languages using the tools available from Microchip; assembler or C. These and other programming languages are also offered from third-parties or supported through open-source projects. The software package supporting a specific programming language is typically called a "toolsuite" or "tool-chain", depending on the document being read, as it contains not one but a multitude of software programs which can convert source code into binary code and the other files typically used during software development on the target controller.
+The tools and their documentation are family specific and are discussed in the relevant family specific chapters.

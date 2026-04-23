@@ -1,0 +1,19 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 7
+section: 360-instructions-actr
+chunk: 27
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+The ACTR pseudo-instruction is used to instruct the assembler to limit the number of AGO and AIF pseudo-instructions to be executed. The ACTR pseudo-instruction is primarily used to prevent endless loops during conditional assembly or macro processing.
+Format
+
+.SYM ACTR value
+Where
+
+.SYM is an optional conditional assembly label (a sequence symbol), which may be omitted, and
+value is a numeric expression greater than zero. The value indicates the maximum number of AGO or successfully executed AIF pseudo-instructions that this macro or conditional assembly is permitted to execute.
+Example

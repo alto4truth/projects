@@ -1,0 +1,30 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 2
+section: allinone
+chunk: 125
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+the method to be called, this flag is necessary.
+Call a DLL function in special cases, such as passing structures and implementing callback functions
+
+Same link as above
+Passing structures - MSDN
+Implementing callback functions - MSDN
+Create a new Exception class and map it to an HRESULT - MSDN
+Default marshaling behavior - MSDN
+Marshal data with Platform Invoke - MSDN
+Marshal data with COM Interop - MSDN
+MarshalAsAttribute class and Marshal class
+
+MarshalAsAttribute class - MSDN
+Marshal class - MSDN
+
+=== Implement Reflection ===
+Exam objective: Implement reflection functionality in a .NET Framework application (refer System.Reflection namespace), and create metadata, Microsoft intermediate language (MSIL), and a PE file by using the System.Reflection.Emit namespace.
+Building a custom attribute (annexes)
+Assembly class -MSDN
+Assembly attributes - MSDN

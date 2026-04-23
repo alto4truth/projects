@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 480
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+e to modification of the data structure during iteration.
+Document the behavior of the iterators when the data structure is modified during traversal.
+
+==== example ====
+Ada provides several mechanisms for building reusable iterators. The following examples discuss the alternatives of "simple" generics, access discriminants, and type extension. The terms active and passive are used to differentiate whether the iteration mechanism (i.e., the way in which the complex data structure is traversed) is exposed or hidden. A passive iterator hides the traversal (e.g., looping mechanism) and consists of a single operation, iterate, that is parameterized by the processing you do on each element of the data structure. By contrast, an active iterator exposes the primitive operations by which you traverse the data structure (Booch 1987).
+The first example shows a generic package that defines an abstract list data type, with both active and passive iterators for traversing a list:
+
+After instantiating the generic package and declaring a list as:
+
+the passive iterator is instantiated, specifying the name of the routine that should be called for each list element when the iterator is called.

@@ -1,0 +1,21 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 38
+section: 360-instructions-lr
+chunk: 121
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+values into memory according to a mask, see STCM
+To store a 16-bit half-word value in memory, see STH.
+To store a 32-bit word value in memory, see ST.
+
+=== 64-Bit Instructions ===
+To load a 20-bit signed value into a 32-bit or 64-bit register from an extended (20-bit) signed memory offset, see LAY.
+To load a 32-bit value into a 64-bit register from an extended (20-bit) signed memory offset, see LGF.
+To copy a 64-bit value from one 64-bit register to another 64-bit register, see LGR.
+To load a 64-bit value into a 64-bit register from memory, see LG.
+To store a 32-bit value from a register to an extended (20-bit) signed memory offset, see STY.
+To store a 64-bit value from a 64-bit register to an address in memory, see STG.

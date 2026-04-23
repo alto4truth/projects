@@ -1,0 +1,17 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 11
+section: parti-chapter-3-string
+chunk: 50
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+romCharCode”, it must be left as “String”. In this case “String” is represented by as a String object. The following example creates a “hello” string:
+
+===== indexOf =====
+String.indexOf( <strsearch>, [startindex] );
+This method searches the string you specified by the parameter <strsearch> and returns the position of the first occurrence of it. If the string is not founded it returns -1. For example this code searches for “ll” string in “tmpString” variable, which’s value is “hello”:
+
+The method “indexOf” will return 2, which means that the beginning of the string you was looking for is at character 3(don’t forget that the first character of the string is 0). The parameter [startindex] tells Flash to begin searching the string from the specified character. In the following example the value returned by “indexOf” method is -1, which means, that the string wasn’t found.

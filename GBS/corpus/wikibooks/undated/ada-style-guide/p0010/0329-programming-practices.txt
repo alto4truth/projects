@@ -1,0 +1,30 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 329
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+use a goto statement, highlight both it and the label with blank space. Indicate at the label where the corresponding goto statement(s) may be found.
+
+=== Return Statements ===
+
+==== guideline ====
+Minimize the number of return statements from a subprogram (NASA 1987).
+Highlight return statements with comments or white space to keep them from being lost in other code.
+
+==== example ====
+The following code fragment is longer and more complex than necessary:
+
+It should be replaced with the shorter, more concise, and clearer equivalent line:
+
+==== rationale ====
+Excessive use of returns can make code confusing and unreadable. Only use return statements where warranted. Too many returns from a subprogram may be an indicator of cluttered logic. If the application requires multiple returns, use them at the same level (i.e., as in different branches of a case statement), rather than scattered throughout the subprogram code. Some rework can often reduce the number of return statements to one and make the code more clear.
+
+==== exceptions ====
+Do not avoid return statements if it detracts from natural structure and code readability.
+
+=== Blocks ===

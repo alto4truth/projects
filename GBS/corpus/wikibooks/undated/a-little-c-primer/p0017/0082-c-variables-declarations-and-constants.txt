@@ -1,0 +1,33 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 17
+section: c-variables-declarations-and-constants
+chunk: 82
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+conversion can be performed from an "int" value to a "float" value as
+follows:
+
+It is possible to define custom "enumerated" types in C. For example:
+
+-- defines enumerated type "day" to consist of the values of the days of the
+week. In practice, the values are merely text constants associated to a set
+of consecutive integer values. By default, the set begins at 0 and counts
+up, so here "saturday" has the value 0, "sunday" has the value 1, and so on.
+Any set of number assignments can be specified if desired:
+
+Obviously much the same could be done with sets of "#define" directives, but
+this is a much cleaner solution. Once the type is defined, for example,
+variables of that type can be declared as follows:
+
+The variable "today" will act as an "int" variable and will allow the
+operations valid for "int" variables. Once more, remember that C doesn't do
+much in the way of bounds checking, and it is not wise to rely on the C
+compiler to give warnings.
+
+Finally, a "typedef" declaration can be used to define custom data types:
+
+Then variables of this type could be declared as follows:

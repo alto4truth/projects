@@ -1,0 +1,23 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 12
+section: tuples-lists-dictionaries
+chunk: 71
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+:
+
+Code Example 6 - Deleting an item
+
+You've just removed the 2nd cat in your list - poor old Snappy.
+And with that morbid message, lets move on to...
+
+== Dictionaries ==
+Ok, so there is more to life than the names of your cats. You need to call your sister, mother, son, the fruit man, and anyone else who needs to know that their favourite cat has run away. For that you need a telephone book.
+Now, the lists we've used above aren't really suitable for a telephone book. You need to know a number based on someone's name - not the other way around, like what we did with the cats. In the examples of months and cats, we gave the computer a number, and it gave us a name. This time we want to give the computer a name, and it give us a number. For this we need dictionaries.
+So how do we make a dictionary? Put away your binding equipment, it isn't that advanced.
+Remember, dictionaries have keys, and values. In a phone book, you have people's names, then their numbers. See a similarity?
+When you initially create a dictionary, it is very much like making a tuple or list. Tuples have ( and ) things, lists have [ and ] things. Guess what! dictionaries have { and } things - curly braces. Here is an example below, showing a dictionary with four phone numbers in it:

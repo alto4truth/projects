@@ -1,0 +1,27 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 26
+section: using-system-types
+chunk: 294
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+gic (from the base class) at the same time as all employee public interface (thru the sender method parameter) and that without having to do any cast.
+
+=== Exception classes ===
+Some links to MSDN:
+
+Exceptions and exception handling - MSDN
+Handling and throwing exceptions - MSDN
+Exception Hierarchy - MSDN
+Exception Class and Properties - MSDN
+
+=== Boxing and unboxing ===
+See MSDN
+All types derive directly or indirectly from System.Object (including value types by the way of System.ValueType). This allows the very convenient concept of a reference to "any" object but poses some technical concerns because value types are not "referenced". Comes boxing and unboxing.
+Boxing and unboxing enable value types to be treated as objects. Boxing a value type packages it inside an instance of the Object reference type. This allows the value type to be stored on the garbage collected heap. Unboxing extracts the value type from the object. In this example, the integer variable i is boxed and assigned to object o:
+
+int i = 123;
+object o = (object) i; // boxing

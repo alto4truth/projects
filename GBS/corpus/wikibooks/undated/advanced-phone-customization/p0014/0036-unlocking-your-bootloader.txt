@@ -1,0 +1,20 @@
+title: Advanced phone customization
+source: wikibooks
+year: undated
+document_id: advanced-phone-customization
+authors: 
+page: 14
+section: unlocking-your-bootloader
+chunk: 36
+source_ref: https://en.wikibooks.org/wiki/Advanced_phone_customization
+
+For non-Samsung phones, the bootloader is often in a locked state and you need to unlock it to allow the installation of custom OS.
+
+== Instructions ==
+Get the Android SDK if you already haven't; you need ADB to continue.
+Enable USB debugging. Open your phone’s app drawer, tap the Settings icon, and select “About Phone”. Scroll all the way down and tap the “Build Number” item seven times. You should get a message saying you are now a developer. Head back to the main Settings page, and you should see a new option near the bottom called “Developer Options”. Open that, and enable “OEM Unlocking”, if the option exists. Next, enable “USB Debugging”. Enter your password or PIN when prompted, if applicable.
+If your manufacturer requires you to obtain an unlock code (eg: Huawei, Motorola), go to the website now. Check your manufacturer's website for the steps.
+Boot to fastboot. Check the Internet for the exact steps for your phone.
+Connect your phone to your PC with a USB cable. Your phone should indicate that the device is connected. On your computer, open the platform-tools folder in your Android SDK folder and Shift+Right Click on an empty area. Choose “Open a Command Prompt Here”, and use that Command Prompt window to retrieve your unlock key as described by your manufacturer. (For example, Motorola phones will run the fastboot oem get_unlock_data command, while HTC phones will run the fastboot oem get_identifier_token command.)
+The Command Prompt will spit out a token in the form of a very long string of characters (see right). Select it, copy it, and paste it into the applicable box on your manufacturer’s website–make sure there are no spaces!–and submit the form. If your device is unlockable, you’ll receive an email with a key or file that you’ll use in the next step.
+With your phone still in fastboot, run fastboot oem unlock, though you should check for the exact command to run for your phone, which could be different.

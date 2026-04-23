@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 239
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ced in source code, consider isolating them to one compilation unit per partition; if specified, the main subprogram for the partition is recommended.
+
+==== rationale ====
+Configuration pragmas are generally used to select a partition-wide or system-wide option. Usually, they reflect either high-level software architecture decisions (e.g., pragma Task_Dispatching_Policy) or the use of the software in a particular application domain (e.g., safety-critical software). If a configuration pragma is embedded within a software component and that component is reused in a different context where the pragma is no longer appropriate, then it may cause problems in the new application. Such problems can include the rejection by the compilation system of otherwise legal source code or unexpected behavior at run-time. These problems can be significant given the wide scope of a configuration pragma. In addition, maintenance of the original system may require that some of these system-wide decisions be changed. If the configuration pragmas are scattered throughout the software, it may be difficult to locate the lines that need to change.
+As a result, it is recommended that all configuration pragmas be kept in a single compilation unit if possible to make them easy to locate and modify as needed. If this compilation unit is unlikely to be reused (e.g., a main subprogram), then the likelihood of conflicts with future reusers is reduced. Finally, if these system-wide decisions are indicated without embedding them in the code at all, such as through a compiler option, then the problems described above are even less likely to occur.

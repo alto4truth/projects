@@ -1,0 +1,22 @@
+title: A Brief Introduction to the LaTeX Typesetting Environment
+source: wikibooks
+year: undated
+document_id: a-brief-introduction-to-the-latex-typesetting-environment
+authors: 
+page: 3
+section: typesetting-the-basics
+chunk: 28
+source_ref: https://en.wikibooks.org/wiki/A_Brief_Introduction_to_the_LaTeX_Typesetting_Environment
+
+ons as shown here:
+
+Here are our first two equations:
+\begin{equation}
+f(x) = 2x^2
+\end{equation}
+\begin{equation}
+g(x) = f(x)^2 = 4x^4
+\end{equation}
+
+And each of these would be labeled as equations in their own right as well as being displayed separately.
+There are a variety of other environments available for inputting equations besides the '$', '$$', or 'begin{equation}' options, but for the sake of levity we will limit our discussion to these alone.

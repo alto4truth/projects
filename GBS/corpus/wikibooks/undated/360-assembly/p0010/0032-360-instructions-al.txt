@@ -1,0 +1,26 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 10
+section: 360-instructions-al
+chunk: 32
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+AL - Add Logical - Opcode 5E
+
+== Format ==
+AL 2,N2
+AL 11,106(0,10)
+The specific syntax is
+
+AL target register,offset(index register,base register)
+Where the offset, index register and base register values will be determined automatically by the assembler if the USING pseudo-instruction has been used, and the target address label used is within 4096 bytes of the value of some base register.
+
+The first argument is a target register which contains the first summand before the operation and the result after the operation.
+The second argument is the source value (the second summand) location.
+The mask, base_register and index_register values are 0 to 15. The offset value is 0 to 4095.
+
+== Availability ==
+The AL instruction is available on all models of the 360, 370 and z/System.

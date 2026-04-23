@@ -1,0 +1,15 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 5
+section: 360-instructions
+chunk: 21
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+15, and the D value is an unsigned, 12-bit displacement address.
+Instructions take a multiple of two bytes, and are two, four or six bytes in length.
+
+All instructions must be aligned to an even address. Attempts to create an instruction at an odd address will be flagged as an error by the assembler; an attempt to branch to an odd address will result in an address exception.
+There are four instruction set architectures:

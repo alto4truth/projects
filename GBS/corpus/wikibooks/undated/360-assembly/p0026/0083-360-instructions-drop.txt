@@ -1,0 +1,32 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 26
+section: 360-instructions-drop
+chunk: 83
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+of this example it is assumed that R14 is equated to 14, R15 is equated to 15 etc., to provide cross reference - see EQU Assembler pseudo-instruction)
+
+* some typical assembler instructions showing comments to the right
+L R15,=A(MOVE) Load sub-routine address into R15
+BALR R14,R15 Go to the sub-routine ===>
+* ....return here with return code in R15
+*
+*****************************************
+* Move the input to output *
+*****************************************
+MOVE EQU * Start of a sub-routine called "Move"
+USING *,R15 Tell the assembler reg. 15 points to
+* this address
+MVC OUTPUT,INPUT Move the input to the output area
+SR R15,R15 Clear register contents (set Return code = 0)
+BR R14 return to caller
+DROP R15 Tell assembler we are no longer using
+* register 15 and resume using previous register
+*
+TABLE DC C'ABCDEFGHIJKLMNOPQRSTUVWXYZ' Table of letters of the alphabet
+INPUT DS Cl80 Input area
+OUTPUT DS Cl80 Output area

@@ -1,0 +1,41 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 321
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ient.
+Type extension and dispatching ease the maintenance burden when
+you add a new variant to a data structure. See also Guidelines
+5.4.2 and 5.4.4 .
+
+==== notes ====
+Ranges that are needed in case
+statements can use constrained
+subtypes to enhance maintainability. It is easier to maintain
+because the declaration of
+the range can be placed where it is logically part of the abstraction,
+not buried in a case statement in the executable code:
+
+==== exceptions ====
+It is acceptable to use ranges for possible values only when the
+user is certain that new values will never be inserted among the
+old ones, as for example, in the range of ASCII characters: 'a' .. 'z'.
+
+=== Loops ===
+
+==== guideline ====
+Use for loops, whenever possible.
+Use while loops when the number of iterations cannot be calculated before entering the loop but a simple continuation condition can be applied at the top of the loop.
+Use plain loops with exit statements for more complex situations.
+Avoid exit statements in while and for loops.
+Minimize the number of ways to exit a loop.
+
+==== example ====
+To iterate over all elements of an array:
+
+To iterate over all elements in a linked list:

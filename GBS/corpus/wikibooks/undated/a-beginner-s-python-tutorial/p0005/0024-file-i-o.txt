@@ -1,0 +1,18 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 5
+section: file-i-o
+chunk: 24
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+Last lesson we learned how to load external code into our program. Without any introduction (like what I usually have), let's delve into file input and output with normal text files, and later the saving and restoring of instances of classes. (Wow, our lingo power has improved greatly!)
+
+== Opening a File ==
+To open a text file you use, well, the open() function. Seems sensible. You pass certain parameters to open() to tell it in which way the file should be opened - 'r' for read only, 'w' for writing only (if there is an old file, it will be written over), 'a' for appending (adding things on to the end of the file) and 'r+' for both reading and writing. But less talk, lets open a file for reading (you can do this in your python idle mode). Open a normal text file. We will then print out what we read inside the file:
+
+Code Example 1 - Opening a file
+
+That was interesting. You'll notice a lot of '\n' symbols. These represent newlines (where you pressed enter to start a new line). The text is completely unformatted, but if you were to pass the output of openfile.read() to print (by typing print openfile.read()) it would be nicely formatted.

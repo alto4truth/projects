@@ -1,0 +1,29 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 13
+section: variables-scripts
+chunk: 77
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+e prompt up, type cd path\to\your\file (path/to/your/file for macOS/*nix) then type python mary.py. Your program will now execute in the command line.
+
+== Variables ==
+Now let's start introducing variables. Variables store a value, that can be looked at or changed at a later time. Let's make a program that uses variables. Open up IDLE and click 'File > New Window'. A new window now appears, and it is easy to type in programs. Type the following (or just copy and paste—just read very carefully, and compare the code to the output that the program will make):
+
+Code Example 3 – Variables
+
+Note that if you just want to modify a variable's value with respect to itself, there are shortcuts. These are called augmented assignment operators:
+
+== Strings ==
+As you can see, variables store values, for use at a later time. You can change them at any time. You can put in more than numbers, though. Variables can hold things like text. A variable that holds text is called a string. Try this program:
+
+Code Example 4 – Strings
+
+The output will be:
+
+Code Example 5 – String output
+Good morning
+Good morning to you too!

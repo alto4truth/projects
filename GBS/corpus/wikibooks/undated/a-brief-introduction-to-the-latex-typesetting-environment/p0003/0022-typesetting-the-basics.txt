@@ -1,0 +1,24 @@
+title: A Brief Introduction to the LaTeX Typesetting Environment
+source: wikibooks
+year: undated
+document_id: a-brief-introduction-to-the-latex-typesetting-environment
+authors: 
+page: 3
+section: typesetting-the-basics
+chunk: 22
+source_ref: https://en.wikibooks.org/wiki/A_Brief_Introduction_to_the_LaTeX_Typesetting_Environment
+
+\end{figure}
+
+And everything is all well and good.
+However, the \begin{document} function is slightly more crucial and will need to be used with care.
+
+\begin{document}
+We've now begun the document. Everything here is part of the document we wish to typeset. For instance, if we want a figure:
+\begin{figure}
+Contents of the figure
+\end{figure}
+And now we have more of our document to deal with. When we're finished with everything we want to typeset as a document, we must be sure to end it as follows
+\end{document}
+
+Now everything will be good to go and you will be able to typeset the code.

@@ -1,0 +1,25 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 15
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+sions can cause undesirable dependencies. Therefore, you should avoid the use of barrier expressions that can cause side effects.
+See also Guideline .
+
+==== exceptions ====
+If the client of the abstraction containing the protected object must use a select statement with an entry call, you must expose the protected object on the package interface.
+
+=== Tasks ===
+
+==== guideline ====
+Use tasks to model selected asynchronous threads of control within the problem domain.
+Consider using tasks to define concurrent algorithms.
+Consider using rendezvous when your application requires synchronous unbuffered communication.
+
+==== example ====
+The naturally concurrent objects within the problem domain can be modeled as Ada tasks.

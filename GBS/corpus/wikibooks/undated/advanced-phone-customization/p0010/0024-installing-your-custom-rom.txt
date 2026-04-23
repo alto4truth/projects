@@ -1,0 +1,22 @@
+title: Advanced phone customization
+source: wikibooks
+year: undated
+document_id: advanced-phone-customization
+authors: 
+page: 10
+section: installing-your-custom-rom
+chunk: 24
+source_ref: https://en.wikibooks.org/wiki/Advanced_phone_customization
+
+s\RR-O-v6.1.0-20180619-zero-common-Official.zip'* daemon not running. starting it now on port 5037 *
+* daemon started successfully *
+Total xfer: 0.95x
+
+F:\Program Files\Android\android-sdk\platform-tools>adb sideload F:\Users\<username>\Downloads\open_gapps-arm64-8.1-nano-20180812.zip
+loading: 'F:\Users\<username>\Downloads\open_gapps-arm64-8.1-nano-20180812.zip'
+error: closed
+
+F:\Program Files\Android\android-sdk\platform-tools>adb sideload F:\Users\<username>\Downloads\open_gapps-arm64-8.1-nano-20180812.zip
+Total xfer: 1.19x
+
+The error on the second part occurred because I forgot to set the phone to adb sideload again.

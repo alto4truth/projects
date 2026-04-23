@@ -1,0 +1,39 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 27
+section: 360-instructions-ex
+chunk: 86
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+e value in the register5.
+
+more example::
+R4 = X
+’00000005’
+R5 = X
+’FFFFFF04’
+R6 = X
+’00000034’
+
+the values stored previously in those registers......
+
+here some object codes shown for the target codes...................
+TARGET1 MVC FIELDA(0),FIELDB * Object code: D2 00 C0 10 C0 20
+TARGET2 AP FIELDC(0),FIELDD(0) * Object code: FA 00 C0 22 C0 34
+TARGET3 LR R0,R0 * Object code: 18 00
+
+................................................................................................
+
+///////// as R4 has the rightmost byte=x'05'=05, so 6bytes will be copied from FIELDB TO FIELDA
+EX R4,TARGET1
+///////// as R5 has the rightmost byte=x'04'=04, so 5bytes will be copied from FIELDB TO FIELDA
+EX R5,TARGET1
+///////// as R6 has the rightmost byte=x'34'=52, so 53bytes will be copied from FIELDB TO FIELDA
+EX R6,TARGET1
+
+////////as R6 has rightmost byte=x'34' so first nibble will go for FIELDC and second nibble will go for FIELDD
+EX R6,TARGET2
+////// FIELDD (5 bytes) is added to FIELDC (4 bytes). and stored into FIELDC.

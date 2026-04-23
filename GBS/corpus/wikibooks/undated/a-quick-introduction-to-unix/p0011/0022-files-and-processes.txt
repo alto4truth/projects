@@ -1,0 +1,16 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 11
+section: files-and-processes
+chunk: 22
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+a jpeg image;
+a directory: directories can be thought of as the analogue of Windows’ folders. Directories are files that contain links to other files.
+
+== The standard input and output and the standard error stream ==
+There are two files that have somewhat opaque names, stdin and stdout. These names refer to default sources of and destinations for data. Consider the process initiated by the command ls. The default output of this process is a list of files in the current working directory which is then displayed on screen. This illustrates the default output stdout which is nothing but the screen. The standard input by contrast is the keyboard - thus also known as stdin.
+In shell programming, it is often useful to prevent error messages from Unix commands from being displayed on screen. Instead, they are either suppressed or sent to a file. This is done by redirecting the error messages to a filename or to /dev/null - the null device or destination. To use these streams (stdin, stdout, stderr) in the shell, we refer to them by the numerical descriptors rather than by name.

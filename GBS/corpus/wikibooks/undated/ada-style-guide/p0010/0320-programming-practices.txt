@@ -1,0 +1,40 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 320
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+er
+and that Terminal_IO.Get handles errors in user input.
+The less readable alternative with the if/elsif statement
+is shown after the case statement:
+
+==== rationale ====
+All possible values for an object should be known and should be
+assigned specific actions. Use of an others clause may
+prevent the developer from carefully considering the actions for
+each value. A compiler warns the user about omitted values if
+an others clause is not used.
+You may not be able to avoid the use of others in a case
+statement when the subtype of the case expression has many values,
+for example, universal_integer, Wide_Character,
+or Character). If your choice of values is small compared
+to the range of the subtype, you should consider using an if/elsif
+statement. Note that you must supply an others alternative
+when your case expression is of a generic type.
+Each possible value should be explicitly enumerated. Ranges can
+be dangerous because of the possibility that the range could change
+and the case statement may not be reexamined. If you
+have declared a subtype to correspond to the range of interest,
+you can consider using this named subtype.
+In many instances, case statements enhance the readability
+of the code. See Guideline 10.5.3 for a discussion of the performance
+considerations. In many implementations, case statements
+may be more efficient.
+Type extension and dispatching ease the maintenance burden when
+you add a new variant to a data structure. See also Guidelines
+5.4.2 and 5.4.4 .

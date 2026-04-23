@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 388
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+The identifier Historical_Year might appear to be specific, but it is actually general, with the adjective historical describing the range constraint:
+
+The suffixes _Capacity, _Range, and _Map help define the purpose of the above subtypes and avoid the search for synonyms for the sector, track, and surface abstractions. Without the suffixes, you would need three different names per abstraction, one to describe each of the concepts succinctly named in the suffix. This recommendation only applies to certain visible subtypes. Private types, for example, should be given a good name that reflects the abstraction being represented.
+
+==== rationale ====
+When this style and the suggested style for object identifiers are used, program code more closely resembles English (see Guideline 3.2.3). Furthermore, this style is consistent with the names of the language's predefined identifiers. They are not named Integers, Booleans, Integer_Type, or Boolean_Type.
+However, using the name of a subtype from the predefined packages is sure to confuse a programmer when that subtype appears somewhere without a package qualification.

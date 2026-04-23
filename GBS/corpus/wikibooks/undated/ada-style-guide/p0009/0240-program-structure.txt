@@ -1,0 +1,26 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 240
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+dicated without embedding them in the code at all, such as through a compiler option, then the problems described above are even less likely to occur.
+
+==== exceptions ====
+Certain pragmas (e.g., pragma Suppress) can be used in several forms, including as a configuration pragma. This guideline does not apply to such pragmas when they are not used as a configuration pragma.
+
+=== Subprograms ===
+
+==== guideline ====
+Use subprograms to enhance abstraction.
+Restrict each subprogram to the performance of a single action.
+
+==== example ====
+Your program is required to draw a menu of user options as part of a menu-driven user interface package. Because the contents of the menu can vary depending on the user state, the proper way to do this is to write a subprogram to draw the menu. This way, the output subprogram has one purpose and the way to determine the menu content is described elsewhere.
+
+==== rationale ====
+Subprograms are an extremely effective and well-understood abstraction technique. Subprograms increase program readability by hiding the details of a particular activity. It is not necessary that a subprogram be called more than once to justify its existence.

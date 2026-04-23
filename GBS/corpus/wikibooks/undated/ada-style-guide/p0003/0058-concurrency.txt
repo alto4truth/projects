@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 58
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+n. Reread and fully understand the Ada Reference Manual 1995, §9.3 [Annotated] on "Task Dependence-Termination of Tasks."
+
+=== The Abort Statement ===
+
+==== guideline ====
+Avoid using the abort statement.
+Consider using the asynchronous select statement rather than the abort statement.
+Minimize uses of the asynchronous select statement.
+Avoid assigning nonatomic global objects from a task or from the abortable part of an asynchronous select statement.
+
+==== example ====
+If required in the application, provide a task entry for orderly shutdown.
+The following example of asynchronous transfer of control shows a database transaction. The database operation may be cancelled (through a special input key) unless the commit transaction has begun. The code is extracted from the Rationale (1995, §9.4):

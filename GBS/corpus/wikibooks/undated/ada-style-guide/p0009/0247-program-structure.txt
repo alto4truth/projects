@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 9
+section: program-structure
+chunk: 247
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+l declarations used only in implementing the package specification.
+Use child packages to implement constructors, even when they return access values.
+
+==== example ====
+The following example of a windowing system is taken from Cohen et al. (1993) and illustrates some of the uses of child units in designing subsystems. The parent (root) package declares the types, subtypes, and constants that its clients and subsystems need. Individual child packages provide specific parts of the windowing abstraction, such as atoms, fonts, graphic output, cursors, and keyboard information:

@@ -1,0 +1,19 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 20
+section: i-feel-like-shouting
+chunk: 40
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+[ctrl-d]
+
+Ctrl-d is how you tell the command from the keyboard that you're done entering input.
+You can tell your shell to connect standard output to a file instead of your screen using the ">" operator. The term for this is "redirection". One would talk about "redirecting" tr's output to a file. Later you can use the cat command to write the file to your screen.
+
+$ tr a-z A-Z > tr_output
+this is a test
+[ctrl-d]
+$ cat tr_output

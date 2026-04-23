@@ -1,0 +1,33 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 4
+section: improving-performance
+chunk: 84
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+used. As updates are made to the code, a routine may become more complex (larger) and the continued use of a pragma Inline may no longer be justified.
+
+==== exceptions ====
+Although it is rare, inlining code may increase code size, which can lead to slower performance caused by additional paging. A pragma Inline may actually thwart a compiler's attempt to use some other optimization technique, such as register optimization.
+When a compiler is already doing a good job of selecting routines to be inlined, the pragma may accomplish little, if any, improvement in execution speed.
+
+=== Pragma Restrictions ===
+
+==== guideline ====
+Use pragma Restrictions to express the user's intent to abide by certain restrictions.
+
+==== rationale ====
+This may facilitate the construction of simpler run-time environments (Ada Reference Manual 1995, §§13.12 [Annotated], D.7 [Annotated], and H.4 [Annotated]).
+
+=== Pragma Preelaborate ===
+
+==== guideline ====
+Use pragma Preelaborate where allowed.
+
+==== rationale ====
+This may reduce memory write operations after load time (Ada Reference Manual 1995, §§10.2.1 [Annotated] and C.4 [Annotated]).
+
+=== Pragma Pure ===

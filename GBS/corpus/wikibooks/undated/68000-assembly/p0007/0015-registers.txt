@@ -1,0 +1,12 @@
+title: 68000 Assembly
+source: wikibooks
+year: undated
+document_id: 68000-assembly
+authors: 
+page: 7
+section: registers
+chunk: 15
+source_ref: https://en.wikibooks.org/wiki/68000_Assembly
+
+ins, giving a maximum addressing range of 16MiB. The Program Counter is changed automatically when a new instruction is loaded or when a BRA, BCC, BSR, JMP, JSR, RTS, or RTE instruction is used. It can also be used as a pointer in PC relative addressing modes.
+The Condition Code Register (CCR) consists of the lower byte of the Status Register (SR). Only the lower byte is accessible in user mode, and of this, only the first five bits are useful. In supervisor mode, the entire 16-bit register is accessible. The register looks like this:

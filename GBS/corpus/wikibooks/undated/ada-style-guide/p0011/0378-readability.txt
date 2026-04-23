@@ -1,0 +1,25 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 378
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+== Introduction ==
+This chapter recommends ways of using Ada features to make reading and understanding code easier. There are many myths about comments and readability. The responsibility for true readability rests more with naming and code structure than with comments. Having as many comment lines as code lines does not imply readability; it more likely indicates the writer does not understand what is important to communicate.
+
+== Spelling ==
+Spelling conventions in source code include rules for capitalization and use of underscores, numbers, and abbreviations. If you follow these conventions consistently, the resulting code is clearer and more readable.
+
+=== Use of Underscores ===
+
+==== guideline ====
+Use underscores to separate words in a compound name.
+
+==== example ====
+
+==== rationale ====
+When an identifier consists of more than one word, it is much easier to read if the words are separated by underscores. Indeed, there is precedent in English in which compound words are separated by a hyphen or a space. In addition to promoting readability of the code, if underscores are used in names, a code formatter has more control over altering capitalization. See Guideline 3.1.3.

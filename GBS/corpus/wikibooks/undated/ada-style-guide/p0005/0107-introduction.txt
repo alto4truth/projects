@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 5
+section: introduction
+chunk: 107
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+aluate the complete context. Each guideline works best when related guidelines are practiced. In isolation, a guideline may have little or no benefit.
+
+=== To Ada 83 To Ada 95 Transition Planners ===
+Transitioning issues fall into two major categories: the incompatibilities between the languages, in particular, upward compatibility, and exploitation of new language features.
+Upward compatibility of Ada 95 was a major design goal of the language. The small number of incompatibilities between Ada 83 and Ada 95 that are likely to occur in practice are easily overcome (see Ada 95 Rationale [1995] Appendix X entitled Upward Compatibility). Detailed information on compatibility issues can be found in Taylor (1995) and Intermetrics (1995).
+The transition planner can gain insight from this book into the exploitation of language features in two ways. First, Table 1 shows the impact of new Ada 95 language features on style guide chapters. Second, Appendix A maps Ada Reference Manual (1995) sections to specific style guidelines.
+
+== Typographic Conventions ==
+This style guide uses the following typographic conventions:

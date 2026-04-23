@@ -1,0 +1,21 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 8
+section: end-program
+chunk: 43
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+arameter_1,parameter_2):
+{this is the code in the function}
+{more code}
+{more code}
+return {value (e.g. text or number) to return to the main program}
+
+Where parameter_1 and parameter_2 are (between the parentheses), you put the names of variables that you want to put the parameters into. Put as many as you need, just have them separated by commas. When you run a function, the first value you put inside the parentheses would go into the variable where parameter_1 is. The second one (after the first comma) would go to the variable where parameter_2 is. This goes on for however many parameters there are in the function (from zero, to the sky) For example:
+
+Code Example 13 - how parameters work
+
+When you run the function above, you would type in something like this: funny_function("meat", "eater", "man"). The first value (that is, "meat") would be put into the variable called first_word. The second value inside the brackets (that is, "eater") would be put into the variable called second_word, and so on. This is how values are passed from the main program to functions - inside the parentheses, after the function name.

@@ -1,0 +1,36 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 8
+section: parti-chapter-3-arrays-methods
+chunk: 32
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+in “newlength”. The following must be traced in Output window:
+
+4
+1,2,3,4
+
+===== reverse =====
+Array.reverse( );
+“reverse” method reverses the array.
+
+The first line creates an array with 5 elements: 1, 2, 3, 4, 5. Line 3 traces “myarray”, then line 4 reverses the array and line 5 again traces our array. The output must be:
+
+1,2,3,4,5
+5,4,3,2,1
+
+===== shift =====
+Array.shift( <start>, <end> );
+This method is similar to method “pop” but removes not the last, but the first element and then returns the value of it.
+
+Line 1 declares “myarray” array with 4 elements: 1, 2, 3, 4. Line 2 declares “shifted” variable without assigning any data type. In line 4 we shift “myarray” and write the value of the first element in “shifted” variable. In line 5 we trace variable “shifted” to see the name of the element which was shifted, and in line 6 we trace “myarray”. The output must be:
+
+1
+2,3,4
+
+===== slice =====
+Array.slice( <start>, <end> );
+The method “slice” copies the elements of one array and then returns them as an array. To use this method you must give it the start and the last indexes of the elements.

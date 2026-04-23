@@ -1,0 +1,52 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 17
+section: c-variables-declarations-and-constants
+chunk: 72
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+AF hex int
+0173 octal int
+0.243 float
+0.1732f float
+15.75E2 float
+'a' character
+"giday" string
+
+There are a number of special characters defined in C:
+
+'\a' alarm (beep) character
+'\p' backspace
+'\f' formfeed
+'\n' newline
+'\r' carriage return
+'\t' horizontal tab
+'\v' vertical tab
+'\\' backslash
+'\?' question mark
+'\'' single quote
+'\"' double quote
+'\0NN' character code in octal
+'\xNN' character code in hex
+'\0' null character
+
+"Symbolic constants" can be specified using the "define" C preprocessor
+declaration:
+
+There is also a "const" declaration that defines a read-only variable, such
+as a memory location in ROM:
+
+Arrays can be declared and initialized:
+
+All C arrays have a starting index of 0, so "list" has the indexes 0 through
+4. Elements in "rdata" would be accessed as follows:
+
+C does not perform rigorous bounds checking on array access. It is easy to
+overrun the bounds of the array, and the only symptom will be that the
+program acts very strangely.
+
+Of particular importance are arrays of characters, which are used to store
+strings:

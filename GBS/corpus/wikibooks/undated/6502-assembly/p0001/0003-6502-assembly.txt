@@ -1,0 +1,36 @@
+title: 6502 Assembly
+source: wikibooks
+year: undated
+document_id: 6502-assembly
+authors: 
+page: 1
+section: 6502-assembly
+chunk: 3
+source_ref: https://en.wikibooks.org/wiki/6502_Assembly
+
+fied and the byte at that address is used to perform the computation.
+Example
+The value $24 at address $D010 is loaded into the X register.
+
+LDX $D010
+
+=== Zero Page: zp ===
+A single byte specifies an address in the first page of memory ($00xx), also known as the zero page, and the byte at that address is used to perform the computation.
+Example
+The value at address $0002 is loaded into the Y register.
+
+LDY $02
+
+=== Relative: r ===
+The offset specified is added to the current address stored in the Program Counter (PC). Offsets can range from -128 to +127.
+Example
+The offset $2D is added to the address in the Program Counter (say $C100). The destination of the branch (if taken) will be $C12D.
+
+BPL $2D
+
+=== Absolute Indirect: (a) ===
+The little-endian two-byte value stored at the specified address is used to perform the computation. Only used by the JMP instruction.
+Example
+The addresses $A001 and $A002 are read, returning $FF and $00 respectively. The address $00FF is then jumped to.
+
+JMP ($A001)

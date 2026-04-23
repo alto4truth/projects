@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 401
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ndent on that literal are automatically changed.
+See Guideline 4.1.4 for additional guidelines on choosing a parameterless function versus a constant.
+
+==== notes ====
+There are situations where a literal is a better choice than a name. For this to be the case, the following conditions have to be fulfilled:
+
+The literal has to be self-explanatory in the respective context, such that replacing the literal by a symbolic value would not improve the readability.
+The value is either unchangeable or only occurs at one single place in the code, such that replacing the literal by a symbolic value would not improve the maintainability.
+For example, the literals in the following well known relationship are both self-explanatory and unchangeable:
+
+As a second example, dividing by the literal 2 is self-explanatory in a binary search algorithm context. And, since the value is also unchangeably related with the algorithm, it also does not matter if the literal occurs at more than one place in the code (for example due to loop unrolling). Therefore, the use of a symbolic value like the following would neither improve readability nor maintainability:
+
+=== Exceptions ===

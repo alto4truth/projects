@@ -1,0 +1,17 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 2
+section: 360-architecture
+chunk: 5
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+tus Word (PSW). The Program Status Word is comprised of the privileged bit, the program counter, and the memory protection key, among other flag bits.
+
+== Privileged and Problem States ==
+The privileged bit (15) of the PSW indicates the state of the program that is currently executing. There are two states, problem (0) and supervisor (1). A program is said to be in "supervisor state" if the privileged bit is set, and "problem state" if it is clear.
+
+Problem state is where all user software operates. Problem state applications ("problem programs") have restrictions including memory read and write restrictions, and cannot directly issue I/O instructions.
+Supervisor state is reserved for the operating system and any of its components. Some operating systems have the capacity for a program to be marked as "authorized," in which case the program can run in supervisor state.

@@ -1,0 +1,42 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 6
+section: picking-the-data-apart-with-cut
+chunk: 16
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+at certain offset in bytes from the beginning of a record. Fixed width data abounds on a Unix system. ls -l writes its output in a fixed width format:
+
+$ ls -l /etc | head -5
+total 6548
+-rw-r--r-- 1 root root 46 Dec 4 12:23 adjtime
+drwxr-xr-x 4 root root 4096 Oct 8 2003 alchemist
+-rw-r--r-- 1 root root 1048 Aug 31 2001 aliases
+-rw-r--r-- 1 root root 12288 Oct 8 2003 aliases.db
+
+As does ps:
+
+$ ps -u'
+USER PID %CPU %MEM VSZ RSS TTY STAT START TIME COMMAND
+jrauser 26870 0.0 0.1 2576 1388 pts/0 S 09:45 0:00 /bin/bash
+jrauser 8943 0.0 0.0 2820 880 pts/0 R 12:58 0:00 ps -u
+
+Returning to the question of how many 1 person households are there in Washington:
+
+$ grep "^H" pums_53.dat | cut -c106-107 | grep -c 01
+7192
+
+7,192, or about 28% of households have only one occupant.
+
+== Delimited data ==
+In delimited data, elements of a record are separated by a special 'delimiter' character. In the password file, fields are delimited by colons:
+
+$ head -5 /etc/passwd
+root:x:0:0:root:/:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin

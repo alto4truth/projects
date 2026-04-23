@@ -1,0 +1,29 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 414
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ated in a package. This is especially true when each function in the set is capable of raising the same exceptions.
+
+=== Program Unit Body Headers ===
+
+==== guideline ====
+Place information required by the maintainer of the program unit in the body of the header
+Explain how and why the unit performs its function, not what the unit does.
+Do not repeat information (except unit name) in the header that is readily apparent from reading the code.
+Do not repeat information (except unit name) in the body header that is available in the specification header.
+
+==== instantiation ====
+Put the name of the program unit in the header.
+Record portability issues in the header.
+Summarize complex algorithms in the header.
+Record reasons for significant or controversial implementation decisions.
+Record discarded implementation alternatives, along with the reason for discarding them.
+Record anticipated changes in the header, especially if some work has already been done to the code to make the changes easy to accomplish.
+
+==== example ====

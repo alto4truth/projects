@@ -1,0 +1,44 @@
+title: 65c02 Assembly
+source: wikibooks
+year: undated
+document_id: 65c02-assembly
+authors: 
+page: 1
+section: 65c02-assembly
+chunk: 11
+source_ref: https://en.wikibooks.org/wiki/65c02_Assembly
+
+As the stack grows backwards, the return address is therefore stored as a little-endian number in memory.
+PC is set to the target address.
+Flags: none
+
+Return from Subroutine: RTS
+Return from a subroutine to the point where it called with JSR.
+The return address is popped from the stack (low byte first, then high byte).The return address is incremented and stored in PC.
+Flags: none
+
+Return from Interrupt: RTI
+Return from an interrupt.
+SR is popped from the stack.
+PC is popped from the stack.
+Flags: all
+
+=== Set and Clear ===
+
+=== Miscellaneous ===
+Break: BRK
+Force an Interrupt.
+This is a two-byte instruction, where the second byte is ignored by the processor. The 2nd byte can be used as argument to the interrupt service routine.
+Flags: B = 1, I = 1
+
+No Operation: NOP
+No Operation
+Flags: none
+
+Wait for Interrupt: WAI
+Wait for Interrupt
+Flags: none
+
+Stop mode: STP
+Stop mode
+Flags: none

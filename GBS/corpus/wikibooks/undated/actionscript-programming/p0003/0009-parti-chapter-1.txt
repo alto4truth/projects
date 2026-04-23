@@ -1,0 +1,18 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 3
+section: parti-chapter-1
+chunk: 9
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+the quality of the object, since its quality property is set. Rather it changes the quality of all the movie. For example if you write the following:
+
+then this will decrease not only of the quality of box object, but also the qualities of all other objects.
+
+=== Name ===
+This property changes or reads the name of the object. To understand how to use this property let's test it. We will use the example which we used when we were learning "Rotation" property. Right click the keyframe in Timeline window to see the "Actions" window. Now add the following lines to the code:
+
+Test the movie and you will notice that nothing has changed. Why? Because you have changed the name of the "box" to "box2", so now the object with the name "box" doesn’t exist. But if you only replace the word "box" in the second line to "box2" and it will look like "box2._rotation = 45; ", then, by testing the movie you will see that the box is rotated.

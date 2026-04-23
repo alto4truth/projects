@@ -1,0 +1,21 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 452
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+return, receives a working instance of the specification. Both parties are best served when the contract is complete and clear about all assumptions.
+
+== Robustness ==
+The following guidelines improve the robustness of Ada code. It is easy to write code that depends on an assumption that you do not realize that you are making. When such a part is reused in a different environment, it can break unexpectedly. The guidelines in this section show some ways in which Ada code can be made to automatically conform to its environment and some ways in which it can be made to check for violations of assumptions. Finally, some guidelines are given to warn you about errors that Ada does not catch as soon as you might like.
+
+=== Named Numbers ===
+
+==== guideline ====
+Use named numbers and static expressions to allow multiple dependencies to be linked to a small number of symbols.
+
+==== example ====

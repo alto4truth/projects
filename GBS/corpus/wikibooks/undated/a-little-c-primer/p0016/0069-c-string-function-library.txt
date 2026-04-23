@@ -1,0 +1,36 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 16
+section: c-string-function-library
+chunk: 69
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+. Notice how the example program increments the pointer before using it
+("++p") so that it doesn't point to the ":" but to the character following
+it.
+
+=== strrchr() ===
+The "strrchr()" function is almost the same as "strchr()", except that it
+searches for the last occurrence of the character in the string.
+
+== strstr() ==
+The "strstr()" function is similar to "strchr()" except that it searches
+for a string, instead of a character. It also returns a pointer:
+
+== strlwr() and strupr() ==
+The "strlwr()" and "strupr()" functions simply perform lowercase or
+uppercase conversion on the source string. For example:
+
+—prints:
+hey barney hey!
+HEY BARNEY HEY!
+
+These two functions are only implemented in some compilers and are not part of
+ANSI C.
+
+== Further reading ==
+C Programming/Strings
+C++ Programming/Code/IO/Streams/string

@@ -1,0 +1,29 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 197
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+on a particular delay being achievable (Nissen and Wallis 1984).
+Never use knowledge of the execution pattern of tasks to achieve timing requirements.
+
+==== rationale ====
+The rationale for this appears in Guideline 6.1.7. In addition, the treatment of delay statements varies from implementation to implementation, thereby hindering portability.
+Using knowledge of the execution pattern of tasks to achieve timing requirements is nonportable. Ada does not specify the underlying scheduling algorithm, and there is no guarantee that system clock ticks will be consistently precise between different systems. Thus, when you change system clocks, your delay behavior also changes.
+
+=== Package Calendar, Type Duration, and System.Tick ===
+
+==== guideline ====
+Do not assume a correlation between System.Tick and type Duration (see Guidelines 6.1.7 and 7.4.2).
+
+==== rationale ====
+Such a correlation is not required, although it may exist in some implementations.
+
+=== Select Statement Evaluation Order ===
+
+==== guideline ====
+Do not depend on the order in which guard conditions are evaluated or on the algorithm for choosing among several open select alternatives.

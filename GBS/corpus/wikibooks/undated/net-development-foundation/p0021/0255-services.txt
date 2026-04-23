@@ -1,0 +1,31 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 21
+section: services
+chunk: 255
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+and Semaphore class MSDN]
+
+LockCookie structure - MSDN
+Monitor class - MSDN
+Mutex class - MSDN
+Semaphore class - MSDN
+Lock vs Monitor vs Mutex - MSDN
+
+==== Using applications domains ====
+Exam objective: Create a unit of isolation for common language runtime in a .NET Framework application by using application domains
+(Refer System namespace)
+
+===== Create an application domain =====
+See MSDN
+An application domain is a division of a process into multiple parts. Applications running in different application domains are as isolated as they would be in different processes. So they cannot access memory in another application domain. However, if native code is run, it can gain unlimited access to the whole process, which includes other application domains.
+Application domains are easier to maintain and are faster because it is easier to communicate between application domains than between processes. An application domain can hold multiple assemblies.
+To create an application domain, you must at least supply a name for the new application domain:
+
+AppDomain ad = AppDomain.CreateDomain("Name");
+
+Use AppDomain.CurrentDomain to get the application domain the calling thread is using.

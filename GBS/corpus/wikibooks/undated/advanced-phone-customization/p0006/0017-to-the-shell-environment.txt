@@ -1,0 +1,22 @@
+title: Advanced phone customization
+source: wikibooks
+year: undated
+document_id: advanced-phone-customization
+authors: 
+page: 6
+section: to-the-shell-environment
+chunk: 17
+source_ref: https://en.wikibooks.org/wiki/Advanced_phone_customization
+
+e from built packages
+Stands for "Product, NO Dependencies"
+psnod Quickly rebuild the product_services image from built packages
+Stands for "ProductServices, NO Dependencies"
+onod Quickly rebuild the odm image from built packages
+Stands for "ODM, NO Dependencies"
+So, for example, you could run:
+cd /mnt/aosp/lineage
+source build/envsetup.sh
+lunch aosp_arm-userdebug
+m -j java
+to build all of the java code for the userdebug variant of the aosp_arm device.

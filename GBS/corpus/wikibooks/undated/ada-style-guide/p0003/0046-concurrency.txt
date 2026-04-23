@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 46
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+updated in this task body, the compiler might otherwise have optimized the code and not generated code to reevaluate Item_Count every time it is read:
+
+==== rationale ====
+There are many techniques for protecting and synchronizing data access. You must program most of them yourself to use them. It is difficult to write a program that shares unprotected data correctly. If it is not done correctly, the reliability of the program suffers.
+Ada provides protected objects that encapsulate and provide synchronized access to protected data that is shared between tasks. Protected objects are expected to provide better performance than the rendezvous that usually requires introduction of an additional task to manage the shared data. The use of unprotected shared variables is more error-prone than the protected objects or rendezvous because the programmer must ensure that the unprotected shared variables are independently addressable and that the actions of reading or updating the same unprotected shared variable are sequential (Ada Reference Manual 1995, §9.0 [Annotated]; Rationale 1995, §II.9).
+The first example above has a race condition requiring perfect interleaving of execution. This code can be made more reliable by introducing a flag that is set by Spool_Server and reset by Line_Printer_Driver. An if (condition flag) then delay ... else would be added to each task loop in order to ensure that the interleaving is satisfied. However, notice that this approach requires a delay and the associated rescheduling. Presumably, this rescheduling overhead is what is being avoided by not using the rendezvous.
+You might need to use an object in shared memory to communicate data between (Rationale 1995, §C.5):

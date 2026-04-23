@@ -1,0 +1,19 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 3
+section: defining-a-class
+chunk: 9
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+example of what we call "creating an instance of a class". Assume that the code in example 2 has already been run:
+
+Code Example 3 - Creating a class
+
+What has been done? It takes a little explaining...
+The __init__ function really comes into play at this time. We create an instance of a class by first giving its name (in this case, Shape) and then, in brackets, the values to pass to the __init__ function. The init function runs (using the parameters you gave it in brackets) and then spits out an instance of that class, which in this case is assigned to the name "rectangle".
+Think of our class instance, rectangle, as a self-contained collection of variables and functions. In the same way that we used self to access functions and variables of the class instance from within itself, we use the name that we assigned to it now (rectangle) to access functions and variables of the class instance from outside of itself. Following on from the code we ran above, we would do this:
+
+Code Example 4 - accessing attributes from outside an instance

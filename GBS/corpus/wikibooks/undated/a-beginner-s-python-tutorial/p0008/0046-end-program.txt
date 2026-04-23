@@ -1,0 +1,22 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 8
+section: end-program
+chunk: 46
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+write this program differently, you would only have to write 15 or so lines, as opposed to the 34 lines you would normally have to without functions.
+
+== Tricky Ways You Can Pass Parameters ==
+Finally, as a bit of an interlude, I will explain what the line add(input("Add this: "), input("to this: ")) means.
+I wanted to fit everything onto one line, with as few variables as possible. Remember what functions look like to the main program? Whatever value they return. If the numbers you passed to the add() function were 2 and 30, the main program would see this:
+
+Code Example 15 - The results of fancy parameter work
+
+The add program would then run, adding 2 and 30, then printing the result. The add program has no 'return' operator - it doesn't return anything to the main program. It simply adds two numbers and prints them onscreen, and the main program doesn't see anything of it.
+Instead of (input("Add this: "), input("to this: ")) as the parameters for the add program, you could have variables. For example,
+
+Code Example 16 - variables as parameters

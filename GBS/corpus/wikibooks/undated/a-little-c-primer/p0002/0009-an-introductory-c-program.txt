@@ -1,0 +1,18 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 2
+section: an-introductory-c-program
+chunk: 9
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+be "declared" by specifying their name and type. The example program declares two variables for the "main" routine:
+
+—and one in the "sphere" routine:
+
+The declarations of "volume", "radius", and "result" specify a floating-point variable. The declaration allows variables to be initialized when declared if need be, in this case declaring "radius" and assigning it a value of "3".
+All three of these declarations define variables block scope. Variables with block scope exist only within the blocks that declare them. Variables of the same name could be declared in different blocks without interference. It is also possible to declare variables with file scope that can be shared by all functions by declaring them outside of all blocks within a translation unit. By default, all identifiers with file scope are given external linkage. It is only with the keyword "static" that an identifier is given internal linkage. Declarations like this:
+
+identify "a" as an int whose storage is defined elsewhere; preferably in another translation unit.

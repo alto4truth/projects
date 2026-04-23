@@ -1,0 +1,32 @@
+title: Advanced phone customization
+source: wikibooks
+year: undated
+document_id: advanced-phone-customization
+authors: 
+page: 4
+section: set-path-so-it-includes-user-s-private-bin-if-it-exists
+chunk: 10
+source_ref: https://en.wikibooks.org/wiki/Advanced_phone_customization
+
+if [ -d "$HOME/bin" ] ; then
+PATH="$HOME/bin:$PATH"
+fi
+
+Then, run source ~/.profile to update your environment.
+In arch linux do the same but name the file ~/.bashrc
+
+=== Initialize the LineageOS source repository ===
+Enter the following to initialize the repository:
+
+cd ~/android/lineage
+
+repo init -u https://github.com/LineageOS/android.git -b lineage-X --git-lfs
+where X is the LineageOS version supported by your device.
+You need to initialize git for this to work:
+git config --global user.name "abc"
+
+git config --global user.email "abc@example.com"
+
+=== Download the source code ===
+To start the download of the source code to your computer, type repo sync.
+The LineageOS manifests include a sensible default configuration for repo, which we strongly suggest you use (i.e. don’t add any options to sync). For reference, our default values are -j 4 and -c. The -j 4 part means that there will be four simultaneous threads/connections. If you experience problems syncing, you can lower this to -j 3 or -j 2. On the other hand, -c will ask repo to pull in only the current branch instead of all branches that are available on GitHub.

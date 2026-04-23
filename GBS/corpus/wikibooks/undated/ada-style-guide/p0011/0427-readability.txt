@@ -1,0 +1,31 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 427
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ype conversions within executable statements. This renders the program more readable while allowing the compiler to enforce strong typing constraints.
+
+==== notes ====
+Subtype declarations do not define new types, only constraints for existing types.
+Any deviation from this guideline detracts from the advantages of the strong typing facilities of the Ada language.
+
+==== exceptions ====
+There are cases where you do not have a particular dependence on any range of numeric values. Such situations occur, for example, with array indices (e.g., a list whose size is not fixed by any particular semantics). See Guideline 7.2.1 for a discussion of appropriate uses of predefined types.
+
+=== Enumeration Types ===
+
+==== guideline ====
+Use enumeration types instead of numeric codes.
+Only if absolutely necessary, use representation clauses to match requirements of external devices.
+
+==== example ====
+Use:
+
+rather than:
+
+and add the following if necessary:

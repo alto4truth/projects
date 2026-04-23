@@ -1,0 +1,35 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 10
+section: interoperability-classes
+chunk: 196
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+MSDN
+Create a class to hold DLL functions - MSDN
+Create prototypes in managed code - MSDN
+
+DllImportAttribute class - MSND
+Call a DLL function - MSDN
+
+Look for "P/Invoke" on the internet.
+A good reference is: http://www.pinvoke.net/
+Some short hints:
+For the DllAttribute "CharSet", Logically, CharSet.Auto is the most secure way as this will autodetect the Charset used. The CharSet can be ANSI(Win95/Win98/ME) or Unicode (Win2000/WinXP)
+GetEntryPoint: There could be one tricky question as the EntryPoint states the method that should be called. In case the name of the method used differs from the method to be called, this flag is necessary.
+Call a DLL function in special cases, such as passing structures and implementing callback functions
+
+Same link as above
+Passing structures - MSDN
+Implementing callback functions - MSDN
+Create a new Exception class and map it to an HRESULT - MSDN
+Default marshaling behavior - MSDN
+Marshal data with Platform Invoke - MSDN
+Marshal data with COM Interop - MSDN
+MarshalAsAttribute class and Marshal class
+
+MarshalAsAttribute class - MSDN
+Marshal class - MSDN

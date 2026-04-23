@@ -1,0 +1,40 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 17
+section: a-perl-statement
+chunk: 35
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+in columns 191-192, where category 9 indicates a bicycle. We'll use an inline perl script to rewrite both education level and mode of transportation:
+
+$ cat pums_53.dat | grep "^P" | cut -c53-54,191-192 |
+perl -ne 'print substr($_,0,2)>=11?1:0,substr($_,2,2)==9?1:0,"\n";' |
+sort | uniq -c
+37452 00
+55 01
+21532 10
+111 11
+
+55/(55+36447) = 0.15% of non college educated people ride their bike to work. 111/(111+20219) = 0.56% of college educated people ride their bike to work.
+Sociological interpretation is left as an exercise for the reader.
+
+== Example - A histogram with custom bucket size ==
+Suppose we wanted to take a look at distribution of personal incomes. The normal trick of sort and uniq would work, but the personal income in the census data has resolution down to the $10 level, so the output would be very long and it would be hard to quickly see the pattern. We can use perl to round the income data down to the nearest $10,000 on the fly. Before the inline perl script:
+
+$ cat pums_53.dat | grep "^P" | cut -c297-303 | head -4
+0018000
+0004100
+0004300
+0005300
+
+And after:
+
+$ cat pums_53.dat | grep "^P" | cut -c297-303 |
+perl -pe '$_=10000*int($_/10000)."\n"' | head -4
+10000
+0
+0
+0

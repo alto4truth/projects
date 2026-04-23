@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 492
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+r.
+
+=== Coupling Due to Pragmas ===
+
+==== guideline ====
+In the specification of a generic library unit, use pragma Elaborate_Body.
+
+==== example ====
+
+==== rationale ====
+The elaboration order of compilation units is only constrained to follow the compilation order. Furthermore, any time you have an instantiation as a library unit or an instantiation in a library package, Ada requires that you elaborate the body of the generic being instantiated before elaborating the instantiation itself. Because a generic library unit body may be compiled after an instantiation of that generic, the body may not necessarily be elaborated at the time of the instantiation, causing a Program_Error. Using pragma Elaborate_Body avoids this by requiring that the generic unit body be elaborated immediately after the specification, whatever the compilation order.
+When there is clear requirement for a recursive dependency, you should use pragma Elaborate_Body. This situation arises, for example, when you have a recursive dependency (i.e., package A's body depends on package B's specification and package B's body depends on package A's specification).

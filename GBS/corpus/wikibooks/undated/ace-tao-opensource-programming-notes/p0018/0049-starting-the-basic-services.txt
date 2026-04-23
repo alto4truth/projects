@@ -1,0 +1,21 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 18
+section: starting-the-basic-services
+chunk: 49
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+As discussed in the previous section, Dealing with IIOP Endpoints, the naming service is one of the basic services. The other basic services you will be needing for most purposes are:
+CosEvent_Service
+Notify_Service
+Scheduling_Service
+On most platforms, you can start these with the following command lines by hand:
+
+Naming_Service -ORBEndPoint iiop://localhost:12345 -ORBDaemon
+CosEvent_Service -ORBInitRef NameService=corbaloc:iiop:localhost:12345/NameService -ORBDaemon
+Notify_Service -ORBInitRef NameService=corbaloc:iiop:localhost:12345/NameService -ORBDaemon
+Scheduling_Service -ORBInitRef NameService=corbaloc:iiop:localhost:12345/NameService -ORBDaemon
+Where the endpoint determines where the listener for the service will hang-out, and the ORBDaemon option tells the service to run as a background daemon. In the Linux environment, these services can also be started automatically in the background through the boot time scripts found in /etc/rc.d. One of the developers on the list server has been good enough to provide RPMs of ACE+TAO complete with the boot time scripts.

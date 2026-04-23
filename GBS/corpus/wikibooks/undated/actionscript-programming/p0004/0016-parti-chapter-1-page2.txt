@@ -1,0 +1,15 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 4
+section: parti-chapter-1-page2
+chunk: 16
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+our box and choose "Actions". When the Actions windows appears make sure the "Advanced Mode" is turned on and type the following the movieclip m_box:
+
+Now lets understand the code. The word "onClipEvent" is an event handler like "on". The word "enterFrame" is the event. If we use "on (event) {" in our previous examples for Buttons, then for Movie Clips we use "onClipEvent(event) {". Now lets discuss the second line. "_root" is the main object in the Flash. Imagine something like this: you are sitting in the car, the car is in the garage, the garage is in the building, the building is in the city. As you see the chief of all these is the city of course, the building is sub chief and so on. This mean that if you want to see the building you must first go out of the car, then out of garage, then out of the builing and only then you will see it. So if we programmly describe your position then it will be "_root.building.garage.car.you" where _root is the city. In our example we are in "onClipEvent (enterFrame) " event, so if we want to access var info, then we will have to access if via "_root", this means "_root.info". Now you ask why we write "_currentframe" without anything. Because we are already in the Movie Clip. For example if you are sitting in the car and you need to take keys from it. You will not get out of the car, then again enter it to take the keys, you will just simply take them and then get out. So that’s why in our example we use "_currentframe" without anything. But if you want to access it via "_root" then you will write "_root.box._currentframe".
+Step 5
+Now test the movie and you will see the result.

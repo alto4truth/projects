@@ -1,0 +1,27 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 8
+section: parti-chapter-3-arrays-methods
+chunk: 34
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+derstand what the difference is lets test the following example:
+
+You will notice that the array is ordered by “name” field, not “phone” or “address”.
+
+===== splice =====
+Array.splice( <start>, <delete count>, <value0>, <value1>, <…> );
+This is almost the most powerful method of array. It does two functions: it can delete the elements of the array specified by you or it can add elements from the location also specified by you. The example below demonstrates “splice” method.
+
+Line 1 creates an array with 4 elements: “a”, “b”, “c”, “d”. In lines 3, 5, 8 and 11 we trace information about process. In line 4 we trace our array. In line 6 we add two elements from third element. This is the use of splice if you want to add elements:
+
+Array.splice( <start>, 0, <value0>, <value1>, <value2> );
+
+As we don’t want to delete anything this is why the second parameter is set to 0. In line 9 we delete two elements from the forth element. This is the use of splice if you want to delete elements from specified locations:
+
+Array.splice( <start>, <delete count>);
+
+In line 12 we delete all elements beginning from the second element. This is the use of deleting all elements after specified location:

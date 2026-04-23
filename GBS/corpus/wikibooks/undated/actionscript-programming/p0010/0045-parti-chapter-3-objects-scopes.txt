@@ -1,0 +1,28 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 10
+section: parti-chapter-3-objects-scopes
+chunk: 45
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+s are like declaring a usual variables except writing the keyword “var” at the beginning of the declaration. Example:
+
+MyVar = new String("Hello!!!");
+
+== Local variables ==
+This group of variables are only accessible from the functions (or block of code) they are declared in. You already know declaring a local variables. Example:
+
+var MyVar = new String("Hello!!!");
+
+For understanding what “block of code” is lets do the following: create a new flash document, open the first frame’s actions and write the following:
+
+var MyVar = new String("Hello!!!");
+
+Then create a button (for doing it just draw your button, select it, press F8, and when “Convert to Symbol” dialog appear enter the button’s name, select “Button” as a behavior and press “OK”), open its actions and write the following:
+
+on (release) {
+trace(MyVar);
+}

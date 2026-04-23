@@ -1,0 +1,40 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 280
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ault values to new parameters added to an existing subprogram.
+
+==== example ====
+Ada Reference Manual (1995) contains many examples of this practice.
+
+==== rationale ====
+Often, the majority of uses of a subprogram or entry need the
+same value for a given parameter. Providing that value, as the
+default for the parameter, makes the parameter optional on the
+majority of calls. It also allows the remaining calls to customize
+the subprogram or entry by providing different values for that
+parameter.
+Placing default parameters at the end of the formal parameter
+list allows the caller to use positional
+association on the call; otherwise, defaults are available only
+when named association is used.
+Often during maintenance activities, you increase the functionality
+of a subprogram or entry. This requires more parameters than the
+original form for some calls. New parameters may be required to
+control this new functionality. Give the new parameters default
+values that specify the old functionality. Calls needing the old
+functionality need not be changed; they take the defaults. This
+is true if the new parameters are added to the end of the parameter
+list, or if named association is used on all calls. New calls
+needing the new functionality can specify that by providing other
+values for the new parameters.
+This enhances maintainability in that the places that use the
+modified routines do not themselves have to be modified, while
+the previous functionality levels of the routines are allowed
+to be "reused."

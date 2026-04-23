@@ -1,0 +1,21 @@
+title: A Neutral Look at Operating Systems
+source: wikibooks
+year: undated
+document_id: a-neutral-look-at-operating-systems
+authors: 
+page: 8
+section: linux
+chunk: 35
+source_ref: https://en.wikibooks.org/wiki/A_Neutral_Look_at_Operating_Systems
+
+trouble.
+A slightly more difficult distribution that also has low system requirements is Damn Small Linux. DSL has a better security model than Puppy.
+
+=== Ubuntu Linux ===
+Ubuntu is based on Debian and produces a new release every 6 months rain or shine. Ubuntu provides free Ubuntu Linux CDs to anyone who asks for them, which makes Ubuntu free-as-in-pizza even if you don't have a high-speed Internet connection.
+In the default configuration, you cannot log in as root, or use the "su" command to become the root user.
+Instead of the traditional root superuser, Ubuntu uses sudo to give certain users administrative privileges.
+Although one may enable the root account, it is not recommended
+[1] [2] [3].
+Ubuntu only officially supports a subset of the packages in Debian, but you can access the rest of the packages with a little work. The default setup includes GNOME, but there's also a KDE version of the distribution called Kubuntu.
+There are also other versions of Ubuntu available such as Edubuntu (suited for educational use) and the lightweight versions (in early development) Xubuntu and UbuntuLite. Even though the different Ubuntu versions are available as different installations, the only difference between them is what software they have included. So basically they are all the same distribution, and they all have the same software packages available on-line.

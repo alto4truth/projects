@@ -1,0 +1,24 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 10
+section: create-a-server
+chunk: 29
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+= Preface =
+This section describes how to create a simple server similar to the quoter example in the TAO examples (ACE_wrappers/TAO/examples/Quoter).
+To get this to work, create the IDL file and run the tao_idl executable on that file. The command line looks like the following:
+
+tao_idl -GI basic.idl
+This generates a whole host of source files, only one or two of which you will be required to edit.
+
+= Source File main.cpp =
+
+= Source file basic.idl =
+Running the tao_idl program against the following source, generates all the files you'll need to generate a simple server. The actual command line should be 'tao_idl -GI basic.idl' The command line option '-GI' is to generate the server related interface file listed below. All you need to do is to implement this file (i.e. fill out some of the empty member functions) and you're off to the races.
+
+= Generated Server Interface Source =
+Don't forget to implement the server's interface (basicI.cpp). I usually make this a trivial call out to some other class where all the fun stuff is.

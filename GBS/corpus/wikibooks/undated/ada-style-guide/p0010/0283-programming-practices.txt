@@ -1,0 +1,26 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 283
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+use of the parameter. You
+should avoid the tendency to make all parameters in out
+mode because out mode parameters may be examined as well
+as updated.
+
+==== exceptions ====
+It may be necessary to consider several alternative implementations
+for a given abstraction. For example, a bounded stack can be implemented
+as a pointer to an array. Even though an update to the object
+being pointed to does not require changing the pointer value itself,
+you may want to consider making the mode in out to allow
+changes to the implementation
+and to document more accurately what the operation is doing. If
+you later change the implementation to a simple array, the mode
+will have to be in out, potentially causing changes to
+all places that the routine is called.

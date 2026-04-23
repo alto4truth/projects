@@ -1,0 +1,32 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 65
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+for data-oriented synchronization.
+Minimize the number of accept and select statements per task .
+Minimize the number of accept statements per entry.
+
+=== termination ===
+Consider using an exception handler for a rendezvous within the main loop inside each task.
+Do not create nonterminating tasks unintentionally.
+Explicitly shut down tasks that depend on library packages.
+Confirm that a task is terminated before freeing it with Ada.Unchecked_Deallocation.
+Consider using a select statement with a terminate alternative rather than an accept statement alone.
+Consider providing a terminate alternative for every selective accept that does not require an else part or a delay.
+Do not declare or create a task within a user-defined Finalize procedure after the environment task has finished waiting for other tasks.
+Avoid using the abort statement.
+Consider using the asynchronous select statement rather than the abort statement.
+Minimize uses of the asynchronous select statement.
+Avoid assigning nonatomic global objects from a task or from the abortable part of an asynchronous select statement.
+Place an exception handler for others at the end of a task body.
+Consider having each exception handler at the end of a task body report the task's demise.
+Do not rely on the task status to determine whether a rendezvous can be made with the task.
+Do not call a task entry that directly or indirectly results in a call to an entry of the original calling task.
+Avoid race conditions in setting an exit status code from the main program when using the procedure Ada.Command_Line.Set_Exit_Status.
+In a program with multiple tasks, encapsulate, serialize, and check calls to the procedure Ada.Command_Line.Set_Exit_Status.

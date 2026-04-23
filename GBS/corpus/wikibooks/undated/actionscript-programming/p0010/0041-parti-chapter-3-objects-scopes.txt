@@ -1,0 +1,40 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 10
+section: parti-chapter-3-objects-scopes
+chunk: 41
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+objects. Now lets see what we can do with objects. First of all by declaring an object variable we can then assign to it any other data type. Example:
+
+1. var obj = new Object();
+2. var num1 = new Number(20);
+3. var num2 = new Number(30);
+4. var str1 = new String("50");
+5. var str2 = new String("70");
+6. trace("str1 + str2 = " + (str1 + str2));
+7. trace("num1 + num2 = " + (num1 + num2));
+8. obj = num1; //Now obj is number
+9. obj += num2;
+10. trace("obj = " + obj);
+11. obj = str1; //Now obj is string
+12. obj += str2;
+13. trace("obj = " + obj);
+
+In line 1 we declare an object variable named “obj”. In lines 2-3 we declare a number variables “num1” and “num2” and correspondingly assign them values 20 and 30.
+
+//output
+// strTemp = ["this", "is", "a", "string", "to", "array", "test"]
+
+private function stringToArray($string:String):Array
+{
+var a = $string.split(" ");
+var temp = [];
+for (var x = 0; x < a.length; x++) {
+temp.push(a[x]);
+}
+return temp;
+}

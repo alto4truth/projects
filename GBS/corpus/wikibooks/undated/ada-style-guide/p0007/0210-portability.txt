@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 210
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+tation-specific (interface) package bodies.
+
+==== example ====
+This example shows how to interface with the following cube root function written in C:
+
+==== rationale ====
+For static interfacing to subprograms in other languages, the pragma Import provides a better solution than access to subprograms because no indirection is required. The pragma Interface (Ada Reference Manual 1983) has been replaced by pragmas Import, Export, and Convention. Annex B of the Rationale (1995) discusses how to use these pragmas in conjunction with the access-to-subprogram types in interfacing to other languages.
+Note especially the distinction between the "External_Name =>" and "Link_Name =>" parameters to pragma Import which are frequently confused. External_Name specifies the procedure name as it appears in the source code of the other language (such as C or Fortran). Link_Name specifies the name used by the linker. Typically, only one of these parameters is specified, and generally External_Name is the preferred choice for portability.
+Access to subprogram types is useful for implementing callbacks in a separate subsystem, such as the X Window system.
+The problems with interfacing to foreign languages are complex. These problems include pragma syntax differences, conventions for linking/binding Ada to other languages, and mapping Ada variables to foreign language variables. By hiding these dependencies within interface packages, the amount of code modification can be reduced.

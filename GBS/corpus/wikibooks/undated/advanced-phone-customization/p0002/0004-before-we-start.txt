@@ -1,0 +1,19 @@
+title: Advanced phone customization
+source: wikibooks
+year: undated
+document_id: advanced-phone-customization
+authors: 
+page: 2
+section: before-we-start
+chunk: 4
+source_ref: https://en.wikibooks.org/wiki/Advanced_phone_customization
+
+lex to include in a ROM and may not be included or have issues. A common example is Dual-Sim support; many ROMs have issues or work only with one sim.
+
+== The warnings ==
+While the risk to your phone is minimal if done properly, as with anything else of this nature, there is a small risk of your phone getting bricked to a state where it's permanently broken. You're doing this purely on your own risk.
+Your warranty on your phone could be voided, depending on the manufacturer (see special note on Samsung phones below).
+You'll lose your apps and data during this process; make a backup of them.
+
+== For Samsung phones ==
+Most new Samsung phones (from the Galaxy S5-S6 series onwards) use a QFuse which is a hardware feature tied to Samsung's Knox security system. If an attempt to install a custom ROM is detected, it will succeed, but the QFuse (often referred to as the Knox switch) will trip. The below screenshot shows a Note 3 with the Knox switched tripped (notice that that Warranty Void hexadecimal is 0x1 and not 0x0).

@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 14
+section: source-code-presentation
+chunk: 517
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ng names from "hiding" in a mass of declarations. This applies to all declarations: types, subtypes, objects, exceptions, named numbers, and so forth.
+
+==== automation notes ====
+Most of the guidelines in this section are easily enforced with an automatic code formatter. The one exception is the last enumerated type example, which is laid out in rows based on the semantics of the enumeration literals. An automatic code formatter will not be able to do this and will likely move the enumeration literals to different lines. However, tools that are checking only for violations of the guidelines should accept the tabular form of an enumeration type declaration.
+
+=== More on Alignment ===
+
+==== guideline ====
+Align parameter modes and parentheses vertically.
+
+==== instantiation ====
+Specifically, it is recommended that you:

@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 341
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+equality operator for a private type.
+When overloading the equality operator for types, maintain the properties of an algebraic equivalence relation.
+
+==== rationale ====
+The predefined equality operation provided with private types depends on the data structure chosen to implement that type. If access types are used, then equality will mean the operands have the same pointer value. If discrete types are used, then equality will mean the operands have the same value. If a floating-point type is used, then equality is based on Ada model intervals (see Guideline 7.2.7). You should, therefore, redefine equality to provide the meaning expected by the client. If you implement a private type using an access type, you should redefine equality to provide a deep equality. For floating-point types, you may want to provide an equality that tests for equality within some application-dependent epsilon value.
+Any assumptions about the meaning of equality for private types will create a dependency on the implementation of that type. See Gonzalez (1991) for a detailed discussion.
+When the definition of "=" is provided, there is a conventional algebraic meaning implied by this symbol. As described in Baker (1991), the following properties should remain true for the equality operator:

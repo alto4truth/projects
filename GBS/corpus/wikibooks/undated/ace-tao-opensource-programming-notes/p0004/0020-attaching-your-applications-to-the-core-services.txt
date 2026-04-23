@@ -1,0 +1,12 @@
+title: ACE+TAO Opensource Programming Notes
+source: wikibooks
+year: undated
+document_id: ace-tao-opensource-programming-notes
+authors: 
+page: 4
+section: attaching-your-applications-to-the-core-services
+chunk: 20
+source_ref: https://en.wikibooks.org/wiki/ACE%2BTAO_Opensource_Programming_Notes
+
+Ok, so we now have a client and server along with services... let's wire them up.
+If you have an already compiled server from one of the previous examples, you'll want to start that up first and have it advertised on the naming service. To do that, you'll need to tell the server you wrote the IOR of the naming service. TAO allows you two ways to do this. The first is to create an environment variable "NameServiceIOR" which you assign the IOR you used when you started the NamingService. The other method, is to put the IOR on the command line. The IOR from the example below is the string starting with "corbaloc" and continuing to the end of the line. The latter option is my preferred method to get a server started.

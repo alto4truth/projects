@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 424
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+aining many begin lines, may occur first. As shown in the second example, the marker comment emphasizes the association of the begin with the package.
+
+==== notes ====
+Repeating names and noting conditional expressions clutters the code if overdone. It is visual distance, especially page breaks, that makes marker comments beneficial.
+
+== Using Types ==
+Strong typing promotes reliability in software. The type definition of an object defines all legal values and operations and allows the compiler to check for and identify potential errors during compilation. In addition, the rules of type allow the compiler to generate code to check for violations of type constraints at execution time. Using these Ada compiler's features facilitates earlier and more complete error detection than that which is available with less strongly typed languages.
+
+=== Declaring Types ===

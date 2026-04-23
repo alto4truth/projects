@@ -1,0 +1,28 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 302
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+her than the outermost, unnested declarative part of either a library package or a main subprogram
+Arrays of tasks that are not statically constrained
+
+==== example ====
+These lines show how a dangling reference might be created:
+
+This line can raise an exception due to referencing the deallocated
+object:
+
+In the following three lines, if there is no intervening assignment
+of the value of P1 to any other pointer, the object created
+on the first line is no longer accessible after the third line.
+The only pointer to the allocated object has been dropped:
+
+The following code shows an example of using Finalize
+to make sure that when an object is finalized (i.e., goes out
+of scope), the dynamically allocated elements are chained on a
+free list:

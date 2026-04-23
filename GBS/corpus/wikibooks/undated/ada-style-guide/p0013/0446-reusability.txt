@@ -1,0 +1,13 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 446
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+e efficient, and must be portable. If it takes more effort to reuse a part than to create one from scratch or if the reused part is simply not efficient enough, reuse does not occur as readily. For guidelines on portability, see Chapter 7.
+This chapter should not be read in isolation. In many respects, a well-written, reusable component is simply an extreme example of a well-written component. All of the guidelines in the previous chapters and in Chapter 9 apply to reusable components as well as components specific to a single application. As experience increases with the 1995 revision to the Ada standard, new guidelines may emerge while others may change. The guidelines listed here apply specifically to reusable components.
+Guidelines in this chapter are frequently worded "consider . . ." because hard and fast rules cannot apply in all situations. The specific choice you can make in a given situation involves design tradeoffs. The rationale for these guidelines is intended to give you insight into some of these tradeoffs.

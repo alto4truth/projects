@@ -1,0 +1,14 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 9
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+== Introduction ==
+Concurrency exists as either apparent concurrency or real concurrency. In a single processor environment, apparent concurrency is the result of interleaved execution of concurrent activities. In a multiprocessor environment, real concurrency is the result of overlapped execution of concurrent activities.
+Concurrent programming is more difficult and error prone than sequential programming. The concurrent programming features of Ada are designed to make it easier to write and maintain concurrent programs that behave consistently and predictably and avoid such problems as deadlock and starvation. The language features themselves cannot guarantee that programs have these desirable properties. They must be used with discipline and care, a process supported by the guidelines in this chapter.
+The correct usage of Ada concurrency features results in reliable, reusable, and portable software. Protected objects (added in Ada 95) encapsulate and provide synchronized access to their private data (Rationale 1995, §II.9). Protected objects help you manage shared data without incurring a performance penalty. Tasks model concurrent activities and use the rendezvous to synchroniz

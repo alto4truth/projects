@@ -1,0 +1,29 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 6
+section: functions
+chunk: 34
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+the brackets. So if you typed this:
+
+Code Example 2 - Using a function
+
+The computer would actually see this:
+
+Code Example 3 - What the computer sees
+
+Note: don't bother typing in this code - multiply() isn't a real function, unless you create it.
+The function ran itself, then returned a number to the main program, based on what parameters it was given.
+Now let's try this with a real function, and see what it does. The function is called input, and asks the user to type in something. It then turns it into a string of text. Try the code below:
+
+Code Example 4 - Using input
+
+Say in the above program, you typed in 'hello' when it asked you to type something in. To the computer, this program would look like this:
+
+Code Example 5 - What the computer sees
+
+Remember, a variable is just a stored value. To the computer, the variable 'a' doesn't look like 'a' - it looks like the value that is stored inside it. Functions are similar - to the main program (that is, the program that is running the function), they look like the value of what they give in return of running.

@@ -1,0 +1,27 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 13
+section: partii-chapter-4
+chunk: 58
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+Number();
+2. i += 1;
+3. i += 2;
+4. i += 3;
+5. i += 4;
+6. i += 5;
+7. i += 6;
+8. i += 7;
+9. i += 8;
+10. i += 9;
+11. i += 10;
+
+(or if you are too smart)
+
+But, anyway, it’s boring to write such a code. Instead you can use “For” and repeat the code for 10 times:
+
+The second part of “For” <condition> tells Flash how much to repeat the action. In our case we wrote to repeat the action while e is less than or equal to 10. So when “e” becomes 11 it will stop repeating the action. In the third part of “For” is <next> you must tell Flash how to change the value of the variable each time it repeats the action. In our case we wrote “e++”. This means that each time Flash repeats the action it will increment e by one. In the actions of “For” (line 4) we wrote “i += e;”. This means that we will add “e” to “i” each time the action repeats. So this small code will give the sum of numbers from 1 to 10. You can trace the value of “i” at the end of the code to see its value. It must be “55”.

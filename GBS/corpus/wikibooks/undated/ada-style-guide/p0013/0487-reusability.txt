@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 487
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+s provides a better separation of concerns and more maintainable, reusable components.
+See Guideline 9.5.1 for a full discussion of the use of mixins.
+
+== Independence ==
+A reusable part should be as independent as possible from other reusable parts. A potential user is less inclined to reuse a part if that part requires the use of other parts that seem unnecessary. The "extra baggage" of the other parts wastes time and space. A user would like to be able to reuse only that part that is perceived as useful.
+The concept of a "part" is intentionally vague here. A single package does not need to be independent of each other package in a reuse library if the "parts" from that library that are typically reused are entire subsystems. If the entire subsystem is perceived as providing a useful function, the entire subsystem is reused. However, the subsystem should not be tightly coupled to all the other subsystems in the reuse library so that it is difficult or impossible to reuse the subsystem without reusing the entire library. Coupling between reusable parts should only occur when it provides a strong benefit perceptible to the user.
+
+=== Subsystem Design ===

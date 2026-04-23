@@ -1,0 +1,22 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 141
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+perate on the parent components of the object of the extended type. Equality, on the other hand, generally does the right thing.
+
+=== Polymorphism ===
+
+==== guideline ====
+Consider using class-wide programming to provide run-time, dynamic polymorphism when constructing larger, reusable, extensible frameworks.
+When possible, use class-wide programming rather than variant records.
+Use class-wide programming to provide a consistent interface across the set of types in the tagged type hierarchy (i.e., class).
+Consider using generics to define a new type in terms of an existing type, either as an extension or as a container, collection, or composite data structure.
+Avoid using type extensions for parameterized abstractions when generics provide a more appropriate mechanism.
+
+==== example ====

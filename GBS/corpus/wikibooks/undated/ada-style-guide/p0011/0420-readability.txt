@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 420
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+an erroneous comment (the one on the statement that accumulates the sum), and making the few remaining comments more visually distinct from the code.
+
+==== rationale ====
+The improvements shown in the example are not improvements merely by reducing the total number of comments; they are improvements by reducing the number of useless comments.
+Comments that paraphrase or explain obvious aspects of the code have no value. They are a waste of effort for the author to write and the maintainer to update. Therefore, they often end up becoming incorrect. Such comments also clutter the code, hiding the few important comments.
+Comments describing what goes on inside another unit violate the principle of information hiding. The details about Convert_To_Integer (deleted above) are irrelevant to the calling unit, and they are better left hidden in case the algorithm ever changes. Examples explaining what goes on elsewhere in the code are very difficult to maintain and almost always become incorrect at the first code modification.
+The advantage of making comments visually distinct from the code is that it makes the code easier to scan, and the few important comments stand out better. Highlighting unusual or special code features indicates that they are intentional. This assists maintainers by focusing attention on code sections that are likely to cause problems during maintenance or when porting the program to another implementation.
+Comments should be used to document code that is nonportable, implementation-dependent, environment-dependent, or tricky in any way. They notify the reader that something unusual was put there for a reason. A beneficial comment would be one explaining a work around for a compiler bug. If you use a lower level (not "ideal" in the software engineering sense) solution, comment on it. Information included in the comments should state why you used that particular construct. Also include documentation on the failed attempts, for example, using a higher level structure. This kind of comment is useful to maintainers for historical purposes. You show the reader that a significant amount of thought went into the choice of a construct.
+Finally, comments should be used to explain what is not present in the code as well as what is present. If you make a conscious decision to not perform some action, like deallocating a data structure with which you appear to be finished, be sure to add a comment explaining why not. Otherwise, a maintainer may notice the apparent omission and "correct" it later, thus introducing an error.
+See also Guideline 9.3.1 for a discussion of what kind of documentation you should provide regarding tagged types and redispatching.

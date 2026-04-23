@@ -1,0 +1,17 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 11
+section: parti-chapter-3-string
+chunk: 51
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+string from the specified character. In the following example the value returned by “indexOf” method is -1, which means, that the string wasn’t found.
+
+===== lastIndexOf =====
+String.lastIndexOf( <strsearch>, [startindex] );
+This method searches the string you specified by the parameter <strsearch> and returns the position of the last occurrence of it. If the string is not founded it returns -1. For example this code searches for “ZZ” string in “tmpString” variable, which’s value is “ZoZZooZZoZoZZ”:
+
+The method “indexOf” will return 11, which means that the beginning of the string you was looking for, from the end of the string, is at character 11(don’t forget that the first character of the string is 0). The parameter [startindex] tells Flash to begin searching the string from the specified character. This means that the part of the string which is followed after the specified character is not involved in the search process. In the following example the value returned by “indexOf” method is 6:

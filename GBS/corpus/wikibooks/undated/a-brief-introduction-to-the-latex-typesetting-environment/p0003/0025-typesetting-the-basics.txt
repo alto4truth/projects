@@ -1,0 +1,23 @@
+title: A Brief Introduction to the LaTeX Typesetting Environment
+source: wikibooks
+year: undated
+document_id: a-brief-introduction-to-the-latex-typesetting-environment
+authors: 
+page: 3
+section: typesetting-the-basics
+chunk: 25
+source_ref: https://en.wikibooks.org/wiki/A_Brief_Introduction_to_the_LaTeX_Typesetting_Environment
+
+since they are handled very differently. The best method would be as follows:
+
+We assume that the constant n is defined to be in units of moles$^{-1}$
+
+Which will place "-1" in the exponent of "moles" making it the unit of inverse-moles. Where this specifically would be useful the author cannot be sure, but it serves to demonstrate the point that while we wanted the "-1" to be an exponent, we did not want "moles" to be typeset as an equation would be. It would change the formatting of the letters and look different from the rest of the text.
+
+=== Separate Mathematical Functions ===
+If one wishes to insert an equation on its own line there are a variety of methods for doing this. Later on we shall see how to insert a list of equations in the table of contents so it's important to note that equations on their own line are not necessarily numbered by LaTeX.
+If we don't want an equation numbered we can do it using two dollar signs ($$) like so:
+
+This is a sentence that would describe the following random equation:
+$$f(x) = \frac{\sqrt{x}}{2}$$
+Where $f$ is a function of $x$ called $f(x)$.

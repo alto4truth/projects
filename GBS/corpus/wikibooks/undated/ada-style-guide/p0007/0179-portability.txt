@@ -1,0 +1,16 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 179
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+§1.1.4 [Annotated]). Avoid arbitrary order dependencies, but also recognize that even an unintentional error of this kind could prohibit portability.
+
+== Numeric Types and Expressions ==
+A great deal of care was taken with the design of the Ada features related to numeric computations to ensure that the language could be used in embedded systems and mathematical applications where precision was important. As far as possible, these features were made portable. However, there is an inevitable tradeoff between maximally exploiting the available precision of numeric computation on a particular machine and maximizing the portability of Ada numeric constructs. This means that these Ada features, particularly numeric types and expressions, must be used with great care if full portability of the resulting program is to be guaranteed.
+
+=== Predefined Numeric Types ===

@@ -1,0 +1,20 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 5
+section: 360-instructions
+chunk: 19
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+t was determined by the first two bits of its operation code ("opcode"), which is the instruction's first eight bits. The first 2-bits are as follows:
+
+00 (opcodes 00 to 3F/0 to 63 (decimal); RR instruction, generally two registers), 2 bytes
+01 (opcodes 40 to 7F/64 to 127 (decimal); RX instruction, one register and one address calculated using a base register, an index register, and a displacement of 0 to 4095 bytes), 4 bytes
+10 (opcodes 80 to BF/128 to 191 (decimal); RS or SI instruction), 4 bytes
+(An RS instruction was generally one register and a storage location address.)
+(An SI instruction was generally one register, one immediate value, and a storage location address.), 4 bytes
+11 (opcodes C0 to FF/192 to 255 (decimal); SS instruction, one or two length operands and two storage addresses), 6 byes
+In order to encourage the expansion of IBM mainframes into more and more uses, the capabilities of their processors were enhanced with new instruction formats, allowing for additional functionality at the machine code level. Currently, there are many instruction formats now available on all mainframe models: the 360, System/370 ("370" or "S/370"), ESA/390 ("390"), and z/System ("Z"). Each instruction format, along with a breakdown and explanation of the format, is provided in the table below.
+Notes:

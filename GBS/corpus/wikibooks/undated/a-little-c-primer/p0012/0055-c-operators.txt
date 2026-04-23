@@ -1,0 +1,44 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 12
+section: c-operators
+chunk: 55
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+C supports the following arithmetic operators:
+
+c = a * b multiplication
+c = a / b division
+c = a % b mod (remainder division)
+c = a + b addition
+c = a - b subtraction
+
+It also supports the following useful (if cryptic) "increment" and
+"decrement" operators:
+
+++a increment
+--a decrement
+
+These operators can also be expressed as "a++" and "a--". If the only thing
+that's needed is an increment or decrement, the distinction between the two
+forms is irrelevant. However, if a variable is being incremented or
+decremented as a component of some expression, then "++a" means "increment
+the variable first, then get its value", while "a++" means "get the value of
+the variable first, then increment it". Failing to remember this distinction
+can lead to subtle programming errors.
+Finally, C supports a set of bitwise operations:
+
+a = ~a bit complement
+a = b << c shift b left by number of bits stored in c
+a = b >> c shift b right by number of bits stored in c
+a = b & c b AND c
+a = b ^ c b XOR c
+a = b | c b OR c
+
+C allows math operations to be performed in a shortcut fashion:
+
+operation shortcut
+_________________________

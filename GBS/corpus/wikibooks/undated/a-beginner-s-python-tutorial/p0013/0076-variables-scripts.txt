@@ -1,0 +1,22 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 13
+section: variables-scripts
+chunk: 76
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+ke this:
+
+Code Example 2 – mary.py output
+Mary had a little lamb,
+its fleece was white as snow;
+and everywhere that Mary went
+her lamb was sure to go.
+
+You can also use IDLE to create Python programs, like what you did in Notepad. Simply click 'File > New'. We will be writing all of our programs now in the Python IDLE program—the Notepad thing is just a demonstration to tell you that a .py file is just a simple text file, which anyone can see.
+Something to note is that the comment wasn't shown. That is good, because remember—comments aren't compiled. (Try compiling it after removing the #—it comes out messy.)
+
+You can also run the program from your command line program (e.g., cmd or Terminal). Open the prompt up, type cd path\to\your\file (path/to/your/file for macOS/*nix) then type python mary.py. Your program will now execute in the command line.

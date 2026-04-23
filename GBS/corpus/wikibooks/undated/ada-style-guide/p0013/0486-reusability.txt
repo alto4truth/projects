@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 486
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+the generic might be instantiated to "mixin" the desired features in the final type extension. See also Guideline 9.5.1 for a related example of code.
+
+==== rationale ====
+The Rationale (1995, §4.6.2) discusses the use of a generic template to define the properties to be mixed in to your abstraction:
+The generic template defines the mixin. The type supplied as generic actual parameter determines the parent . . . the body provides the operations and the specification exports the extended type.
+If you have defined a series of generic mixin packages, you would then serialize the instantiations. The actual parameter to the next instantiation is the exported tagged type from the previous instantiation. This is shown in the second code segment in the example. Each extension is derived from a previous extension, so you have a linearized succession of overriding subprograms. Because they are linearized, you have a derivation order you can use to resolve any conflicts.
+You should encapsulate one extension (and related operations) per generic package. This provides a better separation of concerns and more maintainable, reusable components.
+See Guideline 9.5.1 for a full discussion of the use of mixins.

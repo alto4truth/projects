@@ -1,0 +1,19 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 8
+section: preliminaries
+chunk: 22
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+
+=== Census data ===
+The US Census releases Public Use Microdata Samples (PUMS) on its website. We will use the 1% sample of Washington state's data, the file pums_53.dat, which can be downloaded here
+
+$ head -2 pums_53.dat

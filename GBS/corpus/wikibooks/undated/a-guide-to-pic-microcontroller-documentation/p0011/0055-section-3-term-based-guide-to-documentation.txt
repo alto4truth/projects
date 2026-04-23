@@ -1,0 +1,19 @@
+title: A Guide To PIC Microcontroller Documentation
+source: wikibooks
+year: undated
+document_id: a-guide-to-pic-microcontroller-documentation
+authors: 
+page: 11
+section: section-3-term-based-guide-to-documentation
+chunk: 55
+source_ref: https://en.wikibooks.org/wiki/A_Guide_To_PIC_Microcontroller_Documentation
+
+FSR registers (and 3 corresponding INDF registers). Recent PIC16F parts typically have 2 FSR registers (and 2 corresponding INDF registers).
+
+== G ==
+
+===== GPR =====
+GPR - General Purpose Register - a register in data memory with no predefined functionality. The functionality is defined by the programmer. Each GPR is, in reality, a unit of SRAM. The wording "register" is used in preference to "SRAM" to convey the idea that all SRAM in the data memory has equal standing to the WREG in that the result from an instruction can be written directly back into a GPR as the architecture does not force the result to be stored in an accumulator and then later moved from the accumulator into SRAM as would be required on some other microprocessor architectures.
+
+== M ==
+MSSP - Master Synchronous Serial Port - a serial peripheral interface that can be used either as an I2C, SPI or MicrowireTM interface.

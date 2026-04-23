@@ -1,0 +1,16 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 7
+section: parti-chapter-3-arrays
+chunk: 24
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+== Data types ==
+
+=== Arrays ===
+Arrays are almost the most useful data type of all others. This data type was designed for keeping not one but many values in it. For example you want to have 10 users’ names in variables. So you must declare 10 variables with different names. It will be hard for you do add another user. But using arrays you can just declare one variable and keep all 10 users’ names in it. Now we will learn how to use array and its methods.
+
+The example above shows you the usage of array. Line 1 just declares an array named “users”. Line 2 declares an array with 10 elements. This means that in that array can be kept 10 values at indexes 0 through 9. The first element in an array is always 0. Line 3 declares an array and sets its’ first 5 elements values. “c” will be the element with the index 2 in this array, because as we have already said the index of the first element in an array is always 0. Now lets write a small program to understand arrays better. Write the code written below to Frame 1 actions.

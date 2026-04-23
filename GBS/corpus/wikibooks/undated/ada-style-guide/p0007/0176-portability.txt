@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 176
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ameter Parm denotes Actual_Parm. It cannot be determined whether it denotes the old value of Parm_1, in this case 1, or the new value, in this case 5.
+
+==== rationale ====
+Certain composite types (untagged records and arrays) can be passed either by copy or by reference. If there are two or more formal parameters of the same type, one or more of which is writable, then you should document whether you assume that these formal parameters do not denote the same actual object. Similarly, if a subprogram that has a formal parameter of a given subtype also makes an up-level reference to an object of this same type, you should document whether you assume that the formal parameter denotes a different object from the object named in the up-level reference. In these situations where an object can be accessed through distinct formal parameter paths, the exception Program_Error may be raised, the new value may be read, or the old value of the object may be used (Ada Reference Manual 1995, §6.2 [Annotated]).
+See also Guideline 8.2.7.

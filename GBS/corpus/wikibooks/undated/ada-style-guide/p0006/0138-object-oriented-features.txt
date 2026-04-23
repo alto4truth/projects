@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 138
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+rates the declaration of a constructor in a child package:
+
+The following example shows how to split the initialization and construction of an object:
+
+==== rationale ====
+Constructor operations for the types in a type hierarchy (assuming tagged types and their derivatives) usually differ in their parameter profiles. The constructor will typically need more parameters because of the added components in the descendant types. You run into a problem when you let constructor operations be inherited because you now have operations for which there is no meaningful implementation (default or overridden). Effectively, you violate the class-wide properties (see Guideline 9.2.1) because the root constructor will not successfully construct a descendant object. Inherited operations cannot add parameters to their parameter profile, so these are inappropriate to use as constructors.
+You cannot initialize a limited type at its declaration, so you may need to use an access discriminant and rely on default initialization. For a tagged type, however, you should not assume that any default initialization is sufficient, and you should declare constructors. For limited types, the constructors must be separate procedures or functions that return an access to the limited type.
+The example shows using a constructor in a child package. By declaring constructor operations in either a child package or a nested package, you avoid the problems associated with making them primitive operations. Because they are no longer primitive operations, they cannot be inherited. By declaring them in a child package (see also Guidelines 4.1.6 and 4.2.2 on using child packages versus nested packages), you gain the ability to change them without affecting the clients of the parent package (Taft 1995b).
+You should put the construction logic and initialization logic in distinct subprograms so that you are able to call the initialization routine for the parent tagged type.

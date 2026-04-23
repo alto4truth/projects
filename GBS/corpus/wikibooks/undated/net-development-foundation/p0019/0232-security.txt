@@ -1,0 +1,35 @@
+title: .NET Development Foundation
+source: wikibooks
+year: undated
+document_id: net-development-foundation
+authors: 
+page: 19
+section: security
+chunk: 232
+source_ref: https://en.wikibooks.org/wiki/.NET_Development_Foundation
+
+n classes.
+(Refer System.Security.Permission namespace)
+SecurityPermission class - MSDN
+PrincipalPermission class - MSDN
+FileIOPermission class - MSDN
+
+You can also set the FileIoPermisson attribute at assembly level or class level. Be then aware about the SecurityAction enumerations:
+SecurityAction.RequestRefuse: specifies the operations that should not be granted.
+SecurityAction.RequestMinumum: request for a minimum set of permissions. If not given, the app will not execute.
+StrongNameIdentityPermission class - MSDN
+UIPermission class - MSDN
+UrlIdentityPermission class - MSDN
+PublisherIdentityPermission class - MSDN
+GacIdentityPermission class - MSDN
+FileDialogPermission class - MSDN
+DataProtectionPermission class - MSDN
+EnvironmentPermission class - MSDN
+IUnrestrictedPermission interface - MSDN
+RegistryPermission class - MSDN
+IsolatedStorageFilePermission class - MSDN
+KeyContainerPermission class - MSDN
+ReflectionPermission class - MSDN
+StorePermission class - MSDN
+SiteIdentityPermission class - MSDN
+ZoneIdentityPermission class - MSDN

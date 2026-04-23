@@ -1,0 +1,13 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 10
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ed objects help you manage shared data without incurring a performance penalty. Tasks model concurrent activities and use the rendezvous to synchronize between cooperating concurrent tasks. Much of the synchronization required between tasks involves data synchronization, which can be accomplished most efficiently, in general, using protected objects. Misuse of language features results in software that is unverifiable and difficult to reuse or port. For example, using task priorities or delays to manage synchronization is not portable. It is also important that a reusable component not make assumptions about the order or speed of task execution (i.e., about the compiler's tasking implementation).
+Although concurrent features such as tasks and protected objects are supported by the core Ada language, care should be taken when using these features with implementations that do not specifically support Annex D (Real-Time Systems). If Annex D is not specifically supported, features required for real-time applications might not be implemented.
+Guidelines in this chapter are frequently worded "consider . . ." because hard and fast rules cannot apply in all situations. The specific choice

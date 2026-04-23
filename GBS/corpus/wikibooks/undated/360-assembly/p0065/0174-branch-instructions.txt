@@ -1,0 +1,26 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 65
+section: branch-instructions
+chunk: 174
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+branch instructions are treated as a no branch, or no-operation (NO-OP). Generally they involve the use of Register 0 or a mask value of 0. These are:
+
+Register branch targeting Register 0
+Register to storage branch (regardless of mask) where the Index register is 0
+Register to storage branch where the mask is 0
+Label1 BR R0 No branch
+BC 0,Label1 Branch not taken; mask is 0
+BALR R14,R0 Branch not taken; this is used at the start of a
+* CSECT/START module to load the left register with the
+* address of the next instruction to establish addressing
+BC 15,100(R1,R0) Because R0 is the Index Register, the branch is not taken
+* even though the mask indicates an unconditional branch
+BCT R1,16(R0) Subtract 1 from the contents of R1, but since the base
+* register of the branch address is 0, no branch will occur
+BCTR R1,R0 Subtract 1 from the contents of R1, but since the target
+* branch register is 0, do not branch

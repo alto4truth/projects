@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 358
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+Unchecked_Access, preferably isolating it to package bodies.
+Use the attribute Unchecked_Access only on data whose lifetime/scope is "library level."
+
+==== rationale ====
+The accessibility rules are checked statically at compile time (except for access parameters, which are checked dynamically). These rules ensure that the access value cannot outlive the object it designates. Because these rules are not applied in the case of Unchecked_Access, an access path could be followed to an object no longer in scope.
+Isolating the use of the attribute Unchecked_Access means to isolate its use from clients of the package. You should not apply it to an access value merely for the sake of returning a now unsafe value to clients.
+When you use the attribute Unchecked_Access, you are creating access values in an unsafe manner. You run the risk of dangling references, which in turn lead to erroneous execution (Ada Reference Manual 1995, §13.9.1 [Annotated]).

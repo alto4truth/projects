@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 369
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+tect the error, the operations proceed as they would outside an abort-deferred operation. An abort statement itself may have no effect.
+
+== Summary ==
+
+==== optional parts of the syntax ====
+Associate names with loops when they are nested (Booch 1986, 1987).
+Associate names with any loop that contains an exitstatement.
+Associate names with blocks when they are nested .
+Use loop names on all exit statements from nested loops.
+Include the defining program unit name at the end of a package specification and body.
+Include the defining identifier at the end of a task specification and body.
+Include the entry identifier at the end of an accept statement.
+Include the designator at the end of a subprogram body.
+Include the defining identifier at the end of a protected unit declaration.

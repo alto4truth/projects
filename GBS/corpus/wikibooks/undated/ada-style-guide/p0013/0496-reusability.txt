@@ -1,0 +1,23 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 496
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+== Conditional Compilation ===
+
+==== guideline ====
+Structure reusable code to take advantage of dead code removal by the compiler.
+
+==== example ====
+
+==== rationale ====
+Some compilers omit object code corresponding to parts of the program that they detect can never be executed. Constant expressions in conditional statements take advantage of this feature where it is available, providing a limited form of conditional compilation. When a part is reused in an implementation that does not support this form of conditional compilation, this practice produces a clean structure that is easy to adapt by deleting or commenting out redundant code where it creates an unacceptable overhead.
+This feature should be used when other factors prevent the code from being separated into separate program units. In the above example, it would be preferable to have a different procedure for each algorithm. But the algorithms may differ in slight but complex ways to make separate procedures difficult to maintain.
+
+==== caution ====
+Be aware of whether your implementation supports dead code removal, and be prepared to take other steps to eliminate the overhead of redundant code if necessary.

@@ -1,0 +1,23 @@
+title: 6502 Assembly
+source: wikibooks
+year: undated
+document_id: 6502-assembly
+authors: 
+page: 1
+section: 6502-assembly
+chunk: 1
+source_ref: https://en.wikibooks.org/wiki/6502_Assembly
+
+This book is a guide to the 6502 Assembly language. This book will teach the different memory addressing modes and instructions of the 8-bit 6502 processor.
+You might want to learn 6502 assembly language programming if you want to do Atari 2600/8-bit family/5200/7800 Programming, Commodore PET/VIC/64/128 Programming, Acorn 8 Bit Programming, Apple I/II Programming,
+NES Programming or Super NES Programming.
+
+== Syntax ==
+Syntax will vary between assemblers - this book will use the following syntax throughout:
+
+== Registers ==
+
+== Memory layout ==
+16-bit values are stored in memory in little-endian, so the least significant byte is stored before the most significant. E.g. if address $0000 contains $FF and address $0001 contains $00, reading a two-byte value from $0000 will result in $00FF.
+Signed integers are in two's complement and can represent values from -128 (%10000000) to +127 (%01111111). Bit 7 is set if the integer is negative.
+The 6502's program counter is 16 bits wide, so up to 2^16 (65536) bytes of memory are addressable. Certain regions of memory are reserved for particular purposes:

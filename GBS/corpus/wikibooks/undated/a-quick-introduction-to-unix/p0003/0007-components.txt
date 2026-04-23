@@ -1,0 +1,28 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 3
+section: components
+chunk: 7
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+Unix is made up of three components
+
+the kernel;
+the shell; and
+programs.
+
+== The kernel ==
+The kernel of Unix is the heart of the operating system. It allocates time and memory to programs and handles the file structure and communication between the different parts of the computer system such as the keyboard and the screen.
+
+== The shell ==
+The shell is an interface between the user and the Unix kernel. It resembles the ‘dos box’ that Windows displays if you run the command cmd. When a user logs in, Unix checks their username and password and then starts a program called the shell. The shell interprets the commands the user types and transmits them to the kernel to be executed. These commands are programs.
+There are a variety of shells available for the various Unix systems. The expert user can customise their own shell and users can use different shells on the same machine.
+The shell and kernel work together like this:
+
+a user types cat somefile to display a file;
+the shell finds the program cat;
+the shell instructs the kernel to run the program cat on somefile;
+When the program finishes the kernel passes control back to the shell and displays the Unix prompt.

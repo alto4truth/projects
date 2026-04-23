@@ -1,0 +1,15 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 3
+section: concurrency
+chunk: 12
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+== Concurrency Options ==
+Many problems map naturally to a concurrent programming solution. By understanding and correctly using the Ada language concurrency features, you can produce solutions that are largely independent of target implementation. Tasks provide a means, within the Ada language, of expressing concurrent, asynchronous threads of control and relieving programmers from the problem of explicitly controlling multiple concurrent activities. Protected objects serve as a building block to support other synchronization paradigms.
+Tasks cooperate to perform the required activities of the software. Synchronization and mutual exclusion are required between individual tasks. The Ada rendezvous and protected objects provide powerful mechanisms for both synchronization and mutual exclusion.
+
+=== Protected Objects ===

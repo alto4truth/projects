@@ -1,0 +1,30 @@
+title: A Beginner's Guide to MS Windows Optimization
+source: wikibooks
+year: undated
+document_id: a-beginner-s-guide-to-ms-windows-optimization
+authors: 
+page: 1
+section: a-beginner-s-guide-to-ms-windows-optimization
+chunk: 6
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Guide_to_MS_Windows_Optimization
+
+XP:
+(start->Control Panel->System)
+
+In Windows Vista/7
+(start->Control Panel->System and Maintenance->System)
+
+Please see: http://bayimg.com/JADAhAacl
+
+Here we can see that my CPU is a Intel Core 2 6400 2.13 GHz
+Intel is the company, Core 2 6400 is the model, and the speed (clock frequency). 2.13 GHz is 2130 MHz.
+RAM memory (RAM), is the fast short term memory. It is used by the CPU to access a lot of data very fast. Usually, data is read from the hard drive to the RAM, then it is used by the CPU. And then, if necessary saved back to the hard drive. The thing is that once you switch off the PC the RAM memory is cleared. So hard drives are used to save data when the power is off.
+The problem here is that many programs are not memory efficient and stuff the RAM full. And when the RAM gets full, the PC redirects the RAM traffic to the hard drive. This is the very often slowdown we can see when RAM gets full, because hard drive is MUCH slower than RAM memory.
+So e.g., you switch on the PC, and you have some programs that auto start, they are placed in the RAM. And if they take up the whole RAM space, the PC starts to write the RAM data to the hard drive, and the PC starts to think and think, and this is when it takes 5 min to start e.g. Word.
+So a slow PC is not only the result of slow CPU, it is a more complex issue.
+RAM space is measured in bytes. 1GB is 1000MB, on the picture above we can see that I have 2GB of RAM.
+Hard drive (HDD), is the “permanent” memory, it is measured in bytes (MB or GB) 1000MB is 1GB. To compare: one “old floppy” is 1,44MB, one CD is usually 650-700MB, one DVD is 4,7GB (dual layer is 8,5GB).
+Usually, the more MB/GB the better.
+HDD is the bottle neck in file transfer, because it is relatively slow. And it is, I would say, the most delicate component. If you drop the laptop, usually the first thing to break is the HDD. The HDD is also a tear and wear component, meaning it needs to be replaced once every couple of years. It depends how much you use the PC, but sometime its 5–10 years, sometime 20 years.
+So for all of you relieving your aggression on your laptops because they act inappropriately (are slow), please stop doing that, it may work on humans, but doesn't work on laptops. What can happen is irreversible damage to the HDD.
+One final note about hard drives. Everyone knows that the hard drive "is" C: under Windows. But this is not correct. One hard drive can, but doesn't have to, be divided into smaller parts, called partitions. If you go to (start->Computer), you should see something like this:

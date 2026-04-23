@@ -1,0 +1,17 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 14
+section: very-simple-programs
+chunk: 83
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+lso comment out bits of code if you don't want them to compile, but can't delete them because you might need them later.
+
+== Simple program example ==
+
+Here multiplication and adding operations have been used.
+The first line а = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 3, 2, 1] reflects values for a parameter i in the second line (for i in a). If we set “1” instead of “i” for a parameter b we will see that “space” is multiplied for 12 and “very” is multiplied for “1”.
+So addition operator “+” unites 12 “spaces” and one word “very” which we can see in the first printed line. “for line in b: print(line)” is a cycle aimed at displaying required results.

@@ -1,0 +1,18 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 55
+section: svc-11
+chunk: 153
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ervisor calls is a convention established by general usage, not mandated by the hardware.
+The supervisor call routine can exit in any of several ways:
+
+it may be written as a type of subroutine, with various registers having certain information it might need, such as internal tables and such. It exits by returning by branching to the address in a register;
+it may be written as a type of subroutine, and exits by using the operating system's SVC to terminate itself. There may also be a different privileged exit SVC that only operating system routines are allowed to use. Or, the same SVC terminates a non-privileged program, but acts like a return in the case of a privileged routine;
+using the LPSW instruction from the address of the Supervisor Call Old PSW address to return to the instruction in the calling program after the SVC instruction;
+executing a non-existent instruction, accessing non-existent memory, or some other unusual method.
+The method the SVC will return information may be through registers or changes in memory, which the user pointed to via registers or argument lists in registers. The results and values are operating-system dependent.

@@ -1,0 +1,62 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 7
+section: parti-chapter-3-arrays
+chunk: 29
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+like this:
+
+Myarray
+0
+value
+1
+value
+2
+value
+If you write “var myarray:Array = new Array ( [ [], [] ], [], [ [] ] );” then this is something like this:
+
+myarray
+0
+0
+value
+1
+value
+1
+value
+2
+0
+value
+This is like there is a folder, in which there are three folders. In the first folder there are two folders, in the third folder there is one folder. So if you want to get value from the second folder of the first folder then you must write “myarray[0][1]”. We do the same in our example. If we draw the structure of our array then it will be:
+
+users
+0
+0
+User1
+1
+Phone1
+2
+Address1
+1
+0
+User2
+1
+Phone2
+2
+Address2
+2
+0
+User3
+1
+Phone3
+2
+Address3
+In this structure you see that the names on folders are only numbers. You can also give them names by writing the following:
+
+The output is 3.
+
+« Previous
+Next »

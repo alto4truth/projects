@@ -1,0 +1,40 @@
+title: 68000 Assembly
+source: wikibooks
+year: undated
+document_id: 68000-assembly
+authors: 
+page: 2
+section: addressing-modes
+chunk: 2
+source_ref: https://en.wikibooks.org/wiki/68000_Assembly
+
+== Addressing Modes ==
+n is a number between 0 and 7 denoting which register to use.
+
+=== Immediate addressing with data registers ===
+Assembler syntax
+
+Dn
+Directly operate on the contents of a data register. Example:
+
+Copies the contents of D1 to D0. When the instruction is executed, both registers will contain the same information. When moving a byte or a word, the upper part of the register will remain unchanged.
+
+=== Immediate addressing with address registers ===
+Assembler syntax:
+
+An
+Directly operate on the contents of an address register.Example:
+
+Copies whole A1 to D0. After the instruction, both registers contain the same information. When transferring with ADDRESS registers you must use word or longword. When a word is transferred to an address register, bit 15 (the sign bit) will be copied through the whole upper word (bit 16-31). If it wasn't so, a negative number would become positive.
+
+=== Indirect addressing ===
+Assembler syntax:
+
+(An)
+Operate on the memory location pointed to by An. For example:
+
+lea $1234,A1
+move.w D0,(A1)
+
+will move the first 16 bits of D0 into the word starting at $1234.
+Another example:

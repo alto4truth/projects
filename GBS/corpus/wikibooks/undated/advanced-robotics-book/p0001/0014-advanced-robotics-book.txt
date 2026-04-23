@@ -1,0 +1,19 @@
+title: Advanced Robotics Book
+source: wikibooks
+year: undated
+document_id: advanced-robotics-book
+authors: 
+page: 1
+section: advanced-robotics-book
+chunk: 14
+source_ref: https://en.wikibooks.org/wiki/Advanced_Robotics_Book
+
+es the opposite; one is given the length of each joint and the position of the point in work volume, and one has to calculate the angle of each joint.
+
+== Robot Programming Languages ==
+In order to program a robot, many languages are available to use. It depends on the knowledge of the programmer. Many different robot kits or models may work best with certain programming languages, depending on the difficulty of the program and the build of the robot. Depending on whether a person has knowledge of C, C++, Java, or something else, certain programs may be easier to pick up.
+ROBOTC is a program based on the C language, and it is very compatible, especially with NXT robots. It was created by the Robotics Academy at Carnegie Mellon University. ROBOTC is very easy to learn, and it can be used for easy programs as well as more complex programs. The programming language contains a debugger that allows programmers to see where their programming mistakes are; this allows for easy editing. ROBOTC allows a programmer to specify motors, timers, sensors, and variables.
+Similar to ROBOTC, Not Exactly C, or NXC, is also a C-based program. NXC programs use the Bricx development environment, which was initially developed for LEGO’s earlier RCX robotics product and has been enhanced to support the NXT. NXC uses the same firmware as NXT-G, the basic graphical user interface used with LEGO Mindstorms robot kits. This allows programmers to use a graphical environment and a text environment without having to change the firmware that is loaded on the brick of a robot. A person can store both NXT-G and NXC programs simultaneously in the same brick. NXC allows integer variables; however, floating-point variables create problems.
+Another programming language that is compatible with NXT is ROBOLAB, which is more of a graphical representation of the program, rather than lined text. Developed at Tufts University, ROBOLAB was originally used for the first generation LEGO Mindstorms RCX microprocessor “brick.” Like the NXC language, it was expansively improved and modified to function with both the RCX and the second-generation NXT. This program is useful usually only if you are comfortable with the ROBOLAB platform. If a programmer is unfamiliar with how it works, there are much easier languages a programmer could choose to utilize.
+Lejos is a Java- based program, so if a person is more familiar with Java than with C, Lejos is a good language to use with robots. Just like any other programming language, Lejos programs are written and compiled on a PC. The compiled programs are then transported to the NXT to be executed.
+Pblua is also programming language used for robots. Lua is a relatively new text-based language. It allows a person to virtually do anything that he or she can do with ROBOTC or NXC; it is just a different programming language that one can learn to broaden their robotics programming language knowledge.

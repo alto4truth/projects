@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 343
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+tor of Boolean values. In both these instances, you should also redefine inequality because it is not the Boolean complement of the equality function.
+
+== Using exceptions ==
+Ada exceptions are a reliability-enhancing language feature designed to help specify program behavior in the presence of errors or unexpected events. Exceptions are not intended to provide a general purpose control construct. Further, liberal use of exceptions should not be considered sufficient for providing full software fault tolerance (Melliar-Smith and Randell 1987).
+This section addresses the issues of how and when to avoid raising exceptions, how and where to handle them, and whether to propagate them. Information on how to use exceptions as part of the interface to a unit includes what exceptions to declare and raise and under what conditions to raise them. Other issues are addressed in the guidelines in Sections 4.3 and 7.5.
+
+=== Handling Versus Avoiding Exceptions ===

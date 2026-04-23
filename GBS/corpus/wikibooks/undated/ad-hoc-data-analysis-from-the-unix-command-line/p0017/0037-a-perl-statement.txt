@@ -1,0 +1,35 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 17
+section: a-perl-statement
+chunk: 37
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+cat pums_53.dat | grep "^P" | cut -c297-303 | grep [0-9] | sort |
+cat -n | grep "^ *23179"
+23179 0019900
+
+An even simpler method, using head and tail:
+
+$ cat pums_53.dat | grep "^P" | cut -c297-303 | grep [0-9] | sort |
+head -23179| tail -1
+0019900
+
+The median income in Washington state in 2000 was $19,900.
+
+== Example - Finding the average of a distribution ==
+What about the average? One way to compute the average is to accumulate a running sum with perl, and do the division by hand at the end:
+
+$ cat pums_53.dat | grep "^P" | cut -c297-303 | grep [0-9] |
+perl -ne 'print $sum+=$_,"\n";' | cat -n | tail -1
+46359 1314603988
+
+$1314603988/ 46359 = $28357.0393666818
+You could also get perl to do this division with an END block which perl will execute only after it has exhausted standard input:
+
+$ cat pums_53.dat | grep "^P" | cut -c297-303 | grep [0-9] |
+perl -ne '$sum += $_; $count++; END {print $sum/$count,"\n";}'
+28357.0393666818

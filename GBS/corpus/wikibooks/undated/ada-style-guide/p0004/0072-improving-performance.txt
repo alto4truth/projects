@@ -1,0 +1,36 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 4
+section: improving-performance
+chunk: 72
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+f the lower bound is 1.
+
+=== Unconstrained Records ===
+
+==== guideline ====
+Use fixed-size components for records when measured performance indicates.
+
+==== example ====
+
+==== rationale ====
+Determine the size and speed impact of unconstrained records having components depending on discriminants. Some compilers will allocate the maximum possible size to each object of the type; others will use pointers to the dependent components, incurring a possible heap performance penalty. Consider the possibility of using fixed-size components.
+
+=== Records and Arrays ===
+
+==== guideline ====
+Define arrays of records as parallel arrays when measured performance indicates.
+
+==== example ====
+
+==== rationale ====
+Determine the impact of structuring data as arrays of records, records containing arrays, or parallel arrays. Some implementations of Ada will show significant performance differences among these examples.
+
+=== Record and Array Aggregates ===
+
+==== guideline ====
+Use a sequence of assignments for an aggregation when measured performance indicates.

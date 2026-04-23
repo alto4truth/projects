@@ -1,0 +1,20 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 6
+section: object-oriented-features
+chunk: 132
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ype that is visibly derived from some parent type must fully support the semantics of the parent type.
+
+=== Primitive Operations and Redispatching ===
+
+==== guideline ====
+Consider declaring a primitive abstract operation based on the absence of a meaningful "default" behavior.
+Consider declaring a primitive nonabstract operation based on the presence of a meaningful "default" behavior.
+When overriding an operation, the overriding subprogram should not raise exceptions that are not known to the users of the overridden subprogram.
+If redispatching is used in the implementation of the operations of a type, with the specific intent that some of the redispatched-to operations be overridden by specializations for the derived types, then document this intent clearly in the specification as part of the "interface" of a parent type with its derived types.
+When redispatching is used (for any reason) in the implementation of a primitive operation of a tagged type, then document (in some project-consistent way) this use in the body of the operation subprogram so that it can be easily found during maintenance.

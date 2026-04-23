@@ -1,0 +1,31 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 281
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+t use the
+modified routines do not themselves have to be modified, while
+the previous functionality levels of the routines are allowed
+to be "reused."
+
+==== exceptions ====
+Do not go overboard. If the changes in functionality are truly
+radical, you should be preparing a separate routine rather than
+modifying an existing one. One indicator of this situation would
+be that it is difficult to determine value combinations for the
+defaults that uniquely and naturally require the more restrictive
+of the two functions. In such cases, it is better to go ahead
+with creation of a separate routine.
+
+=== Mode Indication ===
+
+==== guideline ====
+Show the mode indication of all procedure and entry parameters (Nissen and Wallis 1984 ).
+Use the most restrictive parameter mode applicable to your application.
+
+==== example ====

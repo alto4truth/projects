@@ -1,0 +1,14 @@
+title: A Beginner's Python Tutorial
+source: wikibooks
+year: undated
+document_id: a-beginner-s-python-tutorial
+authors: 
+page: 2
+section: classes
+chunk: 2
+source_ref: https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial
+
+One thing that you will get to know about programming, is that programmers like to be lazy. If something has been done before, why should you do it again?
+That is what functions cover in Python. You've already had your code do something special. Now you want to do it again. You put that special code into a function, and re-use it for all it is worth. You can refer to a function anywhere in your code, and the computer will always know what you are talking about. Handy, eh?
+Of course, functions have their limitations. Functions don't store any information like variables do - every time a function is run, it starts afresh. However, certain functions and variables are related to each other very closely, and need to interact with each other a lot. For example, imagine you have a golf club. It has information about it (i.e. variables) like the length of the shaft, the material of the grip, and the material of the head. It also has functions associated with it, like the function of swinging your golf club, or the function of breaking it in pure frustration. For those functions, you need to know the variables of the shaft length, head material, etc.
+That can easily be worked around with no

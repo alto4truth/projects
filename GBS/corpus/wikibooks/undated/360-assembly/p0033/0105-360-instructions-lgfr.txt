@@ -1,0 +1,27 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 33
+section: 360-instructions-lgfr
+chunk: 105
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+==
+The LGFR instruction is 64-bit, and is only available on the 390 series and z/System. It will cause an opcode exception on the 360 and 370 series.
+
+== Operation ==
+The LGFR instruction copies the 32-bit value from the register specified by the second argument to the register specified by the first argument.
+Bits 0-31 (the high half) of the target 64-bit register are filled with copy of sign (most significant) bit of the source value.
+Register 0 is valid for either register and is not ignored as in some other instructions.
+
+== Condition Codes ==
+Condition codes are not changed.
+
+== Exceptions and Faults ==
+360 and 370 Series: Opcode Exception
+390 Series and zSystem: None.
+
+== Most Closely-related Instruction ==
+The most closely-related instruction is Add Logical Register (ALR) and not Load Address (LA), as is sometimes assumed. Whereas L loads a value from memory, LA does not access memory; it only calculates a number, which can but does not have to be an address.

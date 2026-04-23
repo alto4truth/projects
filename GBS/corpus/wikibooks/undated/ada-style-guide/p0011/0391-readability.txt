@@ -1,0 +1,24 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 11
+section: readability
+chunk: 391
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+object is probably serving multiple purposes. Multiple objects should be used in such a case.
+
+=== Naming of Tagged Types and Associated Packages ===
+
+==== guideline ====
+Use a consistent naming convention for tagged types and associated packages.
+
+==== instantiation ====
+Naming conventions spark "religious wars"; therefore, two different instantiations are presented. The first instantiation integrates the use of object-oriented features. Except for two special cases, it applies the same naming conventions to declarations, independent of whether they use an object-oriented feature:
+
+Name tagged types no differently than subtype names (see Guideline 3.2.2).
+Use the prefix Abstract_ for packages that export an abstraction for which you intend to provide multiple implementations (see Guideline 9.2.4).
+Use the suffix _Mixin for packages that provide units of functionality that can be "mixed in" to core abstractions.
+The second instantiation highlights the use of object-oriented features through special names or suffixes:

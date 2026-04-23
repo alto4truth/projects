@@ -1,0 +1,21 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 17
+section: c-variables-declarations-and-constants
+chunk: 75
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+other interesting point is
+that a string literal actually evaluates to a pointer to the string it
+defines. This means that in the following operation:
+
+-- "p" ends up being a pointer to the memory in which the C compiler stored
+the string literal, and "p[0]" would evaluate to "L". In a similar sense,
+the following operation:
+
+-- would put the character "L" into the variable "ch".
+This is very well and good, but why care? The reason to care is because
+this explains why the operation:

@@ -1,0 +1,23 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 35
+section: 360-instructions-lh
+chunk: 113
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+within 4096 bytes of the value of some base register.
+
+== Availability ==
+The LH instruction is available on all models of the 360, 370 and z/System.
+
+== Operation ==
+The LH instruction reads a 16-bit integer value from the memory address specified by the argument and puts it in the low 16 bits of the target register specified by the first argument. The left half of the register is replaced by zeros or ones to reflect the sign (leftmost bit) of the halfword.
+The source argument address must be aligned to a half-word boundary (i.e. 2 bytes) or an exception will occur. The Condition Code field in the Program Status Word is not changed.
+
+== Exceptions and Faults ==
+The source address must be within the range of valid memory or an operation exception occurs.
+The source address must be aligned to a halfword boundary or an address exception occurs.
+The storage key for the source address must be the same as the current process (or the process must be privileged with a key of zero) or a memory protect violate exception occurs.

@@ -1,0 +1,33 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 15
+section: more-grep-examples
+chunk: 32
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+ast this with the previous example. Here, we match everything except be.
+
+=== Example ===
+The input file is as before.
+We search with
+
+The results are
+
+== Character lists ==
+You can use a list of characters surrounded by [ and ] which will match on any single character in the list.
+
+=== Example ===
+The input file is lines:
+
+we search with
+
+The result is
+
+=== Example ===
+The input file is as before.
+we search with
+
+The result is

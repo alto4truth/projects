@@ -1,0 +1,17 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 13
+section: reusability
+chunk: 461
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+pecification.
+Document which generic formal parameters are accessed from a task hidden inside the generic unit.
+Document any multithreaded components.
+
+==== rationale ====
+The effects of tasking become a major factor when reusable code enters the domain of real-time systems. Even though tasks may be used for other purposes, their effect on scheduling algorithms is still a concern and must be clearly documented. With the task clearly documented, the real-time programmer can then analyze performance, priorities, and so forth to meet timing requirements, or, if necessary, he can modify or even redesign the component.
+Concurrent access to datastructures must be carefully planned to avoid errors, especially for data structures that are not atomic (see Chapter 6 for details). If a generic unit accesses one of its generic formal parameters (reads or writes the value of a generic formal object or calls a generic formal subprogram that reads or writes data) from within a task contained in the generic unit, then there is the possibility of concurrent access for which the user may not have planned. In such a case, the user should be warned by a comment in the generic specification.

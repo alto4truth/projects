@@ -1,0 +1,25 @@
+title: Ad Hoc Data Analysis From The Unix Command Line
+source: wikibooks
+year: undated
+document_id: ad-hoc-data-analysis-from-the-unix-command-line
+authors: 
+page: 14
+section: g-n-u-p-l-o-t
+chunk: 31
+source_ref: https://en.wikibooks.org/wiki/Ad_Hoc_Data_Analysis_From_The_Unix_Command_Line
+
+cat pums_53.dat | grep "^P" | cut -c78-81 | grep -v 0000 | sort | uniq -c |
+perl -lape 'chomp $F[-1]; $_ = join " ", reverse @F' > year_of_immigration
+
+Now we can make a bar chart from the contents of the file with gnuplot.
+
+gnuplot> plot 'year_of_immigration' with impulses
+
+Here's the graph gnuplot creates:
+
+Be a bit careful interpreting this plot, only people who are still alive can be counted, so it naturally goes up and to the right (people who immigrated more recently have a better chance of still being alive). That said, there seems to have been an increase in immigration after the end of World War II, and also a spike after the end if the Vietnam war. I remain at a loss to explain the spike around 1980, consult your local historian.
+
+== External links ==
+http://gnuplot.sourceforge.net/demo/
+set term win; set grid;A1=-300;A2=250;n=360;z=2500;splot(x**2)/(A1**2)
++ (y**2)/(A2**2) - ((2*x*y)/(A1*A2))*cos(n-z) - (sin(n-z))**2

@@ -1,0 +1,36 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 284
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+er change the implementation to a simple array, the mode
+will have to be in out, potentially causing changes to
+all places that the routine is called.
+
+== Types ==
+In addition to determining the possible values for variables and
+subtype names, type distinctions can be very valuable aids in
+developing safe, readable, and understandable code. Types clarify
+the structure of your data and can limit or restrict the operations
+performed on that data. "Keeping types distinct has been
+found to be a very powerful means of detecting logical mistakes
+when a program is written and to give valuable assistance whenever
+the program is being subsequently maintained" (Pyle 1985 ).
+Take advantage of Ada's strong typing capability in the form of
+subtypes, derived types, task types, protected types, private
+types, and limited private types.
+The guidelines encourage much code to be written to ensure strong
+typing. While it might appear that there would be execution penalties
+for this amount of code, this is usually not the case. In contrast
+to other conventional languages, Ada has a less direct relationship
+between the amount of code that is written and the size of the
+resulting executable program. Most of the strong type checking
+is performed at compilation time rather than execution time, so
+the size of the executable code is not greatly affected.
+For guidelines on specific kinds of data structures and tagged
+types, see 9.2.1 , respectively.

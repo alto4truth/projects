@@ -1,0 +1,18 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 204
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+interfacing to the particular target environment. This section identifies the various features and their recommended use with respect to portability.
+
+=== Representation Clauses ===
+
+==== guideline ====
+Use algorithms that do not depend on the representation of the data and, therefore, do not need representation clauses.
+Consider using representation clauses when accessing or defining interface data or when a specific representation is needed to implement a design.
+Do not assume that sharing source files between programs guarantees the same representation of data types in those files.

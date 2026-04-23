@@ -1,0 +1,19 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 325
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+hen exit whenever possible (NASA 1987).
+Review exit statement placement.
+
+==== example ====
+See the examples in Guidelines 5.1.1 and Guidelines 5.6.4.
+
+==== rationale ====
+It is more readable to use exit statements than to try to add Boolean flags to a while loop condition to simulate exits from the middle of a loop. Even if all exit statements would be clustered at the top of the loop body, the separation of a complex condition into multiple exit statements can simplify and make it more readable and clear. The sequential execution of two exit statements is often more clear than the short-circuit control forms.
+The exit when form is preferable to the if ... then exit form because it makes the word exit more visible by not nesting it inside of any control construct. The if ... then exit form is needed only in the case where other statements, in addition to the exit statement, must be executed conditionally. For example:

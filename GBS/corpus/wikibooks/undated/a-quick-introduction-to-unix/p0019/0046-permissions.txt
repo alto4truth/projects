@@ -1,0 +1,17 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 19
+section: permissions
+chunk: 46
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+which may be displayed by typing ls -l. Also, ls -lg gives additional information as to which group owns the file (istrain in the following example):
+
+-rwxrw-r-- 1 ccaajim istrain 3210 Aug15 14:25 train.doc
+In the left-hand column is a 10 symbol string consisting of the symbols d, r, w, x, -, and, occasionally, s or S. The important ones for you right now are r for read, w for write and x for execute. If d is present, it will be at the left hand end of the string, and indicates a directory: otherwise the string will start with -.
+The 9 remaining symbols indicate the permissions, or access rights, and are taken as three groups of three.
+The left group of 3 gives the file permissions for the user that owns the file (or directory) (ccaajim in the above example). The rightmost group gives the permissions for all others (called world in Unix speak). The middle three columns are the rights ceded to the group to which the use account belongs.
+The symbols r, w, etc., have slightly different meanings depending on whether they refer to a simple file or to a directory.

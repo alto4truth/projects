@@ -1,0 +1,39 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 19
+section: common-programming-problems-in-c
+chunk: 87
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+be flagged as an error by C.
+7: Confusing strings and character constants. The following is a string:
+
+"Y"
+
+—as opposed to the character constant:
+'Y'
+
+This can cause troubles in comparisons of strings against character
+constants.
+8: Forgetting that strings end in a null character ('\0'). This means that
+a string will always be one character bigger than the text it stores. It can
+also cause trouble if a string is being created on a character-by-character
+basis, and the program doesn't tack the null character onto the end of it.
+9: Failing to allocate enough memory for a string—or, if pointers are
+declared, to allocate any memory for it at all.
+10: Failing to check return values from library functions. Most library
+functions return an error code; while it may not be desirable to check every
+invocation of "printf()", be careful not to ignore error codes in critical
+operations.
+Of course, forgetting to store the value returned by a function when that's
+the only way to get the value out of it is a bonehead move, but people do
+things like that every now and then.
+11: Having duplicate library-function names. The compiler will not always
+catch such bugs.
+12: Forgetting to specify header files for library functions.
+13: Specifying variables as parameters to functions when pointers are
+supposed to be specified, and the reverse. If the function returns a value
+through a parameter, that means it must be specified as a pointer:

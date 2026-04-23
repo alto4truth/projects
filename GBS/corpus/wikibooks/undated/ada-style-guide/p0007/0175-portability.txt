@@ -1,0 +1,13 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 7
+section: portability
+chunk: 175
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+following code fragment shows where there is a potential for bounded error when a procedure is called with actual parameters denoting the same object:
+
+In executing the procedure Test_Bounded_Error, both Parm_1 and Parm_2 denote the object Actual_Parm. After executing the first statement, the object Actual_Parm has the value 5. When the procedure Inner is called, its formal parameter Parm denotes Actual_Parm. It cannot be determined whether it denotes the old value of Parm_1, in this case 1, or the new value, in this case 5.

@@ -1,0 +1,14 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 5
+section: introduction
+chunk: 96
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+=== Source Code Presentation and Readability ===
+Chapters 2 and 3 directly address the issues of creating clear, readable, and understandable source text. Chapter 2 focuses on code formatting, and Chapter 3 addresses issues of use of comments, naming conventions, and types.
+There are two main aspects of code clarity: (1) careful and consistent layout of the source text on the page or the screen, covered by Chapter 2, that can enhance readability dramatically; (2) careful attention to the structure of code, covered by Chapter 3, that can make the code easier to understand. This is true both on the small scale (e.g., by careful choice of identifier names or by disciplined use of loops) and on the large scale (e.g., by proper use of packages). These guidelines treat both layout and structure.
+Code formatting and naming convention preferences tend to be very personal. You must balance your personal likes and dislikes with those of other engineers on the project so that you can agree to a consistent set of conventions that the whole project team will follow. Automatic code formatters can help in enforcing this kind of consistency.

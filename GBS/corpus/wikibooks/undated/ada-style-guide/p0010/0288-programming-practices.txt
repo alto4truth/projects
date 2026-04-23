@@ -1,0 +1,46 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 288
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+ss parameters and access discriminants to guarantee that the parameter or discriminant is treated as a constant.
+
+==== example ====
+Use:
+
+rather than:
+
+==== rationale ====
+Although Ada allows anonymous types, they have limited usefulness
+and complicate program modification. For example, except for arrays,
+a variable of anonymous type can never be used as an actual
+parameter because it is not possible
+to define a formal parameter of
+the same type. Even though this may not be a limitation initially,
+it precludes a modification in which a piece of code is changed
+to a subprogram. Although you can declare the anonymous array
+to be aliased, you cannot use this access value as an actual parameter
+in a subprogram because the subprogram's formal parameter declaration
+requires a type mark. Also, two variables declared using the same
+anonymous type declaration are actually of different types.
+Even though the implicit conversion of array types during parameter
+passing is supported in Ada, it is difficult to justify not using
+the type of the parameter. In most situations, the type of the
+parameter is visible and easily substituted in place of an anonymous
+array type. The use of an anonymous array type implies that the
+array is only being used as a convenient way to implement a collection
+of values. It is misleading to use an anonymous type, and then
+treat the variable as an object.
+When you use an access parameter or access discriminant, the anonymous
+type is essentially declared inside the subprogram or object itself
+(Rationale 1995, §3.7.1 ). Thus, you have no way of declaring
+another object of the same type, and the object is treated as
+a constant. In the case of a self-referential data structure (see
+Guideline 5.4.6 ), you need the access parameter to be able to
+manipulate the data the discriminant accesses (Rationale 1995,
+§3.7.1 ).

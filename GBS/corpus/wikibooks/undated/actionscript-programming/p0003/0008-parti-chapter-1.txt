@@ -1,0 +1,23 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 3
+section: parti-chapter-1
+chunk: 8
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+visible, and to "false" ("no"), this means invisible. This type of construction ( "true" and "false") is called "Boolean", which you will learn later.
+
+=== Rotation ===
+Rotation property specifies the rotation of the object in degrees. To test this property follow the steps.
+Step 1
+Select the Rectangle Tool in the Toolbox, draw a rectangle, double click the drawn rectangle and press F8 to convert it to symbol. When the "Convert to Symbol" dialog will appear, type "mov_box" as the name of the symbol, choose the "Movie Clip" behavior and press OK. Select the rectangle you have drawn and give "box" name to it.
+Step 2
+Now right click the Keyframe in Timeline window and choose "Actions" from the popup window to show "Actions" window. When the window is shown, turn on Advanced Mode and write the following:
+
+Now test the movie by pressing Ctrl + Enter and you will see the result.
+
+=== Quality ===
+Property quality is not very important. It only changes the quality of the scene. But it doesn’t change the quality of the object, since its quality property is set. Rather it changes the quality of all the movie. For example if you write the following:

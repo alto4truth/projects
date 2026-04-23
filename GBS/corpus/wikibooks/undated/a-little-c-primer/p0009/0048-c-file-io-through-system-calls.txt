@@ -1,0 +1,17 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 9
+section: c-file-io-through-system-calls
+chunk: 48
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+call reads data from a open file. Its syntax is exactly
+the same as that of the "write()" call:
+
+read( <file descriptor>, <buffer>, <buffer length> );
+
+The "read()" function returns the number of bytes it actually returns.
+At the end of file it returns 0, or returns -1 on error.

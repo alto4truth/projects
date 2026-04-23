@@ -1,0 +1,37 @@
+title: A Little C Primer
+source: wikibooks
+year: undated
+document_id: a-little-c-primer
+authors: 
+page: 2
+section: an-introductory-c-program
+chunk: 11
+source_ref: https://en.wikibooks.org/wiki/A_Little_C_Primer
+
+—prints the text:
+
+Twas bryllig and the slithy toves
+
+A newline character ("\n") must be added to force a newline. For example:
+
+—gives:
+Hello,
+world!
+
+These examples only print a predefined text constant. It is possible to include "format codes" in the string and then follow the string with one or more variables to print the values they contain:
+
+This would print something like:
+
+Result = 0.5
+
+The "%f" is the format code that tells "printf" to print a floating-point number. For another example:
+
+—would print something like:
+4 times 10 = 40
+
+The "%d" prints an integer quantity. Math or string expressions and functions can be included in the argument list.
+To simply print a string of text, there is a simpler function, "puts()", that displays the specified text and automatically appends a newline:
+
+Just for fun, let's take a look at what our example program would be like in the pre-ANSI versions of C:
+
+The following sections elaborate on the principles outlined in this section.

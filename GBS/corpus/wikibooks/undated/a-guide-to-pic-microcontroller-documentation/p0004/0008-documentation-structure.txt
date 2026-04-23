@@ -1,0 +1,20 @@
+title: A Guide To PIC Microcontroller Documentation
+source: wikibooks
+year: undated
+document_id: a-guide-to-pic-microcontroller-documentation
+authors: 
+page: 4
+section: documentation-structure
+chunk: 8
+source_ref: https://en.wikibooks.org/wiki/A_Guide_To_PIC_Microcontroller_Documentation
+
+are which are all elements of implementing an embedded product based upon a specific controller. The main documentation groups can thus be defined as:
+
+Microcontroller or DSC documentation
+Programming language tools documentation
+Integrated Development Environment (IDE) documentation (if used)
+Hardware debugger and/or programmer documentation
+Flash program memory programming documentation
+In this section, the first three points will be examined in more detail.
+Depending on how development activities are split, a single developer may be responsible for all stages of the design process from conception through to manufacture, whilst others may only be responsible for a small part of the design process. In either case, it is highly recommended to gather all the relevant documentation and at least peruse those documents which are not so pertinent to one's own role in the design flow in case something from an earlier or later stage in the design process has an influence on the aspect of development for which one is responsible.
+For example, to discover during the first production run that a controller pin needed for programming is used by another feature which could have been easily connected to another, perhaps unused, pin will typically require an expensive hardware redesign and delays the products launch.

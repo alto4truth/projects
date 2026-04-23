@@ -1,0 +1,40 @@
+title: Ada Style Guide
+source: wikibooks
+year: undated
+document_id: ada-style-guide
+authors: 
+page: 10
+section: programming-practices
+chunk: 377
+source_ref: https://en.wikibooks.org/wiki/Ada_Style_Guide
+
+s to capture as much information as possible about an exception.
+Use blocks to associate localized sections of code with their own exception handlers.
+
+==== erroneous execution and bounded errors ====
+Use Ada.Unchecked_Conversion only with the utmost care (Ada Reference Manual 1995, §13.9 [Annotated]).
+Consider using the 'Valid attribute to check the validity of scalar data).
+Ensure that the value resulting from Ada.Unchecked_Conversion properly represents a value of the parameter's subtype.
+Isolate the use of Ada.Unchecked_Conversion in package bodies.
+Isolate the use of Ada.Unchecked_Deallocation in package bodies.
+Ensure that no dangling reference to the local object exists after exiting the scope of the local object.
+Minimize the use of the attribute Unchecked_Access, preferably isolating it to package bodies.
+Use the attribute Unchecked_Access only on data whose lifetime/scope is "library level."
+Use address clauses to map variables and entries to the hardware device or memory, not to model the FORTRAN "equivalence" feature.
+Ensure that the address specified in an attribute definition clause is valid and does not conflict with the alignment.
+If available in your Ada environment, use the package Ada.Interrupts to associate handlers with interrupts.
+Avoid using the address clause for nonimported program units.
+Do not suppress exception checks during development.
+If necessary, during operation, introduce blocks that encompass the smallest range of statements that can safely have exception checking removed.
+Initialize all objects , including access values, prior to use.
+Use caution when initializing access values.
+Do not depend on default initialization that is not part of the language.
+Derive from a controlled type and override the primitive procedure to ensure automatic initialization.
+Ensure elaboration of an entity before using it.
+Use function calls in declarations cautiously.
+Ensure that values obtained from Ada.Direct_IO and Ada.Sequential_IO are in range.
+Use the 'Valid attribute to check the validity of scalar values obtained through Ada.Direct_IO and Ada.Sequential_IO.
+Prevent exceptions from propagating outside any user-defined Finalize or Adjust procedure by providing handlers for all predefined and user-defined exceptions at the end of each procedure.
+Do not invoke a potentially blocking operation within a protected entry, a protected procedure, or a protected function.
+Do not use an asynchronous select statement within abort-deferred operations.
+Do not create a task that depends on a master that is included entirely within the execution of an abort-deferred operation.

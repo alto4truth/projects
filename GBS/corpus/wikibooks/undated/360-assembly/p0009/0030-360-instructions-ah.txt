@@ -1,0 +1,23 @@
+title: 360 Assembly
+source: wikibooks
+year: undated
+document_id: 360-assembly
+authors: 
+page: 9
+section: 360-instructions-ah
+chunk: 30
+source_ref: https://en.wikibooks.org/wiki/360_Assembly
+
+ter values are 0 to 15. The offset value is 0 to 4095.
+
+== Availability ==
+The AH instruction is available on all models of the 360, 370 and z/System.
+
+== Operation ==
+The AH instruction reads 16-bit integer value from the memory address specified by the argument, expands it to 32 bits as signed and adds it to the value of register specified by the first argument. The Condition Code field in the Program Status Word is changed according to the resulting value.
+Expansion is done as duplication of the most significant bit of the source value to higher 16 bits of expanded value.
+The source argument address shall be aligned to half word boundary (i.e. 2 bytes).
+
+== Condition Codes ==
+If signed integer overflow occurs, i.e. sum is not between -2**31 and 2**31-1, CC is set to 3.
+Otherwise, CC is set to 0, 1 or 2, if sum is equal to zero, below zero or above zero accordingly.

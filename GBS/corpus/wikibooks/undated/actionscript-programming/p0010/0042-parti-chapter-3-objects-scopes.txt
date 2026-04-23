@@ -1,0 +1,22 @@
+title: ActionScript Programming
+source: wikibooks
+year: undated
+document_id: actionscript-programming
+authors: 
+page: 10
+section: parti-chapter-3-objects-scopes
+chunk: 42
+source_ref: https://en.wikibooks.org/wiki/ActionScript_Programming
+
+tringToArray($string:String):Array
+{
+var a = $string.split(" ");
+var temp = [];
+for (var x = 0; x < a.length; x++) {
+temp.push(a[x]);
+}
+return temp;
+}
+
+== Scopes of variables ==
+In this chapter you learned how to declare, initialize and use variables, but we didn’t talk about the variables limitations. There are three groups of variables: global variables, timeline variables and local variables. The global variables are accessible everywhere in the movie, the timeline variables are accessible from any timeline, and the local variables can be only accessed from the functions they are declared in (functions are like events, you will learn about them later). Now lets understand each of this groups in more details.

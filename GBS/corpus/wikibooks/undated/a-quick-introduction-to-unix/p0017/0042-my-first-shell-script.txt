@@ -1,0 +1,22 @@
+title: A Quick Introduction to Unix
+source: wikibooks
+year: undated
+document_id: a-quick-introduction-to-unix
+authors: 
+page: 17
+section: my-first-shell-script
+chunk: 42
+source_ref: https://en.wikibooks.org/wiki/A_Quick_Introduction_to_Unix
+
+utput file for our data processing. They will be called by the names $1, $2 and $3 respectively in the script.
+Amend your script file so that it reads
+
+grep -in $1 $2 > $3
+So how do we use this new version? At the command line we substitute the terms for the variable names. We might type
+
+scisearch.sh 'religion' religion.txt reloutput.txt
+which assumes that we are searching for the string religion in a file religion.txt and sending the output to reloutput.txt. In many flavours of Unix you could now go onto make your script more interesting - by adding context to your output, for example capturing not just the single lines but those that precede and follow them as well, but we won't go into that here. It would be as well now to rename our script since it no longer has anything particularly to do with science.
+This new script still only introduces the most basic scripting idea, but you are perhaps now in a position to look at a more detailed introduction to Unix.
+
+=== Learning More ===
+You can learn more about scripting from the Bourne Again Shell Scripting book.
