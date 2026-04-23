@@ -30,6 +30,9 @@ SKIP_SUBPAGE_SUFFIXES = {
     "/Copyright",
 }
 MIN_REQUEST_INTERVAL = 1.0
+REQUEST_TIMEOUT = 12
+MAX_SUBPAGES_PER_BOOK = 40
+MAX_SECONDS_PER_BOOK = 45
 _LAST_REQUEST_AT = 0.0
 
 
@@ -44,7 +47,7 @@ def api_get(params: dict[str, str]) -> dict:
             if wait > 0:
                 time.sleep(wait)
             req = urllib.request.Request(f"{API}?{query}", headers={"User-Agent": USER_AGENT})
-            with urllib.request.urlopen(req, timeout=30) as response:
+            with urllib.request.urlopen(req, timeout=REQUEST_TIMEOUT) as response:
                 _LAST_REQUEST_AT = time.monotonic()
                 return json.load(response)
         except HTTPError as exc:
@@ -152,17 +155,28 @@ def fetch_subpages(title: str) -> list[str]:
 
 def build_book_text(title: str) -> str:
     parts: list[str] = []
+    started_at = time.monotonic()
 
     root_text = fetch_page_extract(title)
     if root_text:
         parts.append(f"# {title}\n\n{root_text}")
 
-    for subpage in fetch_subpages(title):
+    subpages = fetch_subpages(title)
+    if len(subpages) > MAX_SUBPAGES_PER_BOOK:
+        print(f"  truncating subpages: {len(subpages)} -> {MAX_SUBPAGES_PER_BOOK}")
+        subpages = subpages[:MAX_SUBPAGES_PER_BOOK]
+
+    for offset, subpage in enumerate(subpages, start=1):
+        if time.monotonic() - started_at > MAX_SECONDS_PER_BOOK:
+            print(f"  time budget reached after {offset - 1} subpages")
+            break
         text = fetch_page_extract(subpage)
         if not text:
             continue
         heading = subpage.split("/", 1)[1]
         parts.append(f"## {heading}\n\n{text}")
+        if offset % 10 == 0:
+            print(f"  fetched {offset}/{len(subpages)} subpages")
 
     return normalize_text("\n\n".join(parts))
 
