@@ -1,0 +1,31 @@
+{
+  "name": "garuda",
+  "version": "0.1.0",
+  "description": "Garuda analysis framework",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "chess:eval": "node js/src/chess/cli.js eval",
+    "chess:selfplay": "node js/src/chess/cli.js selfplay",
+    "chess:tune": "node js/src/chess/cli.js tune",
+    "chess:dist:plan": "node js/src/chess/cli.js dist:plan",
+    "chess:dist:worker": "node js/src/chess/cli.js dist:worker",
+    "chess:dist:aggregate": "node js/src/chess/cli.js dist:aggregate",
+    "chess:dist:tune": "node js/src/chess/cli.js dist:tune",
+    "chess:distill:data": "node js/src/chess/cli.js distill:data",
+    "chess:distill:train": "node js/src/chess/cli.js distill:train",
+    "chess:distill:benchmark": "node js/src/chess/cli.js distill:benchmark",
+    "test": "node js/src/tests/all.test.js",
+    "lint": "eslint src --ext .ts"
+  },
+  "keywords": [
+    "analysis",
+    "static-analysis"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "chess.js": "^1.4.0",
+    "stockfish": "^18.0.7"
+  }
+}
