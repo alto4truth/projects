@@ -1,156 +1,130 @@
-"""Natural Evolution Strategies (NES) for distributed training."""
+from __future__ import annotations
 
-import torch
-import torch.nn as nn
-import numpy as np
-from typing import Optional
-
-
-class NESOptimizer:
-    """
-    NES - параллелится идеально, без синхронизации градиентов!
-    Каждый GPU считает свой fitness, результаты агрегируются.
-    """
-    
-    def __init__(
-        self,
-        model: nn.Module,
-        popsize: int = 256,
-        learning_rate: float = 0.01,
-        sigma: float = 0.01,
-        momentum: float = 0.9,
-    ):
-        self.model = model
-        self.popsize = popsize
-        self.lr = learning_rate
-        self.sigma = sigma
-        self.momentum = momentum
-        
-        # Центральные параметры
-        self.theta = self._get_flat_params()
-        self.velocity = torch.zeros_like(self.theta)
-        
-        # Адаптивная сигма
-        self.sigmas = torch.ones(self.theta.shape) * sigma
-    
-    def _get_flat_params(self) -> torch.Tensor:
-        return torch.cat([p.data.flatten() for p in self.model.parameters()])
-    
-    def _set_flat_params(self, theta: torch.Tensor):
-        offset = 0
-        for p in self.model.parameters():
-            numel = p.numel()
-            p.data = theta[offset:offset+numel].reshape(p.shape)
-            offset += numel
-    
-    def sample_population(self) -> list[torch.Tensor]:
-        """Семплируем популяцию вокруг текущих параметров."""
-        population = []
-        for _ in range(self.popsize):
-            noise = torch.randn_like(self.theta) * self.sigmas
-            # Добавляем шум
-            candidate = self.theta + noise
-            population.append(candidate)
-        return population
-    
-    def update(self, fitnesses: torch.Tensor):
-        """
-        Обновляем на основе fitness оценок.
-        fitnesses: [popsize] - оценки для каждой особи
-        """
-        # Ранжирование (rank transformation)
-        ranks = torch.argsort(torch.argsort(fitnesses))
-        normalized_ranks = (ranks.float() / self.popsize - 0.5) * 2  # [-1, 1]
-        
-        # Семплируем noise для каждой особи
-        noises = []
-        for _ in range(self.popsize):
-            noise = torch.randn_like(self.theta) * self.sigmas
-            noises.append(noise)
-        
-        # Оцениваем градиент
-        gradient = torch.zeros_like(self.theta)
-        for i, noise in enumerate(noises):
-            gradient += normalized_ranks[i] * noise
-        
-        gradient /= self.popsize
-        gradient *= self.sigmas  # Масштабируем
-        
-        # Momentum update
-        self.velocity = self.momentum * self.velocity + gradient * self.lr
-        self.theta += self.velocity
-        
-        # Адаптивная сигма (увеличиваем для большего explore, если fitness плохой)
-        # self.sigmas *= np.exp(0.01 * (fitnesses.mean().item() - 0))
-        
-        self._set_flat_params(self.theta)
-    
-    def step(self, fitness_fn):
-        """Один шаг NES."""
-        # Семплируем популяцию
-        population = self.sample_population()
-        
-        # Оцениваем fitness (распараллелить!)
-        fitnesses = []
-        for theta in population:
-            self._set_flat_params(theta)
-            fit = fitness_fn(self.model)
-            fitnesses.append(fit)
-        
-        fitnesses = torch.tensor(fitnesses)
-        
-        # Восстанавливаем основные параметры
-        self._set_flat_params(self.theta)
-        
-        # Обновляем
-        self.update(fitnesses)
+from dataclasses import dataclass, asdict
+from hashlib import blake2b
+from pathlib import Path
+from typing import Any
+import json
+import math
 
 
-class DistributedNES:
-    """
-    NES легко распараллеливается:
-    - Каждый GPU семплит себе особи
-    - fitness считается локально
-    - агрегация через all_reduce (только скалярные fitness!)
-    """
-    
-    def __init__(self, world_size: int = 8, **nes_kwargs):
-        self.world_size = world_size
-        self.nes = NESOptimizer(**nes_kwargs)
-        self.local_popsize = nes_kwargs.get("popsize", 256) // world_size
-    
-    def分布式_step(self, fitness_fn, global_fitness_fn):
-        """
-        1. Каждый GPU считает локальный fitness
-        2. All-reduce для получения глобального fitness ranking
-        3. Обновление
-        """
-        import torch.distributed as dist
-        
-        # Локальное fitness
-        local_fitness = fitness_fn(self.nes.theta)
-        
-        # All-reduce (только tensor ranking, не градиенты!)
-        global_fitness_buffer = torch.zeros(self.world_size)
-        dist.all_gather(global_fitness_buffer, local_fitness)
-        
-        # Ranking
-        ranks = torch.argsort(torch.argsort(global_fitness_buffer))
-        my_rank = ranks[0]  # rank текущего GPU
-        
-        # Обновляем
-        self.nes.update_rank(my_rank)
+@dataclass(frozen=True)
+class Candidate:
+    step: int
+    rank: int
+    seed: int
+    sign: int
 
 
-if __name__ == "__main__":
-    model = nn.Linear(10, 10)
-    nes = NESOptimizer(model, popsize=16)
-    
-    def fake_fitness(theta):
-        # Глупая функция - работает/не работает
-        return -((theta ** 2).sum())
-    
-    for i in range(10):
-        nes.step(fake_fitness)
-        if i % 5 == 0:
-            print(f"Step {i}, params norm: {nes.theta.norm().item():.4f}")
+@dataclass(frozen=True)
+class FitnessRecord:
+    run_id: str
+    step: int
+    rank: int
+    seed: int
+    sign: int
+    fitness: float
+    diagnostics: dict[str, Any]
+
+
+@dataclass(frozen=True)
+class StepManifest:
+    run_id: str
+    step: int
+    sigma: float
+    learning_rate: float
+    participants: list[FitnessRecord]
+
+
+def candidate_for_rank(run_id: str, step: int, rank: int, population_size: int) -> Candidate:
+    if rank < 0 or rank >= population_size:
+        raise ValueError(f"rank {rank} outside population {population_size}")
+    pair = rank // 2
+    sign = 1 if rank % 2 == 0 else -1
+    seed = stable_seed(run_id, step, pair)
+    return Candidate(step=step, rank=rank, seed=seed, sign=sign)
+
+
+def stable_seed(run_id: str, step: int, pair: int) -> int:
+    h = blake2b(f"{run_id}:{step}:{pair}".encode("utf-8"), digest_size=8).digest()
+    return int.from_bytes(h, "little") & 0x7FFFFFFFFFFFFFFF
+
+
+def rank_utilities(records: list[FitnessRecord]) -> dict[int, float]:
+    ordered = sorted(records, key=lambda record: record.fitness)
+    n = len(ordered)
+    utilities: dict[int, float] = {}
+    for idx, record in enumerate(ordered):
+        centered_rank = idx - (n - 1) / 2
+        utilities[record.rank] = centered_rank / max((n - 1) / 2, 1)
+    return utilities
+
+
+def apply_manifest_update(model, manifest: StepManifest, perturbation_cfg: dict[str, Any]) -> None:
+    import torch
+
+    utilities = rank_utilities(manifest.participants)
+    with torch.no_grad():
+        for param_index, param in enumerate(model.parameters()):
+            if not param.requires_grad or not param.is_floating_point():
+                continue
+            update = torch.zeros_like(param)
+            for record in manifest.participants:
+                noise = make_noise_like(param, record.seed, param_index, perturbation_cfg)
+                update.add_(noise, alpha=utilities[record.rank] * record.sign)
+            scale = manifest.learning_rate / (len(manifest.participants) * manifest.sigma)
+            param.add_(update, alpha=scale)
+
+
+def apply_candidate_perturbation(model, candidate: Candidate, sigma: float, perturbation_cfg: dict[str, Any]) -> None:
+    import torch
+
+    with torch.no_grad():
+        for param_index, param in enumerate(model.parameters()):
+            if not param.requires_grad or not param.is_floating_point():
+                continue
+            noise = make_noise_like(param, candidate.seed, param_index, perturbation_cfg)
+            param.add_(noise, alpha=sigma * candidate.sign)
+
+
+def make_noise_like(param, seed: int, param_index: int, perturbation_cfg: dict[str, Any]):
+    import torch
+
+    generator = torch.Generator(device=param.device)
+    generator.manual_seed((seed + 1_000_003 * param_index) % (2**63 - 1))
+    if perturbation_cfg.get("perturbation") == "blockwise" and param.ndim >= 2:
+        block = int(perturbation_cfg.get("block_size_tensors", 8))
+        rows = math.ceil(param.shape[0] / block)
+        base = torch.randn((rows,) + param.shape[1:], generator=generator, device=param.device, dtype=param.dtype)
+        return base.repeat_interleave(block, dim=0)[: param.shape[0]]
+    return torch.randn(param.shape, generator=generator, device=param.device, dtype=param.dtype)
+
+
+def write_json(path: str | Path, value: Any) -> None:
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(to_jsonable(value), f, indent=2, sort_keys=True)
+
+
+def read_manifest(path: str | Path) -> StepManifest:
+    raw = json.loads(Path(path).read_text(encoding="utf-8"))
+    participants = [FitnessRecord(**item) for item in raw["participants"]]
+    return StepManifest(
+        run_id=raw["run_id"],
+        step=int(raw["step"]),
+        sigma=float(raw["sigma"]),
+        learning_rate=float(raw["learning_rate"]),
+        participants=participants,
+    )
+
+
+def to_jsonable(value: Any) -> Any:
+    if hasattr(value, "__dataclass_fields__"):
+        return asdict(value)
+    if isinstance(value, list):
+        return [to_jsonable(item) for item in value]
+    if isinstance(value, dict):
+        return {key: to_jsonable(item) for key, item in value.items()}
+    return value
+

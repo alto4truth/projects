@@ -1,0 +1,55 @@
+run_id: abyss-smoke-nes
+model_name: Qwen/Qwen2.5-0.5B
+checkpoint_dir: /mnt/abyss/checkpoints/step-00000000
+state_dir: /mnt/abyss
+
+modal:
+  gpu: B200:1
+  nodes: 2
+  node_timeout_seconds: 3600
+
+model:
+  mock: true
+  torch_dtype: float32
+  trust_remote_code: true
+  value_head_init_std: 0.02
+
+sequence:
+  max_context_length: 1024
+
+virtual_tokens:
+  count: 8
+  prefix: "<|abyss_latent_"
+  suffix: "|>"
+
+nes:
+  population_size: 2
+  antithetic: true
+  sigma: 0.001
+  learning_rate: 0.02
+  weight_decay: 0.0
+  rank_normalize: true
+  perturbation: blockwise
+  block_size_tensors: 4
+  max_steps: 10
+  quorum: 2
+
+fitness:
+  tasks_per_step: 2
+  hidden_token_cost: 0.00001
+  mcts_simulations: 2
+  value_loss_weight: 0.1
+
+episode:
+  max_new_tokens: 16
+  temperature: 0.7
+
+tasks:
+  source: builtin
+
+reward_model:
+  enabled: false
+  name: Skywork/Skywork-Reward-V2-Qwen3-0.6B
+  weight: 1.0
+  device: cpu
+  torch_dtype: float32

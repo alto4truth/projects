@@ -1,261 +1,158 @@
-"""ABYSS Training with NES - Main entry point."""
+from __future__ import annotations
 
-import os
-import torch
-import torch.nn as nn
-import torch.distributed as dist
-from torch.utils.data import DataLoader, IterableDataset
-from datasets import load_dataset
-import modal
-from typing import Optional
+import argparse
 import json
+from pathlib import Path
+
+from abyss_config import load_config, validate_config
+from fitness import evaluate_candidate
+from modeling import load_abyss_model, save_abyss_model
+from nes import (
+    FitnessRecord,
+    StepManifest,
+    apply_candidate_perturbation,
+    apply_manifest_update,
+    candidate_for_rank,
+    read_manifest,
+    write_json,
+)
+from reward_model import load_reward_model
 
 
-APP_NAME = "abyss-trainer"
+def main() -> None:
+    parser = argparse.ArgumentParser(description="ABYSS replicated distributed NES node.")
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    dry = sub.add_parser("dry-run")
+    dry.add_argument("--config", required=True)
+
+    eval_cmd = sub.add_parser("evaluate")
+    eval_cmd.add_argument("--config", required=True)
+    eval_cmd.add_argument("--step", type=int, required=True)
+    eval_cmd.add_argument("--rank", type=int, required=True)
+    eval_cmd.add_argument("--out", required=True)
+
+    update_cmd = sub.add_parser("apply-update")
+    update_cmd.add_argument("--config", required=True)
+    update_cmd.add_argument("--manifest", required=True)
+    update_cmd.add_argument("--save-dir", required=True)
+
+    args = parser.parse_args()
+    cfg = load_and_validate(args.config)
+
+    if args.command == "dry-run":
+        print(json.dumps({"status": "dry_run_ok", "run_id": cfg["run_id"]}, indent=2))
+    elif args.command == "evaluate":
+        evaluate(cfg, args.step, args.rank, args.out)
+    elif args.command == "apply-update":
+        apply_update(cfg, args.manifest, args.save_dir)
+    else:
+        raise ValueError(args.command)
 
 
-class ABYSSDataset(IterableDataset):
-    """Streaming dataset from HuggingFace."""
-    
-    def __init__(self, dataset_name: str, split: str = "train"):
-        self.dataset_name = dataset_name
-        self.split = split
-    
-    def __iter__(self):
-        ds = load_dataset(self.dataset_name, split=self.split, streaming=True)
-        for item in ds:
-            yield item["text"]
+def load_and_validate(path: str) -> dict:
+    cfg = load_config(path)
+    validate_config(cfg)
+    return cfg
 
 
-class ABYSS:
-    """ABYSS Model - 70B Transformer."""
-    
-    def __init__(
-        self,
-        vocab_size: int = 51200,
-        d_model: int = 8192,
-        n_heads: int = 64,
-        n_layers: 80,
-        d_ff: int = 32768,
-        max_seq_len: int = 8192,
-    ):
-        self.vocab_size = vocab_size
-        self.d_model = d_model
-        
-        self.token_emb = nn.Embedding(vocab_size, d_model)
-        self.pos_emb = nn.Embedding(max_seq_len, d_model)
-        
-        self.layers = nn.ModuleList([
-            TransformerLayer(d_model, n_heads, d_ff)
-            for _ in range(n_layers)
-        ])
-        
-        self.norm = nn.LayerNorm(d_model)
-        self.lm_head = nn.Linear(d_model, vocab_size, bias=False)
-        self.lm_head.weight = self.token_emb.weight
-    
-    def forward(self, input_ids, attention_mask=None):
-        b, seq_len = input_ids.shape
-        x = self.token_emb(input_ids) + self.pos_emb(torch.arange(seq_len, device=input_ids.device))
-        
-        causal = torch.triu(torch.ones(seq_len, seq_len, device=x.device) * float("-inf"), diagonal=1)
-        
-        for layer in self.layers:
-            x = layer(x, causal)
-        
-        return self.norm(x)
-    
-    def generate(self, input_ids, max_tokens: int = 100):
-        self.eval()
-        for _ in range(max_tokens):
-            logits = self.forward(input_ids)[:, -1]
-            next_token = logits.argmax(dim=-1, keepdim=True)
-            input_ids = torch.cat([input_ids, next_token], dim=1)
-        return input_ids
-
-
-class TransformerLayer(nn.Module):
-    def __init__(self, d_model: int, n_heads: int, d_ff: int):
-        super().__init__()
-        self.attn = nn.MultiheadAttention(d_model, n_heads, batch_first=True, device="cuda")
-        self.ff = nn.Sequential(
-            nn.Linear(d_model, d_ff, device="cuda"),
-            nn.GELU(),
-            nn.Linear(d_ff, d_model, device="cuda"),
+def evaluate(cfg: dict, step: int, rank: int, out: str) -> None:
+    print(f"[abyss] evaluate start step={step} rank={rank}", flush=True)
+    if cfg["model"].get("mock", False):
+        candidate = candidate_for_rank(cfg["run_id"], step, rank, int(cfg["nes"]["population_size"]))
+        fitness = mock_fitness(candidate.seed, candidate.sign, rank, step)
+        record = FitnessRecord(
+            run_id=cfg["run_id"],
+            step=step,
+            rank=rank,
+            seed=candidate.seed,
+            sign=candidate.sign,
+            fitness=fitness,
+            diagnostics={"mock": True},
         )
-        self.norm1 = nn.LayerNorm(d_model, device="cuda")
-        self.norm2 = nn.LayerNorm(d_model, device="cuda")
-    
-    def forward(self, x, mask):
-        attn, _ = self.attn(x, x, x, attn_mask=mask)
-        x = self.norm1(x + attn)
-        x = self.norm2(x + self.ff(x))
-        return x
+        write_json(out, record)
+        return
 
-
-def count_parameters(model: nn.Module) -> int:
-    return sum(p.numel() for p in model.parameters())
-
-
-def get_theta(model: nn.Module) -> torch.Tensor:
-    """Flatten all parameters to single tensor."""
-    return torch.cat([p.data.flatten() for p in model.parameters()])
-
-
-def set_theta(model: nn.Module, theta: torch.Tensor):
-    """Set parameters from flattened tensor."""
-    offset = 0
-    for p in model.parameters():
-        numel = p.numel()
-        p.data = theta[offset:offset+numel].reshape(p.shape).to(p.device)
-        offset += numel
-
-
-def compute_fitness(model: nn.Module, batch) -> float:
-    """Compute fitness = negative loss."""
+    model_source = resolve_model_source(cfg, step)
+    print(f"[abyss] model_source={model_source}", flush=True)
+    model, tokenizer, _ = load_abyss_model(cfg, model_source=model_source)
     model.eval()
-    with torch.no_grad():
-        input_ids = batch["input_ids"].to("cuda")
-        logits = model(input_ids)
-        loss = nn.functional.cross_entropy(
-            logits.view(-1, logits.size(-1)),
-            input_ids.view(-1),
-            ignore=0,
-        )
-    return -loss.item()
+    rm = load_reward_model(cfg)
+    candidate = candidate_for_rank(cfg["run_id"], step, rank, int(cfg["nes"]["population_size"]))
+    print(f"[abyss] applying perturbation seed={candidate.seed} sign={candidate.sign}", flush=True)
+    apply_candidate_perturbation(model, candidate, float(cfg["nes"]["sigma"]), cfg["nes"])
+    print("[abyss] evaluating candidate fitness", flush=True)
+    fitness, diagnostics = evaluate_candidate(model, tokenizer, cfg, rank, step, reward_model=rm)
+    record = FitnessRecord(
+        run_id=cfg["run_id"],
+        step=step,
+        rank=rank,
+        seed=candidate.seed,
+        sign=candidate.sign,
+        fitness=fitness,
+        diagnostics=diagnostics,
+    )
+    write_json(out, record)
+    print(f"[abyss] evaluate done fitness={fitness} out={out}", flush=True)
 
 
-class NES:
-    """NES optimizer for ABYSS."""
-    
-    def __init__(
-        self,
-        model: nn.Module,
-        popsize: int = 256,
-        lr: float = 0.01,
-        sigma: float = 0.01,
-    ):
-        self.model = model
-        self.popsize = popsize
-        self.lr = lr
-        self.sigma = sigma
-        self.theta = get_theta(model)
-    
-    def step(self, fitness_fn):
-        """Single NES step."""
-        # Generate noise on-the-fly
-        fitnesses = []
-        
-        for _ in range(self.popsize):
-            noise = torch.randn_like(self.theta) * self.sigma
-            theta_candidate = self.theta + noise
-            
-            set_theta(self.model, theta_candidate)
-            fitness = fitness_fn(self.model)
-            fitnesses.append(fitness)
-        
-        # Ranking
-        fitnesses = torch.tensor(fitnesses)
-        ranks = torch.argsort(torch.argsort(fitnesses)).float()
-        normalized_ranks = (ranks / self.popsize - 0.5) * 2
-        
-        # Estimate gradient
-        gradient = torch.zeros_like(self.theta)
-        for i in range(self.popsize):
-            noise = torch.randn_like(self.theta) * self.sigma
-            gradient += normalized_ranks[i] * noise
-        
-        gradient /= self.popsize
-        self.theta += gradient * self.lr
-        
-        set_theta(self.model, self.theta)
-        return fitnesses.mean().item()
+def apply_update(cfg: dict, manifest_path: str, save_dir: str) -> None:
+    if cfg["model"].get("mock", False):
+        manifest = read_manifest(manifest_path)
+        save_dir_path = Path(save_dir)
+        save_dir_path.mkdir(parents=True, exist_ok=True)
+        write_json(save_dir_path / "manifest.json", manifest)
+        write_json(save_dir_path / "checkpoint_meta.json", {
+            "run_id": cfg["run_id"],
+            "source": "mock",
+            "step": manifest.step + 1,
+            "base_step": manifest.step,
+        })
+        (save_dir_path / "mock_checkpoint.txt").write_text("mock checkpoint\n", encoding="utf-8")
+        return
+
+    model_source = resolve_model_source(cfg, manifest.step)
+    model, tokenizer, _ = load_abyss_model(cfg, model_source=model_source)
+    manifest = read_manifest(manifest_path)
+    if manifest.run_id != cfg["run_id"]:
+        raise ValueError(f"Manifest run_id {manifest.run_id} != config run_id {cfg['run_id']}")
+    apply_manifest_update(model, manifest, cfg["nes"])
+    save_dir_path = Path(save_dir)
+    save_dir_path.mkdir(parents=True, exist_ok=True)
+    save_abyss_model(model, tokenizer, save_dir_path)
+    write_json(save_dir_path / "manifest.json", manifest)
+    write_json(save_dir_path / "checkpoint_meta.json", {
+        "run_id": cfg["run_id"],
+        "source": model_source,
+        "step": manifest.step + 1,
+        "base_step": manifest.step,
+    })
 
 
-def distributed_step(model, fitness_fn, world_size: int):
-    """Distributed NES across GPUs."""
-    if world_size == 1:
-        return NES(model).step(fitness_fn)
-    
-    local_popsize = 256 // world_size
-    local_fitnesses = []
-    
-    for _ in range(local_popsize):
-        noise = torch.randn_like(get_theta(model)) * 0.01
-        set_theta(model, get_theta(model) + noise)
-        local_fitness = fitness_fn(model)
-        local_fitnesses.append(local_fitness)
-    
-    local_fitnesses = torch.tensor(local_fitnesses, device="cuda")
-    
-    all_fitness = torch.zeros(world_size, device="cuda")
-    dist.all_gather(all_fitness, local_fitnesses.mean())
-    
-    global_rank = torch.argsort(torch.argsort(all_fitness.mean()))[0]
-    
-    return global_rank.item()
+def build_manifest(cfg: dict, step: int, records: list[FitnessRecord]) -> StepManifest:
+    return StepManifest(
+        run_id=cfg["run_id"],
+        step=step,
+        sigma=float(cfg["nes"]["sigma"]),
+        learning_rate=float(cfg["nes"]["learning_rate"]),
+        participants=records,
+    )
 
 
-@modal.App.function(gpu="H100:8", timeout=86400)
-def train(config: dict):
-    """Main training function on Modal."""
-    world_size = int(os.environ.get("WORLD_SIZE", "1"))
-    rank = int(os.environ.get("RANK", "0"))
-    
-    if world_size > 1:
-        dist.init_process_group(backend="nccl")
-    
-    # Initialize model
-    model = ABYSS(
-        d_model=config.get("d_model", 8192),
-        n_heads=config.get("n_heads", 64),
-        n_layers=config.get("n_layers", 80),
-    ).to("cuda")
-    
-    model = torch.nn.DataParallel(model) if world_size > 1 else model
-    
-    print(f"[Rank {rank}] Model params: {count_parameters(model):,}")
-    
-    # Dataset
-    dataset = ABYSSDataset(config.get("dataset", "HuggingFaceFW/fineweb-edu"))
-    
-    # Use tokenizer
-    from transformers import AutoTokenizer
-    tokenizer = AutoTokenizer.from_pretrained("gpt2")
-    
-    # Training loop
-    nes = NES(model, popsize=config.get("popsize", 256))
-    
-    for epoch in range(config.get("epochs", 10)):
-        dataloader = DataLoader(dataset, batch_size=config.get("batch_size", 1))
-        
-        for batch in dataloader:
-            batch = tokenizer(batch["text"], return_tensors="pt", truncation=True, max_length=4096)
-            
-            def fitness_fn(m):
-                return compute_fitness(m, batch)
-            
-            avg_fitness = distributed_step(model, fitness_fn, world_size)
-            
-            if rank == 0:
-                print(f"Epoch {epoch}, fitness: {avg_fitness:.4f}")
-    
-    if world_size > 1:
-        dist.destroy_process_group()
-    
-    return {"status": "done", "final_fitness": avg_fitness}
+def mock_fitness(seed: int, sign: int, rank: int, step: int) -> float:
+    # Deterministic toy objective for protocol smoke tests.
+    return ((seed % 10_000) / 10_000.0) * sign - 0.001 * rank + 0.0001 * step
 
 
-@modal.local_entrypoint()
-def main():
-    config = {
-        "dataset": "HuggingFaceFW/fineweb-edu",
-        "d_model": 8192,
-        "n_heads": 64,
-        "n_layers": 80,
-        "popsize": 256,
-        "batch_size": 1,
-        "epochs": 10,
-    }
-    train.spawn(config)
-    print("Training started!")
+def resolve_model_source(cfg: dict, step: int) -> str:
+    checkpoint = Path(cfg["state_dir"]) / "checkpoints" / f"step-{step:08d}"
+    if checkpoint.exists():
+        return str(checkpoint)
+    genesis = Path(cfg["checkpoint_dir"])
+    if genesis.exists():
+        return str(genesis)
+    return str(cfg["model_name"])
+
+
+if __name__ == "__main__":
+    main()

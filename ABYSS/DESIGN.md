@@ -1,65 +1,74 @@
-# ABYSS Design Decisions
+# ABYSS Design
 
-## Why NES?
+## Direction
 
-### Problem: AdamW doesn't scale across geographies
-- AdamW requires gradient synchronization
-- Cross-region bandwidth is insufficient
-- Need compression, added complexity
+ABYSS starts from a Qwen 72B-class checkpoint and trains full parameters using
+replicated distributed NES. The model adds virtual latent tokens and a value head
+for MCTS.
 
-### Solution: NES (Natural Evolution Strategies)
-- **No gradients** — only fitness values
-- **O(1) communication** — just scalar rankings
-- **Minimal state** — only model weights
+## Model
 
-## Architecture
-
-### Memory: 70B model on 1× B200 (192GB)
-- Model: 70B × FP16 = 140GB ✓
-- NES state: `theta` (current weights) = 140GB ✓
-- **Total: 140GB** < 192GB ✓
-
-### No AdamW state!
-- No momentum (m)
-- No variance (v)
-- **50% memory savings**
-
-### NES workflow
-```
-1. Generate noise N(0,1) on-the-fly
-2. candidate = theta + noise × sigma
-3. Evaluate fitness
-4. Discard noise
-5. Aggregate rankings across GPUs
-6. Update theta
+```text
+Qwen backbone
+├── lm_head
+├── value_head
+└── virtual token embeddings
 ```
 
-### Communication
-- Only fitness rankings (scalars!)
-- No gradients transferred
-- ~few KB per step vs ~28GB with AdamW
+Virtual tokens are tokenizer special tokens:
 
-## Configuration
-
-```python
-{
-    "model_size": "70B",
-    "precision": "fp16",
-    "optimizer": "NES",
-    "popsize": 256,
-    "sigma": 0.01,
-    "learning_rate": 0.01,
-    "distributed": "all_reduce_rankings"
-}
+```text
+<|abyss_latent_0|>
+<|abyss_latent_1|>
+...
 ```
 
-## Hardware Requirements
+The model can generate and consume them. User-facing inference strips them from
+visible output and reward penalizes hidden-token usage.
 
-| Model | GPUs | Memory |
-|-------|------|--------|
-| 70B   | 1× B200 | 140GB |
-| 70B   | 8× B200 | Full sharding |
+## NES Protocol
 
-## References
-- NES: https://arxiv.org/abs/1106.4487
-- OpenAI ES: https://blog.openai.com/evolution-strategies/
+All nodes start from identical `theta_k`.
+
+For step `k`, rank `r` uses:
+
+```text
+seed = hash(run_id, step, floor(rank / 2))
+sign = +1 for even ranks, -1 for odd ranks
+candidate = theta_k + sign * sigma * epsilon(seed)
+```
+
+Each node publishes only:
+
+```text
+rank, seed, sign, fitness, diagnostics
+```
+
+The coordinator writes a canonical manifest. Every node reconstructs the same
+noise tensors and applies the same update, producing identical `theta_{k+1}`
+without checkpoint transfer in the hot path.
+
+## Coordinator
+
+The coordinator is not a learner. It:
+
+- launches Modal evaluator jobs;
+- waits for quorum;
+- writes the canonical step manifest;
+- launches update/checkpoint jobs;
+- publishes `latest.json` after a successful checkpoint commit.
+
+It never computes gradients and never owns a unique copy of the model weights.
+
+## Checkpoint Safety
+
+Weights must not be lost. Therefore:
+
+- checkpoints are versioned by step;
+- manifests are stored next to checkpoints;
+- `latest.json` is updated only after checkpoint files exist;
+- old checkpoints are not deleted automatically;
+- failed steps do not advance `latest.json`;
+- recovery reloads the latest accepted checkpoint and replays deterministic NES
+  manifests if needed.
+
